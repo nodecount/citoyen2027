@@ -1,1 +1,23 @@
-{ "slug": "melenchon", "nom": "Jean-Luc Mélenchon", "parti": "", "sources_officielles": [], "date_derniere_maj": "" }
+{
+  "slug": "melenchon",
+  "nom": "Jean-Luc Mélenchon",
+  "parti": "La France Insoumise",
+  "sources_officielles": [
+    {
+      "type": "primaire",
+      "label": "laec.fr — L'Avenir en Commun, programme officiel (site officiel de campagne)",
+      "url": "https://laec.fr/"
+    },
+    {
+      "type": "primaire",
+      "label": "melenchon2027.fr — Site officiel de candidature de Jean-Luc Mélenchon à l'élection présidentielle",
+      "url": "https://melenchon2027.fr/"
+    },
+    {
+      "type": "primaire",
+      "label": "melenchon.fr — Site personnel/officiel de Jean-Luc Mélenchon (discours et prises de position)",
+      "url": "https://melenchon.fr/"
+    }
+  ],
+  "date_derniere_maj": "2026-09-15"
+}
