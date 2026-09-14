@@ -1,6 +1,10 @@
 import { describe, it, expect } from "vitest";
-import themes from "../../data/themes.json";
-import profilSchema from "../../data/profils-schema.json";
+import themesRaw from "../../data/themes.json";
+import profilSchemaRaw from "../../data/profils-schema.json";
+import type { Theme, ChampProfil } from "../types";
+
+const themes: Theme[] = themesRaw as Theme[];
+const profilSchema: ChampProfil[] = profilSchemaRaw as ChampProfil[];
 
 const THEME_IDS = [
   "fiscalite",
@@ -13,33 +17,54 @@ const THEME_IDS = [
   "succession",
 ];
 
+const THEMES_POPULATED = new Set(["fiscalite", "pouvoir-achat"]);
+
 describe("themes.json", () => {
   it("déclare exactement les 8 thèmes prévus, chacun avec id/libelle/description", () => {
     expect(themes).toHaveLength(8);
-    const ids = themes.map((t: any) => t.id).sort();
+    const ids = themes.map((t) => t.id).sort();
     expect(ids).toEqual([...THEME_IDS].sort());
-    for (const theme of themes as any[]) {
+    for (const theme of themes) {
       expect(typeof theme.libelle).toBe("string");
       expect(theme.libelle.length).toBeGreaterThan(0);
       expect(typeof theme.description).toBe("string");
       expect(theme.description.length).toBeGreaterThan(0);
     }
   });
+
+  it("a le statut attendu (populated pour fiscalite/pouvoir-achat, provisoire sinon)", () => {
+    for (const theme of themes) {
+      const expected = THEMES_POPULATED.has(theme.id) ? "populated" : "provisoire";
+      expect(theme.statut).toBe(expected);
+    }
+  });
 });
 
+const EXPECTED_CHAMP_IDS = [
+  "statut_professionnel",
+  "tranche_revenus",
+  "situation_familiale",
+  "nombre_enfants",
+  "logement",
+  "secteur_activite",
+  "region",
+];
+
 describe("profils-schema.json", () => {
-  it("liste au moins les champs de profil minimaux prévus", () => {
-    const ids = (profilSchema as any[]).map((f) => f.id);
-    for (const champAttendu of [
-      "statut_professionnel",
-      "tranche_revenus",
-      "situation_familiale",
-      "nombre_enfants",
-      "logement",
-      "secteur_activite",
-      "region",
-    ]) {
-      expect(ids).toContain(champAttendu);
+  it("liste exactement les 7 champs de profil attendus (ni plus, ni moins)", () => {
+    const ids = profilSchema.map((f) => f.id);
+    expect(ids.sort()).toEqual([...EXPECTED_CHAMP_IDS].sort());
+  });
+
+  it("chaque champ a un type valide et des options ssi type === enum", () => {
+    for (const champ of profilSchema) {
+      expect(["enum", "number", "text"]).toContain(champ.type);
+      if (champ.type === "enum") {
+        expect(Array.isArray(champ.options)).toBe(true);
+        expect((champ.options as string[]).length).toBeGreaterThan(0);
+      } else {
+        expect(champ.options).toBeUndefined();
+      }
     }
   });
 });
