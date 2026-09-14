@@ -1,1 +1,23 @@
-{ "slug": "philippe", "nom": "Édouard Philippe", "parti": "", "sources_officielles": [], "date_derniere_maj": "" }
+{
+  "slug": "philippe",
+  "nom": "Édouard Philippe",
+  "parti": "Horizons",
+  "sources_officielles": [
+    {
+      "type": "primaire",
+      "label": "edouardphilippe.fr — Site officiel de campagne d'Édouard Philippe (priorités « Pour une France plus prospère »)",
+      "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere"
+    },
+    {
+      "type": "primaire",
+      "label": "edouardphilippe.fr — Site officiel de campagne d'Édouard Philippe (priorités « Pour une France plus attentive à ses enfants »)",
+      "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants"
+    },
+    {
+      "type": "primaire",
+      "label": "Horizons — Site officiel du parti d'Édouard Philippe (Le Manifeste)",
+      "url": "https://horizonsleparti.fr/le-manifeste/"
+    }
+  ],
+  "date_derniere_maj": "2026-09-15"
+}

@@ -1,1 +1,99 @@
-[]
+[
+  {
+    "id": "philippe-fisc-001",
+    "candidat": "philippe",
+    "theme": "fiscalite",
+    "titre": "Pacte fiscal de 50 Md€ par an de baisse des impôts de production, financé par une baisse équivalente des aides publiques aux entreprises",
+    "resume_factuel": "Édouard Philippe propose de conclure avec les entreprises un « pacte fiscal inédit » consistant à baisser de 50 milliards d'euros par an les impôts dits « de production » (impôts assis sur le chiffre d'affaires, la masse salariale ou la valeur ajoutée plutôt que sur le profit, tels que la CVAE, la C3S ou la taxe foncière sur les établissements industriels), en contrepartie d'une réduction équivalente, de 50 milliards d'euros par an, des aides publiques aux entreprises jugées dispersées ou peu efficaces. Sur l'ensemble d'un quinquennat, la mesure représenterait donc 250 milliards d'euros de baisses d'impôts de production, compensées par 250 milliards d'euros de baisses d'aides publiques. Cette mesure figure parmi les priorités « Pour une France plus prospère » publiées sur le site officiel de campagne d'Édouard Philippe, et avait déjà été présentée publiquement en ces termes dès le 6 novembre 2025.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — Priorités « Pour une France plus prospère » (mesure : pacte fiscal 50 Md€ de baisses d'impôts de production contre 50 Md€ d'aides publiques en moins)",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere"
+      },
+      {
+        "type": "secondaire",
+        "label": "Public Sénat — « Entreprises : un « deal » à 250 milliards d'euros sur un quinquennat, que représente la proposition d'Édouard Philippe ? » (6 novembre 2025, Guillaume Jacquot)",
+        "url": "https://www.publicsenat.fr/actualites/economie/entreprises-un-deal-a-250-milliards-deuros-sur-un-quinquennat-que-represente-la-proposition-dedouard-philippe"
+      },
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes, Présidentielle 2027 (section Édouard Philippe : « Mettre en place un « Deal fiscal » de 250 Mds d'€ pour les entreprises »)",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027"
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Le montant de 50 Md€/an (250 Md€ sur le quinquennat) est un chiffre annoncé par le candidat lui-même et repris à l'identique par Public Sénat et par la Fondation iFRAP dans son comparateur de programmes ; il ne s'agit toutefois pas d'un chiffrage produit ou contre-expertisé par un organisme indépendant (Cour des comptes, Haut Conseil des finances publiques). Public Sénat (6 novembre 2025) précise que le périmètre visé par la baisse des impôts de production inclut notamment la CVAE, la C3S et la taxe foncière sur les établissements industriels, et rapporte que la France consacrerait aujourd'hui environ 75 Md€ par an à ces impôts contre 23 Md€ en Allemagne (élément de comparaison cité par l'article, non vérifié de manière indépendante dans le cadre de cette fiche) ; un économiste cité dans le même article s'interroge sur la méthode de sélection des aides publiques qui seraient supprimées, sans remise en cause préalable de leurs objectifs initiaux. La liste précise des aides publiques concernées par la baisse de 50 Md€/an n'est pas détaillée dans les sources consultées à la date de recherche (15/09/2026).",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-15"
+  },
+  {
+    "id": "philippe-fisc-002",
+    "candidat": "philippe",
+    "theme": "fiscalite",
+    "titre": "Moratoire fiscal et normatif : aucun nouvel impôt ni aucune nouvelle norme pendant le quinquennat",
+    "resume_factuel": "Édouard Philippe s'engage, en cas d'élection, à ne créer aucun nouvel impôt ni aucune nouvelle norme pendant la durée du quinquennat (« pas de nouvelle norme et de nouvel impôt sur le quinquennat »). Cet engagement figure dans les priorités « Pour une France plus prospère » de son site officiel de campagne, au sein du volet consacré à la libération des entreprises du poids des impôts et de la bureaucratie.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — Priorités « Pour une France plus prospère » (mesure : moratoire normatif et fiscal sur le quinquennat)",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere"
+      },
+      {
+        "type": "secondaire",
+        "label": "Contribuables Associés — « Présidentielle 2027 : à quelle sauce fiscale serez-vous assaisonnés ? » (9 septembre 2026, Henri Dumaine)",
+        "url": "https://contribuablesassocies.org/2026/09/09/presidentielle-2027-a-quelle-sauce-fiscale-serez-vous-assaisonnes/"
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Il s'agit d'un engagement de nature négative (absence de création de nouveaux prélèvements ou de nouvelles normes) plutôt que d'une mesure de dépense ou de baisse d'impôt chiffrable : son effet budgétaire dépendrait de décisions futures qu'il empêcherait, qui ne peuvent être anticipées ni chiffrées à la date de recherche. Contribuables Associés (9 septembre 2026) relève que le programme fiscal détaillé d'Édouard Philippe restait, à cette date, largement incomplet au-delà de cet engagement de principe, ce qui limite la possibilité d'apprécier sa cohérence avec le reste de son programme fiscal, notamment le pacte de baisse des impôts de production décrit dans la proposition philippe-fisc-001.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-15"
+  },
+  {
+    "id": "philippe-pa-001",
+    "candidat": "philippe",
+    "theme": "pouvoir-achat",
+    "titre": "Rééquilibrer le financement du modèle social pour augmenter le salaire net des actifs",
+    "resume_factuel": "Édouard Philippe indique vouloir « rééquilibrer le financement du modèle social pour qu'il ne repose plus uniquement sur le travail » et « augmenter le salaire net des actifs ». Cette orientation figure dans les priorités « Pour une France plus prospère » de son site officiel de campagne, dans le volet consacré à l'allègement de la charge pesant sur les actifs. À la date de recherche, le site ne précise pas par quel mécanisme concret (nature et montant des cotisations ou prélèvements concernés, nouvelle assiette de financement du modèle social envisagée, calendrier de mise en œuvre) cette hausse du salaire net serait obtenue.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — Priorités « Pour une France plus prospère » (mesure : rééquilibrer le financement du modèle social et augmenter le salaire net des actifs)",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere"
+      },
+      {
+        "type": "secondaire",
+        "label": "Parlons Politique — « En 2027, Édouard Philippe promet ordre et réformes, mais les Français attendent surtout des réponses sur le pouvoir d'achat » (10 mai 2026)",
+        "url": "https://www.parlons-politique.fr/elections/en-2027-edouard-philippe-promet-ordre-et-reformes-mais-les-francais-attendent-surtout-des-reponses-sur-le-pouvoir-dachat_15599/"
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Le site officiel de campagne énonce un objectif (« augmenter le salaire net des actifs », « rééquilibrer le financement du modèle social ») sans indiquer le ou les leviers précis retenus, ce qui rend tout chiffrage impossible en l'état à partir des sources consultées. L'article de Parlons Politique (10 mai 2026), consacré au lancement de la candidature d'Édouard Philippe, relève explicitement que le candidat a évité de s'engager sur des mesures précises concernant le pouvoir d'achat au moment de l'annonce de sa candidature, privilégiant un discours de « politique de l'offre » centré sur les entreprises, et souligne un décalage entre cette approche et l'attente des Français en matière de pouvoir d'achat. Aucun chiffre (montant de cotisations modifiées, gain de salaire net attendu en euros) n'a été identifié dans les sources primaires ou secondaires consultées à la date de recherche (15/09/2026).",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-15"
+  },
+  {
+    "id": "philippe-pa-002",
+    "candidat": "philippe",
+    "theme": "pouvoir-achat",
+    "titre": "Prêt à taux zéro pour chaque naissance, destiné à faciliter le déménagement des familles qui s'agrandissent",
+    "resume_factuel": "Édouard Philippe propose de créer un prêt à taux zéro destiné aux familles à l'occasion de chaque naissance, afin de faciliter leur déménagement lorsqu'elles s'agrandissent. Cette mesure figure dans les priorités « Pour une France plus attentive à ses enfants » de son site officiel de campagne. Antérieurement, lors d'une intervention devant la Fédération nationale de l'immobilier (FNAIM) rapportée le 10 décembre 2025, Édouard Philippe avait évoqué la création d'un nouveau prêt à taux zéro conditionné à la naissance d'un deuxième ou d'un troisième enfant, dans un objectif de lutte contre la dénatalité ; la formulation actuelle du site de campagne (« pour chaque naissance ») ne reprend pas explicitement cette condition de rang de naissance.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — Priorités « Pour une France plus attentive à ses enfants » (mesure : prêt à taux zéro pour chaque naissance)",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants"
+      },
+      {
+        "type": "secondaire",
+        "label": "Empruntis — « Logement : les pistes d'Édouard Philippe pour sortir de la crise » (10 décembre 2025, Luigi Delmet)",
+        "url": "https://www.empruntis.com/financement/actualites/logement-pistes-edouard-philippe-sortir-crise-20373.php"
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Ni le site officiel de campagne ni l'article secondaire consulté ne précisent le montant plafond du prêt, ses éventuelles conditions de ressources, sa durée, ou son coût pour les finances publiques (par exemple sous forme de bonification d'intérêts prise en charge par l'État), ce qui empêche tout chiffrage à la date de recherche. Il existe par ailleurs une divergence entre la condition de rang de naissance mentionnée en décembre 2025 (prêt conditionné à un deuxième ou un troisième enfant) et la formulation plus large retenue en septembre 2026 sur le site de campagne (« pour chaque naissance », sans condition de rang explicite) ; faute de clarification identifiée dans les sources consultées, les deux formulations sont rapportées telles quelles sans trancher entre elles.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-15"
+  }
+]
