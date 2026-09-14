@@ -1,0 +1,9 @@
+[
+  { "id": "statut_professionnel", "label": "Statut professionnel", "type": "enum", "options": ["salarie", "independant", "fonctionnaire", "retraite", "etudiant", "sans_emploi"] },
+  { "id": "tranche_revenus", "label": "Tranche de revenus mensuels nets", "type": "enum", "options": ["moins_1200", "1200_2000", "2000_3000", "3000_5000", "plus_5000"] },
+  { "id": "situation_familiale", "label": "Situation familiale", "type": "enum", "options": ["celibataire", "en_couple", "marie_pacse"] },
+  { "id": "nombre_enfants", "label": "Nombre d'enfants à charge", "type": "number" },
+  { "id": "logement", "label": "Statut de logement", "type": "enum", "options": ["locataire", "proprietaire", "heberge"] },
+  { "id": "secteur_activite", "label": "Secteur d'activité", "type": "text" },
+  { "id": "region", "label": "Région", "type": "text" }
+]
