@@ -1,1 +1,23 @@
-{ "slug": "le-pen", "nom": "Marine Le Pen", "parti": "", "sources_officielles": [], "date_derniere_maj": "" }
+{
+  "slug": "le-pen",
+  "nom": "Marine Le Pen",
+  "parti": "Rassemblement National",
+  "sources_officielles": [
+    {
+      "type": "primaire",
+      "label": "mlafrance.fr — Programme officiel de campagne de Marine Le Pen (mesures détaillées)",
+      "url": "https://mlafrance.fr/programme"
+    },
+    {
+      "type": "primaire",
+      "label": "Rassemblement National — Pétition « Supprimer la TVA sur 100 produits de première nécessité, c'est possible »",
+      "url": "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible"
+    },
+    {
+      "type": "primaire",
+      "label": "Rassemblement National — Pétition « Pour baisser la TVA à 5,5 % sur le prix de l'électricité »",
+      "url": "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez"
+    }
+  ],
+  "date_derniere_maj": "2026-09-15"
+}

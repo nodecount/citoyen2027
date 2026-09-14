@@ -1,1 +1,119 @@
-[]
+[
+  {
+    "id": "le-pen-fisc-001",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "titre": "Baisse de la TVA sur l'énergie de 20 % à 5,5 %",
+    "resume_factuel": "Marine Le Pen et le Rassemblement National proposent de réduire le taux de TVA applicable aux carburants, à l'électricité, au gaz et au fioul domestique, en le faisant passer du taux normal (20 %) au taux réduit (5,5 %). Cette mesure figure dans le programme de campagne de Marine Le Pen et a été portée à plusieurs reprises devant l'Assemblée nationale, notamment via un amendement déposé par Marine Le Pen et examiné le 20 novembre 2025 dans le cadre du projet de loi de finances pour 2026.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr — Programme officiel de Marine Le Pen (mesure : baisse de la TVA sur l'énergie de 20 % à 5,5 %)",
+        "url": "https://mlafrance.fr/programme"
+      },
+      {
+        "type": "primaire",
+        "label": "Assemblée nationale — Compte rendu de la 2e séance du jeudi 20 novembre 2025 (PLF 2026, examen de l'amendement TVA énergie porté par Marine Le Pen)",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2025-2026/deuxieme-seance-du-jeudi-20-novembre-2025"
+      },
+      {
+        "type": "secondaire",
+        "label": "Institut Montaigne — Fiche programme « Baisser la TVA de 20 à 5,5 % pour les carburants, l'électricité, le gaz et le fioul domestique » (Législatives 2024)",
+        "url": "https://www.institutmontaigne.org/legislatives-2024/rassemblement-national/baisser-la-tva-de-20-a-55-pour-les-carburants-lelectricite-le-gaz-et-le-fioul-domestique/"
+      },
+      {
+        "type": "secondaire",
+        "label": "CNews — « Abaissement de la TVA à 5,5 % : quels produits sont concernés par l'amendement déposé par Marine Le Pen pour le budget 2026 ? » (21 octobre 2025)",
+        "url": "https://www.cnews.fr/france/2025-10-21/abaissement-de-la-tva-55-quels-produits-sont-concernes-par-lamendement-depose-par"
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Ni le programme de campagne (mlafrance.fr/programme) ni les communications officielles du RN identifiées à la date de recherche ne fournissent de chiffrage officiel du coût budgétaire de cette baisse de TVA. Aucun chiffrage indépendant fiable et vérifiable n'a pu être confirmé directement à partir d'une source primaire ou secondaire de qualité pour cette fiche ; ce champ est donc laissé à false plutôt que de reprendre un montant non vérifié. La mesure est reprise de façon constante depuis le programme présidentiel 2022 de Marine Le Pen et a été réaffirmée à l'Assemblée nationale à l'automne 2025 lors de l'examen du budget 2026 ; à la date de recherche (15/09/2026), le programme complet 2027 du RN n'était pas encore rendu public dans le détail (cf. reportage franceinfo du 19/05/2026 indiquant un programme achevé à « environ 95 % » mais non publié), ce qui justifie de s'appuyer sur le programme 2022 toujours hébergé sur le site officiel de la candidate et sur les prises de position législatives les plus récentes.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-15"
+  },
+  {
+    "id": "le-pen-fisc-002",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "titre": "Exonération d'impôt sur le revenu pour les moins de 30 ans",
+    "resume_factuel": "Marine Le Pen propose d'exonérer d'impôt sur le revenu l'ensemble des contribuables de moins de 30 ans. Cette mesure a été annoncée lors d'une interview télévisée durant la campagne présidentielle de 2022 et figure dans son programme officiel de campagne ; elle n'a pas fait l'objet, de la part de la candidate, d'un chiffrage détaillé et documenté publiquement au moment de l'annonce.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr — Programme officiel de Marine Le Pen (mesure : exonération d'impôt sur le revenu pour les moins de 30 ans)",
+        "url": "https://mlafrance.fr/programme"
+      },
+      {
+        "type": "secondaire",
+        "label": "Institut Montaigne — Fiche programme « Exonérer tous les jeunes de moins de 30 ans d'impôt sur le revenu » (Présidentielle 2022)",
+        "url": "https://www.institutmontaigne.org/presidentielle-2022/marine-le-pen/exonerer-tous-les-jeunes-de-moins-de-30-ans-dimpot-sur-le-revenu/"
+      },
+      {
+        "type": "secondaire",
+        "label": "Institut Montaigne — « [Présidentielle - Chiffrage 2022] Marine Le Pen propose d'exonérer d'impôt sur le revenu 'tous les jeunes' de moins de 30 ans »",
+        "url": "https://www.institutmontaigne.org/expressions/presidentielle-chiffrage-2022-marine-le-pen-propose-dexonerer-dimpot-sur-le-revenu-tous-les-jeunes"
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Deux estimations chiffrées distinctes existent et divergent : le président du RN, Jordan Bardella, a évoqué un coût d'environ 2 milliards d'euros par an pour cette mesure, tandis que l'Institut Montaigne l'estime à un peu plus de 3,6 milliards d'euros par an (soit environ 18 milliards d'euros sur un quinquennat), en l'absence de chiffrage officiel détaillé communiqué par la candidate elle-même. L'écart s'explique notamment par des hypothèses différentes sur le périmètre exact des revenus concernés (tous revenus des moins de 30 ans vs. périmètre restreint) et sur les effets de comportement (ex. rattachement fiscal au foyer parental). Par ailleurs, plusieurs observateurs relèvent que le principe d'une exonération fondée sur un critère d'âge soulève une question de conformité avec le principe constitutionnel d'égalité devant l'impôt (article 13 de la Déclaration des droits de l'homme et du citoyen), ce qui pourrait nécessiter une adaptation du dispositif ou une révision constitutionnelle ; ce point est un fait rapporté par des tiers et n'est présenté ici ni comme un obstacle certain ni comme négligeable. Aucune version reformulée ou re-chiffrée spécifiquement pour 2027 n'a été identifiée à la date de recherche (15/09/2026) ; les chiffres ci-dessus datent de la campagne 2022.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-15"
+  },
+  {
+    "id": "le-pen-pa-001",
+    "candidat": "le-pen",
+    "theme": "pouvoir-achat",
+    "titre": "Suppression de la TVA sur une liste d'environ 100 produits de première nécessité",
+    "resume_factuel": "Le Rassemblement National propose de supprimer la TVA (la ramener à 0 %, contre 5,5 % actuellement pour la plupart des produits alimentaires) sur un panier d'environ 100 produits considérés comme de première nécessité (par exemple : lait infantile, eau, lait, farine, œufs, fruits et légumes frais). Cette mesure a fait l'objet d'un amendement porté par la députée RN Stéphanie Galzy et examiné à l'Assemblée nationale le 6 avril 2023 (rejeté par 154 voix contre 33, seul le groupe RN ayant voté pour), ainsi que d'une pétition officielle du parti.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "Rassemblement National — Pétition « Supprimer la TVA sur 100 produits de première nécessité, c'est possible »",
+        "url": "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible"
+      },
+      {
+        "type": "primaire",
+        "label": "Rassemblement National — Communiqué « Économies, justice fiscale et défense du pouvoir d'achat : les propositions concrètes du RN aux dialogues de Bercy » (6 septembre 2023)",
+        "url": "https://rassemblementnational.fr/communiques/economies-justice-fiscale-et-defense-du-pouvoir-dachat-les-propositions-concretes-du-rn-aux-dialogues-de-bercy"
+      },
+      {
+        "type": "secondaire",
+        "label": "Institut Montaigne — Fiche programme « Supprimer la TVA sur les produits de première nécessité » (Législatives 2024)",
+        "url": "https://www.institutmontaigne.org/legislatives-2024/rassemblement-national/supprimer-la-tva-sur-les-produits-de-premiere-necessite/"
+      },
+      {
+        "type": "secondaire",
+        "label": "Datan — Relevé du scrutin à l'Assemblée nationale, amendement « Supprimer la TVA sur les produits alimentaires de première nécessité » (6 avril 2023)",
+        "url": "https://datan.fr/votes/legislature-16/vote_1362"
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Le RN n'a pas communiqué de chiffrage officiel de cette mesure selon l'Institut Montaigne, qui en propose sa propre estimation indépendante : un coût central d'environ 6,75 milliards d'euros par an, avec une fourchette de 4,7 à 8,8 milliards d'euros selon le périmètre retenu (liste restreinte aux produits alimentaires et d'hygiène de base, ou liste élargie incluant viandes, poissons et produits d'entretien). La notion de « produits de première nécessité » n'ayant pas de définition juridique stabilisée en droit français, le périmètre exact — et donc le coût réel — reste incertain ; le ministre chargé du budget a par ailleurs indiqué en séance que le droit européen encadre strictement le recours à un taux de TVA à 0 %, ce qui pourrait nécessiter une négociation avec la Commission européenne pour une partie des produits visés. Ces éléments de faisabilité et de chiffrage sont rapportés par des tiers (Institut Montaigne, débats parlementaires) et non par le RN lui-même.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-15"
+  },
+  {
+    "id": "le-pen-pa-002",
+    "candidat": "le-pen",
+    "theme": "pouvoir-achat",
+    "titre": "Réindexation des pensions de retraite sur l'inflation et revalorisation du minimum vieillesse à 1 000 € par mois",
+    "resume_factuel": "Marine Le Pen propose de réindexer les pensions de retraite sur l'inflation et de revaloriser le minimum vieillesse (ASPA) à 1 000 euros par mois. Ces deux mesures figurent dans son programme officiel de campagne, sans précision, dans la source primaire consultée, sur les conditions d'éligibilité (durée de cotisation, ressources du foyer) ni sur le calendrier de mise en œuvre.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr — Programme officiel de Marine Le Pen (mesures : réindexation des pensions sur l'inflation ; revalorisation du minimum vieillesse à 1 000 €/mois)",
+        "url": "https://mlafrance.fr/programme"
+      },
+      {
+        "type": "secondaire",
+        "label": "Institut Montaigne — Fiche programme « Réindexer les pensions de retraites sur l'inflation » (Présidentielle 2022)",
+        "url": "https://www.institutmontaigne.org/presidentielle-2022/marine-le-pen/reindexer-les-pensions-de-retraites-sur-linflation/"
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Le programme officiel ne fournit pas de chiffrage propre. L'Institut Montaigne a estimé le coût de la seule réindexation des pensions sur l'inflation sur un quinquennat à environ 35,6 milliards d'euros dans un scénario médian d'inflation, avec une fourchette de 22,8 à 58,6 milliards d'euros selon le scénario d'inflation retenu (basse ou haute) ; ce chiffrage, réalisé par un tiers indépendant, dépend donc fortement d'hypothèses macroéconomiques sur l'inflation future qui ne relèvent pas du programme de la candidate. Le montant de 1 000 €/mois pour le minimum vieillesse est cité tel quel dans la source primaire, sans indication du barème de ressources ou de durée de cotisation associé, ce qui empêche d'en chiffrer précisément l'impact sans hypothèse supplémentaire. Aucune version re-chiffrée spécifiquement pour 2027 n'a été identifiée à la date de recherche (15/09/2026) ; le RN indique par ailleurs (compte rendu de presse, mai 2026) que l'arbitrage sur les retraites restait, à cette date, l'un des points non encore tranchés de son programme 2027.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-15"
+  }
+]
