@@ -47,3 +47,24 @@ export interface ChampProfil {
   type: "enum" | "number" | "text";
   options?: string[];
 }
+
+export interface Profil {
+  statut_professionnel: string;
+  tranche_revenus: string;
+  situation_familiale: string;
+  nombre_enfants: number;
+  logement: string;
+  secteur_activite: string;
+  region: string;
+  tranche_age: string;
+  tranche_patrimoine: string;
+}
+
+export type NiveauCertitude = "chiffre_personnalise" | "chiffre_macro_seulement" | "qualitatif";
+
+export interface Impact {
+  concerne: boolean;
+  niveau: NiveauCertitude;
+  montant_estime?: number;
+  explication: string;
+}

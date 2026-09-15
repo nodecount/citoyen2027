@@ -48,10 +48,12 @@ const EXPECTED_CHAMP_IDS = [
   "logement",
   "secteur_activite",
   "region",
+  "tranche_age",
+  "tranche_patrimoine",
 ];
 
 describe("profils-schema.json", () => {
-  it("liste exactement les 7 champs de profil attendus (ni plus, ni moins)", () => {
+  it("liste exactement les 9 champs de profil attendus (ni plus, ni moins)", () => {
     const ids = profilSchema.map((f) => f.id);
     expect(ids.sort()).toEqual([...EXPECTED_CHAMP_IDS].sort());
   });

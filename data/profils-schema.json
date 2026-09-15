@@ -5,5 +5,7 @@
   { "id": "nombre_enfants", "label": "Nombre d'enfants à charge", "type": "number" },
   { "id": "logement", "label": "Statut de logement", "type": "enum", "options": ["locataire", "proprietaire", "heberge"] },
   { "id": "secteur_activite", "label": "Secteur d'activité", "type": "text" },
-  { "id": "region", "label": "Région", "type": "text" }
+  { "id": "region", "label": "Région", "type": "text" },
+  { "id": "tranche_age", "label": "Tranche d'âge", "type": "enum", "options": ["moins_30", "30_49", "50_64", "65_plus"] },
+  { "id": "tranche_patrimoine", "label": "Tranche de patrimoine net", "type": "enum", "options": ["moins_100k", "100k_500k", "500k_1_3m", "plus_1_3m"] }
 ]
