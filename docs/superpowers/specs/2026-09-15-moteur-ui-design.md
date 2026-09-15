@@ -119,6 +119,16 @@ Tests unitaires Vitest sur `src/engine/` : `evaluerParDefaut` (un cas génériqu
 - Pas de travail de direction artistique/design visuel poussé (décision utilisateur pour ce prototype).
 - Pas de routing/URL dédiée par écran (état local suffit pour 3 écrans linéaires).
 
+## Piste future (non retenue pour ce sous-projet) : arbre de décision par thème
+
+Idée soulevée par l'utilisateur (2026-09-15) : structurer chaque thème comme un arbre de décision, où chaque nœud est une question / un trait de profil, et où l'on ne pose une question que si elle peut réellement changer le résultat pour ce thème (ex. : sur un thème donné, si le profil est mineur ça ne change rien ; si majeur, la question suivante dépend de salarié ou non ; pour "non", ça dépend d'étranger ou non ; etc.). On commencerait par les questions racines communes (essentielles), puis chaque thème naviguerait son propre arbre pour ne demander que ce qui est pertinent.
+
+Deux bénéfices distincts identifiés :
+1. **UX** : éviter de poser des questions qui ne changent rien à l'analyse pour un thème donné, donc alléger le formulaire.
+2. **Logique de calcul** : l'arbre pourrait directement *être* la logique de détermination du niveau d'impact (chaque feuille = un résultat), plutôt qu'une couche d'optimisation de formulaire au-dessus de fonctions d'éligibilité séparées — potentiellement plus transparent/auditable qu'un ensemble de fonctions ad hoc, ce qui collerait bien au principe « pas de boîte noire » de `CLAUDE.md`.
+
+**Décision** : non retenue pour ce sous-projet. Avec seulement 9 champs de profil et ~5 règles d'éligibilité sur 2 thèmes peuplés, un moteur d'arbre de décision générique (format d'arbre + moteur de traversée + arbre à maintenir par thème) coûte plus cher à construire et maintenir que les fonctions simples déjà prévues, pour un gain marginal à cette échelle. L'idée devient plus intéressante une fois que les 6 thèmes restants seront peuplés et que le profil aura grossi — à reconsidérer à ce moment-là, en remplacement du dossier `src/engine` actuel plutôt qu'en complément.
+
 ## Prochaine étape
 
 Passage au skill `writing-plans` pour découper ce design en plan d'implémentation.
