@@ -1,10 +1,13 @@
 [
   { "id": "fiscalite", "libelle": "Fiscalité", "description": "Impôts sur le revenu, la consommation, le patrimoine et les entreprises.", "statut": "populated" },
-  { "id": "travail", "libelle": "Travail", "description": "Droit du travail, chômage, retraite, conditions d'emploi.", "statut": "provisoire" },
-  { "id": "liberte", "libelle": "Libertés individuelles", "description": "Libertés civiles et droits fondamentaux au sens large.", "statut": "provisoire" },
-  { "id": "aides-etat", "libelle": "Aides de l'État", "description": "Prestations sociales, allocations, aides ciblées.", "statut": "provisoire" },
   { "id": "pouvoir-achat", "libelle": "Pouvoir d'achat", "description": "Prix, salaires nets, coût de la vie courante.", "statut": "populated" },
-  { "id": "liberte-expression", "libelle": "Liberté d'expression", "description": "Presse, médias, liberté de parole et d'information.", "statut": "provisoire" },
-  { "id": "liberte-politique", "libelle": "Libertés politiques", "description": "Droit de vote, pluralisme, organisation des pouvoirs publics.", "statut": "provisoire" },
-  { "id": "succession", "libelle": "Succession", "description": "Droits de succession et transmission de patrimoine.", "statut": "provisoire" }
+  { "id": "travail", "libelle": "Travail", "description": "Droit du travail, chômage, retraite, conditions d'emploi.", "statut": "provisoire" },
+  { "id": "aides-etat", "libelle": "Aides de l'État", "description": "Prestations sociales, allocations, aides ciblées.", "statut": "provisoire" },
+  { "id": "libertes-fondamentales", "libelle": "Libertés fondamentales", "description": "Libertés civiles, liberté d'expression et de la presse, droit de vote et pluralisme politique.", "statut": "provisoire" },
+  { "id": "sante", "libelle": "Santé", "description": "Système de santé, hôpital, accès aux soins, assurance maladie.", "statut": "provisoire" },
+  { "id": "securite", "libelle": "Sécurité", "description": "Sécurité intérieure, délinquance, police, justice pénale.", "statut": "provisoire" },
+  { "id": "immigration", "libelle": "Immigration", "description": "Politique migratoire, droit d'asile, intégration.", "statut": "provisoire" },
+  { "id": "education", "libelle": "Éducation", "description": "École, enseignement supérieur, formation.", "statut": "provisoire" },
+  { "id": "environnement", "libelle": "Environnement", "description": "Climat, transition écologique, politique environnementale.", "statut": "provisoire" },
+  { "id": "logement", "libelle": "Logement", "description": "Accès au logement, construction, aides au logement, urbanisme.", "statut": "provisoire" }
 ]

@@ -8,20 +8,23 @@ const profilSchema: ChampProfil[] = profilSchemaRaw as ChampProfil[];
 
 const THEME_IDS = [
   "fiscalite",
-  "travail",
-  "liberte",
-  "aides-etat",
   "pouvoir-achat",
-  "liberte-expression",
-  "liberte-politique",
-  "succession",
+  "travail",
+  "aides-etat",
+  "libertes-fondamentales",
+  "sante",
+  "securite",
+  "immigration",
+  "education",
+  "environnement",
+  "logement",
 ];
 
 const THEMES_POPULATED = new Set(["fiscalite", "pouvoir-achat"]);
 
 describe("themes.json", () => {
-  it("déclare exactement les 8 thèmes prévus, chacun avec id/libelle/description", () => {
-    expect(themes).toHaveLength(8);
+  it("déclare exactement les 11 thèmes prévus, chacun avec id/libelle/description", () => {
+    expect(themes).toHaveLength(11);
     const ids = themes.map((t) => t.id).sort();
     expect(ids).toEqual([...THEME_IDS].sort());
     for (const theme of themes) {
