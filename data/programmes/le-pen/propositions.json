@@ -115,5 +115,178 @@
     "hypotheses_calcul": "Le programme officiel ne fournit pas de chiffrage propre. L'Institut Montaigne a estimé le coût de la seule réindexation des pensions sur l'inflation sur un quinquennat à environ 35,6 milliards d'euros dans un scénario médian d'inflation, avec une fourchette de 22,8 à 58,6 milliards d'euros selon le scénario d'inflation retenu (basse ou haute) ; ce chiffrage, réalisé par un tiers indépendant, dépend donc fortement d'hypothèses macroéconomiques sur l'inflation future qui ne relèvent pas du programme de la candidate. Le montant de 1 000 €/mois pour le minimum vieillesse est cité tel quel dans la source primaire, sans indication du barème de ressources ou de durée de cotisation associé, ce qui empêche d'en chiffrer précisément l'impact sans hypothèse supplémentaire. Aucune version re-chiffrée spécifiquement pour 2027 n'a été identifiée à la date de recherche (15/09/2026) ; le RN indique par ailleurs (compte rendu de presse, mai 2026) que l'arbitrage sur les retraites restait, à cette date, l'un des points non encore tranchés de son programme 2027.",
     "statut": "complet",
     "date_derniere_verification": "2026-09-15"
+  },
+  {
+    "id": "le-pen-sante-001",
+    "candidat": "le-pen",
+    "theme": "sante",
+    "titre": "Plan de soutien d'urgence pour la santé de 20 milliards d'euros",
+    "resume_factuel": "Marine Le Pen propose un « plan de soutien d'urgence pour la santé » doté d'une enveloppe de 20 milliards d'euros (soit 4 milliards d'euros par an sur le quinquennat, précision apportée lors de la présentation de son programme santé le 20 janvier 2022). Ce plan comprend plusieurs volets : un moratoire immédiat sur les fermetures de lits d'hôpitaux et de maternités (la candidate évoquant environ 100 000 lits fermés en vingt ans), une revalorisation des salaires du personnel soignant — dont une hausse de 10 % des salaires infirmiers pour les rapprocher de la moyenne européenne —, le recrutement de personnel (un taux de postes vacants d'environ 30 % dans les hôpitaux publics étant avancé par la candidate), la création d'urgences gériatriques, un investissement dans les équipements d'imagerie médicale et une relocalisation partielle de la production pharmaceutique, ainsi que des mesures de lutte contre les déserts médicaux (modulation des tarifs de consultation selon la zone d'installation, développement de la télémédecine). Le site de campagne mlafrance.fr, toujours en ligne, confirme l'existence de ce plan et de ses grands axes mais n'en détaille pas la répartition complète ; cette répartition (10 Md€ pour les salaires et le recrutement, 10 Md€ pour l'investissement) et le plan de financement annoncé (15 Md€ attendus de la lutte contre la fraude sociale, 18 Md€ attendus d'économies liées à la politique migratoire) ont été rapportés par la presse médicale professionnelle lors de la présentation du programme.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr — Programme officiel de Marine Le Pen (mesure santé : plan de soutien d'urgence de 20 Md€ pour la santé)",
+        "url": "https://mlafrance.fr/programme"
+      },
+      {
+        "type": "secondaire",
+        "label": "SFMU (Société Française de Médecine d'Urgence) — « Gouvernance, revalorisations des soignants, déserts médicaux : Marine Le Pen présente son programme santé » (20 janvier 2022)",
+        "url": "https://www.sfmu.org/fr/actualites/actualites-de-l-urgences/gouvernance-revalorisations-des-soignants-deserts-medicaux-marine-le-pen-presente-son-programme-sante/new_id/68078"
+      },
+      {
+        "type": "secondaire",
+        "label": "Egora (presse médicale professionnelle) — « Suppression des ARS, hausse des salaires à l'hôpital, réforme de l'AME... Marine Le Pen détaille son plan santé » (21 janvier 2022)",
+        "url": "https://www.egora.fr/actus-pro/politiques/suppression-des-ars-hausse-des-salaires-lhopital-reforme-de-lame-marine-le-pen"
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Le chiffrage de 20 milliards d'euros (4 Md€/an) est un chiffre donné par la candidate elle-même ; aucune contre-expertise indépendante de cette enveloppe globale n'a été identifiée à la date de recherche. Son financement annoncé repose pour partie sur deux hypothèses elles-mêmes non chiffrées de façon indépendante dans les sources consultées : 15 milliards d'euros attendus de la lutte contre la fraude sociale, et 18 milliards d'euros attendus de la politique migratoire. Ce dernier montant est sensiblement supérieur au chiffrage propre à la candidate pour l'ensemble de son programme de réduction des aides aux étrangers lors de la même campagne (environ 16,1 Md€/an au total, cf. fiche immigration « Réforme de l'immigration par référendum »), ce qui interroge sur la cohérence interne du plan de financement annoncé sans qu'il soit possible de trancher, les deux chiffres provenant de présentations distinctes du programme. Aucune version rechiffrée spécifiquement pour 2027 n'a été identifiée à la date de recherche (16/09/2026) ; les montants ci-dessus datent de la présentation du programme santé du 20 janvier 2022.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-16"
+  },
+  {
+    "id": "le-pen-sante-002",
+    "candidat": "le-pen",
+    "theme": "sante",
+    "titre": "Suppression des agences régionales de santé (ARS) et réforme de la gouvernance hospitalière",
+    "resume_factuel": "Marine Le Pen propose de supprimer les agences régionales de santé (ARS), qu'elle présente comme des structures coûteuses incarnant une logique de gestion budgétaire de la santé qu'elle rejette, et de transférer le pilotage territorial de la santé aux préfets. Elle propose une gouvernance hospitalière à deux têtes, associant un directeur administratif et un directeur médical, un plafonnement des postes administratifs à 10 % des effectifs hospitaliers (les agents administratifs qualifiés étant réorientés vers des fonctions de soin), ainsi qu'un abandon de la tarification à l'activité (T2A) au profit d'un retour à une logique de budgétisation globale des établissements. Le site de campagne mlafrance.fr confirme la suppression des ARS et la réduction de 90 % des postes administratifs, mais ne détaille pas le mécanisme de transfert de compétences aux préfets ni de calendrier ; ce mécanisme ainsi que la position de la candidate sur la tarification à l'activité sont documentés par la presse médicale professionnelle (Le Quotidien du Médecin, Egora), qui rapportent ses déclarations lors de la présentation de son programme santé en janvier-février 2022.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr — Programme officiel de Marine Le Pen (mesure santé : suppression des ARS, réduction de 90 % des postes administratifs à l'hôpital)",
+        "url": "https://mlafrance.fr/programme"
+      },
+      {
+        "type": "secondaire",
+        "label": "Le Quotidien du Médecin (presse médicale professionnelle) — « Marine Le Pen (RN) : \"La tarification à l'activité a placé l'hôpital dans une ornière comptable\" » (11 février 2022)",
+        "url": "https://www.lequotidiendumedecin.fr/actus-medicales/politique-de-sante/marine-le-pen-rn-la-tarification-lactivite-place-lhopital-dans-une-orniere-comptable"
+      },
+      {
+        "type": "secondaire",
+        "label": "Egora (presse médicale professionnelle) — « Suppression des ARS, hausse des salaires à l'hôpital, réforme de l'AME... Marine Le Pen détaille son plan santé » (21 janvier 2022)",
+        "url": "https://www.egora.fr/actus-pro/politiques/suppression-des-ars-hausse-des-salaires-lhopital-reforme-de-lame-marine-le-pen"
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Ni le programme officiel ni les sources de presse professionnelle consultées (Le Quotidien du Médecin, Egora, ainsi que la fiche SFMU citée dans la proposition sur le plan santé de 20 Md€) ne fournissent de chiffrage propre à cette réforme de gouvernance — ni économies attendues de la suppression des ARS et de la réduction des effectifs administratifs, ni coût de transition vers un pilotage préfectoral de la santé. Ces sources ont été vérifiées spécifiquement sur ce point avant de conclure à l'absence de chiffrage disponible. L'abandon de la tarification à l'activité est présenté par la candidate comme un principe de réforme sans mécanisme de financement alternatif détaillé dans les sources consultées, ce qui rend une évaluation chiffrée indépendante impossible en l'état de la recherche.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-16"
+  },
+  {
+    "id": "le-pen-secu-001",
+    "candidat": "le-pen",
+    "theme": "securite",
+    "titre": "Rétablissement de peines plancher pour l'ensemble des crimes et délits et suppression des réductions de peine automatiques",
+    "resume_factuel": "Marine Le Pen et le Rassemblement National proposent de rétablir des peines minimales obligatoires (« peines plancher ») pour l'ensemble des crimes et délits, ainsi que de supprimer les réductions et aménagements de peine automatiques, en particulier pour les faits de violence (mlafrance.fr). Cette orientation a été portée sous forme législative par le groupe RN à l'Assemblée nationale : la proposition de loi n° 262 « tendant à l'instauration de peines planchers pour certains crimes et délits », déposée par la députée Pascale Bordes et plusieurs collègues du groupe RN le 17 septembre 2024, prévoyait des peines planchers en cas de récidive légale ainsi que, pour certains crimes et délits, en dehors de toute récidive. Le texte a été rejeté par la commission des lois de l'Assemblée nationale (rapport déposé le 23 octobre 2024) puis examiné en séance publique le 31 octobre 2024, séance lors de laquelle plusieurs groupes, dont le groupe majoritaire Ensemble pour la République, avaient annoncé leur intention de déposer des amendements de suppression. Ni le dossier législatif officiel de l'Assemblée nationale ni l'article de LCP consulté ne permettent de confirmer avec certitude, à la date de recherche, le résultat détaillé du vote en séance publique du 31 octobre 2024 ; ce point reste documenté de façon incomplète malgré la vérification effectuée. Le programme officiel de la candidate ne précise par ailleurs pas les seuils de peine envisagés par catégorie d'infraction.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr — Programme officiel de Marine Le Pen (mesure sécurité : rétablissement des peines plancher, suppression des réductions de peine automatiques)",
+        "url": "https://mlafrance.fr/programme"
+      },
+      {
+        "type": "primaire",
+        "label": "Assemblée nationale — Dossier législatif : Proposition de loi n° 262 tendant à l'instauration de peines planchers pour certains crimes et délits (17e législature)",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/peines_planchers_crimes_delits"
+      },
+      {
+        "type": "secondaire",
+        "label": "LCP (La Chaîne Parlementaire) — « Expulsions, peines planchers : quelle réponse de la droite face à la stratégie piégeuse du Rassemblement national ? »",
+        "url": "https://lcp.fr/actualites/expulsions-peines-planchers-quelle-reponse-de-la-droite-face-a-la-strategie-piegeuse-du"
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage budgétaire (coût lié à une éventuelle hausse de la population carcérale, coûts de fonctionnement de la justice) n'a été identifié pour cette mesure spécifique, ni de la part de la candidate ou du parti, ni dans les sources consultées (dossier législatif de l'Assemblée nationale, article LCP) — ces sources ont été vérifiées spécifiquement sur ce point avant de conclure à l'absence de chiffrage disponible.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-16"
+  },
+  {
+    "id": "le-pen-secu-002",
+    "candidat": "le-pen",
+    "theme": "securite",
+    "titre": "Atteindre 85 000 places de prison en 2027 et doubler le nombre de magistrats",
+    "resume_factuel": "Marine Le Pen propose de porter la capacité du parc pénitentiaire français à 85 000 places d'ici 2027 (contre environ 60 750 places opérationnelles au 1er janvier 2022) et de doubler le nombre de magistrats pour porter leurs effectifs à environ 16 000. Selon la candidate (interview sur Europe 1 et déplacement à Brest, 1er février 2022), ces deux objectifs s'inscrivent dans une enveloppe globale de 7,5 milliards d'euros sur le quinquennat destinée à « reconstruire toute la chaîne pénale » (police, magistrature, établissements pénitentiaires), une loi spécifique devant selon elle être adoptée pour accélérer les constructions pénitentiaires. Le programme officiel (mlafrance.fr) confirme les deux objectifs chiffrés (85 000 places, doublement des magistrats) mais ne détaille pas la répartition de l'enveloppe de 7,5 Md€ entre les différents volets du paquet (construction pénitentiaire, recrutement et rémunération des magistrats, logement des policiers, autres mesures), ni le type d'établissements pénitentiaires à construire — un paramètre qui influe fortement sur le coût unitaire de construction.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr — Programme officiel de Marine Le Pen (mesures sécurité/justice : 85 000 places de prison en 2027, doublement du nombre de magistrats)",
+        "url": "https://mlafrance.fr/programme"
+      },
+      {
+        "type": "secondaire",
+        "label": "Arab News (édition française, dépêche AFP) — « Présidentielle : Marine Le Pen veut débloquer 7,5 milliards d'euros pour la police et la justice » (1er février 2022)",
+        "url": "https://www.arabnews.fr/france/presidentielle-marine-le-pen-veut-debloquer-75-milliards-deuros-pour-la-police-et-la-justice-199896"
+      },
+      {
+        "type": "secondaire",
+        "label": "AEF info — « Le \"plan 15 000 places de prison\" [de l'État] connaît de forts dérapages financiers et calendaires, selon la Cour des comptes » (17 décembre 2025) — cité ici uniquement comme élément de contexte sur la difficulté à anticiper le coût de programmes de construction pénitentiaire, ce plan étant distinct de la proposition de la candidate",
+        "url": "https://www.aefinfo.fr/depeche/743056-le-plan-15-000-places-de-prison-connait-de-forts-derapages-financiers-et-calendaires-selon-la-cour-des-comptes"
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Le chiffre de 7,5 milliards d'euros est celui annoncé par la candidate elle-même ; aucun détail public sur sa répartition entre construction pénitentiaire, recrutement/rémunération des magistrats supplémentaires, logement des policiers et autres mesures du même paquet n'a été identifié. Une recherche a permis d'identifier l'existence probable d'une fiche de chiffrage indépendante consacrée spécifiquement à l'objectif de 85 000 places de prison chez un think tank (Institut Montaigne), mais la page correspondante s'est révélée inaccessible en vérification directe (protection anti-robot du site empêchant la lecture de la page) ; conformément à l'exigence de vérifier chaque source avant de la citer, elle n'a donc pas été retenue comme source de cette fiche. À titre de contexte indépendant vérifié, le plan pénitentiaire distinct « 15 000 places » porté par l'État (non lié à la candidate) connaît, selon la Cour des comptes (repris par AEF info, décembre 2025), d'importants dérapages financiers et calendaires, ce qui illustre la difficulté générale à anticiper le coût réel de programmes de construction pénitentiaire de cette ampleur, sans permettre de chiffrer précisément la proposition de la candidate elle-même.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-16"
+  },
+  {
+    "id": "le-pen-immi-001",
+    "candidat": "le-pen",
+    "theme": "immigration",
+    "titre": "Réforme de l'immigration par référendum : priorité nationale, fin de l'immigration familiale, asile traité hors de France",
+    "resume_factuel": "Marine Le Pen propose de soumettre à référendum une réforme donnant la priorité aux citoyens français dans l'accès aux prestations sociales, au logement et à l'emploi (« priorité nationale »), ces droits étant réservés aux Français ou aux étrangers ayant travaillé en France depuis au moins cinq ans ; de mettre fin à l'immigration familiale (regroupement familial) ; de ne traiter les demandes d'asile qu'à l'extérieur du territoire français ; d'annuler les titres de séjour des étrangers sans emploi depuis plus d'un an ; d'expulser systématiquement les étrangers en situation irrégulière et les étrangers délinquants condamnés ; et de supprimer le droit du sol automatique, la naturalisation devant reposer sur des critères de mérite (mlafrance.fr). Le mécanisme retenu par la candidate pour la partie de ces mesures nécessitant une modification de la Constitution est un référendum fondé sur l'article 11.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr — Programme officiel de Marine Le Pen (mesures immigration : référendum, priorité nationale, fin de l'immigration familiale, asile traité hors de France, expulsions, fin du droit du sol automatique)",
+        "url": "https://mlafrance.fr/programme"
+      },
+      {
+        "type": "secondaire",
+        "label": "Public Sénat — « Immigration : le référendum voulu par Marine Le Pen est-il constitutionnel ? » (29 septembre 2021)",
+        "url": "https://www.publicsenat.fr/actualites/politique/immigration-le-referendum-voulu-par-marine-le-pen-est-il-constitutionnel-190598"
+      },
+      {
+        "type": "secondaire",
+        "label": "Arab News (édition française, dépêche AFP) — « Allocations et immigration : Le Pen détaille les 16 milliards d'euros par an qu'elle entend économiser » (2 décembre 2021)",
+        "url": "https://www.arabnews.fr/france/allocations-et-immigration-le-pen-detaille-les-16-milliards-deuros-par-an-quelle-entend-economiser-175171"
+      },
+      {
+        "type": "secondaire",
+        "label": "Public Sénat — « Contre-budget du RN : \"des propositions qui manquent de crédibilité économique, mais trahissent une véritable cohérence doctrinale\" » (24 octobre 2025)",
+        "url": "https://www.publicsenat.fr/actualites/economie/contre-budget-du-rn-des-propositions-qui-manquent-de-credibilite-economique-mais-trahissent-une-veritable-coherence-doctrinale"
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Deux enjeux distincts ressortent des sources consultées. (1) Constitutionnalité : plusieurs constitutionnalistes cités par Public Sénat (29 septembre 2021) estiment que le champ de l'article 11 de la Constitution (matières « économique, sociale ou environnementale ») ne couvre pas des sujets touchant aux libertés fondamentales comme la priorité nationale et l'immigration, ce qui imposerait de réviser d'abord l'article 11 lui-même par la procédure de l'article 89 (nécessitant l'accord du Parlement, y compris du Sénat) avant de pouvoir organiser le référendum envisagé ; d'autres fragilités juridiques sont relevées (compatibilité avec le droit européen, rétroactivité de certaines mesures d'expulsion). Cet article date de la campagne 2021-2022 ; aucune analyse juridique plus récente et spécifique à une éventuelle version 2027 de cette proposition n'a été identifiée à la date de recherche (16/09/2026), mais le mécanisme (référendum, priorité nationale) demeure constant dans le programme actuellement en ligne sur mlafrance.fr. (2) Chiffrage : lors de la campagne 2022, la candidate avait chiffré l'ensemble de son programme de réduction des aides aux étrangers à environ 80,5 milliards d'euros sur le quinquennat (soit environ 16,1 Md€/an), détaillé en six sous-mesures par l'AFP (2 décembre 2021) : restriction des allocations familiales aux foyers ayant au moins un parent français (15,6 Md€/5 ans), limitation du RSA, de la prime d'activité, de l'AAH et des aides au logement aux étrangers ayant travaillé au moins 5 ans à temps plein (21,9 Md€), expulsion des étrangers sans emploi depuis un an (5,4 Md€), réduction de 75 % des flux d'immigration familiale (2,4 Md€), réforme de l'asile dont la fin de l'accueil des mineurs non accompagnés (30,7 Md€), et remplacement de l'AME par une aide d'urgence vitale (4,5 Md€ — voir aussi la fiche dédiée à cette mesure). La même dépêche rapporte que des économistes et la Caisse nationale des allocations familiales (Cnaf) ont contesté ces chiffres, relevant que l'ensemble des prestations versées à des étrangers représentait alors environ 9 milliards d'euros par an et que l'impact budgétaire net de l'immigration, contributions fiscales des immigrés actifs déduites, serait quasi négligeable selon eux. Plus récemment, dans le cadre du débat sur le budget 2026, Public Sénat (24 octobre 2025) rapporte que le RN chiffrait à 11,9 milliards d'euros les économies attendues de mesures ciblant les étrangers dans son « contre-budget » — un chiffre obtenu dans un contexte et un périmètre différents de celui de 2022 et non directement comparable terme à terme. Un économiste cité (Éric Delannoy, Tenzing Conseil) y juge inatteignables les niveaux d'économies revendiqués par le RN au vu des comptes de la branche famille ; l'article relève qu'une mesure comparable proposée par Les Républicains n'était chiffrée qu'à 2,1 milliards d'euros, et que des dispositions similaires avaient déjà été censurées par le passé par le Conseil constitutionnel.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-16"
+  },
+  {
+    "id": "le-pen-immi-002",
+    "candidat": "le-pen",
+    "theme": "immigration",
+    "titre": "Suppression de l'aide médicale d'État (AME) et remplacement par une « aide d'urgence vitale »",
+    "resume_factuel": "Marine Le Pen et le Rassemblement National proposent de supprimer l'aide médicale d'État (AME), qui permet la prise en charge des soins des étrangers en situation irrégulière, et de la remplacer par une « aide d'urgence vitale » limitée aux soins urgents mettant en jeu le pronostic vital ou pouvant entraîner une altération grave et durable de l'état de santé. Cette mesure, issue du programme présidentiel de la candidate, a été portée sous forme de proposition de loi (n° 1473) déposée à l'Assemblée nationale le 4 juillet 2023 par les députées RN Julie Lechanteux et Lionel Tivoli ainsi que Marine Le Pen et plusieurs membres du groupe RN ; le texte a été renvoyé à la commission des affaires sociales. Le dossier législatif officiel ne fait état d'aucune suite (examen en commission, discussion en séance) après ce renvoi ; la 16e législature ayant pris fin avec la dissolution de l'Assemblée nationale en juin 2024, il n'a pas été possible de confirmer, à la date de recherche, si le texte a été formellement déclaré caduc ou simplement resté sans suite avant la dissolution.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "Assemblée nationale — Proposition de loi n° 1473 portant sur la suppression de l'aide médicale de l'État au profit de la création de l'aide d'urgence vitale (Julie Lechanteux, Lionel Tivoli, Marine Le Pen et membres du groupe RN, 4 juillet 2023)",
+        "url": "https://www.assemblee-nationale.fr/dyn/16/textes/l16b1473_proposition-loi"
+      },
+      {
+        "type": "primaire",
+        "label": "Assemblée nationale — Dossier législatif : Supprimer l'aide médicale de l'État au profit de la création de l'aide d'urgence vitale (16e législature)",
+        "url": "https://www.assemblee-nationale.fr/dyn/16/dossiers/supp_ame"
+      },
+      {
+        "type": "secondaire",
+        "label": "franceinfo — « Législatives 2024 : école, AME, complémentaire santé... L'Institut Montaigne chiffre les principales mesures sur les services publics » (reprenant le chiffrage indépendant de l'Institut Montaigne pour cette mesure)",
+        "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-2024-ecole-ame-complementaire-sante-l-institut-montaigne-chiffre-les-principales-mesures-sur-les-services-publics_6629019.html"
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Le RN a chiffré cette mesure, lors de la campagne présidentielle 2022, à 4,5 milliards d'euros d'économies sur le quinquennat (soit environ 0,9 Md€/an), dans le cadre du chiffrage global de son programme migratoire (source : AFP, 2 décembre 2021 — voir la fiche « Réforme de l'immigration par référendum »). Une évaluation indépendante distincte, réalisée par l'Institut Montaigne dans le cadre du chiffrage de son programme pour les élections législatives de 2024 et rapportée par franceinfo (article vérifié directement), estime l'économie annuelle nette à environ 700 millions d'euros, avec la réserve explicite que la mise en œuvre de la mesure pourrait générer des coûts supplémentaires non négligeables liés à une propagation de maladies contagieuses au sein de la population générale. Ces deux chiffrages, obtenus dans des contextes électoraux différents (présidentielle 2022 pour le chiffre du RN, législatives 2024 pour la contre-expertise de l'Institut Montaigne), ne portent pas nécessairement sur le même périmètre ni la même méthodologie et ne doivent donc pas être directement additionnés ou assimilés l'un à l'autre ; ils sont présentés ici tels que trouvés dans les sources consultées, sans tentative de réconciliation.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-16"
   }
 ]
