@@ -13,7 +13,8 @@ export default function Accueil({ onCommencer }: AccueilProps) {
       <h1>Simulateur d'impact personnel — Présidentielle 2027</h1>
       <p>
         Cet outil projette, pour votre situation personnelle, ce que changerait l'élection de
-        chacun des principaux candidats, thème par thème. Voici les thèmes couverts :
+        chacun des principaux candidats, thème par thème. Trois candidats sont couverts à ce
+        stade, toujours présentés par ordre alphabétique. Voici les thèmes couverts :
       </p>
       <ul>
         {themesTypes.map((theme) => (

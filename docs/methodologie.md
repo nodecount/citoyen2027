@@ -51,3 +51,22 @@ documentée et correctement sourcée (par exemple : « le site officiel ne préc
 mécanisme », avec la source à l'appui). À l'inverse, `"partiel"` ou `"provisoire"` signalent
 un travail de recherche lui-même inachevé (sources manquantes, vérification à compléter),
 indépendamment du degré de précision du programme rapporté.
+
+## Le moteur
+
+Par défaut (`evaluerParDefaut`), le moteur traite toute proposition comme universelle et
+qualitative : il relaie le `resume_factuel` tel quel, et, si un chiffrage existe, l'ajoute
+avec un avertissement explicite que c'est un chiffrage macro (coût ou gain au niveau
+national) et non un montant par ménage — jamais un chiffre inventé et personnalisé.
+
+Une proposition ne reçoit une règle d'éligibilité dédiée (`src/engine/regles.ts`) que si une
+condition est réellement déterminable à partir des champs actuels du profil (âge, statut
+professionnel, tranche de revenus, tranche de patrimoine...). Toutes les autres propositions
+restent sur le comportement par défaut ci-dessus ; ce n'est pas un oubli mais une limite de
+granularité du profil, à combler au fur et à mesure.
+
+Quand une règle ne teste qu'une partie d'une proposition composée de plusieurs volets
+(exemple : une mesure qui combine un volet fiscal chiffrable et un volet non chiffrable), son
+texte « non concerné » doit être scopé à ce volet précis — jamais affirmer que la mesure dans
+son ensemble ne s'applique pas au profil, ce qui serait factuellement faux pour les volets non
+testés.

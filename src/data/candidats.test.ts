@@ -1,4 +1,5 @@
 import { describe, it, expect } from "vitest";
+import { regles } from "../engine/regles";
 import themesRaw from "../../data/themes.json";
 import lePenMetaRaw from "../../data/programmes/le-pen/meta.json";
 import lePenPropsRaw from "../../data/programmes/le-pen/propositions.json";
@@ -91,5 +92,15 @@ describe("ids des propositions", () => {
     const ids = allProps.map((p) => p.id);
     expect(ids.length).toBe(12);
     expect(new Set(ids).size).toBe(ids.length);
+  });
+});
+
+describe("regles (src/engine/regles.ts)", () => {
+  it("chaque clé de `regles` correspond à un id de proposition réel existant", () => {
+    const allProps = [...lePenProps, ...melenchonProps, ...philippeProps];
+    const idsConnus = new Set(allProps.map((p) => p.id));
+    for (const cle of Object.keys(regles)) {
+      expect(idsConnus.has(cle)).toBe(true);
+    }
   });
 });

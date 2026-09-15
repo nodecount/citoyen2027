@@ -60,6 +60,9 @@ export interface Profil {
   tranche_patrimoine: string;
 }
 
+// "chiffre_macro_seulement" est une valeur réservée / prospective : aucune règle actuelle
+// ne la produit (le moteur ne produit aujourd'hui que "qualitatif"). Elle est conservée pour
+// le jour où une règle relaiera un chiffre macro sans personnalisation complète par profil.
 export type NiveauCertitude = "chiffre_personnalise" | "chiffre_macro_seulement" | "qualitatif";
 
 export interface Impact {
