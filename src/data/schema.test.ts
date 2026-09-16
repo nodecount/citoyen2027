@@ -20,7 +20,7 @@ const THEME_IDS = [
   "logement",
 ];
 
-const THEMES_POPULATED = new Set(["fiscalite", "pouvoir-achat"]);
+const THEMES_POPULATED = new Set(["fiscalite", "pouvoir-achat", "sante", "securite", "immigration"]);
 
 describe("themes.json", () => {
   it("déclare exactement les 11 thèmes prévus, chacun avec id/libelle/description", () => {

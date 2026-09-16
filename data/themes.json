@@ -4,9 +4,9 @@
   { "id": "travail", "libelle": "Travail", "description": "Droit du travail, chômage, retraite, conditions d'emploi.", "statut": "provisoire" },
   { "id": "aides-etat", "libelle": "Aides de l'État", "description": "Prestations sociales, allocations, aides ciblées.", "statut": "provisoire" },
   { "id": "libertes-fondamentales", "libelle": "Libertés fondamentales", "description": "Libertés civiles, liberté d'expression et de la presse, droit de vote et pluralisme politique.", "statut": "provisoire" },
-  { "id": "sante", "libelle": "Santé", "description": "Système de santé, hôpital, accès aux soins, assurance maladie.", "statut": "provisoire" },
-  { "id": "securite", "libelle": "Sécurité", "description": "Sécurité intérieure, délinquance, police, justice pénale.", "statut": "provisoire" },
-  { "id": "immigration", "libelle": "Immigration", "description": "Politique migratoire, droit d'asile, intégration.", "statut": "provisoire" },
+  { "id": "sante", "libelle": "Santé", "description": "Système de santé, hôpital, accès aux soins, assurance maladie.", "statut": "populated" },
+  { "id": "securite", "libelle": "Sécurité", "description": "Sécurité intérieure, délinquance, police, justice pénale.", "statut": "populated" },
+  { "id": "immigration", "libelle": "Immigration", "description": "Politique migratoire, droit d'asile, intégration.", "statut": "populated" },
   { "id": "education", "libelle": "Éducation", "description": "École, enseignement supérieur, formation.", "statut": "provisoire" },
   { "id": "environnement", "libelle": "Environnement", "description": "Climat, transition écologique, politique environnementale.", "statut": "provisoire" },
   { "id": "logement", "libelle": "Logement", "description": "Accès au logement, construction, aides au logement, urbanisme.", "statut": "provisoire" }

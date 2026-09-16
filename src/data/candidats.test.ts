@@ -19,7 +19,7 @@ const philippeProps: Proposition[] = philippePropsRaw as Proposition[];
 
 const THEME_IDS = new Set(themes.map((t) => t.id));
 const STATUTS = new Set(["complet", "partiel", "provisoire"]);
-const THEMES_PEUPLES = ["fiscalite", "pouvoir-achat"];
+const THEMES_PEUPLES = ["fiscalite", "pouvoir-achat", "sante", "securite", "immigration"];
 
 const candidats = [
   { slug: "le-pen", meta: lePenMeta, propositions: lePenProps },
@@ -87,10 +87,10 @@ describe.each(candidats)("candidat $slug", ({ slug, meta, propositions }) => {
 });
 
 describe("ids des propositions", () => {
-  it("les 12 ids de propositions, tous candidats confondus, sont uniques", () => {
+  it("les ids de propositions, tous candidats confondus, sont uniques", () => {
     const allProps = [...lePenProps, ...melenchonProps, ...philippeProps];
     const ids = allProps.map((p) => p.id);
-    expect(ids.length).toBe(12);
+    expect(ids.length).toBe(30);
     expect(new Set(ids).size).toBe(ids.length);
   });
 });
