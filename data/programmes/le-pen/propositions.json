@@ -98,7 +98,7 @@
     "candidat": "le-pen",
     "theme": "pouvoir-achat",
     "titre": "Réindexation des pensions de retraite sur l'inflation et revalorisation du minimum vieillesse à 1 000 € par mois",
-    "resume_factuel": "Marine Le Pen propose de réindexer les pensions de retraite sur l'inflation et de revaloriser le minimum vieillesse (ASPA) à 1 000 euros par mois. Ces deux mesures figurent dans son programme officiel de campagne, sans précision, dans la source primaire consultée, sur les conditions d'éligibilité (durée de cotisation, ressources du foyer) ni sur le calendrier de mise en œuvre.",
+    "resume_factuel": "Marine Le Pen propose de réindexer les pensions de retraite sur l'inflation et de revaloriser le minimum vieillesse (ASPA) à 1 000 euros par mois. Ces deux mesures figurent dans son programme officiel de campagne, sans précision, dans la source primaire consultée, sur les conditions d'éligibilité (durée de cotisation, ressources du foyer) ni sur le calendrier de mise en œuvre. Cette même mesure est également présentée, sous l'angle du travail, dans la section consacrée à ce thème : le même bloc du programme officiel (mesure 9, consacrée aux retraites) comprend aussi le refus de tout allongement de l'âge légal de départ et le maintien d'un départ à 60 ans pour les carrières longues, un volet distinct (l'âge de départ, non le montant des pensions) documenté dans cette fiche travail plutôt que répété ici.",
     "sources": [
       {
         "type": "primaire",
@@ -546,6 +546,11 @@
         "url": "https://mlafrance.fr/programme"
       },
       {
+        "type": "primaire",
+        "label": "Rassemblement National — « 22 mesures » (mesure 8 : part fiscale complète dès le 2e enfant, doublement du soutien aux mères isolées, prêt à taux zéro pour les jeunes familles transformé en subvention au 3e enfant)",
+        "url": "https://rassemblementnational.fr/22-mesures"
+      },
+      {
         "type": "secondaire",
         "label": "Public Sénat — « Présidentielle 2022 : le chiffrage des programmes d'Emmanuel Macron et Marine Le Pen » (21 avril 2022)",
         "url": "https://www.publicsenat.fr/actualites/non-classe/presidentielle-2022-le-chiffrage-des-programmes-d-emmanuel-macron-et-marine-le-pen"
@@ -599,16 +604,11 @@
       {
         "type": "secondaire",
         "label": "Wikipédia — article « Référendum d'initiative citoyenne » (source encyclopédique collaborative, citée ici comme source secondaire d'appoint pour l'historique de la proposition portée par le FN/RN depuis 1987 et le seuil de 500 000 signatures précisé en 2022, faute d'accès à un article de presse dédié lors de cette recherche)",
-          "url": "https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rendum_d%27initiative_citoyenne"
-      },
-      {
-        "type": "secondaire",
-        "label": "Wikipédia — article « Rassemblement national » (source encyclopédique collaborative, citée ici comme source secondaire d'appoint pour le contexte historique du soutien du parti à la proportionnelle depuis 1986, faute d'accès à un article de presse dédié lors de cette recherche)",
-        "url": "https://fr.wikipedia.org/wiki/Rassemblement_national"
+        "url": "https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rendum_d%27initiative_citoyenne"
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "Il s'agit d'une réforme institutionnelle et électorale, non d'une mesure de dépense ou de recette publique ; aucun chiffrage budgétaire n'a été identifié ni recherché comme pertinent pour ce type de mesure, à l'exception d'éventuels coûts d'organisation de scrutins supplémentaires liés au RIC, non chiffrés dans les sources consultées. Le mécanisme précis d'adoption d'un RIC aux caractéristiques décrites (seuil de 500 000 signatures, possibilité d'abroger une loi existante) — notamment la question de savoir s'il nécessiterait une révision constitutionnelle plutôt qu'une simple loi ordinaire ou organique — n'est pas documenté avec précision dans les sources consultées lors de cette recherche et n'est donc pas tranché ici.",
+    "hypotheses_calcul": "Il s'agit d'une réforme institutionnelle et électorale, non d'une mesure de dépense ou de recette publique ; aucun chiffrage budgétaire n'a été identifié ni recherché comme pertinent pour ce type de mesure, à l'exception d'éventuels coûts d'organisation de scrutins supplémentaires liés au RIC, non chiffrés dans les sources consultées. Le mécanisme précis d'adoption d'un RIC aux caractéristiques décrites (seuil de 500 000 signatures, possibilité d'abroger une loi existante) — notamment la question de savoir s'il nécessiterait une révision constitutionnelle plutôt qu'une simple loi ordinaire ou organique — n'est pas documenté avec précision dans les sources consultées lors de cette recherche et n'est donc pas tranché ici. Sur le volet proportionnelle : aucune source consultée lors de cette recherche ne documente une revendication historique du FN/RN en faveur de la proportionnelle (une première vérification avait cru l'établir via l'article Wikipédia « Rassemblement national », mais un second contrôle direct de cet article a montré qu'il ne fait que mentionner le scrutin proportionnel utilisé aux élections législatives de 1986 — un choix du gouvernement Mitterrand — sans indiquer que le FN/RN en aurait fait la demande ou en aurait revendiqué le principe ; cette source a donc été retirée). Le soutien actuel de la candidate à la proportionnelle repose uniquement, dans cette fiche, sur les deux sources primaires (mlafrance.fr, rassemblementnational.fr) et n'est pas présenté comme une position historique documentée au-delà de 2022.",
     "statut": "complet",
     "date_derniere_verification": "2026-09-16"
   },
