@@ -95,5 +95,153 @@
     "hypotheses_calcul": "Ni le site officiel de campagne ni l'article secondaire consulté ne précisent le montant plafond du prêt, ses éventuelles conditions de ressources, sa durée, ou son coût pour les finances publiques (par exemple sous forme de bonification d'intérêts prise en charge par l'État), ce qui empêche tout chiffrage à la date de recherche. Il existe par ailleurs une divergence entre la condition de rang de naissance mentionnée en décembre 2025 (prêt conditionné à un deuxième ou un troisième enfant) et la formulation plus large retenue en septembre 2026 sur le site de campagne (« pour chaque naissance », sans condition de rang explicite) ; faute de clarification identifiée dans les sources consultées, les deux formulations sont rapportées telles quelles sans trancher entre elles.",
     "statut": "complet",
     "date_derniere_verification": "2026-09-15"
+  },
+  {
+    "id": "philippe-sante-001",
+    "candidat": "philippe",
+    "theme": "sante",
+    "titre": "Stabiliser les dépenses de santé en misant sur la prévention et les transformations technologiques plutôt que sur la seule hausse des moyens",
+    "resume_factuel": "Dans le volet consacré au rétablissement des comptes publics de ses priorités « Pour une France plus prospère », Édouard Philippe propose de « stabiliser les dépenses de santé en dépensant mieux, en misant sur la prévention et les transformations technologiques plutôt que sur la seule hausse des moyens ». Le site officiel de campagne ne précise pas, à la date de recherche, le mécanisme concret envisagé (nature des transformations technologiques visées, ampleur ou calendrier de la stabilisation, économies attendues). Cette orientation recoupe des déclarations antérieures du candidat : lors d'un entretien accordé au média Legend (Guillaume Pley) le 21 septembre 2025, rapporté par la presse médicale professionnelle, Édouard Philippe avait déjà mis l'accent sur « davantage de prévention » et un « recours à l'IA » comme leviers pour améliorer l'accès aux soins, sans détailler à cette occasion de mesure chiffrée. Contrairement aux thèmes de la sécurité ou de l'immigration, le site officiel de campagne ne comporte, à la date de recherche, aucune page « priorités » spécifiquement dédiée à la santé (seules quatre pages de ce type existent, d'après le plan du site : « plus prospère », « plus attentive à ses enfants », « plus sûre », « plus conquérante ») ; cette phrase sur la stabilisation des dépenses de santé est la seule mention consacrée spécifiquement à ce thème sur l'ensemble du site officiel à la date de recherche.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — Priorités « Pour une France plus prospère » (mesure : stabiliser les dépenses de santé par la prévention et la technologie)",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere"
+      },
+      {
+        "type": "secondaire",
+        "label": "Le Quotidien du Médecin (presse médicale professionnelle) — « Édouard Philippe mise sur davantage de prévention et de recours à l'IA pour améliorer l'accès aux soins » (29 septembre 2025, rapportant un entretien du 21 septembre 2025 sur le média Legend)",
+        "url": "https://www.lequotidiendumedecin.fr/sante-societe/politique-de-sante/edouard-philippe-mise-sur-davantage-de-prevention-et-de-recours-lia-pour-ameliorer-lacces-aux-soins"
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Ni le site officiel ni l'article du Quotidien du Médecin ne fournissent de chiffrage (montant d'économies attendu, calendrier, dépenses de référence) permettant d'évaluer cette stabilisation ; ces deux sources ont été vérifiées spécifiquement sur ce point avant de conclure à l'absence de chiffrage disponible. L'objectif de « stabilisation » des dépenses de santé, dans un contexte de vieillissement de la population et de progrès thérapeutiques généralement inflationnistes en dépenses, pose une question de faisabilité qui n'est pas discutée par les sources consultées. Le constat que le site officiel de campagne ne consacre aucune page dédiée à la santé, alors que la sécurité, l'immigration, la famille et l'économie en disposent chacune d'une, est un élément factuel issu de la vérification du plan du site (sitemap.xml consulté à la date de recherche) ; il documente un degré de détail moindre du candidat sur ce thème par rapport à d'autres, sans qu'il soit possible d'en déduire l'absence d'un programme santé plus étoffé qui n'aurait pas encore été publié sur le site officiel.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-16"
+  },
+  {
+    "id": "philippe-sante-002",
+    "candidat": "philippe",
+    "theme": "sante",
+    "titre": "Accès aux soins et déserts médicaux : une note de cadrage du parti sans mesure nouvelle, et une position du candidat privilégiant l'auto-régulation de l'installation des médecins",
+    "resume_factuel": "En dehors de la mention générale sur la stabilisation des dépenses de santé (voir la fiche « philippe-sante-001 »), deux éléments documentent la position d'Édouard Philippe et de son parti sur l'accès aux soins et les déserts médicaux. D'une part, Horizons a publié en septembre 2022, sous la présidence d'Édouard Philippe, la première de ses « Notes d'Horizons » mensuelles, consacrée à « L'accès aux soins en France » ; cette note précise elle-même, dès ses premières lignes, qu'elle « a pour objectif de poser le cadre d'une réflexion de fond » et que « son contenu ne constitue en rien une prise de position d'Horizons » — il ne s'agit donc pas d'une mesure ou d'un engagement de campagne, mais d'un document de réflexion. D'autre part, interrogé sur la régulation de l'installation des médecins pour lutter contre les déserts médicaux (entretien à France Bleu Mayenne, rapporté le 15 février 2024), Édouard Philippe a indiqué qu'il aurait préféré que « les médecins libéraux s'entendent eux-mêmes sur des règles » pour réguler leur installation, tout en avertissant que, faute d'un tel accord, une règle serait « un jour ou l'autre... imposée par le pouvoir politique » ; il a qualifié une régulation contraignante immédiate de solution qui n'est « pas la solution idéale », et a mis en avant en priorité l'augmentation du nombre de médecins formés ainsi que la montée en compétences des professions paramédicales (infirmiers, pharmaciens) plutôt qu'une contrainte d'installation. Cette déclaration date de février 2024, avant la structuration officielle de sa candidature à l'élection présidentielle de 2027 ; aucune reformulation plus récente et spécifique à la campagne 2027 sur ce point précis n'a été identifiée dans les sources consultées à la date de recherche (16/09/2026).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "Horizons — Les Notes d'Horizons n°1, « L'accès aux soins en France » (septembre 2022, publiée sous la présidence d'Édouard Philippe)",
+        "url": "https://horizonsleparti.fr/wp-content/uploads/pdf/notes/n1/"
+      },
+      {
+        "type": "secondaire",
+        "label": "franceinfo — « Régulation de l'installation des médecins : \"S'ils ne trouvent pas eux-mêmes une règle, elle sera imposée par le pouvoir\", prévient Édouard Philippe » (15 février 2024)",
+        "url": "https://www.franceinfo.fr/sante/deserts-medicaux/regulation-de-l-installation-des-medecins-s-ils-ne-trouvent-pas-eux-memes-une-regle-elle-sera-imposee-par-le-pouvoir-previent-edouard-philippe_6367267.html"
+      },
+      {
+        "type": "secondaire",
+        "label": "What's up Doc (presse médicale professionnelle) — « Régulation de l'installation des médecins : pour Édouard Philippe, \"s'ils ne trouvent pas eux-mêmes une règle, elle sera imposée par le pouvoir\" » (15 février 2024)",
+        "url": "https://www.whatsupdoc-lemag.fr/article/regulation-de-linstallation-des-medecins-pour-edouard-philippe-sils-ne-trouvent-pas-eux"
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucune des sources consultées ne fournit de chiffrage (coût d'un éventuel dispositif de régulation, économies ou dépenses associées à un accroissement du nombre de médecins formés, coût de la montée en compétences des professions paramédicales) ; elles ont été vérifiées spécifiquement sur ce point avant de conclure à l'absence de chiffrage disponible. Le positionnement du candidat sur la régulation de l'installation des médecins reste, dans les sources consultées, volontairement non tranché : il n'exclut pas une régulation future tout en refusant de l'imposer immédiatement, ce qui rend difficile toute évaluation de l'impact concret de sa politique en la matière sans mesure supplémentaire ultérieure. La note d'Horizons de septembre 2022, de son côté, se présentant elle-même comme un document de réflexion et non de position, ne permet pas de documenter un engagement de campagne chiffré ou précis sur l'accès aux soins.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-16"
+  },
+  {
+    "id": "philippe-secu-001",
+    "candidat": "philippe",
+    "theme": "securite",
+    "titre": "Réforme de l'exécution des peines : peines courtes « à la nordique », peines plancher pour les infractions les plus graves, suppression du juge d'application des peines",
+    "resume_factuel": "Dans le volet « Rétablir l'autorité, la fermeté et l'efficacité de la Justice » de ses priorités « Pour une France plus sûre », Édouard Philippe propose de « mettre en place des courtes peines en s'inspirant des pays du Nord qui condamnent dès la première infraction à une peine courte et dissuasive plutôt que d'enfermer trop tard et trop longtemps », d'instaurer des « peines planchers pour les infractions les plus graves, en particulier lorsqu'elles portent atteinte à l'intégrité physique des personnes dépositaires de l'autorité publique », et de « supprimer le juge d'application des peines afin de garantir que ce qu'un juge a décidé ne soit pas défait par un autre que lui ». Le même volet prévoit une réforme du recrutement et de la formation des magistrats (ouverture à des professionnels issus d'autres secteurs du droit), un renforcement de la responsabilité des juges (révision de la composition du CSM, « devoir de redevabilité » à l'égard des victimes), un renforcement de l'autorité du garde des Sceaux sur le parquet par la possibilité d'adresser des instructions individuelles aux procureurs, et l'attribution aux maires d'un pouvoir de sanction pénale pour réprimer les petites infractions. Le candidat avait présenté une version très proche de ces mesures — peines plancher, incarcération dès la première infraction pour de courtes peines, suppression du juge d'application des peines, pouvoir de sanction pour les maires, réforme du recrutement des magistrats — lors d'un meeting à Marseille le 17 mai 2025, en expliquant vouloir mettre fin à un système où, selon lui, « la justice... est devenue presque hypocrite » du fait de l'écart entre peines prononcées et peines réellement exécutées. Ni le site officiel ni l'article rapportant le meeting de Marseille ne détaillent les seuils de peine envisagés par catégorie d'infraction, ni le nombre de places de détention supplémentaires qui seraient nécessaires pour appliquer une incarcération immédiate même pour de courtes peines.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — Priorités « Pour une France plus sûre » (volet « Rétablir l'autorité, la fermeté et l'efficacité de la Justice »)",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure"
+      },
+      {
+        "type": "secondaire",
+        "label": "Europe1 — « Justice : peines planchers, suppression du juge d'application des peines... Edouard Philippe formule des propositions en meeting à Marseille » (17 mai 2025)",
+        "url": "https://www.europe1.fr/politique/justice-peines-planchers-suppression-du-juge-dapplication-des-peines-edouard-philippe-formule-des-propositions-en-meeting-a-marseille-752761"
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage budgétaire (coût de places de détention supplémentaires pour permettre l'incarcération immédiate même de courtes peines, coût du recrutement et de la formation des magistrats visés, coût de la réforme du CSM) n'a été identifié dans le site officiel ni dans l'article Europe1 rapportant le meeting de Marseille du 17 mai 2025 ; ces deux sources ont été vérifiées spécifiquement sur ce point avant de conclure à l'absence de chiffrage disponible. La cohérence entre l'objectif d'incarcération immédiate y compris pour de courtes peines et la surpopulation carcérale déjà chronique en France — que le candidat lui-même a citée à Marseille comme l'une des causes du problème actuel — n'est pas discutée plus avant dans les sources consultées, alors qu'elle pourrait supposer un besoin de places de détention supplémentaires non chiffré à ce stade.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-16"
+  },
+  {
+    "id": "philippe-secu-002",
+    "candidat": "philippe",
+    "theme": "securite",
+    "titre": "Plan de lutte contre le narcotrafic : « état d'urgence narco », « fiche S financière », alignement du régime des grands trafiquants sur celui des terroristes",
+    "resume_factuel": "Dans le volet « Éradiquer le fléau du narcotrafic » de ses priorités « Pour une France plus sûre », Édouard Philippe propose de créer un « état d'urgence narco » comportant des moyens juridiques d'exception limités dans le temps et dans l'espace, pouvant aller jusqu'à l'utilisation ciblée de la reconnaissance faciale ; de constituer une « fiche S financière », soit un profil bancaire spécifique pour les personnes condamnées pour narcotrafic ; de lever l'excuse de minorité pour les faits liés au narcotrafic et d'instaurer la comparution immédiate des mineurs concernés ; de créer des établissements de réinsertion et de soin dédiés à ces mineurs ; de permettre le recouvrement forcé des amendes non payées sur les prestations sociales ; d'aligner le régime d'application des peines des « grands narcotrafiquants » sur celui des terroristes ; de mobiliser la DGSI sur le narcotrafic et de réformer le renseignement économique et financier pour tracer les fonds, y compris en cryptomonnaies ; de cribler systématiquement les fonctions publiques sensibles ; de mener des opérations « place nette » dans les boîtes de nuit et festivals ; et de constituer une liste noire européenne des pays jugés non coopératifs dans la lutte contre le narcotrafic. Cette doctrine a été présentée par le candidat lors d'un déplacement de campagne à Alès (Gard) le 7 septembre 2026, où il a notamment affirmé que la lutte contre le narcotrafic et celle contre le terrorisme représentaient des menaces de gravité comparable sans être identiques, et cité plusieurs chiffres de contexte : un chiffre d'affaires du narcotrafic estimé à 7 milliards d'euros par an, 307 200 personnes poursuivies pour usage de stupéfiants en 2025, et un taux de recouvrement des amendes inférieur à 35 %.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — Priorités « Pour une France plus sûre » (volet « Éradiquer le fléau du narcotrafic »)",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure"
+      },
+      {
+        "type": "secondaire",
+        "label": "Planet.fr — « Édouard Philippe : comment il compte éradiquer le narcotrafic » (7 septembre 2026, déplacement de campagne à Alès)",
+        "url": "https://www.planet.fr/edouard-philippe-comment-il-compte-eradiquer-le-narcotrafic.2999081.817022.html"
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Les chiffres cités par le candidat à Alès le 7 septembre 2026 — 7 milliards d'euros de chiffre d'affaires annuel du narcotrafic, 307 200 personnes poursuivies pour usage de stupéfiants en 2025, taux de recouvrement des amendes inférieur à 35 % — sont des éléments de diagnostic destinés à justifier la mesure, et non un chiffrage du coût ou des économies attendues du plan lui-même (coût de l'état d'urgence narco, de la fiche S financière, du criblage systématique des fonctions sensibles, des établissements de réinsertion pour mineurs) ; aucun chiffrage de ce type n'a été identifié dans le site officiel ni dans l'article Planet.fr, qui ont été vérifiés spécifiquement sur ce point avant de conclure à l'absence de chiffrage disponible. La création d'un régime d'exception (« état d'urgence narco ») soulève par ailleurs une question de conformité aux garanties constitutionnelles et conventionnelles (proportionnalité des perquisitions administratives, usage de la reconnaissance faciale), qui n'est pas discutée dans les sources consultées.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-16"
+  },
+  {
+    "id": "philippe-immi-001",
+    "candidat": "philippe",
+    "theme": "immigration",
+    "titre": "Reprendre le contrôle des flux migratoires avec l'Algérie : dénonciation de l'accord de 1968, restriction de l'immigration familiale, quotas d'immigration économique",
+    "resume_factuel": "Dans le volet « Reprendre le contrôle de nos frontières » de ses priorités « Pour une France plus sûre », Édouard Philippe propose de « dénoncer l'accord de 1968 avec l'Algérie pour reprendre le contrôle des flux migratoires avec ce pays », de « restreindre l'immigration familiale », et de « mettre en place une politique de quotas migratoires permettant de choisir notre immigration économique ». Sa position sur l'accord franco-algérien de 1968 — qui accorde aux ressortissants algériens un statut dérogatoire au droit commun en matière de circulation, de séjour et de travail en France — n'est pas nouvelle : il l'exprimait déjà en ces termes en 2023, dans un entretien à L'Express. Elle a été réaffirmée dans le cadre de la campagne 2027 : selon franceinfo (10 août 2026), qui rapporte une tribune publiée par le candidat le même jour dans Le Figaro, Édouard Philippe propose d'utiliser des leviers de pression (visas, aide au développement, accords commerciaux) pour obtenir la renégociation de cet accord. Ni le site officiel de campagne, ni l'entretien de 2023, ni la tribune rapportée par franceinfo ne précisent de calendrier de mise en œuvre, ni les mesures qui remplaceraient le régime actuel une fois l'accord dénoncé ou renégocié, ni de chiffrage du nombre de personnes concernées par la restriction de l'immigration familiale ou par les quotas d'immigration économique envisagés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — Priorités « Pour une France plus sûre » (volet « Reprendre le contrôle de nos frontières »)",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure"
+      },
+      {
+        "type": "secondaire",
+        "label": "franceinfo — « Après l'afflux de migrants à Ceuta, Edouard Philippe propose des mesures pour limiter l'immigration et les régularisations de sans-papiers dans l'Union européenne » (10 août 2026)",
+        "url": "https://www.franceinfo.fr/societe/immigration/apres-l-afflux-de-migrants-a-ceuta-edouard-philippe-propose-des-mesures-pour-limiter-l-immigration-et-les-regularisations-de-sans-papiers-dans-l-union-europeenne_8141837.html"
+      },
+      {
+        "type": "secondaire",
+        "label": "Europe1 — « Immigration : Édouard Philippe veut renégocier l'accord conclu avec l'Algérie en 1968 » (6 juin 2023, mis à jour le 17 novembre 2024, rapportant un entretien à L'Express)",
+        "url": "https://www.europe1.fr/politique/immigration-edouard-philippe-veut-renegocier-laccord-conclu-avec-lalgerie-en-1968-4187251"
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucune des sources consultées (site officiel, article Europe1 rapportant l'entretien à L'Express, article franceinfo rapportant la tribune du 10 août 2026 dans Le Figaro) ne fournit de chiffrage (nombre de personnes concernées par la restriction de l'immigration familiale, niveau des quotas d'immigration économique envisagés, effet budgétaire de la dénonciation de l'accord de 1968) ; ces sources ont été vérifiées spécifiquement sur ce point avant de conclure à l'absence de chiffrage disponible. L'article Europe1 relève qu'Édouard Philippe se distingue d'autres candidats portant la même demande de dénonciation de l'accord de 1968 (dont le Rassemblement national) en s'opposant à une réforme constitutionnelle destinée à contourner le droit européen en matière migratoire, ainsi qu'à la suppression de l'aide médicale d'État (AME) ; ces deux derniers points sont des positions distinctes de la mesure chiffrée ici, mentionnées à titre de contexte de positionnement du candidat et non comme faisant partie de la présente proposition.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-16"
+  },
+  {
+    "id": "philippe-immi-002",
+    "candidat": "philippe",
+    "theme": "immigration",
+    "titre": "Réforme de l'asile : liste annuelle de pays sûrs, « verrou Schengen », suspension temporaire de l'enregistrement des demandes en cas de crise migratoire exceptionnelle, expulsion immédiate des étrangers délinquants",
+    "resume_factuel": "Dans le volet « Reprendre le contrôle de nos frontières » de ses priorités « Pour une France plus sûre », Édouard Philippe propose de « mettre fin au dévoiement de l'asile en faisant voter chaque année par le Parlement une liste de pays sûrs », d'être « intraitable avec les étrangers délinquants » via une « expulsion immédiate et fin des aides sociales », d'utiliser les « centres de retour prévus par le règlement européen retour », et de mettre en place une « politique d'intégration par la langue, le travail et les valeurs républicaines ». Ce corpus de mesures a été complété, selon franceinfo (10 août 2026, rapportant une tribune publiée le même jour dans Le Figaro, quelques jours après un afflux de migrants dans l'enclave espagnole de Ceuta), par deux dispositifs supplémentaires annoncés par le candidat : un « verrou Schengen » empêchant un État européen de procéder seul à une régularisation massive de sans-papiers au-delà d'un seuil défini collectivement, et un « dispositif anti-chantage migratoire », présenté comme un régime d'urgence européen permettant de suspendre l'enregistrement de nouvelles demandes d'asile face à une situation exceptionnelle de pression migratoire à l'une des frontières de l'Union, y compris, selon la même source, par une suspension temporaire de l'enregistrement des demandes d'asile à Mayotte et en Guyane en cas de « saturation migratoire ». Le site officiel de campagne, consulté à la date de recherche, ne mentionne pas explicitement ces deux derniers dispositifs (verrou Schengen, suspension à Mayotte et en Guyane) dans les termes rapportés par franceinfo ; ils sont donc présentés ici comme une annonce de campagne plus récente (10 août 2026) que le contenu actuellement affiché sur le site officiel, sans qu'il soit possible de déterminer si le site sera mis à jour en conséquence.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — Priorités « Pour une France plus sûre » (volet « Reprendre le contrôle de nos frontières »)",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure"
+      },
+      {
+        "type": "secondaire",
+        "label": "franceinfo — « Après l'afflux de migrants à Ceuta, Edouard Philippe propose des mesures pour limiter l'immigration et les régularisations de sans-papiers dans l'Union européenne » (10 août 2026)",
+        "url": "https://www.franceinfo.fr/societe/immigration/apres-l-afflux-de-migrants-a-ceuta-edouard-philippe-propose-des-mesures-pour-limiter-l-immigration-et-les-regularisations-de-sans-papiers-dans-l-union-europeenne_8141837.html"
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucune des sources consultées ne fournit de chiffrage (nombre de demandes d'asile concernées par la liste de pays sûrs, coût ou effectifs nécessaires aux centres de retour européens, nombre de personnes visées par la suspension à Mayotte et en Guyane) ; elles ont été vérifiées spécifiquement sur ce point avant de conclure à l'absence de chiffrage disponible. Le mécanisme de « liste de pays sûrs » votée annuellement par le Parlement soulève une question de compatibilité avec le droit de l'Union européenne et la Convention de Genève sur les réfugiés, l'appréciation du caractère sûr d'un pays relevant aujourd'hui, en droit français et européen, de critères et de procédures encadrés notamment par la Cour nationale du droit d'asile, non d'un simple vote parlementaire ; cette question n'est pas discutée dans les sources consultées. De même, la suspension temporaire de l'enregistrement des demandes d'asile — à Mayotte, en Guyane, ou via le « dispositif anti-chantage migratoire » — pose une question de compatibilité avec le droit d'asile garanti par la Convention de Genève et le droit de l'Union européenne, qui n'est pas discutée dans l'article franceinfo consulté.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-16"
   }
 ]
