@@ -56,3 +56,129 @@ article {
 .source-type {
   font-weight: 600;
 }
+
+.resume-global {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #8888;
+  border-radius: 0.5rem;
+}
+
+.resume-global h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.compte-themes {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.theme-card {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #8888;
+  border-radius: 0.5rem;
+}
+
+.theme-card h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+
+.candidat-detail {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #8888;
+  border-radius: 0.25rem;
+  background: color-mix(in srgb, currentColor 5%, transparent);
+}
+
+.candidat-detail h3 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.statut-texte {
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.portraits-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.portraits-groupe {
+  display: flex;
+  align-items: flex-start;
+}
+
+.portraits-groupe--concerne {
+  gap: 1rem;
+}
+
+.portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+.portrait--statique {
+  cursor: default;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background: color-mix(in srgb, currentColor 15%, transparent);
+  /* Bordure neutre par défaut : la phase 2 y ajoutera une couleur
+     (favorable/défavorable) sans jamais déplacer les portraits. */
+  border: 3px solid #8888;
+}
+
+.portrait-nom {
+  font-size: 0.75rem;
+  text-align: center;
+  max-width: 5rem;
+}
+
+/* Portraits non concernés : estompés et empilés les uns sur les autres
+   (chaque avatar chevauche le précédent de moitié), pour bien les
+   distinguer visuellement du groupe des candidats concernés. */
+.portrait--empile {
+  opacity: 0.4;
+}
+
+.portraits-groupe--non-concerne .portrait--empile:not(:first-child) {
+  margin-left: -1.5rem;
+}
+
+.portraits-groupe--non-concerne .portrait:hover,
+.portraits-groupe--non-concerne .portrait:focus-visible {
+  opacity: 0.75;
+  z-index: 1;
+  position: relative;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: color-mix(in srgb, currentColor 65%, transparent);
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
