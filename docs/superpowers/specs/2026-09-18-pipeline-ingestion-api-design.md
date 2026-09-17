@@ -130,6 +130,30 @@ une auto-relecture.
   une proposition qui échoue part en attente de relecture manuelle, jamais fusionnée ni
   silencieusement écartée.
 
+### Vérifications déterministes (avant la passe 2)
+
+La passe 2 reste un jugement de LLM — elle réduit le risque d'erreur (deux appels indépendants,
+cadrages différents) mais ne l'élimine pas : un LLM peut valider à tort une synthèse subtilement
+fausse, ou l'inverse. `verify.ts` exécute d'abord, en code pur (sans appel modèle), trois
+contrôles déterministes sur chaque proposition avant même de solliciter le jugement sémantique
+de la passe 2 :
+
+1. **Disponibilité de l'URL** : chaque `source.url` répond en HTTP 200 (requête simple depuis le
+   script). Une URL morte échoue immédiatement, sans appel API.
+2. **Correspondance de domaine** : le nom d'hôte de chaque `source.url` figure bien dans
+   `allowed_domains` pour ce candidat — défense en profondeur si jamais la restriction d'outil
+   de la passe 1 était contournée ou mal appliquée.
+3. **Présence littérale des chiffres cités** : tout nombre apparaissant dans `hypotheses_calcul`
+   (montant, pourcentage, date) doit se retrouver, tel quel ou en variante proche (espaces,
+   séparateurs), dans le texte brut de la page fetchée.
+
+Un échec à l'un de ces trois contrôles vaut `FAIL` immédiat, sans même consommer un appel modèle
+pour la passe 2 sémantique. Seules les propositions qui passent les trois contrôles déterministes
+sont soumises au jugement sémantique du modèle (affirmations de `resume_factuel`/
+`hypotheses_calcul` réellement supportées par la page, cohérence de `statut`). Ces contrôles ne
+remplacent pas la passe 2, ils éliminent gratuitement les erreurs les plus grossières et laissent
+le jugement du modèle se concentrer sur les cas subtils.
+
 ### Fusion et idempotence
 
 - `run.ts` orchestre, pour une liste de candidats × thèmes : passe 1 → passe 2 → fusion des PASS
@@ -141,12 +165,36 @@ une auto-relecture.
   `candidats.test.ts`) avant de considérer la combinaison terminée — mêmes garde-fous
   structurels que le processus manuel.
 
+### Mode `--refresh` : maintenir la base à jour, pas seulement la remplir
+
+L'idempotence telle que décrite ci-dessus ne gère que l'**ajout** (nouveau candidat, thème
+manquant) : une combinaison déjà présente dans `propositions.json` est sautée, jamais
+revérifiée. Ce n'est donc pas suffisant pour une base de connaissance qu'on relance
+« régulièrement » au fil de la campagne — un candidat déjà couvert qui met à jour son programme
+ne serait jamais détecté.
+
+`run.ts --refresh <slug> [<theme>]` relance passe 1 (+ contrôles déterministes + passe 2) sur une
+combinaison **déjà couverte**, sans la sauter. Le résultat frais n'écrase jamais silencieusement
+l'existant : il est comparé (titre, resume_factuel, hypotheses_calcul, sources) à ce qui est
+stocké, et s'il diffère, la version proposée est écrite dans `_a-verifier.json` avec la mention
+`refresh : divergence avec l'existant`, pour arbitrage humain — jamais de remplacement
+automatique de données déjà validées.
+
+**Échantillonnage périodique** : au-delà de la relecture manuelle ponctuelle du lot pilote,
+chaque relance de `run.ts` sur un lot tire aléatoirement ~10 % des combinaisons déjà `PASS`
+(toutes campagnes confondues) et les repasse en `--refresh`, pour détecter une dérive de qualité
+dans la durée plutôt que de considérer la confiance acquise une fois pour toutes après le seul
+lot pilote.
+
 ## Fichiers
 
 - `src/ingestion/generate.ts` — pilote la passe 1 pour une combinaison candidat × thème.
-- `src/ingestion/verify.ts` — pilote la passe 2.
+- `src/ingestion/verify.ts` — pilote la passe 2 (contrôles déterministes puis jugement sémantique).
+- `src/ingestion/checks.ts` — les trois contrôles déterministes (disponibilité d'URL,
+  correspondance de domaine, présence littérale des chiffres cités), en code pur, sans appel
+  modèle — réutilisé par `verify.ts` en mode normal et en mode `--refresh`.
 - `src/ingestion/run.ts` — orchestrateur (liste de candidats/thèmes, boucle, fusion, idempotence,
-  journal de progression).
+  mode `--refresh`, tirage de l'échantillon périodique, journal de progression).
 - `src/ingestion/schema.ts` — schéma JSON structured-output, dérivé du type `Proposition` de
   `src/types.ts` (source de vérité unique, pas de duplication de définition).
 - `src/ingestion/prompts/generation.md`, `src/ingestion/prompts/verification.md` — textes des
@@ -179,6 +227,12 @@ une auto-relecture.
 - Test unitaire de la logique de fusion/idempotence de `run.ts` : une combinaison déjà présente
   dans `propositions.json` n'est pas dupliquée lors d'un second passage ; une proposition `FAIL`
   n'apparaît jamais dans `propositions.json`.
+- Test unitaire de chacun des trois contrôles déterministes (`checks.ts`) : URL vivante vs. morte
+  (mock HTTP), domaine autorisé vs. hors liste, chiffre présent tel quel vs. absent du texte
+  fetché — chacun doit produire un `FAIL` immédiat sans appeler le modèle.
+- Test unitaire du mode `--refresh` : une divergence entre le résultat frais et l'existant produit
+  une entrée dans `_a-verifier.json` sans jamais modifier `propositions.json` ; une absence de
+  divergence ne produit aucune écriture.
 - Pas de test automatisé sur les appels API eux-mêmes (coût, non-déterminisme) — la validation
   de qualité du lot pilote est manuelle, comme convenu avec l'utilisateur.
 
@@ -193,6 +247,10 @@ une auto-relecture.
   d'exigence que le travail manuel existant) avant d'étendre aux 16 candidats restants, en
   respectant le principe « même rigueur pour tous les candidats » du projet — l'automatisation
   ne doit pas abaisser la barre.
+- Au-delà de cette validation ponctuelle du lot pilote, l'échantillonnage périodique décrit dans
+  « Mode `--refresh` » (~10 % des fiches `PASS` revérifiées à chaque relance) consomme des appels
+  API supplémentaires à chaque exécution — à inclure dans le suivi de coût, pas seulement le
+  premier lot.
 
 ## Hors périmètre de ce design
 
