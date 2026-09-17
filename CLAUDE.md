@@ -83,8 +83,8 @@ Champs possibles : statut (salarié, indépendant, fonctionnaire, retraité, ét
 
 ## État actuel du projet
 
-Phase de cadrage. Aucune donnée ni code n'a encore été produit. Prochaines étapes probables :
-- Valider le schéma de données (thèmes, profils, propositions)
-- Identifier et lister les sources primaires officielles par candidat
-- Choisir la stack technique
-- Construire un premier prototype avec 2-3 candidats et 1-2 thèmes pour valider le concept
+Le schéma de données, le moteur de calcul (`src/engine/`) et l'interface (`src/ui/`, React/Vite/TypeScript) sont construits et fonctionnels. Les 11 thèmes de `data/themes.json` sont désormais tous peuplés de données réelles et sourcées pour les trois candidats (Le Pen, Mélenchon, Philippe), soit 71 propositions au total — voir `docs/methodologie.md` pour les règles de sourçage appliquées et l'exception documentée sur deux thèmes du dossier Philippe. Ces données n'ont toutefois pas encore été relues ni validées par le porteur du projet. Prochaines étapes probables :
+- Faire relire et valider le contenu par le porteur du projet (exactitude factuelle, neutralité du ton, cohérence entre candidats)
+- Poursuivre l'audit de l'application uniforme de la convention `resume_factuel` / `hypotheses_calcul` (suivi déjà noté dans `docs/methodologie.md`)
+- Explorer une intégration avec data.gouv.fr et/ou des scripts d'ingestion (`src/ingestion/`, non encore développés) pour la mise à jour continue des données au fil de la campagne
+- Élargir la couverture (compléter les exceptions documentées si une meilleure source apparaît, ajouter d'autres candidats le cas échéant)

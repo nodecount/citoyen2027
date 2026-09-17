@@ -52,6 +52,22 @@ mécanisme », avec la source à l'appui). À l'inverse, `"partiel"` ou `"provis
 un travail de recherche lui-même inachevé (sources manquantes, vérification à compléter),
 indépendamment du degré de précision du programme rapporté.
 
+## Exception documentée : thèmes Philippe à un seul « complet »
+
+La règle de qualité habituelle du projet vise au moins deux propositions `"complet"` par
+thème et par candidat. Deux thèmes du dossier Édouard Philippe dérogent à cette règle de
+façon assumée et documentée plutôt que silencieuse : `aides-etat` et
+`libertes-fondamentales` ne comptent chacun qu'une seule proposition `"complet"` (plus une
+proposition `"partiel"`). Dans les deux cas, après recherche diligente, aucune seconde
+mesure n'a pu être corroborée par une source indépendante du candidat et de son parti — les
+seules sources disponibles au-delà du site de campagne étaient le Manifeste d'Horizons
+lui-même, c'est-à-dire une source de la même organisation, insuffisante pour satisfaire la
+même rigueur de sourçage que les fiches `"complet"` des autres thèmes. C'est une exception
+acceptée et documentée (voir `src/data/candidats.test.ts`, `EXCEPTIONS_UN_SEUL_COMPLET`),
+non un oubli ; elle reste à revisiter lors d'un futur passage de recherche, si un accès plus
+large permet d'identifier une corroboration indépendante ou une seconde mesure réellement
+distincte pour ces deux thèmes chez ce candidat.
+
 ## Le moteur
 
 Par défaut (`evaluerParDefaut`), le moteur traite toute proposition comme universelle et

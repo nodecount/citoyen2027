@@ -19,19 +19,13 @@ const philippeProps: Proposition[] = philippePropsRaw as Proposition[];
 
 const THEME_IDS = new Set(themes.map((t) => t.id));
 const STATUTS = new Set(["complet", "partiel", "provisoire"]);
-const THEMES_PEUPLES = [
-  "fiscalite",
-  "pouvoir-achat",
-  "sante",
-  "securite",
-  "immigration",
-  "education",
-  "environnement",
-  "logement",
-  "travail",
-  "aides-etat",
-  "libertes-fondamentales",
-];
+const THEMES_PEUPLES = themes.filter((t) => t.statut === "populated").map((t) => t.id);
+
+// Exceptions documentées et acceptées à la règle "≥2 propositions complet par thème et
+// par candidat" : voir docs/methodologie.md pour le détail (aucune deuxième source
+// indépendante corroborant une seconde mesure n'a pu être trouvée pour ces deux thèmes
+// chez ce candidat, au-delà du site de campagne et du Manifeste du parti).
+const EXCEPTIONS_UN_SEUL_COMPLET = new Set(["philippe|aides-etat", "philippe|libertes-fondamentales"]);
 
 const candidats = [
   { slug: "le-pen", meta: lePenMeta, propositions: lePenProps },
@@ -90,12 +84,16 @@ describe.each(candidats)("candidat $slug", ({ slug, meta, propositions }) => {
     }
   });
 
-  it.each(THEMES_PEUPLES)("a au moins une proposition complete sur le thème %s", (themeId) => {
-    const propsDuTheme = propositions.filter(
-      (p) => p.theme === themeId && p.statut === "complet"
-    );
-    expect(propsDuTheme.length).toBeGreaterThan(0);
-  });
+  it.each(THEMES_PEUPLES)(
+    "a au moins 2 propositions completes sur le thème %s (sauf exception documentée)",
+    (themeId) => {
+      const propsDuTheme = propositions.filter(
+        (p) => p.theme === themeId && p.statut === "complet"
+      );
+      const seuilMinimum = EXCEPTIONS_UN_SEUL_COMPLET.has(`${slug}|${themeId}`) ? 1 : 2;
+      expect(propsDuTheme.length).toBeGreaterThanOrEqual(seuilMinimum);
+    }
+  );
 });
 
 describe("ids des propositions", () => {
