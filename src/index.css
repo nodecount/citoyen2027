@@ -33,3 +33,26 @@ article {
   padding-top: 1rem;
   border-top: 1px solid #8888;
 }
+
+.avertissement {
+  padding: 0.75rem 1rem;
+  border: 1px solid #8888;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.badge-partiel {
+  font-size: 0.85em;
+  font-weight: normal;
+  font-style: italic;
+  color: #b45309;
+}
+
+.sources {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.source-type {
+  font-weight: 600;
+}

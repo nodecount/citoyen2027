@@ -24,25 +24,33 @@ export default function Resultats({ profil }: ResultatsProps) {
   return (
     <section>
       <h1>Résultats</h1>
+      <p className="avertissement">
+        Ces données ont été collectées et sourcées par un assistant IA — chaque source a été
+        vérifiée individuellement, mais l'ensemble n'a pas encore été relu ni validé par l'équipe
+        du projet. Considérez ceci comme une première version, pas un résultat définitif.
+      </p>
       {candidats.map(({ meta, propositions }) => (
         <article key={meta.slug}>
           <h2>{meta.nom}</h2>
           {themesTypes.map((theme) => {
-            const propsCompletesDuTheme = propositions.filter(
-              (p) => p.theme === theme.id && p.statut === "complet"
+            const propsDuTheme = propositions.filter(
+              (p) => p.theme === theme.id && (p.statut === "complet" || p.statut === "partiel")
             );
             return (
               <div key={theme.id}>
                 <h3>{theme.libelle}</h3>
-                {propsCompletesDuTheme.length === 0 ? (
+                {propsDuTheme.length === 0 ? (
                   <p>Programme en cours d'analyse sur ce thème.</p>
                 ) : (
                   <ul>
-                    {propsCompletesDuTheme.map((proposition) => {
+                    {propsDuTheme.map((proposition) => {
                       const impact = evaluerProposition(profil, proposition);
                       return (
                         <li key={proposition.id}>
                           <strong>{proposition.titre}</strong>
+                          {proposition.statut === "partiel" && (
+                            <span className="badge-partiel"> (sourcing partiel — à confirmer)</span>
+                          )}
                           <p>{impact.explication}</p>
                           {impact.niveau === "chiffre_personnalise" && impact.montant_estime !== undefined && (
                             <p>Estimation pour votre profil : {impact.montant_estime} €/an</p>
@@ -52,6 +60,19 @@ export default function Resultats({ profil }: ResultatsProps) {
                               <em>Cette mesure ne s'applique pas à votre profil.</em>
                             </p>
                           )}
+                          <ul className="sources">
+                            {proposition.sources.map((source, index) => (
+                              <li key={index}>
+                                <span className="source-type">
+                                  {source.type === "primaire" ? "Source primaire" : "Source secondaire"}
+                                </span>{" "}
+                                :{" "}
+                                <a href={source.url} target="_blank" rel="noopener noreferrer">
+                                  {source.label}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
                         </li>
                       );
                     })}
