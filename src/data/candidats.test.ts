@@ -28,6 +28,9 @@ const THEMES_PEUPLES = [
   "education",
   "environnement",
   "logement",
+  "travail",
+  "aides-etat",
+  "libertes-fondamentales",
 ];
 
 const candidats = [
@@ -99,7 +102,7 @@ describe("ids des propositions", () => {
   it("les ids de propositions, tous candidats confondus, sont uniques", () => {
     const allProps = [...lePenProps, ...melenchonProps, ...philippeProps];
     const ids = allProps.map((p) => p.id);
-    expect(ids.length).toBe(50);
+    expect(ids.length).toBe(71);
     expect(new Set(ids).size).toBe(ids.length);
   });
 });

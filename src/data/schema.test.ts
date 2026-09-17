@@ -29,6 +29,9 @@ const THEMES_POPULATED = new Set([
   "education",
   "environnement",
   "logement",
+  "travail",
+  "aides-etat",
+  "libertes-fondamentales",
 ]);
 
 describe("themes.json", () => {
@@ -44,7 +47,7 @@ describe("themes.json", () => {
     }
   });
 
-  it("a le statut attendu (populated pour fiscalite/pouvoir-achat, provisoire sinon)", () => {
+  it("a le statut attendu (tous les 11 thèmes déclarés populated)", () => {
     for (const theme of themes) {
       const expected = THEMES_POPULATED.has(theme.id) ? "populated" : "provisoire";
       expect(theme.statut).toBe(expected);

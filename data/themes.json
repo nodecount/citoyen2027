@@ -1,9 +1,9 @@
 [
   { "id": "fiscalite", "libelle": "Fiscalité", "description": "Impôts sur le revenu, la consommation, le patrimoine et les entreprises.", "statut": "populated" },
   { "id": "pouvoir-achat", "libelle": "Pouvoir d'achat", "description": "Prix, salaires nets, coût de la vie courante.", "statut": "populated" },
-  { "id": "travail", "libelle": "Travail", "description": "Droit du travail, chômage, retraite, conditions d'emploi.", "statut": "provisoire" },
-  { "id": "aides-etat", "libelle": "Aides de l'État", "description": "Prestations sociales, allocations, aides ciblées.", "statut": "provisoire" },
-  { "id": "libertes-fondamentales", "libelle": "Libertés fondamentales", "description": "Libertés civiles, liberté d'expression et de la presse, droit de vote et pluralisme politique.", "statut": "provisoire" },
+  { "id": "travail", "libelle": "Travail", "description": "Droit du travail, chômage, retraite, conditions d'emploi.", "statut": "populated" },
+  { "id": "aides-etat", "libelle": "Aides de l'État", "description": "Prestations sociales, allocations, aides ciblées.", "statut": "populated" },
+  { "id": "libertes-fondamentales", "libelle": "Libertés fondamentales", "description": "Libertés civiles, liberté d'expression et de la presse, droit de vote et pluralisme politique.", "statut": "populated" },
   { "id": "sante", "libelle": "Santé", "description": "Système de santé, hôpital, accès aux soins, assurance maladie.", "statut": "populated" },
   { "id": "securite", "libelle": "Sécurité", "description": "Sécurité intérieure, délinquance, police, justice pénale.", "statut": "populated" },
   { "id": "immigration", "libelle": "Immigration", "description": "Politique migratoire, droit d'asile, intégration.", "statut": "populated" },
