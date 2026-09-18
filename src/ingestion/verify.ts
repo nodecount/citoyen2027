@@ -9,6 +9,7 @@ import type { PropositionGeneree } from "./schema";
 
 const ICI = dirname(fileURLToPath(import.meta.url));
 const MODELE = "claude-opus-5";
+const MAX_TOKENS = 8192;
 
 export type Verdict = { statut: "PASS" } | { statut: "FAIL"; raison: string };
 
@@ -45,6 +46,7 @@ function construireRequeteVerification(meta: CandidatMeta, propositions: Proposi
   const domaines = domainesAutorises(meta);
   return {
     model: MODELE,
+    max_tokens: MAX_TOKENS,
     system: gabarit.split("{{CANDIDAT}}").join(meta.nom),
     tools: [{ type: "web_fetch_20260209", name: "web_fetch", allowed_domains: domaines }],
     output_config: {

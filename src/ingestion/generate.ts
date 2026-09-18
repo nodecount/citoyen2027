@@ -8,9 +8,11 @@ import { SCHEMA_PROPOSITION_GENEREE, validerPropositionGeneree, type Proposition
 
 const ICI = dirname(fileURLToPath(import.meta.url));
 const MODELE = "claude-opus-5";
+const MAX_TOKENS = 8192;
 
 export interface RequeteGeneration {
   model: string;
+  max_tokens: number;
   system: string;
   tools: Array<{ type: string; name: string; allowed_domains: string[] }>;
   output_config: { format: unknown; effort: string };
@@ -43,6 +45,7 @@ export function construireRequeteGeneration(
 
   return {
     model: MODELE,
+    max_tokens: MAX_TOKENS,
     system,
     tools: [
       { type: "web_search_20260209", name: "web_search", allowed_domains: domaines },
