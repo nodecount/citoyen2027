@@ -10,6 +10,23 @@ const themes = themesData as Theme[];
 
 type ModeRelance = "insert" | "update";
 
+// Formate le détail d'un résultat de relance — la spec exige d'afficher les combinaisons
+// fusionnées/en attente/la divergence détectée, pas seulement le statut brut (indispensable en
+// mode update : sans ça, "divergence détectée" et "inchangé" rendent le même texte à l'écran).
+function decrireResultat(r: {
+  statut: "traite" | "saute" | "erreur";
+  fusionnees?: number;
+  enAttente?: number;
+  divergence?: boolean;
+  message?: string;
+}): string {
+  if (r.statut === "erreur") return `erreur : ${r.message ?? "inconnue"}`;
+  if (r.statut === "saute") return "déjà couvert, sauté";
+  if (r.fusionnees !== undefined) return `${r.fusionnees} fusionnée(s), ${r.enAttente} en attente`;
+  if (r.divergence !== undefined) return r.divergence ? "divergence détectée, voir _a-verifier.json" : "inchangé";
+  return "traité";
+}
+
 export default function Monitoring() {
   const { metas, propositions, aVerifier } = construireDonneesCouverture();
   const couverture: CouvertureCandidat[] = calculerCouverture(themes, metas, propositions, aVerifier);
@@ -17,7 +34,7 @@ export default function Monitoring() {
   const [serveurDisponible, setServeurDisponible] = useState(false);
   useEffect(() => {
     let annule = false;
-    fetch(`${URL_SERVEUR_LOCAL}/api/sante`)
+    fetch(`${URL_SERVEUR_LOCAL}/api/sante`, { signal: AbortSignal.timeout(2000) })
       .then((reponse) => {
         if (!annule) setServeurDisponible(reponse.ok);
       })
@@ -168,8 +185,7 @@ export default function Monitoring() {
               <ul>
                 {resultats.map((r) => (
                   <li key={r.theme}>
-                    {r.theme} — {r.statut}
-                    {r.message ? ` : ${r.message}` : ""}
+                    {r.theme} — {r.statut} : {decrireResultat(r)}
                   </li>
                 ))}
               </ul>

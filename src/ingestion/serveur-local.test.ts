@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
-import { gererRelance } from "./serveur-local";
+import { gererRelance, validerRequeteRelance } from "./serveur-local";
 import { chargerPropositions } from "./depot";
 import type { CandidatMeta } from "../types";
 import type { ClientAnthropicMinimal } from "./generate";
@@ -148,5 +148,34 @@ describe("gererRelance", () => {
     } finally {
       rmSync(racine, { recursive: true, force: true });
     }
+  });
+});
+
+describe("validerRequeteRelance", () => {
+  const VALIDE = { slug: "candidat-x", cleApi: "cle-test", themes: ["fiscalite"], mode: "insert" };
+
+  it("accepte un corps valide et retourne l'objet RequeteRelance", () => {
+    expect(validerRequeteRelance(VALIDE)).toEqual({
+      slug: "candidat-x",
+      cleApi: "cle-test",
+      themes: ["fiscalite"],
+      mode: "insert",
+    });
+  });
+
+  it("rejette une cleApi vide (repli silencieux sur .env interdit)", () => {
+    expect(validerRequeteRelance({ ...VALIDE, cleApi: "" })).toBeNull();
+  });
+
+  it("rejette un slug tentant une traversée de répertoire", () => {
+    expect(validerRequeteRelance({ ...VALIDE, slug: "../../etc" })).toBeNull();
+  });
+
+  it("rejette des themes qui ne sont pas un tableau", () => {
+    expect(validerRequeteRelance({ ...VALIDE, themes: "pas-un-tableau" })).toBeNull();
+  });
+
+  it("rejette un mode inconnu", () => {
+    expect(validerRequeteRelance({ ...VALIDE, mode: "supprimer" })).toBeNull();
   });
 });
