@@ -182,3 +182,62 @@ article {
   margin-top: 0.75rem;
   margin-bottom: 0;
 }
+
+.monitoring {
+  max-width: 960px;
+}
+
+.monitoring-candidat {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #8888;
+  border-radius: 0.5rem;
+}
+
+.monitoring-date {
+  font-size: 0.8rem;
+  font-weight: normal;
+  opacity: 0.75;
+}
+
+.monitoring-grille {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.monitoring-grille th,
+.monitoring-grille td {
+  text-align: left;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid #8884;
+}
+
+.monitoring-en-attente {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #b45309;
+  border-radius: 0.25rem;
+}
+
+.monitoring-badge {
+  font-weight: 600;
+  color: #b45309;
+  margin: 0 0 0.5rem;
+}
+
+.monitoring-relance {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #8888;
+  border-radius: 0.5rem;
+}
+
+.monitoring-relance fieldset {
+  margin: 0.75rem 0;
+}
+
+.monitoring-erreur {
+  color: #b91c1c;
+  font-weight: 600;
+}
