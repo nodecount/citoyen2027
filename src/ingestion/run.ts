@@ -1,15 +1,23 @@
+import { pathToFileURL } from "node:url";
 import type { CandidatMeta, Proposition } from "../types";
-import { genererPropositions, type ClientAnthropicMinimal } from "./generate";
+import { genererPropositions, creerClient, type ClientAnthropicMinimal } from "./generate";
 import { verifier } from "./verify";
 import type { FetchImpl } from "./checks";
 import type { PropositionGeneree } from "./schema";
 import {
   chargerAVerifier,
+  chargerMeta,
   chargerPropositions,
+  combinaisonDejaCouverte,
   enregistrerAVerifier,
   enregistrerPropositions,
   type EntreeAVerifier,
 } from "./depot";
+import { chargerEnv } from "./env";
+import { analyserArguments } from "./cli";
+import themesData from "../../data/themes.json";
+
+const themes = themesData as Array<{ id: string; libelle: string }>;
 
 export interface CombinaisonACouvrir {
   slug: string;
@@ -133,4 +141,73 @@ export function tirerEchantillon<T>(elements: T[], proportion: number, alea: () 
     resultat.push(copie.splice(index, 1)[0]);
   }
   return resultat;
+}
+
+export async function executerLot(
+  client: ClientAnthropicMinimal,
+  combinaisons: CombinaisonACouvrir[],
+  options: OptionsExecution = {},
+): Promise<void> {
+  for (const combinaison of combinaisons) {
+    const meta = chargerMeta(combinaison.slug, options.racine);
+    const propositionsExistantes = chargerPropositions(combinaison.slug, options.racine);
+    if (!options.force && combinaisonDejaCouverte(propositionsExistantes, combinaison.themeId)) {
+      console.log(`[sauté] ${combinaison.slug} × ${combinaison.themeId} déjà couvert`);
+      continue;
+    }
+    console.log(`[en cours] ${combinaison.slug} × ${combinaison.themeId}`);
+    try {
+      const { fusionnees, enAttente } = await executerCombinaison(
+        client,
+        meta,
+        combinaison,
+        propositionsExistantes,
+        options,
+      );
+      console.log(
+        `[terminé] ${combinaison.slug} × ${combinaison.themeId} : ${fusionnees.length} fusionnée(s), ${enAttente.length} en attente`,
+      );
+    } catch (erreur) {
+      console.error(`[erreur] ${combinaison.slug} × ${combinaison.themeId} :`, erreur);
+    }
+  }
+}
+
+async function main(): Promise<void> {
+  chargerEnv();
+  const options = analyserArguments(process.argv.slice(2));
+  // `ClientAnthropicMinimal` est une interface volontairement minimale (Tasks 1-4), conçue pour
+  // rester découplée des types précis du SDK Anthropic afin de permettre des clients factices
+  // simples dans les tests. Le SDK réel (`Anthropic`) est structurellement plus strict (types
+  // littéraux, champs additionnels) sans être structurellement assignable dans un sens ou dans
+  // l'autre. Le seul point de production où le client réel entre dans ce pipeline est ici :
+  // l'assertion ci-dessous fait le pont, sans élargir l'interface minimale utilisée partout
+  // ailleurs (et donc sans recoupler le reste du code aux types exacts du SDK).
+  const client = creerClient() as unknown as ClientAnthropicMinimal;
+
+  if (options.refresh) {
+    const meta = chargerMeta(options.refresh.slug);
+    const themesACouvrir = options.refresh.theme
+      ? themes.filter((t) => t.id === options.refresh!.theme)
+      : themes;
+    for (const theme of themesACouvrir) {
+      const { divergence } = await executerRefresh(client, meta, theme.id, theme.libelle);
+      console.log(`[refresh] ${meta.slug} × ${theme.id} : ${divergence ? "divergence détectée, voir _a-verifier.json" : "inchangé"}`);
+    }
+    return;
+  }
+
+  const themesACouvrir = options.themes ? themes.filter((t) => options.themes!.includes(t.id)) : themes;
+  const combinaisons: CombinaisonACouvrir[] = options.candidats.flatMap((slug) =>
+    themesACouvrir.map((theme) => ({ slug, themeId: theme.id, themeLibelle: theme.libelle })),
+  );
+
+  await executerLot(client, combinaisons, { force: options.force });
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((erreur) => {
+    console.error(erreur);
+    process.exitCode = 1;
+  });
 }
