@@ -62,7 +62,7 @@ export async function executerCombinaison(
   propositionsExistantes: Proposition[],
   options: OptionsExecution = {},
 ): Promise<ResultatCombinaison> {
-  const titresExistants = propositionsExistantes.map((p) => p.titre);
+  const titresExistants = propositionsExistantes.filter((p) => p.theme !== combinaison.themeId).map((p) => p.titre);
   const generees = await genererPropositions(
     client,
     meta,

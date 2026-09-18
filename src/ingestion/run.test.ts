@@ -128,6 +128,56 @@ describe("executerCombinaison", () => {
     expect(nouvelle?.id).toBe("candidat-x-fisc-001");
   });
 
+  it("ne transmet au modèle que les titres des AUTRES thèmes, jamais ceux du thème en cours de génération", async () => {
+    preparerRacine();
+    const existanteSante = {
+      id: "candidat-x-sante-001",
+      candidat: "candidat-x",
+      theme: "sante",
+      titre: "Titre Santé Existante",
+      resume_factuel: "Résumé",
+      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" }],
+      chiffrage_disponible: false,
+      hypotheses_calcul: "",
+      statut: "complet" as const,
+      date_derniere_verification: "2026-09-18",
+    };
+    const existanteFiscale = {
+      id: "candidat-x-fisc-001",
+      candidat: "candidat-x",
+      theme: "fiscalite",
+      titre: "Titre Fiscal Existant",
+      resume_factuel: "Résumé",
+      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" }],
+      chiffrage_disponible: false,
+      hypotheses_calcul: "",
+      statut: "complet" as const,
+      date_derniere_verification: "2026-09-18",
+    };
+    const creerMock = vi.fn().mockResolvedValue({ content: [{ type: "text", text: "[]" }] });
+    const clientFactice = { messages: { create: creerMock } };
+    const fetchFactice = async () => new Response("contenu de la page");
+
+    // Génération pour le thème "fiscalite" : existanteSante est d'un autre thème,
+    // existanteFiscale est du même thème que celui en cours de génération.
+    await executerCombinaison(
+      clientFactice,
+      META,
+      { slug: "candidat-x", themeId: "fiscalite", themeLibelle: "Fiscalité" },
+      [existanteSante, existanteFiscale],
+      { racine, fetchImpl: fetchFactice },
+    );
+
+    expect(creerMock).toHaveBeenCalledOnce();
+    const requeteEnvoyee = creerMock.mock.calls[0][0] as { system: string };
+    // Dédup cross-thème : le titre d'un autre thème doit apparaître dans la liste transmise...
+    expect(requeteEnvoyee.system).toContain("Titre Santé Existante");
+    // ... mais un titre du thème en cours de génération ne doit jamais être signalé comme
+    // "déjà existant", sous peine de biaiser le modèle vers l'évitement de doublons internes
+    // au thème (qui sont pourtant légitimes tant qu'ils ne sont pas déjà en base pour ce thème).
+    expect(requeteEnvoyee.system).not.toContain("Titre Fiscal Existant");
+  });
+
   it("n'enregistre rien dans propositions.json pour une proposition qui échoue la vérification", async () => {
     preparerRacine();
     const propositionGeneree = {
