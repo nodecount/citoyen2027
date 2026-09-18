@@ -36,7 +36,7 @@ export const SCHEMA_PROPOSITION_GENEREE = {
   additionalProperties: false,
 } as const;
 
-export type PropositionGeneree = Omit<Proposition, "id" | "candidat">;
+export type PropositionGeneree = Omit<Proposition, "id" | "candidat" | "theme">;
 
 const STATUTS_VALIDES: StatutProposition[] = ["complet", "partiel", "provisoire"];
 const TYPES_SOURCE_VALIDES: Source["type"][] = ["primaire", "secondaire"];
