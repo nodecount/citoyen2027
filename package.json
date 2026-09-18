@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "test": "vitest run",
-    "ingestion": "tsx src/ingestion/run.ts"
+    "ingestion": "tsx src/ingestion/run.ts",
+    "monitoring-server": "tsx src/ingestion/serveur-local.ts"
   },
   "dependencies": {
     "react": "^18.3.1",
