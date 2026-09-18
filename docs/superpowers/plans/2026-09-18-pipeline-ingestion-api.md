@@ -1591,9 +1591,10 @@ export async function executerRefresh(
   themeLibelle: string,
   options: OptionsExecution = {},
 ): Promise<{ divergence: boolean }> {
-  const existantes = chargerPropositions(meta.slug, options.racine).filter((p) => p.theme === themeId);
-  const titresExistants = existantes.map((p) => p.titre);
-  const fraiches = await genererPropositions(client, meta, themeId, themeLibelle, titresExistants);
+  const toutesPropositions = chargerPropositions(meta.slug, options.racine);
+  const existantes = toutesPropositions.filter((p) => p.theme === themeId);
+  const titresAutresThemes = toutesPropositions.filter((p) => p.theme !== themeId).map((p) => p.titre);
+  const fraiches = await genererPropositions(client, meta, themeId, themeLibelle, titresAutresThemes);
 
   if (!combinaisonsDiffere(existantes, fraiches)) {
     return { divergence: false };
