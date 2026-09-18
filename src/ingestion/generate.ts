@@ -125,6 +125,6 @@ export async function genererPropositions(
   return brut.filter(validerPropositionGeneree);
 }
 
-export function creerClient(): Anthropic {
-  return new Anthropic();
+export function creerClient(cleApi?: string): Anthropic {
+  return cleApi ? new Anthropic({ apiKey: cleApi }) : new Anthropic();
 }

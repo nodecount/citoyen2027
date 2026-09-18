@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { construireRequeteGeneration, genererPropositions } from "./generate";
+import { construireRequeteGeneration, creerClient, genererPropositions } from "./generate";
 import type { CandidatMeta } from "../types";
+import Anthropic from "@anthropic-ai/sdk";
 
 const META: CandidatMeta = {
   slug: "test",
@@ -133,5 +134,18 @@ describe("genererPropositions", () => {
       },
     };
     await expect(genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", [])).rejects.toThrow();
+  });
+});
+
+describe("creerClient", () => {
+  it("construit un client avec une clé fournie explicitement, sans dépendre de la variable d'environnement", () => {
+    const cleOriginale = process.env.ANTHROPIC_API_KEY;
+    delete process.env.ANTHROPIC_API_KEY;
+    try {
+      expect(() => creerClient("cle-de-test")).not.toThrow();
+      expect(creerClient("cle-de-test")).toBeInstanceOf(Anthropic);
+    } finally {
+      if (cleOriginale !== undefined) process.env.ANTHROPIC_API_KEY = cleOriginale;
+    }
   });
 });
