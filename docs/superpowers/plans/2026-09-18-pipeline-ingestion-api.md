@@ -736,7 +736,7 @@ import { SCHEMA_PROPOSITION_GENEREE, validerPropositionGeneree, type Proposition
 
 const ICI = dirname(fileURLToPath(import.meta.url));
 const MODELE = "claude-opus-5";
-const MAX_TOKENS = 8192;
+const MAX_TOKENS = 16000;
 
 export interface RequeteGeneration {
   model: string;
@@ -830,10 +830,17 @@ si besoin en gardant les noms d'exports inchangés.
 réellement, mais seulement une fois `creerClient()` effectivement branché sur le pipeline
 (Task 8, `main()`) : `@anthropic-ai/sdk` exige un champ `max_tokens` sur `messages.create`
 (absent de `RequeteGeneration` ci-dessus), ce qui aurait aussi fait échouer un vrai appel API en
-production. `max_tokens` (et la constante `MAX_TOKENS = 8192`) sont ajoutés à `RequeteGeneration`
+production. `max_tokens` (et la constante `MAX_TOKENS`) sont ajoutés à `RequeteGeneration`
 et à la requête construite ci-dessus pour combler ce manque réel — voir la note Task 8 pour le
 reste de l'écart de typage (types littéraux stricts du SDK), qui reste géré par une assertion
 ciblée au point d'intégration plutôt qu'en élargissant cette interface volontairement minimale.
+
+**Correction (trouvée en revue de Task 8) :** `MAX_TOKENS` était initialement fixé à `8192`,
+insuffisant compte tenu du budget partagé entre la génération JSON finale, l'effort `high`, la
+réflexion adaptative par défaut d'Opus 5 et l'usage d'outils serveur (`web_search`/`web_fetch`) —
+un dépassement tronquerait la réponse, ferait échouer le `JSON.parse` protégé et retournerait
+silencieusement un tableau vide sans diagnostic. Relevé à `16000`, conforme à la recommandation
+par défaut pour les requêtes non-streaming.
 
 ```bash
 git add src/ingestion/prompts/generation.md src/ingestion/generate.ts src/ingestion/generate.test.ts
@@ -978,7 +985,7 @@ import type { PropositionGeneree } from "./schema";
 
 const ICI = dirname(fileURLToPath(import.meta.url));
 const MODELE = "claude-opus-5";
-const MAX_TOKENS = 8192;
+const MAX_TOKENS = 16000;
 
 export type Verdict = { statut: "PASS" } | { statut: "FAIL"; raison: string };
 
@@ -1765,14 +1772,14 @@ export async function executerLot(
   options: OptionsExecution = {},
 ): Promise<void> {
   for (const combinaison of combinaisons) {
-    const meta = chargerMeta(combinaison.slug, options.racine);
-    const propositionsExistantes = chargerPropositions(combinaison.slug, options.racine);
-    if (!options.force && combinaisonDejaCouverte(propositionsExistantes, combinaison.themeId)) {
-      console.log(`[sauté] ${combinaison.slug} × ${combinaison.themeId} déjà couvert`);
-      continue;
-    }
-    console.log(`[en cours] ${combinaison.slug} × ${combinaison.themeId}`);
     try {
+      const meta = chargerMeta(combinaison.slug, options.racine);
+      const propositionsExistantes = chargerPropositions(combinaison.slug, options.racine);
+      if (!options.force && combinaisonDejaCouverte(propositionsExistantes, combinaison.themeId)) {
+        console.log(`[sauté] ${combinaison.slug} × ${combinaison.themeId} déjà couvert`);
+        continue;
+      }
+      console.log(`[en cours] ${combinaison.slug} × ${combinaison.themeId}`);
       const { fusionnees, enAttente } = await executerCombinaison(
         client,
         meta,
