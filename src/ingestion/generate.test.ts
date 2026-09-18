@@ -67,4 +67,20 @@ describe("genererPropositions", () => {
     const resultat = await genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", []);
     expect(resultat).toEqual([]);
   });
+
+  it("retourne un tableau vide si le texte n'est pas un JSON valide", async () => {
+    const clientFactice = {
+      messages: { create: async () => ({ content: [{ type: "text", text: "pas du JSON valide {{{" }] }) },
+    };
+    const resultat = await genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", []);
+    expect(resultat).toEqual([]);
+  });
+
+  it("retourne un tableau vide si le JSON valide n'est pas un tableau", async () => {
+    const clientFactice = {
+      messages: { create: async () => ({ content: [{ type: "text", text: JSON.stringify({ pas: "un tableau" }) }] }) },
+    };
+    const resultat = await genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", []);
+    expect(resultat).toEqual([]);
+  });
 });

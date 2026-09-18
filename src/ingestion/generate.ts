@@ -72,7 +72,13 @@ export async function genererPropositions(
   const reponse = await client.messages.create(requete);
   const blocTexte = reponse.content.find((bloc) => bloc.type === "text");
   if (!blocTexte?.text) return [];
-  const brut = JSON.parse(blocTexte.text) as unknown[];
+  let brut: unknown;
+  try {
+    brut = JSON.parse(blocTexte.text);
+  } catch {
+    return [];
+  }
+  if (!Array.isArray(brut)) return [];
   return brut.filter(validerPropositionGeneree);
 }
 
