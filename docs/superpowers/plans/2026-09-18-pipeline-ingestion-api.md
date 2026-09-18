@@ -736,9 +736,11 @@ import { SCHEMA_PROPOSITION_GENEREE, validerPropositionGeneree, type Proposition
 
 const ICI = dirname(fileURLToPath(import.meta.url));
 const MODELE = "claude-opus-5";
+const MAX_TOKENS = 8192;
 
 export interface RequeteGeneration {
   model: string;
+  max_tokens: number;
   system: string;
   tools: Array<{ type: string; name: string; allowed_domains: string[] }>;
   output_config: { format: unknown; effort: string };
@@ -770,6 +772,7 @@ export function construireRequeteGeneration(
 
   return {
     model: MODELE,
+    max_tokens: MAX_TOKENS,
     system,
     tools: [
       { type: "web_search_20260209", name: "web_search", allowed_domains: domaines },
@@ -822,6 +825,15 @@ Expected: PASS (8 tests)
 Run: `npx tsc -b --noEmit 2>&1 | grep ingestion` (ou `npx tsc --noEmit` sur le projet) pour
 détecter un éventuel écart de typage avec le SDK installé sur `output_config`/`tools` ; corriger
 si besoin en gardant les noms d'exports inchangés.
+
+**Correction (trouvée en Task 8) :** cet écart de typage anticipé ci-dessus se manifeste
+réellement, mais seulement une fois `creerClient()` effectivement branché sur le pipeline
+(Task 8, `main()`) : `@anthropic-ai/sdk` exige un champ `max_tokens` sur `messages.create`
+(absent de `RequeteGeneration` ci-dessus), ce qui aurait aussi fait échouer un vrai appel API en
+production. `max_tokens` (et la constante `MAX_TOKENS = 8192`) sont ajoutés à `RequeteGeneration`
+et à la requête construite ci-dessus pour combler ce manque réel — voir la note Task 8 pour le
+reste de l'écart de typage (types littéraux stricts du SDK), qui reste géré par une assertion
+ciblée au point d'intégration plutôt qu'en élargissant cette interface volontairement minimale.
 
 ```bash
 git add src/ingestion/prompts/generation.md src/ingestion/generate.ts src/ingestion/generate.test.ts
@@ -966,6 +978,7 @@ import type { PropositionGeneree } from "./schema";
 
 const ICI = dirname(fileURLToPath(import.meta.url));
 const MODELE = "claude-opus-5";
+const MAX_TOKENS = 8192;
 
 export type Verdict = { statut: "PASS" } | { statut: "FAIL"; raison: string };
 
@@ -997,11 +1010,15 @@ export async function verifierControlesDeterministes(
   return { statut: "PASS" };
 }
 
+// `max_tokens`/`MAX_TOKENS` ajoutés en Task 8 : voir la note de correction dans la section
+// Task 4 (`RequeteGeneration`) — même cause (champ requis par le SDK Anthropic, absent à
+// l'origine), même fix, ici pour la requête de vérification sémantique.
 function construireRequeteVerification(meta: CandidatMeta, propositions: PropositionGeneree[]): RequeteGeneration {
   const gabarit = readFileSync(resolve(ICI, "prompts/verification.md"), "utf-8");
   const domaines = domainesAutorises(meta);
   return {
     model: MODELE,
+    max_tokens: MAX_TOKENS,
     system: gabarit.replaceAll("{{CANDIDAT}}", meta.nom),
     tools: [{ type: "web_fetch_20260209", name: "web_fetch", allowed_domains: domaines }],
     output_config: {
@@ -1780,6 +1797,7 @@ combinaisonDejaCouverte, enregistrerAVerifier, enregistrerPropositions`).
 Ajouter les imports statiques suivants en haut de `run.ts`, à la suite des imports existants :
 
 ```ts
+import { pathToFileURL } from "node:url";
 import { chargerEnv } from "./env";
 import { analyserArguments } from "./cli";
 import themesData from "../../data/themes.json";
@@ -1793,7 +1811,7 @@ Ajouter en fin de fichier :
 async function main(): Promise<void> {
   chargerEnv();
   const options = analyserArguments(process.argv.slice(2));
-  const client = creerClient();
+  const client = creerClient() as unknown as ClientAnthropicMinimal;
 
   if (options.refresh) {
     const meta = chargerMeta(options.refresh.slug);
@@ -1815,13 +1833,31 @@ async function main(): Promise<void> {
   await executerLot(client, combinaisons, { force: options.force });
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch((erreur) => {
     console.error(erreur);
     process.exitCode = 1;
   });
 }
 ```
+
+**Corrections (trouvées en Task 8) :**
+- `const client = creerClient();` ne type-check pas tel quel : `creerClient()` renvoie le vrai
+  `Anthropic` du SDK, structurellement incompatible avec `ClientAnthropicMinimal` (champs
+  manquants comme `max_tokens` — voir la correction Task 4 ci-dessus — et types littéraux plus
+  stricts comme `output_config.effort` que le SDK). `ClientAnthropicMinimal` est une interface
+  volontairement minimale pour permettre des clients factices simples dans les tests ; on ne
+  l'élargit pas pour suivre exactement le SDK (ce qui recouplerait tout le pipeline à ses
+  types précis). Le seul point de production où le client réel entre dans ce pipeline est ce
+  `main()` : `creerClient() as unknown as ClientAnthropicMinimal` fait le pont à cet endroit
+  précis, sans toucher à l'interface utilisée partout ailleurs.
+- `if (import.meta.url === \`file://${process.argv[1]}\`)` ne fonctionne jamais sur Windows :
+  `process.argv[1]` y est un chemin avec antislashs (`F:\...\run.ts`), jamais égal à l'URL
+  `file:///F:/.../run.ts` produite par `import.meta.url` — vérifié empiriquement avec `tsx` sur
+  ce projet. `main()` ne se déclencherait donc jamais via `npm run ingestion` sur cet
+  environnement. Remplacé par `pathToFileURL(process.argv[1]).href` (`node:url`), qui produit la
+  même normalisation d'URL que `import.meta.url` sur toutes les plateformes — vérifié également
+  empiriquement, y compris que main() s'exécute bien avec ce correctif (voir task-8-report.md).
 
 Run: `npx vitest run src/ingestion/run.test.ts`
 Expected: PASS — même nombre de tests qu'avant cette étape (compte-le toi-même plutôt que de te
