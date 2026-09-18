@@ -37,7 +37,8 @@ export function construireRequeteGeneration(
       : "  (aucune proposition existante pour ce candidat)";
 
   const system = gabarit
-    .replaceAll("{{CANDIDAT}}", meta.nom)
+    .split("{{CANDIDAT}}")
+    .join(meta.nom)
     .replace("{{TITRES_EXISTANTS}}", listeTitresExistants);
 
   return {
