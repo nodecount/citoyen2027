@@ -7,6 +7,11 @@ import melenchonMetaRaw from "../../data/programmes/melenchon/meta.json";
 import melenchonPropsRaw from "../../data/programmes/melenchon/propositions.json";
 import philippeMetaRaw from "../../data/programmes/philippe/meta.json";
 import philippePropsRaw from "../../data/programmes/philippe/propositions.json";
+import attalMeta from "../../data/programmes/attal/meta.json";
+import glucksmannMeta from "../../data/programmes/glucksmann/meta.json";
+import retailleauMeta from "../../data/programmes/retailleau/meta.json";
+import ruffinMeta from "../../data/programmes/ruffin/meta.json";
+import faureMeta from "../../data/programmes/faure/meta.json";
 import type { Theme, CandidatMeta, Proposition } from "../types";
 
 const themes: Theme[] = themesRaw as Theme[];
@@ -102,6 +107,22 @@ describe("ids des propositions", () => {
     const ids = allProps.map((p) => p.id);
     expect(ids.length).toBe(71);
     expect(new Set(ids).size).toBe(ids.length);
+  });
+});
+
+describe("meta.json des candidats du lot pilote (ingestion)", () => {
+  const metasPilote = [
+    { slug: "attal", meta: attalMeta },
+    { slug: "glucksmann", meta: glucksmannMeta },
+    { slug: "retailleau", meta: retailleauMeta },
+    { slug: "ruffin", meta: ruffinMeta },
+    { slug: "faure", meta: faureMeta },
+  ];
+
+  it.each(metasPilote)("$slug a un slug cohérent et au moins une source primaire", ({ slug, meta }) => {
+    expect(meta.slug).toBe(slug);
+    expect(meta.sources_officielles.length).toBeGreaterThan(0);
+    expect(meta.sources_officielles.some((s) => s.type === "primaire")).toBe(true);
   });
 });
 
