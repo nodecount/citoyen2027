@@ -1824,8 +1824,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 ```
 
 Run: `npx vitest run src/ingestion/run.test.ts`
-Expected: PASS (toujours 12 tests — `main()` n'est pas testé unitairement, seule sa condition
-d'exécution en `if` empêche qu'il se déclenche pendant les tests)
+Expected: PASS — même nombre de tests qu'avant cette étape (compte-le toi-même plutôt que de te
+fier à un chiffre annoncé ici, les décomptes précédents de ce plan se sont avérés peu fiables) ;
+`main()` n'est pas testé unitairement, seule sa condition d'exécution en `if` empêche qu'il se
+déclenche pendant les tests
 
 - [ ] **Step 4 : Documenter le pipeline**
 
@@ -1884,7 +1886,9 @@ non encore développés) pour la mise à jour continue des données au fil de la
 Run: `npm test`
 Expected: PASS (tous les tests du projet, y compris ceux ajoutés depuis la Task 1)
 
-Run: `npx tsc -b --noEmit`
+Run: `npx tsc --noEmit` (pas `tsc -b`, dont le mode projet-references échoue avec l'erreur de
+configuration TS6310 déjà signalée et non liée à ce plan depuis la Task 4 — `tsc --noEmit` est
+la vérification utilisée avec succès à chaque tâche précédente)
 Expected: aucune erreur de typage
 
 ```bash
