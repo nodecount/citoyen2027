@@ -65,22 +65,17 @@ Puis ajouter ce bloc de test (nouveau `describe`, à la suite des blocs existant
 
 ```ts
 describe("creerClient", () => {
-  it("construit un client avec une clé fournie explicitement, sans dépendre de la variable d'environnement", () => {
-    const cleOriginale = process.env.ANTHROPIC_API_KEY;
-    delete process.env.ANTHROPIC_API_KEY;
-    try {
-      expect(() => creerClient("cle-de-test")).not.toThrow();
-      expect(creerClient("cle-de-test")).toBeInstanceOf(Anthropic);
-    } finally {
-      if (cleOriginale !== undefined) process.env.ANTHROPIC_API_KEY = cleOriginale;
-    }
+  it("construit un client qui utilise réellement la clé fournie explicitement", () => {
+    const client = creerClient("cle-de-test");
+    expect(client).toBeInstanceOf(Anthropic);
+    expect(client.apiKey).toBe("cle-de-test");
   });
 });
 ```
 
 Run: `npx vitest run src/ingestion/generate.test.ts`
-Expected: FAIL — avec `ANTHROPIC_API_KEY` effacée, `creerClient("cle-de-test")` retombe sur
-`new Anthropic()` (l'argument est encore ignoré) et lève une erreur de clé manquante.
+Expected: FAIL — avant modification, `creerClient` retourne toujours `new Anthropic()` sans
+utiliser l'argument, donc `client.apiKey` ne vaudra jamais `"cle-de-test"`.
 
 - [ ] **Step 2 : Implémenter**
 
