@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { mkdtempSync, rmSync, writeFileSync, mkdirSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
-import { executerCombinaison, genererIdProposition, combinaisonsDiffere, executerRefresh, tirerEchantillon } from "./run";
+import { executerCombinaison, executerLot, genererIdProposition, combinaisonsDiffere, executerRefresh, tirerEchantillon } from "./run";
 import { chargerAVerifier, chargerPropositions, enregistrerPropositions } from "./depot";
 import type { CandidatMeta } from "../types";
 
@@ -274,5 +274,74 @@ describe("executerRefresh", () => {
     // être signalé comme "déjà existant", sous peine de pousser le modèle à ne pas le
     // régénérer et donc de vider le refresh de son intérêt.
     expect(requeteEnvoyee.system).not.toContain("Titre A");
+  });
+});
+
+// Test ajouté suite à la revue de code de la Task 8 : chargerMeta/chargerPropositions étaient
+// hors du try/catch d'executerLot, donc un slug invalide ou un meta.json corrompu au milieu
+// d'un lot faisait planter tout le reste du lot (contraire à la garantie de résilience de la
+// spec). Ce test reproduit exactement ce scénario après correction.
+describe("executerLot", () => {
+  afterEach(() => {
+    rmSync(racine, { recursive: true, force: true });
+  });
+
+  it("isole l'échec de chargerMeta d'une combinaison et traite quand même les combinaisons suivantes du lot", async () => {
+    racine = mkdtempSync(resolve(tmpdir(), "ingestion-lot-test-"));
+    const metaValide = (slug: string): CandidatMeta => ({
+      slug,
+      nom: slug,
+      parti: "Parti",
+      date_derniere_maj: "2026-09-18",
+      sources_officielles: [{ type: "primaire", label: "Programme", url: "https://exemple-officiel.fr/programme" }],
+    });
+    mkdirSync(resolve(racine, "candidat-a"), { recursive: true });
+    writeFileSync(resolve(racine, "candidat-a/meta.json"), JSON.stringify(metaValide("candidat-a")));
+    // "candidat-b" n'a délibérément pas de meta.json : chargerMeta doit échouer (ENOENT) pour
+    // cette combinaison, précisément au milieu du lot.
+    mkdirSync(resolve(racine, "candidat-c"), { recursive: true });
+    writeFileSync(resolve(racine, "candidat-c/meta.json"), JSON.stringify(metaValide("candidat-c")));
+
+    const propositionGeneree = {
+      titre: "Titre",
+      resume_factuel: "Résumé",
+      sources: [
+        { type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" },
+        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/b" },
+      ],
+      chiffrage_disponible: false,
+      hypotheses_calcul: "",
+      statut: "complet" as const,
+      date_derniere_verification: "2026-09-18",
+    };
+    const clientFactice = {
+      messages: {
+        create: async (requete: { messages: Array<{ content: string }> }) => {
+          const contenu = requete.messages[0].content;
+          if (contenu.startsWith("Vérifie")) {
+            return { content: [{ type: "text", text: JSON.stringify([{ titre: "Titre", verdict: "PASS" }]) }] };
+          }
+          return { content: [{ type: "text", text: JSON.stringify([propositionGeneree]) }] };
+        },
+      },
+    };
+    const fetchFactice = async () => new Response("contenu de la page");
+
+    await executerLot(
+      clientFactice,
+      [
+        { slug: "candidat-a", themeId: "fiscalite", themeLibelle: "Fiscalité" },
+        { slug: "candidat-b", themeId: "fiscalite", themeLibelle: "Fiscalité" },
+        { slug: "candidat-c", themeId: "fiscalite", themeLibelle: "Fiscalité" },
+      ],
+      { racine, fetchImpl: fetchFactice },
+    );
+
+    expect(chargerPropositions("candidat-a", racine)).toHaveLength(1);
+    // candidat-b : chargerMeta a échoué, donc executerCombinaison n'a jamais été atteint.
+    expect(chargerPropositions("candidat-b", racine)).toEqual([]);
+    // La preuve clé du correctif : candidat-c, listé APRÈS l'échec de candidat-b dans le lot,
+    // est quand même traité normalement.
+    expect(chargerPropositions("candidat-c", racine)).toHaveLength(1);
   });
 });

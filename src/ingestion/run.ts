@@ -149,14 +149,14 @@ export async function executerLot(
   options: OptionsExecution = {},
 ): Promise<void> {
   for (const combinaison of combinaisons) {
-    const meta = chargerMeta(combinaison.slug, options.racine);
-    const propositionsExistantes = chargerPropositions(combinaison.slug, options.racine);
-    if (!options.force && combinaisonDejaCouverte(propositionsExistantes, combinaison.themeId)) {
-      console.log(`[sauté] ${combinaison.slug} × ${combinaison.themeId} déjà couvert`);
-      continue;
-    }
-    console.log(`[en cours] ${combinaison.slug} × ${combinaison.themeId}`);
     try {
+      const meta = chargerMeta(combinaison.slug, options.racine);
+      const propositionsExistantes = chargerPropositions(combinaison.slug, options.racine);
+      if (!options.force && combinaisonDejaCouverte(propositionsExistantes, combinaison.themeId)) {
+        console.log(`[sauté] ${combinaison.slug} × ${combinaison.themeId} déjà couvert`);
+        continue;
+      }
+      console.log(`[en cours] ${combinaison.slug} × ${combinaison.themeId}`);
       const { fusionnees, enAttente } = await executerCombinaison(
         client,
         meta,

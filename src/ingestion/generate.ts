@@ -8,7 +8,7 @@ import { SCHEMA_PROPOSITION_GENEREE, validerPropositionGeneree, type Proposition
 
 const ICI = dirname(fileURLToPath(import.meta.url));
 const MODELE = "claude-opus-5";
-const MAX_TOKENS = 8192;
+const MAX_TOKENS = 16000;
 
 export interface RequeteGeneration {
   model: string;
