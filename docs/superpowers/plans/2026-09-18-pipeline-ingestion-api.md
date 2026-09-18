@@ -699,6 +699,22 @@ describe("genererPropositions", () => {
     const resultat = await genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", []);
     expect(resultat).toEqual([]);
   });
+
+  it("retourne un tableau vide si le texte n'est pas un JSON valide", async () => {
+    const clientFactice = {
+      messages: { create: async () => ({ content: [{ type: "text", text: "pas du JSON valide {{{" }] }) },
+    };
+    const resultat = await genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", []);
+    expect(resultat).toEqual([]);
+  });
+
+  it("retourne un tableau vide si le JSON valide n'est pas un tableau", async () => {
+    const clientFactice = {
+      messages: { create: async () => ({ content: [{ type: "text", text: JSON.stringify({ pas: "un tableau" }) }] }) },
+    };
+    const resultat = await genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", []);
+    expect(resultat).toEqual([]);
+  });
 });
 ```
 
@@ -783,7 +799,13 @@ export async function genererPropositions(
   const reponse = await client.messages.create(requete);
   const blocTexte = reponse.content.find((bloc) => bloc.type === "text");
   if (!blocTexte?.text) return [];
-  const brut = JSON.parse(blocTexte.text) as unknown[];
+  let brut: unknown;
+  try {
+    brut = JSON.parse(blocTexte.text);
+  } catch {
+    return [];
+  }
+  if (!Array.isArray(brut)) return [];
   return brut.filter(validerPropositionGeneree);
 }
 
@@ -795,7 +817,7 @@ export function creerClient(): Anthropic {
 - [ ] **Step 4 : Vérifier et committer**
 
 Run: `npx vitest run src/ingestion/generate.test.ts`
-Expected: PASS (6 tests)
+Expected: PASS (8 tests)
 
 Run: `npx tsc -b --noEmit 2>&1 | grep ingestion` (ou `npx tsc --noEmit` sur le projet) pour
 détecter un éventuel écart de typage avec le SDK installé sur `output_config`/`tools` ; corriger
@@ -915,6 +937,13 @@ describe("verifier", () => {
     expect(create).toHaveBeenCalledOnce();
     expect(resultats.get("Titre")?.statut).toBe("PASS");
   });
+
+  it("ne lève pas d'exception si la réponse du modèle n'est pas un JSON valide", async () => {
+    const fetchFactice = async () => new Response("Le dispositif coûte 1000 euros par an.");
+    const create = vi.fn().mockResolvedValue({ content: [{ type: "text", text: "pas du JSON {{{" }] });
+    const resultats = await verifier({ messages: { create } }, META, [proposition()], fetchFactice);
+    expect(resultats.get("Titre")).toBeUndefined();
+  });
 });
 ```
 
@@ -1014,8 +1043,14 @@ async function verifierSemantiquement(
   const blocTexte = reponse.content.find((bloc) => bloc.type === "text");
   if (!blocTexte?.text) return resultats;
 
-  const brut = JSON.parse(blocTexte.text) as Array<{ titre: string; verdict: "PASS" | "FAIL"; raison?: string }>;
-  for (const item of brut) {
+  let brut: unknown;
+  try {
+    brut = JSON.parse(blocTexte.text);
+  } catch {
+    return resultats;
+  }
+  if (!Array.isArray(brut)) return resultats;
+  for (const item of brut as Array<{ titre: string; verdict: "PASS" | "FAIL"; raison?: string }>) {
     resultats.set(
       item.titre,
       item.verdict === "PASS" ? { statut: "PASS" } : { statut: "FAIL", raison: item.raison ?? "non précisé" },
@@ -1057,7 +1092,7 @@ export async function verifier(
 - [ ] **Step 4 : Vérifier et committer**
 
 Run: `npx vitest run src/ingestion/verify.test.ts`
-Expected: PASS (6 tests)
+Expected: PASS (7 tests)
 
 ```bash
 git add src/ingestion/prompts/verification.md src/ingestion/verify.ts src/ingestion/verify.test.ts
@@ -1684,11 +1719,16 @@ Expected: PASS (6 tests)
 
 - [ ] **Step 3 : Brancher le point d'entrée CLI dans `run.ts`**
 
-Modifier `src/ingestion/run.ts` : remplacer le `executerLot` de la Task 6 (qui passait un
-`CandidatMeta` incomplet) pour charger le vrai `meta.json` de chaque candidat, et ajouter un
-point d'entrée `main()` exécuté seulement quand le fichier est lancé directement.
+Modifier `src/ingestion/run.ts` : ajouter `executerLot`, l'orchestrateur multi-combinaisons qui
+charge le vrai `meta.json` de chaque candidat via `chargerMeta` (la Task 6 ne le définit
+délibérément pas, faute d'accès à `chargerMeta` dans son fil), et ajouter un point d'entrée
+`main()` exécuté seulement quand le fichier est lancé directement.
 
-Remplacer la fonction `executerLot` existante par :
+`executerLot` doit isoler chaque combinaison dans un `try/catch` : une combinaison qui échoue
+(réponse API malformée, erreur réseau, etc.) est journalisée et sautée, sans interrompre le
+reste du lot — c'est la garantie de résilience du plan (section « Gestion des erreurs » de la
+spec : « Erreur d'outil serveur ... sautée, sans interrompre le reste du lot »). Ajouter cette
+fonction :
 
 ```ts
 export async function executerLot(
@@ -1704,16 +1744,20 @@ export async function executerLot(
       continue;
     }
     console.log(`[en cours] ${combinaison.slug} × ${combinaison.themeId}`);
-    const { fusionnees, enAttente } = await executerCombinaison(
-      client,
-      meta,
-      combinaison,
-      propositionsExistantes,
-      options,
-    );
-    console.log(
-      `[terminé] ${combinaison.slug} × ${combinaison.themeId} : ${fusionnees.length} fusionnée(s), ${enAttente.length} en attente`,
-    );
+    try {
+      const { fusionnees, enAttente } = await executerCombinaison(
+        client,
+        meta,
+        combinaison,
+        propositionsExistantes,
+        options,
+      );
+      console.log(
+        `[terminé] ${combinaison.slug} × ${combinaison.themeId} : ${fusionnees.length} fusionnée(s), ${enAttente.length} en attente`,
+      );
+    } catch (erreur) {
+      console.error(`[erreur] ${combinaison.slug} × ${combinaison.themeId} :`, erreur);
+    }
   }
 }
 ```
