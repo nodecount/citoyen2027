@@ -236,4 +236,43 @@ describe("executerRefresh", () => {
     expect(aVerifier[0].theme).toBe("fiscalite");
     expect(aVerifier[0].raison).toBe("refresh : divergence avec l'existant");
   });
+
+  it("ne transmet au modèle que les titres des AUTRES thèmes, jamais ceux du thème en cours de refresh", async () => {
+    preparerRacine();
+    const autreTheme = {
+      id: "candidat-x-travail-001",
+      candidat: "candidat-x",
+      theme: "travail",
+      titre: "Titre Travail B",
+      resume_factuel: "Résumé B",
+      sources: [
+        { type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/c" },
+        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/d" },
+      ],
+      chiffrage_disponible: false,
+      hypotheses_calcul: "",
+      statut: "complet" as const,
+      date_derniere_verification: "2026-09-18",
+    };
+    enregistrerPropositions("candidat-x", [existante, autreTheme], racine);
+    const fraiche = { ...existante, date_derniere_verification: "2026-09-19" } as Record<string, unknown>;
+    delete fraiche.id;
+    delete fraiche.candidat;
+    delete fraiche.theme;
+    const creerMock = vi.fn().mockResolvedValue({ content: [{ type: "text", text: JSON.stringify([fraiche]) }] });
+    const clientFactice = { messages: { create: creerMock } };
+
+    // Refresh du thème "fiscalite" : existante ("Titre A") est du même thème que celui
+    // en cours de refresh, autreTheme ("Titre Travail B") est d'un autre thème.
+    await executerRefresh(clientFactice, META, "fiscalite", "Fiscalité", { racine });
+
+    expect(creerMock).toHaveBeenCalledTimes(1);
+    const requeteEnvoyee = creerMock.mock.calls[0][0] as { system: string };
+    // Dédup cross-thème : le titre d'un autre thème doit apparaître dans la liste transmise...
+    expect(requeteEnvoyee.system).toContain("Titre Travail B");
+    // ... mais le titre du thème qu'on est justement en train de re-vérifier ne doit PAS
+    // être signalé comme "déjà existant", sous peine de pousser le modèle à ne pas le
+    // régénérer et donc de vider le refresh de son intérêt.
+    expect(requeteEnvoyee.system).not.toContain("Titre A");
+  });
 });
