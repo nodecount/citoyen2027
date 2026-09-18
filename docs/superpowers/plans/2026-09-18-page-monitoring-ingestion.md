@@ -634,6 +634,21 @@ const EN_TETES_CORS = {
   "Access-Control-Allow-Headers": "Content-Type",
 };
 
+// Le corps de la requête POST /api/relancer arrive comme JSON non typé — le caster directement
+// en RequeteRelance (comme le ferait TypeScript sans vérification à l'exécution) laisserait
+// passer une clé vide (repli silencieux sur .env, que la spec interdit explicitement) et un slug
+// non validé (traversée de répertoire via chargerMeta/chargerPropositions, avec un message
+// d'erreur JSON.parse potentiellement révélateur du contenu d'un fichier arbitraire lu).
+function validerRequeteRelance(corps: unknown): RequeteRelance | null {
+  if (typeof corps !== "object" || corps === null) return null;
+  const c = corps as Record<string, unknown>;
+  if (typeof c.slug !== "string" || !/^[a-z0-9-]+$/.test(c.slug)) return null;
+  if (typeof c.cleApi !== "string" || c.cleApi.trim().length === 0) return null;
+  if (!Array.isArray(c.themes) || !c.themes.every((t) => typeof t === "string")) return null;
+  if (c.mode !== "insert" && c.mode !== "update") return null;
+  return { slug: c.slug, cleApi: c.cleApi, themes: c.themes as string[], mode: c.mode };
+}
+
 export function creerServeur() {
   return createServer(async (requete, reponse) => {
     if (requete.method === "OPTIONS") {
@@ -647,7 +662,15 @@ export function creerServeur() {
     }
     if (requete.method === "POST" && requete.url === "/api/relancer") {
       try {
-        const corps = (await lireCorpsJSON(requete)) as RequeteRelance;
+        const corpsBrut = await lireCorpsJSON(requete);
+        const corps = validerRequeteRelance(corpsBrut);
+        if (!corps) {
+          envoyerJSON(reponse, 400, {
+            ok: false,
+            message: "Requête invalide : slug (minuscules/tirets), cleApi (non vide), themes (tableau de chaînes) et mode (\"insert\" ou \"update\") sont requis.",
+          });
+          return;
+        }
         const resultat = await gererRelance(corps);
         envoyerJSON(reponse, 200, resultat);
       } catch (erreur) {
@@ -664,7 +687,11 @@ export function creerServeur() {
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const port = PORT;
-  creerServeur().listen(port, () => {
+  // Liaison explicite à 127.0.0.1 : sans hôte explicite, Node écoute sur toutes les interfaces
+  // (0.0.0.0), ce qui rendrait le serveur joignable depuis tout le réseau local (wifi partagé,
+  // coworking...) — contredisant la prémisse de sécurité du design ("le serveur n'est accessible
+  // que depuis localhost"), qui justifie par ailleurs le CORS permissif ci-dessus.
+  creerServeur().listen(port, "127.0.0.1", () => {
     console.log(`Serveur de monitoring local sur http://localhost:${port}`);
   });
 }
@@ -778,6 +805,23 @@ const themes = themesData as Theme[];
 
 type ModeRelance = "insert" | "update";
 
+// Formate le détail d'un résultat de relance — la spec exige d'afficher les combinaisons
+// fusionnées/en attente/la divergence détectée, pas seulement le statut brut (indispensable en
+// mode update : sans ça, "divergence détectée" et "inchangé" rendent le même texte à l'écran).
+function decrireResultat(r: {
+  statut: "traite" | "saute" | "erreur";
+  fusionnees?: number;
+  enAttente?: number;
+  divergence?: boolean;
+  message?: string;
+}): string {
+  if (r.statut === "erreur") return `erreur : ${r.message ?? "inconnue"}`;
+  if (r.statut === "saute") return "déjà couvert, sauté";
+  if (r.fusionnees !== undefined) return `${r.fusionnees} fusionnée(s), ${r.enAttente} en attente`;
+  if (r.divergence !== undefined) return r.divergence ? "divergence détectée, voir _a-verifier.json" : "inchangé";
+  return "traité";
+}
+
 export default function Monitoring() {
   const { metas, propositions, aVerifier } = construireDonneesCouverture();
   const couverture: CouvertureCandidat[] = calculerCouverture(themes, metas, propositions, aVerifier);
@@ -785,7 +829,7 @@ export default function Monitoring() {
   const [serveurDisponible, setServeurDisponible] = useState(false);
   useEffect(() => {
     let annule = false;
-    fetch(`${URL_SERVEUR_LOCAL}/api/sante`)
+    fetch(`${URL_SERVEUR_LOCAL}/api/sante`, { signal: AbortSignal.timeout(2000) })
       .then((reponse) => {
         if (!annule) setServeurDisponible(reponse.ok);
       })
@@ -936,8 +980,7 @@ export default function Monitoring() {
               <ul>
                 {resultats.map((r) => (
                   <li key={r.theme}>
-                    {r.theme} — {r.statut}
-                    {r.message ? ` : ${r.message}` : ""}
+                    {r.theme} — {r.statut} : {decrireResultat(r)}
                   </li>
                 ))}
               </ul>
