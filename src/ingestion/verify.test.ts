@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { verifier, verifierControlesDeterministes } from "./verify";
+import { construireRequeteVerification, verifier, verifierControlesDeterministes } from "./verify";
 import type { CandidatMeta } from "../types";
 import type { PropositionGeneree } from "./schema";
 
@@ -9,6 +9,14 @@ const META: CandidatMeta = {
   parti: "Parti Test",
   date_derniere_maj: "2026-09-18",
   sources_officielles: [{ type: "primaire", label: "Programme", url: "https://exemple-officiel.fr/programme" }],
+};
+
+const META_DOMAINE_INVALIDE: CandidatMeta = {
+  slug: "test-invalide",
+  nom: "Candidat Invalide",
+  parti: "Parti Test",
+  date_derniere_maj: "2026-09-18",
+  sources_officielles: [{ type: "primaire", label: "Programme", url: "pas-une-url" }],
 };
 
 function proposition(overrides: Partial<PropositionGeneree> = {}): PropositionGeneree {
@@ -74,5 +82,43 @@ describe("verifier", () => {
     const create = vi.fn().mockResolvedValue({ content: [{ type: "text", text: "pas du JSON {{{" }] });
     const resultats = await verifier({ messages: { create } }, META, [proposition()], fetchFactice);
     expect(resultats.get("Titre")).toBeUndefined();
+  });
+
+  it("rejette si stop_reason vaut refusal, au lieu de retourner silencieusement un résultat vide", async () => {
+    const fetchFactice = async () => new Response("Le dispositif coûte 1000 euros par an.");
+    const create = vi.fn().mockResolvedValue({
+      content: [{ type: "text", text: "[]" }],
+      stop_reason: "refusal",
+    });
+    await expect(verifier({ messages: { create } }, META, [proposition()], fetchFactice)).rejects.toThrow();
+  });
+
+  it("rejette si un bloc web_fetch_tool_result contient une erreur d'outil serveur", async () => {
+    const fetchFactice = async () => new Response("Le dispositif coûte 1000 euros par an.");
+    const create = vi.fn().mockResolvedValue({
+      content: [{ type: "web_fetch_tool_result", content: { error_code: "max_uses_exceeded" } }],
+    });
+    await expect(verifier({ messages: { create } }, META, [proposition()], fetchFactice)).rejects.toThrow();
+  });
+
+  it("ignore les éléments malformés de la réponse de vérification sémantique sans lever d'exception", async () => {
+    const fetchFactice = async () => new Response("Le dispositif coûte 1000 euros par an.");
+    const create = vi.fn().mockResolvedValue({
+      content: [
+        {
+          type: "text",
+          text: JSON.stringify([{ titre: "Titre", verdict: "PASS" }, null, { titre: 42, verdict: "FAIL" }]),
+        },
+      ],
+    });
+    const resultats = await verifier({ messages: { create } }, META, [proposition()], fetchFactice);
+    expect(resultats.size).toBe(1);
+    expect(resultats.get("Titre")?.statut).toBe("PASS");
+  });
+});
+
+describe("construireRequeteVerification", () => {
+  it("lève une exception si aucun domaine officiel exploitable n'est disponible", () => {
+    expect(() => construireRequeteVerification(META_DOMAINE_INVALIDE, [proposition()])).toThrow();
   });
 });

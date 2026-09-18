@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { CandidatMeta } from "../types";
-import type { ClientAnthropicMinimal, RequeteGeneration } from "./generate";
+import { detecterErreurReponse, type ClientAnthropicMinimal, type RequeteGeneration } from "./generate";
 import { domainesAutorises } from "./domaines";
 import { verifierChiffresPresents, verifierDomaineAutorise, verifierUrlDisponible, type FetchImpl } from "./checks";
 import type { PropositionGeneree } from "./schema";
@@ -41,9 +41,12 @@ export async function verifierControlesDeterministes(
   return { statut: "PASS" };
 }
 
-function construireRequeteVerification(meta: CandidatMeta, propositions: PropositionGeneree[]): RequeteGeneration {
+export function construireRequeteVerification(meta: CandidatMeta, propositions: PropositionGeneree[]): RequeteGeneration {
   const gabarit = readFileSync(resolve(ICI, "prompts/verification.md"), "utf-8");
   const domaines = domainesAutorises(meta);
+  if (domaines.length === 0) {
+    throw new Error(`Aucun domaine officiel exploitable pour ${meta.nom} (slug: ${meta.slug}) — vérifier sources_officielles dans meta.json`);
+  }
   return {
     model: MODELE,
     max_tokens: MAX_TOKENS,
@@ -84,6 +87,10 @@ async function verifierSemantiquement(
 ): Promise<Map<string, Verdict>> {
   const requete = construireRequeteVerification(meta, propositions);
   const reponse = await client.messages.create(requete);
+  const erreur = detecterErreurReponse(reponse);
+  if (erreur) {
+    throw new Error(`verifierSemantiquement (${meta.slug}) : ${erreur}`);
+  }
   const resultats = new Map<string, Verdict>();
   const blocTexte = reponse.content.find((bloc) => bloc.type === "text");
   if (!blocTexte?.text) return resultats;
@@ -95,10 +102,19 @@ async function verifierSemantiquement(
     return resultats;
   }
   if (!Array.isArray(brut)) return resultats;
-  for (const item of brut as Array<{ titre: string; verdict: "PASS" | "FAIL"; raison?: string }>) {
+  for (const item of brut) {
+    if (
+      typeof item !== "object" ||
+      item === null ||
+      typeof (item as Record<string, unknown>).titre !== "string" ||
+      ((item as Record<string, unknown>).verdict !== "PASS" && (item as Record<string, unknown>).verdict !== "FAIL")
+    ) {
+      continue;
+    }
+    const itemValide = item as { titre: string; verdict: "PASS" | "FAIL"; raison?: string };
     resultats.set(
-      item.titre,
-      item.verdict === "PASS" ? { statut: "PASS" } : { statut: "FAIL", raison: item.raison ?? "non précisé" },
+      itemValide.titre,
+      itemValide.verdict === "PASS" ? { statut: "PASS" } : { statut: "FAIL", raison: itemValide.raison ?? "non précisé" },
     );
   }
   return resultats;

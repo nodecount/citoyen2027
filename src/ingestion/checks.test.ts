@@ -36,6 +36,14 @@ describe("verifierDomaineAutorise", () => {
   it("rejette une URL malformée", () => {
     expect(verifierDomaineAutorise("pas-une-url", ["exemple-officiel.fr"])).toBe(false);
   });
+
+  it("accepte un sous-domaine d'un domaine autorisé", () => {
+    expect(verifierDomaineAutorise("https://www.exemple-officiel.fr/x", ["exemple-officiel.fr"])).toBe(true);
+  });
+
+  it("rejette un domaine qui contient le domaine autorisé comme suffixe de sous-chaîne (attaque par suffixe)", () => {
+    expect(verifierDomaineAutorise("https://exemple-officiel.fr.attaquant.com/x", ["exemple-officiel.fr"])).toBe(false);
+  });
 });
 
 describe("verifierChiffresPresents", () => {

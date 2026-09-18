@@ -31,8 +31,23 @@ export interface OptionsExecution {
   force?: boolean;
 }
 
+const ABREVIATIONS_THEME: Record<string, string> = {
+  fiscalite: "fisc",
+  "pouvoir-achat": "pa",
+  travail: "trav",
+  "aides-etat": "aides",
+  "libertes-fondamentales": "lib",
+  sante: "sante",
+  securite: "secu",
+  immigration: "immi",
+  education: "educ",
+  environnement: "envi",
+  logement: "logt",
+};
+
 export function genererIdProposition(slug: string, themeId: string, index: number): string {
-  return `${slug}-${themeId}-${String(index).padStart(3, "0")}`;
+  const abreviation = ABREVIATIONS_THEME[themeId] ?? themeId;
+  return `${slug}-${abreviation}-${String(index).padStart(3, "0")}`;
 }
 
 export interface ResultatCombinaison {
@@ -59,7 +74,7 @@ export async function executerCombinaison(
 
   const fusionnees: Proposition[] = [];
   const enAttente: EntreeAVerifier[] = [];
-  let indexSuivant = propositionsExistantes.length + 1;
+  let indexSuivant = propositionsExistantes.filter((p) => p.theme === combinaison.themeId).length + 1;
 
   for (const proposition of generees) {
     const verdict = verdicts.get(proposition.titre);
@@ -69,6 +84,7 @@ export async function executerCombinaison(
         id: genererIdProposition(meta.slug, combinaison.themeId, indexSuivant),
         candidat: meta.slug,
         theme: combinaison.themeId,
+        date_derniere_verification: new Date().toISOString().slice(0, 10),
       });
       indexSuivant += 1;
     } else {
@@ -191,8 +207,12 @@ async function main(): Promise<void> {
       ? themes.filter((t) => t.id === options.refresh!.theme)
       : themes;
     for (const theme of themesACouvrir) {
-      const { divergence } = await executerRefresh(client, meta, theme.id, theme.libelle);
-      console.log(`[refresh] ${meta.slug} × ${theme.id} : ${divergence ? "divergence détectée, voir _a-verifier.json" : "inchangé"}`);
+      try {
+        const { divergence } = await executerRefresh(client, meta, theme.id, theme.libelle);
+        console.log(`[refresh] ${meta.slug} × ${theme.id} : ${divergence ? "divergence détectée, voir _a-verifier.json" : "inchangé"}`);
+      } catch (erreur) {
+        console.error(`[erreur refresh] ${meta.slug} × ${theme.id} :`, erreur);
+      }
     }
     return;
   }

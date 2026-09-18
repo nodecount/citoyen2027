@@ -11,7 +11,8 @@ export async function verifierUrlDisponible(url: string, fetchImpl: FetchImpl = 
 
 export function verifierDomaineAutorise(url: string, domaines: string[]): boolean {
   try {
-    return domaines.includes(new URL(url).hostname);
+    const hote = new URL(url).hostname;
+    return domaines.some((domaine) => hote === domaine || hote.endsWith(`.${domaine}`));
   } catch {
     return false;
   }

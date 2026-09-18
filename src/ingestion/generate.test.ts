@@ -12,6 +12,28 @@ const META: CandidatMeta = {
   ],
 };
 
+const META_AVEC_RESERVE: CandidatMeta = {
+  slug: "test-reserve",
+  nom: "Candidat Réserve",
+  parti: "Parti Réserve",
+  date_derniere_maj: "2026-09-18",
+  sources_officielles: [
+    {
+      type: "primaire",
+      label: "Site du parti — publié par le parti, pas attribué personnellement au candidat",
+      url: "https://exemple-officiel.fr/programme",
+    },
+  ],
+};
+
+const META_DOMAINE_INVALIDE: CandidatMeta = {
+  slug: "test-invalide",
+  nom: "Candidat Invalide",
+  parti: "Parti Test",
+  date_derniere_maj: "2026-09-18",
+  sources_officielles: [{ type: "primaire", label: "Programme", url: "pas-une-url" }],
+};
+
 describe("construireRequeteGeneration", () => {
   it("restreint les outils web au domaine officiel du candidat", () => {
     const requete = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
@@ -33,6 +55,15 @@ describe("construireRequeteGeneration", () => {
   it("utilise le modèle claude-opus-5", () => {
     const requete = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
     expect(requete.model).toBe("claude-opus-5");
+  });
+
+  it("inclut les réserves d'attribution issues des labels de sources_officielles dans le prompt système", () => {
+    const requete = construireRequeteGeneration(META_AVEC_RESERVE, "fiscalite", "Fiscalité", []);
+    expect(requete.system).toContain("publié par le parti, pas attribué personnellement au candidat");
+  });
+
+  it("lève une exception si aucun domaine officiel exploitable n'est disponible", () => {
+    expect(() => construireRequeteGeneration(META_DOMAINE_INVALIDE, "fiscalite", "Fiscalité", [])).toThrow();
   });
 });
 
@@ -82,5 +113,25 @@ describe("genererPropositions", () => {
     };
     const resultat = await genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", []);
     expect(resultat).toEqual([]);
+  });
+
+  it("rejette si stop_reason vaut refusal, au lieu de retourner silencieusement un tableau vide", async () => {
+    const clientFactice = {
+      messages: {
+        create: async () => ({ content: [{ type: "text", text: "[]" }], stop_reason: "refusal" }),
+      },
+    };
+    await expect(genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", [])).rejects.toThrow();
+  });
+
+  it("rejette si un bloc web_search_tool_result contient une erreur d'outil serveur", async () => {
+    const clientFactice = {
+      messages: {
+        create: async () => ({
+          content: [{ type: "web_search_tool_result", content: { error_code: "max_uses_exceeded" } }],
+        }),
+      },
+    };
+    await expect(genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", [])).rejects.toThrow();
   });
 });

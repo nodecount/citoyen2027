@@ -23,9 +23,9 @@ function preparerRacine(): void {
 }
 
 describe("genererIdProposition", () => {
-  it("produit un identifiant déterministe basé sur le slug, le thème et l'index", () => {
-    expect(genererIdProposition("candidat-x", "fiscalite", 1)).toBe("candidat-x-fiscalite-001");
-    expect(genererIdProposition("candidat-x", "fiscalite", 12)).toBe("candidat-x-fiscalite-012");
+  it("produit un identifiant déterministe basé sur le slug, l'abréviation du thème et l'index", () => {
+    expect(genererIdProposition("candidat-x", "fiscalite", 1)).toBe("candidat-x-fisc-001");
+    expect(genererIdProposition("candidat-x", "fiscalite", 12)).toBe("candidat-x-fisc-012");
   });
 });
 
@@ -70,9 +70,62 @@ describe("executerCombinaison", () => {
 
     const propositionsEnregistrees = chargerPropositions("candidat-x", racine);
     expect(propositionsEnregistrees).toHaveLength(1);
-    expect(propositionsEnregistrees[0].id).toBe("candidat-x-fiscalite-001");
+    expect(propositionsEnregistrees[0].id).toBe("candidat-x-fisc-001");
     expect(propositionsEnregistrees[0].candidat).toBe("candidat-x");
+    expect(propositionsEnregistrees[0].date_derniere_verification).toBe(new Date().toISOString().slice(0, 10));
     expect(chargerAVerifier("candidat-x", racine)).toEqual([]);
+  });
+
+  it("numérote par thème : des propositions existantes sur un autre thème n'influencent pas l'index", async () => {
+    preparerRacine();
+    const propositionsExistantesSante = Array.from({ length: 3 }, (_, i) => ({
+      id: `candidat-x-sante-00${i + 1}`,
+      candidat: "candidat-x",
+      theme: "sante",
+      titre: `Titre santé ${i + 1}`,
+      resume_factuel: "Résumé",
+      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" }],
+      chiffrage_disponible: false,
+      hypotheses_calcul: "",
+      statut: "complet" as const,
+      date_derniere_verification: "2026-09-18",
+    }));
+    enregistrerPropositions("candidat-x", propositionsExistantesSante, racine);
+    const propositionGeneree = {
+      titre: "Titre fiscal",
+      resume_factuel: "Résumé",
+      sources: [
+        { type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" },
+        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/b" },
+      ],
+      chiffrage_disponible: false,
+      hypotheses_calcul: "",
+      statut: "complet" as const,
+      date_derniere_verification: "2026-09-18",
+    };
+    const clientFactice = {
+      messages: {
+        create: vi
+          .fn()
+          .mockResolvedValueOnce({ content: [{ type: "text", text: JSON.stringify([propositionGeneree]) }] })
+          .mockResolvedValueOnce({
+            content: [{ type: "text", text: JSON.stringify([{ titre: "Titre fiscal", verdict: "PASS" }]) }],
+          }),
+      },
+    };
+    const fetchFactice = async () => new Response("contenu de la page");
+
+    await executerCombinaison(
+      clientFactice,
+      META,
+      { slug: "candidat-x", themeId: "fiscalite", themeLibelle: "Fiscalité" },
+      propositionsExistantesSante,
+      { racine, fetchImpl: fetchFactice },
+    );
+
+    const propositionsEnregistrees = chargerPropositions("candidat-x", racine);
+    const nouvelle = propositionsEnregistrees.find((p) => p.titre === "Titre fiscal");
+    expect(nouvelle?.id).toBe("candidat-x-fisc-001");
   });
 
   it("n'enregistre rien dans propositions.json pour une proposition qui échoue la vérification", async () => {
