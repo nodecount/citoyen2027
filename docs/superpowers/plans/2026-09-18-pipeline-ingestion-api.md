@@ -218,7 +218,7 @@ git commit -m "feat(ingestion): dépendances, .env et chargement d'environnement
 
 **Interfaces:**
 - Consumes: `Proposition`, `Source`, `StatutProposition` de `src/types.ts`.
-- Produces: `SCHEMA_PROPOSITION_GENEREE` (objet JSON Schema), `type PropositionGeneree = Omit<Proposition, "id" | "candidat">`, `validerPropositionGeneree(valeur: unknown): valeur is PropositionGeneree`. Utilisés par `generate.ts` (Task 4), `verify.ts` (Task 5) et `run.ts` (Tasks 6-7).
+- Produces: `SCHEMA_PROPOSITION_GENEREE` (objet JSON Schema), `type PropositionGeneree = Omit<Proposition, "id" | "candidat" | "theme">`, `validerPropositionGeneree(valeur: unknown): valeur is PropositionGeneree`. Utilisés par `generate.ts` (Task 4), `verify.ts` (Task 5) et `run.ts` (Tasks 6-7) — `theme` est exclu au même titre que `id`/`candidat` car ni le schéma structured-output ni le validateur ne le produisent ou ne le vérifient : c'est l'appelant (`run.ts`) qui le connaît (c'est la combinaison en cours de traitement) et doit l'assigner explicitement au moment de la fusion, exactement comme `id` et `candidat`.
 
 - [ ] **Step 1 : Écrire les tests (échouent)**
 
@@ -323,7 +323,7 @@ export const SCHEMA_PROPOSITION_GENEREE = {
   additionalProperties: false,
 } as const;
 
-export type PropositionGeneree = Omit<Proposition, "id" | "candidat">;
+export type PropositionGeneree = Omit<Proposition, "id" | "candidat" | "theme">;
 
 const STATUTS_VALIDES: StatutProposition[] = ["complet", "partiel", "provisoire"];
 const TYPES_SOURCE_VALIDES: Source["type"][] = ["primaire", "secondaire"];
@@ -1315,7 +1315,12 @@ describe("executerCombinaison", () => {
     };
     const clientFactice = {
       messages: {
-        create: vi.fn().mockResolvedValue({ content: [{ type: "text", text: JSON.stringify([propositionGeneree]) }] }),
+        create: vi
+          .fn()
+          .mockResolvedValueOnce({ content: [{ type: "text", text: JSON.stringify([propositionGeneree]) }] })
+          .mockResolvedValueOnce({
+            content: [{ type: "text", text: JSON.stringify([{ titre: "Titre", verdict: "PASS" }]) }],
+          }),
       },
     };
     const fetchFactice = async () => new Response("contenu de la page");
@@ -1332,6 +1337,7 @@ describe("executerCombinaison", () => {
     expect(propositionsEnregistrees).toHaveLength(1);
     expect(propositionsEnregistrees[0].id).toBe("candidat-x-fiscalite-001");
     expect(propositionsEnregistrees[0].candidat).toBe("candidat-x");
+    expect(propositionsEnregistrees[0].theme).toBe("fiscalite");
     expect(chargerAVerifier("candidat-x", racine)).toEqual([]);
   });
 
@@ -1340,7 +1346,10 @@ describe("executerCombinaison", () => {
     const propositionGeneree = {
       titre: "Titre invalide",
       resume_factuel: "Résumé",
-      sources: [{ type: "primaire" as const, label: "A", url: "https://domaine-non-autorise.fr/a" }],
+      sources: [
+        { type: "primaire" as const, label: "A", url: "https://domaine-non-autorise.fr/a" },
+        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/b" },
+      ],
       chiffrage_disponible: false,
       hypotheses_calcul: "",
       statut: "complet" as const,
@@ -1436,6 +1445,7 @@ export async function executerCombinaison(
         ...proposition,
         id: genererIdProposition(meta.slug, combinaison.themeId, indexSuivant),
         candidat: meta.slug,
+        theme: combinaison.themeId,
       });
       indexSuivant += 1;
     } else {
@@ -1465,7 +1475,7 @@ multi-combinaisons (`executerLot`) arrive en Task 8, une fois `chargerMeta` bran
 - [ ] **Step 5 : Vérifier et committer**
 
 Run: `npx vitest run src/ingestion/depot.test.ts src/ingestion/run.test.ts`
-Expected: PASS (7 tests au total)
+Expected: PASS (8 tests au total)
 
 ```bash
 git add src/ingestion/depot.ts src/ingestion/depot.test.ts src/ingestion/run.ts src/ingestion/run.test.ts
