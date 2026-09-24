@@ -19,8 +19,6 @@ const THEME_ICONS: Record<string, string> = {
   environnement: "🌳",
   logement: "🏠",
   retraites: "👴",
-  "finances-publiques": "📊",
-  "international-defense-europe": "🌍",
 };
 
 // Thèmes dont les données sont collectées : seuls eux comptent dans le « x / N thèmes »,

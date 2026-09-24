@@ -20,21 +20,42 @@ trois niveaux pour chaque thème :
    d'un **texte de synthèse** expliquant en quoi son programme touche ce thème, pour orienter le
    citoyen vers les thèmes qu'il veut approfondir (puis vers le détail sourcé des mesures).
 3. **Une mise en correspondance avec la situation du citoyen, toujours par thème.** Pour chaque
-   candidat × thème, un **indicateur de projection** — *améliorant / neutre / dégradant* — dit ce
-   que deviendrait la situation du citoyen (profil renseigné) dans une France où la volonté du
-   candidat sur ce thème s'appliquerait. Quand la projection individuelle n'est pas évaluable
-   honnêtement (thème à effet indirect, mesure trop vague, citoyen non concerné), l'indicateur
-   affiche **« non évaluable »** ou **« non concerné »** plutôt qu'une valeur inventée.
+   candidat × thème, un **indicateur de projection** dit ce que deviendrait la situation du
+   citoyen (profil renseigné) dans une France où la volonté du candidat sur ce thème s'appliquerait.
+   Volontairement **quatre niveaux seulement**, pour la clarté de lecture tout en gardant assez de
+   nuance :
+   - **Améliorant** — situation favorable dans le futur pour ce citoyen.
+   - **Mixte** — à la fois du favorable et du défavorable pour ce citoyen sur ce thème.
+   - **Non concerné** — les mesures du candidat sur ce thème ne visent pas ce profil. Ex : le thème
+     « retraite » pour un citoyen de 25 ans ; le thème « logement » quand le candidat annonce un
+     traitement spécifique aux propriétaires et que le citoyen n'est pas propriétaire.
+   - **Dégradant** — situation qui se compliquerait pour ce citoyen. Ex : plus de taxes pour un
+     citoyen dont la tranche de revenus est visée par les intentions d'un candidat sur le pouvoir
+     d'achat. Ex : une mesure sourcée d'un candidat qui restreindrait l'accès à des soins pour les
+     personnes de nationalité étrangère dégrade la situation d'un citoyen étranger sur le thème
+     « santé » — à condition que le périmètre de la mesure recouvre bien le profil du citoyen
+     (une mesure qui ne vise que les personnes en situation irrégulière ne s'applique pas à tout
+     citoyen étranger : on n'élargit jamais le périmètre par approximation).
+   Un candidat sans mesure sourcée sur un thème n'y figure pas. Un candidat dont les mesures sur le
+   thème existent mais dont le sens de l'effet n'est pas déterminable d'après son programme publié
+   apparaît avec sa synthèse **sans badge** et la mention « effet non déterminable d'après le
+   programme publié » : ce n'est pas un cinquième niveau, c'est l'absence honnête de projection.
 
 Garde-fous de l'indicateur (ils découlent du principe d'indépendance ci-dessous) :
 - Il mesure l'effet sur **la situation matérielle et les droits du citoyen** (revenu, coûts, accès,
-  droits), jamais un jugement de valeur sur la politique elle-même.
+  droits), jamais un jugement de valeur sur la politique elle-même. Le « sens » (favorable ou
+  défavorable) est fixé par une table de règles dans le code, jamais par le modèle d'ingestion.
 - Il est produit par des **règles explicites, documentées et reproductibles** à partir de données
-  structurées et sourcées (cibles et sens de l'effet de chaque mesure), pas par un modèle opaque.
+  structurées et sourcées (cibles et sens de l'effet de chaque mesure, avec l'extrait de source qui
+  le fonde), pas par un modèle opaque.
 - **Pas de score global inter-thèmes, pas de classement de candidats.** L'indicateur reste par
   thème ; l'ordre d'affichage reste alphabétique ; la même méthode s'applique à tous les candidats.
+- Effets de premier ordre uniquement : ce que la mesure fait directement au citoyen, pas des
+  conséquences macroéconomiques spéculées.
 - Toute hypothèse est affichée (mesure imprécise, chiffrage absent, effet dépendant de détails non
-  publiés) et l'indicateur se dégrade en « non évaluable » plutôt que de deviner.
+  publiés) ; à défaut de pouvoir trancher, on ne devine pas.
+- Le formulaire citoyen sera affiné **après** les premiers résultats d'ingestion, pour orienter les
+  questions posées à partir des critères (cibles) réellement présents dans les programmes.
 
 **Principe fondateur — INDÉPENDANCE ET NEUTRALITÉ :** C'est la contrainte la plus importante du projet. L'outil ne doit être affilié à aucun parti, ni directement ni indirectement. Concrètement, cela implique :
 - Ne jamais utiliser un simulateur ou un jeu de données produit par un parti ou une organisation partisane (ex : les simulateurs internes que certains candidats ou partis publient sur leur propre programme) comme source de vérité, même comme point de départ technique.
@@ -112,7 +133,7 @@ Champs possibles : statut (salarié, indépendant, fonctionnaire, retraité, ét
 
 ## État actuel du projet
 
-Le schéma de données, le moteur de calcul (`src/engine/`) et l'interface (`src/ui/`, React/Vite/TypeScript) sont construits et fonctionnels. `data/themes.json` compte 14 thèmes : 11 peuplés de données réelles et sourcées pour les trois candidats (Le Pen, Mélenchon, Philippe), soit 71 propositions au total, et 3 encore « provisoire » (retraites, finances publiques, international/défense/Europe) — voir `docs/methodologie.md` pour les règles de sourçage appliquées et l'exception documentée sur deux thèmes du dossier Philippe. Ces données n'ont toutefois pas encore été relues ni validées par le porteur du projet. Prochaines étapes probables :
+Le schéma de données, le moteur de calcul (`src/engine/`) et l'interface (`src/ui/`, React/Vite/TypeScript) sont construits et fonctionnels. `data/themes.json` compte 12 thèmes, tous projetables sur la situation d'un citoyen (les sujets à effet indirect — dette, diplomatie/défense/Europe — ont été volontairement écartés) : 11 peuplés de données réelles et sourcées pour les trois candidats (Le Pen, Mélenchon, Philippe), soit 71 propositions au total, et « retraites » encore « provisoire » — voir `docs/methodologie.md` pour les règles de sourçage appliquées et l'exception documentée sur deux thèmes du dossier Philippe. Ces données n'ont toutefois pas encore été relues ni validées par le porteur du projet. Prochaines étapes probables :
 - **Combler l'écart avec le fil rouge produit** : le modèle de données actuel (propositions avec `resume_factuel`) ne porte encore ni la synthèse par candidat × thème, ni les données structurées (cibles et sens de l'effet) dont l'indicateur améliorant/neutre/dégradant a besoin ; le moteur ne produit qu'un impact « concerné / qualitatif ». Le prompt d'ingestion et l'UI (cards par thème) sont à étendre en conséquence — voir `docs/superpowers/specs/2026-09-24-fil-rouge-themes-projection-design.md`.
 - Faire relire et valider le contenu par le porteur du projet (exactitude factuelle, neutralité du ton, cohérence entre candidats)
 - Poursuivre l'audit de l'application uniforme de la convention `resume_factuel` / `hypotheses_calcul` (suivi déjà noté dans `docs/methodologie.md`)
