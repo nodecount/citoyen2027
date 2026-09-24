@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { CandidatMeta } from "../types";
-import { detecterErreurReponse, type ClientAnthropicMinimal, type RequeteGeneration } from "./generate";
+import { detecterErreurReponse, resumerAppel, type ClientAnthropicMinimal, type RequeteGeneration } from "./generate";
 import { domainesAutorises, domainesAvecInstitutions, estSourceInstitutionnelle } from "./domaines";
 import {
   verifierChiffresPresents,
@@ -114,7 +114,9 @@ async function verifierSemantiquement(
   propositions: PropositionGeneree[],
 ): Promise<Map<string, Verdict>> {
   const requete = construireRequeteVerification(meta, propositions);
+  const debut = Date.now();
   const reponse = await client.messages.create(requete);
+  console.log(`${resumerAppel(reponse, Date.now() - debut)} (vérification ${meta.slug})`);
   const erreur = detecterErreurReponse(reponse);
   if (erreur) {
     throw new Error(`verifierSemantiquement (${meta.slug}) : ${erreur}`);

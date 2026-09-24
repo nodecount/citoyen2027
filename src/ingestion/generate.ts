@@ -57,11 +57,47 @@ export interface BlocContenuReponse {
   type: string;
   text?: string;
   content?: unknown;
+  id?: string;
+  name?: string;
+  input?: unknown;
+  tool_use_id?: string;
 }
 
 export interface ReponseAnthropicMinimale {
   content: BlocContenuReponse[];
   stop_reason?: string | null;
+  usage?: { input_tokens?: number; output_tokens?: number };
+}
+
+function formaterDuree(dureeMs: number): string {
+  const secondes = Math.round(dureeMs / 1000);
+  return secondes >= 60 ? `${Math.floor(secondes / 60)} min ${secondes % 60} s` : `${secondes} s`;
+}
+
+// Une ligne de journal par appel : sans elle, un essai de 14 minutes qui ne rend rien est
+// inexplicable (combien de jetons ? quelles pages lues ? lesquelles inaccessibles ?).
+export function resumerAppel(reponse: ReponseAnthropicMinimale, dureeMs: number): string {
+  const utilisations = reponse.content.filter((bloc) => bloc.type === "server_tool_use");
+  const parOutil = new Map<string, number>();
+  for (const bloc of utilisations) parOutil.set(bloc.name ?? "outil", (parOutil.get(bloc.name ?? "outil") ?? 0) + 1);
+  const outils =
+    parOutil.size > 0 ? [...parOutil].map(([nom, nombre]) => `${nom} ×${nombre}`).join(", ") : "aucun appel d'outil";
+
+  const echecs: string[] = [];
+  for (const bloc of reponse.content) {
+    const contenu = bloc.content as Record<string, unknown> | null | undefined;
+    if (!bloc.tool_use_id || typeof contenu !== "object" || contenu === null || !("error_code" in contenu)) continue;
+    const appel = utilisations.find((u) => u.id === bloc.tool_use_id);
+    const entree = (appel?.input ?? {}) as Record<string, unknown>;
+    const cible = String(entree.url ?? entree.query ?? "?");
+    echecs.push(`${cible} (${String(contenu.error_code)})`);
+  }
+
+  const jetons = reponse.usage
+    ? `${reponse.usage.input_tokens ?? "?"} jetons en entrée, ${reponse.usage.output_tokens ?? "?"} en sortie`
+    : "jetons inconnus";
+  const suffixe = echecs.length > 0 ? ` — échecs : ${echecs.join(" ; ")}` : "";
+  return `[appel] ${formaterDuree(dureeMs)} · ${jetons} · ${outils}${suffixe}`;
 }
 
 export interface ClientAnthropicMinimal {
@@ -155,7 +191,9 @@ export async function genererPropositions(
   titresExistants: string[],
 ): Promise<PropositionGeneree[]> {
   const requete = construireRequeteGeneration(meta, themeId, themeLibelle, titresExistants);
+  const debut = Date.now();
   const reponse = await client.messages.create(requete);
+  console.log(`${resumerAppel(reponse, Date.now() - debut)} (génération ${meta.slug} × ${themeId})`);
   const erreur = detecterErreurReponse(reponse);
   if (erreur) {
     throw new Error(`genererPropositions (${meta.slug} × ${themeId}) : ${erreur}`);
