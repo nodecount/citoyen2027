@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { validerPropositionGeneree } from "./schema";
+import { SCHEMA_PROPOSITION_GENEREE, validerPropositionGeneree } from "./schema";
+
+describe("SCHEMA_PROPOSITION_GENEREE (contrainte de l'API structured outputs)", () => {
+  it("n'utilise pas minItems/maxItems : l'API n'accepte que 0 ou 1, le minimum de 2 sources est vérifié par validerPropositionGeneree", () => {
+    expect(JSON.stringify(SCHEMA_PROPOSITION_GENEREE)).not.toMatch(/minItems|maxItems/);
+  });
+});
 
 const PROPOSITION_VALIDE = {
   titre: "Titre neutre de la mesure",

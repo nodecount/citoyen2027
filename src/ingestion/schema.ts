@@ -7,7 +7,6 @@ export const SCHEMA_PROPOSITION_GENEREE = {
     resume_factuel: { type: "string" },
     sources: {
       type: "array",
-      minItems: 2,
       items: {
         type: "object",
         properties: {

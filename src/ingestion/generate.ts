@@ -2,13 +2,22 @@ import Anthropic from "@anthropic-ai/sdk";
 import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import themesData from "../../data/themes.json";
 import type { CandidatMeta } from "../types";
 import { domainesAutorises } from "./domaines";
 import { SCHEMA_PROPOSITION_GENEREE, validerPropositionGeneree, type PropositionGeneree } from "./schema";
 
 const ICI = dirname(fileURLToPath(import.meta.url));
-const MODELE = "claude-opus-5";
+const MODELE = "claude-sonnet-5";
 const MAX_TOKENS = 16000;
+
+const themes = themesData as Array<{ id: string; libelle: string; description: string }>;
+
+// Le périmètre d'un thème vient de data/themes.json : sans lui, le modèle devine (ex : « Travail »
+// inclut-il les retraites ?) et le périmètre varierait d'un candidat à l'autre.
+function descriptionDuTheme(themeId: string): string {
+  return themes.find((t) => t.id === themeId)?.description ?? "(périmètre non précisé)";
+}
 
 export interface RequeteGeneration {
   model: string;
@@ -74,6 +83,9 @@ export function construireRequeteGeneration(
   const system = gabarit
     .split("{{CANDIDAT}}")
     .join(meta.nom)
+    .replace("{{THEME}}", themeLibelle)
+    .replace("{{THEME_DESCRIPTION}}", descriptionDuTheme(themeId))
+    .replace("{{DATE}}", new Date().toISOString().slice(0, 10))
     .replace("{{TITRES_EXISTANTS}}", listeTitresExistants);
 
   const notesSourcesOfficielles = meta.sources_officielles.map((s) => `  - ${s.label}`).join("\n");

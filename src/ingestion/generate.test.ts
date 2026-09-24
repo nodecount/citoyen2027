@@ -53,9 +53,30 @@ describe("construireRequeteGeneration", () => {
     expect(requete.system).toContain("Mesure déjà écrite");
   });
 
-  it("utilise le modèle claude-opus-5", () => {
+  it("utilise le modèle claude-sonnet-5", () => {
     const requete = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
-    expect(requete.model).toBe("claude-opus-5");
+    expect(requete.model).toBe("claude-sonnet-5");
+  });
+
+  it("transmet le libellé et le périmètre du thème issus de themes.json", () => {
+    const requete = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
+    expect(requete.system).toContain("« Fiscalité »");
+    expect(requete.system).toContain("Impôts sur le revenu, la consommation, le patrimoine et les entreprises");
+  });
+
+  it("injecte la date du jour au lieu de laisser le modèle l'inventer", () => {
+    const requete = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
+    expect(requete.system).toContain(new Date().toISOString().slice(0, 10));
+  });
+
+  it("ne laisse aucun marqueur de gabarit non remplacé", () => {
+    const requete = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
+    expect(requete.system).not.toMatch(/\{\{[A-Z_]+\}\}/);
+  });
+
+  it("demande un tableau vide plutôt qu'une invention quand rien n'est trouvé", () => {
+    const requete = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
+    expect(requete.system).toContain("`[]`");
   });
 
   it("inclut les réserves d'attribution issues des labels de sources_officielles dans le prompt système", () => {

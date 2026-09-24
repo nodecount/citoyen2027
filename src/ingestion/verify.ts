@@ -8,7 +8,7 @@ import { verifierChiffresPresents, verifierDomaineAutorise, verifierUrlDisponibl
 import type { PropositionGeneree } from "./schema";
 
 const ICI = dirname(fileURLToPath(import.meta.url));
-const MODELE = "claude-opus-5";
+const MODELE = "claude-sonnet-5";
 const MAX_TOKENS = 16000;
 
 export type Verdict = { statut: "PASS" } | { statut: "FAIL"; raison: string };
