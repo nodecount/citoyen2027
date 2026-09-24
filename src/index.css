@@ -1,17 +1,73 @@
+/* Aucune police ni ressource externe : charger une police depuis un service tiers révélerait l'adresse
+   IP de chaque citoyen, ce qui n'a pas sa place dans un outil qui manipule un profil sensible. */
 :root {
   color-scheme: light dark;
-  font-family: system-ui, sans-serif;
-  line-height: 1.5;
+
+  --fond: #f2f4f6;
+  --surface: #ffffff;
+  --encre: #17212b;
+  --encre-douce: #566270;
+  --filet: #d3d9df;
+  --alerte: #b45309;
+  --erreur: #b91c1c;
+
+  /* La couleur ne sert qu'aux quatre niveaux de l'indicateur, jamais à un parti ou un candidat, et
+     ne porte jamais le sens seule : chaque niveau a aussi un libellé et un symbole. */
+  --ameliorant: #1e7a5a;
+  --mixte: #9a6200;
+  --non-concerne: #5d6875;
+  --degradant: #b4323f;
+
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #12181f;
+    --surface: #1a222b;
+    --encre: #e8edf2;
+    --encre-douce: #9aa6b2;
+    --filet: #2c3743;
+    --alerte: #e0a63a;
+    --erreur: #f0808b;
+
+    --ameliorant: #5cc79e;
+    --mixte: #e0a63a;
+    --non-concerne: #9aa6b2;
+    --degradant: #f0808b;
+  }
+}
+
+html {
+  background: var(--fond);
 }
 
 body {
-  max-width: 780px;
+  max-width: 44rem;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem 4rem;
+  font-family: var(--sans);
+  line-height: 1.55;
+  color: var(--encre);
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-family: var(--serif);
+  font-size: 2rem;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.15em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--encre);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 form div {
@@ -31,21 +87,30 @@ button {
 article {
   margin-bottom: 2rem;
   padding-top: 1rem;
-  border-top: 1px solid #8888;
+  border-top: 1px solid var(--filet);
 }
 
 .avertissement {
   padding: 0.75rem 1rem;
-  border: 1px solid #8888;
-  border-radius: 0.25rem;
+  border: 1px solid var(--filet);
+  border-left: 4px solid var(--alerte);
+  border-radius: 6px;
+  background: var(--surface);
   font-size: 0.9rem;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--encre-douce);
+  margin-top: 0.75rem;
+  margin-bottom: 0;
 }
 
 .badge-partiel {
   font-size: 0.85em;
   font-weight: normal;
   font-style: italic;
-  color: #b45309;
+  color: var(--alerte);
 }
 
 .sources {
@@ -53,135 +118,235 @@ article {
   font-size: 0.85rem;
 }
 
-.source-type {
+/* ---- Résultats : une card par thème ---------------------------------------------------------- */
+
+.legende {
+  margin: 1rem 0;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--filet);
+  border-radius: 6px;
+  background: var(--surface);
+  font-size: 0.9rem;
+}
+
+.legende > summary {
+  cursor: pointer;
   font-weight: 600;
 }
 
-.resume-global {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  border: 1px solid #8888;
-  border-radius: 0.5rem;
+.legende dl {
+  margin: 0.5rem 0 0;
 }
 
-.resume-global h2 {
-  margin-top: 0;
-  font-size: 1.1rem;
+.legende dl > div {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 0.5rem;
+  align-items: start;
+  padding: 0.35rem 0;
 }
 
-.compte-themes {
-  font-size: 0.75rem;
-  opacity: 0.8;
+.legende dt,
+.legende dd {
+  margin: 0;
 }
 
-.theme-card {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  border: 1px solid #8888;
-  border-radius: 0.5rem;
+@media (max-width: 32rem) {
+  .legende dl > div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
 }
 
-.theme-card h2 {
-  margin-top: 0;
-  font-size: 1.15rem;
-}
-
-.candidat-detail {
-  margin-bottom: 1rem;
-  padding: 0.75rem 1rem;
-  border: 1px solid #8888;
-  border-radius: 0.25rem;
-  background: color-mix(in srgb, currentColor 5%, transparent);
-}
-
-.candidat-detail h3 {
-  margin-top: 0;
-  margin-bottom: 0.25rem;
-}
-
-.statut-texte {
-  font-weight: 600;
-  margin-top: 0;
-}
-
-.portraits-row {
+.reperes {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 1.5rem;
+  gap: 0.4rem;
+  margin: 1rem 0;
+  padding: 0;
 }
 
-.portraits-groupe {
-  display: flex;
-  align-items: flex-start;
+.reperes a {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--filet);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 0.9rem;
+  text-decoration: none;
 }
 
-.portraits-groupe--concerne {
-  gap: 1rem;
+.reperes a:hover {
+  border-color: var(--encre);
 }
 
-.portrait {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.35rem;
-  background: none;
-  border: none;
+.carte {
+  margin: 1.25rem 0;
+  padding: 1.25rem 1.25rem 1rem;
+  border: 1px solid var(--filet);
+  border-radius: 6px;
+  background: var(--surface);
+  scroll-margin-top: 1rem;
+}
+
+.carte h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  line-height: 1.15;
+}
+
+.question {
+  margin: 0.25rem 0 1rem;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--encre-douce);
+}
+
+.candidats {
   margin: 0;
   padding: 0;
-  cursor: pointer;
-  font: inherit;
-  color: inherit;
+  list-style: none;
+  border-top: 1px solid var(--filet);
 }
 
-.portrait--statique {
-  cursor: default;
+.candidats > li {
+  border-bottom: 1px solid var(--filet);
 }
 
-.avatar {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
+.candidat-resume {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  background: color-mix(in srgb, currentColor 15%, transparent);
-  /* Bordure neutre par défaut : la phase 2 y ajoutera une couleur
-     (favorable/défavorable) sans jamais déplacer les portraits. */
-  border: 3px solid #8888;
+  gap: 0.5rem 0.75rem;
+  padding: 0.7rem 0;
+  cursor: pointer;
+  list-style: none;
 }
 
-.portrait-nom {
-  font-size: 0.75rem;
-  text-align: center;
-  max-width: 5rem;
+.candidat-resume::-webkit-details-marker {
+  display: none;
 }
 
-/* Portraits non concernés : estompés et empilés les uns sur les autres
-   (chaque avatar chevauche le précédent de moitié), pour bien les
-   distinguer visuellement du groupe des candidats concernés. */
-.portrait--empile {
-  opacity: 0.4;
+.candidat-resume::before {
+  content: "";
+  flex: none;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 2px solid var(--encre-douce);
+  border-bottom: 2px solid var(--encre-douce);
+  transform: rotate(-45deg);
+  transition: transform 0.15s;
 }
 
-.portraits-groupe--non-concerne .portrait--empile:not(:first-child) {
-  margin-left: -1.5rem;
+.candidat[open] > .candidat-resume::before {
+  transform: rotate(45deg);
 }
 
-.portraits-groupe--non-concerne .portrait:hover,
-.portraits-groupe--non-concerne .portrait:focus-visible {
-  opacity: 0.75;
-  z-index: 1;
-  position: relative;
+@media (prefers-reduced-motion: reduce) {
+  .candidat-resume::before {
+    transition: none;
+  }
 }
 
-.hint {
+.candidat-nom {
+  flex: 1;
+  min-width: 8rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.niveau {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0.6rem;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
   font-size: 0.85rem;
-  color: color-mix(in srgb, currentColor 65%, transparent);
-  margin-top: 0.75rem;
-  margin-bottom: 0;
+  font-weight: 600;
+  white-space: nowrap;
 }
+
+.niveau--ameliorant {
+  color: var(--ameliorant);
+}
+
+.niveau--mixte {
+  color: var(--mixte);
+}
+
+.niveau--non-concerne {
+  color: var(--non-concerne);
+}
+
+.niveau--degradant {
+  color: var(--degradant);
+}
+
+.sans-badge {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--encre-douce);
+}
+
+.candidat-corps {
+  padding: 0 0 1rem 1.25rem;
+}
+
+.synthese {
+  max-width: 65ch;
+  margin: 0 0 0.5rem;
+}
+
+.sources-citees {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  color: var(--encre-douce);
+}
+
+.pour-votre-profil {
+  max-width: 65ch;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.pourquoi,
+.mesures {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.pourquoi > summary,
+.mesures > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--encre-douce);
+}
+
+.pourquoi ul,
+.mesures ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.pourquoi li,
+.mesures li {
+  margin-bottom: 0.75rem;
+}
+
+.mesures li p {
+  margin: 0.2rem 0;
+}
+
+.absents {
+  margin: 0.9rem 0 0;
+  font-size: 0.85rem;
+  color: var(--encre-douce);
+}
+
+/* ---- Monitoring ---------------------------------------------------------------------------- */
 
 .monitoring {
   max-width: 960px;
@@ -190,8 +355,9 @@ article {
 .monitoring-candidat {
   margin-bottom: 2rem;
   padding: 1rem;
-  border: 1px solid #8888;
-  border-radius: 0.5rem;
+  border: 1px solid var(--filet);
+  border-radius: 6px;
+  background: var(--surface);
 }
 
 .monitoring-date {
@@ -210,27 +376,28 @@ article {
 .monitoring-grille td {
   text-align: left;
   padding: 0.35rem 0.5rem;
-  border-bottom: 1px solid #8884;
+  border-bottom: 1px solid var(--filet);
 }
 
 .monitoring-en-attente {
   margin-top: 1rem;
   padding: 0.75rem;
-  border: 1px solid #b45309;
-  border-radius: 0.25rem;
+  border: 1px solid var(--alerte);
+  border-radius: 6px;
 }
 
 .monitoring-badge {
   font-weight: 600;
-  color: #b45309;
+  color: var(--alerte);
   margin: 0 0 0.5rem;
 }
 
 .monitoring-relance {
   margin-top: 2rem;
   padding: 1rem;
-  border: 1px solid #8888;
-  border-radius: 0.5rem;
+  border: 1px solid var(--filet);
+  border-radius: 6px;
+  background: var(--surface);
 }
 
 .monitoring-relance fieldset {
@@ -238,6 +405,6 @@ article {
 }
 
 .monitoring-erreur {
-  color: #b91c1c;
+  color: var(--erreur);
   font-weight: 600;
 }

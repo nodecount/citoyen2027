@@ -52,6 +52,17 @@ describe("assemblerCandidats", () => {
     expect(enCoursAnalyse.map((m) => m.slug)).toEqual(["attal"]);
   });
 
+  it("attache à chaque candidat ses synthèses, ou une liste vide s'il n'en a pas encore", () => {
+    const synthese = { theme: "fiscalite", texte: "Texte.", propositions: ["a1"], date_derniere_verification: "2026-09-24" };
+    const { avecDonnees } = assemblerCandidats(
+      { attal: meta("attal", "A"), philippe: meta("philippe", "P") },
+      { attal: [prop("a1", "complet")], philippe: [prop("p1", "complet")] },
+      { attal: [synthese] }
+    );
+    expect(avecDonnees.find((c) => c.meta.slug === "attal")?.syntheses).toEqual([synthese]);
+    expect(avecDonnees.find((c) => c.meta.slug === "philippe")?.syntheses).toEqual([]);
+  });
+
   it("ignore un propositions.json sans meta.json correspondant", () => {
     const { avecDonnees, enCoursAnalyse } = assemblerCandidats({}, { orphelin: [prop("o1", "complet")] });
     expect(avecDonnees).toEqual([]);

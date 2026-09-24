@@ -1,9 +1,11 @@
-import type { CandidatMeta, Proposition } from "../types";
+import type { CandidatMeta, Proposition, SyntheseTheme } from "../types";
 import { extraireSlug } from "../ui/monitoring/couverture";
 
 export interface CandidatCharge {
   meta: CandidatMeta;
   propositions: Proposition[];
+  // Un texte par thème au plus ; absent tant que l'étape de synthèse du pipeline n'a pas tourné.
+  syntheses: SyntheseTheme[];
 }
 
 export interface CandidatsCharges {
@@ -22,14 +24,15 @@ function aDesPropositionsAffichables(propositions: Proposition[] | undefined): b
 // Ordre alphabétique de slug dans les deux listes : aucun ordre de préférence implicite.
 export function assemblerCandidats(
   metas: Record<string, CandidatMeta>,
-  propositions: Record<string, Proposition[]>
+  propositions: Record<string, Proposition[]>,
+  syntheses: Record<string, SyntheseTheme[]> = {}
 ): CandidatsCharges {
   const slugs = Object.keys(metas).sort((a, b) => a.localeCompare(b));
   const avecDonnees: CandidatCharge[] = [];
   const enCoursAnalyse: CandidatMeta[] = [];
   for (const slug of slugs) {
     if (aDesPropositionsAffichables(propositions[slug])) {
-      avecDonnees.push({ meta: metas[slug], propositions: propositions[slug] });
+      avecDonnees.push({ meta: metas[slug], propositions: propositions[slug], syntheses: syntheses[slug] ?? [] });
     } else {
       enCoursAnalyse.push(metas[slug]);
     }
@@ -44,6 +47,9 @@ const metaModules = import.meta.glob("../../data/programmes/*/meta.json", { eage
 const propositionsModules = import.meta.glob("../../data/programmes/*/propositions.json", {
   eager: true,
 }) as Record<string, { default: Proposition[] }>;
+const synthesesModules = import.meta.glob("../../data/programmes/*/synthese.json", {
+  eager: true,
+}) as Record<string, { default: SyntheseTheme[] }>;
 
 function parSlug<T>(modules: Record<string, { default: T }>): Record<string, T> {
   const resultat: Record<string, T> = {};
@@ -54,5 +60,5 @@ function parSlug<T>(modules: Record<string, { default: T }>): Record<string, T> 
 }
 
 export function chargerCandidats(): CandidatsCharges {
-  return assemblerCandidats(parSlug(metaModules), parSlug(propositionsModules));
+  return assemblerCandidats(parSlug(metaModules), parSlug(propositionsModules), parSlug(synthesesModules));
 }
