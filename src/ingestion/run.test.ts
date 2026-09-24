@@ -13,7 +13,7 @@ const META: CandidatMeta = {
   nom: "Candidat X",
   parti: "Parti X",
   date_derniere_maj: "2026-09-18",
-  sources_officielles: [{ type: "primaire", label: "Programme", url: "https://exemple-officiel.fr/programme" }],
+  sources_officielles: [{ type: "primaire", label: "Programme", url: "https://exemple-officiel.fr/programme", nom: "Source", annee: 2026 }],
 };
 
 function preparerRacine(): void {
@@ -40,8 +40,8 @@ describe("executerCombinaison", () => {
       titre: "Titre",
       resume_factuel: "Résumé",
       sources: [
-        { type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" },
-        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/b" },
+        { type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 },
+        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/b", nom: "Source", annee: 2026 },
       ],
       chiffrage_disponible: false,
       hypotheses_calcul: "",
@@ -85,7 +85,7 @@ describe("executerCombinaison", () => {
       theme: "sante",
       titre: `Titre santé ${i + 1}`,
       resume_factuel: "Résumé",
-      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" }],
+      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 }],
       chiffrage_disponible: false,
       hypotheses_calcul: "",
       statut: "complet" as const,
@@ -97,8 +97,8 @@ describe("executerCombinaison", () => {
       titre: "Titre fiscal",
       resume_factuel: "Résumé",
       sources: [
-        { type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" },
-        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/b" },
+        { type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 },
+        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/b", nom: "Source", annee: 2026 },
       ],
       chiffrage_disponible: false,
       hypotheses_calcul: "",
@@ -139,7 +139,7 @@ describe("executerCombinaison", () => {
       theme: "sante",
       titre: "Titre Santé Existante",
       resume_factuel: "Résumé",
-      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" }],
+      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 }],
       chiffrage_disponible: false,
       hypotheses_calcul: "",
       statut: "complet" as const,
@@ -152,7 +152,7 @@ describe("executerCombinaison", () => {
       theme: "fiscalite",
       titre: "Titre Fiscal Existant",
       resume_factuel: "Résumé",
-      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" }],
+      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 }],
       chiffrage_disponible: false,
       hypotheses_calcul: "",
       statut: "complet" as const,
@@ -189,8 +189,8 @@ describe("executerCombinaison", () => {
       titre: "Titre invalide",
       resume_factuel: "Résumé",
       sources: [
-        { type: "primaire" as const, label: "A", url: "https://domaine-non-autorise.fr/a" },
-        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/b" },
+        { type: "primaire" as const, label: "A", url: "https://domaine-non-autorise.fr/a", nom: "Source", annee: 2026 },
+        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/b", nom: "Source", annee: 2026 },
       ],
       chiffrage_disponible: false,
       hypotheses_calcul: "",
@@ -226,7 +226,7 @@ describe("combinaisonsDiffere", () => {
       theme: "fiscalite",
       titre: "Titre",
       resume_factuel: "Résumé",
-      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" }],
+      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 }],
       chiffrage_disponible: false,
       hypotheses_calcul: "",
       statut: "complet" as const,
@@ -236,7 +236,7 @@ describe("combinaisonsDiffere", () => {
     const fraiche = {
       titre: "Titre",
       resume_factuel: "Résumé",
-      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" }],
+      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 }],
       chiffrage_disponible: false,
       hypotheses_calcul: "",
       statut: "complet" as const,
@@ -253,7 +253,7 @@ describe("combinaisonsDiffere", () => {
       theme: "fiscalite",
       titre: "Titre",
       resume_factuel: "Ancien résumé",
-      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" }],
+      sources: [{ type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 }],
       chiffrage_disponible: false,
       hypotheses_calcul: "",
       statut: "complet" as const,
@@ -296,8 +296,8 @@ describe("executerRefresh", () => {
     titre: "Titre A",
     resume_factuel: "Résumé A",
     sources: [
-      { type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" },
-      { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/b" },
+      { type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 },
+      { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/b", nom: "Source", annee: 2026 },
     ],
     chiffrage_disponible: false,
     hypotheses_calcul: "",
@@ -359,8 +359,8 @@ describe("executerRefresh", () => {
       titre: "Titre Travail B",
       resume_factuel: "Résumé B",
       sources: [
-        { type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/c" },
-        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/d" },
+        { type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/c", nom: "Source", annee: 2026 },
+        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/d", nom: "Source", annee: 2026 },
       ],
       chiffrage_disponible: false,
       hypotheses_calcul: "",
@@ -407,7 +407,7 @@ describe("executerLot", () => {
       nom: slug,
       parti: "Parti",
       date_derniere_maj: "2026-09-18",
-      sources_officielles: [{ type: "primaire", label: "Programme", url: "https://exemple-officiel.fr/programme" }],
+      sources_officielles: [{ type: "primaire", label: "Programme", url: "https://exemple-officiel.fr/programme", nom: "Source", annee: 2026 }],
     });
     mkdirSync(resolve(racine, "candidat-a"), { recursive: true });
     writeFileSync(resolve(racine, "candidat-a/meta.json"), JSON.stringify(metaValide("candidat-a")));
@@ -420,8 +420,8 @@ describe("executerLot", () => {
       titre: "Titre",
       resume_factuel: "Résumé",
       sources: [
-        { type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a" },
-        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/b" },
+        { type: "primaire" as const, label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 },
+        { type: "primaire" as const, label: "B", url: "https://exemple-officiel.fr/b", nom: "Source", annee: 2026 },
       ],
       chiffrage_disponible: false,
       hypotheses_calcul: "",

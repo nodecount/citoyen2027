@@ -13,6 +13,10 @@ export interface Source {
   type: "primaire" | "secondaire";
   label: string;
   url: string;
+  // Citation courte « nom · année » (voir src/citations.ts). Optionnels tant que les sources
+  // collectées avant ce format n'ont pas été enrichies ; obligatoires à la génération.
+  nom?: string;
+  annee?: number;
 }
 
 export interface Proposition {

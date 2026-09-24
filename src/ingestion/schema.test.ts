@@ -12,8 +12,8 @@ const PROPOSITION_VALIDE = {
   titre: "Titre neutre de la mesure",
   resume_factuel: "Le candidat propose de...",
   sources: [
-    { type: "primaire", label: "Programme officiel", url: "https://exemple-officiel.fr/programme" },
-    { type: "primaire", label: "Page mesure dédiée", url: "https://exemple-officiel.fr/mesure" },
+    { type: "primaire", label: "Programme officiel", url: "https://exemple-officiel.fr/programme", nom: "Source", annee: 2026 },
+    { type: "primaire", label: "Page mesure dédiée", url: "https://exemple-officiel.fr/mesure", nom: "Source", annee: 2026 },
   ],
   chiffrage_disponible: true,
   hypotheses_calcul: "Chiffrage basé sur...",
@@ -53,7 +53,7 @@ describe("effets dans la proposition générée", () => {
   });
 
   it("rejette un effet dont la source_url n'est pas une source de la proposition", () => {
-    const effetHorsSource = { ...PROPOSITION_VALIDE.effets[0], source_url: "https://inconnu.fr/x" };
+    const effetHorsSource = { ...PROPOSITION_VALIDE.effets[0], source_url: "https://inconnu.fr/x", nom: "Source", annee: 2026 };
     expect(validerPropositionGeneree({ ...PROPOSITION_VALIDE, effets: [effetHorsSource] })).toBe(false);
   });
 
@@ -90,7 +90,7 @@ describe("validerPropositionGeneree", () => {
     expect(
       validerPropositionGeneree({
         ...PROPOSITION_VALIDE,
-        sources: [{ type: "tertiaire", label: "x", url: "https://exemple.fr" }, PROPOSITION_VALIDE.sources[1]],
+        sources: [{ type: "tertiaire", label: "x", url: "https://exemple.fr", nom: "Source", annee: 2026 }, PROPOSITION_VALIDE.sources[1]],
       }),
     ).toBe(false);
   });
@@ -98,5 +98,38 @@ describe("validerPropositionGeneree", () => {
   it("rejette une valeur qui n'est pas un objet", () => {
     expect(validerPropositionGeneree("pas un objet")).toBe(false);
     expect(validerPropositionGeneree(null)).toBe(false);
+  });
+});
+
+describe("sources citables (nom · année)", () => {
+  it("le schéma d'API exige nom (chaîne) et annee (entier) pour chaque source", () => {
+    const source = SCHEMA_PROPOSITION_GENEREE.properties.sources.items;
+    expect(source.properties.nom.type).toBe("string");
+    expect(source.properties.annee.type).toBe("integer");
+    expect(source.required).toContain("nom");
+    expect(source.required).toContain("annee");
+  });
+
+  it("rejette une source sans nom court", () => {
+    const { nom: _nom, ...sansNom } = PROPOSITION_VALIDE.sources[0];
+    expect(
+      validerPropositionGeneree({ ...PROPOSITION_VALIDE, sources: [sansNom, PROPOSITION_VALIDE.sources[1]] }),
+    ).toBe(false);
+  });
+
+  it("rejette une année non entière ou hors plage plausible", () => {
+    for (const annee of [2021.5, "2021", 1850, 2200]) {
+      const source = { ...PROPOSITION_VALIDE.sources[0], annee };
+      expect(
+        validerPropositionGeneree({ ...PROPOSITION_VALIDE, sources: [source, PROPOSITION_VALIDE.sources[1]] }),
+      ).toBe(false);
+    }
+  });
+
+  it("accepte une position ancienne datée (ex : amendement de 2021)", () => {
+    const source = { ...PROPOSITION_VALIDE.sources[0], annee: 2021, nom: "Assemblée nationale" };
+    expect(
+      validerPropositionGeneree({ ...PROPOSITION_VALIDE, sources: [source, PROPOSITION_VALIDE.sources[1]] }),
+    ).toBe(true);
   });
 });

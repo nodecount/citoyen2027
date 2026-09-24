@@ -12,7 +12,7 @@ const META: CandidatMeta = {
   nom: "Candidat X",
   parti: "Parti X",
   date_derniere_maj: "2026-09-18",
-  sources_officielles: [{ type: "primaire", label: "Programme", url: "https://exemple-officiel.fr/programme" }],
+  sources_officielles: [{ type: "primaire", label: "Programme", url: "https://exemple-officiel.fr/programme", nom: "Source", annee: 2026 }],
 };
 
 function preparerRacine(): string {
@@ -41,8 +41,8 @@ describe("gererRelance", () => {
         titre: "Titre",
         resume_factuel: "Résumé",
         sources: [
-          { type: "primaire", label: "A", url: "https://exemple-officiel.fr/a" },
-          { type: "primaire", label: "B", url: "https://exemple-officiel.fr/b" },
+          { type: "primaire", label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 },
+          { type: "primaire", label: "B", url: "https://exemple-officiel.fr/b", nom: "Source", annee: 2026 },
         ],
         chiffrage_disponible: false,
         hypotheses_calcul: "",
@@ -125,8 +125,8 @@ describe("gererRelance", () => {
         titre: "Titre",
         resume_factuel: "Résumé",
         sources: [
-          { type: "primaire", label: "A", url: "https://exemple-officiel.fr/a" },
-          { type: "primaire", label: "B", url: "https://exemple-officiel.fr/b" },
+          { type: "primaire", label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 },
+          { type: "primaire", label: "B", url: "https://exemple-officiel.fr/b", nom: "Source", annee: 2026 },
         ],
         chiffrage_disponible: false,
         hypotheses_calcul: "",

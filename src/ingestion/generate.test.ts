@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { construireRequeteGeneration, creerClient, genererPropositions } from "./generate";
 import { DOMAINES_INSTITUTIONNELS } from "./domaines";
+import { VALEURS_PAR_CHAMP } from "../effets";
 import themesData from "../../data/themes.json";
 import type { CandidatMeta } from "../types";
 import Anthropic from "@anthropic-ai/sdk";
@@ -11,7 +12,7 @@ const META: CandidatMeta = {
   parti: "Parti Test",
   date_derniere_maj: "2026-09-18",
   sources_officielles: [
-    { type: "primaire", label: "Programme", url: "https://exemple-officiel.fr/programme" },
+    { type: "primaire", label: "Programme", url: "https://exemple-officiel.fr/programme", nom: "Source", annee: 2026 },
   ],
 };
 
@@ -77,6 +78,45 @@ describe("construireRequeteGeneration", () => {
     expect(requete.system).not.toMatch(/\{\{[A-Z_]+\}\}/);
   });
 
+  it("liste au modèle les champs de profil ciblables avec leurs valeurs exactes, issus du formulaire citoyen", () => {
+    const { system } = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
+    for (const [champ, valeurs] of Object.entries(VALEURS_PAR_CHAMP)) {
+      expect(system).toContain(`\`${champ}\``);
+      for (const valeur of valeurs) expect(system).toContain(`\`${valeur}\``);
+    }
+    expect(system).toContain("`autre`");
+  });
+
+  it("nomme les domaines institutionnels et impose au moins une source officielle du candidat", () => {
+    const { system } = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
+    const texte = system.replace(/\s+/g, " "); // le gabarit est renvoyé à la ligne : sans importance pour le modèle
+    for (const domaine of DOMAINES_INSTITUTIONNELS) expect(texte).toContain(domaine);
+    expect(texte).toContain("toujours défendue");
+  });
+
+  it("interdit d'élargir le périmètre d'une mesure et les effets de second ordre, exige un extrait mot pour mot", () => {
+    const texte = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []).system.replace(/\s+/g, " ");
+    expect(texte).toContain("N'élargis jamais le périmètre");
+    expect(texte).toContain("premier ordre");
+    expect(texte).toContain("mot pour mot");
+  });
+
+  it("pose la règle « précision ou rien » et l'exhaustivité identique entre candidats", () => {
+    const { system } = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
+    expect(system).toContain("Précision ou rien");
+    expect(system).toContain("Exhaustivité identique");
+  });
+
+  it("demande le nom court et l'année de chaque source (citation « nom · année »)", () => {
+    const { system } = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
+    expect(system).toContain("nom · année");
+  });
+
+  it("insère les titres existants tels quels, même s'ils contiennent des séquences spéciales de remplacement", () => {
+    const { system } = construireRequeteGeneration(META, "fiscalite", "Fiscalité", ["Mesure « $& » à 5 $1"]);
+    expect(system).toContain("Mesure « $& » à 5 $1");
+  });
+
   it("demande un tableau vide plutôt qu'une invention quand rien n'est trouvé", () => {
     const requete = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
     expect(requete.system).toContain("`[]`");
@@ -98,8 +138,8 @@ describe("genererPropositions", () => {
       titre: "Titre",
       resume_factuel: "Résumé",
       sources: [
-        { type: "primaire", label: "A", url: "https://exemple-officiel.fr/a" },
-        { type: "primaire", label: "B", url: "https://exemple-officiel.fr/b" },
+        { type: "primaire", label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 },
+        { type: "primaire", label: "B", url: "https://exemple-officiel.fr/b", nom: "Source", annee: 2026 },
       ],
       chiffrage_disponible: false,
       hypotheses_calcul: "",

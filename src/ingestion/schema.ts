@@ -20,8 +20,12 @@ export const SCHEMA_PROPOSITION_GENEREE = {
           type: { type: "string", enum: ["primaire", "secondaire"] },
           label: { type: "string" },
           url: { type: "string" },
+          // Citation « nom · année » (src/citations.ts) : nom court de la source, et année du
+          // document ou de la position (ex : 2021 pour un amendement de 2021).
+          nom: { type: "string" },
+          annee: { type: "integer" },
         },
-        required: ["type", "label", "url"],
+        required: ["type", "label", "url", "nom", "annee"],
         additionalProperties: false,
       },
     },
@@ -102,6 +106,8 @@ export function validerPropositionGeneree(valeur: unknown): valeur is Propositio
     }
     if (typeof s.label !== "string" || s.label.length === 0) return false;
     if (typeof s.url !== "string" || s.url.length === 0) return false;
+    if (typeof s.nom !== "string" || s.nom.trim().length === 0 || s.nom.length > 80) return false;
+    if (!Number.isInteger(s.annee) || (s.annee as number) < 1990 || (s.annee as number) > 2035) return false;
   }
 
   if (!Array.isArray(p.effets)) return false;

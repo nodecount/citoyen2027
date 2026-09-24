@@ -3,8 +3,10 @@ import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import themesData from "../../data/themes.json";
+import profilSchema from "../../data/profils-schema.json";
+import { VALEURS_PAR_CHAMP } from "../effets";
 import type { CandidatMeta } from "../types";
-import { domainesAutorises, domainesAvecInstitutions } from "./domaines";
+import { DOMAINES_INSTITUTIONNELS, domainesAutorises, domainesAvecInstitutions } from "./domaines";
 import { SCHEMA_PROPOSITION_GENEREE, validerPropositionGeneree, type PropositionGeneree } from "./schema";
 
 const ICI = dirname(fileURLToPath(import.meta.url));
@@ -17,6 +19,29 @@ const themes = themesData as Array<{ id: string; libelle: string; description: s
 // inclut-il les retraites ?) et le périmètre varierait d'un candidat à l'autre.
 function descriptionDuTheme(themeId: string): string {
   return themes.find((t) => t.id === themeId)?.description ?? "(périmètre non précisé)";
+}
+
+// split/join plutôt que String.replace : une valeur qui contient « $& » ou « $1 » (titre de mesure,
+// libellé) ne doit jamais être interprétée comme un motif de remplacement.
+function remplirGabarit(gabarit: string, valeurs: Record<string, string>): string {
+  let texte = gabarit;
+  for (const [cle, valeur] of Object.entries(valeurs)) {
+    texte = texte.split(`{{${cle}}}`).join(valeur);
+  }
+  return texte;
+}
+
+// Les champs ciblables et leurs valeurs viennent du formulaire citoyen (data/profils-schema.json) :
+// une seule source de vérité, donc le prompt suit automatiquement toute évolution du profil.
+function descriptionChampsProfil(): string {
+  const libelles: Record<string, string> = { enfants_a_charge: "Enfants à charge (déduit du nombre d'enfants)" };
+  for (const champ of profilSchema as Array<{ id: string; label: string }>) libelles[champ.id] = champ.label;
+  return Object.entries(VALEURS_PAR_CHAMP)
+    .map(
+      ([champ, valeurs]) =>
+        `- \`${champ}\` (${libelles[champ] ?? champ}) : ${valeurs.map((v) => `\`${v}\``).join(" | ")}`,
+    )
+    .join("\n");
 }
 
 export interface RequeteGeneration {
@@ -81,13 +106,15 @@ export function construireRequeteGeneration(
       ? titresExistants.map((titre) => `  - ${titre}`).join("\n")
       : "  (aucune proposition existante pour ce candidat)";
 
-  const system = gabarit
-    .split("{{CANDIDAT}}")
-    .join(meta.nom)
-    .replace("{{THEME}}", themeLibelle)
-    .replace("{{THEME_DESCRIPTION}}", descriptionDuTheme(themeId))
-    .replace("{{DATE}}", new Date().toISOString().slice(0, 10))
-    .replace("{{TITRES_EXISTANTS}}", listeTitresExistants);
+  const system = remplirGabarit(gabarit, {
+    CANDIDAT: meta.nom,
+    THEME: themeLibelle,
+    THEME_DESCRIPTION: descriptionDuTheme(themeId),
+    DATE: new Date().toISOString().slice(0, 10),
+    DOMAINES_INSTITUTIONNELS: DOMAINES_INSTITUTIONNELS.join(", "),
+    CHAMPS_PROFIL: descriptionChampsProfil(),
+    TITRES_EXISTANTS: listeTitresExistants,
+  });
 
   const notesSourcesOfficielles = meta.sources_officielles.map((s) => `  - ${s.label}`).join("\n");
   const systemAvecReserves = `${system}\n\nContexte sur les sources officielles disponibles pour ce candidat (avec toute réserve déjà documentée sur leur niveau d'attribution) :\n${notesSourcesOfficielles}\n\nSi une source ci-dessus précise que son contenu est publié par le parti/mouvement plutôt qu'attribué individuellement au candidat, attribue les propositions correspondantes à cette organisation dans resume_factuel — ne les présente jamais comme la position personnelle du candidat sans cette nuance.`;

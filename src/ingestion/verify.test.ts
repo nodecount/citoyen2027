@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import { construireRequeteVerification, verifier, verifierControlesDeterministes } from "./verify";
+import { DOMAINES_INSTITUTIONNELS } from "./domaines";
 import type { CandidatMeta } from "../types";
 import type { PropositionGeneree } from "./schema";
 
@@ -171,6 +172,30 @@ describe("verifier", () => {
     const resultats = await verifier({ messages: { create } }, META, [proposition()], fetchFactice);
     expect(resultats.size).toBe(1);
     expect(resultats.get("Titre")?.statut).toBe("PASS");
+  });
+});
+
+describe("construireRequeteVerification — contenu du prompt", () => {
+  const texte = () => construireRequeteVerification(META, [proposition()]).system.replace(/\s+/g, " ");
+
+  it("fait relire les effets : extrait, périmètre exact des cibles, sens sans second ordre", () => {
+    expect(texte()).toContain("`extrait` figure bien dans la page");
+    expect(texte()).toContain("recouvre **exactement** le public");
+    expect(texte()).toContain("second ordre");
+  });
+
+  it("fait relire les sources datées et l'attribution des documents institutionnels", () => {
+    expect(texte()).toContain("`annee` est l'année du document");
+    expect(texte()).toContain("toujours défendue");
+  });
+
+  it("vérifie la neutralité du vocabulaire", () => {
+    expect(texte()).toContain("aucun vocabulaire évaluatif");
+  });
+
+  it("autorise web_fetch sur le domaine officiel ET les domaines institutionnels", () => {
+    const outils = construireRequeteVerification(META, [proposition()]).tools;
+    expect(outils[0].allowed_domains).toEqual(["exemple-officiel.fr", ...DOMAINES_INSTITUTIONNELS]);
   });
 });
 
