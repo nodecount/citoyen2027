@@ -18,7 +18,14 @@ const THEME_ICONS: Record<string, string> = {
   education: "🎓",
   environnement: "🌳",
   logement: "🏠",
+  retraites: "👴",
+  "finances-publiques": "📊",
+  "international-defense-europe": "🌍",
 };
+
+// Thèmes dont les données sont collectées : seuls eux comptent dans le « x / N thèmes »,
+// sinon aucun candidat ne pourrait atteindre N tant que certains thèmes sont encore vides.
+const nombreThemesPeuples = themesTypes.filter((t) => t.statut === "populated").length;
 
 // Chargés dynamiquement depuis data/programmes/, triés par ordre alphabétique de slug.
 const { avecDonnees: candidats, enCoursAnalyse } = chargerCandidats();
@@ -92,13 +99,13 @@ export default function Resultats({ profil }: ResultatsProps) {
               <span className="avatar">{initiales(meta.nom)}</span>
               <span className="portrait-nom">{meta.nom}</span>
               <span className="compte-themes">
-                {nombreThemesConcerneParSlug[meta.slug]} / {themesTypes.length} thèmes
+                {nombreThemesConcerneParSlug[meta.slug]} / {nombreThemesPeuples} thèmes
               </span>
             </div>
           ))}
         </div>
         <p className="hint">
-          Nombre de thèmes, sur {themesTypes.length}, où ce candidat a au moins une mesure qui
+          Nombre de thèmes, sur {nombreThemesPeuples}, où ce candidat a au moins une mesure qui
           s'applique à votre profil tel que renseigné. Détail thème par thème ci-dessous.
         </p>
       </div>

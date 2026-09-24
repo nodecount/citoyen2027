@@ -18,6 +18,9 @@ const THEME_IDS = [
   "education",
   "environnement",
   "logement",
+  "retraites",
+  "finances-publiques",
+  "international-defense-europe",
 ];
 
 const THEMES_POPULATED = new Set([
@@ -35,8 +38,8 @@ const THEMES_POPULATED = new Set([
 ]);
 
 describe("themes.json", () => {
-  it("déclare exactement les 11 thèmes prévus, chacun avec id/libelle/description", () => {
-    expect(themes).toHaveLength(11);
+  it("déclare exactement les 14 thèmes prévus, chacun avec id/libelle/description", () => {
+    expect(themes).toHaveLength(14);
     const ids = themes.map((t) => t.id).sort();
     expect(ids).toEqual([...THEME_IDS].sort());
     for (const theme of themes) {
@@ -47,7 +50,7 @@ describe("themes.json", () => {
     }
   });
 
-  it("a le statut attendu (tous les 11 thèmes déclarés populated)", () => {
+  it("a le statut attendu (11 thèmes populated, les 3 nouveaux — retraites, finances publiques, international — provisoire tant que non collectés)", () => {
     for (const theme of themes) {
       const expected = THEMES_POPULATED.has(theme.id) ? "populated" : "provisoire";
       expect(theme.statut).toBe(expected);

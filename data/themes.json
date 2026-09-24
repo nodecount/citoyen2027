@@ -1,7 +1,7 @@
 [
   { "id": "fiscalite", "libelle": "Fiscalité", "description": "Impôts sur le revenu, la consommation, le patrimoine et les entreprises.", "statut": "populated" },
   { "id": "pouvoir-achat", "libelle": "Pouvoir d'achat", "description": "Prix, salaires nets, coût de la vie courante.", "statut": "populated" },
-  { "id": "travail", "libelle": "Travail", "description": "Droit du travail, chômage, retraite, conditions d'emploi.", "statut": "populated" },
+  { "id": "travail", "libelle": "Travail", "description": "Droit du travail, chômage, conditions d'emploi.", "statut": "populated" },
   { "id": "aides-etat", "libelle": "Aides de l'État", "description": "Prestations sociales, allocations, aides ciblées.", "statut": "populated" },
   { "id": "libertes-fondamentales", "libelle": "Libertés fondamentales", "description": "Libertés civiles, liberté d'expression et de la presse, droit de vote et pluralisme politique.", "statut": "populated" },
   { "id": "sante", "libelle": "Santé", "description": "Système de santé, hôpital, accès aux soins, assurance maladie.", "statut": "populated" },
@@ -9,5 +9,8 @@
   { "id": "immigration", "libelle": "Immigration", "description": "Politique migratoire, droit d'asile, intégration.", "statut": "populated" },
   { "id": "education", "libelle": "Éducation", "description": "École, enseignement supérieur, formation.", "statut": "populated" },
   { "id": "environnement", "libelle": "Environnement", "description": "Climat, transition écologique, politique environnementale.", "statut": "populated" },
-  { "id": "logement", "libelle": "Logement", "description": "Accès au logement, construction, aides au logement, urbanisme.", "statut": "populated" }
+  { "id": "logement", "libelle": "Logement", "description": "Accès au logement, construction, aides au logement, urbanisme.", "statut": "populated" },
+  { "id": "retraites", "libelle": "Retraites", "description": "Âge de départ, niveau des pensions, financement et régimes de retraite.", "statut": "provisoire" },
+  { "id": "finances-publiques", "libelle": "Finances publiques et dette", "description": "Dette, déficit, dépenses publiques, équilibre budgétaire.", "statut": "provisoire" },
+  { "id": "international-defense-europe", "libelle": "International, défense et Europe", "description": "Politique étrangère, défense, relations avec l'Union européenne et engagements internationaux.", "statut": "provisoire" }
 ]
