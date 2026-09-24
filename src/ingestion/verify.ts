@@ -2,7 +2,8 @@ import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { CandidatMeta } from "../types";
-import { detecterErreurReponse, resumerAppel, type ClientAnthropicMinimal, type RequeteGeneration } from "./generate";
+import { detecterErreurReponse, type ClientAnthropicMinimal, type RequeteGeneration } from "./generate";
+import { appeler } from "./appel";
 import { domainesAutorises, domainesAvecInstitutions, estSourceInstitutionnelle } from "./domaines";
 import {
   verifierChiffresPresents,
@@ -114,9 +115,10 @@ async function verifierSemantiquement(
   propositions: PropositionGeneree[],
 ): Promise<Map<string, Verdict>> {
   const requete = construireRequeteVerification(meta, propositions);
-  const debut = Date.now();
-  const reponse = await client.messages.create(requete);
-  console.log(`${resumerAppel(reponse, Date.now() - debut)} (vérification ${meta.slug})`);
+  const { reponse } = await appeler(client, requete, { phase: "vérification", slug: meta.slug });
+  if (reponse.stop_reason === "max_tokens") {
+    throw new Error(`verifierSemantiquement (${meta.slug}) : sortie tronquée (max_tokens), les verdicts sont incomplets`);
+  }
   const erreur = detecterErreurReponse(reponse);
   if (erreur) {
     throw new Error(`verifierSemantiquement (${meta.slug}) : ${erreur}`);

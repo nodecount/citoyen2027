@@ -4,11 +4,14 @@ import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 import {
   chargerAVerifier,
+  chargerJournal,
   chargerPropositions,
   chargerSyntheses,
   chargerSynthesesAVerifier,
+  combinaisonDejaCherchee,
   combinaisonDejaCouverte,
   enregistrerAVerifier,
+  enregistrerJournal,
   enregistrerPropositions,
   enregistrerSynthese,
   enregistrerSyntheseAVerifier,
@@ -117,5 +120,39 @@ describe("syntheses", () => {
     enregistrerSyntheseAVerifier("candidat-x", { ...a, raison: "r2" }, racine);
     expect(chargerSynthesesAVerifier("candidat-x", racine)).toHaveLength(1);
     expect(chargerSynthesesAVerifier("candidat-x", racine)[0].raison).toBe("r2");
+  });
+});
+
+describe("journal de recherche (dépôt)", () => {
+  afterEach(() => {
+    rmSync(racine, { recursive: true, force: true });
+  });
+
+  const entree = (theme: string, resultat: "aucune_mesure" | "propositions_generees" = "aucune_mesure") => ({
+    theme, date: "2026-09-25", resultat, nombre_propositions: 0, arret: "end_turn", duree_ms: 1, jetons_entree: 1,
+    jetons_sortie: 1, urls_lues: [], urls_echouees: [], requetes: [],
+  });
+
+  it("retourne une liste vide sans fichier, puis retrouve l'entrée enregistrée", () => {
+    racine = mkdtempSync(resolve(tmpdir(), "ingestion-test-"));
+    expect(chargerJournal("candidat-x", racine)).toEqual([]);
+    enregistrerJournal("candidat-x", entree("sante"), racine);
+    expect(chargerJournal("candidat-x", racine)).toEqual([entree("sante")]);
+  });
+
+  it("remplace l'entrée d'un même thème et garde un ordre stable", () => {
+    racine = mkdtempSync(resolve(tmpdir(), "ingestion-test-"));
+    enregistrerJournal("candidat-x", entree("sante"), racine);
+    enregistrerJournal("candidat-x", entree("fiscalite"), racine);
+    enregistrerJournal("candidat-x", entree("sante", "propositions_generees"), racine);
+    const journal = chargerJournal("candidat-x", racine);
+    expect(journal.map((e) => e.theme)).toEqual(["fiscalite", "sante"]);
+    expect(journal[1].resultat).toBe("propositions_generees");
+  });
+
+  it("combinaisonDejaCherchee : vrai seulement pour une recherche sans résultat", () => {
+    expect(combinaisonDejaCherchee([entree("sante")], "sante")).toBe(true);
+    expect(combinaisonDejaCherchee([entree("sante", "propositions_generees")], "sante")).toBe(false);
+    expect(combinaisonDejaCherchee([entree("sante")], "fiscalite")).toBe(false);
   });
 });

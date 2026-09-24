@@ -14,9 +14,11 @@ import {
 } from "./run";
 import {
   chargerAVerifier,
+  chargerJournal,
   chargerPropositions,
   chargerSyntheses,
   chargerSynthesesAVerifier,
+  enregistrerJournal,
   enregistrerPropositions,
   enregistrerSynthese,
   enregistrerSyntheseAVerifier,
@@ -448,8 +450,8 @@ describe("executerLot", () => {
     };
     const clientFactice = {
       messages: {
-        create: async (requete: { messages: Array<{ content: string }> }) => {
-          const contenu = requete.messages[0].content;
+        create: async (requete: { messages: Array<{ content: string | unknown[] }> }) => {
+          const contenu = String(requete.messages[0].content);
           if (contenu.startsWith("Vérifie")) {
             return { content: [{ type: "text", text: JSON.stringify([{ titre: "Titre", verdict: "PASS" }]) }] };
           }
@@ -646,5 +648,80 @@ describe("executerSyntheses", () => {
     expect(erreurs).toHaveBeenCalled();
     erreurs.mockRestore();
     expect(chargerSyntheses("candidat-x", racine).map((s) => s.theme)).toEqual(["sante"]);
+  });
+});
+
+describe("journal de recherche", () => {
+  afterEach(() => {
+    rmSync(racine, { recursive: true, force: true });
+  });
+
+  const reponseVide = {
+    content: [
+      { type: "server_tool_use", id: "f1", name: "web_fetch", input: { url: "https://exemple-officiel.fr/programme" } },
+      { type: "web_fetch_tool_result", tool_use_id: "f1", content: { type: "web_fetch_result" } },
+      { type: "server_tool_use", id: "f2", name: "web_fetch", input: { url: "https://exemple-officiel.fr/absent" } },
+      { type: "web_fetch_tool_result", tool_use_id: "f2", content: { error_code: "url_not_accessible" } },
+      { type: "text", text: "[]" },
+    ],
+    stop_reason: "end_turn",
+    usage: { input_tokens: 1500000, output_tokens: 3000 },
+  };
+
+  it("garde une trace d'une recherche qui ne trouve aucune mesure : arrêt, jetons, pages lues et échouées", async () => {
+    preparerRacine();
+    const create = vi.fn().mockResolvedValueOnce(reponseVide);
+    await executerCombinaison({ messages: { create } }, META, { slug: "candidat-x", themeId: "fiscalite", themeLibelle: "Fiscalité" }, [], { racine });
+
+    expect(create).toHaveBeenCalledTimes(1); // aucune vérification à faire : rien à vérifier
+    expect(chargerPropositions("candidat-x", racine)).toEqual([]);
+    const journal = chargerJournal("candidat-x", racine);
+    expect(journal).toHaveLength(1);
+    expect(journal[0]).toMatchObject({
+      theme: "fiscalite",
+      resultat: "aucune_mesure",
+      arret: "end_turn",
+      jetons_entree: 1500000,
+      jetons_sortie: 3000,
+      urls_lues: ["https://exemple-officiel.fr/programme"],
+      urls_echouees: [{ cible: "https://exemple-officiel.fr/absent", code: "url_not_accessible" }],
+    });
+    expect(journal[0].date).toBe(new Date().toISOString().slice(0, 10));
+  });
+
+  it("ne relance pas une combinaison déjà cherchée sans résultat (elle coûterait de nouveau), sauf avec force", async () => {
+    preparerRacine();
+    enregistrerJournal("candidat-x", {
+      theme: "fiscalite", date: "2026-09-25", resultat: "aucune_mesure", nombre_propositions: 0, arret: "end_turn",
+      duree_ms: 1000, jetons_entree: 1, jetons_sortie: 1, urls_lues: [], urls_echouees: [], requetes: [],
+    }, racine);
+
+    const inactif = vi.fn();
+    await executerLot({ messages: { create: inactif } }, [{ slug: "candidat-x", themeId: "fiscalite", themeLibelle: "Fiscalité" }], { racine });
+    expect(inactif).not.toHaveBeenCalled();
+
+    const create = vi.fn().mockResolvedValueOnce(reponseVide);
+    await executerLot({ messages: { create } }, [{ slug: "candidat-x", themeId: "fiscalite", themeLibelle: "Fiscalité" }], { racine, force: true });
+    expect(create).toHaveBeenCalledTimes(1);
+  });
+
+  it("enregistre aussi une recherche fructueuse dans le journal, avant même la vérification", async () => {
+    preparerRacine();
+    const proposition = {
+      titre: "Titre", resume_factuel: "Résumé",
+      sources: [
+        { type: "primaire", label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 },
+        { type: "primaire", label: "B", url: "https://exemple-officiel.fr/b", nom: "Source", annee: 2026 },
+      ],
+      chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-09-25", effets: [],
+    };
+    const create = vi
+      .fn()
+      .mockResolvedValueOnce({ content: [{ type: "text", text: JSON.stringify([proposition]) }], stop_reason: "end_turn" })
+      .mockRejectedValueOnce(new Error("panne pendant la vérification"));
+    await expect(
+      executerCombinaison({ messages: { create } }, META, { slug: "candidat-x", themeId: "fiscalite", themeLibelle: "Fiscalité" }, [], { racine, fetchImpl: async () => new Response("contenu de la page") }),
+    ).rejects.toThrow("panne");
+    expect(chargerJournal("candidat-x", racine)[0]).toMatchObject({ theme: "fiscalite", resultat: "propositions_generees", nombre_propositions: 1 });
   });
 });

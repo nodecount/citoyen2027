@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { construireRequeteGeneration, creerClient, genererPropositions } from "./generate";
+import { construireRequeteGeneration, creerClient, genererPropositions, genererPropositionsDetaillee } from "./generate";
 import { DOMAINES_INSTITUTIONNELS } from "./domaines";
 import { VALEURS_PAR_CHAMP } from "../effets";
 import themesData from "../../data/themes.json";
@@ -159,26 +159,77 @@ describe("genererPropositions", () => {
     expect(resultat).toEqual([propositionValide]);
   });
 
-  it("retourne un tableau vide si la réponse ne contient pas de bloc texte", async () => {
-    const clientFactice = { messages: { create: async () => ({ content: [] }) } };
+  it("retourne un tableau vide UNIQUEMENT quand le modèle répond explicitement []", async () => {
+    const clientFactice = {
+      messages: { create: async () => ({ content: [{ type: "text", text: "[]" }], stop_reason: "end_turn" }) },
+    };
     const resultat = await genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", []);
     expect(resultat).toEqual([]);
   });
 
-  it("retourne un tableau vide si le texte n'est pas un JSON valide", async () => {
+  it("lève au lieu de retourner [] si la réponse ne contient aucun bloc texte : un arrêt anormal n'est pas « aucune mesure »", async () => {
+    const clientFactice = { messages: { create: async () => ({ content: [] }) } };
+    await expect(genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", [])).rejects.toThrow("aucune réponse textuelle");
+  });
+
+  it("lève, en citant le début de la réponse, si le texte n'est pas un JSON valide", async () => {
     const clientFactice = {
       messages: { create: async () => ({ content: [{ type: "text", text: "pas du JSON valide {{{" }] }) },
     };
-    const resultat = await genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", []);
-    expect(resultat).toEqual([]);
+    await expect(genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", [])).rejects.toThrow("pas du JSON valide");
   });
 
-  it("retourne un tableau vide si le JSON valide n'est pas un tableau", async () => {
+  it("lève si le JSON valide n'est pas un tableau", async () => {
     const clientFactice = {
       messages: { create: async () => ({ content: [{ type: "text", text: JSON.stringify({ pas: "un tableau" }) }] }) },
     };
-    const resultat = await genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", []);
-    expect(resultat).toEqual([]);
+    await expect(genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", [])).rejects.toThrow("pas un tableau");
+  });
+
+  it("lève si la sortie est tronquée (max_tokens), même si le texte reçu est un JSON valide", async () => {
+    const clientFactice = {
+      messages: { create: async () => ({ content: [{ type: "text", text: "[]" }], stop_reason: "max_tokens" }) },
+    };
+    await expect(genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", [])).rejects.toThrow("TRONQUÉE");
+  });
+
+  it("lit le JSON dans le DERNIER bloc texte quand des textes intermédiaires précèdent", async () => {
+    const clientFactice = {
+      messages: {
+        create: async () => ({
+          content: [
+            { type: "text", text: "Je consulte le site officiel…" },
+            { type: "text", text: "[]" },
+          ],
+          stop_reason: "end_turn",
+        }),
+      },
+    };
+    expect(await genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", [])).toEqual([]);
+  });
+
+  it("fournit un diagnostic : arrêt, durée, pages lues et échecs, pour ne jamais avoir un vide inexplicable", async () => {
+    const clientFactice = {
+      messages: {
+        create: async () => ({
+          content: [
+            { type: "server_tool_use", id: "f1", name: "web_fetch", input: { url: "https://exemple-officiel.fr/programme" } },
+            { type: "web_fetch_tool_result", tool_use_id: "f1", content: { type: "web_fetch_result" } },
+            { type: "server_tool_use", id: "f2", name: "web_fetch", input: { url: "https://exemple-officiel.fr/absent" } },
+            { type: "web_fetch_tool_result", tool_use_id: "f2", content: { error_code: "url_not_accessible" } },
+            { type: "text", text: "[]" },
+          ],
+          stop_reason: "end_turn",
+          usage: { input_tokens: 500, output_tokens: 20 },
+        }),
+      },
+    };
+    const { diagnostic, propositions } = await genererPropositionsDetaillee(clientFactice, META, "fiscalite", "Fiscalité", []);
+    expect(propositions).toEqual([]);
+    expect(diagnostic.stop_reason).toBe("end_turn");
+    expect(diagnostic.usage).toMatchObject({ input_tokens: 500, output_tokens: 20 });
+    expect(diagnostic.activite.urlsLues).toEqual(["https://exemple-officiel.fr/programme"]);
+    expect(diagnostic.activite.echecs).toEqual([{ cible: "https://exemple-officiel.fr/absent", code: "url_not_accessible" }]);
   });
 
   it("rejette si stop_reason vaut refusal, au lieu de retourner silencieusement un tableau vide", async () => {

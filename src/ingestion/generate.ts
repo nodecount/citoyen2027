@@ -8,10 +8,20 @@ import { VALEURS_PAR_CHAMP } from "../effets";
 import type { CandidatMeta } from "../types";
 import { DOMAINES_INSTITUTIONNELS, domainesAutorises, domainesAvecInstitutions } from "./domaines";
 import { SCHEMA_PROPOSITION_GENEREE, validerPropositionGeneree, type PropositionGeneree } from "./schema";
+import { appeler, extraireActivite, type ActiviteOutils } from "./appel";
+import { diagnostiquerArret } from "./trace";
 
 const ICI = dirname(fileURLToPath(import.meta.url));
 const MODELE = "claude-sonnet-5";
 const MAX_TOKENS = 16000;
+
+// Bornes de coût et de durée. Le premier essai réel (Attal × fiscalité) a pris 14 minutes et environ
+// 1,5 million de jetons par appel : les pages lues (jusqu'à ~60 000 jetons chacune) sont renvoyées à
+// chaque tour de la boucle d'outils. On borne donc le nombre d'appels d'outil et la taille de page.
+export const MAX_RECHERCHES = 8;
+export const MAX_LECTURES = 12;
+export const MAX_TOKENS_PAGE = 20000;
+export const EFFORT = "medium";
 
 const themes = themesData as Array<{ id: string; libelle: string; description: string }>;
 
@@ -48,9 +58,16 @@ export interface RequeteGeneration {
   model: string;
   max_tokens: number;
   system: string;
-  tools: Array<{ type: string; name: string; allowed_domains: string[] }>;
+  tools: Array<{
+    type: string;
+    name: string;
+    allowed_domains: string[];
+    max_uses?: number;
+    max_content_tokens?: number;
+  }>;
   output_config: { format: unknown; effort: string };
-  messages: Array<{ role: "user"; content: string }>;
+  // `assistant` + blocs : reprise d'une réponse en pause_turn (voir appel.ts).
+  messages: Array<{ role: "user" | "assistant"; content: string | BlocContenuReponse[] }>;
 }
 
 export interface BlocContenuReponse {
@@ -66,43 +83,21 @@ export interface BlocContenuReponse {
 export interface ReponseAnthropicMinimale {
   content: BlocContenuReponse[];
   stop_reason?: string | null;
-  usage?: { input_tokens?: number; output_tokens?: number };
-}
-
-function formaterDuree(dureeMs: number): string {
-  const secondes = Math.round(dureeMs / 1000);
-  return secondes >= 60 ? `${Math.floor(secondes / 60)} min ${secondes % 60} s` : `${secondes} s`;
-}
-
-// Une ligne de journal par appel : sans elle, un essai de 14 minutes qui ne rend rien est
-// inexplicable (combien de jetons ? quelles pages lues ? lesquelles inaccessibles ?).
-export function resumerAppel(reponse: ReponseAnthropicMinimale, dureeMs: number): string {
-  const utilisations = reponse.content.filter((bloc) => bloc.type === "server_tool_use");
-  const parOutil = new Map<string, number>();
-  for (const bloc of utilisations) parOutil.set(bloc.name ?? "outil", (parOutil.get(bloc.name ?? "outil") ?? 0) + 1);
-  const outils =
-    parOutil.size > 0 ? [...parOutil].map(([nom, nombre]) => `${nom} ×${nombre}`).join(", ") : "aucun appel d'outil";
-
-  const echecs: string[] = [];
-  for (const bloc of reponse.content) {
-    const contenu = bloc.content as Record<string, unknown> | null | undefined;
-    if (!bloc.tool_use_id || typeof contenu !== "object" || contenu === null || !("error_code" in contenu)) continue;
-    const appel = utilisations.find((u) => u.id === bloc.tool_use_id);
-    const entree = (appel?.input ?? {}) as Record<string, unknown>;
-    const cible = String(entree.url ?? entree.query ?? "?");
-    echecs.push(`${cible} (${String(contenu.error_code)})`);
-  }
-
-  const jetons = reponse.usage
-    ? `${reponse.usage.input_tokens ?? "?"} jetons en entrée, ${reponse.usage.output_tokens ?? "?"} en sortie`
-    : "jetons inconnus";
-  const suffixe = echecs.length > 0 ? ` — échecs : ${echecs.join(" ; ")}` : "";
-  return `[appel] ${formaterDuree(dureeMs)} · ${jetons} · ${outils}${suffixe}`;
+  usage?: {
+    input_tokens?: number;
+    output_tokens?: number;
+    cache_creation_input_tokens?: number;
+    cache_read_input_tokens?: number;
+    server_tool_use?: { web_search_requests?: number; web_fetch_requests?: number };
+  };
 }
 
 export interface ClientAnthropicMinimal {
   messages: {
-    create(requete: RequeteGeneration): Promise<ReponseAnthropicMinimale>;
+    create(
+      requete: RequeteGeneration,
+      options?: { timeout?: number; maxRetries?: number },
+    ): Promise<ReponseAnthropicMinimale>;
   };
 }
 
@@ -167,12 +162,18 @@ export function construireRequeteGeneration(
     max_tokens: MAX_TOKENS,
     system: systemAvecReserves,
     tools: [
-      { type: "web_search_20260209", name: "web_search", allowed_domains: domaines },
-      { type: "web_fetch_20260209", name: "web_fetch", allowed_domains: domaines },
+      { type: "web_search_20260209", name: "web_search", allowed_domains: domaines, max_uses: MAX_RECHERCHES },
+      {
+        type: "web_fetch_20260209",
+        name: "web_fetch",
+        allowed_domains: domaines,
+        max_uses: MAX_LECTURES,
+        max_content_tokens: MAX_TOKENS_PAGE,
+      },
     ],
     output_config: {
       format: { type: "json_schema", schema: { type: "array", items: SCHEMA_PROPOSITION_GENEREE } },
-      effort: "high",
+      effort: EFFORT,
     },
     messages: [
       {
@@ -183,6 +184,84 @@ export function construireRequeteGeneration(
   };
 }
 
+export interface DiagnosticGeneration {
+  stop_reason: string | null | undefined;
+  dureeMs: number;
+  continuations: number;
+  usage: ReponseAnthropicMinimale["usage"];
+  activite: ActiviteOutils;
+  // Propositions renvoyées par le modèle mais écartées par la validation du schéma.
+  ecartees: number;
+  cheminTrace?: string;
+}
+
+export interface ResultatGeneration {
+  propositions: PropositionGeneree[];
+  diagnostic: DiagnosticGeneration;
+}
+
+// Un `[]` explicite du modèle est le SEUL cas où « aucune mesure » est une réponse. Tout le reste
+// (texte absent, JSON invalide, sortie tronquée, refus, panne d'outil) lève : sinon un arrêt anormal
+// se lirait comme « ce candidat n'a rien proposé sur ce thème », faute qu'on puisse le distinguer.
+export async function genererPropositionsDetaillee(
+  client: ClientAnthropicMinimal,
+  meta: CandidatMeta,
+  themeId: string,
+  themeLibelle: string,
+  titresExistants: string[],
+): Promise<ResultatGeneration> {
+  const requete = construireRequeteGeneration(meta, themeId, themeLibelle, titresExistants);
+  const contexte = `genererPropositions (${meta.slug} × ${themeId})`;
+  const { reponse, dureeMs, continuations, cheminTrace } = await appeler(client, requete, {
+    phase: "génération",
+    slug: meta.slug,
+    themeId,
+  });
+
+  if (reponse.stop_reason === "max_tokens") {
+    throw new Error(
+      `${contexte} : ${diagnostiquerArret(reponse.stop_reason, requete.max_tokens).texte}. Rien n'est enregistré.`,
+    );
+  }
+  const erreur = detecterErreurReponse(reponse);
+  if (erreur) throw new Error(`${contexte} : ${erreur}`);
+
+  // Avec des outils, la réponse contient d'éventuels textes intermédiaires : le JSON est le dernier.
+  const texte = [...reponse.content].reverse().find((bloc) => bloc.type === "text" && bloc.text)?.text;
+  if (!texte) {
+    throw new Error(
+      `${contexte} : aucune réponse textuelle (arrêt : ${diagnostiquerArret(reponse.stop_reason, requete.max_tokens).texte})`,
+    );
+  }
+  let brut: unknown;
+  try {
+    brut = JSON.parse(texte);
+  } catch {
+    throw new Error(`${contexte} : la réponse n'est pas du JSON valide : « ${texte.slice(0, 200)} »`);
+  }
+  if (!Array.isArray(brut)) {
+    throw new Error(`${contexte} : la réponse est du JSON mais pas un tableau : « ${texte.slice(0, 200)} »`);
+  }
+
+  const propositions = brut.filter(validerPropositionGeneree);
+  const ecartees = brut.length - propositions.length;
+  if (ecartees > 0) {
+    console.warn(`[génération] ${contexte} : ${ecartees} proposition(s) écartée(s), schéma ou effets invalides (voir la trace)`);
+  }
+  return {
+    propositions,
+    diagnostic: {
+      stop_reason: reponse.stop_reason,
+      dureeMs,
+      continuations,
+      usage: reponse.usage,
+      activite: extraireActivite(reponse),
+      ecartees,
+      cheminTrace,
+    },
+  };
+}
+
 export async function genererPropositions(
   client: ClientAnthropicMinimal,
   meta: CandidatMeta,
@@ -190,24 +269,7 @@ export async function genererPropositions(
   themeLibelle: string,
   titresExistants: string[],
 ): Promise<PropositionGeneree[]> {
-  const requete = construireRequeteGeneration(meta, themeId, themeLibelle, titresExistants);
-  const debut = Date.now();
-  const reponse = await client.messages.create(requete);
-  console.log(`${resumerAppel(reponse, Date.now() - debut)} (génération ${meta.slug} × ${themeId})`);
-  const erreur = detecterErreurReponse(reponse);
-  if (erreur) {
-    throw new Error(`genererPropositions (${meta.slug} × ${themeId}) : ${erreur}`);
-  }
-  const blocTexte = reponse.content.find((bloc) => bloc.type === "text");
-  if (!blocTexte?.text) return [];
-  let brut: unknown;
-  try {
-    brut = JSON.parse(blocTexte.text);
-  } catch {
-    return [];
-  }
-  if (!Array.isArray(brut)) return [];
-  return brut.filter(validerPropositionGeneree);
+  return (await genererPropositionsDetaillee(client, meta, themeId, themeLibelle, titresExistants)).propositions;
 }
 
 export function creerClient(cleApi?: string): Anthropic {

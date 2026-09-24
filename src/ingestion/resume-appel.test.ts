@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { resumerAppel, type ReponseAnthropicMinimale } from "./generate";
+import { resumerAppel } from "./appel";
+import type { ReponseAnthropicMinimale } from "./generate";
 
 describe("resumerAppel", () => {
   const reponse: ReponseAnthropicMinimale = {

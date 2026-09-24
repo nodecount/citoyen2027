@@ -1,16 +1,19 @@
 import { pathToFileURL } from "node:url";
 import type { CandidatMeta, Proposition } from "../types";
-import { genererPropositions, creerClient, type ClientAnthropicMinimal } from "./generate";
+import { genererPropositions, genererPropositionsDetaillee, creerClient, type ClientAnthropicMinimal } from "./generate";
 import { verifier } from "./verify";
 import type { FetchImpl } from "./checks";
 import type { PropositionGeneree } from "./schema";
 import {
   chargerAVerifier,
+  chargerJournal,
   chargerMeta,
   chargerPropositions,
   chargerSyntheses,
+  combinaisonDejaCherchee,
   combinaisonDejaCouverte,
   enregistrerAVerifier,
+  enregistrerJournal,
   enregistrerPropositions,
   enregistrerSynthese,
   enregistrerSyntheseAVerifier,
@@ -69,12 +72,33 @@ export async function executerCombinaison(
   options: OptionsExecution = {},
 ): Promise<ResultatCombinaison> {
   const titresExistants = propositionsExistantes.filter((p) => p.theme !== combinaison.themeId).map((p) => p.titre);
-  const generees = await genererPropositions(
+  const { propositions: generees, diagnostic } = await genererPropositionsDetaillee(
     client,
     meta,
     combinaison.themeId,
     combinaison.themeLibelle,
     titresExistants,
+  );
+  // Journal écrit tout de suite, avant la vérification : la recherche est payée qu'elle donne
+  // des mesures ou non, et son résultat doit rester consultable même si la suite échoue.
+  enregistrerJournal(
+    meta.slug,
+    {
+      theme: combinaison.themeId,
+      date: new Date().toISOString().slice(0, 10),
+      resultat: generees.length === 0 ? "aucune_mesure" : "propositions_generees",
+      nombre_propositions: generees.length,
+      arret: diagnostic.stop_reason,
+      duree_ms: diagnostic.dureeMs,
+      jetons_entree: diagnostic.usage?.input_tokens ?? 0,
+      jetons_sortie: diagnostic.usage?.output_tokens ?? 0,
+      requetes: diagnostic.activite.requetes,
+      urls_lues: diagnostic.activite.urlsLues,
+      urls_echouees: diagnostic.activite.echecs,
+      ecartees: diagnostic.ecartees,
+      chemin_trace: diagnostic.cheminTrace,
+    },
+    options.racine,
   );
   const verdicts = await verifier(client, meta, generees, options.fetchImpl);
 
@@ -176,6 +200,12 @@ export async function executerLot(
       const propositionsExistantes = chargerPropositions(combinaison.slug, options.racine);
       if (!options.force && combinaisonDejaCouverte(propositionsExistantes, combinaison.themeId)) {
         console.log(`[sauté] ${combinaison.slug} × ${combinaison.themeId} déjà couvert`);
+        continue;
+      }
+      if (!options.force && combinaisonDejaCherchee(chargerJournal(combinaison.slug, options.racine), combinaison.themeId)) {
+        console.log(
+          `[sauté] ${combinaison.slug} × ${combinaison.themeId} déjà cherché sans résultat (voir _journal-recherche.json) ; --force pour refaire`,
+        );
         continue;
       }
       console.log(`[en cours] ${combinaison.slug} × ${combinaison.themeId}`);

@@ -9,6 +9,7 @@ import {
   type RequeteGeneration,
 } from "./generate";
 import type { Verdict } from "./verify";
+import { appeler } from "./appel";
 
 // Étape de synthèse : le texte « en quoi le programme de ce candidat touche ce thème » (fil rouge,
 // CLAUDE.md). Rédigé à partir des SEULES propositions déjà vérifiées — aucun outil web, aucune
@@ -146,7 +147,12 @@ export async function genererSynthese(
   themeLibelle: string,
   propositions: Proposition[],
 ): Promise<ResultatSynthese> {
-  const reponse = await client.messages.create(construireRequeteSynthese(meta, themeId, themeLibelle, propositions));
+  const { reponse } = await appeler(client, construireRequeteSynthese(meta, themeId, themeLibelle, propositions), {
+    phase: "synthèse",
+    slug: meta.slug,
+    themeId,
+  });
+  if (reponse.stop_reason === "max_tokens") throw new Error(`genererSynthese (${meta.slug} × ${themeId}) : sortie tronquée (max_tokens)`);
   const erreurAppel = detecterErreurReponse(reponse);
   if (erreurAppel) throw new Error(`genererSynthese (${meta.slug} × ${themeId}) : ${erreurAppel}`);
 
@@ -205,8 +211,10 @@ export async function verifierSyntheseParModele(
   propositions: Proposition[],
   synthese: SyntheseGeneree,
 ): Promise<Verdict> {
-  const reponse = await client.messages.create(
+  const { reponse } = await appeler(
+    client,
     construireRequeteVerificationSynthese(meta, themeLibelle, propositions, synthese),
+    { phase: "vérification synthèse", slug: meta.slug },
   );
   const erreurAppel = detecterErreurReponse(reponse);
   if (erreurAppel) throw new Error(`verifierSynthese (${meta.slug}) : ${erreurAppel}`);

@@ -113,3 +113,45 @@ export function supprimerSyntheseAVerifier(slug: string, theme: string, racine: 
   }
   writeFileSync(chemin, JSON.stringify(restantes, null, 2) + "\n");
 }
+
+// Journal de recherche : une entrée par candidat x thème, écrite APRÈS chaque génération, y compris
+// quand elle ne trouve rien. Sans lui, un « thème vide » ne laisse aucune trace (impossible à auditer)
+// et serait repayé à chaque relance.
+export interface EntreeJournal {
+  theme: string;
+  date: string;
+  resultat: "aucune_mesure" | "propositions_generees";
+  nombre_propositions: number;
+  arret: string | null | undefined;
+  duree_ms: number;
+  jetons_entree: number;
+  jetons_sortie: number;
+  requetes: string[];
+  urls_lues: string[];
+  urls_echouees: Array<{ cible: string; code: string }>;
+  ecartees?: number;
+  chemin_trace?: string;
+}
+
+export function cheminJournal(slug: string, racine: string = RACINE_PAR_DEFAUT): string {
+  return resolve(racine, slug, "_journal-recherche.json");
+}
+
+export function chargerJournal(slug: string, racine: string = RACINE_PAR_DEFAUT): EntreeJournal[] {
+  const chemin = cheminJournal(slug, racine);
+  if (!existsSync(chemin)) return [];
+  return JSON.parse(readFileSync(chemin, "utf-8")) as EntreeJournal[];
+}
+
+export function enregistrerJournal(slug: string, entree: EntreeJournal, racine: string = RACINE_PAR_DEFAUT): void {
+  const chemin = cheminJournal(slug, racine);
+  const autres = chargerJournal(slug, racine).filter((e) => e.theme !== entree.theme);
+  const toutes = [...autres, entree].sort((a, b) => a.theme.localeCompare(b.theme));
+  mkdirSync(dirname(chemin), { recursive: true });
+  writeFileSync(chemin, JSON.stringify(toutes, null, 2) + "\n");
+}
+
+// Une recherche déjà faite sans résultat n'est pas refaite (sauf --force) : elle coûterait de nouveau.
+export function combinaisonDejaCherchee(journal: EntreeJournal[], themeId: string): boolean {
+  return journal.some((e) => e.theme === themeId && e.resultat === "aucune_mesure");
+}
