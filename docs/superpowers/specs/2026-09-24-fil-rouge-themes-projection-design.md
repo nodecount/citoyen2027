@@ -79,7 +79,64 @@ retraites, rangées sous Travail / Pouvoir d'achat / Aides de l'État, sont à r
 
 ## Ordre de réalisation (point d'étape entre chaque)
 
-1. **Schéma** : types `Effet`, validation dans le schéma d'ingestion, tests.
-2. **Moteur** : table de polarité, règle d'agrégation, quatre niveaux, tests.
+1. **Schéma** : types `Effet`, validation dans le schéma d'ingestion, tests. *(fait, `27d6d9b`)*
+2. **Moteur** : table de polarité, règle d'agrégation, quatre niveaux, tests. *(fait, `68c1e13`)*
 3. **Prompt et synthèse** : génération et vérification étendues, étape de synthèse.
 4. **Interface** : cards par thème, candidats alphabétiques, synthèse et badge.
+
+## Décisions sur le moteur
+
+- **Pas de moteur d'inférence** (Prolog, Datalog, json-rules-engine, Drools) ni de modèle de langage
+  au calcul. Fonctions TypeScript pures (`src/engine/projection.ts`, `polarite.ts`) : règles
+  explicites et lisibles (CLAUDE.md), ensemble de règles petit et fermé, calcul dans le navigateur
+  (le profil sensible ne quitte pas l'appareil), résultat reproductible. Les données (`effets`) ne
+  dépendent pas du moteur : le remplacer reviendrait à réécrire une fonction.
+- **Question non répondue ≠ « non »** : logique ET à trois valeurs. Un critère faux exclut l'effet
+  même si un autre est inconnu ; sinon un effet qui dépend d'un champ non renseigné, ou d'un critère
+  `autre`, ou de sens indéterminé, **supprime le badge** (avec sa raison), sauf si l'indicateur est
+  déjà « mixte », niveau stable.
+- Le formulaire actuel préselectionne la première option de chaque liste : il devra permettre de ne
+  pas répondre (à traiter lors de l'affinage du formulaire, après l'ingestion).
+
+## Phase ultérieure : critères numériques et règles chiffrées
+
+À réaliser **après** l'ingestion, en même temps que l'affinage du formulaire.
+
+1. **Critères numériques.** Un critère de cible pourra porter une fourchette (`min`/`max`) sur un
+   champ numérique facultatif du profil (ex : revenu mensuel net). Même logique à trois valeurs, mêmes
+   quatre niveaux. Prérequis : le programme publie des seuils.
+2. **Règles chiffrées.** Pour une mesure dont les paramètres sont publiés complets (ex : un barème de
+   l'impôt sur le revenu avec seuils et taux), une fonction pure par mesure calcule le montant avec
+   ses hypothèses affichées (quotient familial, abattements, barème en vigueur tiré de sources
+   officielles), le signe du montant fixant le niveau. Le mécanisme d'accueil existe (`regles.ts` par
+   identifiant de proposition, `Impact.montant_estime`). Un simulateur socio-fiscal open source
+   (OpenFisca) est la piste si l'on veut aller plus loin. Sans paramètres complets : on reste au
+   niveau qualitatif, jamais de chiffre approximatif.
+3. **Données sensibles** (salaire, etc.) : facultatives, sur consentement explicite, calculées dans
+   le navigateur (CLAUDE.md).
+
+### Cas d'école : barème de l'impôt sur le revenu de La France insoumise
+
+Vérification faite le 2026-09-24. La fiche `melenchon-fisc-001` cite « davantage de tranches »
+(page « partage des richesses » de melenchon2027.fr) sans barème. Un barème à 14 tranches existe
+dans un **document officiel** : l'**amendement CF119 au PLF 2022** (n° 4709), déposé le
+2 décembre 2021 par Sabine Rubin et 16 cosignataires du groupe La France insoumise, **non soutenu**
+le 8 décembre 2021 — 1 % de 0 à 10 292 €, jusqu'à 90 % au-delà de 411 683 € (source :
+assemblee-nationale.fr/dyn/15/amendements/4709/CION_FIN/CF119).
+
+Réserves à conserver si on l'intègre :
+- C'est une position de 2021 du **groupe parlementaire**, pas un engagement daté de 2027 de la
+  candidature ; à attribuer et dater comme tel, sauf source officielle 2027 qui le reprend.
+- Ce tableau a d'abord été obtenu en interrogeant un modèle, avec la référence « amendement CF11 au
+  PLFR 2021 » — **erreur de référence** (l'amendement CF11 du PLF 2021 porte sur un autre sujet).
+  Les chiffres se sont avérés exacts, la référence non : d'où la vérification par source primaire.
+- Le barème seul ne donne pas le sens de l'effet par revenu : il faut le comparer au barème en
+  vigueur, avec le modèle de calcul du point 2.
+
+### Question ouverte : sources institutionnelles
+
+Le pipeline d'ingestion restreint aujourd'hui les outils web au domaine officiel du candidat
+(`domaines.ts`). Un amendement (assemblee-nationale.fr) ou un texte de loi (legifrance.gouv.fr)
+relève pourtant des sources primaires de CLAUDE.md. À décider : autoriser une liste blanche de
+domaines institutionnels pour les paramètres chiffrés, avec attribution explicite (groupe
+parlementaire vs candidat) ?
