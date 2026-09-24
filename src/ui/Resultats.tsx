@@ -1,12 +1,7 @@
 import { useState } from "react";
 import themes from "../../data/themes.json";
-import lePenMeta from "../../data/programmes/le-pen/meta.json";
-import lePenProps from "../../data/programmes/le-pen/propositions.json";
-import melenchonMeta from "../../data/programmes/melenchon/meta.json";
-import melenchonProps from "../../data/programmes/melenchon/propositions.json";
-import philippeMeta from "../../data/programmes/philippe/meta.json";
-import philippeProps from "../../data/programmes/philippe/propositions.json";
-import type { CandidatMeta, Profil, Proposition, Theme } from "../types";
+import type { Profil, Proposition, Theme } from "../types";
+import { chargerCandidats } from "../data/chargerCandidats";
 import { evaluerProposition } from "../engine";
 
 const themesTypes: Theme[] = themes as Theme[];
@@ -25,11 +20,8 @@ const THEME_ICONS: Record<string, string> = {
   logement: "🏠",
 };
 
-const candidats: { meta: CandidatMeta; propositions: Proposition[] }[] = [
-  { meta: lePenMeta as CandidatMeta, propositions: lePenProps as Proposition[] },
-  { meta: melenchonMeta as CandidatMeta, propositions: melenchonProps as Proposition[] },
-  { meta: philippeMeta as CandidatMeta, propositions: philippeProps as Proposition[] },
-].sort((a, b) => a.meta.slug.localeCompare(b.meta.slug));
+// Chargés dynamiquement depuis data/programmes/, triés par ordre alphabétique de slug.
+const { avecDonnees: candidats, enCoursAnalyse } = chargerCandidats();
 
 interface ResultatsProps {
   profil: Profil;
@@ -110,6 +102,13 @@ export default function Resultats({ profil }: ResultatsProps) {
           s'applique à votre profil tel que renseigné. Détail thème par thème ci-dessous.
         </p>
       </div>
+
+      {enCoursAnalyse.length > 0 && (
+        <p className="hint">
+          Programmes pas encore analysés, donc absents des résultats ci-dessous :{" "}
+          {enCoursAnalyse.map((meta) => meta.nom).join(", ")}.
+        </p>
+      )}
 
       {parThemeEtCandidat.map(({ theme, parCandidat }) => {
         const slugOuvert = ouvert[theme.id] ?? null;
