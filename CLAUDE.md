@@ -54,8 +54,17 @@ Garde-fous de l'indicateur (ils découlent du principe d'indépendance ci-dessou
   conséquences macroéconomiques spéculées.
 - Toute hypothèse est affichée (mesure imprécise, chiffrage absent, effet dépendant de détails non
   publiés) ; à défaut de pouvoir trancher, on ne devine pas.
+- **Mieux vaut pas d'indicateur qu'un mauvais indicateur.** Quand le programme est trop vague pour
+  fixer qui est visé ou dans quel sens l'effet joue, on n'affiche pas de badge : le prompt
+  d'ingestion doit être cadré pour produire une réponse ciblée ou rien, jamais une réponse
+  approximative.
 - Le formulaire citoyen sera affiné **après** les premiers résultats d'ingestion, pour orienter les
   questions posées à partir des critères (cibles) réellement présents dans les programmes.
+- **Données sensibles : sur consentement explicite du citoyen, seulement si nécessaires à
+  l'indicateur.** C'est le citoyen qui décide de les donner (champ facultatif, finalité expliquée
+  au moment de la question) ; elles servent le calcul dans son navigateur et ne sont ni transmises
+  ni conservées. Une question non répondue n'équivaut **pas** à « non » : les effets qui en
+  dépendent n'ont alors pas de badge, avec l'invitation à renseigner le champ pour affiner.
 
 **Principe fondateur — INDÉPENDANCE ET NEUTRALITÉ :** C'est la contrainte la plus importante du projet. L'outil ne doit être affilié à aucun parti, ni directement ni indirectement. Concrètement, cela implique :
 - Ne jamais utiliser un simulateur ou un jeu de données produit par un parti ou une organisation partisane (ex : les simulateurs internes que certains candidats ou partis publient sur leur propre programme) comme source de vérité, même comme point de départ technique.
@@ -119,7 +128,7 @@ Proposition de structure, à valider :
 
 ### Modèle de profil utilisateur (exemple, à affiner)
 
-Champs possibles : statut (salarié, indépendant, fonctionnaire, retraité, étudiant, sans emploi...), tranche de revenus, situation familiale, nombre d'enfants, logement (locataire/propriétaire), secteur d'activité, région, nationalité/statut administratif, etc. Rester au minimum nécessaire pour limiter la friction et les données sensibles collectées.
+Champs possibles : statut (salarié, indépendant, fonctionnaire, retraité, étudiant, sans emploi...), tranche de revenus, situation familiale, nombre d'enfants, logement (locataire/propriétaire), secteur d'activité, région, nationalité/statut administratif, etc. Rester au minimum nécessaire pour limiter la friction ; les champs sensibles ne sont demandés que s'ils sont nécessaires pour fournir l'indicateur, toujours facultatifs et sur consentement explicite du citoyen (voir « Fil rouge produit »).
 
 ## Ce que Claude Code doit garder en tête à chaque session
 
