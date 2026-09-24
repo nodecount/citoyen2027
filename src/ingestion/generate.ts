@@ -70,6 +70,12 @@ export interface ClientAnthropicMinimal {
   };
 }
 
+// Vraies pannes de l'outil : fatales, sinon un thème « vide » pourrait les masquer et se lire comme
+// « ce candidat n'a rien proposé ». Toute autre erreur d'outil (page introuvable, URL hors domaine ou
+// jamais vue dans la conversation…) est propre à UNE requête du modèle : il tâtonne puis répond avec ce
+// qu'il a pu lire. Elle est tolérée mais journalisée, jamais silencieuse.
+const PANNES_OUTIL = new Set(["unavailable", "too_many_requests", "max_uses_exceeded"]);
+
 export function detecterErreurReponse(reponse: ReponseAnthropicMinimale): string | null {
   if (reponse.stop_reason === "refusal") {
     return "le modèle a refusé la requête (stop_reason: refusal)";
@@ -82,8 +88,9 @@ export function detecterErreurReponse(reponse: ReponseAnthropicMinimale): string
       !Array.isArray(bloc.content) &&
       "error_code" in (bloc.content as Record<string, unknown>)
     ) {
-      const codeErreur = (bloc.content as Record<string, unknown>).error_code;
-      return `erreur d'outil serveur (${bloc.type}) : ${String(codeErreur)}`;
+      const codeErreur = String((bloc.content as Record<string, unknown>).error_code);
+      if (PANNES_OUTIL.has(codeErreur)) return `erreur d'outil serveur (${bloc.type}) : ${codeErreur}`;
+      console.warn(`[outil] ${bloc.type} : ${codeErreur} (toléré : erreur propre à une requête du modèle)`);
     }
   }
   return null;

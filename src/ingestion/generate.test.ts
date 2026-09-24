@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { construireRequeteGeneration, creerClient, genererPropositions } from "./generate";
 import { DOMAINES_INSTITUTIONNELS } from "./domaines";
 import { VALEURS_PAR_CHAMP } from "../effets";
@@ -199,6 +199,58 @@ describe("genererPropositions", () => {
       },
     };
     await expect(genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", [])).rejects.toThrow();
+  });
+
+  it("rejette une panne de l'outil (indisponible, quota) : un « thème vide » pourrait sinon la masquer", async () => {
+    for (const error_code of ["unavailable", "too_many_requests", "max_uses_exceeded"]) {
+      const clientFactice = {
+        messages: {
+          create: async () => ({ content: [{ type: "web_fetch_tool_result", content: { error_code } }] }),
+        },
+      };
+      await expect(genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", [])).rejects.toThrow(error_code);
+    }
+  });
+
+  it("tolère une erreur propre à une URL (page introuvable, hors domaine) : le modèle explore, puis répond", async () => {
+    const proposition = {
+      titre: "T",
+      resume_factuel: "R",
+      sources: [
+        { type: "primaire", label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 },
+        { type: "primaire", label: "B", url: "https://exemple-officiel.fr/b", nom: "Source", annee: 2026 },
+      ],
+      chiffrage_disponible: false,
+      hypotheses_calcul: "",
+      statut: "complet",
+      date_derniere_verification: "2026-09-25",
+      effets: [],
+    };
+    const avertissements = vi.spyOn(console, "warn").mockImplementation(() => {});
+    for (const error_code of [
+      "url_not_accessible",
+      "url_not_allowed",
+      "url_not_in_prior_context",
+      "url_too_long",
+      "unsupported_content_type",
+      "code_inconnu",
+    ]) {
+      const clientFactice = {
+        messages: {
+          create: async () => ({
+            content: [
+              { type: "web_fetch_tool_result", content: { error_code } },
+              { type: "text", text: JSON.stringify([proposition]) },
+            ],
+          }),
+        },
+      };
+      const resultat = await genererPropositions(clientFactice, META, "fiscalite", "Fiscalité", []);
+      expect(resultat).toHaveLength(1);
+    }
+    // Tolérée ne veut pas dire silencieuse : chaque erreur est journalisée.
+    expect(avertissements).toHaveBeenCalledTimes(6);
+    avertissements.mockRestore();
   });
 });
 
