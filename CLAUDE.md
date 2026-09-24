@@ -8,10 +8,38 @@ Ce fichier donne à Claude Code le contexte nécessaire pour travailler sur ce p
 
 **Objectif :** Un outil web où un citoyen français renseigne quelques informations sur sa situation personnelle (statut, âge, revenus, situation familiale, secteur d'activité, etc.) et obtient une projection factuelle de ce que changerait, concrètement et pour lui, l'élection de chacun des principaux candidats à la présidentielle 2027 — classée par catégories (économie personnelle, droits et libertés, fiscalité, travail, logement, santé, etc.).
 
+## Fil rouge produit (prioritaire — toute décision de conception doit le servir)
+
+Le produit raisonne **par thème**, avec des thèmes qui parlent aux citoyens français, et articule
+trois niveaux pour chaque thème :
+
+1. **Une card par thème.** Le citoyen repère ses sujets d'un coup d'œil : libellé en langage courant
+   (la question qu'il se pose : « Ma retraite », « Mon logement »…), pas un jargon d'administration.
+2. **Les candidats rangés dans les thèmes qui concernent leur programme.** Un candidat n'apparaît
+   dans un thème que s'il a des mesures sourcées sur ce thème. Chaque candidat y est accompagné
+   d'un **texte de synthèse** expliquant en quoi son programme touche ce thème, pour orienter le
+   citoyen vers les thèmes qu'il veut approfondir (puis vers le détail sourcé des mesures).
+3. **Une mise en correspondance avec la situation du citoyen, toujours par thème.** Pour chaque
+   candidat × thème, un **indicateur de projection** — *améliorant / neutre / dégradant* — dit ce
+   que deviendrait la situation du citoyen (profil renseigné) dans une France où la volonté du
+   candidat sur ce thème s'appliquerait. Quand la projection individuelle n'est pas évaluable
+   honnêtement (thème à effet indirect, mesure trop vague, citoyen non concerné), l'indicateur
+   affiche **« non évaluable »** ou **« non concerné »** plutôt qu'une valeur inventée.
+
+Garde-fous de l'indicateur (ils découlent du principe d'indépendance ci-dessous) :
+- Il mesure l'effet sur **la situation matérielle et les droits du citoyen** (revenu, coûts, accès,
+  droits), jamais un jugement de valeur sur la politique elle-même.
+- Il est produit par des **règles explicites, documentées et reproductibles** à partir de données
+  structurées et sourcées (cibles et sens de l'effet de chaque mesure), pas par un modèle opaque.
+- **Pas de score global inter-thèmes, pas de classement de candidats.** L'indicateur reste par
+  thème ; l'ordre d'affichage reste alphabétique ; la même méthode s'applique à tous les candidats.
+- Toute hypothèse est affichée (mesure imprécise, chiffrage absent, effet dépendant de détails non
+  publiés) et l'indicateur se dégrade en « non évaluable » plutôt que de deviner.
+
 **Principe fondateur — INDÉPENDANCE ET NEUTRALITÉ :** C'est la contrainte la plus importante du projet. L'outil ne doit être affilié à aucun parti, ni directement ni indirectement. Concrètement, cela implique :
 - Ne jamais utiliser un simulateur ou un jeu de données produit par un parti ou une organisation partisane (ex : les simulateurs internes que certains candidats ou partis publient sur leur propre programme) comme source de vérité, même comme point de départ technique.
 - Pour chaque proposition intégrée, toujours viser au moins deux sources, dont une source primaire (le programme officiel du candidat/parti, un texte de loi, une déclaration officielle), inspirées de la rigueur méthodologique observée chez des initiatives comme Komune Media.
-- Présenter les propositions de façon factuelle et juxtaposée, sans commentaire de valeur, sans classement moral, sans "score" implicite favorisant un candidat.
+- Présenter les propositions de façon factuelle et juxtaposée, sans commentaire de valeur ni classement moral. L'indicateur de projection par thème (voir « Fil rouge produit ») est autorisé parce qu'il est défini par des règles explicites et appliqué identiquement à tous ; en revanche, aucun score global ni classement de candidats, et aucun indicateur implicite ou non documenté.
 - Documenter systématiquement les hypothèses de calcul quand une proposition est vague ou incomplète (ex : "aucun chiffrage précis publié, estimation basée sur X").
 - Traiter tous les candidats déclarés avec le même niveau d'exigence et de détail, même si leurs programmes ne sont pas tous publiés au même degré de précision.
 
@@ -74,7 +102,8 @@ Champs possibles : statut (salarié, indépendant, fonctionnaire, retraité, ét
 
 ## Ce que Claude Code doit garder en tête à chaque session
 
-1. **Ne jamais introduire de biais implicite** : formulations, ordre d'affichage (alphabétique par défaut, pas par score), poids des thèmes — tout doit rester équilibré entre candidats.
+0. **Servir le fil rouge produit** (cards par thème → candidats rangés par thème avec synthèse → indicateur de projection par thème) : toute évolution des données, du prompt d'ingestion, du moteur ou de l'UI doit rendre cela possible sans le contourner.
+1. **Ne jamais introduire de biais implicite** : formulations, ordre d'affichage (alphabétique par défaut, jamais par indicateur), poids des thèmes — tout doit rester équilibré entre candidats.
 2. **Toute donnée de programme ajoutée doit avoir ses sources citées dans le fichier de données**, jamais codée en dur dans la logique applicative sans traçabilité.
 3. **Le moteur de calcul doit être transparent** : privilégier des règles explicites et lisibles (if/formules documentées) plutôt qu'un modèle boîte noire, pour que chaque utilisateur puisse comprendre pourquoi tel impact est projeté.
 4. **Pas de scraping de sites non autorisés** : vérifier les conditions d'utilisation avant toute extraction automatisée de données depuis des sites tiers (Komune, Pourquituvotes, etc.). Privilégier les sources officielles (programmes publiés en PDF/HTML par les candidats, Légifrance, data.gouv.fr) ou un partenariat explicite.
@@ -83,7 +112,8 @@ Champs possibles : statut (salarié, indépendant, fonctionnaire, retraité, ét
 
 ## État actuel du projet
 
-Le schéma de données, le moteur de calcul (`src/engine/`) et l'interface (`src/ui/`, React/Vite/TypeScript) sont construits et fonctionnels. Les 11 thèmes de `data/themes.json` sont désormais tous peuplés de données réelles et sourcées pour les trois candidats (Le Pen, Mélenchon, Philippe), soit 71 propositions au total — voir `docs/methodologie.md` pour les règles de sourçage appliquées et l'exception documentée sur deux thèmes du dossier Philippe. Ces données n'ont toutefois pas encore été relues ni validées par le porteur du projet. Prochaines étapes probables :
+Le schéma de données, le moteur de calcul (`src/engine/`) et l'interface (`src/ui/`, React/Vite/TypeScript) sont construits et fonctionnels. `data/themes.json` compte 14 thèmes : 11 peuplés de données réelles et sourcées pour les trois candidats (Le Pen, Mélenchon, Philippe), soit 71 propositions au total, et 3 encore « provisoire » (retraites, finances publiques, international/défense/Europe) — voir `docs/methodologie.md` pour les règles de sourçage appliquées et l'exception documentée sur deux thèmes du dossier Philippe. Ces données n'ont toutefois pas encore été relues ni validées par le porteur du projet. Prochaines étapes probables :
+- **Combler l'écart avec le fil rouge produit** : le modèle de données actuel (propositions avec `resume_factuel`) ne porte encore ni la synthèse par candidat × thème, ni les données structurées (cibles et sens de l'effet) dont l'indicateur améliorant/neutre/dégradant a besoin ; le moteur ne produit qu'un impact « concerné / qualitatif ». Le prompt d'ingestion et l'UI (cards par thème) sont à étendre en conséquence — voir `docs/superpowers/specs/2026-09-24-fil-rouge-themes-projection-design.md`.
 - Faire relire et valider le contenu par le porteur du projet (exactitude factuelle, neutralité du ton, cohérence entre candidats)
 - Poursuivre l'audit de l'application uniforme de la convention `resume_factuel` / `hypotheses_calcul` (suivi déjà noté dans `docs/methodologie.md`)
 - Le pipeline d'ingestion (`src/ingestion/`) est construit : génération + vérification

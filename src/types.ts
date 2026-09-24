@@ -28,8 +28,13 @@ export interface Proposition {
 
 export interface Theme {
   id: string;
+  // Formulé comme le citoyen le vit (« Ma retraite »), pas comme l'administration le classe.
   libelle: string;
+  question_citoyen: string;
   description: string;
+  // false : l'effet sur un citoyen donné est indirect (ex : dette, diplomatie) — l'indicateur de
+  // projection y sera toujours « non évaluable », les candidats et leur synthèse restent affichés.
+  projetable: boolean;
   statut: "populated" | "provisoire";
 }
 

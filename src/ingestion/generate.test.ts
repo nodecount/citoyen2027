@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { construireRequeteGeneration, creerClient, genererPropositions } from "./generate";
+import themesData from "../../data/themes.json";
 import type { CandidatMeta } from "../types";
 import Anthropic from "@anthropic-ai/sdk";
 
@@ -60,8 +61,9 @@ describe("construireRequeteGeneration", () => {
 
   it("transmet le libellé et le périmètre du thème issus de themes.json", () => {
     const requete = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
+    const fiscalite = themesData.find((t) => t.id === "fiscalite")!;
     expect(requete.system).toContain("« Fiscalité »");
-    expect(requete.system).toContain("Impôts sur le revenu, la consommation, le patrimoine et les entreprises");
+    expect(requete.system).toContain(fiscalite.description);
   });
 
   it("injecte la date du jour au lieu de laisser le modèle l'inventer", () => {

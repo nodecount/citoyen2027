@@ -4,8 +4,8 @@ import type { CandidatMeta, Proposition, Theme } from "../../types";
 import type { EntreeAVerifier } from "../../ingestion/depot";
 
 const THEMES: Theme[] = [
-  { id: "fiscalite", libelle: "Fiscalité", description: "", statut: "populated" },
-  { id: "sante", libelle: "Santé", description: "", statut: "populated" },
+  { id: "fiscalite", libelle: "Fiscalité", question_citoyen: "", description: "", projetable: true, statut: "populated" },
+  { id: "sante", libelle: "Santé", question_citoyen: "", description: "", projetable: true, statut: "populated" },
 ];
 
 function proposition(overrides: Partial<Proposition> = {}): Proposition {
