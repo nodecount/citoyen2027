@@ -7,6 +7,8 @@
 // (sources manquantes, vérification à compléter), indépendamment de la précision du programme.
 export type StatutProposition = "complet" | "partiel" | "provisoire";
 
+import type { Effet } from "./effets";
+
 export interface Source {
   type: "primaire" | "secondaire";
   label: string;
@@ -24,6 +26,9 @@ export interface Proposition {
   hypotheses_calcul: string;
   statut: StatutProposition;
   date_derniere_verification: string;
+  // Optionnel tant que les propositions collectées avant le fil rouge n'ont pas été enrichies.
+  // Sans effets, le moteur ne peut pas projeter : il ne devine pas.
+  effets?: Effet[];
 }
 
 export interface Theme {

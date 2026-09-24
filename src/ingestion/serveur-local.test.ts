@@ -48,6 +48,7 @@ describe("gererRelance", () => {
         hypotheses_calcul: "",
         statut: "complet",
         date_derniere_verification: "2026-09-18",
+        effets: [],
       };
       const client = clientFactice([proposition], [{ titre: "Titre", verdict: "PASS" }]);
       const fetchFactice = async () => new Response("contenu de la page");
@@ -79,6 +80,7 @@ describe("gererRelance", () => {
         hypotheses_calcul: "",
         statut: "complet",
         date_derniere_verification: "2026-09-18",
+        effets: [],
       };
       writeFileSync(resolve(racine, "candidat-x/propositions.json"), JSON.stringify([propositionExistante]));
       const create = vi.fn();
@@ -130,6 +132,7 @@ describe("gererRelance", () => {
         hypotheses_calcul: "",
         statut: "complet",
         date_derniere_verification: "2026-09-01",
+        effets: [],
       };
       writeFileSync(resolve(racine, "candidat-x/propositions.json"), JSON.stringify([propositionExistante]));
       // executerRefresh n'appelle que genererPropositions (une seule passe, pas de vérification

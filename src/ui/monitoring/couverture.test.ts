@@ -20,6 +20,7 @@ function proposition(overrides: Partial<Proposition> = {}): Proposition {
     hypotheses_calcul: "",
     statut: "complet",
     date_derniere_verification: "2026-09-18",
+    effets: [],
     ...overrides,
   };
 }
@@ -90,6 +91,7 @@ describe("calculerCouverture", () => {
         hypotheses_calcul: "",
         statut: "complet",
         date_derniere_verification: "2026-09-18",
+        effets: [],
       },
       raison: "test",
     };

@@ -13,7 +13,7 @@ import type { Proposition } from "../types";
 
 let racine: string;
 
-function proposition(theme: string): Proposition {
+function proposition(theme: string): Proposition & Required<Pick<Proposition, "effets">> {
   return {
     id: `test-${theme}-001`,
     candidat: "test",
@@ -28,6 +28,7 @@ function proposition(theme: string): Proposition {
     hypotheses_calcul: "",
     statut: "complet",
     date_derniere_verification: "2026-09-18",
+    effets: [],
   };
 }
 

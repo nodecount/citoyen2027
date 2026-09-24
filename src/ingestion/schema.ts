@@ -1,4 +1,11 @@
 import type { Proposition, Source, StatutProposition } from "../types";
+import {
+  CHAMPS_CIBLES,
+  DIMENSIONS_EFFET,
+  SENS_EFFET,
+  validerEffet,
+  type Effet,
+} from "../effets";
 
 export const SCHEMA_PROPOSITION_GENEREE = {
   type: "object",
@@ -22,6 +29,34 @@ export const SCHEMA_PROPOSITION_GENEREE = {
     hypotheses_calcul: { type: "string" },
     statut: { type: "string", enum: ["complet", "partiel", "provisoire"] },
     date_derniere_verification: { type: "string" },
+    // Ce que la mesure fait directement à un citoyen (voir src/effets.ts). Pas de minItems : l'API
+    // n'accepte que 0 ou 1 ; [] est d'ailleurs une réponse valide (aucun effet direct déterminable).
+    effets: {
+      type: "array",
+      items: {
+        type: "object",
+        properties: {
+          cibles: {
+            type: "array",
+            items: {
+              type: "object",
+              properties: {
+                champ: { type: "string", enum: [...CHAMPS_CIBLES] },
+                valeurs: { type: "array", items: { type: "string" } },
+              },
+              required: ["champ", "valeurs"],
+              additionalProperties: false,
+            },
+          },
+          dimension: { type: "string", enum: [...DIMENSIONS_EFFET] },
+          sens: { type: "string", enum: [...SENS_EFFET] },
+          source_url: { type: "string" },
+          extrait: { type: "string" },
+        },
+        required: ["cibles", "dimension", "sens", "source_url", "extrait"],
+        additionalProperties: false,
+      },
+    },
   },
   required: [
     "titre",
@@ -31,11 +66,16 @@ export const SCHEMA_PROPOSITION_GENEREE = {
     "hypotheses_calcul",
     "statut",
     "date_derniere_verification",
+    "effets",
   ],
   additionalProperties: false,
 } as const;
 
-export type PropositionGeneree = Omit<Proposition, "id" | "candidat" | "theme">;
+// Côté stockage `effets` est optionnel (les 71 propositions collectées à la main n'en ont pas
+// encore) ; côté génération il est obligatoire, éventuellement vide.
+export type PropositionGeneree = Omit<Proposition, "id" | "candidat" | "theme" | "effets"> & {
+  effets: Effet[];
+};
 
 const STATUTS_VALIDES: StatutProposition[] = ["complet", "partiel", "provisoire"];
 const TYPES_SOURCE_VALIDES: Source["type"][] = ["primaire", "secondaire"];
@@ -63,6 +103,10 @@ export function validerPropositionGeneree(valeur: unknown): valeur is Propositio
     if (typeof s.label !== "string" || s.label.length === 0) return false;
     if (typeof s.url !== "string" || s.url.length === 0) return false;
   }
+
+  if (!Array.isArray(p.effets)) return false;
+  const urlsSources = (p.sources as Array<{ url: string }>).map((s) => s.url);
+  if (!p.effets.every((effet) => validerEffet(effet, urlsSources))) return false;
 
   return true;
 }

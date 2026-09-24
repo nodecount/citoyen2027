@@ -28,6 +28,7 @@ function proposition(overrides: Partial<PropositionGeneree> = {}): PropositionGe
     hypotheses_calcul: "Coût de 1000 euros",
     statut: "complet",
     date_derniere_verification: "2026-09-18",
+    effets: [],
     ...overrides,
   };
 }

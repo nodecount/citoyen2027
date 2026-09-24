@@ -47,6 +47,7 @@ describe("executerCombinaison", () => {
       hypotheses_calcul: "",
       statut: "complet" as const,
       date_derniere_verification: "2026-09-18",
+      effets: [],
     };
     const clientFactice = {
       messages: {
@@ -89,6 +90,7 @@ describe("executerCombinaison", () => {
       hypotheses_calcul: "",
       statut: "complet" as const,
       date_derniere_verification: "2026-09-18",
+      effets: [],
     }));
     enregistrerPropositions("candidat-x", propositionsExistantesSante, racine);
     const propositionGeneree = {
@@ -102,6 +104,7 @@ describe("executerCombinaison", () => {
       hypotheses_calcul: "",
       statut: "complet" as const,
       date_derniere_verification: "2026-09-18",
+      effets: [],
     };
     const clientFactice = {
       messages: {
@@ -141,6 +144,7 @@ describe("executerCombinaison", () => {
       hypotheses_calcul: "",
       statut: "complet" as const,
       date_derniere_verification: "2026-09-18",
+      effets: [],
     };
     const existanteFiscale = {
       id: "candidat-x-fisc-001",
@@ -153,6 +157,7 @@ describe("executerCombinaison", () => {
       hypotheses_calcul: "",
       statut: "complet" as const,
       date_derniere_verification: "2026-09-18",
+      effets: [],
     };
     const creerMock = vi.fn().mockResolvedValue({ content: [{ type: "text", text: "[]" }] });
     const clientFactice = { messages: { create: creerMock } };
@@ -191,6 +196,7 @@ describe("executerCombinaison", () => {
       hypotheses_calcul: "",
       statut: "complet" as const,
       date_derniere_verification: "2026-09-18",
+      effets: [],
     };
     const clientFactice = {
       messages: {
@@ -225,6 +231,7 @@ describe("combinaisonsDiffere", () => {
       hypotheses_calcul: "",
       statut: "complet" as const,
       date_derniere_verification: "2026-09-18",
+      effets: [],
     };
     const fraiche = {
       titre: "Titre",
@@ -234,6 +241,7 @@ describe("combinaisonsDiffere", () => {
       hypotheses_calcul: "",
       statut: "complet" as const,
       date_derniere_verification: "2026-09-19",
+      effets: [],
     };
     expect(combinaisonsDiffere([existante], [fraiche])).toBe(false);
   });
@@ -250,13 +258,14 @@ describe("combinaisonsDiffere", () => {
       hypotheses_calcul: "",
       statut: "complet" as const,
       date_derniere_verification: "2026-09-18",
+      effets: [],
     };
     const fraiche = { ...existante, resume_factuel: "Nouveau résumé" };
     expect(combinaisonsDiffere([existante], [fraiche])).toBe(true);
   });
 
   it("retourne true si le nombre de propositions diffère", () => {
-    expect(combinaisonsDiffere([], [{ titre: "Nouvelle", resume_factuel: "x", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-09-18" }])).toBe(true);
+    expect(combinaisonsDiffere([], [{ titre: "Nouvelle", resume_factuel: "x", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-09-18", effets: [] }])).toBe(true);
   });
 });
 
@@ -294,6 +303,7 @@ describe("executerRefresh", () => {
     hypotheses_calcul: "",
     statut: "complet" as const,
     date_derniere_verification: "2026-09-18",
+    effets: [],
   };
 
   it("ne modifie ni propositions.json ni _a-verifier.json quand la fraîche re-vérification confirme l'existant", async () => {
@@ -356,6 +366,7 @@ describe("executerRefresh", () => {
       hypotheses_calcul: "",
       statut: "complet" as const,
       date_derniere_verification: "2026-09-18",
+      effets: [],
     };
     enregistrerPropositions("candidat-x", [existante, autreTheme], racine);
     const fraiche = { ...existante, date_derniere_verification: "2026-09-19" } as Record<string, unknown>;
@@ -416,6 +427,7 @@ describe("executerLot", () => {
       hypotheses_calcul: "",
       statut: "complet" as const,
       date_derniere_verification: "2026-09-18",
+      effets: [],
     };
     const clientFactice = {
       messages: {

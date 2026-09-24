@@ -104,6 +104,7 @@ describe("genererPropositions", () => {
       hypotheses_calcul: "",
       statut: "complet",
       date_derniere_verification: "2026-09-18",
+      effets: [],
     };
     const propositionInvalide = { titre: "Incomplète" };
     const clientFactice = {
