@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   verifierChiffresPresents,
   verifierDomaineAutorise,
+  verifierExtraitPresent,
   verifierUrlDisponible,
 } from "./checks";
 
@@ -61,5 +62,29 @@ describe("verifierChiffresPresents", () => {
 
   it("accepte trivialement s'il n'y a aucun chiffre cité", () => {
     expect(verifierChiffresPresents("Aucun chiffrage précisé par le candidat.", "Texte sans rapport.")).toBe(true);
+  });
+});
+
+describe("verifierExtraitPresent", () => {
+  it("retrouve un extrait identique", () => {
+    expect(verifierExtraitPresent("la contribution exceptionnelle sur les hauts revenus", "Voici la contribution exceptionnelle sur les hauts revenus, créée en 2027.")).toBe(true);
+  });
+
+  it("ignore les balises HTML, la casse, les accents et la ponctuation typographique", () => {
+    const page = "<p>La <b>contribution</b> exceptionnelle sur l&rsquo;impôt des hauts revenus</p>";
+    expect(verifierExtraitPresent("LA CONTRIBUTION EXCEPTIONNELLE sur l'impot des hauts revenus", page)).toBe(true);
+  });
+
+  it("ne tient pas compte du contenu des balises script et style", () => {
+    const page = "<script>la contribution exceptionnelle sur les hauts revenus</script><p>Autre texte.</p>";
+    expect(verifierExtraitPresent("la contribution exceptionnelle sur les hauts revenus", page)).toBe(false);
+  });
+
+  it("retourne false si l'extrait n'apparaît pas dans la page", () => {
+    expect(verifierExtraitPresent("suppression de la flat tax pour tous les contribuables", "Page sans rapport avec la fiscalité.")).toBe(false);
+  });
+
+  it("retourne false pour un extrait vide (ne prouve rien)", () => {
+    expect(verifierExtraitPresent("   ", "Une page quelconque.")).toBe(false);
   });
 });

@@ -133,10 +133,18 @@ Réserves à conserver si on l'intègre :
 - Le barème seul ne donne pas le sens de l'effet par revenu : il faut le comparer au barème en
   vigueur, avec le modèle de calcul du point 2.
 
-### Question ouverte : sources institutionnelles
+### Décision : sources institutionnelles autorisées (2026-09-24)
 
-Le pipeline d'ingestion restreint aujourd'hui les outils web au domaine officiel du candidat
-(`domaines.ts`). Un amendement (assemblee-nationale.fr) ou un texte de loi (legifrance.gouv.fr)
-relève pourtant des sources primaires de CLAUDE.md. À décider : autoriser une liste blanche de
-domaines institutionnels pour les paramètres chiffrés, avec attribution explicite (groupe
-parlementaire vs candidat) ?
+Les candidats défendent dans les médias des positions de 2021-2022 pour l'élection à venir. Le
+pipeline autorise donc, en plus du domaine officiel du candidat, une liste blanche de domaines
+institutionnels : `assemblee-nationale.fr`, `senat.fr`, `legifrance.gouv.fr`. Garde-fous, appliqués
+en code (contrôle déterministe) et dans les prompts : au moins une source **officielle du candidat
+ou du parti** confirme que la mesure est toujours défendue (le document institutionnel ne fait que
+la préciser) ; attribution et année exactes (groupe parlementaire vs candidat) ; document émanant du
+candidat ou de son groupe.
+
+### Citation des sources
+
+Fin du texte de synthèse, discrètement : `<nom de la source> · <année>`, cliquable. `nom` et `annee`
+sont des champs structurés de chaque source (générés puis vérifiés) ; l'interface construit la liste
+à partir des propositions utilisées par la synthèse. Le modèle ne rédige jamais la liste lui-même.

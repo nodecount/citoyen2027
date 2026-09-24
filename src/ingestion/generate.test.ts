@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { construireRequeteGeneration, creerClient, genererPropositions } from "./generate";
+import { DOMAINES_INSTITUTIONNELS } from "./domaines";
 import themesData from "../../data/themes.json";
 import type { CandidatMeta } from "../types";
 import Anthropic from "@anthropic-ai/sdk";
@@ -37,10 +38,10 @@ const META_DOMAINE_INVALIDE: CandidatMeta = {
 };
 
 describe("construireRequeteGeneration", () => {
-  it("restreint les outils web au domaine officiel du candidat", () => {
+  it("restreint les outils web au domaine officiel du candidat et aux domaines institutionnels de la liste blanche", () => {
     const requete = construireRequeteGeneration(META, "fiscalite", "Fiscalité", []);
     for (const outil of requete.tools as Array<{ allowed_domains?: string[] }>) {
-      expect(outil.allowed_domains).toEqual(["exemple-officiel.fr"]);
+      expect(outil.allowed_domains).toEqual(["exemple-officiel.fr", ...DOMAINES_INSTITUTIONNELS]);
     }
   });
 

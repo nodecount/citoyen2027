@@ -3,8 +3,14 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { CandidatMeta } from "../types";
 import { detecterErreurReponse, type ClientAnthropicMinimal, type RequeteGeneration } from "./generate";
-import { domainesAutorises } from "./domaines";
-import { verifierChiffresPresents, verifierDomaineAutorise, verifierUrlDisponible, type FetchImpl } from "./checks";
+import { domainesAutorises, domainesAvecInstitutions, estSourceInstitutionnelle } from "./domaines";
+import {
+  verifierChiffresPresents,
+  verifierDomaineAutorise,
+  verifierExtraitPresent,
+  verifierUrlDisponible,
+  type FetchImpl,
+} from "./checks";
 import type { PropositionGeneree } from "./schema";
 
 const ICI = dirname(fileURLToPath(import.meta.url));
@@ -32,10 +38,32 @@ export async function verifierControlesDeterministes(
     }
   }
 
+  // Un document institutionnel (amendement, texte de loi) ne fait que PRÉCISER une position : il
+  // faut au moins une source officielle du candidat ou du parti qui confirme que la mesure est
+  // toujours défendue, sinon on présenterait une position ancienne comme actuelle.
+  if (proposition.sources.every((s) => estSourceInstitutionnelle(s.url))) {
+    return {
+      statut: "FAIL",
+      raison:
+        "Aucune source officielle du candidat ou du parti : un document institutionnel seul ne prouve pas que la mesure est toujours défendue",
+    };
+  }
+
   const textesSources = await Promise.all(proposition.sources.map((s) => texteDeUrl(s.url, fetchImpl)));
   const texteConcatene = textesSources.join("\n");
   if (!verifierChiffresPresents(proposition.hypotheses_calcul, texteConcatene)) {
     return { statut: "FAIL", raison: "Un chiffre cité dans hypotheses_calcul n'apparaît dans aucune source" };
+  }
+
+  // Chaque effet doit être fondé sur un passage réel de la source qu'il cite.
+  for (const effet of proposition.effets) {
+    const index = proposition.sources.findIndex((s) => s.url === effet.source_url);
+    if (index === -1 || !verifierExtraitPresent(effet.extrait, textesSources[index])) {
+      return {
+        statut: "FAIL",
+        raison: `L'extrait cité pour un effet (« ${effet.extrait.slice(0, 80)} ») n'apparaît pas dans la source ${effet.source_url}`,
+      };
+    }
   }
 
   return { statut: "PASS" };
@@ -43,8 +71,8 @@ export async function verifierControlesDeterministes(
 
 export function construireRequeteVerification(meta: CandidatMeta, propositions: PropositionGeneree[]): RequeteGeneration {
   const gabarit = readFileSync(resolve(ICI, "prompts/verification.md"), "utf-8");
-  const domaines = domainesAutorises(meta);
-  if (domaines.length === 0) {
+  const domaines = domainesAvecInstitutions(meta);
+  if (domainesAutorises(meta).length === 0) {
     throw new Error(`Aucun domaine officiel exploitable pour ${meta.nom} (slug: ${meta.slug}) — vérifier sources_officielles dans meta.json`);
   }
   return {
@@ -126,7 +154,7 @@ export async function verifier(
   propositions: PropositionGeneree[],
   fetchImpl: FetchImpl = fetch,
 ): Promise<Map<string, Verdict>> {
-  const domaines = domainesAutorises(meta);
+  const domaines = domainesAvecInstitutions(meta);
   const resultats = new Map<string, Verdict>();
   const aVerifierSemantiquement: PropositionGeneree[] = [];
 

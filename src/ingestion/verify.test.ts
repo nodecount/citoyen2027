@@ -57,6 +57,62 @@ describe("verifierControlesDeterministes", () => {
     const verdict = await verifierControlesDeterministes(proposition(), ["exemple-officiel.fr"], fetchFactice);
     expect(verdict.statut).toBe("PASS");
   });
+
+  describe("sources institutionnelles", () => {
+    const DOMAINES = ["exemple-officiel.fr", "assemblee-nationale.fr"];
+    const sourceOfficielle = { type: "primaire" as const, label: "Site officiel", url: "https://exemple-officiel.fr/a" };
+    const sourceInstitutionnelle = {
+      type: "primaire" as const,
+      label: "Amendement",
+      url: "https://www.assemblee-nationale.fr/dyn/15/amendements/4709/CION_FIN/CF119",
+    };
+    const pageOk = async () => new Response("Le dispositif coûte 1000 euros par an.");
+
+    it("accepte une source institutionnelle quand une source officielle confirme la mesure", async () => {
+      const p = proposition({ sources: [sourceOfficielle, sourceInstitutionnelle] });
+      const verdict = await verifierControlesDeterministes(p, DOMAINES, pageOk);
+      expect(verdict.statut).toBe("PASS");
+    });
+
+    it("refuse une proposition fondée uniquement sur des sources institutionnelles : rien ne prouve que le candidat la défend encore", async () => {
+      const p = proposition({ sources: [sourceInstitutionnelle] });
+      const verdict = await verifierControlesDeterministes(p, DOMAINES, pageOk);
+      expect(verdict.statut).toBe("FAIL");
+      if (verdict.statut === "FAIL") expect(verdict.raison).toContain("officielle");
+    });
+  });
+
+  describe("effets", () => {
+    const effetSource = {
+      cibles: [],
+      dimension: "revenu_disponible" as const,
+      sens: "baisse" as const,
+      source_url: "https://exemple-officiel.fr/a",
+      extrait: "contribution exceptionnelle sur les hauts revenus",
+    };
+
+    it("échoue si l'extrait d'un effet n'apparaît pas dans la source citée", async () => {
+      const fetchFactice = async () => new Response("Le dispositif coûte 1000 euros par an.");
+      const verdict = await verifierControlesDeterministes(
+        proposition({ effets: [effetSource] }),
+        ["exemple-officiel.fr"],
+        fetchFactice,
+      );
+      expect(verdict.statut).toBe("FAIL");
+      if (verdict.statut === "FAIL") expect(verdict.raison).toContain("extrait");
+    });
+
+    it("passe si l'extrait d'un effet est bien dans la source citée", async () => {
+      const fetchFactice = async () =>
+        new Response("<p>Le dispositif coûte 1000 euros par an : contribution exceptionnelle sur les hauts revenus.</p>");
+      const verdict = await verifierControlesDeterministes(
+        proposition({ effets: [effetSource] }),
+        ["exemple-officiel.fr"],
+        fetchFactice,
+      );
+      expect(verdict.statut).toBe("PASS");
+    });
+  });
 });
 
 describe("verifier", () => {

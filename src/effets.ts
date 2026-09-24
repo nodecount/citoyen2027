@@ -41,6 +41,7 @@ export interface Effet {
   extrait: string;
 }
 
+const EXTRAIT_MIN_CARACTERES = 15; // en dessous, l'extrait ne prouve rien (il trouverait toujours une correspondance)
 const EXTRAIT_MAX_CARACTERES = 600;
 
 interface ChampProfilJson {
@@ -86,7 +87,11 @@ export function validerEffet(valeur: unknown, urlsSources: string[]): valeur is 
   if (!DIMENSIONS_EFFET.includes(e.dimension as DimensionEffet)) return false;
   if (!SENS_EFFET.includes(e.sens as SensEffet)) return false;
   if (typeof e.source_url !== "string" || !urlsSources.includes(e.source_url)) return false;
-  if (typeof e.extrait !== "string" || e.extrait.length === 0 || e.extrait.length > EXTRAIT_MAX_CARACTERES) {
+  if (
+    typeof e.extrait !== "string" ||
+    e.extrait.trim().length < EXTRAIT_MIN_CARACTERES ||
+    e.extrait.length > EXTRAIT_MAX_CARACTERES
+  ) {
     return false;
   }
   return true;

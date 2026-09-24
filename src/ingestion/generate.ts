@@ -4,7 +4,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import themesData from "../../data/themes.json";
 import type { CandidatMeta } from "../types";
-import { domainesAutorises } from "./domaines";
+import { domainesAutorises, domainesAvecInstitutions } from "./domaines";
 import { SCHEMA_PROPOSITION_GENEREE, validerPropositionGeneree, type PropositionGeneree } from "./schema";
 
 const ICI = dirname(fileURLToPath(import.meta.url));
@@ -71,8 +71,9 @@ export function construireRequeteGeneration(
   titresExistants: string[],
 ): RequeteGeneration {
   const gabarit = readFileSync(resolve(ICI, "prompts/generation.md"), "utf-8");
-  const domaines = domainesAutorises(meta);
-  if (domaines.length === 0) {
+  // Le domaine officiel du candidat reste obligatoire : les institutions ne peuvent que préciser.
+  const domaines = domainesAvecInstitutions(meta);
+  if (domainesAutorises(meta).length === 0) {
     throw new Error(`Aucun domaine officiel exploitable pour ${meta.nom} (slug: ${meta.slug}) — vérifier sources_officielles dans meta.json`);
   }
   const listeTitresExistants =
