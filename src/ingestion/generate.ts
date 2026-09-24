@@ -23,7 +23,7 @@ function descriptionDuTheme(themeId: string): string {
 
 // split/join plutôt que String.replace : une valeur qui contient « $& » ou « $1 » (titre de mesure,
 // libellé) ne doit jamais être interprétée comme un motif de remplacement.
-function remplirGabarit(gabarit: string, valeurs: Record<string, string>): string {
+export function remplirGabarit(gabarit: string, valeurs: Record<string, string>): string {
   let texte = gabarit;
   for (const [cle, valeur] of Object.entries(valeurs)) {
     texte = texte.split(`{{${cle}}}`).join(valeur);

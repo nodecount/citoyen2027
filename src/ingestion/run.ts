@@ -8,11 +8,16 @@ import {
   chargerAVerifier,
   chargerMeta,
   chargerPropositions,
+  chargerSyntheses,
   combinaisonDejaCouverte,
   enregistrerAVerifier,
   enregistrerPropositions,
+  enregistrerSynthese,
+  enregistrerSyntheseAVerifier,
+  supprimerSyntheseAVerifier,
   type EntreeAVerifier,
 } from "./depot";
+import { genererSynthese, verifierSyntheseParModele } from "./synthese";
 import { chargerEnv } from "./env";
 import { analyserArguments } from "./cli";
 import themesData from "../../data/themes.json";
@@ -43,6 +48,7 @@ const ABREVIATIONS_THEME: Record<string, string> = {
   education: "educ",
   environnement: "envi",
   logement: "logt",
+  retraites: "retr",
 };
 
 export function genererIdProposition(slug: string, themeId: string, index: number): string {
@@ -189,6 +195,88 @@ export async function executerLot(
   }
 }
 
+export type ResultatSyntheseTheme = "enregistree" | "a_verifier" | "aucune_proposition" | "deja_a_jour";
+
+// Étape 2 du pipeline, après les propositions : le texte « en quoi le programme touche ce thème »,
+// rédigé à partir de TOUTES les mesures affichables du thème (jamais une sélection), relu par un
+// second appel. Un texte refusé va dans _synthese-a-verifier.json, jamais dans synthese.json.
+export async function executerSynthese(
+  client: ClientAnthropicMinimal,
+  meta: CandidatMeta,
+  themeId: string,
+  themeLibelle: string,
+  options: OptionsExecution = {},
+): Promise<ResultatSyntheseTheme> {
+  const affichables = chargerPropositions(meta.slug, options.racine).filter(
+    (p) => p.theme === themeId && (p.statut === "complet" || p.statut === "partiel"),
+  );
+  if (affichables.length === 0) return "aucune_proposition";
+
+  const ids = affichables.map((p) => p.id);
+  const existante = chargerSyntheses(meta.slug, options.racine).find((s) => s.theme === themeId);
+  const memesMesures =
+    existante !== undefined &&
+    existante.propositions.length === ids.length &&
+    [...existante.propositions].sort().join("|") === [...ids].sort().join("|");
+  if (memesMesures && !options.force) return "deja_a_jour";
+
+  const genere = await genererSynthese(client, meta, themeId, themeLibelle, affichables);
+  if (!genere.ok) {
+    enregistrerSyntheseAVerifier(
+      meta.slug,
+      { theme: themeId, texte: "", propositions: ids, raison: genere.erreur },
+      options.racine,
+    );
+    return "a_verifier";
+  }
+
+  const verdict = await verifierSyntheseParModele(client, meta, themeLibelle, affichables, genere.synthese);
+  if (verdict.statut === "FAIL") {
+    enregistrerSyntheseAVerifier(
+      meta.slug,
+      {
+        theme: themeId,
+        texte: genere.synthese.texte,
+        propositions: genere.synthese.propositions_utilisees,
+        raison: verdict.raison,
+      },
+      options.racine,
+    );
+    return "a_verifier";
+  }
+
+  enregistrerSynthese(
+    meta.slug,
+    {
+      theme: themeId,
+      texte: genere.synthese.texte,
+      propositions: ids,
+      date_derniere_verification: new Date().toISOString().slice(0, 10),
+    },
+    options.racine,
+  );
+  supprimerSyntheseAVerifier(meta.slug, themeId, options.racine);
+  return "enregistree";
+}
+
+export async function executerSyntheses(
+  client: ClientAnthropicMinimal,
+  combinaisons: CombinaisonACouvrir[],
+  options: OptionsExecution = {},
+): Promise<void> {
+  for (const combinaison of combinaisons) {
+    try {
+      const meta = chargerMeta(combinaison.slug, options.racine);
+      const resultat = await executerSynthese(client, meta, combinaison.themeId, combinaison.themeLibelle, options);
+      if (resultat !== "aucune_proposition") {
+        console.log(`[synthèse] ${combinaison.slug} × ${combinaison.themeId} : ${resultat}`);
+      }
+    } catch (erreur) {
+      console.error(`[erreur synthèse] ${combinaison.slug} × ${combinaison.themeId} :`, erreur);
+    }
+  }
+}
+
 async function main(): Promise<void> {
   chargerEnv();
   const options = analyserArguments(process.argv.slice(2));
@@ -223,6 +311,8 @@ async function main(): Promise<void> {
   );
 
   await executerLot(client, combinaisons, { force: options.force });
+  // Deuxième étape : une synthèse par candidat × thème pour lequel des mesures existent.
+  await executerSyntheses(client, combinaisons, { force: options.force });
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

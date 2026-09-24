@@ -1,6 +1,6 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
-import type { CandidatMeta, Proposition } from "../types";
+import type { CandidatMeta, Proposition, SyntheseTheme } from "../types";
 import type { PropositionGeneree } from "./schema";
 
 const RACINE_PAR_DEFAUT = resolve(process.cwd(), "data/programmes");
@@ -53,4 +53,63 @@ export function enregistrerAVerifier(slug: string, entrees: EntreeAVerifier[], r
 
 export function combinaisonDejaCouverte(propositions: Proposition[], themeId: string): boolean {
   return propositions.some((p) => p.theme === themeId);
+}
+
+export function cheminSynthese(slug: string, racine: string = RACINE_PAR_DEFAUT): string {
+  return resolve(racine, slug, "synthese.json");
+}
+
+export function cheminSyntheseAVerifier(slug: string, racine: string = RACINE_PAR_DEFAUT): string {
+  return resolve(racine, slug, "_synthese-a-verifier.json");
+}
+
+export function chargerSyntheses(slug: string, racine: string = RACINE_PAR_DEFAUT): SyntheseTheme[] {
+  const chemin = cheminSynthese(slug, racine);
+  if (!existsSync(chemin)) return [];
+  return JSON.parse(readFileSync(chemin, "utf-8")) as SyntheseTheme[];
+}
+
+// Remplace la synthèse du même thème, garde les autres, trie par thème : diffs stables.
+export function enregistrerSynthese(slug: string, synthese: SyntheseTheme, racine: string = RACINE_PAR_DEFAUT): void {
+  const chemin = cheminSynthese(slug, racine);
+  const autres = chargerSyntheses(slug, racine).filter((s) => s.theme !== synthese.theme);
+  const toutes = [...autres, synthese].sort((a, b) => a.theme.localeCompare(b.theme));
+  mkdirSync(dirname(chemin), { recursive: true });
+  writeFileSync(chemin, JSON.stringify(toutes, null, 2) + "\n");
+}
+
+export interface EntreeSyntheseAVerifier {
+  theme: string;
+  texte: string;
+  propositions: string[];
+  raison: string;
+}
+
+export function chargerSynthesesAVerifier(slug: string, racine: string = RACINE_PAR_DEFAUT): EntreeSyntheseAVerifier[] {
+  const chemin = cheminSyntheseAVerifier(slug, racine);
+  if (!existsSync(chemin)) return [];
+  return JSON.parse(readFileSync(chemin, "utf-8")) as EntreeSyntheseAVerifier[];
+}
+
+// Une seule entrée par thème : la dernière tentative refusée remplace la précédente.
+export function enregistrerSyntheseAVerifier(
+  slug: string,
+  entree: EntreeSyntheseAVerifier,
+  racine: string = RACINE_PAR_DEFAUT,
+): void {
+  const chemin = cheminSyntheseAVerifier(slug, racine);
+  const autres = chargerSynthesesAVerifier(slug, racine).filter((e) => e.theme !== entree.theme);
+  mkdirSync(dirname(chemin), { recursive: true });
+  writeFileSync(chemin, JSON.stringify([...autres, entree], null, 2) + "\n");
+}
+
+export function supprimerSyntheseAVerifier(slug: string, theme: string, racine: string = RACINE_PAR_DEFAUT): void {
+  const chemin = cheminSyntheseAVerifier(slug, racine);
+  if (!existsSync(chemin)) return;
+  const restantes = chargerSynthesesAVerifier(slug, racine).filter((e) => e.theme !== theme);
+  if (restantes.length === 0) {
+    rmSync(chemin);
+    return;
+  }
+  writeFileSync(chemin, JSON.stringify(restantes, null, 2) + "\n");
 }

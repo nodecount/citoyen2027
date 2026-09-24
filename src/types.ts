@@ -35,6 +35,17 @@ export interface Proposition {
   effets?: Effet[];
 }
 
+// Texte « pourquoi et en quoi le programme de ce candidat touche ce thème », un par candidat × thème.
+// Dérivé des seules propositions vérifiées listées dans `propositions` (toutes celles du thème) ;
+// les sources affichées à la fin sont construites par l'interface à partir de ces propositions
+// (src/citations.ts), jamais rédigées dans le texte.
+export interface SyntheseTheme {
+  theme: string;
+  texte: string;
+  propositions: string[];
+  date_derniere_verification: string;
+}
+
 export interface Theme {
   id: string;
   // Formulé comme le citoyen le vit (« Ma retraite »), pas comme l'administration le classe.

@@ -2,9 +2,26 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { mkdtempSync, rmSync, writeFileSync, mkdirSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
-import { executerCombinaison, executerLot, genererIdProposition, combinaisonsDiffere, executerRefresh, tirerEchantillon } from "./run";
-import { chargerAVerifier, chargerPropositions, enregistrerPropositions } from "./depot";
-import type { CandidatMeta } from "../types";
+import {
+  executerCombinaison,
+  executerLot,
+  executerSynthese,
+  executerSyntheses,
+  genererIdProposition,
+  combinaisonsDiffere,
+  executerRefresh,
+  tirerEchantillon,
+} from "./run";
+import {
+  chargerAVerifier,
+  chargerPropositions,
+  chargerSyntheses,
+  chargerSynthesesAVerifier,
+  enregistrerPropositions,
+  enregistrerSynthese,
+  enregistrerSyntheseAVerifier,
+} from "./depot";
+import type { CandidatMeta, Proposition } from "../types";
 
 let racine: string;
 
@@ -458,5 +475,176 @@ describe("executerLot", () => {
     // La preuve clé du correctif : candidat-c, listé APRÈS l'échec de candidat-b dans le lot,
     // est quand même traité normalement.
     expect(chargerPropositions("candidat-c", racine)).toHaveLength(1);
+  });
+});
+
+describe("executerSynthese", () => {
+  afterEach(() => {
+    rmSync(racine, { recursive: true, force: true });
+  });
+
+  const TEXTE =
+    "Le programme prévoit une contribution supplémentaire sur les hauts revenus, dont le seuil n'est pas précisé. " +
+    "Cette mesure vise les foyers de la tranche de revenus la plus élevée et réduirait leur revenu disponible.";
+
+  function prop(id: string, theme: string, statut: Proposition["statut"] = "complet"): Proposition {
+    return {
+      id,
+      candidat: "candidat-x",
+      theme,
+      titre: `Mesure ${id}`,
+      resume_factuel: "Résumé",
+      sources: [
+        { type: "primaire", label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 },
+        { type: "primaire", label: "B", url: "https://exemple-officiel.fr/b", nom: "Source", annee: 2026 },
+      ],
+      chiffrage_disponible: false,
+      hypotheses_calcul: "",
+      statut,
+      date_derniere_verification: "2026-09-24",
+      effets: [],
+    };
+  }
+
+  const reponseSynthese = (ids: string[], texte = TEXTE) => ({
+    content: [{ type: "text", text: JSON.stringify({ texte, propositions_utilisees: ids }) }],
+  });
+  const reponseVerdict = (verdict: "PASS" | "FAIL", raison?: string) => ({
+    content: [{ type: "text", text: JSON.stringify(raison ? { verdict, raison } : { verdict }) }],
+  });
+
+  function clientAvec(...reponses: unknown[]) {
+    const create = vi.fn();
+    for (const reponse of reponses) create.mockResolvedValueOnce(reponse);
+    return { messages: { create } };
+  }
+
+  it("génère, fait relire et enregistre la synthèse d'un thème couvert, avec toutes les mesures affichables", async () => {
+    preparerRacine();
+    enregistrerPropositions("candidat-x", [prop("candidat-x-fisc-001", "fiscalite"), prop("candidat-x-fisc-002", "fiscalite")], racine);
+    const client = clientAvec(reponseSynthese(["candidat-x-fisc-001", "candidat-x-fisc-002"]), reponseVerdict("PASS"));
+
+    const resultat = await executerSynthese(client, META, "fiscalite", "Mes impôts et taxes", { racine });
+
+    expect(resultat).toBe("enregistree");
+    const syntheses = chargerSyntheses("candidat-x", racine);
+    expect(syntheses).toHaveLength(1);
+    expect(syntheses[0].theme).toBe("fiscalite");
+    expect(syntheses[0].texte).toBe(TEXTE);
+    expect(syntheses[0].propositions).toEqual(["candidat-x-fisc-001", "candidat-x-fisc-002"]);
+    expect(syntheses[0].date_derniere_verification).toBe(new Date().toISOString().slice(0, 10));
+  });
+
+  it("ne fait rien, sans appeler l'API, si le candidat n'a aucune mesure affichable sur le thème", async () => {
+    preparerRacine();
+    enregistrerPropositions("candidat-x", [prop("candidat-x-fisc-001", "fiscalite", "provisoire"), prop("candidat-x-sante-001", "sante")], racine);
+    const client = clientAvec();
+    expect(await executerSynthese(client, META, "fiscalite", "Mes impôts et taxes", { racine })).toBe("aucune_proposition");
+    expect(client.messages.create).not.toHaveBeenCalled();
+    expect(chargerSyntheses("candidat-x", racine)).toEqual([]);
+  });
+
+  it("ne régénère pas une synthèse déjà à jour (mêmes mesures), sauf avec force", async () => {
+    preparerRacine();
+    enregistrerPropositions("candidat-x", [prop("candidat-x-fisc-001", "fiscalite")], racine);
+    enregistrerSynthese("candidat-x", { theme: "fiscalite", texte: "Ancien texte.", propositions: ["candidat-x-fisc-001"], date_derniere_verification: "2026-09-20" }, racine);
+
+    const inactif = clientAvec();
+    expect(await executerSynthese(inactif, META, "fiscalite", "Mes impôts et taxes", { racine })).toBe("deja_a_jour");
+    expect(inactif.messages.create).not.toHaveBeenCalled();
+
+    const client = clientAvec(reponseSynthese(["candidat-x-fisc-001"]), reponseVerdict("PASS"));
+    expect(await executerSynthese(client, META, "fiscalite", "Mes impôts et taxes", { racine, force: true })).toBe("enregistree");
+    expect(chargerSyntheses("candidat-x", racine)[0].texte).toBe(TEXTE);
+  });
+
+  it("régénère quand l'ensemble des mesures du thème a changé", async () => {
+    preparerRacine();
+    enregistrerPropositions("candidat-x", [prop("candidat-x-fisc-001", "fiscalite"), prop("candidat-x-fisc-002", "fiscalite")], racine);
+    enregistrerSynthese("candidat-x", { theme: "fiscalite", texte: "Ancien texte.", propositions: ["candidat-x-fisc-001"], date_derniere_verification: "2026-09-20" }, racine);
+    const client = clientAvec(reponseSynthese(["candidat-x-fisc-001", "candidat-x-fisc-002"]), reponseVerdict("PASS"));
+    expect(await executerSynthese(client, META, "fiscalite", "Mes impôts et taxes", { racine })).toBe("enregistree");
+  });
+
+  it("met en attente une synthèse refusée par le relecteur, sans toucher à synthese.json", async () => {
+    preparerRacine();
+    enregistrerPropositions("candidat-x", [prop("candidat-x-fisc-001", "fiscalite")], racine);
+    const client = clientAvec(reponseSynthese(["candidat-x-fisc-001"]), reponseVerdict("FAIL", "affirmation non étayée"));
+
+    expect(await executerSynthese(client, META, "fiscalite", "Mes impôts et taxes", { racine })).toBe("a_verifier");
+    expect(chargerSyntheses("candidat-x", racine)).toEqual([]);
+    const enAttente = chargerSynthesesAVerifier("candidat-x", racine);
+    expect(enAttente).toHaveLength(1);
+    expect(enAttente[0].raison).toBe("affirmation non étayée");
+    expect(enAttente[0].texte).toBe(TEXTE);
+  });
+
+  it("met en attente une synthèse qui échoue les contrôles déterministes, sans appeler le relecteur", async () => {
+    preparerRacine();
+    enregistrerPropositions("candidat-x", [prop("candidat-x-fisc-001", "fiscalite"), prop("candidat-x-fisc-002", "fiscalite")], racine);
+    const client = clientAvec(reponseSynthese(["candidat-x-fisc-001"]));
+
+    expect(await executerSynthese(client, META, "fiscalite", "Mes impôts et taxes", { racine })).toBe("a_verifier");
+    expect(client.messages.create).toHaveBeenCalledTimes(1);
+    expect(chargerSynthesesAVerifier("candidat-x", racine)[0].raison).toContain("candidat-x-fisc-002");
+  });
+
+  it("efface l'ancienne entrée en attente d'un thème quand une nouvelle synthèse est enregistrée", async () => {
+    preparerRacine();
+    enregistrerPropositions("candidat-x", [prop("candidat-x-fisc-001", "fiscalite")], racine);
+    enregistrerSyntheseAVerifier("candidat-x", { theme: "fiscalite", texte: "Refusée.", propositions: [], raison: "ancienne raison" }, racine);
+    const client = clientAvec(reponseSynthese(["candidat-x-fisc-001"]), reponseVerdict("PASS"));
+
+    await executerSynthese(client, META, "fiscalite", "Mes impôts et taxes", { racine });
+    expect(chargerSynthesesAVerifier("candidat-x", racine)).toEqual([]);
+  });
+});
+
+describe("executerSyntheses", () => {
+  afterEach(() => {
+    rmSync(racine, { recursive: true, force: true });
+  });
+
+  it("isole l'échec d'un thème : les suivants sont traités quand même", async () => {
+    preparerRacine();
+    const propositions: Proposition[] = ["fiscalite", "sante"].map((theme, i) => ({
+      id: `candidat-x-${theme}-001`,
+      candidat: "candidat-x",
+      theme,
+      titre: `Mesure ${i}`,
+      resume_factuel: "Résumé",
+      sources: [
+        { type: "primaire", label: "A", url: "https://exemple-officiel.fr/a", nom: "Source", annee: 2026 },
+        { type: "primaire", label: "B", url: "https://exemple-officiel.fr/b", nom: "Source", annee: 2026 },
+      ],
+      chiffrage_disponible: false,
+      hypotheses_calcul: "",
+      statut: "complet",
+      date_derniere_verification: "2026-09-24",
+      effets: [],
+    }));
+    enregistrerPropositions("candidat-x", propositions, racine);
+    const texte =
+      "Le programme prévoit plusieurs mesures sur ce thème et laisse non précisés leur calendrier et leur financement. " +
+      "Elles s'adressent à l'ensemble des citoyens concernés et modifieraient directement leurs démarches quotidiennes.";
+    const create = vi
+      .fn()
+      .mockRejectedValueOnce(new Error("panne réseau")) // thème 1 : génération
+      .mockResolvedValueOnce({ content: [{ type: "text", text: JSON.stringify({ texte, propositions_utilisees: ["candidat-x-sante-001"] }) }] })
+      .mockResolvedValueOnce({ content: [{ type: "text", text: JSON.stringify({ verdict: "PASS" }) }] });
+    const erreurs = vi.spyOn(console, "error").mockImplementation(() => {});
+
+    await executerSyntheses(
+      { messages: { create } },
+      [
+        { slug: "candidat-x", themeId: "fiscalite", themeLibelle: "Mes impôts et taxes" },
+        { slug: "candidat-x", themeId: "sante", themeLibelle: "Ma santé" },
+      ],
+      { racine },
+    );
+
+    expect(erreurs).toHaveBeenCalled();
+    erreurs.mockRestore();
+    expect(chargerSyntheses("candidat-x", racine).map((s) => s.theme)).toEqual(["sante"]);
   });
 });
