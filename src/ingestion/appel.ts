@@ -128,6 +128,16 @@ function estTimeout(erreur: unknown): boolean {
   return erreur instanceof Error && (erreur.name === "APIConnectionTimeoutError" || /timed? ?out/i.test(erreur.message));
 }
 
+// Ne pas imputer à notre limite une coupure qui arrive bien avant elle : un premier essai coupé à
+// 5 min 7 s avait été présenté comme « timeout de 10 min atteint », ce qui était faux.
+function expliquerTimeout(dureeMs: number, limiteMs: number): string {
+  const limite = `${limiteMs / 60_000} min`;
+  if (dureeMs >= limiteMs * 0.95) {
+    return `TIMEOUT imposé de ${limite} atteint : l'appel a été coupé côté client (il a pu être facturé)`;
+  }
+  return `Délai dépassé AVANT notre limite de ${limite} : la coupure vient de la connexion ou de l'API, pas de notre timeout (l'appel a pu être facturé)`;
+}
+
 // Les traces ne sont pas écrites pendant les tests (VITEST est défini par vitest).
 function tracer(entree: Parameters<typeof ecrireTraceBrute>[0]): string | undefined {
   return process.env.VITEST ? undefined : ecrireTraceBrute(entree);
@@ -137,7 +147,9 @@ export async function appeler(
   client: ClientAnthropicMinimal,
   requete: RequeteGeneration,
   contexte: ContexteAppel,
+  options: { timeoutMs?: number } = {},
 ): Promise<ResultatAppel> {
+  const limiteMs = options.timeoutMs ?? TIMEOUT_APPEL_MS;
   const debutTotal = Date.now();
   const messages = [...requete.messages];
   let contenu: BlocContenuReponse[] = [];
@@ -148,14 +160,14 @@ export async function appeler(
   for (;;) {
     let reponse: ReponseAnthropicMinimale;
     try {
-      reponse = await client.messages.create({ ...requete, messages }, { timeout: TIMEOUT_APPEL_MS, maxRetries: 0 });
+      reponse = await client.messages.create({ ...requete, messages }, { timeout: limiteMs, maxRetries: 0 });
     } catch (erreur) {
       const dureeMs = Date.now() - debutTotal;
       const message = erreur instanceof Error ? erreur.message : String(erreur);
       const chemin = tracer({ ...contexte, requete, reponse: derniere && { ...derniere, content: contenu, usage }, erreur: message, dureeMs });
       console.error(
         `[appel] ÉCHEC ${contexte.phase} ${contexte.slug}${contexte.themeId ? ` × ${contexte.themeId}` : ""} après ${formaterDuree(dureeMs)} : ${message}` +
-          (estTimeout(erreur) ? `\n  TIMEOUT imposé de ${TIMEOUT_APPEL_MS / 60_000} min atteint : l'appel a été coupé côté client (il a pu être facturé)` : "") +
+          (estTimeout(erreur) ? `\n  ${expliquerTimeout(dureeMs, limiteMs)}` : "") +
           (chemin ? `\n  trace complète : ${chemin}` : ""),
       );
       throw erreur;

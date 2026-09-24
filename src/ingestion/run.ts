@@ -1,6 +1,7 @@
 import { pathToFileURL } from "node:url";
 import type { CandidatMeta, Proposition } from "../types";
 import { genererPropositions, genererPropositionsDetaillee, creerClient, type ClientAnthropicMinimal } from "./generate";
+import { clientEnFlux } from "./flux";
 import { verifier } from "./verify";
 import type { FetchImpl } from "./checks";
 import type { PropositionGeneree } from "./schema";
@@ -317,7 +318,8 @@ async function main(): Promise<void> {
   // l'autre. Le seul point de production où le client réel entre dans ce pipeline est ici :
   // l'assertion ci-dessous fait le pont, sans élargir l'interface minimale utilisée partout
   // ailleurs (et donc sans recoupler le reste du code aux types exacts du SDK).
-  const client = creerClient() as unknown as ClientAnthropicMinimal;
+  // Réponse reçue en flux (voir flux.ts) : connexion gardée active, progression affichée en direct.
+  const client = clientEnFlux(creerClient());
 
   if (options.refresh) {
     const meta = chargerMeta(options.refresh.slug);

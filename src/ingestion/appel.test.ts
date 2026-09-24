@@ -92,14 +92,28 @@ describe("appeler", () => {
     Object.values(espions).forEach((e) => e.mockRestore());
   });
 
-  it("nomme le timeout imposé quand l'appel l'atteint, et relance l'erreur", async () => {
+  it("attribue le timeout à notre limite SEULEMENT si la durée l'a atteinte, et relance l'erreur", async () => {
+    const espions = silencieux();
+    const erreurTimeout = Object.assign(new Error("Request timed out."), { name: "APIConnectionTimeoutError" });
+    const create = vi.fn().mockRejectedValue(erreurTimeout);
+    // Limite ramenée à 0 : n'importe quelle durée l'a « atteinte ».
+    await expect(appeler({ messages: { create } }, REQUETE, CONTEXTE, { timeoutMs: 0 })).rejects.toThrow("timed out");
+    const sortie = espions.erreur.mock.calls.map((c) => String(c[0])).join("\n");
+    expect(sortie).toContain("TIMEOUT imposé");
+    expect(sortie).not.toContain("AVANT notre limite");
+    Object.values(espions).forEach((e) => e.mockRestore());
+  });
+
+  it("ne prétend PAS que notre limite est en cause quand la coupure arrive bien avant elle", async () => {
     const espions = silencieux();
     const erreurTimeout = Object.assign(new Error("Request timed out."), { name: "APIConnectionTimeoutError" });
     const create = vi.fn().mockRejectedValue(erreurTimeout);
     await expect(appeler({ messages: { create } }, REQUETE, CONTEXTE)).rejects.toThrow("timed out");
     const sortie = espions.erreur.mock.calls.map((c) => String(c[0])).join("\n");
-    expect(sortie).toContain("TIMEOUT");
+    expect(sortie).toContain("AVANT notre limite");
     expect(sortie).toContain("10 min");
+    expect(sortie).toContain("connexion");
+    expect(sortie).not.toContain("TIMEOUT imposé");
     Object.values(espions).forEach((e) => e.mockRestore());
   });
 
