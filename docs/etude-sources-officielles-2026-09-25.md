@@ -92,10 +92,12 @@ complétude (usage en veille, non tranché).
 
 ## À arbitrer
 
-1. **Périmètre de la première version** : niveau 1 seul (6 candidats + Le Pen/Philippe déjà en base) ou
-   niveaux 1 et 2 ?
-2. **Positions anciennes** : les afficher datées (« position de 2022 ») quand le candidat n'a rien publié de
-   plus récent — règle déjà posée dans CLAUDE.md — ou les exclure ?
+1. **Périmètre de la première version** : ~~niveau 1 seul~~ **niveaux 1 et 2 (17 candidats)** — décision du
+   porteur du projet, 2026-09-26. Motif : le niveau 1 seul omettrait des candidats très présents dans les
+   sondages (Le Pen, Attal, Philippe). Les niveaux 1 et 2 ne coûtent que quelques euros de plus.
+2. **Positions anciennes** : ~~exclure / sans badge~~ **affichées datées (« position de 2022 ») et comptées
+   dans l'indicateur** quand le candidat n'a rien publié de plus récent — décision du porteur du projet,
+   2026-09-26, prolongement de la règle posée pour les sources institutionnelles.
 3. **Candidats sans programme (niveau 3)** : les montrer comme « programme pas encore publié » (neutre,
    exact), ou ne pas les montrer ?
 4. **Primaire du PS (9-10 octobre)** : attendre le résultat avant d'ingérer Faure, Guedj, Glucksmann ?
