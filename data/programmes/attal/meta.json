@@ -12,7 +12,23 @@
       "type": "primaire",
       "label": "parti-renaissance.fr — Mentions légales du site, confirmant Gabriel Attal comme directeur de la publication (« Directeur de la publication : Monsieur Gabriel Attal »)",
       "url": "https://parti-renaissance.fr/mentions-legales"
+    },
+    {
+      "type": "primaire",
+      "label": "attalpresident.fr — Site de campagne de Gabriel Attal (« Site édité dans le cadre de la campagne pour l'élection présidentielle de 2027 », données traitées par le parti Renaissance) : page « Mes chantiers capitaux » et pages par chantier (école, travail et salaires, frontières, intelligence artificielle, dette de l'État, dette écologique). Vérifié le 26/09/2026 ; robots.txt : ClaudeBot et anthropic-ai autorisés. Conventions thématiques de Renaissance de mai et juillet 2025 (doc.parti.re) : documents du parti, antérieurs à la candidature, comptés comme positions de 2025",
+      "url": "https://attalpresident.fr/programme"
     }
   ],
-  "date_derniere_maj": "2026-09-18"
+  "documents": [
+    { "id": "programme-chantiers", "url": "https://attalpresident.fr/programme", "nom": "attalpresident.fr", "annee": 2026 },
+    { "id": "programme-education", "url": "https://attalpresident.fr/programme/education", "nom": "attalpresident.fr", "annee": 2026 },
+    { "id": "programme-travail-salaires", "url": "https://attalpresident.fr/programme/travail-salaires", "nom": "attalpresident.fr", "annee": 2026 },
+    { "id": "programme-frontieres", "url": "https://attalpresident.fr/programme/frontieres", "nom": "attalpresident.fr", "annee": 2026 },
+    { "id": "programme-intelligence-artificielle", "url": "https://attalpresident.fr/programme/intelligence-artificielle", "nom": "attalpresident.fr", "annee": 2026 },
+    { "id": "programme-dette-etat", "url": "https://attalpresident.fr/programme/dette-de-letat", "nom": "attalpresident.fr", "annee": 2026 },
+    { "id": "programme-dette-ecologique", "url": "https://attalpresident.fr/programme/dette-ecologique", "nom": "attalpresident.fr", "annee": 2026 },
+    { "id": "convention-nouvelle-donne", "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf", "nom": "doc.parti.re", "annee": 2025 },
+    { "id": "convention-regalien", "url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf", "nom": "doc.parti.re", "annee": 2025 }
+  ],
+  "date_derniere_maj": "2026-09-26"
 }
