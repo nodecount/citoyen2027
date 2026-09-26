@@ -83,6 +83,12 @@ permet pas de trancher. Une hausse d'impôt est une **baisse** du `revenu_dispon
 **Effets de premier ordre uniquement** : ce que la mesure fait directement au citoyen visé. Jamais de
 conséquences supposées (croissance, inflation, emploi global, réaction des marchés), même plausibles.
 
+**Impôts, taxes et cotisations payés par les entreprises** (impôts de production, C3S, CVAE, CFE, impôt sur
+les sociétés, cotisations patronales, forfait social…) : **ce ne sont pas des effets sur un citoyen**, sauf si
+le texte dit expressément que des particuliers en bénéficient ou en supportent le coût. Ne les rattache
+JAMAIS par déduction à un statut (`independant`, `salarie`…) ou à un revenu : écris la mesure avec
+`effets: []`. La fiche reste utile pour le détail sourcé.
+
 Exemples fictifs, sans lien avec un candidat réel :
 - « Contribution de 3 % sur la part des revenus au-delà de 250 000 € par an » → un effet ; le seuil
   (≈ 20 800 €/mois) tombe dans la tranche `plus_5000` sans coïncider avec sa borne : `cibles` =
@@ -91,5 +97,7 @@ Exemples fictifs, sans lien avec un candidat réel :
 - « Aide de 100 € par mois pour les locataires de moins de 30 ans » → `cibles` = [{`logement`:
   [`locataire`]}, {`tranche_age`: [`moins_30`]}], `revenu_disponible`, `hausse`.
 - « Réforme du financement des retraites, modalités à définir » → aucun effet (`effets: []`).
+- « Suppression de la cotisation sur la valeur ajoutée des entreprises » → aucun effet sur un citoyen
+  (impôt payé par les entreprises) : `effets: []`.
 
 Réponds uniquement avec le tableau JSON de mesures demandé, sans texte hors du schéma.

@@ -22,7 +22,7 @@ describe("construireCorpus", () => {
   });
 
   it("estime le volume en jetons, document par document et au total", () => {
-    const corpus = construireCorpus([doc("a", "x".repeat(3600)), doc("b", "y".repeat(7200))]);
+    const corpus = construireCorpus([doc("a", "x".repeat(2200)), doc("b", "y".repeat(4400))]);
     expect(corpus.documents.map((d) => d.jetons)).toEqual([1000, 2000]);
     expect(corpus.jetons).toBeGreaterThanOrEqual(3000);
   });

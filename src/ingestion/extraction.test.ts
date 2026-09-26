@@ -39,11 +39,25 @@ const THEME_B = { id: "sante", libelle: "Ma santé", description: "Système de s
 describe("construireRequeteExtraction", () => {
   const requete = (theme = THEME_A, titres: string[] = []) => construireRequeteExtraction(META, CORPUS, theme.id, theme.libelle, theme.description, titres);
 
-  it("n'utilise aucun outil web et borne la sortie : un tour, sans boucle qui gonfle", () => {
+  it("n'utilise aucun outil web : un tour, sans boucle qui gonfle", () => {
     const r = requete();
     expect(r.tools).toEqual([]);
     expect(r.model).toBe("claude-sonnet-5");
-    expect(r.max_tokens).toBeLessThanOrEqual(8000);
+  });
+
+  it("laisse de la place au raisonnement : effort bas et limite haute, car les jetons de réflexion comptent dans max_tokens", () => {
+    // Premier essai réel : 4 979 des 8 000 jetons de sortie partis en réflexion, réponse tronquée.
+    const r = requete();
+    expect(r.output_config.effort).toBe("low");
+    expect(r.max_tokens).toBeGreaterThanOrEqual(12000);
+    expect(r.max_tokens).toBeLessThanOrEqual(20000); // et un coût maximal prévisible
+  });
+
+  it("interdit de rattacher les impôts payés par les entreprises à un citoyen par déduction", () => {
+    const texte = requete().system.replace(/\s+/g, " ");
+    expect(texte).toContain("payés par les entreprises");
+    expect(texte).toContain("ne sont pas des effets sur un citoyen");
+    expect(texte).toContain("JAMAIS par déduction");
   });
 
   it("place le corpus dans un bloc marqué pour le cache, suivi de la question propre au thème", () => {

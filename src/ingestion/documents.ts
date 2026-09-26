@@ -28,7 +28,9 @@ export interface OptionsChargement {
 const CACHE_PAR_DEFAUT = resolve(process.cwd(), "cache/sources");
 const OCTETS_MAX = 60e6;
 const CARACTERES_PAR_PAGE_MIN = 300;
-const CARACTERES_PAR_JETON = 3.6;
+// Mesuré sur le premier essai réel (deux PDF de programme, ~99 800 caractères = 46 214 jetons) : 2,16 caractères
+// par jeton, contre 3,6 supposé au départ. On garde 2,2 : mieux vaut surestimer un coût que le sous-estimer.
+const CARACTERES_PAR_JETON = 2.2;
 const ENTITES: Record<string, string> = { nbsp: " ", amp: "&", quot: '"', apos: "'", rsquo: "'", lsquo: "'", laquo: "«", raquo: "»", hellip: "…", ndash: "–", mdash: "—", eacute: "é", egrave: "è", agrave: "à" };
 
 export function estimerJetons(texte: string): number {

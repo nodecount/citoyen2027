@@ -43,9 +43,13 @@ describe("extraireTextePdf", () => {
   });
 });
 describe("estimerJetons", () => {
-  it("compte environ un jeton pour 3,6 caractères", () => {
-    expect(estimerJetons("a".repeat(3600))).toBe(1000);
+  it("compte environ un jeton pour 2,2 caractères, valeur mesurée sur de vrais PDF de programme (2,16)", () => {
+    expect(estimerJetons("a".repeat(2200))).toBe(1000);
     expect(estimerJetons("")).toBe(0);
+  });
+
+  it("ne sous-estime pas le cas mesuré : ~99 800 caractères valaient 46 214 jetons", () => {
+    expect(estimerJetons("a".repeat(99_800))).toBeGreaterThanOrEqual(46_214 * 0.95);
   });
 });
 

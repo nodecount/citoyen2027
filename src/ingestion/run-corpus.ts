@@ -77,7 +77,7 @@ export async function chargerCorpus(meta: CandidatMeta, options: OptionsCorpus =
 
 // Hypothèses de sortie « typique » pour l'estimation ATTENDUE (le pire cas utilise les maxima). Le plafond dur, lui,
 // s'appuie sur le coût réel de chaque appel.
-const SORTIE_ATTENDUE = { extraction: 3000, verification: 1500, synthese: 1000, verificationSynthese: 300 };
+const SORTIE_ATTENDUE = { extraction: 7000, verification: 1500, synthese: 1000, verificationSynthese: 300 };
 const ENTREE_FIXE = { instructions: 3500, verification: 8000, synthese: 4000 };
 const MAX_TOKENS = { verification: 4000, synthese: 4000, verificationSynthese: 4000 };
 
