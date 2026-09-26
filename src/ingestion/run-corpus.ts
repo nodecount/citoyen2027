@@ -38,6 +38,8 @@ export interface OptionsCorpus {
   actualiser?: boolean;
   force?: boolean;
   extracteurPdf?: (octets: Buffer) => Promise<TextePdf>;
+  // Refait contrôles, relecture et synthèse depuis les extractions en cache ; jamais d'appel d'extraction.
+  retraiter?: boolean;
   // Injecté par run.ts (évite une dépendance circulaire) : produit le texte de synthèse d'un thème.
   synthese?: (client: ClientAnthropicMinimal, meta: CandidatMeta, themeId: string, themeLibelle: string, options: { racine?: string; force?: boolean }) => Promise<unknown>;
 }
@@ -132,7 +134,7 @@ const SORTIE_ATTENDUE = { extraction: 4500, verification: 1500, synthese: 1000, 
 const ENTREE_FIXE = { instructions: 3500, verification: 8000, synthese: 4000 };
 const MAX_TOKENS = { verification: 4000, synthese: 4000, verificationSynthese: 4000 };
 
-export type EtatTheme = "a_jour" | "obsolete" | "a_faire";
+export type EtatTheme = "a_jour" | "obsolete" | "a_faire" | "sans_cache";
 
 export interface PlanTheme {
   themeId: string;
@@ -175,7 +177,7 @@ export function planifier(
   charge: CorpusCharge,
   themes: ThemeExtraction[],
   tarifs: Tarifs,
-  options: { racine?: string; force?: boolean } = {},
+  options: { racine?: string; force?: boolean; retraiter?: boolean; dossierCache?: string } = {},
 ): Plan {
   const propositions = chargerPropositions(meta.slug, options.racine);
   const journal = chargerJournal(meta.slug, options.racine);
@@ -185,8 +187,12 @@ export function planifier(
   const lignes: PlanTheme[] = [];
 
   for (const theme of themes) {
-    const etat = etatDuTheme(propositions, journal, theme.id, charge.corpus.empreinte, options.force);
-    if (etat === "a_jour") {
+    let etat = etatDuTheme(propositions, journal, theme.id, charge.corpus.empreinte, options.force);
+    if (options.retraiter) {
+      const enCache = chargerExtraction(meta.slug, theme.id, options.dossierCache);
+      etat = enCache && enCache.empreinte_corpus === charge.corpus.empreinte ? "obsolete" : "sans_cache";
+    }
+    if (etat === "a_jour" || etat === "sans_cache") {
       lignes.push({ themeId: theme.id, etat, deja: true, estimationUsd: 0 });
       continue;
     }
@@ -195,10 +201,11 @@ export function planifier(
     const extraction = (sortie: number) =>
       estimerAppelUsd(tarifs, { jetonsCorpus: charge.corpus.jetons, jetonsAutres: ENTREE_FIXE.instructions, jetonsSortieMax: sortie, cache });
     const autres = (entree: number, sortie: number) => estimerAppelUsd(tarifs, { jetonsCorpus: 0, jetonsAutres: entree, jetonsSortieMax: sortie, cache: "aucun" });
+    const sansExtraction = options.retraiter === true;
     const attenduTheme =
-      extraction(SORTIE_ATTENDUE.extraction) + autres(ENTREE_FIXE.verification, SORTIE_ATTENDUE.verification) + autres(ENTREE_FIXE.synthese, SORTIE_ATTENDUE.synthese) + autres(ENTREE_FIXE.synthese, SORTIE_ATTENDUE.verificationSynthese);
+      (sansExtraction ? 0 : extraction(SORTIE_ATTENDUE.extraction)) + autres(ENTREE_FIXE.verification, SORTIE_ATTENDUE.verification) + autres(ENTREE_FIXE.synthese, SORTIE_ATTENDUE.synthese) + autres(ENTREE_FIXE.synthese, SORTIE_ATTENDUE.verificationSynthese);
     const pireTheme =
-      extraction(MAX_TOKENS_EXTRACTION) + autres(ENTREE_FIXE.verification, MAX_TOKENS.verification) + autres(ENTREE_FIXE.synthese, MAX_TOKENS.synthese) + autres(ENTREE_FIXE.synthese, MAX_TOKENS.verificationSynthese);
+      (sansExtraction ? 0 : extraction(MAX_TOKENS_EXTRACTION)) + autres(ENTREE_FIXE.verification, MAX_TOKENS.verification) + autres(ENTREE_FIXE.synthese, MAX_TOKENS.synthese) + autres(ENTREE_FIXE.synthese, MAX_TOKENS.verificationSynthese);
     attendu += attenduTheme;
     pireCas += pireTheme;
     lignes.push({ themeId: theme.id, etat, deja: false, estimationUsd: attenduTheme });
@@ -351,7 +358,15 @@ export async function executerCandidatCorpus(
 
   const resume: ResumeCandidat = { slug: meta.slug, themes: [], arretBudget: false };
   for (const theme of themes) {
-    const etat = etatDuTheme(chargerPropositions(meta.slug, options.racine), chargerJournal(meta.slug, options.racine), theme.id, charge.corpus.empreinte, options.force);
+    let etat = etatDuTheme(chargerPropositions(meta.slug, options.racine), chargerJournal(meta.slug, options.racine), theme.id, charge.corpus.empreinte, options.force);
+    if (options.retraiter) {
+      const enCache = chargerExtraction(meta.slug, theme.id, options.dossierCache);
+      etat = enCache && enCache.empreinte_corpus === charge.corpus.empreinte ? "obsolete" : "sans_cache";
+    }
+    if (etat === "sans_cache") {
+      console.log(`[sauté] ${meta.slug} × ${theme.id} : aucune extraction en cache pour ces documents (--retraiter ne paie jamais d'extraction)`);
+      continue;
+    }
     if (etat === "a_jour") {
       console.log(`[sauté] ${meta.slug} × ${theme.id} à jour : les documents n'ont pas changé depuis la dernière recherche (--force pour refaire)`);
       continue;
@@ -386,6 +401,7 @@ export function formaterPlan(plan: Plan, eurParUsd: number, plafondEur: number):
   if (plan.documentsModifies.length > 0) lignes.push(`   ! document(s) modifié(s) depuis la dernière recherche : ${plan.documentsModifies.join(", ")}`);
   for (const t of plan.themes) {
     if (t.etat === "a_jour") lignes.push(`   · ${t.themeId} : à jour, documents inchangés (ignoré, gratuit)`);
+    else if (t.etat === "sans_cache") lignes.push(`   · ${t.themeId} : aucune extraction en cache pour ces documents (ignoré, rien de payant)`);
     else lignes.push(`   · ${t.themeId} : ${t.etat === "obsolete" ? "obsolète, à refaire" : "à faire"} ~${eur(t.estimationUsd)}`);
   }
   lignes.push(`   coût attendu ${eur(plan.attenduUsd)} · pire cas ${eur(plan.pireCasUsd)} · plafond ${plafondEur.toFixed(2)} €`);

@@ -99,3 +99,41 @@ describe("empreinte du corpus", () => {
     expect(corpus.documents[0].empreinte).not.toBe(corpus.documents[1].empreinte);
   });
 });
+
+describe("localiserExtrait — citations avec coupes « … »", () => {
+  const D = doc(
+    "livret",
+    "[[page 4]]\nSophie, 42 ans, gagne 2 700 euros bruts par mois. Après une rupture conventionnelle, elle perçoit environ 1 400 euros par mois.\n" +
+      "Un long développement sans rapport occupe ici plusieurs lignes du document officiel.\n" +
+      "[[page 5]]\nDemain, son indemnisation serait plafonnée et limitée à six mois.",
+  );
+
+  it("accepte des morceaux recopiés mot pour mot, dans l'ordre, reliés par des points de suspension", () => {
+    const r = localiserExtrait(D, "Sophie, 42 ans, gagne 2 700 euros bruts par mois... Demain, son indemnisation serait plafonnée et limitée à six mois.");
+    expect(r.trouve).toBe(true);
+    expect(r.page).toBe(4); // page du premier morceau
+    expect(D.texte.slice(r.debut, r.fin)).toContain("plafonnée et limitée");
+  });
+
+  it("accepte aussi le caractère « … » et des coupes en début ou en fin d'extrait", () => {
+    expect(localiserExtrait(D, "… elle perçoit environ 1 400 euros par mois … Demain, son indemnisation serait plafonnée …").trouve).toBe(true);
+  });
+
+  it("refuse des morceaux dans le désordre : ce serait reconstituer une phrase que le document ne dit pas", () => {
+    expect(localiserExtrait(D, "Demain, son indemnisation serait plafonnée et limitée... Sophie, 42 ans, gagne 2 700 euros bruts").trouve).toBe(false);
+  });
+
+  it("refuse si un seul morceau est absent du document", () => {
+    expect(localiserExtrait(D, "Sophie, 42 ans, gagne 2 700 euros bruts par mois... Elle percevrait ensuite un revenu universel garanti").trouve).toBe(false);
+  });
+
+  it("refuse des morceaux trop éloignés l'un de l'autre : la coupe ne doit pas relier des passages sans rapport", () => {
+    const loin = doc("loin", `Premier passage assez long pour être cité. ${"remplissage ".repeat(400)} Second passage assez long pour être cité.`);
+    expect(localiserExtrait(loin, "Premier passage assez long pour être cité... Second passage assez long pour être cité.").trouve).toBe(false);
+  });
+
+  it("refuse un extrait dont la somme des morceaux est trop courte : il trouverait toujours une correspondance", () => {
+    expect(localiserExtrait(D, "Sophie, 42... mois.").trouve).toBe(false); // 8 + 4 caractères normalisés : trop peu
+    expect(localiserExtrait(D, "gagne... elle").trouve).toBe(false);
+  });
+});

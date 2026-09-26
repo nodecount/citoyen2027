@@ -16,6 +16,9 @@ export interface OptionsCLI {
   // Ne refait que la synthèse (texte « en quoi le programme touche le thème ») des mesures déjà enregistrées :
   // quelques centimes, sans relire les documents ni ré-extraire.
   syntheseSeule: boolean;
+  // Refait contrôles, relecture et synthèse à partir des extractions DÉJÀ payées (cache), sans jamais rappeler
+  // l'extraction : quelques centimes par thème, utile après un changement des règles de contrôle.
+  retraiter: boolean;
 }
 
 export const BUDGET_PAR_DEFAUT_EUR = 2;
@@ -36,6 +39,7 @@ export function analyserArguments(argv: string[]): OptionsCLI {
     dryRun: false,
     actualiserSources: false,
     syntheseSeule: false,
+    retraiter: false,
   };
 
   for (const argument of argv) {
@@ -43,6 +47,8 @@ export function analyserArguments(argv: string[]): OptionsCLI {
       options.force = true;
     } else if (argument === "--dry-run") {
       options.dryRun = true;
+    } else if (argument === "--retraiter") {
+      options.retraiter = true;
     } else if (argument === "--synthese-seule") {
       options.syntheseSeule = true;
     } else if (argument === "--actualiser-sources") {

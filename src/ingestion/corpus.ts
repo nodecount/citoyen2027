@@ -95,27 +95,60 @@ export interface Localisation {
   fin?: number;
 }
 
-// Casse, accents, guillemets et ponctuation sont tolérés ; les mots, eux, doivent être identiques. Le
-// texte des repères « [[page N]] » est ignoré pour ne pas casser un extrait à cheval sur deux pages.
+// Deux morceaux d'une citation coupée par « … » doivent se suivre dans le document, à moins de cette distance
+// (en caractères) : au-delà, la coupe relierait des passages sans rapport.
+const ECART_MAX_ENTRE_MORCEAUX = 2500;
+const LONGUEUR_MIN_MORCEAU = 8;
+
+function chercher(norm: string, pos: number[], morceau: string, apres: number): { debut: number; fin: number } | null {
+  const indice = norm.indexOf(morceau, apres);
+  if (indice === -1) return null;
+  return { debut: indice, fin: indice + morceau.length };
+}
+
+// Casse, accents, guillemets et ponctuation sont tolérés ; les mots, eux, doivent être identiques. Le texte des
+// repères « [[page N]] » est ignoré pour ne pas casser un extrait à cheval sur deux pages. Une citation peut être
+// abrégée par « … » ou « ... » (convention d'usage) : chaque morceau doit être recopié mot pour mot, dans l'ordre du
+// document, à moins de ECART_MAX_ENTRE_MORCEAUX caractères du précédent.
 export function localiserExtrait(document: TexteDocument, extrait: string): Localisation {
-  const cible = normaliser(extrait);
-  if (cible.length < LONGUEUR_MIN_EXTRAIT) return { trouve: false };
+  const morceaux = extrait
+    .split(/\.{3}|…/)
+    .map((m) => normaliser(m))
+    .filter((m) => m.length >= LONGUEUR_MIN_MORCEAU);
+  const total = morceaux.reduce((somme, m) => somme + m.length, 0);
+  if (morceaux.length === 0 || total < LONGUEUR_MIN_EXTRAIT) return { trouve: false };
 
   const sansRepere = document.texte.replace(/\[\[page \d+\]\]/g, (m) => " ".repeat(m.length));
   const { norm, pos } = normaliserAvecPositions(sansRepere);
-  const indice = norm.indexOf(cible);
-  if (indice === -1) return { trouve: false };
 
-  const debut = pos[indice];
-  const fin = pos[indice + cible.length - 1] + 1;
+  let curseur = 0;
+  let premier: number | undefined;
+  let dernierFin = 0;
+  let finPrecedenteOriginale: number | undefined;
+  for (const morceau of morceaux) {
+    const trouve = chercher(norm, pos, morceau, curseur);
+    if (!trouve) return { trouve: false };
+    const debutOriginal = pos[trouve.debut];
+    if (finPrecedenteOriginale !== undefined && debutOriginal - finPrecedenteOriginale > ECART_MAX_ENTRE_MORCEAUX) {
+      return { trouve: false };
+    }
+    if (premier === undefined) premier = trouve.debut;
+    dernierFin = trouve.fin;
+    finPrecedenteOriginale = pos[trouve.fin - 1] + 1;
+    curseur = trouve.fin;
+  }
+
+  const debut = pos[premier!];
+  const fin = pos[dernierFin - 1] + 1;
   let page: number | undefined;
   if (document.type === "pdf") {
     for (const m of document.texte.slice(0, debut).matchAll(/\[\[page (\d+)\]\]/g)) page = Number(m[1]);
   }
   return { trouve: true, page, debut, fin };
 }
-
 // Extrait + contexte, dans le texte d'origine et borné aux limites du document.
-export function fenetreAutour(document: TexteDocument, debut: number, fin: number, marge = 600): string {
+// Marge de 1 500 caractères : à 600, le relecteur rejetait des mesures dont l'information se trouvait juste hors de la
+// fenêtre (par exemple un objectif chiffré quelques lignes plus loin).
+export function fenetreAutour(document: TexteDocument, debut: number, fin: number, marge = 1500): string {
   return document.texte.slice(Math.max(0, debut - marge), Math.min(document.texte.length, fin + marge));
 }

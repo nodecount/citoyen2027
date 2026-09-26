@@ -348,3 +348,40 @@ describe("l'empreinte n'est enregistrée qu'une fois le thème réellement termi
     expect(chargerJournal("candidat-x", racine)[0].empreinte_corpus).toMatch(/^[0-9a-f]{16}$/);
   });
 });
+
+describe("--retraiter : refaire contrôles, relecture et synthèse à partir des extractions déjà payées", () => {
+  it("ne rappelle jamais l'extraction : seuls la relecture et la synthèse sont refaites", async () => {
+    const create1 = vi.fn().mockResolvedValueOnce(texte([mesure()])).mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "FAIL", raison: "portée élargie" }]));
+    await executerCandidatCorpus({ messages: { create: create1 } }, META, [THEME], options({ synthese: vi.fn() }));
+    expect(chargerPropositions("candidat-x", racine)).toEqual([]);
+
+    const create2 = vi.fn().mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "PASS" }]));
+    const synthese = vi.fn();
+    await executerCandidatCorpus({ messages: { create: create2 } }, META, [THEME], options({ synthese, retraiter: true }));
+    expect(create2).toHaveBeenCalledTimes(1); // la relecture seulement
+    expect(String(create2.mock.calls[0][0].messages[0].content)).not.toContain("CORPUS");
+    expect(chargerPropositions("candidat-x", racine)).toHaveLength(1);
+    expect(synthese).toHaveBeenCalledTimes(1);
+  });
+
+  it("ignore, sans rien payer, un thème qui n'a pas d'extraction en cache", async () => {
+    const create = vi.fn();
+    const resume = await executerCandidatCorpus({ messages: { create } }, META, [THEME], options({ synthese: vi.fn(), retraiter: true }));
+    expect(create).not.toHaveBeenCalled();
+    expect(resume.themes).toEqual([]);
+  });
+
+  it("le plan n'estime que relecture et synthèse, et signale les thèmes sans extraction en cache", async () => {
+    const create1 = vi.fn().mockResolvedValueOnce(texte([mesure()])).mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "PASS" }]));
+    await executerCandidatCorpus({ messages: { create: create1 } }, META, [THEME], options({ synthese: vi.fn() }));
+    const corpus = await chargerCorpus(META, options());
+    const tarifs = TARIFS_PAR_MODELE["claude-sonnet-5"];
+    const complet = planifier(META, corpus, [THEME], tarifs, { racine, force: true, dossierCache: cache });
+    const retraite = planifier(META, corpus, [THEME, THEME_SANTE], tarifs, { racine, retraiter: true, dossierCache: cache });
+    // La différence est l'extraction : au moins sa sortie attendue (4 500 jetons à 15 $/M ≈ 0,0675 $).
+    const ecart = complet.themes[0].estimationUsd - retraite.themes.find((t) => t.themeId === "fiscalite")!.estimationUsd;
+    expect(ecart).toBeGreaterThan(0.06);
+    expect(retraite.themes.find((t) => t.themeId === "sante")!.etat).toBe("sans_cache");
+    expect(formaterPlan(retraite, 0.9, 2)).toContain("aucune extraction en cache");
+  });
+});

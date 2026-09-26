@@ -340,7 +340,7 @@ async function mainCorpus(options: OptionsCLI): Promise<void> {
     try {
       const meta = chargerMeta(slug);
       const charge = await chargerCorpus(meta, { actualiser: options.actualiserSources });
-      const plan = planifier(meta, charge, themesACouvrir, tarifs, { force: options.force });
+      const plan = planifier(meta, charge, themesACouvrir, tarifs, { force: options.force, retraiter: options.retraiter });
       console.log(formaterPlan(plan, budget.eurParUsd, options.budgetEur));
       attenduTotalEur += budget.enEuros(plan.attenduUsd);
       retenus.push(meta);
@@ -368,6 +368,7 @@ async function mainCorpus(options: OptionsCLI): Promise<void> {
   for (const meta of retenus) {
     const resume = await executerCandidatCorpus(client, meta, themesACouvrir, {
       force: options.force,
+      retraiter: options.retraiter,
       synthese: executerSynthese,
     });
     if (resume.arretBudget) break;

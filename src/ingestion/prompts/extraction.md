@@ -25,7 +25,11 @@ Date du jour : {{DATE}}
   `extrait` est un passage de ce document **recopié mot pour mot**, de 15 à 600 caractères, qui décrit la
   mesure. Le code retrouve ton extrait dans le texte : s'il n'y figure pas tel quel, **la mesure est rejetée**.
 - Ne recopie pas les repères `[[page N]]`. N'invente pas de ponctuation. Si le passage chevauche un saut de
-  page, arrête l'extrait avant le repère. Ne paraphrase jamais dans un extrait.
+  page, arrête l'extrait avant le repère. **Ne paraphrase ni ne résume jamais dans un extrait** : un extrait qui
+  reformule le texte est rejeté.
+- Pour abréger, tu peux couper avec « … » : chaque morceau doit être recopié mot pour mot, dans l'ordre du
+  document, et à moins d'environ 2 500 caractères du précédent. Un morceau est un passage réel, jamais une
+  reformulation.
 - Une mesure a une ou plusieurs preuves ; cite plusieurs documents quand ils se recoupent.
 
 ## Datation et attribution

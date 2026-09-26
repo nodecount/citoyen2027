@@ -74,3 +74,10 @@ describe("analyserArguments — --synthese-seule", () => {
     expect(analyserArguments(["--candidats=retailleau"]).syntheseSeule).toBe(false);
   });
 });
+
+describe("analyserArguments — --retraiter", () => {
+  it("lit --retraiter : refaire relecture et synthèse depuis les extractions déjà payées", () => {
+    expect(analyserArguments(["--candidats=retailleau", "--retraiter"]).retraiter).toBe(true);
+    expect(analyserArguments(["--candidats=retailleau"]).retraiter).toBe(false);
+  });
+});
