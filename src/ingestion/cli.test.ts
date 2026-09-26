@@ -65,3 +65,12 @@ describe("analyserArguments — mode corpus et budget", () => {
     expect(() => analyserArguments(["--mode=magique"])).toThrow("mode");
   });
 });
+
+describe("analyserArguments — --synthese-seule", () => {
+  it("lit --synthese-seule : ne refait que la synthèse des mesures déjà enregistrées", () => {
+    expect(analyserArguments(["--candidats=retailleau", "--synthese-seule"]).syntheseSeule).toBe(true);
+  });
+  it("est absent par défaut", () => {
+    expect(analyserArguments(["--candidats=retailleau"]).syntheseSeule).toBe(false);
+  });
+});

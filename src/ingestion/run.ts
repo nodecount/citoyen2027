@@ -24,7 +24,7 @@ import {
 import { genererSynthese, verifierSyntheseParModele } from "./synthese";
 import { chargerEnv } from "./env";
 import { analyserArguments, type OptionsCLI } from "./cli";
-import { Budget, TARIFS_PAR_MODELE } from "./budget";
+import { Budget, BudgetDepasse, TARIFS_PAR_MODELE } from "./budget";
 import { definirBudget } from "./appel";
 import { chargerCorpus, executerCandidatCorpus, formaterPlan, planifier } from "./run-corpus";
 import themesData from "../../data/themes.json";
@@ -294,6 +294,35 @@ export async function executerSyntheses(
   }
 }
 
+// Synthèse seule : pas de lecture de documents ni d'extraction, uniquement le texte de chaque thème qui a des
+// mesures. Sous le même plafond dur que le reste.
+async function mainSyntheseSeule(options: OptionsCLI): Promise<void> {
+  const budget = new Budget(options.budgetEur, TARIFS_PAR_MODELE["claude-sonnet-5"]);
+  const themesACouvrir = options.themes ? themes.filter((t) => options.themes!.includes(t.id)) : themes;
+  if (options.dryRun) {
+    console.log("[dry-run] synthèse seule : aucun appel n'a été envoyé.");
+    return;
+  }
+  definirBudget(budget);
+  const client = clientEnFlux(creerClient());
+  for (const slug of options.candidats) {
+    const meta = chargerMeta(slug);
+    for (const theme of themesACouvrir) {
+      try {
+        const resultat = await executerSynthese(client, meta, theme.id, theme.libelle, { force: options.force });
+        if (resultat !== "aucune_proposition") console.log(`[synthèse] ${slug} × ${theme.id} : ${resultat}`);
+      } catch (erreur) {
+        if (erreur instanceof BudgetDepasse) {
+          console.error(`[budget] ${erreur.message}`);
+          return;
+        }
+        console.error(`[erreur synthèse] ${slug} × ${theme.id} : ${erreur instanceof Error ? erreur.message : String(erreur)}`);
+      }
+    }
+  }
+  console.log(`[budget] dépensé ${budget.depenseEur.toFixed(2)} € sur ${budget.plafondEur.toFixed(2)} €`);
+}
+
 async function mainCorpus(options: OptionsCLI): Promise<void> {
   const tarifs = TARIFS_PAR_MODELE["claude-sonnet-5"];
   const budget = new Budget(options.budgetEur, tarifs);
@@ -348,6 +377,11 @@ async function mainCorpus(options: OptionsCLI): Promise<void> {
 async function main(): Promise<void> {
   chargerEnv();
   const options = analyserArguments(process.argv.slice(2));
+
+  if (options.syntheseSeule && !options.refresh) {
+    await mainSyntheseSeule(options);
+    return;
+  }
 
   if (options.mode === "corpus" && !options.refresh) {
     await mainCorpus(options);

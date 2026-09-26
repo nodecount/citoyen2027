@@ -13,6 +13,9 @@ export interface OptionsCLI {
   // Affiche le plan et le coût estimé sans appeler l'API payante.
   dryRun: boolean;
   actualiserSources: boolean;
+  // Ne refait que la synthèse (texte « en quoi le programme touche le thème ») des mesures déjà enregistrées :
+  // quelques centimes, sans relire les documents ni ré-extraire.
+  syntheseSeule: boolean;
 }
 
 export const BUDGET_PAR_DEFAUT_EUR = 2;
@@ -32,6 +35,7 @@ export function analyserArguments(argv: string[]): OptionsCLI {
     budgetEur: BUDGET_PAR_DEFAUT_EUR,
     dryRun: false,
     actualiserSources: false,
+    syntheseSeule: false,
   };
 
   for (const argument of argv) {
@@ -39,6 +43,8 @@ export function analyserArguments(argv: string[]): OptionsCLI {
       options.force = true;
     } else if (argument === "--dry-run") {
       options.dryRun = true;
+    } else if (argument === "--synthese-seule") {
+      options.syntheseSeule = true;
     } else if (argument === "--actualiser-sources") {
       options.actualiserSources = true;
     } else if (argument.startsWith("--budget=")) {
