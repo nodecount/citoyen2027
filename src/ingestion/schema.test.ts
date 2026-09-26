@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { CHAMPS_CIBLES, DIMENSIONS_EFFET, SENS_EFFET } from "../effets";
-import { SCHEMA_PROPOSITION_GENEREE, validerPropositionGeneree } from "./schema";
+import { SCHEMA_PROPOSITION_GENEREE, SOURCES_MINIMUM, validerPropositionGeneree } from "./schema";
 
 describe("SCHEMA_PROPOSITION_GENEREE (contrainte de l'API structured outputs)", () => {
   it("n'utilise pas minItems/maxItems : l'API n'accepte que 0 ou 1, le minimum de 2 sources est vérifié par validerPropositionGeneree", () => {
@@ -80,10 +80,15 @@ describe("validerPropositionGeneree", () => {
     expect(validerPropositionGeneree({ ...PROPOSITION_VALIDE, statut: "en-cours" })).toBe(false);
   });
 
-  it("rejette moins de deux sources", () => {
+  it("accepte une seule source primaire : son extrait est vérifié mot pour mot par le code (SOURCES_MINIMUM = 1)", () => {
     expect(
-      validerPropositionGeneree({ ...PROPOSITION_VALIDE, sources: [PROPOSITION_VALIDE.sources[0]] }),
-    ).toBe(false);
+      validerPropositionGeneree({ ...PROPOSITION_VALIDE, sources: [PROPOSITION_VALIDE.sources[0]], effets: [] }),
+    ).toBe(true);
+    expect(SOURCES_MINIMUM).toBe(1);
+  });
+
+  it("rejette une proposition sans aucune source", () => {
+    expect(validerPropositionGeneree({ ...PROPOSITION_VALIDE, sources: [], effets: [] })).toBe(false);
   });
 
   it("rejette un type de source invalide", () => {

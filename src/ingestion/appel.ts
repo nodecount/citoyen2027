@@ -1,4 +1,6 @@
 import type { BlocContenuReponse, ClientAnthropicMinimal, ReponseAnthropicMinimale, RequeteGeneration } from "./generate";
+import { Budget, estimerAppelUsd } from "./budget";
+import { estimerJetons } from "./documents";
 import { diagnostiquerArret, ecrireTraceBrute } from "./trace";
 
 // Tout appel API du pipeline passe par ici : timeout imposé, aucune relance automatique, pauses de la
@@ -11,6 +13,36 @@ export const TIMEOUT_APPEL_MS = 10 * 60_000;
 // Une réponse en pause_turn doit être renvoyée telle quelle pour continuer. On borne pour ne jamais
 // boucler en payant.
 export const MAX_CONTINUATIONS = 4;
+
+// Budget courant : défini par le CLI au démarrage. Tout appel payant du pipeline passe par appeler(), donc le
+// plafond s'applique partout (extraction, relecture, synthèse) sans repasser le budget de fonction en fonction.
+let budgetCourant: Budget | undefined;
+
+export function definirBudget(budget: Budget | undefined): void {
+  budgetCourant = budget;
+}
+
+export function budgetActuel(): Budget | undefined {
+  return budgetCourant;
+}
+
+// Jetons de la requête, séparés entre la partie mise en cache (blocs marqués cache_control) et le reste.
+function jetonsRequete(requete: RequeteGeneration): { corpus: number; autres: number } {
+  let corpus = 0;
+  let autres = estimerJetons(requete.system);
+  for (const message of requete.messages) {
+    if (typeof message.content === "string") {
+      autres += estimerJetons(message.content);
+      continue;
+    }
+    for (const bloc of message.content) {
+      const jetons = estimerJetons(bloc.text ?? JSON.stringify(bloc));
+      if (bloc.cache_control) corpus += jetons;
+      else autres += jetons;
+    }
+  }
+  return { corpus, autres };
+}
 
 export interface ContexteAppel {
   phase: string;
@@ -150,6 +182,17 @@ export async function appeler(
   options: { timeoutMs?: number } = {},
 ): Promise<ResultatAppel> {
   const limiteMs = options.timeoutMs ?? TIMEOUT_APPEL_MS;
+  const etiquette = `${contexte.phase} ${contexte.slug}${contexte.themeId ? ` × ${contexte.themeId}` : ""}`;
+  if (budgetCourant) {
+    const { corpus, autres } = jetonsRequete(requete);
+    const estimation = estimerAppelUsd(budgetCourant.tarifs, {
+      jetonsCorpus: corpus,
+      jetonsAutres: autres,
+      jetonsSortieMax: requete.max_tokens,
+      cache: corpus > 0 ? budgetCourant.modeCache() : "aucun",
+    });
+    budgetCourant.verifierAvant(estimation, etiquette);
+  }
   const debutTotal = Date.now();
   const messages = [...requete.messages];
   let contenu: BlocContenuReponse[] = [];
@@ -190,6 +233,11 @@ export async function appeler(
   const dureeMs = Date.now() - debutTotal;
   const fusionnee: ReponseAnthropicMinimale = { content: contenu, stop_reason: derniere?.stop_reason, usage };
   const cheminTrace = tracer({ ...contexte, requete, reponse: fusionnee, dureeMs });
-  console.log(resumerAppel(fusionnee, dureeMs, { contexte, requete, continuations, cheminTrace }));
+  let ligneCout = "";
+  if (budgetCourant) {
+    const eur = budgetCourant.enregistrer(usage);
+    ligneCout = `\n  coût de l'appel ≈ ${eur.toFixed(2)} € · cumul ${budgetCourant.depenseEur.toFixed(2)} € / plafond ${budgetCourant.plafondEur.toFixed(2)} €`;
+  }
+  console.log(resumerAppel(fusionnee, dureeMs, { contexte, requete, continuations, cheminTrace }) + ligneCout);
   return { reponse: fusionnee, dureeMs, continuations, cheminTrace };
 }

@@ -1,5 +1,31 @@
 # Pipeline d'ingestion
 
+## Mode « corpus » (par défaut) — lire une fois, interroger douze fois
+
+Notre code télécharge les documents officiels déclarés dans `meta.json` (champ `documents` : `id`, `url`,
+`nom`, `annee`), en extrait le texte (HTML et PDF, avec repères de page) et le met en cache disque
+(`cache/sources/`, ignoré par git). Le modèle reçoit ce texte en un bloc mis en cache de prompt, **sans outil
+web**, et est interrogé une fois par thème. Chaque mesure et chaque effet citent un extrait recopié mot pour
+mot ; le code le retrouve dans le texte, en déduit la page, et fabrique les sources (nom et année viennent de
+`meta.json`). Une relecture ne voit que les passages autour des extraits.
+
+```bash
+# Plan et coût estimé, SANS appel payant (lit et met en cache les documents)
+npm run ingestion -- --candidats=retailleau --dry-run
+
+# Exécution sous plafond dur (2 € par défaut) ; refuse de partir si le coût attendu dépasse le plafond
+npm run ingestion -- --candidats=retailleau --budget=3
+
+# Un seul thème, ou forcer un thème déjà fait ; --actualiser-sources retélécharge les documents
+npm run ingestion -- --candidats=retailleau --themes=fiscalite --budget=1 --force
+```
+
+Tarifs et change sont des **hypothèses** (`src/ingestion/budget.ts`) à confirmer avec la grille de la console
+Anthropic. L'ancien mode où le modèle cherche sur le web reste disponible avec `--mode=recherche-web`
+(très coûteux, non recommandé).
+
+## Mode « recherche-web » (ancien)
+
 Génère et vérifie des propositions de programme via l'API Claude, restreinte au domaine
 officiel de chaque candidat. Voir `docs/superpowers/specs/2026-09-18-pipeline-ingestion-api-design.md`
 pour le design complet.

@@ -55,11 +55,22 @@ export interface Theme {
   statut: "populated" | "provisoire";
 }
 
+// Document officiel lu par le pipeline (mode corpus). `nom` et `annee` alimentent la citation « nom · année » :
+// ils viennent de nos données, jamais du modèle. `annee` = année du document (pas celle de la consultation).
+export interface DocumentOfficiel {
+  id: string;
+  url: string;
+  nom: string;
+  annee: number;
+}
+
 export interface CandidatMeta {
   slug: string;
   nom: string;
   parti: string;
   sources_officielles: Source[];
+  // Documents à lire pour l'extraction par corpus (voir docs/superpowers/specs/2026-09-26-ingestion-lecture-unique-design.md).
+  documents?: DocumentOfficiel[];
   date_derniere_maj: string;
 }
 

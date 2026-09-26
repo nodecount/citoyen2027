@@ -1,5 +1,6 @@
-import { describe, expect, it, vi } from "vitest";
-import { MAX_CONTINUATIONS, TIMEOUT_APPEL_MS, appeler, resumerAppel } from "./appel";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import { MAX_CONTINUATIONS, TIMEOUT_APPEL_MS, appeler, definirBudget, resumerAppel } from "./appel";
+import { Budget, TARIFS_PAR_MODELE } from "./budget";
 import type { ReponseAnthropicMinimale, RequeteGeneration } from "./generate";
 
 const REQUETE: RequeteGeneration = {
@@ -141,5 +142,67 @@ describe("resumerAppel", () => {
   it("dit la longueur du texte final : un texte vide n'est pas une réponse", () => {
     expect(resumerAppel(reponse({ content: [{ type: "text", text: "[]" }] }), 1000)).toContain("texte final : 2 caractères");
     expect(resumerAppel(reponse({ content: [] }), 1000)).toContain("texte final : aucun");
+  });
+});
+
+describe("appeler avec un budget", () => {
+  const REQUETE_CACHE: RequeteGeneration = {
+    model: "claude-sonnet-5",
+    max_tokens: 8000,
+    system: "S".repeat(360),
+    tools: [],
+    output_config: { format: {}, effort: "medium" },
+    messages: [
+      {
+        role: "user",
+        content: [
+          { type: "text", text: "C".repeat(360_000), cache_control: { type: "ephemeral" } }, // ~100 000 jetons de corpus
+          { type: "text", text: "Q".repeat(360) },
+        ],
+      },
+    ],
+  };
+
+  afterEach(() => definirBudget(undefined));
+
+  it("refuse d'envoyer un appel dont le coût estimé dépasse le plafond, sans le facturer", async () => {
+    const espions = silencieux();
+    definirBudget(new Budget(0.05, TARIFS_PAR_MODELE["claude-sonnet-5"], 1));
+    const create = vi.fn().mockResolvedValue(reponse());
+    await expect(appeler({ messages: { create } }, REQUETE_CACHE, CONTEXTE)).rejects.toThrow(/Budget dépassé/);
+    expect(create).not.toHaveBeenCalled();
+    Object.values(espions).forEach((e) => e.mockRestore());
+  });
+
+  it("enregistre le coût réel de l'appel et l'affiche avec le cumul et le plafond", async () => {
+    const espions = silencieux();
+    const budget = new Budget(5, TARIFS_PAR_MODELE["claude-sonnet-5"], 1);
+    definirBudget(budget);
+    const create = vi.fn().mockResolvedValue(reponse({ usage: { input_tokens: 1_000, output_tokens: 1_000, cache_creation_input_tokens: 100_000 } }));
+    await appeler({ messages: { create } }, REQUETE_CACHE, CONTEXTE);
+    expect(budget.depenseEur).toBeGreaterThan(0.3);
+    const sortie = espions.log.mock.calls.map((c) => String(c[0])).join("\n");
+    expect(sortie).toContain("coût");
+    expect(sortie).toContain("plafond");
+    Object.values(espions).forEach((e) => e.mockRestore());
+  });
+
+  it("estime la lecture du corpus au tarif du cache quand il est chaud : le second appel passe là où le premier aurait été refusé", async () => {
+    const espions = silencieux();
+    const tarifs = TARIFS_PAR_MODELE["claude-sonnet-5"];
+    // Plafond entre le coût d'une écriture de cache (~0,50 $) et celui d'une lecture (~0,15 $).
+    const budget = new Budget(0.4, tarifs, 1);
+    budget.enregistrer({ cache_read_input_tokens: 10 }); // cache déclaré chaud
+    definirBudget(budget);
+    const create = vi.fn().mockResolvedValue(reponse());
+    await expect(appeler({ messages: { create } }, REQUETE_CACHE, CONTEXTE)).resolves.toBeDefined();
+    Object.values(espions).forEach((e) => e.mockRestore());
+  });
+
+  it("sans budget défini, ne contrôle rien (comportement existant)", async () => {
+    const espions = silencieux();
+    const create = vi.fn().mockResolvedValue(reponse());
+    await expect(appeler({ messages: { create } }, REQUETE_CACHE, CONTEXTE)).resolves.toBeDefined();
+    Object.values(espions).forEach((e) => e.mockRestore());
   });
 });

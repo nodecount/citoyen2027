@@ -77,7 +77,13 @@ export const SCHEMA_PROPOSITION_GENEREE = {
 
 // Côté stockage `effets` est optionnel (les 71 propositions collectées à la main n'en ont pas
 // encore) ; côté génération il est obligatoire, éventuellement vide.
-export type PropositionGeneree = Omit<Proposition, "id" | "candidat" | "theme" | "effets"> & {
+// Nombre minimum de sources par proposition. Il était de 2 tant que la vérification relisait des pages
+// citées ; il est de 1 depuis que l'extrait de chaque preuve est retrouvé mot pour mot par le code dans le
+// texte extrait du document (une preuve vérifiée vaut mieux que deux sources non relues). La seconde source
+// reste ajoutée quand elle existe. Voir docs/superpowers/specs/2026-09-26-ingestion-lecture-unique-design.md.
+export const SOURCES_MINIMUM = 1;
+
+export type PropositionGeneree =Omit<Proposition, "id" | "candidat" | "theme" | "effets"> & {
   effets: Effet[];
 };
 
@@ -96,7 +102,7 @@ export function validerPropositionGeneree(valeur: unknown): valeur is Propositio
     return false;
   }
   if (typeof p.date_derniere_verification !== "string") return false;
-  if (!Array.isArray(p.sources) || p.sources.length < 2) return false;
+  if (!Array.isArray(p.sources) || p.sources.length < SOURCES_MINIMUM) return false;
 
   for (const source of p.sources) {
     if (typeof source !== "object" || source === null) return false;

@@ -32,3 +32,36 @@ describe("analyserArguments", () => {
     expect(options.force).toBeUndefined();
   });
 });
+
+describe("analyserArguments — mode corpus et budget", () => {
+  it("le mode par défaut est « corpus » et le budget par défaut de 2 €", () => {
+    const options = analyserArguments(["--candidats=retailleau"]);
+    expect(options.mode).toBe("corpus");
+    expect(options.budgetEur).toBe(2);
+    expect(options.dryRun).toBe(false);
+    expect(options.actualiserSources).toBe(false);
+  });
+
+  it("lit --budget en euros, avec une virgule ou un point décimal", () => {
+    expect(analyserArguments(["--budget=5"]).budgetEur).toBe(5);
+    expect(analyserArguments(["--budget=1.5"]).budgetEur).toBe(1.5);
+    expect(analyserArguments(["--budget=0,75"]).budgetEur).toBe(0.75);
+  });
+
+  it("refuse un budget absurde plutôt que de lancer sans plafond", () => {
+    expect(() => analyserArguments(["--budget=0"])).toThrow("budget");
+    expect(() => analyserArguments(["--budget=-3"])).toThrow("budget");
+    expect(() => analyserArguments(["--budget=beaucoup"])).toThrow("budget");
+  });
+
+  it("lit --dry-run, --actualiser-sources et --mode=recherche-web", () => {
+    const options = analyserArguments(["--candidats=a", "--dry-run", "--actualiser-sources", "--mode=recherche-web"]);
+    expect(options.dryRun).toBe(true);
+    expect(options.actualiserSources).toBe(true);
+    expect(options.mode).toBe("recherche-web");
+  });
+
+  it("refuse un mode inconnu", () => {
+    expect(() => analyserArguments(["--mode=magique"])).toThrow("mode");
+  });
+});

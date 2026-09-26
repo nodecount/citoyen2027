@@ -23,10 +23,13 @@ import {
 } from "./depot";
 import { genererSynthese, verifierSyntheseParModele } from "./synthese";
 import { chargerEnv } from "./env";
-import { analyserArguments } from "./cli";
+import { analyserArguments, type OptionsCLI } from "./cli";
+import { Budget, TARIFS_PAR_MODELE } from "./budget";
+import { definirBudget } from "./appel";
+import { chargerCorpus, executerCandidatCorpus, formaterPlan, planifier } from "./run-corpus";
 import themesData from "../../data/themes.json";
 
-const themes = themesData as Array<{ id: string; libelle: string }>;
+const themes = themesData as Array<{ id: string; libelle: string; description: string }>;
 
 export interface CombinaisonACouvrir {
   slug: string;
@@ -40,25 +43,8 @@ export interface OptionsExecution {
   force?: boolean;
 }
 
-const ABREVIATIONS_THEME: Record<string, string> = {
-  fiscalite: "fisc",
-  "pouvoir-achat": "pa",
-  travail: "trav",
-  "aides-etat": "aides",
-  "libertes-fondamentales": "lib",
-  sante: "sante",
-  securite: "secu",
-  immigration: "immi",
-  education: "educ",
-  environnement: "envi",
-  logement: "logt",
-  retraites: "retr",
-};
-
-export function genererIdProposition(slug: string, themeId: string, index: number): string {
-  const abreviation = ABREVIATIONS_THEME[themeId] ?? themeId;
-  return `${slug}-${abreviation}-${String(index).padStart(3, "0")}`;
-}
+export { genererIdProposition } from "./ids";
+import { genererIdProposition } from "./ids";
 
 export interface ResultatCombinaison {
   fusionnees: Proposition[];
@@ -308,16 +294,67 @@ export async function executerSyntheses(
   }
 }
 
+async function mainCorpus(options: OptionsCLI): Promise<void> {
+  const tarifs = TARIFS_PAR_MODELE["claude-sonnet-5"];
+  const budget = new Budget(options.budgetEur, tarifs);
+  const themesACouvrir = options.themes ? themes.filter((t) => options.themes!.includes(t.id)) : themes;
+  if (options.candidats.length === 0) {
+    console.error("Aucun candidat : indiquer --candidats=slug1,slug2 (voir data/programmes/).");
+    process.exitCode = 1;
+    return;
+  }
+
+  // 1. Lire les documents (gratuit, cache disque) et afficher le plan et le coût attendu AVANT tout appel.
+  let attenduTotalEur = 0;
+  const retenus: CandidatMeta[] = [];
+  for (const slug of options.candidats) {
+    try {
+      const meta = chargerMeta(slug);
+      const charge = await chargerCorpus(meta, { actualiser: options.actualiserSources });
+      const plan = planifier(meta, charge, themesACouvrir, tarifs, { force: options.force });
+      console.log(formaterPlan(plan, budget.eurParUsd, options.budgetEur));
+      attenduTotalEur += budget.enEuros(plan.attenduUsd);
+      retenus.push(meta);
+    } catch (erreur) {
+      console.error(`[erreur] ${slug} : ${erreur instanceof Error ? erreur.message : String(erreur)}`);
+    }
+  }
+  console.log(`[plan] total attendu ${attenduTotalEur.toFixed(2)} € pour un plafond de ${budget.plafondEur.toFixed(2)} €`);
+
+  if (options.dryRun) {
+    console.log("[dry-run] aucun appel n'a été envoyé.");
+    return;
+  }
+  if (attenduTotalEur > budget.plafondEur) {
+    console.error(
+      `[refus] coût attendu (${attenduTotalEur.toFixed(2)} €) supérieur au plafond (${budget.plafondEur.toFixed(2)} €) : augmenter --budget ou réduire --candidats / --themes. Rien n'a été envoyé.`,
+    );
+    process.exitCode = 1;
+    return;
+  }
+
+  // 2. Exécuter, sous plafond dur : tout appel qui ferait dépasser le budget est refusé avant d'être envoyé.
+  definirBudget(budget);
+  const client = clientEnFlux(creerClient());
+  for (const meta of retenus) {
+    const resume = await executerCandidatCorpus(client, meta, themesACouvrir, {
+      force: options.force,
+      synthese: executerSynthese,
+    });
+    if (resume.arretBudget) break;
+  }
+}
+
 async function main(): Promise<void> {
   chargerEnv();
   const options = analyserArguments(process.argv.slice(2));
-  // `ClientAnthropicMinimal` est une interface volontairement minimale (Tasks 1-4), conçue pour
-  // rester découplée des types précis du SDK Anthropic afin de permettre des clients factices
-  // simples dans les tests. Le SDK réel (`Anthropic`) est structurellement plus strict (types
-  // littéraux, champs additionnels) sans être structurellement assignable dans un sens ou dans
-  // l'autre. Le seul point de production où le client réel entre dans ce pipeline est ici :
-  // l'assertion ci-dessous fait le pont, sans élargir l'interface minimale utilisée partout
-  // ailleurs (et donc sans recoupler le reste du code aux types exacts du SDK).
+
+  if (options.mode === "corpus" && !options.refresh) {
+    await mainCorpus(options);
+    return;
+  }
+
+  console.warn("[avertissement] mode « recherche-web » : le modèle explore le web lui-même — très coûteux (~15 € pour un seul thème mesuré). Préférer le mode « corpus ».");
   // Réponse reçue en flux (voir flux.ts) : connexion gardée active, progression affichée en direct.
   const client = clientEnFlux(creerClient());
 
@@ -346,7 +383,6 @@ async function main(): Promise<void> {
   // Deuxième étape : une synthèse par candidat × thème pour lequel des mesures existent.
   await executerSyntheses(client, combinaisons, { force: options.force });
 }
-
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch((erreur) => {
     console.error(erreur);

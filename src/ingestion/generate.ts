@@ -43,7 +43,7 @@ export function remplirGabarit(gabarit: string, valeurs: Record<string, string>)
 
 // Les champs ciblables et leurs valeurs viennent du formulaire citoyen (data/profils-schema.json) :
 // une seule source de vérité, donc le prompt suit automatiquement toute évolution du profil.
-function descriptionChampsProfil(): string {
+export function descriptionChampsProfil(): string {
   const libelles: Record<string, string> = { enfants_a_charge: "Enfants à charge (déduit du nombre d'enfants)" };
   for (const champ of profilSchema as Array<{ id: string; label: string }>) libelles[champ.id] = champ.label;
   return Object.entries(VALEURS_PAR_CHAMP)
@@ -78,6 +78,8 @@ export interface BlocContenuReponse {
   name?: string;
   input?: unknown;
   tool_use_id?: string;
+  // Point de coupure du cache de prompt : tout ce qui précède est mis en cache (voir extraction.ts).
+  cache_control?: { type: "ephemeral" };
 }
 
 export interface ReponseAnthropicMinimale {

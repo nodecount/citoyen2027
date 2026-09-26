@@ -9,3 +9,6 @@ data/programmes/*/_a-verifier.json
 
 # Traces brutes des appels API d'ingestion (pages entières, coûteuses à produire)
 logs/
+
+# Texte extrait des documents officiels (cache local, non republié)
+cache/
