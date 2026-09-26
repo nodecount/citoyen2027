@@ -41,6 +41,18 @@ trois niveaux pour chaque thème :
    apparaît avec sa synthèse **sans badge** et la mention « effet non déterminable d'après le
    programme publié » : ce n'est pas un cinquième niveau, c'est l'absence honnête de projection.
 
+**Parcours du visiteur (précisé par le porteur du projet le 2026-09-26 ; c'est le principe de départ, pas un
+changement) :**
+1. **Page de départ = les thèmes.** Le visiteur voit d'abord les cartes de thèmes ; sur chacune, seuls les
+   **portraits** des candidats dont les mesures sourcées touchent le thème, **cliquables** (le détail — synthèse, mesures,
+   sources — s'ouvre depuis le portrait). Aucun formulaire à remplir avant, aucun indicateur.
+2. **Tant que le visiteur n'a rien renseigné, les effets ne sont pas appliqués** : les portraits restent sans indicateur
+   (jamais de « badge général » ni de moyenne inventée).
+3. **Après avoir eu des informations sur lui**, chaque portrait reçoit son indicateur (améliorant, mixte, non concerné,
+   dégradant), qui s'affine à mesure que le visiteur répond. Les questions sont facultatives ; c'est parce qu'on ne connaît pas
+   l'individu qu'on l'interroge plus précisément (les effets « pour tout le monde », comme un prix ou une prestation courante,
+   restent des effets valides : ils décrivent le cas courant).
+
 Garde-fous de l'indicateur (ils découlent du principe d'indépendance ci-dessous) :
 - Il mesure l'effet sur **la situation matérielle et les droits du citoyen** (revenu, coûts, accès,
   droits), jamais un jugement de valeur sur la politique elle-même. Le « sens » (favorable ou
