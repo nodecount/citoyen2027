@@ -18,7 +18,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Economies & hausses de dépenses"
+    "sous_theme": "Economies & hausses de dépenses",
+    "effets": []
   },
   {
     "id": "parti-socialiste-finances-publiques-002",
@@ -39,7 +40,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": []
   },
   {
     "id": "parti-socialiste-finances-publiques-003",
@@ -60,7 +62,29 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "proprietaire"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "propriétaires de 4 logements ou plus hors résidence principale"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer une taxe « anti-rente » ciblant les multipropriétaires (dès le 4e logement hors résidence principale)."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-finances-publiques-004",
@@ -81,7 +105,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": []
   },
   {
     "id": "parti-socialiste-finances-publiques-005",
@@ -102,7 +127,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": []
   },
   {
     "id": "parti-socialiste-finances-publiques-006",
@@ -123,7 +149,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": []
   },
   {
     "id": "parti-socialiste-finances-publiques-007",
@@ -186,7 +213,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": []
   },
   {
     "id": "parti-socialiste-interieur-justice-001",
@@ -207,7 +235,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "parti-socialiste-interieur-justice-002",
@@ -228,7 +257,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "titulaires d'un titre de séjour de longue durée"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre le renouvellement automatique des titres de séjour de longue durée."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-social-solidarite-001",
@@ -249,7 +294,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Allocations & prestations sociales"
+    "sous_theme": "Allocations & prestations sociales",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "independant"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer une caisse de sécurité sociale spécifique à destination des travailleurs indépendants."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-social-solidarite-002",
@@ -270,7 +331,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-003",
@@ -312,7 +374,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-005",
@@ -333,7 +396,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-006",
@@ -354,7 +418,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-007",
@@ -375,7 +440,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-008",
@@ -396,7 +462,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-009",
@@ -417,7 +484,16 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "en rendant le dépistage accessible à tous"
+      }
+    ]
   },
   {
     "id": "parti-socialiste-social-solidarite-010",
@@ -438,7 +514,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-011",
@@ -459,7 +536,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-012",
@@ -480,7 +558,16 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "assurant le remboursement intégral des soins essentiels par la suppression des franchises sur les médicaments concernés"
+      }
+    ]
   },
   {
     "id": "parti-socialiste-social-solidarite-013",
@@ -501,7 +588,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-014",
@@ -522,7 +610,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-015",
@@ -543,7 +632,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-016",
@@ -564,7 +654,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-017",
@@ -585,7 +676,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-018",
@@ -606,7 +698,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-019",
@@ -627,7 +720,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-020",
@@ -648,7 +742,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-021",
@@ -669,7 +764,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-022",
@@ -690,7 +786,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-023",
@@ -711,7 +808,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-024",
@@ -732,7 +830,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-025",
@@ -753,7 +852,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-026",
@@ -774,7 +874,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-027",
@@ -795,7 +896,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-028",
@@ -837,7 +939,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": []
   },
   {
     "id": "parti-socialiste-retraites-travail-002",
@@ -858,7 +961,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Industrie & relocalisation"
+    "sous_theme": "Industrie & relocalisation",
+    "effets": []
   },
   {
     "id": "parti-socialiste-retraites-travail-003",
@@ -879,7 +983,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Industrie & relocalisation"
+    "sous_theme": "Industrie & relocalisation",
+    "effets": []
   },
   {
     "id": "parti-socialiste-retraites-travail-004",
@@ -900,7 +1005,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Industrie & relocalisation"
+    "sous_theme": "Industrie & relocalisation",
+    "effets": []
   },
   {
     "id": "parti-socialiste-retraites-travail-005",
@@ -921,7 +1027,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Industrie & relocalisation"
+    "sous_theme": "Industrie & relocalisation",
+    "effets": []
   },
   {
     "id": "parti-socialiste-retraites-travail-006",
@@ -942,7 +1049,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Industrie & relocalisation"
+    "sous_theme": "Industrie & relocalisation",
+    "effets": []
   },
   {
     "id": "parti-socialiste-retraites-travail-007",
@@ -963,7 +1071,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Industrie & relocalisation"
+    "sous_theme": "Industrie & relocalisation",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-001",
@@ -984,7 +1093,16 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Energie"
+    "sous_theme": "Energie",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place des « chèques-soleil » pour aider les Français à s’équiper de panneaux solaires."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-envi-002",
@@ -1005,7 +1123,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Energie"
+    "sous_theme": "Energie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-003",
@@ -1026,7 +1145,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Energie"
+    "sous_theme": "Energie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-004",
@@ -1047,7 +1167,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Energie"
+    "sous_theme": "Energie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-005",
@@ -1068,7 +1189,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Energie"
+    "sous_theme": "Energie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-006",
@@ -1089,7 +1211,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "ménages modestes"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "renforcer le soutien public à l’acquisition de véhicules peu polluants par les ménages modestes"
+      }
+    ]
   },
   {
     "id": "parti-socialiste-envi-007",
@@ -1110,7 +1248,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-008",
@@ -1131,7 +1270,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-009",
@@ -1152,7 +1292,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-010",
@@ -1173,7 +1314,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-011",
@@ -1194,7 +1336,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-012",
@@ -1215,7 +1358,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-013",
@@ -1236,7 +1380,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-014",
@@ -1257,7 +1402,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-015",
@@ -1278,7 +1424,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-016",
@@ -1299,7 +1446,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-017",
@@ -1320,7 +1468,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-018",
@@ -1341,7 +1490,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-envi-019",
@@ -1362,7 +1512,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "parti-socialiste-reformes-etat-001",
@@ -1383,7 +1534,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Administrations et opérateurs"
+    "sous_theme": "Administrations et opérateurs",
+    "effets": []
   },
   {
     "id": "parti-socialiste-reformes-etat-002",
@@ -1404,7 +1556,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Administrations et opérateurs"
+    "sous_theme": "Administrations et opérateurs",
+    "effets": []
   },
   {
     "id": "parti-socialiste-reformes-etat-003",
@@ -1425,7 +1578,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Administrations et opérateurs"
+    "sous_theme": "Administrations et opérateurs",
+    "effets": []
   },
   {
     "id": "parti-socialiste-reformes-etat-004",
@@ -1446,7 +1600,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Administrations et opérateurs"
+    "sous_theme": "Administrations et opérateurs",
+    "effets": []
   },
   {
     "id": "parti-socialiste-reformes-etat-005",
@@ -1467,7 +1622,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Administrations et opérateurs"
+    "sous_theme": "Administrations et opérateurs",
+    "effets": []
   },
   {
     "id": "parti-socialiste-reformes-etat-006",
@@ -1488,7 +1644,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Administrations et opérateurs"
+    "sous_theme": "Administrations et opérateurs",
+    "effets": []
   },
   {
     "id": "parti-socialiste-education-jeunesse-001",
@@ -1509,7 +1666,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "parti-socialiste-education-jeunesse-002",
@@ -1551,6 +1709,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   }
 ]

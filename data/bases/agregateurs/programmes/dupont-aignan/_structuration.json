@@ -1,0 +1,82 @@
+[
+  {
+    "theme": "environnement",
+    "groupe": 0,
+    "empreinte": "67e18871649beb85",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 7,
+    "avec_effets": 1,
+    "sans_effet": 6,
+    "rejetees": [],
+    "cout_reference_usd": 0.033,
+    "appels": 2
+  },
+  {
+    "theme": "gouvernance-republique",
+    "groupe": 0,
+    "empreinte": "a7fa2cb513308a52",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 16,
+    "avec_effets": 1,
+    "sans_effet": 14,
+    "rejetees": [
+      {
+        "id": "dupont-aignan-gouvernance-republique-001",
+        "raison": "relecture : Le texte vise « le service public » (agents mais aussi potentiellement usagers), et la cible « fonctionnaire » restreint le périmètre : les agents contractuels et autres personnels du service public ne sont pas des fonctionnaires, donc le statut nommé ne correspond pas fidèlement au texte."
+      }
+    ],
+    "cout_reference_usd": 0.0394,
+    "appels": 2
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 0,
+    "empreinte": "30f4fe200b49cb9f",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 21,
+    "avec_effets": 3,
+    "sans_effet": 17,
+    "rejetees": [
+      {
+        "id": "dupont-aignan-interieur-justice-009",
+        "raison": "relecture : Le texte limite le droit de vote aux Français, mais la cible « personnes de nationalité étrangère » est une reformulation qui ne nomme pas explicitement qui perd ce droit ; elle est déduite et non fondée sur l'extrait, sans savoir si des étrangers votent déjà."
+      }
+    ],
+    "cout_reference_usd": 0.0444,
+    "appels": 2
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "e339127c64db54e4",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 1,
+    "sans_effet": 0,
+    "rejetees": [],
+    "cout_reference_usd": 0.0283,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 0,
+    "empreinte": "bfeff405841d2bff",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 3,
+    "avec_effets": 1,
+    "sans_effet": 1,
+    "rejetees": [
+      {
+        "id": "dupont-aignan-social-solidarite-003",
+        "raison": "relecture : Le texte vise les donateurs qui transmettent, mais l'effet sur le patrimoine (hausse) est ambigu : la donation transfère du patrimoine du donateur vers les enfants ; le gain de patrimoine concerne les bénéficiaires (enfants/petits-enfants), non les donateurs, donc cible et sens sont faux."
+      }
+    ],
+    "cout_reference_usd": 0.0329,
+    "appels": 2
+  }
+]

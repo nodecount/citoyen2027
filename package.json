@@ -9,6 +9,7 @@
     "test": "vitest run",
     "ingestion": "tsx src/ingestion/run.ts",
     "scrape:ifrap": "tsx src/scraping/run-ifrap.ts",
+    "scrape:structurer": "tsx src/scraping/run-structuration.ts",
     "monitoring-server": "tsx src/ingestion/serveur-local.ts"
   },
   "dependencies": {

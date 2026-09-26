@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
-import type { Theme } from "../types";
+import type { Proposition, Theme } from "../types";
 import type { CandidatConverti } from "./ifrap";
 
 function ecrireJson(chemin: string, valeur: unknown): void {
@@ -8,15 +8,68 @@ function ecrireJson(chemin: string, valeur: unknown): void {
   writeFileSync(chemin, JSON.stringify(valeur, null, 2) + "\n");
 }
 
+function lireJson<T>(chemin: string, parDefaut: T): T {
+  return existsSync(chemin) ? (JSON.parse(readFileSync(chemin, "utf-8")) as T) : parDefaut;
+}
+
+export function dossierCandidat(racineBase: string, slug: string): string {
+  return resolve(racineBase, "programmes", slug);
+}
+
+export function chargerPropositionsCandidat(racineBase: string, slug: string): Proposition[] {
+  return lireJson<Proposition[]>(resolve(dossierCandidat(racineBase, slug), "propositions.json"), []);
+}
+
+export function ecrirePropositionsCandidat(racineBase: string, slug: string, propositions: Proposition[]): void {
+  ecrireJson(resolve(dossierCandidat(racineBase, slug), "propositions.json"), propositions);
+}
+
+// Une nouvelle collecte remplace les propositions, mais garde les `effets` déjà structurés d'une proposition dont le
+// texte n'a pas changé (même identifiant, même texte) : la structuration est payante en temps d'abonnement, on ne la
+// refait que pour ce qui a changé.
+export function conserverEffets(nouvelles: Proposition[], anciennes: Proposition[]): Proposition[] {
+  const parId = new Map(anciennes.map((p) => [p.id, p]));
+  return nouvelles.map((p) => {
+    const ancienne = parId.get(p.id);
+    return ancienne?.effets !== undefined && ancienne.resume_factuel === p.resume_factuel ? { ...p, effets: ancienne.effets } : p;
+  });
+}
+
 // Écrit meta.json et propositions.json de chaque candidat dans <racineBase>/programmes/<slug>/ : la même structure
 // que la base officielle, donc lue sans code supplémentaire par le moteur et l'interface. Remplace les deux fichiers
 // (jamais de cumul) ; les autres fichiers du dossier ne sont pas touchés.
 export function ecrireCandidats(racineBase: string, candidats: CandidatConverti[]): void {
   for (const { meta, propositions } of candidats) {
-    const dossier = resolve(racineBase, "programmes", meta.slug);
+    const dossier = dossierCandidat(racineBase, meta.slug);
     ecrireJson(resolve(dossier, "meta.json"), meta);
-    ecrireJson(resolve(dossier, "propositions.json"), propositions);
+    ecrirePropositionsCandidat(racineBase, meta.slug, conserverEffets(propositions, chargerPropositionsCandidat(racineBase, meta.slug)));
   }
+}
+
+// Journal de structuration d'un candidat : une entrée par groupe (thème × tranche de propositions), avec l'empreinte
+// des textes et des prompts, pour savoir ce qui est à jour et pourquoi une proposition n'a pas d'effet.
+export interface EntreeJournalStructuration {
+  theme: string;
+  groupe: number;
+  empreinte: string;
+  date: string;
+  modele: string;
+  propositions: number;
+  avec_effets: number;
+  sans_effet: number;
+  rejetees: Array<{ id: string; raison: string }>;
+  cout_reference_usd: number;
+  appels: number;
+}
+
+export function chargerJournalStructuration(racineBase: string, slug: string): EntreeJournalStructuration[] {
+  return lireJson<EntreeJournalStructuration[]>(resolve(dossierCandidat(racineBase, slug), "_structuration.json"), []);
+}
+
+export function enregistrerJournalStructuration(racineBase: string, slug: string, entree: EntreeJournalStructuration): void {
+  const autres = chargerJournalStructuration(racineBase, slug).filter((e) => !(e.theme === entree.theme && e.groupe === entree.groupe));
+  const toutes = [...autres, entree].sort((a, b) => a.theme.localeCompare(b.theme) || a.groupe - b.groupe);
+  ecrireJson(resolve(dossierCandidat(racineBase, slug), "_structuration.json"), toutes);
 }
 
 // Un thème est « populated » quand au moins un candidat a une proposition dessus, « provisoire » sinon.

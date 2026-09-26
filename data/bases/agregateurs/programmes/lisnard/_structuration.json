@@ -1,0 +1,108 @@
+[
+  {
+    "theme": "education-jeunesse",
+    "groupe": 0,
+    "empreinte": "ebccd9384367e6e4",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 10,
+    "avec_effets": 2,
+    "sans_effet": 7,
+    "rejetees": [
+      {
+        "id": "lisnard-education-jeunesse-002",
+        "raison": "relecture : Le texte dit seulement que le financement public est équivalent quel que soit l'enseignement choisi ; une hausse d'accès aux services pour toutes les familles avec enfants est supposée (mécanisme non énoncé), et le sens est douteux (indetermine)."
+      }
+    ],
+    "cout_reference_usd": 0.0374,
+    "appels": 2
+  },
+  {
+    "theme": "environnement",
+    "groupe": 0,
+    "empreinte": "d4f4b7efdcdee638",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 9,
+    "avec_effets": 1,
+    "sans_effet": 8,
+    "rejetees": [],
+    "cout_reference_usd": 0.0338,
+    "appels": 2
+  },
+  {
+    "theme": "finances-publiques",
+    "groupe": 0,
+    "empreinte": "8cb137bdd542c0bc",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 3,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [
+      {
+        "id": "lisnard-finances-publiques-002",
+        "raison": "relecture : Le champ « enfants_a_charge » élargit/déforme le public : le texte vise des parents donateurs et leurs enfants (pas forcément à charge, souvent adultes), et le patrimoine des enfants comme des parents n'est pas précisé (les parents transmettent, donc l'effet sur leur patrimoine est indéterminé ou opposé) ; le sens « hausse » pour ces cibles n'est pas fondé."
+      }
+    ],
+    "cout_reference_usd": 0.0298,
+    "appels": 2
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 0,
+    "empreinte": "8a7f89c203201bb4",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 22,
+    "avec_effets": 0,
+    "sans_effet": 21,
+    "rejetees": [
+      {
+        "id": "lisnard-interieur-justice-022",
+        "raison": "relecture : Le texte interdit le voile à l'université, ce qui vise les personnes portant le voile (et non tous les étudiants) ; la cible « etudiant » élargit le périmètre à tous les étudiants alors que seules les étudiantes voilées sont concernées."
+      }
+    ],
+    "cout_reference_usd": 0.0397,
+    "appels": 2
+  },
+  {
+    "theme": "reformes-etat",
+    "groupe": 0,
+    "empreinte": "27ab0d3da83e14aa",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 9,
+    "avec_effets": 0,
+    "sans_effet": 9,
+    "rejetees": [],
+    "cout_reference_usd": 0.0204,
+    "appels": 1
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "75e4d6848ab9f7ac",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0161,
+    "appels": 1
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 0,
+    "empreinte": "18432ef8ecab17aa",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 9,
+    "avec_effets": 1,
+    "sans_effet": 8,
+    "rejetees": [],
+    "cout_reference_usd": 0.0313,
+    "appels": 2
+  }
+]

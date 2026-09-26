@@ -1,0 +1,24 @@
+[
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "5018f5f6710ac337",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 6,
+    "avec_effets": 2,
+    "sans_effet": 2,
+    "rejetees": [
+      {
+        "id": "brun-retraites-travail-003",
+        "raison": "relecture : Le sens est indéterminé, mais l'effet est retenu sur tous les retraités. Le texte ne dit pas qui gagne ou perd, donc l'effet n'est pas fondé."
+      },
+      {
+        "id": "brun-retraites-travail-005",
+        "raison": "relecture : Le texte prévoit un plancher qui empêche la baisse des pensions et une indexation sur les salaires. Le sens du revenu n'est pas établi, et l'effet retenu repose sur un mécanisme supposé."
+      }
+    ],
+    "cout_reference_usd": 0.0422,
+    "appels": 2
+  }
+]

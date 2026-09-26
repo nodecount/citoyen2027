@@ -1,0 +1,130 @@
+[
+  {
+    "theme": "education-jeunesse",
+    "groupe": 0,
+    "empreinte": "708fbb3a66396c7f",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 3,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [
+      {
+        "id": "parti-socialiste-education-jeunesse-002",
+        "raison": "relecture : La cible « fonctionnaire » est un statut que le texte ne nomme pas, car il parle seulement des enseignants. Elle élargit le périmètre à un statut non mentionné, alors que le critère « enseignants » suffit."
+      }
+    ],
+    "cout_reference_usd": 0.0322,
+    "appels": 2
+  },
+  {
+    "theme": "environnement",
+    "groupe": 0,
+    "empreinte": "774f64599bf9042c",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 19,
+    "avec_effets": 2,
+    "sans_effet": 17,
+    "rejetees": [],
+    "cout_reference_usd": 0.0381,
+    "appels": 2
+  },
+  {
+    "theme": "finances-publiques",
+    "groupe": 0,
+    "empreinte": "f20d55842f3010c9",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 9,
+    "avec_effets": 1,
+    "sans_effet": 6,
+    "rejetees": [
+      {
+        "id": "parti-socialiste-finances-publiques-007",
+        "raison": "relecture : Le texte ne dit pas que la fiscalité favorable se traduit par une baisse effective du coût de la vie ; le mécanisme de répercussion sur les prix est supposé et la dimension est plus large que les produits alimentaires de base."
+      },
+      {
+        "id": "parti-socialiste-finances-publiques-008",
+        "raison": "relecture : La cible tranche_patrimoine « plus_1_3m » élargit le périmètre : le texte vise uniquement les patrimoines supérieurs à 100 millions d'euros, pas toutes les tranches au-dessus de 1,3 M€."
+      }
+    ],
+    "cout_reference_usd": 0.039,
+    "appels": 2
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 0,
+    "empreinte": "eb9a4fdad754c742",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 1,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0272,
+    "appels": 2
+  },
+  {
+    "theme": "reformes-etat",
+    "groupe": 0,
+    "empreinte": "a0d6c3e9d21b9386",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 6,
+    "avec_effets": 0,
+    "sans_effet": 6,
+    "rejetees": [],
+    "cout_reference_usd": 0.0194,
+    "appels": 1
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "74003647f37f5117",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 7,
+    "avec_effets": 0,
+    "sans_effet": 7,
+    "rejetees": [],
+    "cout_reference_usd": 0.0194,
+    "appels": 1
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 0,
+    "empreinte": "8d5e3458258b58f3",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 3,
+    "sans_effet": 21,
+    "rejetees": [
+      {
+        "id": "parti-socialiste-social-solidarite-003",
+        "raison": "relecture : Le texte vise la tarification sociale selon le quotient familial (gratuité pour les plus modestes), donc pas tous les foyers avec enfants ; la cible « au moins un enfant » élargit le périmètre et la baisse n'est pas garantie pour tous."
+      }
+    ],
+    "cout_reference_usd": 0.0434,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 1,
+    "empreinte": "0e3206b2819f7f5f",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 3,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [
+      {
+        "id": "parti-socialiste-social-solidarite-028",
+        "raison": "relecture : Le texte ne dit pas que tous les locataires sont visés (seuls ceux qui optent pour le leasing après quelques années), et la hausse de patrimoine est un mécanisme supposé, l'accès à la propriété étant seulement une possibilité."
+      }
+    ],
+    "cout_reference_usd": 0.0168,
+    "appels": 2
+  }
+]

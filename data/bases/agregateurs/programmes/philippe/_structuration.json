@@ -1,0 +1,153 @@
+[
+  {
+    "theme": "education-jeunesse",
+    "groupe": 0,
+    "empreinte": "9c7398e183c3838e",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 9,
+    "avec_effets": 2,
+    "sans_effet": 6,
+    "rejetees": [
+      {
+        "id": "philippe-education-jeunesse-006",
+        "raison": "relecture : Le service est dit universel mais la cible « enfants à charge » ne précise pas scolarisés ; surtout l'effet reste plausible, cependant le périmètre (élèves) n'est pas nommé dans le texte et les parents d'enfants non scolarisés ou sans enfant en âge scolaire sont inclus à tort."
+      }
+    ],
+    "cout_reference_usd": 0.0378,
+    "appels": 2
+  },
+  {
+    "theme": "environnement",
+    "groupe": 0,
+    "empreinte": "37ca4e362b89bd87",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 11,
+    "avec_effets": 0,
+    "sans_effet": 11,
+    "rejetees": [],
+    "cout_reference_usd": 0.0206,
+    "appels": 1
+  },
+  {
+    "theme": "finances-publiques",
+    "groupe": 0,
+    "empreinte": "61555e482dcc9e5a",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 11,
+    "avec_effets": 0,
+    "sans_effet": 9,
+    "rejetees": [
+      {
+        "id": "philippe-finances-publiques-007",
+        "raison": "relecture : Les cibles sont vides (tout le monde) alors que seuls les donateurs/bénéficiaires de donations sont visés, et l'effet sur le patrimoine est un mécanisme supposé non énoncé par le texte (exonération fiscale, pas de hausse de patrimoine explicite)."
+      },
+      {
+        "id": "philippe-finances-publiques-011",
+        "raison": "relecture : Le texte vise les foyers à partir du deuxième enfant, mais la cible « au moins un enfant » élargit le périmètre aux foyers avec un seul enfant, qui ne sont pas concernés."
+      }
+    ],
+    "cout_reference_usd": 0.0354,
+    "appels": 2
+  },
+  {
+    "theme": "gouvernance-republique",
+    "groupe": 0,
+    "empreinte": "44fb61fa052433a4",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 13,
+    "avec_effets": 0,
+    "sans_effet": 12,
+    "rejetees": [
+      {
+        "id": "philippe-gouvernance-republique-012",
+        "raison": "relecture : Le texte n'énonce qu'un droit à la reconversion, sans dire que l'emploi de ces personnes augmente ; la hausse d'emploi est un effet supposé par mécanisme (et la dimension est au mieux indéterminée)."
+      }
+    ],
+    "cout_reference_usd": 0.0345,
+    "appels": 2
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 0,
+    "empreinte": "22511218bdfecbd3",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 1,
+    "sans_effet": 23,
+    "rejetees": [
+      {
+        "id": "philippe-interieur-justice-025",
+        "raison": "relecture : Le texte ne mentionne pas explicitement les stupéfiants ; la cible « consommateurs de stupéfiants » est une inférence, et l'effet ne vise que ceux ayant des amendes recouvrées, pas tous les consommateurs."
+      }
+    ],
+    "cout_reference_usd": 0.0466,
+    "appels": 2
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 1,
+    "empreinte": "cab2abe5f1fcee52",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0047,
+    "appels": 1
+  },
+  {
+    "theme": "reformes-etat",
+    "groupe": 0,
+    "empreinte": "4bc8535b531d30d6",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 4,
+    "avec_effets": 0,
+    "sans_effet": 4,
+    "rejetees": [],
+    "cout_reference_usd": 0.0176,
+    "appels": 1
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "09720f8f260db01a",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 6,
+    "avec_effets": 1,
+    "sans_effet": 4,
+    "rejetees": [
+      {
+        "id": "philippe-retraites-travail-001",
+        "raison": "relecture : Le texte vise « les actifs » sans nommer de statuts précis ; la liste salarié/indépendant/fonctionnaire élargit ou précise le périmètre, et la mesure concrète est vague (déclaration de principe sans mécanisme)."
+      }
+    ],
+    "cout_reference_usd": 0.0329,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 0,
+    "empreinte": "c46e35ddffed886e",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 4,
+    "avec_effets": 0,
+    "sans_effet": 3,
+    "rejetees": [
+      {
+        "id": "philippe-social-solidarite-003",
+        "raison": "relecture : Un prêt à taux zéro est une dette, pas un gain de patrimoine net ; le sens « hausse » du patrimoine est douteux (devrait être indéterminé) et la mesure vise plutôt le coût/financement du logement, avec un périmètre « au moins un enfant » élargi aux familles déjà avec enfants alors que le texte vise les naissances."
+      }
+    ],
+    "cout_reference_usd": 0.0296,
+    "appels": 2
+  }
+]

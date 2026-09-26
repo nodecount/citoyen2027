@@ -1,0 +1,28 @@
+[
+  {
+    "theme": "finances-publiques",
+    "groupe": 0,
+    "empreinte": "feabfd41413f205e",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 5,
+    "avec_effets": 1,
+    "sans_effet": 4,
+    "rejetees": [],
+    "cout_reference_usd": 0.029,
+    "appels": 2
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "f3bc6b9be5e33d62",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0158,
+    "appels": 1
+  }
+]

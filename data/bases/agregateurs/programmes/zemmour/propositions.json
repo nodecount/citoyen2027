@@ -18,7 +18,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Economies & hausses de dépenses"
+    "sous_theme": "Economies & hausses de dépenses",
+    "effets": []
   },
   {
     "id": "zemmour-finances-publiques-002",
@@ -39,7 +40,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Economies & hausses de dépenses"
+    "sous_theme": "Economies & hausses de dépenses",
+    "effets": []
   },
   {
     "id": "zemmour-finances-publiques-003",
@@ -60,7 +62,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Economies & hausses de dépenses"
+    "sous_theme": "Economies & hausses de dépenses",
+    "effets": []
   },
   {
     "id": "zemmour-finances-publiques-004",
@@ -81,7 +84,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Economies & hausses de dépenses"
+    "sous_theme": "Economies & hausses de dépenses",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "fonctionnaire"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revenir sur les trois jours de carence pour les arrêts maladie des agents de la fonction publique."
+      }
+    ]
   },
   {
     "id": "zemmour-finances-publiques-005",
@@ -102,7 +121,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Economies & hausses de dépenses"
+    "sous_theme": "Economies & hausses de dépenses",
+    "effets": []
   },
   {
     "id": "zemmour-finances-publiques-006",
@@ -123,7 +143,31 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie",
+              "fonctionnaire",
+              "independant"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "travailleurs modestes"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter le salaire des travailleurs modestes du public, du privé et des indépendants par la baisse de la CSG."
+      }
+    ]
   },
   {
     "id": "zemmour-finances-publiques-007",
@@ -144,7 +188,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-001",
@@ -165,7 +210,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étrangers pouvant bénéficier du regroupement familial"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer le droit au « regroupement familial » et tous les droits automatiques liés à l’immigration familiale."
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-002",
@@ -186,7 +247,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "demandeurs d'asile"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "en le limitant à une centaine d’individus chaque année (contre près de 140 000 aujourd’hui)"
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-003",
@@ -207,7 +284,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "demandeurs d'asile"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Exiger que les demandes d’asile soient déposées en dehors du territoire national, dans nos consulats"
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-004",
@@ -228,7 +321,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-005",
@@ -249,7 +343,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-006",
@@ -270,7 +365,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-007",
@@ -291,7 +387,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-008",
@@ -312,7 +409,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-009",
@@ -333,7 +431,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étrangers extra-européens"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les aides sociales non-contributives (allocations familiales, aides au logement, RSA, minimum vieillesse…) pour les étrangers extra-européens."
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-010",
@@ -354,7 +468,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étrangers en situation irrégulière bénéficiaires de l'AME"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les soins gratuits pour les étrangers clandestins (AME) pour ne conserver qu’une Aide médicale d’urgence (AMU)."
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-011",
@@ -375,7 +505,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étrangers entrés illégalement sur le territoire français"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire définitivement la régularisation de tout étranger entré illégalement sur le territoire français."
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-012",
@@ -396,7 +542,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-013",
@@ -417,7 +564,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étrangers candidats à la naturalisation"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Durcir les conditions de naturalisation, en augmentant la durée minimale de résidence en France de 5 ans à 10 ans"
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-014",
@@ -438,7 +601,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-015",
@@ -459,7 +623,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "délinquants et criminels étrangers condamnés"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Expulser systématiquement tous les délinquants étrangers dès leur condamnation et les criminels à l’issue de leur peine."
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-016",
@@ -480,7 +660,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étrangers au chômage après six mois de recherche d'emploi infructueuse"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Expulser les étrangers au chômage au terme d’un délai de six mois de recherche d’emploi infructueuse."
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-017",
@@ -501,7 +697,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-018",
@@ -522,7 +719,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-019",
@@ -543,7 +741,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-020",
@@ -564,7 +763,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-021",
@@ -585,7 +785,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-022",
@@ -606,7 +807,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-023",
@@ -648,7 +850,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "squatteurs"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Expulser tous les squatteurs en moins de 72h, grâce au recours obligatoire à la force publique par les préfets."
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-025",
@@ -669,7 +887,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-026",
@@ -690,7 +909,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "délinquants"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Suspendre les aides sociales aux délinquants."
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-027",
@@ -711,7 +946,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-028",
@@ -732,7 +968,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-029",
@@ -753,7 +990,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-030",
@@ -774,7 +1012,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Sécurité intérieure"
+    "sous_theme": "Sécurité intérieure",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-031",
@@ -795,7 +1034,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Sécurité intérieure"
+    "sous_theme": "Sécurité intérieure",
+    "effets": []
   },
   {
     "id": "zemmour-social-solidarite-001",
@@ -816,7 +1056,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "habitants des déserts médicaux"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Recruter 1 000 médecins salariés par l’État sur 5 ans dans les déserts médicaux."
+      }
+    ]
   },
   {
     "id": "zemmour-social-solidarite-002",
@@ -837,7 +1093,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "habitants des déserts médicaux"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer des services hospitaliers de proximité dans les déserts médicaux"
+      }
+    ]
   },
   {
     "id": "zemmour-social-solidarite-003",
@@ -879,7 +1151,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports"
+    "sous_theme": "Transports",
+    "effets": []
   },
   {
     "id": "zemmour-social-solidarite-005",
@@ -900,7 +1173,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports"
+    "sous_theme": "Transports",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "habitants des bourgs des secteurs ruraux"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Désenclaver les bourgs des secteurs ruraux par une offre locale d’accès aux transports en commun routiers"
+      }
+    ]
   },
   {
     "id": "zemmour-social-solidarite-006",
@@ -921,7 +1210,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports"
+    "sous_theme": "Transports",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-001",
@@ -942,7 +1232,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-002",
@@ -963,7 +1254,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-003",
@@ -984,7 +1276,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "simplifiant et défiscalisant la prime de participation des salariés"
+      }
+    ]
   },
   {
     "id": "zemmour-retraites-travail-004",
@@ -1005,7 +1313,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre le déblocage immédiat de la prime de participation sans aucun impôt sur le revenu et sans aucune condition pour le salarié."
+      }
+    ]
   },
   {
     "id": "zemmour-retraites-travail-005",
@@ -1026,7 +1350,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-006",
@@ -1047,7 +1372,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-007",
@@ -1089,7 +1415,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "apprentis"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "en augmentant le niveau d’exonération des cotisations salariales pour l’apprentissage de 79 % à 100 % du SMIC"
+      }
+    ]
   },
   {
     "id": "zemmour-retraites-travail-009",
@@ -1110,7 +1452,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-010",
@@ -1131,7 +1474,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-011",
@@ -1152,7 +1496,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-012",
@@ -1173,7 +1518,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-013",
@@ -1194,7 +1540,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-014",
@@ -1215,7 +1562,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-015",
@@ -1257,7 +1605,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Industrie & relocalisation"
+    "sous_theme": "Industrie & relocalisation",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-017",
@@ -1278,7 +1627,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Industrie & relocalisation"
+    "sous_theme": "Industrie & relocalisation",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-018",
@@ -1299,7 +1649,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Industrie & relocalisation"
+    "sous_theme": "Industrie & relocalisation",
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-019",
@@ -1320,7 +1671,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Industrie & relocalisation"
+    "sous_theme": "Industrie & relocalisation",
+    "effets": []
   },
   {
     "id": "zemmour-envi-001",
@@ -1341,7 +1693,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Energie"
+    "sous_theme": "Energie",
+    "effets": []
   },
   {
     "id": "zemmour-envi-002",
@@ -1362,7 +1715,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Energie"
+    "sous_theme": "Energie",
+    "effets": []
   },
   {
     "id": "zemmour-envi-003",
@@ -1383,7 +1737,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Energie"
+    "sous_theme": "Energie",
+    "effets": []
   },
   {
     "id": "zemmour-envi-004",
@@ -1404,7 +1759,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Energie"
+    "sous_theme": "Energie",
+    "effets": []
   },
   {
     "id": "zemmour-envi-005",
@@ -1425,7 +1781,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "zemmour-envi-006",
@@ -1446,7 +1803,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "zemmour-envi-007",
@@ -1467,7 +1825,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "zemmour-gouvernance-republique-001",
@@ -1488,7 +1847,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif"
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "effets": []
   },
   {
     "id": "zemmour-gouvernance-republique-002",
@@ -1509,7 +1869,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif"
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "effets": []
   },
   {
     "id": "zemmour-gouvernance-republique-003",
@@ -1530,7 +1891,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif"
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "effets": []
   },
   {
     "id": "zemmour-gouvernance-republique-004",
@@ -1551,7 +1913,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif"
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "effets": []
   },
   {
     "id": "zemmour-gouvernance-republique-005",
@@ -1572,7 +1935,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif"
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "effets": []
   },
   {
     "id": "zemmour-gouvernance-republique-006",
@@ -1593,7 +1957,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Numérique et IA"
+    "sous_theme": "Numérique et IA",
+    "effets": []
   },
   {
     "id": "zemmour-gouvernance-republique-007",
@@ -1614,7 +1979,16 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Numérique et IA"
+    "sous_theme": "Numérique et IA",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir une connexion haut débit à chaque Français et chaque entreprise sur tout le territoire."
+      }
+    ]
   },
   {
     "id": "zemmour-gouvernance-republique-008",
@@ -1635,7 +2009,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Numérique et IA"
+    "sous_theme": "Numérique et IA",
+    "effets": []
   },
   {
     "id": "zemmour-education-jeunesse-001",
@@ -1656,7 +2031,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "zemmour-education-jeunesse-002",
@@ -1677,7 +2053,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "zemmour-education-jeunesse-003",
@@ -1698,7 +2075,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "zemmour-education-jeunesse-004",
@@ -1719,7 +2097,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "zemmour-education-jeunesse-005",
@@ -1740,7 +2119,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "zemmour-education-jeunesse-006",
@@ -1761,7 +2141,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "zemmour-education-jeunesse-007",
@@ -1782,7 +2163,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "zemmour-education-jeunesse-008",
@@ -1803,7 +2185,29 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "parents d'élèves perturbateurs ou absentéistes"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Suspendre les allocations familales des parents d’élèves perturbateurs ou absentéistes."
+      }
+    ]
   },
   {
     "id": "zemmour-education-jeunesse-009",
@@ -1824,7 +2228,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "zemmour-education-jeunesse-010",
@@ -1845,7 +2250,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "zemmour-education-jeunesse-011",
@@ -1866,7 +2272,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "zemmour-education-jeunesse-012",
@@ -1887,7 +2294,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "zemmour-education-jeunesse-013",

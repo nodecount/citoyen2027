@@ -9,7 +9,7 @@
   {
     "id": "agregateurs",
     "libelle": "Base issue de comparateurs indépendants",
-    "description": "Propositions reprises telles que rédigées par des comparateurs indépendants de programmes (sources secondaires, sans indication de date par mesure). Thèmes propres à ces comparateurs. Pas de projection pour votre profil.",
-    "avertissement": "Ces propositions sont reprises sans modification de comparateurs indépendants (sources secondaires) : elles n'ont pas été recoupées avec les programmes officiels, ne portent pas de date par mesure, et l'année affichée est celle de la consultation. Cette base ne calcule pas de projection pour votre profil."
+    "description": "Propositions reprises telles que rédigées par des comparateurs indépendants de programmes (sources secondaires, sans indication de date par mesure). Thèmes propres à ces comparateurs. Projection pour votre profil seulement quand le texte de la proposition permet de la fonder.",
+    "avertissement": "Ces propositions sont reprises sans modification de comparateurs indépendants (sources secondaires) : elles n'ont pas été recoupées avec les programmes officiels, ne portent pas de date par mesure, et l'année affichée est celle de la consultation. Les projections pour votre profil, rares, viennent d'effets décrits par un assistant IA à partir du seul texte de chaque proposition, retrouvés mot pour mot dans ce texte puis relus par un second appel : quand le texte est trop court ou trop vague pour trancher, il n'y a pas de projection."
   }
 ]

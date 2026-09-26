@@ -1,0 +1,54 @@
+[
+  {
+    "theme": "education-jeunesse",
+    "groupe": 0,
+    "empreinte": "0d707be7c6468aa2",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 7,
+    "avec_effets": 3,
+    "sans_effet": 4,
+    "rejetees": [],
+    "cout_reference_usd": 0.0335,
+    "appels": 2
+  },
+  {
+    "theme": "environnement",
+    "groupe": 0,
+    "empreinte": "6ca096be9f6d444c",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0158,
+    "appels": 1
+  },
+  {
+    "theme": "finances-publiques",
+    "groupe": 0,
+    "empreinte": "d6bafd6d98f73374",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0167,
+    "appels": 1
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "66f0ecb4feb9a5cc",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 3,
+    "avec_effets": 1,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0278,
+    "appels": 2
+  }
+]

@@ -1,0 +1,165 @@
+[
+  {
+    "theme": "education-jeunesse",
+    "groupe": 0,
+    "empreinte": "7133dcb5f123ed2f",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 15,
+    "avec_effets": 1,
+    "sans_effet": 12,
+    "rejetees": [
+      {
+        "id": "glucksmann-education-jeunesse-004",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « création d’une aide nationale pour compenser les frais liés … »"
+      },
+      {
+        "id": "glucksmann-education-jeunesse-007",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Revaloriser le salaire de tous les enseignants de manière co… »"
+      }
+    ],
+    "cout_reference_usd": 0.0379,
+    "appels": 2
+  },
+  {
+    "theme": "environnement",
+    "groupe": 0,
+    "empreinte": "8b7ff63d12fb0dae",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 2,
+    "sans_effet": 21,
+    "rejetees": [
+      {
+        "id": "glucksmann-envi-004",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Faire baisser les prix de l’électricité : fixer une partie d… »"
+      },
+      {
+        "id": "glucksmann-envi-022",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Garantir le revenu des agriculteurs par la mise en place de … »"
+      }
+    ],
+    "cout_reference_usd": 0.0421,
+    "appels": 2
+  },
+  {
+    "theme": "environnement",
+    "groupe": 1,
+    "empreinte": "91bee89905435fcd",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 7,
+    "avec_effets": 0,
+    "sans_effet": 6,
+    "rejetees": [
+      {
+        "id": "glucksmann-envi-031",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « des aides automatiques pour les foyers dont la facture dépas… »"
+      }
+    ],
+    "cout_reference_usd": 0.0105,
+    "appels": 1
+  },
+  {
+    "theme": "finances-publiques",
+    "groupe": 0,
+    "empreinte": "c3245a0361b1914e",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 8,
+    "avec_effets": 0,
+    "sans_effet": 6,
+    "rejetees": [
+      {
+        "id": "glucksmann-finances-publiques-006",
+        "raison": "relecture : La cible « tranche_patrimoine plus_1_3m » élargit le périmètre (le texte vise uniquement les patrimoines > 100 M€, pas la tranche 1-3 M€), ce qui est faux."
+      },
+      {
+        "id": "glucksmann-finances-publiques-008",
+        "raison": "relecture : Le texte précise que la baisse des cotisations est financée par une taxation des gros héritages, effet non retenu (image trompeuse), et la cible « salarié » ignore les autres publics concernés (héritiers de gros patrimoines qui perdent)."
+      }
+    ],
+    "cout_reference_usd": 0.0351,
+    "appels": 2
+  },
+  {
+    "theme": "gouvernance-republique",
+    "groupe": 0,
+    "empreinte": "1ad681e68419120b",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 21,
+    "avec_effets": 1,
+    "sans_effet": 18,
+    "rejetees": [
+      {
+        "id": "glucksmann-gouvernance-republique-006",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « pour les étrangers extra-communautaires aux élections locale… »"
+      },
+      {
+        "id": "glucksmann-gouvernance-republique-012",
+        "raison": "relecture : Le texte vise les « agents » de la fonction publique, pas uniquement les fonctionnaires (statut précis), ce qui élargit ou restreint le périmètre sans fondement ; le terme agents inclut aussi les contractuels."
+      }
+    ],
+    "cout_reference_usd": 0.0471,
+    "appels": 2
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 0,
+    "empreinte": "d37f6a4b2317abb8",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 12,
+    "avec_effets": 1,
+    "sans_effet": 11,
+    "rejetees": [],
+    "cout_reference_usd": 0.0323,
+    "appels": 2
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "8bbb9aa9ae1d78ef",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 18,
+    "avec_effets": 1,
+    "sans_effet": 15,
+    "rejetees": [
+      {
+        "id": "glucksmann-retraites-travail-002",
+        "raison": "relecture : Le texte vise les personnes rémunérées au SMIC, pas tous les salariés : la cible « salarie » élargit le périmètre (il faudrait un critère autre fidèle, ex. salariés au SMIC)."
+      },
+      {
+        "id": "glucksmann-retraites-travail-010",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « créer des guichets uniques jeunesse dans chaque territoire o… »"
+      }
+    ],
+    "cout_reference_usd": 0.0411,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 0,
+    "empreinte": "b2dc3ea496e12d07",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 24,
+    "avec_effets": 1,
+    "sans_effet": 21,
+    "rejetees": [
+      {
+        "id": "glucksmann-social-solidarite-013",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Renforcer le statut des artistes-auteurs par une loi garanti… »"
+      },
+      {
+        "id": "glucksmann-social-solidarite-021",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « un titre de transport unique, à tarif fixe, abordable et val… »"
+      }
+    ],
+    "cout_reference_usd": 0.0443,
+    "appels": 2
+  }
+]

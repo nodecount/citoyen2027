@@ -18,7 +18,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Economies & hausses de dépenses"
+    "sous_theme": "Economies & hausses de dépenses",
+    "effets": []
   },
   {
     "id": "philippe-finances-publiques-002",
@@ -39,7 +40,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Economies & hausses de dépenses"
+    "sous_theme": "Economies & hausses de dépenses",
+    "effets": []
   },
   {
     "id": "philippe-finances-publiques-003",
@@ -60,7 +62,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Economies & hausses de dépenses"
+    "sous_theme": "Economies & hausses de dépenses",
+    "effets": []
   },
   {
     "id": "philippe-finances-publiques-004",
@@ -81,7 +84,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Dette & déficit"
+    "sous_theme": "Dette & déficit",
+    "effets": []
   },
   {
     "id": "philippe-finances-publiques-005",
@@ -102,7 +106,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Dette & déficit"
+    "sous_theme": "Dette & déficit",
+    "effets": []
   },
   {
     "id": "philippe-finances-publiques-006",
@@ -123,7 +128,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": []
   },
   {
     "id": "philippe-finances-publiques-007",
@@ -165,7 +171,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": []
   },
   {
     "id": "philippe-finances-publiques-009",
@@ -186,7 +193,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": []
   },
   {
     "id": "philippe-finances-publiques-010",
@@ -207,7 +215,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": []
   },
   {
     "id": "philippe-finances-publiques-011",
@@ -249,7 +258,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-002",
@@ -270,7 +280,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-003",
@@ -291,7 +302,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-004",
@@ -312,7 +324,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étrangers délinquants"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "mettre fin à leurs aides sociales"
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-005",
@@ -333,7 +361,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-006",
@@ -354,7 +383,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-007",
@@ -375,7 +405,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "sous_theme": "Immigration",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-008",
@@ -396,7 +427,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-009",
@@ -417,7 +449,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-010",
@@ -438,7 +471,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-011",
@@ -459,7 +493,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-012",
@@ -480,7 +515,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-013",
@@ -501,7 +537,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-014",
@@ -522,7 +559,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-015",
@@ -543,7 +581,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-016",
@@ -564,7 +603,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-017",
@@ -585,7 +625,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Lutte contre le narcotrafic"
+    "sous_theme": "Lutte contre le narcotrafic",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-018",
@@ -606,7 +647,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Lutte contre le narcotrafic"
+    "sous_theme": "Lutte contre le narcotrafic",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-019",
@@ -627,7 +669,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Lutte contre le narcotrafic"
+    "sous_theme": "Lutte contre le narcotrafic",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-020",
@@ -648,7 +691,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Lutte contre le narcotrafic"
+    "sous_theme": "Lutte contre le narcotrafic",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-021",
@@ -669,7 +713,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Lutte contre le narcotrafic"
+    "sous_theme": "Lutte contre le narcotrafic",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-022",
@@ -690,7 +735,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Lutte contre le narcotrafic"
+    "sous_theme": "Lutte contre le narcotrafic",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-023",
@@ -711,7 +757,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Lutte contre le narcotrafic"
+    "sous_theme": "Lutte contre le narcotrafic",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-024",
@@ -732,7 +779,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Lutte contre le narcotrafic"
+    "sous_theme": "Lutte contre le narcotrafic",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-025",
@@ -774,7 +822,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Lutte contre le narcotrafic"
+    "sous_theme": "Lutte contre le narcotrafic",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-027",
@@ -795,7 +844,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Sécurité intérieure"
+    "sous_theme": "Sécurité intérieure",
+    "effets": []
   },
   {
     "id": "philippe-social-solidarite-001",
@@ -816,7 +866,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Allocations & prestations sociales"
+    "sous_theme": "Allocations & prestations sociales",
+    "effets": []
   },
   {
     "id": "philippe-social-solidarite-002",
@@ -837,7 +888,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": []
   },
   {
     "id": "philippe-social-solidarite-003",
@@ -879,7 +931,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports"
+    "sous_theme": "Transports",
+    "effets": []
   },
   {
     "id": "philippe-retraites-travail-001",
@@ -921,7 +974,29 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "parents en reprise d'activité après un congé parental"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un temps partiel parental, à 80 % rémunéré 100 % pendant 2 mois"
+      }
+    ]
   },
   {
     "id": "philippe-retraites-travail-003",
@@ -942,7 +1017,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite"
+    "sous_theme": "Système de retraite",
+    "effets": []
   },
   {
     "id": "philippe-retraites-travail-004",
@@ -963,7 +1039,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite"
+    "sous_theme": "Système de retraite",
+    "effets": []
   },
   {
     "id": "philippe-retraites-travail-005",
@@ -984,7 +1061,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite"
+    "sous_theme": "Système de retraite",
+    "effets": []
   },
   {
     "id": "philippe-retraites-travail-006",
@@ -1005,7 +1083,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite"
+    "sous_theme": "Système de retraite",
+    "effets": []
   },
   {
     "id": "philippe-envi-001",
@@ -1026,7 +1105,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Energie"
+    "sous_theme": "Energie",
+    "effets": []
   },
   {
     "id": "philippe-envi-002",
@@ -1047,7 +1127,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "philippe-envi-003",
@@ -1068,7 +1149,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "philippe-envi-004",
@@ -1089,7 +1171,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "philippe-envi-005",
@@ -1110,7 +1193,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "philippe-envi-006",
@@ -1131,7 +1215,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "philippe-envi-007",
@@ -1152,7 +1237,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": []
   },
   {
     "id": "philippe-envi-008",
@@ -1173,7 +1259,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Agriculture"
+    "sous_theme": "Agriculture",
+    "effets": []
   },
   {
     "id": "philippe-envi-009",
@@ -1194,7 +1281,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Agriculture"
+    "sous_theme": "Agriculture",
+    "effets": []
   },
   {
     "id": "philippe-envi-010",
@@ -1215,7 +1303,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Agriculture"
+    "sous_theme": "Agriculture",
+    "effets": []
   },
   {
     "id": "philippe-envi-011",
@@ -1236,7 +1325,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Agriculture"
+    "sous_theme": "Agriculture",
+    "effets": []
   },
   {
     "id": "philippe-europe-international-001",
@@ -1257,7 +1347,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Union Européenne"
+    "sous_theme": "Union Européenne",
+    "effets": []
   },
   {
     "id": "philippe-europe-international-002",
@@ -1278,7 +1369,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Union Européenne"
+    "sous_theme": "Union Européenne",
+    "effets": []
   },
   {
     "id": "philippe-europe-international-003",
@@ -1299,7 +1391,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Union Européenne"
+    "sous_theme": "Union Européenne",
+    "effets": []
   },
   {
     "id": "philippe-europe-international-004",
@@ -1320,7 +1413,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Union Européenne"
+    "sous_theme": "Union Européenne",
+    "effets": []
   },
   {
     "id": "philippe-europe-international-005",
@@ -1341,7 +1435,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Union Européenne"
+    "sous_theme": "Union Européenne",
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-001",
@@ -1362,7 +1457,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif"
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-002",
@@ -1383,7 +1479,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif"
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-003",
@@ -1404,7 +1501,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif"
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-004",
@@ -1425,7 +1523,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif"
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-005",
@@ -1446,7 +1545,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif"
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-006",
@@ -1467,7 +1567,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Numérique et IA"
+    "sous_theme": "Numérique et IA",
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-007",
@@ -1488,7 +1589,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Numérique et IA"
+    "sous_theme": "Numérique et IA",
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-008",
@@ -1509,7 +1611,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Numérique et IA"
+    "sous_theme": "Numérique et IA",
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-009",
@@ -1530,7 +1633,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Numérique et IA"
+    "sous_theme": "Numérique et IA",
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-010",
@@ -1551,7 +1655,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Numérique et IA"
+    "sous_theme": "Numérique et IA",
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-011",
@@ -1572,7 +1677,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Numérique et IA"
+    "sous_theme": "Numérique et IA",
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-012",
@@ -1614,7 +1720,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Numérique et IA"
+    "sous_theme": "Numérique et IA",
+    "effets": []
   },
   {
     "id": "philippe-reformes-etat-001",
@@ -1635,7 +1742,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Administrations et opérateurs"
+    "sous_theme": "Administrations et opérateurs",
+    "effets": []
   },
   {
     "id": "philippe-reformes-etat-002",
@@ -1656,7 +1764,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Administrations et opérateurs"
+    "sous_theme": "Administrations et opérateurs",
+    "effets": []
   },
   {
     "id": "philippe-reformes-etat-003",
@@ -1677,7 +1786,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Administrations et opérateurs"
+    "sous_theme": "Administrations et opérateurs",
+    "effets": []
   },
   {
     "id": "philippe-reformes-etat-004",
@@ -1698,7 +1808,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Administrations et opérateurs"
+    "sous_theme": "Administrations et opérateurs",
+    "effets": []
   },
   {
     "id": "philippe-education-jeunesse-001",
@@ -1719,7 +1830,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Périscolaire"
+    "sous_theme": "Périscolaire",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "permettre aux parents de saisir la police pour faire vérifier l'absence d'antécédents d'une personne entrant au contact de leur enfant"
+      }
+    ]
   },
   {
     "id": "philippe-education-jeunesse-002",
@@ -1740,7 +1867,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Périscolaire"
+    "sous_theme": "Périscolaire",
+    "effets": []
   },
   {
     "id": "philippe-education-jeunesse-003",
@@ -1761,7 +1889,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Périscolaire"
+    "sous_theme": "Périscolaire",
+    "effets": []
   },
   {
     "id": "philippe-education-jeunesse-004",
@@ -1782,7 +1911,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "philippe-education-jeunesse-005",
@@ -1803,7 +1933,29 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "fonctionnaire"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "enseignants"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter de 20 % en moyenne le salaire des enseignants sur un quinquennat"
+      }
+    ]
   },
   {
     "id": "philippe-education-jeunesse-006",
@@ -1845,7 +1997,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "philippe-education-jeunesse-008",
@@ -1866,7 +2019,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "philippe-education-jeunesse-009",
@@ -1887,7 +2041,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "philippe-defense-001",
@@ -1908,7 +2063,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Défense & armées"
+    "sous_theme": "Défense & armées",
+    "effets": []
   },
   {
     "id": "philippe-defense-002",
@@ -1929,7 +2085,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Défense & armées"
+    "sous_theme": "Défense & armées",
+    "effets": []
   },
   {
     "id": "philippe-defense-003",
@@ -1950,7 +2107,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Défense & armées"
+    "sous_theme": "Défense & armées",
+    "effets": []
   },
   {
     "id": "philippe-defense-004",
@@ -1971,7 +2129,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Défense & armées"
+    "sous_theme": "Défense & armées",
+    "effets": []
   },
   {
     "id": "philippe-defense-005",
@@ -1992,6 +2151,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Défense & armées"
+    "sous_theme": "Défense & armées",
+    "effets": []
   }
 ]

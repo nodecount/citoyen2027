@@ -1,0 +1,173 @@
+[
+  {
+    "theme": "education-jeunesse",
+    "groupe": 0,
+    "empreinte": "e511e8a3a7efd9e0",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 16,
+    "avec_effets": 1,
+    "sans_effet": 13,
+    "rejetees": [
+      {
+        "id": "retailleau-education-jeunesse-003",
+        "raison": "relecture : Le relèvement du plafond ne bénéficie qu'aux salariés dont l'employeur verse une participation garde d'enfant ; cibler tous les salariés avec enfant élargit le périmètre et suppose un gain effectif non établi par le texte."
+      },
+      {
+        "id": "retailleau-education-jeunesse-004",
+        "raison": "relecture : L'accès prioritaire au logement social n'est pas un accès à des services au sens d'une grandeur clairement fondée ; l'effet sur le logement (coût/accès) est supposé, et le texte ne garantit pas de gain concret pour les professionnels."
+      }
+    ],
+    "cout_reference_usd": 0.0444,
+    "appels": 2
+  },
+  {
+    "theme": "environnement",
+    "groupe": 0,
+    "empreinte": "1554f3dffa5f255f",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 2,
+    "sans_effet": 22,
+    "rejetees": [
+      {
+        "id": "retailleau-envi-003",
+        "raison": "relecture : Il s'agit d'un simple objectif (« objectif -5 % à -15 % ») dépendant d'un mécanisme supposé (nucléaire, marché), pas d'une baisse établie de la facture."
+      }
+    ],
+    "cout_reference_usd": 0.0435,
+    "appels": 2
+  },
+  {
+    "theme": "finances-publiques",
+    "groupe": 0,
+    "empreinte": "8cec29cb79b71346",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 13,
+    "avec_effets": 1,
+    "sans_effet": 11,
+    "rejetees": [
+      {
+        "id": "retailleau-finances-publiques-009",
+        "raison": "relecture : Le périmètre est élargi : le texte vise les salariés qui font des heures supplémentaires au-delà de 35 h, pas tous les salariés. De plus, l'effet sur le revenu disponible suppose que l'exonération de cotisations se traduit par un gain net, ce que le texte ne dit pas de façon certaine."
+      }
+    ],
+    "cout_reference_usd": 0.0375,
+    "appels": 2
+  },
+  {
+    "theme": "gouvernance-republique",
+    "groupe": 0,
+    "empreinte": "2453c4463d2c27cd",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 12,
+    "avec_effets": 0,
+    "sans_effet": 12,
+    "rejetees": [],
+    "cout_reference_usd": 0.0234,
+    "appels": 1
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 0,
+    "empreinte": "339fa5ccfaf1e364",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 13,
+    "avec_effets": 1,
+    "sans_effet": 12,
+    "rejetees": [],
+    "cout_reference_usd": 0.0333,
+    "appels": 2
+  },
+  {
+    "theme": "reformes-etat",
+    "groupe": 0,
+    "empreinte": "18ca6a36c7d0d18f",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0168,
+    "appels": 1
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "295af0a5a2431dd9",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 19,
+    "avec_effets": 2,
+    "sans_effet": 16,
+    "rejetees": [
+      {
+        "id": "retailleau-retraites-travail-009",
+        "raison": "relecture : La cotisation de 1 % finance une retraite par capitalisation (épargne future), donc le sens sur le revenu disponible est discutable et l'effet dépend d'un mécanisme non dit (le texte ne précise pas si c'est une cotisation additionnelle ou substituée) ; il devrait être indéterminé."
+      }
+    ],
+    "cout_reference_usd": 0.0435,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 0,
+    "empreinte": "9c35b2fd5aa75754",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 3,
+    "sans_effet": 16,
+    "rejetees": [
+      {
+        "id": "retailleau-social-solidarite-005",
+        "raison": "relecture : Le texte vise les familles avec un troisième enfant mineur, mais la cible « au moins un enfant » élargit le périmètre."
+      },
+      {
+        "id": "retailleau-social-solidarite-006",
+        "raison": "relecture : Le texte ne mentionne les intérêts d'emprunt que pour les familles avec emprunt immobilier ; la cible « au moins un enfant » omet la condition d'emprunt, et le volet de recentrage du logement social n'est pas pris en compte (image incomplète)."
+      },
+      {
+        "id": "retailleau-social-solidarite-007",
+        "raison": "relecture : Le texte ne précise pas que le bénéfice est réservé aux salariés (rémunération antérieure), et le gain de revenu n'est pas sûr face à la perte de salaire pendant le congé ; cible salarie non fondée."
+      },
+      {
+        "id": "retailleau-social-solidarite-010",
+        "raison": "relecture : Le texte vise aussi les moins de 40 ans (100 000 €) ; ne retenir que moins de 30 ans donne une image partielle."
+      },
+      {
+        "id": "retailleau-social-solidarite-020",
+        "raison": "relecture : Le texte concerne les emprunteurs immobiliers ; la cible « au moins un enfant » sans condition d'emprunt élargit le périmètre."
+      },
+      {
+        "id": "retailleau-social-solidarite-025",
+        "raison": "relecture : Le texte vise aussi les moins de 40 ans (100 000 €) ; ne retenir que moins de 30 ans donne une image partielle."
+      }
+    ],
+    "cout_reference_usd": 0.0966,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 1,
+    "empreinte": "f67f51db5fac9d37",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 7,
+    "avec_effets": 2,
+    "sans_effet": 4,
+    "rejetees": [
+      {
+        "id": "retailleau-social-solidarite-026",
+        "raison": "relecture : Le texte vise « ceux qui travaillent » et les familles avec enfant, mais l'effet sur les actifs est listé sans nuance, alors que recentrer l'accès pour ces publics implique aussi une baisse pour les autres (image trompeuse), et le périmètre statut_professionnel (salarié, indépendant, fonctionnaire) est une interprétation de « ceux qui travaillent »."
+      }
+    ],
+    "cout_reference_usd": 0.0248,
+    "appels": 2
+  }
+]

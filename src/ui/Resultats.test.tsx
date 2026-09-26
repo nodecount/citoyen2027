@@ -20,16 +20,18 @@ const PROFIL: Profil = {
 // Rendu de bout en bout avec les VRAIES données de chaque base : le même moteur et la même interface doivent
 // fonctionner quelle que soit la base, avec ses propres thèmes.
 describe("Résultats sur les données réelles", () => {
-  it("base « agregateurs » : thèmes du comparateur, sources secondaires citées, jamais de badge inventé", () => {
+  it("base « agregateurs » : thèmes du comparateur, sources secondaires citées, badges seulement s'ils sont expliqués", () => {
     const rendu = renderToStaticMarkup(<Resultats profil={PROFIL} base={chargerBase("agregateurs")} />);
     expect(rendu).toContain("Finances publiques");
     expect(rendu).toContain("Retraites &amp; Travail");
     expect(rendu).toContain("Fondation iFRAP · 2026");
-    expect(rendu).toContain("Cette base ne calcule pas de projection");
-    // Aucun badge à côté d'un nom de candidat (la légende, elle, décrit les niveaux : on ne regarde que les candidats).
-    expect(rendu).not.toMatch(/candidat-nom">[^<]+<\/span><span class="niveau/);
+    expect(rendu).toContain("sources secondaires");
     expect(rendu).toContain("Pas de projection");
     expect(rendu).not.toContain("Mes impôts");
+    // Un badge n'apparaît jamais sans le détail « Pourquoi cet indicateur ? » qui cite les extraits qui le fondent.
+    const badges = (rendu.match(/candidat-nom">[^<]+<\/span><span class="niveau/g) ?? []).length;
+    const explications = (rendu.match(/Pourquoi cet indicateur/g) ?? []).length;
+    if (badges > 0) expect(explications).toBeGreaterThan(0);
   });
 
   it("base « officielle » : ses propres thèmes, sans ceux du comparateur", () => {

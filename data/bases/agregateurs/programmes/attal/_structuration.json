@@ -1,0 +1,129 @@
+[
+  {
+    "theme": "education-jeunesse",
+    "groupe": 0,
+    "empreinte": "1e2890fd41259afe",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 3,
+    "avec_effets": 0,
+    "sans_effet": 3,
+    "rejetees": [],
+    "cout_reference_usd": 0.0169,
+    "appels": 1
+  },
+  {
+    "theme": "environnement",
+    "groupe": 0,
+    "empreinte": "0b61bc9462e25287",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0162,
+    "appels": 1
+  },
+  {
+    "theme": "finances-publiques",
+    "groupe": 0,
+    "empreinte": "ef70ffa95c0ad2a7",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 13,
+    "avec_effets": 2,
+    "sans_effet": 10,
+    "rejetees": [
+      {
+        "id": "attal-finances-publiques-011",
+        "raison": "relecture : Les cibles sont vides alors que le texte vise explicitement les classes moyennes ; l'effet est appliqué à tous, ce qui élargit le périmètre."
+      }
+    ],
+    "cout_reference_usd": 0.0369,
+    "appels": 2
+  },
+  {
+    "theme": "gouvernance-republique",
+    "groupe": 0,
+    "empreinte": "c1f4a745f4b78264",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0163,
+    "appels": 1
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 0,
+    "empreinte": "f254ef47939ea4f2",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 7,
+    "avec_effets": 2,
+    "sans_effet": 5,
+    "rejetees": [],
+    "cout_reference_usd": 0.0351,
+    "appels": 2
+  },
+  {
+    "theme": "reformes-etat",
+    "groupe": 0,
+    "empreinte": "9ebd69dda85f69fc",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0166,
+    "appels": 1
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "6bfe424cab07e7a5",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 8,
+    "avec_effets": 2,
+    "sans_effet": 4,
+    "rejetees": [
+      {
+        "id": "attal-retraites-travail-001",
+        "raison": "relecture : Le texte ne nomme pas les salariés (les heures supplémentaires peuvent concerner d'autres statuts, ex. agents publics) et ne précise pas qui en bénéficie; le périmètre est extrapolé."
+      },
+      {
+        "id": "attal-retraites-travail-008",
+        "raison": "relecture : La dotation de 1 000 € est versée à l'enfant à la naissance (cible « enfants à charge » = parents, pas l'enfant) et placée dans un fonds jusqu'à la retraite; l'effet patrimoine pour le foyer est mal ciblé, et la mesure vise aussi l'avantage retraite futur."
+      }
+    ],
+    "cout_reference_usd": 0.0388,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 0,
+    "empreinte": "1b2318eeb14b7151",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 4,
+    "avec_effets": 1,
+    "sans_effet": 1,
+    "rejetees": [
+      {
+        "id": "attal-social-solidarite-001",
+        "raison": "relecture : Le texte dit « durcir et réformer » sans préciser les règles ; une baisse de protection sociale pour les sans-emploi est supposée (le périmètre « sans_emploi » englobe aussi des personnes non indemnisées) et le sens réel est indéterminé."
+      },
+      {
+        "id": "attal-social-solidarite-002",
+        "raison": "relecture : Les cibles sont vides alors que le texte vise les bénéficiaires de prestations sociales hors petites retraites, et l'effet omet l'exception explicitement épargnée, ce qui donne une image trompeuse."
+      }
+    ],
+    "cout_reference_usd": 0.0331,
+    "appels": 2
+  }
+]

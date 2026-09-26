@@ -1,0 +1,109 @@
+[
+  {
+    "theme": "education-jeunesse",
+    "groupe": 0,
+    "empreinte": "298741f73e9bdc5c",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 3,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [
+      {
+        "id": "tondelier-education-jeunesse-001",
+        "raison": "relecture : La cible « statut_professionnel: fonctionnaire » n'est pas nommée dans le texte, qui vise seulement les enseignants, et elle peut élargir le périmètre à tous les fonctionnaires."
+      }
+    ],
+    "cout_reference_usd": 0.0307,
+    "appels": 2
+  },
+  {
+    "theme": "environnement",
+    "groupe": 0,
+    "empreinte": "c7721ea983001e62",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 21,
+    "avec_effets": 0,
+    "sans_effet": 20,
+    "rejetees": [
+      {
+        "id": "tondelier-envi-021",
+        "raison": "relecture : Le texte ne précise pas que le congé vise les salariés (périmètre supposé, il pourrait couvrir d'autres actifs) et la dimension « droits_et_libertés » est vague ; l'effet concret (jours de congé/temps libre) n'est pas explicité."
+      }
+    ],
+    "cout_reference_usd": 0.0355,
+    "appels": 2
+  },
+  {
+    "theme": "finances-publiques",
+    "groupe": 0,
+    "empreinte": "768bc8a2a01e6470",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 9,
+    "avec_effets": 1,
+    "sans_effet": 7,
+    "rejetees": [
+      {
+        "id": "tondelier-finances-publiques-004",
+        "raison": "relecture : La cible tranche_patrimoine « plus_1_3m » élargit le périmètre : le texte ne vise que les fortunes supérieures à 100 millions d'euros, pas toutes les fortunes au-dessus de 1,3 M€."
+      }
+    ],
+    "cout_reference_usd": 0.0393,
+    "appels": 2
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "9bdd9f627ef0d68f",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 15,
+    "avec_effets": 2,
+    "sans_effet": 12,
+    "rejetees": [
+      {
+        "id": "tondelier-retraites-travail-013",
+        "raison": "relecture : Le périmètre est élargi : la cible « salarie » englobe tous les salariés alors que le texte ne vise que les personnes rémunérées au SMIC."
+      }
+    ],
+    "cout_reference_usd": 0.0422,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 0,
+    "empreinte": "74c9a4e9a3c8cfc4",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 3,
+    "sans_effet": 20,
+    "rejetees": [
+      {
+        "id": "tondelier-social-solidarite-008",
+        "raison": "relecture : Le texte vise les bénéficiaires du minimum vieillesse, pas tous les retraités ; cibler « retraite » élargit le périmètre."
+      },
+      {
+        "id": "tondelier-social-solidarite-011",
+        "raison": "relecture : Le critère « retraite » seul est plus large que les seuls bénéficiaires de petites retraites ; les cibles combinées peuvent élargir le périmètre, et « améliorer » ne précise pas clairement le sens sur le revenu."
+      }
+    ],
+    "cout_reference_usd": 0.0401,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 1,
+    "empreinte": "fc7f40ac2d9e97c9",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 11,
+    "avec_effets": 1,
+    "sans_effet": 10,
+    "rejetees": [],
+    "cout_reference_usd": 0.0193,
+    "appels": 2
+  }
+]

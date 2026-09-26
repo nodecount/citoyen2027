@@ -1,0 +1,265 @@
+[
+  {
+    "theme": "education-jeunesse",
+    "groupe": 0,
+    "empreinte": "f87ec662ebc5da67",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 2,
+    "sans_effet": 20,
+    "rejetees": [
+      {
+        "id": "melenchon-education-jeunesse-003",
+        "raison": "relecture : Le texte ne vise pas tous les foyers avec au moins un enfant à charge (places en crèche pour jeunes enfants) : périmètre élargi, l'âge des enfants n'étant pas précisé dans la cible."
+      },
+      {
+        "id": "melenchon-education-jeunesse-005",
+        "raison": "relecture : La cible « enfants_a_charge au_moins_un » élargit le périmètre aux parents de tout enfant, alors que le texte ne vise que les parents d'enfants en crèche publique."
+      },
+      {
+        "id": "melenchon-education-jeunesse-015",
+        "raison": "relecture : Le texte parle de négociation sur les grilles et de fin du Pacte enseignant (perte de rémunération possible pour certains), et cible « fonctionnaire » élargit aux non-enseignants ; image et périmètre non fidèles."
+      }
+    ],
+    "cout_reference_usd": 0.0457,
+    "appels": 2
+  },
+  {
+    "theme": "education-jeunesse",
+    "groupe": 1,
+    "empreinte": "54926bcaac07d676",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 11,
+    "avec_effets": 4,
+    "sans_effet": 6,
+    "rejetees": [
+      {
+        "id": "melenchon-education-jeunesse-027",
+        "raison": "relecture : La cible 'etudiant' seule est un périmètre élargi : le texte vise les étudiants et apprentis mineurs sous condition de ressources et éloignés, et l'apprenti n'est pas couvert par le statut 'etudiant'."
+      }
+    ],
+    "cout_reference_usd": 0.0325,
+    "appels": 2
+  },
+  {
+    "theme": "environnement",
+    "groupe": 0,
+    "empreinte": "30abf908befaaa5e",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 21,
+    "avec_effets": 1,
+    "sans_effet": 20,
+    "rejetees": [],
+    "cout_reference_usd": 0.0389,
+    "appels": 2
+  },
+  {
+    "theme": "finances-publiques",
+    "groupe": 0,
+    "empreinte": "63a80d5b49296995",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 3,
+    "sans_effet": 19,
+    "rejetees": [
+      {
+        "id": "melenchon-finances-publiques-007",
+        "raison": "relecture : Le texte ne vise que les salariés d'entreprises versant des dividendes ou aidées par l'État, pas tous les salariés ; le périmètre est élargi et l'effet sur l'emploi repose sur un mécanisme supposé."
+      },
+      {
+        "id": "melenchon-finances-publiques-011",
+        "raison": "relecture : Restructurer les emprunts n'implique pas explicitement une hausse du revenu disponible (allègement de mensualités possible mais allongement de durée/coût total incertain) ; le sens devrait être indéterminé."
+      },
+      {
+        "id": "melenchon-finances-publiques-022",
+        "raison": "relecture : La cible tranche_patrimoine « plus_1_3m » élargit le périmètre : le texte ne vise que les patrimoines supérieurs à 100 millions d'euros."
+      }
+    ],
+    "cout_reference_usd": 0.0529,
+    "appels": 2
+  },
+  {
+    "theme": "finances-publiques",
+    "groupe": 1,
+    "empreinte": "d2b1428814c37442",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 15,
+    "avec_effets": 2,
+    "sans_effet": 13,
+    "rejetees": [],
+    "cout_reference_usd": 0.0253,
+    "appels": 2
+  },
+  {
+    "theme": "gouvernance-republique",
+    "groupe": 0,
+    "empreinte": "8e923721a6263ef1",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 1,
+    "sans_effet": 24,
+    "rejetees": [],
+    "cout_reference_usd": 0.0409,
+    "appels": 2
+  },
+  {
+    "theme": "gouvernance-republique",
+    "groupe": 1,
+    "empreinte": "11e6ee9527f40ace",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 12,
+    "avec_effets": 1,
+    "sans_effet": 11,
+    "rejetees": [],
+    "cout_reference_usd": 0.0153,
+    "appels": 2
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 0,
+    "empreinte": "efebe1332f41a35e",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 2,
+    "sans_effet": 22,
+    "rejetees": [
+      {
+        "id": "melenchon-interieur-justice-004",
+        "raison": "relecture : Cibles vides (aucun public défini, alors que le texte vise les personnes engagées dans un divorce) et dimension « cout_de_la_vie » mal choisie pour la gratuité d'une procédure judiciaire ponctuelle."
+      }
+    ],
+    "cout_reference_usd": 0.0465,
+    "appels": 2
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 1,
+    "empreinte": "d8d43c8af8620900",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 16,
+    "avec_effets": 2,
+    "sans_effet": 14,
+    "rejetees": [],
+    "cout_reference_usd": 0.0192,
+    "appels": 2
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "915e76c4d122d910",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 5,
+    "sans_effet": 17,
+    "rejetees": [
+      {
+        "id": "melenchon-retraites-travail-006",
+        "raison": "relecture : Le texte dit seulement qu'on « pourra se voir proposer » un emploi (simple possibilité) ; une hausse de l'emploi pour tous les chômeurs de longue durée n'est pas garantie, et la cible statut sans_emploi est redondante."
+      },
+      {
+        "id": "melenchon-retraites-travail-007",
+        "raison": "relecture : La majoration des heures supplémentaires ne profite qu'à ceux qui en font, et le retour aux 35h peut réduire ces heures ; la hausse du revenu disponible de tous les salariés est un effet supposé, sens au mieux indéterminé."
+      },
+      {
+        "id": "melenchon-retraites-travail-025",
+        "raison": "relecture : Les « petites retraites » ne sont pas définies par le texte ; les tranches de revenus moins_1200 et 1200_2000 ajoutent un périmètre non nommé (le SMIC à 1 600 € dépasse la tranche 1200-2000 au-delà de laquelle des retraités ne sont pas visés)."
+      }
+    ],
+    "cout_reference_usd": 0.0546,
+    "appels": 2
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 1,
+    "empreinte": "a6e5da75e0f9df27",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 7,
+    "avec_effets": 0,
+    "sans_effet": 6,
+    "rejetees": [
+      {
+        "id": "melenchon-retraites-travail-026",
+        "raison": "relecture : Le texte ne dit pas que l'indexation sur les salaires augmente le revenu des retraités (dépend de l'évolution relative des salaires et de l'indexation actuelle), donc le sens « hausse » est supposé et devrait être indéterminé."
+      }
+    ],
+    "cout_reference_usd": 0.0184,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 0,
+    "empreinte": "966b06d740814532",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 8,
+    "sans_effet": 14,
+    "rejetees": [
+      {
+        "id": "melenchon-social-solidarite-001",
+        "raison": "relecture : Le texte vise les bénéficiaires du minimum vieillesse, pas tous les retraités : cible élargie."
+      },
+      {
+        "id": "melenchon-social-solidarite-008",
+        "raison": "relecture : Le texte vise les chômeurs indemnisés à la fin d'un contrat, pas tous les sans-emploi ; cible élargie."
+      },
+      {
+        "id": "melenchon-social-solidarite-024",
+        "raison": "relecture : Intégrer les mutuelles à la Sécu peut changer les cotisations ; le texte ne dit pas que le coût de la vie baisse pour tous, effet supposé."
+      }
+    ],
+    "cout_reference_usd": 0.0584,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 1,
+    "empreinte": "9d03bb337b7ac628",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 1,
+    "sans_effet": 22,
+    "rejetees": [
+      {
+        "id": "melenchon-social-solidarite-040",
+        "raison": "relecture : La mesure vise les locataires menacés d'expulsion, pas tous les locataires ; le périmètre est élargi, et la dimension « droits et libertés » est un effet de principe plutôt qu'une grandeur clairement fondée."
+      },
+      {
+        "id": "melenchon-social-solidarite-044",
+        "raison": "relecture : Le texte dit encadrer les loyers partout mais à la baisse seulement dans les grandes villes ; une baisse du coût de la vie pour tous les locataires élargit le périmètre et donne une image trompeuse."
+      }
+    ],
+    "cout_reference_usd": 0.0333,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 2,
+    "empreinte": "16b6ae54edc02fd3",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 7,
+    "avec_effets": 3,
+    "sans_effet": 3,
+    "rejetees": [
+      {
+        "id": "melenchon-social-solidarite-056",
+        "raison": "relecture : L'aide à la réparation et le soutien aux garages solidaires sont censés garantir l'accès aux réseaux ; le texte ne dit pas que le coût de la vie baisse pour les habitants, et la cible est élargie à tous les habitants du territoire au lieu des seuls usagers de véhicules ou bénéficiaires."
+      }
+    ],
+    "cout_reference_usd": 0.0211,
+    "appels": 2
+  }
+]

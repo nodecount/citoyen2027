@@ -1,0 +1,41 @@
+[
+  {
+    "theme": "finances-publiques",
+    "groupe": 0,
+    "empreinte": "429fbe002222c102",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0164,
+    "appels": 1
+  },
+  {
+    "theme": "gouvernance-republique",
+    "groupe": 0,
+    "empreinte": "ad88344d33bd6d0d",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 5,
+    "avec_effets": 0,
+    "sans_effet": 5,
+    "rejetees": [],
+    "cout_reference_usd": 0.0182,
+    "appels": 1
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 0,
+    "empreinte": "1fcffe70ffe35cba",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0163,
+    "appels": 1
+  }
+]

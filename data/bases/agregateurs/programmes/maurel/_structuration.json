@@ -1,0 +1,33 @@
+[
+  {
+    "theme": "environnement",
+    "groupe": 0,
+    "empreinte": "b318b35f6e49a090",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 4,
+    "avec_effets": 2,
+    "sans_effet": 1,
+    "rejetees": [
+      {
+        "id": "maurel-envi-002",
+        "raison": "relecture : Le plafonnement des marges des distributeurs et raffineurs est un mécanisme supposé pour faire baisser le prix à la pompe (effet macroéconomique/de marché non affirmé par le texte, qui ne dit que « lutter contre »)."
+      }
+    ],
+    "cout_reference_usd": 0.032,
+    "appels": 2
+  },
+  {
+    "theme": "finances-publiques",
+    "groupe": 0,
+    "empreinte": "2e66425b3a6abca1",
+    "date": "2026-09-26",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0166,
+    "appels": 1
+  }
+]
