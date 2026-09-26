@@ -103,55 +103,63 @@
   {
     "theme": "immigration",
     "date": "2026-09-26",
-    "resultat": "aucune_mesure",
-    "nombre_propositions": 0,
+    "resultat": "propositions_generees",
+    "nombre_propositions": 7,
     "arret": "end_turn",
-    "duree_ms": 5502,
-    "jetons_entree": 94784,
-    "jetons_sortie": 361,
+    "duree_ms": 32210,
+    "jetons_entree": 103579,
+    "jetons_sortie": 3334,
     "requetes": [],
     "urls_lues": [
       "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf",
       "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf",
       "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf",
-      "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf"
+      "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf",
+      "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
+      "https://republicains.fr/actualites/2026/08/02/lespace-schengen-doit-etre-reserve-aux-europeens/"
     ],
     "urls_echouees": [],
     "ecartees": 0,
-    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-26T01-46-32-265Z-extraction-retailleau-immigration.json",
-    "empreinte_corpus": "6c34d244bb341cf8",
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-26T09-50-05-384Z-extraction-retailleau-immigration.json",
+    "empreinte_corpus": "773d4f3db47c9807",
     "empreintes_documents": {
       "produire-plus": "8c6de3df049ef33d",
       "travail-gagnant": "90cbb04f4a7324dc",
       "famille": "69a63c8f8b24cffd",
-      "logement": "c72d13aa580bdfec"
+      "logement": "c72d13aa580bdfec",
+      "interview-cour-supreme": "0da5039a5f99cfbb",
+      "schengen": "f495b6539733c36a"
     }
   },
   {
     "theme": "libertes-fondamentales",
     "date": "2026-09-26",
-    "resultat": "aucune_mesure",
-    "nombre_propositions": 0,
+    "resultat": "propositions_generees",
+    "nombre_propositions": 4,
     "arret": "end_turn",
-    "duree_ms": 3473,
-    "jetons_entree": 95056,
-    "jetons_sortie": 151,
+    "duree_ms": 23783,
+    "jetons_entree": 103861,
+    "jetons_sortie": 2552,
     "requetes": [],
     "urls_lues": [
       "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf",
       "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf",
       "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf",
-      "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf"
+      "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf",
+      "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
+      "https://republicains.fr/actualites/2026/08/02/lespace-schengen-doit-etre-reserve-aux-europeens/"
     ],
     "urls_echouees": [],
     "ecartees": 0,
-    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-26T01-47-22-492Z-extraction-retailleau-libertes-fondamentales.json",
-    "empreinte_corpus": "6c34d244bb341cf8",
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-26T09-50-59-241Z-extraction-retailleau-libertes-fondamentales.json",
+    "empreinte_corpus": "773d4f3db47c9807",
     "empreintes_documents": {
       "produire-plus": "8c6de3df049ef33d",
       "travail-gagnant": "90cbb04f4a7324dc",
       "famille": "69a63c8f8b24cffd",
-      "logement": "c72d13aa580bdfec"
+      "logement": "c72d13aa580bdfec",
+      "interview-cour-supreme": "0da5039a5f99cfbb",
+      "schengen": "f495b6539733c36a"
     }
   },
   {
@@ -259,27 +267,31 @@
     "theme": "securite",
     "date": "2026-09-26",
     "resultat": "propositions_generees",
-    "nombre_propositions": 2,
+    "nombre_propositions": 6,
     "arret": "end_turn",
-    "duree_ms": 20051,
-    "jetons_entree": 94781,
-    "jetons_sortie": 1945,
+    "duree_ms": 41990,
+    "jetons_entree": 103476,
+    "jetons_sortie": 4429,
     "requetes": [],
     "urls_lues": [
       "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf",
       "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf",
       "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf",
-      "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf"
+      "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf",
+      "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
+      "https://republicains.fr/actualites/2026/08/02/lespace-schengen-doit-etre-reserve-aux-europeens/"
     ],
     "urls_echouees": [],
     "ecartees": 0,
-    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-26T01-46-21-946Z-extraction-retailleau-securite.json",
-    "empreinte_corpus": "6c34d244bb341cf8",
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-26T09-49-00-882Z-extraction-retailleau-securite.json",
+    "empreinte_corpus": "773d4f3db47c9807",
     "empreintes_documents": {
       "produire-plus": "8c6de3df049ef33d",
       "travail-gagnant": "90cbb04f4a7324dc",
       "famille": "69a63c8f8b24cffd",
-      "logement": "c72d13aa580bdfec"
+      "logement": "c72d13aa580bdfec",
+      "interview-cour-supreme": "0da5039a5f99cfbb",
+      "schengen": "f495b6539733c36a"
     }
   },
   {

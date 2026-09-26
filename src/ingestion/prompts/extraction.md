@@ -93,6 +93,15 @@ le texte dit expressément que des particuliers en bénéficient ou en supporten
 JAMAIS par déduction à un statut (`independant`, `salarie`…) ou à un revenu : écris la mesure avec
 `effets: []`. La fiche reste utile pour le détail sourcé.
 
+**`securite_personnelle` et `droits_et_libertes`** : n'écris un effet que si la mesure **modifie directement**
+une protection ou un droit **dont le citoyen ciblé est lui-même titulaire** (ex : un droit accordé ou retiré à
+une catégorie de personnes précisément désignée). N'en écris JAMAIS quand l'effet passerait par un mécanisme
+supposé : dissuasion (peines minimales, durcissement des sanctions), déclaration de principe (« droit à la
+sécurité » inscrit dans la Constitution), ou changement du fonctionnement des institutions (référendum,
+Conseil constitutionnel, hiérarchie des normes) : écris alors `effets: []`. Une mesure qui vise des personnes
+précisément désignées (condamnés, personnes sous OQTF…) porte sur ces personnes seulement, pas sur « tout le
+monde ».
+
 Exemples fictifs, sans lien avec un candidat réel :
 - « Contribution de 3 % sur la part des revenus au-delà de 250 000 € par an » → un effet ; le seuil
   (≈ 20 800 €/mois) tombe dans la tranche `plus_5000` sans coïncider avec sa borne : `cibles` =
