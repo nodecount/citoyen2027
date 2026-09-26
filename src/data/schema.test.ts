@@ -74,6 +74,13 @@ describe("profils-schema.json", () => {
     expect(ids.sort()).toEqual([...EXPECTED_CHAMP_IDS].sort());
   });
 
+  it("chaque option d'un champ à choix a un libellé lisible, et seulement celles-là", () => {
+    for (const champ of profilSchema.filter((c) => c.type === "enum")) {
+      expect(Object.keys(champ.libelles ?? {}).sort(), champ.id).toEqual([...(champ.options ?? [])].sort());
+      for (const libelle of Object.values(champ.libelles ?? {})) expect(libelle.trim().length).toBeGreaterThan(0);
+    }
+  });
+
   it("chaque champ a un type valide et des options ssi type === enum", () => {
     for (const champ of profilSchema) {
       expect(["enum", "number", "text"]).toContain(champ.type);

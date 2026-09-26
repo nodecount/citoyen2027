@@ -81,6 +81,8 @@ export interface ChampProfil {
   label: string;
   type: "enum" | "number" | "text";
   options?: string[];
+  // Libellé lisible de chaque option (le formulaire n'affiche jamais un identifiant technique).
+  libelles?: Record<string, string>;
 }
 
 export interface Profil {

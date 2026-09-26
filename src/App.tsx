@@ -1,20 +1,20 @@
 import { useState } from "react";
-import Accueil from "./ui/Accueil";
+import PageThemes from "./ui/PageThemes";
 import ProfilForm from "./ui/ProfilForm";
-import Resultats from "./ui/Resultats";
 import Monitoring from "./ui/Monitoring";
 import { SelecteurBase } from "./ui/SelecteurBase";
 import { baseInitiale, retenirBase } from "./ui/choixBase";
 import { chargerBase, listerBases } from "./data/bases";
-import type { Profil } from "./types";
+import type { ProfilPartiel } from "./profil";
 
-type Ecran = "accueil" | "formulaire" | "resultats";
+type Ecran = "themes" | "formulaire";
 
 const BASES = listerBases();
 
 export default function App() {
-  const [ecran, setEcran] = useState<Ecran>("accueil");
-  const [profil, setProfil] = useState<Profil | null>(null);
+  const [ecran, setEcran] = useState<Ecran>("themes");
+  // Les réponses du visiteur restent en mémoire de la page : ni envoyées, ni stockées.
+  const [profil, setProfil] = useState<ProfilPartiel>({});
   const [baseId, setBaseId] = useState<string>(() => baseInitiale(BASES).id);
   const base = chargerBase(baseId);
 
@@ -36,31 +36,22 @@ export default function App() {
 
   if (ecran === "formulaire") {
     return (
-      <>
-        {selecteur}
-        <ProfilForm
-          onValider={(p) => {
-            setProfil(p);
-            setEcran("resultats");
-          }}
-        />
-      </>
-    );
-  }
-
-  if (ecran === "resultats" && profil) {
-    return (
-      <>
-        {selecteur}
-        <Resultats profil={profil} base={base} />
-      </>
+      <ProfilForm
+        profilInitial={profil}
+        onValider={(p) => {
+          setProfil(p);
+          setEcran("themes");
+          window.scrollTo(0, 0);
+        }}
+        onAnnuler={() => setEcran("themes")}
+      />
     );
   }
 
   return (
     <>
       {selecteur}
-      <Accueil base={base} onCommencer={() => setEcran("formulaire")} />
+      <PageThemes base={base} profil={profil} onRenseigner={() => setEcran("formulaire")} onEffacer={() => setProfil({})} />
     </>
   );
 }

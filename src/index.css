@@ -204,59 +204,117 @@ article {
   color: var(--encre-douce);
 }
 
-.candidats {
+/* Portraits : une pastille à initiales, identique pour tous. Aucune couleur par candidat (elle évoquerait un
+   parti) ; la couleur ne sert qu'aux quatre niveaux de l'indicateur. */
+.portraits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.4rem;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  width: 6.2rem;
+  margin: 0;
+  padding: 0.5rem 0.25rem 0.55rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+.portrait:hover {
+  border-color: var(--filet);
+}
+
+.portrait--ouvert {
+  border-color: var(--encre);
+  background: var(--fond);
+}
+
+.pastille {
+  display: grid;
+  place-items: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  border: 2px solid var(--filet);
+  border-radius: 50%;
+  background: var(--fond);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.portrait--ouvert .pastille {
+  border-color: var(--encre);
+  background: var(--surface);
+}
+
+.portrait-nom {
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.portrait .niveau {
+  padding: 0.05rem 0.4rem;
+  font-size: 0.72rem;
+}
+
+.detail {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
   border-top: 1px solid var(--filet);
 }
 
-.candidats > li {
-  border-bottom: 1px solid var(--filet);
+.detail-titre {
+  margin: 0 0 0.5rem;
+  font-family: var(--serif);
+  font-size: 1.2rem;
 }
 
-.candidat-resume {
-  display: flex;
+.actions {
+  flex-direction: row !important;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem 0.75rem;
-  padding: 0.7rem 0;
-  cursor: pointer;
-  list-style: none;
+  gap: 0.6rem;
 }
 
-.candidat-resume::-webkit-details-marker {
-  display: none;
+.actions > button {
+  margin-top: 0.5rem;
 }
 
-.candidat-resume::before {
-  content: "";
-  flex: none;
-  width: 0.45rem;
-  height: 0.45rem;
-  border-right: 2px solid var(--encre-douce);
-  border-bottom: 2px solid var(--encre-douce);
-  transform: rotate(-45deg);
-  transition: transform 0.15s;
+button.secondaire {
+  border: 1px solid var(--filet);
+  background: none;
+  color: inherit;
 }
 
-.candidat[open] > .candidat-resume::before {
-  transform: rotate(45deg);
+.ma-situation {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--filet);
+  border-radius: 6px;
+  background: var(--surface);
+  font-size: 0.95rem;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .candidat-resume::before {
-    transition: none;
-  }
+.ma-situation p {
+  margin: 0 0 0.25rem;
 }
 
-.candidat-nom {
-  flex: 1;
-  min-width: 8rem;
-  font-size: 1.05rem;
-  font-weight: 600;
+.ma-situation .actions {
+  display: flex;
 }
-
 .niveau {
   display: inline-flex;
   align-items: center;
@@ -289,10 +347,6 @@ article {
   font-size: 0.85rem;
   font-style: italic;
   color: var(--encre-douce);
-}
-
-.candidat-corps {
-  padding: 0 0 1rem 1.25rem;
 }
 
 .synthese {

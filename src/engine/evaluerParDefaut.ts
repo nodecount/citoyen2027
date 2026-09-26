@@ -1,6 +1,7 @@
 import type { Profil, Proposition, Impact } from "../types";
 
-export function evaluerParDefaut(_profil: Profil, proposition: Proposition): Impact {
+// Le profil n'est pas utilisé : l'évaluation par défaut est générale. Un profil partiel est donc accepté.
+export function evaluerParDefaut(_profil: Partial<Profil>, proposition: Proposition): Impact {
   let explication = proposition.resume_factuel;
   if (proposition.chiffrage_disponible) {
     explication +=

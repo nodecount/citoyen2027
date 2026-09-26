@@ -1,11 +1,11 @@
 [
-  { "id": "statut_professionnel", "label": "Statut professionnel", "type": "enum", "options": ["salarie", "independant", "fonctionnaire", "retraite", "etudiant", "sans_emploi"] },
-  { "id": "tranche_revenus", "label": "Tranche de revenus mensuels nets", "type": "enum", "options": ["moins_1200", "1200_2000", "2000_3000", "3000_5000", "plus_5000"] },
-  { "id": "situation_familiale", "label": "Situation familiale", "type": "enum", "options": ["celibataire", "en_couple", "marie_pacse"] },
-  { "id": "nombre_enfants", "label": "Nombre d'enfants à charge", "type": "number" },
-  { "id": "logement", "label": "Statut de logement", "type": "enum", "options": ["locataire", "proprietaire", "heberge"] },
-  { "id": "secteur_activite", "label": "Secteur d'activité", "type": "text" },
-  { "id": "region", "label": "Région", "type": "text" },
-  { "id": "tranche_age", "label": "Tranche d'âge", "type": "enum", "options": ["moins_30", "30_49", "50_64", "65_plus"] },
-  { "id": "tranche_patrimoine", "label": "Tranche de patrimoine net", "type": "enum", "options": ["moins_100k", "100k_500k", "500k_1_3m", "plus_1_3m"] }
+  {"id":"statut_professionnel","label":"Statut professionnel","type":"enum","options":["salarie","independant","fonctionnaire","retraite","etudiant","sans_emploi"],"libelles":{"salarie":"Salarié(e)","independant":"Indépendant(e)","fonctionnaire":"Fonctionnaire","retraite":"Retraité(e)","etudiant":"Étudiant(e)","sans_emploi":"Sans emploi"}},
+  {"id":"tranche_revenus","label":"Tranche de revenus mensuels nets","type":"enum","options":["moins_1200","1200_2000","2000_3000","3000_5000","plus_5000"],"libelles":{"moins_1200":"Moins de 1 200 €","1200_2000":"1 200 à 2 000 €","2000_3000":"2 000 à 3 000 €","3000_5000":"3 000 à 5 000 €","plus_5000":"Plus de 5 000 €"}},
+  {"id":"situation_familiale","label":"Situation familiale","type":"enum","options":["celibataire","en_couple","marie_pacse"],"libelles":{"celibataire":"Célibataire","en_couple":"En couple","marie_pacse":"Marié(e) ou pacsé(e)"}},
+  {"id":"nombre_enfants","label":"Nombre d'enfants à charge","type":"number"},
+  {"id":"logement","label":"Statut de logement","type":"enum","options":["locataire","proprietaire","heberge"],"libelles":{"locataire":"Locataire","proprietaire":"Propriétaire","heberge":"Hébergé(e)"}},
+  {"id":"secteur_activite","label":"Secteur d'activité","type":"text"},
+  {"id":"region","label":"Région","type":"text"},
+  {"id":"tranche_age","label":"Tranche d'âge","type":"enum","options":["moins_30","30_49","50_64","65_plus"],"libelles":{"moins_30":"Moins de 30 ans","30_49":"30 à 49 ans","50_64":"50 à 64 ans","65_plus":"65 ans et plus"}},
+  {"id":"tranche_patrimoine","label":"Tranche de patrimoine net","type":"enum","options":["moins_100k","100k_500k","500k_1_3m","plus_1_3m"],"libelles":{"moins_100k":"Moins de 100 000 €","100k_500k":"100 000 à 500 000 €","500k_1_3m":"500 000 € à 1,3 M€","plus_1_3m":"Plus de 1,3 M€"}}
 ]

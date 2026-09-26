@@ -65,7 +65,7 @@ describe("construireCards", () => {
       PROFIL,
     );
     expect(cards[0].lignes.map((l) => l.meta.slug)).toEqual(["b", "m", "z"]);
-    expect(cards[0].lignes.map((l) => l.projection.niveau)).toEqual(["degradant", "ameliorant", "ameliorant"]);
+    expect(cards[0].lignes.map((l) => l.projection?.niveau)).toEqual(["degradant", "ameliorant", "ameliorant"]);
   });
 
   it("ne range un candidat que dans les thèmes où il a des mesures affichables, et nomme les autres comme absents", () => {
@@ -94,8 +94,41 @@ describe("construireCards", () => {
 
   it("calcule l'indicateur pour le profil, sans badge pour les mesures sans effets (anciennes données)", () => {
     const cards = construireCards(THEMES, [candidat("a", [prop("a", "fiscalite", undefined)])], PROFIL);
-    expect(cards[0].lignes[0].projection.niveau).toBeNull();
+    expect(cards[0].lignes[0].projection?.niveau).toBeNull();
     expect(cards[0].lignes[0].messagesSansBadge.length).toBeGreaterThan(0);
+  });
+
+  describe("tant que le visiteur n'a rien dit de lui", () => {
+    const candidats = [candidat("a", [prop("a", "fiscalite", [HAUSSE])])]; // effet sans cible : s'appliquerait à tout le monde
+
+    it("n'applique aucun effet : pas de projection, même pour un effet qui vise tout le monde", () => {
+      for (const profil of [null, {}, { region: "", tranche_age: "  " }]) {
+        const ligne = construireCards(THEMES, candidats, profil)[0].lignes[0];
+        expect(ligne.projection).toBeNull();
+        expect(ligne.messagesSansBadge).toEqual([]);
+      }
+    });
+
+    it("garde pourtant le candidat, sa synthèse, ses mesures et ses sources : seul l'indicateur manque", () => {
+      const ligne = construireCards(THEMES, candidats, null)[0].lignes[0];
+      expect(ligne.propositions).toHaveLength(1);
+      expect(ligne.sources).toEqual([{ texte: "a · 2026", url: "https://a.fr/p" }]);
+    });
+
+    it("calcule l'indicateur dès qu'une seule information est donnée, avec ce qu'on sait", () => {
+      const ligne = construireCards(THEMES, candidats, { tranche_age: "30_49" })[0].lignes[0];
+      expect(ligne.projection?.niveau).toBe("ameliorant");
+    });
+
+    it("s'affine : un effet ciblé sur un champ non répondu bloque le badge, puis se résout à la réponse", () => {
+      const cible = { ...HAUSSE, cibles: [{ champ: "logement", valeurs: ["locataire"] }] };
+      const ciblees = [candidat("a", [prop("a", "fiscalite", [cible])])];
+      const sansLogement = construireCards(THEMES, ciblees, { tranche_age: "30_49" })[0].lignes[0];
+      expect(sansLogement.projection?.niveau).toBeNull();
+      expect(sansLogement.messagesSansBadge.join(" ")).toContain("Statut de logement");
+      expect(construireCards(THEMES, ciblees, { logement: "locataire" })[0].lignes[0].projection?.niveau).toBe("ameliorant");
+      expect(construireCards(THEMES, ciblees, { logement: "proprietaire" })[0].lignes[0].projection?.niveau).toBe("non_concerne");
+    });
   });
 
   it("n'attache la synthèse que si elle couvre exactement les mesures actuelles du thème", () => {

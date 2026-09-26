@@ -1,13 +1,15 @@
 import { sourcesCitees, type SourceCitee } from "../citations";
 import type { CandidatCharge } from "../data/chargerCandidats";
 import { projeterTheme, type Projection } from "../engine/projection";
-import type { CandidatMeta, Profil, Proposition, SyntheseTheme, Theme } from "../types";
+import { aDesInformations, type ProfilPartiel } from "../profil";
+import type { CandidatMeta, Proposition, SyntheseTheme, Theme } from "../types";
 import { messagesSansBadge } from "./projection";
 
 export interface LigneCandidat {
   meta: CandidatMeta;
   propositions: Proposition[];
-  projection: Projection;
+  // Null tant que le visiteur n'a donné aucune information sur lui : aucun effet n'est alors appliqué.
+  projection: Projection | null;
   messagesSansBadge: string[];
   // Null tant qu'elle n'existe pas, ou si elle ne couvre plus exactement les mesures du thème
   // (mesures ajoutées ou changées depuis) : un texte périmé est pire que pas de texte.
@@ -34,8 +36,11 @@ function memesIdentifiants(a: string[], b: string[]): boolean {
 // Une card par thème (ordre du référentiel). Dans chaque card, les candidats sont rangés par ordre
 // alphabétique de slug — jamais selon leur indicateur — et seulement s'ils ont des mesures sur ce
 // thème. Aucun score global : chaque indicateur est propre à un thème.
-export function construireCards(themes: Theme[], candidats: CandidatCharge[], profil: Profil): CardTheme[] {
+// `profil` null, vide ou sans aucune réponse : on ne calcule rien (pas de projection) ; dès qu'une information est
+// donnée, l'indicateur est calculé avec ce qu'on sait, et s'affine à mesure que le visiteur répond.
+export function construireCards(themes: Theme[], candidats: CandidatCharge[], profil: ProfilPartiel | null): CardTheme[] {
   const parSlug = [...candidats].sort((a, b) => a.meta.slug.localeCompare(b.meta.slug));
+  const personnalise = aDesInformations(profil);
 
   return themes.map((theme) => {
     const lignes: LigneCandidat[] = [];
@@ -47,7 +52,7 @@ export function construireCards(themes: Theme[], candidats: CandidatCharge[], pr
         absents.push(candidat.meta);
         continue;
       }
-      const projection = projeterTheme(profil, propositions);
+      const projection = personnalise && profil ? projeterTheme(profil, propositions) : null;
       const synthese =
         candidat.syntheses.find(
           (s) =>
@@ -61,7 +66,7 @@ export function construireCards(themes: Theme[], candidats: CandidatCharge[], pr
         meta: candidat.meta,
         propositions,
         projection,
-        messagesSansBadge: messagesSansBadge(projection, propositions),
+        messagesSansBadge: projection ? messagesSansBadge(projection, propositions) : [],
         synthese,
         sources: sourcesCitees(propositions),
       });
