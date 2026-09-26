@@ -126,8 +126,11 @@ référence un thème de SA base.
 - **`officielle`** : documents officiels des candidats, alimentée par le pipeline d'ingestion par API
   (`src/ingestion/`, en pause à la date de la décision : crédit API à recharger). Extraits retrouvés mot pour mot,
   effets structurés, projection par thème.
-- **`agregateurs`** : reprise, sans modèle, de comparateurs indépendants (iFRAP, puis candidatspresidentielles2027.fr
-  via le navigateur). Sources **secondaires**, sans date par mesure (année = année de consultation), thèmes de la
+- **`agregateurs`** : reprise, sans modèle, de comparateurs indépendants. Aujourd'hui : iFRAP seul.
+  candidatspresidentielles2027.fr est **abandonné** (2026-09-26) : Cloudflare le bloque même dans un vrai navigateur
+  (« Sorry, you have been blocked »), on ne contourne pas ; ne réessayer qu'avec l'accord de son éditeur ou via un
+  dépôt public de ses données. Si plusieurs sources coexistent un jour, leurs propositions sont mises bout à bout
+  (chacune gardant sa source) ; le badge MIXTE n'apparaît alors que si les mesures portent des `effets` structurés. Sources **secondaires**, sans date par mesure (année = année de consultation), thèmes de la
   source (`npm run scrape:ifrap`, `src/scraping/` : une requête publique, aucun coût ; rejouable, remplace les propositions),
   **pas d'`effets`** donc pas de badge (le moteur affiche « pas de projection », jamais une devinette). Le
   porteur du projet a décidé de leur faire confiance ; le contenu reste attribué et lié à sa page d'origine. La
