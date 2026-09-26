@@ -1,0 +1,195 @@
+[
+  {
+    "titre": "Baisse de la TVA sur les véhicules électriques neufs",
+    "resume_factuel": "Position du parti Renaissance (convention de 2025) : passer la TVA sur les véhicules électriques neufs de 20 % à 5,5 % pendant 5 ans, en substitution partielle du dispositif actuel de prime à l'achat, avec application de critères d'écoconditionnalité. Après 5 ans, la TVA serait relevée sans surcoût, du fait de la baisse anticipée des coûts de production.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=62",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun montant chiffré de gain par véhicule n'est donné ; seule la baisse de taux (20% à 5,5%) est précisée.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "acheteurs de véhicules électriques neufs"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=62",
+        "extrait": "Comme la Norvège (pays avec le plus haut taux mondial de véhicules électriques dans son parc), nous proposons d’abaisser le taux de TVA des véhicules électriques à 5,5%"
+      }
+    ],
+    "id": "attal-fisc-001",
+    "candidat": "attal",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "TVA réduite pour les entreprises de réemploi et de réparation",
+    "resume_factuel": "Position du parti Renaissance (convention de 2025) : création d'un label « entreprise de seconde vie » pour les acteurs consacrant au moins 70 % de leur chiffre d'affaires au reconditionnement, à la réparation ou à la vente de produits remis à neuf, avec une TVA réduite à 5,5 % (contre 20 % normalement) sur leurs ventes et prestations, financée par un redéploiement des recettes de l'éco-contribution des filières DEEE et textile.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=80",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Coût fiscal net estimé à 350 M€/an (TVA réduite), compensé selon le texte par les recettes sociales et la baisse des déchets mis à la benne.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "consommateurs achetant des produits ou services de réparation/reconditionnement auprès d'entreprises labellisées"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=80",
+        "extrait": "La TVA sera réduite à 5,5 % sur les ventes et prestations de ces entreprises"
+      }
+    ],
+    "id": "attal-fisc-002",
+    "candidat": "attal",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Refonte de la fiscalité carbone des ménages",
+    "resume_factuel": "Position du parti Renaissance (convention de 2025) : explorer une refonte de la fiscalité carbone payée par les ménages, via deux pistes non arbitrées — un « compte épargne-carbone » où les taxes carbone déjà payées (chauffage, carburant) alimentent un compte non convertible en argent, utilisable pour l'isolation du logement, le remplacement d'une chaudière ou l'achat d'un véhicule zéro-émission, majoré pour les premiers déciles ; ou une taxe carbone rendue plus progressive selon les revenus et le lieu de vie. Aucun mécanisme n'est arrêté, les modalités restant à expérimenter.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=58",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage n'est donné pour ces deux pistes, présentées comme nécessitant des phases d'expertise et d'expérimentation.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "indetermine",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=58",
+        "extrait": "Depuis le gel de la taxe carbone après la crise des gilets jaunes, les ménages modestes continuent de supporter une part disproportionnée de la facture énergétique."
+      }
+    ],
+    "id": "attal-fisc-003",
+    "candidat": "attal",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Réorientation de la fiscalité de l'assurance-vie vers l'épargne longue",
+    "resume_factuel": "Position du parti Renaissance (convention de 2025) : baisser la fiscalité sur l'assurance-vie investie dans le long terme (unités de compte européennes bloquées 20 ans, avec un prélèvement forfaitaire unique divisé par deux à la sortie, soutien à l'assurance-vie eurocroissance) et, en parallèle, augmenter la fiscalité sur l'épargne de court terme, afin de mieux orienter l'épargne des Français vers le financement de long terme.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=17",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage des gains ou pertes fiscaux par épargnant n'est fourni.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "épargnants investissant en assurance-vie sur des unités de compte bloquées 20 ans"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=17",
+        "extrait": "la baisse de la fiscalité sur l’assurance vie investie dans le long terme (UC européenne bloquée sur 20 ans avec un PFU divisé par deux à la sortie"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "épargnants détenant de l'épargne à court terme"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=17",
+        "extrait": "la hausse de la fiscalité sur le court terme, le renforcement de la concurrence et de la portabilité"
+      }
+    ],
+    "id": "attal-fisc-004",
+    "candidat": "attal",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Suppression de la réduction d'impôt pour frais de scolarité",
+    "resume_factuel": "Position du parti Renaissance (convention de 2025) : dans le cadre de la finalisation de la réforme des bourses étudiantes sur critères sociaux, suppression de la réduction d'impôt au titre des frais de scolarité, dont l'efficacité n'est pas jugée avérée, afin de financer un système de bourses plus juste et plus généreux.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=43",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun montant chiffré de l'économie budgétaire ou de la perte pour les foyers concernés n'est fourni.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "foyers bénéficiant actuellement de la réduction d'impôt pour frais de scolarité d'un enfant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=43",
+        "extrait": "La suppression de la réduction d’impôts au titre des frais de scolarité, dont l’efficacité n’est pas attestée, pourra conforter le financement de ce nouveau système de bourse"
+      }
+    ],
+    "id": "attal-fisc-005",
+    "candidat": "attal",
+    "theme": "fiscalite"
+  }
+]

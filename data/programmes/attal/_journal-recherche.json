@@ -1,0 +1,39 @@
+[
+  {
+    "theme": "fiscalite",
+    "date": "2026-09-26",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 7,
+    "arret": "end_turn",
+    "duree_ms": 64342,
+    "jetons_entree": 129092,
+    "jetons_sortie": 7044,
+    "requetes": [],
+    "urls_lues": [
+      "https://attalpresident.fr/programme",
+      "https://attalpresident.fr/programme/education",
+      "https://attalpresident.fr/programme/travail-salaires",
+      "https://attalpresident.fr/programme/frontieres",
+      "https://attalpresident.fr/programme/intelligence-artificielle",
+      "https://attalpresident.fr/programme/dette-de-letat",
+      "https://attalpresident.fr/programme/dette-ecologique",
+      "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf",
+      "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-26T15-43-51-078Z-extraction-attal-fiscalite.json",
+    "empreinte_corpus": "2390eb97659bafd9",
+    "empreintes_documents": {
+      "programme-chantiers": "fd50e75f473dd596",
+      "programme-education": "0db3f3368c3a4ce1",
+      "programme-travail-salaires": "91b5024cebfc2b04",
+      "programme-frontieres": "f310ce4b8356b80d",
+      "programme-intelligence-artificielle": "1a8f1edce76035f2",
+      "programme-dette-etat": "3c434fb9dc584e27",
+      "programme-dette-ecologique": "c44ca3745d3d93b1",
+      "convention-nouvelle-donne": "138684385cea88cd",
+      "convention-regalien": "01c1b1877c779e83"
+    }
+  }
+]

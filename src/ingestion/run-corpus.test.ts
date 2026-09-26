@@ -155,6 +155,15 @@ describe("executerCandidatCorpus", () => {
     expect(resume.themes).toEqual([]);
   });
 
+  it("s'arrête dès que le compte API est en panne (crédit épuisé) au lieu de parcourir les thèmes restants", async () => {
+    const create = vi.fn().mockRejectedValue(new Error('400 {"error":{"message":"Your credit balance is too low to access the Anthropic API."}}'));
+    const resume = await executerCandidatCorpus({ messages: { create } }, META, [THEME, THEME_SANTE], options({ synthese: vi.fn() }));
+    expect(create).toHaveBeenCalledTimes(1);
+    expect(resume.arretBudget).toBe(true);
+    expect(resume.themes).toHaveLength(1);
+    expect(resume.themes[0].erreur).toContain("credit balance");
+  });
+
   it("isole l'échec d'un thème : le suivant est traité quand même", async () => {
     const create = vi.fn().mockRejectedValueOnce(new Error("panne réseau")).mockResolvedValueOnce(texte([]));
     const resume = await executerCandidatCorpus({ messages: { create } }, META, [THEME, THEME_SANTE], options({ synthese: vi.fn() }));

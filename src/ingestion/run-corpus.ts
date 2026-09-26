@@ -2,7 +2,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import type { CandidatMeta, Proposition } from "../types";
 import { budgetActuel } from "./appel";
-import { BudgetDepasse, estimerAppelUsd, type Tarifs } from "./budget";
+import { BudgetDepasse, estimerAppelUsd, estPanneDeCompte, type Tarifs } from "./budget";
 import type { FetchImpl } from "./checks";
 import { construireCorpus, type Corpus } from "./corpus";
 import {
@@ -384,6 +384,12 @@ export async function executerCandidatCorpus(
       }
       const message = erreur instanceof Error ? erreur.message : String(erreur);
       console.error(`[erreur] ${meta.slug} × ${theme.id} : ${message}`);
+      if (estPanneDeCompte(erreur)) {
+        console.error("[arrêt] Panne du compte API (crédit épuisé, clé ou droits) : les thèmes restants échoueraient aussi, on s'arrête. Rien n'est perdu : relancer la même commande reprend là où c'est resté.");
+        resume.themes.push({ themeId: theme.id, mesuresExtraites: 0, fusionnees: 0, enAttente: 0, erreur: message });
+        resume.arretBudget = true;
+        break;
+      }
       resume.themes.push({ themeId: theme.id, mesuresExtraites: 0, fusionnees: 0, enAttente: 0, erreur: message });
     }
   }
