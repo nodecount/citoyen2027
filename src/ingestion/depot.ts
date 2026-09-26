@@ -78,6 +78,17 @@ export function enregistrerSynthese(slug: string, synthese: SyntheseTheme, racin
   writeFileSync(chemin, JSON.stringify(toutes, null, 2) + "\n");
 }
 
+// Une synthèse décrit UN ensemble de mesures : quand ces mesures ont changé et que la nouvelle synthèse est refusée
+// (ou qu'il n'y a plus de mesure), l'ancienne ne doit pas rester affichée à côté de mesures qu'elle ne décrit plus.
+export function supprimerSynthese(slug: string, theme: string, racine: string = RACINE_PAR_DEFAUT): void {
+  const chemin = cheminSynthese(slug, racine);
+  if (!existsSync(chemin)) return;
+  const toutes = chargerSyntheses(slug, racine);
+  const restantes = toutes.filter((s) => s.theme !== theme);
+  if (restantes.length === toutes.length) return;
+  writeFileSync(chemin, JSON.stringify(restantes, null, 2) + "\n");
+}
+
 export interface EntreeSyntheseAVerifier {
   theme: string;
   texte: string;

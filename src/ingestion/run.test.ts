@@ -595,6 +595,26 @@ describe("executerSynthese", () => {
     expect(enAttente.texte).toBe(TEXTE);
   });
 
+  it("retire l'ancienne synthèse quand la nouvelle est refusée : mieux vaut aucun texte qu'un texte périmé", async () => {
+    preparerRacine();
+    enregistrerPropositions("candidat-x", [prop("candidat-x-fisc-001", "fiscalite"), prop("candidat-x-fisc-002", "fiscalite")], racine);
+    enregistrerSynthese("candidat-x", { theme: "fiscalite", texte: "Ancien texte.", propositions: ["candidat-x-fisc-001", "candidat-x-fisc-009"], date_derniere_verification: "2026-09-20" }, racine);
+    const client = clientAvec(reponseSynthese(["candidat-x-fisc-001", "candidat-x-fisc-002"]), reponseVerdict("FAIL", "affirmation non étayée"));
+
+    expect(await executerSynthese(client, META, "fiscalite", "Mes impôts et taxes", { racine })).toBe("a_verifier");
+    expect(chargerSyntheses("candidat-x", racine)).toEqual([]);
+  });
+
+  it("retire aussi l'ancienne synthèse quand le thème n'a plus aucune mesure affichable", async () => {
+    preparerRacine();
+    enregistrerPropositions("candidat-x", [prop("candidat-x-sante-001", "sante")], racine);
+    enregistrerSynthese("candidat-x", { theme: "fiscalite", texte: "Ancien texte.", propositions: ["candidat-x-fisc-001"], date_derniere_verification: "2026-09-20" }, racine);
+    enregistrerSynthese("candidat-x", { theme: "sante", texte: "Texte santé.", propositions: ["candidat-x-sante-001"], date_derniere_verification: "2026-09-20" }, racine);
+
+    expect(await executerSynthese(clientAvec(), META, "fiscalite", "Mes impôts et taxes", { racine })).toBe("aucune_proposition");
+    expect(chargerSyntheses("candidat-x", racine).map((s) => s.theme)).toEqual(["sante"]);
+  });
+
   it("efface l'ancienne entrée en attente d'un thème quand une nouvelle synthèse est enregistrée", async () => {
     preparerRacine();
     enregistrerPropositions("candidat-x", [prop("candidat-x-fisc-001", "fiscalite")], racine);

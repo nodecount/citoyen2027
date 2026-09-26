@@ -18,6 +18,7 @@ import {
   enregistrerPropositions,
   enregistrerSynthese,
   enregistrerSyntheseAVerifier,
+  supprimerSynthese,
   supprimerSyntheseAVerifier,
   type EntreeAVerifier,
 } from "./depot";
@@ -227,7 +228,10 @@ export async function executerSynthese(
   const affichables = chargerPropositions(meta.slug, options.racine).filter(
     (p) => p.theme === themeId && (p.statut === "complet" || p.statut === "partiel"),
   );
-  if (affichables.length === 0) return "aucune_proposition";
+  if (affichables.length === 0) {
+    supprimerSynthese(meta.slug, themeId, options.racine);
+    return "aucune_proposition";
+  }
 
   const ids = affichables.map((p) => p.id);
   const existante = chargerSyntheses(meta.slug, options.racine).find((s) => s.theme === themeId);
@@ -237,8 +241,11 @@ export async function executerSynthese(
     [...existante.propositions].sort().join("|") === [...ids].sort().join("|");
   if (memesMesures && !options.force) return "deja_a_jour";
 
+  // À partir d'ici, l'éventuelle synthèse existante ne décrit plus les mesures actuelles (ou est refaite de force) :
+  // si la nouvelle est refusée, on préfère aucune synthèse à une synthèse périmée.
   const genere = await genererSynthese(client, meta, themeId, themeLibelle, affichables);
   if (!genere.ok) {
+    supprimerSynthese(meta.slug, themeId, options.racine);
     enregistrerSyntheseAVerifier(
       meta.slug,
       { theme: themeId, texte: genere.texte ?? "", propositions: ids, raison: genere.erreur },
@@ -249,6 +256,7 @@ export async function executerSynthese(
 
   const verdict = await verifierSyntheseParModele(client, meta, themeLibelle, affichables, genere.synthese);
   if (verdict.statut === "FAIL") {
+    supprimerSynthese(meta.slug, themeId, options.racine);
     enregistrerSyntheseAVerifier(
       meta.slug,
       {

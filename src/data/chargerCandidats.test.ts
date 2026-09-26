@@ -63,6 +63,16 @@ describe("assemblerCandidats", () => {
     expect(avecDonnees.find((c) => c.meta.slug === "philippe")?.syntheses).toEqual([]);
   });
 
+  it("n'affiche pas une synthèse qui ne décrit plus les mesures actuelles du thème", () => {
+    const perimee = { theme: "fiscalite", texte: "Ancien texte.", propositions: ["a1", "a2"], date_derniere_verification: "2026-09-24" };
+    const { avecDonnees } = assemblerCandidats(
+      { attal: meta("attal", "A") },
+      { attal: [prop("a1", "complet"), prop("a3", "complet")] },
+      { attal: [perimee] }
+    );
+    expect(avecDonnees[0].syntheses).toEqual([]);
+  });
+
   it("ignore un propositions.json sans meta.json correspondant", () => {
     const { avecDonnees, enCoursAnalyse } = assemblerCandidats({}, { orphelin: [prop("o1", "complet")] });
     expect(avecDonnees).toEqual([]);
