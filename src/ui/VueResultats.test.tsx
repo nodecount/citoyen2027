@@ -61,6 +61,17 @@ describe("VueResultats", () => {
     expect(html([candidat("a", [prop("a", [HAUSSE])])])).toContain("Avertissement de la base.");
   });
 
+  it("ne répète pas le titre d'une mesure quand son texte est identique, et indique la rubrique de la source", () => {
+    const identique: Proposition = { ...prop("a", undefined), titre: "Supprimer la taxe X.", resume_factuel: "Supprimer la taxe X.", sous_theme: "Fiscalité" };
+    const rendu = html([candidat("a", [identique])]);
+    expect(rendu.match(/Supprimer la taxe X\./g)).toHaveLength(1);
+    expect(rendu).toContain("rubrique « Fiscalité » de la source");
+  });
+
+  it("affiche l'explication d'une mesure quand elle apporte plus que le titre", () => {
+    expect(html([candidat("a", [prop("a", undefined)])])).toContain("Résumé factuel.");
+  });
+
   it("affiche une card par thème avec son libellé et la question du citoyen", () => {
     const rendu = html([candidat("a", [prop("a", [HAUSSE])])]);
     expect(rendu).toContain("Mes impôts et taxes");

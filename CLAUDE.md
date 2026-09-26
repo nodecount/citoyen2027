@@ -128,7 +128,8 @@ référence un thème de SA base.
   effets structurés, projection par thème.
 - **`agregateurs`** : reprise, sans modèle, de comparateurs indépendants (iFRAP, puis candidatspresidentielles2027.fr
   via le navigateur). Sources **secondaires**, sans date par mesure (année = année de consultation), thèmes de la
-  source, **pas d'`effets`** donc pas de badge (le moteur affiche « pas de projection », jamais une devinette). Le
+  source (`npm run scrape:ifrap`, `src/scraping/` : une requête publique, aucun coût ; rejouable, remplace les propositions),
+  **pas d'`effets`** donc pas de badge (le moteur affiche « pas de projection », jamais une devinette). Le
   porteur du projet a décidé de leur faire confiance ; le contenu reste attribué et lié à sa page d'origine. La
   règle « une source primaire » de la base officielle ne s'y applique pas.
 

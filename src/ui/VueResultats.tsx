@@ -37,7 +37,8 @@ function MesureAnalysee({ proposition, profil }: { proposition: Proposition; pro
     <li>
       <strong>{proposition.titre}</strong>
       {proposition.statut === "partiel" && <span className="badge-partiel"> (sourcing partiel — à confirmer)</span>}
-      <p>{impact.explication}</p>
+      {proposition.sous_theme && <span className="sous-theme"> — rubrique « {proposition.sous_theme} » de la source</span>}
+      {impact.explication !== proposition.titre && <p>{impact.explication}</p>}
       {impact.niveau === "chiffre_personnalise" && impact.montant_estime !== undefined && (
         <p>Estimation pour votre profil : {impact.montant_estime} €/an</p>
       )}
@@ -76,7 +77,7 @@ function CandidatDansTheme({ ligne, profil }: { ligne: LigneCandidat; profil: Pr
             </>
           ) : (
             <p className="hint">
-              Le résumé de ce programme sur ce thème n'est pas encore rédigé : le détail sourcé des mesures est
+              Aucun résumé n'est disponible pour ce candidat sur ce thème : le détail sourcé des mesures est
               ci-dessous.
             </p>
           )}

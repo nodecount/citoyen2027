@@ -33,6 +33,8 @@ export interface Proposition {
   // Optionnel tant que les propositions collectées avant le fil rouge n'ont pas été enrichies.
   // Sans effets, le moteur ne peut pas projeter : il ne devine pas.
   effets?: Effet[];
+  // Rubrique de la source quand elle range ses propositions plus finement que nos thèmes (bases issues de comparateurs).
+  sous_theme?: string;
 }
 
 // Texte « pourquoi et en quoi le programme de ce candidat touche ce thème », un par candidat × thème.

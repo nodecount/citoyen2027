@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "test": "vitest run",
     "ingestion": "tsx src/ingestion/run.ts",
+    "scrape:ifrap": "tsx src/scraping/run-ifrap.ts",
     "monitoring-server": "tsx src/ingestion/serveur-local.ts"
   },
   "dependencies": {
