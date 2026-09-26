@@ -1,0 +1,80 @@
+[
+  {
+    "titre": "Suppression et recentrage de quatre impôts de production (C3S, CVAE, forfait social, CFE industrielle)",
+    "resume_factuel": "Le mouvement Les Républicains propose un allègement d'environ 15 milliards d'euros de la fiscalité de production, en supprimant la C3S (5,3 Md€), en supprimant la CVAE (4,3 Md€), en maintenant le forfait social à 20 % sur la participation légale tout en exonérant l'intéressement, la participation supra-légale et l'épargne retraite individuelle, et en exonérant la part industrielle de la CFE (1,9 Md€). Ces impôts sont payés par les entreprises ; le corpus ne précise pas de répercussion directe chiffrée sur les particuliers.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=20",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffrage du corpus : 25 Md€ d'allègements sur le coût du travail (cotisations) et 15 Md€ sur la fiscalité de production (C3S 5,3 Md€, CVAE 4,3 Md€, forfait social 2,8 Md€, CFE industrielle 1,9 Md€), soit 40 Md€ sur un handicap fiscal évalué à 67 Md€.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-fisc-001",
+    "candidat": "retailleau",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Report automatique de l'exigibilité des droits de mutation à titre gratuit sur les entreprises transmises",
+    "resume_factuel": "Position du mouvement Les Républicains (2026) : la transmission de parts ou actions de sociétés exerçant une activité économique réelle (donation ou succession) ferait l'objet d'un report automatique de l'exigibilité des droits de mutation à titre gratuit (DMTG), calculés à la date de la transmission mais non exigibles tant que l'outil de production est conservé et exploité. Le dispositif est réservé aux entreprises à activité productive effective, hors structures purement patrimoniales ou financières ; les holdings ne sont éligibles qu'à proportion de leurs participations opérationnelles.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=34",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage global du coût ou du gain de cette mesure n'est fourni dans le corpus ; seul le taux actuel des DMTG (pouvant atteindre 45 %) est mentionné comme référence.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "héritiers ou donataires de parts/actions d'entreprises à activité productive réelle"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=34",
+        "extrait": "Tant que l’outil de production est conservé, exploité et continue de produire, aucun droit \nde mutation n’est exigible."
+      }
+    ],
+    "id": "retailleau-fisc-002",
+    "candidat": "retailleau",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Réforme de la fiscalité de l'épargne pour l'orienter vers l'investissement productif",
+    "resume_factuel": "Position du mouvement Les Républicains (2026) : réforme des produits d'épargne visant à simplifier les supports existants, rendre la fiscalité plus incitative pour les investissements productifs de long terme, et réorienter les flux d'épargne aujourd'hui captés par la dette publique ou le logement social vers le capital des entreprises. Un compte d'épargne retraite individuel, complémentaire et volontaire, serait ouvert pour chaque actif, alimenté notamment par l'intéressement, la participation et l'épargne volontaire. Le corpus ne précise pas les montants ni les modalités fiscales exactes de cette réforme.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=36",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage précis du gain fiscal individuel n'est fourni ; le corpus mentionne un objectif de constitution à terme d'un socle de capital productif de l'ordre de 1 000 milliards d'euros, sans détail sur l'effet fiscal par épargnant.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-fisc-003",
+    "candidat": "retailleau",
+    "theme": "fiscalite"
+  }
+]
