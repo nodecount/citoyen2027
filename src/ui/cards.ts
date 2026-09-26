@@ -3,7 +3,7 @@ import type { CandidatCharge } from "../data/chargerCandidats";
 import { projeterTheme, type Projection } from "../engine/projection";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import type { CandidatMeta, Proposition, SyntheseTheme, Theme } from "../types";
-import { messagesSansBadge } from "./projection";
+import { messagesIncertitude, messagesSansBadge } from "./projection";
 
 export interface LigneCandidat {
   meta: CandidatMeta;
@@ -11,6 +11,8 @@ export interface LigneCandidat {
   // Null tant que le visiteur n'a donné aucune information sur lui : aucun effet n'est alors appliqué.
   projection: Projection | null;
   messagesSansBadge: string[];
+  // Quand l'indicateur est « mixte » faute de savoir si le visiteur est concerné : pourquoi, et quoi préciser.
+  messagesIncertitude: string[];
   // Null tant qu'elle n'existe pas, ou si elle ne couvre plus exactement les mesures du thème
   // (mesures ajoutées ou changées depuis) : un texte périmé est pire que pas de texte.
   synthese: SyntheseTheme | null;
@@ -67,6 +69,7 @@ export function construireCards(themes: Theme[], candidats: CandidatCharge[], pr
         propositions,
         projection,
         messagesSansBadge: projection ? messagesSansBadge(projection, propositions) : [],
+        messagesIncertitude: projection ? messagesIncertitude(projection) : [],
         synthese,
         sources: sourcesCitees(propositions),
       });

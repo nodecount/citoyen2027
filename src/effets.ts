@@ -50,12 +50,12 @@ interface ChampProfilJson {
   options?: string[];
 }
 
-// Source de vérité unique : les options du formulaire citoyen (data/profils-schema.json). Seuls les
-// champs énumérables sont ciblables ; région et secteur (texte libre) ne s'apparient pas de façon fiable.
+// Source de vérité unique : les options du formulaire citoyen (data/profils-schema.json). Seuls les champs à
+// choix (un seul ou plusieurs) sont ciblables ; un texte libre ne s'apparie pas de façon fiable.
 function construireValeursParChamp(): Record<string, string[]> {
   const valeurs: Record<string, string[]> = {};
   for (const champ of profilSchemaRaw as ChampProfilJson[]) {
-    if (champ.type === "enum" && champ.options) valeurs[champ.id] = champ.options;
+    if ((champ.type === "enum" || champ.type === "multi") && champ.options) valeurs[champ.id] = champ.options;
   }
   valeurs.enfants_a_charge = ["aucun", "au_moins_un"];
   return valeurs;

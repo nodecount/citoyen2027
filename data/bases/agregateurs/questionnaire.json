@@ -1,0 +1,98 @@
+{
+  "description": "Pertinence des questions pour les thèmes de la base « comparateurs », dérivée de la base officielle par correspondance des thèmes : finances publiques = fiscalité et pouvoir d'achat ; retraites et travail ; social et solidarité = aides, logement, santé ; éducation ; intérieur et justice = sécurité et immigration ; gouvernance = libertés ; réformes de l'État = statut de fonctionnaire. Europe et défense : aucune question, leurs mesures ne touchent pas directement un citoyen.",
+  "pertinence": {
+    "tranche_age": [
+      "finances-publiques",
+      "retraites-travail",
+      "social-solidarite",
+      "education-jeunesse"
+    ],
+    "statut_professionnel": [
+      "finances-publiques",
+      "retraites-travail",
+      "social-solidarite",
+      "education-jeunesse",
+      "reformes-etat"
+    ],
+    "tranche_revenus": [
+      "finances-publiques",
+      "social-solidarite",
+      "retraites-travail"
+    ],
+    "situation_familiale": [
+      "finances-publiques",
+      "social-solidarite"
+    ],
+    "nombre_enfants": [
+      "finances-publiques",
+      "social-solidarite",
+      "education-jeunesse",
+      "retraites-travail"
+    ],
+    "logement": [
+      "social-solidarite",
+      "finances-publiques",
+      "environnement"
+    ],
+    "territoire": [
+      "social-solidarite",
+      "environnement",
+      "education-jeunesse",
+      "interieur-justice"
+    ],
+    "metier": [
+      "education-jeunesse",
+      "environnement",
+      "social-solidarite",
+      "interieur-justice",
+      "retraites-travail"
+    ],
+    "nationalite": [
+      "interieur-justice",
+      "social-solidarite",
+      "education-jeunesse",
+      "gouvernance-republique"
+    ],
+    "statut_sejour": [
+      "interieur-justice",
+      "social-solidarite"
+    ],
+    "aides_percues": [
+      "social-solidarite",
+      "finances-publiques"
+    ],
+    "handicap": [
+      "social-solidarite"
+    ],
+    "tranche_patrimoine": [
+      "finances-publiques"
+    ],
+    "logements_hors_residence": [
+      "social-solidarite"
+    ],
+    "logement_social": [
+      "social-solidarite"
+    ],
+    "projet_achat": [
+      "social-solidarite"
+    ],
+    "vehicule": [
+      "environnement"
+    ],
+    "metier_penible": [
+      "retraites-travail"
+    ],
+    "carriere_longue": [
+      "retraites-travail"
+    ],
+    "aidant_familial": [
+      "social-solidarite"
+    ],
+    "enfants_scolarises": [
+      "education-jeunesse"
+    ],
+    "ne_en_france_parents_etrangers": [
+      "interieur-justice"
+    ]
+  }
+}

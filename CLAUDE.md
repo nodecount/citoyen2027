@@ -46,13 +46,21 @@ changement) :**
 1. **Page de départ = les thèmes.** Le visiteur voit d'abord les cartes de thèmes ; sur chacune, seuls les
    **portraits** des candidats dont les mesures sourcées touchent le thème, **cliquables** (le détail — synthèse, mesures,
    sources — s'ouvre depuis le portrait). Aucun formulaire à remplir avant, aucun indicateur.
-2. **Tant que le visiteur n'a rien renseigné, les effets ne sont pas appliqués** : les portraits restent sans indicateur
-   (jamais de « badge général » ni de moyenne inventée).
-3. **Après avoir eu des informations sur lui**, chaque portrait reçoit son indicateur (améliorant, mixte, non concerné,
-   dégradant), qui s'affine à mesure que le visiteur répond. Les questions sont facultatives ; c'est parce qu'on ne connaît pas
-   l'individu qu'on l'interroge plus précisément (les effets « pour tout le monde », comme un prix ou une prestation courante,
-   restent des effets valides : ils décrivent le cas courant).
-
+2. **Formulaire général d'abord, puis par thème.** Le visiteur répond aux **questions générales** (utiles à au moins deux
+   thèmes, posées une seule fois), puis **valide** ce formulaire. **Tant qu'il n'est pas validé — ou s'il est validé sans
+   aucune réponse — les effets ne sont pas appliqués** : les portraits restent sans indicateur ni couleur (jamais de « badge
+   général » ni de moyenne inventée). Le questionnaire est **segmenté par thème** (pertinence question → thèmes propre à
+   chaque base : `data/bases/<id>/questionnaire.json`) ; une question utile à un seul thème est posée dans ce thème.
+3. **Après la validation du formulaire général**, une couleur apparaît autour de chaque portrait (améliorant, mixte, non
+   concerné, dégradant), toujours doublée du mot et d'un symbole. Le visiteur peut alors **préciser d'autres informations
+   thème par thème, à son rythme** ; chaque réponse s'applique tout de suite. Les questions sont toutes facultatives et
+   conditionnelles quand il le faut ; c'est parce qu'on ne connaît pas l'individu qu'on l'interroge plus précisément (les
+   effets « pour tout le monde », comme un prix ou une prestation courante, restent des effets valides : ils décrivent le
+   cas courant).
+4. **Quand le moteur n'est pas sûr que le visiteur soit concerné** (réponse manquante sur un critère de l'effet, ou public
+   que le formulaire ne sait pas encore décrire), l'indicateur est **« mixte »**, marqué « à préciser », avec l'explication et
+   la liste des questions qui lèveraient le doute. Ce n'est pas un jugement sur les mesures : c'est l'incertitude affichée.
+   Un « mixte » réel (mesures favorables ET défavorables) reste distinct (`Projection.incertain`).
 Garde-fous de l'indicateur (ils découlent du principe d'indépendance ci-dessous) :
 - Il mesure l'effet sur **la situation matérielle et les droits du citoyen** (revenu, coûts, accès,
   droits), jamais un jugement de valeur sur la politique elle-même. Le « sens » (favorable ou
@@ -67,16 +75,18 @@ Garde-fous de l'indicateur (ils découlent du principe d'indépendance ci-dessou
 - Toute hypothèse est affichée (mesure imprécise, chiffrage absent, effet dépendant de détails non
   publiés) ; à défaut de pouvoir trancher, on ne devine pas.
 - **Mieux vaut pas d'indicateur qu'un mauvais indicateur.** Quand le programme est trop vague pour
-  fixer qui est visé ou dans quel sens l'effet joue, on n'affiche pas de badge : le prompt
-  d'ingestion doit être cadré pour produire une réponse ciblée ou rien, jamais une réponse
-  approximative.
-- Le formulaire citoyen sera affiné **après** les premiers résultats d'ingestion, pour orienter les
-  questions posées à partir des critères (cibles) réellement présents dans les programmes.
+  fixer dans quel sens l'effet joue, ou qu'aucune mesure n'a d'effet déterminable, on n'affiche pas de badge : le
+  prompt d'ingestion doit être cadré pour produire une réponse ciblée ou rien, jamais une réponse approximative.
+  (Quand c'est le fait que le visiteur soit concerné qui est incertain, on affiche « mixte à préciser », voir plus haut.)
+- Le formulaire est construit **à partir des critères (cibles) réellement présents dans les programmes** (catalogue
+  `data/profils-schema.json`, qui alimente aussi les prompts d'ingestion). Pas de texte libre que le moteur ne sait
+  pas apparier (région et secteur retirés) : collecter le minimum nécessaire. Réponses multiples possibles.
 - **Données sensibles : sur consentement explicite du citoyen, seulement si nécessaires à
   l'indicateur.** C'est le citoyen qui décide de les donner (champ facultatif, finalité expliquée
   au moment de la question) ; elles servent le calcul dans son navigateur et ne sont ni transmises
-  ni conservées. Une question non répondue n'équivaut **pas** à « non » : les effets qui en
-  dépendent n'ont alors pas de badge, avec l'invitation à renseigner le champ pour affiner.
+  ni conservées. Les questions sensibles ne s'affichent qu'après une case d'accord explicite, chacune explique sa
+  finalité, et décocher l'accord efface les réponses. Une question non répondue n'équivaut **pas** à « non » : les
+  effets qui en dépendent rendent l'indicateur « mixte à préciser », avec l'invitation à répondre pour affiner.
 
 **Principe fondateur — INDÉPENDANCE ET NEUTRALITÉ :** C'est la contrainte la plus importante du projet. L'outil ne doit être affilié à aucun parti, ni directement ni indirectement. Concrètement, cela implique :
 - Ne jamais utiliser un simulateur ou un jeu de données produit par un parti ou une organisation partisane (ex : les simulateurs internes que certains candidats ou partis publient sur leur propre programme) comme source de vérité, même comme point de départ technique.

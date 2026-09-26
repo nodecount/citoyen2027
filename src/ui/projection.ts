@@ -80,3 +80,18 @@ export function messagesSansBadge(projection: Projection, propositions: Proposit
   }
   return messages;
 }
+
+// « Mixte » par incertitude : on le dit, on dit pourquoi, et on dit quoi préciser. Ce n'est pas un jugement sur les mesures
+// mais le constat que le moteur ne sait pas si le visiteur est concerné.
+export function messagesIncertitude(projection: Projection): string[] {
+  if (!projection.incertain) return [];
+  const messages = ["Nous ne savons pas encore si certaines mesures vous concernent : par prudence, l'indicateur est « mixte »."];
+  if (projection.champsManquants.length > 0) {
+    const champs = projection.champsManquants.map((c) => `« ${libelleChamp(c)} »`).join(", ");
+    messages.push(`Répondez à ${champs} pour le préciser.`);
+  }
+  if (projection.raisons.includes("critere_hors_formulaire")) {
+    messages.push("Certaines mesures visent un public que le formulaire ne permet pas encore d'identifier.");
+  }
+  return messages;
+}

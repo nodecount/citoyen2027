@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { libelleCitation } from "../citations";
 import { evaluerProposition } from "../engine";
-import { evaluerParDefaut } from "../engine/evaluerParDefaut";
 import type { NiveauProjection } from "../engine/projection";
-import { profilComplet, type ProfilPartiel } from "../profil";
-import type { Proposition } from "../types";
+import { compterReponses, questionsDuTheme, type Questionnaire } from "../questionnaire";
+import type { ProfilPartiel } from "../profil";
+import type { ChampProfil, Proposition } from "../types";
 import type { CardTheme, LigneCandidat } from "./cards";
 import { initiales } from "./portrait";
 import { NIVEAUX, decrireEffet } from "./projection";
+import { SectionQuestions, type SurReponse } from "./Questions";
 
 const ORDRE_LEGENDE: NiveauProjection[] = ["ameliorant", "mixte", "non_concerne", "degradant"];
 
@@ -36,20 +37,19 @@ function ListeSources({ sources }: { sources: Array<{ texte: string; url: string
 }
 
 function MesureAnalysee({ proposition, profil }: { proposition: Proposition; profil: ProfilPartiel }) {
-  // Les anciennes règles par mesure supposent un profil complet : avec un profil partiel, une réponse manquante se
-  // lirait comme « non concerné ». On donne alors l'explication générale, sans conclure pour le visiteur.
-  const complet = profilComplet(profil);
-  const impact = complet ? evaluerProposition(profil, proposition) : evaluerParDefaut(profil, proposition);
+  // Une règle propre à une mesure ne s'applique que si le visiteur a répondu aux questions dont elle dépend
+  // (voir evaluerProposition) : sinon explication générale, jamais « non concerné » sur une réponse manquante.
+  const impact = evaluerProposition(profil, proposition);
   return (
     <li>
       <strong>{proposition.titre}</strong>
       {proposition.statut === "partiel" && <span className="badge-partiel"> (sourcing partiel — à confirmer)</span>}
       {proposition.sous_theme && <span className="sous-theme"> — rubrique « {proposition.sous_theme} » de la source</span>}
       {impact.explication !== proposition.titre && <p>{impact.explication}</p>}
-      {complet && impact.niveau === "chiffre_personnalise" && impact.montant_estime !== undefined && (
+      {impact.niveau === "chiffre_personnalise" && impact.montant_estime !== undefined && (
         <p>Estimation pour votre profil : {impact.montant_estime} €/an</p>
       )}
-      {complet && !impact.concerne && (
+      {!impact.concerne && (
         <p>
           <em>Cette mesure ne s'applique pas à votre profil.</em>
         </p>
@@ -65,7 +65,7 @@ function MesureAnalysee({ proposition, profil }: { proposition: Proposition; pro
 // Le détail d'un candidat sur un thème, ouvert depuis son portrait : programme d'abord (synthèse, sources, mesures),
 // puis — seulement si le visiteur a donné des informations — ce que cela change pour lui.
 function DetailCandidat({ ligne, profil, id }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string }) {
-  const { meta, projection, synthese, sources, messagesSansBadge, propositions } = ligne;
+  const { meta, projection, synthese, sources, messagesSansBadge, messagesIncertitude, propositions } = ligne;
   const niveau = projection?.niveau ?? null;
 
   return (
@@ -86,9 +86,16 @@ function DetailCandidat({ ligne, profil, id }: { ligne: LigneCandidat; profil: P
 
       {projection &&
         (niveau ? (
-          <p className="pour-votre-profil">
-            <strong>Pour votre profil :</strong> {NIVEAUX[niveau].sens}
-          </p>
+          <>
+            <p className="pour-votre-profil">
+              <strong>Pour votre profil :</strong> {NIVEAUX[niveau].sens}
+            </p>
+            {messagesIncertitude.map((message) => (
+              <p className="pour-votre-profil incertitude" key={message}>
+                {message}
+              </p>
+            ))}
+          </>
         ) : (
           <>
             <p className="pour-votre-profil">
@@ -142,6 +149,7 @@ function Portrait({ ligne, ouvert, idDetail, onBasculer }: { ligne: LigneCandida
       <button
         type="button"
         className={`portrait${ouvert ? " portrait--ouvert" : ""}`}
+        data-niveau={niveau ?? undefined}
         aria-expanded={ouvert}
         aria-controls={idDetail}
         onClick={onBasculer}
@@ -151,13 +159,45 @@ function Portrait({ ligne, ouvert, idDetail, onBasculer }: { ligne: LigneCandida
         </span>
         <span className="portrait-nom">{ligne.meta.nom}</span>
         {niveau && <BadgeNiveau niveau={niveau} />}
+        {ligne.projection?.incertain && <span className="a-preciser">à préciser</span>}
       </button>
     </li>
   );
 }
 
+// Questions propres à un thème : le visiteur les renseigne à son rythme, une fois le formulaire général validé. Chaque
+// réponse s'applique tout de suite : l'indicateur des portraits de ce thème s'affine.
+function QuestionsDuTheme({ theme, idTheme, questions, profil, onReponse }: { theme: string; idTheme: string; questions: ChampProfil[]; profil: ProfilPartiel; onReponse: SurReponse }) {
+  const { repondues, total } = compterReponses(questions, profil);
+  // Aucune question ordinaire (seulement des questions sensibles, sur accord) : pas de décompte « 0/0 ».
+  const progression = total === 0 ? "(questions sensibles, facultatif)" : `(${repondues}/${total} réponse${repondues > 1 ? "s" : ""})`;
+  return (
+    <details className="questions-theme">
+      <summary>
+        Préciser ma situation pour ce thème <span className="progression">{progression}</span>
+      </summary>
+      <div className="questions-theme-corps" aria-label={`Questions sur le thème ${theme}`}>
+        <SectionQuestions questions={questions} profil={profil} onReponse={onReponse} idPrefixe={`theme-${idTheme}`} />
+      </div>
+    </details>
+  );
+}
+
 // `ouvertInitial` sert aux tests (rendu statique) : à l'écran, le détail s'ouvre au clic sur un portrait.
-function CarteTheme({ card, profil, ouvertInitial }: { card: CardTheme; profil: ProfilPartiel; ouvertInitial?: string }) {
+function CarteTheme({
+  card,
+  profil,
+  questionsTheme,
+  onReponse,
+  ouvertInitial,
+}: {
+  card: CardTheme;
+  profil: ProfilPartiel;
+  // Questions propres à ce thème, à afficher seulement une fois le formulaire général validé ; [] sinon.
+  questionsTheme: ChampProfil[];
+  onReponse: SurReponse;
+  ouvertInitial?: string;
+}) {
   const { theme, lignes, absents, enCoursAnalyse } = card;
   const [ouvert, setOuvert] = useState<string | null>(ouvertInitial ?? null);
   const ligneOuverte = lignes.find((l) => l.meta.slug === ouvert) ?? null;
@@ -167,6 +207,8 @@ function CarteTheme({ card, profil, ouvertInitial }: { card: CardTheme; profil: 
     <section className="carte" id={`theme-${theme.id}`} aria-labelledby={`titre-${theme.id}`}>
       <h2 id={`titre-${theme.id}`}>{theme.libelle}</h2>
       <p className="question">{theme.question_citoyen}</p>
+
+      {questionsTheme.length > 0 && <QuestionsDuTheme theme={theme.libelle} idTheme={theme.id} questions={questionsTheme} profil={profil} onReponse={onReponse} />}
 
       {enCoursAnalyse ? (
         <p className="hint">Ce thème est en cours d'analyse : aucun programme n'a encore été analysé sur ce sujet.</p>
@@ -197,12 +239,17 @@ function CarteTheme({ card, profil, ouvertInitial }: { card: CardTheme; profil: 
 interface VueThemesProps {
   cards: CardTheme[];
   profil: ProfilPartiel;
-  // Vrai dès que le visiteur a donné une information : c'est alors seulement que les indicateurs existent.
+  // Vrai après validation du formulaire général ET dès que le visiteur a donné une information : c'est alors seulement
+  // que les indicateurs (les couleurs autour des portraits) existent.
   personnalise: boolean;
+  questionnaire: Questionnaire;
+  // Vrai après validation du formulaire général : les questions propres à chaque thème deviennent disponibles.
+  questionsActives: boolean;
+  onReponse: SurReponse;
   ouvertInitial?: { theme: string; candidat: string };
 }
 
-export function VueThemes({ cards, profil, personnalise, ouvertInitial }: VueThemesProps) {
+export function VueThemes({ cards, profil, personnalise, questionnaire, questionsActives, onReponse, ouvertInitial }: VueThemesProps) {
   return (
     <section className="themes">
       {personnalise && (
@@ -222,6 +269,15 @@ export function VueThemes({ cards, profil, personnalise, ouvertInitial }: VueThe
                 <dd>{NIVEAUX[niveau].sens}</dd>
               </div>
             ))}
+            <div>
+              <dt>
+                <BadgeNiveau niveau="mixte" /> <span className="a-preciser">à préciser</span>
+              </dt>
+              <dd>
+                Quand nous ne savons pas encore si les mesures vous concernent, l'indicateur est « mixte » par prudence :
+                répondre aux questions du thème permet de le préciser.
+              </dd>
+            </div>
             <div>
               <dt>
                 <span className="sans-badge">Pas d'indicateur</span>
@@ -250,6 +306,8 @@ export function VueThemes({ cards, profil, personnalise, ouvertInitial }: VueThe
           key={card.theme.id}
           card={card}
           profil={profil}
+          questionsTheme={questionsActives ? questionsDuTheme(questionnaire, card.theme.id) : []}
+          onReponse={onReponse}
           ouvertInitial={ouvertInitial?.theme === card.theme.id ? ouvertInitial.candidat : undefined}
         />
       ))}

@@ -120,12 +120,14 @@ describe("construireCards", () => {
       expect(ligne.projection?.niveau).toBe("ameliorant");
     });
 
-    it("s'affine : un effet ciblé sur un champ non répondu bloque le badge, puis se résout à la réponse", () => {
+    it("s'affine : un effet ciblé sur un champ non répondu donne « mixte » (à préciser), puis se résout à la réponse", () => {
       const cible = { ...HAUSSE, cibles: [{ champ: "logement", valeurs: ["locataire"] }] };
       const ciblees = [candidat("a", [prop("a", "fiscalite", [cible])])];
       const sansLogement = construireCards(THEMES, ciblees, { tranche_age: "30_49" })[0].lignes[0];
-      expect(sansLogement.projection?.niveau).toBeNull();
-      expect(sansLogement.messagesSansBadge.join(" ")).toContain("Statut de logement");
+      expect(sansLogement.projection?.niveau).toBe("mixte");
+      expect(sansLogement.projection?.incertain).toBe(true);
+      expect(sansLogement.messagesIncertitude.join(" ")).toContain("Statut de logement");
+      expect(sansLogement.messagesSansBadge).toEqual([]); // ce n'est pas une absence de badge : il y a un badge, et on explique
       expect(construireCards(THEMES, ciblees, { logement: "locataire" })[0].lignes[0].projection?.niveau).toBe("ameliorant");
       expect(construireCards(THEMES, ciblees, { logement: "proprietaire" })[0].lignes[0].projection?.niveau).toBe("non_concerne");
     });

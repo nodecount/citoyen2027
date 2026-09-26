@@ -3,7 +3,7 @@ import { DIMENSIONS_EFFET } from "../effets";
 import type { Effet } from "../effets";
 import type { Proposition } from "../types";
 import type { Projection } from "../engine/projection";
-import { DIMENSIONS_LIBELLES, NIVEAUX, decrireEffet, libelleChamp, messagesSansBadge } from "./projection";
+import { DIMENSIONS_LIBELLES, NIVEAUX, decrireEffet, libelleChamp, messagesIncertitude, messagesSansBadge } from "./projection";
 
 function proposition(effets: Effet[] | undefined): Proposition {
   return {
@@ -22,7 +22,7 @@ function proposition(effets: Effet[] | undefined): Proposition {
 }
 
 function sansBadge(surcharge: Partial<Projection>): Projection {
-  return { niveau: null, raisons: [], champsManquants: [], effetsRetenus: [], ...surcharge };
+  return { niveau: null, raisons: [], champsManquants: [], effetsRetenus: [], incertain: false, ...surcharge };
 }
 
 describe("NIVEAUX", () => {
@@ -97,6 +97,25 @@ describe("messagesSansBadge", () => {
   });
 
   it("ne renvoie rien quand il y a un badge", () => {
-    expect(messagesSansBadge({ niveau: "ameliorant", raisons: [], champsManquants: [], effetsRetenus: [] }, [])).toEqual([]);
+    expect(messagesSansBadge({ niveau: "ameliorant", raisons: [], champsManquants: [], effetsRetenus: [], incertain: false }, [])).toEqual([]);
+  });
+});
+
+describe("messagesIncertitude", () => {
+  it("ne dit rien quand l'indicateur ne vient pas d'une incertitude", () => {
+    expect(messagesIncertitude(sansBadge({ niveau: "mixte" }))).toEqual([]);
+    expect(messagesIncertitude(sansBadge({ niveau: "ameliorant" }))).toEqual([]);
+  });
+
+  it("explique le « mixte » par prudence et nomme ce qu'il faut préciser", () => {
+    const messages = messagesIncertitude(sansBadge({ niveau: "mixte", incertain: true, raisons: ["informations_manquantes"], champsManquants: ["logement"] }));
+    expect(messages[0]).toContain("par prudence");
+    expect(messages[0]).toContain("mixte");
+    expect(messages[1]).toContain("Statut de logement");
+  });
+
+  it("signale un public que le formulaire ne sait pas décrire", () => {
+    const messages = messagesIncertitude(sansBadge({ niveau: "mixte", incertain: true, raisons: ["critere_hors_formulaire"] }));
+    expect(messages.join(" ")).toContain("formulaire");
   });
 });

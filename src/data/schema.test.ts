@@ -56,37 +56,29 @@ describe("themes.json", () => {
   });
 });
 
-const EXPECTED_CHAMP_IDS = [
-  "statut_professionnel",
-  "tranche_revenus",
-  "situation_familiale",
-  "nombre_enfants",
-  "logement",
-  "secteur_activite",
-  "region",
-  "tranche_age",
-  "tranche_patrimoine",
-];
-
+// Les questions du formulaire (catalogue) : la validité fine de chaque question et de sa pertinence par base est
+// vérifiée dans src/questionnaire.test.ts. Ici, les invariants du fichier lui-même.
 describe("profils-schema.json", () => {
-  it("liste exactement les 9 champs de profil attendus (ni plus, ni moins)", () => {
-    const ids = profilSchema.map((f) => f.id);
-    expect(ids.sort()).toEqual([...EXPECTED_CHAMP_IDS].sort());
-  });
+  const ids = profilSchema.map((f) => f.id);
 
-  it("chaque option d'un champ à choix a un libellé lisible, et seulement celles-là", () => {
-    for (const champ of profilSchema.filter((c) => c.type === "enum")) {
-      expect(Object.keys(champ.libelles ?? {}).sort(), champ.id).toEqual([...(champ.options ?? [])].sort());
-      for (const libelle of Object.values(champ.libelles ?? {})) expect(libelle.trim().length).toBeGreaterThan(0);
+  it("garde les questions historiques du profil, avec leurs identifiants (les effets déjà structurés les ciblent)", () => {
+    for (const id of ["statut_professionnel", "tranche_revenus", "situation_familiale", "nombre_enfants", "logement", "tranche_age", "tranche_patrimoine"]) {
+      expect(ids).toContain(id);
     }
   });
 
-  it("chaque champ a un type valide et des options ssi type === enum", () => {
+  it("ne pose plus les deux textes libres (région, secteur) : le moteur ne sait pas les apparier, donc les demander serait collecter pour rien", () => {
+    expect(ids).not.toContain("region");
+    expect(ids).not.toContain("secteur_activite");
+  });
+
+  it("chaque champ a un type valide, et des options ssi c'est une question à choix", () => {
     for (const champ of profilSchema) {
-      expect(["enum", "number", "text"]).toContain(champ.type);
-      if (champ.type === "enum") {
+      expect(["enum", "multi", "number", "text"]).toContain(champ.type);
+      if (champ.type === "enum" || champ.type === "multi") {
         expect(Array.isArray(champ.options)).toBe(true);
         expect((champ.options as string[]).length).toBeGreaterThan(0);
+        expect(Object.keys(champ.libelles ?? {}).sort(), champ.id).toEqual([...(champ.options as string[])].sort());
       } else {
         expect(champ.options).toBeUndefined();
       }

@@ -1,10 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { DIMENSIONS_EFFET, type Effet } from "../effets";
-import type { Profil, Proposition } from "../types";
+import type { ProfilPartiel } from "../profil";
+import type { Proposition } from "../types";
 import { polarite } from "./polarite";
 import { projeterTheme } from "./projection";
 
-const PROFIL: Profil = {
+const PROFIL: ProfilPartiel = {
   statut_professionnel: "salarie",
   tranche_revenus: "3000_5000",
   situation_familiale: "en_couple",
@@ -152,10 +153,12 @@ describe("projeterTheme — pas de badge plutôt qu'un mauvais badge", () => {
     expect(projeterTheme(PROFIL, [proposition([])]).raisons).toEqual(["aucun_effet_determine"]);
   });
 
-  it("champ non répondu : pas de badge, le champ manquant est indiqué", () => {
+  it("champ non répondu : on ne sait pas si le visiteur est concerné → « mixte » par prudence, avec le champ à préciser", () => {
     const p = proposition([effet({ cibles: [{ champ: "logement", valeurs: ["proprietaire"] }] })]);
-    const projection = projeterTheme({ ...PROFIL, logement: "" }, [p]);
-    expect(projection.niveau).toBeNull();
+    const { logement: _l, ...sansLogement } = PROFIL;
+    const projection = projeterTheme(sansLogement, [p]);
+    expect(projection.niveau).toBe("mixte");
+    expect(projection.incertain).toBe(true);
     expect(projection.raisons).toContain("informations_manquantes");
     expect(projection.champsManquants).toEqual(["logement"]);
   });
@@ -163,7 +166,24 @@ describe("projeterTheme — pas de badge plutôt qu'un mauvais badge", () => {
   it("un champ non répondu n'équivaut pas à « non » : il ne rend jamais « non concerné »", () => {
     const p = proposition([effet({ cibles: [{ champ: "tranche_age", valeurs: ["65_plus"] }] })]);
     const { tranche_age: _t, ...sansAge } = PROFIL;
-    expect(projeterTheme(sansAge, [p]).niveau).toBeNull();
+    const projection = projeterTheme(sansAge, [p]);
+    expect(projection.niveau).not.toBe("non_concerne");
+    expect(projection.niveau).toBe("mixte");
+  });
+
+  it("répondre lève l'incertitude : le même effet devient améliorant ou non concerné selon la réponse", () => {
+    const p = proposition([effet({ cibles: [{ champ: "logement", valeurs: ["proprietaire"] }] })]);
+    expect(projeterTheme({ ...PROFIL, logement: "proprietaire" }, [p]).niveau).toBe("ameliorant");
+    const locataire = projeterTheme({ ...PROFIL, logement: "locataire" }, [p]);
+    expect(locataire.niveau).toBe("non_concerne");
+    expect(locataire.incertain).toBe(false);
+  });
+
+  it("un « mixte » réel (favorable ET défavorable) n'est pas marqué incertain", () => {
+    const reel = projeterTheme(PROFIL, [proposition([effet({ sens: "hausse" }), effet({ sens: "baisse" })])]);
+    expect(reel.niveau).toBe("mixte");
+    expect(reel.incertain).toBe(false);
+    expect(reel.raisons).toEqual([]);
   });
 
   it("un critère déjà exclu l'emporte sur un critère non répondu (faux ET inconnu = faux)", () => {
@@ -180,12 +200,13 @@ describe("projeterTheme — pas de badge plutôt qu'un mauvais badge", () => {
     expect(projection.champsManquants).toEqual([]);
   });
 
-  it("critère « autre » : jamais apparié, pas de badge, raison distincte", () => {
+  it("critère « autre » : jamais apparié ; on ne sait pas si le visiteur est concerné → « mixte », raison distincte", () => {
     const p = proposition([
       effet({ sens: "baisse", cibles: [{ champ: "autre", valeurs: ["personnes de nationalité étrangère"] }] }),
     ]);
     const projection = projeterTheme(PROFIL, [p]);
-    expect(projection.niveau).toBeNull();
+    expect(projection.niveau).toBe("mixte");
+    expect(projection.incertain).toBe(true);
     expect(projection.raisons).toEqual(["critere_hors_formulaire"]);
     expect(projection.champsManquants).toEqual([]);
   });
@@ -205,14 +226,25 @@ describe("projeterTheme — pas de badge plutôt qu'un mauvais badge", () => {
     expect(projeterTheme(PROFIL, [p]).niveau).toBe("ameliorant");
   });
 
-  it("améliorant + effet à confirmer : pas de badge, car l'effet à confirmer pourrait le contredire", () => {
+  it("améliorant + effet à confirmer : « mixte », car l'effet à confirmer pourrait contredire le favorable", () => {
     const p = proposition([
       effet({ sens: "hausse" }),
       effet({ sens: "baisse", cibles: [{ champ: "logement", valeurs: ["proprietaire"] }] }),
     ]);
-    const projection = projeterTheme({ ...PROFIL, logement: "" }, [p]);
-    expect(projection.niveau).toBeNull();
+    const { logement: _l, ...sansLogement } = PROFIL;
+    const projection = projeterTheme(sansLogement, [p]);
+    expect(projection.niveau).toBe("mixte");
+    expect(projection.incertain).toBe(true);
     expect(projection.champsManquants).toEqual(["logement"]);
+  });
+
+  it("incertitude ET effet de sens indéterminé : « mixte » (l'incertitude prime)", () => {
+    const p = proposition([
+      effet({ sens: "indetermine" }),
+      effet({ cibles: [{ champ: "logement", valeurs: ["proprietaire"] }] }),
+    ]);
+    const { logement: _l, ...sansLogement } = PROFIL;
+    expect(projeterTheme(sansLogement, [p]).niveau).toBe("mixte");
   });
 
   it("mixte reste mixte malgré un effet à confirmer : plus d'effets ne peuvent pas le défaire", () => {
@@ -221,7 +253,28 @@ describe("projeterTheme — pas de badge plutôt qu'un mauvais badge", () => {
       effet({ sens: "baisse" }),
       effet({ sens: "baisse", cibles: [{ champ: "logement", valeurs: ["proprietaire"] }] }),
     ]);
-    expect(projeterTheme({ ...PROFIL, logement: "" }, [p]).niveau).toBe("mixte");
+    const { logement: _l, ...sansLogement } = PROFIL;
+    const projection = projeterTheme(sansLogement, [p]);
+    expect(projection.niveau).toBe("mixte");
+    expect(projection.incertain).toBe(false);
+  });
+});
+
+describe("projeterTheme — réponses à plusieurs choix", () => {
+  const rsa = proposition([effet({ cibles: [{ champ: "aides_percues", valeurs: ["rsa"] }] })]);
+
+  it("s'applique si l'un des choix du visiteur est visé", () => {
+    expect(projeterTheme({ aides_percues: ["aide_logement", "rsa"] }, [rsa]).niveau).toBe("ameliorant");
+  });
+
+  it("ne s'applique pas si aucun choix n'est visé, y compris « aucune de ces aides » : non concerné, pas incertain", () => {
+    const projection = projeterTheme({ aides_percues: ["aucune"] }, [rsa]);
+    expect(projection.niveau).toBe("non_concerne");
+    expect(projection.incertain).toBe(false);
+  });
+
+  it("reste incertain tant que la question n'est pas répondue", () => {
+    expect(projeterTheme({ tranche_age: "30_49" }, [rsa]).niveau).toBe("mixte");
   });
 });
 

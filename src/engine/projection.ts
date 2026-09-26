@@ -1,11 +1,13 @@
 import { CHAMP_AUTRE, type Effet } from "../effets";
-import type { Profil, Proposition } from "../types";
+import { valeursDuProfil, type ProfilPartiel } from "../profil";
+import type { Proposition } from "../types";
 import { polarite, type Polarite } from "./polarite";
 
 // Indicateur de projection d'un candidat sur un thème pour un citoyen — règles documentées dans
 // docs/superpowers/specs/2026-09-24-fil-rouge-themes-projection-design.md et CLAUDE.md.
-// Quatre niveaux seulement. Pas de badge (niveau null) quand on ne peut pas trancher honnêtement :
-// mieux vaut pas d'indicateur qu'un mauvais indicateur.
+// Quatre niveaux seulement. Deux cas sans badge : aucun effet déterminé, ou effet qui vise le visiteur sans que son sens
+// soit établi. Quand le moteur ne sait pas si le visiteur est concerné (réponse manquante, ou public que le formulaire
+// ne sait pas décrire), l'indicateur est « mixte » — et on dit pourquoi, et quoi préciser.
 
 export type NiveauProjection = "ameliorant" | "mixte" | "non_concerne" | "degradant";
 
@@ -23,22 +25,14 @@ export interface EffetRetenu {
 
 export interface Projection {
   niveau: NiveauProjection | null;
+  // Pourquoi pas de badge (niveau null), ou pourquoi « mixte » par incertitude (incertain) : sinon vide.
   raisons: RaisonSansBadge[];
+  // Champs du profil à préciser pour lever l'incertitude (niveau null ou incertain) : sinon vide.
   champsManquants: string[];
   effetsRetenus: EffetRetenu[];
-}
-
-// Une question non répondue vaut « inconnu », JAMAIS « non » : "" ou absent = non répondu.
-type ProfilPartiel = Partial<Profil>;
-
-function valeurProfil(profil: ProfilPartiel, champ: string): string | null {
-  if (champ === "enfants_a_charge") {
-    const n = profil.nombre_enfants;
-    if (typeof n !== "number") return null;
-    return n > 0 ? "au_moins_un" : "aucun";
-  }
-  const valeur = (profil as Record<string, unknown>)[champ];
-  return typeof valeur === "string" && valeur.length > 0 ? valeur : null;
+  // Vrai quand « mixte » vient de ce que le moteur ne sait pas si le visiteur est concerné par certaines mesures, et non
+  // de mesures qui le favorisent ET le défavorisent.
+  incertain: boolean;
 }
 
 type StatutEffet =
@@ -46,7 +40,8 @@ type StatutEffet =
   | { type: "applicable" }
   | { type: "a_confirmer"; champsManquants: string[]; horsFormulaire: boolean };
 
-// ET à trois valeurs : un critère faux exclut l'effet même si un autre est inconnu.
+// ET à trois valeurs : un critère faux exclut l'effet même si un autre est inconnu. Une réponse à plusieurs choix
+// correspond si l'un de ses choix est visé.
 function statutEffet(profil: ProfilPartiel, effet: Effet): StatutEffet {
   const champsManquants: string[] = [];
   let horsFormulaire = false;
@@ -55,10 +50,10 @@ function statutEffet(profil: ProfilPartiel, effet: Effet): StatutEffet {
       horsFormulaire = true;
       continue;
     }
-    const valeur = valeurProfil(profil, critere.champ);
-    if (valeur === null) {
+    const valeurs = valeursDuProfil(profil, critere.champ);
+    if (valeurs === null) {
       champsManquants.push(critere.champ);
-    } else if (!critere.valeurs.includes(valeur)) {
+    } else if (!valeurs.some((v) => critere.valeurs.includes(v))) {
       return { type: "hors_cible" };
     }
   }
@@ -76,7 +71,8 @@ export function projeterTheme(profil: ProfilPartiel, propositions: Proposition[]
   let nombreHorsCible = 0;
   let favorables = 0;
   let defavorables = 0;
-  let bloquant = false; // effet qui vise peut-être ce profil sans qu'on puisse conclure
+  let incertains = 0; // effets qui visent peut-être ce profil : on ne sait pas s'il est concerné
+  let indetermines = 0; // effets qui visent ce profil sans sens établi
 
   for (const proposition of propositions) {
     // Même périmètre que l'affichage : une fiche « provisoire » est une recherche inachevée.
@@ -89,7 +85,7 @@ export function projeterTheme(profil: ProfilPartiel, propositions: Proposition[]
         continue;
       }
       if (statut.type === "a_confirmer") {
-        bloquant = true;
+        incertains += 1;
         for (const champ of statut.champsManquants) champsManquants.add(champ);
         if (statut.champsManquants.length > 0) raisons.add("informations_manquantes");
         if (statut.horsFormulaire) raisons.add("critere_hors_formulaire");
@@ -97,7 +93,7 @@ export function projeterTheme(profil: ProfilPartiel, propositions: Proposition[]
       }
       const sens = polarite(effet.dimension, effet.sens);
       if (sens === null) {
-        bloquant = true;
+        indetermines += 1;
         raisons.add("effet_non_determinable");
         continue;
       }
@@ -107,20 +103,23 @@ export function projeterTheme(profil: ProfilPartiel, propositions: Proposition[]
     }
   }
 
-  const resultat = (niveau: NiveauProjection | null): Projection => ({
+  const resultat = (niveau: NiveauProjection | null, incertain = false): Projection => ({
     niveau,
-    raisons: niveau === null ? [...raisons] : [],
-    champsManquants: niveau === null ? [...champsManquants] : [],
+    raisons: niveau === null || incertain ? [...raisons] : [],
+    champsManquants: niveau === null || incertain ? [...champsManquants] : [],
     effetsRetenus,
+    incertain,
   });
 
   if (nombreEffets === 0) {
     raisons.add("aucun_effet_determine");
     return resultat(null);
   }
-  // Le mixte est stable : ajouter des effets (même à confirmer) ne peut pas le défaire.
+  // Le mixte « réel » est stable : ajouter des effets (même à confirmer) ne peut pas le défaire.
   if (favorables > 0 && defavorables > 0) return resultat("mixte");
-  if (bloquant) return resultat(null);
+  // On ne sait pas si le visiteur est concerné par certaines mesures : « mixte », par prudence, avec l'explication.
+  if (incertains > 0) return resultat("mixte", true);
+  if (indetermines > 0) return resultat(null);
   if (favorables > 0) return resultat("ameliorant");
   if (defavorables > 0) return resultat("degradant");
   // Tous les effets existants ont été exclus par le ciblage : ce thème ne concerne pas ce profil.

@@ -74,7 +74,7 @@ export const regles: Record<string, (profil: Profil, proposition: Proposition) =
   },
 
   "philippe-pa-001": (profil, proposition) => {
-    const concerne = ["salarie", "independant", "fonctionnaire"].includes(profil.statut_professionnel);
+    const concerne = ["salarie", "independant", "fonctionnaire"].includes(String(profil.statut_professionnel));
     return avecConcerneAffine(
       profil,
       proposition,
@@ -84,4 +84,14 @@ export const regles: Record<string, (profil: Profil, proposition: Proposition) =
         : "Cette mesure concerne les actifs (salariés, indépendants, fonctionnaires)."
     );
   },
+};
+
+// Champs du profil dont chaque règle a besoin : sans eux, la règle n'est pas appliquée (une réponse manquante se lirait
+// « non concerné »). L'évaluation retombe alors sur l'explication générale.
+export const champsRequis: Record<string, string[]> = {
+  "le-pen-fisc-002": ["tranche_age"],
+  "le-pen-pa-002": ["statut_professionnel"],
+  "melenchon-fisc-002": ["tranche_patrimoine"],
+  "melenchon-pa-001": ["statut_professionnel", "tranche_revenus"],
+  "philippe-pa-001": ["statut_professionnel"],
 };

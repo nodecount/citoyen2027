@@ -76,26 +76,27 @@ export interface CandidatMeta {
   date_derniere_maj: string;
 }
 
+// Une question du formulaire = un champ du profil. `enum` : un choix ; `multi` : plusieurs choix (la réponse est une
+// liste) ; `number` : un nombre ; `text` : texte libre (jamais apparié par le moteur).
 export interface ChampProfil {
   id: string;
   label: string;
-  type: "enum" | "number" | "text";
+  type: "enum" | "multi" | "number" | "text";
   options?: string[];
   // Libellé lisible de chaque option (le formulaire n'affiche jamais un identifiant technique).
   libelles?: Record<string, string>;
+  // Donnée sensible : demandée seulement avec l'accord explicite du visiteur, toujours facultative.
+  sensible?: boolean;
+  // Pourquoi la question est posée (affiché au visiteur).
+  finalite?: string;
+  // Question conditionnelle : affichée seulement si la réponse à un autre champ est l'une de ces valeurs.
+  afficher_si?: { champ: string; valeurs: string[] };
 }
 
-export interface Profil {
-  statut_professionnel: string;
-  tranche_revenus: string;
-  situation_familiale: string;
-  nombre_enfants: number;
-  logement: string;
-  secteur_activite: string;
-  region: string;
-  tranche_age: string;
-  tranche_patrimoine: string;
-}
+// Une réponse du visiteur : un choix, un nombre, ou une liste de choix. Une question non répondue est ABSENTE du
+// profil (inconnu), jamais « non ».
+export type Reponse = string | number | string[];
+export type Profil = Record<string, Reponse>;
 
 // "chiffre_macro_seulement" est une valeur réservée / prospective : aucune règle actuelle
 // ne la produit (le moteur ne produit aujourd'hui que "qualitatif"). Elle est conservée pour

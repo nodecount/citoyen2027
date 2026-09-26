@@ -1,0 +1,27 @@
+{
+  "description": "Pour chaque question du profil (data/profils-schema.json), les thèmes de CETTE base auxquels elle sert. Une question pertinente pour au moins deux thèmes est posée dans les questions générales ; pertinente pour un seul thème, elle est posée dans ce thème.",
+  "pertinence": {
+    "tranche_age": ["fiscalite", "travail", "retraites", "aides-etat", "sante", "education", "logement"],
+    "statut_professionnel": ["fiscalite", "pouvoir-achat", "travail", "retraites", "aides-etat", "education"],
+    "tranche_revenus": ["fiscalite", "pouvoir-achat", "aides-etat", "logement", "travail", "retraites"],
+    "situation_familiale": ["fiscalite", "aides-etat", "logement"],
+    "nombre_enfants": ["fiscalite", "aides-etat", "education", "logement", "travail"],
+    "logement": ["logement", "fiscalite", "environnement", "pouvoir-achat", "aides-etat"],
+    "territoire": ["logement", "sante", "environnement", "education", "securite"],
+    "metier": ["education", "environnement", "sante", "securite", "travail"],
+    "nationalite": ["immigration", "aides-etat", "sante", "education", "libertes-fondamentales"],
+    "statut_sejour": ["immigration", "sante", "aides-etat", "logement"],
+    "aides_percues": ["aides-etat", "logement", "pouvoir-achat"],
+    "handicap": ["sante", "aides-etat"],
+    "tranche_patrimoine": ["fiscalite"],
+    "logements_hors_residence": ["logement"],
+    "logement_social": ["logement"],
+    "projet_achat": ["logement"],
+    "vehicule": ["environnement"],
+    "metier_penible": ["retraites"],
+    "carriere_longue": ["retraites"],
+    "aidant_familial": ["sante"],
+    "enfants_scolarises": ["education"],
+    "ne_en_france_parents_etrangers": ["immigration"]
+  }
+}

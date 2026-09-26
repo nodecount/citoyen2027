@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { evaluerProposition } from "./index";
+import { champsRequis, regles } from "./regles";
 import type { Profil, Proposition } from "../types";
 
 const profil: Profil = {
@@ -40,5 +41,20 @@ describe("evaluerProposition", () => {
     const impact = evaluerProposition(profil, proposition("id-inconnu-sans-regle"));
     expect(impact.concerne).toBe(true);
     expect(impact.niveau).toBe("qualitatif");
+  });
+
+  it("n'applique pas une règle dédiée quand le visiteur n'a pas répondu aux questions dont elle dépend", () => {
+    // Sans la tranche d'âge, « moins de 30 ans » ne peut pas être conclu : explication générale, jamais « non concerné ».
+    const impact = evaluerProposition({ logement: "locataire" }, proposition("le-pen-fisc-002"));
+    expect(impact.concerne).toBe(true);
+    expect(impact.explication).not.toContain("cible les moins de 30 ans");
+  });
+
+  it("applique la règle dédiée dès que ses questions sont répondues", () => {
+    expect(evaluerProposition({ tranche_age: "65_plus" }, proposition("le-pen-fisc-002")).concerne).toBe(false);
+  });
+
+  it("déclare les champs requis de chaque règle dédiée, et rien de plus", () => {
+    expect(Object.keys(champsRequis).sort()).toEqual(Object.keys(regles).sort());
   });
 });

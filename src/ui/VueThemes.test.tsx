@@ -3,9 +3,13 @@ import { describe, expect, it } from "vitest";
 import type { CandidatCharge } from "../data/chargerCandidats";
 import type { Effet } from "../effets";
 import { aDesInformations, type ProfilPartiel } from "../profil";
+import { construireQuestionnaire, CHAMPS_PROFIL, type Questionnaire } from "../questionnaire";
 import type { Proposition, SyntheseTheme, Theme } from "../types";
 import { construireCards } from "./cards";
 import { VueThemes } from "./VueThemes";
+
+// Seulement la liste des portraits : la légende, elle, décrit les niveaux et contient leurs classes.
+const portraits = (rendu: string): string => (rendu.match(/<ul class="portraits"[\s\S]*?<\/ul>/g) ?? []).join("");
 
 const PROFIL: ProfilPartiel = {
   statut_professionnel: "salarie",
@@ -47,13 +51,30 @@ function candidat(slug: string, propositions: Proposition[], syntheses: Synthese
   return { meta: { slug, nom, parti: "P", sources_officielles: [], date_derniere_maj: "2026-09-24" }, propositions, syntheses };
 }
 
-// Seulement la liste des portraits : la légende, elle, décrit les niveaux et contient leurs classes.
-const portraits = (rendu: string): string => (rendu.match(/<ul class="portraits"[\s\S]*?<\/ul>/g) ?? []).join("");
+// Questionnaire de test : « logement » sert aux deux thèmes (général) ; « vehicule » à un seul (thème fiscalité).
+const QUESTIONNAIRE: Questionnaire = construireQuestionnaire(
+  CHAMPS_PROFIL,
+  { logement: ["fiscalite", "retraites"], vehicule: ["fiscalite"], nationalite: ["fiscalite"] },
+  THEMES,
+);
 
-function html(candidats: CandidatCharge[], profil: ProfilPartiel = {}, ouvert?: { theme: string; candidat: string }): string {
+function html(
+  candidats: CandidatCharge[],
+  profil: ProfilPartiel = {},
+  ouvert?: { theme: string; candidat: string },
+  questionsActives = false,
+): string {
   const personnalise = aDesInformations(profil);
   return renderToStaticMarkup(
-    <VueThemes cards={construireCards(THEMES, candidats, personnalise ? profil : null)} profil={profil} personnalise={personnalise} ouvertInitial={ouvert} />,
+    <VueThemes
+      cards={construireCards(THEMES, candidats, personnalise ? profil : null)}
+      profil={profil}
+      personnalise={personnalise}
+      questionnaire={QUESTIONNAIRE}
+      questionsActives={questionsActives}
+      onReponse={() => {}}
+      ouvertInitial={ouvert}
+    />,
   );
 }
 
@@ -192,15 +213,75 @@ describe("après avoir eu des informations sur le visiteur", () => {
     expect(r).toContain("pas encore disponible");
   });
 
-  it("invite à préciser un champ manquant plutôt que de conclure", () => {
+  it("invite à préciser un champ manquant : « mixte » par prudence plutôt que de conclure à la place du visiteur", () => {
     const cible = { ...HAUSSE, cibles: [{ champ: "logement", valeurs: ["locataire"] }] };
     const r = html([candidat("a", [prop("a", [cible])])], { tranche_age: "30_49" }, { theme: "fiscalite", candidat: "a" });
     expect(r).toContain("Statut de logement");
-    expect(portraits(r)).not.toContain("niveau"); // pas de badge sur le portrait tant que le logement est inconnu
+    expect(portraits(r)).not.toContain("niveau--ameliorant"); // il n'est pas « améliorant » tant que le logement est inconnu
+    expect(portraits(r)).toContain("niveau--mixte");
   });
 
   it("ne dit jamais « cette mesure ne s'applique pas à votre profil » sur la foi d'un profil incomplet", () => {
     const r = html([candidat("a", [prop("a", undefined)])], { tranche_age: "30_49" }, { theme: "fiscalite", candidat: "a" });
     expect(r).not.toContain("ne s&#x27;applique pas à votre profil");
+  });
+
+  it("colore le tour du portrait selon le niveau (couleur + mot + symbole)", () => {
+    const r = html([candidat("a", [prop("a", [HAUSSE])])], PROFIL);
+    expect(portraits(r)).toContain('data-niveau="ameliorant"');
+    expect(portraits(html([candidat("a", [prop("a", [BAISSE])])], PROFIL))).toContain('data-niveau="degradant"');
+  });
+
+  it("dit « à préciser » sous un « mixte » par incertitude, et explique quoi préciser dans le détail", () => {
+    const cible = { ...HAUSSE, cibles: [{ champ: "logement", valeurs: ["locataire"] }] };
+    const r = html([candidat("a", [prop("a", [cible])])], { tranche_age: "30_49" }, { theme: "fiscalite", candidat: "a" });
+    expect(portraits(r)).toContain("Mixte");
+    expect(portraits(r)).toContain("à préciser");
+    expect(r).toContain("par prudence");
+    expect(r).toContain("Répondez à");
+    expect(r).toContain("Statut de logement");
+  });
+
+  it("ne dit pas « à préciser » pour un « mixte » réel (favorable ET défavorable)", () => {
+    expect(portraits(html([candidat("a", [prop("a", [HAUSSE, BAISSE])])], PROFIL))).not.toContain("à préciser");
+  });
+});
+
+describe("questions propres à chaque thème", () => {
+  const candidats = [candidat("a", [prop("a", [HAUSSE])])];
+
+  it("n'apparaissent pas avant la validation du formulaire général", () => {
+    const r = html(candidats, PROFIL, undefined, false);
+    expect(r).not.toContain("Préciser ma situation pour ce thème");
+  });
+
+  it("apparaissent après, uniquement sur le thème concerné, avec le décompte des réponses", () => {
+    const r = html(candidats, { tranche_age: "30_49", vehicule: "thermique" }, undefined, true);
+    expect(r).toContain("Préciser ma situation pour ce thème");
+    expect(r).toContain("1/1 réponse");
+    expect(r).toContain("Quel véhicule utilisez-vous le plus ?");
+    const carteRetraites = r.slice(r.indexOf('id="theme-retraites"'));
+    expect(carteRetraites).not.toContain("Préciser ma situation pour ce thème");
+  });
+
+  it("n'affichent pas « 0/0 » quand un thème n'a que des questions sensibles", () => {
+    const seulementSensibles = construireQuestionnaire(CHAMPS_PROFIL, { nationalite: ["fiscalite"] }, THEMES);
+    const personnalise = aDesInformations(PROFIL);
+    const r = renderToStaticMarkup(
+      <VueThemes cards={construireCards(THEMES, candidats, PROFIL)} profil={PROFIL} personnalise={personnalise} questionnaire={seulementSensibles} questionsActives={true} onReponse={() => {}} />,
+    );
+    expect(r).not.toContain("0/0");
+    expect(r).toContain("questions sensibles, facultatif");
+  });
+
+  it("ne reposent que sur les questions propres au thème : les questions générales n'y sont pas répétées", () => {
+    const r = html(candidats, PROFIL, undefined, true);
+    expect(r).not.toContain("Statut de logement"); // question générale (deux thèmes) : posée dans le formulaire général
+  });
+
+  it("gardent les questions sensibles derrière l'accord du visiteur", () => {
+    const r = html(candidats, PROFIL, undefined, true);
+    expect(r).toContain("J&#x27;accepte de répondre à des questions plus sensibles");
+    expect(r).not.toContain("Votre nationalité"); // masquée tant que l'accord n'est pas donné
   });
 });

@@ -1,5 +1,6 @@
 import basesJson from "../../data/bases/bases.json";
 import type { EntreeAVerifier } from "../ingestion/depot";
+import { CHAMPS_PROFIL, construireQuestionnaire, type Questionnaire } from "../questionnaire";
 import type { CandidatMeta, Proposition, SyntheseTheme, Theme } from "../types";
 import { assemblerCandidats, type CandidatsCharges } from "./chargerCandidats";
 
@@ -20,6 +21,8 @@ export interface InfoBase {
 export interface BaseCharge {
   info: InfoBase;
   themes: Theme[];
+  // Questions générales + questions par thème, calculées depuis la pertinence propre à la base.
+  questionnaire: Questionnaire;
   metas: Record<string, CandidatMeta>;
   propositions: Record<string, Proposition[]>;
   syntheses: Record<string, SyntheseTheme[]>;
@@ -29,6 +32,7 @@ export interface BaseCharge {
 const infosBases = basesJson as InfoBase[];
 
 const themesModules = import.meta.glob("../../data/bases/*/themes.json", { eager: true }) as Record<string, { default: Theme[] }>;
+const questionnaireModules = import.meta.glob("../../data/bases/*/questionnaire.json", { eager: true }) as Record<string, { default: { pertinence: Record<string, string[]> } }>;
 const metaModules = import.meta.glob("../../data/bases/*/programmes/*/meta.json", { eager: true }) as Record<string, { default: CandidatMeta }>;
 const propositionsModules = import.meta.glob("../../data/bases/*/programmes/*/propositions.json", { eager: true }) as Record<string, { default: Proposition[] }>;
 const synthesesModules = import.meta.glob("../../data/bases/*/programmes/*/synthese.json", { eager: true }) as Record<string, { default: SyntheseTheme[] }>;
@@ -70,9 +74,11 @@ export function resoudreBase(demandee: string | null | undefined, bases: InfoBas
 export function chargerBase(id: string): BaseCharge {
   const info = resoudreBase(id);
   const themes = Object.entries(themesModules).find(([chemin]) => extraireBase(chemin) === info.id)?.[1].default ?? [];
+  const pertinence = Object.entries(questionnaireModules).find(([chemin]) => extraireBase(chemin) === info.id)?.[1].default.pertinence ?? {};
   return {
     info,
     themes,
+    questionnaire: construireQuestionnaire(CHAMPS_PROFIL, pertinence, themes),
     metas: regrouperParBaseEtSlug(metaModules, info.id),
     propositions: regrouperParBaseEtSlug(propositionsModules, info.id),
     syntheses: regrouperParBaseEtSlug(synthesesModules, info.id),

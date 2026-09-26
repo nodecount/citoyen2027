@@ -271,6 +271,108 @@ article {
   font-size: 0.72rem;
 }
 
+/* Couleur autour du portrait : elle n'apparaît qu'après validation du formulaire général, et ne sert qu'aux quatre niveaux
+   de l'indicateur. Le sens est toujours aussi écrit (mot + symbole) sous le portrait. */
+.portrait[data-niveau] .pastille {
+  border-color: var(--niveau-couleur);
+  box-shadow: 0 0 0 3px var(--surface), 0 0 0 6px var(--niveau-couleur);
+}
+
+.portrait[data-niveau="ameliorant"] { --niveau-couleur: var(--ameliorant); }
+.portrait[data-niveau="mixte"] { --niveau-couleur: var(--mixte); }
+.portrait[data-niveau="non_concerne"] { --niveau-couleur: var(--non-concerne); }
+.portrait[data-niveau="degradant"] { --niveau-couleur: var(--degradant); }
+
+.a-preciser {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: var(--encre-douce);
+}
+
+.incertitude {
+  color: var(--mixte);
+}
+
+/* ---- Questions du formulaire ------------------------------------------------------------------ */
+
+.progression {
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: var(--encre-douce);
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0 0 1rem;
+}
+
+.question label,
+.question legend {
+  font-weight: 600;
+}
+
+.question select,
+.question input[type="number"],
+.question input[type="text"] {
+  max-width: 100%;
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+
+.finalite {
+  color: var(--encre-douce);
+  font-size: 0.8rem;
+}
+
+fieldset.question {
+  min-width: 0;
+  padding: 0.5rem 0.75rem 0.75rem;
+  border: 1px solid var(--filet);
+  border-radius: 6px;
+}
+
+.option-multi {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.2rem 0;
+  font-weight: normal !important;
+}
+
+.sensibles {
+  margin: 1.25rem 0 0;
+  padding: 0.75rem 1rem;
+  border: 1px dashed var(--filet);
+  border-radius: 6px;
+}
+
+.accord {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.questions-theme {
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--filet);
+  border-radius: 6px;
+  background: var(--fond);
+  font-size: 0.95rem;
+}
+
+.questions-theme > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.questions-theme-corps {
+  margin-top: 0.9rem;
+}
+
 .detail {
   margin-top: 1rem;
   padding-top: 0.9rem;
