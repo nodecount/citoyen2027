@@ -1650,8 +1650,8 @@
     "theme": "environnement"
   },
   {
-    "titre": "Instauration de peines minimales obligatoires",
-    "resume_factuel": "Bruno Retailleau propose d'inscrire dans une charte de l'ordre républicain, annexée à sa révision constitutionnelle, l'obligation d'appliquer des peines minimales, dont l'application dépend aujourd'hui du juge. Le mécanisme précis (quantum, infractions concernées) n'est pas détaillé.",
+    "titre": "Peines minimales obligatoires",
+    "resume_factuel": "Le candidat propose de rendre obligatoires les peines minimales, dont l'application dépend aujourd'hui du juge, dans le cadre d'une « charte de l'ordre républicain » annexée à une révision constitutionnelle.",
     "sources": [
       {
         "type": "primaire",
@@ -1662,25 +1662,17 @@
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
+    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
     "statut": "complet",
     "date_derniere_verification": "2026-09-26",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "securite_personnelle",
-        "sens": "hausse",
-        "source_url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "extrait": "Je prends un exemple : si aujourd’hui les peines minimales existent, leur application dépend du juge. Je veux qu’elles soient désormais obligatoires et, grâce à cette charte, elles le seront."
-      }
-    ],
+    "effets": [],
     "id": "retailleau-secu-001",
     "candidat": "retailleau",
     "theme": "securite"
   },
   {
-    "titre": "Création d'un droit constitutionnel à la sécurité des Français",
-    "resume_factuel": "Bruno Retailleau propose d'inscrire dans une charte de l'ordre républicain un droit constitutionnel à la sécurité, placé au même niveau juridique que la protection des libertés.",
+    "titre": "Droit constitutionnel à la sécurité des Français",
+    "resume_factuel": "Dans le cadre de la charte de l'ordre républicain, le candidat propose d'instaurer un droit constitutionnel à la sécurité des Français, mis au même niveau juridique que la protection des libertés.",
     "sources": [
       {
         "type": "primaire",
@@ -1691,52 +1683,44 @@
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
+    "hypotheses_calcul": "Aucun chiffrage disponible ; mécanisme de mise en œuvre non précisé au-delà de l'inscription constitutionnelle.",
     "statut": "complet",
     "date_derniere_verification": "2026-09-26",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "securite_personnelle",
-        "sens": "hausse",
-        "source_url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "extrait": "Concrètement, je souhaite instaurer un droit constitutionnel à la sécurité des Français. La protection des libertés — à laquelle je suis attaché — et la sécurité des Français doivent avoir la même valeur juridique."
-      }
-    ],
+    "effets": [],
     "id": "retailleau-secu-002",
     "candidat": "retailleau",
     "theme": "securite"
   },
   {
-    "titre": "Bouclier constitutionnel contre les jurisprudences européennes et internationales",
-    "resume_factuel": "Une révision constitutionnelle instaurerait un « bouclier constitutionnel » permettant à une loi organique de revenir sur une jurisprudence européenne (notamment de la CEDH) jugée contraire aux intérêts fondamentaux de la France, par exemple lorsque la CEDH interdit l'expulsion d'individus dangereux au motif de leur vie privée et familiale en France ou de l'absence de procès équitable dans leur pays d'origine.",
+    "titre": "Tolérance zéro contre le squat : expulsion administrative accélérée",
+    "resume_factuel": "Le candidat propose une procédure administrative d'expulsion accélérée en cas de squat constaté, avec un délai maximal de dix jours, la possibilité pour le propriétaire de faire suspendre eau et électricité, et une obligation pour l'État d'exécuter les décisions de justice sous trente jours sous peine d'indemnisation automatique du propriétaire.",
     "sources": [
       {
         "type": "primaire",
-        "label": "republicains.fr — interview-cour-supreme",
-        "url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=36",
         "nom": "republicains.fr",
         "annee": 2026
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
+    "hypotheses_calcul": "Aucun chiffrage disponible.",
     "statut": "complet",
     "date_derniere_verification": "2026-09-26",
     "effets": [
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "logement",
             "valeurs": [
-              "individus dont l'expulsion est aujourd'hui bloquée par la CEDH au nom de la vie privée et familiale"
+              "proprietaire"
             ]
           }
         ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "extrait": "La CEDH nous a interdit d’expulser des individus dangereux au motif qu’ils avaient une vie privée et familiale en France. Ou encore parce que leur pays d’origine ne leur offrirait pas de procès équitable. Dans ces cas-là, je propose qu’une loi organique puisse revenir sur une jurisprudence européenne si elle est contraire à nos intérêts fondamentaux."
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=36",
+        "extrait": "les situations de squat feront l’objet d’une procédure administrative d’expulsion accélérée. Dès qu’une occupation illégale sera constatée par les forces de l’ordre ou par un commissaire de justice, la procédure sera engagée immédiatement et l’expulsion interviendra dans un délai maximal de dix jours"
       }
     ],
     "id": "retailleau-secu-003",
@@ -1744,42 +1728,13 @@
     "theme": "securite"
   },
   {
-    "titre": "Élargissement du référendum aux questions de politique pénale et migratoire",
-    "resume_factuel": "Le projet de révision constitutionnelle élargirait le périmètre de l'article 11 pour permettre au peuple de décider par référendum de questions aujourd'hui interdites, notamment la politique pénale et la politique migratoire, et allègerait les conditions du référendum d'initiative partagée (2,5 millions de signatures au lieu de 5 millions).",
+    "titre": "Réserver la libre circulation de l'espace Schengen aux Européens et instaurer des visas territorialisés",
+    "resume_factuel": "Bruno Retailleau propose de revenir à l'inspiration première de Schengen en réservant la libre circulation aux Européens, et non aux extra-Européens, et de généraliser les visas territorialisés, strictement limités au pays qui les a délivrés, comme règle de droit commun.",
     "sources": [
       {
         "type": "primaire",
-        "label": "republicains.fr — interview-cour-supreme",
-        "url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "nom": "republicains.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-26",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "extrait": "D’abord, le peuple français doit pouvoir décider, par référendum, de toute question législative. Aujourd’hui, il y a des questions interdites aux Français : la politique pénale, la politique migratoire, et, plus largement, les questions de société."
-      }
-    ],
-    "id": "retailleau-secu-004",
-    "candidat": "retailleau",
-    "theme": "securite"
-  },
-  {
-    "titre": "Suppression du droit du sol, fin des naturalisations automatiques et retour à l'assimilation",
-    "resume_factuel": "Bruno Retailleau propose d'abolir le droit du sol et de revenir à un principe d'assimilation pour l'accès à la nationalité française, mettant fin aux naturalisations automatiques. Le mécanisme précis de remplacement n'est pas détaillé dans le corpus.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "republicains.fr — interview-cour-supreme",
-        "url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
+        "label": "republicains.fr — schengen",
+        "url": "https://republicains.fr/actualites/2026/08/02/lespace-schengen-doit-etre-reserve-aux-europeens/",
         "nom": "republicains.fr",
         "annee": 2026
       }
@@ -1794,7 +1749,199 @@
           {
             "champ": "autre",
             "valeurs": [
-              "personnes nées en France de parents étrangers susceptibles d'acquérir la nationalité par droit du sol"
+              "ressortissants extra-européens souhaitant circuler dans l'espace Schengen"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/actualites/2026/08/02/lespace-schengen-doit-etre-reserve-aux-europeens/",
+        "extrait": "avec une libre circulation pour les Européens, mais pas pour les extra-Européens"
+      }
+    ],
+    "id": "retailleau-immi-001",
+    "candidat": "retailleau",
+    "theme": "immigration"
+  },
+  {
+    "titre": "Levier diplomatique et migratoire vis-à-vis des pays d'origine non coopératifs",
+    "resume_factuel": "Bruno Retailleau propose de ne plus distribuer de visas aux pays non coopératifs en matière migratoire, de supprimer leurs tarifs commerciaux préférentiels et de conditionner l'aide au développement à la reprise de leurs ressortissants expulsés, ainsi que de déployer Frontex sur les points de passage comme Ceuta.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — schengen",
+        "url": "https://republicains.fr/actualites/2026/08/02/lespace-schengen-doit-etre-reserve-aux-europeens/",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-immi-002",
+    "candidat": "retailleau",
+    "theme": "immigration"
+  },
+  {
+    "titre": "Conditionnement de l'hébergement d'urgence à la régularité du séjour",
+    "resume_factuel": "Cette mesure est traitée dans la fiche logement (conditionnement de l'hébergement d'urgence à la régularité du séjour et plafonnement à 18 mois) ; elle vise spécifiquement les personnes en situation irrégulière ou sous OQTF, qui relèveraient désormais du droit des étrangers et non du droit au logement.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=44",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes en situation irrégulière ou sous OQTF"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=44",
+        "extrait": "conditionner l’hébergement d’urgence à la régularité du séjour"
+      }
+    ],
+    "id": "retailleau-immi-003",
+    "candidat": "retailleau",
+    "theme": "immigration"
+  },
+  {
+    "titre": "Condition de résidence et d'activité professionnelle pour les ressortissants étrangers bénéficiant des aides familiales",
+    "resume_factuel": "Cette mesure est déjà décrite dans la fiche famille (condition de cinq ans de résidence et d'activité professionnelle pour les ressortissants étrangers bénéficiant des aides familiales, dont le Revenu familial) ; elle relève aussi de la politique d'intégration puisqu'elle conditionne l'accès aux prestations universelles à une durée de résidence et de travail en France.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — famille",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=4",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "ressortissants étrangers présents en France depuis moins de cinq ans ou sans activité professionnelle"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=4",
+        "extrait": "pour bénéficier pleinement des dispositifs familiaux, les ressortissants étrangers devront justifier de cinq années de résidence en France et d’exercice d’une activité professionnelle"
+      }
+    ],
+    "id": "retailleau-immi-004",
+    "candidat": "retailleau",
+    "theme": "immigration"
+  },
+  {
+    "titre": "Extension du champ du référendum et allègement du RIP",
+    "resume_factuel": "Bruno Retailleau propose d'élargir le périmètre de l'article 11 de la Constitution afin de permettre au peuple de décider par référendum de toute question législative, y compris la politique pénale et migratoire, actuellement exclues. Il propose aussi d'alléger les conditions du référendum d'initiative partagée (RIP) en réduisant de moitié le nombre de signatures requises (2,5 millions au lieu de 5 millions).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — interview-cour-supreme",
+        "url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-lib-001",
+    "candidat": "retailleau",
+    "theme": "libertes-fondamentales"
+  },
+  {
+    "titre": "Création d'un bouclier constitutionnel face aux juridictions européennes et internationales",
+    "resume_factuel": "Le candidat propose d'inscrire dans la Constitution un mécanisme permettant à une loi organique de revenir sur une jurisprudence européenne (notamment de la CEDH) jugée contraire aux intérêts fondamentaux de la France, et de préciser à l'article 88 que le droit européen ne prime sur la loi que s'il respecte la Constitution française et le principe de subsidiarité.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — interview-cour-supreme",
+        "url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-lib-002",
+    "candidat": "retailleau",
+    "theme": "libertes-fondamentales"
+  },
+  {
+    "titre": "Procédure permettant de passer outre une censure du Conseil constitutionnel",
+    "resume_factuel": "Bruno Retailleau propose une nouvelle procédure : lorsque le Conseil constitutionnel censure une loi votée par le Parlement, le président de la République pourrait soumettre le texte au peuple par référendum ou réunir le Parlement en congrès pour passer outre cette censure. Il cite comme exemple d'application la fin des aides sociales automatiques pour les étrangers, votée par le Parlement puis censurée.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — interview-cour-supreme",
+        "url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-lib-003",
+    "candidat": "retailleau",
+    "theme": "libertes-fondamentales"
+  },
+  {
+    "titre": "Charte de l'ordre républicain : abolition du droit du sol et fin des naturalisations automatiques",
+    "resume_factuel": "Dans le cadre d'une charte de l'ordre républicain adossée à la révision constitutionnelle, le candidat propose d'abolir le droit du sol et de revenir à un principe d'assimilation, mettant fin aux naturalisations automatiques : « devenir français, cela se mérite ».",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — interview-cour-supreme",
+        "url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes nées en France de parents étrangers pouvant prétendre à la nationalité par le droit du sol"
             ]
           }
         ],
@@ -1804,13 +1951,13 @@
         "extrait": "abolir le droit du sol et revenir à l’assimilation pour qu’il n’y ait plus de naturalisations automatiques."
       }
     ],
-    "id": "retailleau-immi-001",
+    "id": "retailleau-lib-004",
     "candidat": "retailleau",
-    "theme": "immigration"
+    "theme": "libertes-fondamentales"
   },
   {
-    "titre": "Suppression du droit au mariage pour les personnes sous obligation de quitter le territoire (OQTF)",
-    "resume_factuel": "Le candidat propose de supprimer le droit au mariage pour les personnes visées par une OQTF, dans le cadre de la charte de l'ordre républicain qu'il souhaite adosser à une révision constitutionnelle.",
+    "titre": "Suppression du droit au mariage pour les personnes sous OQTF",
+    "resume_factuel": "Le candidat propose de supprimer le droit au mariage pour les personnes faisant l'objet d'une obligation de quitter le territoire français (OQTF), dans le cadre de sa charte de l'ordre républicain.",
     "sources": [
       {
         "type": "primaire",
@@ -1821,7 +1968,7 @@
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
+    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
     "statut": "complet",
     "date_derniere_verification": "2026-09-26",
     "effets": [
@@ -1840,177 +1987,13 @@
         "extrait": "supprimer le droit au mariage pour les OQTF"
       }
     ],
-    "id": "retailleau-immi-002",
-    "candidat": "retailleau",
-    "theme": "immigration"
-  },
-  {
-    "titre": "Expulsion de toutes les personnes « qui n'ont rien à faire en France »",
-    "resume_factuel": "Dans le cadre de sa charte de l'ordre républicain, le candidat souhaite rendre possible l'expulsion systématique des personnes jugées ne pas avoir leur place en France, sans que les critères précis d'application ni le mécanisme juridique complet ne soient détaillés au-delà du bouclier constitutionnel contre la CEDH.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "republicains.fr — interview-cour-supreme",
-        "url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "nom": "republicains.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-26",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes étrangères visées par une mesure d'expulsion, y compris celles invoquant leur vie privée et familiale en France"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "extrait": "Expulser tous ceux qui n’ont rien à faire en France"
-      }
-    ],
-    "id": "retailleau-immi-003",
-    "candidat": "retailleau",
-    "theme": "immigration"
-  },
-  {
-    "titre": "Réserver la libre circulation de l'espace Schengen aux ressortissants européens via des visas territorialisés",
-    "resume_factuel": "Bruno Retailleau propose de revenir à l'inspiration initiale de Schengen en réservant la libre circulation aux Européens, et d'instaurer les visas territorialisés comme règle de droit commun : un visa serait strictement limité au pays qui l'a délivré, empêchant la circulation vers d'autres pays de l'espace Schengen pour les extra-Européens.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "republicains.fr — schengen",
-        "url": "https://republicains.fr/actualites/2026/08/02/lespace-schengen-doit-etre-reserve-aux-europeens/",
-        "nom": "republicains.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-26",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "ressortissants extra-européens munis d'un visa Schengen"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://republicains.fr/actualites/2026/08/02/lespace-schengen-doit-etre-reserve-aux-europeens/",
-        "extrait": "une libre circulation pour les Européens, mais pas pour les extra-Européens. Je demande l’instauration de visas territorialisés comme règle de droit commun."
-      }
-    ],
-    "id": "retailleau-immi-004",
-    "candidat": "retailleau",
-    "theme": "immigration"
-  },
-  {
-    "titre": "Conditionner visas, tarifs commerciaux et aide au développement à la réadmission des expulsés par les pays d'origine",
-    "resume_factuel": "Le candidat propose une « révolution diplomatique » consistant à cesser de distribuer des visas aux pays non coopératifs, à supprimer les tarifs commerciaux préférentiels et à conditionner l'aide au développement à la reprise par les pays d'origine de leurs ressortissants expulsés. Cette mesure vise les États tiers, pas directement les citoyens résidant en France ; elle n'a pas d'effet direct chiffré sur un profil de citoyen.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "republicains.fr — schengen",
-        "url": "https://republicains.fr/actualites/2026/08/02/lespace-schengen-doit-etre-reserve-aux-europeens/",
-        "nom": "republicains.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-26",
-    "effets": [],
-    "id": "retailleau-immi-005",
-    "candidat": "retailleau",
-    "theme": "immigration"
-  },
-  {
-    "titre": "Déploiement de Frontex à Ceuta pour sécuriser les frontières extérieures de l'UE",
-    "resume_factuel": "Bruno Retailleau se dit favorable à ce que l'agence européenne Frontex se déploie à Ceuta afin de renforcer le contrôle des frontières extérieures de l'Union européenne.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "republicains.fr — schengen",
-        "url": "https://republicains.fr/actualites/2026/08/02/lespace-schengen-doit-etre-reserve-aux-europeens/",
-        "nom": "republicains.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-26",
-    "effets": [],
-    "id": "retailleau-immi-006",
-    "candidat": "retailleau",
-    "theme": "immigration"
-  },
-  {
-    "titre": "Référendum sur l'immigration (position de 2025)",
-    "resume_factuel": "Position de 2025 : Bruno Retailleau, alors ministre de l'Intérieur, avait indiqué souhaiter un référendum sur l'immigration. Le corpus ne précise pas le contenu exact des questions qui seraient soumises, mais l'entretien de 2026 confirme sa volonté d'élargir le champ du référendum aux questions migratoires via une révision constitutionnelle de l'article 11.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "republicains.fr — schengen",
-        "url": "https://republicains.fr/actualites/2026/08/02/lespace-schengen-doit-etre-reserve-aux-europeens/",
-        "nom": "republicains.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-26",
-    "effets": [],
-    "id": "retailleau-immi-007",
-    "candidat": "retailleau",
-    "theme": "immigration"
-  },
-  {
-    "titre": "Extension du référendum et assouplissement du référendum d'initiative partagée (RIP)",
-    "resume_factuel": "Bruno Retailleau propose d'élargir le périmètre de l'article 11 de la Constitution pour permettre au peuple de décider par référendum de toute question législative, y compris des sujets aujourd'hui exclus (politique pénale, politique migratoire, questions de société). Il souhaite aussi réduire de moitié le nombre de signatures nécessaires pour déclencher un référendum d'initiative partagée (actuellement 5 millions), sans préciser le calendrier de mise en œuvre au-delà de la saisine du Parlement dès son arrivée à l'Élysée et d'un référendum global à la rentrée 2027.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "republicains.fr — interview-cour-supreme",
-        "url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "nom": "republicains.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-26",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "extrait": "D’abord, le peuple français doit pouvoir décider, par référendum, de toute question législative."
-      }
-    ],
-    "id": "retailleau-lib-001",
+    "id": "retailleau-lib-005",
     "candidat": "retailleau",
     "theme": "libertes-fondamentales"
   },
   {
-    "titre": "Mécanisme permettant de « censurer la censure » du Conseil constitutionnel",
-    "resume_factuel": "Bruno Retailleau propose de créer une nouvelle procédure constitutionnelle : lorsque le Conseil constitutionnel censure une loi votée par le Parlement, le président de la République pourrait donner la parole au peuple (référendum) ou réunir le Parlement en congrès pour passer outre cette censure. Il cite en exemple la censure de la fin des aides sociales automatiques pour les étrangers, qui serait ainsi rendue applicable.",
+    "titre": "Charte de l'ordre républicain contre le séparatisme et pour la reconnaissance des racines judéo-chrétiennes",
+    "resume_factuel": "Bruno Retailleau propose une charte de l'ordre républicain destinée à combattre le séparatisme et l'entrisme religieux tout en sanctuarisant des éléments culturels jugés patrimoniaux, avec des exemples cités (crèches de Noël en mairie, port du voile par des élues), sans que le mécanisme juridique précis (interdictions, sanctions) soit détaillé dans le corpus.",
     "sources": [
       {
         "type": "primaire",
@@ -2021,84 +2004,11 @@
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-26",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "droits_et_libertes",
-        "sens": "indetermine",
-        "source_url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "extrait": "le président de la République pourra donner la parole au peuple français pour censurer la censure. Soit par référendum, soit en réunissant le Parlement en congrès."
-      }
-    ],
-    "id": "retailleau-lib-002",
-    "candidat": "retailleau",
-    "theme": "libertes-fondamentales"
-  },
-  {
-    "titre": "Bouclier constitutionnel contre les juridictions européennes et internationales et primauté conditionnelle du droit européen",
-    "resume_factuel": "Le candidat propose d'inscrire dans la Constitution un « bouclier constitutionnel » permettant à une loi organique de revenir sur une jurisprudence européenne (notamment de la CEDH) jugée contraire aux intérêts fondamentaux de la France, et de préciser à l'article 88 que le droit européen ne prime la loi française que s'il respecte la Constitution française et le principe de subsidiarité.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "republicains.fr — interview-cour-supreme",
-        "url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "nom": "republicains.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-26",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "droits_et_libertes",
-        "sens": "indetermine",
-        "source_url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "extrait": "je propose qu’une loi organique puisse revenir sur une jurisprudence européenne si elle est contraire à nos intérêts fondamentaux."
-      }
-    ],
-    "id": "retailleau-lib-003",
-    "candidat": "retailleau",
-    "theme": "libertes-fondamentales"
-  },
-  {
-    "titre": "Charte de l'ordre républicain : reconnaissance des racines judéo-chrétiennes et encadrement du port de signes religieux par les élus",
-    "resume_factuel": "Dans le cadre d'une « charte de l'ordre républicain » annexée au pacte constitutionnel, le candidat souhaite combattre le séparatisme et l'entrisme religieux tout en sanctuarisant des éléments culturels jugés patrimoniaux (crèches de Noël dans les mairies), et reconnaître les racines judéo-chrétiennes de la France. Il critique le fait qu'une conseillère municipale puisse siéger voilée, sans détailler précisément la mesure normative envisagée (interdiction, restriction du port de signes religieux pour les élus).",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "republicains.fr — interview-cour-supreme",
-        "url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "nom": "republicains.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
+    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus ; les modalités précises de mise en œuvre ne sont pas détaillées.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "élus locaux portant un signe religieux, notamment le voile"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://republicains.fr/actualites/2026/09/02/en-france-la-seule-cour-supreme-cest-le-peuple-je-lui-donnerai-le-dernier-mot/",
-        "extrait": "on n’a pas le droit d’installer une crèche de Noël dans une mairie, mais en revanche une conseillère municipale peut y siéger voilée !"
-      }
-    ],
-    "id": "retailleau-lib-004",
+    "effets": [],
+    "id": "retailleau-lib-006",
     "candidat": "retailleau",
     "theme": "libertes-fondamentales"
   }
