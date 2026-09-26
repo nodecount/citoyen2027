@@ -134,12 +134,20 @@ export function construireRequeteSynthese(
   };
 }
 
-export type ResultatSynthese = { ok: true; synthese: SyntheseGeneree } | { ok: false; erreur: string };
+export type ResultatSynthese =
+  | { ok: true; synthese: SyntheseGeneree }
+  // `texte` : dernier texte refusé, gardé pour la relecture humaine (avant, il était perdu).
+  | { ok: false; erreur: string; texte?: string };
 
 function texteDeReponse(reponse: { content: Array<{ type: string; text?: string }> }): string | undefined {
   return reponse.content.find((bloc) => bloc.type === "text")?.text;
 }
 
+const TENTATIVES_MAX = 2;
+
+// Un refus déterministe (texte trop long, mesure omise, mot évaluatif…) se corrige presque toujours en
+// renvoyant l'erreur au modèle : une seule nouvelle tentative, pour ~1 centime. Refus, troncature et pannes
+// d'outil lèvent sans nouvelle tentative.
 export async function genererSynthese(
   client: ClientAnthropicMinimal,
   meta: CandidatMeta,
@@ -147,29 +155,47 @@ export async function genererSynthese(
   themeLibelle: string,
   propositions: Proposition[],
 ): Promise<ResultatSynthese> {
-  const { reponse } = await appeler(client, construireRequeteSynthese(meta, themeId, themeLibelle, propositions), {
-    phase: "synthèse",
-    slug: meta.slug,
-    themeId,
-  });
-  if (reponse.stop_reason === "max_tokens") throw new Error(`genererSynthese (${meta.slug} × ${themeId}) : sortie tronquée (max_tokens)`);
-  const erreurAppel = detecterErreurReponse(reponse);
-  if (erreurAppel) throw new Error(`genererSynthese (${meta.slug} × ${themeId}) : ${erreurAppel}`);
+  const ids = propositions.map((p) => p.id);
+  const requeteInitiale = construireRequeteSynthese(meta, themeId, themeLibelle, propositions);
+  let messages = requeteInitiale.messages;
+  let dernier: ResultatSynthese = { ok: false, erreur: "aucune tentative" };
 
-  const texte = texteDeReponse(reponse);
-  if (!texte) return { ok: false, erreur: "réponse vide" };
-  let brut: unknown;
-  try {
-    brut = JSON.parse(texte);
-  } catch {
-    return { ok: false, erreur: "réponse non JSON" };
+  for (let tentative = 1; tentative <= TENTATIVES_MAX; tentative += 1) {
+    const { reponse } = await appeler(client, { ...requeteInitiale, messages }, { phase: "synthèse", slug: meta.slug, themeId });
+    if (reponse.stop_reason === "max_tokens") throw new Error(`genererSynthese (${meta.slug} × ${themeId}) : sortie tronquée (max_tokens)`);
+    const erreurAppel = detecterErreurReponse(reponse);
+    if (erreurAppel) throw new Error(`genererSynthese (${meta.slug} × ${themeId}) : ${erreurAppel}`);
+
+    const texte = texteDeReponse(reponse);
+    let erreur: string | null;
+    let brut: unknown;
+    if (!texte) {
+      erreur = "réponse vide";
+    } else {
+      try {
+        brut = JSON.parse(texte);
+        erreur = erreurSynthese(brut, ids);
+      } catch {
+        erreur = "réponse non JSON";
+      }
+    }
+    if (!erreur) {
+      const { texte: contenu, propositions_utilisees } = brut as SyntheseGeneree;
+      return { ok: true, synthese: { texte: contenu, propositions_utilisees } };
+    }
+
+    const refuse = brut && typeof brut === "object" && typeof (brut as { texte?: unknown }).texte === "string" ? (brut as { texte: string }).texte : texte;
+    dernier = { ok: false, erreur, texte: refuse };
+    if (tentative < TENTATIVES_MAX) {
+      messages = [
+        ...requeteInitiale.messages,
+        { role: "assistant", content: texte ?? "" },
+        { role: "user", content: `Ta réponse est refusée par un contrôle automatique : ${erreur}. Corrige ce point précis et renvoie l'objet JSON complet, sans rien changer d'autre.` },
+      ];
+    }
   }
-  const erreur = erreurSynthese(brut, propositions.map((p) => p.id));
-  if (erreur) return { ok: false, erreur };
-  const { texte: contenu, propositions_utilisees } = brut as SyntheseGeneree;
-  return { ok: true, synthese: { texte: contenu, propositions_utilisees } };
+  return dernier;
 }
-
 export function construireRequeteVerificationSynthese(
   meta: CandidatMeta,
   themeLibelle: string,

@@ -193,3 +193,40 @@ describe("verifierSyntheseParModele", () => {
     expect((await verifierSyntheseParModele(client, META, "Mes impôts et taxes", props, synthese())).statut).toBe("FAIL");
   });
 });
+
+describe("genererSynthese — nouvelle tentative après un refus déterministe", () => {
+  const props = [proposition("test-fisc-001"), proposition("test-fisc-002")];
+  const reponseTexte = (v: unknown) => ({ content: [{ type: "text", text: JSON.stringify(v) }], stop_reason: "end_turn" });
+  const TROP_LONG = "x".repeat(1300);
+
+  it("renvoie l'erreur au modèle et retente UNE fois : un texte trop long se corrige pour ~1 centime", async () => {
+    const create = vi
+      .fn()
+      .mockResolvedValueOnce(reponseTexte(synthese({ texte: TROP_LONG })))
+      .mockResolvedValueOnce(reponseTexte(synthese()));
+    const resultat = await genererSynthese({ messages: { create } }, META, "fiscalite", "Mes impôts et taxes", props);
+    expect(resultat).toEqual({ ok: true, synthese: synthese() });
+    expect(create).toHaveBeenCalledTimes(2);
+    const seconde = create.mock.calls[1][0].messages;
+    expect(seconde).toHaveLength(3);
+    expect(String(seconde[2].content)).toContain("trop long");
+    expect(String(seconde[1].content ?? seconde[1].content?.[0]?.text)).toContain("xxxx"); // le texte refusé est rendu au modèle
+  });
+
+  it("s'arrête après deux échecs et CONSERVE le dernier texte refusé pour la relecture humaine", async () => {
+    const create = vi.fn().mockResolvedValue(reponseTexte(synthese({ texte: TROP_LONG })));
+    const resultat = await genererSynthese({ messages: { create } }, META, "fiscalite", "Mes impôts et taxes", props);
+    expect(create).toHaveBeenCalledTimes(2);
+    expect(resultat.ok).toBe(false);
+    if (!resultat.ok) {
+      expect(resultat.erreur).toContain("trop long");
+      expect(resultat.texte).toBe(TROP_LONG);
+    }
+  });
+
+  it("ne retente pas une panne d'outil ou une sortie tronquée : elles lèvent", async () => {
+    const create = vi.fn().mockResolvedValue({ content: [], stop_reason: "max_tokens" });
+    await expect(genererSynthese({ messages: { create } }, META, "fiscalite", "Mes impôts et taxes", props)).rejects.toThrow("tronquée");
+    expect(create).toHaveBeenCalledTimes(1);
+  });
+});

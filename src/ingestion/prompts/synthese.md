@@ -12,7 +12,7 @@ Règles impératives :
   Ce que le programme laisse non précisé (seuil, montant, calendrier) est dit comme tel :
   « le programme ne précise pas… ».
 - **Couvre toutes les mesures**, sans en écarter ni en mettre en avant. Le même niveau de détail
-  s'applique à tous les candidats : 3 à 5 phrases, entre 400 et 900 caractères, même structure.
+  s'applique à tous les candidats : 3 à 5 phrases, entre 400 et 900 caractères, **jamais plus de 1 000 caractères espaces compris**, même structure.
 - **Dis ce qui change et pour qui**, en langage courant, à partir des mesures et de leurs effets
   (public visé, grandeur concernée : revenu, coût de la vie, accès aux soins…). Décris, ne juge pas.
 - **Aucun vocabulaire évaluatif** : ni favorable/défavorable, avantageux/injuste, ambitieux/

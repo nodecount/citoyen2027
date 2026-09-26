@@ -241,7 +241,7 @@ export async function executerSynthese(
   if (!genere.ok) {
     enregistrerSyntheseAVerifier(
       meta.slug,
-      { theme: themeId, texte: "", propositions: ids, raison: genere.erreur },
+      { theme: themeId, texte: genere.texte ?? "", propositions: ids, raison: genere.erreur },
       options.racine,
     );
     return "a_verifier";

@@ -584,11 +584,15 @@ describe("executerSynthese", () => {
   it("met en attente une synthèse qui échoue les contrôles déterministes, sans appeler le relecteur", async () => {
     preparerRacine();
     enregistrerPropositions("candidat-x", [prop("candidat-x-fisc-001", "fiscalite"), prop("candidat-x-fisc-002", "fiscalite")], racine);
-    const client = clientAvec(reponseSynthese(["candidat-x-fisc-001"]));
+    // Deux tentatives (l'erreur est renvoyée au modèle une fois), toutes deux incomplètes ; aucun relecteur.
+    const client = clientAvec(reponseSynthese(["candidat-x-fisc-001"]), reponseSynthese(["candidat-x-fisc-001"]));
 
     expect(await executerSynthese(client, META, "fiscalite", "Mes impôts et taxes", { racine })).toBe("a_verifier");
-    expect(client.messages.create).toHaveBeenCalledTimes(1);
-    expect(chargerSynthesesAVerifier("candidat-x", racine)[0].raison).toContain("candidat-x-fisc-002");
+    expect(client.messages.create).toHaveBeenCalledTimes(2);
+    const enAttente = chargerSynthesesAVerifier("candidat-x", racine)[0];
+    expect(enAttente.raison).toContain("candidat-x-fisc-002");
+    // Le texte refusé est conservé pour la relecture humaine (il était perdu : entrée vide).
+    expect(enAttente.texte).toBe(TEXTE);
   });
 
   it("efface l'ancienne entrée en attente d'un thème quand une nouvelle synthèse est enregistrée", async () => {
