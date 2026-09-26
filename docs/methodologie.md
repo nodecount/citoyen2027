@@ -1,6 +1,6 @@
 # Méthodologie — règles de sourçage et de neutralité
 
-Ce document reprend les standards déjà appliqués dans les fiches de `data/programmes/`,
+Ce document reprend les standards déjà appliqués dans les fiches de `data/bases/officielle/programmes/`,
 tels qu'établis en cours de collecte. Il documente une pratique existante ; ce n'est pas
 une nouvelle politique.
 

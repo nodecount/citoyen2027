@@ -28,7 +28,7 @@ import { analyserArguments, type OptionsCLI } from "./cli";
 import { Budget, BudgetDepasse, TARIFS_PAR_MODELE } from "./budget";
 import { definirBudget } from "./appel";
 import { chargerCorpus, executerCandidatCorpus, formaterPlan, planifier } from "./run-corpus";
-import themesData from "../../data/themes.json";
+import themesData from "../../data/bases/officielle/themes.json";
 
 const themes = themesData as Array<{ id: string; libelle: string; description: string }>;
 
@@ -336,7 +336,7 @@ async function mainCorpus(options: OptionsCLI): Promise<void> {
   const budget = new Budget(options.budgetEur, tarifs);
   const themesACouvrir = options.themes ? themes.filter((t) => options.themes!.includes(t.id)) : themes;
   if (options.candidats.length === 0) {
-    console.error("Aucun candidat : indiquer --candidats=slug1,slug2 (voir data/programmes/).");
+    console.error("Aucun candidat : indiquer --candidats=slug1,slug2 (voir data/bases/officielle/programmes/).");
     process.exitCode = 1;
     return;
   }

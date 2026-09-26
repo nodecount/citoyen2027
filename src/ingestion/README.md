@@ -53,7 +53,7 @@ npm run ingestion -- --candidats=attal --force
 ```
 
 Les propositions qui échouent la vérification (contrôles déterministes ou passe sémantique)
-sont écrites dans `data/programmes/<slug>/_a-verifier.json`, jamais fusionnées automatiquement.
+sont écrites dans `data/bases/officielle/programmes/<slug>/_a-verifier.json`, jamais fusionnées automatiquement.
 Relire ce fichier manuellement avant toute correction ou nouvel essai.
 
 ## Ce que produit le pipeline

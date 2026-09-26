@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import { construireRequeteGeneration, creerClient, genererPropositions, genererPropositionsDetaillee } from "./generate";
 import { DOMAINES_INSTITUTIONNELS } from "./domaines";
 import { VALEURS_PAR_CHAMP } from "../effets";
-import themesData from "../../data/themes.json";
+import themesData from "../../data/bases/officielle/themes.json";
 import type { CandidatMeta } from "../types";
 import Anthropic from "@anthropic-ai/sdk";
 

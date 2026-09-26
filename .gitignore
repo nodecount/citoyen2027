@@ -5,7 +5,7 @@ dist
 /vite.config.js
 /vite.config.d.ts
 .env
-data/programmes/*/_a-verifier.json
+data/bases/*/programmes/*/_a-verifier.json
 
 # Traces brutes des appels API d'ingestion (pages entières, coûteuses à produire)
 logs/

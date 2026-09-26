@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calculerCouverture, extraireSlug } from "./couverture";
+import { calculerCouverture } from "./couverture";
 import type { CandidatMeta, Proposition, Theme } from "../../types";
 import type { EntreeAVerifier } from "../../ingestion/depot";
 
@@ -24,16 +24,6 @@ function proposition(overrides: Partial<Proposition> = {}): Proposition {
     ...overrides,
   };
 }
-
-describe("extraireSlug", () => {
-  it("extrait le slug du chemin d'un module glob", () => {
-    expect(extraireSlug("/data/programmes/le-pen/meta.json")).toBe("le-pen");
-  });
-
-  it("retourne le chemin tel quel si le motif ne correspond pas", () => {
-    expect(extraireSlug("chemin-invalide.json")).toBe("chemin-invalide.json");
-  });
-});
 
 describe("calculerCouverture", () => {
   const META: CandidatMeta = {

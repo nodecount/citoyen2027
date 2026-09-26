@@ -51,10 +51,16 @@ function candidat(slug: string, propositions: Proposition[], syntheses: Synthese
 }
 
 function html(candidats: CandidatCharge[]): string {
-  return renderToStaticMarkup(<VueResultats cards={construireCards(THEMES, candidats, PROFIL)} profil={PROFIL} />);
+  return renderToStaticMarkup(
+    <VueResultats cards={construireCards(THEMES, candidats, PROFIL)} profil={PROFIL} avertissement="Avertissement de la base." />,
+  );
 }
 
 describe("VueResultats", () => {
+  it("affiche l'avertissement propre à la base utilisée", () => {
+    expect(html([candidat("a", [prop("a", [HAUSSE])])])).toContain("Avertissement de la base.");
+  });
+
   it("affiche une card par thème avec son libellé et la question du citoyen", () => {
     const rendu = html([candidat("a", [prop("a", [HAUSSE])])]);
     expect(rendu).toContain("Mes impôts et taxes");

@@ -151,15 +151,11 @@ function CarteTheme({ card, profil }: { card: CardTheme; profil: Profil }) {
   );
 }
 
-export function VueResultats({ cards, profil }: { cards: CardTheme[]; profil: Profil }) {
+export function VueResultats({ cards, profil, avertissement }: { cards: CardTheme[]; profil: Profil; avertissement: string }) {
   return (
     <section className="resultats">
       <h1>Vos résultats</h1>
-      <p className="avertissement">
-        Ces données ont été collectées et sourcées par un assistant IA — chaque source a été vérifiée
-        individuellement, mais l'ensemble n'a pas encore été relu ni validé par l'équipe du projet. Considérez ceci
-        comme une première version, pas un résultat définitif.
-      </p>
+      <p className="avertissement">{avertissement}</p>
 
       <details className="legende">
         <summary>Comment lire les indicateurs</summary>

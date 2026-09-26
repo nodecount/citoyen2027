@@ -1,5 +1,4 @@
 import type { CandidatMeta, Proposition, SyntheseTheme } from "../types";
-import { extraireSlug } from "../ui/monitoring/couverture";
 
 export interface CandidatCharge {
   meta: CandidatMeta;
@@ -50,27 +49,4 @@ export function assemblerCandidats(
     }
   }
   return { avecDonnees, enCoursAnalyse };
-}
-
-const metaModules = import.meta.glob("../../data/programmes/*/meta.json", { eager: true }) as Record<
-  string,
-  { default: CandidatMeta }
->;
-const propositionsModules = import.meta.glob("../../data/programmes/*/propositions.json", {
-  eager: true,
-}) as Record<string, { default: Proposition[] }>;
-const synthesesModules = import.meta.glob("../../data/programmes/*/synthese.json", {
-  eager: true,
-}) as Record<string, { default: SyntheseTheme[] }>;
-
-function parSlug<T>(modules: Record<string, { default: T }>): Record<string, T> {
-  const resultat: Record<string, T> = {};
-  for (const [chemin, module] of Object.entries(modules)) {
-    resultat[extraireSlug(chemin)] = module.default;
-  }
-  return resultat;
-}
-
-export function chargerCandidats(): CandidatsCharges {
-  return assemblerCandidats(parSlug(metaModules), parSlug(propositionsModules), parSlug(synthesesModules));
 }

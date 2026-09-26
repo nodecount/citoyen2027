@@ -5,7 +5,7 @@ import { creerClient, type ClientAnthropicMinimal } from "./generate";
 import { executerCombinaison, executerRefresh } from "./run";
 import { chargerMeta, chargerPropositions, combinaisonDejaCouverte } from "./depot";
 import type { FetchImpl } from "./checks";
-import themesData from "../../data/themes.json";
+import themesData from "../../data/bases/officielle/themes.json";
 
 const themes = themesData as Array<{ id: string; libelle: string }>;
 const PORT = 5175;

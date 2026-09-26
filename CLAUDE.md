@@ -96,12 +96,15 @@ Proposition de structure, à valider :
 
 ```
 /data
-  /programmes
-    <candidat_slug>/
-      meta.json          # nom, parti, sources officielles, date de dernière maj
-      propositions.json  # liste de propositions structurées par thème
-  /themes.json            # référentiel des catégories (fiscalité, travail, logement, santé, droits...)
-  /profils-schema.json    # schéma des champs de profil utilisateur
+  /bases                  # plusieurs bases de connaissances, de structure identique (voir ci-dessous)
+    bases.json            # registre : id, libellé, description, avertissement affiché, base par défaut
+    /<base_id>/           # « officielle », « agregateurs »…
+      themes.json         # référentiel de thèmes PROPRE à la base
+      /programmes/<candidat_slug>/
+        meta.json          # nom, parti, sources officielles, date de dernière maj
+        propositions.json  # liste de propositions structurées par thème
+        synthese.json      # un texte par candidat × thème (facultatif)
+  /profils-schema.json    # schéma des champs de profil utilisateur (commun à toutes les bases)
 
 /src
   /engine        # moteur de calcul : profil + proposition -> impact estimé
@@ -111,6 +114,23 @@ Proposition de structure, à valider :
 /docs
   methodologie.md   # règles de sourçage, règles de neutralité, processus de mise à jour
 ```
+
+### Bases de connaissances (décision du 2026-09-26)
+
+Le moteur, l'interface et le fil rouge sont **communs** ; la provenance des données varie selon la base, et l'on
+bascule de l'une à l'autre (sélecteur en haut de page, adresse `?base=<id>`, choix mémorisé dans le navigateur ;
+base par défaut = celle de `bases.json` marquée `defaut`). Toutes ont la même structure de fichiers ; **chaque base a ses
+propres thèmes** (selon la source branchée, il y en a plus ou moins). Ajouter une base = un dossier
+`data/bases/<id>/` + une entrée dans `bases.json`, aucun autre code ; les tests vérifient que chaque proposition
+référence un thème de SA base.
+- **`officielle`** : documents officiels des candidats, alimentée par le pipeline d'ingestion par API
+  (`src/ingestion/`, en pause à la date de la décision : crédit API à recharger). Extraits retrouvés mot pour mot,
+  effets structurés, projection par thème.
+- **`agregateurs`** : reprise, sans modèle, de comparateurs indépendants (iFRAP, puis candidatspresidentielles2027.fr
+  via le navigateur). Sources **secondaires**, sans date par mesure (année = année de consultation), thèmes de la
+  source, **pas d'`effets`** donc pas de badge (le moteur affiche « pas de projection », jamais une devinette). Le
+  porteur du projet a décidé de leur faire confiance ; le contenu reste attribué et lié à sa page d'origine. La
+  règle « une source primaire » de la base officielle ne s'y applique pas.
 
 ### Modèle de donnée d'une proposition (exemple de structure à affiner)
 

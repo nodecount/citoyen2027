@@ -1,11 +1,6 @@
 import type { CandidatMeta, Proposition, StatutProposition, Theme } from "../../types";
 import type { EntreeAVerifier } from "../../ingestion/depot";
 
-export function extraireSlug(cheminModule: string): string {
-  const correspondance = cheminModule.match(/data\/programmes\/([^/]+)\//);
-  return correspondance ? correspondance[1] : cheminModule;
-}
-
 export interface CouvertureTheme {
   themeId: string;
   libelle: string;

@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import themesData from "../../data/themes.json";
-import type { Theme } from "../types";
+import type { BaseCharge } from "../data/bases";
 import { calculerCouverture, type CouvertureCandidat } from "./monitoring/couverture";
-import { construireDonneesCouverture } from "./monitoring/glob";
 import type { RequeteRelance, ResultatRelance } from "../ingestion/serveur-local";
 
 const URL_SERVEUR_LOCAL = "http://localhost:5175";
-const themes = themesData as Theme[];
+// Le pipeline d'ingestion par API n'alimente que la base « officielle » : la relance n'est proposée que pour elle.
+const BASE_DU_PIPELINE = "officielle";
 
 type ModeRelance = "insert" | "update";
 
@@ -27,9 +26,9 @@ function decrireResultat(r: {
   return "traité";
 }
 
-export default function Monitoring() {
-  const { metas, propositions, aVerifier } = construireDonneesCouverture();
-  const couverture: CouvertureCandidat[] = calculerCouverture(themes, metas, propositions, aVerifier);
+export default function Monitoring({ base }: { base: BaseCharge }) {
+  const themes = base.themes;
+  const couverture: CouvertureCandidat[] = calculerCouverture(themes, base.metas, base.propositions, base.aVerifier);
 
   const [serveurDisponible, setServeurDisponible] = useState(false);
   useEffect(() => {
@@ -87,8 +86,9 @@ export default function Monitoring() {
   return (
     <section className="monitoring">
       <h1>Monitoring du pipeline d'ingestion</h1>
+      <p>Base affichée : {base.info.libelle}.</p>
 
-      {couverture.length === 0 && <p>Aucune donnée de candidat trouvée dans data/programmes/.</p>}
+      {couverture.length === 0 && <p>Aucune donnée de candidat trouvée dans data/bases/{base.info.id}/programmes/.</p>}
 
       {couverture.map((candidat) => (
         <div className="monitoring-candidat" key={candidat.slug}>
@@ -132,7 +132,12 @@ export default function Monitoring() {
         </div>
       ))}
 
-      <div className="monitoring-relance">
+      {base.info.id !== BASE_DU_PIPELINE && (
+        <p className="monitoring-badge">
+          Cette base n'est pas alimentée par le pipeline d'ingestion par API : choisir la base « officielle » pour le relancer.
+        </p>
+      )}
+      <div className="monitoring-relance" hidden={base.info.id !== BASE_DU_PIPELINE}>
         <h2>Relancer le pipeline</h2>
         {!serveurDisponible && (
           <p className="monitoring-badge">Disponible en local uniquement — serveur non détecté sur localhost:5175.</p>

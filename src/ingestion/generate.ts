@@ -2,7 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import themesData from "../../data/themes.json";
+import themesData from "../../data/bases/officielle/themes.json";
 import profilSchema from "../../data/profils-schema.json";
 import { VALEURS_PAR_CHAMP } from "../effets";
 import type { CandidatMeta } from "../types";
@@ -25,7 +25,7 @@ export const EFFORT = "medium";
 
 const themes = themesData as Array<{ id: string; libelle: string; description: string }>;
 
-// Le périmètre d'un thème vient de data/themes.json : sans lui, le modèle devine (ex : « Travail »
+// Le périmètre d'un thème vient de data/bases/officielle/themes.json : sans lui, le modèle devine (ex : « Travail »
 // inclut-il les retraites ?) et le périmètre varierait d'un candidat à l'autre.
 function descriptionDuTheme(themeId: string): string {
   return themes.find((t) => t.id === themeId)?.description ?? "(périmètre non précisé)";

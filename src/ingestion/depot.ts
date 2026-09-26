@@ -3,7 +3,7 @@ import { dirname, resolve } from "node:path";
 import type { CandidatMeta, Proposition, SyntheseTheme } from "../types";
 import type { PropositionGeneree } from "./schema";
 
-const RACINE_PAR_DEFAUT = resolve(process.cwd(), "data/programmes");
+const RACINE_PAR_DEFAUT = resolve(process.cwd(), "data/bases/officielle/programmes");
 
 export function cheminPropositions(slug: string, racine: string = RACINE_PAR_DEFAUT): string {
   return resolve(racine, slug, "propositions.json");

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import themesRaw from "../../data/themes.json";
+import themesRaw from "../../data/bases/officielle/themes.json";
 import profilSchemaRaw from "../../data/profils-schema.json";
 import type { Theme, ChampProfil } from "../types";
 

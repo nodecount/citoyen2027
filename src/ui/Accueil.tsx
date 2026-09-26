@@ -1,15 +1,12 @@
-import themes from "../../data/themes.json";
-import { chargerCandidats } from "../data/chargerCandidats";
-import type { Theme } from "../types";
-
-const themesTypes: Theme[] = themes as Theme[];
-const nombreCandidats = chargerCandidats().avecDonnees.length;
+import { candidatsDeBase, type BaseCharge } from "../data/bases";
 
 interface AccueilProps {
+  base: BaseCharge;
   onCommencer: () => void;
 }
 
-export default function Accueil({ onCommencer }: AccueilProps) {
+export default function Accueil({ base, onCommencer }: AccueilProps) {
+  const nombreCandidats = candidatsDeBase(base).avecDonnees.length;
   return (
     <section>
       <h1>Simulateur d'impact personnel — Présidentielle 2027</h1>
@@ -20,7 +17,7 @@ export default function Accueil({ onCommencer }: AccueilProps) {
         présentés par ordre alphabétique. Voici les thèmes :
       </p>
       <ul>
-        {themesTypes.map((theme) => (
+        {base.themes.map((theme) => (
           <li key={theme.id}>
             <strong>{theme.libelle}</strong> — {theme.question_citoyen}{" "}
             <em>{theme.statut === "populated" ? "(données disponibles)" : "(en cours d'analyse)"}</em>
