@@ -1,4 +1,5 @@
-import { estimerJetons, type TexteDocument } from "./documents";
+import { createHash } from "node:crypto";
+import { empreinteTexte, estimerJetons, type TexteDocument } from "./documents";
 
 // Corpus = le texte des documents officiels d'un candidat, balisé, donné au modèle en UN bloc mis en cache.
 // Le modèle cite des extraits ; c'est le CODE qui les retrouve dans le texte extrait, qui en déduit la page,
@@ -16,11 +17,15 @@ export interface ResumeDocument {
   url: string;
   caracteres: number;
   jetons: number;
+  empreinte: string;
 }
 
 export interface Corpus {
   texte: string;
   jetons: number;
+  // Empreinte de l'ensemble des documents (identifiants + contenus, indépendante de l'ordre) : deux corpus de
+  // même empreinte donnent les mêmes extractions, donc rien à refaire.
+  empreinte: string;
   documents: ResumeDocument[];
   parId: Map<string, TexteDocument>;
 }
@@ -33,7 +38,7 @@ export function construireCorpus(documents: TexteDocument[]): Corpus {
     if (parId.has(d.id)) throw new Error(`Deux documents portent le même identifiant « ${d.id} » : une citation serait ambiguë`);
     parId.set(d.id, d);
     blocs.push(`<<<DOCUMENT ${d.id} | ${d.nom} | ${d.annee} | ${d.url}>>>\n${d.texte}\n<<<FIN DOCUMENT ${d.id}>>>`);
-    resumes.push({ id: d.id, nom: d.nom, annee: d.annee, url: d.url, caracteres: d.texte.length, jetons: estimerJetons(d.texte) });
+    resumes.push({ id: d.id, nom: d.nom, annee: d.annee, url: d.url, caracteres: d.texte.length, jetons: estimerJetons(d.texte), empreinte: d.empreinte ?? empreinteTexte(d.texte) });
   }
   const texte = blocs.join("\n\n");
   const jetons = estimerJetons(texte);
@@ -42,7 +47,11 @@ export function construireCorpus(documents: TexteDocument[]): Corpus {
       `Corpus trop volumineux : ~${jetons} jetons pour une limite de ${JETONS_CORPUS_MAX}. Retirer des documents ou les scinder en deux corpus.`,
     );
   }
-  return { texte, jetons, documents: resumes, parId };
+  const empreinte = createHash("sha256")
+    .update(resumes.map((r) => `${r.id}:${r.empreinte}`).sort().join("|"))
+    .digest("hex")
+    .slice(0, 16);
+  return { texte, jetons, empreinte, documents: resumes, parId };
 }
 
 // Normalisation avec correspondance de positions : chaque caractère normalisé garde l'indice du caractère

@@ -85,9 +85,9 @@ describe("planifier", () => {
     expect(plan.corpusJetons).toBeGreaterThan(0);
   });
 
-  it("n'inclut pas dans l'estimation les thèmes déjà couverts ou déjà cherchés sans résultat", async () => {
-    enregistrerJournal("candidat-x", { theme: "fiscalite", date: "2026-09-25", resultat: "aucune_mesure", nombre_propositions: 0, arret: "end_turn", duree_ms: 1, jetons_entree: 1, jetons_sortie: 1, urls_lues: [], urls_echouees: [], requetes: [] }, racine);
+  it("n'inclut pas dans l'estimation les thèmes à jour (même empreinte de documents)", async () => {
     const corpus = await chargerCorpus(META, options());
+    enregistrerJournal("candidat-x", { theme: "fiscalite", date: "2026-09-25", resultat: "aucune_mesure", nombre_propositions: 0, arret: "end_turn", duree_ms: 1, jetons_entree: 1, jetons_sortie: 1, urls_lues: [], urls_echouees: [], requetes: [], empreinte_corpus: corpus.corpus.empreinte }, racine);
     const plan = planifier(META, corpus, [THEME, THEME_SANTE], TARIFS_PAR_MODELE["claude-sonnet-5"], { racine });
     expect(plan.themes.find((t) => t.themeId === "fiscalite")?.deja).toBe(true);
     expect(plan.themes.find((t) => t.themeId === "sante")?.deja).toBe(false);
@@ -177,14 +177,104 @@ describe("formaterPlan", () => {
     expect(texte).toContain("fiscalite");
   });
 
-  it("signale les thèmes déjà faits et les documents non lus", async () => {
+  it("signale les thèmes à jour et les documents non lus", async () => {
     const meta = { ...META, documents: [...META.documents!, { id: "mort", url: "https://exemple-officiel.fr/mort", nom: "x", annee: 2026 }] };
     const fetchImpl = async (url: string | URL | Request) => (String(url).endsWith("/mort") ? new Response("", { status: 404 }) : fetchOk());
     const corpus = await chargerCorpus(meta, options({ fetchImpl }));
-    enregistrerJournal("candidat-x", { theme: "fiscalite", date: "2026-09-25", resultat: "aucune_mesure", nombre_propositions: 0, arret: "end_turn", duree_ms: 1, jetons_entree: 1, jetons_sortie: 1, urls_lues: [], urls_echouees: [], requetes: [] }, racine);
+    enregistrerJournal("candidat-x", { theme: "fiscalite", date: "2026-09-25", resultat: "aucune_mesure", nombre_propositions: 0, arret: "end_turn", duree_ms: 1, jetons_entree: 1, jetons_sortie: 1, urls_lues: [], urls_echouees: [], requetes: [], empreinte_corpus: corpus.corpus.empreinte }, racine);
     const texte = formaterPlan(planifier(meta, corpus, [THEME], TARIFS_PAR_MODELE["claude-sonnet-5"], { racine }), 0.9, 2);
-    expect(texte).toContain("déjà fait");
+    expect(texte).toContain("à jour");
     expect(texte).toContain("non lu");
     expect(texte).toContain("/mort");
+  });
+});
+
+describe("mise à jour : rejouable quand les programmes changent", () => {
+  const html = (phrase: string) => `<html><body><p>Introduction.</p><p>${phrase}</p></body></html>`;
+  const fetchDe = (phrase: string) => async () => new Response(html(phrase), { status: 200, headers: { "content-type": "text/html" } });
+  const reponses = (n: number) => {
+    const create = vi.fn();
+    for (let i = 0; i < n; i += 1) {
+      create.mockResolvedValueOnce(texte([mesure()])).mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "PASS" }]));
+    }
+    return create;
+  };
+
+  it("ne refait rien, gratuitement, quand les documents n'ont pas changé depuis la dernière extraction", async () => {
+    const create = reponses(2);
+    await executerCandidatCorpus({ messages: { create } }, META, [THEME], options({ synthese: vi.fn() }));
+    expect(create).toHaveBeenCalledTimes(2);
+
+    // Trois mois plus tard : on retélécharge (actualiser), le texte est identique.
+    await executerCandidatCorpus({ messages: { create } }, META, [THEME], options({ synthese: vi.fn(), actualiser: true }));
+    expect(create).toHaveBeenCalledTimes(2);
+  });
+
+  it("refait le thème quand un document a changé, et REMPLACE les mesures au lieu de les dupliquer", async () => {
+    const create = reponses(2);
+    const synthese = vi.fn();
+    await executerCandidatCorpus({ messages: { create } }, META, [THEME], options({ synthese }));
+    expect(chargerPropositions("candidat-x", racine)).toHaveLength(1);
+
+    const misAJour = PHRASE + " Une nouvelle mesure a été ajoutée au programme.";
+    await executerCandidatCorpus({ messages: { create } }, META, [THEME], options({ synthese, actualiser: true, fetchImpl: fetchDe(misAJour) }));
+
+    expect(create).toHaveBeenCalledTimes(4);
+    const props = chargerPropositions("candidat-x", racine);
+    expect(props).toHaveLength(1); // remplacée, pas ajoutée
+    expect(props[0].id).toBe("candidat-x-fisc-001");
+    // La synthèse est régénérée de force : mêmes identifiants, contenu possiblement différent.
+    expect(synthese).toHaveBeenLastCalledWith(expect.anything(), META, "fiscalite", "Mes impôts et taxes", expect.objectContaining({ force: true }));
+  });
+
+  it("remplace aussi les entrées « à vérifier » du thème au lieu de les empiler, et laisse les autres thèmes intacts", async () => {
+    const create = vi.fn()
+      .mockResolvedValueOnce(texte([mesure({ preuves: [{ document: "programme", extrait: "Une phrase que le programme ne contient absolument pas" }] })]))
+      .mockResolvedValueOnce(texte([mesure()]))
+      .mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "PASS" }]));
+    await executerCandidatCorpus({ messages: { create } }, META, [THEME], options({ synthese: vi.fn() }));
+    expect(chargerAVerifier("candidat-x", racine)).toHaveLength(1);
+
+    await executerCandidatCorpus({ messages: { create } }, META, [THEME], options({ synthese: vi.fn(), actualiser: true, fetchImpl: fetchDe(PHRASE + " Ajout.") }));
+    expect(chargerAVerifier("candidat-x", racine)).toEqual([]);
+    expect(chargerPropositions("candidat-x", racine)).toHaveLength(1);
+  });
+
+  it("garde les mesures des autres thèmes quand un thème est refait", async () => {
+    const create = vi.fn()
+      .mockResolvedValueOnce(texte([mesure()])).mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "PASS" }]))
+      .mockResolvedValueOnce(texte([mesure({ titre: "Mesure santé" })])).mockResolvedValueOnce(verdicts([{ titre: "Mesure santé", verdict: "PASS" }]));
+    await executerCandidatCorpus({ messages: { create } }, META, [THEME, THEME_SANTE], options({ synthese: vi.fn() }));
+    expect(chargerPropositions("candidat-x", racine).map((p) => p.theme).sort()).toEqual(["fiscalite", "sante"]);
+
+    const create2 = vi.fn().mockResolvedValueOnce(texte([mesure()])).mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "PASS" }]));
+    await executerCandidatCorpus({ messages: { create: create2 } }, META, [THEME], options({ synthese: vi.fn(), force: true }));
+    expect(chargerPropositions("candidat-x", racine).map((p) => p.theme).sort()).toEqual(["fiscalite", "sante"]);
+    expect(chargerPropositions("candidat-x", racine)).toHaveLength(2);
+  });
+
+  it("considère comme obsolète une recherche antérieure à l'empreinte (données historiques) : elle est refaite", async () => {
+    enregistrerJournal("candidat-x", { theme: "fiscalite", date: "2026-09-25", resultat: "aucune_mesure", nombre_propositions: 0, arret: "end_turn", duree_ms: 1, jetons_entree: 1, jetons_sortie: 1, urls_lues: [], urls_echouees: [], requetes: [] }, racine);
+    const create = vi.fn().mockResolvedValue(texte([]));
+    await executerCandidatCorpus({ messages: { create } }, META, [THEME], options({ synthese: vi.fn() }));
+    expect(create).toHaveBeenCalledTimes(1);
+    expect(chargerJournal("candidat-x", racine)[0].empreinte_corpus).toMatch(/^[0-9a-f]{16}$/);
+  });
+
+  it("le plan distingue à jour, obsolète et à faire, et nomme les documents modifiés", async () => {
+    const create = reponses(1);
+    await executerCandidatCorpus({ messages: { create } }, META, [THEME], options({ synthese: vi.fn() }));
+
+    const modifie = await chargerCorpus(META, options({ actualiser: true, fetchImpl: fetchDe(PHRASE + " Modif.") }));
+    const plan = planifier(META, modifie, [THEME, THEME_SANTE], TARIFS_PAR_MODELE["claude-sonnet-5"], { racine });
+    expect(plan.themes.find((t) => t.themeId === "fiscalite")?.etat).toBe("obsolete");
+    expect(plan.themes.find((t) => t.themeId === "sante")?.etat).toBe("a_faire");
+    expect(plan.documentsModifies).toEqual(["programme"]);
+    expect(formaterPlan(plan, 0.9, 2)).toContain("obsolète");
+
+    const identique = await chargerCorpus(META, options({ actualiser: true }));
+    const plan2 = planifier(META, identique, [THEME], TARIFS_PAR_MODELE["claude-sonnet-5"], { racine });
+    expect(plan2.themes[0].etat).toBe("a_jour");
+    expect(plan2.documentsModifies).toEqual([]);
   });
 });

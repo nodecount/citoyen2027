@@ -7,12 +7,12 @@ import {
   chargerAVerifier,
   chargerJournal,
   chargerPropositions,
-  combinaisonDejaCherchee,
   combinaisonDejaCouverte,
   enregistrerAVerifier,
   enregistrerJournal,
   enregistrerPropositions,
   type EntreeAVerifier,
+  type EntreeJournal,
 } from "./depot";
 import { chargerDocument, type TexteDocument, type TextePdf } from "./documents";
 import { MAX_TOKENS_EXTRACTION, assemblerProposition, extraireMesures, type MesureModele } from "./extraction";
@@ -81,15 +81,37 @@ const SORTIE_ATTENDUE = { extraction: 7000, verification: 1500, synthese: 1000, 
 const ENTREE_FIXE = { instructions: 3500, verification: 8000, synthese: 4000 };
 const MAX_TOKENS = { verification: 4000, synthese: 4000, verificationSynthese: 4000 };
 
+export type EtatTheme = "a_jour" | "obsolete" | "a_faire";
+
 export interface PlanTheme {
   themeId: string;
+  // À jour : rien à refaire (gratuit). Obsolète : des documents ont changé (ou recherche historique sans empreinte).
+  etat: EtatTheme;
   deja: boolean;
   estimationUsd: number;
+}
+
+// Un thème est « à jour » si sa dernière recherche a été faite sur EXACTEMENT ces documents (même empreinte) et
+// qu'elle a donné des mesures ou une absence de mesure enregistrée. Sinon, obsolète (documents changés) ou à faire.
+export function etatDuTheme(
+  propositions: Proposition[],
+  journal: EntreeJournal[],
+  themeId: string,
+  empreinte: string,
+  force?: boolean,
+): EtatTheme {
+  const entree = journal.find((e) => e.theme === themeId);
+  const couvert = combinaisonDejaCouverte(propositions, themeId);
+  if (force) return entree || couvert ? "obsolete" : "a_faire";
+  if (entree && entree.empreinte_corpus === empreinte && (couvert || entree.resultat === "aucune_mesure")) return "a_jour";
+  return entree || couvert ? "obsolete" : "a_faire";
 }
 
 export interface Plan {
   slug: string;
   documents: Corpus["documents"];
+  // Documents dont le texte a changé depuis la dernière recherche (empreintes comparées au journal).
+  documentsModifies: string[];
   echecs: CorpusCharge["echecs"];
   corpusJetons: number;
   themes: PlanTheme[];
@@ -112,9 +134,9 @@ export function planifier(
   const lignes: PlanTheme[] = [];
 
   for (const theme of themes) {
-    const deja = !options.force && (combinaisonDejaCouverte(propositions, theme.id) || combinaisonDejaCherchee(journal, theme.id));
-    if (deja) {
-      lignes.push({ themeId: theme.id, deja: true, estimationUsd: 0 });
+    const etat = etatDuTheme(propositions, journal, theme.id, charge.corpus.empreinte, options.force);
+    if (etat === "a_jour") {
+      lignes.push({ themeId: theme.id, etat, deja: true, estimationUsd: 0 });
       continue;
     }
     const cache = premier ? "ecriture" : "lecture";
@@ -128,9 +150,11 @@ export function planifier(
       extraction(MAX_TOKENS_EXTRACTION) + autres(ENTREE_FIXE.verification, MAX_TOKENS.verification) + autres(ENTREE_FIXE.synthese, MAX_TOKENS.synthese) + autres(ENTREE_FIXE.synthese, MAX_TOKENS.verificationSynthese);
     attendu += attenduTheme;
     pireCas += pireTheme;
-    lignes.push({ themeId: theme.id, deja: false, estimationUsd: attenduTheme });
+    lignes.push({ themeId: theme.id, etat, deja: false, estimationUsd: attenduTheme });
   }
-  return { slug: meta.slug, documents: charge.corpus.documents, echecs: charge.echecs, corpusJetons: charge.corpus.jetons, themes: lignes, attenduUsd: attendu, pireCasUsd: pireCas };
+  const anciennes = journal.find((e) => e.empreintes_documents)?.empreintes_documents ?? {};
+  const documentsModifies = charge.corpus.documents.filter((d) => anciennes[d.id] !== undefined && anciennes[d.id] !== d.empreinte).map((d) => d.id);
+  return { slug: meta.slug, documents: charge.corpus.documents, documentsModifies, echecs: charge.echecs, corpusJetons: charge.corpus.jetons, themes: lignes, attenduUsd: attendu, pireCasUsd: pireCas };
 }
 
 // ---- Exécution ----------------------------------------------------------------------------------------------
@@ -193,6 +217,8 @@ async function executerTheme(
       urls_echouees: charge.echecs,
       ecartees: extraction.ecartees,
       chemin_trace: extraction.cheminTrace,
+      empreinte_corpus: charge.corpus.empreinte,
+      empreintes_documents: Object.fromEntries(charge.corpus.documents.map((d) => [d.id, d.empreinte])),
     },
     options.racine,
   );
@@ -207,7 +233,7 @@ async function executerTheme(
 
   const verdicts = await verifierMesuresParPassages(client, meta, assemblees);
   const fusionnees: Proposition[] = [];
-  let index = existantes.filter((p) => p.theme === theme.id).length + 1;
+  let index = 1; // les mesures du thème sont REMPLACÉES : la numérotation repart de 1
   for (const { proposition } of assemblees) {
     const verdict = verdicts.get(proposition.titre);
     if (verdict?.statut === "PASS") {
@@ -218,11 +244,20 @@ async function executerTheme(
     }
   }
 
-  if (fusionnees.length > 0) enregistrerPropositions(meta.slug, [...existantes, ...fusionnees], options.racine);
-  if (enAttente.length > 0) enregistrerAVerifier(meta.slug, [...chargerAVerifier(meta.slug, options.racine), ...enAttente], options.racine);
+  // Remplacement, jamais ajout : refaire un thème (documents mis à jour, --force) ne doit pas dupliquer ses mesures.
+  // L'historique reste dans git ; les entrées « à vérifier » du thème sont remplacées elles aussi.
+  const avaitDesMesures = existantes.some((p) => p.theme === theme.id);
+  if (avaitDesMesures || fusionnees.length > 0) {
+    enregistrerPropositions(meta.slug, [...existantes.filter((p) => p.theme !== theme.id), ...fusionnees], options.racine);
+  }
+  const ancienAVerifier = chargerAVerifier(meta.slug, options.racine);
+  if (ancienAVerifier.some((e) => e.theme === theme.id) || enAttente.length > 0) {
+    enregistrerAVerifier(meta.slug, [...ancienAVerifier.filter((e) => e.theme !== theme.id), ...enAttente], options.racine);
+  }
 
   if (options.synthese) {
-    await options.synthese(client, meta, theme.id, theme.libelle, { racine: options.racine, force: options.force });
+    // Forcée : les identifiants peuvent être les mêmes alors que le contenu des mesures a changé.
+    await options.synthese(client, meta, theme.id, theme.libelle, { racine: options.racine, force: true });
   }
   return { themeId: theme.id, mesuresExtraites: extraction.mesures.length, fusionnees: fusionnees.length, enAttente: enAttente.length };
 }
@@ -241,16 +276,12 @@ export async function executerCandidatCorpus(
 
   const resume: ResumeCandidat = { slug: meta.slug, themes: [], arretBudget: false };
   for (const theme of themes) {
-    const propositions = chargerPropositions(meta.slug, options.racine);
-    if (!options.force && combinaisonDejaCouverte(propositions, theme.id)) {
-      console.log(`[sauté] ${meta.slug} × ${theme.id} déjà couvert`);
+    const etat = etatDuTheme(chargerPropositions(meta.slug, options.racine), chargerJournal(meta.slug, options.racine), theme.id, charge.corpus.empreinte, options.force);
+    if (etat === "a_jour") {
+      console.log(`[sauté] ${meta.slug} × ${theme.id} à jour : les documents n'ont pas changé depuis la dernière recherche (--force pour refaire)`);
       continue;
     }
-    if (!options.force && combinaisonDejaCherchee(chargerJournal(meta.slug, options.racine), theme.id)) {
-      console.log(`[sauté] ${meta.slug} × ${theme.id} déjà cherché sans résultat (voir _journal-recherche.json) ; --force pour refaire`);
-      continue;
-    }
-    console.log(`[en cours] ${meta.slug} × ${theme.id}`);
+    console.log(`[en cours] ${meta.slug} × ${theme.id}${etat === "obsolete" ? " (obsolète : documents modifiés, mesures remplacées)" : ""}`);
     try {
       const r = await executerTheme(client, meta, charge, theme, options);
       resume.themes.push(r);
@@ -277,8 +308,10 @@ export function formaterPlan(plan: Plan, eurParUsd: number, plafondEur: number):
   const lignes = [`[plan] ${plan.slug} : ${plan.documents.length} document(s) lu(s), ~${plan.corpusJetons} jetons`];
   for (const d of plan.documents) lignes.push(`   - ${d.id} (${d.nom}, ${d.annee}) ~${d.jetons} jetons`);
   for (const e of plan.echecs) lignes.push(`   ! non lu : ${e.cible} — ${e.code}`);
+  if (plan.documentsModifies.length > 0) lignes.push(`   ! document(s) modifié(s) depuis la dernière recherche : ${plan.documentsModifies.join(", ")}`);
   for (const t of plan.themes) {
-    lignes.push(t.deja ? `   · ${t.themeId} : déjà fait (ignoré)` : `   · ${t.themeId} : ~${eur(t.estimationUsd)}`);
+    if (t.etat === "a_jour") lignes.push(`   · ${t.themeId} : à jour, documents inchangés (ignoré, gratuit)`);
+    else lignes.push(`   · ${t.themeId} : ${t.etat === "obsolete" ? "obsolète, à refaire" : "à faire"} ~${eur(t.estimationUsd)}`);
   }
   lignes.push(`   coût attendu ${eur(plan.attenduUsd)} · pire cas ${eur(plan.pireCasUsd)} · plafond ${plafondEur.toFixed(2)} €`);
   return lignes.join("\n");

@@ -14,6 +14,12 @@ export interface TexteDocument extends DocumentSource {
   type: "html" | "pdf";
   texte: string;
   pages?: number;
+  // Empreinte du texte extrait : sert à détecter qu'un programme a changé entre deux lectures.
+  empreinte?: string;
+}
+
+export function empreinteTexte(texte: string): string {
+  return createHash("sha256").update(texte).digest("hex").slice(0, 16);
 }
 
 export interface OptionsChargement {
@@ -95,8 +101,9 @@ export async function chargerDocument(doc: DocumentSource, options: OptionsCharg
   const fichierMeta = resolve(dossier, "meta.json");
 
   if (!options.actualiser && existsSync(fichierTexte) && existsSync(fichierMeta)) {
-    const meta = JSON.parse(readFileSync(fichierMeta, "utf-8")) as { type: "html" | "pdf"; pages?: number };
-    return { ...doc, type: meta.type, pages: meta.pages, texte: readFileSync(fichierTexte, "utf-8") };
+    const meta = JSON.parse(readFileSync(fichierMeta, "utf-8")) as { type: "html" | "pdf"; pages?: number; empreinte?: string };
+    const texteCache = readFileSync(fichierTexte, "utf-8");
+    return { ...doc, type: meta.type, pages: meta.pages, texte: texteCache, empreinte: meta.empreinte ?? empreinteTexte(texteCache) };
   }
 
   const fetchImpl = options.fetchImpl ?? fetch;
@@ -126,7 +133,11 @@ export async function chargerDocument(doc: DocumentSource, options: OptionsCharg
   writeFileSync(fichierTexte, texte);
   writeFileSync(
     fichierMeta,
-    JSON.stringify({ url: doc.url, type: estPdf ? "pdf" : "html", pages, caracteres: texte.length, recupere_le: new Date().toISOString() }, null, 2),
+    JSON.stringify(
+      { url: doc.url, type: estPdf ? "pdf" : "html", pages, caracteres: texte.length, empreinte: empreinteTexte(texte), recupere_le: new Date().toISOString() },
+      null,
+      2,
+    ),
   );
-  return { ...doc, type: estPdf ? "pdf" : "html", pages, texte };
+  return { ...doc, type: estPdf ? "pdf" : "html", pages, texte, empreinte: empreinteTexte(texte) };
 }

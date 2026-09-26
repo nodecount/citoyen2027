@@ -82,3 +82,20 @@ describe("fenetreAutour", () => {
     expect(fenetreAutour(PDF, 0, 5, 9999)).toBe(PDF.texte);
   });
 });
+
+describe("empreinte du corpus", () => {
+  it("dépend du contenu de chaque document et de son identifiant, pas de l'ordre de déclaration", () => {
+    const a = construireCorpus([doc("a", "Texte A"), doc("b", "Texte B")]);
+    const memeOrdreInverse = construireCorpus([doc("b", "Texte B"), doc("a", "Texte A")]);
+    const modifie = construireCorpus([doc("a", "Texte A modifié"), doc("b", "Texte B")]);
+    expect(a.empreinte).toBe(memeOrdreInverse.empreinte);
+    expect(a.empreinte).not.toBe(modifie.empreinte);
+    expect(a.empreinte).toMatch(/^[0-9a-f]{16}$/);
+  });
+
+  it("expose l'empreinte de chaque document pour dire lequel a changé", () => {
+    const corpus = construireCorpus([doc("a", "Texte A"), doc("b", "Texte B")]);
+    expect(corpus.documents.map((d) => d.empreinte)).toHaveLength(2);
+    expect(corpus.documents[0].empreinte).not.toBe(corpus.documents[1].empreinte);
+  });
+});

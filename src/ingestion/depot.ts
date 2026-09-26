@@ -131,6 +131,10 @@ export interface EntreeJournal {
   urls_echouees: Array<{ cible: string; code: string }>;
   ecartees?: number;
   chemin_trace?: string;
+  // Corpus sur lequel cette recherche a été faite (mode corpus) : si les documents changent, la recherche est
+  // obsolète et sera refaite ; sinon elle est à jour et ne coûte rien.
+  empreinte_corpus?: string;
+  empreintes_documents?: Record<string, string>;
 }
 
 export function cheminJournal(slug: string, racine: string = RACINE_PAR_DEFAUT): string {

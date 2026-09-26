@@ -107,3 +107,29 @@ describe("chargerDocument", () => {
     await expect(chargerDocument(doc, { fetchImpl, dossierCache: cache, extracteurPdf })).rejects.toThrow("OCR");
   });
 });
+
+describe("empreinte des documents", () => {
+  let cache: string;
+  afterEach(() => rmSync(cache, { recursive: true, force: true }));
+  const doc = { id: "d1", url: "https://exemple-officiel.fr/programme", nom: "exemple-officiel.fr", annee: 2026 };
+  const html = (texte: string) => async () => new Response(`<p>${texte}</p>`, { status: 200, headers: { "content-type": "text/html" } });
+
+  it("calcule une empreinte stable du texte, qui change dès que le document change", async () => {
+    cache = mkdtempSync(resolve(tmpdir(), "cache-src-"));
+    const a = await chargerDocument(doc, { fetchImpl: html("Version un du programme."), dossierCache: cache });
+    const b = await chargerDocument(doc, { fetchImpl: html("Version un du programme."), dossierCache: cache, actualiser: true });
+    const c = await chargerDocument(doc, { fetchImpl: html("Version deux du programme."), dossierCache: cache, actualiser: true });
+    expect(a.empreinte).toBe(b.empreinte);
+    expect(c.empreinte).not.toBe(a.empreinte);
+    expect(a.empreinte).toMatch(/^[0-9a-f]{16}$/);
+  });
+
+  it("restitue l'empreinte depuis le cache disque sans refaire la requête", async () => {
+    cache = mkdtempSync(resolve(tmpdir(), "cache-src-"));
+    const a = await chargerDocument(doc, { fetchImpl: html("Un texte."), dossierCache: cache });
+    const fetchImpl = vi.fn(html("Autre texte."));
+    const b = await chargerDocument(doc, { fetchImpl, dossierCache: cache });
+    expect(fetchImpl).not.toHaveBeenCalled();
+    expect(b.empreinte).toBe(a.empreinte);
+  });
+});
