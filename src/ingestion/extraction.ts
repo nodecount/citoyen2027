@@ -27,7 +27,7 @@ const MODELE = "claude-sonnet-5";
 // Les jetons de RAISONNEMENT comptent dans max_tokens : au premier essai réel, 4 979 des 8 000 jetons de sortie
 // sont partis en réflexion et la réponse a été tronquée. Effort réduit (l'extraction guidée par des citations
 // n'a pas besoin d'un long raisonnement) et limite relevée ; la borne garde un coût maximal prévisible.
-export const MAX_TOKENS_EXTRACTION = 16000;
+export const MAX_TOKENS_EXTRACTION = 12000; // mesuré : 2 980 jetons de sortie pour la fiscalité, à effort bas
 const EFFORT = "low";
 
 export interface PreuveModele {

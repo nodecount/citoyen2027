@@ -1,3 +1,5 @@
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
 import type { CandidatMeta, Proposition } from "../types";
 import { budgetActuel } from "./appel";
 import { BudgetDepasse, estimerAppelUsd, type Tarifs } from "./budget";
@@ -15,7 +17,7 @@ import {
   type EntreeJournal,
 } from "./depot";
 import { chargerDocument, type TexteDocument, type TextePdf } from "./documents";
-import { MAX_TOKENS_EXTRACTION, assemblerProposition, extraireMesures, type MesureModele } from "./extraction";
+import { MAX_TOKENS_EXTRACTION, assemblerProposition, extraireMesures, type MesureModele, type ResultatExtraction } from "./extraction";
 import type { ClientAnthropicMinimal } from "./generate";
 import { genererIdProposition } from "./ids";
 import type { PropositionGeneree } from "./schema";
@@ -73,11 +75,60 @@ export async function chargerCorpus(meta: CandidatMeta, options: OptionsCorpus =
   return { corpus: construireCorpus(charges), echecs };
 }
 
+// ---- Extractions sauvegardées : un résultat payé ne doit jamais être perdu ni repayé ------------------------
+
+const CACHE_SOURCES_PAR_DEFAUT = resolve(process.cwd(), "cache/sources");
+
+interface ExtractionSauvegardee {
+  empreinte_corpus: string;
+  date: string;
+  mesures: MesureModele[];
+  ecartees: number;
+  duree_ms: number;
+  stop_reason?: string | null;
+  usage?: ResultatExtraction["reponse"]["usage"];
+  chemin_trace?: string;
+}
+
+function cheminExtraction(slug: string, themeId: string, dossierCache?: string): string {
+  return resolve(dossierCache ?? CACHE_SOURCES_PAR_DEFAUT, "extractions", slug, `${themeId}.json`);
+}
+
+function chargerExtraction(slug: string, themeId: string, dossierCache?: string): ExtractionSauvegardee | undefined {
+  const chemin = cheminExtraction(slug, themeId, dossierCache);
+  if (!existsSync(chemin)) return undefined;
+  try {
+    return JSON.parse(readFileSync(chemin, "utf-8")) as ExtractionSauvegardee;
+  } catch {
+    return undefined;
+  }
+}
+
+// Écrite dès que l'appel payant a réussi, AVANT les contrôles et la relecture : si un plafond de coût, une panne ou un
+// rejet interrompt la suite, l'extraction (la partie chère) n'est pas à repayer. Au premier essai avec le corpus
+// complet, 0,46 € ont été dépensés puis perdus faute de cette sauvegarde.
+export function sauvegarderExtraction(slug: string, themeId: string, empreinteCorpus: string, e: ResultatExtraction, dossierCache?: string): void {
+  const chemin = cheminExtraction(slug, themeId, dossierCache);
+  mkdirSync(dirname(chemin), { recursive: true });
+  const contenu: ExtractionSauvegardee = {
+    empreinte_corpus: empreinteCorpus,
+    date: new Date().toISOString(),
+    mesures: e.mesures,
+    ecartees: e.ecartees,
+    duree_ms: e.dureeMs,
+    stop_reason: e.reponse.stop_reason,
+    usage: e.reponse.usage,
+    chemin_trace: e.cheminTrace,
+  };
+  writeFileSync(chemin, JSON.stringify(contenu, null, 2));
+}
+
 // ---- Plan et estimation de coût (avant tout appel) ----------------------------------------------------------
 
 // Hypothèses de sortie « typique » pour l'estimation ATTENDUE (le pire cas utilise les maxima). Le plafond dur, lui,
 // s'appuie sur le coût réel de chaque appel.
-const SORTIE_ATTENDUE = { extraction: 7000, verification: 1500, synthese: 1000, verificationSynthese: 300 };
+// Extraction : 2 980 jetons mesurés pour la fiscalité (essai réel) ; 4 500 laissent de la marge pour un thème plus chargé.
+const SORTIE_ATTENDUE = { extraction: 4500, verification: 1500, synthese: 1000, verificationSynthese: 300 };
 const ENTREE_FIXE = { instructions: 3500, verification: 8000, synthese: 4000 };
 const MAX_TOKENS = { verification: 4000, synthese: 4000, verificationSynthese: 4000 };
 
@@ -197,13 +248,25 @@ async function executerTheme(
   const existantes = chargerPropositions(meta.slug, options.racine);
   const titresAutres = existantes.filter((p) => p.theme !== theme.id).map((p) => p.titre);
 
-  const extraction = await extraireMesures(client, meta, charge.corpus, theme.id, theme.libelle, theme.description, titresAutres);
+  let extraction: ResultatExtraction;
+  const sauvegarde = options.force ? undefined : chargerExtraction(meta.slug, theme.id, options.dossierCache);
+  if (sauvegarde && sauvegarde.empreinte_corpus === charge.corpus.empreinte) {
+    console.log(`[cache] ${meta.slug} × ${theme.id} : extraction déjà payée (${sauvegarde.date.slice(0, 10)}), réutilisée — aucun appel d'extraction`);
+    extraction = {
+      mesures: sauvegarde.mesures,
+      ecartees: sauvegarde.ecartees,
+      reponse: { content: [], stop_reason: sauvegarde.stop_reason, usage: sauvegarde.usage },
+      dureeMs: sauvegarde.duree_ms,
+      cheminTrace: sauvegarde.chemin_trace,
+    };
+  } else {
+    extraction = await extraireMesures(client, meta, charge.corpus, theme.id, theme.libelle, theme.description, titresAutres);
+    sauvegarderExtraction(meta.slug, theme.id, charge.corpus.empreinte, extraction, options.dossierCache);
+  }
 
   // Journal écrit tout de suite : la recherche est payée qu'elle donne des mesures ou non.
   const usage = extraction.reponse.usage;
-  enregistrerJournal(
-    meta.slug,
-    {
+  const entreeJournal: EntreeJournal = {
       theme: theme.id,
       date: new Date().toISOString().slice(0, 10),
       resultat: extraction.mesures.length === 0 ? "aucune_mesure" : "propositions_generees",
@@ -217,11 +280,11 @@ async function executerTheme(
       urls_echouees: charge.echecs,
       ecartees: extraction.ecartees,
       chemin_trace: extraction.cheminTrace,
-      empreinte_corpus: charge.corpus.empreinte,
-      empreintes_documents: Object.fromEntries(charge.corpus.documents.map((d) => [d.id, d.empreinte])),
-    },
-    options.racine,
-  );
+  };
+  // Écrit tout de suite, SANS empreinte : la recherche est tracée (elle est payée) mais le thème n'est pas encore
+  // « à jour ». L'empreinte n'est ajoutée qu'une fois les mesures réellement enregistrées (voir plus bas), sinon un
+  // arrêt pendant la relecture ferait ignorer le thème au passage suivant alors que ses mesures sont les anciennes.
+  enregistrerJournal(meta.slug, entreeJournal, options.racine);
 
   const enAttente: EntreeAVerifier[] = [];
   const assemblees: MesureAVerifier[] = [];
@@ -254,6 +317,18 @@ async function executerTheme(
   if (ancienAVerifier.some((e) => e.theme === theme.id) || enAttente.length > 0) {
     enregistrerAVerifier(meta.slug, [...ancienAVerifier.filter((e) => e.theme !== theme.id), ...enAttente], options.racine);
   }
+
+  // Le thème est terminé : mesures et entrées « à vérifier » sont enregistrées. Seulement maintenant, il devient
+  // « à jour » pour cette empreinte de documents.
+  enregistrerJournal(
+    meta.slug,
+    {
+      ...entreeJournal,
+      empreinte_corpus: charge.corpus.empreinte,
+      empreintes_documents: Object.fromEntries(charge.corpus.documents.map((d) => [d.id, d.empreinte])),
+    },
+    options.racine,
+  );
 
   if (options.synthese) {
     // Forcée : les identifiants peuvent être les mêmes alors que le contenu des mesures a changé.

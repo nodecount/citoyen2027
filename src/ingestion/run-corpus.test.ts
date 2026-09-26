@@ -278,3 +278,73 @@ describe("mise à jour : rejouable quand les programmes changent", () => {
     expect(plan2.documentsModifies).toEqual([]);
   });
 });
+
+describe("reprise après arrêt : une extraction payée n'est jamais refaite", () => {
+  it("réutilise l'extraction sauvegardée quand un arrêt (budget, panne) est survenu après elle", async () => {
+    // 1re passe : l'extraction réussit, la relecture tombe en panne.
+    const create1 = vi.fn().mockResolvedValueOnce(texte([mesure()])).mockRejectedValueOnce(new Error("panne pendant la relecture"));
+    const r1 = await executerCandidatCorpus({ messages: { create: create1 } }, META, [THEME], options({ synthese: vi.fn() }));
+    expect(r1.themes[0].erreur).toContain("panne");
+    expect(chargerPropositions("candidat-x", racine)).toEqual([]);
+    expect(create1).toHaveBeenCalledTimes(2);
+
+    // 2e passe : seule la relecture est refaite ; l'extraction (payante) vient du cache.
+    const create2 = vi.fn().mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "PASS" }]));
+    await executerCandidatCorpus({ messages: { create: create2 } }, META, [THEME], options({ synthese: vi.fn() }));
+    expect(create2).toHaveBeenCalledTimes(1);
+    expect(String(create2.mock.calls[0][0].messages[0].content)).not.toContain("CORPUS"); // c'est bien la relecture
+    expect(chargerPropositions("candidat-x", racine)).toHaveLength(1);
+  });
+
+  it("ne réutilise pas une extraction faite sur d'autres documents", async () => {
+    const create1 = vi.fn().mockResolvedValueOnce(texte([mesure()])).mockRejectedValueOnce(new Error("panne"));
+    await executerCandidatCorpus({ messages: { create: create1 } }, META, [THEME], options({ synthese: vi.fn() }));
+
+    const modifie = async () => new Response(html2(PHRASE + " Ajout au programme."), { status: 200, headers: { "content-type": "text/html" } });
+    const create2 = vi.fn().mockResolvedValueOnce(texte([mesure()])).mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "PASS" }]));
+    await executerCandidatCorpus({ messages: { create: create2 } }, META, [THEME], options({ synthese: vi.fn(), actualiser: true, fetchImpl: modifie }));
+    expect(create2).toHaveBeenCalledTimes(2); // extraction refaite : les documents ont changé
+  });
+
+  it("--force ignore le cache d'extraction", async () => {
+    const create1 = vi.fn().mockResolvedValueOnce(texte([mesure()])).mockRejectedValueOnce(new Error("panne"));
+    await executerCandidatCorpus({ messages: { create: create1 } }, META, [THEME], options({ synthese: vi.fn() }));
+    const create2 = vi.fn().mockResolvedValueOnce(texte([mesure()])).mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "PASS" }]));
+    await executerCandidatCorpus({ messages: { create: create2 } }, META, [THEME], options({ synthese: vi.fn(), force: true }));
+    expect(create2).toHaveBeenCalledTimes(2);
+  });
+
+  it("après un rejet, un nouveau passage refait seulement la relecture (quelques centimes), jamais l'extraction", async () => {
+    const create = vi.fn().mockResolvedValueOnce(texte([mesure()])).mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "FAIL", raison: "portée élargie" }]));
+    await executerCandidatCorpus({ messages: { create } }, META, [THEME], options({ synthese: vi.fn() }));
+    const create2 = vi.fn().mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "PASS" }]));
+    await executerCandidatCorpus({ messages: { create: create2 } }, META, [THEME], options({ synthese: vi.fn(), force: false }));
+    expect(create2).toHaveBeenCalledTimes(1);
+    expect(String(create2.mock.calls[0][0].messages[0].content)).not.toContain("CORPUS");
+    expect(chargerPropositions("candidat-x", racine)).toHaveLength(1);
+  });
+});
+
+const html2 = (phrase: string) => `<html><body><p>Introduction.</p><p>${phrase}</p></body></html>`;
+
+describe("l'empreinte n'est enregistrée qu'une fois le thème réellement terminé", () => {
+  it("un arrêt pendant la relecture laisse le thème à refaire, même si d'anciennes mesures existent", async () => {
+    const modifie = async () => new Response(html2(PHRASE + " Ajout au programme."), { status: 200, headers: { "content-type": "text/html" } });
+
+    // 1. thème terminé sur la version initiale des documents
+    const create1 = vi.fn().mockResolvedValueOnce(texte([mesure()])).mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "PASS" }]));
+    await executerCandidatCorpus({ messages: { create: create1 } }, META, [THEME], options({ synthese: vi.fn() }));
+    expect(chargerPropositions("candidat-x", racine)).toHaveLength(1);
+
+    // 2. documents modifiés : l'extraction réussit, la relecture tombe en panne (ou le budget l'interdit)
+    const create2 = vi.fn().mockResolvedValueOnce(texte([mesure()])).mockRejectedValueOnce(new Error("panne pendant la relecture"));
+    await executerCandidatCorpus({ messages: { create: create2 } }, META, [THEME], options({ synthese: vi.fn(), actualiser: true, fetchImpl: modifie }));
+    expect(chargerJournal("candidat-x", racine)[0].empreinte_corpus).toBeUndefined();
+
+    // 3. nouveau passage sur les mêmes documents modifiés : il ne doit PAS être ignoré ; l'extraction vient du cache
+    const create3 = vi.fn().mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "PASS" }]));
+    await executerCandidatCorpus({ messages: { create: create3 } }, META, [THEME], options({ synthese: vi.fn(), fetchImpl: modifie, actualiser: true }));
+    expect(create3).toHaveBeenCalledTimes(1);
+    expect(chargerJournal("candidat-x", racine)[0].empreinte_corpus).toMatch(/^[0-9a-f]{16}$/);
+  });
+});
