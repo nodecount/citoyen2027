@@ -1,28 +1,575 @@
 [
   {
-    "titre": "Suppression et recentrage de quatre impôts de production (C3S, CVAE, forfait social, CFE industrielle)",
-    "resume_factuel": "Le mouvement Les Républicains propose un allègement d'environ 15 milliards d'euros de la fiscalité de production, en supprimant la C3S (5,3 Md€), en supprimant la CVAE (4,3 Md€), en maintenant le forfait social à 20 % sur la participation légale tout en exonérant l'intéressement, la participation supra-légale et l'épargne retraite individuelle, et en exonérant la part industrielle de la CFE (1,9 Md€). Ces impôts sont payés par les entreprises ; le corpus ne précise pas de répercussion directe chiffrée sur les particuliers.",
+    "titre": "Seuil « zéro cotisation » sur les heures travaillées au-delà de 1 623 heures par an",
+    "resume_factuel": "Les Républicains proposent d'exonérer de toutes les cotisations sociales (salariales et patronales), hors CSG-CRDS, les heures travaillées au-delà d'un seuil annuel de 1 623 heures (contre 1 607 aujourd'hui), tout en maintenant l'exonération d'impôt sur le revenu des heures supplémentaires. Le mécanisme s'accompagne d'une annualisation du temps de travail.",
     "sources": [
       {
         "type": "primaire",
-        "label": "republicains.fr — produire-plus",
-        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=20",
+        "label": "republicains.fr — travail-gagnant",
+        "url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=11",
         "nom": "republicains.fr",
         "annee": 2026
       }
     ],
     "chiffrage_disponible": true,
-    "hypotheses_calcul": "Chiffrage du corpus : 25 Md€ d'allègements sur le coût du travail (cotisations) et 15 Md€ sur la fiscalité de production (C3S 5,3 Md€, CVAE 4,3 Md€, forfait social 2,8 Md€, CFE industrielle 1,9 Md€), soit 40 Md€ sur un handicap fiscal évalué à 67 Md€.",
+    "hypotheses_calcul": "Le corpus chiffre un gain de pouvoir d'achat d'environ 230 euros nets avant impôt par an pour un salarié ne faisant pas d'heures supplémentaires (16h nécessaires pour atteindre le seuil), et jusqu'à 2 800 euros annuels pour un salarié au salaire médian faisant deux heures de plus par semaine. Le coût horaire des heures au-delà du seuil baisserait d'environ 35 % pour l'employeur. Le dispositif est présenté comme autofinancé.",
     "statut": "complet",
     "date_derniere_verification": "2026-09-26",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=11",
+        "extrait": "le coût horaire des heures travaillées au-delà du seuil baisse d’environ 35 % pour les entreprises, qui sont incitées à proposer davantage d’heures, tandis que les salariés bénéficient d’un gain direct de pouvoir d’achat."
+      }
+    ],
+    "id": "retailleau-pa-001",
+    "candidat": "retailleau",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Plafonnement des aides sociales non contributives à 70 % du SMIC net via un Compte social unique (CSU)",
+    "resume_factuel": "Création d'un Compte social unique retraçant l'ensemble des aides perçues par chaque adulte (hors handicap, dépendance, vieillesse), avec instauration d'un plafond global fixé à 70 % du SMIC net par adulte, entraînant une modulation automatique à la baisse des aides différentielles (RSA/RIA) en cas de dépassement.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — travail-gagnant",
+        "url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=14",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Exemple chiffré du corpus : un couple avec deux enfants percevant 2 375 euros nets avant impôt par mois en aides cumulées (85 % du SMIC net par adulte du foyer) verrait ce montant plafonné à 1 865 euros, soit une diminution de 410 euros par mois.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          },
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=14",
+        "extrait": "Avec le Compte social unique, le plafonnement à hauteur de 70 % du SMIC net par adulte du foyer de l’ensemble de ces aides, par minoration du RSA, aboutit à un montant total de 1 865 euros nets avant impôt, soit une diminution de 410 euros des aides reçues par Sarah et Maxime"
+      }
+    ],
+    "id": "retailleau-pa-002",
+    "candidat": "retailleau",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Cumul emploi-retraite rénové et exonération de cotisations pour les seniors en fin de carrière",
+    "resume_factuel": "Avant l'âge légal, exonération totale de cotisations retraite et chômage pour les salariés ayant validé tous leurs trimestres. Après l'âge légal, un « cumul emploi-retraite rénové » remplace la surcote et le cumul emploi-retraite actuels : exonération de cotisations sociales hors CSG-CRDS, cumul partiel entre pension et revenu d'activité (pension minorée de 30 % du revenu d'activité), suppression du délai de carence de six mois.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — travail-gagnant",
+        "url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=13",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Exemples chiffrés : au salaire médian, hausse du salaire net d'environ 300 €/mois avant l'âge légal ; exemple de Catherine, 62 ans, gain de 280 € nets/mois ; exemple de Michel, 65 ans, gain total de plus de 17 500 € sur deux ans en cumulant pension ajustée et revenu d'activité à mi-temps.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "50_64",
+              "65_plus"
+            ]
+          },
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie",
+              "retraite"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=13",
+        "extrait": "Avec le seuil « zéro cotisation senior anticipé », son employeur économie plus de 400 euros par mois et Catherine gagne 280 euros nets supplémentaires par mois, avant impôt."
+      }
+    ],
+    "id": "retailleau-pa-003",
+    "candidat": "retailleau",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Refonte du prêt à taux zéro (PTZ)",
+    "resume_factuel": "Le PTZ serait réservé aux primo-accédants, ouvert sans distinction au neuf et à l'ancien, appartements et maisons, avec suppression du zonage actuel ; son financement serait pris en charge par la Caisse des dépôts plutôt que par un crédit d'impôt budgétaire.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=22",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage du gain pour un ménage type n'est donné dans le corpus ; le texte mentionne un effet d'aubaine estimé à environ 15 % du dispositif actuel.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "locataire",
+              "heberge"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "primo-accédants à la propriété"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=22",
+        "extrait": "un PTZ lisible est souvent l’outil qui permet de décrocher le crédit en réduisant la mensualité."
+      }
+    ],
+    "id": "retailleau-pa-004",
+    "candidat": "retailleau",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Création d'un Revenu d'incitation à l'activité (RIA) fusionnant RSA, prime d'activité et ASS",
+    "resume_factuel": "Fusion de trois aides existantes (RSA, prime d'activité, allocation de solidarité spécifique) en un Revenu d'incitation à l'activité comprenant un « RIA Socle » de 300 €/mois pour les personnes sans activité en situation régulière, un « RIA Insertion » de 250 €/mois en cas de formation ou recherche active d'emploi, et un mécanisme de cumul avec le salaire (déduction de 30 % du salaire) en cas de reprise d'activité, jusqu'à un seuil de sortie de 1 833 €/mois de revenus d'activité. Le RIA ne dépend pas de la situation familiale.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — travail-gagnant",
+        "url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=12",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Le document chiffre un gain budgétaire de 2 Md€ par an lié au RIA. L'exemple donné (Sylvie, mère isolée) montre un gain de 400 € par mois en reprenant un mi-temps par rapport au système actuel.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=12",
+        "extrait": "Une personne adulte de moins de 65 ans, sans activité et sans revenu, en situation régulière, perçoit un « RIA Socle » de 300 euros par mois."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "situation_familiale",
+            "valeurs": [
+              "celibataire"
+            ]
+          },
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=12",
+        "extrait": "Avec le RIA, la situation change : en reprenant un mi‑temps, elle cumule son salaire, un RIA partiellement maintenu et ses autres aides. Son revenu total atteint alors près de 1 900 euros nets avant impôt par mois, soit 400 euros de plus qu’aujourd’hui."
+      }
+    ],
+    "id": "retailleau-aides-001",
+    "candidat": "retailleau",
+    "theme": "aides-etat"
+  },
+  {
+    "titre": "Suppression de l'obligation de temps partiel minimal de 24 heures hebdomadaires",
+    "resume_factuel": "En complément du RIA, suppression de l'obligation légale d'un minimum de 24 heures hebdomadaires pour le travail à temps partiel, sauf accord collectif, afin de faciliter l'accès à l'emploi pour les publics dont les volumes horaires disponibles sont réduits.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — travail-gagnant",
+        "url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=24",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage séparé fourni pour cette mesure spécifique.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=24",
+        "extrait": "Cette règle constitue aujourd’hui un frein pour de nombreux publics dont l’accès à l’emploi passe souvent par des volumes horaires réduits."
+      }
+    ],
+    "id": "retailleau-aides-002",
+    "candidat": "retailleau",
+    "theme": "aides-etat"
+  },
+  {
+    "titre": "Doublement du Revenu familial pour le troisième enfant mineur à charge",
+    "resume_factuel": "Le Revenu familial de 240 €/mois par enfant (mesure déjà présentée dans le thème famille) serait doublé (480 €) pour le troisième enfant mineur à charge, remplaçant les incitations actuelles liées aux allocations familiales, au complément familial et au quotient familial.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — famille",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=13",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffrage : effort budgétaire additionnel estimé à 1,5 milliard d'euros (note de bas de page indique un calcul alternatif à 3 milliards selon hypothèses), concernant environ 17 % des familles ayant trois enfants ou plus.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "famille ayant au moins trois enfants mineurs à charge"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=13",
+        "extrait": "La bonification du Revenu familial pour le troisième enfant représente un effort budgétaire destiné aux 17 % de familles nombreuses, soit environ 1,5 milliard d’euros."
+      }
+    ],
+    "id": "retailleau-aides-003",
+    "candidat": "retailleau",
+    "theme": "aides-etat"
+  },
+  {
+    "titre": "Condition de cinq ans de résidence et d'activité professionnelle pour les ressortissants étrangers bénéficiant des aides familiales",
+    "resume_factuel": "Pour bénéficier pleinement des dispositifs familiaux (dont le Revenu familial), les ressortissants étrangers devront justifier de cinq années de résidence en France et d'exercice d'une activité professionnelle.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — famille",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=4",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage isolé fourni pour cette condition spécifique.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "ressortissant étranger résidant en France depuis moins de cinq ans ou sans activité professionnelle"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=4",
+        "extrait": "Conditionner le Revenu familial à une résidence régulière en France et à l’exercice d’une activité professionnelle depuis au moins cinq ans."
+      }
+    ],
+    "id": "retailleau-aides-004",
+    "candidat": "retailleau",
+    "theme": "aides-etat"
+  },
+  {
+    "titre": "Suspension du Revenu familial par décision de justice en cas de défaillance éducative",
+    "resume_factuel": "Le Revenu familial pourra être suspendu temporairement sur décision de justice en cas de défaillance éducative des parents.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — famille",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=11",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Non chiffré spécifiquement.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "parents faisant l'objet d'une décision de justice pour défaillance éducative"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=11",
+        "extrait": "et en permettre la suspension temporaire par décision de justice en cas de défaillance éducative."
+      }
+    ],
+    "id": "retailleau-aides-005",
+    "candidat": "retailleau",
+    "theme": "aides-etat"
+  },
+  {
+    "titre": "Suppression des APL pour certains étudiants (étrangers non boursiers et enfants de familles aisées)",
+    "resume_factuel": "Application stricte de la suppression des APL pour environ 100 000 étudiants étrangers hors UE non boursiers (déjà prévue par la loi de finances 2026), et exclusion de l'APL pour les étudiants dont les parents appartiennent aux deux derniers déciles de revenus (plus de 45 000 €/an par unité de consommation), la perte étant compensée par le maintien de la demi-part fiscale.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=46",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffrage : 200 M€ d'économie pour les étudiants étrangers non boursiers ; 200 à 300 M€ pour l'exclusion des étudiants de familles aisées (déciles 9-10).",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étudiant étranger hors UE non boursier"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=46",
+        "extrait": "La loi de finances pour 2026 prévoit la suppression des APL pour les étudiants étrangers hors UE qui ne sont pas boursiers."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étudiant dont les parents appartiennent aux deux derniers déciles de revenus (plus de 45 000 € par unité de consommation)"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=46",
+        "extrait": "Les étudiants dont les parents appartiennent aux deux derniers déciles de revenus (plus de 45 000 euros par unité de consommation) seront exclus de l’APL."
+      }
+    ],
+    "id": "retailleau-aides-006",
+    "candidat": "retailleau",
+    "theme": "aides-etat"
+  },
+  {
+    "titre": "Suppression du quotient familial et de 11 autres dispositifs, remplacés par un « Revenu familial » de 240 €/mois versé via l'impôt sur le revenu",
+    "resume_factuel": "Les Républicains (programme famille) proposent de fusionner douze dispositifs (allocations familiales, quotient familial, complément familial, PAJE, allocation de rentrée scolaire, réduction d'impôt pour enfant scolarisé, etc.) en un Revenu familial (RF) de 240 €/mois par enfant mineur, versé dès le premier enfant. Le RF est intégré au prélèvement à la source : il est déduit chaque mois de l'impôt sur le revenu dû, ou versé directement si le foyer n'est pas imposable. Conditionné à une résidence régulière en France et à l'exercice d'une activité professionnelle depuis au moins cinq ans pour les ressortissants étrangers. Le mécanisme précis de compensation pour les familles perdant l'avantage du quotient familial (plus favorable aux hauts revenus) n'est pas chiffré par foyer.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — famille",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=11",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Coût du nouveau RF estimé à 40,3 milliards d'euros (14 millions de mineurs x 240 € x 12 mois), pour 41 milliards d'euros de dispositifs supprimés ; réforme présentée comme réalisée à budget constant, avec 600 à 800 millions d'euros d'économies de gestion attendues.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "indetermine",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=11",
+        "extrait": "Fusionner 12 dispositifs pour les remplacer par un Revenu familial (RF) \nde 240 euros versé chaque mois à tous, dès le premier enfant, de la naissance \njusqu’à 18 ans"
+      }
+    ],
     "id": "retailleau-fisc-001",
     "candidat": "retailleau",
     "theme": "fiscalite"
   },
   {
-    "titre": "Report automatique de l'exigibilité des droits de mutation à titre gratuit sur les entreprises transmises",
-    "resume_factuel": "Position du mouvement Les Républicains (2026) : la transmission de parts ou actions de sociétés exerçant une activité économique réelle (donation ou succession) ferait l'objet d'un report automatique de l'exigibilité des droits de mutation à titre gratuit (DMTG), calculés à la date de la transmission mais non exigibles tant que l'outil de production est conservé et exploité. Le dispositif est réservé aux entreprises à activité productive effective, hors structures purement patrimoniales ou financières ; les holdings ne sont éligibles qu'à proportion de leurs participations opérationnelles.",
+    "titre": "Doublement du Revenu familial pour le troisième enfant mineur à charge",
+    "resume_factuel": "En complément de la fusion des aides familiales en un Revenu familial (RF) de 240 €/mois par enfant, LR propose de doubler ce montant pour le troisième enfant mineur (480 €), afin de remplacer les incitations actuelles aux familles nombreuses (allocations familiales majorées, complément familial, quotient familial doublé à partir du 3e enfant).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — famille",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=13",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Effort budgétaire additionnel estimé à environ 1,5 milliard d'euros (autre estimation dans le texte : 3 milliards d'euros selon hypothèses détaillées), destiné aux 17 % de familles nombreuses.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "foyers ayant au moins trois enfants mineurs à charge"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=13",
+        "extrait": "Les parents de trois enfants \nmineurs percevraient ainsi 240 euros par enfant pour les deux premiers et 480 euros \npour le troisième, soit 960 euros au total."
+      }
+    ],
+    "id": "retailleau-fisc-002",
+    "candidat": "retailleau",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Choc de transmission patrimoniale : relèvement temporaire des plafonds de dons familiaux exonérés",
+    "resume_factuel": "LR propose de relever pendant trois ans le plafond des dons familiaux de sommes d'argent exonérés de droits, à 150 000 € pour un bénéficiaire de moins de 30 ans et à 100 000 € pour un bénéficiaire de moins de 40 ans (par donateur), contre environ 31 865 € aujourd'hui pour les seuls dons en numéraire. Ces règles s'appliqueraient aussi aux donations et successions portant sur le patrimoine immobilier.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=27",
+        "nom": "republicains.fr",
+        "annee": 2026
+      },
+      {
+        "type": "primaire",
+        "label": "republicains.fr — famille",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=17",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Le texte indique que ces montants représentent près de cinq fois plus, pour les moins de 30 ans, que le régime actuel (moins de 32 000 €).",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "moins_30"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=27",
+        "extrait": "150 000 euros exonérés pour un bénéficiaire de moins de 30 ans"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "bénéficiaire d'un don familial âgé de moins de 40 ans"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=27",
+        "extrait": "100 000 euros pour un bénéficiaire de moins de 40 ans"
+      }
+    ],
+    "id": "retailleau-fisc-003",
+    "candidat": "retailleau",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Différé automatique des droits de mutation à titre gratuit sur la transmission d'entreprises familiales",
+    "resume_factuel": "LR (parti) propose que les droits de mutation à titre gratuit (DMTG, pouvant atteindre 45 %) dus lors de la transmission (donation ou succession) de parts, actions ou entreprises individuelles exerçant une activité économique réelle soient calculés à la date de transmission mais leur paiement automatiquement différé tant que l'outil de production est conservé et exploité, sans cession. Le dispositif est réservé aux entreprises à activité productive effective, hors structures purement patrimoniales ou de détention passive.",
     "sources": [
       {
         "type": "primaire",
@@ -33,7 +580,7 @@
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage global du coût ou du gain de cette mesure n'est fourni dans le corpus ; seul le taux actuel des DMTG (pouvant atteindre 45 %) est mentionné comme référence.",
+    "hypotheses_calcul": "Aucun chiffrage global du coût ou du gain budgétaire n'est fourni dans le corpus.",
     "statut": "complet",
     "date_derniere_verification": "2026-09-26",
     "effets": [
@@ -42,7 +589,7 @@
           {
             "champ": "autre",
             "valeurs": [
-              "héritiers ou donataires de parts/actions d'entreprises à activité productive réelle"
+              "héritiers ou donataires d'entreprises familiales (TPE, PME, exploitations agricoles) conservant l'activité"
             ]
           }
         ],
@@ -52,13 +599,275 @@
         "extrait": "Tant que l’outil de production est conservé, exploité et continue de produire, aucun droit \nde mutation n’est exigible."
       }
     ],
-    "id": "retailleau-fisc-002",
+    "id": "retailleau-fisc-004",
     "candidat": "retailleau",
     "theme": "fiscalite"
   },
   {
-    "titre": "Réforme de la fiscalité de l'épargne pour l'orienter vers l'investissement productif",
-    "resume_factuel": "Position du mouvement Les Républicains (2026) : réforme des produits d'épargne visant à simplifier les supports existants, rendre la fiscalité plus incitative pour les investissements productifs de long terme, et réorienter les flux d'épargne aujourd'hui captés par la dette publique ou le logement social vers le capital des entreprises. Un compte d'épargne retraite individuel, complémentaire et volontaire, serait ouvert pour chaque actif, alimenté notamment par l'intéressement, la participation et l'épargne volontaire. Le corpus ne précise pas les montants ni les modalités fiscales exactes de cette réforme.",
+    "titre": "Relèvement du plafond d'exonération fiscale et sociale de la participation employeur pour la garde d'enfant",
+    "resume_factuel": "LR (parti) propose de relever de 2 421 € à 7 000 € par an le plafond d'exonération de cotisations sociales et d'impôt sur le revenu applicable à la participation financière versée par l'employeur à chaque salarié pour la garde de son enfant, afin de bénéficier notamment aux salariés de PME et TPE.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — famille",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=21",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Coût total estimé conjointement avec la suppression du plafond du crédit d'impôt famille (CIF) à 800 millions d'euros, partiellement compensé par un retour à l'emploi d'environ 40 000 mères supplémentaires (bénéfice économique direct estimé à 200 millions d'euros).",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Famille_vFinale.pdf#page=21",
+        "extrait": "Relever de 2 421 euros à 7 000 euros par an le plafond d’exonération \nde cotisations sociales et d’impôt sur le revenu applicable à la participation \nfinancière versée par l’employeur à chaque salarié pour la garde \nde son enfant."
+      }
+    ],
+    "id": "retailleau-fisc-005",
+    "candidat": "retailleau",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Refondation du Code du travail autour de 50 principes indépassables, le reste supplétif face à l'accord collectif",
+    "resume_factuel": "Position du parti LR (2026). Un socle de 50 principes fondamentaux du Code du travail serait rendu indépassable ; en dehors, l'accord collectif (entreprise ou branche) primerait sur les règles du Code, qui deviendrait supplétif. Les accords pourraient être conclus par syndicats majoritaires, CSE ou référendum employeur.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=12",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "indetermine",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=12",
+        "extrait": "en dehors de ces 50 principes, l’accord collectif pourra déroger aux milliers de règles du Code. Il deviendra la règle prioritaire dans l’entreprise, à défaut dans la branche"
+      }
+    ],
+    "id": "retailleau-trav-001",
+    "candidat": "retailleau",
+    "theme": "travail"
+  },
+  {
+    "titre": "Relèvement de seuils sociaux (CSE, BDESE) et obligation de sécurité transformée en obligation de moyens",
+    "resume_factuel": "Position du parti LR (2026). Le seuil de déclenchement du CSE serait relevé de 11 à 50 salariés, la BDESE supprimée en dessous de 250 salariés, et l'obligation de sécurité de résultat transformée en obligation de moyens pour les entreprises.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=10",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=10",
+        "extrait": "Obligation de sécurité\nTransformation de l'obligation de sécurité de résultat \nen obligation de moyens"
+      }
+    ],
+    "id": "retailleau-trav-002",
+    "candidat": "retailleau",
+    "theme": "travail"
+  },
+  {
+    "titre": "Création d'un Revenu d'incitation à l'activité (RIA) fusionnant RSA, prime d'activité et ASS",
+    "resume_factuel": "Position du parti LR (2026, document Travail gagnant). Fusion du RSA, de la prime d'activité et de l'allocation de solidarité spécifique (ASS) en un Revenu d'incitation à l'activité. Une personne sans activité perçoit un « RIA Socle » de 300 €/mois, complété par un « RIA Insertion » de 250 €/mois sous conditions de formation/recherche d'emploi ; en cas de reprise d'activité, l'allocation est diminuée de 30 % du salaire perçu ; le dispositif s'annule au-delà de 1833 €/mois de revenus d'activité. Suppression concomitante de l'obligation d'un minimum de 24h hebdomadaires pour le temps partiel, sauf accord collectif.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — travail-gagnant",
+        "url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=12",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffrage : gain estimé à 2 milliards d'euros par an pour les finances publiques ; exemple chiffré de Sylvie (mère isolée) : passage de 1 486 € à environ 1 900 € nets avant impôt en reprenant un mi-temps, soit +400 €.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=12",
+        "extrait": "Avec le RIA, la situation change : \nen reprenant un mi‑temps, elle cumule son salaire, \nun RIA partiellement maintenu et ses autres aides. \nSon revenu total atteint alors près de 1 900 euros \nnets avant impôt par mois, soit 400 euros de plus \nqu’aujourd’hui."
+      }
+    ],
+    "id": "retailleau-trav-003",
+    "candidat": "retailleau",
+    "theme": "travail"
+  },
+  {
+    "titre": "Réforme de l'assurance chômage : durée d'indemnisation, ruptures conventionnelles, frontaliers, alternance emploi-chômage",
+    "resume_factuel": "Position du parti LR (2026, document Travail gagnant). Mise en œuvre des règles de juin 2024 jamais appliquées (réduction de la durée maximale d'indemnisation de 18 à 15 mois, modulation selon la conjoncture, accès plus tardif aux droits prolongés pour les seniors, renforcement des obligations de recherche d'emploi, encadrement des refus d'offres raisonnables avec fin de l'indemnisation au 3e refus). Limitation à 6 mois et plafonnement de l'indemnisation des ruptures conventionnelles. Alignement de l'indemnisation des travailleurs frontaliers sur un salaire français équivalent. Plafonnement et dégressivité accrue de l'allocation chômage pour les salariés qui alternent emploi et chômage, allongement de la période minimale de rechargement des droits à 9-12 mois.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — travail-gagnant",
+        "url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=31",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffrage : 4 à 5 Md€ d'économies/an pour l'application des règles de juin 2024 ; 7 à 8 Md€/an pour la limitation des ruptures conventionnelles ; 0,5 à 0,7 Md€/an pour l'alignement des frontaliers ; 1 à 2 Md€/an pour la fin des stratégies d'alternance ; total 12,5 à 15,7 Md€/an. Exemples chiffrés : Sophie (rupture conventionnelle) passe de ~1400€/11 mois à indemnisation plafonnée sur 6 mois ; Marc (frontalier) passe de 2670€ à un montant calculé sur salaire français équivalent ; Thomas (alternance) voit ses indemnisations réduites.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "salarié ayant conclu une rupture conventionnelle"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=31",
+        "extrait": "Sophie, 42 ans, gagne 2 700 euros bruts par mois. \nAprès une rupture conventionnelle, elle perçoit environ \n1 400 euros par mois d’allocation chômage... Demain, son indemnisation serait plafonnée et limitée \nà six mois."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "travailleur transfrontalier au chômage"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=31",
+        "extrait": "Marc gagnait 5 800 euros bruts par mois en Suisse. \nDepuis qu’il est au chômage, il touche 2 670 euros d’indemnité \npar mois... Avec la réforme, son allocation serait \ncalculée sur un salaire français équivalent"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=31",
+        "extrait": "la durée maximale \nd’indemnisation (de 18 à 15 mois), \nune modulation en fonction de la conjoncture, un accès plus \ntardif aux droits prolongés pour les seniors et un renforcement \ndes obligations de recherche d’emploi."
+      }
+    ],
+    "id": "retailleau-trav-004",
+    "candidat": "retailleau",
+    "theme": "travail"
+  },
+  {
+    "titre": "Rééquilibrage de la gouvernance de l'assurance chômage entre Unédic, partenaires sociaux et régions",
+    "resume_factuel": "Position du parti LR (2026). Association pleine et entière de l'Unédic, des partenaires sociaux et des régions à la définition de l'accompagnement assuré par France Travail et au partage des données, l'objectif étant que ceux qui financent le régime puissent en piloter la politique.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — travail-gagnant",
+        "url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=34",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-trav-005",
+    "candidat": "retailleau",
+    "theme": "travail"
+  },
+  {
+    "titre": "Passer d'un État de méfiance à un État de confiance pour les entreprises : contrôle du travail recentré sur la fraude",
+    "resume_factuel": "Position du parti LR (2026). L'erreur non intentionnelle des entreprises ne constituerait plus une faute sauf socle limité de règles ; seule l'intention frauduleuse justifierait la sanction. L'inspection du travail devrait accompagner avant de sanctionner plutôt que constater et sanctionner après coup.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=17",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-trav-006",
+    "candidat": "retailleau",
+    "theme": "travail"
+  },
+  {
+    "titre": "Création d'un étage de retraite par capitalisation individuelle et volontaire",
+    "resume_factuel": "Le parti Les Républicains propose la mise en place d'un compte d'épargne retraite individuel, ouvert pour chaque actif, complémentaire et volontaire au système de retraite par répartition existant, sans s'y substituer. Il serait alimenté notamment par le redéploiement progressif de flux existants (intéressement, participation, épargne volontaire), avec une gouvernance paritaire et un investissement orienté vers l'économie réelle (PME, industrie, infrastructures). Le corpus vise un socle de capital productif de l'ordre de 1 000 milliards d'euros à terme, sans préciser le calendrier exact ni les modalités fiscales détaillées, celles-ci devant être précisées dans le cadre des propositions relatives au système de retraite.",
     "sources": [
       {
         "type": "primaire",
@@ -69,12 +878,775 @@
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage précis du gain fiscal individuel n'est fourni ; le corpus mentionne un objectif de constitution à terme d'un socle de capital productif de l'ordre de 1 000 milliards d'euros, sans détail sur l'effet fiscal par épargnant.",
-    "statut": "partiel",
+    "hypotheses_calcul": "Objectif chiffré de constitution d'un socle de capital productif de l'ordre de 1 000 milliards d'euros à terme, mentionné dans le document Produire plus, sans calendrier précis ni détail du niveau de cotisation individuelle.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie",
+              "independant"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "indetermine",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=36",
+        "extrait": "L’alimentation de ce compte d’épargne retraite individuel, dont les modalités seront précisées dans le cadre des propositions relatives à notre système de retraite, reposera notamment sur le redéploiement progressif de flux existants, tels que l’intéressement, la participation et l’épargne volontaire."
+      }
+    ],
+    "id": "retailleau-retr-001",
+    "candidat": "retailleau",
+    "theme": "retraites"
+  },
+  {
+    "titre": "Exonération de cotisations retraite et chômage avant l'âge légal pour les salariés ayant tous leurs trimestres",
+    "resume_factuel": "Distinct du cumul emploi-retraite rénové déjà mentionné (fiche 'seniors en fin de carrière'), ce dispositif concerne spécifiquement les salariés n'ayant pas encore atteint l'âge légal de départ mais ayant validé tous leurs trimestres : une exonération totale de cotisations retraite et chômage est proposée, augmentant le salaire net d'environ 300 euros par mois au niveau du salaire médian et réduisant le coût employeur de 450 euros.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — travail-gagnant",
+        "url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=13",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffrage au niveau du salaire médian : gain employeur d'environ 15 % du salaire brut (plus de 4 800 euros par an), hausse du salaire net d'environ 13 % (près de 3 400 euros par an), selon l'exemple de Catherine (62 ans, salaire brut 2 700 €/mois).",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "50_64"
+            ]
+          },
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/01/LesRepublicains_NosPropositionsPourLaFrance_TravailGagnant.pdf#page=13",
+        "extrait": "Avant l’âge légal, pour les salarié ayant validé tous leurs trimestres, une exonération de cotisations retraite et chômage accroît le salaire net d’environ 300 euros par mois au niveau du salaire médian, et réduit le coût employeur de 450 euros."
+      }
+    ],
+    "id": "retailleau-retr-002",
+    "candidat": "retailleau",
+    "theme": "retraites"
+  },
+  {
+    "titre": "Suppression du ZAN (zéro artificialisation nette) et refonte de l'urbanisme local",
+    "resume_factuel": "Abrogation du dispositif ZAN qui limite l'ouverture de nouveaux fonciers ; le PLU est simplifié en un « PLU urbanisme harmonieux » concentré sur l'essentiel (hauteur, alignement, espaces verts) ; le maire redevient décisionnaire, contrôle a posteriori renforcé. Objectif : diviser par deux les délais de construction (de 7 à 3 ans) via une loi d'urgence, guichet unique d'instruction, silence vaut accord, et encadrement des recours abusifs (consignation financière, délais de jugement contraints).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=3",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Objectif de 450 000 logements par an et d'1 million de logements supplémentaires sur le quinquennat ; délai moyen actuel de construction estimé à 7 ans, objectif de 3 ans.",
+    "statut": "complet",
     "date_derniere_verification": "2026-09-26",
     "effets": [],
-    "id": "retailleau-fisc-003",
+    "id": "retailleau-logt-001",
     "candidat": "retailleau",
-    "theme": "fiscalite"
+    "theme": "logement"
+  },
+  {
+    "titre": "Reversement d'une part de TVA aux communes pour chaque logement neuf construit",
+    "resume_factuel": "Chaque logement neuf donnera lieu au versement automatique d'une fraction forfaitaire de TVA de 9 000 euros à la commune concernée, afin de compenser le financement des équipements publics (écoles, voirie, réseaux), pour inciter les maires à délivrer des permis de construire.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=15",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "9 000 euros par logement neuf ; financé par les recettes de TVA supplémentaires générées par la reprise de la construction, sans impôt nouveau.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-logt-002",
+    "candidat": "retailleau",
+    "theme": "logement"
+  },
+  {
+    "titre": "Suppression des interdictions de louer liées au DPE (passoires thermiques)",
+    "resume_factuel": "Le diagnostic de performance énergétique (DPE) redevient un outil purement informatif et ne pourra plus fonder une interdiction administrative de louer les logements classés F ou G ; objectif de remettre ou préserver environ 450 000 logements sur le marché locatif.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=30",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffrage de 150 000 logements remis sur le marché immédiatement et 300 000 logements F préservés de l'interdiction prévue en 2028.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "locataire"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=30",
+        "extrait": "Au total donc, ce sont près de 450 000 logements que cette politique permettrait de préserver ou de remettre à disposition des Français."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "proprietaire"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "propriétaires bailleurs de logements classés F ou G au DPE"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=30",
+        "extrait": "le DPE restera obligatoire et pleinement informatif pour les locataires et les acquéreurs, mais il ne pourra plus servir de fondement à une interdiction administrative de louer"
+      }
+    ],
+    "id": "retailleau-logt-003",
+    "candidat": "retailleau",
+    "theme": "logement"
+  },
+  {
+    "titre": "Suppression de l'encadrement des loyers",
+    "resume_factuel": "Suppression des dispositifs d'encadrement des loyers issus de la loi ELAN et des mécanismes de plafonnement de la loi de 1989 ; le loyer sera librement fixé entre bailleur et locataire à la signature du bail.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=31",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Le corpus cite un rapport de mai 2026 selon lequel l'encadrement réduit l'offre d'environ 8 % pour une baisse des loyers de seulement 2 à 4 %.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "locataire"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "indetermine",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=31",
+        "extrait": "Le loyer sera librement fixé entre le bailleur et le locataire lors de la signature du bail, comme dans la majorité des marchés européens."
+      }
+    ],
+    "id": "retailleau-logt-004",
+    "candidat": "retailleau",
+    "theme": "logement"
+  },
+  {
+    "titre": "Réforme de la loi SRU : suppression des quotas uniformes de logements sociaux",
+    "resume_factuel": "Suppression des quotas de 20 % et 25 % imposés à chaque commune ; les objectifs de production de logements sociaux seront désormais fixés par contrats territoriaux entre préfet et intercommunalités, sans objectif dans les zones non tendues ; plafonnement de la concentration du logement social (au-delà de 30 %, plus d'aides publiques pour de nouvelles opérations).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=8",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus pour cette mesure spécifique.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-logt-005",
+    "candidat": "retailleau",
+    "theme": "logement"
+  },
+  {
+    "titre": "Restitution du parc Action Logement aux salariés (réduction du contingent préfectoral DALO/prioritaires)",
+    "resume_factuel": "Le contingent préfectoral sur le parc Action Logement sera ramené à 5 % (seuls agents de l'État) ; les 25 points actuellement fléchés vers publics DALO et prioritaires seront supprimés, restituant environ 40 000 attributions par an aux salariés dont les entreprises financent la PEEC.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=41",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffrage : 40 000 attributions par an restituées à la mission première d'Action Logement.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=41",
+        "extrait": "Les ressources financées par les entreprises devront d'abord bénéficier aux actifs et aux familles."
+      }
+    ],
+    "id": "retailleau-logt-006",
+    "candidat": "retailleau",
+    "theme": "logement"
+  },
+  {
+    "titre": "Rétablissement de la rotation dans le parc social : réexamen tous les 5 ans et surloyer dès le premier euro",
+    "resume_factuel": "Tous les locataires du parc social feront l'objet d'un réexamen de leur situation tous les cinq ans ; en cas de dépassement durable des plafonds de ressources, sortie organisée du parc avec délai de 12 à 18 mois ; le supplément de loyer de solidarité sera déclenché dès le premier euro de dépassement des plafonds (contre 20 % actuellement), avec maintien du bouclier à 30 % des ressources.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=42",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffrage : jusqu'à 600 millions d'euros de recettes supplémentaires annuelles pour les bailleurs.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "locataire"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "locataires du parc social dont les revenus dépassent les plafonds de ressources"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=42",
+        "extrait": "Ces évolutions pourraient générer jusqu'à 600 millions d'euros de recettes supplémentaires annuelles pour les bailleurs."
+      }
+    ],
+    "id": "retailleau-logt-007",
+    "candidat": "retailleau",
+    "theme": "logement"
+  },
+  {
+    "titre": "Extinction progressive du DALO (droit au logement opposable)",
+    "resume_factuel": "Le DALO ne donnera plus un accès automatique au parc social des métropoles mais un droit à une solution de logement (logement privé conventionné, résidence sociale, intermédiation locative) ; refus d'une solution adaptée entraînant la sortie définitive du dispositif ; pour les ménages sans activité, la solution pourra être proposée n'importe où sur le territoire, y compris en zone détendue.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=43",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Chiffrage : jusqu'à 25 à 30 % de propositions refusées en Île-de-France selon le corpus.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "bénéficiaires reconnus prioritaires au titre du DALO"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=43",
+        "extrait": "La reconnaissance DALO n'ouvrira plus un accès automatique au parc social des métropoles."
+      }
+    ],
+    "id": "retailleau-logt-008",
+    "candidat": "retailleau",
+    "theme": "logement"
+  },
+  {
+    "titre": "Conditionnement de l'hébergement d'urgence à la régularité du séjour et plafonnement à 18 mois",
+    "resume_factuel": "Révision de l'article L.345-2-2 du code de l'action sociale et des familles pour exclure les personnes en situation irrégulière ou sous OQTF de l'hébergement d'urgence généraliste ; plafonnement de la durée d'hébergement à dix-huit mois pour l'ensemble des bénéficiaires.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=44",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Selon la Cour des comptes citée, 40 à 60 % des places d'hébergement d'urgence généraliste seraient occupées par des étrangers en situation irrégulière, pour un coût annuel d'un milliard d'euros.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes en situation irrégulière ou sous OQTF"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=44",
+        "extrait": "Les personnes en situation irrégulière ou sous OQTF relèvent du droit des étrangers, non du droit au logement"
+      }
+    ],
+    "id": "retailleau-logt-009",
+    "candidat": "retailleau",
+    "theme": "logement"
+  },
+  {
+    "titre": "Vente aux locataires de 10 % du parc de pavillons HLM avec décote de 20 %",
+    "resume_factuel": "Après dix ans d'occupation, un locataire de pavillon HLM pourra demander à acheter son logement avec une décote de 20 % ; objectif de vente de 10 % du parc de pavillons (environ 86 000 logements sur 864 000) ; un fonds de mutualisation compensera une partie des décotes.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=23",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffrage : objectif de 86 000 logements vendus sur environ 864 000 pavillons HLM existants.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "locataire"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "locataires de pavillons HLM depuis au moins 10 ans"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=23",
+        "extrait": "le locataire pourra demander à acheter le logement qu'il occupe avec une décote de 20 %"
+      }
+    ],
+    "id": "retailleau-logt-010",
+    "candidat": "retailleau",
+    "theme": "logement"
+  },
+  {
+    "titre": "Développement du bail réel solidaire (BRS) et du prêt social location-accession (PSLA)",
+    "resume_factuel": "Déploiement massif du bail réel solidaire, qui dissocie foncier et bâti et permet une décote d'environ 30 % sur le prix d'achat, en mobilisant le foncier public confié aux organismes de foncier solidaire ; renforcement du PSLA, avec information systématique des locataires du parc social par les bailleurs sociaux.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=22",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Décote estimée à environ 30 % sur le prix d'achat via le BRS.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "ménages accédant à la propriété via le bail réel solidaire ou le PSLA"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=22",
+        "extrait": "Ce mécanisme permet une décote d'environ 30 % sur le prix d'achat, en garantissant que le logement restera accessible."
+      }
+    ],
+    "id": "retailleau-logt-011",
+    "candidat": "retailleau",
+    "theme": "logement"
+  },
+  {
+    "titre": "Suppression de l'exonération d'impôt sur les sociétés des bailleurs sociaux et fin du programme ANRU après 2030",
+    "resume_factuel": "Suppression progressive sur cinq ans de l'exonération d'IS des organismes HLM (350 millions d'euros par an), redistribuée aux bailleurs qui construisent et rénovent via le Fonds national des aides à la pierre ; non-renouvellement du programme national de rénovation urbaine après le NPNRU en 2030, permettant à Action Logement de réorienter 850 millions d'euros par an vers le logement des salariés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=45",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffrages : 350 M€/an d'économie sur l'IS, 100 à 150 M€/an d'économie côté État sur l'ANRU, 850 M€/an réorientés par Action Logement, soit environ 30 000 logements supplémentaires par an.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-logt-012",
+    "candidat": "retailleau",
+    "theme": "logement"
+  },
+  {
+    "titre": "Suspension de l'autorisation préalable de changement de destination pour transformer bureaux en logements",
+    "resume_factuel": "L'autorisation préalable de changement de destination sera suspendue pour les bâtiments existants (bureaux, commerces), remplacée par un régime déclaratif à la mairie, afin de faciliter la reconversion du parc tertiaire vacant en logements ; les normes de sécurité, salubrité et performance énergétique resteront contrôlées a posteriori.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=19",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffrage : création estimée de 150 000 logements supplémentaires sur cinq ans grâce à cette mesure.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-logt-013",
+    "candidat": "retailleau",
+    "theme": "logement"
+  },
+  {
+    "titre": "Transfert des lycées professionnels et de l'orientation vers les régions et les entreprises",
+    "resume_factuel": "Position du parti Les Républicains (2026) : l'orientation et les lycées professionnels quitteraient le giron de l'Éducation nationale pour être confiés aux régions et aux entreprises. Les lycées professionnels convergeraient progressivement vers le modèle des centres de formation des apprentis (CFA) et intégreraient davantage les entreprises dans leur gouvernance. Les plateaux techniques bénéficieraient d'un dispositif de sur-amortissement fiscal pour encourager les entreprises à investir dans leur équipement. Le calendrier et les modalités précises de transfert de gouvernance ne sont pas détaillés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=31",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage n'est fourni pour cette mesure spécifique de transfert de gouvernance.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "moins_30"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "élèves des lycées professionnels"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "indetermine",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=31",
+        "extrait": "l’orientation et les lycées professionnels quitteront le giron de l’Éducation nationale et seront confiés aux régions et aux entreprises"
+      }
+    ],
+    "id": "retailleau-educ-001",
+    "candidat": "retailleau",
+    "theme": "education"
+  },
+  {
+    "titre": "Gouvernance partagée de France Compétences avec les entreprises",
+    "resume_factuel": "Position du parti Les Républicains (2026) : les entreprises prendraient pleinement part à la définition des orientations stratégiques de la formation professionnelle initiale, la gouvernance de France Compétences étant strictement partagée entre l'État et les partenaires sociaux. Le corpus ne précise pas les modalités concrètes de cette nouvelle gouvernance ni ses effets directs sur les usagers de la formation.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=29",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus pour cette mesure de gouvernance.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-educ-002",
+    "candidat": "retailleau",
+    "theme": "education"
+  },
+  {
+    "titre": "Recentrage du financement de la recherche publique vers des débouchés industriels et redéploiement de postes de chercheurs",
+    "resume_factuel": "Position du parti Les Républicains (2026) : tout financement public de la recherche devra s'inscrire dans un continuum vers un débouché industriel identifié. Le Crédit d'Impôt Recherche (CIR) sera sanctuarisé mais les contrôles contre ses dérives renforcés. Jusqu'à 2 000 emplois de chercheurs pourraient être redéployés vers des disciplines jugées stratégiques pour la souveraineté industrielle, au détriment d'autres disciplines académiques. Les financements publics de recherche et d'innovation seront concentrés sur sept secteurs stratégiques pilotés par le Commissariat au Plan.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=32",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Le chiffre de 2 000 emplois de chercheurs redéployés est mentionné comme un maximum possible ('pourront ainsi être redéployés'), sans calendrier ni méthode précisée pour identifier les postes concernés.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie",
+              "fonctionnaire"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "chercheurs dans des disciplines académiques non jugées stratégiques"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "indetermine",
+        "source_url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=32",
+        "extrait": "Jusqu’à 2 000 emplois de chercheurs pourront ainsi être redéployés vers ces disciplines stratégiques, afin de concentrer les moyens là où ils produisent un impact économique, industriel et technologique mesurable"
+      }
+    ],
+    "id": "retailleau-educ-003",
+    "candidat": "retailleau",
+    "theme": "education"
+  },
+  {
+    "titre": "Rétablissement d'un contrat nucléaire de long terme et prolongation du parc jusqu'à 80 ans",
+    "resume_factuel": "LR propose de remplacer le Versement Nucléaire Universel par un dispositif contractuel de long terme inspiré d'Exeltium entre EDF et fournisseurs alternatifs, sécurisant sur quinze ans jusqu'à 30 TWh annuels d'électricité nucléaire à prix négocié. Le parc nucléaire existant serait prolongé jusqu'à quatre-vingts ans si les conditions de sûreté le permettent, avec un objectif de production de 400 TWh, pour rendre crédible une baisse du prix de fourniture pour l'industrie pouvant atteindre 10 %.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=22",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Objectif de baisse du prix moyen de fourniture pour l'industrie pouvant atteindre 10 % ; contrat sur 15 ans jusqu'à 30 TWh annuels.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-envi-001",
+    "candidat": "retailleau",
+    "theme": "environnement"
+  },
+  {
+    "titre": "Arrêt des soutiens publics aux nouvelles capacités solaires et éoliennes",
+    "resume_factuel": "Le parti Les Républicains propose de mettre fin aux soutiens publics aux nouvelles capacités solaires et éoliennes et de reporter les projets déjà autorisés en cas de surcapacité, afin de préserver l'équilibre économique du mix électrique.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=22",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-envi-002",
+    "candidat": "retailleau",
+    "theme": "environnement"
+  },
+  {
+    "titre": "Discipline budgétaire sur les tarifs de réseau électrique",
+    "resume_factuel": "LR propose d'imposer une discipline budgétaire renforcée aux gestionnaires de réseaux électriques et de mettre un terme aux investissements non prioritaires, en particulier ceux liés au raccordement de nouvelles capacités intermittentes, afin de stabiliser puis baisser le tarif d'acheminement de 5 à 10 % à moyen terme.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=23",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Baisse comprise entre 5 et 10 % du tarif d'acheminement à moyen terme.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-envi-003",
+    "candidat": "retailleau",
+    "theme": "environnement"
+  },
+  {
+    "titre": "Renforcement du mécanisme d'ajustement carbone aux frontières",
+    "resume_factuel": "LR souhaite renforcer et étendre le mécanisme d'ajustement carbone aux frontières aux produits transformés, afin de garantir une réciprocité climatique et de mettre fin au dumping environnemental.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=25",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage disponible.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-envi-004",
+    "candidat": "retailleau",
+    "theme": "environnement"
+  },
+  {
+    "titre": "Suppression du principe de précaution au profit d'un principe de responsabilité",
+    "resume_factuel": "Dans le cadre de la déréglementation, LR propose de remplacer le principe de précaution par un principe de responsabilité, et de ne plus permettre aux considérations environnementales de constituer un frein automatique à la réalisation de projets industriels.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=10",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage disponible ; mesure de nature réglementaire.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-envi-005",
+    "candidat": "retailleau",
+    "theme": "environnement"
+  },
+  {
+    "titre": "Moratoire sur les interdictions plastiques/PFAS et loi anti-gaspillage au-delà des règlements européens",
+    "resume_factuel": "LR propose un moratoire immédiat sur toute interdiction (loi AGEC, plastiques/PFAS) allant au-delà des règlements européens, ainsi qu'un alignement des seuils des installations classées (ICPE) sur les seuils européens.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=10",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage disponible.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-envi-006",
+    "candidat": "retailleau",
+    "theme": "environnement"
+  },
+  {
+    "titre": "Suppression des projets de territoire pour la gestion de l'eau (PTGE) et reconnaissance des retenues d'eau agricoles",
+    "resume_factuel": "LR propose de supprimer les procédures de projets de territoire pour la gestion de l'eau et de déclarer les retenues d'eau agricoles comme étant d'intérêt général majeur.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — produire-plus",
+        "url": "https://republicains.fr/wp-content/uploads/2026/02/LR_Produire_Plus_LIVRET.pdf#page=10",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage disponible.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-envi-007",
+    "candidat": "retailleau",
+    "theme": "environnement"
+  },
+  {
+    "titre": "Moratoire de dix ans sur les normes de construction et gel des paliers RE2020",
+    "resume_factuel": "LR (livret Logement) propose un moratoire normatif de dix ans sur les règles applicables à la construction de logements, maintenant la RE2020 mais sans appliquer les paliers de durcissement prévus en 2028 et 2031.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "republicains.fr — logement",
+        "url": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf#page=16",
+        "nom": "republicains.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage disponible.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-09-26",
+    "effets": [],
+    "id": "retailleau-envi-008",
+    "candidat": "retailleau",
+    "theme": "environnement"
   }
 ]
