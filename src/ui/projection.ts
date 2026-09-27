@@ -95,3 +95,16 @@ export function messagesIncertitude(projection: Projection): string[] {
   }
   return messages;
 }
+
+// Effets qu'AUCUNE réponse ne pourra jamais confirmer (public hors formulaire) : exclus du calcul du badge (voir
+// `Projection.effetsNonPrisEnCompte`), mais on le dit toujours, y compris quand il y a un badge — jamais l'impression que
+// l'indicateur tient compte de tout. Quand il n'y a pas de badge (niveau null), `messagesSansBadge` l'explique déjà.
+export function messagesEffetsExclus(projection: Projection): string[] {
+  if (projection.niveau === null || projection.effetsNonPrisEnCompte === 0) return [];
+  const n = projection.effetsNonPrisEnCompte;
+  return [
+    n === 1
+      ? "Une mesure supplémentaire vise un public que le formulaire ne permet pas encore de décrire : elle n'est pas prise en compte dans cet indicateur."
+      : `${n} mesures supplémentaires visent un public que le formulaire ne permet pas encore de décrire : elles ne sont pas prises en compte dans cet indicateur.`,
+  ];
+}

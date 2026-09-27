@@ -200,15 +200,16 @@ describe("projeterTheme — pas de badge plutôt qu'un mauvais badge", () => {
     expect(projection.champsManquants).toEqual([]);
   });
 
-  it("critère « autre » : jamais apparié ; on ne sait pas si le visiteur est concerné → « mixte », raison distincte", () => {
+  it("critère « autre » seul : aucune réponse ne le confirmera jamais → pas de badge, compté à part", () => {
     const p = proposition([
       effet({ sens: "baisse", cibles: [{ champ: "autre", valeurs: ["personnes de nationalité étrangère"] }] }),
     ]);
     const projection = projeterTheme(PROFIL, [p]);
-    expect(projection.niveau).toBe("mixte");
-    expect(projection.incertain).toBe(true);
+    expect(projection.niveau).toBeNull();
+    expect(projection.incertain).toBe(false);
     expect(projection.raisons).toEqual(["critere_hors_formulaire"]);
     expect(projection.champsManquants).toEqual([]);
+    expect(projection.effetsNonPrisEnCompte).toBe(1);
   });
 
   it("effet de sens indéterminé qui vise le profil : pas de badge", () => {
@@ -257,6 +258,50 @@ describe("projeterTheme — pas de badge plutôt qu'un mauvais badge", () => {
     const projection = projeterTheme(sansLogement, [p]);
     expect(projection.niveau).toBe("mixte");
     expect(projection.incertain).toBe(false);
+  });
+});
+
+describe("projeterTheme — effets qu'aucune réponse ne peut jamais confirmer (critère « autre »)", () => {
+  it("n'empêchent plus un badge par ailleurs déterminé, et sont comptés à part", () => {
+    const p = proposition([
+      effet({ sens: "hausse" }),
+      effet({ sens: "baisse", cibles: [{ champ: "autre", valeurs: ["personnes en situation irrégulière"] }] }),
+    ]);
+    const projection = projeterTheme(PROFIL, [p]);
+    expect(projection.niveau).toBe("ameliorant");
+    expect(projection.effetsNonPrisEnCompte).toBe(1);
+    // Ce n'est pas un « pas de badge » : les raisons ne s'affichent pas comme telles à côté d'un badge.
+    expect(projection.raisons).toEqual([]);
+  });
+
+  it("un critère répondable qui exclut déjà le profil prime sur un critère « autre » qu'on ne pourra jamais lever", () => {
+    const p = proposition([
+      effet({
+        cibles: [
+          { champ: "tranche_age", valeurs: ["65_plus"] },
+          { champ: "autre", valeurs: ["personnes en situation irrégulière"] },
+        ],
+      }),
+    ]);
+    const projection = projeterTheme(PROFIL, [p]);
+    expect(projection.niveau).toBe("non_concerne");
+    expect(projection.effetsNonPrisEnCompte).toBe(0);
+  });
+
+  it("un critère « autre » combiné à un champ non répondu reste exclu (pas « incertain », jamais confirmable)", () => {
+    const p = proposition([
+      effet({ cibles: [{ champ: "logement", valeurs: ["proprietaire"] }, { champ: "autre", valeurs: ["x"] }] }),
+    ]);
+    const { logement: _l, ...sansLogement } = PROFIL;
+    const projection = projeterTheme(sansLogement, [p]);
+    expect(projection.niveau).toBeNull();
+    expect(projection.incertain).toBe(false);
+    expect(projection.champsManquants).toEqual([]);
+    expect(projection.effetsNonPrisEnCompte).toBe(1);
+  });
+
+  it("vaut 0 quand aucun effet n'a de critère « autre »", () => {
+    expect(projeterTheme(PROFIL, [proposition([effet()])]).effetsNonPrisEnCompte).toBe(0);
   });
 });
 

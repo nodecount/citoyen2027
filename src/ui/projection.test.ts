@@ -3,7 +3,7 @@ import { DIMENSIONS_EFFET } from "../effets";
 import type { Effet } from "../effets";
 import type { Proposition } from "../types";
 import type { Projection } from "../engine/projection";
-import { DIMENSIONS_LIBELLES, NIVEAUX, decrireEffet, libelleChamp, messagesIncertitude, messagesSansBadge } from "./projection";
+import { DIMENSIONS_LIBELLES, NIVEAUX, decrireEffet, libelleChamp, messagesEffetsExclus, messagesIncertitude, messagesSansBadge } from "./projection";
 
 function proposition(effets: Effet[] | undefined): Proposition {
   return {
@@ -22,7 +22,7 @@ function proposition(effets: Effet[] | undefined): Proposition {
 }
 
 function sansBadge(surcharge: Partial<Projection>): Projection {
-  return { niveau: null, raisons: [], champsManquants: [], effetsRetenus: [], incertain: false, ...surcharge };
+  return { niveau: null, raisons: [], champsManquants: [], effetsRetenus: [], incertain: false, effetsNonPrisEnCompte: 0, ...surcharge };
 }
 
 describe("NIVEAUX", () => {
@@ -97,7 +97,7 @@ describe("messagesSansBadge", () => {
   });
 
   it("ne renvoie rien quand il y a un badge", () => {
-    expect(messagesSansBadge({ niveau: "ameliorant", raisons: [], champsManquants: [], effetsRetenus: [], incertain: false }, [])).toEqual([]);
+    expect(messagesSansBadge(sansBadge({ niveau: "ameliorant" }), [])).toEqual([]);
   });
 });
 
@@ -117,5 +117,17 @@ describe("messagesIncertitude", () => {
   it("signale un public que le formulaire ne sait pas décrire", () => {
     const messages = messagesIncertitude(sansBadge({ niveau: "mixte", incertain: true, raisons: ["critere_hors_formulaire"] }));
     expect(messages.join(" ")).toContain("formulaire");
+  });
+});
+
+describe("messagesEffetsExclus", () => {
+  it("ne dit rien sans badge (le cas est déjà expliqué par messagesSansBadge), ni s'il n'y a rien d'exclu", () => {
+    expect(messagesEffetsExclus(sansBadge({ niveau: null, effetsNonPrisEnCompte: 3 }))).toEqual([]);
+    expect(messagesEffetsExclus(sansBadge({ niveau: "ameliorant", effetsNonPrisEnCompte: 0 }))).toEqual([]);
+  });
+
+  it("signale, au singulier ou au pluriel, les effets exclus à côté d'un badge existant", () => {
+    expect(messagesEffetsExclus(sansBadge({ niveau: "ameliorant", effetsNonPrisEnCompte: 1 }))[0]).toContain("Une mesure supplémentaire");
+    expect(messagesEffetsExclus(sansBadge({ niveau: "mixte", effetsNonPrisEnCompte: 3 }))[0]).toContain("3 mesures supplémentaires");
   });
 });

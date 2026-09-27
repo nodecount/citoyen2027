@@ -65,7 +65,7 @@ function MesureAnalysee({ proposition, profil }: { proposition: Proposition; pro
 // Le détail d'un candidat sur un thème, ouvert depuis son portrait : programme d'abord (synthèse, sources, mesures),
 // puis — seulement si le visiteur a donné des informations — ce que cela change pour lui.
 function DetailCandidat({ ligne, profil, id }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string }) {
-  const { meta, projection, synthese, sources, messagesSansBadge, messagesIncertitude, propositions } = ligne;
+  const { meta, projection, synthese, sources, messagesSansBadge, messagesIncertitude, messagesEffetsExclus, propositions } = ligne;
   const niveau = projection?.niveau ?? null;
 
   return (
@@ -108,6 +108,12 @@ function DetailCandidat({ ligne, profil, id }: { ligne: LigneCandidat; profil: P
             ))}
           </>
         ))}
+      {/* Toujours affiché quand il s'applique, même à côté d'un badge : jamais l'impression que l'indicateur tient compte de tout. */}
+      {messagesEffetsExclus.map((message) => (
+        <p className="pour-votre-profil exclus" key={message}>
+          {message}
+        </p>
+      ))}
 
       {projection && projection.effetsRetenus.length > 0 && (
         <details className="pourquoi">

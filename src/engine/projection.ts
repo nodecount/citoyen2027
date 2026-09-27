@@ -6,14 +6,16 @@ import { polarite, type Polarite } from "./polarite";
 // Indicateur de projection d'un candidat sur un thème pour un citoyen — règles documentées dans
 // docs/superpowers/specs/2026-09-24-fil-rouge-themes-projection-design.md et CLAUDE.md.
 // Quatre niveaux seulement. Deux cas sans badge : aucun effet déterminé, ou effet qui vise le visiteur sans que son sens
-// soit établi. Quand le moteur ne sait pas si le visiteur est concerné (réponse manquante, ou public que le formulaire
-// ne sait pas décrire), l'indicateur est « mixte » — et on dit pourquoi, et quoi préciser.
+// soit établi. Quand le moteur ne sait pas si le visiteur est concerné par une réponse manquante mais RÉPONDABLE,
+// l'indicateur est « mixte » (à préciser). Un effet qui vise un public que le formulaire ne pourra JAMAIS décrire (critère
+// « autre ») ne bloque plus le badge — répondre ne lèverait jamais le doute — mais est signalé à part (voir
+// `effetsNonPrisEnCompte`), pour ne pas se prétendre plus complet qu'on ne l'est.
 
 export type NiveauProjection = "ameliorant" | "mixte" | "non_concerne" | "degradant";
 
 export type RaisonSansBadge =
   | "informations_manquantes" // un champ du profil utile n'a pas été renseigné
-  | "critere_hors_formulaire" // le programme vise un critère que le formulaire ne capture pas
+  | "critere_hors_formulaire" // toutes les mesures du thème visent un critère que le formulaire ne capture pas
   | "effet_non_determinable" // le programme vise ce profil sans que le sens de l'effet soit établi
   | "aucun_effet_determine"; // aucune mesure du thème n'a d'effet direct déterminé
 
@@ -30,9 +32,13 @@ export interface Projection {
   // Champs du profil à préciser pour lever l'incertitude (niveau null ou incertain) : sinon vide.
   champsManquants: string[];
   effetsRetenus: EffetRetenu[];
-  // Vrai quand « mixte » vient de ce que le moteur ne sait pas si le visiteur est concerné par certaines mesures, et non
-  // de mesures qui le favorisent ET le défavorisent.
+  // Vrai quand « mixte » vient de ce que le moteur ne sait pas si le visiteur est concerné par certaines mesures
+  // RÉPONDABLES (réponse manquante à une question du formulaire), et non de mesures qui le favorisent ET le défavorisent.
   incertain: boolean;
+  // Nombre d'effets exclus du calcul ci-dessus parce qu'ils visent un public qu'AUCUNE réponse du formulaire ne peut
+  // jamais confirmer (un critère « autre » les concerne toujours) : toujours présent, même quand il y a un badge, pour
+  // ne jamais laisser croire que l'indicateur tient compte de tout.
+  effetsNonPrisEnCompte: number;
 }
 
 type StatutEffet =
@@ -40,8 +46,9 @@ type StatutEffet =
   | { type: "applicable" }
   | { type: "a_confirmer"; champsManquants: string[]; horsFormulaire: boolean };
 
-// ET à trois valeurs : un critère faux exclut l'effet même si un autre est inconnu. Une réponse à plusieurs choix
-// correspond si l'un de ses choix est visé.
+// ET à trois valeurs : un critère faux exclut l'effet même si un autre est inconnu — y compris un critère « autre » : un
+// critère répondable qui exclut déjà le profil prime sur un doute qu'aucune réponse ne lèvera jamais. Une réponse à
+// plusieurs choix correspond si l'un de ses choix est visé.
 function statutEffet(profil: ProfilPartiel, effet: Effet): StatutEffet {
   const champsManquants: string[] = [];
   let horsFormulaire = false;
@@ -71,8 +78,9 @@ export function projeterTheme(profil: ProfilPartiel, propositions: Proposition[]
   let nombreHorsCible = 0;
   let favorables = 0;
   let defavorables = 0;
-  let incertains = 0; // effets qui visent peut-être ce profil : on ne sait pas s'il est concerné
+  let incertains = 0; // effets à confirmer par une question RÉPONDABLE du formulaire
   let indetermines = 0; // effets qui visent ce profil sans sens établi
+  let effetsNonPrisEnCompte = 0; // effets qu'aucune réponse ne peut jamais confirmer (critère « autre »)
 
   for (const proposition of propositions) {
     // Même périmètre que l'affichage : une fiche « provisoire » est une recherche inachevée.
@@ -85,10 +93,16 @@ export function projeterTheme(profil: ProfilPartiel, propositions: Proposition[]
         continue;
       }
       if (statut.type === "a_confirmer") {
+        if (statut.horsFormulaire) {
+          // Répondre à tout le formulaire ne lèverait jamais ce doute : on l'exclut du calcul plutôt que de bloquer
+          // indéfiniment l'indicateur, et on le compte à part pour le dire honnêtement.
+          effetsNonPrisEnCompte += 1;
+          raisons.add("critere_hors_formulaire");
+          continue;
+        }
         incertains += 1;
         for (const champ of statut.champsManquants) champsManquants.add(champ);
-        if (statut.champsManquants.length > 0) raisons.add("informations_manquantes");
-        if (statut.horsFormulaire) raisons.add("critere_hors_formulaire");
+        raisons.add("informations_manquantes");
         continue;
       }
       const sens = polarite(effet.dimension, effet.sens);
@@ -103,25 +117,31 @@ export function projeterTheme(profil: ProfilPartiel, propositions: Proposition[]
     }
   }
 
+  // Effets sur lesquels le badge peut effectivement se prononcer, un jour ou l'autre.
+  const resolvables = nombreEffets - effetsNonPrisEnCompte;
+
   const resultat = (niveau: NiveauProjection | null, incertain = false): Projection => ({
     niveau,
     raisons: niveau === null || incertain ? [...raisons] : [],
     champsManquants: niveau === null || incertain ? [...champsManquants] : [],
     effetsRetenus,
     incertain,
+    effetsNonPrisEnCompte,
   });
 
   if (nombreEffets === 0) {
     raisons.add("aucun_effet_determine");
     return resultat(null);
   }
+  // Toutes les mesures du thème visent un public hors formulaire : rien à calculer, mais on le dit (pas « aucun effet »).
+  if (resolvables === 0) return resultat(null);
   // Le mixte « réel » est stable : ajouter des effets (même à confirmer) ne peut pas le défaire.
   if (favorables > 0 && defavorables > 0) return resultat("mixte");
-  // On ne sait pas si le visiteur est concerné par certaines mesures : « mixte », par prudence, avec l'explication.
+  // On ne sait pas si le visiteur est concerné par une mesure RÉPONDABLE : « mixte », par prudence, avec l'explication.
   if (incertains > 0) return resultat("mixte", true);
   if (indetermines > 0) return resultat(null);
   if (favorables > 0) return resultat("ameliorant");
   if (defavorables > 0) return resultat("degradant");
-  // Tous les effets existants ont été exclus par le ciblage : ce thème ne concerne pas ce profil.
-  return nombreHorsCible === nombreEffets ? resultat("non_concerne") : resultat(null);
+  // Tous les effets résolvables ont été exclus par le ciblage : ce thème ne concerne pas ce profil.
+  return nombreHorsCible === resolvables ? resultat("non_concerne") : resultat(null);
 }

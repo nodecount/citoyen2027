@@ -293,6 +293,11 @@ article {
   color: var(--mixte);
 }
 
+.exclus {
+  color: var(--encre-douce);
+  font-style: italic;
+}
+
 /* ---- Questions du formulaire ------------------------------------------------------------------ */
 
 .progression {
