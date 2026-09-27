@@ -28,8 +28,14 @@ describe("controlerResume", () => {
   const refs = new Map([["m1", "id-1"], ["m2", "id-2"]]);
 
   it("accepte un résumé où chaque mesure est couverte par un seul mot clé, et le normalise", () => {
-    const r = controlerResume({ segments: [{ texte: "Il veut ", mesures: [] }, { texte: "deux choses.", mesures: ["m1", "m2"] }] }, refs);
-    expect(r).toEqual({ ok: true, segments: [{ texte: "Il veut ", mesures: [] }, { texte: "deux choses", mesures: ["id-1", "id-2"] }, { texte: ".", mesures: [] }] });
+    const r = controlerResume({ segments: [{ texte: "Faire deux choses.", mesures: ["m1", "m2"] }] }, refs);
+    expect(r).toEqual({ ok: true, segments: [{ texte: "Faire deux choses", mesures: ["id-1", "id-2"] }, { texte: ".", mesures: [] }] });
+  });
+
+  it("refuse une phrase introductive ou une liaison qui fait phrase (style à l'infinitif)", () => {
+    expect(controlerResume({ segments: [{ texte: "Le programme prévoit de ", mesures: [] }, { texte: "faire deux choses", mesures: ["m1", "m2"] }] }, refs).ok).toBe(false);
+    const longue = [{ texte: "Faire une chose", mesures: ["m1"] }, { texte: " et il souhaite aussi ", mesures: [] }, { texte: "faire l'autre", mesures: ["m2"] }];
+    expect(controlerResume({ segments: longue }, refs).ok).toBe(false);
   });
 
   it("refuse une mesure oubliée, un mot clé trop long ou une référence inconnue", () => {

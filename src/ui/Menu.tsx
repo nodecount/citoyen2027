@@ -35,8 +35,7 @@ export function Menu({ ecran, onNaviguer, bases, baseActive, onChoisirBase }: Me
   return (
     <header className="menu">
       <span className="marque">
-        <span className="drapeau" aria-hidden="true" />
-        Présidentielle 2027
+        Citoyen 2027
       </span>
       <nav aria-label="Navigation principale">
         {lien("accueil", "Accueil")}

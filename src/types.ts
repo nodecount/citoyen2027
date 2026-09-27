@@ -71,6 +71,8 @@ export interface Theme {
   libelle: string;
   question_citoyen: string;
   description: string;
+  // Sujets abordés, en quelques mots chacun : affichés sous le nom du thème (« Sujets abordés : … »).
+  sujets?: string[];
   statut: "populated" | "provisoire";
 }
 

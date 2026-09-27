@@ -352,3 +352,29 @@ describe("résumé en 50 mots d'un candidat sur un thème", () => {
     expect(rendu).not.toContain("mot-cle");
   });
 });
+
+describe("en-tête de carte", () => {
+  const themes: Theme[] = [{ ...THEMES[0], sujets: ["impôt sur le revenu", "TVA"] }];
+  const rendu = (ouvert?: { theme: string; candidat: string }) =>
+    renderToStaticMarkup(
+      <VueThemes
+        cards={construireCards(themes, [candidat("a", [prop("a", undefined)])], null)}
+        profil={{}}
+        personnalise={false}
+        questionnaire={QUESTIONNAIRE}
+        questionsActives={false}
+        onReponse={() => {}}
+        ouvertInitial={ouvert}
+      />,
+    );
+
+  it("liste les sujets abordés sous le nom du thème", () => {
+    expect(rendu()).toContain("Sujets abordés : impôt sur le revenu, TVA.");
+  });
+
+  it("masque le titre et les sujets quand un candidat est ouvert (titre gardé pour les lecteurs d'écran)", () => {
+    const html = rendu({ theme: "fiscalite", candidat: "a" });
+    expect(html).toContain('class="cache-visuel">Mes impôts et taxes</h2>');
+    expect(html).not.toContain("Sujets abordés");
+  });
+});

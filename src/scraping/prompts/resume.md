@@ -8,19 +8,24 @@ extérieure** : tout ce que tu écris vient de ces mesures, et d'elles seules.
 
 ## Ce que tu dois produire
 
-Un texte de **50 mots au maximum**, en français simple, en une à trois phrases, découpé en **segments** :
-- les segments **mots clés** : un groupe de mots **court** (2 à 6 mots, 10 au grand maximum) qui nomme une ou
-  plusieurs mesures ; tu indiques les références des mesures qu'il couvre. Un mot clé ne contient ni « Le programme
-  prévoit de », ni verbe de liaison, ni parenthèse d'énumération : ce sont des segments de liaison ;
-- les segments **de liaison** : le reste du texte (articles, verbes de liaison, virgules), sans référence.
+Un texte de **50 mots au maximum**, en français simple, **à l'infinitif**, sans phrase introductive : une suite
+d'actions à l'infinitif (« Baisser…, geler… et réformer… »), découpée en **segments** :
+- les segments **mots clés** : un groupe de mots **court** commençant par un verbe à l'infinitif (2 à 6 mots, 10 au
+  grand maximum) qui nomme une ou plusieurs mesures ; tu indiques les références des mesures qu'il couvre. Pas de
+  parenthèse d'énumération ;
+- les segments **de liaison** : uniquement la ponctuation et les petits mots entre deux mots clés (« , », « et »,
+  « ; »), **3 mots au plus**, sans référence.
+
+Le texte **commence directement par un mot clé** : jamais « Le programme prévoit de », « Il propose de », « Sur ce
+thème, » ni aucune autre introduction.
 
 Mis bout à bout, les segments forment le texte exact : mets toi-même les espaces et la ponctuation dans les segments.
 
 Exemple fictif (sans lien avec un candidat réel), pour 5 mesures :
-`[{"texte":"Le programme prévoit de ","mesures":[]}, {"texte":"baisser l'impôt des ménages","mesures":["m1","m3"]},
-{"texte":", de ","mesures":[]}, {"texte":"geler les loyers","mesures":["m2"]}, {"texte":" et de ","mesures":[]},
+`[{"texte":"Baisser l'impôt des ménages","mesures":["m1","m3"]}, {"texte":", ","mesures":[]},
+{"texte":"geler les loyers","mesures":["m2"]}, {"texte":" et ","mesures":[]},
 {"texte":"réformer le permis de construire","mesures":["m4","m5"]}, {"texte":".","mesures":[]}]`
-→ « Le programme prévoit de baisser l'impôt des ménages, de geler les loyers et de réformer le permis de construire. »
+→ « Baisser l'impôt des ménages, geler les loyers et réformer le permis de construire. »
 
 ## Règles impératives
 
@@ -33,8 +38,7 @@ Exemple fictif (sans lien avec un candidat réel), pour 5 mesures :
 - Chaque mot clé décrit **fidèlement toutes** les mesures qu'il couvre, sans élargir ni restreindre leur portée.
 - **Aucun jugement** : pas d'adjectif évaluatif (ambitieux, injuste, efficace, coûteux, flou…), pas d'ordre
   d'importance (« surtout », « principalement », « avant tout »), pas de conséquence supposée.
-- Ne nomme pas le candidat (son nom est affiché au-dessus du texte). Commence directement, par exemple « Baisser… »
-  ou « Le programme prévoit de… ».
+- Ne nomme pas le candidat (son nom est affiché au-dessus du texte).
 - N'ajoute aucun chiffre, aucune date, aucune information absente des mesures.
 
 Réponds uniquement selon le schéma demandé.

@@ -241,7 +241,7 @@ function QuestionsDuTheme({ theme, idTheme, questions, profil, onReponse }: { th
   );
 }
 
-// `ouvertInitial` sert aux tests (rendu statique) : à l'écran, le détail s'ouvre au clic sur un portrait.
+// `ouvertInitial` : candidat ouvert à l'arrivée (lien depuis le tableau de l'accueil) ; ensuite, au clic sur un portrait.
 function CarteTheme({
   card,
   profil,
@@ -269,8 +269,15 @@ function CarteTheme({
         <div className="medaillon" aria-hidden="true">
           <IconeTheme themeId={theme.id} taille={24} />
         </div>
-        <h2 id={`titre-${theme.id}`}>{theme.libelle}</h2>
-        {!ligneOuverte && <p className="question-theme">{theme.question_citoyen}</p>}
+        {/* Candidat ouvert : son texte prend toute la place ; le titre reste lu par les lecteurs d'écran. */}
+        <h2 id={`titre-${theme.id}`} className={ligneOuverte ? "cache-visuel" : undefined}>
+          {theme.libelle}
+        </h2>
+        {!ligneOuverte && (
+          <p className="question-theme">
+            {theme.sujets?.length ? `Sujets abordés : ${theme.sujets.join(", ")}.` : theme.question_citoyen}
+          </p>
+        )}
       </header>
 
       <div className="carte-corps">

@@ -1,10 +1,12 @@
 import { LayoutGrid, Link2, UserRoundCheck, Users } from "lucide-react";
 import { candidatsDeBase, derniereMiseAJour, type BaseCharge } from "../data/bases";
+import type { Ouverture } from "./router";
 import { TableauCouverture } from "./TableauCouverture";
 
 interface AccueilProps {
   base: BaseCharge;
   onCommencer: () => void;
+  onOuvrir: (ouverture: Ouverture) => void;
 }
 
 function dateLisible(iso: string): string {
@@ -15,7 +17,7 @@ function dateLisible(iso: string): string {
 
 // Accueil : ce qu'est l'outil (en une phrase), ses trois garanties, puis qui propose quoi. Pas de formulaire ici :
 // la personnalisation est annoncée, elle se fait dans le parcours par thème.
-export default function Accueil({ base, onCommencer }: AccueilProps) {
+export default function Accueil({ base, onCommencer, onOuvrir }: AccueilProps) {
   const { avecDonnees } = candidatsDeBase(base);
   const maj = derniereMiseAJour(base);
   const n = avecDonnees.length;
@@ -55,7 +57,7 @@ export default function Accueil({ base, onCommencer }: AccueilProps) {
         <LayoutGrid aria-hidden="true" />
         Qui propose quoi ?
       </h2>
-      <TableauCouverture themes={base.themes} candidats={avecDonnees} />
+      <TableauCouverture themes={base.themes} candidats={avecDonnees} onOuvrir={onOuvrir} />
 
     </section>
   );

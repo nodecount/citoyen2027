@@ -45,4 +45,12 @@ describe("TableauCouverture sur les données réelles", () => {
     expect(html).toContain(`>${n}</td>`);
     expect(html).toContain('aria-label="aucune mesure">—');
   });
+
+  it("fait de chaque case non vide un bouton qui ouvre ce candidat sur ce thème", () => {
+    const avecLien = renderToStaticMarkup(<TableauCouverture themes={base.themes} candidats={avecDonnees} onOuvrir={() => {}} />);
+    const melenchon = avecDonnees.find((c) => c.meta.slug === "melenchon")!;
+    const n = compterMesures(melenchon, "finances-publiques");
+    expect(avecLien).toContain(`<button type="button" class="cellule-lien" aria-label="Jean-Luc Mélenchon, Finances publiques : ${n} mesures">${n}</button>`);
+    expect(avecLien).not.toMatch(/cellule-lien[^>]*>—/);
+  });
 });

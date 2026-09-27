@@ -1,14 +1,158 @@
 [
-  { "id": "fiscalite", "libelle": "Mes impôts et taxes", "question_citoyen": "Combien vais-je payer d'impôts et de taxes ?", "description": "Impôt sur le revenu, TVA et taxes à la consommation, patrimoine et successions, fiscalité des entreprises et du capital.", "statut": "populated" },
-  { "id": "pouvoir-achat", "libelle": "Mon pouvoir d'achat", "question_citoyen": "Que pourrai-je acheter avec mon argent ?", "description": "Prix, salaires nets, énergie et carburants, coût de la vie courante.", "statut": "populated" },
-  { "id": "travail", "libelle": "Mon travail et le chômage", "question_citoyen": "Comment mon emploi, mon contrat ou ma recherche d'emploi évolueront-ils ?", "description": "Droit du travail, contrats, chômage et assurance chômage, conditions d'emploi.", "statut": "populated" },
-  { "id": "retraites", "libelle": "Ma retraite", "question_citoyen": "À quel âge et avec quelle pension pourrai-je partir ?", "description": "Âge de départ, niveau des pensions, financement et régimes de retraite.", "statut": "provisoire" },
-  { "id": "aides-etat", "libelle": "Les aides et la solidarité", "question_citoyen": "À quelles aides aurai-je droit ?", "description": "Prestations sociales, allocations, aides aux familles et aides ciblées, lutte contre les inégalités sociales.", "statut": "populated" },
-  { "id": "logement", "libelle": "Mon logement", "question_citoyen": "Comment me loger, et à quel prix ?", "description": "Accès au logement, construction, logement social, aides au logement, urbanisme.", "statut": "populated" },
-  { "id": "sante", "libelle": "Ma santé", "question_citoyen": "Pourrai-je me soigner facilement et à quel coût ?", "description": "Système de santé, hôpital, accès aux soins, assurance maladie, santé mentale.", "statut": "populated" },
-  { "id": "education", "libelle": "L'école, les études et la formation", "question_citoyen": "Quelle école et quelles études pour moi et mes enfants ?", "description": "École, enseignement supérieur, formation.", "statut": "populated" },
-  { "id": "securite", "libelle": "Ma sécurité et la justice", "question_citoyen": "Comment seront assurées ma sécurité et la justice au quotidien ?", "description": "Sécurité intérieure, délinquance, police, justice pénale.", "statut": "populated" },
-  { "id": "immigration", "libelle": "Immigration et intégration", "question_citoyen": "Que changerait la politique migratoire pour moi ou mes proches ?", "description": "Politique migratoire, droit d'asile, intégration, accès à la nationalité.", "statut": "populated" },
-  { "id": "environnement", "libelle": "Écologie et énergie", "question_citoyen": "Que changera la transition écologique pour ma vie et ma facture d'énergie ?", "description": "Climat, transition écologique, politique énergétique (nucléaire, renouvelables), protection de la nature.", "statut": "populated" },
-  { "id": "libertes-fondamentales", "libelle": "Libertés, égalité et démocratie", "question_citoyen": "Quels droits et quelles libertés me seront garantis ?", "description": "Libertés civiles, liberté d'expression et de la presse, lutte contre les discriminations, droit de vote, pluralisme et institutions.", "statut": "populated" }
+  {
+    "id": "fiscalite",
+    "libelle": "Mes impôts et taxes",
+    "question_citoyen": "Combien vais-je payer d'impôts et de taxes ?",
+    "description": "Impôt sur le revenu, TVA et taxes à la consommation, patrimoine et successions, fiscalité des entreprises et du capital.",
+    "statut": "populated",
+    "sujets": [
+      "impôt sur le revenu",
+      "TVA",
+      "patrimoine et successions",
+      "entreprises et capital"
+    ]
+  },
+  {
+    "id": "pouvoir-achat",
+    "libelle": "Mon pouvoir d'achat",
+    "question_citoyen": "Que pourrai-je acheter avec mon argent ?",
+    "description": "Prix, salaires nets, énergie et carburants, coût de la vie courante.",
+    "statut": "populated",
+    "sujets": [
+      "prix",
+      "salaires nets",
+      "énergie et carburants",
+      "coût de la vie"
+    ]
+  },
+  {
+    "id": "travail",
+    "libelle": "Mon travail et le chômage",
+    "question_citoyen": "Comment mon emploi, mon contrat ou ma recherche d'emploi évolueront-ils ?",
+    "description": "Droit du travail, contrats, chômage et assurance chômage, conditions d'emploi.",
+    "statut": "populated",
+    "sujets": [
+      "droit du travail",
+      "contrats",
+      "chômage",
+      "conditions d'emploi"
+    ]
+  },
+  {
+    "id": "retraites",
+    "libelle": "Ma retraite",
+    "question_citoyen": "À quel âge et avec quelle pension pourrai-je partir ?",
+    "description": "Âge de départ, niveau des pensions, financement et régimes de retraite.",
+    "statut": "provisoire",
+    "sujets": [
+      "âge de départ",
+      "pensions",
+      "financement et régimes"
+    ]
+  },
+  {
+    "id": "aides-etat",
+    "libelle": "Les aides et la solidarité",
+    "question_citoyen": "À quelles aides aurai-je droit ?",
+    "description": "Prestations sociales, allocations, aides aux familles et aides ciblées, lutte contre les inégalités sociales.",
+    "statut": "populated",
+    "sujets": [
+      "prestations sociales",
+      "allocations",
+      "aides aux familles",
+      "inégalités"
+    ]
+  },
+  {
+    "id": "logement",
+    "libelle": "Mon logement",
+    "question_citoyen": "Comment me loger, et à quel prix ?",
+    "description": "Accès au logement, construction, logement social, aides au logement, urbanisme.",
+    "statut": "populated",
+    "sujets": [
+      "accès au logement",
+      "construction",
+      "logement social",
+      "aides au logement",
+      "urbanisme"
+    ]
+  },
+  {
+    "id": "sante",
+    "libelle": "Ma santé",
+    "question_citoyen": "Pourrai-je me soigner facilement et à quel coût ?",
+    "description": "Système de santé, hôpital, accès aux soins, assurance maladie, santé mentale.",
+    "statut": "populated",
+    "sujets": [
+      "hôpital",
+      "accès aux soins",
+      "assurance maladie",
+      "santé mentale"
+    ]
+  },
+  {
+    "id": "education",
+    "libelle": "L'école, les études et la formation",
+    "question_citoyen": "Quelle école et quelles études pour moi et mes enfants ?",
+    "description": "École, enseignement supérieur, formation.",
+    "statut": "populated",
+    "sujets": [
+      "école",
+      "enseignement supérieur",
+      "formation"
+    ]
+  },
+  {
+    "id": "securite",
+    "libelle": "Ma sécurité et la justice",
+    "question_citoyen": "Comment seront assurées ma sécurité et la justice au quotidien ?",
+    "description": "Sécurité intérieure, délinquance, police, justice pénale.",
+    "statut": "populated",
+    "sujets": [
+      "sécurité",
+      "délinquance",
+      "police",
+      "justice pénale"
+    ]
+  },
+  {
+    "id": "immigration",
+    "libelle": "Immigration et intégration",
+    "question_citoyen": "Que changerait la politique migratoire pour moi ou mes proches ?",
+    "description": "Politique migratoire, droit d'asile, intégration, accès à la nationalité.",
+    "statut": "populated",
+    "sujets": [
+      "politique migratoire",
+      "droit d'asile",
+      "intégration",
+      "nationalité"
+    ]
+  },
+  {
+    "id": "environnement",
+    "libelle": "Écologie et énergie",
+    "question_citoyen": "Que changera la transition écologique pour ma vie et ma facture d'énergie ?",
+    "description": "Climat, transition écologique, politique énergétique (nucléaire, renouvelables), protection de la nature.",
+    "statut": "populated",
+    "sujets": [
+      "climat",
+      "transition écologique",
+      "énergie",
+      "nature"
+    ]
+  },
+  {
+    "id": "libertes-fondamentales",
+    "libelle": "Libertés, égalité et démocratie",
+    "question_citoyen": "Quels droits et quelles libertés me seront garantis ?",
+    "description": "Libertés civiles, liberté d'expression et de la presse, lutte contre les discriminations, droit de vote, pluralisme et institutions.",
+    "statut": "populated",
+    "sujets": [
+      "libertés",
+      "presse",
+      "discriminations",
+      "droit de vote",
+      "institutions"
+    ]
+  }
 ]

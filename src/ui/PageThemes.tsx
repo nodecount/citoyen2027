@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { candidatsDeBase, type BaseCharge } from "../data/bases";
+import { lireOuverture } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
 import type { SurReponse } from "./Questions";
@@ -21,6 +23,11 @@ export default function PageThemes({ base, profil, generalSoumis, onRenseigner, 
   const { avecDonnees: candidats, enCoursAnalyse } = candidatsDeBase(base);
   const personnalise = generalSoumis && aDesInformations(profil);
   const cards = construireCards(base.themes, candidats, personnalise ? profil : null);
+  // Arrivée depuis le tableau de l'accueil (ou une adresse partagée) : la carte du thème, avec ce candidat ouvert.
+  const [ouverture] = useState(() => (typeof window === "undefined" ? null : lireOuverture(window.location.href)));
+  useEffect(() => {
+    if (ouverture) document.getElementById(`theme-${ouverture.theme}`)?.scrollIntoView({ block: "center" });
+  }, [ouverture]);
 
   return (
     <>
@@ -62,6 +69,7 @@ export default function PageThemes({ base, profil, generalSoumis, onRenseigner, 
         questionnaire={base.questionnaire}
         questionsActives={generalSoumis}
         onReponse={onReponse}
+        ouvertInitial={ouverture ?? undefined}
       />
 
       {enCoursAnalyse.length > 0 && (

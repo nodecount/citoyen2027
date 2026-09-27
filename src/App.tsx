@@ -7,7 +7,7 @@ import PageQuestionsGenerales from "./ui/PageQuestionsGenerales";
 import PageAPropos from "./ui/PageAPropos";
 import Monitoring from "./ui/Monitoring";
 import { baseInitiale, retenirBase } from "./ui/choixBase";
-import { ecranDepuisChemin, naviguerVers, type Ecran } from "./ui/router";
+import { ecranDepuisChemin, naviguerVers, type Ecran, type Ouverture } from "./ui/router";
 import { chargerBase, listerBases } from "./data/bases";
 import { CHAMPS_PROFIL } from "./questionnaire";
 import { mettreAJourReponse, type ProfilPartiel } from "./profil";
@@ -32,10 +32,11 @@ export default function App() {
     return () => window.removeEventListener("popstate", surRetour);
   }, []);
 
-  function allerA(cible: Ecran): void {
-    naviguerVers(cible);
+  // Avec une ouverture, c'est la page des thèmes qui fait défiler jusqu'à la carte (voir PageThemes).
+  function allerA(cible: Ecran, ouverture?: Ouverture): void {
+    naviguerVers(cible, ouverture);
     setEcran(cible);
-    window.scrollTo(0, 0);
+    if (!ouverture) window.scrollTo(0, 0);
   }
 
   function choisirBase(id: string): void {
@@ -55,7 +56,7 @@ export default function App() {
   return (
     <>
       <Menu ecran={ecran} onNaviguer={allerA} bases={BASES} baseActive={baseId} onChoisirBase={choisirBase} />
-      {ecran === "accueil" && <Accueil base={base} onCommencer={() => allerA("themes")} />}
+      {ecran === "accueil" && <Accueil base={base} onCommencer={() => allerA("themes")} onOuvrir={(ouverture) => allerA("themes", ouverture)} />}
       {ecran === "a-propos" && <PageAPropos bases={BASES} nomsParSlug={Object.fromEntries(Object.entries(base.metas).map(([slug, m]) => [slug, m.nom]))} />}
       {ecran === "questions-generales" && (
         <PageQuestionsGenerales

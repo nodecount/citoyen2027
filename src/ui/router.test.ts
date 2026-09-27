@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cheminDeLEcran, ecranDepuisChemin, type Ecran } from "./router";
+import { cheminDeLEcran, ecranDepuisChemin, lireOuverture, type Ecran } from "./router";
 
 const ECRANS: Ecran[] = ["accueil", "themes", "questions-generales", "a-propos"];
 
@@ -19,5 +19,11 @@ describe("routeur", () => {
   it("renvoie vers l'accueil pour une adresse inconnue, plutôt qu'une page blanche", () => {
     expect(ecranDepuisChemin("/nimporte-quoi")).toBe("accueil");
     expect(ecranDepuisChemin("")).toBe("accueil");
+  });
+
+  it("lit le candidat à ouvrir et la carte du thème dans l'adresse", () => {
+    expect(lireOuverture("http://x/themes?base=agregateurs&candidat=attal#theme-finances-publiques")).toEqual({ theme: "finances-publiques", candidat: "attal" });
+    expect(lireOuverture("http://x/themes#theme-finances-publiques")).toBeNull();
+    expect(lireOuverture("http://x/themes?candidat=attal")).toBeNull();
   });
 });

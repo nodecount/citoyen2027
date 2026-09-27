@@ -1,90 +1,51 @@
 [
   {
-    "theme": "finances-publiques",
+    "theme": "defense",
     "segments": [
       {
-        "texte": "Le programme prévoit de ",
-        "mesures": []
-      },
-      {
-        "texte": "bloquer les prix et réguler les entreprises",
+        "texte": "Instaurer une conscription citoyenne de neuf mois",
         "mesures": [
-          "melenchon-finances-publiques-001",
-          "melenchon-finances-publiques-002",
-          "melenchon-finances-publiques-003",
-          "melenchon-finances-publiques-004",
-          "melenchon-finances-publiques-005",
-          "melenchon-finances-publiques-006",
-          "melenchon-finances-publiques-007",
-          "melenchon-finances-publiques-008",
-          "melenchon-finances-publiques-009",
-          "melenchon-finances-publiques-032",
-          "melenchon-finances-publiques-033",
-          "melenchon-finances-publiques-036"
+          "melenchon-defense-001"
         ]
       },
       {
-        "texte": ", d'",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "élargir l'accès bancaire et énergétique",
+        "texte": "abroger le SNU",
         "mesures": [
-          "melenchon-finances-publiques-010",
-          "melenchon-finances-publiques-011",
-          "melenchon-finances-publiques-012",
-          "melenchon-finances-publiques-013"
+          "melenchon-defense-002"
         ]
       },
       {
-        "texte": ", de ",
+        "texte": ". ",
         "mesures": []
       },
       {
-        "texte": "sortir la dette publique des marchés financiers",
+        "texte": "Lutter contre l'armement spatial",
         "mesures": [
-          "melenchon-finances-publiques-014",
-          "melenchon-finances-publiques-015",
-          "melenchon-finances-publiques-016",
-          "melenchon-finances-publiques-017",
-          "melenchon-finances-publiques-018"
+          "melenchon-defense-003"
         ]
       },
       {
-        "texte": ", de ",
+        "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "réformer en profondeur la fiscalité",
+        "texte": "quitter le commandement intégré de l'OTAN",
         "mesures": [
-          "melenchon-finances-publiques-019",
-          "melenchon-finances-publiques-020",
-          "melenchon-finances-publiques-021",
-          "melenchon-finances-publiques-022",
-          "melenchon-finances-publiques-023",
-          "melenchon-finances-publiques-024",
-          "melenchon-finances-publiques-025",
-          "melenchon-finances-publiques-026",
-          "melenchon-finances-publiques-027",
-          "melenchon-finances-publiques-028",
-          "melenchon-finances-publiques-029",
-          "melenchon-finances-publiques-030",
-          "melenchon-finances-publiques-031",
-          "melenchon-finances-publiques-040"
+          "melenchon-defense-004"
         ]
       },
       {
-        "texte": " et de ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "réguler le système bancaire et financier",
+        "texte": "adopter une loi de programmation militaire",
         "mesures": [
-          "melenchon-finances-publiques-034",
-          "melenchon-finances-publiques-035",
-          "melenchon-finances-publiques-037",
-          "melenchon-finances-publiques-038",
-          "melenchon-finances-publiques-039"
+          "melenchon-defense-005"
         ]
       },
       {
@@ -93,48 +54,13 @@
       }
     ],
     "propositions": [
-      "melenchon-finances-publiques-001",
-      "melenchon-finances-publiques-002",
-      "melenchon-finances-publiques-003",
-      "melenchon-finances-publiques-004",
-      "melenchon-finances-publiques-005",
-      "melenchon-finances-publiques-006",
-      "melenchon-finances-publiques-007",
-      "melenchon-finances-publiques-008",
-      "melenchon-finances-publiques-009",
-      "melenchon-finances-publiques-010",
-      "melenchon-finances-publiques-011",
-      "melenchon-finances-publiques-012",
-      "melenchon-finances-publiques-013",
-      "melenchon-finances-publiques-014",
-      "melenchon-finances-publiques-015",
-      "melenchon-finances-publiques-016",
-      "melenchon-finances-publiques-017",
-      "melenchon-finances-publiques-018",
-      "melenchon-finances-publiques-019",
-      "melenchon-finances-publiques-020",
-      "melenchon-finances-publiques-021",
-      "melenchon-finances-publiques-022",
-      "melenchon-finances-publiques-023",
-      "melenchon-finances-publiques-024",
-      "melenchon-finances-publiques-025",
-      "melenchon-finances-publiques-026",
-      "melenchon-finances-publiques-027",
-      "melenchon-finances-publiques-028",
-      "melenchon-finances-publiques-029",
-      "melenchon-finances-publiques-030",
-      "melenchon-finances-publiques-031",
-      "melenchon-finances-publiques-032",
-      "melenchon-finances-publiques-033",
-      "melenchon-finances-publiques-034",
-      "melenchon-finances-publiques-035",
-      "melenchon-finances-publiques-036",
-      "melenchon-finances-publiques-037",
-      "melenchon-finances-publiques-038",
-      "melenchon-finances-publiques-039",
-      "melenchon-finances-publiques-040"
+      "melenchon-defense-001",
+      "melenchon-defense-002",
+      "melenchon-defense-003",
+      "melenchon-defense-004",
+      "melenchon-defense-005"
     ],
-    "empreinte": "5b6681b7f563157c",
+    "empreinte": "8729e95e06907138",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   }

@@ -45,18 +45,6 @@ html {
   background: var(--fond);
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 20;
-  height: 5px;
-  background: linear-gradient(to right, var(--bleu) 0 33.34%, #ffffff 33.34% 66.67%, var(--rouge) 66.67% 100%);
-  box-shadow: 0 1px 0 var(--filet);
-}
-
 body {
   /* Une seule largeur pour toutes les pages ; à l'intérieur, les cartes de thèmes occupent toute la place. */
   max-width: 76rem;
@@ -111,15 +99,6 @@ a {
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--bleu-fonce);
-}
-
-.drapeau {
-  display: inline-block;
-  width: 1.6rem;
-  height: 1.1rem;
-  border: 1px solid var(--filet);
-  border-radius: 3px;
-  background: linear-gradient(to right, var(--bleu) 0 33.34%, #ffffff 33.34% 66.67%, var(--rouge) 66.67% 100%);
 }
 
 .menu nav {
@@ -349,7 +328,34 @@ a {
 
 .tableau-couverture td {
   text-align: center;
+  vertical-align: middle;
+  font-size: 1.125rem;
+  font-weight: 700;
   font-variant-numeric: tabular-nums;
+}
+
+/* La case entière est le bouton : pas seulement le chiffre. */
+.tableau-couverture td:has(.cellule-lien) {
+  padding: 0;
+}
+
+.tableau-couverture .cellule-lien {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.45rem 0.6rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.tableau-couverture .cellule-lien:focus-visible {
+  outline-offset: -3px;
 }
 
 /* Survol : la ligne et la colonne de la cellule sont mises en valeur (contour et en-têtes). */
@@ -734,6 +740,17 @@ article {
   line-height: 1.25;
   color: var(--bleu-fonce);
 }
+/* Masqué à l'écran, toujours lu par les lecteurs d'écran. */
+.cache-visuel {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .question-theme {
   margin: 0.35rem 0 0.75rem;
   font-size: 0.9375rem;

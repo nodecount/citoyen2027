@@ -23,12 +23,35 @@ export function ecranDepuisChemin(chemin: string): Ecran {
   return ECRAN_PAR_CHEMIN[chemin] ?? "accueil";
 }
 
+// Un candidat ouvert dans une carte de thème : « /themes?candidat=<slug>#theme-<id> » (ancre = la carte du thème).
+export interface Ouverture {
+  theme: string;
+  candidat: string;
+}
+
+export function lireOuverture(adresse: string): Ouverture | null {
+  try {
+    const url = new URL(adresse);
+    const theme = url.hash.startsWith("#theme-") ? decodeURIComponent(url.hash.slice("#theme-".length)) : "";
+    const candidat = url.searchParams.get("candidat") ?? "";
+    return theme && candidat ? { theme, candidat } : null;
+  } catch {
+    return null;
+  }
+}
+
 // Change l'écran affiché en changeant l'adresse (garde les paramètres existants, par ex. ?base=) ; ajoute une entrée
 // d'historique, pour que le bouton précédent du navigateur revienne à l'écran précédent.
-export function naviguerVers(ecran: Ecran): void {
+export function naviguerVers(ecran: Ecran, ouverture?: Ouverture): void {
   try {
     const adresse = new URL(window.location.href);
     adresse.pathname = cheminDeLEcran(ecran);
+    adresse.searchParams.delete("candidat");
+    adresse.hash = "";
+    if (ouverture) {
+      adresse.searchParams.set("candidat", ouverture.candidat);
+      adresse.hash = `theme-${ouverture.theme}`;
+    }
     window.history.pushState(null, "", adresse);
   } catch {
     // adresse non modifiable (environnement sans historique) : l'écran change quand même côté React

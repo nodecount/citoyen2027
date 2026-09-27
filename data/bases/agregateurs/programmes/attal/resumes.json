@@ -1,90 +1,25 @@
 [
   {
-    "theme": "finances-publiques",
+    "theme": "defense",
     "segments": [
       {
         "texte": "Le programme prévoit de ",
         "mesures": []
       },
       {
-        "texte": "réduire le déficit public à 0 % du PIB",
+        "texte": "renforcer les armées",
         "mesures": [
-          "attal-finances-publiques-009"
+          "attal-defense-001"
         ]
       },
       {
-        "texte": ", ",
+        "texte": " et de ",
         "mesures": []
       },
       {
-        "texte": "inscrire une règle d'or budgétaire",
+        "texte": "protéger l'Europe",
         "mesures": [
-          "attal-finances-publiques-010"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "réformer retraites, arrêts maladie et chômage",
-        "mesures": [
-          "attal-finances-publiques-001",
-          "attal-finances-publiques-003"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "supprimer des postes de fonctionnaires",
-        "mesures": [
-          "attal-finances-publiques-007"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "réorganiser les collectivités territoriales",
-        "mesures": [
-          "attal-finances-publiques-008"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "geler les prestations sociales",
-        "mesures": [
-          "attal-finances-publiques-006"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "baisser certains impôts",
-        "mesures": [
-          "attal-finances-publiques-011",
-          "attal-finances-publiques-012",
-          "attal-finances-publiques-013"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "encadrer la gestion budgétaire",
-        "mesures": [
-          "attal-finances-publiques-002",
-          "attal-finances-publiques-004",
-          "attal-finances-publiques-005"
+          "attal-defense-002"
         ]
       },
       {
@@ -93,21 +28,129 @@
       }
     ],
     "propositions": [
-      "attal-finances-publiques-001",
-      "attal-finances-publiques-002",
-      "attal-finances-publiques-003",
-      "attal-finances-publiques-004",
-      "attal-finances-publiques-005",
-      "attal-finances-publiques-006",
-      "attal-finances-publiques-007",
-      "attal-finances-publiques-008",
-      "attal-finances-publiques-009",
-      "attal-finances-publiques-010",
-      "attal-finances-publiques-011",
-      "attal-finances-publiques-012",
-      "attal-finances-publiques-013"
+      "attal-defense-001",
+      "attal-defense-002"
     ],
-    "empreinte": "603e0f1c017c25e8",
+    "empreinte": "9d89a1a9a3352caa",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "education-jeunesse",
+    "segments": [
+      {
+        "texte": "Le programme prévoit de ",
+        "mesures": []
+      },
+      {
+        "texte": "maintenir le « choc des savoirs »",
+        "mesures": [
+          "attal-education-jeunesse-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "interdire les réseaux sociaux aux moins de 15 ans",
+        "mesures": [
+          "attal-education-jeunesse-002"
+        ]
+      },
+      {
+        "texte": " et de ",
+        "mesures": []
+      },
+      {
+        "texte": "raccourcir les journées d'école",
+        "mesures": [
+          "attal-education-jeunesse-003"
+        ]
+      },
+      {
+        "texte": " au détriment des vacances scolaires.",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "attal-education-jeunesse-001",
+      "attal-education-jeunesse-002",
+      "attal-education-jeunesse-003"
+    ],
+    "empreinte": "f4131e08f66c0ec0",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "environnement",
+    "segments": [
+      {
+        "texte": "Le programme prévoit de ",
+        "mesures": []
+      },
+      {
+        "texte": "doubler le fonds chaleur pour la géoénergie",
+        "mesures": [
+          "attal-envi-001"
+        ]
+      },
+      {
+        "texte": " et de ",
+        "mesures": []
+      },
+      {
+        "texte": "créer un droit à la climatisation en facilitant les installations",
+        "mesures": [
+          "attal-envi-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "attal-envi-001",
+      "attal-envi-002"
+    ],
+    "empreinte": "19360709db9348e3",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "gouvernance-republique",
+    "segments": [
+      {
+        "texte": "Organiser ",
+        "mesures": []
+      },
+      {
+        "texte": "un référendum annuel",
+        "mesures": [
+          "attal-gouvernance-republique-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "soutenir l'intelligence artificielle française",
+        "mesures": [
+          "attal-gouvernance-republique-002"
+        ]
+      },
+      {
+        "texte": " par des investissements privés.",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "attal-gouvernance-republique-001",
+      "attal-gouvernance-republique-002"
+    ],
+    "empreinte": "b9248794d262cbe8",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -185,12 +228,16 @@
     "modele": "claude-sonnet-5"
   },
   {
-    "theme": "retraites-travail",
+    "theme": "reformes-etat",
     "segments": [
       {
-        "texte": "Défiscaliser les heures supplémentaires",
+        "texte": "Mettre en place ",
+        "mesures": []
+      },
+      {
+        "texte": "un plan de départs volontaires de fonctionnaires",
         "mesures": [
-          "attal-retraites-travail-001"
+          "attal-reformes-etat-001"
         ]
       },
       {
@@ -198,69 +245,9 @@
         "mesures": []
       },
       {
-        "texte": "supprimer leur plafond annuel",
+        "texte": "le non-remplacement de certains départs à la retraite",
         "mesures": [
-          "attal-retraites-travail-004"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "réformer le 1er mai chômé",
-        "mesures": [
-          "attal-retraites-travail-002"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "réécrire le Code du travail",
-        "mesures": [
-          "attal-retraites-travail-003"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "former 20 millions de salariés à l'IA",
-        "mesures": [
-          "attal-retraites-travail-005"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "baisser les charges salariales",
-        "mesures": [
-          "attal-retraites-travail-006"
-        ]
-      },
-      {
-        "texte": ". ",
-        "mesures": []
-      },
-      {
-        "texte": "Supprimer l'âge légal de départ",
-        "mesures": [
-          "attal-retraites-travail-007"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "créer une part de retraite par capitalisation",
-        "mesures": [
-          "attal-retraites-travail-008"
+          "attal-reformes-etat-002"
         ]
       },
       {
@@ -269,16 +256,10 @@
       }
     ],
     "propositions": [
-      "attal-retraites-travail-001",
-      "attal-retraites-travail-002",
-      "attal-retraites-travail-003",
-      "attal-retraites-travail-004",
-      "attal-retraites-travail-005",
-      "attal-retraites-travail-006",
-      "attal-retraites-travail-007",
-      "attal-retraites-travail-008"
+      "attal-reformes-etat-001",
+      "attal-reformes-etat-002"
     ],
-    "empreinte": "5c7a36983aab00ec",
+    "empreinte": "17193bc22a680f34",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },

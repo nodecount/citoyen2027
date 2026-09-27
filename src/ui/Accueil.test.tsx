@@ -4,7 +4,7 @@ import { chargerBase } from "../data/bases";
 import Accueil from "./Accueil";
 
 function rendre(baseId: string) {
-  return renderToStaticMarkup(<Accueil base={chargerBase(baseId)} onCommencer={() => {}} />);
+  return renderToStaticMarkup(<Accueil base={chargerBase(baseId)} onCommencer={() => {}} onOuvrir={() => {}} />);
 }
 
 describe("Accueil", () => {

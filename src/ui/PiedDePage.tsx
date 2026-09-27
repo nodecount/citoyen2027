@@ -13,8 +13,7 @@ export function PiedDePage({ onNaviguer }: { onNaviguer: (ecran: Ecran) => void 
   return (
     <footer className="pied-de-page">
       <span className="marque">
-        <span className="drapeau" aria-hidden="true" />
-        Présidentielle 2027
+        Citoyen 2027
       </span>
       <nav aria-label="Pied de page">
         <ul>

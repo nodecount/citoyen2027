@@ -14,6 +14,7 @@ import type { OutilsAppel } from "./structuration";
 const ICI = dirname(fileURLToPath(import.meta.url));
 export const MOTS_MAX = 50;
 export const MOTS_MAX_MOT_CLE = 10;
+export const MOTS_MAX_LIAISON = 3;
 const ESSAIS = 3;
 
 export const SCHEMA_RESUME = {
@@ -122,6 +123,10 @@ export function controlerResume(structure: unknown, refs: Map<string, string>): 
   const normalises = normaliserSegments(segments);
   if (normalises.some((s) => s.mesures.length > 0 && compterMots(s.texte) === 0)) return { ok: false, raison: "mot clé vide" };
   segments.splice(0, segments.length, ...normalises);
+  // Style à l'infinitif, sans introduction : le texte commence par un mot clé, les liaisons ne sont que de petits mots.
+  if (segments[0].mesures.length === 0) return { ok: false, raison: `le texte doit commencer directement par un mot clé, sans introduction (« ${segments[0].texte.trim()} »)` };
+  const liaisonLongue = segments.find((s) => s.mesures.length === 0 && compterMots(s.texte) > MOTS_MAX_LIAISON);
+  if (liaisonLongue) return { ok: false, raison: `liaison trop longue (plus de ${MOTS_MAX_LIAISON} mots) : « ${liaisonLongue.texte.trim()} »` };
   const oubliees = [...refs.entries()].filter(([, id]) => !vues.has(id)).map(([ref]) => ref);
   if (oubliees.length > 0) return { ok: false, raison: `mesures non couvertes par un mot clé : ${oubliees.join(", ")}` };
   const doublons = [...refs.entries()].filter(([, id]) => (vues.get(id) ?? 0) > 1).map(([ref]) => ref);
