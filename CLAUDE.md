@@ -102,6 +102,29 @@ Garde-fous de l'indicateur (ils découlent du principe d'indépendance ci-dessou
 - Documenter systématiquement les hypothèses de calcul quand une proposition est vague ou incomplète (ex : "aucun chiffrage précis publié, estimation basée sur X").
 - Traiter tous les candidats déclarés avec le même niveau d'exigence et de détail, même si leurs programmes ne sont pas tous publiés au même degré de précision.
 
+## Direction artistique et rédactionnelle (décision du porteur du projet, 2026-09-27)
+
+Le site est pensé pour un **citoyen français lambda** qui veut juste se renseigner sur les programmes avant de voter.
+- **Accessible** : police **14 px minimum** partout ; contrastes suffisants ; focus visible ; la couleur ne porte
+  jamais seule une information (mot + symbole pour les indicateurs) ; animations coupées si l'utilisateur le demande.
+- **Police** : Atkinson Hyperlegible (Braille Institute, conçue pour la lisibilité), embarquée localement — rien qui
+  ressemble au style des sites IA actuels (ni sans-serif géométrique type Inter, ni serif éditoriale sur fond crème).
+- **Style moderne, bleu-blanc-rouge**, thème clair uniquement. Le **bleu** est la couleur d'action (boutons, liens,
+  onglet actif, accents) ; le **rouge** reste décoratif (bandeau tricolore, soulignés), jamais sur un bouton ni un
+  texte d'information, car dans le contenu le rouge signifie « dégradant ». Aucune couleur attribuée à un candidat.
+  Pas d'imitation de l'identité visuelle de l'État (pas de Marianne ni de « République française »).
+- **Informations importantes accentuées par la couleur** (blocs, badges, soulignés), pas par des paragraphes.
+- **Texte limité à ce qu'il doit dire** : phrases courtes, rien qui n'intéresse pas un électeur qui veut savoir qui
+  propose quoi. **Aucune répétition** : chaque information a une seule place (la provenance des données = une ligne
+  par base ; la source de chaque mesure = un lien cliquable dans la carte ; les crédits photos = en bas de l'accueil).
+- **Photos des candidats** : image principale Wikidata de chacun (même règle pour tous), licences libres uniquement,
+  créditées, copiées dans `static/candidats/` (`npm run portraits`) ; à défaut, initiales. Aucune requête vers un
+  service tiers pendant la visite.
+- **Pages** (chacune a son adresse) : `/` accueil (présentation en une phrase, trois garanties, tableau « qui propose
+  quoi » : candidats × thèmes, nombre de mesures) ; `/themes` (cartes de thèmes, trois par ligne, hauteur fixe,
+  médaillon d'icône, portraits en pied de carte, candidats sans mesure empilés à droite) ; `/ma-situation`
+  (questions générales). La base de connaissances se change dans une modale ouverte depuis une icône du menu.
+
 ## Ce qui existe déjà sur le marché (contexte de veille, ne pas dupliquer bêtement)
 
 - **Komune Media** (komunemedia.fr) — comparateur sourcé, exigence de sources primaires, approche éditoriale indépendante. Bonne référence méthodologique.

@@ -10,9 +10,12 @@
     "ingestion": "tsx src/ingestion/run.ts",
     "scrape:ifrap": "tsx src/scraping/run-ifrap.ts",
     "scrape:structurer": "tsx src/scraping/run-structuration.ts",
+    "portraits": "tsx src/scraping/run-portraits.ts",
     "monitoring-server": "tsx src/ingestion/serveur-local.ts"
   },
   "dependencies": {
+    "@fontsource/atkinson-hyperlegible": "^5.3.0",
+    "lucide-react": "^1.48.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

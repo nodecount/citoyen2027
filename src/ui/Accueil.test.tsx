@@ -8,27 +8,31 @@ function rendre(baseId: string) {
 }
 
 describe("Accueil", () => {
-  it.each(["officielle", "agregateurs"])("annonce l'élection, la mise à jour et l'idée de personnalisation (base « %s »)", (id) => {
+  it.each(["officielle", "agregateurs"])("présente l'outil en une phrase, avec l'idée de personnalisation (base « %s »)", (id) => {
     const rendu = rendre(id);
-    expect(rendu).toContain("élection présidentielle de 2027");
-    expect(rendu).toContain("Dernière mise à jour des données");
-    expect(rendu).toContain("consentement");
-    expect(rendu).toContain("facultatives");
-    expect(rendu).toContain("mandat à venir");
-    expect(rendu).toContain("Découvrir les thèmes");
+    expect(rendu).toContain("Présidentielle 2027");
+    expect(rendu).toContain("pour vous");
+    expect(rendu).toContain("prochain mandat");
+    expect(rendu).toContain("Voir les thèmes");
   });
 
-  it("écrit la date en français, pas au format technique AAAA-MM-JJ", () => {
+  it("met la date de mise à jour dans le bloc « Sources citées », en français", () => {
     const rendu = rendre("officielle");
-    expect(rendu).toMatch(/Dernière mise à jour des données : \d{1,2} [a-zûé]+ 2026/);
+    const bloc = rendu.slice(rendu.indexOf("Sources citées"));
+    expect(bloc).toMatch(/^Sources citées<\/strong><span>mises à jour le \d{1,2} [a-zûé]+ 2026<\/span>/);
     expect(rendu).not.toMatch(/\d{4}-\d{2}-\d{2}/);
   });
 
-  it("nomme la base et compte ses candidats, sans classement ni score", () => {
+  it("résume le nombre de candidats et l'absence de classement en quelques mots", () => {
     const rendu = rendre("agregateurs");
-    expect(rendu).toContain("base « Base issue de comparateurs indépendants »");
-    expect(rendu).toContain("19 candidats");
-    expect(rendu).toContain("pas de classement, pas de score");
+    expect(rendu).toContain("19 candidats</strong><span>sans aucun classement</span>");
+  });
+
+  it("affiche le tableau « qui propose quoi », sans les crédits photos (ils sont sur la page À propos)", () => {
+    const rendu = rendre("agregateurs");
+    expect(rendu).toContain("Qui propose quoi ?");
+    expect(rendu).toContain('class="tableau-couverture"');
+    expect(rendu).not.toContain("Crédits photos");
   });
 
   it("n'affiche aucun formulaire : la personnalisation reste une promesse, pas une saisie", () => {

@@ -1,4 +1,6 @@
+import { LayoutGrid, Link2, UserRoundCheck, Users } from "lucide-react";
 import { candidatsDeBase, derniereMiseAJour, type BaseCharge } from "../data/bases";
+import { TableauCouverture } from "./TableauCouverture";
 
 interface AccueilProps {
   base: BaseCharge;
@@ -11,8 +13,8 @@ function dateLisible(iso: string): string {
   return new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" }).format(date);
 }
 
-// Page de départ du site : présente l'outil avant les thèmes. Aucun formulaire ici — l'idée de personnalisation est
-// annoncée, pas engagée : le consentement et les questions restent dans le parcours par thème.
+// Accueil : ce qu'est l'outil (en une phrase), ses trois garanties, puis qui propose quoi. Pas de formulaire ici :
+// la personnalisation est annoncée, elle se fait dans le parcours par thème.
 export default function Accueil({ base, onCommencer }: AccueilProps) {
   const { avecDonnees } = candidatsDeBase(base);
   const maj = derniereMiseAJour(base);
@@ -20,24 +22,41 @@ export default function Accueil({ base, onCommencer }: AccueilProps) {
 
   return (
     <section className="accueil">
-      <h1>Simulateur d'impact personnel — Présidentielle 2027</h1>
-      <p className="chapeau">
-        En vue de l'élection présidentielle de 2027, cet outil rassemble, thème par thème et à partir de sources
-        publiques, les mesures des programmes des candidats déclarés.
-      </p>
-      {maj && <p className="maj">Dernière mise à jour des données : {dateLisible(maj)}.</p>}
-      <p>
-        Vous pouvez consulter ces programmes tels quels. Vous pouvez aussi, si vous le souhaitez, obtenir une vue
-        personnalisée — sur votre consentement, avec des questions toutes facultatives — simulant ce que chaque
-        mesure changerait concrètement pour votre situation si elle s'appliquait durant le mandat à venir.
-      </p>
-      <p className="hint">
-        {n} {n > 1 ? "candidats sont couverts" : "candidat est couvert"} à ce stade dans la base « {base.info.libelle} »,
-        toujours présentés par ordre alphabétique : pas de classement, pas de score.
-      </p>
-      <button type="button" onClick={onCommencer}>
-        Découvrir les thèmes
-      </button>
+      <div className="bandeau-accueil">
+        <h1>Présidentielle 2027 : les programmes, thème par thème</h1>
+        <p className="chapeau">
+          Les mesures des candidats, avec leurs sources. Et, si vous le voulez, ce qu'elles changeraient{" "}
+          <strong>pour vous</strong> pendant le prochain mandat.
+        </p>
+        <button type="button" onClick={onCommencer}>
+          Voir les thèmes
+        </button>
+      </div>
+
+      <ul className="atouts">
+        <li>
+          <Users aria-hidden="true" />
+          <strong>{n} candidats</strong>
+          <span>sans aucun classement</span>
+        </li>
+        <li>
+          <Link2 aria-hidden="true" />
+          <strong>Sources citées</strong>
+          <span>{maj ? `mises à jour le ${dateLisible(maj)}` : "une source par mesure"}</span>
+        </li>
+        <li>
+          <UserRoundCheck aria-hidden="true" />
+          <strong>Pour vous, si vous voulez</strong>
+          <span>questions facultatives, rien n'est enregistré</span>
+        </li>
+      </ul>
+
+      <h2 className="accueil-sous-titre">
+        <LayoutGrid aria-hidden="true" />
+        Qui propose quoi ?
+      </h2>
+      <TableauCouverture themes={base.themes} candidats={avecDonnees} />
+
     </section>
   );
 }

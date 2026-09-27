@@ -25,48 +25,32 @@ export default function PageThemes({ base, profil, generalSoumis, onRenseigner, 
   return (
     <>
       <h1>Les thèmes</h1>
-      <p>Choisissez un thème puis un candidat pour voir ce que propose son programme, avec ses sources.</p>
       <p className="avertissement">{base.info.avertissement}</p>
 
       <div className="ma-situation">
         {personnalise ? (
           <>
             <p>
-              <strong>Vos réponses sont prises en compte.</strong> Les couleurs autour des portraits indiquent, thème par
-              thème, ce que les mesures changeraient pour vous. Ouvrez « Préciser ma situation pour ce thème » pour
-              affiner, à votre rythme.
+              <strong>Vos réponses sont prises en compte.</strong>
             </p>
             <div className="actions">
               <button type="button" onClick={onRenseigner}>
-                Modifier mes réponses générales
+                Modifier mes réponses
               </button>
               <button type="button" className="secondaire" onClick={onEffacer}>
                 Effacer mes réponses
               </button>
             </div>
           </>
-        ) : generalSoumis ? (
-          <>
-            <p>
-              <strong>Aucune réponse donnée : aucun indicateur.</strong> Répondez à au moins une question générale pour
-              voir apparaître les indicateurs.
-            </p>
-            <div className="actions">
-              <button type="button" onClick={onRenseigner}>
-                Répondre aux questions générales
-              </button>
-            </div>
-          </>
         ) : (
           <>
             <p>
-              <strong>Aucun indicateur pour l'instant.</strong> Répondez d'abord aux questions générales (toutes
-              facultatives) : après validation, un indicateur apparaît autour de chaque portrait, et vous pouvez ensuite
-              préciser d'autres informations thème par thème.
+              <strong>{generalSoumis ? "Aucune réponse donnée." : "Et pour vous ?"}</strong> Répondez à quelques questions
+              facultatives : chaque candidat recevra un indicateur.
             </p>
             <div className="actions">
               <button type="button" onClick={onRenseigner}>
-                Répondre aux questions générales
+                Répondre aux questions
               </button>
             </div>
           </>
@@ -83,9 +67,7 @@ export default function PageThemes({ base, profil, generalSoumis, onRenseigner, 
       />
 
       {enCoursAnalyse.length > 0 && (
-        <p className="hint">
-          Programmes pas encore analysés, donc absents : {enCoursAnalyse.map((meta) => meta.nom).join(", ")}.
-        </p>
+        <p className="hint">Programmes pas encore analysés : {enCoursAnalyse.map((meta) => meta.nom).join(", ")}.</p>
       )}
     </>
   );

@@ -88,11 +88,27 @@ describe("page de départ : aucune information sur le visiteur", () => {
     expect(rendu).toContain('id="theme-fiscalite"');
   });
 
-  it("montre les candidats en portraits cliquables : pastille à initiales et nom, dans un bouton", () => {
+  it("montre les candidats en portraits cliquables : pastille dans un bouton, nom accessible mais pas écrit dessous", () => {
     expect(rendu).toMatch(/<button[^>]*class="portrait"[^>]*aria-expanded="false"/);
-    expect(rendu).toContain(">GA<");
-    expect(rendu).toContain(">MLP<");
-    expect(rendu).toContain("Gabriel Attal");
+    expect(rendu).toMatch(/aria-label="Gabriel Attal"[^>]*title="Gabriel Attal"/);
+    expect(rendu).toContain(">MLP<"); // pas de photo pour ce slug de test : initiales
+    expect(rendu).not.toContain("portrait-nom");
+  });
+
+  it("place les portraits en pied de carte, sous le corps qui accueillera le texte du candidat", () => {
+    const carte = rendu.slice(rendu.indexOf('id="theme-fiscalite"'));
+    expect(carte.indexOf('class="carte-corps"')).toBeLessThan(carte.indexOf('class="carte-pied"'));
+    expect(carte.indexOf('class="carte-pied"')).toBeLessThan(carte.indexOf('class="portraits"'));
+  });
+
+  it("met l'icône du thème dans un médaillon, avec le nom du thème en dessous, hors du médaillon", () => {
+    const entete = rendu.slice(rendu.indexOf('class="carte-entete"'), rendu.indexOf('class="carte-corps"'));
+    expect(entete).toMatch(/class="medaillon"[^>]*>.*<svg[\s\S]*?<\/div><h2/);
+    expect(entete).toContain("Mes impôts et taxes</h2>");
+  });
+
+  it("invite à cliquer sur un candidat tant qu'aucun n'est ouvert", () => {
+    expect(rendu).toContain("Cliquez sur un candidat pour voir ses mesures.");
   });
 
   it("n'affiche AUCUN indicateur, ni légende, ni « pas de projection » : les effets ne sont pas appliqués", () => {
@@ -104,22 +120,20 @@ describe("page de départ : aucune information sur le visiteur", () => {
 
   it("n'ouvre aucun détail avant le clic sur un portrait", () => {
     expect(rendu).not.toContain('role="region"');
-    expect(rendu).not.toContain("Mesures analysées");
+    expect(rendu).not.toContain("Mesures (");
   });
 
   it("range les portraits par ordre alphabétique de slug, quel que soit l'effet de leurs mesures", () => {
     const r = html([candidat("z", [prop("z", [HAUSSE])]), candidat("b", [prop("b", [BAISSE])])]);
-    expect(r.indexOf("Nom b")).toBeLessThan(r.indexOf("Nom z"));
+    expect(r.indexOf('title="Nom b"')).toBeLessThan(r.indexOf('title="Nom z"'));
   });
 
-  it("propose des repères cliquables vers chaque thème", () => {
-    expect(rendu).toContain('href="#theme-fiscalite"');
-    expect(rendu).toContain('href="#theme-retraites"');
-  });
-
-  it("nomme les candidats sans mesure sur le thème plutôt que de les omettre", () => {
+  it("garde les candidats sans mesure sur le thème dans le pied de carte, empilés à part et non cliquables", () => {
     const r = html([candidat("a", [prop("a", [HAUSSE])]), candidat("b", [prop("b", [HAUSSE], "retraites")])]);
-    expect(r).toContain("Aucune mesure analysée sur ce thème : Nom b.");
+    const carte = r.slice(r.indexOf('id="theme-fiscalite"'), r.indexOf('id="theme-retraites"'));
+    const absents = carte.slice(carte.indexOf('class="portraits-absents"'));
+    expect(absents).toContain('aria-label="Nom b : aucune mesure sur ce thème"');
+    expect(absents).not.toContain("<button");
   });
 
   it("annonce un thème sans aucun programme analysé comme en cours d'analyse", () => {
@@ -138,6 +152,17 @@ describe("le détail s'ouvre depuis le portrait", () => {
     expect(r).toContain('role="region"');
     expect(r).toContain("Détail : Nom a");
     expect(r).not.toContain("Détail : Nom b");
+    // Le nom du candidat est en tête du texte révélé.
+    expect(r).toMatch(/class="detail-titre">[\s\S]*?<span>Nom a<\/span><\/h3>/);
+  });
+
+  it("recouvre le texte de la carte (question du thème) par le texte du candidat, avec une croix pour refermer", () => {
+    const r = html([candidat("a", [mesure], [synthese])], {}, ouvert);
+    const carte = r.slice(r.indexOf('id="theme-fiscalite"'), r.indexOf('id="theme-retraites"'));
+    expect(carte).toContain("Mes impôts et taxes</h2>"); // le nom du thème reste
+    expect(carte).not.toContain("Combien vais-je payer ?");
+    expect(carte).not.toContain("Cliquez sur un candidat");
+    expect(carte).toContain('aria-label="Fermer : Nom a"');
   });
 
   it("affiche la synthèse puis les sources citées « nom · année », cliquables", () => {
@@ -151,21 +176,26 @@ describe("le détail s'ouvre depuis le portrait", () => {
 
   it("sans information sur le visiteur : programme et mesures seulement, rien sur « votre profil »", () => {
     const r = html([candidat("a", [mesure], [synthese])], {}, ouvert);
-    expect(r).toContain("Mesures analysées (1)");
+    expect(r).toContain("Mesures (1)");
     expect(r).not.toContain("Pour votre profil");
     expect(r).not.toContain("Pourquoi cet indicateur");
   });
 
-  it("dit clairement quand aucun résumé n'existe, au lieu de laisser un vide", () => {
+  it("sans résumé : pas de message d'excuse, les mesures sont directement dépliées", () => {
     const r = html([candidat("a", [mesure])], {}, ouvert);
-    expect(r).toContain("Aucun résumé n&#x27;est disponible");
+    expect(r).not.toContain("Aucun résumé");
+    expect(r).toMatch(/<details class="mesures" open="">/);
+    const avecResume = html([candidat("a", [mesure], [synthese])], {}, ouvert);
+    expect(avecResume).toMatch(/<details class="mesures">/);
   });
 
-  it("ne répète pas le titre d'une mesure quand son texte est identique, et indique la rubrique de la source", () => {
-    const identique: Proposition = { ...prop("a", undefined), titre: "Supprimer la taxe X.", resume_factuel: "Supprimer la taxe X.", sous_theme: "Fiscalité" };
+  it("ne répète pas le titre d'une mesure quand son texte est identique, ni de mention à chaque mesure", () => {
+    const identique: Proposition = { ...prop("a", undefined), titre: "Supprimer la taxe X.", resume_factuel: "Supprimer la taxe X.", sous_theme: "Fiscalité", statut: "partiel" };
     const r = html([candidat("a", [identique])], {}, ouvert);
     expect(r.match(/Supprimer la taxe X\./g)).toHaveLength(1);
-    expect(r).toContain("rubrique « Fiscalité » de la source");
+    expect(r).not.toContain("rubrique");
+    expect(r).not.toContain("sourcing partiel");
+    expect(r).toMatch(/Source :.*<a href="https:\/\/a\.fr\/p"/);
   });
 
   it("affiche l'explication d'une mesure quand elle apporte plus que le titre", () => {

@@ -29,7 +29,8 @@ export interface CardTheme {
   enCoursAnalyse: boolean;
 }
 
-function affichable(p: Proposition): boolean {
+// Une fiche « provisoire » est une recherche inachevée : jamais affichée ni comptée.
+export function affichable(p: Proposition): boolean {
   return p.statut === "complet" || p.statut === "partiel";
 }
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { X } from "lucide-react";
 import { libelleCitation } from "../citations";
 import { evaluerProposition } from "../engine";
 import type { NiveauProjection } from "../engine/projection";
@@ -6,7 +7,8 @@ import { compterReponses, questionsDuTheme, type Questionnaire } from "../questi
 import type { ProfilPartiel } from "../profil";
 import type { ChampProfil, Proposition } from "../types";
 import type { CardTheme, LigneCandidat } from "./cards";
-import { initiales } from "./portrait";
+import { IconeTheme } from "./icones";
+import { Pastille } from "./Pastille";
 import { NIVEAUX, decrireEffet } from "./projection";
 import { SectionQuestions, type SurReponse } from "./Questions";
 
@@ -43,8 +45,6 @@ function MesureAnalysee({ proposition, profil }: { proposition: Proposition; pro
   return (
     <li>
       <strong>{proposition.titre}</strong>
-      {proposition.statut === "partiel" && <span className="badge-partiel"> (sourcing partiel — à confirmer)</span>}
-      {proposition.sous_theme && <span className="sous-theme"> — rubrique « {proposition.sous_theme} » de la source</span>}
       {impact.explication !== proposition.titre && <p>{impact.explication}</p>}
       {impact.niveau === "chiffre_personnalise" && impact.montant_estime !== undefined && (
         <p>Estimation pour votre profil : {impact.montant_estime} €/an</p>
@@ -55,7 +55,7 @@ function MesureAnalysee({ proposition, profil }: { proposition: Proposition; pro
         </p>
       )}
       <p className="sources">
-        Sources :{" "}
+        Source :{" "}
         <ListeSources sources={proposition.sources.map((s) => ({ texte: libelleCitation(s), url: s.url }))} />
       </p>
     </li>
@@ -64,13 +64,23 @@ function MesureAnalysee({ proposition, profil }: { proposition: Proposition; pro
 
 // Le détail d'un candidat sur un thème, ouvert depuis son portrait : programme d'abord (synthèse, sources, mesures),
 // puis — seulement si le visiteur a donné des informations — ce que cela change pour lui.
-function DetailCandidat({ ligne, profil, id }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string }) {
+function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string; onFermer?: () => void }) {
   const { meta, projection, synthese, sources, messagesSansBadge, messagesIncertitude, messagesEffetsExclus, propositions } = ligne;
   const niveau = projection?.niveau ?? null;
 
   return (
     <div className="detail" id={id} role="region" aria-label={`Détail : ${meta.nom}`}>
-      <h3 className="detail-titre">{meta.nom}</h3>
+      <div className="detail-entete">
+        <h3 className="detail-titre">
+          <Pastille slug={meta.slug} nom={meta.nom} className="pastille--petite" />
+          <span>{meta.nom}</span>
+        </h3>
+        {onFermer && (
+          <button type="button" className="bouton-icone" aria-label={`Fermer : ${meta.nom}`} onClick={onFermer}>
+            <X size={20} aria-hidden="true" />
+          </button>
+        )}
+      </div>
       {synthese ? (
         <>
           <p className="synthese">{synthese.texte}</p>
@@ -78,11 +88,7 @@ function DetailCandidat({ ligne, profil, id }: { ligne: LigneCandidat; profil: P
             Sources : <ListeSources sources={sources} />
           </p>
         </>
-      ) : (
-        <p className="hint">
-          Aucun résumé n'est disponible pour ce candidat sur ce thème : le détail sourcé des mesures est ci-dessous.
-        </p>
-      )}
+      ) : null}
 
       {projection &&
         (niveau ? (
@@ -135,8 +141,8 @@ function DetailCandidat({ ligne, profil, id }: { ligne: LigneCandidat; profil: P
         </details>
       )}
 
-      <details className="mesures">
-        <summary>Mesures analysées ({propositions.length})</summary>
+      <details className="mesures" open={!synthese}>
+        <summary>Mesures ({propositions.length})</summary>
         <ul>
           {propositions.map((proposition) => (
             <MesureAnalysee key={proposition.id} proposition={proposition} profil={profil} />
@@ -147,9 +153,12 @@ function DetailCandidat({ ligne, profil, id }: { ligne: LigneCandidat; profil: P
   );
 }
 
-// Un portrait = une pastille à initiales, le nom, et — seulement s'il existe — l'indicateur du candidat sur ce thème.
+// Un portrait = une pastille à initiales et — seulement s'il existe — l'indicateur du candidat sur ce thème. Le nom
+// n'est pas écrit sous la pastille, mais il reste le nom accessible du bouton et s'affiche au survol.
 function Portrait({ ligne, ouvert, idDetail, onBasculer }: { ligne: LigneCandidat; ouvert: boolean; idDetail: string; onBasculer: () => void }) {
   const niveau = ligne.projection?.niveau ?? null;
+  const { nom } = ligne.meta;
+  const precision = niveau ? ` — ${NIVEAUX[niveau].libelle}${ligne.projection?.incertain ? ", à préciser" : ""}` : "";
   return (
     <li>
       <button
@@ -158,12 +167,11 @@ function Portrait({ ligne, ouvert, idDetail, onBasculer }: { ligne: LigneCandida
         data-niveau={niveau ?? undefined}
         aria-expanded={ouvert}
         aria-controls={idDetail}
+        aria-label={`${nom}${precision}`}
+        title={nom}
         onClick={onBasculer}
       >
-        <span className="pastille" aria-hidden="true">
-          {initiales(ligne.meta.nom)}
-        </span>
-        <span className="portrait-nom">{ligne.meta.nom}</span>
+        <Pastille slug={ligne.meta.slug} nom={nom} />
         {niveau && <BadgeNiveau niveau={niveau} />}
         {ligne.projection?.incertain && <span className="a-preciser">à préciser</span>}
       </button>
@@ -209,18 +217,38 @@ function CarteTheme({
   const ligneOuverte = lignes.find((l) => l.meta.slug === ouvert) ?? null;
   const idDetail = `detail-${theme.id}`;
 
+  // Carte de hauteur fixe : en-tête (thème), corps défilant qui accueille le texte du candidat choisi, pied avec les
+  // portraits. Ouvrir un candidat ne change pas la taille de la carte ni la mise en page de la grille.
   return (
-    <section className="carte" id={`theme-${theme.id}`} aria-labelledby={`titre-${theme.id}`}>
-      <h2 id={`titre-${theme.id}`}>{theme.libelle}</h2>
-      <p className="question">{theme.question_citoyen}</p>
+    <article className="carte" id={`theme-${theme.id}`} aria-labelledby={`titre-${theme.id}`}>
+      <header className="carte-entete">
+        <div className="medaillon" aria-hidden="true">
+          <IconeTheme themeId={theme.id} taille={24} />
+        </div>
+        <h2 id={`titre-${theme.id}`}>{theme.libelle}</h2>
+        {!ligneOuverte && <p className="question-theme">{theme.question_citoyen}</p>}
+      </header>
 
-      {questionsTheme.length > 0 && <QuestionsDuTheme theme={theme.libelle} idTheme={theme.id} questions={questionsTheme} profil={profil} onReponse={onReponse} />}
+      <div className="carte-corps">
+        {enCoursAnalyse ? (
+          <p className="hint">Ce thème est en cours d'analyse : aucun programme n'a encore été analysé sur ce sujet.</p>
+        ) : (
+          <>
+            {ligneOuverte ? (
+              <DetailCandidat ligne={ligneOuverte} profil={profil} id={idDetail} onFermer={() => setOuvert(null)} />
+            ) : (
+              <>
+                {questionsTheme.length > 0 && <QuestionsDuTheme theme={theme.libelle} idTheme={theme.id} questions={questionsTheme} profil={profil} onReponse={onReponse} />}
+                <p className="hint carte-invite">Cliquez sur un candidat pour voir ses mesures.</p>
+              </>
+            )}
+          </>
+        )}
+      </div>
 
-      {enCoursAnalyse ? (
-        <p className="hint">Ce thème est en cours d'analyse : aucun programme n'a encore été analysé sur ce sujet.</p>
-      ) : (
-        <>
-          <ul className="portraits" aria-label={`Candidats sur le thème ${theme.libelle}`}>
+      {!enCoursAnalyse && (
+        <footer className="carte-pied">
+          <ul className="portraits" aria-label={`Candidats ayant des mesures sur le thème ${theme.libelle}`}>
             {lignes.map((ligne) => (
               <Portrait
                 key={ligne.meta.slug}
@@ -231,14 +259,19 @@ function CarteTheme({
               />
             ))}
           </ul>
-          {ligneOuverte && <DetailCandidat ligne={ligneOuverte} profil={profil} id={idDetail} />}
-        </>
+          {/* Candidats sans mesure sur ce thème : nommés, jamais omis en silence — empilés à droite, non cliquables. */}
+          {absents.length > 0 && (
+            <ul className="portraits-absents" aria-label={`Candidats sans mesure sur le thème ${theme.libelle}`}>
+              {absents.map((meta) => (
+                <li key={meta.slug}>
+                  <Pastille slug={meta.slug} nom={meta.nom} className="pastille--absent" libelle={`${meta.nom} : aucune mesure sur ce thème`} />
+                </li>
+              ))}
+            </ul>
+          )}
+        </footer>
       )}
-
-      {!enCoursAnalyse && absents.length > 0 && (
-        <p className="absents">Aucune mesure analysée sur ce thème : {absents.map((m) => m.nom).join(", ")}.</p>
-      )}
-    </section>
+    </article>
   );
 }
 
@@ -297,26 +330,18 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
         </details>
       )}
 
-      <nav aria-label="Thèmes">
-        <ul className="reperes">
-          {cards.map(({ theme }) => (
-            <li key={theme.id}>
-              <a href={`#theme-${theme.id}`}>{theme.libelle}</a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      {cards.map((card) => (
-        <CarteTheme
-          key={card.theme.id}
-          card={card}
-          profil={profil}
-          questionsTheme={questionsActives ? questionsDuTheme(questionnaire, card.theme.id) : []}
-          onReponse={onReponse}
-          ouvertInitial={ouvertInitial?.theme === card.theme.id ? ouvertInitial.candidat : undefined}
-        />
-      ))}
+      <div className="grille-themes">
+        {cards.map((card) => (
+          <CarteTheme
+            key={card.theme.id}
+            card={card}
+            profil={profil}
+            questionsTheme={questionsActives ? questionsDuTheme(questionnaire, card.theme.id) : []}
+            onReponse={onReponse}
+            ouvertInitial={ouvertInitial?.theme === card.theme.id ? ouvertInitial.candidat : undefined}
+          />
+        ))}
+      </div>
     </section>
   );
 }

@@ -1,71 +1,90 @@
 /* Aucune police ni ressource externe : charger une police depuis un service tiers révélerait l'adresse
    IP de chaque citoyen, ce qui n'a pas sa place dans un outil qui manipule un profil sensible. */
 :root {
-  color-scheme: light dark;
+  /* Thème clair imposé (choix du porteur du projet, 2026-09-27) : ne suit pas la préférence sombre du système. */
+  color-scheme: light;
 
-  --fond: #f2f4f6;
+  --fond: #f4f6fb;
   --surface: #ffffff;
-  --encre: #17212b;
-  --encre-douce: #566270;
-  --filet: #d3d9df;
+  --encre: #0f1b33;
+  --encre-douce: #55607a;
+  --filet: #dde2ec;
   --alerte: #b45309;
   --erreur: #b91c1c;
 
-  /* La couleur ne sert qu'aux quatre niveaux de l'indicateur, jamais à un parti ou un candidat, et
-     ne porte jamais le sens seule : chaque niveau a aussi un libellé et un symbole. */
+  /* Bleu-blanc-rouge : le BLEU est la couleur d'action (boutons, liens, onglet actif). Le ROUGE reste décoratif
+     (bandeau, marque) et n'est jamais posé sur un bouton ni un texte : dans le contenu, le rouge signifie « dégradant ».
+     Aucune de ces couleurs n'est attribuée à un candidat. */
+  --bleu: #1b3f94;
+  --bleu-fonce: #122c6b;
+  --bleu-pale: #e9eefa;
+  --rouge: #d52b1e;
+
+  /* La couleur des quatre niveaux de l'indicateur ne porte jamais le sens seule : chaque niveau a aussi un libellé et
+     un symbole. */
   --ameliorant: #1e7a5a;
   --mixte: #9a6200;
   --non-concerne: #5d6875;
   --degradant: #b4323f;
 
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Atkinson Hyperlegible (Braille Institute) : lettres ambiguës bien différenciées (l/I/1, 0/O), pour la lisibilité.
+     Deux graisses seulement (400, 700) : les titres jouent sur la taille et la graisse, pas sur une autre police. */
+  --titre: "Atkinson Hyperlegible", "Verdana", sans-serif;
+  --sans: "Atkinson Hyperlegible", "Verdana", sans-serif;
+  --rayon: 12px;
+  --ombre: 0 1px 2px rgba(15, 27, 51, 0.06), 0 4px 16px rgba(15, 27, 51, 0.06);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fond: #12181f;
-    --surface: #1a222b;
-    --encre: #e8edf2;
-    --encre-douce: #9aa6b2;
-    --filet: #2c3743;
-    --alerte: #e0a63a;
-    --erreur: #f0808b;
-
-    --ameliorant: #5cc79e;
-    --mixte: #e0a63a;
-    --non-concerne: #9aa6b2;
-    --degradant: #f0808b;
-  }
+/* Largeur = contenu + rembourrage + bordure : indispensable pour que trois cartes tiennent exactement sur une ligne. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
   background: var(--fond);
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  height: 5px;
+  background: linear-gradient(to right, var(--bleu) 0 33.34%, #ffffff 33.34% 66.67%, var(--rouge) 66.67% 100%);
+  box-shadow: 0 1px 0 var(--filet);
+}
+
 body {
-  max-width: 44rem;
+  /* Une seule largeur pour toutes les pages ; à l'intérieur, les cartes de thèmes occupent toute la place. */
+  max-width: 76rem;
   margin: 0 auto;
-  padding: 1.5rem 1rem 4rem;
+  padding: 1.75rem 1rem 4rem;
   font-family: var(--sans);
-  line-height: 1.55;
+  font-size: 1.0625rem;
+  line-height: 1.6;
   color: var(--encre);
 }
 
 h1 {
-  font-family: var(--serif);
-  font-size: 2rem;
+  font-family: var(--titre);
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   line-height: 1.15;
+  color: var(--bleu-fonce);
   margin: 0 0 1rem;
 }
 
 a {
-  color: inherit;
+  color: var(--bleu);
   text-underline-offset: 0.15em;
 }
 
 :focus-visible {
-  outline: 3px solid var(--encre);
+  outline: 3px solid var(--bleu);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -75,12 +94,32 @@ a {
 .menu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 0.5rem 1.5rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--filet);
+  align-items: center;
+  gap: 0.75rem 1.75rem;
+  margin-bottom: 2rem;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  background: var(--surface);
+  box-shadow: var(--ombre);
+}
+
+.marque {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--bleu-fonce);
+}
+
+.drapeau {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.1rem;
+  border: 1px solid var(--filet);
+  border-radius: 3px;
+  background: linear-gradient(to right, var(--bleu) 0 33.34%, #ffffff 33.34% 66.67%, var(--rouge) 66.67% 100%);
 }
 
 .menu nav {
@@ -100,40 +139,376 @@ a {
 }
 
 .lien-menu:hover {
-  color: var(--encre);
+  color: var(--bleu);
 }
 
 .lien-menu--actif {
-  color: var(--encre);
+  color: var(--bleu);
   text-decoration: underline;
-  text-underline-offset: 0.25em;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.4em;
 }
 
-.selecteur-base {
-  font-size: 0.85rem;
+.bouton-base {
+  margin-left: auto !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--filet);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--encre);
+  font: inherit;
+  font-size: 0.875rem;
 }
 
-.selecteur-base select {
-  margin-left: 0.35rem;
+.bouton-base:hover {
+  border-color: var(--bleu);
+  color: var(--bleu);
 }
 
-.selecteur-base .hint {
-  margin: 0.15rem 0 0;
-  max-width: 20rem;
+.bouton-icone {
+  display: inline-grid;
+  place-items: center;
+  margin: 0;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--encre-douce);
 }
 
+.bouton-icone:hover {
+  color: var(--encre);
+  background: var(--fond);
+}
+
+/* ---- Modale ---------------------------------------------------------------------------------- */
+
+.modale-fond {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(15, 27, 51, 0.5);
+}
+
+.modale {
+  width: min(34rem, 100%);
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  padding: 1.25rem 1.4rem 1.4rem;
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 16px 48px rgba(15, 27, 51, 0.25);
+}
+
+.modale-entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modale-entete h2 {
+  margin: 0;
+  font-family: var(--titre);
+  font-size: 1.35rem;
+}
+
+.choix-bases {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.choix-base {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--filet);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.choix-base:hover,
+.choix-base--actif {
+  border-color: var(--bleu);
+  background: var(--bleu-pale);
+}
+
+.choix-base input {
+  margin-top: 0.25rem;
+}
+
+.choix-base > span {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.choix-base-description {
+  color: var(--encre-douce);
+  font-size: 0.875rem;
+}
 /* ---- Accueil --------------------------------------------------------------------------------- */
 
 .accueil .chapeau {
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  line-height: 1.45;
+  font-family: var(--titre);
+  font-size: 1.25rem;
+  line-height: 1.5;
   max-width: 38rem;
 }
 
-.accueil .maj {
-  font-size: 0.85rem;
+.avertissement,
+.ma-situation,
+.legende,
+.questionnaire {
+  max-width: 46rem;
+}
+
+.accueil-sous-titre {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 3rem 0 0;
+  font-family: var(--titre);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--bleu-fonce);
+}
+
+.tableau-defilement {
+  margin-top: 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  background: var(--surface);
+  box-shadow: var(--ombre);
+}
+
+.tableau-couverture thead th {
+  background: var(--bleu-pale);
+  color: var(--bleu-fonce);
+}
+
+.tableau-couverture .icone-theme {
+  color: var(--bleu);
+}
+
+.tableau-couverture {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.tableau-couverture caption {
+  padding: 0.6rem 0.9rem;
+  text-align: left;
   color: var(--encre-douce);
+}
+
+.tableau-couverture th,
+.tableau-couverture td {
+  padding: 0.45rem 0.6rem;
+  border-top: 1px solid var(--filet);
+}
+
+.tableau-couverture thead th {
+  vertical-align: bottom;
+  font-weight: 600;
+  min-width: 6.5rem;
+}
+
+.tableau-couverture thead th.coin {
+  text-align: left;
+  min-width: 12rem;
+}
+
+.entete-theme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.tableau-couverture tbody th {
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tableau-couverture td {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Survol : la ligne et la colonne de la cellule sont mises en valeur (contour et en-têtes). */
+.tableau-couverture tr.surligne > th,
+.tableau-couverture thead th.surligne {
+  background: var(--bleu);
+  color: #ffffff;
+}
+
+.tableau-couverture thead th.surligne .icone-theme {
+  color: #ffffff;
+}
+
+.tableau-couverture tr.surligne > td,
+.tableau-couverture td.colonne-surlignee {
+  box-shadow: inset 0 0 0 999px rgba(15, 27, 51, 0.07);
+}
+
+.tableau-couverture td.cellule-survolee {
+  outline: 3px solid var(--bleu-fonce);
+  outline-offset: -3px;
+  font-weight: 700;
+}
+
+.cellule-vide {
+  color: #9aa3b5;
+}
+
+.candidat-ligne {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pastille--petite {
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 0.875rem;
+}
+
+.icone-theme {
+  flex: none;
+  color: var(--encre-douce);
+}
+
+.bandeau-accueil {
+  padding: 2rem 2rem 2.2rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--bleu-fonce), var(--bleu));
+  color: #ffffff;
+  box-shadow: var(--ombre);
+}
+
+.bandeau-accueil h1 {
+  max-width: none;
+  margin: 0.5rem 0 0.75rem;
+  color: #ffffff;
+}
+
+.bandeau-accueil .chapeau {
+  max-width: 58rem;
+  margin: 0 0 1.5rem;
+  font-size: 1.35rem;
+  color: #e6ebf7;
+}
+
+.bandeau-accueil .chapeau strong {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: var(--rouge);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.25em;
+}
+
+/* Bouton sur fond bleu : blanc, texte bleu (contraste suffisant). */
+.bandeau-accueil button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone)) {
+  margin: 0;
+  background: #ffffff;
+  color: var(--bleu-fonce);
+}
+
+.bandeau-accueil button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone)):hover {
+  background: var(--bleu-pale);
+}
+
+.atouts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.atouts li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.8rem;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  background: var(--surface);
+  box-shadow: var(--ombre);
+}
+
+.atouts svg {
+  grid-row: span 2;
+  box-sizing: content-box;
+  padding: 0.55rem;
+  border-radius: 10px;
+  background: var(--bleu-pale);
+  color: var(--bleu);
+}
+
+.atouts strong {
+  color: var(--bleu-fonce);
+  font-size: 1.05rem;
+}
+
+.atouts span {
+  color: var(--encre-douce);
+  font-size: 0.9375rem;
+}
+
+.a-propos {
+  max-width: 46rem;
+}
+
+.a-propos h2 {
+  margin: 1.75rem 0 0.4rem;
+  font-size: 1.2rem;
+  color: var(--bleu-fonce);
+}
+
+.a-propos p,
+.a-propos ul {
+  margin: 0.25rem 0;
+}
+
+.liste-credits {
+  padding-left: 1.1rem;
+  font-size: 0.9375rem;
+}
+
+.credits {
+  margin-top: 2rem;
+  color: var(--encre-douce);
+  font-size: 0.875rem;
+}
+
+.credits summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.credits ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
 }
 
 form div {
@@ -145,9 +520,22 @@ form div {
 
 button {
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.15rem;
   font-size: 1rem;
   cursor: pointer;
+}
+
+button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone)) {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: var(--bleu);
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone)):hover {
+  background: var(--bleu-fonce);
 }
 
 article {
@@ -160,20 +548,20 @@ article {
   padding: 0.75rem 1rem;
   border: 1px solid var(--filet);
   border-left: 4px solid var(--alerte);
-  border-radius: 6px;
+  border-radius: var(--rayon);
   background: var(--surface);
   font-size: 0.9rem;
 }
 
 .hint {
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   color: var(--encre-douce);
   margin-top: 0.75rem;
   margin-bottom: 0;
 }
 
 .badge-partiel {
-  font-size: 0.85em;
+  font-size: 0.875rem;
   font-weight: normal;
   font-style: italic;
   color: var(--alerte);
@@ -181,7 +569,7 @@ article {
 
 .sources {
   margin-top: 0.25rem;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
 }
 
 /* ---- Résultats : une card par thème ---------------------------------------------------------- */
@@ -190,7 +578,7 @@ article {
   margin: 1rem 0;
   padding: 0.7rem 1rem;
   border: 1px solid var(--filet);
-  border-radius: 6px;
+  border-radius: var(--rayon);
   background: var(--surface);
   font-size: 0.9rem;
 }
@@ -224,58 +612,155 @@ article {
   }
 }
 
-.reperes {
-  list-style: none;
+.grille-themes {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 1rem 0;
-  padding: 0;
+  justify-content: center;
+  gap: 3rem 1.5rem;
+  margin: 3.5rem 0 1.5rem;
 }
 
-.reperes a {
-  display: inline-block;
-  padding: 0.25rem 0.7rem;
-  border: 1px solid var(--filet);
-  border-radius: 999px;
-  background: var(--surface);
-  font-size: 0.9rem;
-  text-decoration: none;
-}
-
-.reperes a:hover {
-  border-color: var(--encre);
-}
-
+/* Trois cartes par ligne ; une ligne incomplète reste centrée. En dessous d'une largeur utile, deux puis une. */
 .carte {
-  margin: 1.25rem 0;
-  padding: 1.25rem 1.25rem 1rem;
+  flex: 1 1 calc((100% - 2 * 1.5rem) / 3);
+  max-width: calc((100% - 2 * 1.5rem) / 3);
+  min-width: 17rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 29rem;
+  padding: 2.4rem 1rem 0.8rem;
   border: 1px solid var(--filet);
-  border-radius: 6px;
+  border-radius: var(--rayon);
   background: var(--surface);
-  scroll-margin-top: 1rem;
+  box-shadow: var(--ombre);
+  scroll-margin-top: 3rem;
+}
+
+@media (max-width: 62rem) {
+  .carte {
+    flex-basis: calc((100% - 1.5rem) / 2);
+    max-width: calc((100% - 1.5rem) / 2);
+  }
+}
+
+@media (max-width: 40rem) {
+  .carte {
+    flex-basis: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+.carte-entete {
+  flex: none;
+  text-align: center;
+}
+
+/* Icône du thème dans un cercle centré, à moitié sorti au-dessus de la carte. */
+.medaillon {
+  position: absolute;
+  top: -1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 4px solid var(--fond);
+  border-radius: 50%;
+  background: var(--bleu);
+  box-shadow: var(--ombre);
+}
+
+.medaillon .icone-theme {
+  color: #ffffff;
 }
 
 .carte h2 {
   margin: 0;
-  font-family: var(--serif);
-  font-size: 1.6rem;
-  line-height: 1.15;
+  font-family: var(--titre);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--bleu-fonce);
 }
-
-.question {
-  margin: 0.25rem 0 1rem;
-  font-family: var(--serif);
-  font-style: italic;
+.question-theme {
+  margin: 0.35rem 0 0.75rem;
+  font-size: 0.9375rem;
   color: var(--encre-douce);
 }
 
+/* Le corps accueille le texte du candidat choisi : il défile, la carte ne grandit pas. */
+.carte-corps {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 0.3rem;
+}
+
+.carte-invite {
+  margin-top: 0.25rem;
+}
+
+.carte-pied {
+  flex: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--filet);
+}
+
+.carte-pied .portraits {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-height: 10.5rem;
+  overflow-y: auto;
+}
+
+/* En pied de carte, portraits compacts : tous les candidats tiennent sans défilement dans la plupart des cas. */
+.carte-pied .portrait {
+  min-width: 0;
+  padding: 0.2rem;
+}
+
+.carte-pied .pastille {
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+/* Candidats sans mesure sur le thème : empilés, à droite, estompés, non cliquables. */
+.portraits-absents {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  max-height: 10.5rem;
+  margin: 0 0 0 auto;
+  padding: 0 0 0 0.75rem;
+  overflow-y: auto;
+  list-style: none;
+  border-left: 1px dashed var(--filet);
+}
+
+.pastille--absent {
+  width: 2rem;
+  height: 2rem;
+  border-width: 1px;
+  font-size: 0.875rem;
+  color: var(--encre-douce);
+  filter: grayscale(1);
+  opacity: 0.6;
+}
 /* Portraits : une pastille à initiales, identique pour tous. Aucune couleur par candidat (elle évoquerait un
    parti) ; la couleur ne sert qu'aux quatre niveaux de l'indicateur. */
 .portraits {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 0.4rem;
+  gap: 0.25rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -286,9 +771,9 @@ article {
   flex-direction: column;
   align-items: center;
   gap: 0.3rem;
-  width: 6.2rem;
+  min-width: 3.4rem;
   margin: 0;
-  padding: 0.5rem 0.25rem 0.55rem;
+  padding: 0.35rem 0.2rem 0.4rem;
   border: 1px solid transparent;
   border-radius: 8px;
   background: none;
@@ -300,48 +785,53 @@ article {
 
 .portrait:hover {
   border-color: var(--filet);
+  background: var(--fond);
 }
 
 .portrait--ouvert {
-  border-color: var(--encre);
-  background: var(--fond);
+  border-color: var(--bleu);
+  background: var(--bleu-pale);
 }
 
 .pastille {
   display: grid;
   place-items: center;
-  width: 3.4rem;
-  height: 3.4rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  overflow: hidden;
   border: 2px solid var(--filet);
   border-radius: 50%;
-  background: var(--fond);
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  font-weight: 600;
+  background: #eef1f6;
+  color: var(--encre);
+  font-family: var(--titre);
+  font-size: 1.05rem;
+  font-weight: 700;
   letter-spacing: 0.02em;
 }
 
 .portrait--ouvert .pastille {
-  border-color: var(--encre);
+  border-color: var(--bleu);
   background: var(--surface);
-}
-
-.portrait-nom {
-  font-size: 0.82rem;
-  font-weight: 600;
-  line-height: 1.2;
 }
 
 .portrait .niveau {
   padding: 0.05rem 0.4rem;
-  font-size: 0.72rem;
+  font-size: 0.875rem;
 }
 
 /* Couleur autour du portrait : elle n'apparaît qu'après validation du formulaire général, et ne sert qu'aux quatre niveaux
    de l'indicateur. Le sens est toujours aussi écrit (mot + symbole) sous le portrait. */
 .portrait[data-niveau] .pastille {
   border-color: var(--niveau-couleur);
-  box-shadow: 0 0 0 3px var(--surface), 0 0 0 6px var(--niveau-couleur);
+  box-shadow: 0 0 0 2px var(--surface), 0 0 0 5px var(--niveau-couleur);
+}
+
+/* Photo du candidat : même cadrage pour tous. */
+.pastille--photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
 }
 
 .portrait[data-niveau="ameliorant"] { --niveau-couleur: var(--ameliorant); }
@@ -350,7 +840,7 @@ article {
 .portrait[data-niveau="degradant"] { --niveau-couleur: var(--degradant); }
 
 .a-preciser {
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   font-style: italic;
   color: var(--encre-douce);
 }
@@ -367,7 +857,7 @@ article {
 /* ---- Questions du formulaire ------------------------------------------------------------------ */
 
 .progression {
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   font-weight: normal;
   color: var(--encre-douce);
 }
@@ -394,7 +884,7 @@ article {
 
 .finalite {
   color: var(--encre-douce);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
 }
 
 fieldset.question {
@@ -430,8 +920,8 @@ fieldset.question {
   margin: 0 0 1rem;
   padding: 0.6rem 0.9rem;
   border: 1px solid var(--filet);
-  border-radius: 6px;
-  background: var(--fond);
+  border-radius: var(--rayon);
+  background: var(--bleu-pale);
   font-size: 0.95rem;
 }
 
@@ -445,15 +935,25 @@ fieldset.question {
 }
 
 .detail {
-  margin-top: 1rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--filet);
+  margin-top: 0.25rem;
+}
+
+.detail-entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0 0 0.6rem;
 }
 
 .detail-titre {
-  margin: 0 0 0.5rem;
-  font-family: var(--serif);
-  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  font-family: var(--titre);
+  font-size: 1.1rem;
+  color: var(--bleu-fonce);
 }
 
 .actions {
@@ -467,16 +967,20 @@ fieldset.question {
 }
 
 button.secondaire {
-  border: 1px solid var(--filet);
-  background: none;
-  color: inherit;
+  border: 1px solid var(--bleu);
+  background: transparent;
+  color: var(--bleu);
+}
+
+button.secondaire:hover {
+  background: var(--bleu-pale);
 }
 
 .ma-situation {
   margin: 1rem 0;
   padding: 0.75rem 1rem;
   border: 1px solid var(--filet);
-  border-radius: 6px;
+  border-radius: var(--rayon);
   background: var(--surface);
   font-size: 0.95rem;
 }
@@ -495,7 +999,7 @@ button.secondaire {
   padding: 0.15rem 0.6rem;
   border: 1.5px solid currentColor;
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -517,7 +1021,7 @@ button.secondaire {
 }
 
 .sans-badge {
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   font-style: italic;
   color: var(--encre-douce);
 }
@@ -529,7 +1033,7 @@ button.secondaire {
 
 .sources-citees {
   margin: 0 0 0.75rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--encre-douce);
 }
 
@@ -569,7 +1073,7 @@ button.secondaire {
 
 .absents {
   margin: 0.9rem 0 0;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   color: var(--encre-douce);
 }
 
@@ -588,7 +1092,7 @@ button.secondaire {
 }
 
 .monitoring-date {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: normal;
   opacity: 0.75;
 }
@@ -634,4 +1138,16 @@ button.secondaire {
 .monitoring-erreur {
   color: var(--erreur);
   font-weight: 600;
+}
+
+/* ---- Accessibilité ----------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
 }

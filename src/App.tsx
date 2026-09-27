@@ -1,28 +1,41 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Accueil from "./ui/Accueil";
-import { Menu, type Ecran as EcranMenu } from "./ui/Menu";
+import { Menu } from "./ui/Menu";
 import PageThemes from "./ui/PageThemes";
 import PageQuestionsGenerales from "./ui/PageQuestionsGenerales";
+import PageAPropos from "./ui/PageAPropos";
 import Monitoring from "./ui/Monitoring";
 import { baseInitiale, retenirBase } from "./ui/choixBase";
+import { ecranDepuisChemin, naviguerVers, type Ecran } from "./ui/router";
 import { chargerBase, listerBases } from "./data/bases";
 import { CHAMPS_PROFIL } from "./questionnaire";
 import { mettreAJourReponse, type ProfilPartiel } from "./profil";
 import type { ChampProfil } from "./types";
 
-type Ecran = EcranMenu | "questions-generales";
-
 const BASES = listerBases();
 
 export default function App() {
-  // La page de départ présente l'outil avant d'entrer dans les thèmes.
-  const [ecran, setEcran] = useState<Ecran>("accueil");
+  // L'écran affiché suit l'adresse : « / » accueil, « /themes », « /ma-situation », « /a-propos ».
+  const [ecran, setEcran] = useState<Ecran>(() => ecranDepuisChemin(window.location.pathname));
   // Les réponses du visiteur restent en mémoire de la page : ni envoyées, ni stockées.
   const [profil, setProfil] = useState<ProfilPartiel>({});
   // Les indicateurs n'apparaissent qu'après la validation du formulaire général.
   const [generalSoumis, setGeneralSoumis] = useState(false);
   const [baseId, setBaseId] = useState<string>(() => baseInitiale(BASES).id);
   const base = chargerBase(baseId);
+
+  // Boutons précédent/suivant du navigateur.
+  useEffect(() => {
+    const surRetour = () => setEcran(ecranDepuisChemin(window.location.pathname));
+    window.addEventListener("popstate", surRetour);
+    return () => window.removeEventListener("popstate", surRetour);
+  }, []);
+
+  function allerA(cible: Ecran): void {
+    naviguerVers(cible);
+    setEcran(cible);
+    window.scrollTo(0, 0);
+  }
 
   function choisirBase(id: string): void {
     retenirBase(id);
@@ -38,39 +51,29 @@ export default function App() {
     return <Monitoring base={base} />;
   }
 
-  // Le formulaire général est un écran à part entière (pas de menu ni de distraction pendant la saisie), mais reste
-  // accessible en un clic depuis le menu de tout écran : « Thèmes » y ramène.
-  if (ecran === "questions-generales") {
-    return (
-      <PageQuestionsGenerales
-        questions={base.questionnaire.generales}
-        profilInitial={profil}
-        onValider={(p) => {
-          setProfil(p);
-          setGeneralSoumis(true);
-          setEcran("themes");
-          window.scrollTo(0, 0);
-        }}
-        onAnnuler={() => setEcran("themes")}
-      />
-    );
-  }
-
-  // Naviguer vers "accueil"/"themes" via le menu quitte le formulaire général sans rien enregistrer (identique à
-  // « Retour aux thèmes ») : le menu ne doit jamais laisser un écran caché en incohérence avec le menu affiché.
-  const menu = <Menu ecran={ecran} onNaviguer={setEcran} bases={BASES} baseActive={baseId} onChoisirBase={choisirBase} />;
-
   return (
     <>
-      {menu}
-      {ecran === "accueil" ? (
-        <Accueil base={base} onCommencer={() => setEcran("themes")} />
-      ) : (
+      <Menu ecran={ecran} onNaviguer={allerA} bases={BASES} baseActive={baseId} onChoisirBase={choisirBase} />
+      {ecran === "accueil" && <Accueil base={base} onCommencer={() => allerA("themes")} />}
+      {ecran === "a-propos" && <PageAPropos bases={BASES} nomsParSlug={Object.fromEntries(Object.entries(base.metas).map(([slug, m]) => [slug, m.nom]))} />}
+      {ecran === "questions-generales" && (
+        <PageQuestionsGenerales
+          questions={base.questionnaire.generales}
+          profilInitial={profil}
+          onValider={(p) => {
+            setProfil(p);
+            setGeneralSoumis(true);
+            allerA("themes");
+          }}
+          onAnnuler={() => allerA("themes")}
+        />
+      )}
+      {ecran === "themes" && (
         <PageThemes
           base={base}
           profil={profil}
           generalSoumis={generalSoumis}
-          onRenseigner={() => setEcran("questions-generales")}
+          onRenseigner={() => allerA("questions-generales")}
           onEffacer={() => {
             setProfil({});
             setGeneralSoumis(false);
