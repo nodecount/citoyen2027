@@ -128,10 +128,11 @@ describe("page de départ : aucune information sur le visiteur", () => {
     expect(r.indexOf('title="Nom b"')).toBeLessThan(r.indexOf('title="Nom z"'));
   });
 
-  it("garde les candidats sans mesure sur le thème dans le pied de carte, empilés à part et non cliquables", () => {
+  it("garde les candidats sans mesure sur le thème en fin de liste, en pile, non cliquables", () => {
     const r = html([candidat("a", [prop("a", [HAUSSE])]), candidat("b", [prop("b", [HAUSSE], "retraites")])]);
     const carte = r.slice(r.indexOf('id="theme-fiscalite"'), r.indexOf('id="theme-retraites"'));
-    const absents = carte.slice(carte.indexOf('class="portraits-absents"'));
+    expect(carte.indexOf('title="Nom a"')).toBeLessThan(carte.indexOf('class="pile-absents"'));
+    const absents = carte.slice(carte.indexOf('class="pile-absents"'));
     expect(absents).toContain('aria-label="Nom b : aucune mesure sur ce thème"');
     expect(absents).not.toContain("<button");
   });
@@ -181,12 +182,18 @@ describe("le détail s'ouvre depuis le portrait", () => {
     expect(r).not.toContain("Pourquoi cet indicateur");
   });
 
-  it("sans résumé : pas de message d'excuse, les mesures sont directement dépliées", () => {
+  it("sans résumé : pas de message d'excuse ni de menu, les mesures directement", () => {
     const r = html([candidat("a", [mesure])], {}, ouvert);
     expect(r).not.toContain("Aucun résumé");
-    expect(r).toMatch(/<details class="mesures" open="">/);
-    const avecResume = html([candidat("a", [mesure], [synthese])], {}, ouvert);
-    expect(avecResume).toMatch(/<details class="mesures">/);
+    expect(r).not.toContain("onglets-detail");
+    expect(r).toContain('class="liste-mesures"');
+  });
+
+  it("avec un texte : menu Résumé / Mesures, ouvert sur le résumé", () => {
+    const r = html([candidat("a", [mesure], [synthese])], {}, ouvert);
+    expect(r).toMatch(/<button type="button" aria-pressed="true">Résumé<\/button>/);
+    expect(r).toMatch(/aria-pressed="false">Mesures \((<!-- -->)?1(<!-- -->)?\)<\/button>/);
+    expect(r).not.toContain('class="liste-mesures"');
   });
 
   it("ne répète pas le titre d'une mesure quand son texte est identique, ni de mention à chaque mesure", () => {
@@ -343,13 +350,33 @@ describe("résumé en 40 à 60 mots d'un candidat sur un thème", () => {
     const legende = rendu.slice(rendu.indexOf('class="legende-resume"'));
     expect(legende).toContain("Mesure de a");
     expect(legende).toContain('href="https://a.fr/p"');
-    expect(rendu).toMatch(/<details class="mesures">/); // liste complète gardée, repliée
+    expect(rendu).toContain("Mesures ("); // liste complète gardée, dans l'autre vue du menu
   });
 
   it("n'affiche pas un résumé qui ne couvre plus exactement les mesures du thème", () => {
     const autre = { ...mesure, id: "a-fiscalite-002" };
     const rendu = html([{ ...candidat("a", [mesure, autre]), resumes: [resume] }], {}, { theme: "fiscalite", candidat: "a" });
     expect(rendu).not.toContain("mot-cle");
+  });
+});
+
+describe("masquer les candidats non concernés", () => {
+  // Effet réservé aux propriétaires : un locataire n'est pas concerné.
+  const proprietaires = { ...HAUSSE, cibles: [{ champ: "logement", valeurs: ["proprietaire"] }] };
+  const candidats = [candidat("a", [prop("a", [proprietaires])], [], "Gabriel Attal"), candidat("b", [prop("b", [BAISSE])], [], "Marine Le Pen")];
+
+  it("masque par défaut, dès qu'une information est donnée, les candidats « non concerné », et le dit", () => {
+    const r = html(candidats, PROFIL);
+    expect(r).toContain('role="switch" checked=""');
+    expect(portraits(r)).not.toContain("Gabriel Attal");
+    expect(portraits(r)).toContain("Marine Le Pen");
+    expect(r).toContain("1 non concerné masqué");
+  });
+
+  it("ne propose rien tant qu'aucune information n'est donnée", () => {
+    const r = html(candidats);
+    expect(r).not.toContain('role="switch"');
+    expect(portraits(r)).toContain("Gabriel Attal");
   });
 });
 

@@ -12,9 +12,10 @@ import type { OutilsAppel } from "./structuration";
 // par exactement un mot clé, et l'absence de mot évaluatif ; un second appel relit la fidélité et la neutralité.
 
 const ICI = dirname(fileURLToPath(import.meta.url));
-export const MOTS_MAX = 60;
+// Visé : 40 à 60 mots (moins avec peu de mesures) ; refusé au-delà de 65, une petite marge étant acceptée.
+export const MOTS_MAX = 65;
 export const MOTS_MAX_MOT_CLE = 12;
-export const MOTS_MAX_LIAISON = 3;
+export const MOTS_MAX_LIAISON = 4;
 const ESSAIS = 4;
 
 export const SCHEMA_RESUME = {
@@ -152,7 +153,15 @@ export interface ResultatResume {
   appels: number;
 }
 
-// Trois essais au plus : une réponse refusée (contrôles ou relecture) est renvoyée au modèle avec la raison du refus.
+// Longueur visée selon le nombre de mesures : un texte long pour une ou deux mesures pousse à découper une mesure en
+// plusieurs mots clés, ce qui est refusé.
+export function longueurVisee(nombreMesures: number): string {
+  if (nombreMesures <= 2) return "10 à 25 mots, un seul mot clé par mesure";
+  if (nombreMesures <= 5) return "20 à 45 mots, un mot clé par mesure ou presque";
+  return "40 à 60 mots";
+}
+
+// Quatre essais au plus : une réponse refusée (contrôles ou relecture) est renvoyée au modèle avec la raison du refus.
 export async function resumerTheme(candidat: string, theme: string, propositions: Proposition[], outils: OutilsAppel): Promise<ResultatResume> {
   const refs = references(propositions);
   const mesures = listeMesures(propositions, refs);
@@ -166,11 +175,14 @@ export async function resumerTheme(candidat: string, theme: string, propositions
     const exces = raison.match(/^texte trop long : (\d+) mots/);
     const conseil = raison.startsWith("mot clé trop long")
       ? " Raccourcis ce mot clé à 8 mots au plus, ou découpe-le en deux mots clés."
-      : exces
-        ? ` Retire au moins ${Number(exces[1]) - MOTS_MAX + 3} mots : regroupe davantage de mesures sous moins de mots clés, plus courts.`
+      : raison.startsWith("mesures rattachées à plusieurs")
+        ? " Chaque mesure doit apparaître derrière UN SEUL mot clé : un texte plus court vaut mieux qu'une mesure répétée."
+        : exces
+        ? ` Retire au moins ${Number(exces[1]) - 57} mots : regroupe davantage de mesures sous moins de mots clés, plus courts.`
         : "";
     const consigne = raison ? `\n\nTa réponse précédente a été refusée : ${raison}. Corrige ce défaut.${conseil}` : "";
-    const sortie = await outils.appeler(`Mesures (${refs.size}) :\n${mesures}${consigne}`, systeme, SCHEMA_RESUME);
+    const longueur = `\n\nLongueur visée pour ces ${refs.size} mesure(s) : ${longueurVisee(refs.size)} (jamais plus de 60).`;
+    const sortie = await outils.appeler(`Mesures (${refs.size}) :\n${mesures}${longueur}${consigne}`, systeme, SCHEMA_RESUME);
     cout += sortie.coutReferenceUsd;
     appels += 1;
     const controle = controlerResume(sortie.structure, refs);

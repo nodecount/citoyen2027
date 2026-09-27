@@ -34,7 +34,7 @@ describe("controlerResume", () => {
 
   it("refuse une phrase introductive ou une liaison qui fait phrase (style à l'infinitif)", () => {
     expect(controlerResume({ segments: [{ texte: "Le programme prévoit de ", mesures: [] }, { texte: "faire deux choses", mesures: ["m1", "m2"] }] }, refs).ok).toBe(false);
-    const longue = [{ texte: "Faire une chose", mesures: ["m1"] }, { texte: " et il souhaite aussi ", mesures: [] }, { texte: "faire l'autre", mesures: ["m2"] }];
+    const longue = [{ texte: "Faire une chose", mesures: ["m1"] }, { texte: " et il souhaite aussi pouvoir ", mesures: [] }, { texte: "faire l'autre", mesures: ["m2"] }];
     expect(controlerResume({ segments: longue }, refs).ok).toBe(false);
   });
 

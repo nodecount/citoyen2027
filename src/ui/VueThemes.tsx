@@ -112,6 +112,10 @@ function Resume({ resume, propositions }: { resume: ResumeTheme; propositions: P
 function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string; onFermer?: () => void }) {
   const { meta, projection, synthese, resume, sources, messagesSansBadge, messagesIncertitude, messagesEffetsExclus, propositions } = ligne;
   const niveau = projection?.niveau ?? null;
+  // Deux vues : le résumé (par défaut, s'il existe) et la liste des mesures. Sans résumé ni synthèse, les mesures seules.
+  const aUnTexte = Boolean(resume || synthese);
+  const [vue, setVue] = useState<"resume" | "mesures">("resume");
+  const vueActive = aUnTexte ? vue : "mesures";
 
   return (
     <div className="detail" id={id} role="region" aria-label={`Détail : ${meta.nom}`}>
@@ -123,7 +127,23 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
           </button>
         )}
       </div>
-      {resume ? (
+      {aUnTexte && (
+        <div className="onglets-detail" role="group" aria-label="Affichage">
+          <button type="button" aria-pressed={vueActive === "resume"} onClick={() => setVue("resume")}>
+            Résumé
+          </button>
+          <button type="button" aria-pressed={vueActive === "mesures"} onClick={() => setVue("mesures")}>
+            Mesures ({propositions.length})
+          </button>
+        </div>
+      )}
+      {vueActive === "mesures" ? (
+        <ul className="liste-mesures">
+          {propositions.map((proposition) => (
+            <MesureAnalysee key={proposition.id} proposition={proposition} profil={profil} />
+          ))}
+        </ul>
+      ) : resume ? (
         <Resume resume={resume} propositions={propositions} />
       ) : synthese ? (
         <>
@@ -184,15 +204,6 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
           </ul>
         </details>
       )}
-
-      <details className="mesures" open={!synthese && !resume}>
-        <summary>Mesures ({propositions.length})</summary>
-        <ul>
-          {propositions.map((proposition) => (
-            <MesureAnalysee key={proposition.id} proposition={proposition} profil={profil} />
-          ))}
-        </ul>
-      </details>
     </div>
   );
 }
@@ -248,6 +259,7 @@ function CarteTheme({
   questionsTheme,
   onReponse,
   ouvertInitial,
+  masquerNonConcernes,
 }: {
   card: CardTheme;
   profil: ProfilPartiel;
@@ -255,8 +267,12 @@ function CarteTheme({
   questionsTheme: ChampProfil[];
   onReponse: SurReponse;
   ouvertInitial?: string;
+  masquerNonConcernes: boolean;
 }) {
-  const { theme, lignes, absents, enCoursAnalyse } = card;
+  const { theme, absents, enCoursAnalyse } = card;
+  // Option du visiteur : les candidats dont les mesures ne changent rien à sa situation (« non concerné ») sont retirés.
+  const lignes = masquerNonConcernes ? card.lignes.filter((l) => l.projection?.niveau !== "non_concerne") : card.lignes;
+  const nombreMasques = card.lignes.length - lignes.length;
   const [ouvert, setOuvert] = useState<string | null>(ouvertInitial ?? null);
   const ligneOuverte = lignes.find((l) => l.meta.slug === ouvert) ?? null;
   const idDetail = `detail-${theme.id}`;
@@ -290,7 +306,11 @@ function CarteTheme({
             ) : (
               <>
                 {questionsTheme.length > 0 && <QuestionsDuTheme theme={theme.libelle} idTheme={theme.id} questions={questionsTheme} profil={profil} onReponse={onReponse} />}
-                <p className="hint carte-invite">Cliquez sur un candidat pour voir ses mesures.</p>
+                <p className="hint carte-invite">
+                  {lignes.length > 0
+                    ? "Cliquez sur un candidat pour voir ses mesures."
+                    : "Aucun candidat ne change votre situation sur ce thème, d'après vos réponses."}
+                </p>
               </>
             )}
           </>
@@ -299,7 +319,7 @@ function CarteTheme({
 
       {!enCoursAnalyse && (
         <footer className="carte-pied">
-          <ul className="portraits" aria-label={`Candidats ayant des mesures sur le thème ${theme.libelle}`}>
+          <ul className="portraits" aria-label={`Candidats, thème ${theme.libelle}`}>
             {lignes.map((ligne) => (
               <Portrait
                 key={ligne.meta.slug}
@@ -309,17 +329,25 @@ function CarteTheme({
                 onBasculer={() => setOuvert(ouvert === ligne.meta.slug ? null : ligne.meta.slug)}
               />
             ))}
+            {nombreMasques > 0 && (
+              <li className="portraits-masques">
+                {nombreMasques} non concerné{nombreMasques > 1 ? "s" : ""} masqué{nombreMasques > 1 ? "s" : ""}
+              </li>
+            )}
+            {/* Candidats sans mesure sur ce thème : nommés, jamais omis en silence — en fin de liste, en pile estompée,
+                non cliquables. */}
+            {absents.length > 0 && (
+              <li className="pile-absents">
+                <ul aria-label={`Candidats sans mesure sur le thème ${theme.libelle}`}>
+                  {absents.map((meta) => (
+                    <li key={meta.slug}>
+                      <Pastille slug={meta.slug} nom={meta.nom} className="pastille--absent" libelle={`${meta.nom} : aucune mesure sur ce thème`} />
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            )}
           </ul>
-          {/* Candidats sans mesure sur ce thème : nommés, jamais omis en silence — empilés à droite, non cliquables. */}
-          {absents.length > 0 && (
-            <ul className="portraits-absents" aria-label={`Candidats sans mesure sur le thème ${theme.libelle}`}>
-              {absents.map((meta) => (
-                <li key={meta.slug}>
-                  <Pastille slug={meta.slug} nom={meta.nom} className="pastille--absent" libelle={`${meta.nom} : aucune mesure sur ce thème`} />
-                </li>
-              ))}
-            </ul>
-          )}
         </footer>
       )}
     </article>
@@ -340,8 +368,17 @@ interface VueThemesProps {
 }
 
 export function VueThemes({ cards, profil, personnalise, questionnaire, questionsActives, onReponse, ouvertInitial }: VueThemesProps) {
+  const [masquer, setMasquer] = useState(true);
+  const masquerNonConcernes = personnalise && masquer;
   return (
     <section className="themes">
+      {personnalise && (
+        <label className="interrupteur">
+          <input type="checkbox" role="switch" checked={masquer} onChange={(e) => setMasquer(e.target.checked)} />
+          <span className="interrupteur-piste" aria-hidden="true" />
+          Masquer les candidats dont les mesures ne changent rien à ma situation
+        </label>
+      )}
       {personnalise && (
         <details className="legende">
           <summary>Comment lire les indicateurs</summary>
@@ -390,6 +427,7 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
             questionsTheme={questionsActives ? questionsDuTheme(questionnaire, card.theme.id) : []}
             onReponse={onReponse}
             ouvertInitial={ouvertInitial?.theme === card.theme.id ? ouvertInitial.candidat : undefined}
+            masquerNonConcernes={masquerNonConcernes}
           />
         ))}
       </div>

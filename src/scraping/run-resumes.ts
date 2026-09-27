@@ -4,10 +4,10 @@ import type { CandidatMeta, Proposition, ResumeTheme, Theme } from "../types";
 import { appelerClaudeCli, MODELE_CLI, PanneCli } from "./claude-cli";
 import { empreinteResume, resumerTheme } from "./resumes";
 
-// Usage : npm run scrape:resumes [-- --bases=a,b --candidats=x,y --themes=t --force --dry-run --concurrence=3 --plafond-ref=15 --limite=5]
+// Usage : npm run scrape:resumes [-- --bases=a,b --candidats=x,y --themes=t --force --refus --dry-run --concurrence=3 --plafond-ref=15 --limite=5]
 // Pour chaque candidat × thème : un texte de 40 à 60 mots résumant TOUTES ses mesures, mots clés rattachés à leurs
 // mesures (voir resumes.ts). Commande claude (abonnement, pas le crédit API). Rejouable : un résumé à jour, ou refusé
-// pour les mêmes mesures, n'est pas refait (sauf --force).
+// pour les mêmes mesures, n'est pas refait (sauf --force ; --refus retente seulement les refusés).
 
 const RACINE = process.cwd();
 
@@ -41,7 +41,7 @@ function ecrire(chemin: string, valeur: unknown): void {
 
 const affichable = (p: Proposition) => p.statut === "complet" || p.statut === "partiel";
 
-function planifier(force: boolean): Tache[] {
+function planifier(force: boolean, reessayerRefus: boolean): Tache[] {
   const filtreBases = valeur("bases")?.split(",");
   const filtreCandidats = valeur("candidats")?.split(",");
   const filtreThemes = valeur("themes")?.split(",");
@@ -64,7 +64,7 @@ function planifier(force: boolean): Tache[] {
         const duTheme = propositions.filter((p) => p.theme === theme.id);
         if (duTheme.length === 0) continue;
         const empreinte = empreinteResume(duTheme);
-        const fait = resumes.some((r) => r.theme === theme.id && r.empreinte === empreinte) || refus.some((r) => r.theme === theme.id && r.empreinte === empreinte);
+        const fait = resumes.some((r) => r.theme === theme.id && r.empreinte === empreinte) || (!reessayerRefus && refus.some((r) => r.theme === theme.id && r.empreinte === empreinte));
         if (force || !fait) taches.push({ base: base.name, slug, nom, theme, propositions: duTheme, empreinte });
       }
     }
@@ -81,7 +81,7 @@ function enFile(tache: () => void): Promise<void> {
 }
 
 async function main(): Promise<void> {
-  const taches = planifier(process.argv.includes("--force"));
+  const taches = planifier(process.argv.includes("--force"), process.argv.includes("--refus"));
   const limite = valeur("limite") !== undefined ? Number(valeur("limite")) : undefined;
   const aFaire = limite !== undefined ? taches.slice(0, limite) : taches;
   const plafond = Number(valeur("plafond-ref") ?? 15);
