@@ -1,0 +1,120 @@
+[
+  {
+    "theme": "finances-publiques",
+    "segments": [
+      {
+        "texte": "Organiser des États généraux de la fiscalité",
+        "mesures": [
+          "ruffin-finances-publiques-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "lutter contre l'évasion fiscale",
+        "mesures": [
+          "ruffin-finances-publiques-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "ruffin-finances-publiques-001",
+      "ruffin-finances-publiques-002"
+    ],
+    "empreinte": "e9e5369626e0321d",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "gouvernance-republique",
+    "segments": [
+      {
+        "texte": "Réduire le salaire du président à un niveau proche du SMIC",
+        "mesures": [
+          "ruffin-gouvernance-republique-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire le budget de l'Élysée",
+        "mesures": [
+          "ruffin-gouvernance-republique-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer les privilèges des dirigeants",
+        "mesures": [
+          "ruffin-gouvernance-republique-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "baisser les hauts salaires politiques",
+        "mesures": [
+          "ruffin-gouvernance-republique-004"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "limiter l'influence des grandes entreprises et de la finance sur l'État",
+        "mesures": [
+          "ruffin-gouvernance-republique-005"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "ruffin-gouvernance-republique-001",
+      "ruffin-gouvernance-republique-002",
+      "ruffin-gouvernance-republique-003",
+      "ruffin-gouvernance-republique-004",
+      "ruffin-gouvernance-republique-005"
+    ],
+    "empreinte": "7523a662900a1af5",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "social-solidarite",
+    "segments": [
+      {
+        "texte": "Créer un plan de rénovation des salles des fêtes",
+        "mesures": [
+          "ruffin-social-solidarite-001"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "ruffin-social-solidarite-001"
+    ],
+    "empreinte": "0f145a8fa267ff50",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  }
+]

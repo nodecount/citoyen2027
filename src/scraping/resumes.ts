@@ -176,7 +176,7 @@ export async function resumerTheme(candidat: string, theme: string, propositions
     const conseil = raison.startsWith("mot clé trop long")
       ? " Raccourcis ce mot clé à 8 mots au plus, ou découpe-le en deux mots clés."
       : raison.startsWith("mesures rattachées à plusieurs")
-        ? " Chaque mesure doit apparaître derrière UN SEUL mot clé : un texte plus court vaut mieux qu'une mesure répétée."
+        ? " Une mesure a probablement plusieurs volets (ex. baisser X et réduire Y) : mets-les dans UN SEUL mot clé qui les couvre tous deux (relie-les par « et » à l'intérieur du mot clé), ne crée jamais un second mot clé pour la même référence."
         : exces
         ? ` Retire au moins ${Number(exces[1]) - 57} mots : regroupe davantage de mesures sous moins de mots clés, plus courts.`
         : "";

@@ -1,0 +1,859 @@
+[
+  {
+    "theme": "defense",
+    "segments": [
+      {
+        "texte": "Augmenter les effectifs de réservistes et de volontaires du service militaire",
+        "mesures": [
+          "philippe-defense-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "massifier la production de drones tactiques",
+        "mesures": [
+          "philippe-defense-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "lancer un grand plan munitions",
+        "mesures": [
+          "philippe-defense-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer la flotte navale aux Outre-mer",
+        "mesures": [
+          "philippe-defense-004"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "lancer une nouvelle loi de programmation militaire de massification",
+        "mesures": [
+          "philippe-defense-005"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-defense-001",
+      "philippe-defense-002",
+      "philippe-defense-003",
+      "philippe-defense-004",
+      "philippe-defense-005"
+    ],
+    "empreinte": "4daff3babc4a6b25",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "education-jeunesse",
+    "segments": [
+      {
+        "texte": "Instituer un droit de savoir pour les parents",
+        "mesures": [
+          "philippe-education-jeunesse-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "déployer les certificats d'honorabilité dans le périscolaire",
+        "mesures": [
+          "philippe-education-jeunesse-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "revoir le recrutement, la formation et la rémunération des enseignants",
+        "mesures": [
+          "philippe-education-jeunesse-003",
+          "philippe-education-jeunesse-005",
+          "philippe-education-jeunesse-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "donner plus d'autonomie aux chefs d'établissement",
+        "mesures": [
+          "philippe-education-jeunesse-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer un service public universel de soutien scolaire",
+        "mesures": [
+          "philippe-education-jeunesse-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "adapter les rythmes scolaires aux besoins des enfants",
+        "mesures": [
+          "philippe-education-jeunesse-007"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "concentrer le primaire sur les savoirs fondamentaux",
+        "mesures": [
+          "philippe-education-jeunesse-008"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-education-jeunesse-001",
+      "philippe-education-jeunesse-002",
+      "philippe-education-jeunesse-003",
+      "philippe-education-jeunesse-004",
+      "philippe-education-jeunesse-005",
+      "philippe-education-jeunesse-006",
+      "philippe-education-jeunesse-007",
+      "philippe-education-jeunesse-008",
+      "philippe-education-jeunesse-009"
+    ],
+    "empreinte": "c4713dc914463388",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "environnement",
+    "segments": [
+      {
+        "texte": "Ouvrir un accès préférentiel à l'énergie décarbonée",
+        "mesures": [
+          "philippe-envi-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "accélérer la décarbonation et la capture de carbone",
+        "mesures": [
+          "philippe-envi-003",
+          "philippe-envi-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "climatiser les infrastructures fragiles et planter des arbres en ville",
+        "mesures": [
+          "philippe-envi-002",
+          "philippe-envi-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "rendre les rivières baignables et rénover les piscines",
+        "mesures": [
+          "philippe-envi-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer un opérateur unique d'adaptation des territoires",
+        "mesures": [
+          "philippe-envi-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "simplifier les normes agricoles et moderniser les réseaux",
+        "mesures": [
+          "philippe-envi-008",
+          "philippe-envi-009"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "développer la souveraineté alimentaire des territoires, inscrite dans la Charte de l'environnement",
+        "mesures": [
+          "philippe-envi-010",
+          "philippe-envi-011"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-envi-001",
+      "philippe-envi-002",
+      "philippe-envi-003",
+      "philippe-envi-004",
+      "philippe-envi-005",
+      "philippe-envi-006",
+      "philippe-envi-007",
+      "philippe-envi-008",
+      "philippe-envi-009",
+      "philippe-envi-010",
+      "philippe-envi-011"
+    ],
+    "empreinte": "3843fc674e99c282",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "europe-international",
+    "segments": [
+      {
+        "texte": "Lier sécurité commerciale, étrangère et militaire",
+        "mesures": [
+          "philippe-europe-international-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "protéger le marché européen face à la concurrence chinoise",
+        "mesures": [
+          "philippe-europe-international-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "achever le marché unique européen",
+        "mesures": [
+          "philippe-europe-international-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "construire une union des marchés de capitaux",
+        "mesures": [
+          "philippe-europe-international-004"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "lancer un Buy European Tech Act avec achats technologiques groupés",
+        "mesures": [
+          "philippe-europe-international-005"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-europe-international-001",
+      "philippe-europe-international-002",
+      "philippe-europe-international-003",
+      "philippe-europe-international-004",
+      "philippe-europe-international-005"
+    ],
+    "empreinte": "5b912ced33de3982",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "finances-publiques",
+    "segments": [
+      {
+        "texte": "Mettre en place un pacte fiscal pour les entreprises",
+        "mesures": [
+          "philippe-finances-publiques-001",
+          "philippe-finances-publiques-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "inscrire une règle d'or budgétaire dans la Constitution",
+        "mesures": [
+          "philippe-finances-publiques-002",
+          "philippe-finances-publiques-004",
+          "philippe-finances-publiques-005"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "stabiliser les dépenses de santé",
+        "mesures": [
+          "philippe-finances-publiques-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "défendre le pacte Dutreil",
+        "mesures": [
+          "philippe-finances-publiques-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "faciliter la transmission du patrimoine",
+        "mesures": [
+          "philippe-finances-publiques-007",
+          "philippe-finances-publiques-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "ne pas créer de nouvel impôt",
+        "mesures": [
+          "philippe-finances-publiques-010"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "accorder une part fiscale dès le deuxième enfant",
+        "mesures": [
+          "philippe-finances-publiques-011"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-finances-publiques-001",
+      "philippe-finances-publiques-002",
+      "philippe-finances-publiques-003",
+      "philippe-finances-publiques-004",
+      "philippe-finances-publiques-005",
+      "philippe-finances-publiques-006",
+      "philippe-finances-publiques-007",
+      "philippe-finances-publiques-008",
+      "philippe-finances-publiques-009",
+      "philippe-finances-publiques-010",
+      "philippe-finances-publiques-011"
+    ],
+    "empreinte": "c316b62a1a719e3b",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "gouvernance-republique",
+    "segments": [
+      {
+        "texte": "Encadrer le droit d'amendement",
+        "mesures": [
+          "philippe-gouvernance-republique-001",
+          "philippe-gouvernance-republique-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "limiter la loi au domaine législatif",
+        "mesures": [
+          "philippe-gouvernance-republique-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer une présomption de légalité",
+        "mesures": [
+          "philippe-gouvernance-republique-004"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "abroger massivement les normes obsolètes",
+        "mesures": [
+          "philippe-gouvernance-republique-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "encadrer les algorithmes des plateformes",
+        "mesures": [
+          "philippe-gouvernance-republique-006",
+          "philippe-gouvernance-republique-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "instaurer une majorité numérique",
+        "mesures": [
+          "philippe-gouvernance-republique-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "développer une IA souveraine européenne",
+        "mesures": [
+          "philippe-gouvernance-republique-009",
+          "philippe-gouvernance-republique-010"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "mobiliser l'épargne pour la tech",
+        "mesures": [
+          "philippe-gouvernance-republique-011"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "adapter la formation à l'IA",
+        "mesures": [
+          "philippe-gouvernance-republique-012",
+          "philippe-gouvernance-republique-013"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-gouvernance-republique-001",
+      "philippe-gouvernance-republique-002",
+      "philippe-gouvernance-republique-003",
+      "philippe-gouvernance-republique-004",
+      "philippe-gouvernance-republique-005",
+      "philippe-gouvernance-republique-006",
+      "philippe-gouvernance-republique-007",
+      "philippe-gouvernance-republique-008",
+      "philippe-gouvernance-republique-009",
+      "philippe-gouvernance-republique-010",
+      "philippe-gouvernance-republique-011",
+      "philippe-gouvernance-republique-012",
+      "philippe-gouvernance-republique-013"
+    ],
+    "empreinte": "03880d0c4386f7cc",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "interieur-justice",
+    "segments": [
+      {
+        "texte": "Encadrer l'immigration par des quotas et des accords bilatéraux",
+        "mesures": [
+          "philippe-interieur-justice-001",
+          "philippe-interieur-justice-002",
+          "philippe-interieur-justice-003",
+          "philippe-interieur-justice-005",
+          "philippe-interieur-justice-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "expulser les étrangers délinquants",
+        "mesures": [
+          "philippe-interieur-justice-004"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer l'intégration par la langue et le travail",
+        "mesures": [
+          "philippe-interieur-justice-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "durcir les peines et leur exécution",
+        "mesures": [
+          "philippe-interieur-justice-008",
+          "philippe-interieur-justice-009",
+          "philippe-interieur-justice-010",
+          "philippe-interieur-justice-019"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer la justice et donner un pouvoir de sanction aux maires",
+        "mesures": [
+          "philippe-interieur-justice-011",
+          "philippe-interieur-justice-012",
+          "philippe-interieur-justice-013",
+          "philippe-interieur-justice-014"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "protéger les mineurs victimes",
+        "mesures": [
+          "philippe-interieur-justice-015",
+          "philippe-interieur-justice-016"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "mener une lutte d'exception contre le narcotrafic",
+        "mesures": [
+          "philippe-interieur-justice-017",
+          "philippe-interieur-justice-018",
+          "philippe-interieur-justice-020",
+          "philippe-interieur-justice-021",
+          "philippe-interieur-justice-022",
+          "philippe-interieur-justice-026"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "lutter contre la corruption des fonctionnaires",
+        "mesures": [
+          "philippe-interieur-justice-023",
+          "philippe-interieur-justice-024"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "réprimer les consommateurs et le proxénétisme en ligne",
+        "mesures": [
+          "philippe-interieur-justice-025",
+          "philippe-interieur-justice-027"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-interieur-justice-001",
+      "philippe-interieur-justice-002",
+      "philippe-interieur-justice-003",
+      "philippe-interieur-justice-004",
+      "philippe-interieur-justice-005",
+      "philippe-interieur-justice-006",
+      "philippe-interieur-justice-007",
+      "philippe-interieur-justice-008",
+      "philippe-interieur-justice-009",
+      "philippe-interieur-justice-010",
+      "philippe-interieur-justice-011",
+      "philippe-interieur-justice-012",
+      "philippe-interieur-justice-013",
+      "philippe-interieur-justice-014",
+      "philippe-interieur-justice-015",
+      "philippe-interieur-justice-016",
+      "philippe-interieur-justice-017",
+      "philippe-interieur-justice-018",
+      "philippe-interieur-justice-019",
+      "philippe-interieur-justice-020",
+      "philippe-interieur-justice-021",
+      "philippe-interieur-justice-022",
+      "philippe-interieur-justice-023",
+      "philippe-interieur-justice-024",
+      "philippe-interieur-justice-025",
+      "philippe-interieur-justice-026",
+      "philippe-interieur-justice-027"
+    ],
+    "empreinte": "11f4528e50e60c2c",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "reformes-etat",
+    "segments": [
+      {
+        "texte": "Fusionner des agences en une DATAR 2.0",
+        "mesures": [
+          "philippe-reformes-etat-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "ne pas produire de nouvelle norme",
+        "mesures": [
+          "philippe-reformes-etat-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "regrouper ou privatiser les agences et opérateurs de l'Etat",
+        "mesures": [
+          "philippe-reformes-etat-003"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "simplifier les procédures",
+        "mesures": [
+          "philippe-reformes-etat-004"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-reformes-etat-001",
+      "philippe-reformes-etat-002",
+      "philippe-reformes-etat-003",
+      "philippe-reformes-etat-004"
+    ],
+    "empreinte": "22995b88b0f1608b",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "retraites-travail",
+    "segments": [
+      {
+        "texte": "Rééquilibrer le financement du modèle social",
+        "mesures": [
+          "philippe-retraites-travail-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "créer un temps partiel parental mieux rémunéré",
+        "mesures": [
+          "philippe-retraites-travail-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "introduire une part de capitalisation dans les pensions",
+        "mesures": [
+          "philippe-retraites-travail-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "organiser un référendum sur les retraites",
+        "mesures": [
+          "philippe-retraites-travail-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "relever l'âge légal de départ selon la pénibilité des métiers",
+        "mesures": [
+          "philippe-retraites-travail-005"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "confier la gestion du régime aux partenaires sociaux",
+        "mesures": [
+          "philippe-retraites-travail-006"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-retraites-travail-001",
+      "philippe-retraites-travail-002",
+      "philippe-retraites-travail-003",
+      "philippe-retraites-travail-004",
+      "philippe-retraites-travail-005",
+      "philippe-retraites-travail-006"
+    ],
+    "empreinte": "aaa893dc333b177d",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "social-solidarite",
+    "segments": [
+      {
+        "texte": "Créer une aide financière unique et universelle pour les familles",
+        "mesures": [
+          "philippe-social-solidarite-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "permettre un prêt à taux zéro à chaque naissance",
+        "mesures": [
+          "philippe-social-solidarite-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "stabiliser les dépenses de santé en misant sur la prévention",
+        "mesures": [
+          "philippe-social-solidarite-002"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "mettre en place un plan fret-ferroviaire pour limiter la circulation des camions",
+        "mesures": [
+          "philippe-social-solidarite-004"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-social-solidarite-001",
+      "philippe-social-solidarite-002",
+      "philippe-social-solidarite-003",
+      "philippe-social-solidarite-004"
+    ],
+    "empreinte": "1072a1554c1fdc31",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  }
+]

@@ -1,0 +1,258 @@
+[
+  {
+    "theme": "aides-etat",
+    "segments": [
+      {
+        "texte": "Supprimer les aides sociales des étrangers délinquants expulsés",
+        "mesures": [
+          "philippe-aides-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "remplacer les aides aux familles par une aide unique",
+        "mesures": [
+          "philippe-aides-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-aides-001",
+      "philippe-aides-002"
+    ],
+    "empreinte": "6e27f3e0e681d502",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "environnement",
+    "segments": [
+      {
+        "texte": "Relancer le nucléaire et décarboner l'industrie",
+        "mesures": [
+          "philippe-envi-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "adapter les villes au réchauffement climatique",
+        "mesures": [
+          "philippe-envi-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-envi-001",
+      "philippe-envi-002"
+    ],
+    "empreinte": "2b5ba1470b7eb58f",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "immigration",
+    "segments": [
+      {
+        "texte": "Reprendre le contrôle des flux migratoires avec l'Algérie",
+        "mesures": [
+          "philippe-immi-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer l'asile en durcissant les règles migratoires et d'expulsion",
+        "mesures": [
+          "philippe-immi-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-immi-001",
+      "philippe-immi-002"
+    ],
+    "empreinte": "b3ba61dd491a6673",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "libertes-fondamentales",
+    "segments": [
+      {
+        "texte": "Refuser une loi sanctionnant le port du voile dans l'espace public",
+        "mesures": [
+          "philippe-lib-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "défendre les institutions de la Vème République et un débat démocratique respectueux",
+        "mesures": [
+          "philippe-lib-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-lib-001",
+      "philippe-lib-002"
+    ],
+    "empreinte": "69e0a0698e0cb941",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "pouvoir-achat",
+    "segments": [
+      {
+        "texte": "Rééquilibrer le financement du modèle social",
+        "mesures": [
+          "philippe-pa-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "créer un prêt à taux zéro pour chaque naissance",
+        "mesures": [
+          "philippe-pa-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-pa-001",
+      "philippe-pa-002"
+    ],
+    "empreinte": "756db498c07b4067",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "sante",
+    "segments": [
+      {
+        "texte": "Stabiliser les dépenses de santé grâce à la prévention et aux technologies",
+        "mesures": [
+          "philippe-sante-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "privilégier l'auto-régulation de l'installation des médecins par les professionnels",
+        "mesures": [
+          "philippe-sante-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-sante-001",
+      "philippe-sante-002"
+    ],
+    "empreinte": "7946151c486efac2",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "securite",
+    "segments": [
+      {
+        "texte": "Réformer l'exécution des peines",
+        "mesures": [
+          "philippe-secu-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "lutter contre le narcotrafic",
+        "mesures": [
+          "philippe-secu-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-secu-001",
+      "philippe-secu-002"
+    ],
+    "empreinte": "fdbf56d8fc0af672",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "travail",
+    "segments": [
+      {
+        "texte": "Réformer les retraites en allongeant l'activité et créant un pilier de capitalisation",
+        "mesures": [
+          "philippe-trav-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire la durée d'indemnisation chômage et encadrer les arrêts de travail",
+        "mesures": [
+          "philippe-trav-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-trav-001",
+      "philippe-trav-002"
+    ],
+    "empreinte": "0a83cb33eb8a5d30",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  }
+]

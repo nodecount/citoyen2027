@@ -1,0 +1,387 @@
+[
+  {
+    "theme": "aides-etat",
+    "segments": [
+      {
+        "texte": "Augmenter et automatiser l'allocation aux adultes handicapés, plafonner les frais bancaires",
+        "mesures": [
+          "melenchon-aides-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "s'opposer à la conditionnalité du RSA à 15 heures d'activité",
+        "mesures": [
+          "melenchon-aides-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-aides-001",
+      "melenchon-aides-002"
+    ],
+    "empreinte": "415010115cc52f2f",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "education",
+    "segments": [
+      {
+        "texte": "Rénover les écoles et étendre la gratuité scolaire",
+        "mesures": [
+          "melenchon-educ-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "recruter et revaloriser les enseignants et AESH",
+        "mesures": [
+          "melenchon-educ-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-educ-001",
+      "melenchon-educ-002"
+    ],
+    "empreinte": "37e1ef81006c4394",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "environnement",
+    "segments": [
+      {
+        "texte": "Renationaliser l'électricité et le gaz",
+        "mesures": [
+          "melenchon-envi-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "renationaliser les autoroutes en développant le rail",
+        "mesures": [
+          "melenchon-envi-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-envi-001",
+      "melenchon-envi-002"
+    ],
+    "empreinte": "d01cdc4d4608fbd2",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "fiscalite",
+    "segments": [
+      {
+        "texte": "Rendre l'impôt sur le revenu plus progressif",
+        "mesures": [
+          "melenchon-fisc-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "rétablir un ISF renforcé avec volet climatique",
+        "mesures": [
+          "melenchon-fisc-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-fisc-001",
+      "melenchon-fisc-002"
+    ],
+    "empreinte": "760246d851265e16",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "immigration",
+    "segments": [
+      {
+        "texte": "Défendre le droit du sol pour les enfants nés en France",
+        "mesures": [
+          "melenchon-immi-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "régulariser travailleurs, parents d'enfants scolarisés et sans-papiers",
+        "mesures": [
+          "melenchon-immi-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-immi-001",
+      "melenchon-immi-002"
+    ],
+    "empreinte": "315d6d55e7001a93",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "libertes-fondamentales",
+    "segments": [
+      {
+        "texte": "Réunir une Assemblée constituante pour une VIe République",
+        "mesures": [
+          "melenchon-lib-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer le contrôle citoyen des médias et protéger les journalistes",
+        "mesures": [
+          "melenchon-lib-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "abroger les dispositions liberticides de l'état d'urgence permanent",
+        "mesures": [
+          "melenchon-lib-003"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "reconnaître le vote blanc, instaurer un référendum révocatoire et un parrainage citoyen",
+        "mesures": [
+          "melenchon-lib-004"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-lib-001",
+      "melenchon-lib-002",
+      "melenchon-lib-003",
+      "melenchon-lib-004"
+    ],
+    "empreinte": "52d81dba7d9dc741",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "logement",
+    "segments": [
+      {
+        "texte": "Généraliser l'encadrement des loyers",
+        "mesures": [
+          "melenchon-logt-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "interdire les expulsions sans relogement",
+        "mesures": [
+          "melenchon-logt-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-logt-001",
+      "melenchon-logt-002"
+    ],
+    "empreinte": "274b9606cfe13550",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "pouvoir-achat",
+    "segments": [
+      {
+        "texte": "Revaloriser le SMIC net par décret",
+        "mesures": [
+          "melenchon-pa-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "bloquer les prix de première nécessité",
+        "mesures": [
+          "melenchon-pa-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-pa-001",
+      "melenchon-pa-002"
+    ],
+    "empreinte": "5ae6b464f65abaa6",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "sante",
+    "segments": [
+      {
+        "texte": "Créer une Sécurité sociale intégrale",
+        "mesures": [
+          "melenchon-sante-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "imposer une restauration collective saine",
+        "mesures": [
+          "melenchon-sante-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-sante-001",
+      "melenchon-sante-002"
+    ],
+    "empreinte": "7be59bc8b6380bcf",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "securite",
+    "segments": [
+      {
+        "texte": "Rétablir une police de proximité et dissoudre la BRAV-M",
+        "mesures": [
+          "melenchon-secu-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "remplacer l'IGPN et l'IGGN par une autorité de contrôle indépendante",
+        "mesures": [
+          "melenchon-secu-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-secu-001",
+      "melenchon-secu-002"
+    ],
+    "empreinte": "c2f1ab532149a568",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "travail",
+    "segments": [
+      {
+        "texte": "Rétablir la retraite à 60 ans",
+        "mesures": [
+          "melenchon-trav-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire le temps de travail",
+        "mesures": [
+          "melenchon-trav-002"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "rétablir une assurance-chômage protectrice",
+        "mesures": [
+          "melenchon-trav-003"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-trav-001",
+      "melenchon-trav-002",
+      "melenchon-trav-003"
+    ],
+    "empreinte": "451a7588c049924d",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  }
+]

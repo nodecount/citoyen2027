@@ -3,17 +3,13 @@
     "theme": "environnement",
     "segments": [
       {
-        "texte": "Le programme prévoit d'",
-        "mesures": []
-      },
-      {
-        "texte": "investir dans l'électrification pour sortir des hydrocarbures",
+        "texte": "Investir dans l'électrification pour réduire l'addiction aux hydrocarbures",
         "mesures": [
           "maurel-envi-001"
         ]
       },
       {
-        "texte": ", de ",
+        "texte": ", ",
         "mesures": []
       },
       {
@@ -23,7 +19,7 @@
         ]
       },
       {
-        "texte": ", de ",
+        "texte": ", ",
         "mesures": []
       },
       {
@@ -33,11 +29,11 @@
         ]
       },
       {
-        "texte": " et de ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "développer le leasing social pour les voitures électriques",
+        "texte": "développer le leasing social pour l'accès aux voitures électriques",
         "mesures": [
           "maurel-envi-004"
         ]
@@ -53,7 +49,39 @@
       "maurel-envi-003",
       "maurel-envi-004"
     ],
-    "empreinte": "42621c8e81d2f334",
+    "empreinte": "a3a908f134431631",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "finances-publiques",
+    "segments": [
+      {
+        "texte": "Lancer un emprunt national citoyen pour financer la décarbonation",
+        "mesures": [
+          "maurel-finances-publiques-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "rééquilibrer la fiscalité pour augmenter les recettes",
+        "mesures": [
+          "maurel-finances-publiques-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "maurel-finances-publiques-001",
+      "maurel-finances-publiques-002"
+    ],
+    "empreinte": "549630640d6987c6",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   }

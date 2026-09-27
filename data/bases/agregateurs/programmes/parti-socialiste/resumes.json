@@ -1,23 +1,273 @@
 [
   {
-    "theme": "interieur-justice",
+    "theme": "education-jeunesse",
     "segments": [
       {
-        "texte": "Le programme prévoit de ",
+        "texte": "Réduire le nombre d'élèves par classe",
+        "mesures": [
+          "parti-socialiste-education-jeunesse-001"
+        ]
+      },
+      {
+        "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "créer un secrétariat d'État à l'immigration et l'intégration",
+        "texte": "revaloriser le salaire des enseignants",
+        "mesures": [
+          "parti-socialiste-education-jeunesse-002"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "remettre de la mixité sociale dans les classes",
+        "mesures": [
+          "parti-socialiste-education-jeunesse-003"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "parti-socialiste-education-jeunesse-001",
+      "parti-socialiste-education-jeunesse-002",
+      "parti-socialiste-education-jeunesse-003"
+    ],
+    "empreinte": "522a2d15b36d0af1",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "environnement",
+    "segments": [
+      {
+        "texte": "Aider à équiper les logements en panneaux solaires et les rénover",
+        "mesures": [
+          "parti-socialiste-envi-001",
+          "parti-socialiste-envi-002",
+          "parti-socialiste-envi-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "planifier la sortie des énergies fossiles",
+        "mesures": [
+          "parti-socialiste-envi-004"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "placer l'électricité et l'eau sous gestion publique",
+        "mesures": [
+          "parti-socialiste-envi-003",
+          "parti-socialiste-envi-005",
+          "parti-socialiste-envi-018"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "développer les véhicules électriques et les transports alternatifs",
+        "mesures": [
+          "parti-socialiste-envi-006",
+          "parti-socialiste-envi-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire la pollution plastique, chimique et agricole",
+        "mesures": [
+          "parti-socialiste-envi-009",
+          "parti-socialiste-envi-010",
+          "parti-socialiste-envi-011",
+          "parti-socialiste-envi-012",
+          "parti-socialiste-envi-013",
+          "parti-socialiste-envi-014",
+          "parti-socialiste-envi-015"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer des fonds pour la dépollution et les risques climatiques",
+        "mesures": [
+          "parti-socialiste-envi-016",
+          "parti-socialiste-envi-017"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "prévenir les risques majeurs",
+        "mesures": [
+          "parti-socialiste-envi-019"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "parti-socialiste-envi-001",
+      "parti-socialiste-envi-002",
+      "parti-socialiste-envi-003",
+      "parti-socialiste-envi-004",
+      "parti-socialiste-envi-005",
+      "parti-socialiste-envi-006",
+      "parti-socialiste-envi-007",
+      "parti-socialiste-envi-008",
+      "parti-socialiste-envi-009",
+      "parti-socialiste-envi-010",
+      "parti-socialiste-envi-011",
+      "parti-socialiste-envi-012",
+      "parti-socialiste-envi-013",
+      "parti-socialiste-envi-014",
+      "parti-socialiste-envi-015",
+      "parti-socialiste-envi-016",
+      "parti-socialiste-envi-017",
+      "parti-socialiste-envi-018",
+      "parti-socialiste-envi-019"
+    ],
+    "empreinte": "95e435338879a2d0",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "finances-publiques",
+    "segments": [
+      {
+        "texte": "Réorienter les aides publiques inefficaces",
+        "mesures": [
+          "parti-socialiste-finances-publiques-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "augmenter la taxe sur les services numériques",
+        "mesures": [
+          "parti-socialiste-finances-publiques-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer des taxes sur les multipropriétaires et les locaux commerciaux vacants",
+        "mesures": [
+          "parti-socialiste-finances-publiques-003",
+          "parti-socialiste-finances-publiques-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "taxer davantage le capital et les hauts salaires",
+        "mesures": [
+          "parti-socialiste-finances-publiques-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "baisser les charges des artisans et commerçants et encadrer le e-commerce",
+        "mesures": [
+          "parti-socialiste-finances-publiques-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "alléger la fiscalité sur les produits alimentaires de base",
+        "mesures": [
+          "parti-socialiste-finances-publiques-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "instaurer un impôt plancher sur les très hauts patrimoines",
+        "mesures": [
+          "parti-socialiste-finances-publiques-008"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "taxer les grandes successions",
+        "mesures": [
+          "parti-socialiste-finances-publiques-009"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "parti-socialiste-finances-publiques-001",
+      "parti-socialiste-finances-publiques-002",
+      "parti-socialiste-finances-publiques-003",
+      "parti-socialiste-finances-publiques-004",
+      "parti-socialiste-finances-publiques-005",
+      "parti-socialiste-finances-publiques-006",
+      "parti-socialiste-finances-publiques-007",
+      "parti-socialiste-finances-publiques-008",
+      "parti-socialiste-finances-publiques-009"
+    ],
+    "empreinte": "2cf62966997d9d3b",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "interieur-justice",
+    "segments": [
+      {
+        "texte": "Créer un secrétariat d'État chargé de l'immigration et de l'intégration",
         "mesures": [
           "parti-socialiste-interieur-justice-001"
         ]
       },
       {
-        "texte": " et de ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "renouveler automatiquement les titres de séjour de longue durée",
+        "texte": "permettre le renouvellement automatique des titres de séjour de longue durée",
         "mesures": [
           "parti-socialiste-interieur-justice-002"
         ]
@@ -31,7 +281,308 @@
       "parti-socialiste-interieur-justice-001",
       "parti-socialiste-interieur-justice-002"
     ],
-    "empreinte": "658bd4ad893c743a",
+    "empreinte": "a0ed59ed7c1e8553",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "reformes-etat",
+    "segments": [
+      {
+        "texte": "Harmoniser les règles de la fonction publique",
+        "mesures": [
+          "parti-socialiste-reformes-etat-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire le temps de travail pénible",
+        "mesures": [
+          "parti-socialiste-reformes-etat-002"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "démocratiser les élites administratives",
+        "mesures": [
+          "parti-socialiste-reformes-etat-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "délocaliser des sièges ministériels et renforcer les services déconcentrés",
+        "mesures": [
+          "parti-socialiste-reformes-etat-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer une contribution territoriale universelle",
+        "mesures": [
+          "parti-socialiste-reformes-etat-005"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer les doublons entre État et collectivités",
+        "mesures": [
+          "parti-socialiste-reformes-etat-006"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "parti-socialiste-reformes-etat-001",
+      "parti-socialiste-reformes-etat-002",
+      "parti-socialiste-reformes-etat-003",
+      "parti-socialiste-reformes-etat-004",
+      "parti-socialiste-reformes-etat-005",
+      "parti-socialiste-reformes-etat-006"
+    ],
+    "empreinte": "42b1912b689b8904",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "retraites-travail",
+    "segments": [
+      {
+        "texte": "Instaurer un moratoire sur les grands centres logistiques",
+        "mesures": [
+          "parti-socialiste-retraites-travail-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "programmer la réindustrialisation et la souveraineté avec régions et partenaires sociaux",
+        "mesures": [
+          "parti-socialiste-retraites-travail-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "négocier un assouplissement des aides d'État européennes",
+        "mesures": [
+          "parti-socialiste-retraites-travail-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "permettre la mise sous tutelle d'urgence de sites en difficulté",
+        "mesures": [
+          "parti-socialiste-retraites-travail-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "mener des coalitions industrielles européennes",
+        "mesures": [
+          "parti-socialiste-retraites-travail-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer un « Airbus du médicament »",
+        "mesures": [
+          "parti-socialiste-retraites-travail-006"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "imposer des objectifs de sécurité d'approvisionnement",
+        "mesures": [
+          "parti-socialiste-retraites-travail-007"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "parti-socialiste-retraites-travail-001",
+      "parti-socialiste-retraites-travail-002",
+      "parti-socialiste-retraites-travail-003",
+      "parti-socialiste-retraites-travail-004",
+      "parti-socialiste-retraites-travail-005",
+      "parti-socialiste-retraites-travail-006",
+      "parti-socialiste-retraites-travail-007"
+    ],
+    "empreinte": "6a46c6aafdacaf08",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "social-solidarite",
+    "segments": [
+      {
+        "texte": "Renforcer la prévention alimentaire et sanitaire",
+        "mesures": [
+          "parti-socialiste-social-solidarite-002",
+          "parti-socialiste-social-solidarite-003",
+          "parti-socialiste-social-solidarite-004",
+          "parti-socialiste-social-solidarite-005",
+          "parti-socialiste-social-solidarite-007",
+          "parti-socialiste-social-solidarite-008",
+          "parti-socialiste-social-solidarite-009",
+          "parti-socialiste-social-solidarite-010",
+          "parti-socialiste-social-solidarite-020",
+          "parti-socialiste-social-solidarite-021",
+          "parti-socialiste-social-solidarite-022"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "développer l'usage des données de santé",
+        "mesures": [
+          "parti-socialiste-social-solidarite-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réorganiser le financement et l'accès aux soins",
+        "mesures": [
+          "parti-socialiste-social-solidarite-001",
+          "parti-socialiste-social-solidarite-011",
+          "parti-socialiste-social-solidarite-012",
+          "parti-socialiste-social-solidarite-013",
+          "parti-socialiste-social-solidarite-014",
+          "parti-socialiste-social-solidarite-015",
+          "parti-socialiste-social-solidarite-016",
+          "parti-socialiste-social-solidarite-017"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer la santé mentale",
+        "mesures": [
+          "parti-socialiste-social-solidarite-018",
+          "parti-socialiste-social-solidarite-019"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "produire des logements",
+        "mesures": [
+          "parti-socialiste-social-solidarite-023",
+          "parti-socialiste-social-solidarite-024"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "prioriser le logement permanent",
+        "mesures": [
+          "parti-socialiste-social-solidarite-025"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "stopper la baisse des aides au logement",
+        "mesures": [
+          "parti-socialiste-social-solidarite-026"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "faciliter l'accès à la propriété",
+        "mesures": [
+          "parti-socialiste-social-solidarite-027",
+          "parti-socialiste-social-solidarite-028"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "parti-socialiste-social-solidarite-001",
+      "parti-socialiste-social-solidarite-002",
+      "parti-socialiste-social-solidarite-003",
+      "parti-socialiste-social-solidarite-004",
+      "parti-socialiste-social-solidarite-005",
+      "parti-socialiste-social-solidarite-006",
+      "parti-socialiste-social-solidarite-007",
+      "parti-socialiste-social-solidarite-008",
+      "parti-socialiste-social-solidarite-009",
+      "parti-socialiste-social-solidarite-010",
+      "parti-socialiste-social-solidarite-011",
+      "parti-socialiste-social-solidarite-012",
+      "parti-socialiste-social-solidarite-013",
+      "parti-socialiste-social-solidarite-014",
+      "parti-socialiste-social-solidarite-015",
+      "parti-socialiste-social-solidarite-016",
+      "parti-socialiste-social-solidarite-017",
+      "parti-socialiste-social-solidarite-018",
+      "parti-socialiste-social-solidarite-019",
+      "parti-socialiste-social-solidarite-020",
+      "parti-socialiste-social-solidarite-021",
+      "parti-socialiste-social-solidarite-022",
+      "parti-socialiste-social-solidarite-023",
+      "parti-socialiste-social-solidarite-024",
+      "parti-socialiste-social-solidarite-025",
+      "parti-socialiste-social-solidarite-026",
+      "parti-socialiste-social-solidarite-027",
+      "parti-socialiste-social-solidarite-028"
+    ],
+    "empreinte": "dcf0e0a61bddd6f1",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   }

@@ -1,0 +1,619 @@
+[
+  {
+    "theme": "aides-etat",
+    "segments": [
+      {
+        "texte": "Créer un Revenu d'incitation à l'activité",
+        "mesures": [
+          "retailleau-aides-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer le temps partiel minimal",
+        "mesures": [
+          "retailleau-aides-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "doubler le Revenu familial pour le troisième enfant",
+        "mesures": [
+          "retailleau-aides-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "conditionner les aides familiales des étrangers à cinq ans de résidence",
+        "mesures": [
+          "retailleau-aides-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "permettre la suspension judiciaire du Revenu familial",
+        "mesures": [
+          "retailleau-aides-005"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer les APL de certains étudiants",
+        "mesures": [
+          "retailleau-aides-006"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "retailleau-aides-001",
+      "retailleau-aides-002",
+      "retailleau-aides-003",
+      "retailleau-aides-004",
+      "retailleau-aides-005",
+      "retailleau-aides-006"
+    ],
+    "empreinte": "667618389fb43919",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "education",
+    "segments": [
+      {
+        "texte": "Transférer les lycées professionnels et l'orientation aux régions et entreprises",
+        "mesures": [
+          "retailleau-educ-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "partager la gouvernance de France Compétences avec les entreprises",
+        "mesures": [
+          "retailleau-educ-002"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "recentrer le financement de la recherche publique vers des débouchés industriels",
+        "mesures": [
+          "retailleau-educ-003"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "retailleau-educ-001",
+      "retailleau-educ-002",
+      "retailleau-educ-003"
+    ],
+    "empreinte": "1eb94140e5d17bfd",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "environnement",
+    "segments": [
+      {
+        "texte": "Rétablir un contrat nucléaire de long terme",
+        "mesures": [
+          "retailleau-envi-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "arrêter les soutiens au solaire et à l'éolien",
+        "mesures": [
+          "retailleau-envi-002"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "baisser les tarifs de réseau électrique",
+        "mesures": [
+          "retailleau-envi-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "étendre le mécanisme carbone aux frontières",
+        "mesures": [
+          "retailleau-envi-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire les contraintes environnementales et normatives sur l'industrie, l'eau et la construction",
+        "mesures": [
+          "retailleau-envi-005",
+          "retailleau-envi-006",
+          "retailleau-envi-007",
+          "retailleau-envi-008"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "retailleau-envi-001",
+      "retailleau-envi-002",
+      "retailleau-envi-003",
+      "retailleau-envi-004",
+      "retailleau-envi-005",
+      "retailleau-envi-006",
+      "retailleau-envi-007",
+      "retailleau-envi-008"
+    ],
+    "empreinte": "8d6493249072f697",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "fiscalite",
+    "segments": [
+      {
+        "texte": "Fusionner douze dispositifs familiaux en un Revenu familial",
+        "mesures": [
+          "retailleau-fisc-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "doubler ce montant pour le troisième enfant",
+        "mesures": [
+          "retailleau-fisc-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "relever temporairement les plafonds de dons familiaux exonérés",
+        "mesures": [
+          "retailleau-fisc-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "différer les droits de mutation sur les entreprises familiales transmises",
+        "mesures": [
+          "retailleau-fisc-004"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "relever le plafond d'exonération de l'aide employeur à la garde d'enfant",
+        "mesures": [
+          "retailleau-fisc-005"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "retailleau-fisc-001",
+      "retailleau-fisc-002",
+      "retailleau-fisc-003",
+      "retailleau-fisc-004",
+      "retailleau-fisc-005"
+    ],
+    "empreinte": "871173f124666b58",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "libertes-fondamentales",
+    "segments": [
+      {
+        "texte": "Élargir le champ du référendum",
+        "mesures": [
+          "retailleau-lib-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer un bouclier constitutionnel face au droit européen",
+        "mesures": [
+          "retailleau-lib-002"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "permettre de passer outre une censure du Conseil constitutionnel",
+        "mesures": [
+          "retailleau-lib-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "abolir le droit du sol",
+        "mesures": [
+          "retailleau-lib-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer le mariage pour les personnes sous OQTF",
+        "mesures": [
+          "retailleau-lib-005"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "instaurer une charte de l'ordre républicain contre le séparatisme",
+        "mesures": [
+          "retailleau-lib-006"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "retailleau-lib-001",
+      "retailleau-lib-002",
+      "retailleau-lib-003",
+      "retailleau-lib-004",
+      "retailleau-lib-005",
+      "retailleau-lib-006"
+    ],
+    "empreinte": "fae16146941f52da",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "logement",
+    "segments": [
+      {
+        "texte": "Simplifier l'urbanisme et faciliter la construction",
+        "mesures": [
+          "retailleau-logt-001",
+          "retailleau-logt-002",
+          "retailleau-logt-013"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer l'encadrement des loyers et les interdictions liées au DPE",
+        "mesures": [
+          "retailleau-logt-003",
+          "retailleau-logt-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer l'attribution et la gestion du logement social",
+        "mesures": [
+          "retailleau-logt-005",
+          "retailleau-logt-006",
+          "retailleau-logt-007",
+          "retailleau-logt-008",
+          "retailleau-logt-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "favoriser l'accession à la propriété",
+        "mesures": [
+          "retailleau-logt-010",
+          "retailleau-logt-011"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer le financement des bailleurs sociaux",
+        "mesures": [
+          "retailleau-logt-012"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "retailleau-logt-001",
+      "retailleau-logt-002",
+      "retailleau-logt-003",
+      "retailleau-logt-004",
+      "retailleau-logt-005",
+      "retailleau-logt-006",
+      "retailleau-logt-007",
+      "retailleau-logt-008",
+      "retailleau-logt-009",
+      "retailleau-logt-010",
+      "retailleau-logt-011",
+      "retailleau-logt-012",
+      "retailleau-logt-013"
+    ],
+    "empreinte": "dc6f1ea9fe23c8c0",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "pouvoir-achat",
+    "segments": [
+      {
+        "texte": "Exonérer de cotisations les heures au-delà de 1 623 heures",
+        "mesures": [
+          "retailleau-pa-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "plafonner les aides sociales à 70 % du SMIC",
+        "mesures": [
+          "retailleau-pa-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "exonérer de cotisations les seniors en fin de carrière",
+        "mesures": [
+          "retailleau-pa-003"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer le prêt à taux zéro",
+        "mesures": [
+          "retailleau-pa-004"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "retailleau-pa-001",
+      "retailleau-pa-002",
+      "retailleau-pa-003",
+      "retailleau-pa-004"
+    ],
+    "empreinte": "ecd39109bdb4915e",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "retraites",
+    "segments": [
+      {
+        "texte": "Créer un étage de retraite par capitalisation individuelle",
+        "mesures": [
+          "retailleau-retr-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "exonérer de cotisations les salariés proches de la retraite",
+        "mesures": [
+          "retailleau-retr-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "retailleau-retr-001",
+      "retailleau-retr-002"
+    ],
+    "empreinte": "72648a0c83526276",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "securite",
+    "segments": [
+      {
+        "texte": "Rendre obligatoires les peines minimales",
+        "mesures": [
+          "retailleau-secu-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "inscrire un droit constitutionnel à la sécurité",
+        "mesures": [
+          "retailleau-secu-002"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "accélérer l'expulsion administrative des squatteurs",
+        "mesures": [
+          "retailleau-secu-003"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "retailleau-secu-001",
+      "retailleau-secu-002",
+      "retailleau-secu-003"
+    ],
+    "empreinte": "ff99bf329add54b3",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "travail",
+    "segments": [
+      {
+        "texte": "Refondre le Code du travail autour d'un socle de principes",
+        "mesures": [
+          "retailleau-trav-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "relever les seuils sociaux des entreprises",
+        "mesures": [
+          "retailleau-trav-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer un revenu d'incitation à l'activité fusionnant les minima sociaux",
+        "mesures": [
+          "retailleau-trav-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer l'assurance chômage et ses règles d'indemnisation",
+        "mesures": [
+          "retailleau-trav-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "rééquilibrer la gouvernance de l'assurance chômage",
+        "mesures": [
+          "retailleau-trav-005"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "recentrer le contrôle du travail sur la fraude",
+        "mesures": [
+          "retailleau-trav-006"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "retailleau-trav-001",
+      "retailleau-trav-002",
+      "retailleau-trav-003",
+      "retailleau-trav-004",
+      "retailleau-trav-005",
+      "retailleau-trav-006"
+    ],
+    "empreinte": "26ee8e7fdea36a2b",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  }
+]

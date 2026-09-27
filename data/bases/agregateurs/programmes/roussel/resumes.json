@@ -1,0 +1,88 @@
+[
+  {
+    "theme": "finances-publiques",
+    "segments": [
+      {
+        "texte": "Rétablir et tripler l'ISF",
+        "mesures": [
+          "roussel-finances-publiques-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "rendre l'impôt sur le revenu plus progressif",
+        "mesures": [
+          "roussel-finances-publiques-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "remplacer progressivement la CSG par des cotisations sociales des entreprises",
+        "mesures": [
+          "roussel-finances-publiques-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer un registre public des bénéficiaires des entreprises contre l'optimisation fiscale",
+        "mesures": [
+          "roussel-finances-publiques-004"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "instaurer un impôt sur les sociétés progressif selon leur activité",
+        "mesures": [
+          "roussel-finances-publiques-005"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "roussel-finances-publiques-001",
+      "roussel-finances-publiques-002",
+      "roussel-finances-publiques-003",
+      "roussel-finances-publiques-004",
+      "roussel-finances-publiques-005"
+    ],
+    "empreinte": "bc39d6c8d140d456",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "retraites-travail",
+    "segments": [
+      {
+        "texte": "Nationaliser TotalEnergies",
+        "mesures": [
+          "roussel-retraites-travail-001"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "roussel-retraites-travail-001"
+    ],
+    "empreinte": "5488180e89c0c179",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  }
+]

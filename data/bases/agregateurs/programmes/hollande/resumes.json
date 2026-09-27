@@ -3,13 +3,13 @@
     "theme": "finances-publiques",
     "segments": [
       {
-        "texte": "Taxer les gros patrimoines",
+        "texte": "Taxer les patrimoines supérieurs à 10 millions d'euros lors de la transmission",
         "mesures": [
           "hollande-finances-publiques-001"
         ]
       },
       {
-        "texte": " à la transmission, ",
+        "texte": ", ",
         "mesures": []
       },
       {
@@ -19,7 +19,7 @@
         ]
       },
       {
-        "texte": ", et ",
+        "texte": " et ",
         "mesures": []
       },
       {
@@ -38,7 +38,7 @@
       "hollande-finances-publiques-002",
       "hollande-finances-publiques-003"
     ],
-    "empreinte": "32824b79f481ad93",
+    "empreinte": "933467770d7cde05",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   }

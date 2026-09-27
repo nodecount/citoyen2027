@@ -3,9 +3,10 @@
     "theme": "education-jeunesse",
     "segments": [
       {
-        "texte": "Créer un collège modulaire",
+        "texte": "Réformer le collège et le primaire",
         "mesures": [
-          "le-pen-education-jeunesse-001"
+          "le-pen-education-jeunesse-001",
+          "le-pen-education-jeunesse-004"
         ]
       },
       {
@@ -19,62 +20,13 @@
         ]
       },
       {
-        "texte": ", instaurer ",
+        "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "l'uniforme",
+        "texte": "imposer l'uniforme et interdire le voile islamique",
         "mesures": [
-          "le-pen-education-jeunesse-003"
-        ]
-      },
-      {
-        "texte": ", réformer ",
-        "mesures": []
-      },
-      {
-        "texte": "le primaire",
-        "mesures": [
-          "le-pen-education-jeunesse-004"
-        ]
-      },
-      {
-        "texte": ", lancer ",
-        "mesures": []
-      },
-      {
-        "texte": "un plan d'urgence pour l'Outre-Mer",
-        "mesures": [
-          "le-pen-education-jeunesse-005"
-        ]
-      },
-      {
-        "texte": ", supprimer ",
-        "mesures": []
-      },
-      {
-        "texte": "la discrimination positive",
-        "mesures": [
-          "le-pen-education-jeunesse-006"
-        ]
-      },
-      {
-        "texte": ", appliquer ",
-        "mesures": []
-      },
-      {
-        "texte": "la loi Ciotti sur l'assiduité et la sécurité",
-        "mesures": [
-          "le-pen-education-jeunesse-007"
-        ]
-      },
-      {
-        "texte": ", interdire ",
-        "mesures": []
-      },
-      {
-        "texte": "le voile islamique",
-        "mesures": [
+          "le-pen-education-jeunesse-003",
           "le-pen-education-jeunesse-008"
         ]
       },
@@ -83,9 +35,30 @@
         "mesures": []
       },
       {
-        "texte": "revaloriser les professeurs",
+        "texte": "lancer un plan d'urgence pour l'Outre-Mer",
         "mesures": [
-          "le-pen-education-jeunesse-009"
+          "le-pen-education-jeunesse-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer la discrimination positive et les INSPE",
+        "mesures": [
+          "le-pen-education-jeunesse-006",
+          "le-pen-education-jeunesse-010"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "rétablir la loi Ciotti sur la discipline scolaire",
+        "mesures": [
+          "le-pen-education-jeunesse-007"
         ]
       },
       {
@@ -93,9 +66,9 @@
         "mesures": []
       },
       {
-        "texte": "supprimer les instituts de formation des enseignants",
+        "texte": "revaloriser les professeurs de 3% par an",
         "mesures": [
-          "le-pen-education-jeunesse-010"
+          "le-pen-education-jeunesse-009"
         ]
       },
       {
@@ -115,7 +88,7 @@
       "le-pen-education-jeunesse-009",
       "le-pen-education-jeunesse-010"
     ],
-    "empreinte": "d9eee182ca4e78d2",
+    "empreinte": "9f20ea5ed8f7b7d5",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -123,11 +96,7 @@
     "theme": "europe-international",
     "segments": [
       {
-        "texte": "Le programme prévoit de ",
-        "mesures": []
-      },
-      {
-        "texte": "réduire de moitié la contribution française au budget de l'UE",
+        "texte": "Réduire de moitié la contribution française au budget de l'Union européenne",
         "mesures": [
           "le-pen-europe-international-001"
         ]
@@ -140,7 +109,7 @@
     "propositions": [
       "le-pen-europe-international-001"
     ],
-    "empreinte": "749b81318b35b313",
+    "empreinte": "b0af402109aec23a",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -148,20 +117,20 @@
     "theme": "finances-publiques",
     "segments": [
       {
-        "texte": "Créer un impôt sur la fortune financière",
+        "texte": "Créer un impôt sur la fortune financière, excluant la résidence principale",
         "mesures": [
           "le-pen-finances-publiques-001"
         ]
       },
       {
-        "texte": ", excluant la résidence principale.",
+        "texte": ".",
         "mesures": []
       }
     ],
     "propositions": [
       "le-pen-finances-publiques-001"
     ],
-    "empreinte": "10546e2a65eb33e1",
+    "empreinte": "1986ccacc8ab74a6",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -169,7 +138,7 @@
     "theme": "gouvernance-republique",
     "segments": [
       {
-        "texte": "Inscrire la priorité nationale dans la Constitution",
+        "texte": "Inscrire la priorité nationale dans la Constitution par référendum",
         "mesures": [
           "le-pen-gouvernance-republique-001"
         ]
@@ -179,28 +148,10 @@
         "mesures": []
       },
       {
-        "texte": "encadrer le rachat étranger d'entreprises numériques",
+        "texte": "contrôler et taxer les entreprises numériques étrangères",
         "mesures": [
-          "le-pen-gouvernance-republique-002"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "taxer les entreprises étrangères du numérique",
-        "mesures": [
-          "le-pen-gouvernance-republique-003"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "contrôler leur respect du droit français",
-        "mesures": [
+          "le-pen-gouvernance-republique-002",
+          "le-pen-gouvernance-republique-003",
           "le-pen-gouvernance-republique-004"
         ]
       },
@@ -209,19 +160,9 @@
         "mesures": []
       },
       {
-        "texte": "étendre la couverture numérique du territoire",
+        "texte": "imposer l'hébergement des données en France ou en Europe",
         "mesures": [
-          "le-pen-gouvernance-republique-005"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "lutter contre l'illettrisme numérique",
-        "mesures": [
-          "le-pen-gouvernance-republique-006"
+          "le-pen-gouvernance-republique-007"
         ]
       },
       {
@@ -229,9 +170,10 @@
         "mesures": []
       },
       {
-        "texte": "imposer l'hébergement des données en Europe",
+        "texte": "étendre la couverture numérique du territoire en luttant contre l'illettrisme numérique",
         "mesures": [
-          "le-pen-gouvernance-republique-007"
+          "le-pen-gouvernance-republique-005",
+          "le-pen-gouvernance-republique-006"
         ]
       },
       {
@@ -248,7 +190,61 @@
       "le-pen-gouvernance-republique-006",
       "le-pen-gouvernance-republique-007"
     ],
-    "empreinte": "931a7327c7832a2f",
+    "empreinte": "48f68dec62e501aa",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "interieur-justice",
+    "segments": [
+      {
+        "texte": "Atteindre 85 000 places de prison",
+        "mesures": [
+          "le-pen-interieur-justice-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "instaurer une présomption de légitime défense pour les forces de l'ordre",
+        "mesures": [
+          "le-pen-interieur-justice-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer 7000 postes de policiers et gendarmes",
+        "mesures": [
+          "le-pen-interieur-justice-003"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "obliger les grandes communes à créer une police municipale",
+        "mesures": [
+          "le-pen-interieur-justice-004"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "le-pen-interieur-justice-001",
+      "le-pen-interieur-justice-002",
+      "le-pen-interieur-justice-003",
+      "le-pen-interieur-justice-004"
+    ],
+    "empreinte": "617053c3398d2389",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -256,14 +252,23 @@
     "theme": "retraites-travail",
     "segments": [
       {
-        "texte": "Simplifier les normes",
+        "texte": "Recenser et simplifier les normes",
         "mesures": [
-          "le-pen-retraites-travail-001",
+          "le-pen-retraites-travail-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "simplifier l'administration par ordonnances",
+        "mesures": [
           "le-pen-retraites-travail-002"
         ]
       },
       {
-        "texte": " et ",
+        "texte": ", ",
         "mesures": []
       },
       {
@@ -273,33 +278,33 @@
         ]
       },
       {
-        "texte": ", tout en appliquant la ",
+        "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "priorité nationale dans la commande publique",
-        "mesures": [
-          "le-pen-retraites-travail-006"
-        ]
-      },
-      {
-        "texte": ". Sur les retraites, ",
-        "mesures": []
-      },
-      {
-        "texte": "permettre un départ à 60 ans",
+        "texte": "permettre un départ à 60 ans après un début de carrière précoce",
         "mesures": [
           "le-pen-retraites-travail-004"
         ]
       },
       {
-        "texte": " pour les carrières longues et ",
+        "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "instaurer une capitalisation volontaire",
+        "texte": "instaurer une capitalisation volontaire des retraites",
         "mesures": [
           "le-pen-retraites-travail-005"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "donner priorité nationale à la commande publique",
+        "mesures": [
+          "le-pen-retraites-travail-006"
         ]
       },
       {
@@ -315,7 +320,7 @@
       "le-pen-retraites-travail-005",
       "le-pen-retraites-travail-006"
     ],
-    "empreinte": "a7027edaad88c07a",
+    "empreinte": "664d1054e621a5b3",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -323,7 +328,7 @@
     "theme": "social-solidarite",
     "segments": [
       {
-        "texte": "Réformer la gouvernance et le financement des hôpitaux",
+        "texte": "Réformer la gouvernance hospitalière",
         "mesures": [
           "le-pen-social-solidarite-001",
           "le-pen-social-solidarite-007"
@@ -334,11 +339,10 @@
         "mesures": []
       },
       {
-        "texte": "recruter des soignants et geler les suppressions de lits",
+        "texte": "recruter des soignants et limiter les postes administratifs",
         "mesures": [
           "le-pen-social-solidarite-002",
-          "le-pen-social-solidarite-003",
-          "le-pen-social-solidarite-004"
+          "le-pen-social-solidarite-003"
         ]
       },
       {
@@ -346,8 +350,9 @@
         "mesures": []
       },
       {
-        "texte": "réorganiser les urgences",
+        "texte": "maintenir les lits et réorganiser les urgences",
         "mesures": [
+          "le-pen-social-solidarite-004",
           "le-pen-social-solidarite-005",
           "le-pen-social-solidarite-006"
         ]
@@ -357,27 +362,18 @@
         "mesures": []
       },
       {
-        "texte": "réduire les déserts médicaux",
+        "texte": "lutter contre les déserts médicaux et développer la télémédecine",
         "mesures": [
-          "le-pen-social-solidarite-008"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "développer la télémédecine",
-        "mesures": [
+          "le-pen-social-solidarite-008",
           "le-pen-social-solidarite-009"
         ]
       },
       {
-        "texte": ". ",
+        "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "Remplacer MaPrimeRénov'",
+        "texte": "remplacer MaPrimeRénov' par des prêts à taux zéro",
         "mesures": [
           "le-pen-social-solidarite-010"
         ]
@@ -387,7 +383,7 @@
         "mesures": []
       },
       {
-        "texte": "durcir les sanctions contre les impayés",
+        "texte": "durcir les sanctions contre les impayés de loyer",
         "mesures": [
           "le-pen-social-solidarite-011"
         ]
@@ -397,7 +393,7 @@
         "mesures": []
       },
       {
-        "texte": "supprimer les normes logements mal notés, loi SRU et ZAN",
+        "texte": "assouplir les règles de location et d'urbanisme",
         "mesures": [
           "le-pen-social-solidarite-012",
           "le-pen-social-solidarite-013",
@@ -405,11 +401,11 @@
         ]
       },
       {
-        "texte": ", ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "instaurer la préférence nationale",
+        "texte": "instaurer la préférence nationale pour le logement",
         "mesures": [
           "le-pen-social-solidarite-014"
         ]
@@ -436,7 +432,7 @@
       "le-pen-social-solidarite-014",
       "le-pen-social-solidarite-015"
     ],
-    "empreinte": "f5c4a5e9b16137dc",
+    "empreinte": "7847c56d15a428ab",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   }

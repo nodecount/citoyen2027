@@ -1,1 +1,78 @@
-[]
+[
+  {
+    "theme": "retraites-travail",
+    "segments": [
+      {
+        "texte": "Introduire une dose de capitalisation collective",
+        "mesures": [
+          "brun-retraites-travail-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "maintenir l'âge légal à 62 ans avec départ anticipé pour pénibilité",
+        "mesures": [
+          "brun-retraites-travail-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "soumettre à référendum une réforme prenant en compte la pénibilité",
+        "mesures": [
+          "brun-retraites-travail-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "indexer les pensions sur les salaires",
+        "mesures": [
+          "brun-retraites-travail-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "désindexer les pensions supérieures à 3 000 €",
+        "mesures": [
+          "brun-retraites-travail-002"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "remplacer l'abattement fiscal par un forfait",
+        "mesures": [
+          "brun-retraites-travail-003"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "brun-retraites-travail-001",
+      "brun-retraites-travail-002",
+      "brun-retraites-travail-003",
+      "brun-retraites-travail-004",
+      "brun-retraites-travail-005",
+      "brun-retraites-travail-006"
+    ],
+    "empreinte": "38c7d6e98613fa81",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  }
+]

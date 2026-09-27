@@ -3,17 +3,13 @@
     "theme": "defense",
     "segments": [
       {
-        "texte": "Le programme prévoit de ",
-        "mesures": []
-      },
-      {
-        "texte": "renforcer les armées",
+        "texte": "Renforcer les armées",
         "mesures": [
           "attal-defense-001"
         ]
       },
       {
-        "texte": " et de ",
+        "texte": " et ",
         "mesures": []
       },
       {
@@ -31,7 +27,7 @@
       "attal-defense-001",
       "attal-defense-002"
     ],
-    "empreinte": "9d89a1a9a3352caa",
+    "empreinte": "cb7f97aac9296d5a",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -39,11 +35,7 @@
     "theme": "education-jeunesse",
     "segments": [
       {
-        "texte": "Le programme prévoit de ",
-        "mesures": []
-      },
-      {
-        "texte": "maintenir le « choc des savoirs »",
+        "texte": "Maintenir le choc des savoirs pour renforcer les fondamentaux",
         "mesures": [
           "attal-education-jeunesse-001"
         ]
@@ -53,23 +45,23 @@
         "mesures": []
       },
       {
-        "texte": "interdire les réseaux sociaux aux moins de 15 ans",
+        "texte": "soutenir l'interdiction des réseaux sociaux pour les moins de 15 ans",
         "mesures": [
           "attal-education-jeunesse-002"
         ]
       },
       {
-        "texte": " et de ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "raccourcir les journées d'école",
+        "texte": "raccourcir les journées de classe en réduisant les vacances scolaires",
         "mesures": [
           "attal-education-jeunesse-003"
         ]
       },
       {
-        "texte": " au détriment des vacances scolaires.",
+        "texte": ".",
         "mesures": []
       }
     ],
@@ -78,7 +70,7 @@
       "attal-education-jeunesse-002",
       "attal-education-jeunesse-003"
     ],
-    "empreinte": "f4131e08f66c0ec0",
+    "empreinte": "22d1e37d9a519c25",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -86,17 +78,13 @@
     "theme": "environnement",
     "segments": [
       {
-        "texte": "Le programme prévoit de ",
-        "mesures": []
-      },
-      {
-        "texte": "doubler le fonds chaleur pour la géoénergie",
+        "texte": "Doubler le fonds dédié à la géoénergie",
         "mesures": [
           "attal-envi-001"
         ]
       },
       {
-        "texte": " et de ",
+        "texte": " et ",
         "mesures": []
       },
       {
@@ -114,7 +102,7 @@
       "attal-envi-001",
       "attal-envi-002"
     ],
-    "empreinte": "19360709db9348e3",
+    "empreinte": "ec5ada6c4099524b",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -221,11 +209,7 @@
     "theme": "gouvernance-republique",
     "segments": [
       {
-        "texte": "Organiser ",
-        "mesures": []
-      },
-      {
-        "texte": "un référendum annuel",
+        "texte": "Proposer un référendum chaque année",
         "mesures": [
           "attal-gouvernance-republique-001"
         ]
@@ -235,13 +219,13 @@
         "mesures": []
       },
       {
-        "texte": "soutenir l'intelligence artificielle française",
+        "texte": "soutenir l'investissement privé dans l'intelligence artificielle",
         "mesures": [
           "attal-gouvernance-republique-002"
         ]
       },
       {
-        "texte": " par des investissements privés.",
+        "texte": ".",
         "mesures": []
       }
     ],
@@ -249,7 +233,7 @@
       "attal-gouvernance-republique-001",
       "attal-gouvernance-republique-002"
     ],
-    "empreinte": "b9248794d262cbe8",
+    "empreinte": "d42e43ab2fd651c3",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -257,25 +241,9 @@
     "theme": "interieur-justice",
     "segments": [
       {
-        "texte": "Le programme prévoit de ",
-        "mesures": []
-      },
-      {
-        "texte": "privilégier une immigration de travail, restreindre le regroupement familial",
+        "texte": "Privilégier une immigration de travail",
         "mesures": [
-          "attal-interieur-justice-001",
-          "attal-interieur-justice-002"
-        ]
-      },
-      {
-        "texte": ", instaurer des ",
-        "mesures": []
-      },
-      {
-        "texte": "quotas d'immigration votés par secteur et un permis à points",
-        "mesures": [
-          "attal-interieur-justice-003",
-          "attal-interieur-justice-004"
+          "attal-interieur-justice-001"
         ]
       },
       {
@@ -283,13 +251,43 @@
         "mesures": []
       },
       {
-        "texte": "interdire le voile avant 15 ans",
+        "texte": "restreindre le regroupement familial",
+        "mesures": [
+          "attal-interieur-justice-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "faire voter des quotas d'immigration par secteur",
+        "mesures": [
+          "attal-interieur-justice-003"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "mettre en place un permis à points pour l'immigration",
+        "mesures": [
+          "attal-interieur-justice-004"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "interdire le voile pour les moins de 15 ans",
         "mesures": [
           "attal-interieur-justice-005"
         ]
       },
       {
-        "texte": " et ",
+        "texte": ", ",
         "mesures": []
       },
       {
@@ -299,11 +297,11 @@
         ]
       },
       {
-        "texte": ", et soutenir la ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "comparution immédiate pour certains mineurs",
+        "texte": "soutenir la comparution immédiate pour certains mineurs",
         "mesures": [
           "attal-interieur-justice-007"
         ]
@@ -322,7 +320,7 @@
       "attal-interieur-justice-006",
       "attal-interieur-justice-007"
     ],
-    "empreinte": "9241a9bb8f279743",
+    "empreinte": "8012db451990a6cc",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -330,11 +328,7 @@
     "theme": "reformes-etat",
     "segments": [
       {
-        "texte": "Mettre en place ",
-        "mesures": []
-      },
-      {
-        "texte": "un plan de départs volontaires de fonctionnaires",
+        "texte": "Encourager les départs volontaires de fonctionnaires",
         "mesures": [
           "attal-reformes-etat-001"
         ]
@@ -344,7 +338,7 @@
         "mesures": []
       },
       {
-        "texte": "le non-remplacement de certains départs à la retraite",
+        "texte": "limiter le remplacement des départs en retraite",
         "mesures": [
           "attal-reformes-etat-002"
         ]
@@ -358,7 +352,7 @@
       "attal-reformes-etat-001",
       "attal-reformes-etat-002"
     ],
-    "empreinte": "17193bc22a680f34",
+    "empreinte": "2be2b4114faca88f",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -464,7 +458,7 @@
     "theme": "social-solidarite",
     "segments": [
       {
-        "texte": "Réformer l'assurance chômage",
+        "texte": "Durcir et réformer l’assurance chômage",
         "mesures": [
           "attal-social-solidarite-001"
         ]
@@ -474,7 +468,7 @@
         "mesures": []
       },
       {
-        "texte": "faire une année blanche sur les prestations sociales",
+        "texte": "geler l’ensemble des prestations sociales en épargnant les petites retraites",
         "mesures": [
           "attal-social-solidarite-002"
         ]
@@ -494,7 +488,7 @@
         "mesures": []
       },
       {
-        "texte": "prioriser les logements étudiants et Crous",
+        "texte": "prioriser la construction de logements étudiants et Crous",
         "mesures": [
           "attal-social-solidarite-004"
         ]
@@ -510,7 +504,7 @@
       "attal-social-solidarite-003",
       "attal-social-solidarite-004"
     ],
-    "empreinte": "afc6dcb3dfec6c1a",
+    "empreinte": "f1ee91b43f30b99d",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   }

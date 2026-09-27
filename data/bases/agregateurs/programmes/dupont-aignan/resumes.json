@@ -1,51 +1,11 @@
 [
   {
-    "theme": "environnement",
+    "theme": "defense",
     "segments": [
       {
-        "texte": "Rompre les accords de libre-échange",
+        "texte": "Construire deux nouveaux porte-avions",
         "mesures": [
-          "dupont-aignan-envi-001"
-        ]
-      },
-      {
-        "texte": ", défendre ",
-        "mesures": []
-      },
-      {
-        "texte": "une exception agricole à l'OMC",
-        "mesures": [
-          "dupont-aignan-envi-002"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "sortir de la PAC",
-        "mesures": [
-          "dupont-aignan-envi-003"
-        ]
-      },
-      {
-        "texte": ". ",
-        "mesures": []
-      },
-      {
-        "texte": "Supprimer les droits de succession",
-        "mesures": [
-          "dupont-aignan-envi-004"
-        ]
-      },
-      {
-        "texte": " pour les jeunes agriculteurs, ",
-        "mesures": []
-      },
-      {
-        "texte": "imposer un étiquetage d'origine",
-        "mesures": [
-          "dupont-aignan-envi-005"
+          "dupont-aignan-defense-001"
         ]
       },
       {
@@ -53,9 +13,9 @@
         "mesures": []
       },
       {
-        "texte": "réserver les commandes publiques aux producteurs français",
+        "texte": "porter la flotte à 20 frégates",
         "mesures": [
-          "dupont-aignan-envi-006"
+          "dupont-aignan-defense-002"
         ]
       },
       {
@@ -63,9 +23,59 @@
         "mesures": []
       },
       {
-        "texte": "développer les circuits courts",
+        "texte": "à 300 Rafale",
         "mesures": [
-          "dupont-aignan-envi-007"
+          "dupont-aignan-defense-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "transformer la réserve en garde nationale",
+        "mesures": [
+          "dupont-aignan-defense-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "instaurer un service national civique avec option militaire",
+        "mesures": [
+          "dupont-aignan-defense-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "enterrer le SCAF au profit du successeur du Rafale",
+        "mesures": [
+          "dupont-aignan-defense-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "viser l'autosuffisance en production militaire",
+        "mesures": [
+          "dupont-aignan-defense-007"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer la place de l'Etat dans les groupes de défense",
+        "mesures": [
+          "dupont-aignan-defense-008"
         ]
       },
       {
@@ -74,15 +84,16 @@
       }
     ],
     "propositions": [
-      "dupont-aignan-envi-001",
-      "dupont-aignan-envi-002",
-      "dupont-aignan-envi-003",
-      "dupont-aignan-envi-004",
-      "dupont-aignan-envi-005",
-      "dupont-aignan-envi-006",
-      "dupont-aignan-envi-007"
+      "dupont-aignan-defense-001",
+      "dupont-aignan-defense-002",
+      "dupont-aignan-defense-003",
+      "dupont-aignan-defense-004",
+      "dupont-aignan-defense-005",
+      "dupont-aignan-defense-006",
+      "dupont-aignan-defense-007",
+      "dupont-aignan-defense-008"
     ],
-    "empreinte": "0368a11a3eb7f5ec",
+    "empreinte": "1c5bd7103ee071f7",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -90,10 +101,9 @@
     "theme": "gouvernance-republique",
     "segments": [
       {
-        "texte": "Imposer une laïcité stricte",
+        "texte": "Interdire les signes religieux dans le service public",
         "mesures": [
-          "dupont-aignan-gouvernance-republique-001",
-          "dupont-aignan-gouvernance-republique-002"
+          "dupont-aignan-gouvernance-republique-001"
         ]
       },
       {
@@ -101,8 +111,9 @@
         "mesures": []
       },
       {
-        "texte": "sanctionner les dérives religieuses",
+        "texte": "encadrer et sanctionner les dérives religieuses",
         "mesures": [
+          "dupont-aignan-gouvernance-republique-002",
           "dupont-aignan-gouvernance-republique-003",
           "dupont-aignan-gouvernance-republique-004",
           "dupont-aignan-gouvernance-republique-005"
@@ -113,21 +124,13 @@
         "mesures": []
       },
       {
-        "texte": "créer un fonds souverain IA",
+        "texte": "investir dans la souveraineté numérique et l'IA",
         "mesures": [
-          "dupont-aignan-gouvernance-republique-006"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "développer un cloud et des logiciels souverains",
-        "mesures": [
+          "dupont-aignan-gouvernance-republique-006",
           "dupont-aignan-gouvernance-republique-007",
           "dupont-aignan-gouvernance-republique-008",
-          "dupont-aignan-gouvernance-republique-009"
+          "dupont-aignan-gouvernance-republique-009",
+          "dupont-aignan-gouvernance-republique-016"
         ]
       },
       {
@@ -135,10 +138,9 @@
         "mesures": []
       },
       {
-        "texte": "privilégier les acteurs français du numérique",
+        "texte": "imposer une préférence nationale dans le numérique",
         "mesures": [
           "dupont-aignan-gouvernance-republique-010",
-          "dupont-aignan-gouvernance-republique-011",
           "dupont-aignan-gouvernance-republique-012"
         ]
       },
@@ -147,8 +149,9 @@
         "mesures": []
       },
       {
-        "texte": "relocaliser l'industrie critique et les matières premières",
+        "texte": "soutenir les start-ups et relocaliser l'industrie critique",
         "mesures": [
+          "dupont-aignan-gouvernance-republique-011",
           "dupont-aignan-gouvernance-republique-013",
           "dupont-aignan-gouvernance-republique-014"
         ]
@@ -158,10 +161,9 @@
         "mesures": []
       },
       {
-        "texte": "adapter l'éducation et créer une agence d'éthique de l'IA",
+        "texte": "adapter l'éducation à l'IA",
         "mesures": [
-          "dupont-aignan-gouvernance-republique-015",
-          "dupont-aignan-gouvernance-republique-016"
+          "dupont-aignan-gouvernance-republique-015"
         ]
       },
       {
@@ -187,7 +189,143 @@
       "dupont-aignan-gouvernance-republique-015",
       "dupont-aignan-gouvernance-republique-016"
     ],
-    "empreinte": "6f62aa0ab7d4ecec",
+    "empreinte": "28cef61bfa71c0cf",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "interieur-justice",
+    "segments": [
+      {
+        "texte": "Sortir de Schengen",
+        "mesures": [
+          "dupont-aignan-interieur-justice-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "restreindre l'immigration et le regroupement familial",
+        "mesures": [
+          "dupont-aignan-interieur-justice-002",
+          "dupont-aignan-interieur-justice-003",
+          "dupont-aignan-interieur-justice-004",
+          "dupont-aignan-interieur-justice-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer les aides sociales et le droit du sol pour les étrangers",
+        "mesures": [
+          "dupont-aignan-interieur-justice-006",
+          "dupont-aignan-interieur-justice-007",
+          "dupont-aignan-interieur-justice-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réserver le droit de vote aux Français",
+        "mesures": [
+          "dupont-aignan-interieur-justice-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "construire des places de prison et durcir la détention",
+        "mesures": [
+          "dupont-aignan-interieur-justice-010",
+          "dupont-aignan-interieur-justice-011",
+          "dupont-aignan-interieur-justice-012",
+          "dupont-aignan-interieur-justice-013",
+          "dupont-aignan-interieur-justice-014",
+          "dupont-aignan-interieur-justice-015",
+          "dupont-aignan-interieur-justice-016"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer les effectifs et moyens des forces de l'ordre et des douanes",
+        "mesures": [
+          "dupont-aignan-interieur-justice-017",
+          "dupont-aignan-interieur-justice-018",
+          "dupont-aignan-interieur-justice-019"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "protéger juridiquement les forces de l'ordre et mieux recouvrer les amendes",
+        "mesures": [
+          "dupont-aignan-interieur-justice-020",
+          "dupont-aignan-interieur-justice-021"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "dupont-aignan-interieur-justice-001",
+      "dupont-aignan-interieur-justice-002",
+      "dupont-aignan-interieur-justice-003",
+      "dupont-aignan-interieur-justice-004",
+      "dupont-aignan-interieur-justice-005",
+      "dupont-aignan-interieur-justice-006",
+      "dupont-aignan-interieur-justice-007",
+      "dupont-aignan-interieur-justice-008",
+      "dupont-aignan-interieur-justice-009",
+      "dupont-aignan-interieur-justice-010",
+      "dupont-aignan-interieur-justice-011",
+      "dupont-aignan-interieur-justice-012",
+      "dupont-aignan-interieur-justice-013",
+      "dupont-aignan-interieur-justice-014",
+      "dupont-aignan-interieur-justice-015",
+      "dupont-aignan-interieur-justice-016",
+      "dupont-aignan-interieur-justice-017",
+      "dupont-aignan-interieur-justice-018",
+      "dupont-aignan-interieur-justice-019",
+      "dupont-aignan-interieur-justice-020",
+      "dupont-aignan-interieur-justice-021"
+    ],
+    "empreinte": "ea687bcc86073e03",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "retraites-travail",
+    "segments": [
+      {
+        "texte": "Verser 10 000 euros à chaque nouveau né",
+        "mesures": [
+          "dupont-aignan-retraites-travail-001"
+        ]
+      },
+      {
+        "texte": ", gelés jusqu'à 60 ans.",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "dupont-aignan-retraites-travail-001"
+    ],
+    "empreinte": "b1fb91fe37edf032",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },
@@ -195,31 +333,27 @@
     "theme": "social-solidarite",
     "segments": [
       {
-        "texte": "Le programme prévoit d'",
-        "mesures": []
-      },
-      {
-        "texte": "élargir le prêt à taux zéro",
+        "texte": "Élargir l'accès au prêt à taux zéro",
         "mesures": [
           "dupont-aignan-social-solidarite-001"
         ]
       },
       {
-        "texte": ", de ",
+        "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "créer un Prêt Accession à la Propriété",
+        "texte": "créer un prêt accession à la propriété",
         "mesures": [
           "dupont-aignan-social-solidarite-002"
         ]
       },
       {
-        "texte": " et d'",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "augmenter les exonérations de droits sur les donations immobilières",
+        "texte": "faciliter la transmission des biens immobiliers",
         "mesures": [
           "dupont-aignan-social-solidarite-003"
         ]
@@ -234,7 +368,7 @@
       "dupont-aignan-social-solidarite-002",
       "dupont-aignan-social-solidarite-003"
     ],
-    "empreinte": "818d08f4b348e079",
+    "empreinte": "d7eb14f1bcfac39a",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   }
