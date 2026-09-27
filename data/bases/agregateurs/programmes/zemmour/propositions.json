@@ -151,8 +151,8 @@
             "champ": "statut_professionnel",
             "valeurs": [
               "salarie",
-              "fonctionnaire",
-              "independant"
+              "independant",
+              "fonctionnaire"
             ]
           },
           {
@@ -188,8 +188,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité",
-    "effets": []
+    "sous_theme": "Fiscalité"
   },
   {
     "id": "zemmour-interieur-justice-001",
@@ -211,22 +210,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étrangers pouvant bénéficier du regroupement familial"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer le droit au « regroupement familial » et tous les droits automatiques liés à l’immigration familiale."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-002",
@@ -252,16 +236,16 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "statut_sejour",
             "valeurs": [
-              "demandeurs d'asile"
+              "demandeur_asile"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "en le limitant à une centaine d’individus chaque année (contre près de 140 000 aujourd’hui)"
+        "extrait": "Revenir à l’esprit originel du droit d’asile en le limitant à une centaine d’individus chaque année"
       }
     ]
   },
@@ -285,22 +269,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "demandeurs d'asile"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Exiger que les demandes d’asile soient déposées en dehors du territoire national, dans nos consulats"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-004",
@@ -431,23 +400,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étrangers extra-européens"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer les aides sociales non-contributives (allocations familiales, aides au logement, RSA, minimum vieillesse…) pour les étrangers extra-européens."
-      }
-    ]
+    "sous_theme": "Immigration"
   },
   {
     "id": "zemmour-interieur-justice-010",
@@ -473,9 +426,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "statut_sejour",
             "valeurs": [
-              "étrangers en situation irrégulière bénéficiaires de l'AME"
+              "sans_titre"
             ]
           }
         ],
@@ -506,22 +459,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étrangers entrés illégalement sur le territoire français"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Interdire définitivement la régularisation de tout étranger entré illégalement sur le territoire français."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-012",
@@ -565,22 +503,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étrangers candidats à la naturalisation"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Durcir les conditions de naturalisation, en augmentant la durée minimale de résidence en France de 5 ans à 10 ans"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-014",
@@ -624,22 +547,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "délinquants et criminels étrangers condamnés"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Expulser systématiquement tous les délinquants étrangers dès leur condamnation et les criminels à l’issue de leur peine."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-016",
@@ -661,22 +569,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étrangers au chômage après six mois de recherche d'emploi infructueuse"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Expulser les étrangers au chômage au terme d’un délai de six mois de recherche d’emploi infructueuse."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-017",
@@ -829,7 +722,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire"
+    "sous_theme": "Justice & pénitentiaire",
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-024",
@@ -851,22 +745,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "squatteurs"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Expulser tous les squatteurs en moins de 72h, grâce au recours obligatoire à la force publique par les préfets."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-025",
@@ -916,7 +795,7 @@
           {
             "champ": "autre",
             "valeurs": [
-              "délinquants"
+              "délinquants percevant des aides sociales"
             ]
           }
         ],
@@ -1012,8 +891,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Sécurité intérieure",
-    "effets": []
+    "sous_theme": "Sécurité intérieure"
   },
   {
     "id": "zemmour-interieur-justice-031",
@@ -1178,9 +1056,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "territoire",
             "valeurs": [
-              "habitants des bourgs des secteurs ruraux"
+              "rural"
             ]
           }
         ],
@@ -1420,9 +1298,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "statut_professionnel",
             "valeurs": [
-              "apprentis"
+              "apprenti"
             ]
           }
         ],
@@ -1584,7 +1462,29 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite"
+    "sous_theme": "Système de retraite",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "retraite"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "retraites inférieures à 1300 € / mois"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser jusqu’à 600 € / an les petites retraites inférieures à 1300 € / mois par l’exonération de CSG et CRDS."
+      }
+    ]
   },
   {
     "id": "zemmour-retraites-travail-016",
@@ -2190,9 +2090,9 @@
       {
         "cibles": [
           {
-            "champ": "enfants_a_charge",
+            "champ": "aides_percues",
             "valeurs": [
-              "au_moins_un"
+              "allocations_familiales"
             ]
           },
           {
@@ -2316,6 +2216,22 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "enseignant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser les salaires des enseignants en accélérant la progression des carrières et en attribuant des Primes d’Excellence Professorale"
+      }
+    ]
   }
 ]

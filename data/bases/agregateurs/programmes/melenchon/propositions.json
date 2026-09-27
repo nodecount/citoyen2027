@@ -158,7 +158,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Economies & hausses de dépenses"
+    "sous_theme": "Economies & hausses de dépenses",
+    "effets": []
   },
   {
     "id": "melenchon-finances-publiques-008",
@@ -253,7 +254,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Economies & hausses de dépenses"
+    "sous_theme": "Economies & hausses de dépenses",
+    "effets": []
   },
   {
     "id": "melenchon-finances-publiques-012",
@@ -480,8 +482,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité",
-    "effets": []
+    "sous_theme": "Fiscalité"
   },
   {
     "id": "melenchon-finances-publiques-022",
@@ -589,16 +590,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser la TVA sur les produits de première nécessité de 5,5 % à 5 %."
-      }
-    ]
+    "sous_theme": "Fiscalité"
   },
   {
     "id": "melenchon-finances-publiques-027",
@@ -708,22 +700,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "enfants_a_charge",
-            "valeurs": [
-              "au_moins_un"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "indetermine",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "remplacer l’injuste quotient familial fiscal actuel par un crédit d’impôt par enfant que pourraient toucher toutes les familles"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "melenchon-finances-publiques-032",
@@ -1793,8 +1770,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Outre-mer",
-    "effets": []
+    "sous_theme": "Outre-mer"
   },
   {
     "id": "melenchon-interieur-justice-039",
@@ -1816,15 +1792,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Outre-mer",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir l’accueil scolaire et la santé publique gratuite pour tous."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "melenchon-interieur-justice-040",
@@ -1889,7 +1857,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Allocations & prestations sociales"
+    "sous_theme": "Allocations & prestations sociales",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "bénéficiaires du minimum vieillesse"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter le minimum vieillesse au niveau du seuil de pauvreté (environ 1100 euros)."
+      }
+    ]
   },
   {
     "id": "melenchon-social-solidarite-002",
@@ -1977,22 +1961,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "sans_emploi"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "indetermine",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "indemniser les chômeurs grâce à une assurance calculée à partir du premier jour de travail"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "melenchon-social-solidarite-006",
@@ -2046,7 +2015,7 @@
             ]
           }
         ],
-        "dimension": "acces_aux_services",
+        "dimension": "protection_sociale",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Élargir la médecine du travail aux chômeurs, avec visite obligatoire au-delà de six mois."
@@ -2072,7 +2041,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Allocations & prestations sociales"
+    "sous_theme": "Allocations & prestations sociales",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Indemniser les chômeurs dès le premier jour de la fin de contrat."
+      }
+    ]
   },
   {
     "id": "melenchon-social-solidarite-009",
@@ -2245,9 +2230,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "aides_percues",
             "valeurs": [
-              "bénéficiaires de l'AAH"
+              "aah"
             ]
           }
         ],
@@ -2420,14 +2405,7 @@
     "sous_theme": "Santé",
     "effets": [
       {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes utilisant des protections périodiques"
-            ]
-          }
-        ],
+        "cibles": [],
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
@@ -2815,7 +2793,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Culture",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "pour rendre gratuite la pratique d’une activité sportive"
+      }
+    ]
   },
   {
     "id": "melenchon-social-solidarite-039",
@@ -2858,7 +2851,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "locataire"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire les expulsions locatives sans relogement public."
+      }
+    ]
   },
   {
     "id": "melenchon-social-solidarite-041",
@@ -2901,8 +2910,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement",
-    "effets": []
+    "sous_theme": "Logement"
   },
   {
     "id": "melenchon-social-solidarite-043",
@@ -2945,7 +2953,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "locataire"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Encadrer les loyers partout sur le territoire et à la baisse dans les grandes villes."
+      }
+    ]
   },
   {
     "id": "melenchon-social-solidarite-045",
@@ -3011,7 +3035,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement_social",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "éviter les hausses de loyers à la relocation en logement social"
+      }
+    ]
   },
   {
     "id": "melenchon-social-solidarite-048",
@@ -3076,8 +3115,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement",
-    "effets": []
+    "sous_theme": "Logement"
   },
   {
     "id": "melenchon-social-solidarite-051",
@@ -3103,9 +3141,11 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "territoire",
             "valeurs": [
-              "habitants des départements ruraux, quartiers prioritaires et Outre-mer"
+              "rural",
+              "quartier_prioritaire",
+              "outre_mer"
             ]
           }
         ],
@@ -3388,7 +3428,7 @@
             ]
           }
         ],
-        "dimension": "droits_et_libertes",
+        "dimension": "emploi",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Garantir les droits des représentants des personnels et des délégués syndicaux contre les licenciements abusifs des salariés protégés."
@@ -3457,7 +3497,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier_penible",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Passer aux 32 heures hebdomadaires pour les métiers pénibles ou de nuit."
+      }
+    ]
   },
   {
     "id": "melenchon-retraites-travail-009",
@@ -3478,23 +3533,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Généraliser une sixième semaine de congés payés pour tous les salariés."
-      }
-    ]
+    "sous_theme": "Emploi & travail"
   },
   {
     "id": "melenchon-retraites-travail-010",
@@ -3625,29 +3664,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "fonctionnaire"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "précaires des trois fonctions publiques"
-            ]
-          }
-        ],
-        "dimension": "emploi",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Titulariser les précaires des trois fonctions publiques."
-      }
-    ]
+    "sous_theme": "Emploi & travail"
   },
   {
     "id": "melenchon-retraites-travail-016",
@@ -3705,7 +3722,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Porter le SMIC à 1 600€ net et indexer les salaires sur l’inflation dans le privé et dans la fonction publique."
+        "extrait": "indexer les salaires sur l’inflation dans le privé et dans la fonction publique"
       }
     ]
   },
@@ -3728,23 +3745,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "apprentis et alternants"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Revaloriser la rémunération des apprentis et des alternants."
-      }
-    ]
+    "sous_theme": "Emploi & travail"
   },
   {
     "id": "melenchon-retraites-travail-019",
@@ -3875,8 +3876,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite",
-    "effets": []
+    "sous_theme": "Système de retraite"
   },
   {
     "id": "melenchon-retraites-travail-025",
@@ -3897,7 +3897,29 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite"
+    "sous_theme": "Système de retraite",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "retraite"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "titulaires de petites retraites"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter les petites retraites jusqu’au SMIC revalorisé à 1 600 €."
+      }
+    ]
   },
   {
     "id": "melenchon-retraites-travail-026",
@@ -4358,7 +4380,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir des prix rémunérateurs aux producteurs par des prix planchers pour les agriculteurs"
+      }
+    ]
   },
   {
     "id": "melenchon-envi-015",
@@ -4489,16 +4526,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Agriculture",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Limiter le prix final des produits alimentaires en fixant des coefficients multiplicateurs"
-      }
-    ]
+    "sous_theme": "Agriculture"
   },
   {
     "id": "melenchon-envi-021",
@@ -4916,7 +4944,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes condamnées pour corruption"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre inéligible toute personne condamnée pour corruption."
+      }
+    ]
   },
   {
     "id": "melenchon-gouvernance-republique-006",
@@ -5157,23 +5200,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "jeunes de 16 et 17 ans"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer le droit de vote à 16 ans."
-      }
-    ]
+    "sous_theme": "Démocratie, élections et pouvoir législatif"
   },
   {
     "id": "melenchon-gouvernance-republique-017",
@@ -5349,7 +5376,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "syndicalistes, Gilets jaunes, militants pour la paix, écologistes, associatifs et mouvements sociaux dans les Outre-mer, condamnés pour leur participation à la vie publique"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire voter une loi d’amnistie pour les syndicalistes, les Gilets jaunes, les militants pour la paix, les écologistes, les associatifs"
+      }
+    ]
   },
   {
     "id": "melenchon-gouvernance-republique-025",
@@ -5687,22 +5729,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes en situation d’illettrisme"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "leur proposer une remise à niveau gratuite"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "melenchon-education-jeunesse-003",
@@ -5723,7 +5750,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "parents de jeunes enfants"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Ouvrir 500 000 places en crèche et modes de garde adaptés sur 5 ans."
+      }
+    ]
   },
   {
     "id": "melenchon-education-jeunesse-004",
@@ -5766,7 +5809,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "parents de jeunes enfants en crèche publique"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir la gratuité des crèches publiques."
+      }
+    ]
   },
   {
     "id": "melenchon-education-jeunesse-006",
@@ -6183,22 +6242,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "lycéens"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Étendre le droit de réunion et d’association pour les lycéens."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "melenchon-education-jeunesse-025",
@@ -6263,7 +6307,30 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant",
+              "apprenti"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "mineurs, sous condition de ressources et éloignés des lieux d'apprentissage"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre l’accès et la gratuité des places d’internat aux étudiants et apprentis mineurs sous condition de ressources et pour les plus éloignés des lieux d’apprentissage."
+      }
+    ]
   },
   {
     "id": "melenchon-education-jeunesse-028",
@@ -6328,29 +6395,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "etudiant"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étudiants étrangers"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abroger l’augmentation des frais d’inscription décidée par Macron pour les étudiants étrangers."
-      }
-    ]
+    "sous_theme": "Education nationale"
   },
   {
     "id": "melenchon-education-jeunesse-031",
@@ -6525,7 +6570,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Construire 15 000 logements supplémentaires par an pour les étudiants, rénover et remettre aux normes de sécurité et environnementales les logements existants."
+        "extrait": "Construire 15 000 logements supplémentaires par an pour les étudiants"
       }
     ]
   },

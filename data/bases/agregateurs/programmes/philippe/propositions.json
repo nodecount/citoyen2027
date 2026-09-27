@@ -329,6 +329,13 @@
       {
         "cibles": [
           {
+            "champ": "nationalite",
+            "valeurs": [
+              "europeenne",
+              "hors_ue"
+            ]
+          },
+          {
             "champ": "autre",
             "valeurs": [
               "étrangers délinquants"
@@ -338,7 +345,7 @@
         "dimension": "revenu_disponible",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "mettre fin à leurs aides sociales"
+        "extrait": "Expulser immédiatement les étrangers délinquants et mettre fin à leurs aides sociales."
       }
     ]
   },
@@ -801,7 +808,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Lutte contre le narcotrafic"
+    "sous_theme": "Lutte contre le narcotrafic",
+    "effets": []
   },
   {
     "id": "philippe-interieur-justice-026",
@@ -994,7 +1002,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un temps partiel parental, à 80 % rémunéré 100 % pendant 2 mois"
+        "extrait": "temps partiel parental, à 80 % rémunéré 100 % pendant 2 mois"
       }
     ]
   },
@@ -1938,15 +1946,9 @@
       {
         "cibles": [
           {
-            "champ": "statut_professionnel",
+            "champ": "metier",
             "valeurs": [
-              "fonctionnaire"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "enseignants"
+              "enseignant"
             ]
           }
         ],
@@ -1976,7 +1978,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "philippe-education-jeunesse-007",

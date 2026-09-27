@@ -89,8 +89,15 @@ function lirePrompt(nom: string): string {
   return readFileSync(resolve(ICI, "prompts", nom), "utf-8");
 }
 
+// Les prompts ET la liste des champs du profil qu'ils donnent au modèle : ajouter ou changer une question du formulaire
+// rend les groupes « à refaire » (les effets pourraient désormais viser ce champ au lieu de « autre »).
 export function empreintePrompts(): string {
-  return createHash("sha256").update(lirePrompt("structuration.md")).update(lirePrompt("verification-structuration.md")).digest("hex").slice(0, 16);
+  return createHash("sha256")
+    .update(lirePrompt("structuration.md"))
+    .update(lirePrompt("verification-structuration.md"))
+    .update(descriptionChampsProfil())
+    .digest("hex")
+    .slice(0, 16);
 }
 
 // Change dès que le texte d'une proposition, l'ensemble des propositions du groupe ou les prompts changent : le

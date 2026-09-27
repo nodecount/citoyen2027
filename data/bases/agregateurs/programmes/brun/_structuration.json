@@ -2,23 +2,19 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "5018f5f6710ac337",
-    "date": "2026-09-26",
+    "empreinte": "4a51647320d8c2b3",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 6,
-    "avec_effets": 2,
-    "sans_effet": 2,
+    "avec_effets": 1,
+    "sans_effet": 4,
     "rejetees": [
       {
-        "id": "brun-retraites-travail-003",
-        "raison": "relecture : Le sens est indéterminé, mais l'effet est retenu sur tous les retraités. Le texte ne dit pas qui gagne ou perd, donc l'effet n'est pas fondé."
-      },
-      {
-        "id": "brun-retraites-travail-005",
-        "raison": "relecture : Le texte prévoit un plancher qui empêche la baisse des pensions et une indexation sur les salaires. Le sens du revenu n'est pas établi, et l'effet retenu repose sur un mécanisme supposé."
+        "id": "brun-retraites-travail-002",
+        "raison": "relecture : Le texte vise les pensions supérieures à 3 000 € bruts, mais la cible tranche_revenus 3000_5000 et plus_5000 est appliquée à tous les retraités de ces tranches (revenu net/total, pas seulement la pension), ce qui élargit le périmètre et la tranche de revenus n'est pas équivalente au seuil de pension brute ; en outre la désindexation n'est pas une baisse nominale certaine."
       }
     ],
-    "cout_reference_usd": 0.0422,
+    "cout_reference_usd": 0.0401,
     "appels": 2
   }
 ]

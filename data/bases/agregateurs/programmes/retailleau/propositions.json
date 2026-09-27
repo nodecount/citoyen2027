@@ -165,8 +165,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité",
-    "effets": []
+    "sous_theme": "Fiscalité"
   },
   {
     "id": "retailleau-finances-publiques-008",
@@ -209,7 +208,29 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "salariés effectuant des heures supplémentaires au-delà de 35 heures par semaine"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Exonérer totalement de cotisations sociales les heures supplémentaires effectuées au-delà de 35 heures par semaine"
+      }
+    ]
   },
   {
     "id": "retailleau-finances-publiques-010",
@@ -473,7 +494,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "habitants des quartiers gangrenés par le trafic de drogue"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Boucler 24h/24 les quartiers gangrenés par le trafic de drogue, en contrôlant les entrées et sorties"
+      }
+    ]
   },
   {
     "id": "retailleau-interieur-justice-009",
@@ -722,7 +758,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Allocations & prestations sociales"
+    "sous_theme": "Allocations & prestations sociales",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "familles avec au moins trois enfants mineurs à charge"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "avec un RF doublé pour le troisième enfant mineur à charge"
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-006",
@@ -764,7 +816,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Allocations & prestations sociales"
+    "sous_theme": "Allocations & prestations sociales",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "parents d'un enfant de moins de six mois"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Etendre le congé de naissance jusqu’aux six mois de l’enfant, ouvert à l’un des deux parents qui serait indemnisé à 70 % de sa rémunération antérieure"
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-008",
@@ -812,22 +880,22 @@
       {
         "cibles": [
           {
-            "champ": "enfants_a_charge",
+            "champ": "projet_achat",
             "valeurs": [
-              "au_moins_un"
+              "oui"
             ]
           },
           {
-            "champ": "autre",
+            "champ": "enfants_a_charge",
             "valeurs": [
-              "ménages qui achètent une résidence principale"
+              "au_moins_un"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire l’impôt sur le revenu des ménages qui achètent une résidence principale, grâce à la déduction d’une quote-part des intérêts d’emprunt"
+        "extrait": "Réduire l’impôt sur le revenu des ménages qui achètent une résidence principale"
       }
     ]
   },
@@ -938,22 +1006,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "logement",
-            "valeurs": [
-              "locataire"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "indetermine",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer les dispositifs d’encadrement des loyers issus de la loi ELAN. Abroger les mécanismes de plafonnement prévus par la loi de 1989."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "retailleau-social-solidarite-015",
@@ -1214,7 +1267,37 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes qui travaillent demandant un logement social"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "recentrer l’accès au logement social pour : ceux qui travaillent, les familles avec enfant"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "recentrer l’accès au logement social pour : ceux qui travaillent, les familles avec enfant"
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-027",
@@ -1235,23 +1318,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Restituer le parc Action Logement aux salariés pour les loger à proximité de leur emploi."
-      }
-    ]
+    "sous_theme": "Logement"
   },
   {
     "id": "retailleau-social-solidarite-028",
@@ -1527,7 +1594,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "des heures supplémentaires qui ne donnent lieu ni à cotisations sociales, ni patronales, ni salariales"
+        "extrait": "heures supplémentaires qui ne donnent lieu ni à cotisations sociales, ni patronales, ni salariales"
       }
     ]
   },
@@ -1642,6 +1709,12 @@
       {
         "cibles": [
           {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
             "champ": "autre",
             "valeurs": [
               "personnes ayant atteint toutes leurs annuités à 62 ans"
@@ -1651,7 +1724,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "pour augmenter de 15 % leur salaire net"
+        "extrait": "Supprimer les cotisations retraite et chômage pour les personnes (et leurs employeurs) ayant atteint toutes leurs annuités à 62 ans, pour augmenter de 15 % leur salaire net."
       }
     ]
   },
@@ -2788,7 +2861,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Services de la petite enfance"
+    "sous_theme": "Services de la petite enfance",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "professionnels de la petite enfance"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "ouvrir un accès prioritaire au logement social à proximité de leur lieu de travail"
+      }
+    ]
   },
   {
     "id": "retailleau-education-jeunesse-005",
@@ -2814,15 +2903,9 @@
       {
         "cibles": [
           {
-            "champ": "statut_professionnel",
+            "champ": "metier",
             "valeurs": [
-              "fonctionnaire"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "professeurs"
+              "enseignant"
             ]
           }
         ],

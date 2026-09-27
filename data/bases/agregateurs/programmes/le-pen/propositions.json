@@ -19,22 +19,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "détenteurs de patrimoine financier assujettis à l'impôt sur la fortune financière"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer l'impôt sur la fortune financière (IFF), inspiré de l’ancien ISF"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "le-pen-interieur-justice-001",
@@ -78,7 +63,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Sécurité intérieure",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "forces_ordre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place une présomption de légitime défense pour les policiers et gendarmes."
+      }
+    ]
   },
   {
     "id": "le-pen-interieur-justice-003",
@@ -166,7 +166,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "soignant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants et revaloriser leurs salaires."
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-003",
@@ -253,7 +268,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "65_plus"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Cette filière spécifique doit permettre de limiter l’attente aux urgences, d’améliorer la prise en charge et de mieux orienter le patient âgé."
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-007",
@@ -427,8 +458,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement",
-    "effets": []
+    "sous_theme": "Logement"
   },
   {
     "id": "le-pen-social-solidarite-015",
@@ -542,9 +572,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "carriere_longue",
             "valeurs": [
-              "personnes ayant commencé à travailler avant 20 ans"
+              "oui"
             ]
           }
         ],
@@ -737,7 +767,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir aux paysans des prix respectueux de leur travail"
+      }
+    ]
   },
   {
     "id": "le-pen-envi-007",
@@ -1089,15 +1134,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place une couverture numérique plus large du territoire afin de supprimer les zones blanches."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "le-pen-gouvernance-republique-006",
@@ -1338,7 +1375,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "enseignant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revalorisation des professeurs du primaire au lycée de 3% par an chaque année du quinquennat."
+      }
+    ]
   },
   {
     "id": "le-pen-education-jeunesse-010",

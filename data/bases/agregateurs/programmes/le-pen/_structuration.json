@@ -2,106 +2,101 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "e75fba666f65ce8c",
-    "date": "2026-09-26",
+    "empreinte": "f60cf5081dd52f09",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 10,
-    "avec_effets": 0,
+    "avec_effets": 1,
     "sans_effet": 9,
-    "rejetees": [
-      {
-        "id": "le-pen-education-jeunesse-009",
-        "raison": "relecture : La cible « fonctionnaire » élargit le périmètre : le texte vise uniquement les professeurs du primaire au lycée, et le statut de fonctionnaire n'y est pas mentionné (il est supposé)."
-      }
-    ],
-    "cout_reference_usd": 0.0326,
+    "rejetees": [],
+    "cout_reference_usd": 0.0381,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "c9034486748ef6f9",
-    "date": "2026-09-26",
+    "empreinte": "c89444752c689958",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 16,
-    "avec_effets": 1,
-    "sans_effet": 15,
+    "avec_effets": 2,
+    "sans_effet": 14,
     "rejetees": [],
-    "cout_reference_usd": 0.0342,
+    "cout_reference_usd": 0.0415,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "eb2a0aa807b7cdc0",
-    "date": "2026-09-26",
+    "empreinte": "11f57434a0b1a044",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 1,
-    "avec_effets": 1,
-    "sans_effet": 0,
+    "avec_effets": 0,
+    "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.0298,
-    "appels": 2
+    "cout_reference_usd": 0.0243,
+    "appels": 1
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "04e71c72033760c9",
-    "date": "2026-09-26",
+    "empreinte": "555500b7c8f60b18",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 7,
-    "avec_effets": 1,
-    "sans_effet": 6,
+    "avec_effets": 0,
+    "sans_effet": 7,
     "rejetees": [],
-    "cout_reference_usd": 0.0298,
-    "appels": 2
+    "cout_reference_usd": 0.0264,
+    "appels": 1
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "89519cc22d52d4d5",
-    "date": "2026-09-26",
+    "empreinte": "98780e6d845ef404",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 4,
-    "avec_effets": 0,
-    "sans_effet": 4,
+    "avec_effets": 1,
+    "sans_effet": 3,
     "rejetees": [],
-    "cout_reference_usd": 0.0173,
-    "appels": 1
+    "cout_reference_usd": 0.0362,
+    "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "fbc461ea46e27381",
-    "date": "2026-09-26",
+    "empreinte": "336a038f01d94446",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 6,
     "avec_effets": 1,
     "sans_effet": 5,
     "rejetees": [],
-    "cout_reference_usd": 0.0294,
+    "cout_reference_usd": 0.036,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "604f49109a0bfdde",
-    "date": "2026-09-26",
+    "empreinte": "f7d1f07bc8162247",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 15,
-    "avec_effets": 0,
-    "sans_effet": 13,
+    "avec_effets": 2,
+    "sans_effet": 11,
     "rejetees": [
       {
-        "id": "le-pen-social-solidarite-006",
-        "raison": "relecture : Le texte ne nomme pas de tranche d'âge chiffrée : « personnes les plus âgées » n'est pas équivalent à 65 ans et plus, ce qui élargit ou précise indûment le périmètre ; de plus, l'amélioration de l'accès est un objectif affiché (« doit permettre »), non un effet établi."
+        "id": "le-pen-social-solidarite-011",
+        "raison": "relecture : Le périmètre est élargi : la cible « locataire » vise tous les locataires alors que le texte ne vise que ceux qui ne paient pas leur loyer. De plus, la dimension « droits_et_libertes » est douteuse pour des sanctions et des expulsions, qui relèvent plutôt du logement ou de la sécurité du logement."
       },
       {
-        "id": "le-pen-social-solidarite-011",
-        "raison": "relecture : Le périmètre est élargi à tous les locataires alors que le texte vise uniquement les locataires qui ne paient pas leur loyer (impayés) ; la dimension « droits et libertés » est aussi discutable, l'effet portant plutôt sur la sécurité du logement."
+        "id": "le-pen-social-solidarite-014",
+        "raison": "relecture : La cible « europeenne » et « hors_ue » regroupe tous les non-Français, y compris ceux en situation régulière. Le texte dit seulement que les Français seront favorisés, sans préciser le statut des autres. De plus, la « hausse » pour les Français suppose un mécanisme de rationnement que le texte ne décrit pas."
       }
     ],
-    "cout_reference_usd": 0.0399,
+    "cout_reference_usd": 0.0533,
     "appels": 2
   }
 ]

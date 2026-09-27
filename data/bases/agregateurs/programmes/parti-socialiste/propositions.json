@@ -67,15 +67,9 @@
       {
         "cibles": [
           {
-            "champ": "logement",
+            "champ": "logements_hors_residence",
             "valeurs": [
-              "proprietaire"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "propriétaires de 4 logements ou plus hors résidence principale"
+              "quatre_ou_plus"
             ]
           }
         ],
@@ -262,9 +256,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "statut_sejour",
             "valeurs": [
-              "titulaires d'un titre de séjour de longue durée"
+              "titre_long_sejour"
             ]
           }
         ],
@@ -485,15 +479,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "en rendant le dépistage accessible à tous"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "parti-socialiste-social-solidarite-010",
@@ -875,7 +861,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "aide_logement"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Stopper la diminution des aides au logement."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-social-solidarite-027",
@@ -896,8 +897,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement",
-    "effets": []
+    "sous_theme": "Logement"
   },
   {
     "id": "parti-socialiste-social-solidarite-028",
@@ -1688,7 +1688,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "enseignant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser le salaire des enseignants pour atteindre la moyenne de l’OCDE."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-education-jeunesse-003",

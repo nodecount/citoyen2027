@@ -110,9 +110,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "vehicule",
             "valeurs": [
-              "propriétaires de véhicules thermiques"
+              "thermique"
             ]
           }
         ],
@@ -143,14 +143,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Développer le leasing social pour faciliter l'accès aux voitures électriques."
-      }
-    ]
+    "effets": []
   }
 ]

@@ -89,9 +89,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "metier_penible",
             "valeurs": [
-              "personnes exerçant des métiers à fortes pénibilités"
+              "oui"
             ]
           }
         ],
@@ -148,16 +148,18 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "enfants_scolarises",
             "valeurs": [
-              "élèves des établissements scolaires"
+              "maternelle_primaire",
+              "college",
+              "lycee"
             ]
           }
         ],
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "petit-déjeuner gratuit pour tous les élèves dans les établissements scolaires"
+        "extrait": "Mettre en place un petit-déjeuner gratuit pour tous les élèves dans les établissements scolaires."
       }
     ]
   },
@@ -207,16 +209,18 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "enfants_scolarises",
             "valeurs": [
-              "élèves des établissements scolaires"
+              "maternelle_primaire",
+              "college",
+              "lycee"
             ]
           }
         ],
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir la présence d’un psychologue et d’une infirmière scolaires dans chaque établissement"
+        "extrait": "Garantir la présence d’un psychologue et d’une infirmière scolaires dans chaque établissement."
       }
     ]
   },
@@ -240,22 +244,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "élèves"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Permettre à chaque élève de participer à une classe de découverte au cours de sa scolarité"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "faure-education-jeunesse-005",

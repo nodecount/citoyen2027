@@ -107,7 +107,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "héritiers des 1 % des successions les plus importantes"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Taxer les méga-héritages, ciblant les 1 % des successions les plus importantes."
+      }
+    ]
   },
   {
     "id": "glucksmann-finances-publiques-006",
@@ -236,8 +251,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration",
-    "effets": []
+    "sous_theme": "Immigration"
   },
   {
     "id": "glucksmann-interieur-justice-004",
@@ -465,7 +479,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "soignant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mieux rémunérer les soignants."
+      }
+    ]
   },
   {
     "id": "glucksmann-social-solidarite-002",
@@ -596,23 +625,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "aidants familiaux qui réduisent ou arrêtent leur travail pour s'occuper des aînés"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer une indemnité d’aidant familial pour ceux qui réduisent ou arrêtent leur travail pour s’occuper des aînés."
-      }
-    ]
+    "sous_theme": "Santé"
   },
   {
     "id": "glucksmann-social-solidarite-008",
@@ -743,7 +756,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Culture"
+    "sous_theme": "Culture",
+    "effets": []
   },
   {
     "id": "glucksmann-social-solidarite-014",
@@ -786,8 +800,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement",
-    "effets": []
+    "sous_theme": "Logement"
   },
   {
     "id": "glucksmann-social-solidarite-016",
@@ -1062,7 +1075,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "revaloriser durablement les rémunérations pour renforcer l’attractivité de la fonction publique"
+        "extrait": "revaloriser durablement les rémunérations pour renforcer l’attractivité de la fonction publique, indexant leur point d’indice sur l’inflation"
       }
     ]
   },
@@ -3044,29 +3057,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Enseignement supérieur",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "etudiant"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étudiants éloignés de leur lieu d'études supérieures"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "création d'une aide nationale pour compenser les frais liés à l'éloignement"
-      }
-    ]
+    "sous_theme": "Enseignement supérieur"
   },
   {
     "id": "glucksmann-education-jeunesse-014",

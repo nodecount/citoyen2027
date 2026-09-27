@@ -2,30 +2,26 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "e511e8a3a7efd9e0",
-    "date": "2026-09-26",
+    "empreinte": "31872238fc22873d",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 16,
-    "avec_effets": 1,
+    "avec_effets": 2,
     "sans_effet": 13,
     "rejetees": [
       {
         "id": "retailleau-education-jeunesse-003",
-        "raison": "relecture : Le relèvement du plafond ne bénéficie qu'aux salariés dont l'employeur verse une participation garde d'enfant ; cibler tous les salariés avec enfant élargit le périmètre et suppose un gain effectif non établi par le texte."
-      },
-      {
-        "id": "retailleau-education-jeunesse-004",
-        "raison": "relecture : L'accès prioritaire au logement social n'est pas un accès à des services au sens d'une grandeur clairement fondée ; l'effet sur le logement (coût/accès) est supposé, et le texte ne garantit pas de gain concret pour les professionnels."
+        "raison": "relecture : Le texte vise les salariés dont l'employeur verse une participation garde d'enfant, pas tous les salariés avec enfant ; le gain dépend de la décision de l'employeur (périmètre élargi, effet supposé)."
       }
     ],
-    "cout_reference_usd": 0.0444,
+    "cout_reference_usd": 0.0497,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "1554f3dffa5f255f",
-    "date": "2026-09-26",
+    "empreinte": "4fe3b63a43455897",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "avec_effets": 2,
@@ -33,74 +29,74 @@
     "rejetees": [
       {
         "id": "retailleau-envi-003",
-        "raison": "relecture : Il s'agit d'un simple objectif (« objectif -5 % à -15 % ») dépendant d'un mécanisme supposé (nucléaire, marché), pas d'une baisse établie de la facture."
+        "raison": "relecture : Il s'agit d'un simple objectif chiffré (-5 % à -15 %) sans mécanisme décrit dans le texte, donc un effet supposé plutôt que fondé."
       }
     ],
-    "cout_reference_usd": 0.0435,
+    "cout_reference_usd": 0.0506,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "8cec29cb79b71346",
-    "date": "2026-09-26",
+    "empreinte": "3390b96daab165cb",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "avec_effets": 1,
-    "sans_effet": 11,
+    "avec_effets": 2,
+    "sans_effet": 10,
     "rejetees": [
       {
-        "id": "retailleau-finances-publiques-009",
-        "raison": "relecture : Le périmètre est élargi : le texte vise les salariés qui font des heures supplémentaires au-delà de 35 h, pas tous les salariés. De plus, l'effet sur le revenu disponible suppose que l'exonération de cotisations se traduit par un gain net, ce que le texte ne dit pas de façon certaine."
+        "id": "retailleau-finances-publiques-007",
+        "raison": "relecture : Le texte ne parle que d'un seuil d'exonération des donations ; le lien avec une hausse du patrimoine est une déduction, et la cible (donateurs et bénéficiaires confondus) est élargie sans que le texte distingue qui gagne."
       }
     ],
-    "cout_reference_usd": 0.0375,
+    "cout_reference_usd": 0.0515,
     "appels": 2
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "2453c4463d2c27cd",
-    "date": "2026-09-26",
+    "empreinte": "8cdbf431d5ad3448",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 12,
     "avec_effets": 0,
     "sans_effet": 12,
     "rejetees": [],
-    "cout_reference_usd": 0.0234,
+    "cout_reference_usd": 0.0302,
     "appels": 1
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "339fa5ccfaf1e364",
-    "date": "2026-09-26",
+    "empreinte": "49f6e474bf587a50",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "avec_effets": 1,
-    "sans_effet": 12,
+    "avec_effets": 2,
+    "sans_effet": 11,
     "rejetees": [],
-    "cout_reference_usd": 0.0333,
+    "cout_reference_usd": 0.0459,
     "appels": 2
   },
   {
     "theme": "reformes-etat",
     "groupe": 0,
-    "empreinte": "18ca6a36c7d0d18f",
-    "date": "2026-09-26",
+    "empreinte": "8fa542055ff4a97d",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 0,
     "sans_effet": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.0168,
+    "cout_reference_usd": 0.0236,
     "appels": 1
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "295af0a5a2431dd9",
-    "date": "2026-09-26",
+    "empreinte": "9fb842647357a719",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 19,
     "avec_effets": 2,
@@ -108,66 +104,58 @@
     "rejetees": [
       {
         "id": "retailleau-retraites-travail-009",
-        "raison": "relecture : La cotisation de 1 % finance une retraite par capitalisation (épargne future), donc le sens sur le revenu disponible est discutable et l'effet dépend d'un mécanisme non dit (le texte ne précise pas si c'est une cotisation additionnelle ou substituée) ; il devrait être indéterminé."
+        "raison": "relecture : Le texte cible ceux qui entreront sur le marché du travail en 2027 (montée en puissance progressive), pas tous les salariés : périmètre élargi ; de plus, la cotisation finance une retraite future, donc l'effet sur le revenu disponible est à nuancer."
       }
     ],
-    "cout_reference_usd": 0.0435,
+    "cout_reference_usd": 0.0513,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "9c35b2fd5aa75754",
-    "date": "2026-09-26",
+    "empreinte": "cf7d1d4fdd83f8d8",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 3,
-    "sans_effet": 16,
+    "avec_effets": 4,
+    "sans_effet": 17,
     "rejetees": [
       {
-        "id": "retailleau-social-solidarite-005",
-        "raison": "relecture : Le texte vise les familles avec un troisième enfant mineur, mais la cible « au moins un enfant » élargit le périmètre."
-      },
-      {
         "id": "retailleau-social-solidarite-006",
-        "raison": "relecture : Le texte ne mentionne les intérêts d'emprunt que pour les familles avec emprunt immobilier ; la cible « au moins un enfant » omet la condition d'emprunt, et le volet de recentrage du logement social n'est pas pris en compte (image incomplète)."
-      },
-      {
-        "id": "retailleau-social-solidarite-007",
-        "raison": "relecture : Le texte ne précise pas que le bénéfice est réservé aux salariés (rémunération antérieure), et le gain de revenu n'est pas sûr face à la perte de salaire pendant le congé ; cible salarie non fondée."
+        "raison": "relecture : La déduction ne bénéficie qu'aux familles ayant un emprunt immobilier, or la cible est tous les foyers avec enfant (périmètre élargi) ; de plus le texte évoque aussi un recentrage du logement social non retenu."
       },
       {
         "id": "retailleau-social-solidarite-010",
-        "raison": "relecture : Le texte vise aussi les moins de 40 ans (100 000 €) ; ne retenir que moins de 30 ans donne une image partielle."
+        "raison": "relecture : Image trompeuse : le texte vise aussi les moins de 40 ans (100 000 €) mais seul le public moins de 30 ans est retenu, et l'effet ne vaut que pour ceux recevant un don."
       },
       {
         "id": "retailleau-social-solidarite-020",
-        "raison": "relecture : Le texte concerne les emprunteurs immobiliers ; la cible « au moins un enfant » sans condition d'emprunt élargit le périmètre."
+        "raison": "relecture : La mesure concerne les emprunteurs (déductibilité des intérêts), pas tous les foyers avec enfants : cibles élargies faute de critère d'emprunt/projet d'achat."
       },
       {
         "id": "retailleau-social-solidarite-025",
-        "raison": "relecture : Le texte vise aussi les moins de 40 ans (100 000 €) ; ne retenir que moins de 30 ans donne une image partielle."
+        "raison": "relecture : Image trompeuse : le texte prévoit aussi 100 000 € pour les moins de 40 ans, non retenu, et l'effet ne concerne que les bénéficiaires d'un don."
       }
     ],
-    "cout_reference_usd": 0.0966,
+    "cout_reference_usd": 0.0714,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 1,
-    "empreinte": "f67f51db5fac9d37",
-    "date": "2026-09-26",
+    "empreinte": "a8594bbe6f6f2f83",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 7,
     "avec_effets": 2,
     "sans_effet": 4,
     "rejetees": [
       {
-        "id": "retailleau-social-solidarite-026",
-        "raison": "relecture : Le texte vise « ceux qui travaillent » et les familles avec enfant, mais l'effet sur les actifs est listé sans nuance, alors que recentrer l'accès pour ces publics implique aussi une baisse pour les autres (image trompeuse), et le périmètre statut_professionnel (salarié, indépendant, fonctionnaire) est une interprétation de « ceux qui travaillent »."
+        "id": "retailleau-social-solidarite-027",
+        "raison": "relecture : Le texte ne précise pas que tous les salariés obtiennent un accès accru : restituer le parc Action Logement est une réorganisation institutionnelle, l'effet sur l'accès des salariés est supposé (mécanisme non établi)."
       }
     ],
-    "cout_reference_usd": 0.0248,
+    "cout_reference_usd": 0.0205,
     "appels": 2
   }
 ]

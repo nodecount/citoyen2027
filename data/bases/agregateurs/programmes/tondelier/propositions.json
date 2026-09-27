@@ -25,7 +25,7 @@
           {
             "champ": "autre",
             "valeurs": [
-              "héritiers de successions dépassant 4 millions d'euros"
+              "héritiers d'héritages dépassant 4 millions d'euros"
             ]
           }
         ],
@@ -99,7 +99,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "contribuables dont la fortune dépasse 100 millions d'euros"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un impôt plancher de 2 % sur le patrimoine des contribuables dont la fortune dépasse 100 millions d’euros"
+      }
+    ]
   },
   {
     "id": "tondelier-finances-publiques-005",
@@ -384,7 +400,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Allocations & prestations sociales"
+    "sous_theme": "Allocations & prestations sociales",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "bénéficiaires du minimum vieillesse"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter les minimums vieillesse."
+      }
+    ]
   },
   {
     "id": "tondelier-social-solidarite-009",
@@ -449,7 +481,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Allocations & prestations sociales"
+    "sous_theme": "Allocations & prestations sociales",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "titulaires de petites retraites"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Améliorer les petites retraites."
+      }
+    ]
   },
   {
     "id": "tondelier-social-solidarite-012",
@@ -536,16 +584,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Allocations & prestations sociales",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Plafonner les frais bancaires."
-      }
-    ]
+    "sous_theme": "Allocations & prestations sociales"
   },
   {
     "id": "tondelier-social-solidarite-016",
@@ -571,9 +610,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "aides_percues",
             "valeurs": [
-              "bénéficiaires des APL"
+              "aide_logement"
             ]
           }
         ],
@@ -810,22 +849,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "bénéficiaires potentiels de l'Aide médicale d'État (AME)"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir l’accès à l’Aide médicale d’État (AME)."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "tondelier-social-solidarite-027",
@@ -1294,12 +1318,6 @@
             "champ": "statut_professionnel",
             "valeurs": [
               "sans_emploi"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "chômeurs longue durée"
             ]
           }
         ],
@@ -1871,7 +1889,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie"
+    "sous_theme": "Ecologie",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un « congé climatique » (5 jours maximum par an)."
+      }
+    ]
   },
   {
     "id": "tondelier-education-jeunesse-001",
@@ -1892,7 +1926,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "enseignant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter de 15 % les salaires des enseignants, en plus de l’inflation"
+      }
+    ]
   },
   {
     "id": "tondelier-education-jeunesse-002",
@@ -1914,7 +1964,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire à 19 le nombre maximum d’élèves par classe dans les écoles primaires."
+      }
+    ]
   },
   {
     "id": "tondelier-education-jeunesse-003",

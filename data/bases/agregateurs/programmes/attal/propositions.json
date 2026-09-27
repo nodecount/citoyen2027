@@ -159,22 +159,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "fonctionnaire"
-            ]
-          }
-        ],
-        "dimension": "emploi",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer 100 000 postes de fonctionnaires."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "attal-finances-publiques-008",
@@ -261,7 +246,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "classes moyennes"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser de 2 Md€ les impôts pour les classes moyennes."
+      }
+    ]
   },
   {
     "id": "attal-finances-publiques-012",
@@ -349,22 +350,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étrangers pouvant demander le regroupement familial"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Restreindre le regroupement familial."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "attal-interieur-justice-003",
@@ -436,7 +422,7 @@
           {
             "champ": "autre",
             "valeurs": [
-              "personnes de moins de 15 ans souhaitant porter le voile"
+              "personnes de moins de 15 ans"
             ]
           }
         ],
@@ -575,22 +561,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "etudiant"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Prioriser la construction des logements étudiants et Crous."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "attal-retraites-travail-001",
@@ -611,7 +582,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Défiscaliser les heures supplémentaires."
+      }
+    ]
   },
   {
     "id": "attal-retraites-travail-002",
@@ -699,22 +686,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Plannifier la formation de 20 M de salariés sur 5 ans pour l’intelligence artificielle."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "attal-retraites-travail-006",
@@ -794,7 +766,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite"
+    "sous_theme": "Système de retraite",
+    "effets": []
   },
   {
     "id": "attal-envi-001",

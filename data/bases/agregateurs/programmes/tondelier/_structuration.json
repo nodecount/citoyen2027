@@ -2,62 +2,47 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "298741f73e9bdc5c",
-    "date": "2026-09-26",
+    "empreinte": "f3d9f1b200e225d0",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 3,
-    "avec_effets": 0,
-    "sans_effet": 2,
-    "rejetees": [
-      {
-        "id": "tondelier-education-jeunesse-001",
-        "raison": "relecture : La cible « statut_professionnel: fonctionnaire » n'est pas nommée dans le texte, qui vise seulement les enseignants, et elle peut élargir le périmètre à tous les fonctionnaires."
-      }
-    ],
-    "cout_reference_usd": 0.0307,
+    "avec_effets": 2,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0367,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "c7721ea983001e62",
-    "date": "2026-09-26",
+    "empreinte": "3397b3719e622fae",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 21,
-    "avec_effets": 0,
+    "avec_effets": 1,
     "sans_effet": 20,
-    "rejetees": [
-      {
-        "id": "tondelier-envi-021",
-        "raison": "relecture : Le texte ne précise pas que le congé vise les salariés (périmètre supposé, il pourrait couvrir d'autres actifs) et la dimension « droits_et_libertés » est vague ; l'effet concret (jours de congé/temps libre) n'est pas explicité."
-      }
-    ],
-    "cout_reference_usd": 0.0355,
+    "rejetees": [],
+    "cout_reference_usd": 0.0416,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "768bc8a2a01e6470",
-    "date": "2026-09-26",
+    "empreinte": "5f8fd44bdd53281e",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 9,
-    "avec_effets": 1,
+    "avec_effets": 2,
     "sans_effet": 7,
-    "rejetees": [
-      {
-        "id": "tondelier-finances-publiques-004",
-        "raison": "relecture : La cible tranche_patrimoine « plus_1_3m » élargit le périmètre : le texte ne vise que les fortunes supérieures à 100 millions d'euros, pas toutes les fortunes au-dessus de 1,3 M€."
-      }
-    ],
-    "cout_reference_usd": 0.0393,
+    "rejetees": [],
+    "cout_reference_usd": 0.0409,
     "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "9bdd9f627ef0d68f",
-    "date": "2026-09-26",
+    "empreinte": "5aac66e5482bf178",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 15,
     "avec_effets": 2,
@@ -65,45 +50,41 @@
     "rejetees": [
       {
         "id": "tondelier-retraites-travail-013",
-        "raison": "relecture : Le périmètre est élargi : la cible « salarie » englobe tous les salariés alors que le texte ne vise que les personnes rémunérées au SMIC."
+        "raison": "relecture : Le périmètre est élargi : la cible « salarie » vise tous les salariés alors que le texte ne concerne que les salariés rémunérés au SMIC (la seconde cible, fidèle au texte, suffit)."
       }
     ],
-    "cout_reference_usd": 0.0422,
+    "cout_reference_usd": 0.0453,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "74c9a4e9a3c8cfc4",
-    "date": "2026-09-26",
+    "empreinte": "f65a8bebb85ab154",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 3,
+    "avec_effets": 4,
     "sans_effet": 20,
     "rejetees": [
       {
-        "id": "tondelier-social-solidarite-008",
-        "raison": "relecture : Le texte vise les bénéficiaires du minimum vieillesse, pas tous les retraités ; cibler « retraite » élargit le périmètre."
-      },
-      {
-        "id": "tondelier-social-solidarite-011",
-        "raison": "relecture : Le critère « retraite » seul est plus large que les seuls bénéficiaires de petites retraites ; les cibles combinées peuvent élargir le périmètre, et « améliorer » ne précise pas clairement le sens sur le revenu."
+        "id": "tondelier-social-solidarite-015",
+        "raison": "relecture : Cibles vides (tout citoyen) alors que le plafonnement des frais bancaires ne vise que les clients concernés par ces frais ; le texte ne précise pas le public et l'effet sur le coût de la vie est supposé."
       }
     ],
-    "cout_reference_usd": 0.0401,
+    "cout_reference_usd": 0.0555,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 1,
-    "empreinte": "fc7f40ac2d9e97c9",
-    "date": "2026-09-26",
+    "empreinte": "b756073c7dd332b8",
+    "date": "2026-09-27",
     "modele": "claude-sonnet-5",
     "propositions": 11,
-    "avec_effets": 1,
-    "sans_effet": 10,
+    "avec_effets": 0,
+    "sans_effet": 11,
     "rejetees": [],
-    "cout_reference_usd": 0.0193,
-    "appels": 2
+    "cout_reference_usd": 0.0273,
+    "appels": 1
   }
 ]

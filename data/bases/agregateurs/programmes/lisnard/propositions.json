@@ -19,7 +19,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser la fiscalité sur les héritages et les donations afin de faciliter la transmission du patrimoine."
+      }
+    ]
   },
   {
     "id": "lisnard-finances-publiques-002",
@@ -545,7 +553,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Sécurité intérieure"
+    "sous_theme": "Sécurité intérieure",
+    "effets": []
   },
   {
     "id": "lisnard-social-solidarite-001",
@@ -567,7 +576,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "habitants des zones sous-dotées en médecins"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "la Sécurité sociale rembourse mieux les actes dans les zones sous-dotées que dans les zones saturées"
+      }
+    ]
   },
   {
     "id": "lisnard-social-solidarite-002",
@@ -860,23 +884,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Agriculture",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "agriculteurs"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "transfert d’une part des charges vers la valeur ajoutée pour améliorer les revenus nets"
-      }
-    ]
+    "sous_theme": "Agriculture"
   },
   {
     "id": "lisnard-envi-005",
@@ -1242,7 +1250,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "effets": []
   },
   {
     "id": "lisnard-education-jeunesse-003",
@@ -1334,16 +1343,16 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "metier",
             "valeurs": [
-              "enseignants"
+              "enseignant"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter de 20 % les rémunérations en 5 ans"
+        "extrait": "Augmenter de 20 % les rémunérations en 5 ans, proposition conditionnée à une réorganisation"
       }
     ]
   },

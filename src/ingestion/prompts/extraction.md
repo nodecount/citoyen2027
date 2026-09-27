@@ -73,6 +73,27 @@ Règles de ciblage :
   décrit le seuil exact. Les tranches entièrement hors du seuil ne figurent pas.
 - Ne cible qu'avec ce que le texte dit : n'invente pas de public.
 
+**Préfère toujours un champ listé à `autre`** : n'utilise `autre` que si AUCUN champ ne décrit exactement le public visé.
+Correspondances exactes (à appliquer telles quelles quand le texte les vise) :
+- « étrangers » (sans autre précision) → `nationalite` : [`europeenne`, `hors_ue`] ; « ressortissants extra-européens » →
+  `nationalite` : [`hors_ue`].
+- « personnes en situation irrégulière » ou « sous OQTF » → `statut_sejour` : [`sans_titre`] ; « demandeurs d'asile » →
+  `statut_sejour` : [`demandeur_asile`] ; « titulaires d'un titre de séjour de longue durée » → `statut_sejour` :
+  [`titre_long_sejour`].
+- « bénéficiaires du RSA / de la prime d'activité / des APL / des allocations familiales / de l'AAH » → `aides_percues` avec
+  l'aide nommée.
+- « enseignants » ou « agriculteurs » ou « soignants » → `metier` ; « apprentis et alternants » → `statut_professionnel` :
+  [`apprenti`] ; « étudiants étrangers » → `statut_professionnel` : [`etudiant`] ET `nationalite` : [`europeenne`, `hors_ue`].
+- « propriétaires de 4 logements ou plus (hors résidence principale) » → `logements_hors_residence` : [`quatre_ou_plus`].
+- « propriétaires de véhicules thermiques » → `vehicule` : [`thermique`].
+- « métiers pénibles » → `metier_penible` : [`oui`] ; « carrière longue / commencé à travailler avant 20 ans » →
+  `carriere_longue` : [`oui`] ; « aidants familiaux » → `aidant_familial` : [`oui`].
+- « nés en France de parents étrangers » → `ne_en_france_parents_etrangers` : [`oui`] ; « habitants des zones rurales » →
+  `territoire` : [`rural`] ; « quartiers prioritaires » → `territoire` : [`quartier_prioritaire`] ; « outre-mer » →
+  `territoire` : [`outre_mer`] ; « locataires du parc social » → `logement_social` : [`oui`].
+- Un public plus large ou différent (« ménages modestes », « classes moyennes », « lycéens »…) n'a PAS de champ exact :
+  `autre`. Ne rapproche jamais « habitants des déserts médicaux » de `rural`, ni « ménages modestes » d'une tranche de revenus.
+
 **`dimension`** : la grandeur qui bouge pour le citoyen visé — `revenu_disponible` (impôts, cotisations,
 salaire net, prestations perçues), `cout_de_la_vie` (prix, loyers, énergie, frais restant à charge), `emploi`,
 `protection_sociale`, `acces_aux_services` (soins, école, transports, justice), `droits_et_libertes`,
