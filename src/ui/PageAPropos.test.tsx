@@ -13,8 +13,12 @@ describe("PageAPropos", () => {
     expect(html).toContain("Rien n&#x27;est envoyé ni enregistré");
   });
 
-  it("crédite chaque photo : auteur, licence et source, cliquables", () => {
-    expect((html.match(/<li><strong>/g) ?? []).length).toBeGreaterThanOrEqual(Object.keys(PORTRAITS).length);
+  it("présente chaque section dans un bloc avec son icône", () => {
+    expect((html.match(/<article class="bloc-a-propos[^"]*"><svg/g) ?? []).length).toBe(4);
+  });
+
+  it("crédite chaque photo : vignette, auteur, licence et source, cliquables", () => {
+    expect((html.match(/>source<\/a>/g) ?? []).length).toBe(Object.keys(PORTRAITS).length);
     expect(html).toContain("<strong>Marine Le Pen</strong>");
     expect(html).toContain(PORTRAITS["le-pen"].licence);
     expect(html).toContain(`href="${PORTRAITS["le-pen"].source_url}"`);

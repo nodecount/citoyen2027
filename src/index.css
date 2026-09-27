@@ -475,26 +475,75 @@ a {
   font-size: 0.9375rem;
 }
 
-.a-propos {
-  max-width: 46rem;
+/* ---- À propos : une section = un bloc avec son icône ------------------------------------------ */
+
+.sections-a-propos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
 }
 
-.a-propos h2 {
-  margin: 1.75rem 0 0.4rem;
+.bloc-a-propos {
+  padding: 1.25rem 1.3rem;
+  border: 1px solid var(--filet);
+  border-top: 4px solid var(--bleu);
+  border-radius: var(--rayon);
+  background: var(--surface);
+  box-shadow: var(--ombre);
+}
+
+.bloc-a-propos > svg {
+  box-sizing: content-box;
+  padding: 0.55rem;
+  border-radius: 10px;
+  background: var(--bleu-pale);
+  color: var(--bleu);
+}
+
+.bloc-a-propos h2 {
+  margin: 0.75rem 0 0.4rem;
   font-size: 1.2rem;
   color: var(--bleu-fonce);
 }
 
-.a-propos p,
-.a-propos ul {
-  margin: 0.25rem 0;
+.bloc-a-propos p,
+.bloc-a-propos ul {
+  margin: 0.3rem 0;
+}
+
+.bloc-a-propos ul {
+  padding-left: 1.1rem;
+}
+
+.bloc-credits {
+  margin-top: 1.25rem;
 }
 
 .liste-credits {
-  padding-left: 1.1rem;
-  font-size: 0.9375rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 0.6rem 1.25rem;
+  margin-top: 1rem !important;
+  padding: 0 !important;
+  list-style: none;
 }
 
+.liste-credits li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.liste-credits li > span:last-child {
+  display: grid;
+  line-height: 1.35;
+}
+
+.credit-detail {
+  color: var(--encre-douce);
+  font-size: 0.875rem;
+}
 .credits {
   margin-top: 2rem;
   color: var(--encre-douce);
@@ -699,8 +748,15 @@ article {
   padding-right: 0.3rem;
 }
 
-.carte-invite {
-  margin-top: 0.25rem;
+/* L'invitation à cliquer occupe l'espace libre du corps, centrée dans les deux sens. */
+.carte-corps {
+  display: flex;
+  flex-direction: column;
+}
+
+.carte-corps .carte-invite {
+  margin: auto;
+  text-align: center;
 }
 
 .carte-pied {
