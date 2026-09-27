@@ -41,8 +41,8 @@ export default function Accueil({ base, onCommencer }: AccueilProps) {
         </li>
         <li>
           <Link2 aria-hidden="true" />
-          <strong>Sources citées</strong>
-          <span>{maj ? `mises à jour le ${dateLisible(maj)}` : "une source par mesure"}</span>
+          <strong>Programmes officiels</strong>
+          <span>{maj ? `mis à jour le ${dateLisible(maj)}` : "une source par mesure"}</span>
         </li>
         <li>
           <UserRoundCheck aria-hidden="true" />

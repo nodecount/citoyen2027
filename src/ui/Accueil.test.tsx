@@ -16,10 +16,10 @@ describe("Accueil", () => {
     expect(rendu).toContain("Voir les thèmes");
   });
 
-  it("met la date de mise à jour dans le bloc « Sources citées », en français", () => {
+  it("met la date de mise à jour dans le bloc « Programmes officiels », en français", () => {
     const rendu = rendre("officielle");
-    const bloc = rendu.slice(rendu.indexOf("Sources citées"));
-    expect(bloc).toMatch(/^Sources citées<\/strong><span>mises à jour le \d{1,2} [a-zûé]+ 2026<\/span>/);
+    const bloc = rendu.slice(rendu.indexOf("Programmes officiels</strong>"));
+    expect(bloc).toMatch(/^Programmes officiels<\/strong><span>mis à jour le \d{1,2} [a-zûé]+ 2026<\/span>/);
     expect(rendu).not.toMatch(/\d{4}-\d{2}-\d{2}/);
   });
 
