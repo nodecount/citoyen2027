@@ -12,3 +12,6 @@ logs/
 
 # Texte extrait des documents officiels (cache local, non republié)
 cache/
+
+# Essais écartés, gardés en local pour référence (jamais committé par erreur avec git add -A)
+data/archive/
