@@ -40,7 +40,7 @@ describe("controlerResume", () => {
 
   it("refuse une mesure oubliée, un mot clé trop long ou une référence inconnue", () => {
     expect(controlerResume({ segments: [{ texte: "une chose", mesures: ["m1"] }] }, refs).ok).toBe(false);
-    expect(controlerResume({ segments: [{ texte: "un deux trois quatre cinq six sept huit neuf dix onze", mesures: ["m1", "m2"] }] }, refs).ok).toBe(false);
+    expect(controlerResume({ segments: [{ texte: "un deux trois quatre cinq six sept huit neuf dix onze douze treize", mesures: ["m1", "m2"] }] }, refs).ok).toBe(false);
     expect(controlerResume({ segments: [{ texte: "x", mesures: ["m9"] }] }, refs).ok).toBe(false);
   });
 });

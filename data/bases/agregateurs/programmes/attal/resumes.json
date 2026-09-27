@@ -119,6 +119,105 @@
     "modele": "claude-sonnet-5"
   },
   {
+    "theme": "finances-publiques",
+    "segments": [
+      {
+        "texte": "Baisser les charges sur le travail et cibler des baisses d'impôts",
+        "mesures": [
+          "attal-finances-publiques-001",
+          "attal-finances-publiques-011",
+          "attal-finances-publiques-012",
+          "attal-finances-publiques-013"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer les retraites, l'assurance chômage et les arrêts maladie",
+        "mesures": [
+          "attal-finances-publiques-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer des postes de fonctionnaires et fusionner des collectivités",
+        "mesures": [
+          "attal-finances-publiques-007",
+          "attal-finances-publiques-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "geler les prestations sociales une année",
+        "mesures": [
+          "attal-finances-publiques-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "sanctionner les responsables budgétaires",
+        "mesures": [
+          "attal-finances-publiques-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "programmer les finances publiques et rectifier le budget",
+        "mesures": [
+          "attal-finances-publiques-002",
+          "attal-finances-publiques-005"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "inscrire une règle d'or et viser l'équilibre du déficit",
+        "mesures": [
+          "attal-finances-publiques-009",
+          "attal-finances-publiques-010"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "attal-finances-publiques-001",
+      "attal-finances-publiques-002",
+      "attal-finances-publiques-003",
+      "attal-finances-publiques-004",
+      "attal-finances-publiques-005",
+      "attal-finances-publiques-006",
+      "attal-finances-publiques-007",
+      "attal-finances-publiques-008",
+      "attal-finances-publiques-009",
+      "attal-finances-publiques-010",
+      "attal-finances-publiques-011",
+      "attal-finances-publiques-012",
+      "attal-finances-publiques-013"
+    ],
+    "empreinte": "5188f20eef650109",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
     "theme": "gouvernance-republique",
     "segments": [
       {
@@ -260,6 +359,104 @@
       "attal-reformes-etat-002"
     ],
     "empreinte": "17193bc22a680f34",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "retraites-travail",
+    "segments": [
+      {
+        "texte": "Défiscaliser les heures supplémentaires",
+        "mesures": [
+          "attal-retraites-travail-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer leur plafond annuel",
+        "mesures": [
+          "attal-retraites-travail-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer le 1er mai chômé pour les commerçants",
+        "mesures": [
+          "attal-retraites-travail-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réécrire le Code du travail avec les partenaires sociaux",
+        "mesures": [
+          "attal-retraites-travail-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "planifier la formation des salariés à l'intelligence artificielle",
+        "mesures": [
+          "attal-retraites-travail-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "baisser les charges salariales",
+        "mesures": [
+          "attal-retraites-travail-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer l'âge légal de départ en retraite",
+        "mesures": [
+          "attal-retraites-travail-007"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "ajouter une part de capitalisation au système de retraite",
+        "mesures": [
+          "attal-retraites-travail-008"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "attal-retraites-travail-001",
+      "attal-retraites-travail-002",
+      "attal-retraites-travail-003",
+      "attal-retraites-travail-004",
+      "attal-retraites-travail-005",
+      "attal-retraites-travail-006",
+      "attal-retraites-travail-007",
+      "attal-retraites-travail-008"
+    ],
+    "empreinte": "6cefe7b98d5ce718",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },

@@ -1,0 +1,60 @@
+[
+  {
+    "theme": "environnement",
+    "segments": [
+      {
+        "texte": "Le programme prévoit d'",
+        "mesures": []
+      },
+      {
+        "texte": "investir dans l'électrification pour sortir des hydrocarbures",
+        "mesures": [
+          "maurel-envi-001"
+        ]
+      },
+      {
+        "texte": ", de ",
+        "mesures": []
+      },
+      {
+        "texte": "plafonner les marges des distributeurs et raffineurs sur les carburants",
+        "mesures": [
+          "maurel-envi-002"
+        ]
+      },
+      {
+        "texte": ", de ",
+        "mesures": []
+      },
+      {
+        "texte": "subventionner le rétrofit électrique des moteurs thermiques",
+        "mesures": [
+          "maurel-envi-003"
+        ]
+      },
+      {
+        "texte": " et de ",
+        "mesures": []
+      },
+      {
+        "texte": "développer le leasing social pour les voitures électriques",
+        "mesures": [
+          "maurel-envi-004"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "maurel-envi-001",
+      "maurel-envi-002",
+      "maurel-envi-003",
+      "maurel-envi-004"
+    ],
+    "empreinte": "42621c8e81d2f334",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  }
+]

@@ -48,7 +48,7 @@ export function TableauCouverture({ themes, candidats, onOuvrir }: TableauCouver
         <thead>
           <tr>
             <th scope="col" className="coin">
-              Candidat
+              <span className="cache-visuel">Candidat</span>
             </th>
             {themes.map((theme) => (
               <th scope="col" key={theme.id} className={survol?.colonne === theme.id ? "surligne" : undefined}>

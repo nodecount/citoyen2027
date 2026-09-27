@@ -1,0 +1,218 @@
+[
+  {
+    "theme": "finances-publiques",
+    "segments": [
+      {
+        "texte": "Baisser la fiscalité sur les héritages",
+        "mesures": [
+          "lisnard-finances-publiques-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "augmenter les abattements sur les donations",
+        "mesures": [
+          "lisnard-finances-publiques-002"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "permettre de transmettre hors de la famille",
+        "mesures": [
+          "lisnard-finances-publiques-003"
+        ]
+      },
+      {
+        "texte": ", y compris à des fonds ou causes d'intérêt général.",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "lisnard-finances-publiques-001",
+      "lisnard-finances-publiques-002",
+      "lisnard-finances-publiques-003"
+    ],
+    "empreinte": "c72bdf22e0735b54",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "reformes-etat",
+    "segments": [
+      {
+        "texte": "Digitaliser le service public",
+        "mesures": [
+          "lisnard-reformes-etat-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "diviser le ministère des Finances en trois",
+        "mesures": [
+          "lisnard-reformes-etat-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "simplifier et réduire les normes et textes existants",
+        "mesures": [
+          "lisnard-reformes-etat-002",
+          "lisnard-reformes-etat-003",
+          "lisnard-reformes-etat-005",
+          "lisnard-reformes-etat-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer certaines agences déconcentrées au profit du préfet",
+        "mesures": [
+          "lisnard-reformes-etat-006",
+          "lisnard-reformes-etat-008"
+        ]
+      },
+      {
+        "texte": ", et ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer les contrôles et sanctions administratives",
+        "mesures": [
+          "lisnard-reformes-etat-007"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "lisnard-reformes-etat-001",
+      "lisnard-reformes-etat-002",
+      "lisnard-reformes-etat-003",
+      "lisnard-reformes-etat-004",
+      "lisnard-reformes-etat-005",
+      "lisnard-reformes-etat-006",
+      "lisnard-reformes-etat-007",
+      "lisnard-reformes-etat-008",
+      "lisnard-reformes-etat-009"
+    ],
+    "empreinte": "ec473e5595cc61cd",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "social-solidarite",
+    "segments": [
+      {
+        "texte": "Adapter le remboursement selon les zones",
+        "mesures": [
+          "lisnard-social-solidarite-001"
+        ]
+      },
+      {
+        "texte": ", généraliser ",
+        "mesures": []
+      },
+      {
+        "texte": "les maisons de santé et l'accès direct aux paramédicaux",
+        "mesures": [
+          "lisnard-social-solidarite-002",
+          "lisnard-social-solidarite-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer les ARS au profit des élus",
+        "mesures": [
+          "lisnard-social-solidarite-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "revaloriser les métiers",
+        "mesures": [
+          "lisnard-social-solidarite-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "doubler les places en médecine",
+        "mesures": [
+          "lisnard-social-solidarite-006"
+        ]
+      },
+      {
+        "texte": ", et soutenir ",
+        "mesures": []
+      },
+      {
+        "texte": "l'industrie pharmaceutique",
+        "mesures": [
+          "lisnard-social-solidarite-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "la recherche",
+        "mesures": [
+          "lisnard-social-solidarite-008"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "l'innovation médicale",
+        "mesures": [
+          "lisnard-social-solidarite-009"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "lisnard-social-solidarite-001",
+      "lisnard-social-solidarite-002",
+      "lisnard-social-solidarite-003",
+      "lisnard-social-solidarite-004",
+      "lisnard-social-solidarite-005",
+      "lisnard-social-solidarite-006",
+      "lisnard-social-solidarite-007",
+      "lisnard-social-solidarite-008",
+      "lisnard-social-solidarite-009"
+    ],
+    "empreinte": "a0bc756fc352dc62",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  }
+]

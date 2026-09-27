@@ -1,0 +1,66 @@
+[
+  {
+    "theme": "finances-publiques",
+    "segments": [
+      {
+        "texte": "Appliquer la taxe Zucman",
+        "mesures": [
+          "faure-finances-publiques-001"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "faure-finances-publiques-001"
+    ],
+    "empreinte": "182a2922a2592630",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "retraites-travail",
+    "segments": [
+      {
+        "texte": "Limiter les écarts de salaires",
+        "mesures": [
+          "faure-retraites-travail-001"
+        ]
+      },
+      {
+        "texte": " en entreprise, ",
+        "mesures": []
+      },
+      {
+        "texte": "abroger la réforme des retraites Borne",
+        "mesures": [
+          "faure-retraites-travail-002"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "permettre un départ anticipé pour les métiers pénibles",
+        "mesures": [
+          "faure-retraites-travail-003"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "faure-retraites-travail-001",
+      "faure-retraites-travail-002",
+      "faure-retraites-travail-003"
+    ],
+    "empreinte": "4d9b73288b129001",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  }
+]

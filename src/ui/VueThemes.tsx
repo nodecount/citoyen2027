@@ -67,7 +67,7 @@ function MesureAnalysee({ proposition, profil }: { proposition: Proposition; pro
   );
 }
 
-// Résumé en 50 mots : chaque mot clé porte un numéro, et la légende dit quelles mesures (et quelles sources) il recouvre.
+// Résumé en 40 à 60 mots : chaque mot clé porte un numéro, et la légende dit quelles mesures (et quelles sources) il recouvre.
 function Resume({ resume, propositions }: { resume: ResumeTheme; propositions: Proposition[] }) {
   const parId = new Map(propositions.map((p) => [p.id, p]));
   const motsCles = resume.segments.filter((s) => s.mesures.length > 0);

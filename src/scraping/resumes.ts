@@ -7,15 +7,15 @@ import { remplirGabarit } from "../ingestion/generate";
 import type { Proposition, SegmentResume } from "../types";
 import type { OutilsAppel } from "./structuration";
 
-// Résumé de toutes les mesures d'un candidat sur un thème, en 50 mots au plus, avec des mots clés rattachés à leurs
+// Résumé de toutes les mesures d'un candidat sur un thème, en 40 à 60 mots (60 au plus), avec des mots clés rattachés à leurs
 // mesures. Le modèle rédige (commande claude, abonnement) ; le CODE vérifie la longueur, que chaque mesure est couverte
 // par exactement un mot clé, et l'absence de mot évaluatif ; un second appel relit la fidélité et la neutralité.
 
 const ICI = dirname(fileURLToPath(import.meta.url));
-export const MOTS_MAX = 50;
-export const MOTS_MAX_MOT_CLE = 10;
+export const MOTS_MAX = 60;
+export const MOTS_MAX_MOT_CLE = 12;
 export const MOTS_MAX_LIAISON = 3;
-const ESSAIS = 3;
+const ESSAIS = 4;
 
 export const SCHEMA_RESUME = {
   type: "object",
@@ -163,7 +163,12 @@ export async function resumerTheme(candidat: string, theme: string, propositions
   let raison = "";
 
   for (let essai = 1; essai <= ESSAIS; essai += 1) {
-    const conseil = raison.startsWith("mot clé trop long") ? " Raccourcis ce mot clé à 6 mots au plus, ou découpe-le en deux mots clés." : "";
+    const exces = raison.match(/^texte trop long : (\d+) mots/);
+    const conseil = raison.startsWith("mot clé trop long")
+      ? " Raccourcis ce mot clé à 8 mots au plus, ou découpe-le en deux mots clés."
+      : exces
+        ? ` Retire au moins ${Number(exces[1]) - MOTS_MAX + 3} mots : regroupe davantage de mesures sous moins de mots clés, plus courts.`
+        : "";
     const consigne = raison ? `\n\nTa réponse précédente a été refusée : ${raison}. Corrige ce défaut.${conseil}` : "";
     const sortie = await outils.appeler(`Mesures (${refs.size}) :\n${mesures}${consigne}`, systeme, SCHEMA_RESUME);
     cout += sortie.coutReferenceUsd;

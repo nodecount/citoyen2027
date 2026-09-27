@@ -5,7 +5,7 @@ import { appelerClaudeCli, MODELE_CLI, PanneCli } from "./claude-cli";
 import { empreinteResume, resumerTheme } from "./resumes";
 
 // Usage : npm run scrape:resumes [-- --bases=a,b --candidats=x,y --themes=t --force --dry-run --concurrence=3 --plafond-ref=15 --limite=5]
-// Pour chaque candidat × thème : un texte de 50 mots au plus résumant TOUTES ses mesures, mots clés rattachés à leurs
+// Pour chaque candidat × thème : un texte de 40 à 60 mots résumant TOUTES ses mesures, mots clés rattachés à leurs
 // mesures (voir resumes.ts). Commande claude (abonnement, pas le crédit API). Rejouable : un résumé à jour, ou refusé
 // pour les mêmes mesures, n'est pas refait (sauf --force).
 

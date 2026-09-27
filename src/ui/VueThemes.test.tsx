@@ -322,7 +322,7 @@ describe("questions propres à chaque thème", () => {
   });
 });
 
-describe("résumé en 50 mots d'un candidat sur un thème", () => {
+describe("résumé en 40 à 60 mots d'un candidat sur un thème", () => {
   const mesure = prop("a", undefined);
   const resume = {
     theme: "fiscalite",
