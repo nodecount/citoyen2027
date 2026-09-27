@@ -34,10 +34,8 @@ describe("page des thèmes, sur les données réelles", () => {
     expect(rendu).not.toContain("Préciser ma situation pour ce thème"); // les questions par thème viennent après
   });
 
-  it("affiche la provenance des données en une seule ligne, celle de la base active", () => {
-    expect(rendre("agregateurs", AUCUNE_REPONSE, false)).toContain("Mesures reprises du comparateur iFRAP, non vérifiées dans les programmes.");
-    expect(rendre("officielle", AUCUNE_REPONSE, false)).toContain("pas encore relues par l&#x27;équipe");
-    expect((rendre("agregateurs", AUCUNE_REPONSE, false).match(/class="avertissement"/g) ?? []).length).toBe(1);
+  it("n'affiche pas de paragraphe sur la provenance des données (elle est dans le menu et sur la page À propos)", () => {
+    expect(rendre("agregateurs", AUCUNE_REPONSE, false)).not.toContain('class="avertissement"');
   });
 
   it("base « agregateurs » : thèmes du comparateur, portraits avec photo, aucun thème de l'autre base", () => {

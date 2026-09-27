@@ -25,7 +25,6 @@ export default function PageThemes({ base, profil, generalSoumis, onRenseigner, 
   return (
     <>
       <h1>Les thèmes</h1>
-      <p className="avertissement">{base.info.avertissement}</p>
 
       <div className="ma-situation">
         {personnalise ? (
