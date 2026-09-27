@@ -46,8 +46,8 @@ export default function Accueil({ base, onCommencer }: AccueilProps) {
         </li>
         <li>
           <UserRoundCheck aria-hidden="true" />
-          <strong>Pour vous, si vous voulez</strong>
-          <span>questions facultatives, rien n'est enregistré</span>
+          <strong>Adapté à votre situation</strong>
+          <span>facultatif, gratuit, rien n'est enregistré</span>
         </li>
       </ul>
 
