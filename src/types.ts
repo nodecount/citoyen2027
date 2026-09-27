@@ -48,6 +48,23 @@ export interface SyntheseTheme {
   date_derniere_verification: string;
 }
 
+// Résumé d'un candidat sur un thème : 50 mots au plus, en segments. Un segment « mot clé » porte les identifiants des
+// mesures qu'il couvre ; chaque mesure du thème est couverte par exactement un mot clé (aucune n'est choisie ni oubliée).
+export interface SegmentResume {
+  texte: string;
+  mesures: string[];
+}
+
+export interface ResumeTheme {
+  theme: string;
+  segments: SegmentResume[];
+  // Toutes les mesures résumées (triées) : si elles changent, le résumé est périmé et n'est plus affiché.
+  propositions: string[];
+  empreinte: string;
+  date: string;
+  modele: string;
+}
+
 export interface Theme {
   id: string;
   // Formulé comme le citoyen le vit (« Ma retraite »), pas comme l'administration le classe.

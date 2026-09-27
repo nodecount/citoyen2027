@@ -1,0 +1,215 @@
+[
+  {
+    "theme": "interieur-justice",
+    "segments": [
+      {
+        "texte": "Le programme prévoit de ",
+        "mesures": []
+      },
+      {
+        "texte": "privilégier une immigration de travail, restreindre le regroupement familial",
+        "mesures": [
+          "attal-interieur-justice-001",
+          "attal-interieur-justice-002"
+        ]
+      },
+      {
+        "texte": ", instaurer des ",
+        "mesures": []
+      },
+      {
+        "texte": "quotas d'immigration votés par secteur et un permis à points",
+        "mesures": [
+          "attal-interieur-justice-003",
+          "attal-interieur-justice-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "interdire le voile avant 15 ans",
+        "mesures": [
+          "attal-interieur-justice-005"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "créer un délit de contrainte au port du voile",
+        "mesures": [
+          "attal-interieur-justice-006"
+        ]
+      },
+      {
+        "texte": ", et soutenir la ",
+        "mesures": []
+      },
+      {
+        "texte": "comparution immédiate pour certains mineurs",
+        "mesures": [
+          "attal-interieur-justice-007"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "attal-interieur-justice-001",
+      "attal-interieur-justice-002",
+      "attal-interieur-justice-003",
+      "attal-interieur-justice-004",
+      "attal-interieur-justice-005",
+      "attal-interieur-justice-006",
+      "attal-interieur-justice-007"
+    ],
+    "empreinte": "9241a9bb8f279743",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "retraites-travail",
+    "segments": [
+      {
+        "texte": "Défiscaliser les heures supplémentaires",
+        "mesures": [
+          "attal-retraites-travail-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer leur plafond annuel",
+        "mesures": [
+          "attal-retraites-travail-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer le 1er mai chômé",
+        "mesures": [
+          "attal-retraites-travail-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réécrire le Code du travail",
+        "mesures": [
+          "attal-retraites-travail-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "former 20 millions de salariés à l'IA",
+        "mesures": [
+          "attal-retraites-travail-005"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "baisser les charges salariales",
+        "mesures": [
+          "attal-retraites-travail-006"
+        ]
+      },
+      {
+        "texte": ". ",
+        "mesures": []
+      },
+      {
+        "texte": "Supprimer l'âge légal de départ",
+        "mesures": [
+          "attal-retraites-travail-007"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "créer une part de retraite par capitalisation",
+        "mesures": [
+          "attal-retraites-travail-008"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "attal-retraites-travail-001",
+      "attal-retraites-travail-002",
+      "attal-retraites-travail-003",
+      "attal-retraites-travail-004",
+      "attal-retraites-travail-005",
+      "attal-retraites-travail-006",
+      "attal-retraites-travail-007",
+      "attal-retraites-travail-008"
+    ],
+    "empreinte": "5c7a36983aab00ec",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "social-solidarite",
+    "segments": [
+      {
+        "texte": "Réformer l'assurance chômage",
+        "mesures": [
+          "attal-social-solidarite-001"
+        ]
+      },
+      {
+        "texte": ", faire une année blanche sur les prestations sociales",
+        "mesures": [
+          "attal-social-solidarite-002"
+        ]
+      },
+      {
+        "texte": ", lancer un plan de construction de logements",
+        "mesures": [
+          "attal-social-solidarite-003"
+        ]
+      },
+      {
+        "texte": " et prioriser les logements étudiants et Crous",
+        "mesures": [
+          "attal-social-solidarite-004"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "attal-social-solidarite-001",
+      "attal-social-solidarite-002",
+      "attal-social-solidarite-003",
+      "attal-social-solidarite-004"
+    ],
+    "empreinte": "afc6dcb3dfec6c1a",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  }
+]

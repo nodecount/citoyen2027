@@ -11,6 +11,7 @@
     "scrape:ifrap": "tsx src/scraping/run-ifrap.ts",
     "scrape:structurer": "tsx src/scraping/run-structuration.ts",
     "portraits": "tsx src/scraping/run-portraits.ts",
+    "scrape:resumes": "tsx src/scraping/run-resumes.ts",
     "monitoring-server": "tsx src/ingestion/serveur-local.ts"
   },
   "dependencies": {

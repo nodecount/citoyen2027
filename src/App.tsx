@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Accueil from "./ui/Accueil";
 import { Menu } from "./ui/Menu";
+import { PiedDePage } from "./ui/PiedDePage";
 import PageThemes from "./ui/PageThemes";
 import PageQuestionsGenerales from "./ui/PageQuestionsGenerales";
 import PageAPropos from "./ui/PageAPropos";
@@ -81,6 +82,7 @@ export default function App() {
           onReponse={repondreDansUnTheme}
         />
       )}
+      <PiedDePage onNaviguer={allerA} />
     </>
   );
 }

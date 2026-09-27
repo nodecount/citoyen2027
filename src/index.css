@@ -1176,6 +1176,33 @@ button.secondaire:hover {
   font-weight: 600;
 }
 
+/* ---- Pied de page ------------------------------------------------------------------------------ */
+
+.pied-de-page {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 2rem;
+  margin-top: 4rem;
+  padding: 1.25rem 1.1rem;
+  border-top: 1px solid var(--filet);
+  color: var(--encre-douce);
+  font-size: 0.9375rem;
+}
+
+.pied-de-page ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pied-de-page p {
+  margin: 0 0 0 auto;
+}
+
 /* ---- Accessibilité ----------------------------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
