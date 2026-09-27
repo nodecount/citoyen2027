@@ -783,13 +783,10 @@ article {
   cursor: pointer;
 }
 
-.portrait:hover {
-  border-color: var(--filet);
-  background: var(--fond);
-}
-
 /* Portrait sélectionné : un simple fond gris neutre. Aucune couleur ni anneau : la couleur autour des portraits est
    réservée à l'indicateur. */
+/* Survol et sélection : exactement le même style. */
+.portrait:hover,
 .portrait--ouvert {
   border-color: transparent;
   background: #e3e7ee;
