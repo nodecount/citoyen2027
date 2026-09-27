@@ -153,7 +153,7 @@ describe("le détail s'ouvre depuis le portrait", () => {
     expect(r).toContain("Détail : Nom a");
     expect(r).not.toContain("Détail : Nom b");
     // Le nom du candidat est en tête du texte révélé.
-    expect(r).toMatch(/class="detail-titre">[\s\S]*?<span>Nom a<\/span><\/h3>/);
+    expect(r).toContain('<h3 class="detail-titre">Nom a</h3>');
   });
 
   it("recouvre le texte de la carte (question du thème) par le texte du candidat, avec une croix pour refermer", () => {

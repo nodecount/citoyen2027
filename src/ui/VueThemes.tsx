@@ -71,10 +71,7 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
   return (
     <div className="detail" id={id} role="region" aria-label={`Détail : ${meta.nom}`}>
       <div className="detail-entete">
-        <h3 className="detail-titre">
-          <Pastille slug={meta.slug} nom={meta.nom} className="pastille--petite" />
-          <span>{meta.nom}</span>
-        </h3>
+        <h3 className="detail-titre">{meta.nom}</h3>
         {onFermer && (
           <button type="button" className="bouton-icone" aria-label={`Fermer : ${meta.nom}`} onClick={onFermer}>
             <X size={20} aria-hidden="true" />
