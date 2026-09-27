@@ -28,8 +28,9 @@ describe("page des thèmes, sur les données réelles", () => {
     expect(portraits(rendu)).not.toContain("data-niveau"); // aucune couleur autour des portraits
     expect(portraits(rendu)).not.toContain("niveau--"); // aucun badge
     expect(rendu).not.toContain("Comment lire les indicateurs");
-    expect(rendu).toContain("Et pour vous ?");
-    expect(rendu).toContain("Répondre aux questions");
+    expect(rendu).toContain("changerait pour votre situation personnelle pendant le mandat");
+    expect(rendu).toMatch(/Pour cela,\s*<button[^>]*class="bouton-en-ligne"[^>]*>Renseignez des informations<\/button>/);
+    expect(rendu).not.toMatch(/mettez en valeur|profiterai/i); // aucune formulation qui trie les candidats
     expect(rendu).not.toContain("<form"); // aucun formulaire imposé avant de voir les programmes
     expect(rendu).not.toContain("Préciser ma situation pour ce thème"); // les questions par thème viennent après
   });
@@ -66,7 +67,7 @@ describe("les indicateurs n'apparaissent qu'après la validation du formulaire g
   it("des réponses en brouillon (formulaire non validé) ne colorent aucun portrait", () => {
     const rendu = rendre("agregateurs", UNE_REPONSE, false);
     expect(portraits(rendu)).not.toContain("data-niveau");
-    expect(rendu).toContain("Et pour vous ?");
+    expect(rendu).toContain("Renseignez des informations");
   });
 
   it("après validation avec au moins une réponse : couleurs autour des portraits, mot et symbole, légende", () => {

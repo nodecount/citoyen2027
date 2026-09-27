@@ -1044,6 +1044,13 @@ button.secondaire:hover {
 .ma-situation .actions {
   display: flex;
 }
+
+/* Bouton dans le fil de la phrase. */
+button.bouton-en-ligne {
+  margin: 0.35rem 0 0;
+  padding: 0.4rem 0.9rem;
+  vertical-align: baseline;
+}
 .niveau {
   display: inline-flex;
   align-items: center;

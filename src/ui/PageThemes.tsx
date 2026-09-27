@@ -44,14 +44,13 @@ export default function PageThemes({ base, profil, generalSoumis, onRenseigner, 
         ) : (
           <>
             <p>
-              <strong>{generalSoumis ? "Aucune réponse donnée." : "Et pour vous ?"}</strong> Répondez à quelques questions
-              facultatives : chaque candidat recevra un indicateur.
-            </p>
-            <div className="actions">
-              <button type="button" onClick={onRenseigner}>
-                Répondre aux questions
+              {generalSoumis && <strong>Aucune réponse donnée. </strong>}
+              Voyez ce que le programme de chaque candidat changerait pour votre situation personnelle pendant le mandat
+              à venir. Pour cela,{" "}
+              <button type="button" className="bouton-en-ligne" onClick={onRenseigner}>
+                Renseignez des informations
               </button>
-            </div>
+            </p>
           </>
         )}
       </div>
