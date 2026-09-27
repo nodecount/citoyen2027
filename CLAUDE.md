@@ -57,10 +57,14 @@ changement) :**
    conditionnelles quand il le faut ; c'est parce qu'on ne connaît pas l'individu qu'on l'interroge plus précisément (les
    effets « pour tout le monde », comme un prix ou une prestation courante, restent des effets valides : ils décrivent le
    cas courant).
-4. **Quand le moteur n'est pas sûr que le visiteur soit concerné** (réponse manquante sur un critère de l'effet, ou public
-   que le formulaire ne sait pas encore décrire), l'indicateur est **« mixte »**, marqué « à préciser », avec l'explication et
-   la liste des questions qui lèveraient le doute. Ce n'est pas un jugement sur les mesures : c'est l'incertitude affichée.
-   Un « mixte » réel (mesures favorables ET défavorables) reste distinct (`Projection.incertain`).
+4. **Quand le moteur n'est pas sûr que le visiteur soit concerné** par une mesure, deux cas bien distincts (décision du
+   2026-09-27) : si une **réponse à une question du formulaire lèverait le doute** (champ non répondu), l'indicateur est
+   **« mixte »**, marqué « à préciser », avec l'explication et la question qui manque (`Projection.incertain`). Si
+   **aucune réponse ne le pourra jamais** (la mesure vise un public que le formulaire ne sait pas décrire, critère `autre`),
+   l'effet est **exclu du calcul du badge** plutôt que de le bloquer indéfiniment sur « mixte » sans espoir de résolution ;
+   il est compté et signalé à part (`Projection.effetsNonPrisEnCompte`), y compris à côté d'un badge déterminé, pour ne
+   jamais laisser croire que l'indicateur tient compte de tout. Un « mixte » réel (mesures favorables ET défavorables)
+   reste distinct des deux.
 Garde-fous de l'indicateur (ils découlent du principe d'indépendance ci-dessous) :
 - Il mesure l'effet sur **la situation matérielle et les droits du citoyen** (revenu, coûts, accès,
   droits), jamais un jugement de valeur sur la politique elle-même. Le « sens » (favorable ou
@@ -112,9 +116,9 @@ Garde-fous de l'indicateur (ils découlent du principe d'indépendance ci-dessou
 
 **Constat :** aucun outil identifié à ce jour ne combine (a) profil personnel détaillé, (b) plusieurs candidats en parallèle, (c) impact chiffré par catégorie de vie, (d) indépendance vis-à-vis des partis. C'est le créneau du projet.
 
-## Architecture cible (à discuter/ajuster avec l'utilisateur avant de coder)
+## Architecture
 
-Proposition de structure, à valider :
+Structure en place (toute évolution significative se discute avec le porteur du projet) :
 
 ```
 /data
@@ -192,19 +196,27 @@ Champs possibles : statut (salarié, indépendant, fonctionnaire, retraité, ét
 3. **Le moteur de calcul doit être transparent** : privilégier des règles explicites et lisibles (if/formules documentées) plutôt qu'un modèle boîte noire, pour que chaque utilisateur puisse comprendre pourquoi tel impact est projeté.
 4. **Pas de scraping de sites non autorisés** : vérifier les conditions d'utilisation avant toute extraction automatisée de données depuis des sites tiers (Komune, Pourquituvotes, etc.). Privilégier les sources officielles (programmes publiés en PDF/HTML par les candidats, Légifrance, data.gouv.fr) ou un partenariat explicite.
 5. **Statut des programmes** : certains candidats n'ont pas encore publié de programme complet à cette date — le prévoir dans le modèle de données (champ de statut "provisoire / partiel / complet") plutôt que de combler les trous avec des suppositions.
-6. **Stack technique** : à définir avec l'utilisateur (pas encore fixée à ce stade — ne pas présumer d'un framework sans lui demander).
+6. **Stack technique** : fixée — React/Vite/TypeScript, vitest pour les tests (voir « État actuel »). Un changement de stack se discute avec le porteur du projet, ne se décide pas seul.
 
-## État actuel du projet
+## État actuel du projet (mis à jour le 2026-09-27)
 
-Le schéma de données, le moteur de calcul (`src/engine/`) et l'interface (`src/ui/`, React/Vite/TypeScript) sont construits et fonctionnels. `data/themes.json` compte 12 thèmes, tous projetables sur la situation d'un citoyen (les sujets à effet indirect — dette, diplomatie/défense/Europe — ont été volontairement écartés) : 11 peuplés de données réelles et sourcées pour les trois candidats (Le Pen, Mélenchon, Philippe), soit 71 propositions au total, et « retraites » encore « provisoire » — voir `docs/methodologie.md` pour les règles de sourçage appliquées et l'exception documentée sur deux thèmes du dossier Philippe. Ces données n'ont toutefois pas encore été relues ni validées par le porteur du projet. **Statut des 71 propositions existantes (décision du 2026-09-24) :** collectées à la main avant le pipeline, avec l'ancienne méthode (sources secondaires acceptées : ~107 sources secondaires, 52 propositions sur 71 sans deux sources officielles, 6 sans aucune). Elles ne passeraient pas les contrôles du nouveau pipeline (sources officielles et institutionnelles uniquement) et n'ont ni `effets` ni sources « nom · année ». **On les garde telles quelles jusqu'au premier résultat du nouveau pipeline sur un candidat, puis on compare et on remplace les trois candidats d'un coup** (ne pas les supprimer avant, le site n'aurait plus de données). Sans `effets`, elles n'ont pas de badge de projection.
+Le moteur de calcul (`src/engine/`), le formulaire par thème (`src/questionnaire.ts`, `src/ui/Questions*.tsx`,
+`data/profils-schema.json` : 22 questions, générales + par thème, sensibles sur consentement) et l'interface
+(`src/ui/`, portraits cliquables, React/Vite/TypeScript) sont construits et fonctionnels. **Aucune donnée, dans
+aucune des deux bases, n'a encore été relue ni validée par le porteur du projet.**
+
+- **`officielle`** (pipeline `src/ingestion/`, en pause : crédit API épuisé) : `retailleau` (60 propositions, 11
+  thèmes sur 12, 37 avec effets) et `attal` (5 propositions, thème fiscalité seul, toutes avec effets) sont passés
+  par le pipeline « corpus » actuel. `le-pen`, `melenchon`, `philippe` (22 à 25 propositions chacun, 11 thèmes)
+  restent sur l'**ancienne collecte manuelle pré-pipeline** (sources secondaires acceptées, pas d'`effets` donc pas
+  de badge) : à repasser par le pipeline corpus dès que le budget le permet, puis à remplacer d'un coup. Les 12
+  autres candidats des niveaux 1-2 de l'étude n'ont pas encore de données.
+- **`agregateurs`** (`src/scraping/`) : 22 candidats scrapés depuis iFRAP (`npm run scrape:ifrap`), 1 186
+  propositions, 128 avec effets structurés par un modèle appelé via la commande `claude -p` (`npm run
+  scrape:structurer`, sur abonnement, pas sur le crédit API).
 
 Prochaines étapes probables :
-- **Combler l'écart avec le fil rouge produit** : le modèle de données actuel (propositions avec `resume_factuel`) ne porte encore ni la synthèse par candidat × thème, ni les données structurées (cibles et sens de l'effet) dont l'indicateur améliorant/neutre/dégradant a besoin ; le moteur ne produit qu'un impact « concerné / qualitatif ». Le prompt d'ingestion et l'UI (cards par thème) sont à étendre en conséquence — voir `docs/superpowers/specs/2026-09-24-fil-rouge-themes-projection-design.md`.
-- Faire relire et valider le contenu par le porteur du projet (exactitude factuelle, neutralité du ton, cohérence entre candidats)
-- Poursuivre l'audit de l'application uniforme de la convention `resume_factuel` / `hypotheses_calcul` (suivi déjà noté dans `docs/methodologie.md`)
-- Le pipeline d'ingestion (`src/ingestion/`) est construit : génération + vérification
-  adversariale via l'API Claude, restreinte au domaine officiel de chaque candidat (voir
-  `docs/superpowers/specs/2026-09-18-pipeline-ingestion-api-design.md` et
-  `src/ingestion/README.md`). Le lot pilote (Attal, Glucksmann, Retailleau, Ruffin, Faure) reste
-  à exécuter et à valider manuellement avant d'étendre aux candidats restants.
-- Élargir la couverture (compléter les exceptions documentées si une meilleure source apparaît, ajouter d'autres candidats le cas échéant)
+- Faire relire et valider le contenu par le porteur du projet (exactitude factuelle, neutralité du ton, cohérence entre candidats), sur les deux bases.
+- Recharger le crédit API pour reprendre l'ingestion `officielle` : repasser `le-pen`/`melenchon`/`philippe` par le pipeline corpus, puis étendre aux candidats restants.
+- Décider du thème « pouvoir d'achat » (retrait ou maintien) — en suspens.
+- Si `candidatspresidentielles2027.fr` redevient accessible un jour (accord de son éditeur), l'ajouter à `agregateurs`.
