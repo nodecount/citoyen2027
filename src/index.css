@@ -70,6 +70,72 @@ a {
   border-radius: 2px;
 }
 
+/* ---- Menu (accueil / thèmes / base) --------------------------------------------------------- */
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--filet);
+}
+
+.menu nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.lien-menu {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-weight: 600;
+  color: var(--encre-douce);
+  cursor: pointer;
+}
+
+.lien-menu:hover {
+  color: var(--encre);
+}
+
+.lien-menu--actif {
+  color: var(--encre);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.selecteur-base {
+  font-size: 0.85rem;
+}
+
+.selecteur-base select {
+  margin-left: 0.35rem;
+}
+
+.selecteur-base .hint {
+  margin: 0.15rem 0 0;
+  max-width: 20rem;
+}
+
+/* ---- Accueil --------------------------------------------------------------------------------- */
+
+.accueil .chapeau {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.45;
+  max-width: 38rem;
+}
+
+.accueil .maj {
+  font-size: 0.85rem;
+  color: var(--encre-douce);
+}
+
 form div {
   margin-bottom: 0.75rem;
   display: flex;

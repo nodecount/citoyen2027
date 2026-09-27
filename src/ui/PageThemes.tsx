@@ -21,15 +21,11 @@ export default function PageThemes({ base, profil, generalSoumis, onRenseigner, 
   const { avecDonnees: candidats, enCoursAnalyse } = candidatsDeBase(base);
   const personnalise = generalSoumis && aDesInformations(profil);
   const cards = construireCards(base.themes, candidats, personnalise ? profil : null);
-  const n = candidats.length;
 
   return (
     <>
-      <h1>Simulateur d'impact personnel — Présidentielle 2027</h1>
-      <p>
-        {n} {n > 1 ? "candidats sont couverts" : "candidat est couvert"} à ce stade, toujours présentés par ordre
-        alphabétique. Choisissez un thème puis un candidat pour voir ce que propose son programme, avec ses sources.
-      </p>
+      <h1>Les thèmes</h1>
+      <p>Choisissez un thème puis un candidat pour voir ce que propose son programme, avec ses sources.</p>
       <p className="avertissement">{base.info.avertissement}</p>
 
       <div className="ma-situation">

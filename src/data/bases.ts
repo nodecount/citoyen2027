@@ -89,3 +89,12 @@ export function chargerBase(id: string): BaseCharge {
 export function candidatsDeBase(base: BaseCharge): CandidatsCharges {
   return assemblerCandidats(base.metas, base.propositions, base.syntheses);
 }
+
+// Date de mise à jour à afficher au visiteur : la plus récente des dates de mise à jour des candidats de la base
+// (format ISO AAAA-MM-JJ, comparable en chaîne). Null si la base n'a aucun candidat — jamais une date inventée.
+export function derniereMiseAJour(base: BaseCharge): string | null {
+  const dates = Object.values(base.metas)
+    .map((m) => m.date_derniere_maj)
+    .filter((d): d is string => typeof d === "string" && d.length > 0);
+  return dates.length > 0 ? dates.reduce((plusRecente, d) => (d > plusRecente ? d : plusRecente)) : null;
+}

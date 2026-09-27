@@ -3,11 +3,13 @@ import {
   baseParDefaut,
   candidatsDeBase,
   chargerBase,
+  derniereMiseAJour,
   extraireBase,
   extraireBaseEtSlug,
   listerBases,
   regrouperParBaseEtSlug,
   resoudreBase,
+  type BaseCharge,
   type InfoBase,
 } from "./bases";
 
@@ -101,6 +103,30 @@ describe.each(listerBases())("base « $id »", (info) => {
   it("s'assemble en candidats sans erreur", () => {
     const { avecDonnees, enCoursAnalyse } = candidatsDeBase(base);
     expect(avecDonnees.length + enCoursAnalyse.length).toBe(Object.keys(base.metas).length);
+  });
+});
+
+function baseAvecMetas(dates: string[]): BaseCharge {
+  const metas = Object.fromEntries(dates.map((d, i) => [`c${i}`, { slug: `c${i}`, nom: `C${i}`, parti: "P", sources_officielles: [], date_derniere_maj: d }]));
+  return { info: BASES[0], themes: [], questionnaire: { generales: [], parTheme: [] }, metas, propositions: {}, syntheses: {}, aVerifier: {} };
+}
+
+describe("derniereMiseAJour", () => {
+  it("prend la plus récente des dates de mise à jour des candidats de la base", () => {
+    expect(derniereMiseAJour(baseAvecMetas(["2026-09-18", "2026-09-27", "2026-01-05"]))).toBe("2026-09-27");
+  });
+
+  it("renvoie null pour une base sans candidat, jamais une date inventée", () => {
+    expect(derniereMiseAJour(baseAvecMetas([]))).toBeNull();
+  });
+
+  it("reflète les vraies données de chaque base (jamais dans le futur, jamais absente)", () => {
+    const aujourdhui = new Date().toISOString().slice(0, 10);
+    for (const info of listerBases()) {
+      const maj = derniereMiseAJour(chargerBase(info.id));
+      expect(maj, info.id).not.toBeNull();
+      expect(maj! <= aujourdhui, `${info.id} : ${maj}`).toBe(true);
+    }
   });
 });
 

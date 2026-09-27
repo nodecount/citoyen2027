@@ -1,20 +1,22 @@
 import { useState } from "react";
+import Accueil from "./ui/Accueil";
+import { Menu, type Ecran as EcranMenu } from "./ui/Menu";
 import PageThemes from "./ui/PageThemes";
 import PageQuestionsGenerales from "./ui/PageQuestionsGenerales";
 import Monitoring from "./ui/Monitoring";
-import { SelecteurBase } from "./ui/SelecteurBase";
 import { baseInitiale, retenirBase } from "./ui/choixBase";
 import { chargerBase, listerBases } from "./data/bases";
 import { CHAMPS_PROFIL } from "./questionnaire";
 import { mettreAJourReponse, type ProfilPartiel } from "./profil";
 import type { ChampProfil } from "./types";
 
-type Ecran = "themes" | "questions-generales";
+type Ecran = EcranMenu | "questions-generales";
 
 const BASES = listerBases();
 
 export default function App() {
-  const [ecran, setEcran] = useState<Ecran>("themes");
+  // La page de départ présente l'outil avant d'entrer dans les thèmes.
+  const [ecran, setEcran] = useState<Ecran>("accueil");
   // Les réponses du visiteur restent en mémoire de la page : ni envoyées, ni stockées.
   const [profil, setProfil] = useState<ProfilPartiel>({});
   // Les indicateurs n'apparaissent qu'après la validation du formulaire général.
@@ -32,17 +34,12 @@ export default function App() {
     setProfil((precedent) => mettreAJourReponse(precedent, champ, brut, CHAMPS_PROFIL));
   }
 
-  const selecteur = <SelecteurBase bases={BASES} actif={baseId} onChoisir={choisirBase} />;
-
   if (window.location.pathname === "/monitoring") {
-    return (
-      <>
-        {selecteur}
-        <Monitoring base={base} />
-      </>
-    );
+    return <Monitoring base={base} />;
   }
 
+  // Le formulaire général est un écran à part entière (pas de menu ni de distraction pendant la saisie), mais reste
+  // accessible en un clic depuis le menu de tout écran : « Thèmes » y ramène.
   if (ecran === "questions-generales") {
     return (
       <PageQuestionsGenerales
@@ -59,20 +56,28 @@ export default function App() {
     );
   }
 
+  // Naviguer vers "accueil"/"themes" via le menu quitte le formulaire général sans rien enregistrer (identique à
+  // « Retour aux thèmes ») : le menu ne doit jamais laisser un écran caché en incohérence avec le menu affiché.
+  const menu = <Menu ecran={ecran} onNaviguer={setEcran} bases={BASES} baseActive={baseId} onChoisirBase={choisirBase} />;
+
   return (
     <>
-      {selecteur}
-      <PageThemes
-        base={base}
-        profil={profil}
-        generalSoumis={generalSoumis}
-        onRenseigner={() => setEcran("questions-generales")}
-        onEffacer={() => {
-          setProfil({});
-          setGeneralSoumis(false);
-        }}
-        onReponse={repondreDansUnTheme}
-      />
+      {menu}
+      {ecran === "accueil" ? (
+        <Accueil base={base} onCommencer={() => setEcran("themes")} />
+      ) : (
+        <PageThemes
+          base={base}
+          profil={profil}
+          generalSoumis={generalSoumis}
+          onRenseigner={() => setEcran("questions-generales")}
+          onEffacer={() => {
+            setProfil({});
+            setGeneralSoumis(false);
+          }}
+          onReponse={repondreDansUnTheme}
+        />
+      )}
     </>
   );
 }

@@ -41,7 +41,6 @@ describe("page de départ, sur les données réelles", () => {
     expect(rendu).not.toContain("Mes impôts");
     expect(rendu).toContain(">MLP<");
     expect(rendu).toContain(">JM<");
-    expect(rendu).toContain("19 candidats");
   });
 
   it("base « officielle » : ses propres thèmes, sans ceux du comparateur", () => {
