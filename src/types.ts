@@ -35,6 +35,11 @@ export interface Proposition {
   effets?: Effet[];
   // Rubrique de la source quand elle range ses propositions plus finement que nos thèmes (bases issues de comparateurs).
   sous_theme?: string;
+  // `titre` reprend le texte de la source mot pour mot (jamais le cas base « officielle », où `titre` est une
+  // reformulation neutre imposée par le prompt de génération — jamais un slogan cité entre guillemets). Sert
+  // uniquement à savoir si l'interface peut citer `titre` entre guillemets sans le faire passer pour autre chose
+  // qu'une reformulation.
+  titre_litteral?: boolean;
 }
 
 // Texte « pourquoi et en quoi le programme de ce candidat touche ce thème », un par candidat × thème.

@@ -13,7 +13,7 @@ describe("Accueil", () => {
     expect(rendu).toContain("Présidentielle 2027");
     expect(rendu).toContain("pour vous");
     expect(rendu).toContain("prochain mandat");
-    expect(rendu).toContain("Voir les thèmes");
+    expect(rendu).toContain("Accéder au simulateur");
   });
 
   it("met la date de mise à jour dans le bloc « Programmes officiels », en français", () => {

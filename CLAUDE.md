@@ -120,8 +120,8 @@ Le site est pensé pour un **citoyen français lambda** qui veut juste se rensei
 - **Photos des candidats** : image principale Wikidata de chacun (même règle pour tous), licences libres uniquement,
   créditées, copiées dans `static/candidats/` (`npm run portraits`) ; à défaut, initiales. Aucune requête vers un
   service tiers pendant la visite.
-- **Pages** (chacune a son adresse) : `/` accueil (présentation en une phrase, trois garanties, tableau « qui propose
-  quoi » : candidats × thèmes, nombre de mesures) ; `/themes` (cartes de thèmes, trois par ligne, hauteur fixe,
+- **Pages** (chacune a son adresse) : `/` accueil (présentation en une phrase, garanties, tableau « qui propose
+  quoi » : candidats × thèmes, nombre de mesures) ; `/simulateur` (cartes de thèmes, trois par ligne, hauteur fixe,
   médaillon d'icône, portraits en pied de carte, candidats sans mesure empilés à droite) ; `/ma-situation`
   (questions générales). La base de connaissances se change dans une modale ouverte depuis une icône du menu.
 

@@ -1,4 +1,4 @@
-import { LayoutGrid, Link2, UserRoundCheck, Users } from "lucide-react";
+import { FileText, LayoutGrid, UserRoundCheck, Users } from "lucide-react";
 import { candidatsDeBase, derniereMiseAJour, type BaseCharge } from "../data/bases";
 import type { Ouverture } from "./router";
 import { TableauCouverture } from "./TableauCouverture";
@@ -15,7 +15,7 @@ function dateLisible(iso: string): string {
   return new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" }).format(date);
 }
 
-// Accueil : ce qu'est l'outil (en une phrase), ses trois garanties, puis qui propose quoi. Pas de formulaire ici :
+// Accueil : ce qu'est l'outil (en une phrase), ses garanties, puis qui propose quoi. Pas de formulaire ici :
 // la personnalisation est annoncée, elle se fait dans le parcours par thème.
 export default function Accueil({ base, onCommencer, onOuvrir }: AccueilProps) {
   const { avecDonnees } = candidatsDeBase(base);
@@ -31,7 +31,7 @@ export default function Accueil({ base, onCommencer, onOuvrir }: AccueilProps) {
           <strong>pour vous</strong> pendant le prochain mandat.
         </p>
         <button type="button" onClick={onCommencer}>
-          Voir les thèmes
+          Accéder au simulateur
         </button>
       </div>
 
@@ -42,9 +42,14 @@ export default function Accueil({ base, onCommencer, onOuvrir }: AccueilProps) {
           <span>à l'élection présidentielle 2027</span>
         </li>
         <li>
-          <Link2 aria-hidden="true" />
+          <FileText aria-hidden="true" />
           <strong>Programmes officiels</strong>
           <span>{maj ? `à jour du ${dateLisible(maj)}` : "une source par mesure"}</span>
+        </li>
+        <li>
+          <LayoutGrid aria-hidden="true" />
+          <strong>{base.themes.length} thèmes</strong>
+          <span>populaires et différenciants</span>
         </li>
         <li>
           <UserRoundCheck aria-hidden="true" />

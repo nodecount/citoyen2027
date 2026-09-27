@@ -8,7 +8,7 @@ describe("PiedDePage", () => {
   it("est un pied de page avec la marque, les liens des pages et une ligne sur l'indépendance", () => {
     expect(html).toMatch(/^<footer class="pied-de-page">/);
     expect(html).toContain("Citoyen 2027");
-    for (const libelle of ["Accueil", "Thèmes", "À propos"]) expect(html).toContain(`>${libelle}</button>`);
+    for (const libelle of ["Accueil", "Simulateur", "À propos"]) expect(html).toContain(`>${libelle}</button>`);
     expect(html).toContain("sans lien avec un parti ou un candidat");
   });
 

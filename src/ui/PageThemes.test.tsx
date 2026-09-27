@@ -24,7 +24,7 @@ describe("page des thèmes, sur les données réelles", () => {
     const rendu = rendre(id, AUCUNE_REPONSE, false);
     const base = chargerBase(id);
     for (const theme of base.themes) expect(rendu).toContain(`id="theme-${theme.id}"`);
-    expect(rendu).toMatch(/<button[^>]*class="portrait"/);
+    expect(rendu).toMatch(/<button[^>]*class="portrait/);
     expect(portraits(rendu)).not.toContain("data-niveau"); // aucune couleur autour des portraits
     expect(portraits(rendu)).not.toContain("niveau--"); // aucun badge
     expect(rendu).not.toContain("Comment lire les indicateurs");

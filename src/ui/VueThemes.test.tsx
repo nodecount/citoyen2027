@@ -6,7 +6,7 @@ import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireQuestionnaire, CHAMPS_PROFIL, type Questionnaire } from "../questionnaire";
 import type { Proposition, SyntheseTheme, Theme } from "../types";
 import { construireCards } from "./cards";
-import { VueThemes } from "./VueThemes";
+import { CitationsResume, VueThemes } from "./VueThemes";
 
 // Seulement la liste des portraits : la légende, elle, décrit les niveaux et contient leurs classes.
 const portraits = (rendu: string): string => (rendu.match(/<ul class="portraits"[\s\S]*?<\/ul>/g) ?? []).join("");
@@ -88,17 +88,18 @@ describe("page de départ : aucune information sur le visiteur", () => {
     expect(rendu).toContain('id="theme-fiscalite"');
   });
 
-  it("montre les candidats en portraits cliquables : pastille dans un bouton, nom accessible mais pas écrit dessous", () => {
-    expect(rendu).toMatch(/<button[^>]*class="portrait"[^>]*aria-expanded="false"/);
-    expect(rendu).toMatch(/aria-label="Gabriel Attal"[^>]*title="Gabriel Attal"/);
+  it("montre les candidats en grands portraits cliquables dans le pied de carte, avec leur nombre de mesures", () => {
+    expect(rendu).toMatch(/<button[^>]*class="portrait portrait--grand"[^>]*aria-expanded="false"/);
+    expect(rendu).toMatch(/aria-label="Gabriel Attal : 1 mesure sur ce thème"[^>]*title="Gabriel Attal"/);
     expect(rendu).toContain(">MLP<"); // pas de photo pour ce slug de test : initiales
+    expect(rendu).toContain('class="portrait-compte" aria-hidden="true">1<'); // comme un nombre de notifications
     expect(rendu).not.toContain("portrait-nom");
   });
 
   it("place les portraits en pied de carte, sous le corps qui accueillera le texte du candidat", () => {
     const carte = rendu.slice(rendu.indexOf('id="theme-fiscalite"'));
-    expect(carte.indexOf('class="carte-corps"')).toBeLessThan(carte.indexOf('class="carte-pied"'));
-    expect(carte.indexOf('class="carte-pied"')).toBeLessThan(carte.indexOf('class="portraits"'));
+    expect(carte.indexOf('class="carte-corps"')).toBeLessThan(carte.indexOf('class="carte-pied'));
+    expect(carte.indexOf('class="carte-pied')).toBeLessThan(carte.indexOf('class="portraits"'));
   });
 
   it("met l'icône du thème dans un médaillon, avec le nom du thème en dessous, hors du médaillon", () => {
@@ -107,8 +108,9 @@ describe("page de départ : aucune information sur le visiteur", () => {
     expect(entete).toContain("Mes impôts et taxes</h2>");
   });
 
-  it("invite à cliquer sur un candidat tant qu'aucun n'est ouvert", () => {
-    expect(rendu).toContain("Cliquez sur un candidat pour voir ses mesures.");
+  it("n'affiche aucun texte d'invitation tant que des candidats concernés existent (les portraits suffisent)", () => {
+    expect(rendu).not.toContain("Cliquez sur un candidat");
+    expect(rendu).not.toContain("Aucun candidat ne change votre situation");
   });
 
   it("n'affiche AUCUN indicateur, ni légende, ni « pas de projection » : les effets ne sont pas appliqués", () => {
@@ -177,7 +179,8 @@ describe("le détail s'ouvre depuis le portrait", () => {
 
   it("sans information sur le visiteur : programme et mesures seulement, rien sur « votre profil »", () => {
     const r = html([candidat("a", [mesure], [synthese])], {}, ouvert);
-    expect(r).toContain("Mesures (1)");
+    expect(r).toContain(">Mesures (ancien)<"); // le nombre est sur le portrait agrandi, pas répété dans le libellé
+    expect(r).toContain('class="portrait-compte" aria-hidden="true">1<');
     expect(r).not.toContain("Pour votre profil");
     expect(r).not.toContain("Pourquoi cet indicateur");
   });
@@ -189,10 +192,11 @@ describe("le détail s'ouvre depuis le portrait", () => {
     expect(r).toContain('class="liste-mesures"');
   });
 
-  it("avec un texte : menu Résumé / Mesures, ouvert sur le résumé", () => {
+  it("avec un texte : menu Résumé / Mesures (ancien), ouvert sur le résumé — pas de synthèse, pas d'onglet Mesures citations", () => {
     const r = html([candidat("a", [mesure], [synthese])], {}, ouvert);
     expect(r).toMatch(/<button type="button" aria-pressed="true">Résumé<\/button>/);
-    expect(r).toMatch(/aria-pressed="false">Mesures \((<!-- -->)?1(<!-- -->)?\)<\/button>/);
+    expect(r).toMatch(/aria-pressed="false">Mesures \(ancien\)<\/button>/);
+    expect(r).not.toContain(">Mesures<"); // pas de résumé structuré ici : pas de citations à en tirer
     expect(r).not.toContain('class="liste-mesures"');
   });
 
@@ -344,13 +348,28 @@ describe("résumé en 40 à 60 mots d'un candidat sur un thème", () => {
     modele: "m",
   };
 
-  it("accentue chaque mot clé avec son numéro, et la légende donne les mesures et leurs sources", () => {
+  it("accentue chaque mot clé avec son numéro, sans la légende dans la même vue (déplacée dans l'onglet Mesures)", () => {
     const rendu = html([{ ...candidat("a", [mesure]), resumes: [resume] }], {}, { theme: "fiscalite", candidat: "a" });
     expect(rendu).toContain('<span class="mot-cle">baisser l&#x27;impôt<sup>1</sup></span>');
-    const legende = rendu.slice(rendu.indexOf('class="legende-resume"'));
-    expect(legende).toContain("Mesure de a");
-    expect(legende).toContain('href="https://a.fr/p"');
-    expect(rendu).toContain("Mesures ("); // liste complète gardée, dans l'autre vue du menu
+    expect(rendu).not.toContain("legende-resume");
+    // Les trois onglets sont proposés : Résumé (par défaut), Mesures (les citations du résumé) et Mesures (ancien).
+    expect(rendu).toMatch(/<button type="button" aria-pressed="true">Résumé<\/button>/);
+    expect(rendu).toMatch(/aria-pressed="false">Mesures<\/button>/);
+    expect(rendu).toMatch(/aria-pressed="false">Mesures \(ancien\)<\/button>/);
+  });
+
+  it("CitationsResume : un spoiler par renvoi numéroté, avec le libellé du résumé et les mesures citées entre guillemets quand c'en est une", () => {
+    const litterale: Proposition = { ...mesure, titre: "Baisser les impôts de production.", titre_litteral: true };
+    const r = renderToStaticMarkup(<CitationsResume resume={resume} propositions={[litterale]} />);
+    expect(r).toContain("<summary>1. baisser l&#x27;impôt</summary>");
+    expect(r).toContain("« Baisser les impôts de production. »");
+  });
+
+  it("CitationsResume : ne met PAS entre guillemets un titre reformulé (base « officielle », jamais une vraie citation)", () => {
+    const reformule: Proposition = { ...mesure, titre: "Baisser les impôts de production." };
+    const r = renderToStaticMarkup(<CitationsResume resume={resume} propositions={[reformule]} />);
+    expect(r).toContain("Baisser les impôts de production.");
+    expect(r).not.toContain("«");
   });
 
   it("n'affiche pas un résumé qui ne couvre plus exactement les mesures du thème", () => {
@@ -399,9 +418,9 @@ describe("en-tête de carte", () => {
     expect(rendu()).toContain("Sujets abordés : impôt sur le revenu, TVA.");
   });
 
-  it("masque le titre et les sujets quand un candidat est ouvert (titre gardé pour les lecteurs d'écran)", () => {
+  it("garde le titre visible à côté du médaillon, et masque les sujets, quand un candidat est ouvert", () => {
     const html = rendu({ theme: "fiscalite", candidat: "a" });
-    expect(html).toContain('class="cache-visuel">Mes impôts et taxes</h2>');
+    expect(html).toMatch(/class="carte-entete carte-entete--ouvert"[\s\S]*<h2[^>]*>Mes impôts et taxes<\/h2>/);
     expect(html).not.toContain("Sujets abordés");
   });
 });

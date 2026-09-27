@@ -1,11 +1,11 @@
 // Navigation par adresse, sans bibliothèque : chaque écran a sa propre adresse (partageable, bouton précédent/suivant
 // du navigateur fonctionnel), sans recharger la page. « /monitoring » reste un cas à part, géré par App.tsx.
 
-export type Ecran = "accueil" | "themes" | "questions-generales" | "a-propos";
+export type Ecran = "accueil" | "simulateur" | "questions-generales" | "a-propos";
 
 const CHEMIN_PAR_ECRAN: Record<Ecran, string> = {
   accueil: "/",
-  themes: "/themes",
+  simulateur: "/simulateur",
   "questions-generales": "/ma-situation",
   "a-propos": "/a-propos",
 };
@@ -23,7 +23,7 @@ export function ecranDepuisChemin(chemin: string): Ecran {
   return ECRAN_PAR_CHEMIN[chemin] ?? "accueil";
 }
 
-// Un candidat ouvert dans une carte de thème : « /themes?candidat=<slug>#theme-<id> » (ancre = la carte du thème).
+// Un candidat ouvert dans une carte de thème : « /simulateur?candidat=<slug>#theme-<id> » (ancre = la carte du thème).
 export interface Ouverture {
   theme: string;
   candidat: string;

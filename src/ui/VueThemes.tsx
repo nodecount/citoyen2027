@@ -67,43 +67,62 @@ function MesureAnalysee({ proposition, profil }: { proposition: Proposition; pro
   );
 }
 
-// Résumé en 40 à 60 mots : chaque mot clé porte un numéro, et la légende dit quelles mesures (et quelles sources) il recouvre.
-function Resume({ resume, propositions }: { resume: ResumeTheme; propositions: Proposition[] }) {
-  const parId = new Map(propositions.map((p) => [p.id, p]));
-  const motsCles = resume.segments.filter((s) => s.mesures.length > 0);
+// Résumé en 40 à 60 mots : chaque mot clé porte un numéro renvoyant à ses mesures (voir CitationsResume, dans
+// l'onglet Mesures).
+function Resume({ resume }: { resume: ResumeTheme }) {
   let numero = 0;
   return (
-    <>
-      <p className="resume">
-        {resume.segments.map((segment, index) => {
-          if (segment.mesures.length === 0) return <span key={index}>{segment.texte}</span>;
-          numero += 1;
-          return (
-            <span key={index} className="mot-cle">
-              {segment.texte}
-              <sup>{numero}</sup>
-            </span>
-          );
-        })}
-      </p>
-      <ol className="legende-resume">
-        {motsCles.map((segment, index) => (
-          <li key={index}>
-            {segment.mesures
-              .map((id) => parId.get(id))
-              .filter((p): p is Proposition => p !== undefined)
-              .map((p) => (
-                <span className="legende-mesure" key={p.id}>
-                  {p.titre}{" "}
-                  <span className="sources">
-                    (<ListeSources sources={p.sources.map((s) => ({ texte: libelleCitation(s), url: s.url }))} />)
-                  </span>
-                </span>
-              ))}
-          </li>
-        ))}
-      </ol>
-    </>
+    <p className="resume">
+      {resume.segments.map((segment, index) => {
+        if (segment.mesures.length === 0) return <span key={index}>{segment.texte}</span>;
+        numero += 1;
+        return (
+          <span key={index} className="mot-cle">
+            {segment.texte}
+            <sup>{numero}</sup>
+          </span>
+        );
+      })}
+    </p>
+  );
+}
+
+// `titre` n'est mis entre guillemets que lorsqu'il reprend vraiment la source mot pour mot (voir `titre_litteral` sur
+// Proposition) : jamais sur une reformulation neutre, qui ne doit jamais se faire passer pour une citation.
+export function texteMesure(p: Proposition): string {
+  return p.titre_litteral ? `« ${p.titre} »` : p.titre;
+}
+
+// Un spoiler par mot clé du résumé, numéroté comme son renvoi : à l'intérieur, les mesures qu'il recouvre, citées
+// (entre guillemets quand c'en est une), avec leurs sources.
+export function CitationsResume({ resume, propositions }: { resume: ResumeTheme; propositions: Proposition[] }) {
+  const parId = new Map(propositions.map((p) => [p.id, p]));
+  const motsCles = resume.segments.filter((s) => s.mesures.length > 0);
+  return (
+    <ol className="citations-resume">
+      {motsCles.map((segment, index) => (
+        <li key={index}>
+          <details className="citation-reference">
+            <summary>
+              {index + 1}. {segment.texte}
+            </summary>
+            <ul className="citation-reference-corps">
+              {segment.mesures
+                .map((id) => parId.get(id))
+                .filter((p): p is Proposition => p !== undefined)
+                .map((p) => (
+                  <li key={p.id}>
+                    {texteMesure(p)}{" "}
+                    <span className="sources">
+                      (<ListeSources sources={p.sources.map((s) => ({ texte: libelleCitation(s), url: s.url }))} />)
+                    </span>
+                  </li>
+                ))}
+            </ul>
+          </details>
+        </li>
+      ))}
+    </ol>
   );
 }
 
@@ -112,39 +131,59 @@ function Resume({ resume, propositions }: { resume: ResumeTheme; propositions: P
 function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string; onFermer?: () => void }) {
   const { meta, projection, synthese, resume, sources, messagesSansBadge, messagesIncertitude, messagesEffetsExclus, propositions } = ligne;
   const niveau = projection?.niveau ?? null;
-  // Deux vues : le résumé (par défaut, s'il existe) et la liste des mesures. Sans résumé ni synthèse, les mesures seules.
+  // Trois vues : le résumé (par défaut, s'il existe), ses références citées (« Mesures », si le résumé existe), et
+  // le détail complet des mesures (« Mesures (ancien) », toujours disponible). Sans résumé ni synthèse, ce dernier
+  // directement, seul.
   const aUnTexte = Boolean(resume || synthese);
-  const [vue, setVue] = useState<"resume" | "mesures">("resume");
-  const vueActive = aUnTexte ? vue : "mesures";
+  const [vue, setVue] = useState<"resume" | "citations" | "detail">("resume");
+  const vueActive = aUnTexte ? vue : "detail";
+  const nombre = propositions.length;
 
   return (
     <div className="detail" id={id} role="region" aria-label={`Détail : ${meta.nom}`}>
-      <div className="detail-entete">
+      {onFermer && (
+        <button type="button" className="bouton-icone detail-fermer" aria-label={`Fermer : ${meta.nom}`} onClick={onFermer}>
+          <X size={20} aria-hidden="true" />
+        </button>
+      )}
+      {/* Portrait agrandi, sorti d'un tiers au-dessus du cadre — un rappel du candidat qu'on vient d'ouvrir. */}
+      <div className="detail-profil">
+        <span className="detail-avatar">
+          <Pastille slug={meta.slug} nom={meta.nom} />
+          <span className="portrait-compte" aria-hidden="true">
+            {nombre}
+          </span>
+          <span className="cache-visuel">
+            {nombre} mesure{nombre > 1 ? "s" : ""} sur ce thème
+          </span>
+        </span>
         <h3 className="detail-titre">{meta.nom}</h3>
-        {onFermer && (
-          <button type="button" className="bouton-icone" aria-label={`Fermer : ${meta.nom}`} onClick={onFermer}>
-            <X size={20} aria-hidden="true" />
-          </button>
+        {aUnTexte && (
+          <div className="onglets-detail" role="group" aria-label="Affichage">
+            <button type="button" aria-pressed={vueActive === "resume"} onClick={() => setVue("resume")}>
+              Résumé
+            </button>
+            {resume && (
+              <button type="button" aria-pressed={vueActive === "citations"} onClick={() => setVue("citations")}>
+                Mesures
+              </button>
+            )}
+            <button type="button" aria-pressed={vueActive === "detail"} onClick={() => setVue("detail")}>
+              Mesures (ancien)
+            </button>
+          </div>
         )}
       </div>
-      {aUnTexte && (
-        <div className="onglets-detail" role="group" aria-label="Affichage">
-          <button type="button" aria-pressed={vueActive === "resume"} onClick={() => setVue("resume")}>
-            Résumé
-          </button>
-          <button type="button" aria-pressed={vueActive === "mesures"} onClick={() => setVue("mesures")}>
-            Mesures ({propositions.length})
-          </button>
-        </div>
-      )}
-      {vueActive === "mesures" ? (
+      {vueActive === "detail" ? (
         <ul className="liste-mesures">
           {propositions.map((proposition) => (
             <MesureAnalysee key={proposition.id} proposition={proposition} profil={profil} />
           ))}
         </ul>
+      ) : vueActive === "citations" && resume ? (
+        <CitationsResume resume={resume} propositions={propositions} />
       ) : resume ? (
-        <Resume resume={resume} propositions={propositions} />
+        <Resume resume={resume} />
       ) : synthese ? (
         <>
           <p className="synthese">{synthese.texte}</p>
@@ -209,24 +248,31 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
 }
 
 // Un portrait = une pastille à initiales et — seulement s'il existe — l'indicateur du candidat sur ce thème. Le nom
-// n'est pas écrit sous la pastille, mais il reste le nom accessible du bouton et s'affiche au survol.
-function Portrait({ ligne, ouvert, idDetail, onBasculer }: { ligne: LigneCandidat; ouvert: boolean; idDetail: string; onBasculer: () => void }) {
+// n'est pas écrit sous la pastille, mais il reste le nom accessible du bouton et s'affiche au survol. Tant qu'aucun
+// candidat n'est sélectionné, le pied de carte s'agrandit et chaque portrait affiche son nombre de mesures, comme un
+// compteur de notifications ; dès qu'un candidat est ouvert, le pied de carte — et tous ses portraits — rapetissent.
+function Portrait({ ligne, ouvert, grand, idDetail, onBasculer }: { ligne: LigneCandidat; ouvert: boolean; grand: boolean; idDetail: string; onBasculer: () => void }) {
   const niveau = ligne.projection?.niveau ?? null;
   const { nom } = ligne.meta;
+  const nombre = ligne.propositions.length;
   const precision = niveau ? ` — ${NIVEAUX[niveau].libelle}${ligne.projection?.incertain ? ", à préciser" : ""}` : "";
+  const label = `${nom}${precision} : ${nombre} mesure${nombre > 1 ? "s" : ""} sur ce thème`;
   return (
     <li>
       <button
         type="button"
-        className={`portrait${ouvert ? " portrait--ouvert" : ""}`}
+        className={`portrait${grand ? " portrait--grand" : ""}${ouvert ? " portrait--ouvert" : ""}`}
         data-niveau={niveau ?? undefined}
         aria-expanded={ouvert}
         aria-controls={idDetail}
-        aria-label={`${nom}${precision}`}
+        aria-label={label}
         title={nom}
         onClick={onBasculer}
       >
         <Pastille slug={ligne.meta.slug} nom={nom} />
+        <span className="portrait-compte" aria-hidden="true">
+          {nombre}
+        </span>
         {niveau && <BadgeNiveau niveau={niveau} />}
         {ligne.projection?.incertain && <span className="a-preciser">à préciser</span>}
       </button>
@@ -280,15 +326,13 @@ function CarteTheme({
   // Carte de hauteur fixe : en-tête (thème), corps défilant qui accueille le texte du candidat choisi, pied avec les
   // portraits. Ouvrir un candidat ne change pas la taille de la carte ni la mise en page de la grille.
   return (
-    <article className="carte" id={`theme-${theme.id}`} aria-labelledby={`titre-${theme.id}`}>
-      <header className="carte-entete">
+    <article className={`carte${ligneOuverte ? " carte--ouvert" : ""}`} id={`theme-${theme.id}`} aria-labelledby={`titre-${theme.id}`}>
+      {/* Candidat ouvert : le médaillon rejoint le titre sur une ligne, pour laisser la place au texte du candidat. */}
+      <header className={`carte-entete${ligneOuverte ? " carte-entete--ouvert" : ""}`}>
         <div className="medaillon" aria-hidden="true">
           <IconeTheme themeId={theme.id} taille={24} />
         </div>
-        {/* Candidat ouvert : son texte prend toute la place ; le titre reste lu par les lecteurs d'écran. */}
-        <h2 id={`titre-${theme.id}`} className={ligneOuverte ? "cache-visuel" : undefined}>
-          {theme.libelle}
-        </h2>
+        <h2 id={`titre-${theme.id}`}>{theme.libelle}</h2>
         {!ligneOuverte && (
           <p className="question-theme">
             {theme.sujets?.length ? `Sujets abordés : ${theme.sujets.join(", ")}.` : theme.question_citoyen}
@@ -306,11 +350,11 @@ function CarteTheme({
             ) : (
               <>
                 {questionsTheme.length > 0 && <QuestionsDuTheme theme={theme.libelle} idTheme={theme.id} questions={questionsTheme} profil={profil} onReponse={onReponse} />}
-                <p className="hint carte-invite">
-                  {lignes.length > 0
-                    ? "Cliquez sur un candidat pour voir ses mesures."
-                    : "Aucun candidat ne change votre situation sur ce thème, d'après vos réponses."}
-                </p>
+                {/* Les portraits, toujours visibles en pied de carte (en grand tant qu'aucun n'est sélectionné),
+                    suffisent à inviter au clic : pas besoin de le répéter ici. */}
+                {lignes.length === 0 && (
+                  <p className="hint carte-invite">Aucun candidat ne change votre situation sur ce thème, d'après vos réponses.</p>
+                )}
               </>
             )}
           </>
@@ -318,13 +362,14 @@ function CarteTheme({
       </div>
 
       {!enCoursAnalyse && (
-        <footer className="carte-pied">
+        <footer className={`carte-pied${ligneOuverte ? "" : " carte-pied--grand"}`}>
           <ul className="portraits" aria-label={`Candidats, thème ${theme.libelle}`}>
             {lignes.map((ligne) => (
               <Portrait
                 key={ligne.meta.slug}
                 ligne={ligne}
                 ouvert={ouvert === ligne.meta.slug}
+                grand={!ligneOuverte}
                 idDetail={idDetail}
                 onBasculer={() => setOuvert(ouvert === ligne.meta.slug ? null : ligne.meta.slug)}
               />

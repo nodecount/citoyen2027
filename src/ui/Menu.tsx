@@ -12,16 +12,16 @@ interface MenuProps {
   onChoisirBase: (id: string) => void;
 }
 
-// Barre de navigation présente sur tout le site : Accueil, Thèmes, et une icône qui ouvre le choix de la base de
+// Barre de navigation présente sur tout le site : Accueil, Simulateur, et une icône qui ouvre le choix de la base de
 // connaissances dans une modale (seulement s'il y a plusieurs bases). Le nom de la base active reste visible.
 export function Menu({ ecran, onNaviguer, bases, baseActive, onChoisirBase }: MenuProps) {
   const [modaleOuverte, setModaleOuverte] = useState(false);
   const fermer = useCallback(() => setModaleOuverte(false), []);
   const courante = bases.find((b) => b.id === baseActive);
-  // Le formulaire général fait partie du parcours « Thèmes » : c'est cet onglet qui reste marqué.
-  const onglet = ecran === "questions-generales" ? "themes" : ecran;
+  // Le formulaire général fait partie du parcours « Simulateur » : c'est cet onglet qui reste marqué.
+  const onglet = ecran === "questions-generales" ? "simulateur" : ecran;
 
-  const lien = (cible: "accueil" | "themes" | "a-propos", libelle: string) => (
+  const lien = (cible: "accueil" | "simulateur" | "a-propos", libelle: string) => (
     <button
       type="button"
       className={onglet === cible ? "lien-menu lien-menu--actif" : "lien-menu"}
@@ -39,7 +39,7 @@ export function Menu({ ecran, onNaviguer, bases, baseActive, onChoisirBase }: Me
       </span>
       <nav aria-label="Navigation principale">
         {lien("accueil", "Accueil")}
-        {lien("themes", "Thèmes")}
+        {lien("simulateur", "Simulateur")}
         {lien("a-propos", "À propos")}
       </nav>
       {bases.length > 1 && courante && (

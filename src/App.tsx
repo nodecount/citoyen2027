@@ -16,7 +16,7 @@ import type { ChampProfil } from "./types";
 const BASES = listerBases();
 
 export default function App() {
-  // L'écran affiché suit l'adresse : « / » accueil, « /themes », « /ma-situation », « /a-propos ».
+  // L'écran affiché suit l'adresse : « / » accueil, « /simulateur », « /ma-situation », « /a-propos ».
   const [ecran, setEcran] = useState<Ecran>(() => ecranDepuisChemin(window.location.pathname));
   // Les réponses du visiteur restent en mémoire de la page : ni envoyées, ni stockées.
   const [profil, setProfil] = useState<ProfilPartiel>({});
@@ -56,7 +56,7 @@ export default function App() {
   return (
     <>
       <Menu ecran={ecran} onNaviguer={allerA} bases={BASES} baseActive={baseId} onChoisirBase={choisirBase} />
-      {ecran === "accueil" && <Accueil base={base} onCommencer={() => allerA("themes")} onOuvrir={(ouverture) => allerA("themes", ouverture)} />}
+      {ecran === "accueil" && <Accueil base={base} onCommencer={() => allerA("simulateur")} onOuvrir={(ouverture) => allerA("simulateur", ouverture)} />}
       {ecran === "a-propos" && <PageAPropos bases={BASES} nomsParSlug={Object.fromEntries(Object.entries(base.metas).map(([slug, m]) => [slug, m.nom]))} />}
       {ecran === "questions-generales" && (
         <PageQuestionsGenerales
@@ -65,12 +65,12 @@ export default function App() {
           onValider={(p) => {
             setProfil(p);
             setGeneralSoumis(true);
-            allerA("themes");
+            allerA("simulateur");
           }}
-          onAnnuler={() => allerA("themes")}
+          onAnnuler={() => allerA("simulateur")}
         />
       )}
-      {ecran === "themes" && (
+      {ecran === "simulateur" && (
         <PageThemes
           base={base}
           profil={profil}

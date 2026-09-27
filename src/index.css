@@ -47,7 +47,7 @@ html {
 
 body {
   /* Une seule largeur pour toutes les pages ; à l'intérieur, les cartes de thèmes occupent toute la place. */
-  max-width: calc(76rem + 400px);
+  max-width: calc(76rem + 600px);
   margin: 0 auto;
   padding: 1.75rem 1rem 4rem;
   font-family: var(--sans);
@@ -685,10 +685,9 @@ article {
   display: flex;
   flex-direction: column;
   height: 36rem;
-  padding: 2.4rem 1rem 0.8rem;
   border: 1px solid var(--filet);
   border-radius: var(--rayon);
-  background: var(--surface);
+  background: linear-gradient(160deg, #d3e0f7 0%, var(--bleu-pale) 35%, var(--surface) 85%);
   box-shadow: var(--ombre);
   scroll-margin-top: 3rem;
 }
@@ -711,9 +710,11 @@ article {
 .carte-entete {
   flex: none;
   text-align: center;
+  padding: 2.4rem 1rem 0;
 }
 
-/* Icône du thème dans un cercle centré, à moitié sorti au-dessus de la carte. */
+/* Icône du thème dans un cercle centré, à moitié sorti au-dessus de la carte. Mêmes dimensions, même position,
+   candidat ouvert ou non : seul le titre bouge (à côté plutôt que dessous). */
 .medaillon {
   position: absolute;
   top: -1.75rem;
@@ -723,14 +724,49 @@ article {
   place-items: center;
   width: 3.5rem;
   height: 3.5rem;
-  border: 4px solid var(--fond);
+  border: 4px solid var(--surface);
   border-radius: 50%;
   background: var(--bleu);
-  box-shadow: var(--ombre);
 }
 
 .medaillon .icone-theme {
   color: #ffffff;
+}
+
+/* Candidat ouvert : icône + titre forment un seul groupe, centré comme l'icône seule seule l'était — même taille
+   d'icône, aucun padding ajouté en haut, en bas ni à gauche de l'icône, juste un peu à droite du libellé. Fond blanc
+   (contrairement à l'en-tête fermé, sans fond) : tout se lit comme une seule pastille, posée sur la carte. */
+.carte-entete--ouvert {
+  position: absolute;
+  top: -1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface);
+  border-radius: 999px;
+  box-shadow: var(--ombre);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.6rem 0 0;
+  white-space: nowrap;
+}
+
+.carte-entete--ouvert .medaillon {
+  position: static;
+  flex: none;
+  transform: none;
+}
+
+/* Le libellé du thème apparaît à côté du médaillon plutôt que de se substituer brutalement à celui du dessous. */
+.carte-entete--ouvert h2 {
+  animation: titre-theme-entree 0.25s ease-out;
+}
+
+@keyframes titre-theme-entree {
+  from {
+    opacity: 0;
+    transform: translateX(-0.4rem);
+  }
 }
 
 .carte h2 {
@@ -741,6 +777,7 @@ article {
   line-height: 1.25;
   color: var(--bleu-fonce);
 }
+
 /* Masqué à l'écran, toujours lu par les lecteurs d'écran. */
 .cache-visuel {
   position: absolute !important;
@@ -763,7 +800,7 @@ article {
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
-  padding-right: 0.3rem;
+  padding: 0 0.7rem 0.8rem 1rem;
 }
 
 /* L'invitation à cliquer occupe l'espace libre du corps, centrée dans les deux sens. */
@@ -777,14 +814,42 @@ article {
   text-align: center;
 }
 
+/* Nombre de mesures du candidat sur ce thème, en pastille sur son portrait, comme un compteur de notifications —
+   toujours visible, y compris quand le portrait est réduit dans le pied de carte. */
+.portrait-compte {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+  display: grid;
+  place-items: center;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.25rem;
+  border: 2px solid var(--surface);
+  border-radius: 999px;
+  background: var(--bleu);
+  color: #ffffff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: min-width 0.25s ease, height 0.25s ease, font-size 0.25s ease;
+}
+
+/* Tiroir : plaqué aux bords de la carte (plus de marge sur les côtés), fond blanc dépoli (verre) qui laisse
+   deviner le dégradé de la carte au travers, bordure du haut nette, coins bas arrondis comme la carte. */
 .carte-pied {
   flex: none;
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
   margin-top: 0.75rem;
-  padding-top: 0.75rem;
+  padding: 0.75rem 1rem 0.8rem;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-top: 1px solid var(--filet);
+  border-radius: 0 0 var(--rayon) var(--rayon);
+  transition: gap 0.25s ease, margin-top 0.25s ease, padding-top 0.25s ease;
 }
 
 /* Tous les portraits à la suite, sur autant de lignes que nécessaire : pas de défilement. */
@@ -803,6 +868,36 @@ article {
 .carte-pied .pastille {
   width: 2.3rem;
   height: 2.3rem;
+}
+
+/* Tant qu'aucun candidat n'est sélectionné, le pied de carte s'agrandit : portraits plus grands, avec leur nombre
+   de mesures en plus grande pastille (comme une notification). */
+.carte-pied--grand {
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.carte-pied--grand .portraits {
+  gap: 0.3rem;
+}
+
+.carte-pied--grand .portrait {
+  min-width: 4.75rem;
+  padding: 0.45rem 0.35rem 0.5rem;
+}
+
+.carte-pied--grand .pastille {
+  width: 4.25rem;
+  height: 4.25rem;
+  font-size: 1.15rem;
+}
+
+.carte-pied--grand .portrait-compte {
+  min-width: 1.5rem;
+  height: 1.5rem;
+  padding: 0 0.3rem;
+  font-size: 0.8125rem;
 }
 
 /* Candidats sans mesure sur le thème : en fin de liste, en pile où chacun ne montre que la moitié de son portrait,
@@ -833,7 +928,7 @@ article {
 .portraits {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem;
+  gap: 0.1rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -901,6 +996,7 @@ article {
 }
 
 .portrait {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -915,6 +1011,7 @@ article {
   font: inherit;
   text-align: center;
   cursor: pointer;
+  transition: min-width 0.25s ease, padding 0.25s ease;
 }
 
 /* Portrait sélectionné : un simple fond gris neutre. Aucune couleur ni anneau : la couleur autour des portraits est
@@ -940,6 +1037,7 @@ article {
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+  transition: width 0.25s ease, height 0.25s ease, font-size 0.25s ease;
 }
 
 
@@ -1064,60 +1162,102 @@ fieldset.question {
   margin-top: 0.9rem;
 }
 
-/* Le détail révélé au clic sur un portrait : encadré, pour qu'on voie ce qui s'est ouvert. */
+/* Le détail révélé au clic sur un portrait : encadré, pour qu'on voie ce qui s'est ouvert. Le portrait déborde d'un
+   tiers au-dessus du cadre (comme une page de profil) ; le padding-top lui réserve sa place. Elle monte légèrement
+   en apparaissant, pour qu'on remarque l'ouverture. */
 .detail {
-  margin-top: 0.25rem;
-  padding: 0.6rem 0.8rem 0.8rem;
+  position: relative;
+  flex: 1 1 auto;
+  margin-top: 1.75rem;
+  padding: 3.25rem 0.8rem 0.8rem;
   border: 1px solid var(--filet);
   border-radius: 10px;
   background: var(--surface);
+  animation: detail-entree 0.3s ease-out;
 }
 
-/* Menu Résumé / Mesures : deux boutons à bascule, le bleu marque la vue affichée. */
-.onglets-detail {
-  display: inline-flex;
-  margin: 0 0 0.75rem;
-  padding: 0.2rem;
-  border-radius: 999px;
-  background: var(--bleu-pale);
+@keyframes detail-entree {
+  from {
+    opacity: 0;
+    transform: translateY(0.9rem);
+  }
 }
 
-.onglets-detail button {
-  margin: 0;
-  padding: 0.3rem 0.9rem;
-  border: 0;
-  border-radius: 999px;
-  background: transparent;
-  color: var(--bleu-fonce);
-  font-size: 0.875rem;
-  font-weight: 600;
+.detail-fermer {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
 }
 
-.onglets-detail button:hover {
-  background: #d6def3;
-}
-
-.onglets-detail button[aria-pressed="true"] {
-  background: var(--bleu);
-  color: #ffffff;
-}
-
-.detail-entete {
+.detail-profil {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
+  gap: 0.3rem;
   margin: 0 0 0.6rem;
+  text-align: center;
+}
+
+/* Portrait du candidat, sorti d'un tiers (≈ 1,4 rem sur 4,25 rem) au-dessus du cadre du détail. */
+.detail-avatar {
+  position: absolute;
+  top: -1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-grid;
+}
+
+/* Même taille que le grand portrait du pied de carte (sans candidat sélectionné) : photo et compteur identiques
+   dans les deux contextes. */
+.detail-avatar .pastille {
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 3px solid var(--surface);
+  box-shadow: var(--ombre);
+  font-size: 1.15rem;
+}
+
+.detail-avatar .portrait-compte {
+  min-width: 1.5rem;
+  height: 1.5rem;
+  padding: 0 0.3rem;
+  font-size: 0.8125rem;
 }
 
 .detail-titre {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
   margin: 0;
   font-family: var(--titre);
   font-size: 1.1rem;
   color: var(--bleu-fonce);
+}
+
+/* Menu Résumé / Mesures : simple texte, jamais un fond de couleur ; le souligné marque le survol ET la vue active. */
+.onglets-detail {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.onglets-detail button {
+  margin: 0;
+  padding: 0.1rem 0.15rem;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--bleu-fonce);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.onglets-detail button:hover,
+.onglets-detail button[aria-pressed="true"] {
+  text-decoration: underline;
+  text-decoration-color: var(--bleu);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
 }
 
 .actions {
@@ -1212,11 +1352,14 @@ button.bouton-en-ligne {
 .mot-cle {
   color: var(--bleu-fonce);
   font-weight: 700;
-  background: var(--bleu-pale);
   border-radius: 0.25rem;
   padding: 0 0.2rem;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+.mot-cle:hover {
+  background: var(--bleu-pale);
 }
 
 .mot-cle sup {
@@ -1226,24 +1369,74 @@ button.bouton-en-ligne {
   color: var(--bleu);
 }
 
-.legende-resume {
-  margin: 0 0 0.75rem;
-  padding-left: 1.5rem;
-  font-size: 0.875rem;
-  color: var(--encre-douce);
+/* Onglet Mesures : un spoiler par renvoi numéroté du résumé, son libellé repris du résumé, les mesures qu'il
+   recouvre à l'intérieur (citées entre guillemets quand c'en est une, avec leur source). */
+.citations-resume {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
-.legende-resume li {
-  margin-bottom: 0.35rem;
+.citation-reference {
+  border: 1px solid var(--filet);
+  border-radius: 8px;
+  background: var(--surface);
 }
 
-.legende-resume li::marker {
-  color: var(--bleu);
+/* Replié : une seule ligne, tronquée par des points de suspension plutôt que de pousser la carte en hauteur. Sans
+   triangle natif (pas assez lisible à cette taille) : le survol et l'état ouvert suffisent à le signaler. */
+.citation-reference > summary {
+  padding: 0.45rem 0.65rem;
+  cursor: pointer;
   font-weight: 700;
+  color: var(--encre);
+  list-style: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.legende-mesure {
-  display: block;
+.citation-reference > summary::-webkit-details-marker {
+  display: none;
+}
+
+.citation-reference > summary::marker {
+  content: "";
+}
+
+.citation-reference > summary:hover {
+  color: var(--bleu);
+}
+
+.citation-reference[open] {
+  border-color: var(--bleu);
+}
+
+/* Ouvert : le libellé complet redevient lisible, sur autant de lignes qu'il faut. */
+.citation-reference[open] > summary {
+  color: var(--bleu-fonce);
+  border-bottom: 1px solid var(--filet);
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.citation-reference-corps {
+  margin: 0;
+  padding: 0.35rem 0.65rem 0.5rem;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.citation-reference-corps li {
+  margin-bottom: 0.4rem;
+}
+
+.citation-reference-corps li:last-child {
+  margin-bottom: 0;
 }
 
 .sources-citees {

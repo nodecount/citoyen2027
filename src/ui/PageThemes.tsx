@@ -17,8 +17,8 @@ interface PageThemesProps {
   onReponse: SurReponse;
 }
 
-// Page de départ : les thèmes, et sur chacun les portraits cliquables des candidats concernés. Aucun indicateur tant que le
-// formulaire général n'a pas été validé (et qu'il contient au moins une réponse).
+// Page du simulateur : les thèmes, et sur chacun les portraits cliquables des candidats concernés. Aucun indicateur
+// tant que le formulaire général n'a pas été validé (et qu'il contient au moins une réponse).
 export default function PageThemes({ base, profil, generalSoumis, onRenseigner, onEffacer, onReponse }: PageThemesProps) {
   const { avecDonnees: candidats, enCoursAnalyse } = candidatsDeBase(base);
   const personnalise = generalSoumis && aDesInformations(profil);
@@ -31,7 +31,7 @@ export default function PageThemes({ base, profil, generalSoumis, onRenseigner, 
 
   return (
     <>
-      <h1>Les thèmes</h1>
+      <h1>Simulateur</h1>
 
       <div className="ma-situation">
         {personnalise ? (

@@ -12,19 +12,19 @@ function rendre(ecran: Ecran, bases = DEUX_BASES) {
 }
 
 describe("Menu", () => {
-  it("propose Accueil, Thèmes et À propos, et marque l'onglet actif", () => {
+  it("propose Accueil, Simulateur et À propos, et marque l'onglet actif", () => {
     const html = rendre("accueil");
-    for (const libelle of ["Accueil", "Thèmes", "À propos"]) expect(html).toContain(`>${libelle}<`);
+    for (const libelle of ["Accueil", "Simulateur", "À propos"]) expect(html).toContain(`>${libelle}<`);
     expect(html).toMatch(/lien-menu--actif"[^>]*aria-current="page"[^>]*>Accueil/);
     expect(rendre("a-propos")).toMatch(/lien-menu--actif"[^>]*aria-current="page"[^>]*>À propos/);
   });
 
-  it("garde l'onglet Thèmes actif pendant le formulaire général (il fait partie du parcours)", () => {
-    expect(rendre("questions-generales")).toMatch(/lien-menu--actif"[^>]*aria-current="page"[^>]*>Thèmes/);
+  it("garde l'onglet Simulateur actif pendant le formulaire général (il fait partie du parcours)", () => {
+    expect(rendre("questions-generales")).toMatch(/lien-menu--actif"[^>]*aria-current="page"[^>]*>Simulateur/);
   });
 
   it("change de base par une icône qui ouvre une modale, avec le nom de la base active visible", () => {
-    const html = rendre("themes");
+    const html = rendre("simulateur");
     expect(html).toMatch(/class="bouton-base"[^>]*aria-haspopup="dialog"/);
     expect(html).toContain("<svg"); // icône
     expect(html).toContain("<span>Base A</span>");
@@ -32,6 +32,6 @@ describe("Menu", () => {
   });
 
   it("n'affiche pas le choix de base quand il n'y en a qu'une", () => {
-    expect(rendre("themes", UNE_BASE)).not.toContain("bouton-base");
+    expect(rendre("simulateur", UNE_BASE)).not.toContain("bouton-base");
   });
 });

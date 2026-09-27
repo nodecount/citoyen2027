@@ -1,12 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { cheminDeLEcran, ecranDepuisChemin, lireOuverture, type Ecran } from "./router";
 
-const ECRANS: Ecran[] = ["accueil", "themes", "questions-generales", "a-propos"];
+const ECRANS: Ecran[] = ["accueil", "simulateur", "questions-generales", "a-propos"];
 
 describe("routeur", () => {
   it("donne à chaque écran sa propre adresse", () => {
     expect(cheminDeLEcran("accueil")).toBe("/");
-    expect(cheminDeLEcran("themes")).toBe("/themes");
+    expect(cheminDeLEcran("simulateur")).toBe("/simulateur");
     expect(cheminDeLEcran("questions-generales")).toBe("/ma-situation");
     expect(cheminDeLEcran("a-propos")).toBe("/a-propos");
     expect(new Set(ECRANS.map(cheminDeLEcran)).size).toBe(ECRANS.length);
@@ -22,8 +22,8 @@ describe("routeur", () => {
   });
 
   it("lit le candidat à ouvrir et la carte du thème dans l'adresse", () => {
-    expect(lireOuverture("http://x/themes?base=agregateurs&candidat=attal#theme-finances-publiques")).toEqual({ theme: "finances-publiques", candidat: "attal" });
-    expect(lireOuverture("http://x/themes#theme-finances-publiques")).toBeNull();
-    expect(lireOuverture("http://x/themes?candidat=attal")).toBeNull();
+    expect(lireOuverture("http://x/simulateur?base=agregateurs&candidat=attal#theme-finances-publiques")).toEqual({ theme: "finances-publiques", candidat: "attal" });
+    expect(lireOuverture("http://x/simulateur#theme-finances-publiques")).toBeNull();
+    expect(lireOuverture("http://x/simulateur?candidat=attal")).toBeNull();
   });
 });

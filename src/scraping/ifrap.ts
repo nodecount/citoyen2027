@@ -163,6 +163,8 @@ export function convertirIfrap(donnees: DonneesIfrap, date: string): { candidats
             statut: "partiel",
             date_derniere_verification: date,
             sous_theme: rubrique.name,
+            // `titre` = première ligne du texte de la source, reprise telle quelle (voir titreDe) : une vraie citation.
+            titre_litteral: true,
           });
           const vus = themesVus.get(candidat.meta.slug) ?? new Set<string>();
           vus.add(themeId);
