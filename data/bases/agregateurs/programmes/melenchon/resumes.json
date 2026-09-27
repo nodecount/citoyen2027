@@ -65,6 +65,169 @@
     "modele": "claude-sonnet-5"
   },
   {
+    "theme": "education-jeunesse",
+    "segments": [
+      {
+        "texte": "Développer l'alphabétisation et la remise à niveau",
+        "mesures": [
+          "melenchon-education-jeunesse-001",
+          "melenchon-education-jeunesse-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer des places de crèche publiques et gratuites",
+        "mesures": [
+          "melenchon-education-jeunesse-003",
+          "melenchon-education-jeunesse-004",
+          "melenchon-education-jeunesse-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire les effectifs et renforcer l'accompagnement scolaire",
+        "mesures": [
+          "melenchon-education-jeunesse-006",
+          "melenchon-education-jeunesse-007",
+          "melenchon-education-jeunesse-009",
+          "melenchon-education-jeunesse-010",
+          "melenchon-education-jeunesse-016",
+          "melenchon-education-jeunesse-018"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer la scolarité et la vie lycéenne",
+        "mesures": [
+          "melenchon-education-jeunesse-008",
+          "melenchon-education-jeunesse-011",
+          "melenchon-education-jeunesse-012",
+          "melenchon-education-jeunesse-013",
+          "melenchon-education-jeunesse-024"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "revaloriser les personnels et refonder l'école publique",
+        "mesures": [
+          "melenchon-education-jeunesse-014",
+          "melenchon-education-jeunesse-015",
+          "melenchon-education-jeunesse-017",
+          "melenchon-education-jeunesse-019",
+          "melenchon-education-jeunesse-020",
+          "melenchon-education-jeunesse-021"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "intégrer l'écologie et le bio dans les cantines",
+        "mesures": [
+          "melenchon-education-jeunesse-022",
+          "melenchon-education-jeunesse-023"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer la voie professionnelle et l'apprentissage",
+        "mesures": [
+          "melenchon-education-jeunesse-025",
+          "melenchon-education-jeunesse-026",
+          "melenchon-education-jeunesse-027",
+          "melenchon-education-jeunesse-028"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer la recherche publique",
+        "mesures": [
+          "melenchon-education-jeunesse-029",
+          "melenchon-education-jeunesse-030",
+          "melenchon-education-jeunesse-031",
+          "melenchon-education-jeunesse-032"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "rendre l'enseignement supérieur gratuit et accessible",
+        "mesures": [
+          "melenchon-education-jeunesse-033",
+          "melenchon-education-jeunesse-034",
+          "melenchon-education-jeunesse-035",
+          "melenchon-education-jeunesse-036"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-education-jeunesse-001",
+      "melenchon-education-jeunesse-002",
+      "melenchon-education-jeunesse-003",
+      "melenchon-education-jeunesse-004",
+      "melenchon-education-jeunesse-005",
+      "melenchon-education-jeunesse-006",
+      "melenchon-education-jeunesse-007",
+      "melenchon-education-jeunesse-008",
+      "melenchon-education-jeunesse-009",
+      "melenchon-education-jeunesse-010",
+      "melenchon-education-jeunesse-011",
+      "melenchon-education-jeunesse-012",
+      "melenchon-education-jeunesse-013",
+      "melenchon-education-jeunesse-014",
+      "melenchon-education-jeunesse-015",
+      "melenchon-education-jeunesse-016",
+      "melenchon-education-jeunesse-017",
+      "melenchon-education-jeunesse-018",
+      "melenchon-education-jeunesse-019",
+      "melenchon-education-jeunesse-020",
+      "melenchon-education-jeunesse-021",
+      "melenchon-education-jeunesse-022",
+      "melenchon-education-jeunesse-023",
+      "melenchon-education-jeunesse-024",
+      "melenchon-education-jeunesse-025",
+      "melenchon-education-jeunesse-026",
+      "melenchon-education-jeunesse-027",
+      "melenchon-education-jeunesse-028",
+      "melenchon-education-jeunesse-029",
+      "melenchon-education-jeunesse-030",
+      "melenchon-education-jeunesse-031",
+      "melenchon-education-jeunesse-032",
+      "melenchon-education-jeunesse-033",
+      "melenchon-education-jeunesse-034",
+      "melenchon-education-jeunesse-035",
+      "melenchon-education-jeunesse-036"
+    ],
+    "empreinte": "4f2100496f0e87e3",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
     "theme": "environnement",
     "segments": [
       {
@@ -320,6 +483,180 @@
       "melenchon-europe-international-013"
     ],
     "empreinte": "1d178c421c56068f",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "gouvernance-republique",
+    "segments": [
+      {
+        "texte": "Convoquer une Constituante citoyenne pour une 6e République parlementaire",
+        "mesures": [
+          "melenchon-gouvernance-republique-001",
+          "melenchon-gouvernance-republique-002",
+          "melenchon-gouvernance-republique-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "instaurer le référendum d'initiative citoyenne et le référendum obligatoire",
+        "mesures": [
+          "melenchon-gouvernance-republique-015",
+          "melenchon-gouvernance-republique-020"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer les règles électorales",
+        "mesures": [
+          "melenchon-gouvernance-republique-016",
+          "melenchon-gouvernance-republique-017",
+          "melenchon-gouvernance-republique-018"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer la transparence et l'éthique des élus",
+        "mesures": [
+          "melenchon-gouvernance-republique-004",
+          "melenchon-gouvernance-republique-005",
+          "melenchon-gouvernance-republique-006",
+          "melenchon-gouvernance-republique-007",
+          "melenchon-gouvernance-republique-009",
+          "melenchon-gouvernance-republique-012",
+          "melenchon-gouvernance-republique-019",
+          "melenchon-gouvernance-republique-023"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer la fonction publique",
+        "mesures": [
+          "melenchon-gouvernance-republique-008",
+          "melenchon-gouvernance-republique-013",
+          "melenchon-gouvernance-republique-014"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "démocratiser la représentation patronale et la Sécurité sociale",
+        "mesures": [
+          "melenchon-gouvernance-republique-010",
+          "melenchon-gouvernance-republique-011"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "amnistier les militants condamnés",
+        "mesures": [
+          "melenchon-gouvernance-republique-024"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réorganiser les collectivités locales",
+        "mesures": [
+          "melenchon-gouvernance-republique-021",
+          "melenchon-gouvernance-republique-022",
+          "melenchon-gouvernance-republique-025",
+          "melenchon-gouvernance-republique-026",
+          "melenchon-gouvernance-republique-027",
+          "melenchon-gouvernance-republique-028",
+          "melenchon-gouvernance-republique-029",
+          "melenchon-gouvernance-republique-030",
+          "melenchon-gouvernance-republique-035"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "séparer l'Église et l'État",
+        "mesures": [
+          "melenchon-gouvernance-republique-032",
+          "melenchon-gouvernance-republique-033",
+          "melenchon-gouvernance-republique-034"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "garantir des droits numériques et corporels",
+        "mesures": [
+          "melenchon-gouvernance-republique-031",
+          "melenchon-gouvernance-republique-036",
+          "melenchon-gouvernance-republique-037"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-gouvernance-republique-001",
+      "melenchon-gouvernance-republique-002",
+      "melenchon-gouvernance-republique-003",
+      "melenchon-gouvernance-republique-004",
+      "melenchon-gouvernance-republique-005",
+      "melenchon-gouvernance-republique-006",
+      "melenchon-gouvernance-republique-007",
+      "melenchon-gouvernance-republique-008",
+      "melenchon-gouvernance-republique-009",
+      "melenchon-gouvernance-republique-010",
+      "melenchon-gouvernance-republique-011",
+      "melenchon-gouvernance-republique-012",
+      "melenchon-gouvernance-republique-013",
+      "melenchon-gouvernance-republique-014",
+      "melenchon-gouvernance-republique-015",
+      "melenchon-gouvernance-republique-016",
+      "melenchon-gouvernance-republique-017",
+      "melenchon-gouvernance-republique-018",
+      "melenchon-gouvernance-republique-019",
+      "melenchon-gouvernance-republique-020",
+      "melenchon-gouvernance-republique-021",
+      "melenchon-gouvernance-republique-022",
+      "melenchon-gouvernance-republique-023",
+      "melenchon-gouvernance-republique-024",
+      "melenchon-gouvernance-republique-025",
+      "melenchon-gouvernance-republique-026",
+      "melenchon-gouvernance-republique-027",
+      "melenchon-gouvernance-republique-028",
+      "melenchon-gouvernance-republique-029",
+      "melenchon-gouvernance-republique-030",
+      "melenchon-gouvernance-republique-031",
+      "melenchon-gouvernance-republique-032",
+      "melenchon-gouvernance-republique-033",
+      "melenchon-gouvernance-republique-034",
+      "melenchon-gouvernance-republique-035",
+      "melenchon-gouvernance-republique-036",
+      "melenchon-gouvernance-republique-037"
+    ],
+    "empreinte": "f92537cfb7c077af",
     "date": "2026-09-27",
     "modele": "claude-sonnet-5"
   },

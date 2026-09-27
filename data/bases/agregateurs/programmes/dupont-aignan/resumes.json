@@ -98,6 +98,93 @@
     "modele": "claude-sonnet-5"
   },
   {
+    "theme": "environnement",
+    "segments": [
+      {
+        "texte": "Rompre les accords européens de libre-échange",
+        "mesures": [
+          "dupont-aignan-envi-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "sortir de la PAC",
+        "mesures": [
+          "dupont-aignan-envi-003"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "défendre une exception agricole à l'OMC",
+        "mesures": [
+          "dupont-aignan-envi-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer les droits de succession sur cent hectares",
+        "mesures": [
+          "dupont-aignan-envi-004"
+        ]
+      },
+      {
+        "texte": " pour les jeunes agriculteurs, ",
+        "mesures": []
+      },
+      {
+        "texte": "imposer l'étiquetage du pays d'origine",
+        "mesures": [
+          "dupont-aignan-envi-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réserver les commandes publiques aux producteurs français",
+        "mesures": [
+          "dupont-aignan-envi-006"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "développer les circuits courts et la vente libre entre producteurs",
+        "mesures": [
+          "dupont-aignan-envi-007"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "dupont-aignan-envi-001",
+      "dupont-aignan-envi-002",
+      "dupont-aignan-envi-003",
+      "dupont-aignan-envi-004",
+      "dupont-aignan-envi-005",
+      "dupont-aignan-envi-006",
+      "dupont-aignan-envi-007"
+    ],
+    "empreinte": "c2dfcd322e98687f",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
     "theme": "gouvernance-republique",
     "segments": [
       {
