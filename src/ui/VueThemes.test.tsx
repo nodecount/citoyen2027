@@ -198,6 +198,12 @@ describe("le détail s'ouvre depuis le portrait", () => {
     expect(r).toMatch(/Source :.*<a href="https:\/\/a\.fr\/p"/);
   });
 
+  it("met chaque mesure dans un volet dépliable, replié au départ : le titre en résumé, le détail et la source dedans", () => {
+    const r = html([candidat("a", [prop("a", undefined)])], {}, ouvert);
+    expect(r).toMatch(/<details class="mesure"><summary>Mesure de a<\/summary><div class="mesure-corps">[\s\S]*?Source :/);
+    expect(r).not.toContain('<details class="mesure" open');
+  });
+
   it("affiche l'explication d'une mesure quand elle apporte plus que le titre", () => {
     expect(html([candidat("a", [prop("a", undefined)])], {}, ouvert)).toContain("Résumé factuel.");
   });

@@ -42,22 +42,27 @@ function MesureAnalysee({ proposition, profil }: { proposition: Proposition; pro
   // Une règle propre à une mesure ne s'applique que si le visiteur a répondu aux questions dont elle dépend
   // (voir evaluerProposition) : sinon explication générale, jamais « non concerné » sur une réponse manquante.
   const impact = evaluerProposition(profil, proposition);
+  // Chaque mesure est repliée : son titre suffit pour parcourir la liste ; on la déplie pour le détail et la source.
   return (
     <li>
-      <strong>{proposition.titre}</strong>
-      {impact.explication !== proposition.titre && <p>{impact.explication}</p>}
-      {impact.niveau === "chiffre_personnalise" && impact.montant_estime !== undefined && (
-        <p>Estimation pour votre profil : {impact.montant_estime} €/an</p>
-      )}
-      {!impact.concerne && (
-        <p>
-          <em>Cette mesure ne s'applique pas à votre profil.</em>
-        </p>
-      )}
-      <p className="sources">
-        Source :{" "}
-        <ListeSources sources={proposition.sources.map((s) => ({ texte: libelleCitation(s), url: s.url }))} />
-      </p>
+      <details className="mesure">
+        <summary>{proposition.titre}</summary>
+        <div className="mesure-corps">
+          {impact.explication !== proposition.titre && <p>{impact.explication}</p>}
+          {impact.niveau === "chiffre_personnalise" && impact.montant_estime !== undefined && (
+            <p>Estimation pour votre profil : {impact.montant_estime} €/an</p>
+          )}
+          {!impact.concerne && (
+            <p>
+              <em>Cette mesure ne s'applique pas à votre profil.</em>
+            </p>
+          )}
+          <p className="sources">
+            Source :{" "}
+            <ListeSources sources={proposition.sources.map((s) => ({ texte: libelleCitation(s), url: s.url }))} />
+          </p>
+        </div>
+      </details>
     </li>
   );
 }
