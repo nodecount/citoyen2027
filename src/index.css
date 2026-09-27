@@ -788,11 +788,11 @@ article {
   background: var(--fond);
 }
 
-/* Portrait sélectionné : fond et barre dessous, jamais un contour ou un anneau (réservés à l'indicateur). */
+/* Portrait sélectionné : un simple fond gris neutre. Aucune couleur ni anneau : la couleur autour des portraits est
+   réservée à l'indicateur. */
 .portrait--ouvert {
   border-color: transparent;
-  background: var(--bleu-pale);
-  box-shadow: inset 0 -3px 0 var(--bleu);
+  background: #e3e7ee;
 }
 
 .pastille {
