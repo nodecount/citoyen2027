@@ -37,7 +37,7 @@ export default function Accueil({ base, onCommencer }: AccueilProps) {
         <li>
           <Users aria-hidden="true" />
           <strong>{n} candidats</strong>
-          <span>sans aucun classement</span>
+          <span>à l'élection présidentielle 2027</span>
         </li>
         <li>
           <Link2 aria-hidden="true" />

@@ -23,9 +23,9 @@ describe("Accueil", () => {
     expect(rendu).not.toMatch(/\d{4}-\d{2}-\d{2}/);
   });
 
-  it("résume le nombre de candidats et l'absence de classement en quelques mots", () => {
+  it("annonce le nombre de candidats à l'élection", () => {
     const rendu = rendre("agregateurs");
-    expect(rendu).toContain("19 candidats</strong><span>sans aucun classement</span>");
+    expect(rendu).toContain("19 candidats</strong><span>à l&#x27;élection présidentielle 2027</span>");
   });
 
   it("affiche le tableau « qui propose quoi », sans les crédits photos (ils sont sur la page À propos)", () => {
