@@ -1090,6 +1090,50 @@ button.bouton-en-ligne {
   margin: 0 0 0.5rem;
 }
 
+/* Résumé en 50 mots : mots clés accentués, numérotés vers la légende des mesures qu'ils recouvrent. */
+.resume {
+  max-width: 65ch;
+  margin: 0 0 0.75rem;
+  line-height: 1.6;
+}
+
+.mot-cle {
+  color: var(--bleu-fonce);
+  font-weight: 700;
+  background: var(--bleu-pale);
+  border-radius: 0.25rem;
+  padding: 0 0.2rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.mot-cle sup {
+  font-size: 0.875rem;
+  line-height: 0;
+  margin-left: 0.1rem;
+  color: var(--bleu);
+}
+
+.legende-resume {
+  margin: 0 0 0.75rem;
+  padding-left: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--encre-douce);
+}
+
+.legende-resume li {
+  margin-bottom: 0.35rem;
+}
+
+.legende-resume li::marker {
+  color: var(--bleu);
+  font-weight: 700;
+}
+
+.legende-mesure {
+  display: block;
+}
+
 .sources-citees {
   margin: 0 0 0.75rem;
   font-size: 0.875rem;

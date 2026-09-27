@@ -1,10 +1,12 @@
-import type { CandidatMeta, Proposition, SyntheseTheme } from "../types";
+import type { CandidatMeta, Proposition, ResumeTheme, SyntheseTheme } from "../types";
 
 export interface CandidatCharge {
   meta: CandidatMeta;
   propositions: Proposition[];
   // Un texte par thème au plus ; absent tant que l'étape de synthèse du pipeline n'a pas tourné.
   syntheses: SyntheseTheme[];
+  // Résumé de 50 mots par thème (mots clés rattachés à leurs mesures) ; absent tant qu'il n'a pas été produit.
+  resumes?: ResumeTheme[];
 }
 
 export interface CandidatsCharges {
@@ -18,7 +20,7 @@ function aDesPropositionsAffichables(propositions: Proposition[] | undefined): b
 
 // Filet de sécurité : une synthèse ne s'affiche que si elle décrit exactement les mesures affichables actuelles du
 // thème. Sinon (mesures refaites depuis), elle raconterait autre chose que ce qui est listé dessous.
-export function synthesesCoherentes(propositions: Proposition[], syntheses: SyntheseTheme[]): SyntheseTheme[] {
+export function synthesesCoherentes<T extends { theme: string; propositions: string[] }>(propositions: Proposition[], syntheses: T[]): T[] {
   return syntheses.filter((s) => {
     const ids = propositions
       .filter((p) => p.theme === s.theme && (p.statut === "complet" || p.statut === "partiel"))
@@ -36,14 +38,15 @@ export function synthesesCoherentes(propositions: Proposition[], syntheses: Synt
 export function assemblerCandidats(
   metas: Record<string, CandidatMeta>,
   propositions: Record<string, Proposition[]>,
-  syntheses: Record<string, SyntheseTheme[]> = {}
+  syntheses: Record<string, SyntheseTheme[]> = {},
+  resumes: Record<string, ResumeTheme[]> = {}
 ): CandidatsCharges {
   const slugs = Object.keys(metas).sort((a, b) => a.localeCompare(b));
   const avecDonnees: CandidatCharge[] = [];
   const enCoursAnalyse: CandidatMeta[] = [];
   for (const slug of slugs) {
     if (aDesPropositionsAffichables(propositions[slug])) {
-      avecDonnees.push({ meta: metas[slug], propositions: propositions[slug], syntheses: synthesesCoherentes(propositions[slug], syntheses[slug] ?? []) });
+      avecDonnees.push({ meta: metas[slug], propositions: propositions[slug], syntheses: synthesesCoherentes(propositions[slug], syntheses[slug] ?? []), resumes: synthesesCoherentes(propositions[slug], resumes[slug] ?? []) });
     } else {
       enCoursAnalyse.push(metas[slug]);
     }

@@ -2,7 +2,7 @@ import { sourcesCitees, type SourceCitee } from "../citations";
 import type { CandidatCharge } from "../data/chargerCandidats";
 import { projeterTheme, type Projection } from "../engine/projection";
 import { aDesInformations, type ProfilPartiel } from "../profil";
-import type { CandidatMeta, Proposition, SyntheseTheme, Theme } from "../types";
+import type { CandidatMeta, Proposition, ResumeTheme, SyntheseTheme, Theme } from "../types";
 import { messagesEffetsExclus, messagesIncertitude, messagesSansBadge } from "./projection";
 
 export interface LigneCandidat {
@@ -18,6 +18,8 @@ export interface LigneCandidat {
   // Null tant qu'elle n'existe pas, ou si elle ne couvre plus exactement les mesures du thème
   // (mesures ajoutées ou changées depuis) : un texte périmé est pire que pas de texte.
   synthese: SyntheseTheme | null;
+  // Même règle : le résumé ne s'affiche que s'il couvre exactement les mesures du thème.
+  resume: ResumeTheme | null;
   sources: SourceCitee[];
 }
 
@@ -67,6 +69,8 @@ export function construireCards(themes: Theme[], candidats: CandidatCharge[], pr
               propositions.map((p) => p.id),
             ),
         ) ?? null;
+      const ids = propositions.map((p) => p.id);
+      const resume = candidat.resumes?.find((r) => r.theme === theme.id && memesIdentifiants(r.propositions, ids)) ?? null;
       lignes.push({
         meta: candidat.meta,
         propositions,
@@ -75,6 +79,7 @@ export function construireCards(themes: Theme[], candidats: CandidatCharge[], pr
         messagesIncertitude: projection ? messagesIncertitude(projection) : [],
         messagesEffetsExclus: projection ? messagesEffetsExclus(projection) : [],
         synthese,
+        resume,
         sources: sourcesCitees(propositions),
       });
     }

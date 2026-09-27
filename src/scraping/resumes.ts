@@ -69,6 +69,35 @@ export function references(propositions: Proposition[]): Map<string, string> {
   return new Map(propositions.map((p, i) => [`m${i + 1}`, p.id]));
 }
 
+// Un mot clé ne commence ni ne finit par une ponctuation, une espace ou une liaison (« et », « ou ») : ces morceaux sont
+// déplacés dans des segments de liaison voisins. Aucun mot n'est modifié, le texte complet reste identique.
+export function normaliserSegments(segments: SegmentResume[]): SegmentResume[] {
+  const resultat: SegmentResume[] = [];
+  const ajouterLiaison = (texte: string) => {
+    if (!texte) return;
+    const dernier = resultat[resultat.length - 1];
+    if (dernier && dernier.mesures.length === 0) dernier.texte += texte;
+    else resultat.push({ texte, mesures: [] });
+  };
+  for (const s of segments) {
+    if (s.mesures.length === 0) {
+      ajouterLiaison(s.texte);
+      continue;
+    }
+    const debut = s.texte.match(/^(?:[\s,;:.]|(?:et|ou)\s)*/i)?.[0] ?? "";
+    const fin = s.texte.slice(debut.length).match(/[\s,;:.]*$/)?.[0] ?? "";
+    const coeur = s.texte.slice(debut.length, s.texte.length - fin.length);
+    if (!coeur) {
+      ajouterLiaison(s.texte);
+      continue;
+    }
+    ajouterLiaison(debut);
+    resultat.push({ texte: coeur, mesures: s.mesures });
+    ajouterLiaison(fin);
+  }
+  return resultat;
+}
+
 // Contrôles déterministes. Renvoie les segments (identifiants réels) ou la raison du refus.
 export function controlerResume(structure: unknown, refs: Map<string, string>): { ok: true; segments: SegmentResume[] } | { ok: false; raison: string } {
   const bruts = (structure as { segments?: unknown })?.segments;
@@ -90,6 +119,9 @@ export function controlerResume(structure: unknown, refs: Map<string, string>): 
     if (ids.length > 0 && compterMots(texte) === 0) return { ok: false, raison: "mot clé vide" };
     segments.push({ texte, mesures: ids });
   }
+  const normalises = normaliserSegments(segments);
+  if (normalises.some((s) => s.mesures.length > 0 && compterMots(s.texte) === 0)) return { ok: false, raison: "mot clé vide" };
+  segments.splice(0, segments.length, ...normalises);
   const oubliees = [...refs.entries()].filter(([, id]) => !vues.has(id)).map(([ref]) => ref);
   if (oubliees.length > 0) return { ok: false, raison: `mesures non couvertes par un mot clé : ${oubliees.join(", ")}` };
   const doublons = [...refs.entries()].filter(([, id]) => (vues.get(id) ?? 0) > 1).map(([ref]) => ref);
@@ -126,7 +158,8 @@ export async function resumerTheme(candidat: string, theme: string, propositions
   let raison = "";
 
   for (let essai = 1; essai <= ESSAIS; essai += 1) {
-    const consigne = raison ? `\n\nTa réponse précédente a été refusée : ${raison}. Corrige ce défaut.` : "";
+    const conseil = raison.startsWith("mot clé trop long") ? " Raccourcis ce mot clé à 6 mots au plus, ou découpe-le en deux mots clés." : "";
+    const consigne = raison ? `\n\nTa réponse précédente a été refusée : ${raison}. Corrige ce défaut.${conseil}` : "";
     const sortie = await outils.appeler(`Mesures (${refs.size}) :\n${mesures}${consigne}`, systeme, SCHEMA_RESUME);
     cout += sortie.coutReferenceUsd;
     appels += 1;

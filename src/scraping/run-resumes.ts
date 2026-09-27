@@ -4,7 +4,7 @@ import type { CandidatMeta, Proposition, ResumeTheme, Theme } from "../types";
 import { appelerClaudeCli, MODELE_CLI, PanneCli } from "./claude-cli";
 import { empreinteResume, resumerTheme } from "./resumes";
 
-// Usage : npm run scrape:resumes [-- --bases=a,b --candidats=x,y --force --dry-run --concurrence=3 --plafond-ref=15 --limite=5]
+// Usage : npm run scrape:resumes [-- --bases=a,b --candidats=x,y --themes=t --force --dry-run --concurrence=3 --plafond-ref=15 --limite=5]
 // Pour chaque candidat × thème : un texte de 50 mots au plus résumant TOUTES ses mesures, mots clés rattachés à leurs
 // mesures (voir resumes.ts). Commande claude (abonnement, pas le crédit API). Rejouable : un résumé à jour, ou refusé
 // pour les mêmes mesures, n'est pas refait (sauf --force).
@@ -44,6 +44,7 @@ const affichable = (p: Proposition) => p.statut === "complet" || p.statut === "p
 function planifier(force: boolean): Tache[] {
   const filtreBases = valeur("bases")?.split(",");
   const filtreCandidats = valeur("candidats")?.split(",");
+  const filtreThemes = valeur("themes")?.split(",");
   const taches: Tache[] = [];
   for (const base of readdirSync(resolve(RACINE, "data/bases"), { withFileTypes: true }).filter((d) => d.isDirectory())) {
     if (filtreBases && !filtreBases.includes(base.name)) continue;
@@ -59,6 +60,7 @@ function planifier(force: boolean): Tache[] {
       const resumes = lire<ResumeTheme[]>(resolve(d, "resumes.json"), []);
       const refus = lire<Refus[]>(resolve(d, "_resumes-refuses.json"), []);
       for (const theme of themes) {
+        if (filtreThemes && !filtreThemes.includes(theme.id)) continue;
         const duTheme = propositions.filter((p) => p.theme === theme.id);
         if (duTheme.length === 0) continue;
         const empreinte = empreinteResume(duTheme);

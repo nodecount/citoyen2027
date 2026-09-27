@@ -1,11 +1,11 @@
 import basesJson from "../../data/bases/bases.json";
 import type { EntreeAVerifier } from "../ingestion/depot";
 import { CHAMPS_PROFIL, construireQuestionnaire, type Questionnaire } from "../questionnaire";
-import type { CandidatMeta, Proposition, SyntheseTheme, Theme } from "../types";
+import type { CandidatMeta, Proposition, ResumeTheme, SyntheseTheme, Theme } from "../types";
 import { assemblerCandidats, type CandidatsCharges } from "./chargerCandidats";
 
 // Une « base de connaissances » = un référentiel de thèmes + un dossier par candidat, dans data/bases/<id>/.
-// Toutes les bases ont exactement la même structure de fichiers (meta.json, propositions.json, synthese.json) :
+// Toutes les bases ont exactement la même structure de fichiers (meta.json, propositions.json, synthese.json, resumes.json) :
 // le moteur et l'interface sont communs, seule la provenance des données change. Ajouter une base = ajouter un
 // dossier et une entrée dans data/bases/bases.json, aucun autre code.
 
@@ -26,6 +26,7 @@ export interface BaseCharge {
   metas: Record<string, CandidatMeta>;
   propositions: Record<string, Proposition[]>;
   syntheses: Record<string, SyntheseTheme[]>;
+  resumes: Record<string, ResumeTheme[]>;
   aVerifier: Record<string, EntreeAVerifier[]>;
 }
 
@@ -36,6 +37,7 @@ const questionnaireModules = import.meta.glob("../../data/bases/*/questionnaire.
 const metaModules = import.meta.glob("../../data/bases/*/programmes/*/meta.json", { eager: true }) as Record<string, { default: CandidatMeta }>;
 const propositionsModules = import.meta.glob("../../data/bases/*/programmes/*/propositions.json", { eager: true }) as Record<string, { default: Proposition[] }>;
 const synthesesModules = import.meta.glob("../../data/bases/*/programmes/*/synthese.json", { eager: true }) as Record<string, { default: SyntheseTheme[] }>;
+const resumesModules = import.meta.glob("../../data/bases/*/programmes/*/resumes.json", { eager: true }) as Record<string, { default: ResumeTheme[] }>;
 const aVerifierModules = import.meta.glob("../../data/bases/*/programmes/*/_a-verifier.json", { eager: true }) as Record<string, { default: EntreeAVerifier[] }>;
 
 // "/…/data/bases/<base>/programmes/<slug>/fichier.json" → { base, slug }
@@ -82,12 +84,13 @@ export function chargerBase(id: string): BaseCharge {
     metas: regrouperParBaseEtSlug(metaModules, info.id),
     propositions: regrouperParBaseEtSlug(propositionsModules, info.id),
     syntheses: regrouperParBaseEtSlug(synthesesModules, info.id),
+    resumes: regrouperParBaseEtSlug(resumesModules, info.id),
     aVerifier: regrouperParBaseEtSlug(aVerifierModules, info.id),
   };
 }
 
 export function candidatsDeBase(base: BaseCharge): CandidatsCharges {
-  return assemblerCandidats(base.metas, base.propositions, base.syntheses);
+  return assemblerCandidats(base.metas, base.propositions, base.syntheses, base.resumes);
 }
 
 // Date de mise à jour à afficher au visiteur : la plus récente des dates de mise à jour des candidats de la base

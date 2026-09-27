@@ -321,3 +321,34 @@ describe("questions propres à chaque thème", () => {
     expect(r).not.toContain("Votre nationalité"); // masquée tant que l'accord n'est pas donné
   });
 });
+
+describe("résumé en 50 mots d'un candidat sur un thème", () => {
+  const mesure = prop("a", undefined);
+  const resume = {
+    theme: "fiscalite",
+    segments: [
+      { texte: "Il prévoit de ", mesures: [] },
+      { texte: "baisser l'impôt", mesures: [mesure.id] },
+      { texte: ".", mesures: [] },
+    ],
+    propositions: [mesure.id],
+    empreinte: "e",
+    date: "2026-09-27",
+    modele: "m",
+  };
+
+  it("accentue chaque mot clé avec son numéro, et la légende donne les mesures et leurs sources", () => {
+    const rendu = html([{ ...candidat("a", [mesure]), resumes: [resume] }], {}, { theme: "fiscalite", candidat: "a" });
+    expect(rendu).toContain('<span class="mot-cle">baisser l&#x27;impôt<sup>1</sup></span>');
+    const legende = rendu.slice(rendu.indexOf('class="legende-resume"'));
+    expect(legende).toContain("Mesure de a");
+    expect(legende).toContain('href="https://a.fr/p"');
+    expect(rendu).toMatch(/<details class="mesures">/); // liste complète gardée, repliée
+  });
+
+  it("n'affiche pas un résumé qui ne couvre plus exactement les mesures du thème", () => {
+    const autre = { ...mesure, id: "a-fiscalite-002" };
+    const rendu = html([{ ...candidat("a", [mesure, autre]), resumes: [resume] }], {}, { theme: "fiscalite", candidat: "a" });
+    expect(rendu).not.toContain("mot-cle");
+  });
+});

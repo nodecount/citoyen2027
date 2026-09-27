@@ -5,7 +5,7 @@ import { evaluerProposition } from "../engine";
 import type { NiveauProjection } from "../engine/projection";
 import { compterReponses, questionsDuTheme, type Questionnaire } from "../questionnaire";
 import type { ProfilPartiel } from "../profil";
-import type { ChampProfil, Proposition } from "../types";
+import type { ChampProfil, Proposition, ResumeTheme } from "../types";
 import type { CardTheme, LigneCandidat } from "./cards";
 import { IconeTheme } from "./icones";
 import { Pastille } from "./Pastille";
@@ -67,10 +67,50 @@ function MesureAnalysee({ proposition, profil }: { proposition: Proposition; pro
   );
 }
 
+// Résumé en 50 mots : chaque mot clé porte un numéro, et la légende dit quelles mesures (et quelles sources) il recouvre.
+function Resume({ resume, propositions }: { resume: ResumeTheme; propositions: Proposition[] }) {
+  const parId = new Map(propositions.map((p) => [p.id, p]));
+  const motsCles = resume.segments.filter((s) => s.mesures.length > 0);
+  let numero = 0;
+  return (
+    <>
+      <p className="resume">
+        {resume.segments.map((segment, index) => {
+          if (segment.mesures.length === 0) return <span key={index}>{segment.texte}</span>;
+          numero += 1;
+          return (
+            <span key={index} className="mot-cle">
+              {segment.texte}
+              <sup>{numero}</sup>
+            </span>
+          );
+        })}
+      </p>
+      <ol className="legende-resume">
+        {motsCles.map((segment, index) => (
+          <li key={index}>
+            {segment.mesures
+              .map((id) => parId.get(id))
+              .filter((p): p is Proposition => p !== undefined)
+              .map((p) => (
+                <span className="legende-mesure" key={p.id}>
+                  {p.titre}{" "}
+                  <span className="sources">
+                    (<ListeSources sources={p.sources.map((s) => ({ texte: libelleCitation(s), url: s.url }))} />)
+                  </span>
+                </span>
+              ))}
+          </li>
+        ))}
+      </ol>
+    </>
+  );
+}
+
 // Le détail d'un candidat sur un thème, ouvert depuis son portrait : programme d'abord (synthèse, sources, mesures),
 // puis — seulement si le visiteur a donné des informations — ce que cela change pour lui.
 function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string; onFermer?: () => void }) {
-  const { meta, projection, synthese, sources, messagesSansBadge, messagesIncertitude, messagesEffetsExclus, propositions } = ligne;
+  const { meta, projection, synthese, resume, sources, messagesSansBadge, messagesIncertitude, messagesEffetsExclus, propositions } = ligne;
   const niveau = projection?.niveau ?? null;
 
   return (
@@ -83,7 +123,9 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
           </button>
         )}
       </div>
-      {synthese ? (
+      {resume ? (
+        <Resume resume={resume} propositions={propositions} />
+      ) : synthese ? (
         <>
           <p className="synthese">{synthese.texte}</p>
           <p className="sources-citees">
@@ -143,7 +185,7 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
         </details>
       )}
 
-      <details className="mesures" open={!synthese}>
+      <details className="mesures" open={!synthese && !resume}>
         <summary>Mesures ({propositions.length})</summary>
         <ul>
           {propositions.map((proposition) => (

@@ -1,5 +1,117 @@
 [
   {
+    "theme": "finances-publiques",
+    "segments": [
+      {
+        "texte": "Le programme prévoit de ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire le déficit public à 0 % du PIB",
+        "mesures": [
+          "attal-finances-publiques-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "inscrire une règle d'or budgétaire",
+        "mesures": [
+          "attal-finances-publiques-010"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer retraites, arrêts maladie et chômage",
+        "mesures": [
+          "attal-finances-publiques-001",
+          "attal-finances-publiques-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer des postes de fonctionnaires",
+        "mesures": [
+          "attal-finances-publiques-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réorganiser les collectivités territoriales",
+        "mesures": [
+          "attal-finances-publiques-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "geler les prestations sociales",
+        "mesures": [
+          "attal-finances-publiques-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "baisser certains impôts",
+        "mesures": [
+          "attal-finances-publiques-011",
+          "attal-finances-publiques-012",
+          "attal-finances-publiques-013"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "encadrer la gestion budgétaire",
+        "mesures": [
+          "attal-finances-publiques-002",
+          "attal-finances-publiques-004",
+          "attal-finances-publiques-005"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "attal-finances-publiques-001",
+      "attal-finances-publiques-002",
+      "attal-finances-publiques-003",
+      "attal-finances-publiques-004",
+      "attal-finances-publiques-005",
+      "attal-finances-publiques-006",
+      "attal-finances-publiques-007",
+      "attal-finances-publiques-008",
+      "attal-finances-publiques-009",
+      "attal-finances-publiques-010",
+      "attal-finances-publiques-011",
+      "attal-finances-publiques-012",
+      "attal-finances-publiques-013"
+    ],
+    "empreinte": "603e0f1c017c25e8",
+    "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
     "theme": "interieur-justice",
     "segments": [
       {
@@ -180,19 +292,31 @@
         ]
       },
       {
-        "texte": ", faire une année blanche sur les prestations sociales",
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "faire une année blanche sur les prestations sociales",
         "mesures": [
           "attal-social-solidarite-002"
         ]
       },
       {
-        "texte": ", lancer un plan de construction de logements",
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "lancer un plan de construction de logements",
         "mesures": [
           "attal-social-solidarite-003"
         ]
       },
       {
-        "texte": " et prioriser les logements étudiants et Crous",
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "prioriser les logements étudiants et Crous",
         "mesures": [
           "attal-social-solidarite-004"
         ]
