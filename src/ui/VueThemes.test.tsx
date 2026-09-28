@@ -338,20 +338,20 @@ describe("questions propres à chaque thème", () => {
   it("apparaissent après, uniquement sur le thème concerné, avec le décompte des réponses", () => {
     const r = html(candidats, { tranche_age: "30_49", vehicule: "thermique" }, undefined, true);
     expect(r).toContain("Préciser ma situation pour ce thème");
-    expect(r).toContain("1/1 réponse");
+    expect(r).toMatch(/\(1\/\d+ réponse\)/); // 1 réponse donnée, sur toutes les questions du thème (sensibles comprises)
     expect(r).toContain("Quel véhicule utilisez-vous le plus ?");
     const carteRetraites = r.slice(r.indexOf('id="theme-retraites"'));
     expect(carteRetraites).not.toContain("Préciser ma situation pour ce thème");
   });
 
-  it("n'affichent pas « 0/0 » quand un thème n'a que des questions sensibles", () => {
+  it("comptent aussi les questions sensibles, sans mention « questions sensibles, facultatif »", () => {
     const seulementSensibles = construireQuestionnaire(CHAMPS_PROFIL, { nationalite: ["fiscalite"] }, THEMES);
     const personnalise = aDesInformations(PROFIL);
     const r = renderToStaticMarkup(
       <VueThemes cards={construireCards(THEMES, candidats, PROFIL)} profil={PROFIL} personnalise={personnalise} questionnaire={seulementSensibles} questionsActives={true} onReponse={() => {}} />,
     );
-    expect(r).not.toContain("0/0");
-    expect(r).toContain("questions sensibles, facultatif");
+    expect(r).toContain("0/1 réponse");
+    expect(r).not.toContain("questions sensibles, facultatif");
   });
 
   it("ne reposent que sur les questions propres au thème : les questions générales n'y sont pas répétées", () => {
@@ -444,7 +444,9 @@ describe("masquer les candidats non concernés", () => {
     expect(r).toContain('role="switch" checked=""');
     expect(portraits(r)).not.toContain("Gabriel Attal");
     expect(portraits(r)).toContain("Marine Le Pen");
-    expect(r).toContain("1 non concerné masqué");
+    expect(r).toContain(">+1<"); // pastille « +1 », plus de texte
+    expect(r).toContain('aria-label="1 candidat non concerné masqué"');
+    expect(r).not.toContain("non concerné masqué<");
   });
 
   it("ne propose rien tant qu'aucune information n'est donnée", () => {

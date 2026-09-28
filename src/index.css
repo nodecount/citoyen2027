@@ -746,18 +746,18 @@ article {
   align-items: center;
   gap: 0.4rem;
 }
-.themes-outils {
-  display: flex;
-  justify-content: flex-end;
-  margin: 1.25rem 0 0;
+.legende-option {
+  margin-top: auto !important;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--filet);
 }
 
-.themes-outils .interrupteur {
+.legende-option .interrupteur {
   margin: 0;
+  font-size: 0.9375rem;
 }
 
-/* Le médaillon des cartes déborde de 1,75 rem au-dessus d'elles : l'espace sous l'interrupteur le laisse passer. */
-.themes-outils + .grille-themes {
+.grille-themes {
   margin-top: 2.75rem;
 }
 
@@ -1162,11 +1162,25 @@ article {
   list-style: none;
 }
 
-.portraits-masques {
-  align-self: center;
-  padding: 0 0.4rem;
+/* « +X » : les candidats non concernés masqués, dans une pastille blanche de la taille d'un portrait, juste après les
+   portraits (avant la pile des candidats sans mesure). Décorative pour l'œil, nommée pour les lecteurs d'écran. */
+.portraits-plus {
+  align-self: flex-start;
+  padding: 0.2rem;
+}
+
+.portrait-plus {
+  display: grid;
+  place-items: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border: 2px solid var(--filet);
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--bleu-fonce);
   font-size: 0.875rem;
-  color: var(--encre-douce);
+  font-weight: 700;
+  cursor: help;
 }
 
 /* Interrupteur : une case à cocher native (accessible au clavier), dessinée en glissière. */
@@ -1279,7 +1293,7 @@ article {
    de l'indicateur. Le sens est toujours aussi écrit (mot + symbole) sous le portrait. */
 .portrait[data-niveau] .pastille {
   border-color: var(--niveau-couleur);
-  box-shadow: 0 0 0 2px var(--surface), 0 0 0 5px var(--niveau-couleur);
+  border-width: 4px; /* plus épaisse que la bordure neutre (2 px) : la couleur de l'indicateur se voit mieux */
 }
 
 /* Photo du candidat : même cadrage pour tous. */
@@ -1549,24 +1563,31 @@ fieldset.question {
   font-weight: 600;
 }
 
+/* Questions propres au thème : quand il y en a, elles occupent tout le corps de la carte (à la place du flux de
+   portraits), dans un panneau blanc en verre (glassmorphism), sous un titre, avec leur décompte. Le corps défile si
+   elles débordent. */
 .questions-theme {
-  margin: 0 0 1rem;
-  padding: 0.6rem 0.9rem;
-  border: 1px solid var(--filet);
-  border-radius: var(--rayon);
-  background: var(--bleu-pale);
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0.9rem 1rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 14px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.5));
+  backdrop-filter: blur(14px) saturate(1.5);
+  -webkit-backdrop-filter: blur(14px) saturate(1.5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 6px 20px rgba(23, 60, 140, 0.12);
   font-size: 0.95rem;
 }
 
-.questions-theme > summary {
-  cursor: pointer;
-  font-weight: 600;
+.questions-theme-titre {
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+  color: var(--bleu-fonce);
 }
 
 .questions-theme-corps {
-  margin-top: 0.9rem;
+  margin: 0;
 }
-
 /* Le détail révélé au clic sur un portrait : encadré, pour qu'on voie ce qui s'est ouvert. Le portrait déborde d'un
    tiers au-dessus du cadre (comme une page de profil) ; le padding-top lui réserve sa place. Elle monte légèrement
    en apparaissant, pour qu'on remarque l'ouverture. */
@@ -2068,4 +2089,57 @@ button.bouton-en-ligne {
     animation: none !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ---- Champs de formulaire : sobres et modernes -------------------------------------------------- */
+/* Liste déroulante sans l'habillage du système : bordure fine, coins arrondis, chevron bleu à droite, survol et focus
+   dans le bleu d'action. Hauteur de 2,5 rem (cible tactile confortable). Placé en fin de feuille pour l'emporter sur les
+   réglages de taille des cartes de questions. */
+.question select,
+.question input[type="number"],
+.question input[type="text"] {
+  box-sizing: border-box;
+  min-height: 2.5rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #c3cbdb;
+  border-radius: 8px;
+  background-color: var(--surface);
+  color: var(--encre);
+  font: inherit;
+  font-size: 0.9375rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.question select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231f4fa3' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+  cursor: pointer;
+}
+
+.question select:hover,
+.question input[type="number"]:hover,
+.question input[type="text"]:hover {
+  border-color: var(--bleu);
+}
+
+.question select:focus-visible,
+.question input[type="number"]:focus-visible,
+.question input[type="text"]:focus-visible {
+  outline: none;
+  border-color: var(--bleu);
+  box-shadow: 0 0 0 3px rgba(31, 79, 163, 0.25);
+}
+
+/* Aucune réponse : la ligne « Je préfère ne pas répondre » garde l'aspect d'un texte d'attente. */
+.question select:has(option[value=""]:checked) {
+  color: var(--encre-douce);
+}
+
+.question select option {
+  color: var(--encre);
 }

@@ -93,6 +93,111 @@
     "modele": "claude-sonnet-5"
   },
   {
+    "theme": "environnement",
+    "segments": [
+      {
+        "texte": "Renationaliser l'électricité et baisser la TVA",
+        "mesures": [
+          "le-pen-envi-001",
+          "le-pen-envi-002",
+          "le-pen-envi-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "nucléariser l'énergie, réduire l'éolien et respecter Paris",
+        "mesures": [
+          "le-pen-envi-004",
+          "le-pen-envi-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "garantir des prix justes, prévenir les suicides",
+        "mesures": [
+          "le-pen-envi-006",
+          "le-pen-envi-012"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "freiner l'artificialisation, installer de nouveaux agriculteurs",
+        "mesures": [
+          "le-pen-envi-007",
+          "le-pen-envi-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "protéger l'agriculture des normes, traités et imports interdits",
+        "mesures": [
+          "le-pen-envi-009",
+          "le-pen-envi-013",
+          "le-pen-envi-014"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "redresser la balance commerciale, soutenir le bio et cantines",
+        "mesures": [
+          "le-pen-envi-010",
+          "le-pen-envi-011",
+          "le-pen-envi-016"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "refuser d'interdire les phytosanitaires sans alternatives",
+        "mesures": [
+          "le-pen-envi-015"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "le-pen-envi-001",
+      "le-pen-envi-002",
+      "le-pen-envi-003",
+      "le-pen-envi-004",
+      "le-pen-envi-005",
+      "le-pen-envi-006",
+      "le-pen-envi-007",
+      "le-pen-envi-008",
+      "le-pen-envi-009",
+      "le-pen-envi-010",
+      "le-pen-envi-011",
+      "le-pen-envi-012",
+      "le-pen-envi-013",
+      "le-pen-envi-014",
+      "le-pen-envi-015",
+      "le-pen-envi-016"
+    ],
+    "empreinte": "b6594f399609b975",
+    "date": "2026-09-28",
+    "modele": "claude-sonnet-5"
+  },
+  {
     "theme": "europe-international",
     "segments": [
       {

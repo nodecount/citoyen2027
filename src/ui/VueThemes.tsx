@@ -382,17 +382,16 @@ function Portrait({ ligne, ouvert, idDetail, onBasculer }: { ligne: LigneCandida
 // réponse s'applique tout de suite : l'indicateur des portraits de ce thème s'affine.
 function QuestionsDuTheme({ theme, idTheme, questions, profil, onReponse }: { theme: string; idTheme: string; questions: ChampProfil[]; profil: ProfilPartiel; onReponse: SurReponse }) {
   const { repondues, total } = compterReponses(questions, profil);
-  // Aucune question ordinaire (seulement des questions sensibles, sur accord) : pas de décompte « 0/0 ».
-  const progression = total === 0 ? "(questions sensibles, facultatif)" : `(${repondues}/${total} réponse${repondues > 1 ? "s" : ""})`;
+  const progression = `(${repondues}/${total} réponse${repondues > 1 ? "s" : ""})`;
   return (
-    <details className="questions-theme">
-      <summary>
+    <section className="questions-theme">
+      <p className="questions-theme-titre">
         Préciser ma situation pour ce thème <span className="progression">{progression}</span>
-      </summary>
+      </p>
       <div className="questions-theme-corps" aria-label={`Questions sur le thème ${theme}`}>
         <SectionQuestions questions={questions} profil={profil} onReponse={onReponse} idPrefixe={`theme-${idTheme}`} />
       </div>
-    </details>
+    </section>
   );
 }
 
@@ -527,7 +526,7 @@ function CarteTheme({
               <DetailCandidat ligne={ligneOuverte} profil={profil} id={idDetail} onFermer={fermer} />
             ) : (
               <>
-                {lignes.length > 0 && <FluxCandidats key={lignes.map((l) => l.meta.slug).join("|")} lignes={lignes} />}
+                {lignes.length > 0 && questionsTheme.length === 0 && <FluxCandidats key={lignes.map((l) => l.meta.slug).join("|")} lignes={lignes} />}
                 {questionsTheme.length > 0 && <QuestionsDuTheme theme={theme.libelle} idTheme={theme.id} questions={questionsTheme} profil={profil} onReponse={onReponse} />}
                 {/* Les portraits, toujours visibles en pied de carte ,
                     suffisent à inviter au clic : pas besoin de le répéter ici. */}
@@ -553,10 +552,11 @@ function CarteTheme({
               />
             ))}
             {nombreMasques > 0 && (
-              <li className="portraits-masques">
-                {nombreMasques} non concerné{nombreMasques > 1 ? "s" : ""} masqué{nombreMasques > 1 ? "s" : ""}
-              </li>
-            )}
+              <li className="portraits-plus">
+                <span className="portrait-plus" role="img" aria-label={`${nombreMasques} candidat${nombreMasques > 1 ? "s" : ""} non concerné${nombreMasques > 1 ? "s" : ""} masqué${nombreMasques > 1 ? "s" : ""}`} title={`${nombreMasques} non concerné${nombreMasques > 1 ? "s" : ""} masqué${nombreMasques > 1 ? "s" : ""}`}>
+                  +{nombreMasques}
+                </span>
+              </li>            )}
             {/* Candidats sans mesure sur ce thème : nommés, jamais omis en silence — en fin de liste, en pile estompée,
                 non cliquables. */}
             {absents.length > 0 && (
@@ -632,19 +632,15 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
                 Les mesures ou vos réponses ne permettent pas de conclure. Nous préférons ne rien afficher plutôt qu'un
                 indicateur douteux.
               </dd>
+              <dd className="legende-option">
+                <label className="interrupteur">
+                  <input type="checkbox" role="switch" checked={masquer} onChange={(e) => setMasquer(e.target.checked)} />
+                  <span className="interrupteur-piste" aria-hidden="true" />
+                  Masquer les candidats dont les mesures ne changent rien à ma situation
+                </label>
+              </dd>
             </div>
           </dl>
-        </div>
-      )}
-
-      {/* Juste au-dessus des cartes, à droite. */}
-      {personnalise && (
-        <div className="themes-outils">
-          <label className="interrupteur">
-            <input type="checkbox" role="switch" checked={masquer} onChange={(e) => setMasquer(e.target.checked)} />
-            <span className="interrupteur-piste" aria-hidden="true" />
-            Masquer les candidats dont les mesures ne changent rien à ma situation
-          </label>
         </div>
       )}
 

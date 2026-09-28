@@ -48,9 +48,9 @@ describe("questionsVisibles et compterReponses", () => {
     expect(questionsVisibles(questions, { logement: "y" }).map((q) => q.id)).toEqual(["logement"]);
   });
 
-  it("ne compte pas une question sensible restée sans réponse (le visiteur ne l'a peut-être pas choisie), mais la compte une fois répondue", () => {
+  it("compte une question sensible comme les autres, répondue ou non", () => {
     const sensible = Q("nationalite", { sensible: true });
-    expect(compterReponses([Q("age"), sensible], {})).toEqual({ repondues: 0, total: 1 });
+    expect(compterReponses([Q("age"), sensible], {})).toEqual({ repondues: 0, total: 2 });
     expect(compterReponses([Q("age"), sensible], { nationalite: "x" })).toEqual({ repondues: 1, total: 2 });
   });
 

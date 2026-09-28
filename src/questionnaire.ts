@@ -57,6 +57,7 @@ export function questionsRepondues(questions: ChampProfil[], profil: ProfilParti
 // Décompte des réponses. Une question sensible non répondue n'est pas comptée : le visiteur n'a peut-être pas donné son
 // accord pour la voir, et on ne lui présente pas un « manque » sur une question qu'il n'a pas choisi de se voir poser.
 export function compterReponses(questions: ChampProfil[], profil: ProfilPartiel): { repondues: number; total: number } {
-  const comptees = questionsVisibles(questions, profil).filter((q) => !q.sensible || estRepondue(q, profil));
+  // Les questions sensibles sont posées comme les autres : elles comptent, répondues ou non.
+  const comptees = questionsVisibles(questions, profil);
   return { repondues: comptees.filter((q) => estRepondue(q, profil)).length, total: comptees.length };
 }
