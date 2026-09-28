@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
+import { flushSync } from "react-dom";
 import { libelleCitation } from "../citations";
 import { evaluerProposition } from "../engine";
 import type { NiveauProjection, Projection } from "../engine/projection";
@@ -7,6 +8,7 @@ import { compterReponses, questionsDuTheme, type Questionnaire } from "../questi
 import type { ProfilPartiel } from "../profil";
 import type { ChampProfil, Proposition, Remarque, ResumeTheme } from "../types";
 import type { CardTheme, LigneCandidat } from "./cards";
+import { FluxCandidats } from "./FluxCandidats";
 import { IconeTheme } from "./icones";
 import { Pastille } from "./Pastille";
 import { NIVEAUX, decrireEffet } from "./projection";
@@ -223,6 +225,8 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
           </div>
         )}
       </div>
+      {/* Entête (portrait, nom, onglets) fixe ; le contenu (résumé ou liste des mesures, puis « Pour votre profil ») défile. */}
+      <div className="detail-contenu">
       {vueActive === "detail" ? (
         estMixteReel ? (
           <>
@@ -307,9 +311,38 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
           </ul>
         </details>
       )}
+      </div>
     </div>
   );
 }
+
+// Copie d'un élément posée au même endroit de la carte, qui s'estompe puis disparaît : donne un fondu de sortie à un
+// élément que React retire aussitôt du DOM. Décorative (masquée aux lecteurs d'écran, non cliquable).
+function estomper(element: HTMLElement) {
+  const carte = element.closest("article");
+  if (!carte || typeof element.animate !== "function") return;
+  const cadre = carte.getBoundingClientRect();
+  const place = element.getBoundingClientRect();
+  const copie = element.cloneNode(true) as HTMLElement;
+  copie.removeAttribute("id");
+  copie.setAttribute("aria-hidden", "true");
+  Object.assign(copie.style, {
+    position: "absolute",
+    left: `${place.left - cadre.left}px`,
+    top: `${place.top - cadre.top}px`,
+    width: `${place.width}px`,
+    margin: "0",
+    pointerEvents: "none",
+    zIndex: "3",
+  });
+  carte.appendChild(copie);
+  copie.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 200, easing: "ease-out" }).finished.then(
+    () => copie.remove(),
+    () => copie.remove(),
+  );
+}
+// Le rendu serveur (tests) n'exécute pas d'effet de mise en page.
+const useEffetLayout = typeof window === "undefined" ? useEffect : useLayoutEffect;
 
 // Un portrait = une pastille à initiales et — seulement s'il existe — la couleur de l'indicateur du candidat sur ce
 // thème, en bordure. Le nom n'est pas écrit sous la pastille, mais il reste le nom accessible du bouton et s'affiche
@@ -388,13 +421,93 @@ function CarteTheme({
   const ligneOuverte = lignes.find((l) => l.meta.slug === ouvert) ?? null;
   const idDetail = `detail-${theme.id}`;
 
+  // Animations d'ouverture et de fermeture du candidat (désactivées si le visiteur demande de limiter les animations).
+  // Ouverture : la pastille blanche qui entoure icône et libellé grandit à partir du seul médaillon. Elle est centrée,
+  // donc son bord gauche — et le médaillon, posé contre ce bord — glisse vers la gauche, du centre à sa place finale ;
+  // son ombre apparaît progressivement. Fermeture : le mouvement inverse (la pastille rétrécit, le médaillon revient au
+  // centre) pendant que le corps de la carte s'estompe, puis seulement le candidat est refermé.
+  const medaillon = useRef<HTMLDivElement>(null);
+  const entete_ = useRef<HTMLElement>(null);
+  const corps_ = useRef<HTMLDivElement>(null);
+  const ouvertAvant = useRef(Boolean(ligneOuverte));
+  const fermeture = useRef(false);
+  // Vrai après une fermeture : le titre et la question du thème réapparaissent en fondu (pas au premier affichage).
+  const [retour, setRetour] = useState(false);
+  const OPTIONS_ANIMATION = { duration: 350, easing: "cubic-bezier(0.22, 1, 0.36, 1)" };
+  const sansAnimation = () => typeof window === "undefined" || Boolean(window.matchMedia?.("(prefers-reduced-motion: reduce)").matches);
+
+  useEffetLayout(() => {
+    const change = ouvertAvant.current !== Boolean(ligneOuverte);
+    ouvertAvant.current = Boolean(ligneOuverte);
+    const element = medaillon.current;
+    const entete = entete_.current;
+    if (!change || !ligneOuverte || !element || !entete || typeof entete.animate !== "function" || sansAnimation()) return;
+    const ombre = getComputedStyle(entete).boxShadow;
+    entete.animate(
+      [
+        { width: `${element.offsetWidth}px`, boxShadow: "0 0 0 0 rgba(0, 0, 0, 0)" },
+        { width: `${entete.offsetWidth}px`, boxShadow: ombre },
+      ],
+      OPTIONS_ANIMATION,
+    );
+  }, [ligneOuverte]);
+
+  function fermer() {
+    const entete = entete_.current;
+    const element = medaillon.current;
+    const corps = corps_.current;
+    if (!entete || !element || !corps || typeof entete.animate !== "function" || sansAnimation()) {
+      setOuvert(null);
+      return;
+    }
+    if (fermeture.current) return;
+    fermeture.current = true;
+    const options = { ...OPTIONS_ANIMATION, fill: "forwards" as FillMode };
+    const pastille = entete.animate(
+      [
+        { width: `${entete.offsetWidth}px`, boxShadow: getComputedStyle(entete).boxShadow },
+        { width: `${element.offsetWidth}px`, boxShadow: "0 0 0 0 rgba(0, 0, 0, 0)" },
+      ],
+      options,
+    );
+    const autres = [
+      corps.animate([{ opacity: 1 }, { opacity: 0 }], { ...options, duration: 250 }),
+      ...Array.from(entete.querySelectorAll("h2")).map((titre) => titre.animate([{ opacity: 1 }, { opacity: 0 }], { ...options, duration: 150 })),
+    ];
+    const terminer = () => {
+      flushSync(() => {
+        setOuvert(null);
+        setRetour(true);
+      });
+      [pastille, ...autres].forEach((animation) => animation.cancel());
+      fermeture.current = false;
+    };
+    pastille.finished.then(terminer, () => {
+      fermeture.current = false;
+    });
+  }
+
+  // Ouvrir un autre candidat remplace directement le détail ; cliquer sur le candidat ouvert le referme (avec animation).
+  function basculer(slug: string) {
+    if (ouvert === slug) {
+      fermer();
+      return;
+    }
+    if (ouvert === null && !sansAnimation()) {
+      // Le titre et la question, sur le point de disparaître de leur place, s'estompent au lieu de s'éclipser.
+      const entete = entete_.current;
+      if (entete) entete.querySelectorAll<HTMLElement>(":scope > h2, :scope > .question-theme").forEach(estomper);
+    }
+    setRetour(false);
+    setOuvert(slug);
+  }
   // Carte de hauteur fixe : en-tête (thème), corps défilant qui accueille le texte du candidat choisi, pied avec les
   // portraits. Ouvrir un candidat ne change pas la taille de la carte ni la mise en page de la grille.
   return (
     <article className={`carte${ligneOuverte ? " carte--ouvert" : ""}`} id={`theme-${theme.id}`} aria-labelledby={`titre-${theme.id}`}>
       {/* Candidat ouvert : le médaillon rejoint le titre sur une ligne, pour laisser la place au texte du candidat. */}
-      <header className={`carte-entete${ligneOuverte ? " carte-entete--ouvert" : ""}`}>
-        <div className="medaillon" aria-hidden="true">
+      <header className={`carte-entete${ligneOuverte ? " carte-entete--ouvert" : ""}${retour && !ligneOuverte ? " carte-entete--retour" : ""}`} ref={entete_}>
+        <div className="medaillon" aria-hidden="true" ref={medaillon}>
           <IconeTheme themeId={theme.id} taille={24} />
         </div>
         <h2 id={`titre-${theme.id}`}>{theme.libelle}</h2>
@@ -405,15 +518,16 @@ function CarteTheme({
         )}
       </header>
 
-      <div className="carte-corps">
+      <div className={`carte-corps${ligneOuverte ? " carte-corps--detail" : ""}`} ref={corps_}>
         {enCoursAnalyse ? (
           <p className="hint">Ce thème est en cours d'analyse : aucun programme n'a encore été analysé sur ce sujet.</p>
         ) : (
           <>
             {ligneOuverte ? (
-              <DetailCandidat ligne={ligneOuverte} profil={profil} id={idDetail} onFermer={() => setOuvert(null)} />
+              <DetailCandidat ligne={ligneOuverte} profil={profil} id={idDetail} onFermer={fermer} />
             ) : (
               <>
+                {lignes.length > 0 && <FluxCandidats key={lignes.map((l) => l.meta.slug).join("|")} lignes={lignes} />}
                 {questionsTheme.length > 0 && <QuestionsDuTheme theme={theme.libelle} idTheme={theme.id} questions={questionsTheme} profil={profil} onReponse={onReponse} />}
                 {/* Les portraits, toujours visibles en pied de carte ,
                     suffisent à inviter au clic : pas besoin de le répéter ici. */}
@@ -435,7 +549,7 @@ function CarteTheme({
                 ligne={ligne}
                 ouvert={ouvert === ligne.meta.slug}
                 idDetail={idDetail}
-                onBasculer={() => setOuvert(ouvert === ligne.meta.slug ? null : ligne.meta.slug)}
+                onBasculer={() => basculer(ligne.meta.slug)}
               />
             ))}
             {nombreMasques > 0 && (

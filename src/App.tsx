@@ -75,7 +75,10 @@ export default function App() {
           base={base}
           profil={profil}
           generalSoumis={generalSoumis}
-          onRenseigner={() => allerA("questions-generales")}
+          onValider={(p) => {
+            setProfil(p);
+            setGeneralSoumis(true);
+          }}
           onEffacer={() => {
             setProfil({});
             setGeneralSoumis(false);

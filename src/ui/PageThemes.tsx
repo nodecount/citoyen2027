@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { candidatsDeBase, type BaseCharge } from "../data/bases";
+import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/bases";
 import { lireOuverture } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
+import PageQuestionsGenerales from "./PageQuestionsGenerales";
 import { PanneauFiltres } from "./PanneauFiltres";
 import { SectionQuestions, type SurReponse } from "./Questions";
 import { VueThemes } from "./VueThemes";
@@ -13,15 +14,19 @@ interface PageThemesProps {
   // Le formulaire général a-t-il été validé ? Seule sa validation fait apparaître les indicateurs et ouvre les questions
   // propres à chaque thème.
   generalSoumis: boolean;
-  onRenseigner: () => void;
+  // Validation du formulaire général ouvert au-dessus des thèmes (les réponses sont alors appliquées).
+  onValider: (profil: ProfilPartiel) => void;
   onEffacer: () => void;
   onReponse: SurReponse;
 }
 
 // Page du simulateur : les thèmes, et sur chacun les portraits cliquables des candidats concernés. Aucun indicateur
 // tant que le formulaire général n'a pas été validé (et qu'il contient au moins une réponse).
-export default function PageThemes({ base, profil, generalSoumis, onRenseigner, onEffacer, onReponse }: PageThemesProps) {
+export default function PageThemes({ base, profil, generalSoumis, onValider, onEffacer, onReponse }: PageThemesProps) {
+  // Le formulaire général s'ouvre ici, avant les cartes de thèmes, plutôt que de rediriger vers une autre page.
+  const [formulaireOuvert, setFormulaireOuvert] = useState(false);
   const { avecDonnees: candidats, enCoursAnalyse } = candidatsDeBase(base);
+  const manquants = resumesManquants(base, candidats);
   const personnalise = generalSoumis && aDesInformations(profil);
   const cards = construireCards(base.themes, candidats, personnalise ? profil : null);
   // Arrivée depuis le tableau de l'accueil (ou une adresse partagée) : la carte du thème, avec ce candidat ouvert.
@@ -34,7 +39,20 @@ export default function PageThemes({ base, profil, generalSoumis, onRenseigner, 
     <>
       <h1>Simulateur</h1>
 
-      <div className="ma-situation">
+      {formulaireOuvert && (
+        <PageQuestionsGenerales
+          integre
+          questions={base.questionnaire.generales}
+          profilInitial={profil}
+          onValider={(p) => {
+            onValider(p);
+            setFormulaireOuvert(false);
+          }}
+          onAnnuler={() => setFormulaireOuvert(false)}
+        />
+      )}
+
+      <div className="ma-situation" hidden={formulaireOuvert}>
         {personnalise ? (
           <>
             <p>
@@ -53,7 +71,7 @@ export default function PageThemes({ base, profil, generalSoumis, onRenseigner, 
               {generalSoumis && <strong>Aucune réponse donnée. </strong>}
               Voyez ce que le programme de chaque candidat changerait pour votre situation personnelle pendant le mandat
               à venir. Pour cela,{" "}
-              <button type="button" className="bouton-en-ligne" onClick={onRenseigner}>
+              <button type="button" className="bouton-en-ligne" onClick={() => setFormulaireOuvert(true)} aria-expanded={formulaireOuvert} aria-controls="formulaire-general">
                 Renseignez des informations
               </button>
             </p>
@@ -76,6 +94,11 @@ export default function PageThemes({ base, profil, generalSoumis, onRenseigner, 
 
       {enCoursAnalyse.length > 0 && (
         <p className="hint">Programmes pas encore analysés : {enCoursAnalyse.map((meta) => meta.nom).join(", ")}.</p>
+      )}
+      {manquants.length > 0 && (
+        <p className="hint">
+          Résumé pas encore disponible (le détail complet des mesures reste affiché) : {manquants.map((m) => `${m.nom} (${m.themeLibelle})`).join(", ")}.
+        </p>
       )}
     </>
   );

@@ -772,7 +772,7 @@ article {
 .carte-entete {
   flex: none;
   text-align: center;
-  padding: 2.4rem 1rem 0;
+  padding: 2rem 1rem 0;
 }
 
 /* Icône du thème dans un cercle centré, à moitié sorti au-dessus de la carte. Mêmes dimensions, même position,
@@ -821,7 +821,7 @@ article {
 
 /* Le libellé du thème apparaît à côté du médaillon plutôt que de se substituer brutalement à celui du dessous. */
 .carte-entete--ouvert h2 {
-  animation: titre-theme-entree 0.25s ease-out;
+  animation: titre-theme-entree 0.25s ease-out 0.12s backwards;
 }
 
 @keyframes titre-theme-entree {
@@ -834,7 +834,7 @@ article {
 .carte h2 {
   margin: 0;
   font-family: var(--titre);
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.25;
   color: var(--bleu-fonce);
@@ -851,8 +851,25 @@ article {
   white-space: nowrap;
 }
 
+/* Retour à l'en-tête fermé : le titre et la question réapparaissent en fondu. */
+.carte-entete--retour h2,
+.carte-entete--retour .question-theme {
+  animation: entete-retour 0.35s ease-out backwards;
+}
+
+.carte-entete--retour .question-theme {
+  animation-delay: 0.1s;
+}
+
+@keyframes entete-retour {
+  from {
+    opacity: 0;
+    transform: translateY(0.35rem);
+  }
+}
+
 .question-theme {
-  margin: 0.35rem 0 0.75rem;
+  margin: 0.75rem 0 0.75rem;
   font-size: 0.9375rem;
   color: var(--encre-douce);
 }
@@ -864,6 +881,140 @@ article {
   overflow-y: auto;
   margin-top: 20px;
   padding: 0 0.7rem 3.3rem 1rem;
+}
+
+/* Candidat ouvert : le corps ne défile plus, c'est le contenu du détail (résumé ou liste des mesures) qui défile,
+   sous l'entête fixe (portrait, nom, onglets). Il passe sous le tiroir de verre : d'où le bas de page réservé au
+   contenu et non au corps. */
+.carte-corps--detail {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 1rem; /* symétrique : la scrollbar n'est plus ici (l'ancien 0.7rem à droite lui laissait la place) */
+}
+
+.carte-corps--detail .detail {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.detail-contenu {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-gutter: stable both-edges; /* même réserve à gauche et à droite : le texte reste centré, scrollbar ou non */
+  padding-bottom: 3.3rem;
+}
+
+/* Flux de portraits (aucun candidat choisi) : calque décoratif sur toute la zone du corps, sous le tiroir de verre.
+   Chaque portrait part du bas, remonte, et s'efface en haut ; sa bulle est à droite ou à gauche selon sa position. */
+.carte-corps {
+  position: relative;
+}
+
+.flux-candidats {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  container-type: size;
+  pointer-events: none;
+}
+
+.carte-corps > :not(.flux-candidats) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Chaque groupe (portrait + bulle) est centré horizontalement dans la zone (`translate` : il se combine avec le
+   `transform` de la montée). Le portrait est à gauche ou à droite de sa bulle, en alternance (row / row-reverse). */
+.flux-item {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50% 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: max-content;
+  max-width: calc(100cqw - 2rem);
+  opacity: 0;
+  animation: flux-montee 20s linear infinite backwards;
+}
+
+.flux-item--bulle-gauche {
+  flex-direction: row-reverse;
+}
+
+.flux-item .pastille {
+  flex: none;
+  width: 3.4rem;
+  height: 3.4rem;
+  box-shadow: 0 2px 8px rgba(23, 60, 140, 0.2);
+}
+
+.flux-bulle {
+  position: relative;
+  width: 60cqw;
+  min-width: 0;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--filet);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 2px 8px rgba(23, 60, 140, 0.12);
+  color: var(--encre);
+  font-size: 1rem;
+  line-height: 1.3;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* Petite pointe de la bulle, du côté du portrait. */
+.flux-bulle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  z-index: -1; /* derrière le fond de la bulle : seule la pointe dépasse, elle ne recouvre jamais le texte */
+  width: 0.7rem;
+  height: 0.7rem;
+  background: var(--surface);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.flux-item--bulle-droite .flux-bulle::before {
+  left: -0.35rem;
+  border-bottom: 1px solid var(--filet);
+  border-left: 1px solid var(--filet);
+}
+
+.flux-item--bulle-gauche .flux-bulle::before {
+  right: -0.35rem;
+  border-top: 1px solid var(--filet);
+  border-right: 1px solid var(--filet);
+}
+
+/* Du bas de la zone (apparition en fondu) vers le haut, où le portrait s'efface complètement. */
+@keyframes flux-montee {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  8% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(-100cqh - 2.5rem));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flux-candidats {
+    display: none;
+  }
 }
 
 /* L'invitation à cliquer occupe l'espace libre du corps, centrée dans les deux sens. */
@@ -1161,6 +1312,94 @@ article {
   font-size: 0.875rem;
 }
 
+/* Formulaire ouvert au-dessus des thèmes : une carte par question (icône à gauche), en grille, avec le « pourquoi »
+   dans un encadré bleu pâle. */
+.questionnaire--integre {
+  max-width: none;
+  margin: 1rem 0 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  background: var(--surface);
+  box-shadow: var(--ombre);
+}
+
+.questionnaire--integre h2 {
+  margin-top: 0;
+}
+
+.section-questions--cartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.sensibles--cartes {
+  max-width: none;
+}
+
+.sensibles--cartes .section-questions--cartes {
+  margin-top: 1rem;
+}
+
+.question-carte {
+  display: flex;
+  gap: 0.85rem;
+  padding: 1rem;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  background: var(--surface);
+}
+
+.question-icone {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--bleu-pale);
+  color: var(--bleu);
+}
+
+.question-carte-corps {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.question-carte .question {
+  margin: 0;
+}
+
+.question-carte fieldset.question {
+  padding: 0;
+  border: 0;
+}
+
+.question-carte select,
+.question-carte input[type="number"],
+.question-carte input[type="text"] {
+  width: 100%;
+}
+
+.question-carte .finalite {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: 6px;
+  background: var(--bleu-pale);
+  color: var(--encre);
+}
+
+.question-carte .finalite svg {
+  flex: none;
+  margin-top: 0.15rem;
+  color: var(--bleu);
+}
+
 fieldset.question {
   min-width: 0;
   padding: 0.5rem 0.75rem 0.75rem;
@@ -1215,7 +1454,7 @@ fieldset.question {
   position: relative;
   flex: 1 1 auto;
   margin-top: 1.75rem;
-  padding: 3.25rem 0.8rem 0.8rem;
+  padding: 3.25rem 1.4rem 0.8rem;
   border: 1px solid var(--filet);
   border-radius: 10px;
   background: var(--surface);
@@ -1278,34 +1517,36 @@ fieldset.question {
 }
 
 /* Menu Résumé / Mesures : simple texte, jamais un fond de couleur ; le souligné marque le survol ET la vue active. */
+/* Onglets du détail : texte bleu (couleur d'action), sans fond, et soulignement rouge épais au survol comme sur l'onglet
+   actif — le rouge n'est ici qu'un souligné décoratif (jamais un texte ni un bouton). Espacés entre eux et du contenu
+   qui précède et qui suit. */
 .onglets-detail {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin: 0;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.9rem 0 1.1rem;
   padding: 0;
 }
 
 .onglets-detail button {
   margin: 0;
-  padding: 0.1rem 0.15rem;
+  padding: 0.4rem 0.85rem 0.3rem;
   border: 0;
-  border-radius: 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 8px 8px 0 0;
   background: none;
   color: var(--bleu-fonce);
   font-size: 0.9375rem;
   font-weight: 600;
   text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
 }
 
 .onglets-detail button:hover,
 .onglets-detail button[aria-pressed="true"] {
-  text-decoration: underline;
-  text-decoration-color: var(--bleu);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.2em;
+  border-bottom-color: var(--rouge);
 }
-
 .actions {
   flex-direction: row !important;
   flex-wrap: wrap;
@@ -1392,7 +1633,7 @@ button.bouton-en-ligne {
 .resume {
   max-width: 65ch;
   margin: 0 0 0.75rem;
-  line-height: 1.6;
+  line-height: 1.9;
 }
 
 .mot-cle {

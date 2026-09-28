@@ -1,4 +1,6 @@
 import { describe, expect, it } from "vitest";
+import type { Proposition } from "../types";
+import type { CandidatCharge } from "./chargerCandidats";
 import {
   baseParDefaut,
   candidatsDeBase,
@@ -9,6 +11,7 @@ import {
   listerBases,
   regrouperParBaseEtSlug,
   resoudreBase,
+  resumesManquants,
   type BaseCharge,
   type InfoBase,
 } from "./bases";
@@ -119,8 +122,64 @@ describe.each(listerBases())("base « $id »", (info) => {
 
 function baseAvecMetas(dates: string[]): BaseCharge {
   const metas = Object.fromEntries(dates.map((d, i) => [`c${i}`, { slug: `c${i}`, nom: `C${i}`, parti: "P", sources_officielles: [], date_derniere_maj: d }]));
-  return { info: BASES[0], themes: [], questionnaire: { generales: [], parTheme: [] }, metas, propositions: {}, syntheses: {}, resumes: {}, remarques: {}, aVerifier: {} };
+  return { info: BASES[0], themes: [], questionnaire: { generales: [], parTheme: [] }, metas, propositions: {}, syntheses: {}, resumes: {}, remarques: {}, resumesRefuses: {}, aVerifier: {} };
 }
+
+describe("resumesManquants", () => {
+  const THEMES = [
+    { id: "fiscalite", libelle: "Mes impôts et taxes", question_citoyen: "Q ?", description: "d", statut: "populated" as const },
+    { id: "retraites", libelle: "Ma retraite", question_citoyen: "Q ?", description: "d", statut: "populated" as const },
+  ];
+  const mesure = (theme: string, id: string): Proposition => ({
+    id,
+    candidat: "a",
+    theme,
+    titre: "T",
+    resume_factuel: "R",
+    sources: [],
+    chiffrage_disponible: false,
+    hypotheses_calcul: "",
+    statut: "complet",
+    date_derniere_verification: "2026-09-28",
+  });
+  const resume = (theme: string) => ({ theme, segments: [], propositions: [], empreinte: "e", date: "2026-09-28", modele: "m" });
+  function base(resumesRefuses: BaseCharge["resumesRefuses"] = {}): BaseCharge {
+    return { ...baseAvecMetas([]), themes: THEMES, resumesRefuses };
+  }
+  function candidat(propositions: ReturnType<typeof mesure>[], resumes: ReturnType<typeof resume>[] = []): CandidatCharge {
+    return { meta: { slug: "a", nom: "Nom A", parti: "P", sources_officielles: [], date_derniere_maj: "2026-09-28" }, propositions, syntheses: [], resumes };
+  }
+
+  it("liste un thème avec des mesures mais sans résumé, raison null si jamais tenté", () => {
+    const manquants = resumesManquants(base(), [candidat([mesure("fiscalite", "a-1")])]);
+    expect(manquants).toEqual([{ nom: "Nom A", themeLibelle: "Mes impôts et taxes", nombreMesures: 1, raison: null }]);
+  });
+
+  it("reprend la raison du dernier refus enregistré, quand la génération a déjà été tentée", () => {
+    const manquants = resumesManquants(base({ a: [{ theme: "fiscalite", raison: "texte trop long", empreinte: "e", date: "2026-09-28" }] }), [
+      candidat([mesure("fiscalite", "a-1")]),
+    ]);
+    expect(manquants[0].raison).toBe("texte trop long");
+  });
+
+  it("n'inclut pas un thème qui a déjà un résumé", () => {
+    const manquants = resumesManquants(base(), [candidat([mesure("fiscalite", "a-1")], [resume("fiscalite")])]);
+    expect(manquants).toEqual([]);
+  });
+
+  it("n'inclut pas un thème sans aucune mesure affichable pour ce candidat", () => {
+    const manquants = resumesManquants(base(), [candidat([{ ...mesure("fiscalite", "a-1"), statut: "provisoire" }])]);
+    expect(manquants).toEqual([]);
+  });
+
+  it("liste chaque thème concerné, pour plusieurs candidats", () => {
+    const manquants = resumesManquants(base(), [
+      candidat([mesure("fiscalite", "a-1"), mesure("retraites", "a-2")]),
+      { ...candidat([mesure("fiscalite", "b-1")]), meta: { slug: "b", nom: "Nom B", parti: "P", sources_officielles: [], date_derniere_maj: "2026-09-28" } },
+    ]);
+    expect(manquants.map((m) => `${m.nom} × ${m.themeLibelle}`)).toEqual(["Nom A × Mes impôts et taxes", "Nom A × Ma retraite", "Nom B × Mes impôts et taxes"]);
+  });
+});
 
 describe("derniereMiseAJour", () => {
   it("prend la plus récente des dates de mise à jour des candidats de la base", () => {

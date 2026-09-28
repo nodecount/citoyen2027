@@ -1,8 +1,8 @@
 import basesJson from "../../data/bases/bases.json";
 import type { EntreeAVerifier } from "../ingestion/depot";
 import { CHAMPS_PROFIL, construireQuestionnaire, type Questionnaire } from "../questionnaire";
-import type { CandidatMeta, Proposition, Remarque, ResumeTheme, SyntheseTheme, Theme } from "../types";
-import { assemblerCandidats, type CandidatsCharges } from "./chargerCandidats";
+import type { CandidatMeta, Proposition, Remarque, ResumeRefuse, ResumeTheme, SyntheseTheme, Theme } from "../types";
+import { assemblerCandidats, type CandidatCharge, type CandidatsCharges } from "./chargerCandidats";
 
 // Une « base de connaissances » = un référentiel de thèmes + un dossier par candidat, dans data/bases/<id>/.
 // Toutes les bases ont exactement la même structure de fichiers (meta.json, propositions.json, synthese.json, resumes.json) :
@@ -29,6 +29,9 @@ export interface BaseCharge {
   resumes: Record<string, ResumeTheme[]>;
   // Remarques de relecture sur un résumé publié malgré un défaut relevé (voir Remarque) : à côté, jamais dans le calcul.
   remarques: Record<string, Remarque[]>;
+  // Dernier refus de résumé enregistré par thème (voir ResumeRefuse) : un thème avec des mesures mais sans résumé s'y
+  // trouve, sauf s'il n'a encore jamais été tenté (voir `resumesManquants`, qui ne dépend pas de ce détail).
+  resumesRefuses: Record<string, ResumeRefuse[]>;
   aVerifier: Record<string, EntreeAVerifier[]>;
 }
 
@@ -41,6 +44,7 @@ const propositionsModules = import.meta.glob("../../data/bases/*/programmes/*/pr
 const synthesesModules = import.meta.glob("../../data/bases/*/programmes/*/synthese.json", { eager: true }) as Record<string, { default: SyntheseTheme[] }>;
 const resumesModules = import.meta.glob("../../data/bases/*/programmes/*/resumes.json", { eager: true }) as Record<string, { default: ResumeTheme[] }>;
 const remarquesModules = import.meta.glob("../../data/bases/*/programmes/*/remarques.json", { eager: true }) as Record<string, { default: Remarque[] }>;
+const resumesRefusesModules = import.meta.glob("../../data/bases/*/programmes/*/_resumes-refuses.json", { eager: true }) as Record<string, { default: ResumeRefuse[] }>;
 const aVerifierModules = import.meta.glob("../../data/bases/*/programmes/*/_a-verifier.json", { eager: true }) as Record<string, { default: EntreeAVerifier[] }>;
 
 // "/…/data/bases/<base>/programmes/<slug>/fichier.json" → { base, slug }
@@ -89,12 +93,44 @@ export function chargerBase(id: string): BaseCharge {
     syntheses: regrouperParBaseEtSlug(synthesesModules, info.id),
     resumes: regrouperParBaseEtSlug(resumesModules, info.id),
     remarques: regrouperParBaseEtSlug(remarquesModules, info.id),
+    resumesRefuses: regrouperParBaseEtSlug(resumesRefusesModules, info.id),
     aVerifier: regrouperParBaseEtSlug(aVerifierModules, info.id),
   };
 }
 
 export function candidatsDeBase(base: BaseCharge): CandidatsCharges {
   return assemblerCandidats(base.metas, base.propositions, base.syntheses, base.resumes, base.remarques);
+}
+
+export interface ResumeManquant {
+  nom: string;
+  themeLibelle: string;
+  nombreMesures: number;
+  // Raison du dernier refus connu pour ce thème, si la génération a déjà été tentée (voir ResumeRefuse) ; null si elle
+  // n'a jamais encore été lancée (candidat ou thème récent).
+  raison: string | null;
+}
+
+// Thèmes où un candidat a au moins une mesure affichable mais aucun résumé : ni caché ni deviné, listé pour que
+// l'absence ne soit jamais silencieuse (décision du porteur du projet, 2026-09-28). N'affecte ni le calcul ni
+// l'indicateur : le détail des mesures reste affiché intégralement pour ces thèmes.
+export function resumesManquants(base: BaseCharge, candidats: CandidatCharge[]): ResumeManquant[] {
+  const manquants: ResumeManquant[] = [];
+  for (const candidat of candidats) {
+    const nombreParTheme = new Map<string, number>();
+    for (const p of candidat.propositions) {
+      if (p.statut !== "complet" && p.statut !== "partiel") continue;
+      nombreParTheme.set(p.theme, (nombreParTheme.get(p.theme) ?? 0) + 1);
+    }
+    for (const theme of base.themes) {
+      const nombreMesures = nombreParTheme.get(theme.id) ?? 0;
+      if (nombreMesures === 0) continue;
+      if ((candidat.resumes ?? []).some((r) => r.theme === theme.id)) continue;
+      const refus = (base.resumesRefuses[candidat.meta.slug] ?? []).find((r) => r.theme === theme.id);
+      manquants.push({ nom: candidat.meta.nom, themeLibelle: theme.libelle, nombreMesures, raison: refus?.raison ?? null });
+    }
+  }
+  return manquants;
 }
 
 // Date de mise à jour à afficher au visiteur : la plus récente des dates de mise à jour des candidats de la base

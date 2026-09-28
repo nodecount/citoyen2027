@@ -1,6 +1,6 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
-import { chargerBase } from "../data/bases";
+import { candidatsDeBase, chargerBase, resumesManquants } from "../data/bases";
 import type { ProfilPartiel } from "../profil";
 import PageThemes from "./PageThemes";
 
@@ -17,7 +17,7 @@ const UNE_REPONSE: ProfilPartiel = { tranche_age: "30_49" };
 
 function rendre(baseId: string, profil: ProfilPartiel, generalSoumis: boolean): string {
   return renderToStaticMarkup(
-    <PageThemes base={chargerBase(baseId)} profil={profil} generalSoumis={generalSoumis} onRenseigner={() => {}} onEffacer={() => {}} onReponse={() => {}} />,
+    <PageThemes base={chargerBase(baseId)} profil={profil} generalSoumis={generalSoumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} />,
   );
 }
 
@@ -58,6 +58,19 @@ describe("page des thèmes, sur les données réelles", () => {
 
   it("n'écrit pas le nom des candidats sous leur portrait", () => {
     expect(rendre("agregateurs", AUCUNE_REPONSE, false)).not.toContain("portrait-nom");
+  });
+
+  it.each(["officielle", "agregateurs"])("base « %s » : signale les résumés manquants (mesures présentes, résumé absent), sans jamais les cacher", (id) => {
+    const base = chargerBase(id);
+    const manquants = resumesManquants(base, candidatsDeBase(base).avecDonnees);
+    const rendu = rendre(id, AUCUNE_REPONSE, false);
+    if (manquants.length > 0) {
+      expect(rendu).toContain("Résumé pas encore disponible");
+      expect(rendu).toContain(manquants[0].nom);
+      expect(rendu).toContain(manquants[0].themeLibelle.replace(/&/g, "&amp;"));
+    } else {
+      expect(rendu).not.toContain("Résumé pas encore disponible");
+    }
   });
 
   it("l'ordre des portraits reste alphabétique dans une carte, quelle que soit la base", () => {

@@ -82,6 +82,15 @@ export interface Remarque {
   date: string;
 }
 
+// Dernier refus enregistré pour un résumé de candidat × thème (voir run-resumes.ts : au plus un par thème, le plus
+// récent). Sert uniquement à ne jamais laisser un résumé manquant en silence — voir `resumesManquants` (src/data/bases.ts).
+export interface ResumeRefuse {
+  theme: string;
+  raison: string;
+  empreinte: string;
+  date: string;
+}
+
 export interface Theme {
   id: string;
   // Formulé comme le citoyen le vit (« Ma retraite »), pas comme l'administration le classe.

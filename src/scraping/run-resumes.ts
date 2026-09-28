@@ -1,6 +1,6 @@
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
-import type { CandidatMeta, Proposition, Remarque, ResumeTheme, Theme } from "../types";
+import type { CandidatMeta, Proposition, Remarque, ResumeRefuse, ResumeTheme, Theme } from "../types";
 import { appelerClaudeCli, MODELE_CLI, PanneCli } from "./claude-cli";
 import { empreinteResume, resumerTheme } from "./resumes";
 
@@ -13,13 +13,6 @@ import { empreinteResume, resumerTheme } from "./resumes";
 // être affichée à côté de la ou des mesures qu'elle désigne — jamais mêlée au texte du résumé ni au calcul.
 
 const RACINE = process.cwd();
-
-interface Refus {
-  theme: string;
-  empreinte: string;
-  raison: string;
-  date: string;
-}
 
 interface Tache {
   base: string;
@@ -61,7 +54,7 @@ function planifier(force: boolean, reessayerRefus: boolean): Tache[] {
       if (propositions.length === 0) continue;
       const nom = lire<CandidatMeta>(resolve(d, "meta.json"), { nom: slug } as CandidatMeta).nom;
       const resumes = lire<ResumeTheme[]>(resolve(d, "resumes.json"), []);
-      const refus = lire<Refus[]>(resolve(d, "_resumes-refuses.json"), []);
+      const refus = lire<ResumeRefuse[]>(resolve(d, "_resumes-refuses.json"), []);
       for (const theme of themes) {
         if (filtreThemes && !filtreThemes.includes(theme.id)) continue;
         const duTheme = propositions.filter((p) => p.theme === theme.id);
@@ -133,7 +126,7 @@ async function main(): Promise<void> {
         const cheminRefus = resolve(dossier, "_resumes-refuses.json");
         const cheminRemarques = resolve(dossier, "remarques.json");
         const resumes = lire<ResumeTheme[]>(cheminResumes, []).filter((x) => x.theme !== t.theme.id);
-        const refus = lire<Refus[]>(cheminRefus, []).filter((x) => x.theme !== t.theme.id);
+        const refus = lire<ResumeRefuse[]>(cheminRefus, []).filter((x) => x.theme !== t.theme.id);
         const remarques = lire<Remarque[]>(cheminRemarques, []).filter((x) => x.theme !== t.theme.id);
         if (r.ok && r.segments) {
           resumes.push({ theme: t.theme.id, segments: r.segments, propositions: t.propositions.map((p) => p.id).sort(), empreinte: t.empreinte, date, modele: MODELE_CLI });
