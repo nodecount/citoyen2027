@@ -23,7 +23,7 @@ function rendre(baseId: string, profil: ProfilPartiel, generalSoumis: boolean): 
 
 const portraits = (rendu: string): string => (rendu.match(/<ul class="portraits"[\s\S]*?<\/ul>/g) ?? []).join("");
 // Le nom n'est plus écrit sous la pastille : il est porté par le bouton (title et nom accessible).
-const noms = (rendu: string): string[] => [...portraits(rendu).matchAll(/class="portrait[^"]*"[^>]*title="([^"]+)"/g)].map((m) => m[1]);
+const noms = (rendu: string): string[] => [...portraits(rendu).matchAll(/class="infobulle infobulle--nom"[^>]*>([^<]+)</g)].map((m) => m[1]);
 
 // Rendu de bout en bout avec les VRAIES données de chaque base : le même moteur et la même interface doivent
 // fonctionner quelle que soit la base, avec ses propres thèmes.

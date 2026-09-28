@@ -91,7 +91,9 @@ describe("page de départ : aucune information sur le visiteur", () => {
   it("montre les candidats en portraits cliquables dans le pied de carte, toujours de même taille, avec leur nombre de mesures", () => {
     expect(rendu).toMatch(/<button[^>]*class="portrait"[^>]*aria-expanded="false"/);
     expect(rendu).not.toContain("carte-pied--grand");
-    expect(rendu).toMatch(/aria-label="Gabriel Attal : 1 mesure sur ce thème"[^>]*title="Gabriel Attal"/);
+    expect(rendu).toContain('aria-label="Gabriel Attal : 1 mesure sur ce thème"');
+    expect(rendu).toMatch(/class="infobulle infobulle--nom"[^>]*>Gabriel Attal</); // vraie infobulle, pas de title natif
+    expect(rendu).not.toContain('title="Gabriel Attal"');
     expect(rendu).toContain(">MLP<"); // pas de photo pour ce slug de test : initiales
     expect(rendu).toContain('class="portrait-compte" aria-hidden="true">1<'); // comme un nombre de notifications
     expect(rendu).not.toContain("portrait-nom");
@@ -128,18 +130,21 @@ describe("page de départ : aucune information sur le visiteur", () => {
 
   it("range les portraits par ordre alphabétique de slug, quel que soit l'effet de leurs mesures", () => {
     const r = html([candidat("z", [prop("z", [HAUSSE])]), candidat("b", [prop("b", [BAISSE])])]);
-    expect(r.indexOf('title="Nom b"')).toBeLessThan(r.indexOf('title="Nom z"'));
+    expect(r.indexOf('infobulle--nom" aria-hidden="true">Nom b<')).toBeLessThan(r.indexOf('infobulle--nom" aria-hidden="true">Nom z<'));
   });
 
-  it("garde les candidats sans mesure sur le thème en fin de liste, en pile, non cliquables", () => {
+  it("résume en un seul « +X » les candidats sans mesure sur le thème, avec une vraie infobulle (pas de title natif) et sans portrait", () => {
     const r = html([candidat("a", [prop("a", [HAUSSE])]), candidat("b", [prop("b", [HAUSSE], "retraites")])]);
     const carte = r.slice(r.indexOf('id="theme-fiscalite"'), r.indexOf('id="theme-retraites"'));
-    expect(carte.indexOf('title="Nom a"')).toBeLessThan(carte.indexOf('class="pile-absents"'));
-    const absents = carte.slice(carte.indexOf('class="pile-absents"'));
-    expect(absents).toContain('aria-label="Nom b : aucune mesure sur ce thème"');
-    expect(absents).not.toContain("<button");
+    expect(carte.indexOf('>Nom a<')).toBeLessThan(carte.indexOf("portrait-plus"));
+    expect(carte).toContain(">+1<");
+    expect(carte).toContain('role="tooltip"');
+    expect(carte).toContain("Ces candidats n&#x27;ont aucune mesure sur ce thème."); // pas de « votre situation » : rien n'a été masqué
+    expect(carte).not.toContain('title="Ces candidats');
+    expect(carte).toContain('aria-label="1 autre candidat"');
+    expect(carte).not.toContain("pile-absents");
+    expect(carte).not.toContain('>Nom b<'); // pas de portrait ni d'infobulle nominative pour lui
   });
-
   it("annonce un thème sans aucun programme analysé comme en cours d'analyse", () => {
     expect(rendu).toContain("Ce thème est en cours d&#x27;analyse");
   });
@@ -445,8 +450,8 @@ describe("masquer les candidats non concernés", () => {
     expect(portraits(r)).not.toContain("Gabriel Attal");
     expect(portraits(r)).toContain("Marine Le Pen");
     expect(r).toContain(">+1<"); // pastille « +1 », plus de texte
-    expect(r).toContain('aria-label="1 candidat non concerné masqué"');
-    expect(r).not.toContain("non concerné masqué<");
+    expect(r).toContain('aria-label="1 autre candidat"');
+    expect(r).toContain("Ces candidats n&#x27;ont aucune mesure qui change votre situation sur ce thème."); // des candidats ont été masqués pour cette raison
   });
 
   it("ne propose rien tant qu'aucune information n'est donnée", () => {

@@ -78,7 +78,7 @@ describe("PageQuestionsGenerales", () => {
   it("annonce que tout est facultatif, que rien n'est envoyé, et que valider fait apparaître les indicateurs", () => {
     const html = rendre();
     expect(html).toContain("facultatives");
-    expect(html).toContain("ni envoyées ni conservées");
+    expect(html).toContain("jamais envoyées");
     expect(html).toContain("jamais comptée");
     expect(html).toContain("les indicateurs apparaissent autour des");
     expect(html).toContain("Enregistrer et voir les indicateurs");

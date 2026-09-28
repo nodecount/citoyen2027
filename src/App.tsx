@@ -7,6 +7,7 @@ import PageQuestionsGenerales from "./ui/PageQuestionsGenerales";
 import PageAPropos from "./ui/PageAPropos";
 import Monitoring from "./ui/Monitoring";
 import { baseInitiale, retenirBase } from "./ui/choixBase";
+import { lireReponses, memoriserReponses } from "./ui/memoireReponses";
 import { ecranDepuisChemin, naviguerVers, type Ecran, type Ouverture } from "./ui/router";
 import { chargerBase, listerBases } from "./data/bases";
 import { CHAMPS_PROFIL } from "./questionnaire";
@@ -18,10 +19,13 @@ const BASES = listerBases();
 export default function App() {
   // L'écran affiché suit l'adresse : « / » accueil, « /simulateur », « /ma-situation », « /a-propos ».
   const [ecran, setEcran] = useState<Ecran>(() => ecranDepuisChemin(window.location.pathname));
-  // Les réponses du visiteur restent en mémoire de la page : ni envoyées, ni stockées.
-  const [profil, setProfil] = useState<ProfilPartiel>({});
-  // Les indicateurs n'apparaissent qu'après la validation du formulaire général.
-  const [generalSoumis, setGeneralSoumis] = useState(false);
+  // Les réponses du visiteur ne sont jamais envoyées ; elles sont gardées dans son navigateur (voir memoireReponses)
+  // pour survivre à un rechargement de la page.
+  const [memorise] = useState(lireReponses);
+  const [profil, setProfil] = useState<ProfilPartiel>(memorise.profil);
+  // Les indicateurs n'apparaissent qu'après l'enregistrement du formulaire général.
+  const [generalSoumis, setGeneralSoumis] = useState(memorise.soumis);
+  useEffect(() => memoriserReponses({ profil, soumis: generalSoumis }), [profil, generalSoumis]);
   const [baseId, setBaseId] = useState<string>(() => baseInitiale(BASES).id);
   const base = chargerBase(baseId);
 

@@ -358,7 +358,7 @@ function Portrait({ ligne, ouvert, idDetail, onBasculer }: { ligne: LigneCandida
   const precision = niveau ? ` — ${NIVEAUX[niveau].libelle}${ligne.projection?.incertain ? ", à préciser" : ""}` : "";
   const label = `${nom}${precision} : ${nombre} mesure${nombre > 1 ? "s" : ""} sur ce thème`;
   return (
-    <li>
+    <li className="avec-infobulle">
       <button
         type="button"
         className={`portrait${ouvert ? " portrait--ouvert" : ""}`}
@@ -366,7 +366,6 @@ function Portrait({ ligne, ouvert, idDetail, onBasculer }: { ligne: LigneCandida
         aria-expanded={ouvert}
         aria-controls={idDetail}
         aria-label={label}
-        title={nom}
         onClick={onBasculer}
       >
         <Pastille slug={ligne.meta.slug} nom={nom} />
@@ -374,6 +373,11 @@ function Portrait({ ligne, ouvert, idDetail, onBasculer }: { ligne: LigneCandida
           {nombre}
         </span>
       </button>
+      {/* Nom du candidat : vraie infobulle au survol et au focus (le nom complet est déjà dans le nom accessible du
+          bouton, d'où aria-hidden). */}
+      <span className="infobulle infobulle--nom" aria-hidden="true">
+        {nom}
+      </span>
     </li>
   );
 }
@@ -416,6 +420,7 @@ function CarteTheme({
   // Option du visiteur : les candidats dont les mesures ne changent rien à sa situation (« non concerné ») sont retirés.
   const lignes = masquerNonConcernes ? card.lignes.filter((l) => l.projection?.niveau !== "non_concerne") : card.lignes;
   const nombreMasques = card.lignes.length - lignes.length;
+  const autres = nombreMasques + absents.length;
   const [ouvert, setOuvert] = useState<string | null>(ouvertInitial ?? null);
   const ligneOuverte = lignes.find((l) => l.meta.slug === ouvert) ?? null;
   const idDetail = `detail-${theme.id}`;
@@ -551,26 +556,20 @@ function CarteTheme({
                 onBasculer={() => basculer(ligne.meta.slug)}
               />
             ))}
-            {nombreMasques > 0 && (
-              <li className="portraits-plus">
-                <span className="portrait-plus" role="img" aria-label={`${nombreMasques} candidat${nombreMasques > 1 ? "s" : ""} non concerné${nombreMasques > 1 ? "s" : ""} masqué${nombreMasques > 1 ? "s" : ""}`} title={`${nombreMasques} non concerné${nombreMasques > 1 ? "s" : ""} masqué${nombreMasques > 1 ? "s" : ""}`}>
-                  +{nombreMasques}
+            {/* « +X » unique : les candidats sans mesure sur ce thème et ceux dont les mesures ne changent rien à la
+                situation du visiteur (masqués). Une vraie infobulle (survol ET focus clavier) l'explique ; elle ne parle
+                de « votre situation » que si des candidats ont été masqués pour cette raison, donc seulement une fois le
+                visiteur renseigné — sinon ce sont simplement des candidats sans mesure sur le thème. */}
+            {autres > 0 && (
+              <li className="portraits-plus avec-infobulle">
+                <span className="portrait-plus" tabIndex={0} role="img" aria-label={`${autres} autre${autres > 1 ? "s" : ""} candidat${autres > 1 ? "s" : ""}`} aria-describedby={`infobulle-${theme.id}`}>
+                  +{autres}
                 </span>
-              </li>            )}
-            {/* Candidats sans mesure sur ce thème : nommés, jamais omis en silence — en fin de liste, en pile estompée,
-                non cliquables. */}
-            {absents.length > 0 && (
-              <li className="pile-absents">
-                <ul aria-label={`Candidats sans mesure sur le thème ${theme.libelle}`}>
-                  {absents.map((meta) => (
-                    <li key={meta.slug}>
-                      <Pastille slug={meta.slug} nom={meta.nom} className="pastille--absent" libelle={`${meta.nom} : aucune mesure sur ce thème`} />
-                    </li>
-                  ))}
-                </ul>
+                <span className="infobulle" role="tooltip" id={`infobulle-${theme.id}`}>
+                  {nombreMasques > 0 ? "Ces candidats n'ont aucune mesure qui change votre situation sur ce thème." : "Ces candidats n'ont aucune mesure sur ce thème."}
+                </span>
               </li>
-            )}
-          </ul>
+            )}          </ul>
         </footer>
       )}
     </article>

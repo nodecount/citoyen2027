@@ -63,7 +63,7 @@ export default function PageQuestionsGenerales({ questions, profilInitial, onVal
       )}
       <p className="hint">
         Ces questions générales servent à plusieurs thèmes. Elles sont toutes facultatives : répondez à celles que vous
-        voulez. Vos réponses restent dans votre navigateur, elles ne sont ni envoyées ni conservées. Une question laissée
+        voulez. Vos réponses restent dans votre navigateur : elles ne sont jamais envoyées, et gardées pour votre prochaine visite tant que vous ne les effacez pas. Une question laissée
         sans réponse n'est jamais comptée comme « non ». Une fois enregistrées, les indicateurs apparaissent autour des
         portraits, et vous pourrez préciser d'autres informations thème par thème.
       </p>

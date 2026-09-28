@@ -1118,37 +1118,8 @@ article {
 }
 
 .carte-pied .pastille {
-  width: 2.3rem;
-  height: 2.3rem;
-}
-
-/* Candidats sans mesure sur le thème : en fin de liste, en pile où chacun ne montre que la moitié de son portrait,
-   estompés, non cliquables. */
-.pile-absents ul {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 0.25rem;
-  margin: 0;
-  padding: 0 0 0 1rem;
-  list-style: none;
-}
-
-.pile-absents li {
-  margin-left: -1rem;
-}
-
-.pastille--absent {
-  width: 2rem;
-  height: 2rem;
-  font-size: 0.875rem;
-  color: var(--encre-douce);
-}
-
-/* Dans le tiroir, les absents ont la même bordure que les portraits (2 px, sans halo) et sont alignés sur la
-   rangée des pastilles (haut du portrait : bordure + padding), pas centrés sur la hauteur portrait + libellé. */
-.carte-pied .pile-absents {
-  align-self: flex-start;
-  padding-top: calc(0.2rem + 1px);
+  width: calc(2.3rem + 4px);
+  height: calc(2.3rem + 4px);
 }
 
 /* Portraits : une pastille à initiales, identique pour tous. Aucune couleur par candidat (elle évoquerait un
@@ -1162,9 +1133,14 @@ article {
   list-style: none;
 }
 
-/* « +X » : les candidats non concernés masqués, dans une pastille blanche de la taille d'un portrait, juste après les
-   portraits (avant la pile des candidats sans mesure). Décorative pour l'œil, nommée pour les lecteurs d'écran. */
+/* « +X » : les autres candidats (sans mesure sur le thème, ou non concernés et masqués), dans une pastille blanche de la
+   taille d'un portrait, juste après les portraits. Une infobulle au survol explique qu'ils n'impactent pas la situation. */
+.avec-infobulle {
+  position: relative;
+}
+
 .portraits-plus {
+  position: relative;
   align-self: flex-start;
   padding: 0.2rem;
 }
@@ -1172,8 +1148,8 @@ article {
 .portrait-plus {
   display: grid;
   place-items: center;
-  width: 2.3rem;
-  height: 2.3rem;
+  width: calc(2.3rem + 4px); /* même diamètre que les portraits du tiroir */
+  height: calc(2.3rem + 4px);
   border: 2px solid var(--filet);
   border-radius: 50%;
   background: #ffffff;
@@ -1181,6 +1157,58 @@ article {
   font-size: 0.875rem;
   font-weight: 700;
   cursor: help;
+}
+
+/* Vraie infobulle (pas le `title` natif du navigateur) : bulle bleu nuit au-dessus de la pastille, avec sa pointe,
+   visible au survol et au focus clavier. Elle se superpose au reste, sans prendre de place. */
+.infobulle {
+  position: absolute;
+  bottom: calc(100% + 0.35rem);
+  left: 50%;
+  z-index: 5;
+  width: max-content;
+  max-width: 15rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background: var(--bleu-fonce);
+  box-shadow: 0 6px 18px rgba(23, 60, 140, 0.3);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 0.25rem);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s linear 0.15s;
+}
+
+.infobulle::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -0.4rem;
+  border: 0.4rem solid transparent;
+  border-top-color: var(--bleu-fonce);
+}
+
+.avec-infobulle:hover .infobulle,
+.avec-infobulle:focus-within .infobulle {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+  transition-delay: 0s;
+}
+
+.infobulle--nom {
+  white-space: nowrap;
+}
+
+.portrait-plus:focus-visible {
+  outline: 3px solid var(--bleu);
+  outline-offset: 2px;
 }
 
 /* Interrupteur : une case à cocher native (accessible au clavier), dessinée en glissière. */
