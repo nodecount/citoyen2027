@@ -2,10 +2,10 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import { libelleCitation } from "../citations";
 import { evaluerProposition } from "../engine";
-import type { NiveauProjection } from "../engine/projection";
+import type { NiveauProjection, Projection } from "../engine/projection";
 import { compterReponses, questionsDuTheme, type Questionnaire } from "../questionnaire";
 import type { ProfilPartiel } from "../profil";
-import type { ChampProfil, Proposition, ResumeTheme } from "../types";
+import type { ChampProfil, Proposition, Remarque, ResumeTheme } from "../types";
 import type { CardTheme, LigneCandidat } from "./cards";
 import { IconeTheme } from "./icones";
 import { Pastille } from "./Pastille";
@@ -38,10 +38,11 @@ function ListeSources({ sources }: { sources: Array<{ texte: string; url: string
   );
 }
 
-function MesureAnalysee({ proposition, profil }: { proposition: Proposition; profil: ProfilPartiel }) {
+function MesureAnalysee({ proposition, profil, remarques = [] }: { proposition: Proposition; profil: ProfilPartiel; remarques?: Remarque[] }) {
   // Une règle propre à une mesure ne s'applique que si le visiteur a répondu aux questions dont elle dépend
   // (voir evaluerProposition) : sinon explication générale, jamais « non concerné » sur une réponse manquante.
   const impact = evaluerProposition(profil, proposition);
+  const laConcernant = remarques.filter((r) => r.mesures.includes(proposition.id));
   // Chaque mesure est repliée : son titre suffit pour parcourir la liste ; on la déplie pour le détail et la source.
   return (
     <li>
@@ -57,6 +58,13 @@ function MesureAnalysee({ proposition, profil }: { proposition: Proposition; pro
               <em>Cette mesure ne s'applique pas à votre profil.</em>
             </p>
           )}
+          {/* Remarque de relecture sur le résumé du thème (voir Remarque) : jamais dans le calcul, seulement ici, à
+              côté de la mesure qu'elle désigne. */}
+          {laConcernant.map((r, index) => (
+            <p className="remarque" key={index}>
+              <strong>Remarque :</strong> {r.texte}
+            </p>
+          ))}
           <p className="sources">
             Source :{" "}
             <ListeSources sources={proposition.sources.map((s) => ({ texte: libelleCitation(s), url: s.url }))} />
@@ -64,6 +72,48 @@ function MesureAnalysee({ proposition, profil }: { proposition: Proposition; pro
         </div>
       </details>
     </li>
+  );
+}
+
+// Sur un vrai « mixte » (favorable ET défavorable, jamais le « mixte à préciser »), répartit les mesures du thème
+// entre celles retenues comme favorables et celles retenues comme défavorables, d'après les effets que l'indicateur a
+// effectivement retenus (voir `Projection.effetsRetenus`). Une mesure aux effets contradictoires peut figurer dans
+// les deux listes ; une mesure sans effet retenu (exclue, ou sans effet déterminé) ne figure dans aucune des deux.
+function grouperParPolarite(projection: Projection, propositions: Proposition[]): { favorables: Proposition[]; defavorables: Proposition[] } {
+  const idsFavorables = new Set(projection.effetsRetenus.filter((e) => e.polarite === "favorable").map((e) => e.propositionId));
+  const idsDefavorables = new Set(projection.effetsRetenus.filter((e) => e.polarite === "defavorable").map((e) => e.propositionId));
+  return {
+    favorables: propositions.filter((p) => idsFavorables.has(p.id)),
+    defavorables: propositions.filter((p) => idsDefavorables.has(p.id)),
+  };
+}
+
+// Un groupe de mesures sous un petit titre coloré (vert « favorables », rouge « défavorables » : les couleurs déjà
+// utilisées pour ces sens partout ailleurs sur la page). Chaque mesure garde son affichage habituel (titre dépliable,
+// explication, source). Rien n'est affiché si le groupe est vide.
+function GroupeMesures({
+  titre,
+  sens,
+  propositions,
+  profil,
+  remarques,
+}: {
+  titre: string;
+  sens: "favorable" | "defavorable" | "neutre";
+  propositions: Proposition[];
+  profil: ProfilPartiel;
+  remarques?: Remarque[];
+}) {
+  if (propositions.length === 0) return null;
+  return (
+    <div className={`groupe-mesures groupe-mesures--${sens}`}>
+      <p className="groupe-mesures-titre">{titre}</p>
+      <ul className="liste-mesures">
+        {propositions.map((proposition) => (
+          <MesureAnalysee key={proposition.id} proposition={proposition} profil={profil} remarques={remarques} />
+        ))}
+      </ul>
+    </div>
   );
 }
 
@@ -129,15 +179,19 @@ export function CitationsResume({ resume, propositions }: { resume: ResumeTheme;
 // Le détail d'un candidat sur un thème, ouvert depuis son portrait : programme d'abord (synthèse, sources, mesures),
 // puis — seulement si le visiteur a donné des informations — ce que cela change pour lui.
 function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string; onFermer?: () => void }) {
-  const { meta, projection, synthese, resume, sources, messagesSansBadge, messagesIncertitude, messagesEffetsExclus, propositions } = ligne;
+  const { meta, projection, synthese, resume, sources, messagesSansBadge, messagesIncertitude, messagesEffetsExclus, propositions, remarques } = ligne;
   const niveau = projection?.niveau ?? null;
-  // Trois vues : le résumé (par défaut, s'il existe), ses références citées (« Mesures », si le résumé existe), et
-  // le détail complet des mesures (« Mesures (ancien) », toujours disponible). Sans résumé ni synthèse, ce dernier
-  // directement, seul.
+  // Avec un résumé : deux vues, le résumé (par défaut) et ses références citées (« Mesures »). Sans résumé ni
+  // synthèse, le détail complet des mesures directement, seul.
   const aUnTexte = Boolean(resume || synthese);
-  const [vue, setVue] = useState<"resume" | "citations" | "detail">("resume");
+  const [vue, setVue] = useState<"resume" | "citations">("resume");
   const vueActive = aUnTexte ? vue : "detail";
   const nombre = propositions.length;
+  // Un vrai « mixte » (jamais le « mixte à préciser », qui n'a pas encore de sens établi par mesure) : le détail
+  // répartit ses mesures en favorables et défavorables plutôt que de les lister toutes ensemble.
+  const estMixteReel = niveau === "mixte" && projection !== null && !projection.incertain;
+  const { favorables, defavorables } = estMixteReel && projection ? grouperParPolarite(projection, propositions) : { favorables: [], defavorables: [] };
+  const autres = estMixteReel ? propositions.filter((p) => !favorables.includes(p) && !defavorables.includes(p)) : [];
 
   return (
     <div className="detail" id={id} role="region" aria-label={`Détail : ${meta.nom}`}>
@@ -158,28 +212,31 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
           </span>
         </span>
         <h3 className="detail-titre">{meta.nom}</h3>
-        {aUnTexte && (
+        {resume && (
           <div className="onglets-detail" role="group" aria-label="Affichage">
             <button type="button" aria-pressed={vueActive === "resume"} onClick={() => setVue("resume")}>
               Résumé
             </button>
-            {resume && (
-              <button type="button" aria-pressed={vueActive === "citations"} onClick={() => setVue("citations")}>
-                Mesures
-              </button>
-            )}
-            <button type="button" aria-pressed={vueActive === "detail"} onClick={() => setVue("detail")}>
-              Mesures (ancien)
+            <button type="button" aria-pressed={vueActive === "citations"} onClick={() => setVue("citations")}>
+              {nombre > 1 ? `Détail des ${nombre} mesures` : "Détail de la mesure"}
             </button>
           </div>
         )}
       </div>
       {vueActive === "detail" ? (
-        <ul className="liste-mesures">
-          {propositions.map((proposition) => (
-            <MesureAnalysee key={proposition.id} proposition={proposition} profil={profil} />
-          ))}
-        </ul>
+        estMixteReel ? (
+          <>
+            <GroupeMesures titre="Mesures favorables" sens="favorable" propositions={favorables} profil={profil} remarques={remarques} />
+            <GroupeMesures titre="Mesures défavorables" sens="defavorable" propositions={defavorables} profil={profil} remarques={remarques} />
+            <GroupeMesures titre="Autres mesures" sens="neutre" propositions={autres} profil={profil} remarques={remarques} />
+          </>
+        ) : (
+          <ul className="liste-mesures">
+            {propositions.map((proposition) => (
+              <MesureAnalysee key={proposition.id} proposition={proposition} profil={profil} remarques={remarques} />
+            ))}
+          </ul>
+        )
       ) : vueActive === "citations" && resume ? (
         <CitationsResume resume={resume} propositions={propositions} />
       ) : resume ? (
@@ -199,6 +256,13 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
             <p className="pour-votre-profil">
               <strong>Pour votre profil :</strong> {NIVEAUX[niveau].sens}
             </p>
+            {/* Déjà réparties dans le détail des mesures quand il est affiché : pas de répétition. */}
+            {estMixteReel && vueActive !== "detail" && (
+              <>
+                <GroupeMesures titre="Mesures favorables" sens="favorable" propositions={favorables} profil={profil} remarques={remarques} />
+                <GroupeMesures titre="Mesures défavorables" sens="defavorable" propositions={defavorables} profil={profil} remarques={remarques} />
+              </>
+            )}
             {messagesIncertitude.map((message) => (
               <p className="pour-votre-profil incertitude" key={message}>
                 {message}
@@ -247,10 +311,13 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
   );
 }
 
-// Un portrait = une pastille à initiales et — seulement s'il existe — l'indicateur du candidat sur ce thème. Le nom
-// n'est pas écrit sous la pastille, mais il reste le nom accessible du bouton et s'affiche au survol. Tant qu'aucun
-// candidat n'est sélectionné, le pied de carte s'agrandit et chaque portrait affiche son nombre de mesures, comme un
-// compteur de notifications ; dès qu'un candidat est ouvert, le pied de carte — et tous ses portraits — rapetissent.
+// Un portrait = une pastille à initiales et — seulement s'il existe — la couleur de l'indicateur du candidat sur ce
+// thème, en bordure. Le nom n'est pas écrit sous la pastille, mais il reste le nom accessible du bouton et s'affiche
+// au survol. Le mot et le symbole de l'indicateur ne sont pas répétés sous chaque portrait (la légende, affichée en
+// permanence au-dessus de la grille, les porte déjà pour les quatre niveaux) : la couleur n'est donc jamais la SEULE
+// façon de connaître le niveau, seulement la façon la plus rapide une fois la légende lue. Tant qu'aucun candidat
+// n'est sélectionné, le pied de carte s'agrandit et chaque portrait affiche son nombre de mesures, comme un compteur
+// de notifications ; dès qu'un candidat est ouvert, le pied de carte — et tous ses portraits — rapetissent.
 function Portrait({ ligne, ouvert, grand, idDetail, onBasculer }: { ligne: LigneCandidat; ouvert: boolean; grand: boolean; idDetail: string; onBasculer: () => void }) {
   const niveau = ligne.projection?.niveau ?? null;
   const { nom } = ligne.meta;
@@ -273,8 +340,6 @@ function Portrait({ ligne, ouvert, grand, idDetail, onBasculer }: { ligne: Ligne
         <span className="portrait-compte" aria-hidden="true">
           {nombre}
         </span>
-        {niveau && <BadgeNiveau niveau={niveau} />}
-        {ligne.projection?.incertain && <span className="a-preciser">à préciser</span>}
       </button>
     </li>
   );
@@ -425,8 +490,8 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
         </label>
       )}
       {personnalise && (
-        <details className="legende">
-          <summary>Comment lire les indicateurs</summary>
+        <div className="legende">
+          <p className="legende-titre">Comment lire les indicateurs</p>
           <p>
             Pour chaque thème, l'indicateur dit ce que deviendrait votre situation si les mesures du candidat sur ce
             thème s'appliquaient. Il est calculé par des règles explicites, à partir de vos réponses et des mesures
@@ -460,7 +525,7 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
               </dd>
             </div>
           </dl>
-        </details>
+        </div>
       )}
 
       <div className="grille-themes">

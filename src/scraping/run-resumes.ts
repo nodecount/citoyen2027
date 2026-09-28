@@ -1,6 +1,6 @@
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
-import type { CandidatMeta, Proposition, ResumeTheme, Theme } from "../types";
+import type { CandidatMeta, Proposition, Remarque, ResumeTheme, Theme } from "../types";
 import { appelerClaudeCli, MODELE_CLI, PanneCli } from "./claude-cli";
 import { empreinteResume, resumerTheme } from "./resumes";
 
@@ -8,6 +8,9 @@ import { empreinteResume, resumerTheme } from "./resumes";
 // Pour chaque candidat × thème : un texte de 40 à 60 mots résumant TOUTES ses mesures, mots clés rattachés à leurs
 // mesures (voir resumes.ts). Commande claude (abonnement, pas le crédit API). Rejouable : un résumé à jour, ou refusé
 // pour les mêmes mesures, n'est pas refait (sauf --force ; --refus retente seulement les refusés).
+// Un résumé structurellement valide mais rejeté par la relecture à chaque essai est PUBLIÉ quand même (décision du
+// porteur du projet, 2026-09-28) : la raison du refus est gardée à part, dans remarques.json (voir resumerTheme), pour
+// être affichée à côté de la ou des mesures qu'elle désigne — jamais mêlée au texte du résumé ni au calcul.
 
 const RACINE = process.cwd();
 
@@ -128,20 +131,27 @@ async function main(): Promise<void> {
       await enFile(() => {
         const cheminResumes = resolve(dossier, "resumes.json");
         const cheminRefus = resolve(dossier, "_resumes-refuses.json");
+        const cheminRemarques = resolve(dossier, "remarques.json");
         const resumes = lire<ResumeTheme[]>(cheminResumes, []).filter((x) => x.theme !== t.theme.id);
         const refus = lire<Refus[]>(cheminRefus, []).filter((x) => x.theme !== t.theme.id);
+        const remarques = lire<Remarque[]>(cheminRemarques, []).filter((x) => x.theme !== t.theme.id);
         if (r.ok && r.segments) {
           resumes.push({ theme: t.theme.id, segments: r.segments, propositions: t.propositions.map((p) => p.id).sort(), empreinte: t.empreinte, date, modele: MODELE_CLI });
+          if (r.remarque) remarques.push({ theme: t.theme.id, texte: r.remarque.texte, mesures: r.remarque.mesures, empreinte: t.empreinte, date });
         } else {
           refus.push({ theme: t.theme.id, empreinte: t.empreinte, raison: r.raison ?? "refusé", date });
         }
         ecrire(cheminResumes, resumes.sort((a, b) => a.theme.localeCompare(b.theme)));
         if (refus.length > 0) ecrire(cheminRefus, refus.sort((a, b) => a.theme.localeCompare(b.theme)));
         else if (existsSync(cheminRefus)) ecrire(cheminRefus, []);
+        if (remarques.length > 0) ecrire(cheminRemarques, remarques.sort((a, b) => a.theme.localeCompare(b.theme)));
+        else if (existsSync(cheminRemarques)) ecrire(cheminRemarques, []);
       });
       if (r.ok) faits += 1;
       else refuses += 1;
-      console.log(`[${r.ok ? "ok" : "refusé"}] ${nom} : ${t.propositions.length} mesures${r.ok ? "" : ` — ${r.raison}`} (${r.coutReferenceUsd.toFixed(3)} $, cumul ${cout.toFixed(2)} $)`);
+      console.log(
+        `[${r.ok ? "ok" : "refusé"}] ${nom} : ${t.propositions.length} mesures${r.ok ? "" : ` — ${r.raison}`}${r.remarque ? ` (remarque : ${r.remarque.texte})` : ""} (${r.coutReferenceUsd.toFixed(3)} $, cumul ${cout.toFixed(2)} $)`,
+      );
     }
   }
 

@@ -1,7 +1,7 @@
 import basesJson from "../../data/bases/bases.json";
 import type { EntreeAVerifier } from "../ingestion/depot";
 import { CHAMPS_PROFIL, construireQuestionnaire, type Questionnaire } from "../questionnaire";
-import type { CandidatMeta, Proposition, ResumeTheme, SyntheseTheme, Theme } from "../types";
+import type { CandidatMeta, Proposition, Remarque, ResumeTheme, SyntheseTheme, Theme } from "../types";
 import { assemblerCandidats, type CandidatsCharges } from "./chargerCandidats";
 
 // Une « base de connaissances » = un référentiel de thèmes + un dossier par candidat, dans data/bases/<id>/.
@@ -27,6 +27,8 @@ export interface BaseCharge {
   propositions: Record<string, Proposition[]>;
   syntheses: Record<string, SyntheseTheme[]>;
   resumes: Record<string, ResumeTheme[]>;
+  // Remarques de relecture sur un résumé publié malgré un défaut relevé (voir Remarque) : à côté, jamais dans le calcul.
+  remarques: Record<string, Remarque[]>;
   aVerifier: Record<string, EntreeAVerifier[]>;
 }
 
@@ -38,6 +40,7 @@ const metaModules = import.meta.glob("../../data/bases/*/programmes/*/meta.json"
 const propositionsModules = import.meta.glob("../../data/bases/*/programmes/*/propositions.json", { eager: true }) as Record<string, { default: Proposition[] }>;
 const synthesesModules = import.meta.glob("../../data/bases/*/programmes/*/synthese.json", { eager: true }) as Record<string, { default: SyntheseTheme[] }>;
 const resumesModules = import.meta.glob("../../data/bases/*/programmes/*/resumes.json", { eager: true }) as Record<string, { default: ResumeTheme[] }>;
+const remarquesModules = import.meta.glob("../../data/bases/*/programmes/*/remarques.json", { eager: true }) as Record<string, { default: Remarque[] }>;
 const aVerifierModules = import.meta.glob("../../data/bases/*/programmes/*/_a-verifier.json", { eager: true }) as Record<string, { default: EntreeAVerifier[] }>;
 
 // "/…/data/bases/<base>/programmes/<slug>/fichier.json" → { base, slug }
@@ -85,12 +88,13 @@ export function chargerBase(id: string): BaseCharge {
     propositions: regrouperParBaseEtSlug(propositionsModules, info.id),
     syntheses: regrouperParBaseEtSlug(synthesesModules, info.id),
     resumes: regrouperParBaseEtSlug(resumesModules, info.id),
+    remarques: regrouperParBaseEtSlug(remarquesModules, info.id),
     aVerifier: regrouperParBaseEtSlug(aVerifierModules, info.id),
   };
 }
 
 export function candidatsDeBase(base: BaseCharge): CandidatsCharges {
-  return assemblerCandidats(base.metas, base.propositions, base.syntheses, base.resumes);
+  return assemblerCandidats(base.metas, base.propositions, base.syntheses, base.resumes, base.remarques);
 }
 
 // Date de mise à jour à afficher au visiteur : la plus récente des dates de mise à jour des candidats de la base

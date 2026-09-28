@@ -78,4 +78,30 @@ describe("assemblerCandidats", () => {
     expect(avecDonnees).toEqual([]);
     expect(enCoursAnalyse).toEqual([]);
   });
+
+  it("attache à chaque candidat les remarques de son résumé, dans le même ordre", () => {
+    const resume = { theme: "fiscalite", segments: [], propositions: ["a1"], empreinte: "e", date: "2026-09-28", modele: "m" };
+    const remarque = { theme: "fiscalite", texte: "Un mot clé déforme une mesure.", mesures: ["a1"], empreinte: "e", date: "2026-09-28" };
+    const { avecDonnees } = assemblerCandidats(
+      { attal: meta("attal", "A") },
+      { attal: [prop("a1", "complet")] },
+      {},
+      { attal: [resume] },
+      { attal: [remarque] }
+    );
+    expect(avecDonnees[0].remarques).toEqual([remarque]);
+  });
+
+  it("retire une remarque dont le résumé n'est plus affiché (mesures changées depuis)", () => {
+    const resumePerime = { theme: "fiscalite", segments: [], propositions: ["a1", "a2"], empreinte: "e", date: "2026-09-28", modele: "m" };
+    const remarque = { theme: "fiscalite", texte: "Un mot clé déforme une mesure.", mesures: ["a1"], empreinte: "e", date: "2026-09-28" };
+    const { avecDonnees } = assemblerCandidats(
+      { attal: meta("attal", "A") },
+      { attal: [prop("a1", "complet"), prop("a3", "complet")] },
+      {},
+      { attal: [resumePerime] },
+      { attal: [remarque] }
+    );
+    expect(avecDonnees[0].remarques).toEqual([]);
+  });
 });

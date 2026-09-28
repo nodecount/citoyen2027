@@ -40,11 +40,12 @@ function prop(candidat: string, theme: string, effets: Effet[] | undefined, stat
   };
 }
 
-function candidat(slug: string, propositions: Proposition[], syntheses: SyntheseTheme[] = []): CandidatCharge {
+function candidat(slug: string, propositions: Proposition[], syntheses: SyntheseTheme[] = [], remarques: CandidatCharge["remarques"] = []): CandidatCharge {
   return {
     meta: { slug, nom: slug.toUpperCase(), parti: "P", sources_officielles: [], date_derniere_maj: "2026-09-24" },
     propositions,
     syntheses,
+    remarques,
   };
 }
 
@@ -144,5 +145,16 @@ describe("construireCards", () => {
   it("construit la liste des sources depuis les mesures du thème, formatée « nom · année »", () => {
     const cards = construireCards(THEMES, [candidat("a", [prop("a", "fiscalite", [HAUSSE])])], PROFIL);
     expect(cards[0].lignes[0].sources).toEqual([{ texte: "a · 2026", url: "https://a.fr/p" }]);
+  });
+
+  it("n'attache à chaque ligne que les remarques de SON thème", () => {
+    const remarques = [
+      { theme: "fiscalite", texte: "Remarque fiscalité.", mesures: [], empreinte: "e", date: "2026-09-28" },
+      { theme: "retraites", texte: "Remarque retraite.", mesures: [], empreinte: "e", date: "2026-09-28" },
+    ];
+    const candidats = [candidat("a", [prop("a", "fiscalite", [HAUSSE]), prop("a", "retraites", [HAUSSE])], [], remarques)];
+    const cards = construireCards(THEMES, candidats, PROFIL);
+    expect(cards.find((c) => c.theme.id === "fiscalite")!.lignes[0].remarques).toEqual([remarques[0]]);
+    expect(cards.find((c) => c.theme.id === "retraites")!.lignes[0].remarques).toEqual([remarques[1]]);
   });
 });

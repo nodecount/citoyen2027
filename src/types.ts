@@ -70,6 +70,18 @@ export interface ResumeTheme {
   modele: string;
 }
 
+// Une remarque de relecture sur un résumé publié malgré un défaut relevé (décision du porteur du projet, 2026-09-28 :
+// mieux vaut un résumé imparfait que pas de résumé du tout — contrairement aux effets, jamais publiés sur un défaut).
+// Stockée à part, sans influence sur le calcul ni sur l'indicateur : affichée uniquement à côté de la ou des mesures
+// qu'elle désigne, dans le détail des mesures. `mesures` est vide quand la relecture n'a désigné aucune mesure précise.
+export interface Remarque {
+  theme: string;
+  texte: string;
+  mesures: string[];
+  empreinte: string;
+  date: string;
+}
+
 export interface Theme {
   id: string;
   // Formulé comme le citoyen le vit (« Ma retraite »), pas comme l'administration le classe.

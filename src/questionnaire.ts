@@ -44,9 +44,14 @@ export function questionsVisibles(questions: ChampProfil[], profil: ProfilPartie
   return questions.filter((q) => questionVisible(q, profil));
 }
 
-function estRepondue(q: ChampProfil, profil: ProfilPartiel): boolean {
+export function estRepondue(q: ChampProfil, profil: ProfilPartiel): boolean {
   const v = profil[q.id];
   return Array.isArray(v) ? v.length > 0 : v !== undefined && v !== "";
+}
+
+// Questions déjà répondues, parmi celles actuellement visibles (pour un récapitulatif à ajuster sur place).
+export function questionsRepondues(questions: ChampProfil[], profil: ProfilPartiel): ChampProfil[] {
+  return questionsVisibles(questions, profil).filter((q) => estRepondue(q, profil));
 }
 
 // Décompte des réponses. Une question sensible non répondue n'est pas comptée : le visiteur n'a peut-être pas donné son

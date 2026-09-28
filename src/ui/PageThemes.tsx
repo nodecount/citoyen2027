@@ -3,7 +3,8 @@ import { candidatsDeBase, type BaseCharge } from "../data/bases";
 import { lireOuverture } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
-import type { SurReponse } from "./Questions";
+import { PanneauFiltres } from "./PanneauFiltres";
+import { SectionQuestions, type SurReponse } from "./Questions";
 import { VueThemes } from "./VueThemes";
 
 interface PageThemesProps {
@@ -37,12 +38,10 @@ export default function PageThemes({ base, profil, generalSoumis, onRenseigner, 
         {personnalise ? (
           <>
             <p>
-              <strong>Vos réponses sont prises en compte.</strong>
+              <strong>Vos réponses générales</strong>
             </p>
+            <SectionQuestions questions={base.questionnaire.generales} profil={profil} onReponse={onReponse} idPrefixe="generales-simulateur" />
             <div className="actions">
-              <button type="button" onClick={onRenseigner}>
-                Modifier mes réponses
-              </button>
               <button type="button" className="secondaire" onClick={onEffacer}>
                 Effacer mes réponses
               </button>
@@ -62,15 +61,18 @@ export default function PageThemes({ base, profil, generalSoumis, onRenseigner, 
         )}
       </div>
 
-      <VueThemes
-        cards={cards}
-        profil={profil}
-        personnalise={personnalise}
-        questionnaire={base.questionnaire}
-        questionsActives={generalSoumis}
-        onReponse={onReponse}
-        ouvertInitial={ouverture ?? undefined}
-      />
+      <div className="simulateur-corps">
+        {personnalise && <PanneauFiltres questionnaire={base.questionnaire} profil={profil} onReponse={onReponse} />}
+        <VueThemes
+          cards={cards}
+          profil={profil}
+          personnalise={personnalise}
+          questionnaire={base.questionnaire}
+          questionsActives={generalSoumis}
+          onReponse={onReponse}
+          ouvertInitial={ouverture ?? undefined}
+        />
+      </div>
 
       {enCoursAnalyse.length > 0 && (
         <p className="hint">Programmes pas encore analysés : {enCoursAnalyse.map((meta) => meta.nom).join(", ")}.</p>

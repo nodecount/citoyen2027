@@ -4,6 +4,14 @@ import { chargerBase } from "../data/bases";
 import type { ProfilPartiel } from "../profil";
 import PageThemes from "./PageThemes";
 
+// Une valeur valide quel que soit le type de la question (enum, multi, nombre), pour répondre à une question de
+// thème prise dynamiquement dans les données réelles.
+function uneReponseValide(champ: { type: string; options?: string[] }): string | string[] {
+  if (champ.type === "multi") return champ.options ? [champ.options[0]] : [];
+  if (champ.type === "number") return "1";
+  return champ.options?.[0] ?? "oui";
+}
+
 const AUCUNE_REPONSE: ProfilPartiel = {};
 const UNE_REPONSE: ProfilPartiel = { tranche_age: "30_49" };
 
@@ -70,14 +78,15 @@ describe("les indicateurs n'apparaissent qu'après la validation du formulaire g
     expect(rendu).toContain("Renseignez des informations");
   });
 
-  it("après validation avec au moins une réponse : couleurs autour des portraits, mot et symbole, légende", () => {
+  it("après validation avec au moins une réponse : couleurs autour des portraits, réponses générales affichées, légende permanente", () => {
     const rendu = rendre("agregateurs", UNE_REPONSE, true);
     expect(rendu).toContain("Comment lire les indicateurs");
-    expect(rendu).toContain("Vos réponses sont prises en compte");
-    expect(rendu).toContain("Modifier mes réponses");
+    expect(rendu).not.toContain('<details class="legende"'); // la légende n'est plus un spoiler : toujours affichée
+    expect(rendu).toContain("Vos réponses générales");
+    expect(rendu).not.toContain("Modifier mes réponses"); // modifiable sur place, plus besoin d'y retourner
     expect(rendu).toContain("Effacer mes réponses");
     expect(portraits(rendu)).toMatch(/data-niveau="[a-z_]+"/);
-    expect(portraits(rendu)).toMatch(/[▲◆○▼]/);
+    expect(rendu).toMatch(/[▲◆○▼]/); // le mot et le symbole restent affichés, dans la légende permanente
   });
 
   it("après validation d'un formulaire resté vide : toujours aucun indicateur, et on invite à répondre", () => {
@@ -95,5 +104,15 @@ describe("les indicateurs n'apparaissent qu'après la validation du formulaire g
 
   it("garde les mêmes portraits qu'au départ : répondre n'ajoute ni ne retire aucun candidat", () => {
     expect(noms(rendre("agregateurs", UNE_REPONSE, true))).toEqual(noms(rendre("agregateurs", AUCUNE_REPONSE, false)));
+  });
+
+  it("récapitule à gauche, par thème, seulement les réponses données à des questions propres à un thème", () => {
+    const base = chargerBase("officielle");
+    const champ = base.questionnaire.parTheme[0].questions[0];
+    // Une réponse générale seule (UNE_REPONSE) ne fait pas apparaître le panneau : déjà récapitulée en haut de page.
+    expect(rendre("officielle", UNE_REPONSE, true)).not.toContain('class="panneau-filtres"');
+    const avecReponseDeTheme = rendre("officielle", { ...UNE_REPONSE, [champ.id]: uneReponseValide(champ) } as ProfilPartiel, true);
+    expect(avecReponseDeTheme).toContain('class="panneau-filtres"');
+    expect(avecReponseDeTheme).toContain("Vos réponses par thème");
   });
 });

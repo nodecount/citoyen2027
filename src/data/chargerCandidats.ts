@@ -1,4 +1,4 @@
-import type { CandidatMeta, Proposition, ResumeTheme, SyntheseTheme } from "../types";
+import type { CandidatMeta, Proposition, Remarque, ResumeTheme, SyntheseTheme } from "../types";
 
 export interface CandidatCharge {
   meta: CandidatMeta;
@@ -7,6 +7,9 @@ export interface CandidatCharge {
   syntheses: SyntheseTheme[];
   // Résumé de 50 mots par thème (mots clés rattachés à leurs mesures) ; absent tant qu'il n'a pas été produit.
   resumes?: ResumeTheme[];
+  // Remarques de relecture sur un résumé publié malgré un défaut (voir Remarque) : jamais dans le calcul, affichées à
+  // part, à côté de la ou des mesures qu'elles désignent.
+  remarques?: Remarque[];
 }
 
 export interface CandidatsCharges {
@@ -39,14 +42,24 @@ export function assemblerCandidats(
   metas: Record<string, CandidatMeta>,
   propositions: Record<string, Proposition[]>,
   syntheses: Record<string, SyntheseTheme[]> = {},
-  resumes: Record<string, ResumeTheme[]> = {}
+  resumes: Record<string, ResumeTheme[]> = {},
+  remarques: Record<string, Remarque[]> = {}
 ): CandidatsCharges {
   const slugs = Object.keys(metas).sort((a, b) => a.localeCompare(b));
   const avecDonnees: CandidatCharge[] = [];
   const enCoursAnalyse: CandidatMeta[] = [];
   for (const slug of slugs) {
     if (aDesPropositionsAffichables(propositions[slug])) {
-      avecDonnees.push({ meta: metas[slug], propositions: propositions[slug], syntheses: synthesesCoherentes(propositions[slug], syntheses[slug] ?? []), resumes: synthesesCoherentes(propositions[slug], resumes[slug] ?? []) });
+      const resumesCoherents = synthesesCoherentes(propositions[slug], resumes[slug] ?? []);
+      // Une remarque suit le sort de SON résumé : périmée (mesures changées depuis) dès que lui l'est.
+      const themesAvecResume = new Set(resumesCoherents.map((r) => r.theme));
+      avecDonnees.push({
+        meta: metas[slug],
+        propositions: propositions[slug],
+        syntheses: synthesesCoherentes(propositions[slug], syntheses[slug] ?? []),
+        resumes: resumesCoherents,
+        remarques: (remarques[slug] ?? []).filter((r) => themesAvecResume.has(r.theme)),
+      });
     } else {
       enCoursAnalyse.push(metas[slug]);
     }

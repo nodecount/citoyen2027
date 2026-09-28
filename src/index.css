@@ -639,8 +639,8 @@ article {
   font-size: 0.9rem;
 }
 
-.legende > summary {
-  cursor: pointer;
+.legende-titre {
+  margin: 0;
   font-weight: 600;
 }
 
@@ -665,6 +665,68 @@ article {
   .legende dl > div {
     grid-template-columns: 1fr;
     gap: 0.15rem;
+  }
+}
+
+/* Le panneau de filtres (réponses par thème) à gauche, la colonne des thèmes à droite ; sous une largeur utile, le
+   panneau repasse au-dessus de la grille plutôt qu'à côté. */
+.simulateur-corps {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.simulateur-corps > .themes {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.panneau-filtres {
+  flex: 0 0 16rem;
+  max-width: 16rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1rem;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  background: var(--surface);
+  font-size: 0.9rem;
+}
+
+.panneau-filtres-titre {
+  margin: 0;
+  font-weight: 600;
+}
+
+.panneau-filtres-theme {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--filet);
+  padding-top: 0.75rem;
+}
+
+.panneau-filtres-theme:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.panneau-filtres-theme legend {
+  padding: 0;
+  font-weight: 600;
+  color: var(--bleu-fonce);
+}
+
+@media (max-width: 55rem) {
+  .simulateur-corps {
+    flex-direction: column;
+  }
+
+  .panneau-filtres {
+    flex: 1 1 auto;
+    max-width: none;
+    width: 100%;
   }
 }
 
@@ -800,7 +862,8 @@ article {
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
-  padding: 0 0.7rem 0.8rem 1rem;
+  margin-top: 20px;
+  padding: 0 0.7rem 3.3rem 1rem;
 }
 
 /* L'invitation à cliquer occupe l'espace libre du corps, centrée dans les deux sens. */
@@ -835,19 +898,26 @@ article {
   transition: min-width 0.25s ease, height 0.25s ease, font-size 0.25s ease;
 }
 
-/* Tiroir : plaqué aux bords de la carte (plus de marge sur les côtés), fond blanc dépoli (verre) qui laisse
-   deviner le dégradé de la carte au travers, bordure du haut nette, coins bas arrondis comme la carte. */
+/* Tiroir : plaqué aux bords de la carte, effet verre (glassmorphism) : fond blanc translucide teinté de bleu,
+   flou + saturation de ce qui passe derrière, liseré lumineux en haut, ombre douce vers le haut, coins bas
+   arrondis comme la carte. Le fond reste assez opaque pour garder un contraste de texte suffisant. */
 .carte-pied {
   flex: none;
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  margin-top: 0.75rem;
+  position: relative;
+  z-index: 1;
+  margin-top: -2.5rem;
   padding: 0.75rem 1rem 0.8rem;
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-top: 1px solid var(--filet);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(232, 240, 253, 0.22) 100%);
+  backdrop-filter: blur(10px) saturate(1.8);
+  -webkit-backdrop-filter: blur(10px) saturate(1.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+    0 -6px 18px rgba(23, 60, 140, 0.08);
   border-radius: 0 0 var(--rayon) var(--rayon);
   transition: gap 0.25s ease, margin-top 0.25s ease, padding-top 0.25s ease;
 }
@@ -874,7 +944,6 @@ article {
    de mesures en plus grande pastille (comme une notification). */
 .carte-pied--grand {
   gap: 1rem;
-  margin-top: 1rem;
   padding-top: 1rem;
 }
 
@@ -918,10 +987,19 @@ article {
 .pastille--absent {
   width: 2rem;
   height: 2rem;
-  border-width: 1px;
   font-size: 0.875rem;
   color: var(--encre-douce);
-  box-shadow: 0 0 0 2px var(--surface);
+}
+
+/* Dans le tiroir, les absents ont la même bordure que les portraits (2 px, sans halo) et sont alignés sur la
+   rangée des pastilles (haut du portrait : bordure + padding), pas centrés sur la hauteur portrait + libellé. */
+.carte-pied .pile-absents {
+  align-self: flex-start;
+  padding-top: calc(0.2rem + 1px);
+}
+
+.carte-pied--grand .pile-absents {
+  padding-top: calc(0.45rem + 1px);
 }
 /* Portraits : une pastille à initiales, identique pour tous. Aucune couleur par candidat (elle évoquerait un
    parti) ; la couleur ne sert qu'aux quatre niveaux de l'indicateur. */
@@ -1451,6 +1529,35 @@ button.bouton-en-ligne {
   font-size: 0.95rem;
 }
 
+/* Répartition des mesures d'un vrai « mixte » : petit titre coloré, puis les mesures dans leur affichage habituel.
+   Vert et rouge-brun reprennent les couleurs déjà utilisées pour « améliorant » et « dégradant » ailleurs sur la
+   page — jamais le bleu (réservé à l'action) ni le rouge décoratif du bandeau. */
+.groupe-mesures {
+  margin: 0.6rem 0;
+}
+
+.groupe-mesures-titre {
+  display: inline-block;
+  margin: 0 0 0.4rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.groupe-mesures--favorable .groupe-mesures-titre {
+  background: var(--ameliorant);
+}
+
+.groupe-mesures--defavorable .groupe-mesures-titre {
+  background: var(--degradant);
+}
+
+.groupe-mesures--neutre .groupe-mesures-titre {
+  background: var(--non-concerne);
+}
+
 .pourquoi {
   margin-top: 0.75rem;
   font-size: 0.9rem;
@@ -1515,6 +1622,15 @@ button.bouton-en-ligne {
 
 .mesure-corps {
   padding: 0.35rem 0.65rem 0.5rem;
+}
+
+/* Remarque de relecture sur le résumé du thème (voir Remarque) : jamais un jugement sur la mesure elle-même, juste
+   une réserve sur la façon dont le résumé l'a évoquée ; distincte visuellement du reste du détail de la mesure. */
+.remarque {
+  padding: 0.35rem 0.6rem;
+  border-left: 3px solid var(--alerte);
+  background: #fdf6ec;
+  font-size: 0.875rem;
 }
 
 .absents {

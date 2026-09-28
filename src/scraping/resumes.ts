@@ -7,14 +7,23 @@ import { remplirGabarit } from "../ingestion/generate";
 import type { Proposition, SegmentResume } from "../types";
 import type { OutilsAppel } from "./structuration";
 
-// Résumé de toutes les mesures d'un candidat sur un thème, en 40 à 60 mots (60 au plus), avec des mots clés rattachés à leurs
-// mesures. Le modèle rédige (commande claude, abonnement) ; le CODE vérifie la longueur, que chaque mesure est couverte
-// par exactement un mot clé, et l'absence de mot évaluatif ; un second appel relit la fidélité et la neutralité.
+// Résumé de toutes les mesures d'un candidat sur un thème, avec des mots clés rattachés à leurs mesures. Le modèle
+// rédige (commande claude, abonnement) ; le CODE vérifie la longueur (voir motsMaxPour), que chaque mesure est
+// couverte par exactement un mot clé, et l'absence de mot évaluatif ; un second appel relit la fidélité et la neutralité.
 
 const ICI = dirname(fileURLToPath(import.meta.url));
-// Visé : 40 à 60 mots (moins avec peu de mesures) ; refusé au-delà de 65, une petite marge étant acceptée.
-export const MOTS_MAX = 65;
-export const MOTS_MAX_MOT_CLE = 12;
+// Visé : 40 à 60 mots avec peu de mesures. Le prompt (resume.md) demande de les regrouper en 6 à 10 mots clés au
+// maximum plutôt que de forcer une longueur fixe : avec beaucoup de mesures, rester fidèle à chacune dans un texte
+// aussi court qu'avec 5 mesures est impossible sans déformer certaines d'entre elles — le plafond suit donc le nombre
+// de mesures (décision du porteur du projet, 2026-09-28), avec un plancher de 50 mots pour les thèmes à peu de mesures.
+export function motsMaxPour(nombreMesures: number): number {
+  return Math.max(50, nombreMesures * 2);
+}
+// Même logique par mot clé (décision du porteur du projet, 2026-09-28) : un mot clé qui regroupe plusieurs mesures a
+// besoin de plus de mots pour rester fidèle à toutes qu'un mot clé qui n'en couvre qu'une.
+export function motsMaxMotClePour(nombreMesures: number): number {
+  return Math.max(8, nombreMesures * 3);
+}
 export const MOTS_MAX_LIAISON = 4;
 const ESSAIS = 4;
 
@@ -117,7 +126,9 @@ export function controlerResume(structure: unknown, refs: Map<string, string>): 
       vues.set(id, (vues.get(id) ?? 0) + 1);
       ids.push(id);
     }
-    if (ids.length > 0 && compterMots(texte) > MOTS_MAX_MOT_CLE) return { ok: false, raison: `mot clé trop long (plus de ${MOTS_MAX_MOT_CLE} mots) : « ${texte.trim()} »` };
+    const motsMaxMotCle = motsMaxMotClePour(ids.length);
+    if (ids.length > 0 && compterMots(texte) > motsMaxMotCle)
+      return { ok: false, raison: `mot clé trop long (plus de ${motsMaxMotCle} mots pour ${ids.length} mesure(s) couverte(s)) : « ${texte.trim()} »` };
     if (ids.length > 0 && compterMots(texte) === 0) return { ok: false, raison: "mot clé vide" };
     segments.push({ texte, mesures: ids });
   }
@@ -134,7 +145,8 @@ export function controlerResume(structure: unknown, refs: Map<string, string>): 
   if (doublons.length > 0) return { ok: false, raison: `mesures rattachées à plusieurs mots clés : ${doublons.join(", ")}` };
   const texte = texteComplet(segments);
   const mots = compterMots(texte);
-  if (mots > MOTS_MAX) return { ok: false, raison: `texte trop long : ${mots} mots pour ${MOTS_MAX} au plus` };
+  const motsMax = motsMaxPour(refs.size);
+  if (mots > motsMax) return { ok: false, raison: `texte trop long : ${mots} mots pour ${motsMax} au plus` };
   const evaluatifs = motsEvaluatifsTrouves(texte);
   if (evaluatifs.length > 0) return { ok: false, raison: `mots évaluatifs : ${evaluatifs.join(", ")}` };
   return { ok: true, segments };
@@ -149,19 +161,37 @@ export interface ResultatResume {
   ok: boolean;
   segments?: SegmentResume[];
   raison?: string;
+  // Présent quand le résumé est publié malgré un défaut relevé par la relecture (voir `resumerTheme`) : la raison du
+  // refus, et les mesures qu'elle désigne (identifiants réels), pour l'afficher à côté d'elles dans le détail.
+  remarque?: { texte: string; mesures: string[] };
   coutReferenceUsd: number;
   appels: number;
 }
 
+// Références de mesures (« m3 », « m12»…) trouvées dans un texte de relecture, résolues en identifiants réels.
+export function mesuresCiteesDansLaRaison(raison: string, refs: Map<string, string>): string[] {
+  const trouvees = new Set<string>();
+  for (const m of raison.matchAll(/\bm\d+\b/g)) {
+    const id = refs.get(m[0]);
+    if (id) trouvees.add(id);
+  }
+  return [...trouvees];
+}
+
 // Longueur visée selon le nombre de mesures : un texte long pour une ou deux mesures pousse à découper une mesure en
-// plusieurs mots clés, ce qui est refusé.
+// plusieurs mots clés, ce qui est refusé. Au-delà de 5 mesures, la cible haute suit le plafond réel (motsMaxPour) :
+// jamais une cible qui pousserait à sacrifier la fidélité d'un mot clé pour tenir dans un total trop serré.
 export function longueurVisee(nombreMesures: number): string {
   if (nombreMesures <= 2) return "10 à 25 mots, un seul mot clé par mesure";
   if (nombreMesures <= 5) return "20 à 45 mots, un mot clé par mesure ou presque";
-  return "40 à 60 mots";
+  return `40 à ${motsMaxPour(nombreMesures)} mots`;
 }
 
 // Quatre essais au plus : une réponse refusée (contrôles ou relecture) est renvoyée au modèle avec la raison du refus.
+// Un résumé qui échoue les contrôles déterministes n'est jamais publié (structure invalide, rien à en tirer). Un résumé
+// qui les passe mais que la relecture rejette encore après les quatre essais EST publié tout de même (décision du
+// porteur du projet, 2026-09-28 : mieux vaut un résumé imparfait que pas de résumé) — avec la dernière raison de
+// relecture gardée à part comme remarque, jamais mêlée au texte affiché.
 export async function resumerTheme(candidat: string, theme: string, propositions: Proposition[], outils: OutilsAppel): Promise<ResultatResume> {
   const refs = references(propositions);
   const mesures = listeMesures(propositions, refs);
@@ -170,18 +200,24 @@ export async function resumerTheme(candidat: string, theme: string, propositions
   let cout = 0;
   let appels = 0;
   let raison = "";
+  // Dernier résumé structurellement valide (contrôles déterministes passés) ET la raison de relecture qui l'a rejeté,
+  // gardés ENSEMBLE (jamais la raison d'un autre essai) : le filet de sécurité si aucun essai n'obtient un PASS complet.
+  let dernierValide: { segments: SegmentResume[]; raisonRelecture: string } | undefined;
+
+  const motsMax = motsMaxPour(refs.size);
+  const marge = 8; // vise un peu en dessous du plafond, pour absorber l'arrondi du modèle.
 
   for (let essai = 1; essai <= ESSAIS; essai += 1) {
     const exces = raison.match(/^texte trop long : (\d+) mots/);
     const conseil = raison.startsWith("mot clé trop long")
-      ? " Raccourcis ce mot clé à 8 mots au plus, ou découpe-le en deux mots clés."
+      ? " Raccourcis ce mot clé pour rester dans la limite indiquée (elle dépend du nombre de mesures qu'il couvre), sans en perdre la fidélité — ou découpe-le en deux mots clés (jamais deux mots clés pour la même référence)."
       : raison.startsWith("mesures rattachées à plusieurs")
         ? " Une mesure a probablement plusieurs volets (ex. baisser X et réduire Y) : mets-les dans UN SEUL mot clé qui les couvre tous deux (relie-les par « et » à l'intérieur du mot clé), ne crée jamais un second mot clé pour la même référence."
         : exces
-        ? ` Retire au moins ${Number(exces[1]) - 57} mots : regroupe davantage de mesures sous moins de mots clés, plus courts.`
+        ? ` Retire au moins ${Number(exces[1]) - (motsMax - marge)} mots : regroupe davantage de mesures sous moins de mots clés, plus courts.`
         : "";
     const consigne = raison ? `\n\nTa réponse précédente a été refusée : ${raison}. Corrige ce défaut.${conseil}` : "";
-    const longueur = `\n\nLongueur visée pour ces ${refs.size} mesure(s) : ${longueurVisee(refs.size)} (jamais plus de 60).`;
+    const longueur = `\n\nLongueur visée pour ces ${refs.size} mesure(s) : ${longueurVisee(refs.size)} (jamais plus de ${motsMax}).`;
     const sortie = await outils.appeler(`Mesures (${refs.size}) :\n${mesures}${longueur}${consigne}`, systeme, SCHEMA_RESUME);
     cout += sortie.coutReferenceUsd;
     appels += 1;
@@ -197,7 +233,14 @@ export async function resumerTheme(candidat: string, theme: string, propositions
     appels += 1;
     const v = verdict.structure as { verdict?: string; raison?: string };
     if (v?.verdict === "PASS") return { ok: true, segments: controle.segments, coutReferenceUsd: cout, appels };
-    raison = `relecture : ${v?.raison ?? "refusé sans raison"}`;
+    raison = v?.raison ?? "refusé sans raison";
+    dernierValide = { segments: controle.segments, raisonRelecture: raison };
+  }
+  // Aucun essai n'a obtenu un PASS complet : publié quand même si au moins un essai était structurellement valide et a
+  // été rejeté par la relecture (jamais si SEULS les contrôles déterministes ont échoué : pas de structure exploitable).
+  if (dernierValide) {
+    const { segments, raisonRelecture } = dernierValide;
+    return { ok: true, segments, remarque: { texte: raisonRelecture, mesures: mesuresCiteesDansLaRaison(raisonRelecture, refs) }, coutReferenceUsd: cout, appels };
   }
   return { ok: false, raison, coutReferenceUsd: cout, appels };
 }

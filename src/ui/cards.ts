@@ -2,7 +2,7 @@ import { sourcesCitees, type SourceCitee } from "../citations";
 import type { CandidatCharge } from "../data/chargerCandidats";
 import { projeterTheme, type Projection } from "../engine/projection";
 import { aDesInformations, type ProfilPartiel } from "../profil";
-import type { CandidatMeta, Proposition, ResumeTheme, SyntheseTheme, Theme } from "../types";
+import type { CandidatMeta, Proposition, Remarque, ResumeTheme, SyntheseTheme, Theme } from "../types";
 import { messagesEffetsExclus, messagesIncertitude, messagesSansBadge } from "./projection";
 
 export interface LigneCandidat {
@@ -21,6 +21,9 @@ export interface LigneCandidat {
   // Même règle : le résumé ne s'affiche que s'il couvre exactement les mesures du thème.
   resume: ResumeTheme | null;
   sources: SourceCitee[];
+  // Remarques de relecture sur le résumé de CE thème (voir Remarque) : jamais dans le calcul, affichées à côté de la
+  // ou des mesures qu'elles désignent, dans le détail des mesures.
+  remarques: Remarque[];
 }
 
 export interface CardTheme {
@@ -81,6 +84,7 @@ export function construireCards(themes: Theme[], candidats: CandidatCharge[], pr
         synthese,
         resume,
         sources: sourcesCitees(propositions),
+        remarques: (candidat.remarques ?? []).filter((r) => r.theme === theme.id),
       });
     }
 

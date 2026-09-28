@@ -100,6 +100,17 @@ describe.each(listerBases())("base « $id »", (info) => {
     for (const syntheses of Object.values(base.syntheses)) for (const s of syntheses) expect(ids.has(s.theme)).toBe(true);
   });
 
+  it("ne référence dans les remarques qu'un thème de la base et des mesures du candidat concerné", () => {
+    const idsThemes = new Set(base.themes.map((t) => t.id));
+    for (const [slug, remarques] of Object.entries(base.remarques)) {
+      const idsMesures = new Set(base.propositions[slug]?.map((p) => p.id) ?? []);
+      for (const r of remarques) {
+        expect(idsThemes.has(r.theme), `${slug} : thème « ${r.theme} » absent de la base ${info.id}`).toBe(true);
+        for (const id of r.mesures) expect(idsMesures.has(id), `${slug} : mesure « ${id} » absente de ses propositions`).toBe(true);
+      }
+    }
+  });
+
   it("s'assemble en candidats sans erreur", () => {
     const { avecDonnees, enCoursAnalyse } = candidatsDeBase(base);
     expect(avecDonnees.length + enCoursAnalyse.length).toBe(Object.keys(base.metas).length);
@@ -108,7 +119,7 @@ describe.each(listerBases())("base « $id »", (info) => {
 
 function baseAvecMetas(dates: string[]): BaseCharge {
   const metas = Object.fromEntries(dates.map((d, i) => [`c${i}`, { slug: `c${i}`, nom: `C${i}`, parti: "P", sources_officielles: [], date_derniere_maj: d }]));
-  return { info: BASES[0], themes: [], questionnaire: { generales: [], parTheme: [] }, metas, propositions: {}, syntheses: {}, resumes: {}, aVerifier: {} };
+  return { info: BASES[0], themes: [], questionnaire: { generales: [], parTheme: [] }, metas, propositions: {}, syntheses: {}, resumes: {}, remarques: {}, aVerifier: {} };
 }
 
 describe("derniereMiseAJour", () => {
