@@ -219,6 +219,152 @@
     "modele": "claude-sonnet-5"
   },
   {
+    "theme": "environnement",
+    "segments": [
+      {
+        "texte": "Renforcer la souveraineté énergétique et baisser les prix de l'électricité",
+        "mesures": [
+          "glucksmann-envi-001",
+          "glucksmann-envi-002",
+          "glucksmann-envi-003",
+          "glucksmann-envi-004",
+          "glucksmann-envi-005",
+          "glucksmann-envi-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "moderniser l'industrie verte, les transports et le logement",
+        "mesures": [
+          "glucksmann-envi-006",
+          "glucksmann-envi-007",
+          "glucksmann-envi-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer des assemblées citoyennes pour le climat",
+        "mesures": [
+          "glucksmann-envi-010",
+          "glucksmann-envi-011"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réguler le commerce et légiférer pour le climat",
+        "mesures": [
+          "glucksmann-envi-012",
+          "glucksmann-envi-013",
+          "glucksmann-envi-014",
+          "glucksmann-envi-015",
+          "glucksmann-envi-016"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer la politique agricole et garantir le revenu des agriculteurs",
+        "mesures": [
+          "glucksmann-envi-017",
+          "glucksmann-envi-018",
+          "glucksmann-envi-019",
+          "glucksmann-envi-020",
+          "glucksmann-envi-021",
+          "glucksmann-envi-022"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "généraliser une alimentation saine et solidaire",
+        "mesures": [
+          "glucksmann-envi-023",
+          "glucksmann-envi-024",
+          "glucksmann-envi-025"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "protéger les forêts, les océans et l'eau",
+        "mesures": [
+          "glucksmann-envi-026",
+          "glucksmann-envi-027",
+          "glucksmann-envi-028",
+          "glucksmann-envi-029",
+          "glucksmann-envi-030",
+          "glucksmann-envi-031"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "interdire les pesticides et PFAS ciblés",
+        "mesures": [
+          "glucksmann-envi-032"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "glucksmann-envi-001",
+      "glucksmann-envi-002",
+      "glucksmann-envi-003",
+      "glucksmann-envi-004",
+      "glucksmann-envi-005",
+      "glucksmann-envi-006",
+      "glucksmann-envi-007",
+      "glucksmann-envi-008",
+      "glucksmann-envi-009",
+      "glucksmann-envi-010",
+      "glucksmann-envi-011",
+      "glucksmann-envi-012",
+      "glucksmann-envi-013",
+      "glucksmann-envi-014",
+      "glucksmann-envi-015",
+      "glucksmann-envi-016",
+      "glucksmann-envi-017",
+      "glucksmann-envi-018",
+      "glucksmann-envi-019",
+      "glucksmann-envi-020",
+      "glucksmann-envi-021",
+      "glucksmann-envi-022",
+      "glucksmann-envi-023",
+      "glucksmann-envi-024",
+      "glucksmann-envi-025",
+      "glucksmann-envi-026",
+      "glucksmann-envi-027",
+      "glucksmann-envi-028",
+      "glucksmann-envi-029",
+      "glucksmann-envi-030",
+      "glucksmann-envi-031",
+      "glucksmann-envi-032"
+    ],
+    "empreinte": "716283214c19e865",
+    "date": "2026-09-28",
+    "modele": "claude-sonnet-5"
+  },
+  {
     "theme": "europe-international",
     "segments": [
       {

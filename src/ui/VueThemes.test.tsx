@@ -88,8 +88,9 @@ describe("page de départ : aucune information sur le visiteur", () => {
     expect(rendu).toContain('id="theme-fiscalite"');
   });
 
-  it("montre les candidats en grands portraits cliquables dans le pied de carte, avec leur nombre de mesures", () => {
-    expect(rendu).toMatch(/<button[^>]*class="portrait portrait--grand"[^>]*aria-expanded="false"/);
+  it("montre les candidats en portraits cliquables dans le pied de carte, toujours de même taille, avec leur nombre de mesures", () => {
+    expect(rendu).toMatch(/<button[^>]*class="portrait"[^>]*aria-expanded="false"/);
+    expect(rendu).not.toContain("carte-pied--grand");
     expect(rendu).toMatch(/aria-label="Gabriel Attal : 1 mesure sur ce thème"[^>]*title="Gabriel Attal"/);
     expect(rendu).toContain(">MLP<"); // pas de photo pour ce slug de test : initiales
     expect(rendu).toContain('class="portrait-compte" aria-hidden="true">1<'); // comme un nombre de notifications

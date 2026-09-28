@@ -940,35 +940,6 @@ article {
   height: 2.3rem;
 }
 
-/* Tant qu'aucun candidat n'est sélectionné, le pied de carte s'agrandit : portraits plus grands, avec leur nombre
-   de mesures en plus grande pastille (comme une notification). */
-.carte-pied--grand {
-  gap: 1rem;
-  padding-top: 1rem;
-}
-
-.carte-pied--grand .portraits {
-  gap: 0.3rem;
-}
-
-.carte-pied--grand .portrait {
-  min-width: 4.75rem;
-  padding: 0.45rem 0.35rem 0.5rem;
-}
-
-.carte-pied--grand .pastille {
-  width: 4.25rem;
-  height: 4.25rem;
-  font-size: 1.15rem;
-}
-
-.carte-pied--grand .portrait-compte {
-  min-width: 1.5rem;
-  height: 1.5rem;
-  padding: 0 0.3rem;
-  font-size: 0.8125rem;
-}
-
 /* Candidats sans mesure sur le thème : en fin de liste, en pile où chacun ne montre que la moitié de son portrait,
    estompés, non cliquables. */
 .pile-absents ul {
@@ -998,9 +969,6 @@ article {
   padding-top: calc(0.2rem + 1px);
 }
 
-.carte-pied--grand .pile-absents {
-  padding-top: calc(0.45rem + 1px);
-}
 /* Portraits : une pastille à initiales, identique pour tous. Aucune couleur par candidat (elle évoquerait un
    parti) ; la couleur ne sert qu'aux quatre niveaux de l'indicateur. */
 .portraits {

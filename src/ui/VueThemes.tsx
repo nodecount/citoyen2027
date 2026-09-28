@@ -316,9 +316,9 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
 // au survol. Le mot et le symbole de l'indicateur ne sont pas répétés sous chaque portrait (la légende, affichée en
 // permanence au-dessus de la grille, les porte déjà pour les quatre niveaux) : la couleur n'est donc jamais la SEULE
 // façon de connaître le niveau, seulement la façon la plus rapide une fois la légende lue. Tant qu'aucun candidat
-// n'est sélectionné, le pied de carte s'agrandit et chaque portrait affiche son nombre de mesures, comme un compteur
-// de notifications ; dès qu'un candidat est ouvert, le pied de carte — et tous ses portraits — rapetissent.
-function Portrait({ ligne, ouvert, grand, idDetail, onBasculer }: { ligne: LigneCandidat; ouvert: boolean; grand: boolean; idDetail: string; onBasculer: () => void }) {
+// n'est sélectionné, chaque portrait affiche son nombre de mesures, comme un compteur de notifications. Le pied de
+// carte garde toujours la même taille (rétractée), qu'un candidat soit ouvert ou non.
+function Portrait({ ligne, ouvert, idDetail, onBasculer }: { ligne: LigneCandidat; ouvert: boolean; idDetail: string; onBasculer: () => void }) {
   const niveau = ligne.projection?.niveau ?? null;
   const { nom } = ligne.meta;
   const nombre = ligne.propositions.length;
@@ -328,7 +328,7 @@ function Portrait({ ligne, ouvert, grand, idDetail, onBasculer }: { ligne: Ligne
     <li>
       <button
         type="button"
-        className={`portrait${grand ? " portrait--grand" : ""}${ouvert ? " portrait--ouvert" : ""}`}
+        className={`portrait${ouvert ? " portrait--ouvert" : ""}`}
         data-niveau={niveau ?? undefined}
         aria-expanded={ouvert}
         aria-controls={idDetail}
@@ -415,7 +415,7 @@ function CarteTheme({
             ) : (
               <>
                 {questionsTheme.length > 0 && <QuestionsDuTheme theme={theme.libelle} idTheme={theme.id} questions={questionsTheme} profil={profil} onReponse={onReponse} />}
-                {/* Les portraits, toujours visibles en pied de carte (en grand tant qu'aucun n'est sélectionné),
+                {/* Les portraits, toujours visibles en pied de carte ,
                     suffisent à inviter au clic : pas besoin de le répéter ici. */}
                 {lignes.length === 0 && (
                   <p className="hint carte-invite">Aucun candidat ne change votre situation sur ce thème, d'après vos réponses.</p>
@@ -427,14 +427,13 @@ function CarteTheme({
       </div>
 
       {!enCoursAnalyse && (
-        <footer className={`carte-pied${ligneOuverte ? "" : " carte-pied--grand"}`}>
+        <footer className="carte-pied">
           <ul className="portraits" aria-label={`Candidats, thème ${theme.libelle}`}>
             {lignes.map((ligne) => (
               <Portrait
                 key={ligne.meta.slug}
                 ligne={ligne}
                 ouvert={ouvert === ligne.meta.slug}
-                grand={!ligneOuverte}
                 idDetail={idDetail}
                 onBasculer={() => setOuvert(ouvert === ligne.meta.slug ? null : ligne.meta.slug)}
               />
