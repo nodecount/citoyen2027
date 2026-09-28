@@ -58,9 +58,11 @@ export function FluxCandidats({ lignes }: { lignes: LigneCandidat[] }) {
   if (tirages.length === 0) return null;
   const nombre = tirages.length;
 
-  // À chaque fin de traversée, l'emplacement repart avec le candidat suivant (celui `nombre` rangs plus loin).
+  // À chaque fin de traversée, l'emplacement repart avec un autre candidat, tiré au hasard parmi ceux absents de l'écran.
   function relancer(indice: number) {
-    setTirages((precedents) => precedents.map((t, i) => (i === indice ? tirer(avecMesures, t.curseur + nombre) : t)));
+    setTirages((precedents) =>
+      precedents.map((t, i) => (i === indice ? tirer(avecMesures, t.curseur + nombre, precedents.filter((_, j) => j !== indice).map((autre) => autre.slug)) : t)),
+    );
   }
 
   return (
