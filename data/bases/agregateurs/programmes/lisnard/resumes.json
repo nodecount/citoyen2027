@@ -453,6 +453,27 @@
     "modele": "claude-sonnet-5"
   },
   {
+    "theme": "retraites-travail",
+    "segments": [
+      {
+        "texte": "Ajouter une capitalisation aux retraites par répartition",
+        "mesures": [
+          "lisnard-retraites-travail-001"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "lisnard-retraites-travail-001"
+    ],
+    "empreinte": "2b8950b185d7c0cf",
+    "date": "2026-09-28",
+    "modele": "claude-sonnet-5"
+  },
+  {
     "theme": "social-solidarite",
     "segments": [
       {

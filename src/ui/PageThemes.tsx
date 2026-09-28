@@ -3,8 +3,10 @@ import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/base
 import { lireOuverture } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
+import { ModaleConfirmation } from "./ModaleConfirmation";
 import PageQuestionsGenerales from "./PageQuestionsGenerales";
-import { SectionQuestions, type SurReponse } from "./Questions";
+import { compterReponses } from "../questionnaire";
+import type { SurReponse } from "./Questions";
 import { VueThemes } from "./VueThemes";
 
 interface PageThemesProps {
@@ -24,9 +26,11 @@ interface PageThemesProps {
 export default function PageThemes({ base, profil, generalSoumis, onValider, onEffacer, onReponse }: PageThemesProps) {
   // Le formulaire général s'ouvre ici, avant les cartes de thèmes, plutôt que de rediriger vers une autre page.
   const [formulaireOuvert, setFormulaireOuvert] = useState(false);
+  const [confirmerEffacement, setConfirmerEffacement] = useState(false);
   const { avecDonnees: candidats, enCoursAnalyse } = candidatsDeBase(base);
   const manquants = resumesManquants(base, candidats);
   const personnalise = generalSoumis && aDesInformations(profil);
+  const reponsesGenerales = compterReponses(base.questionnaire.generales, profil);
   const cards = construireCards(base.themes, candidats, personnalise ? profil : null);
   // Arrivée depuis le tableau de l'accueil (ou une adresse partagée) : la carte du thème, avec ce candidat ouvert.
   const [ouverture] = useState(() => (typeof window === "undefined" ? null : lireOuverture(window.location.href)));
@@ -48,35 +52,47 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
             setFormulaireOuvert(false);
           }}
           onAnnuler={() => setFormulaireOuvert(false)}
+          onEffacer={personnalise ? () => setConfirmerEffacement(true) : undefined}
         />
       )}
 
-      {/* Après validation : le même formulaire en cartes (icônes, « pourquoi cette question ? »), modifiable en direct,
-          plutôt qu'un second style de formulaire. */}
-      {personnalise && (
-        <section className="questionnaire questionnaire--integre" aria-label="Vos réponses générales">
-          <h2>Vos réponses générales</h2>
-          <SectionQuestions carte questions={base.questionnaire.generales} profil={profil} onReponse={onReponse} idPrefixe="generales-simulateur" />
-          <div className="actions">
-            <button type="button" className="secondaire" onClick={onEffacer}>
-              Effacer mes réponses
-            </button>
-          </div>
-        </section>
-      )}
+      <ModaleConfirmation
+        ouverte={confirmerEffacement}
+        titre="Effacer vos réponses ?"
+        message="Toutes les informations saisies (questions générales et par thème) seront effacées, et les indicateurs disparaîtront des portraits. Cette action ne peut pas être annulée."
+        libelleConfirmer="Oui, tout effacer"
+        onConfirmer={() => {
+          setConfirmerEffacement(false);
+          setFormulaireOuvert(false);
+          onEffacer();
+        }}
+        onAnnuler={() => setConfirmerEffacement(false)}
+      />
 
+      {/* Après enregistrement : une simple ligne (pas tout le formulaire, qui prendrait la place des thèmes). « Modifier »
+          rouvre le même formulaire, toujours avec son bouton d'enregistrement : on peut changer ou compléter ses réponses
+          à tout moment. */}
+      {personnalise && !formulaireOuvert && (
+        <div className="recap-situation" role="region" aria-label="Vos réponses générales">
+          <p>
+            <strong>Ma situation</strong> : {reponsesGenerales.repondues} réponse{reponsesGenerales.repondues > 1 ? "s" : ""} sur {reponsesGenerales.total}
+          </p>
+          <button type="button" className="secondaire" onClick={() => setFormulaireOuvert(true)}>
+            Modifier mes réponses
+          </button>
+        </div>
+      )}
       {!personnalise && !formulaireOuvert && (
         <div className="bandeau-accueil bandeau-accueil--compact">
           <p className="chapeau">
             {generalSoumis && <strong>Aucune réponse donnée. </strong>}
             Voyez ce que le programme de chaque candidat changerait pour votre situation personnelle pendant le mandat à
-            venir. Pour cela,{" "}
-            <button type="button" className="bouton-en-ligne" onClick={() => setFormulaireOuvert(true)}>
-              Renseignez des informations
-            </button>
+            venir. Pour cela,
           </p>
-        </div>
-      )}
+          <button type="button" className="bouton-en-ligne" onClick={() => setFormulaireOuvert(true)}>
+            Renseignez des informations
+          </button>
+        </div>      )}
 
       <VueThemes
         cards={cards}

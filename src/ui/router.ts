@@ -40,7 +40,7 @@ export function lireOuverture(adresse: string): Ouverture | null {
   }
 }
 
-// Change l'écran affiché en changeant l'adresse (garde les paramètres existants, par ex. ?base=) ; ajoute une entrée
+// Change l'écran affiché en changeant l'adresse (garde les paramètres existants) ; ajoute une entrée
 // d'historique, pour que le bouton précédent du navigateur revienne à l'écran précédent.
 export function naviguerVers(ecran: Ecran, ouverture?: Ouverture): void {
   try {

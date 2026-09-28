@@ -186,6 +186,14 @@ a {
   box-shadow: 0 16px 48px rgba(15, 27, 51, 0.25);
 }
 
+.modale--confirmation {
+  max-width: 28rem;
+}
+
+.modale--confirmation .actions {
+  justify-content: flex-end;
+}
+
 .modale-entete {
   display: flex;
   justify-content: space-between;
@@ -444,13 +452,31 @@ a {
 
 /* Variante compacte du bandeau bleu (invitation sur la page du simulateur). */
 .bandeau-accueil--compact {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   margin: 1.5rem 0 0;
-  padding: 1.25rem 1.75rem;
+  padding: 0.9rem 1.5rem;
 }
 
+/* Texte et bouton sur une seule ligne (elle ne se replie que sur écran étroit). */
 .bandeau-accueil--compact .chapeau {
+  flex: 0 1 auto;
+  min-width: 0;
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1rem;
+}
+
+.bandeau-accueil--compact button {
+  flex: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 55rem) {
+  .bandeau-accueil--compact {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .bandeau-accueil--compact .chapeau strong {
@@ -1265,35 +1291,64 @@ article {
   font-size: 0.875rem;
 }
 
-/* Formulaire ouvert au-dessus des thèmes : une carte par question (icône à gauche), en grille, avec le « pourquoi »
-   dans un encadré bleu pâle. */
+/* Formulaire ouvert au-dessus des thèmes : compact. En-tête d'une ligne (titre, progression, actions toujours à portée
+   sans défiler), puis une grille dense de cartes (icône discrète, question, « pourquoi » en petit dessous). */
 .questionnaire--integre {
   max-width: none;
-  margin: 1rem 0 1.5rem;
-  padding: 1.25rem;
+  margin: 1rem 0 1.25rem;
+  padding: 0.9rem 1.1rem 1.1rem;
   border: 1px solid var(--filet);
   border-radius: var(--rayon);
   background: var(--surface);
   box-shadow: var(--ombre);
 }
 
-.questionnaire--integre h2 {
+.questionnaire-entete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.questionnaire-entete h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.questionnaire-entete .progression {
+  margin: 0;
+}
+
+.questionnaire-entete .actions {
+  margin-left: auto;
+  gap: 0.5rem;
+}
+
+.questionnaire-entete .actions > button {
   margin-top: 0;
+  padding: 0.35rem 0.9rem;
+}
+
+.questionnaire--integre > .hint {
+  max-width: 62rem;
+  margin: 0 0 0.85rem;
+  font-size: 0.875rem;
 }
 
 .section-questions--cartes {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+  gap: 0.6rem;
   align-items: start;
 }
 
 .question-carte {
   display: flex;
-  gap: 0.85rem;
-  padding: 1rem;
+  gap: 0.6rem;
+  padding: 0.65rem 0.8rem;
   border: 1px solid var(--filet);
-  border-radius: var(--rayon);
+  border-radius: 10px;
   background: var(--surface);
 }
 
@@ -1301,11 +1356,16 @@ article {
   flex: none;
   display: grid;
   place-items: center;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   background: var(--bleu-pale);
   color: var(--bleu);
+}
+
+.question-icone svg {
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
 .question-carte-corps {
@@ -1314,10 +1374,80 @@ article {
 }
 
 .question-carte .question {
+  gap: 0.3rem;
   margin: 0;
 }
 
+.question-carte .question label,
+.question-carte .question legend {
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
 .question-carte fieldset.question {
+  padding: 0;
+  border: 0;
+}
+
+.question-carte select,
+.question-carte input[type="number"],
+.question-carte input[type="text"] {
+  width: 100%;
+  padding: 0.3rem 0.4rem;
+  font-size: 0.9375rem;
+}
+
+.question-carte .option-multi {
+  margin: 0.1rem 0;
+  font-size: 0.9375rem;
+}
+
+/* Le « pourquoi » reste visible mais discret : petit texte gris sous la question, sans encadré. */
+.question-carte .finalite {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+  margin-top: 0.15rem;
+  font-size: 0.875rem;
+  line-height: 1.35;
+  color: var(--encre-douce);
+}
+
+.question-carte .finalite svg {
+  flex: none;
+  margin-top: 0.15rem;
+  color: var(--bleu);
+}
+
+/* Une fois les réponses enregistrées : une seule ligne, avec « Modifier mes réponses ». */
+.recap-situation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0 0;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--filet);
+  border-left: 4px solid var(--bleu);
+  border-radius: var(--rayon);
+  background: var(--surface);
+}
+
+.recap-situation p {
+  margin: 0;
+}
+
+.recap-situation button {
+  margin: 0;
+  padding: 0.3rem 0.9rem;
+}
+
+@media (max-width: 40rem) {
+  .questionnaire-entete .actions {
+    margin-left: 0;
+  }
+}
+fieldset.question {
   padding: 0;
   border: 0;
 }

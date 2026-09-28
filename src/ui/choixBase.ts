@@ -19,19 +19,29 @@ function memoriser(id: string): void {
   }
 }
 
-// Priorité : adresse (?base=…, partageable) > dernier choix mémorisé > base par défaut.
+// Le choix de base vit dans le navigateur (localStorage), jamais dans l'adresse. Priorité : ancien lien portant encore
+// ?base=… (retenu une fois, puis retiré de l'adresse) > dernier choix mémorisé > base par défaut.
 export function baseInitiale(bases: InfoBase[]): InfoBase {
   const dansAdresse = new URLSearchParams(window.location.search).get("base");
-  return resoudreBase(dansAdresse ?? lireMemorise(), bases);
+  if (dansAdresse !== null) {
+    const base = resoudreBase(dansAdresse, bases);
+    memoriser(base.id);
+    retirerBaseDeLAdresse();
+    return base;
+  }
+  return resoudreBase(lireMemorise(), bases);
 }
 
 export function retenirBase(id: string): void {
   memoriser(id);
+}
+
+function retirerBaseDeLAdresse(): void {
   try {
     const adresse = new URL(window.location.href);
-    adresse.searchParams.set("base", id);
+    adresse.searchParams.delete("base");
     window.history.replaceState(null, "", adresse);
   } catch {
-    // adresse non modifiable : le choix reste mémorisé
+    // adresse non modifiable : sans conséquence
   }
 }

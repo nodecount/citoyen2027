@@ -81,7 +81,7 @@ describe("PageQuestionsGenerales", () => {
     expect(html).toContain("ni envoyées ni conservées");
     expect(html).toContain("jamais comptée");
     expect(html).toContain("les indicateurs apparaissent autour des");
-    expect(html).toContain("Valider et voir les indicateurs");
+    expect(html).toContain("Enregistrer et voir les indicateurs");
     expect(html).toContain("Retour aux thèmes");
   });
 

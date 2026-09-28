@@ -32,6 +32,49 @@
     "modele": "claude-sonnet-5"
   },
   {
+    "theme": "education",
+    "segments": [
+      {
+        "texte": "Donner l'autonomie aux établissements",
+        "mesures": [
+          "philippe-educ-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "revaloriser la rémunération des professeurs",
+        "mesures": [
+          "philippe-educ-002"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "sanctionner les parents responsables",
+        "mesures": [
+          "philippe-educ-003"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-educ-001",
+      "philippe-educ-002",
+      "philippe-educ-003"
+    ],
+    "empreinte": "01d8415621f52c7e",
+    "date": "2026-09-28",
+    "modele": "claude-sonnet-5"
+  },
+  {
     "theme": "environnement",
     "segments": [
       {
@@ -61,6 +104,38 @@
     ],
     "empreinte": "2b5ba1470b7eb58f",
     "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "fiscalite",
+    "segments": [
+      {
+        "texte": "Baisser les impôts de production",
+        "mesures": [
+          "philippe-fisc-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "geler tout nouvel impôt ou norme",
+        "mesures": [
+          "philippe-fisc-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-fisc-001",
+      "philippe-fisc-002"
+    ],
+    "empreinte": "d16f6c4857bcdcad",
+    "date": "2026-09-28",
     "modele": "claude-sonnet-5"
   },
   {
@@ -125,6 +200,49 @@
     ],
     "empreinte": "69e0a0698e0cb941",
     "date": "2026-09-27",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "logement",
+    "segments": [
+      {
+        "texte": "Créer un prêt à taux zéro par naissance",
+        "mesures": [
+          "philippe-logt-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "citer la rénovation des logements",
+        "mesures": [
+          "philippe-logt-002"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer les droits des propriétaires bailleurs",
+        "mesures": [
+          "philippe-logt-003"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "philippe-logt-001",
+      "philippe-logt-002",
+      "philippe-logt-003"
+    ],
+    "empreinte": "05433429f3b0ac51",
+    "date": "2026-09-28",
     "modele": "claude-sonnet-5"
   },
   {

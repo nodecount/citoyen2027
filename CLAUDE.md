@@ -85,11 +85,12 @@ Garde-fous de l'indicateur (ils découlent du principe d'indépendance ci-dessou
 - Le formulaire est construit **à partir des critères (cibles) réellement présents dans les programmes** (catalogue
   `data/profils-schema.json`, qui alimente aussi les prompts d'ingestion). Pas de texte libre que le moteur ne sait
   pas apparier (région et secteur retirés) : collecter le minimum nécessaire. Réponses multiples possibles.
-- **Données sensibles : sur consentement explicite du citoyen, seulement si nécessaires à
-  l'indicateur.** C'est le citoyen qui décide de les donner (champ facultatif, finalité expliquée
-  au moment de la question) ; elles servent le calcul dans son navigateur et ne sont ni transmises
-  ni conservées. Les questions sensibles ne s'affichent qu'après une case d'accord explicite, chacune explique sa
-  finalité, et décocher l'accord efface les réponses. Une question non répondue n'équivaut **pas** à « non » : les
+- **Données sensibles : seulement si nécessaires à l'indicateur, toujours facultatives.** C'est le citoyen qui
+  décide de les donner (finalité expliquée sous chaque question, « Je préfère ne pas répondre » comme état de départ) ;
+  elles servent le calcul dans son navigateur et ne sont ni transmises ni conservées. Décision du 2026-09-29 : plus de
+  case d'accord préalable ni de bloc séparé (deux clics pour une information, mauvaise ergonomie) — les questions
+  sensibles sont posées au même niveau que les autres, leur caractère facultatif et leur finalité tenant lieu de
+  garde-fou ; l'ancienne règle « case d'accord explicite, décocher efface les réponses » est abandonnée. Une question non répondue n'équivaut **pas** à « non » : les
   effets qui en dépendent rendent l'indicateur « mixte à préciser », avec l'invitation à répondre pour affiner.
 
 **Principe fondateur — INDÉPENDANCE ET NEUTRALITÉ :** C'est la contrainte la plus importante du projet. L'outil ne doit être affilié à aucun parti, ni directement ni indirectement. Concrètement, cela implique :
@@ -224,7 +225,7 @@ Champs possibles : statut (salarié, indépendant, fonctionnaire, retraité, ét
 ## État actuel du projet (mis à jour le 2026-09-27)
 
 Le moteur de calcul (`src/engine/`), le formulaire par thème (`src/questionnaire.ts`, `src/ui/Questions*.tsx`,
-`data/profils-schema.json` : 22 questions, générales + par thème, sensibles sur consentement) et l'interface
+`data/profils-schema.json` : 22 questions, générales + par thème, sensibles facultatives posées au même niveau que les autres) et l'interface
 (`src/ui/`, portraits cliquables, React/Vite/TypeScript) sont construits et fonctionnels. **Aucune donnée, dans
 aucune des deux bases, n'a encore été relue ni validée par le porteur du projet.**
 
