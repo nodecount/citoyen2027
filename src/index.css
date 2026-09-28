@@ -255,7 +255,6 @@ a {
 
 .avertissement,
 .ma-situation,
-.legende,
 .questionnaire {
   max-width: 46rem;
 }
@@ -671,42 +670,95 @@ article {
 
 /* ---- Résultats : une card par thème ---------------------------------------------------------- */
 
+/* Légende des indicateurs : pleine largeur. En-tête (icône + titre), phrase d'explication, puis les six cas en tuiles
+   d'une grille (badge en haut, sens dessous), chacune marquée d'un filet de la couleur de son niveau. */
 .legende {
   margin: 1rem 0;
-  padding: 0.7rem 1rem;
+  padding: 1rem 1.25rem 1.1rem;
   border: 1px solid var(--filet);
   border-radius: var(--rayon);
   background: var(--surface);
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
+}
+
+.legende-entete {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--bleu-fonce);
+}
+
+.legende-entete svg {
+  flex: none;
+  color: var(--bleu);
 }
 
 .legende-titre {
   margin: 0;
-  font-weight: 600;
+  font-family: var(--titre);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.legende-intro {
+  max-width: 70rem;
+  margin: 0.4rem 0 0.9rem;
+  color: var(--encre-douce);
 }
 
 .legende dl {
-  margin: 0.5rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.75rem;
+  margin: 0;
 }
 
 .legende dl > div {
-  display: grid;
-  grid-template-columns: 9.5rem 1fr;
-  gap: 0.5rem;
-  align-items: start;
-  padding: 0.35rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--filet);
+  border-top: 4px solid var(--filet);
+  border-radius: 10px;
+  background: var(--fond);
 }
+
+.legende dl > div[data-niveau="ameliorant"] { border-top-color: var(--ameliorant); }
+.legende dl > div[data-niveau="mixte"] { border-top-color: var(--mixte); }
+.legende dl > div[data-niveau="non_concerne"] { border-top-color: var(--non-concerne); }
+.legende dl > div[data-niveau="degradant"] { border-top-color: var(--degradant); }
 
 .legende dt,
 .legende dd {
   margin: 0;
 }
 
-@media (max-width: 32rem) {
-  .legende dl > div {
-    grid-template-columns: 1fr;
-    gap: 0.15rem;
-  }
+.legende-precision {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--encre-douce);
+}
+
+.legende dt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+.themes-outils {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.25rem 0 0;
+}
+
+.themes-outils .interrupteur {
+  margin: 0;
+}
+
+/* Le médaillon des cartes déborde de 1,75 rem au-dessus d'elles : l'espace sous l'interrupteur le laisse passer. */
+.themes-outils + .grille-themes {
+  margin-top: 2.75rem;
 }
 
 .grille-themes {
@@ -1015,14 +1067,14 @@ article {
   right: 0.1rem;
   display: grid;
   place-items: center;
-  min-width: 1.1rem;
-  height: 1.1rem;
-  padding: 0 0.25rem;
+  min-width: 1.4rem;
+  height: 1.4rem;
+  padding: 0 0.3rem;
   border: 2px solid var(--surface);
   border-radius: 999px;
   background: var(--bleu);
   color: #ffffff;
-  font-size: 0.6875rem;
+  font-size: 0.875rem; /* 14 px : plancher d'accessibilité du projet */
   font-weight: 700;
   line-height: 1;
   transition: min-width 0.25s ease, height 0.25s ease, font-size 0.25s ease;
@@ -1574,7 +1626,7 @@ fieldset.question {
   min-width: 1.5rem;
   height: 1.5rem;
   padding: 0 0.3rem;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 .detail-titre {

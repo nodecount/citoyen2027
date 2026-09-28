@@ -487,6 +487,186 @@
     "modele": "claude-sonnet-5"
   },
   {
+    "theme": "finances-publiques",
+    "segments": [
+      {
+        "texte": "Bloquer les prix, revenir sur les privatisations et réquisitionner les entreprises",
+        "mesures": [
+          "melenchon-finances-publiques-001",
+          "melenchon-finances-publiques-002",
+          "melenchon-finances-publiques-003",
+          "melenchon-finances-publiques-013"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "encadrer les dividendes, la gouvernance et les licenciements boursiers",
+        "mesures": [
+          "melenchon-finances-publiques-004",
+          "melenchon-finances-publiques-005",
+          "melenchon-finances-publiques-006",
+          "melenchon-finances-publiques-007",
+          "melenchon-finances-publiques-020"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "favoriser les coopératives d'entreprise",
+        "mesures": [
+          "melenchon-finances-publiques-008",
+          "melenchon-finances-publiques-009"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "garantir l'accès à l'énergie et aux services bancaires",
+        "mesures": [
+          "melenchon-finances-publiques-010",
+          "melenchon-finances-publiques-011",
+          "melenchon-finances-publiques-012"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer le financement de la dette publique",
+        "mesures": [
+          "melenchon-finances-publiques-014",
+          "melenchon-finances-publiques-015",
+          "melenchon-finances-publiques-016",
+          "melenchon-finances-publiques-017",
+          "melenchon-finances-publiques-018"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "taxer les grands patrimoines, les successions et le foncier",
+        "mesures": [
+          "melenchon-finances-publiques-021",
+          "melenchon-finances-publiques-022",
+          "melenchon-finances-publiques-025",
+          "melenchon-finances-publiques-030"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "taxer les superprofits, les transactions et le luxe",
+        "mesures": [
+          "melenchon-finances-publiques-019",
+          "melenchon-finances-publiques-026",
+          "melenchon-finances-publiques-029"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer l'impôt sur le revenu et les foyers",
+        "mesures": [
+          "melenchon-finances-publiques-023",
+          "melenchon-finances-publiques-024",
+          "melenchon-finances-publiques-031"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "lutter contre la fraude et l'opacité des entreprises",
+        "mesures": [
+          "melenchon-finances-publiques-027",
+          "melenchon-finances-publiques-028",
+          "melenchon-finances-publiques-032",
+          "melenchon-finances-publiques-033"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "réguler les banques et les flux financiers",
+        "mesures": [
+          "melenchon-finances-publiques-034",
+          "melenchon-finances-publiques-035",
+          "melenchon-finances-publiques-036",
+          "melenchon-finances-publiques-037",
+          "melenchon-finances-publiques-038",
+          "melenchon-finances-publiques-039",
+          "melenchon-finances-publiques-040"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "melenchon-finances-publiques-001",
+      "melenchon-finances-publiques-002",
+      "melenchon-finances-publiques-003",
+      "melenchon-finances-publiques-004",
+      "melenchon-finances-publiques-005",
+      "melenchon-finances-publiques-006",
+      "melenchon-finances-publiques-007",
+      "melenchon-finances-publiques-008",
+      "melenchon-finances-publiques-009",
+      "melenchon-finances-publiques-010",
+      "melenchon-finances-publiques-011",
+      "melenchon-finances-publiques-012",
+      "melenchon-finances-publiques-013",
+      "melenchon-finances-publiques-014",
+      "melenchon-finances-publiques-015",
+      "melenchon-finances-publiques-016",
+      "melenchon-finances-publiques-017",
+      "melenchon-finances-publiques-018",
+      "melenchon-finances-publiques-019",
+      "melenchon-finances-publiques-020",
+      "melenchon-finances-publiques-021",
+      "melenchon-finances-publiques-022",
+      "melenchon-finances-publiques-023",
+      "melenchon-finances-publiques-024",
+      "melenchon-finances-publiques-025",
+      "melenchon-finances-publiques-026",
+      "melenchon-finances-publiques-027",
+      "melenchon-finances-publiques-028",
+      "melenchon-finances-publiques-029",
+      "melenchon-finances-publiques-030",
+      "melenchon-finances-publiques-031",
+      "melenchon-finances-publiques-032",
+      "melenchon-finances-publiques-033",
+      "melenchon-finances-publiques-034",
+      "melenchon-finances-publiques-035",
+      "melenchon-finances-publiques-036",
+      "melenchon-finances-publiques-037",
+      "melenchon-finances-publiques-038",
+      "melenchon-finances-publiques-039",
+      "melenchon-finances-publiques-040"
+    ],
+    "empreinte": "60a2bebebc4c9f88",
+    "date": "2026-09-28",
+    "modele": "claude-sonnet-5"
+  },
+  {
     "theme": "gouvernance-republique",
     "segments": [
       {

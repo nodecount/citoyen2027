@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { X } from "lucide-react";
+import { Info, X } from "lucide-react";
 import { flushSync } from "react-dom";
 import { libelleCitation } from "../citations";
 import { evaluerProposition } from "../engine";
@@ -596,39 +596,35 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
   return (
     <section className="themes">
       {personnalise && (
-        <label className="interrupteur">
-          <input type="checkbox" role="switch" checked={masquer} onChange={(e) => setMasquer(e.target.checked)} />
-          <span className="interrupteur-piste" aria-hidden="true" />
-          Masquer les candidats dont les mesures ne changent rien à ma situation
-        </label>
-      )}
-      {personnalise && (
         <div className="legende">
-          <p className="legende-titre">Comment lire les indicateurs</p>
-          <p>
+          <div className="legende-entete">
+            <Info size={20} aria-hidden="true" focusable="false" />
+            <p className="legende-titre">Comment lire les indicateurs</p>
+          </div>
+          <p className="legende-intro">
             Pour chaque thème, l'indicateur dit ce que deviendrait votre situation si les mesures du candidat sur ce
             thème s'appliquaient. Il est calculé par des règles explicites, à partir de vos réponses et des mesures
             sourcées, et il n'existe pas de score global. Plus vous répondez, plus il s'affine.
           </p>
           <dl>
             {ORDRE_LEGENDE.map((niveau) => (
-              <div key={niveau}>
+              <div key={niveau} data-niveau={niveau}>
                 <dt>
                   <BadgeNiveau niveau={niveau} />
                 </dt>
-                <dd>{NIVEAUX[niveau].sens}</dd>
+                <dd>
+                  {NIVEAUX[niveau].sens}
+                  {/* Même niveau, pas un cinquième : « à préciser » n'est qu'une mention posée sur « mixte ». */}
+                  {niveau === "mixte" && (
+                    <span className="legende-precision">
+                      <span className="a-preciser">à préciser</span> : quand nous ne savons pas encore si les mesures vous
+                      concernent, l'indicateur est « mixte » par prudence. Répondre aux questions du thème permet de le
+                      préciser.
+                    </span>
+                  )}
+                </dd>
               </div>
-            ))}
-            <div>
-              <dt>
-                <BadgeNiveau niveau="mixte" /> <span className="a-preciser">à préciser</span>
-              </dt>
-              <dd>
-                Quand nous ne savons pas encore si les mesures vous concernent, l'indicateur est « mixte » par prudence :
-                répondre aux questions du thème permet de le préciser.
-              </dd>
-            </div>
-            <div>
+            ))}            <div>
               <dt>
                 <span className="sans-badge">Pas d'indicateur</span>
               </dt>
@@ -638,6 +634,17 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
               </dd>
             </div>
           </dl>
+        </div>
+      )}
+
+      {/* Juste au-dessus des cartes, à droite. */}
+      {personnalise && (
+        <div className="themes-outils">
+          <label className="interrupteur">
+            <input type="checkbox" role="switch" checked={masquer} onChange={(e) => setMasquer(e.target.checked)} />
+            <span className="interrupteur-piste" aria-hidden="true" />
+            Masquer les candidats dont les mesures ne changent rien à ma situation
+          </label>
         </div>
       )}
 

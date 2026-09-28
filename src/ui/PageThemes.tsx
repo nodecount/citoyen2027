@@ -49,7 +49,9 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           profilInitial={profil}
           onValider={(p) => {
             onValider(p);
-            setFormulaireOuvert(false);
+            // Le formulaire reste ouvert (on peut continuer à le compléter) : la page remonte simplement jusqu'aux premières
+            // cartes de thèmes, où les indicateurs viennent d'apparaître.
+            document.querySelector(".grille-themes")?.scrollIntoView({ behavior: "smooth", block: "start" });
           }}
           onAnnuler={() => setFormulaireOuvert(false)}
           onEffacer={personnalise ? () => setConfirmerEffacement(true) : undefined}
