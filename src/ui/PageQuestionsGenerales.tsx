@@ -1,3 +1,4 @@
+import { Eye, ListChecks, Lock } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { CHAMPS_PROFIL, compterReponses } from "../questionnaire";
 import { mettreAJourReponse, type ProfilPartiel } from "../profil";
@@ -61,13 +62,29 @@ export default function PageQuestionsGenerales({ questions, profilInitial, onVal
       ) : (
         <h1>Ma situation</h1>
       )}
-      <p className="hint">
-        Ces questions générales servent à plusieurs thèmes. Elles sont toutes facultatives : répondez à celles que vous
-        voulez. Vos réponses restent dans votre navigateur : elles ne sont jamais envoyées, et gardées pour votre prochaine visite tant que vous ne les effacez pas. Une question laissée
-        sans réponse n'est jamais comptée comme « non ». Une fois enregistrées, les indicateurs apparaissent autour des
-        portraits, et vous pourrez préciser d'autres informations thème par thème.
-      </p>
-      {!integre && (
+      <ul className="aide-formulaire">
+        <li>
+          <ListChecks aria-hidden="true" />
+          <span>
+            Les questions sont toutes <strong>facultatives</strong> : répondez à celles que vous voulez. Une question sans
+            réponse n'est jamais comptée comme « non ».
+          </span>
+        </li>
+        <li>
+          <Lock aria-hidden="true" />
+          <span>
+            Vos réponses restent <strong>dans votre navigateur</strong> : jamais envoyées, gardées pour votre prochaine
+            visite tant que vous ne les effacez pas.
+          </span>
+        </li>
+        <li>
+          <Eye aria-hidden="true" />
+          <span>
+            Une fois enregistrées, les indicateurs apparaissent autour des portraits ; vous pourrez préciser d'autres
+            informations thème par thème.
+          </span>
+        </li>
+      </ul>      {!integre && (
         <p className="progression" aria-live="polite">
           {progression}
         </p>

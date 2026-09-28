@@ -935,7 +935,7 @@ article {
   min-height: 0;
   overflow-y: auto;
   scrollbar-gutter: stable both-edges; /* même réserve à gauche et à droite : le texte reste centré, scrollbar ou non */
-  padding-bottom: 3.3rem;
+  padding-bottom: 2.5rem; /* = le chevauchement du tiroir de verre (-2.5rem) : le texte n'a à défiler que s'il passe vraiment dessous */
 }
 
 /* Flux de portraits (aucun candidat choisi) : calque décoratif sur toute la zone du corps, sous le tiroir de verre.
@@ -1424,10 +1424,36 @@ article {
   padding: 0.35rem 0.9rem;
 }
 
-.questionnaire--integre > .hint {
-  max-width: 62rem;
-  margin: 0 0 0.85rem;
-  font-size: 0.875rem;
+/* Aide du formulaire : trois idées courtes, chacune avec son icône, en colonnes (lignes de moins de 60 caractères, texte à
+   14 px minimum, contraste > 6:1), au lieu d'un long paragraphe. Les mots à retenir sont en gras. */
+.aide-formulaire {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 0.6rem 1.25rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.aide-formulaire li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--encre);
+}
+
+.aide-formulaire svg {
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.1rem;
+  color: var(--bleu);
+}
+
+.aide-formulaire strong {
+  color: var(--bleu-fonce);
 }
 
 .section-questions--cartes {

@@ -87,7 +87,13 @@ Garde-fous de l'indicateur (ils découlent du principe d'indépendance ci-dessou
   pas apparier (région et secteur retirés) : collecter le minimum nécessaire. Réponses multiples possibles.
 - **Données sensibles : seulement si nécessaires à l'indicateur, toujours facultatives.** C'est le citoyen qui
   décide de les donner (finalité expliquée sous chaque question, « Je préfère ne pas répondre » comme état de départ) ;
-  elles servent le calcul dans son navigateur et ne sont ni transmises ni conservées. Décision du 2026-09-29 : plus de
+  elles servent le calcul dans son navigateur et ne sont jamais transmises. Décision du 2026-09-29 : **toutes les
+  réponses (sensibles comprises) sont gardées dans le navigateur du visiteur** (`localStorage`, clé `reponses-visiteur`,
+  `src/ui/memoireReponses.ts`) pour survivre à un rechargement de page ; jamais envoyées à un serveur, effaçables à
+  tout moment (« Effacer mes réponses », avec confirmation), et le formulaire le dit (« gardées pour votre prochaine
+  visite tant que vous ne les effacez pas »). Au rechargement, seules les réponses encore valides pour le questionnaire
+  actuel sont reprises (une option ou un champ disparu est écarté, jamais deviné) ; si le stockage est refusé
+  (navigation privée), l'outil marche en mémoire seulement. Même décision : plus de
   case d'accord préalable ni de bloc séparé (deux clics pour une information, mauvaise ergonomie) — les questions
   sensibles sont posées au même niveau que les autres, leur caractère facultatif et leur finalité tenant lieu de
   garde-fou ; l'ancienne règle « case d'accord explicite, décocher efface les réponses » est abandonnée. Une question non répondue n'équivaut **pas** à « non » : les
