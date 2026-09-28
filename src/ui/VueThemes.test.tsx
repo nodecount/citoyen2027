@@ -359,10 +359,13 @@ describe("questions propres à chaque thème", () => {
     expect(r).not.toContain("Statut de logement"); // question générale (deux thèmes) : posée dans le formulaire général
   });
 
-  it("gardent les questions sensibles derrière l'accord du visiteur", () => {
-    const r = html(candidats, PROFIL, undefined, true);
-    expect(r).toContain("J&#x27;accepte de répondre à des questions plus sensibles");
-    expect(r).not.toContain("Votre nationalité"); // masquée tant que l'accord n'est pas donné
+  it("posent les questions sensibles directement, sans case d'accord préalable", () => {
+    const seulementSensibles = construireQuestionnaire(CHAMPS_PROFIL, { nationalite: ["fiscalite"] }, THEMES);
+    const r = renderToStaticMarkup(
+      <VueThemes cards={construireCards(THEMES, candidats, PROFIL)} profil={PROFIL} personnalise={aDesInformations(PROFIL)} questionnaire={seulementSensibles} questionsActives={true} onReponse={() => {}} />,
+    );
+    expect(r).not.toContain("J&#x27;accepte");
+    expect(r).toContain("Votre nationalité");
   });
 });
 

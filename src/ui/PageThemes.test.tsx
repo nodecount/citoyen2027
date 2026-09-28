@@ -119,13 +119,4 @@ describe("les indicateurs n'apparaissent qu'après la validation du formulaire g
     expect(noms(rendre("agregateurs", UNE_REPONSE, true))).toEqual(noms(rendre("agregateurs", AUCUNE_REPONSE, false)));
   });
 
-  it("récapitule à gauche, par thème, seulement les réponses données à des questions propres à un thème", () => {
-    const base = chargerBase("officielle");
-    const champ = base.questionnaire.parTheme[0].questions[0];
-    // Une réponse générale seule (UNE_REPONSE) ne fait pas apparaître le panneau : déjà récapitulée en haut de page.
-    expect(rendre("officielle", UNE_REPONSE, true)).not.toContain('class="panneau-filtres"');
-    const avecReponseDeTheme = rendre("officielle", { ...UNE_REPONSE, [champ.id]: uneReponseValide(champ) } as ProfilPartiel, true);
-    expect(avecReponseDeTheme).toContain('class="panneau-filtres"');
-    expect(avecReponseDeTheme).toContain("Vos réponses par thème");
-  });
 });

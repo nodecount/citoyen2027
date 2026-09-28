@@ -56,18 +56,14 @@ describe("SectionQuestions", () => {
     expect(section([ENUM, CONDITIONNELLE], { logement: "locataire" })).toContain("Logement social ?");
   });
 
-  it("cache les questions sensibles derrière l'accord explicite du visiteur, en expliquant les garanties", () => {
+  it("pose les questions sensibles au même niveau que les autres, sans case d'accord ni bloc à part", () => {
     const html = section([ENUM, SENSIBLE]);
-    expect(html).toContain("J&#x27;accepte de répondre à des questions plus sensibles");
-    expect(html).toContain("rien n&#x27;est envoyé ni conservé");
-    expect(html).not.toContain("Votre nationalité");
-    expect(html).not.toMatch(/accord[^>]*>.*checked/);
-  });
-
-  it("affiche les questions sensibles déjà répondues (l'accord est alors donné)", () => {
-    const html = section([ENUM, SENSIBLE], { nationalite: "francaise" });
+    expect(html).not.toContain("J&#x27;accepte");
+    expect(html).not.toContain('type="checkbox"');
+    expect(html).not.toContain("sensibles");
     expect(html).toContain("Votre nationalité");
-    expect(html).toContain("Certaines mesures dépendent de la nationalité.");
+    expect(html).toContain("Certaines mesures dépendent de la nationalité."); // la finalité reste affichée
+    expect(html).toMatch(/<option value="" selected="">Je préfère ne pas répondre<\/option>/); // rien de présélectionné
   });
 
   it("n'affiche pas de bloc sensible quand la section n'en contient pas", () => {

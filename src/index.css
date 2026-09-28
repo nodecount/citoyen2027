@@ -442,6 +442,21 @@ a {
   background: var(--bleu-pale);
 }
 
+/* Variante compacte du bandeau bleu (invitation sur la page du simulateur). */
+.bandeau-accueil--compact {
+  margin: 1.5rem 0 0;
+  padding: 1.25rem 1.75rem;
+}
+
+.bandeau-accueil--compact .chapeau {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.bandeau-accueil--compact .chapeau strong {
+  text-decoration: none;
+}
+
 .atouts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
@@ -665,68 +680,6 @@ article {
   .legende dl > div {
     grid-template-columns: 1fr;
     gap: 0.15rem;
-  }
-}
-
-/* Le panneau de filtres (réponses par thème) à gauche, la colonne des thèmes à droite ; sous une largeur utile, le
-   panneau repasse au-dessus de la grille plutôt qu'à côté. */
-.simulateur-corps {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-
-.simulateur-corps > .themes {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.panneau-filtres {
-  flex: 0 0 16rem;
-  max-width: 16rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-  padding: 1rem;
-  border: 1px solid var(--filet);
-  border-radius: var(--rayon);
-  background: var(--surface);
-  font-size: 0.9rem;
-}
-
-.panneau-filtres-titre {
-  margin: 0;
-  font-weight: 600;
-}
-
-.panneau-filtres-theme {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-top: 1px solid var(--filet);
-  padding-top: 0.75rem;
-}
-
-.panneau-filtres-theme:first-of-type {
-  border-top: 0;
-  padding-top: 0;
-}
-
-.panneau-filtres-theme legend {
-  padding: 0;
-  font-weight: 600;
-  color: var(--bleu-fonce);
-}
-
-@media (max-width: 55rem) {
-  .simulateur-corps {
-    flex-direction: column;
-  }
-
-  .panneau-filtres {
-    flex: 1 1 auto;
-    max-width: none;
-    width: 100%;
   }
 }
 
@@ -1335,14 +1288,6 @@ article {
   align-items: start;
 }
 
-.sensibles--cartes {
-  max-width: none;
-}
-
-.sensibles--cartes .section-questions--cartes {
-  margin-top: 1rem;
-}
-
 .question-carte {
   display: flex;
   gap: 0.85rem;
@@ -1413,13 +1358,6 @@ fieldset.question {
   gap: 0.5rem;
   margin: 0.2rem 0;
   font-weight: normal !important;
-}
-
-.sensibles {
-  margin: 1.25rem 0 0;
-  padding: 0.75rem 1rem;
-  border: 1px dashed var(--filet);
-  border-radius: 6px;
 }
 
 .accord {

@@ -1,5 +1,4 @@
 import { Info } from "lucide-react";
-import { useState } from "react";
 import { questionsVisibles } from "../questionnaire";
 import { iconeDeQuestion } from "./icones";
 import type { ProfilPartiel } from "../profil";
@@ -111,48 +110,15 @@ interface SectionQuestionsProps {
   carte?: boolean;
 }
 
-// Questions d'une section. Les questions sensibles ne s'affichent qu'avec l'accord explicite du visiteur (case à
-// cocher) ; retirer l'accord efface ses réponses sensibles. Les questions conditionnelles n'apparaissent que si leur
-// condition est remplie.
+// Questions d'une section, toutes au même niveau : les questions sensibles ne sont ni regroupées ni précédées d'une case
+// d'accord (un seul geste pour répondre). Elles restent facultatives, chacune explique sa finalité, et « Je préfère ne
+// pas répondre » est l'état de départ. Les questions conditionnelles n'apparaissent que si leur condition est remplie.
 export function SectionQuestions({ questions, profil, onReponse, idPrefixe, carte = false }: SectionQuestionsProps) {
-  const visibles = questionsVisibles(questions, profil);
-  const ordinaires = visibles.filter((q) => !q.sensible);
-  const sensibles = visibles.filter((q) => q.sensible);
-  const dejaRepondu = sensibles.some((q) => profil[q.id] !== undefined);
-  const [accord, setAccord] = useState<boolean>(dejaRepondu);
-
-  function changerAccord(coche: boolean) {
-    setAccord(coche);
-    if (!coche) for (const q of sensibles) if (profil[q.id] !== undefined) onReponse(q, q.type === "multi" ? [] : "");
-  }
-
   return (
     <div className={`section-questions${carte ? " section-questions--cartes" : ""}`}>
-      {ordinaires.map((champ) => (
+      {questionsVisibles(questions, profil).map((champ) => (
         <ChampQuestion key={champ.id} champ={champ} profil={profil} onReponse={onReponse} idPrefixe={idPrefixe} carte={carte} />
       ))}
-      {sensibles.length > 0 && (
-        <div className={`sensibles${carte ? " sensibles--cartes" : ""}`}>
-          <label className="accord">
-            <input type="checkbox" checked={accord} onChange={(e) => changerAccord(e.target.checked)} />
-            J'accepte de répondre à des questions plus sensibles ({sensibles.length}) — facultatif
-          </label>
-          <p className="hint">
-            Elles servent uniquement au calcul dans votre navigateur : rien n'est envoyé ni conservé. Chaque question
-            explique pourquoi elle est posée, et vous pouvez l'ignorer. Décocher efface vos réponses à ces questions.
-          </p>
-          {accord &&
-            (carte ? (
-              <div className="section-questions--cartes">
-                {sensibles.map((champ) => (
-                  <ChampQuestion key={champ.id} champ={champ} profil={profil} onReponse={onReponse} idPrefixe={idPrefixe} carte />
-                ))}
-              </div>
-            ) : (
-              sensibles.map((champ) => <ChampQuestion key={champ.id} champ={champ} profil={profil} onReponse={onReponse} idPrefixe={idPrefixe} />)
-            ))}
-        </div>
-      )}
     </div>
   );
 }

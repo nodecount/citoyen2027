@@ -28,14 +28,24 @@ function textesPossibles(ligne: LigneCandidat): string[] {
   return motsCles.length > 0 ? motsCles : ligne.propositions.map((p) => p.titre);
 }
 
-// Un candidat (le suivant dans la liste, pour que tous passent tour à tour) et l'une de ses mesures, au hasard.
-function tirer(lignes: LigneCandidat[], curseur: number): Tirage {
-  const ligne = lignes[curseur % lignes.length];
+// Un candidat tiré au hasard (jamais l'un de ceux déjà à l'écran tant qu'il en reste d'autres, sans quoi le même
+// candidat reviendrait en double) et l'une de ses mesures, au hasard aussi. Le curseur ne sert qu'à alterner les côtés.
+function tirer(lignes: LigneCandidat[], curseur: number, dejaLa: string[]): Tirage {
+  const libres = lignes.filter((l) => !dejaLa.includes(l.meta.slug));
+  const choix = libres.length > 0 ? libres : lignes;
+  const ligne = choix[Math.floor(Math.random() * choix.length)];
   const textes = textesPossibles(ligne);
   const mesure = majuscule(textes[Math.floor(Math.random() * textes.length)]);
   return { curseur, slug: ligne.meta.slug, nom: ligne.meta.nom, mesure, x: curseur % 2 === 0 ? X_GAUCHE : X_DROITE };
 }
 
+// Tirages de départ : chacun exclut les précédents.
+function tiragesDeDepart(lignes: LigneCandidat[]): Tirage[] {
+  const tirages: Tirage[] = [];
+  const nombre = Math.min(EMPLACEMENTS_MAX, lignes.length);
+  for (let i = 0; i < nombre; i++) tirages.push(tirer(lignes, i, tirages.map((t) => t.slug)));
+  return tirages;
+}
 // Animation d'ambiance, tant qu'aucun candidat n'est choisi : les portraits remontent du bas de la carte et s'effacent
 // en haut, chacun avec une bulle qui cite en entier, sur autant de lignes qu'il faut, une seule de ses mesures (au hasard, tirée de nouveau à
 // chaque passage). Purement décoratif : masqué aux lecteurs d'écran, non cliquable, sans le nombre de mesures, et
@@ -44,9 +54,7 @@ function tirer(lignes: LigneCandidat[], curseur: number): Tirage {
 // À remonter avec une `key` propre à la liste des candidats (elle fige les tirages de départ).
 export function FluxCandidats({ lignes }: { lignes: LigneCandidat[] }) {
   const avecMesures = lignes.filter((l) => l.propositions.length > 0);
-  const [tirages, setTirages] = useState<Tirage[]>(() =>
-    avecMesures.length === 0 ? [] : Array.from({ length: Math.min(EMPLACEMENTS_MAX, avecMesures.length) }, (_, i) => tirer(avecMesures, i)),
-  );
+  const [tirages, setTirages] = useState<Tirage[]>(() => (avecMesures.length === 0 ? [] : tiragesDeDepart(avecMesures)));
   if (tirages.length === 0) return null;
   const nombre = tirages.length;
 

@@ -4,7 +4,6 @@ import { lireOuverture } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
 import PageQuestionsGenerales from "./PageQuestionsGenerales";
-import { PanneauFiltres } from "./PanneauFiltres";
 import { SectionQuestions, type SurReponse } from "./Questions";
 import { VueThemes } from "./VueThemes";
 
@@ -52,46 +51,42 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
         />
       )}
 
-      <div className="ma-situation" hidden={formulaireOuvert}>
-        {personnalise ? (
-          <>
-            <p>
-              <strong>Vos réponses générales</strong>
-            </p>
-            <SectionQuestions questions={base.questionnaire.generales} profil={profil} onReponse={onReponse} idPrefixe="generales-simulateur" />
-            <div className="actions">
-              <button type="button" className="secondaire" onClick={onEffacer}>
-                Effacer mes réponses
-              </button>
-            </div>
-          </>
-        ) : (
-          <>
-            <p>
-              {generalSoumis && <strong>Aucune réponse donnée. </strong>}
-              Voyez ce que le programme de chaque candidat changerait pour votre situation personnelle pendant le mandat
-              à venir. Pour cela,{" "}
-              <button type="button" className="bouton-en-ligne" onClick={() => setFormulaireOuvert(true)} aria-expanded={formulaireOuvert} aria-controls="formulaire-general">
-                Renseignez des informations
-              </button>
-            </p>
-          </>
-        )}
-      </div>
+      {/* Après validation : le même formulaire en cartes (icônes, « pourquoi cette question ? »), modifiable en direct,
+          plutôt qu'un second style de formulaire. */}
+      {personnalise && (
+        <section className="questionnaire questionnaire--integre" aria-label="Vos réponses générales">
+          <h2>Vos réponses générales</h2>
+          <SectionQuestions carte questions={base.questionnaire.generales} profil={profil} onReponse={onReponse} idPrefixe="generales-simulateur" />
+          <div className="actions">
+            <button type="button" className="secondaire" onClick={onEffacer}>
+              Effacer mes réponses
+            </button>
+          </div>
+        </section>
+      )}
 
-      <div className="simulateur-corps">
-        {personnalise && <PanneauFiltres questionnaire={base.questionnaire} profil={profil} onReponse={onReponse} />}
-        <VueThemes
-          cards={cards}
-          profil={profil}
-          personnalise={personnalise}
-          questionnaire={base.questionnaire}
-          questionsActives={generalSoumis}
-          onReponse={onReponse}
-          ouvertInitial={ouverture ?? undefined}
-        />
-      </div>
+      {!personnalise && !formulaireOuvert && (
+        <div className="bandeau-accueil bandeau-accueil--compact">
+          <p className="chapeau">
+            {generalSoumis && <strong>Aucune réponse donnée. </strong>}
+            Voyez ce que le programme de chaque candidat changerait pour votre situation personnelle pendant le mandat à
+            venir. Pour cela,{" "}
+            <button type="button" className="bouton-en-ligne" onClick={() => setFormulaireOuvert(true)}>
+              Renseignez des informations
+            </button>
+          </p>
+        </div>
+      )}
 
+      <VueThemes
+        cards={cards}
+        profil={profil}
+        personnalise={personnalise}
+        questionnaire={base.questionnaire}
+        questionsActives={generalSoumis}
+        onReponse={onReponse}
+        ouvertInitial={ouverture ?? undefined}
+      />
       {enCoursAnalyse.length > 0 && (
         <p className="hint">Programmes pas encore analysés : {enCoursAnalyse.map((meta) => meta.nom).join(", ")}.</p>
       )}
