@@ -733,6 +733,10 @@ article {
 .legende dl > div[data-niveau="non_concerne"] { --niv: var(--non-concerne); }
 .legende dl > div[data-niveau="degradant"] { --niv: var(--degradant); }
 .legende dl > div[data-niveau="aucun"] { --niv: #8a94a8; }
+.legende dl > div[data-niveau="mixte"] {
+  border-color: color-mix(in srgb, var(--ameliorant) 30%, #ffffff) color-mix(in srgb, var(--degradant) 30%, #ffffff) color-mix(in srgb, var(--degradant) 30%, #ffffff) color-mix(in srgb, var(--ameliorant) 30%, #ffffff);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--ameliorant) 8%, #ffffff) 50%, color-mix(in srgb, var(--degradant) 8%, #ffffff) 50%);
+}
 
 .legende dt,
 .legende dd {
@@ -1343,6 +1347,13 @@ article {
 
 .portrait[data-niveau="ameliorant"] { --niveau-couleur: var(--ameliorant); }
 .portrait[data-niveau="mixte"] { --niveau-couleur: var(--mixte); }
+/* Mixte : ni marron ni couleur intermédiaire, mais un anneau moitié vert (améliorant), moitié rouge (dégradant). */
+.portrait[data-niveau="mixte"] .pastille {
+  border-color: transparent;
+  background:
+    linear-gradient(#eef1f6, #eef1f6) padding-box,
+    linear-gradient(90deg, var(--ameliorant) 50%, var(--degradant) 50%) border-box;
+}
 .portrait[data-niveau="non_concerne"] { --niveau-couleur: var(--non-concerne); }
 .portrait[data-niveau="degradant"] { --niveau-couleur: var(--degradant); }
 
@@ -1803,7 +1814,12 @@ button.bouton-en-ligne {
 }
 
 .niveau--mixte {
-  color: var(--mixte);
+  /* Moitié vert, moitié rouge (le mot et le symbole restent lisibles : contrastes des deux couleurs sur fond clair). */
+  background: linear-gradient(90deg, var(--ameliorant) 50%, var(--degradant) 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .niveau--non-concerne {
@@ -2441,7 +2457,6 @@ button.bouton-en-ligne {
   justify-content: flex-start;
   padding-left: 1rem;
   border-bottom-left-radius: var(--rayon);
-  background: linear-gradient(90deg, color-mix(in srgb, var(--ameliorant) 32%, transparent), color-mix(in srgb, var(--ameliorant) 0%, transparent));
 }
 
 .tiroir-zones > .portraits[data-zone="milieu"] {
@@ -2452,7 +2467,6 @@ button.bouton-en-ligne {
   justify-content: flex-end;
   padding-right: 1rem;
   border-bottom-right-radius: var(--rayon);
-  background: linear-gradient(270deg, color-mix(in srgb, var(--degradant) 30%, transparent), color-mix(in srgb, var(--degradant) 0%, transparent));
 }
 
 /* ---- Non concernés : hors des zones colorées, sur une ligne à part, sans indicateur ---- */

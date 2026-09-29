@@ -418,6 +418,7 @@ function CarteTheme({
   ouvertInitial,
   vueInitiale,
   masquerNonConcernes,
+  simulateur,
   sansFlux,
 }: {
   card: CardTheme;
@@ -428,6 +429,8 @@ function CarteTheme({
   ouvertInitial?: string;
   vueInitiale?: VueInitiale;
   masquerNonConcernes: boolean;
+  // Indicateurs affichés : la pastille « +X » ne compte que les candidats sans mesure sur le thème.
+  simulateur: boolean;
   // Mode « Simuler pour moi » : pas de flux de bulles de paroles.
   sansFlux: boolean;
 }) {
@@ -438,7 +441,9 @@ function CarteTheme({
   // par un lien, ou détail déjà ouvert), même s'il fait partie de cette catégorie.
   const lignes = masquerNonConcernes ? card.lignes.filter((l) => !l.projection || (l.projection.niveau !== "non_concerne" && l.projection.niveau !== null) || l.meta.slug === ouvert) : card.lignes;
   const nombreMasques = card.lignes.length - lignes.length;
-  const autres = nombreMasques + absents.length;
+  // Simulateur : la pastille ne regroupe que les candidats sans mesure sur le thème (comme en exploration) ; les non
+  // concernés masqués disparaissent sans être comptés.
+  const autres = simulateur ? absents.length : nombreMasques + absents.length;
   const ligneOuverte = lignes.find((l) => l.meta.slug === ouvert) ?? null;
   const idDetail = `detail-${theme.id}`;
 
@@ -634,15 +639,17 @@ interface VueThemesProps {
 export function VueThemes({ cards, profil, personnalise, questionnaire, questionsActives, onReponse, ouvertInitial, sansFlux = false }: VueThemesProps) {
   const [masquer, setMasquer] = useState(true);
   const masquerNonConcernes = personnalise && masquer;
-  // Tous les tiroirs de portraits ont la même hauteur (celle du plus haut), avec ou sans simulateur : on mesure le plus
-  // haut à sa hauteur naturelle, puis on l'impose à tous (variable CSS sur la grille). Recalcul quand le contenu change
-  // et quand la fenêtre est redimensionnée (le nombre de lignes de portraits dépend de la largeur des cartes).
+  // Exploration : tous les tiroirs de portraits ont la même hauteur (celle du plus haut) : on mesure le plus haut à sa
+  // hauteur naturelle, puis on l'impose à tous (variable CSS sur la grille). Recalcul quand le contenu change et quand la
+  // fenêtre est redimensionnée (le nombre de lignes de portraits dépend de la largeur des cartes).
+  // Simulateur avec indicateurs (`personnalise`) : chaque tiroir est dimensionné à ses seuls candidats, sans égalisation.
   const grille = useRef<HTMLDivElement>(null);
   useEffetLayout(() => {
     const element = grille.current;
     if (!element) return;
     const egaliser = () => {
       element.style.setProperty("--tiroir-hauteur", "0px");
+      if (personnalise) return;
       const hauteurs = [...element.querySelectorAll<HTMLElement>(".carte-pied")].map((tiroir) => tiroir.getBoundingClientRect().height);
       element.style.setProperty("--tiroir-hauteur", `${Math.ceil(Math.max(0, ...hauteurs))}px`);
     };
@@ -713,6 +720,7 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
             ouvertInitial={ouvertInitial?.theme === card.theme.id ? ouvertInitial.candidat : undefined}
             vueInitiale={ouvertInitial?.theme === card.theme.id ? ouvertInitial.vue : undefined}
             masquerNonConcernes={masquerNonConcernes}
+            simulateur={personnalise}
             sansFlux={sansFlux}
           />
         ))}

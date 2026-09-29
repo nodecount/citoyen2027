@@ -28,7 +28,7 @@ trois niveaux pour chaque thème :
    - **Mixte** — à la fois du favorable et du défavorable pour ce citoyen sur ce thème.
    - **Non concerné** — les mesures du candidat sur ce thème ne visent pas ce profil. Ex : le thème
      « retraite » pour un citoyen de 25 ans ; le thème « logement » quand le candidat annonce un
-     traitement spécifique aux propriétaires et que le citoyen n'est pas propriétaire.
+     traitement spécifique aux propriétaires et que le citoyen n'est pas propriétaire. Depuis le 2026-09-29, « sans indicateur » (effet indéterminable) relève de la même catégorie : la légende les réunit et le masquage les retire ensemble.
    - **Dégradant** — situation qui se compliquerait pour ce citoyen. Ex : plus de taxes pour un
      citoyen dont la tranche de revenus est visée par les intentions d'un candidat sur le pouvoir
      d'achat. Ex : une mesure sourcée d'un candidat qui restreindrait l'accès à des soins pour les
@@ -40,6 +40,10 @@ trois niveaux pour chaque thème :
    thème existent mais dont le sens de l'effet n'est pas déterminable d'après son programme publié
    apparaît avec sa synthèse **sans badge** et la mention « effet non déterminable d'après le
    programme publié » : ce n'est pas un cinquième niveau, c'est l'absence honnête de projection.
+
+**Deux modes d'affichage (décision du 2026-09-29).** La page du simulateur propose une bascule « Explorer les mesures » / « Simuler pour moi » (choix retenu dans le navigateur ; « Simuler pour moi » par défaut). **Exploration** : les programmes seuls — ni indicateur, ni légende, ni formulaire, ni questions par thème, même si des réponses sont enregistrées ; c'est le seul mode où s'affiche le flux animé de bulles (portraits + une mesure, tirés au hasard). **Simulateur** : tout ce qui rattache les mesures à la situation du visiteur. Les questions propres à un thème ne portent ni titre ni décompte : chacune est simplement préfixée « Pour affiner : ».
+
+**Tiroir de portraits en mode simulateur (décision du 2026-09-29)**, une fois des indicateurs affichés : trois zones, sans fond coloré, de gauche à droite — *améliorant*, *mixte*, *dégradant* (la couleur reste sur le contour des portraits ; le mixte n'a pas de couleur propre : moitié vert, moitié rouge) — alphabétique dans chaque zone. C'est un rangement par catégorie d'effet sur la situation du visiteur, **pas un classement de candidats** : aucun score, aucun ordre entre candidats d'une même zone. Les « non concerné » et « sans indicateur » (une seule catégorie) sont masqués par défaut (interrupteur « Masquer les candidats dont les mesures ne changent rien à ma situation », dernière tuile de la légende, qui est blanche) ; masqués, ils disparaissent sans être comptés (leurs noms restent dans le tableau de l'accueil) ; la pastille « +X » ne regroupe, comme en exploration, que les candidats sans mesure sur le thème ; affichés, tous les non concernés sont en ligne, sur une ligne à part sous les zones, **sans couleur ni indicateur**, comme en exploration. Un candidat ouvert reste affiché même s'il appartient à cette catégorie. Les tiroirs ont la même hauteur en exploration ; en mode simulateur (indicateurs affichés), chaque tiroir est dimensionné à ses seuls candidats.
 
 **Parcours du visiteur (précisé par le porteur du projet le 2026-09-26 ; c'est le principe de départ, pas un
 changement) :**
@@ -73,7 +77,7 @@ Garde-fous de l'indicateur (ils découlent du principe d'indépendance ci-dessou
   structurées et sourcées (cibles et sens de l'effet de chaque mesure, avec l'extrait de source qui
   le fonde), pas par un modèle opaque.
 - **Pas de score global inter-thèmes, pas de classement de candidats.** L'indicateur reste par
-  thème ; l'ordre d'affichage reste alphabétique ; la même méthode s'applique à tous les candidats.
+  thème ; l'ordre d'affichage reste alphabétique (y compris dans chaque zone du tiroir en mode simulateur, voir « Tiroir de portraits ») ; la même méthode s'applique à tous les candidats.
 - Effets de premier ordre uniquement : ce que la mesure fait directement au citoyen, pas des
   conséquences macroéconomiques spéculées.
 - Toute hypothèse est affichée (mesure imprécise, chiffrage absent, effet dépendant de détails non
@@ -221,7 +225,7 @@ Champs possibles : statut (salarié, indépendant, fonctionnaire, retraité, ét
 ## Ce que Claude Code doit garder en tête à chaque session
 
 0. **Servir le fil rouge produit** (cards par thème → candidats rangés par thème avec synthèse → indicateur de projection par thème) : toute évolution des données, du prompt d'ingestion, du moteur ou de l'UI doit rendre cela possible sans le contourner.
-1. **Ne jamais introduire de biais implicite** : formulations, ordre d'affichage (alphabétique par défaut, jamais par indicateur), poids des thèmes — tout doit rester équilibré entre candidats.
+1. **Ne jamais introduire de biais implicite** : formulations, ordre d'affichage (alphabétique par défaut, jamais par indicateur ; seule exception, décidée le 2026-09-29 : en mode simulateur le tiroir de portraits range les candidats en zones par catégorie d'indicateur, alphabétique dans chaque zone), poids des thèmes — tout doit rester équilibré entre candidats.
 2. **Toute donnée de programme ajoutée doit avoir ses sources citées dans le fichier de données**, jamais codée en dur dans la logique applicative sans traçabilité.
 3. **Le moteur de calcul doit être transparent** : privilégier des règles explicites et lisibles (if/formules documentées) plutôt qu'un modèle boîte noire, pour que chaque utilisateur puisse comprendre pourquoi tel impact est projeté.
 4. **Pas de scraping de sites non autorisés** : vérifier les conditions d'utilisation avant toute extraction automatisée de données depuis des sites tiers (Komune, Pourquituvotes, etc.). Privilégier les sources officielles (programmes publiés en PDF/HTML par les candidats, Légifrance, data.gouv.fr) ou un partenariat explicite.

@@ -452,9 +452,7 @@ describe("masquer les candidats non concernés", () => {
     expect(r).toContain('role="switch" checked=""');
     expect(portraits(r)).not.toContain("Gabriel Attal");
     expect(portraits(r)).toContain("Marine Le Pen");
-    expect(r).toContain(">+1<"); // pastille « +1 », plus de texte
-    expect(r).toContain('aria-label="1 autre candidat"');
-    expect(r).toContain("Ces candidats n&#x27;ont aucune mesure qui change votre situation sur ce thème."); // des candidats ont été masqués pour cette raison
+    expect(r).not.toContain("portrait-plus"); // pas de pastille pour les non concernés masqués (aucun candidat sans mesure ici)
   });
 
   it("ne propose rien tant qu'aucune information n'est donnée", () => {
