@@ -103,6 +103,14 @@ describe("projeterConviction", () => {
   it("fiche provisoire ignorée", () => {
     expect(projeterConviction(faibles, [prop("a", [effet(MODESTES, "revenu_disponible", "hausse")], "provisoire")]).niveau).toBeNull();
   });
+  it("mêmes règles pour tous : deux candidats aux mesures identiques ont le même constat", () => {
+    const mesures = (candidat: string) => [{ ...prop(`${candidat}-a`, [effet(MODESTES, "revenu_disponible", "hausse"), effet(RETRAITES, "protection_sociale", "baisse")]), candidat }];
+    const a = projeterConviction(faibles, mesures("a"));
+    const b = projeterConviction(faibles, mesures("b"));
+    expect(a.niveau).toBe(b.niveau);
+    expect(a.effetsIncertains).toBe(b.effetsIncertains);
+    expect(a.effetsRetenus.map((r) => r.polarite)).toEqual(b.effetsRetenus.map((r) => r.polarite));
+  });
   it("plusieurs groupes en une fois : l'union de leurs effets", () => {
     const groupes = [groupe("tranche_revenus:moins_1200"), groupe("statut_professionnel:retraite")];
     expect(projeterConviction(groupes, [prop("a", [effet(RETRAITES, "revenu_disponible", "hausse")])]).niveau).toBe("ameliorant");

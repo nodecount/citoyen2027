@@ -32,6 +32,13 @@ export type ConstatIntegrite =
 export const NON_VERIFIE: ConstatIntegrite = { etat: "non_verifie" };
 
 const DATE_ISO = /^\d{4}-\d{2}-\d{2}$/;
+// Une vraie date du calendrier (pas « 2026-13-45 » ni « 2026-02-30 »), pas dans le futur : ni vérification ni décision
+// ne peuvent être postérieures à aujourd'hui.
+function dateValide(valeur: unknown, aujourdhui: Date): valeur is string {
+  if (typeof valeur !== "string" || !DATE_ISO.test(valeur)) return false;
+  const date = new Date(`${valeur}T00:00:00Z`);
+  return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === valeur && date.getTime() <= aujourdhui.getTime();
+}
 const texte = (v: unknown): v is string => typeof v === "string" && v.trim().length > 0;
 const objet = (v: unknown): v is Record<string, unknown> => typeof v === "object" && v !== null && !Array.isArray(v);
 
@@ -45,11 +52,11 @@ function erreursSource(source: unknown, chemin: string): string[] {
   return erreurs;
 }
 
-function erreursCondamnation(c: unknown, chemin: string): string[] {
+function erreursCondamnation(c: unknown, chemin: string, aujourdhui: Date): string[] {
   if (!objet(c)) return [`${chemin} : condamnation manquante`];
   const erreurs: string[] = [];
   for (const champ of ["nature", "juridiction", "peine"] as const) if (!texte(c[champ])) erreurs.push(`${chemin}.${champ} manquant`);
-  if (!texte(c.date_decision) || !DATE_ISO.test(c.date_decision)) erreurs.push(`${chemin}.date_decision doit etre AAAA-MM-JJ`);
+  if (!dateValide(c.date_decision, aujourdhui)) erreurs.push(`${chemin}.date_decision doit etre une date AAAA-MM-JJ existante, pas dans le futur`);
   if (!Array.isArray(c.sources) || c.sources.length < 2) {
     erreurs.push(`${chemin}.sources : au moins deux sources sont requises`);
   } else {
@@ -60,11 +67,11 @@ function erreursCondamnation(c: unknown, chemin: string): string[] {
 }
 
 // Liste d'erreurs lisibles ; vide si le fichier est valide.
-export function validerIntegrite(brut: unknown): string[] {
+export function validerIntegrite(brut: unknown, aujourdhui: Date = new Date()): string[] {
   if (!objet(brut)) return ["le fichier doit etre un objet"];
   const erreurs: string[] = [];
   if (!texte(brut.slug)) erreurs.push("slug manquant");
-  if (!texte(brut.verifie_le) || !DATE_ISO.test(brut.verifie_le)) erreurs.push("verifie_le doit etre AAAA-MM-JJ");
+  if (!dateValide(brut.verifie_le, aujourdhui)) erreurs.push("verifie_le doit etre une date AAAA-MM-JJ existante, pas dans le futur");
   if (!Array.isArray(brut.sources_consultees) || brut.sources_consultees.length === 0) {
     erreurs.push("sources_consultees : au moins une source est requise");
   } else {
@@ -73,7 +80,7 @@ export function validerIntegrite(brut: unknown): string[] {
   if (!Array.isArray(brut.condamnations_definitives)) {
     erreurs.push("condamnations_definitives doit etre une liste");
   } else {
-    brut.condamnations_definitives.forEach((c, i) => erreurs.push(...erreursCondamnation(c, `condamnations_definitives[${i}]`)));
+    brut.condamnations_definitives.forEach((c, i) => erreurs.push(...erreursCondamnation(c, `condamnations_definitives[${i}]`, aujourdhui)));
   }
   return erreurs;
 }

@@ -34,6 +34,17 @@ describe("validerIntegrite", () => {
     expect(validerIntegrite({ ...valide(), condamnations_definitives: [{ ...condamnation(), date_decision: "" }] }).length).toBeGreaterThan(0);
     expect(validerIntegrite({ ...valide(), condamnations_definitives: [{ ...condamnation(), nature: "" }] }).length).toBeGreaterThan(0);
   });
+  it("refuse une date impossible ou dans le futur (vérification comme décision)", () => {
+    for (const date of ["2026-13-45", "2026-02-30", "2999-01-01"]) {
+      expect(validerIntegrite({ ...valide(), verifie_le: date }).length, `verifie_le ${date}`).toBeGreaterThan(0);
+      expect(validerIntegrite({ ...valide(), condamnations_definitives: [{ ...condamnation(), date_decision: date }] }).length, `date_decision ${date}`).toBeGreaterThan(0);
+    }
+  });
+  it("accepte la date du jour et une date bissextile", () => {
+    const aujourdhui = new Date("2026-09-30T12:00:00Z");
+    expect(validerIntegrite({ ...valide(), verifie_le: "2026-09-30" }, aujourdhui)).toEqual([]);
+    expect(validerIntegrite({ ...valide(), verifie_le: "2024-02-29" }, aujourdhui)).toEqual([]);
+  });
   it("refuse tout ce qui n'est pas un objet", () => {
     for (const brut of [null, "x", 3, []]) expect(validerIntegrite(brut).length).toBeGreaterThan(0);
   });

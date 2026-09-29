@@ -4,9 +4,8 @@ import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/base
 import { lireOuverture } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
-import { constatIntegrite, INTEGRITES } from "../data/integrite";
 import { anonymiserCards, type Correspondance } from "./aveugle";
-import { BlocConvictions } from "./Convictions";
+import { BlocConvictions, convictionsVisibles, integritesVisibles } from "./Convictions";
 import { CONVICTIONS_VIDES, lireConvictions, memoriserConvictions, type Convictions } from "./memoireConvictions";
 import { lireAveugle, lireMode, memoriserAveugle, memoriserMode, type ModeAffichage } from "./memoireReponses";
 import { ModaleConfirmation } from "./ModaleConfirmation";
@@ -58,10 +57,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   const [convictions, setConvictions] = useState<Convictions>(() => convictionsInitiales ?? lireConvictions());
   useEffect(() => memoriserConvictions(convictions), [convictions]);
   // Faits d'intégrité : seulement si le visiteur y tient, en simulateur, et jamais à l'aveugle (un casier identifie).
-  const integrites =
-    simulateur && convictions.exemplarite && !aveugle
-      ? Object.fromEntries(candidats.map((c) => [c.meta.slug, constatIntegrite(INTEGRITES[c.meta.slug])]))
-      : null;
+  const integrites = integritesVisibles({ simulateur, exemplarite: convictions.exemplarite, aveugle, slugs: candidats.map((c) => c.meta.slug) });
   const [revelation, setRevelation] = useState<Correspondance[] | null>(null);
   const basculerAveugle = (afficher: boolean) => {
     if (afficher) {
@@ -143,11 +139,12 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
       <ModaleConfirmation
         ouverte={confirmerEffacement}
         titre="Effacer vos réponses ?"
-        message="Toutes les informations saisies (questions générales et par thème) seront effacées, et les indicateurs disparaîtront des portraits. Cette action ne peut pas être annulée."
+        message="Toutes les informations saisies (questions générales, par thème et convictions) seront effacées, et les indicateurs disparaîtront des portraits. Cette action ne peut pas être annulée."
         libelleConfirmer="Oui, tout effacer"
         onConfirmer={() => {
           setConfirmerEffacement(false);
           setFormulaireOuvert(false);
+          setConvictions(CONVICTIONS_VIDES); // un seul effacement pour tout ce que le visiteur a saisi
           onEffacer();
         }}
         onAnnuler={() => setConfirmerEffacement(false)}
@@ -181,7 +178,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
       {simulateur && <BlocConvictions convictions={convictions} onChange={setConvictions} aveugle={aveugle} />}
 
       <VueThemes
-        convictions={simulateur ? convictions : CONVICTIONS_VIDES}
+        convictions={convictionsVisibles(simulateur, convictions)}
         integrites={integrites}
         cards={cards}
         profil={profil}
