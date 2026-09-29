@@ -103,7 +103,9 @@ Le bloc convictions n'existe que si le visiteur a choisi au moins un groupe ; si
 - **Flouté** : aucun nom ni slug réel ni URL de portrait dans le rendu tant que la card n'est pas révélée. **Révélé** : nom
   et portrait réels, formulaire retiré, bouton « Recommencer ».
 - Recommencer : les réponses et convictions sont intactes.
-- Mode exploration : ni card idéale, ni masquage.
+- Mode exploration : ni card idéale, ni masquage — les noms et les vrais portraits des candidats sont visibles sur les
+  cards de thèmes (test : le rendu contient les noms réels et les photos, et aucune lettre « Candidat A »), y compris
+  après être passé par le mode simulateur puis être revenu en exploration.
 - Interrupteur et « Qui était qui ? » n'existent plus ; simulateur toujours masqué.
 - `X` = questions de thème non répondues.
 
