@@ -91,10 +91,16 @@ testés.
 
 Axe séparé de l'indicateur « Ma situation » : aucun score, aucun classement, aucune moyenne entre axes.
 
-- **Valeurs sociales** : le visiteur choisit des groupes (catalogue `src/convictions.ts`) ; le constat par thème
-  (`src/engine/convictions.ts`) applique la même table de polarité que l'indicateur principal. Un effet compte pour un
-  groupe s'il vise tout le monde, ou s'il a un critère sur le champ du groupe qui le recoupe entièrement ; jamais
-  d'élargissement par approximation. Sans effet structuré : « pas d'indicateur ».
+- **Valeurs sociales** : le visiteur choisit des groupes ; le catalogue (`src/convictions.ts`) est **généré depuis le
+  schéma du formulaire**, une entrée par option de chaque champ retenu (statut, âge, revenus, logement, territoire, métier,
+  enfants, handicap) : jamais de liste choisie à la main, aucun public mis en avant. Le constat par thème
+  (`src/engine/convictions.ts`) applique la même table de polarité que l'indicateur principal, **groupe par groupe**
+  (jamais une union), avec l'explication des mesures retenues. Un effet est :
+  « visé » s'il cible tout le monde, ou si tous ses critères sur le champ du groupe recoupent au moins une valeur du
+  groupe (les critères sur d'autres champs ne bloquent pas : portée partielle assumée) ; « exclu » s'il cible le champ
+  du groupe sans le recouper ; « incertain » s'il ne dit rien du champ (autre champ, critère « autre »). Les effets
+  incertains ne sont pas comptés, sont signalés à part, et ne produisent **jamais** « non concerné » : « non concerné »
+  exige que tous les effets soient exclus avec certitude. Sans effet structuré : « pas d'indicateur ».
 - **Intégrité** : `data/integrite/<slug>.json`. Condamnations **définitives** seulement (ni mise en examen, ni enquête, ni
   première instance en appel). Chaque condamnation : nature, juridiction, date de décision, peine, et **au moins deux
   sources dont une primaire**. « Aucune condamnation recensée » n'est affiché que si `verifie_le` et
