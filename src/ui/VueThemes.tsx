@@ -4,7 +4,7 @@ import { flushSync } from "react-dom";
 import { libelleCitation } from "../citations";
 import { evaluerProposition } from "../engine";
 import type { NiveauProjection, Projection } from "../engine/projection";
-import { questionsDuTheme, type Questionnaire } from "../questionnaire";
+import { estRepondue, questionsDuTheme, type Questionnaire } from "../questionnaire";
 import type { ProfilPartiel } from "../profil";
 import type { ChampProfil, Proposition, Remarque, ResumeTheme } from "../types";
 import type { CardTheme, LigneCandidat } from "./cards";
@@ -99,22 +99,34 @@ function GroupeMesures({
   propositions,
   profil,
   remarques,
+  resume,
 }: {
   titre: string;
   sens: "favorable" | "defavorable" | "neutre";
   propositions: Proposition[];
   profil: ProfilPartiel;
   remarques?: Remarque[];
+  // Avec un résumé : le groupe n'en montre que les mots clés (numérotés 1, 2, 3…) dont les mesures sont dans le groupe,
+  // pas la liste des mesures (qui est dans l'onglet « Mesures »). Sans résumé : la liste des mesures du groupe.
+  resume?: ResumeTheme | null;
 }) {
   if (propositions.length === 0) return null;
+  const ids = new Set(propositions.map((p) => p.id));
+  const segments = resume ? resume.segments.map((s) => ({ ...s, mesures: s.mesures.filter((id) => ids.has(id)) })).filter((s) => s.mesures.length > 0) : [];
   return (
     <div className={`groupe-mesures groupe-mesures--${sens}`}>
-      <p className="groupe-mesures-titre">{titre}</p>
-      <ul className="liste-mesures">
-        {propositions.map((proposition) => (
-          <MesureAnalysee key={proposition.id} proposition={proposition} profil={profil} remarques={remarques} />
-        ))}
-      </ul>
+      <p className="groupe-mesures-titre">
+        {titre} ({propositions.length})
+      </p>
+      {resume ? (
+        <CitationsResume resume={{ ...resume, segments }} propositions={propositions} />
+      ) : (
+        <ul className="liste-mesures">
+          {propositions.map((proposition) => (
+            <MesureAnalysee key={proposition.id} proposition={proposition} profil={profil} remarques={remarques} />
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
@@ -178,12 +190,19 @@ export function CitationsResume({ resume, propositions }: { resume: ResumeTheme;
   );
 }
 
+// Appel à l'action de l'onglet « Favorable / défavorable » quand aucun indicateur n'existe : passer en mode simulateur
+// (depuis l'exploration) ou renseigner des informations (en simulateur, avant toute réponse).
+export interface ActionProfil {
+  type: "simuler" | "renseigner";
+  onClick: () => void;
+}
+
 // Onglet ouvert d'emblée dans le détail d'un candidat (« detail » : le détail des mesures, quelle que soit sa forme).
 type VueInitiale = "resume" | "polarite" | "detail";
 
 // Le détail d'un candidat sur un thème, ouvert depuis son portrait : programme d'abord (synthèse, sources, mesures),
 // puis — seulement si le visiteur a donné des informations — ce que cela change pour lui.
-function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume" }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string; onFermer?: () => void; vueInitiale?: VueInitiale }) {
+function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", actionProfil }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string; onFermer?: () => void; vueInitiale?: VueInitiale; actionProfil?: ActionProfil }) {
   const { meta, projection, synthese, resume, sources, messagesSansBadge, messagesIncertitude, messagesEffetsExclus, propositions, remarques } = ligne;
   const niveau = projection?.niveau ?? null;
   // Trois onglets possibles, ouverts sur « Résumé » : le résumé (à défaut, la synthèse texte ; à défaut encore, un
@@ -211,35 +230,42 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume" }:
       <div className="detail-profil">
         <span className="detail-avatar">
           <Pastille slug={meta.slug} nom={meta.nom} />
-          <span className="portrait-compte" aria-hidden="true">
-            {nombre}
-          </span>
-          <span className="cache-visuel">
-            {nombre} mesure{nombre > 1 ? "s" : ""} sur ce thème
-          </span>
         </span>
         <h3 className="detail-titre">{meta.nom}</h3>
         <div className="onglets-detail" role="group" aria-label="Affichage">
           <button type="button" aria-pressed={vueActive === "resume"} onClick={() => setVue("resume")}>
             Résumé
           </button>
-          {projection && (
-            <button type="button" aria-pressed={vueActive === "polarite"} onClick={() => setVue("polarite")}>
-              Favorable / défavorable
-            </button>
-          )}
           <button type="button" aria-pressed={vueActive === vueDetail} onClick={() => setVue(vueDetail)}>
-            {nombre > 1 ? `Détail des ${nombre} mesures` : "Détail de la mesure"}
+            Mesures ({nombre})
+          </button>
+          <button type="button" aria-pressed={vueActive === "polarite"} onClick={() => setVue("polarite")}>
+            Favorable / défavorable
           </button>
         </div>
       </div>
       {/* Entête (portrait, nom, onglets) fixe ; le contenu (résumé ou liste des mesures, puis « Pour votre profil ») défile. */}
       <div className="detail-contenu">
-      {vueActive === "polarite" ? (
+      {vueActive === "polarite" && !projection ? (
+        actionProfil ? (
+          <div className="appel-profil">
+            <p>
+              {actionProfil.type === "simuler"
+                ? "Ce que ce programme change pour vous n'est pas affiché en mode exploration."
+                : "Pour savoir ce que ce programme change pour vous, renseignez quelques informations."}
+            </p>
+            <button type="button" className="bouton-en-ligne" onClick={actionProfil.onClick}>
+              {actionProfil.type === "simuler" ? "Passer en mode « Simuler pour moi »" : "Renseigner mes informations"}
+            </button>
+          </div>
+        ) : (
+          <p className="hint">Pas d'indicateur pour ce candidat sur ce thème.</p>
+        )
+      ) : vueActive === "polarite" ? (
         <>
-          <GroupeMesures titre="Mesures favorables" sens="favorable" propositions={favorables} profil={profil} remarques={remarques} />
-          <GroupeMesures titre="Mesures défavorables" sens="defavorable" propositions={defavorables} profil={profil} remarques={remarques} />
-          <GroupeMesures titre="Autres mesures" sens="neutre" propositions={autres} profil={profil} remarques={remarques} />
+          <GroupeMesures titre="Mesures favorables" sens="favorable" propositions={favorables} profil={profil} remarques={remarques} resume={resume} />
+          <GroupeMesures titre="Mesures défavorables" sens="defavorable" propositions={defavorables} profil={profil} remarques={remarques} resume={resume} />
+          <GroupeMesures titre="Autres mesures" sens="neutre" propositions={autres} profil={profil} remarques={remarques} resume={resume} />
         </>
       ) : vueActive === "detail" ? (
         <ul className="liste-mesures">
@@ -417,6 +443,7 @@ function CarteTheme({
   onReponse,
   ouvertInitial,
   vueInitiale,
+  actionProfil,
   masquerNonConcernes,
   simulateur,
   sansFlux,
@@ -428,6 +455,7 @@ function CarteTheme({
   onReponse: SurReponse;
   ouvertInitial?: string;
   vueInitiale?: VueInitiale;
+  actionProfil?: ActionProfil;
   masquerNonConcernes: boolean;
   // Indicateurs affichés : la pastille « +X » ne compte que les candidats sans mesure sur le thème.
   simulateur: boolean;
@@ -570,7 +598,7 @@ function CarteTheme({
         ) : (
           <>
             {ligneOuverte ? (
-              <DetailCandidat ligne={ligneOuverte} profil={profil} id={idDetail} onFermer={fermer} vueInitiale={vueInitiale} />
+              <DetailCandidat ligne={ligneOuverte} profil={profil} id={idDetail} onFermer={fermer} vueInitiale={vueInitiale} actionProfil={actionProfil} />
             ) : (
               <>
                 {lignes.length > 0 && questionsTheme.length === 0 && !sansFlux && <FluxCandidats key={lignes.map((l) => l.meta.slug).join("|")} lignes={lignes} />}
@@ -634,9 +662,11 @@ interface VueThemesProps {
   ouvertInitial?: { theme: string; candidat: string; vue?: VueInitiale };
   // Mode « Simuler pour moi » : le flux de bulles de paroles n'est pas affiché.
   sansFlux?: boolean;
+  // Appel à l'action de l'onglet « Favorable / défavorable » tant qu'aucun indicateur n'existe.
+  actionProfil?: ActionProfil;
 }
 
-export function VueThemes({ cards, profil, personnalise, questionnaire, questionsActives, onReponse, ouvertInitial, sansFlux = false }: VueThemesProps) {
+export function VueThemes({ cards, profil, personnalise, questionnaire, questionsActives, onReponse, ouvertInitial, sansFlux = false, actionProfil }: VueThemesProps) {
   const [masquer, setMasquer] = useState(true);
   const masquerNonConcernes = personnalise && masquer;
   // Exploration : tous les tiroirs de portraits ont la même hauteur (celle du plus haut) : on mesure le plus haut à sa
@@ -715,13 +745,14 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
             key={card.theme.id}
             card={card}
             profil={profil}
-            questionsTheme={questionsActives ? questionsDuTheme(questionnaire, card.theme.id) : []}
+            questionsTheme={questionsActives ? questionsDuTheme(questionnaire, card.theme.id).filter((q) => !estRepondue(q, profil)) : []}
             onReponse={onReponse}
             ouvertInitial={ouvertInitial?.theme === card.theme.id ? ouvertInitial.candidat : undefined}
             vueInitiale={ouvertInitial?.theme === card.theme.id ? ouvertInitial.vue : undefined}
             masquerNonConcernes={masquerNonConcernes}
             simulateur={personnalise}
             sansFlux={sansFlux}
+            actionProfil={actionProfil}
           />
         ))}
       </div>

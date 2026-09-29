@@ -67,8 +67,19 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           integre
           questions={base.questionnaire.generales}
           profilInitial={profil}
+          sectionsThemes={generalSoumis ? base.questionnaire.parTheme : []}
+          profilThemes={profil}
+          onReponseTheme={onReponse}
           onValider={(p) => {
-            onValider(p);
+            // Les réponses par thème s'appliquent tout de suite : on les reprend du profil courant, pas du brouillon.
+            const fusion: ProfilPartiel = { ...p };
+            for (const { questions } of base.questionnaire.parTheme) {
+              for (const q of questions) {
+                if (profil[q.id] === undefined) delete fusion[q.id];
+                else fusion[q.id] = profil[q.id];
+              }
+            }
+            onValider(fusion);
             // Le formulaire reste ouvert (on peut continuer à le compléter) : la page remonte simplement jusqu'aux premières
             // cartes de thèmes, où les indicateurs viennent d'apparaître.
             document.querySelector(".grille-themes")?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -121,6 +132,19 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
         profil={profil}
         personnalise={personnalise}
         sansFlux={simulateur}
+        actionProfil={
+          personnalise
+            ? undefined
+            : simulateur
+              ? {
+                  type: "renseigner",
+                  onClick: () => {
+                    setFormulaireOuvert(true);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  },
+                }
+              : { type: "simuler", onClick: () => setMode("simulateur") }
+        }
         questionnaire={base.questionnaire}
         questionsActives={simulateur && generalSoumis}
         onReponse={onReponse}

@@ -1709,12 +1709,6 @@ fieldset.question {
   font-size: 1.15rem;
 }
 
-.detail-avatar .portrait-compte {
-  min-width: 1.5rem;
-  height: 1.5rem;
-  padding: 0 0.3rem;
-  font-size: 0.875rem;
-}
 
 .detail-titre {
   margin: 0;
@@ -2491,4 +2485,13 @@ button.bouton-en-ligne {
 .legende dl > div[data-niveau="non_concerne"] {
   background: #ffffff;
   border-color: var(--filet);
+}
+
+/* Questions par thème, rangées sous le formulaire général. */
+.questionnaire-theme {
+  margin-top: 1.25rem;
+}
+.questionnaire-theme h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
 }

@@ -6,7 +6,7 @@ import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireQuestionnaire, CHAMPS_PROFIL, type Questionnaire } from "../questionnaire";
 import type { Proposition, SyntheseTheme, Theme } from "../types";
 import { construireCards } from "./cards";
-import { CitationsResume, VueThemes } from "./VueThemes";
+import { CitationsResume, VueThemes, type ActionProfil } from "./VueThemes";
 
 // Seulement la liste des portraits : la légende, elle, décrit les niveaux et contient leurs classes.
 const portraits = (rendu: string): string => (rendu.match(/<ul class="portraits"[\s\S]*?<\/ul>/g) ?? []).join("");
@@ -63,10 +63,12 @@ function html(
   profil: ProfilPartiel = {},
   ouvert?: { theme: string; candidat: string; vue?: "resume" | "polarite" | "detail" },
   questionsActives = false,
+  actionProfil?: ActionProfil,
 ): string {
   const personnalise = aDesInformations(profil);
   return renderToStaticMarkup(
     <VueThemes
+      actionProfil={actionProfil}
       cards={construireCards(THEMES, candidats, personnalise ? profil : null)}
       profil={profil}
       personnalise={personnalise}
@@ -195,7 +197,7 @@ describe("le détail s'ouvre depuis le portrait", () => {
     const r = html([candidat("a", [mesure])], {}, ouvert);
     expect(r).toContain("onglets-detail");
     expect(r).toMatch(/<button type="button" aria-pressed="true">Résumé<\/button>/);
-    expect(r).toMatch(/aria-pressed="false">Détail de la mesure<\/button>/);
+    expect(r).toMatch(/aria-pressed="false">Mesures \(1\)<\/button>/);
     expect(r).toContain("Pas de résumé pour ce candidat sur ce thème.");
     expect(r).not.toContain('class="liste-mesures"');
     const detail = html([candidat("a", [mesure])], {}, { ...ouvert, vue: "detail" });
@@ -332,8 +334,20 @@ describe("après avoir eu des informations sur le visiteur", () => {
     expect(r).toContain("Favorable / défavorable"); // l'onglet existe
     expect(r).toContain("Pour votre profil");
     expect(r).not.toContain("Mesures favorables"); // la répartition n'apparaît que dans son onglet
-    expect(html([candidat("a", [prop("a", undefined)])], {}, { theme: "fiscalite", candidat: "a" })).not.toContain("Favorable / défavorable"); // sans projection, pas d'onglet
-  });});
+  });
+
+  it("onglets toujours dans le même ordre : Résumé, Mesures, Favorable / défavorable ; sans indicateur, un appel à l'action", () => {
+    const ouvert = { theme: "fiscalite", candidat: "a" };
+    const sans = html([candidat("a", [prop("a", undefined)])], {}, ouvert);
+    expect(sans.indexOf(">Résumé<")).toBeLessThan(sans.indexOf("Mesures (1)"));
+    expect(sans.indexOf("Mesures (1)")).toBeLessThan(sans.indexOf("Favorable / défavorable"));
+    const polarite = { ...ouvert, vue: "polarite" as const };
+    const simuler = html([candidat("a", [prop("a", undefined)])], {}, polarite, false, { type: "simuler", onClick: () => {} });
+    expect(simuler).toContain("Passer en mode « Simuler pour moi »");
+    const renseigner = html([candidat("a", [prop("a", undefined)])], {}, polarite, false, { type: "renseigner", onClick: () => {} });
+    expect(renseigner).toContain("Renseigner mes informations");
+  });
+});
 
 describe("questions propres à chaque thème", () => {
   const candidats = [candidat("a", [prop("a", [HAUSSE])])];
@@ -344,12 +358,17 @@ describe("questions propres à chaque thème", () => {
   });
 
   it("apparaissent après, uniquement sur le thème concerné, chaque question préfixée « Pour affiner : », sans titre ni décompte", () => {
-    const r = html(candidats, { tranche_age: "30_49", vehicule: "thermique" }, undefined, true);
+    const r = html(candidats, { tranche_age: "30_49" }, undefined, true);
     expect(r).toContain("Pour affiner : Quel véhicule utilisez-vous le plus ?");
     expect(r).not.toContain("Préciser ma situation pour ce thème");
     expect(r).not.toMatch(/\(\d+\/\d+ réponse/); // plus de décompte
     const carteRetraites = r.slice(r.indexOf('id="theme-retraites"'));
     expect(carteRetraites).not.toContain("Pour affiner");
+  });
+
+  it("disparaissent de la carte une fois répondues (elles se modifient dans le formulaire du haut)", () => {
+    const r = html(candidats, { tranche_age: "30_49", vehicule: "thermique" }, undefined, true);
+    expect(r).not.toContain("Quel véhicule utilisez-vous le plus ?");
   });
 
   it("posent aussi les questions sensibles, sans mention « questions sensibles, facultatif » ni décompte", () => {
@@ -396,9 +415,9 @@ describe("résumé en 40 à 60 mots d'un candidat sur un thème", () => {
     const rendu = html([{ ...candidat("a", [mesure]), resumes: [resume] }], {}, { theme: "fiscalite", candidat: "a" });
     expect(rendu).toContain('<span class="mot-cle">baisser l&#x27;impôt<sup>1</sup></span>');
     expect(rendu).not.toContain("legende-resume");
-    // Deux onglets : Résumé (par défaut) et « Détail de la mesure » (les citations du résumé, avec leur nombre).
+    // Deux onglets : Résumé (par défaut) et « Mesures (N) » (les citations du résumé, avec leur nombre).
     expect(rendu).toMatch(/<button type="button" aria-pressed="true">Résumé<\/button>/);
-    expect(rendu).toMatch(/aria-pressed="false">Détail de la mesure<\/button>/);
+    expect(rendu).toMatch(/aria-pressed="false">Mesures \(1\)<\/button>/);
     expect(rendu).not.toContain("(ancien)");
   });
 

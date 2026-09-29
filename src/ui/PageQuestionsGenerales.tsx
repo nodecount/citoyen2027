@@ -1,9 +1,9 @@
 import { Eye, ListChecks, Lock } from "lucide-react";
 import { useState, type FormEvent } from "react";
-import { CHAMPS_PROFIL, compterReponses } from "../questionnaire";
+import { CHAMPS_PROFIL, compterReponses, questionsVisibles, type SectionTheme } from "../questionnaire";
 import { mettreAJourReponse, type ProfilPartiel } from "../profil";
 import type { ChampProfil } from "../types";
-import { SectionQuestions } from "./Questions";
+import { SectionQuestions, type SurReponse } from "./Questions";
 
 interface PageQuestionsGeneralesProps {
   questions: ChampProfil[];
@@ -15,13 +15,18 @@ interface PageQuestionsGeneralesProps {
   integre?: boolean;
   // Efface toutes les réponses (proposé seulement quand il y en a déjà d'enregistrées).
   onEffacer?: () => void;
+  // Questions propres à chaque thème (affichées seulement une fois le formulaire général validé), avec le profil courant
+  // et le rappel qui applique chaque réponse immédiatement.
+  sectionsThemes?: SectionTheme[];
+  profilThemes?: ProfilPartiel;
+  onReponseTheme?: SurReponse;
 }
 
 // Les questions générales : utiles à plusieurs thèmes, posées d'abord et une seule fois. Les réponses sont un BROUILLON
 // tant que le visiteur n'a pas enregistré : c'est l'enregistrement qui fait apparaître (ou met à jour) les indicateurs
 // sur les portraits. Le visiteur peut y revenir à tout moment pour changer ou compléter ses réponses ; ensuite, chaque
 // thème permet de préciser d'autres informations, à son rythme.
-export default function PageQuestionsGenerales({ questions, profilInitial, onValider, onAnnuler, integre = false, onEffacer }: PageQuestionsGeneralesProps) {
+export default function PageQuestionsGenerales({ questions, profilInitial, onValider, onAnnuler, integre = false, onEffacer, sectionsThemes = [], profilThemes = profilInitial, onReponseTheme }: PageQuestionsGeneralesProps) {
   const [brouillon, setBrouillon] = useState<ProfilPartiel>(profilInitial);
   const { repondues, total } = compterReponses(questions, brouillon);
 
@@ -90,6 +95,17 @@ export default function PageQuestionsGenerales({ questions, profilInitial, onVal
         </p>
       )}
       <SectionQuestions questions={questions} profil={brouillon} onReponse={repondre} idPrefixe={integre ? "general-ouvert" : "general"} carte={integre} />
+      {/* Questions propres à un thème, rangées par thème : toutes visibles ici (répondues ou non) pour pouvoir les revoir
+          et les modifier ; chaque réponse s'applique tout de suite, sans attendre l'enregistrement. */}
+      {sectionsThemes.map(({ theme, questions: questionsTheme }) => {
+        if (questionsVisibles(questionsTheme, profilThemes).length === 0) return null;
+        return (
+          <section key={theme.id} className="questionnaire-theme" aria-labelledby={`form-theme-${theme.id}`}>
+            <h3 id={`form-theme-${theme.id}`}>{theme.libelle}</h3>
+            <SectionQuestions questions={questionsTheme} profil={profilThemes} onReponse={onReponseTheme!} idPrefixe={`form-theme-${theme.id}`} carte={integre} />
+          </section>
+        );
+      })}
       {!integre && actions}
     </form>
   );
