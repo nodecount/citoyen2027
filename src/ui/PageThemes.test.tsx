@@ -184,3 +184,15 @@ describe("bascule entre exploration des mesures et simulateur", () => {
     expect(derniere).toContain("Masquer les candidats dont les mesures ne changent rien à ma situation");
   });
 });
+
+describe("bloc « Mes convictions » sur la page du simulateur", () => {
+  it("affiché en mode simulateur, absent en mode exploration même avec des convictions enregistrées", () => {
+    const base = chargerBase("agregateurs");
+    const page = (mode: "simulateur" | "exploration") =>
+      renderToStaticMarkup(
+        <PageThemes base={base} profil={{}} generalSoumis={false} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} convictionsInitiales={{ groupes: ["jeunes"], exemplarite: true }} />,
+      );
+    expect(page("simulateur")).toContain("Mes convictions");
+    expect(page("exploration")).not.toContain("Mes convictions");
+  });
+});

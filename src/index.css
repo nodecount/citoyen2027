@@ -2506,3 +2506,24 @@ button.bouton-en-ligne {
   margin: 0.5rem 0 0;
   padding-left: 1.25rem;
 }
+.convictions {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #ccd;
+  border-radius: 0.75rem;
+}
+.convictions fieldset {
+  border: 0;
+  margin: 0.75rem 0;
+  padding: 0;
+}
+.convictions .case {
+  display: block;
+  margin: 0.25rem 0;
+}
+.panneau-convictions {
+  margin: 0.75rem 0;
+  padding: 0.5rem 0.75rem;
+  border-left: 4px solid #1f3f9e;
+  background: #f4f6fc;
+}

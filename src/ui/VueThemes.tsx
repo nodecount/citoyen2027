@@ -8,7 +8,10 @@ import { estRepondue, questionsDuTheme, type Questionnaire } from "../questionna
 import type { ProfilPartiel } from "../profil";
 import type { ChampProfil, Proposition, Remarque, ResumeTheme } from "../types";
 import type { CardTheme, LigneCandidat } from "./cards";
+import { NON_VERIFIE, type ConstatIntegrite } from "../data/integrite";
+import { PanneauConvictions } from "./Convictions";
 import { FluxCandidats } from "./FluxCandidats";
+import { aDesConvictions, CONVICTIONS_VIDES, type Convictions } from "./memoireConvictions";
 import { IconeTheme } from "./icones";
 import { Pastille } from "./Pastille";
 import { NIVEAUX, decrireEffet } from "./projection";
@@ -207,7 +210,7 @@ type VueInitiale = "resume" | "polarite" | "detail";
 
 // Le détail d'un candidat sur un thème, ouvert depuis son portrait : programme d'abord (synthèse, sources, mesures),
 // puis — seulement si le visiteur a donné des informations — ce que cela change pour lui.
-function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", actionProfil }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string; onFermer?: () => void; vueInitiale?: VueInitiale; actionProfil?: ActionProfil }) {
+function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", actionProfil, convictions, integrite }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string; onFermer?: () => void; vueInitiale?: VueInitiale; actionProfil?: ActionProfil; convictions?: Convictions; integrite?: ConstatIntegrite | null }) {
   const { meta, projection, synthese, resume, sources, messagesSansBadge, messagesIncertitude, messagesEffetsExclus, propositions, remarques } = ligne;
   const niveau = projection?.niveau ?? null;
   // Trois onglets possibles, ouverts sur « Résumé » : le résumé (à défaut, la synthèse texte ; à défaut encore, un
@@ -293,6 +296,10 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", a
         </>
       ) : (
         <p className="hint aucun-resume">Pas de résumé pour ce candidat sur ce thème.</p>
+      )}
+
+      {convictions && aDesConvictions(convictions) && (
+        <PanneauConvictions propositions={propositions} convictions={convictions} integrite={convictions.exemplarite ? (integrite ?? null) : null} />
       )}
 
       {projection &&
@@ -454,7 +461,12 @@ function CarteTheme({
   masquerNonConcernes,
   simulateur,
   sansFlux,
+  convictions,
+  integrites,
 }: {
+  convictions?: Convictions;
+  // Faits d'intégrité par slug ; null quand ils ne doivent pas s'afficher (option désactivée, mode aveugle).
+  integrites?: Record<string, ConstatIntegrite> | null;
   card: CardTheme;
   profil: ProfilPartiel;
   // Questions propres à ce thème, à afficher seulement une fois le formulaire général validé ; [] sinon.
@@ -605,7 +617,7 @@ function CarteTheme({
         ) : (
           <>
             {ligneOuverte ? (
-              <DetailCandidat ligne={ligneOuverte} profil={profil} id={idDetail} onFermer={fermer} vueInitiale={vueInitiale} actionProfil={actionProfil} />
+              <DetailCandidat ligne={ligneOuverte} profil={profil} id={idDetail} onFermer={fermer} vueInitiale={vueInitiale} actionProfil={actionProfil} convictions={convictions} integrite={integrites ? (integrites[ligneOuverte.meta.slug] ?? NON_VERIFIE) : null} />
             ) : (
               <>
                 {lignes.length > 0 && questionsTheme.length === 0 && !sansFlux && <FluxCandidats key={lignes.map((l) => l.meta.slug).join("|")} lignes={lignes} />}
@@ -671,9 +683,12 @@ interface VueThemesProps {
   sansFlux?: boolean;
   // Appel à l'action de l'onglet « Favorable / défavorable » tant qu'aucun indicateur n'existe.
   actionProfil?: ActionProfil;
+  // Convictions du visiteur et faits d'intégrité (voir Convictions.tsx) : affichés dans le détail de chaque candidat.
+  convictions?: Convictions;
+  integrites?: Record<string, ConstatIntegrite> | null;
 }
 
-export function VueThemes({ cards, profil, personnalise, questionnaire, questionsActives, onReponse, ouvertInitial, sansFlux = false, actionProfil }: VueThemesProps) {
+export function VueThemes({ cards, profil, personnalise, questionnaire, questionsActives, onReponse, ouvertInitial, sansFlux = false, actionProfil, convictions = CONVICTIONS_VIDES, integrites = null }: VueThemesProps) {
   const [masquer, setMasquer] = useState(true);
   const masquerNonConcernes = personnalise && masquer;
   // Exploration : tous les tiroirs de portraits ont la même hauteur (celle du plus haut) : on mesure le plus haut à sa
@@ -760,6 +775,8 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
             simulateur={personnalise}
             sansFlux={sansFlux}
             actionProfil={actionProfil}
+            convictions={convictions}
+            integrites={integrites}
           />
         ))}
       </div>

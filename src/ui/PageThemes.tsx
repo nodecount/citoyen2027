@@ -4,7 +4,10 @@ import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/base
 import { lireOuverture } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
+import { constatIntegrite, INTEGRITES } from "../data/integrite";
 import { anonymiserCards, type Correspondance } from "./aveugle";
+import { BlocConvictions } from "./Convictions";
+import { CONVICTIONS_VIDES, lireConvictions, memoriserConvictions, type Convictions } from "./memoireConvictions";
 import { lireAveugle, lireMode, memoriserAveugle, memoriserMode, type ModeAffichage } from "./memoireReponses";
 import { ModaleConfirmation } from "./ModaleConfirmation";
 import PageQuestionsGenerales from "./PageQuestionsGenerales";
@@ -24,11 +27,13 @@ interface PageThemesProps {
   onReponse: SurReponse;
   // Mode d'affichage de départ (par défaut : le dernier choix du visiteur, sinon « simulateur »).
   modeInitial?: ModeAffichage;
+  // Convictions de départ (par défaut : celles gardées dans le navigateur).
+  convictionsInitiales?: Convictions;
 }
 
 // Page du simulateur : les thèmes, et sur chacun les portraits cliquables des candidats concernés. Aucun indicateur
 // tant que le formulaire général n'a pas été validé (et qu'il contient au moins une réponse).
-export default function PageThemes({ base, profil, generalSoumis, onValider, onEffacer, onReponse, modeInitial }: PageThemesProps) {
+export default function PageThemes({ base, profil, generalSoumis, onValider, onEffacer, onReponse, modeInitial, convictionsInitiales }: PageThemesProps) {
   // « Explorer les mesures » : les programmes seuls (ni indicateur, ni légende, ni formulaire, ni questions par thème).
   // « Simuler pour moi » : tout ce qui rattache les mesures à la situation du visiteur.
   const [mode, setMode] = useState<ModeAffichage>(() => modeInitial ?? lireMode());
@@ -49,6 +54,14 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   const [graine, setGraine] = useState(() => Math.floor(Math.random() * 2 ** 31));
   const anonymisation = aveugle ? anonymiserCards(cardsNommees, graine) : null;
   const cards = anonymisation?.cards ?? cardsNommees;
+  // Convictions : bloc et panneau seulement en mode « Simuler pour moi » (elles rattachent les mesures au visiteur).
+  const [convictions, setConvictions] = useState<Convictions>(() => convictionsInitiales ?? lireConvictions());
+  useEffect(() => memoriserConvictions(convictions), [convictions]);
+  // Faits d'intégrité : seulement si le visiteur y tient, en simulateur, et jamais à l'aveugle (un casier identifie).
+  const integrites =
+    simulateur && convictions.exemplarite && !aveugle
+      ? Object.fromEntries(candidats.map((c) => [c.meta.slug, constatIntegrite(INTEGRITES[c.meta.slug])]))
+      : null;
   const [revelation, setRevelation] = useState<Correspondance[] | null>(null);
   const basculerAveugle = (afficher: boolean) => {
     if (afficher) {
@@ -165,7 +178,11 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           </button>
         </div>      )}
 
+      {simulateur && <BlocConvictions convictions={convictions} onChange={setConvictions} aveugle={aveugle} />}
+
       <VueThemes
+        convictions={simulateur ? convictions : CONVICTIONS_VIDES}
+        integrites={integrites}
         cards={cards}
         profil={profil}
         personnalise={personnalise}
