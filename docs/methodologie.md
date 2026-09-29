@@ -86,3 +86,20 @@ Quand une règle ne teste qu'une partie d'une proposition composée de plusieurs
 texte « non concerné » doit être scopé à ce volet précis — jamais affirmer que la mesure dans
 son ensemble ne s'applique pas au profil, ce qui serait factuellement faux pour les volets non
 testés.
+
+## Axe « Convictions » (2026-09-29)
+
+Axe séparé de l'indicateur « Ma situation » : aucun score, aucun classement, aucune moyenne entre axes.
+
+- **Valeurs sociales** : le visiteur choisit des groupes (catalogue `src/convictions.ts`) ; le constat par thème
+  (`src/engine/convictions.ts`) applique la même table de polarité que l'indicateur principal. Un effet compte pour un
+  groupe s'il vise tout le monde, ou s'il a un critère sur le champ du groupe qui le recoupe entièrement ; jamais
+  d'élargissement par approximation. Sans effet structuré : « pas d'indicateur ».
+- **Intégrité** : `data/integrite/<slug>.json`. Condamnations **définitives** seulement (ni mise en examen, ni enquête, ni
+  première instance en appel). Chaque condamnation : nature, juridiction, date de décision, peine, et **au moins deux
+  sources dont une primaire**. « Aucune condamnation recensée » n'est affiché que si `verifie_le` et
+  `sources_consultees` sont renseignés, et se dit toujours « d'après les sources consultées le <date> ». **Sans fichier
+  valide : « non vérifié »**, jamais « aucune condamnation ».
+- Mêmes règles pour tous les candidats. Aucune donnée n'est saisie sans source relue par le porteur du projet. Les
+  condamnations effacées (amnistie, réhabilitation) sont à traiter selon un avis juridique avant publication.
+- Mode aveugle : les faits d'intégrité ne s'affichent pas (un casier identifie le candidat).
