@@ -1,4 +1,5 @@
 import portraitsJson from "../../data/portraits.json";
+import { PREFIXE_ANONYME } from "./aveugle";
 import { initiales } from "./portrait";
 
 export interface Portrait {
@@ -26,11 +27,13 @@ interface PastilleProps {
 // Photo du candidat dans un cercle, ou ses initiales s'il n'y a pas de photo libre (même forme pour tous).
 export function Pastille({ slug, nom, className, libelle }: PastilleProps) {
   const photo = PORTRAITS[slug];
+  // Mode « à l'aveugle » : la lettre du candidat, jamais ses initiales ni sa photo.
+  const contenu = slug.startsWith(PREFIXE_ANONYME) ? slug.slice(PREFIXE_ANONYME.length) : initiales(nom);
   const classes = ["pastille", photo ? "pastille--photo" : "", className ?? ""].filter(Boolean).join(" ");
   const accessibilite = libelle ? { role: "img", "aria-label": libelle, title: libelle } : { "aria-hidden": true as const };
   return (
     <span className={classes} {...accessibilite}>
-      {photo ? <img src={`/${photo.fichier}`} alt="" loading="lazy" decoding="async" /> : initiales(nom)}
+      {photo ? <img src={`/${photo.fichier}`} alt="" loading="lazy" decoding="async" /> : contenu}
     </span>
   );
 }

@@ -4,7 +4,8 @@ import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/base
 import { lireOuverture } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
-import { lireMode, memoriserMode, type ModeAffichage } from "./memoireReponses";
+import { anonymiserCards, type Correspondance } from "./aveugle";
+import { lireAveugle, lireMode, memoriserAveugle, memoriserMode, type ModeAffichage } from "./memoireReponses";
 import { ModaleConfirmation } from "./ModaleConfirmation";
 import PageQuestionsGenerales from "./PageQuestionsGenerales";
 import { compterReponses } from "../questionnaire";
@@ -40,7 +41,25 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   const manquants = resumesManquants(base, candidats);
   const personnalise = simulateur && generalSoumis && aDesInformations(profil);
   const reponsesGenerales = compterReponses(base.questionnaire.generales, profil);
-  const cards = construireCards(base.themes, candidats, personnalise ? profil : null);
+  const cardsNommees = construireCards(base.themes, candidats, personnalise ? profil : null);
+  // « Afficher les candidats : non » : simulateur à l'aveugle (voir aveugle.ts). Les lettres sont retirées au sort à
+  // chaque activation ; à la révélation, on garde la correspondance le temps de la montrer.
+  const [aveugle, setAveugle] = useState(lireAveugle);
+  useEffect(() => memoriserAveugle(aveugle), [aveugle]);
+  const [graine, setGraine] = useState(() => Math.floor(Math.random() * 2 ** 31));
+  const anonymisation = aveugle ? anonymiserCards(cardsNommees, graine) : null;
+  const cards = anonymisation?.cards ?? cardsNommees;
+  const [revelation, setRevelation] = useState<Correspondance[] | null>(null);
+  const basculerAveugle = (afficher: boolean) => {
+    if (afficher) {
+      setRevelation(anonymisation?.correspondance ?? null);
+      setAveugle(false);
+    } else {
+      setGraine(Math.floor(Math.random() * 2 ** 31));
+      setRevelation(null);
+      setAveugle(true);
+    }
+  };
   // Arrivée depuis le tableau de l'accueil (ou une adresse partagée) : la carte du thème, avec ce candidat ouvert.
   const [ouverture] = useState(() => (typeof window === "undefined" ? null : lireOuverture(window.location.href)));
   useEffect(() => {
@@ -61,6 +80,25 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           Simuler pour moi
         </button>
       </div>
+
+      <label className="interrupteur interrupteur--candidats">
+        <input type="checkbox" role="switch" checked={!aveugle} onChange={(e) => basculerAveugle(e.target.checked)} />
+        <span className="interrupteur-piste" aria-hidden="true" />
+        Afficher les candidats
+      </label>
+      {aveugle && <p className="hint">Candidats masqués : les lettres sont tirées au hasard et changent à chaque activation.</p>}
+      {revelation && !aveugle && (
+        <details className="revelation">
+          <summary>Qui était qui ?</summary>
+          <ul>
+            {revelation.map(({ lettre, nom }) => (
+              <li key={lettre}>
+                {lettre} : {nom}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
 
       {simulateur && formulaireOuvert && (
         <PageQuestionsGenerales
@@ -148,12 +186,12 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
         questionnaire={base.questionnaire}
         questionsActives={simulateur && generalSoumis}
         onReponse={onReponse}
-        ouvertInitial={ouverture ?? undefined}
+        ouvertInitial={(!aveugle && ouverture) || undefined}
       />
-      {enCoursAnalyse.length > 0 && (
+      {!aveugle && enCoursAnalyse.length > 0 && (
         <p className="hint">Programmes pas encore analysés : {enCoursAnalyse.map((meta) => meta.nom).join(", ")}.</p>
       )}
-      {manquants.length > 0 && (
+      {!aveugle && manquants.length > 0 && (
         <p className="hint">
           Résumé pas encore disponible (le détail complet des mesures reste affiché) : {manquants.map((m) => `${m.nom} (${m.themeLibelle})`).join(", ")}.
         </p>

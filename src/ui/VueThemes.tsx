@@ -67,10 +67,13 @@ function MesureAnalysee({ proposition, profil, remarques = [] }: { proposition: 
               <strong>Remarque :</strong> {r.texte}
             </p>
           ))}
-          <p className="sources">
-            Source :{" "}
-            <ListeSources sources={proposition.sources.map((s) => ({ texte: libelleCitation(s), url: s.url }))} />
-          </p>
+          {/* Sans source : mode « à l'aveugle » (le nom de la source trahirait l'auteur). */}
+          {proposition.sources.length > 0 && (
+            <p className="sources">
+              Source :{" "}
+              <ListeSources sources={proposition.sources.map((s) => ({ texte: libelleCitation(s), url: s.url }))} />
+            </p>
+          )}
         </div>
       </details>
     </li>
@@ -177,9 +180,11 @@ export function CitationsResume({ resume, propositions }: { resume: ResumeTheme;
                 .map((p) => (
                   <li key={p.id}>
                     {texteMesure(p)}{" "}
-                    <span className="sources">
-                      (<ListeSources sources={p.sources.map((s) => ({ texte: libelleCitation(s), url: s.url }))} />)
-                    </span>
+                    {p.sources.length > 0 && (
+                      <span className="sources">
+                        (<ListeSources sources={p.sources.map((s) => ({ texte: libelleCitation(s), url: s.url }))} />)
+                      </span>
+                    )}
                   </li>
                 ))}
             </ul>
@@ -280,9 +285,11 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", a
       ) : synthese ? (
         <>
           <p className="synthese">{synthese.texte}</p>
-          <p className="sources-citees">
-            Sources : <ListeSources sources={sources} />
-          </p>
+          {sources.length > 0 && (
+            <p className="sources-citees">
+              Sources : <ListeSources sources={sources} />
+            </p>
+          )}
         </>
       ) : (
         <p className="hint aucun-resume">Pas de résumé pour ce candidat sur ce thème.</p>
