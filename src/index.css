@@ -670,74 +670,73 @@ article {
 
 /* ---- Résultats : une card par thème ---------------------------------------------------------- */
 
-/* Légende des indicateurs : pleine largeur. En-tête (icône + titre), phrase d'explication, puis les six cas en tuiles
-   d'une grille (badge en haut, sens dessous), chacune marquée d'un filet de la couleur de son niveau. */
+/* Légende des indicateurs : un bandeau blanc pleine largeur. Titre + une phrase, puis une rangée de tuiles teintées à la
+   couleur de leur niveau (fond pâle, liseré fin) : badge en haut, sens dessous. La couleur ne porte jamais seule
+   l'information : le mot et le symbole sont dans le badge. */
 .legende {
-  margin: 1rem 0;
-  padding: 1rem 1.25rem 1.1rem;
+  margin: 1rem 0 0;
+  padding: 1.1rem 1.25rem 1.25rem;
   border: 1px solid var(--filet);
-  border-radius: var(--rayon);
+  border-radius: 14px;
   background: var(--surface);
+  box-shadow: var(--ombre);
   font-size: 0.9375rem;
 }
 
-.legende-entete {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--bleu-fonce);
-}
-
-.legende-entete svg {
-  flex: none;
-  color: var(--bleu);
+.legende-tete {
+  display: grid;
+  gap: 0.2rem;
+  margin-bottom: 0.9rem;
 }
 
 .legende-titre {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin: 0;
   font-family: var(--titre);
   font-size: 1.15rem;
   font-weight: 700;
+  color: var(--bleu-fonce);
+}
+
+.legende-titre svg {
+  flex: none;
+  color: var(--bleu);
 }
 
 .legende-intro {
-  max-width: 70rem;
-  margin: 0.4rem 0 0.9rem;
+  margin: 0;
   color: var(--encre-douce);
 }
 
 .legende dl {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
+  gap: 0.6rem;
   margin: 0;
 }
 
 .legende dl > div {
+  --niv: var(--non-concerne);
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  padding: 0.7rem 0.9rem;
-  border: 1px solid var(--filet);
-  border-top: 4px solid var(--filet);
-  border-radius: 10px;
-  background: var(--fond);
+  gap: 0.45rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid color-mix(in srgb, var(--niv) 30%, #ffffff);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--niv) 8%, #ffffff);
 }
 
-.legende dl > div[data-niveau="ameliorant"] { border-top-color: var(--ameliorant); }
-.legende dl > div[data-niveau="mixte"] { border-top-color: var(--mixte); }
-.legende dl > div[data-niveau="non_concerne"] { border-top-color: var(--non-concerne); }
-.legende dl > div[data-niveau="degradant"] { border-top-color: var(--degradant); }
+.legende dl > div[data-niveau="ameliorant"] { --niv: var(--ameliorant); }
+.legende dl > div[data-niveau="mixte"] { --niv: var(--mixte); }
+.legende dl > div[data-niveau="non_concerne"] { --niv: var(--non-concerne); }
+.legende dl > div[data-niveau="degradant"] { --niv: var(--degradant); }
+.legende dl > div[data-niveau="aucun"] { --niv: #8a94a8; }
 
 .legende dt,
 .legende dd {
   margin: 0;
-}
-
-.legende-precision {
-  display: block;
-  margin-top: 0.4rem;
-  color: var(--encre-douce);
 }
 
 .legende dt {
@@ -746,21 +745,31 @@ article {
   align-items: center;
   gap: 0.4rem;
 }
-.legende-option {
-  margin-top: auto !important;
+
+.legende dd {
+  line-height: 1.4;
+  color: var(--encre);
+}
+
+.legende-precision {
+  display: block;
+  margin-top: 0.5rem;
   padding-top: 0.5rem;
-  border-top: 1px dashed var(--filet);
+  border-top: 1px dashed color-mix(in srgb, var(--niv) 40%, #ffffff);
+  color: var(--encre-douce);
+}
+
+/* Interrupteur de masquage, au pied de la tuile « Pas d'indicateur ». */
+.legende dd.legende-option {
+  margin-top: auto;
+  padding-top: 0.6rem;
+  border-top: 1px dashed color-mix(in srgb, var(--niv) 40%, #ffffff);
 }
 
 .legende-option .interrupteur {
   margin: 0;
   font-size: 0.9375rem;
 }
-
-.grille-themes {
-  margin-top: 2.75rem;
-}
-
 .grille-themes {
   display: flex;
   flex-wrap: wrap;
@@ -1618,10 +1627,10 @@ fieldset.question {
 }
 
 /* Questions propres au thème : quand il y en a, elles occupent tout le corps de la carte (à la place du flux de
-   portraits), dans un panneau blanc en verre (glassmorphism), sous un titre, avec leur décompte. Le corps défile si
-   elles débordent. */
+   portraits), dans un panneau blanc en verre (glassmorphism). Chaque question est préfixée « Pour affiner : ». Le corps
+   défile si elles débordent. */
 .questions-theme {
-  flex: 1 1 auto;
+  flex: 0 0 auto; /* hauteur adaptée au contenu : le panneau ne s'étire plus sur toute la carte */
   margin: 0;
   padding: 0.9rem 1rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.85);
@@ -1633,15 +1642,7 @@ fieldset.question {
   font-size: 0.95rem;
 }
 
-.questions-theme-titre {
-  margin: 0 0 0.75rem;
-  font-weight: 700;
-  color: var(--bleu-fonce);
-}
 
-.questions-theme-corps {
-  margin: 0;
-}
 /* Le détail révélé au clic sur un portrait : encadré, pour qu'on voie ce qui s'est ouvert. Le portrait déborde d'un
    tiers au-dessus du cadre (comme une page de profil) ; le padding-top lui réserve sa place. Elle monte légèrement
    en apparaissant, pour qu'on remarque l'ouverture. */
@@ -1726,7 +1727,7 @@ fieldset.question {
 
 .onglets-detail button {
   margin: 0;
-  padding: 0.4rem 0.85rem 0.3rem;
+  padding: 0.4rem 0 0.3rem;
   border: 0;
   border-bottom: 3px solid transparent;
   border-radius: 8px 8px 0 0;
@@ -2196,4 +2197,284 @@ button.bouton-en-ligne {
 
 .question select option {
   color: var(--encre);
+}
+
+/* ---- Question compacte : icône, libellé à sa droite, « ? » tout à droite ------------------------- */
+.question-tete {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 0.35rem;
+}
+
+.question-libelle {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.question-carte {
+  display: block;
+  padding: 0.6rem 0.8rem 0.7rem;
+}
+
+.question-carte .question-icone {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+.question-carte .question-icone svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+/* « ? » de la finalité, avec sa vraie infobulle (bulle bleu nuit SOUS le bouton, pointe en haut à droite). */
+.aide-question {
+  position: relative;
+  flex: none;
+  margin-left: auto;
+}
+
+.aide-question .aide-question-bouton {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0.15rem;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  box-shadow: none;
+  color: var(--bleu);
+  line-height: 0;
+  cursor: help;
+}
+
+.aide-question .aide-question-bouton:hover {
+  background: var(--bleu-pale);
+}
+
+.aide-question .infobulle--dessous {
+  top: calc(100% + 0.45rem);
+  right: -0.4rem;
+  bottom: auto;
+  left: auto;
+  width: 17rem;
+  max-width: 70vw;
+  font-weight: 400;
+  transform: translateY(-0.25rem);
+}
+
+.aide-question .infobulle--dessous::after {
+  top: auto;
+  bottom: 100%;
+  left: auto;
+  right: 0.75rem;
+  margin: 0;
+  border-top-color: transparent;
+  border-bottom-color: var(--bleu-fonce);
+}
+
+.aide-question:hover .infobulle--dessous,
+.aide-question:focus-within .infobulle--dessous,
+.aide-question--ouverte .infobulle--dessous {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+/* ---- Liste déroulante à choix multiples : même allure que les <select>, cases à cocher à l'ouverture --- */
+.select-multiple {
+  position: relative;
+}
+
+.select-multiple .select-multiple-bouton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 2.5rem;
+  margin: 0;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #c3cbdb;
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: none;
+  color: var(--encre);
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.select-multiple .select-multiple-bouton:hover,
+.select-multiple .select-multiple-bouton[aria-expanded="true"] {
+  border-color: var(--bleu);
+  background: var(--surface);
+}
+
+.select-multiple .select-multiple-bouton:focus-visible {
+  outline: none;
+  border-color: var(--bleu);
+  box-shadow: 0 0 0 3px rgba(31, 79, 163, 0.25);
+}
+
+.select-multiple .select-multiple-bouton--vide {
+  color: var(--encre-douce);
+}
+
+.select-multiple-bouton svg {
+  flex: none;
+  color: #1f4fa3;
+  transition: transform 0.15s;
+}
+
+.select-multiple-bouton[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.select-multiple-resume {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.select-multiple-liste {
+  position: absolute;
+  z-index: 6;
+  top: calc(100% + 0.25rem);
+  right: 0;
+  left: 0;
+  max-height: 15rem;
+  overflow-y: auto;
+  padding: 0.35rem;
+  border: 1px solid #c3cbdb;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(23, 60, 140, 0.18);
+}
+
+.select-multiple-liste .option-multi {
+  margin: 0;
+  padding: 0.45rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.select-multiple-liste .option-multi:hover {
+  background: var(--bleu-pale);
+}
+
+
+/* ---- Bascule « Explorer les mesures » / « Simuler pour moi » -------------------------------------- */
+.bascule-mode {
+  display: inline-flex;
+  gap: 0.25rem;
+  margin: 0 0 1rem;
+  padding: 0.25rem;
+  border: 1px solid var(--filet);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.bascule-mode button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0.45rem 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  box-shadow: none;
+  color: var(--bleu-fonce);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: background 0.15s, color 0.15s;
+}
+
+.bascule-mode button:hover {
+  background: var(--bleu-pale);
+}
+
+.bascule-mode button[aria-pressed="true"] {
+  background: var(--bleu);
+  color: #ffffff;
+}
+
+/* ---- Tiroir de portraits : hauteur commune à toutes les cartes, et zones teintées en mode simulateur ---- */
+/* --tiroir-hauteur est posée sur la grille par VueThemes : la hauteur du tiroir le plus haut. */
+.carte-pied {
+  box-sizing: border-box;
+  min-height: var(--tiroir-hauteur, 0);
+}
+
+/* Simulateur : trois colonnes égales. À gauche, ceux qui améliorent (fond vert qui s'estompe vers le centre), au milieu les
+   mixtes et neutres, à droite ceux qui dégradent (fond rouge). Les portraits s'alignent sur leur bord : gauche,
+   centre, droite. Les teintes reprennent les couleurs des indicateurs (mot et symbole restent dans le détail). */
+.carte-pied--zones {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.tiroir-zones {
+  display: flex;
+  flex: 1 1 auto;
+  align-self: stretch;
+  min-width: 0;
+}
+
+.tiroir-zones > .portraits {
+  flex: 1 1 0;
+  align-content: flex-start;
+  padding: 0.3rem 0.5rem;
+}
+
+.tiroir-zones > .portraits[data-zone="gauche"] {
+  justify-content: flex-start;
+  padding-left: 1rem;
+  border-bottom-left-radius: var(--rayon);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--ameliorant) 32%, transparent), color-mix(in srgb, var(--ameliorant) 0%, transparent));
+}
+
+.tiroir-zones > .portraits[data-zone="milieu"] {
+  justify-content: center;
+}
+
+.tiroir-zones > .portraits[data-zone="droite"] {
+  justify-content: flex-end;
+  padding-right: 1rem;
+  border-bottom-right-radius: var(--rayon);
+  background: linear-gradient(270deg, color-mix(in srgb, var(--degradant) 30%, transparent), color-mix(in srgb, var(--degradant) 0%, transparent));
+}
+
+/* ---- Non concernés : hors des zones colorées, sur une ligne à part, sans indicateur ---- */
+.carte-pied--zones {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+.tiroir-zones {
+  flex: 0 0 auto;
+}
+
+.carte-pied--zones > .portraits[data-zone="neutres"] {
+  flex: 0 0 auto;
+  margin-top: 0.2rem;
+  padding: 0.4rem 1rem 0;
+  border-top: 1px dashed var(--filet);
+}
+
+/* Légende : la tuile « Non concerné » (dernière) est blanche, sans teinte de couleur. */
+.legende dl > div[data-niveau="non_concerne"] {
+  background: #ffffff;
+  border-color: var(--filet);
 }

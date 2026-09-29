@@ -61,7 +61,7 @@ const QUESTIONNAIRE: Questionnaire = construireQuestionnaire(
 function html(
   candidats: CandidatCharge[],
   profil: ProfilPartiel = {},
-  ouvert?: { theme: string; candidat: string },
+  ouvert?: { theme: string; candidat: string; vue?: "resume" | "polarite" | "detail" },
   questionsActives = false,
 ): string {
   const personnalise = aDesInformations(profil);
@@ -191,24 +191,28 @@ describe("le détail s'ouvre depuis le portrait", () => {
     expect(r).not.toContain("Pourquoi cet indicateur");
   });
 
-  it("sans résumé : pas de message d'excuse ni de menu, les mesures directement", () => {
+  it("sans résumé : les onglets sont là, ouverts sur Résumé, qui dit qu'il n'y a pas de résumé ; le détail des mesures est à un clic", () => {
     const r = html([candidat("a", [mesure])], {}, ouvert);
-    expect(r).not.toContain("Aucun résumé");
-    expect(r).not.toContain("onglets-detail");
-    expect(r).toContain('class="liste-mesures"');
+    expect(r).toContain("onglets-detail");
+    expect(r).toMatch(/<button type="button" aria-pressed="true">Résumé<\/button>/);
+    expect(r).toMatch(/aria-pressed="false">Détail de la mesure<\/button>/);
+    expect(r).toContain("Pas de résumé pour ce candidat sur ce thème.");
+    expect(r).not.toContain('class="liste-mesures"');
+    const detail = html([candidat("a", [mesure])], {}, { ...ouvert, vue: "detail" });
+    expect(detail).toContain('class="liste-mesures"');
+    expect(detail).not.toContain("Pas de résumé pour ce candidat");
   });
 
-  it("avec une synthèse seule : le texte, sans menu ni onglet Mesures (pas de résumé structuré, donc pas de citations)", () => {
+  it("avec une synthèse seule : le texte dans l'onglet Résumé, sans le message d'absence", () => {
     const r = html([candidat("a", [mesure], [synthese])], {}, ouvert);
     expect(r).toContain("Le programme prévoit une contribution.");
-    expect(r).not.toContain("onglets-detail");
-    expect(r).not.toContain(">Mesures<");
+    expect(r).toContain("onglets-detail");
+    expect(r).not.toContain("Pas de résumé pour ce candidat");
     expect(r).not.toContain('class="liste-mesures"');
   });
-
   it("ne répète pas le titre d'une mesure quand son texte est identique, ni de mention à chaque mesure", () => {
     const identique: Proposition = { ...prop("a", undefined), titre: "Supprimer la taxe X.", resume_factuel: "Supprimer la taxe X.", sous_theme: "Fiscalité", statut: "partiel" };
-    const r = html([candidat("a", [identique])], {}, ouvert);
+    const r = html([candidat("a", [identique])], {}, { ...ouvert, vue: "detail" });
     expect(r.match(/Supprimer la taxe X\./g)).toHaveLength(1);
     expect(r).not.toContain("rubrique");
     expect(r).not.toContain("sourcing partiel");
@@ -216,13 +220,13 @@ describe("le détail s'ouvre depuis le portrait", () => {
   });
 
   it("met chaque mesure dans un volet dépliable, replié au départ : le titre en résumé, le détail et la source dedans", () => {
-    const r = html([candidat("a", [prop("a", undefined)])], {}, ouvert);
+    const r = html([candidat("a", [prop("a", undefined)])], {}, { ...ouvert, vue: "detail" });
     expect(r).toMatch(/<details class="mesure"><summary>Mesure de a<\/summary><div class="mesure-corps">[\s\S]*?Source :/);
     expect(r).not.toContain('<details class="mesure" open');
   });
 
   it("affiche l'explication d'une mesure quand elle apporte plus que le titre", () => {
-    expect(html([candidat("a", [prop("a", undefined)])], {}, ouvert)).toContain("Résumé factuel.");
+    expect(html([candidat("a", [prop("a", undefined)])], {}, { ...ouvert, vue: "detail" })).toContain("Résumé factuel.");
   });
 });
 
@@ -299,63 +303,62 @@ describe("après avoir eu des informations sur le visiteur", () => {
     expect(portraits(html([candidat("a", [prop("a", [HAUSSE, BAISSE])])], PROFIL))).not.toContain("à préciser");
   });
 
-  it("répartit les mesures d'un « mixte » réel en favorables et défavorables, dans le détail", () => {
+  it("répartit les mesures en favorables et défavorables dans l'onglet dédié", () => {
     const favorable = prop("a", [HAUSSE]);
     const defavorable = { ...prop("a", [BAISSE]), id: "a-fiscalite-002", titre: "Mesure défavorable de a" };
-    const r = html([candidat("a", [favorable, defavorable])], PROFIL, { theme: "fiscalite", candidat: "a" });
+    const r = html([candidat("a", [favorable, defavorable])], PROFIL, { theme: "fiscalite", candidat: "a", vue: "polarite" });
     expect(r).toContain("Mesures favorables");
     expect(r).toContain("Mesures défavorables");
     expect(r.indexOf("Mesures favorables")).toBeLessThan(r.indexOf("Mesure de a"));
     expect(r.indexOf("Mesures défavorables")).toBeLessThan(r.indexOf("Mesure défavorable de a"));
-    // La même répartition, dans le détail des mesures : pas une troisième liste plate en plus.
+    // Répartition dans l'onglet « Favorable / défavorable » : chaque groupe une seule fois.
     expect(r.match(/Mesures favorables/g)).toHaveLength(1);
     expect(r.match(/Mesures défavorables/g)).toHaveLength(1);
   });
 
   it("ne répartit pas les mesures d'un « mixte à préciser » (le sens des mesures manquantes n'est pas établi)", () => {
     const cible = { ...HAUSSE, cibles: [{ champ: "logement", valeurs: ["locataire"] }] };
-    const r = html([candidat("a", [prop("a", [cible])])], { tranche_age: "30_49" }, { theme: "fiscalite", candidat: "a" });
+    const r = html([candidat("a", [prop("a", [cible])])], { tranche_age: "30_49" }, { theme: "fiscalite", candidat: "a", vue: "polarite" });
     expect(r).not.toContain("Mesures favorables");
     expect(r).not.toContain("Mesures défavorables");
   });
 
-  it("affiche déjà la répartition sous « Pour votre profil », sans attendre le détail des mesures", () => {
+  it("propose l'onglet « Favorable / défavorable » dès qu'une projection existe, sans répéter la répartition sous « Pour votre profil »", () => {
     const favorable = prop("a", [HAUSSE]);
     const defavorable = { ...prop("a", [BAISSE]), id: "a-fiscalite-002", titre: "Mesure défavorable de a" };
     const synthese: SyntheseTheme = { theme: "fiscalite", texte: "Synthèse du candidat.", propositions: [favorable.id, defavorable.id], date_derniere_verification: "2026-09-24" };
     const r = html([candidat("a", [favorable, defavorable], [synthese])], PROFIL, { theme: "fiscalite", candidat: "a" });
-    // Vue par défaut : le résumé — la répartition est déjà là.
-    expect(r).toContain("Synthèse du candidat.");
-    expect(r.indexOf("Pour votre profil")).toBeLessThan(r.indexOf("Mesures favorables"));
-    expect(r).toContain("Mesures favorables");
-    expect(r).toContain("Mesures défavorables");
-  });
-});
+    expect(r).toContain("Synthèse du candidat."); // vue par défaut : le résumé
+    expect(r).toContain("Favorable / défavorable"); // l'onglet existe
+    expect(r).toContain("Pour votre profil");
+    expect(r).not.toContain("Mesures favorables"); // la répartition n'apparaît que dans son onglet
+    expect(html([candidat("a", [prop("a", undefined)])], {}, { theme: "fiscalite", candidat: "a" })).not.toContain("Favorable / défavorable"); // sans projection, pas d'onglet
+  });});
 
 describe("questions propres à chaque thème", () => {
   const candidats = [candidat("a", [prop("a", [HAUSSE])])];
 
   it("n'apparaissent pas avant la validation du formulaire général", () => {
     const r = html(candidats, PROFIL, undefined, false);
-    expect(r).not.toContain("Préciser ma situation pour ce thème");
+    expect(r).not.toContain("Pour affiner");
   });
 
-  it("apparaissent après, uniquement sur le thème concerné, avec le décompte des réponses", () => {
+  it("apparaissent après, uniquement sur le thème concerné, chaque question préfixée « Pour affiner : », sans titre ni décompte", () => {
     const r = html(candidats, { tranche_age: "30_49", vehicule: "thermique" }, undefined, true);
-    expect(r).toContain("Préciser ma situation pour ce thème");
-    expect(r).toMatch(/\(1\/\d+ réponse\)/); // 1 réponse donnée, sur toutes les questions du thème (sensibles comprises)
-    expect(r).toContain("Quel véhicule utilisez-vous le plus ?");
+    expect(r).toContain("Pour affiner : Quel véhicule utilisez-vous le plus ?");
+    expect(r).not.toContain("Préciser ma situation pour ce thème");
+    expect(r).not.toMatch(/\(\d+\/\d+ réponse/); // plus de décompte
     const carteRetraites = r.slice(r.indexOf('id="theme-retraites"'));
-    expect(carteRetraites).not.toContain("Préciser ma situation pour ce thème");
+    expect(carteRetraites).not.toContain("Pour affiner");
   });
 
-  it("comptent aussi les questions sensibles, sans mention « questions sensibles, facultatif »", () => {
+  it("posent aussi les questions sensibles, sans mention « questions sensibles, facultatif » ni décompte", () => {
     const seulementSensibles = construireQuestionnaire(CHAMPS_PROFIL, { nationalite: ["fiscalite"] }, THEMES);
     const personnalise = aDesInformations(PROFIL);
     const r = renderToStaticMarkup(
       <VueThemes cards={construireCards(THEMES, candidats, PROFIL)} profil={PROFIL} personnalise={personnalise} questionnaire={seulementSensibles} questionsActives={true} onReponse={() => {}} />,
     );
-    expect(r).toContain("0/1 réponse");
+    expect(r).toContain("Pour affiner : Votre nationalité");
     expect(r).not.toContain("questions sensibles, facultatif");
   });
 
@@ -428,10 +431,10 @@ describe("résumé en 40 à 60 mots d'un candidat sur un thème", () => {
   });
 
   it("affiche la remarque dans le détail des mesures, à côté de la mesure qu'elle désigne, pas des autres", () => {
-    // Sans résumé ni synthèse : la vue « détail » des mesures s'affiche directement (voir DetailCandidat).
+    // Sans résumé ni synthèse : le détail des mesures est ouvert d'emblée par ue: "detail".
     const autre = prop("b", undefined, "fiscalite");
     const remarque = { theme: "fiscalite", texte: "Ce mot clé déforme la mesure.", mesures: [mesure.id], empreinte: "e", date: "2026-09-27" };
-    const rendu = html([candidat("a", [mesure, autre], [], "Nom a", [remarque])], {}, { theme: "fiscalite", candidat: "a" });
+    const rendu = html([candidat("a", [mesure, autre], [], "Nom a", [remarque])], {}, { theme: "fiscalite", candidat: "a", vue: "detail" });
     expect(rendu).toContain('class="remarque"');
     expect(rendu).toContain("Ce mot clé déforme la mesure.");
     // Une seule remarque affichée (à côté de « mesure », pas de « autre »).

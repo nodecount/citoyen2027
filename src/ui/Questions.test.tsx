@@ -36,7 +36,9 @@ describe("ChampQuestion", () => {
   it("affiche une question à choix multiples en cases à cocher, sans rien de coché au départ", () => {
     const html = champ(MULTI);
     expect(html).toContain('type="checkbox"');
-    expect(html).toContain("<legend>Aides perçues</legend>");
+    expect(html).toContain('class="select-multiple-bouton select-multiple-bouton--vide"'); // liste déroulante : « Je préfère ne pas répondre » au départ
+    expect(html).toContain('aria-expanded="false"'); // fermée : les cases sont dans la page mais masquées
+    expect(html).toContain("Aides perçues");
     expect(html).not.toContain("checked");
     expect(champ(MULTI, { aides: ["rsa"] })).toMatch(/checked=""[^>]*\/>RSA/);
   });

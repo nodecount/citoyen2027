@@ -52,3 +52,24 @@ export function memoriserReponses(reponses: ReponsesMemorisees): void {
     // sans conséquence : les réponses restent en mémoire pour cette session
   }
 }
+
+// Mode d'affichage du simulateur : « exploration » (les mesures seules, sans indicateur ni formulaire) ou « simulateur »
+// (indicateurs et questions pour le visiteur). Retenu dans le navigateur, comme les réponses.
+export type ModeAffichage = "simulateur" | "exploration";
+const CLE_MODE = "mode-affichage";
+
+export function lireMode(): ModeAffichage {
+  try {
+    return window.localStorage.getItem(CLE_MODE) === "exploration" ? "exploration" : "simulateur";
+  } catch {
+    return "simulateur";
+  }
+}
+
+export function memoriserMode(mode: ModeAffichage): void {
+  try {
+    window.localStorage.setItem(CLE_MODE, mode);
+  } catch {
+    // sans conséquence : le choix vaut pour cette session seulement
+  }
+}

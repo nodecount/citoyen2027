@@ -4,7 +4,7 @@ import { flushSync } from "react-dom";
 import { libelleCitation } from "../citations";
 import { evaluerProposition } from "../engine";
 import type { NiveauProjection, Projection } from "../engine/projection";
-import { compterReponses, questionsDuTheme, type Questionnaire } from "../questionnaire";
+import { questionsDuTheme, type Questionnaire } from "../questionnaire";
 import type { ProfilPartiel } from "../profil";
 import type { ChampProfil, Proposition, Remarque, ResumeTheme } from "../types";
 import type { CardTheme, LigneCandidat } from "./cards";
@@ -14,7 +14,7 @@ import { Pastille } from "./Pastille";
 import { NIVEAUX, decrireEffet } from "./projection";
 import { SectionQuestions, type SurReponse } from "./Questions";
 
-const ORDRE_LEGENDE: NiveauProjection[] = ["ameliorant", "mixte", "non_concerne", "degradant"];
+const ORDRE_LEGENDE: NiveauProjection[] = ["ameliorant", "mixte", "degradant", "non_concerne"];
 
 function BadgeNiveau({ niveau }: { niveau: NiveauProjection }) {
   const { libelle, symbole, sens } = NIVEAUX[niveau];
@@ -178,22 +178,27 @@ export function CitationsResume({ resume, propositions }: { resume: ResumeTheme;
   );
 }
 
+// Onglet ouvert d'emblée dans le détail d'un candidat (« detail » : le détail des mesures, quelle que soit sa forme).
+type VueInitiale = "resume" | "polarite" | "detail";
+
 // Le détail d'un candidat sur un thème, ouvert depuis son portrait : programme d'abord (synthèse, sources, mesures),
 // puis — seulement si le visiteur a donné des informations — ce que cela change pour lui.
-function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string; onFermer?: () => void }) {
+function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume" }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string; onFermer?: () => void; vueInitiale?: VueInitiale }) {
   const { meta, projection, synthese, resume, sources, messagesSansBadge, messagesIncertitude, messagesEffetsExclus, propositions, remarques } = ligne;
   const niveau = projection?.niveau ?? null;
-  // Avec un résumé : deux vues, le résumé (par défaut) et ses références citées (« Mesures »). Sans résumé ni
-  // synthèse, le détail complet des mesures directement, seul.
-  const aUnTexte = Boolean(resume || synthese);
-  const [vue, setVue] = useState<"resume" | "citations">("resume");
-  const vueActive = aUnTexte ? vue : "detail";
+  // Trois onglets possibles, ouverts sur « Résumé » : le résumé (à défaut, la synthèse texte ; à défaut encore, un
+  // message qui dit qu'il n'y en a pas), la répartition favorable/défavorable (dès qu'une projection existe, quel que
+  // soit son niveau), et le détail des mesures. Avec un résumé, ce dernier est celui de ses références citées ; sans,
+  // c'est la liste complète des mesures.
+  const vueDetail = resume ? "citations" : "detail";
+  const [vue, setVue] = useState<"resume" | "polarite" | "citations" | "detail">(vueInitiale === "detail" ? vueDetail : vueInitiale);
+  const vueActive = vue;
   const nombre = propositions.length;
-  // Un vrai « mixte » (jamais le « mixte à préciser », qui n'a pas encore de sens établi par mesure) : le détail
-  // répartit ses mesures en favorables et défavorables plutôt que de les lister toutes ensemble.
-  const estMixteReel = niveau === "mixte" && projection !== null && !projection.incertain;
-  const { favorables, defavorables } = estMixteReel && projection ? grouperParPolarite(projection, propositions) : { favorables: [], defavorables: [] };
-  const autres = estMixteReel ? propositions.filter((p) => !favorables.includes(p) && !defavorables.includes(p)) : [];
+  // Répartition entre mesures favorables et défavorables, pour TOUT candidat ayant une projection — pas seulement un
+  // « mixte » : l'onglet dédié la montre quel que soit l'indicateur (améliorant, dégradant, non concerné, mixte, ou
+  // même sans badge). Une mesure sans effet retenu (exclue, ou sans effet déterminé) tombe dans « Autres mesures ».
+  const { favorables, defavorables } = projection ? grouperParPolarite(projection, propositions) : { favorables: [], defavorables: [] };
+  const autres = propositions.filter((p) => !favorables.includes(p) && !defavorables.includes(p));
 
   return (
     <div className="detail" id={id} role="region" aria-label={`Détail : ${meta.nom}`}>
@@ -214,33 +219,34 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
           </span>
         </span>
         <h3 className="detail-titre">{meta.nom}</h3>
-        {resume && (
-          <div className="onglets-detail" role="group" aria-label="Affichage">
-            <button type="button" aria-pressed={vueActive === "resume"} onClick={() => setVue("resume")}>
-              Résumé
+        <div className="onglets-detail" role="group" aria-label="Affichage">
+          <button type="button" aria-pressed={vueActive === "resume"} onClick={() => setVue("resume")}>
+            Résumé
+          </button>
+          {projection && (
+            <button type="button" aria-pressed={vueActive === "polarite"} onClick={() => setVue("polarite")}>
+              Favorable / défavorable
             </button>
-            <button type="button" aria-pressed={vueActive === "citations"} onClick={() => setVue("citations")}>
-              {nombre > 1 ? `Détail des ${nombre} mesures` : "Détail de la mesure"}
-            </button>
-          </div>
-        )}
+          )}
+          <button type="button" aria-pressed={vueActive === vueDetail} onClick={() => setVue(vueDetail)}>
+            {nombre > 1 ? `Détail des ${nombre} mesures` : "Détail de la mesure"}
+          </button>
+        </div>
       </div>
       {/* Entête (portrait, nom, onglets) fixe ; le contenu (résumé ou liste des mesures, puis « Pour votre profil ») défile. */}
       <div className="detail-contenu">
-      {vueActive === "detail" ? (
-        estMixteReel ? (
-          <>
-            <GroupeMesures titre="Mesures favorables" sens="favorable" propositions={favorables} profil={profil} remarques={remarques} />
-            <GroupeMesures titre="Mesures défavorables" sens="defavorable" propositions={defavorables} profil={profil} remarques={remarques} />
-            <GroupeMesures titre="Autres mesures" sens="neutre" propositions={autres} profil={profil} remarques={remarques} />
-          </>
-        ) : (
-          <ul className="liste-mesures">
-            {propositions.map((proposition) => (
-              <MesureAnalysee key={proposition.id} proposition={proposition} profil={profil} remarques={remarques} />
-            ))}
-          </ul>
-        )
+      {vueActive === "polarite" ? (
+        <>
+          <GroupeMesures titre="Mesures favorables" sens="favorable" propositions={favorables} profil={profil} remarques={remarques} />
+          <GroupeMesures titre="Mesures défavorables" sens="defavorable" propositions={defavorables} profil={profil} remarques={remarques} />
+          <GroupeMesures titre="Autres mesures" sens="neutre" propositions={autres} profil={profil} remarques={remarques} />
+        </>
+      ) : vueActive === "detail" ? (
+        <ul className="liste-mesures">
+          {propositions.map((proposition) => (
+            <MesureAnalysee key={proposition.id} proposition={proposition} profil={profil} remarques={remarques} />
+          ))}
+        </ul>
       ) : vueActive === "citations" && resume ? (
         <CitationsResume resume={resume} propositions={propositions} />
       ) : resume ? (
@@ -252,7 +258,9 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
             Sources : <ListeSources sources={sources} />
           </p>
         </>
-      ) : null}
+      ) : (
+        <p className="hint aucun-resume">Pas de résumé pour ce candidat sur ce thème.</p>
+      )}
 
       {projection &&
         (niveau ? (
@@ -260,13 +268,6 @@ function DetailCandidat({ ligne, profil, id, onFermer }: { ligne: LigneCandidat;
             <p className="pour-votre-profil">
               <strong>Pour votre profil :</strong> {NIVEAUX[niveau].sens}
             </p>
-            {/* Déjà réparties dans le détail des mesures quand il est affiché : pas de répétition. */}
-            {estMixteReel && vueActive !== "detail" && (
-              <>
-                <GroupeMesures titre="Mesures favorables" sens="favorable" propositions={favorables} profil={profil} remarques={remarques} />
-                <GroupeMesures titre="Mesures défavorables" sens="defavorable" propositions={defavorables} profil={profil} remarques={remarques} />
-              </>
-            )}
             {messagesIncertitude.map((message) => (
               <p className="pour-votre-profil incertitude" key={message}>
                 {message}
@@ -341,6 +342,20 @@ function estomper(element: HTMLElement) {
     () => copie.remove(),
   );
 }
+// Zones du tiroir de portraits en mode simulateur : de gauche à droite, ce qui améliore, ce qui est mixte ou neutre, ce qui
+// dégrade la situation du visiteur.
+const ZONES_TIROIR = [
+  { id: "gauche", libelle: "Candidats qui améliorent votre situation" },
+  { id: "milieu", libelle: "Candidats mixtes pour votre situation" },
+  { id: "droite", libelle: "Candidats qui dégradent votre situation" },
+] as const;
+
+// « Non concerné » et « sans indicateur » ne font qu'un : ces candidats ne sont dans aucune zone colorée, mais sur une
+// ligne à part sous les zones (« neutres »), sans indicateur, comme en mode « Explorer les mesures ».
+function zoneDe(ligne: LigneCandidat): "gauche" | "milieu" | "droite" | "neutres" {
+  const niveau = ligne.projection?.niveau;
+  return niveau === "ameliorant" ? "gauche" : niveau === "degradant" ? "droite" : niveau === "mixte" ? "milieu" : "neutres";
+}
 // Le rendu serveur (tests) n'exécute pas d'effet de mise en page.
 const useEffetLayout = typeof window === "undefined" ? useEffect : useLayoutEffect;
 
@@ -351,8 +366,9 @@ const useEffetLayout = typeof window === "undefined" ? useEffect : useLayoutEffe
 // façon de connaître le niveau, seulement la façon la plus rapide une fois la légende lue. Tant qu'aucun candidat
 // n'est sélectionné, chaque portrait affiche son nombre de mesures, comme un compteur de notifications. Le pied de
 // carte garde toujours la même taille (rétractée), qu'un candidat soit ouvert ou non.
-function Portrait({ ligne, ouvert, idDetail, onBasculer }: { ligne: LigneCandidat; ouvert: boolean; idDetail: string; onBasculer: () => void }) {
-  const niveau = ligne.projection?.niveau ?? null;
+function Portrait({ ligne, ouvert, idDetail, onBasculer, neutre = false }: { ligne: LigneCandidat; ouvert: boolean; idDetail: string; onBasculer: () => void; neutre?: boolean }) {
+  // `neutre` : portrait sans indicateur (candidats non concernés affichés à part) — ni couleur, ni niveau dans son nom.
+  const niveau = neutre ? null : (ligne.projection?.niveau ?? null);
   const { nom } = ligne.meta;
   const nombre = ligne.propositions.length;
   const precision = niveau ? ` — ${NIVEAUX[niveau].libelle}${ligne.projection?.incertain ? ", à préciser" : ""}` : "";
@@ -385,16 +401,10 @@ function Portrait({ ligne, ouvert, idDetail, onBasculer }: { ligne: LigneCandida
 // Questions propres à un thème : le visiteur les renseigne à son rythme, une fois le formulaire général validé. Chaque
 // réponse s'applique tout de suite : l'indicateur des portraits de ce thème s'affine.
 function QuestionsDuTheme({ theme, idTheme, questions, profil, onReponse }: { theme: string; idTheme: string; questions: ChampProfil[]; profil: ProfilPartiel; onReponse: SurReponse }) {
-  const { repondues, total } = compterReponses(questions, profil);
-  const progression = `(${repondues}/${total} réponse${repondues > 1 ? "s" : ""})`;
+  // Pas de titre ni de décompte : chaque question est simplement précédée de « Pour affiner : ».
   return (
-    <section className="questions-theme">
-      <p className="questions-theme-titre">
-        Préciser ma situation pour ce thème <span className="progression">{progression}</span>
-      </p>
-      <div className="questions-theme-corps" aria-label={`Questions sur le thème ${theme}`}>
-        <SectionQuestions questions={questions} profil={profil} onReponse={onReponse} idPrefixe={`theme-${idTheme}`} />
-      </div>
+    <section className="questions-theme" aria-label={`Questions sur le thème ${theme}`}>
+      <SectionQuestions questions={questions} profil={profil} onReponse={onReponse} idPrefixe={`theme-${idTheme}`} prefixe="Pour affiner : " />
     </section>
   );
 }
@@ -406,7 +416,9 @@ function CarteTheme({
   questionsTheme,
   onReponse,
   ouvertInitial,
+  vueInitiale,
   masquerNonConcernes,
+  sansFlux,
 }: {
   card: CardTheme;
   profil: ProfilPartiel;
@@ -414,17 +426,42 @@ function CarteTheme({
   questionsTheme: ChampProfil[];
   onReponse: SurReponse;
   ouvertInitial?: string;
+  vueInitiale?: VueInitiale;
   masquerNonConcernes: boolean;
+  // Mode « Simuler pour moi » : pas de flux de bulles de paroles.
+  sansFlux: boolean;
 }) {
   const { theme, absents, enCoursAnalyse } = card;
-  // Option du visiteur : les candidats dont les mesures ne changent rien à sa situation (« non concerné ») sont retirés.
-  const lignes = masquerNonConcernes ? card.lignes.filter((l) => l.projection?.niveau !== "non_concerne") : card.lignes;
+  const [ouvert, setOuvert] = useState<string | null>(ouvertInitial ?? null);
+  // Option du visiteur : les candidats dont les mesures ne changent rien à sa situation sont retirés. « Non concerné » et
+  // « sans indicateur » sont une seule catégorie : le masquage retire les deux. Un candidat ouvert reste affiché (arrivée
+  // par un lien, ou détail déjà ouvert), même s'il fait partie de cette catégorie.
+  const lignes = masquerNonConcernes ? card.lignes.filter((l) => !l.projection || (l.projection.niveau !== "non_concerne" && l.projection.niveau !== null) || l.meta.slug === ouvert) : card.lignes;
   const nombreMasques = card.lignes.length - lignes.length;
   const autres = nombreMasques + absents.length;
-  const [ouvert, setOuvert] = useState<string | null>(ouvertInitial ?? null);
   const ligneOuverte = lignes.find((l) => l.meta.slug === ouvert) ?? null;
   const idDetail = `detail-${theme.id}`;
 
+  // « +X » unique : les candidats sans mesure sur ce thème et ceux dont les mesures ne changent rien à la situation du
+  // visiteur (masqués). Une vraie infobulle (survol ET focus clavier) l'explique ; elle ne parle de « votre situation »
+  // que si des candidats ont été masqués pour cette raison, donc seulement une fois le visiteur renseigné — sinon ce
+  // sont simplement des candidats sans mesure sur le thème.
+  const pastillePlus =
+    autres > 0 ? (
+      <li className="portraits-plus avec-infobulle">
+        <span className="portrait-plus" tabIndex={0} role="img" aria-label={`${autres} autre${autres > 1 ? "s" : ""} candidat${autres > 1 ? "s" : ""}`} aria-describedby={`infobulle-${theme.id}`}>
+          +{autres}
+        </span>
+        <span className="infobulle" role="tooltip" id={`infobulle-${theme.id}`}>
+          {nombreMasques > 0 ? "Ces candidats n'ont aucune mesure qui change votre situation sur ce thème." : "Ces candidats n'ont aucune mesure sur ce thème."}
+        </span>
+      </li>
+    ) : null;
+  const portraitsDe = (liste: LigneCandidat[], neutre = false) =>
+    liste.map((ligne) => <Portrait key={ligne.meta.slug} ligne={ligne} ouvert={ouvert === ligne.meta.slug} idDetail={idDetail} onBasculer={() => basculer(ligne.meta.slug)} neutre={neutre} />);
+  const neutres = lignes.filter((l) => zoneDe(l) === "neutres");
+  // Zones du tiroir seulement quand des indicateurs existent (mode simulateur, formulaire enregistré).
+  const enZones = lignes.some((l) => l.projection);
   // Animations d'ouverture et de fermeture du candidat (désactivées si le visiteur demande de limiter les animations).
   // Ouverture : la pastille blanche qui entoure icône et libellé grandit à partir du seul médaillon. Elle est centrée,
   // donc son bord gauche — et le médaillon, posé contre ce bord — glisse vers la gauche, du centre à sa place finale ;
@@ -528,10 +565,10 @@ function CarteTheme({
         ) : (
           <>
             {ligneOuverte ? (
-              <DetailCandidat ligne={ligneOuverte} profil={profil} id={idDetail} onFermer={fermer} />
+              <DetailCandidat ligne={ligneOuverte} profil={profil} id={idDetail} onFermer={fermer} vueInitiale={vueInitiale} />
             ) : (
               <>
-                {lignes.length > 0 && questionsTheme.length === 0 && <FluxCandidats key={lignes.map((l) => l.meta.slug).join("|")} lignes={lignes} />}
+                {lignes.length > 0 && questionsTheme.length === 0 && !sansFlux && <FluxCandidats key={lignes.map((l) => l.meta.slug).join("|")} lignes={lignes} />}
                 {questionsTheme.length > 0 && <QuestionsDuTheme theme={theme.libelle} idTheme={theme.id} questions={questionsTheme} profil={profil} onReponse={onReponse} />}
                 {/* Les portraits, toujours visibles en pied de carte ,
                     suffisent à inviter au clic : pas besoin de le répéter ici. */}
@@ -545,31 +582,33 @@ function CarteTheme({
       </div>
 
       {!enCoursAnalyse && (
-        <footer className="carte-pied">
-          <ul className="portraits" aria-label={`Candidats, thème ${theme.libelle}`}>
-            {lignes.map((ligne) => (
-              <Portrait
-                key={ligne.meta.slug}
-                ligne={ligne}
-                ouvert={ouvert === ligne.meta.slug}
-                idDetail={idDetail}
-                onBasculer={() => basculer(ligne.meta.slug)}
-              />
-            ))}
-            {/* « +X » unique : les candidats sans mesure sur ce thème et ceux dont les mesures ne changent rien à la
-                situation du visiteur (masqués). Une vraie infobulle (survol ET focus clavier) l'explique ; elle ne parle
-                de « votre situation » que si des candidats ont été masqués pour cette raison, donc seulement une fois le
-                visiteur renseigné — sinon ce sont simplement des candidats sans mesure sur le thème. */}
-            {autres > 0 && (
-              <li className="portraits-plus avec-infobulle">
-                <span className="portrait-plus" tabIndex={0} role="img" aria-label={`${autres} autre${autres > 1 ? "s" : ""} candidat${autres > 1 ? "s" : ""}`} aria-describedby={`infobulle-${theme.id}`}>
-                  +{autres}
-                </span>
-                <span className="infobulle" role="tooltip" id={`infobulle-${theme.id}`}>
-                  {nombreMasques > 0 ? "Ces candidats n'ont aucune mesure qui change votre situation sur ce thème." : "Ces candidats n'ont aucune mesure sur ce thème."}
-                </span>
-              </li>
-            )}          </ul>
+        <footer className={`carte-pied${enZones ? " carte-pied--zones" : ""}`}>
+          {enZones ? (
+            // Simulateur : trois zones, teintées dans la couleur de leur niveau. À gauche ceux qui améliorent la situation du
+            // visiteur (vert), au milieu les mixtes (neutre), à droite ceux qui la dégradent (rouge). Dans
+            // chaque zone, l'ordre reste alphabétique.
+            <>
+            <div className="tiroir-zones">
+              {ZONES_TIROIR.map((zone) => (
+                <ul className="portraits" data-zone={zone.id} key={zone.id} aria-label={`${zone.libelle}, thème ${theme.libelle}`}>
+                  {portraitsDe(lignes.filter((l) => zoneDe(l) === zone.id))}
+                </ul>
+              ))}
+            </div>
+            {/* Hors couleurs : non concernés (si on les affiche) et « +X », sur une ligne à part, sans indicateur. */}
+            {(neutres.length > 0 || pastillePlus) && (
+              <ul className="portraits" data-zone="neutres" aria-label={`Candidats non concernés, thème ${theme.libelle}`}>
+                {portraitsDe(neutres, true)}
+                {pastillePlus}
+              </ul>
+            )}
+            </>
+          ) : (
+            <ul className="portraits" aria-label={`Candidats, thème ${theme.libelle}`}>
+              {portraitsDe(lignes)}
+              {pastillePlus}
+            </ul>
+          )}
         </footer>
       )}
     </article>
@@ -586,25 +625,45 @@ interface VueThemesProps {
   // Vrai après validation du formulaire général : les questions propres à chaque thème deviennent disponibles.
   questionsActives: boolean;
   onReponse: SurReponse;
-  ouvertInitial?: { theme: string; candidat: string };
+  // ue : onglet ouvert d'emblée (« detail » = le détail des mesures) ; par défaut le résumé.
+  ouvertInitial?: { theme: string; candidat: string; vue?: VueInitiale };
+  // Mode « Simuler pour moi » : le flux de bulles de paroles n'est pas affiché.
+  sansFlux?: boolean;
 }
 
-export function VueThemes({ cards, profil, personnalise, questionnaire, questionsActives, onReponse, ouvertInitial }: VueThemesProps) {
+export function VueThemes({ cards, profil, personnalise, questionnaire, questionsActives, onReponse, ouvertInitial, sansFlux = false }: VueThemesProps) {
   const [masquer, setMasquer] = useState(true);
   const masquerNonConcernes = personnalise && masquer;
+  // Tous les tiroirs de portraits ont la même hauteur (celle du plus haut), avec ou sans simulateur : on mesure le plus
+  // haut à sa hauteur naturelle, puis on l'impose à tous (variable CSS sur la grille). Recalcul quand le contenu change
+  // et quand la fenêtre est redimensionnée (le nombre de lignes de portraits dépend de la largeur des cartes).
+  const grille = useRef<HTMLDivElement>(null);
+  useEffetLayout(() => {
+    const element = grille.current;
+    if (!element) return;
+    const egaliser = () => {
+      element.style.setProperty("--tiroir-hauteur", "0px");
+      const hauteurs = [...element.querySelectorAll<HTMLElement>(".carte-pied")].map((tiroir) => tiroir.getBoundingClientRect().height);
+      element.style.setProperty("--tiroir-hauteur", `${Math.ceil(Math.max(0, ...hauteurs))}px`);
+    };
+    egaliser();
+    window.addEventListener("resize", egaliser);
+    return () => window.removeEventListener("resize", egaliser);
+  }, [cards, personnalise, masquer]);
   return (
     <section className="themes">
       {personnalise && (
-        <div className="legende">
-          <div className="legende-entete">
-            <Info size={20} aria-hidden="true" focusable="false" />
-            <p className="legende-titre">Comment lire les indicateurs</p>
+        <section className="legende" aria-label="Comment lire les indicateurs">
+          <div className="legende-tete">
+            <p className="legende-titre">
+              <Info size={20} aria-hidden="true" focusable="false" />
+              Comment lire les indicateurs
+            </p>
+            <p className="legende-intro">
+              Ce que deviendrait votre situation si les mesures du candidat sur ce thème s'appliquaient. Règles explicites,
+              pas de score global : plus vous répondez, plus l'indicateur s'affine.
+            </p>
           </div>
-          <p className="legende-intro">
-            Pour chaque thème, l'indicateur dit ce que deviendrait votre situation si les mesures du candidat sur ce
-            thème s'appliquaient. Il est calculé par des règles explicites, à partir de vos réponses et des mesures
-            sourcées, et il n'existe pas de score global. Plus vous répondez, plus il s'affine.
-          </p>
           <dl>
             {ORDRE_LEGENDE.map((niveau) => (
               <div key={niveau} data-niveau={niveau}>
@@ -616,34 +675,34 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
                   {/* Même niveau, pas un cinquième : « à préciser » n'est qu'une mention posée sur « mixte ». */}
                   {niveau === "mixte" && (
                     <span className="legende-precision">
-                      <span className="a-preciser">à préciser</span> : quand nous ne savons pas encore si les mesures vous
-                      concernent, l'indicateur est « mixte » par prudence. Répondre aux questions du thème permet de le
-                      préciser.
+                      <span className="a-preciser">à préciser</span> quand nous ne savons pas encore si les mesures vous
+                      concernent : répondez aux questions du thème.
+                    </span>
+                  )}
+                  {/* « Pas d'indicateur » (mesures ou réponses qui ne permettent pas de conclure) est la même catégorie. */}
+                  {niveau === "non_concerne" && (
+                    <span className="legende-precision">
+                      Vaut aussi quand les mesures ou vos réponses ne permettent pas de conclure : mieux vaut ne rien afficher
+                      qu'un indicateur douteux.
                     </span>
                   )}
                 </dd>
+                {niveau === "non_concerne" && (
+                  <dd className="legende-option">
+                    <label className="interrupteur">
+                      <input type="checkbox" role="switch" checked={masquer} onChange={(e) => setMasquer(e.target.checked)} />
+                      <span className="interrupteur-piste" aria-hidden="true" />
+                      Masquer les candidats dont les mesures ne changent rien à ma situation
+                    </label>
+                  </dd>
+                )}
               </div>
-            ))}            <div>
-              <dt>
-                <span className="sans-badge">Pas d'indicateur</span>
-              </dt>
-              <dd>
-                Les mesures ou vos réponses ne permettent pas de conclure. Nous préférons ne rien afficher plutôt qu'un
-                indicateur douteux.
-              </dd>
-              <dd className="legende-option">
-                <label className="interrupteur">
-                  <input type="checkbox" role="switch" checked={masquer} onChange={(e) => setMasquer(e.target.checked)} />
-                  <span className="interrupteur-piste" aria-hidden="true" />
-                  Masquer les candidats dont les mesures ne changent rien à ma situation
-                </label>
-              </dd>
-            </div>
+            ))}
           </dl>
-        </div>
+        </section>
       )}
 
-      <div className="grille-themes">
+      <div className="grille-themes" ref={grille}>
         {cards.map((card) => (
           <CarteTheme
             key={card.theme.id}
@@ -652,7 +711,9 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
             questionsTheme={questionsActives ? questionsDuTheme(questionnaire, card.theme.id) : []}
             onReponse={onReponse}
             ouvertInitial={ouvertInitial?.theme === card.theme.id ? ouvertInitial.candidat : undefined}
+            vueInitiale={ouvertInitial?.theme === card.theme.id ? ouvertInitial.vue : undefined}
             masquerNonConcernes={masquerNonConcernes}
+            sansFlux={sansFlux}
           />
         ))}
       </div>

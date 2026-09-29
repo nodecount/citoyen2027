@@ -1,8 +1,10 @@
+import { BookOpen, SlidersHorizontal } from "lucide-react";
 import { useEffect, useState } from "react";
 import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/bases";
 import { lireOuverture } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
+import { lireMode, memoriserMode, type ModeAffichage } from "./memoireReponses";
 import { ModaleConfirmation } from "./ModaleConfirmation";
 import PageQuestionsGenerales from "./PageQuestionsGenerales";
 import { compterReponses } from "../questionnaire";
@@ -19,17 +21,24 @@ interface PageThemesProps {
   onValider: (profil: ProfilPartiel) => void;
   onEffacer: () => void;
   onReponse: SurReponse;
+  // Mode d'affichage de départ (par défaut : le dernier choix du visiteur, sinon « simulateur »).
+  modeInitial?: ModeAffichage;
 }
 
 // Page du simulateur : les thèmes, et sur chacun les portraits cliquables des candidats concernés. Aucun indicateur
 // tant que le formulaire général n'a pas été validé (et qu'il contient au moins une réponse).
-export default function PageThemes({ base, profil, generalSoumis, onValider, onEffacer, onReponse }: PageThemesProps) {
+export default function PageThemes({ base, profil, generalSoumis, onValider, onEffacer, onReponse, modeInitial }: PageThemesProps) {
+  // « Explorer les mesures » : les programmes seuls (ni indicateur, ni légende, ni formulaire, ni questions par thème).
+  // « Simuler pour moi » : tout ce qui rattache les mesures à la situation du visiteur.
+  const [mode, setMode] = useState<ModeAffichage>(() => modeInitial ?? lireMode());
+  useEffect(() => memoriserMode(mode), [mode]);
+  const simulateur = mode === "simulateur";
   // Le formulaire général s'ouvre ici, avant les cartes de thèmes, plutôt que de rediriger vers une autre page.
   const [formulaireOuvert, setFormulaireOuvert] = useState(false);
   const [confirmerEffacement, setConfirmerEffacement] = useState(false);
   const { avecDonnees: candidats, enCoursAnalyse } = candidatsDeBase(base);
   const manquants = resumesManquants(base, candidats);
-  const personnalise = generalSoumis && aDesInformations(profil);
+  const personnalise = simulateur && generalSoumis && aDesInformations(profil);
   const reponsesGenerales = compterReponses(base.questionnaire.generales, profil);
   const cards = construireCards(base.themes, candidats, personnalise ? profil : null);
   // Arrivée depuis le tableau de l'accueil (ou une adresse partagée) : la carte du thème, avec ce candidat ouvert.
@@ -42,7 +51,18 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
     <>
       <h1>Simulateur</h1>
 
-      {formulaireOuvert && (
+      <div className="bascule-mode" role="group" aria-label="Mode d'affichage">
+        <button type="button" aria-pressed={!simulateur} onClick={() => setMode("exploration")}>
+          <BookOpen size={18} aria-hidden="true" focusable="false" />
+          Explorer les mesures
+        </button>
+        <button type="button" aria-pressed={simulateur} onClick={() => setMode("simulateur")}>
+          <SlidersHorizontal size={18} aria-hidden="true" focusable="false" />
+          Simuler pour moi
+        </button>
+      </div>
+
+      {simulateur && formulaireOuvert && (
         <PageQuestionsGenerales
           integre
           questions={base.questionnaire.generales}
@@ -84,7 +104,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           </button>
         </div>
       )}
-      {!personnalise && !formulaireOuvert && (
+      {simulateur && !personnalise && !formulaireOuvert && (
         <div className="bandeau-accueil bandeau-accueil--compact">
           <p className="chapeau">
             {generalSoumis && <strong>Aucune réponse donnée. </strong>}
@@ -100,8 +120,9 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
         cards={cards}
         profil={profil}
         personnalise={personnalise}
+        sansFlux={simulateur}
         questionnaire={base.questionnaire}
-        questionsActives={generalSoumis}
+        questionsActives={simulateur && generalSoumis}
         onReponse={onReponse}
         ouvertInitial={ouverture ?? undefined}
       />
