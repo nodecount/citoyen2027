@@ -31,7 +31,7 @@ export function convictionsVisibles(simulateur: boolean, convictions: Conviction
 const RUBRIQUES = [...new Set(GROUPES_SOCIAUX.map((g) => g.rubrique))];
 
 // Bloc de questions « Mes convictions » : facultatif, séparé de « Ma situation » (aucun score, aucun classement).
-export function BlocConvictions({ convictions, onChange, aveugle }: { convictions: Convictions; onChange: (c: Convictions) => void; aveugle: boolean }) {
+export function BlocConvictions({ convictions, onChange }: { convictions: Convictions; onChange: (c: Convictions) => void }) {
   const basculer = (id: string, coche: boolean) =>
     onChange({ ...convictions, groupes: coche ? [...convictions.groupes, id] : convictions.groupes.filter((g) => g !== id) });
   const [confirmerEffacement, setConfirmerEffacement] = useState(false);
@@ -42,7 +42,7 @@ export function BlocConvictions({ convictions, onChange, aveugle }: { conviction
         Facultatif. Ces choix s'affichent à part, dans le détail de chaque candidat : ils ne changent pas les indicateurs « Ma situation ». Ils sont gardés dans votre navigateur tant que vous ne les effacez pas.
       </p>
       <p className="hint">
-        Repères : ▲ améliorant, ◆ mixte, ○ non concerné, ▼ dégradant, pour les groupes choisis, pas pour vous. Intégrité : ■ condamnation recensée, □ aucune recensée, ? non vérifié.
+        Repères : ▲ améliorant, ◆ mixte, ○ non concerné, ▼ dégradant, pour les groupes choisis, pas pour vous.
       </p>
       <p className="question-convictions">Je veux un candidat dont les mesures améliorent la situation de :</p>
       {RUBRIQUES.map((rubrique) => (
@@ -61,7 +61,14 @@ export function BlocConvictions({ convictions, onChange, aveugle }: { conviction
         <span className="interrupteur-piste" aria-hidden="true" />
         Je tiens à un candidat sans condamnation définitive
       </label>
-      {aveugle && convictions.exemplarite && <p className="hint">Les faits d'intégrité sont masqués tant que les candidats sont masqués.</p>}
+      {/* Le simulateur est toujours à l'aveugle : les faits d'intégrité ne s'affichent jamais, ils servent seulement à écarter
+          des candidats du résultat « convictions » de la card « candidat idéal », qui n'existe qu'avec au moins un groupe. */}
+      {convictions.exemplarite &&
+        (convictions.groupes.length === 0 ? (
+          <p className="hint">Cette option ne change rien tant que vous n'avez pas choisi au moins un groupe : elle écarte seulement des candidats du résultat « convictions ».</p>
+        ) : (
+          <p className="hint">Les candidats à condamnation définitive recensée sont écartés du résultat « convictions » ; les faits eux-mêmes ne sont pas affichés (simulateur à l'aveugle).</p>
+        ))}
       {aDesConvictions(convictions) && (
         <button type="button" className="secondaire" onClick={() => setConfirmerEffacement(true)}>
           Effacer mes convictions

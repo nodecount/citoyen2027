@@ -25,7 +25,7 @@ const rendre = (c: Parameters<typeof PanneauConvictions>[0]) => renderToStaticMa
 
 describe("BlocConvictions", () => {
   it("propose les groupes par rubrique en cases à cocher et l'exemplarité en interrupteur, facultatifs", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={CONVICTIONS_VIDES} onChange={() => {}} aveugle={false} />);
+    const html = renderToStaticMarkup(<BlocConvictions convictions={CONVICTIONS_VIDES} onChange={() => {}} />);
     expect(html).toContain("Mes convictions");
     for (const t of ["Situation professionnelle", "Indépendant(e)", "Retraité(e)", "Propriétaire", "Familles avec enfants à charge", "Moins de 1 200 €", "Plus de 5 000 €"]) expect(html).toContain(t);
     expect(html).toContain('type="checkbox"');
@@ -34,24 +34,39 @@ describe("BlocConvictions", () => {
     expect(html).toContain("gardés dans votre navigateur");
   });
   it("coche exactement ce que le visiteur a choisi", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ groupes: ["tranche_age:moins_30"], exemplarite: false }} onChange={() => {}} aveugle={false} />);
+    const html = renderToStaticMarkup(<BlocConvictions convictions={{ groupes: ["tranche_age:moins_30"], exemplarite: false }} onChange={() => {}} />);
     const cochees = html.match(/<input[^>]*type="checkbox"[^>]*checked=""[^>]*>/g) ?? [];
     expect(cochees).toHaveLength(1);
     expect(html).toMatch(/checked=""[^>]*\/?>Moins de 30 ans/);
   });
-  it("donne une légende propre à l'axe : mêmes niveaux que « Ma situation » mais pour les groupes choisis, et symboles d'intégrité", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={CONVICTIONS_VIDES} onChange={() => {}} aveugle={false} />);
+  it("donne une légende propre à l'axe : mêmes niveaux que « Ma situation » mais pour les groupes choisis, sans symboles qui ne s'affichent jamais", () => {
+    const html = renderToStaticMarkup(<BlocConvictions convictions={CONVICTIONS_VIDES} onChange={() => {}} />);
     expect(html).toContain("pour les groupes choisis, pas pour vous");
-    for (const symbole of ["■", "□", "?"]) expect(html).toContain(symbole);
+    for (const symbole of ["▲", "◆", "○", "▼"]) expect(html).toContain(symbole);
+    // Les faits d'intégrité ne sont jamais affichés (simulateur à l'aveugle) : pas de légende pour leurs symboles.
+    for (const symbole of ["■", "□", "Intégrité :"]) expect(html).not.toContain(symbole);
   });
   it("l'effacement est confirmé : la modale est fermée par défaut", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ groupes: ["tranche_age:moins_30"], exemplarite: false }} onChange={() => {}} aveugle={false} />);
+    const html = renderToStaticMarkup(<BlocConvictions convictions={{ groupes: ["tranche_age:moins_30"], exemplarite: false }} onChange={() => {}} />);
     expect(html).toContain("Effacer mes convictions");
     expect(html).not.toContain("alertdialog");
   });
-  it("mode aveugle : dit que l'intégrité est masquée", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ groupes: [], exemplarite: true }} onChange={() => {}} aveugle={true} />);
-    expect(html).toContain("masqués");
+  it("« sans condamnation définitive » cochée sans groupe : dit qu'elle ne change rien", () => {
+    const html = renderToStaticMarkup(<BlocConvictions convictions={{ groupes: [], exemplarite: true }} onChange={() => {}} />);
+    expect(html).toContain("ne change rien");
+    expect(html).toContain("choisi au moins un groupe");
+  });
+  it("« sans condamnation définitive » cochée avec un groupe : dit ce qu'elle fait (écarter), et que les faits ne s'affichent pas", () => {
+    const html = renderToStaticMarkup(<BlocConvictions convictions={{ groupes: ["tranche_age:moins_30"], exemplarite: true }} onChange={() => {}} />);
+    expect(html).toContain("écartés du résultat");
+    expect(html).toContain("ne sont pas affichés");
+    expect(html).not.toContain("ne change rien");
+    expect(html).not.toContain("masqués tant que"); // ancien texte, faux : le masquage n'a plus rien de temporaire
+  });
+  it("option décochée : aucune mention de l'option", () => {
+    const html = renderToStaticMarkup(<BlocConvictions convictions={{ groupes: ["tranche_age:moins_30"], exemplarite: false }} onChange={() => {}} />);
+    expect(html).not.toContain("ne change rien");
+    expect(html).not.toContain("écartés du résultat");
   });
 });
 

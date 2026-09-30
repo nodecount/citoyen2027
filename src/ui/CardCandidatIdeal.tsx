@@ -42,7 +42,7 @@ function BlocFlou({ resultat }: { resultat: ResultatAffiche }) {
         {lettres.map((lettre) => (
           <Pastille key={lettre} slug={`${PREFIXE_ANONYME}${lettre}`} nom={`Candidat ${lettre}`} />
         ))}
-        <p className="ideal-nom">Prénom Nom, parti du candidat</p>
+        <p>Prénom Nom, parti du candidat</p>
       </div>
       <p className="hint">Identité masquée.</p>
     </div>

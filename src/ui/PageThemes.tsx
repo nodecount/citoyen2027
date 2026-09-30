@@ -191,7 +191,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           </button>
         </div>      )}
 
-      {formulaireVisible && <BlocConvictions convictions={convictions} onChange={setConvictions} aveugle={aveugle} />}
+      {formulaireVisible && <BlocConvictions convictions={convictions} onChange={setConvictions} />}
 
       {personnalise && (situationIdeale || convictionsIdeales) && (
         <CardCandidatIdeal

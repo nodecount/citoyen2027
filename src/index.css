@@ -2495,17 +2495,6 @@ button.bouton-en-ligne {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
 }
-.interrupteur--candidats {
-  margin: 0.75rem 0;
-}
-.revelation {
-  margin: 0.5rem 0 1rem;
-}
-.revelation ul {
-  columns: 2;
-  margin: 0.5rem 0 0;
-  padding-left: 1.25rem;
-}
 .convictions {
   margin: 1rem 0;
   padding: 1rem;
@@ -2566,7 +2555,6 @@ button.bouton-en-ligne {
   filter: blur(7px);
   user-select: none;
   pointer-events: none;
-  transition: filter 0.4s ease;
 }
 .ideal-gagnants {
   list-style: none;
@@ -2585,11 +2573,6 @@ button.bouton-en-ligne {
 @media (max-width: 800px) {
   .carte-ideal {
     grid-template-columns: 1fr;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .ideal-flou {
-    transition: none;
   }
 }
 .panneau-convictions {
