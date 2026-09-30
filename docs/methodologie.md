@@ -108,4 +108,22 @@ Axe séparé de l'indicateur « Ma situation » : aucun score, aucun classement,
   valide : « non vérifié »**, jamais « aucune condamnation ».
 - Mêmes règles pour tous les candidats. Aucune donnée n'est saisie sans source relue par le porteur du projet. Les
   condamnations effacées (amnistie, réhabilitation) sont à traiter selon un avis juridique avant publication.
-- Mode aveugle : les faits d'intégrité ne s'affichent pas (un casier identifie le candidat).
+- Mode aveugle : les faits d'intégrité ne s'affichent pas (un casier identifie le candidat). Le simulateur étant toujours à
+  l'aveugle, ils ne servent qu'à écarter des candidats du résultat « convictions » de la card « candidat idéal ».
+
+## Card « candidat idéal » (2026-09-30)
+
+Seul endroit du produit où un candidat est désigné, par exception au principe « pas de classement » (voir CLAUDE.md).
+
+- **Règle** (`src/engine/candidatIdeal.ts`) : solde = nombre de thèmes « améliorant » moins nombre de thèmes « dégradant » pour le
+  visiteur ; « mixte », « non concerné » et l'absence d'indicateur comptent zéro ; aucune pondération. Pour les convictions, le
+  solde porte sur les constats (groupe choisi × thème). Les deux résultats sont séparés et peuvent désigner des candidats différents.
+- **Limites dites au visiteur** : le solde compense un thème par un autre (choix assumé) et dépend du nombre d'indicateurs
+  disponibles ; la couverture (« sur N thèmes analysés ») est toujours affichée.
+- **Égalités** : tous les ex æquo, jamais départagés par l'ordre alphabétique. Un candidat sans aucun indicateur n'est pas
+  éligible : sans données, il gagnerait par absence de mesures dégradantes.
+- **Intégrité** : un candidat à condamnation définitive **recensée** est écarté du résultat convictions quand le visiteur tient
+  à un candidat « sans condamnation définitive » ; le nombre d'écartés est indiqué, pas leur identité tant que la card est
+  floutée. Un candidat « non vérifié » n'est pas écarté.
+- **Identité** : tant que la card est floutée, ni le nom, ni le slug, ni la photo ne sont dans la page (le flou CSS n'est pas la
+  protection).
