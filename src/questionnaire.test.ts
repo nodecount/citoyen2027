@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { listerBases, chargerBase } from "./data/bases";
-import { CHAMPS_PROFIL, compterReponses, construireQuestionnaire, questionsDuTheme, questionsVisibles } from "./questionnaire";
+import { CHAMPS_PROFIL, compterReponses, construireQuestionnaire, questionsDuTheme, questionsRestantes, questionsVisibles } from "./questionnaire";
 import type { ChampProfil, Theme } from "./types";
 
 const THEMES: Theme[] = ["a", "b", "c"].map((id) => ({ id, libelle: id, question_citoyen: "?", description: "d", statut: "populated" as const }));
@@ -130,5 +130,23 @@ describe.each(listerBases())("questionnaire de la base « $id »", (info) => {
     const visibles = questionsVisibles(base.questionnaire.generales, {}).filter((q) => !q.sensible);
     expect(visibles.length).toBeLessThanOrEqual(12);
     expect(visibles.length).toBeGreaterThan(3);
+  });
+});
+
+describe("questionsRestantes", () => {
+  const champs = [Q("age"), Q("q1"), Q("q2"), Q("cond", { afficher_si: { champ: "age", valeurs: ["x"] } })];
+  const questionnaire = construireQuestionnaire(champs, { age: ["a", "b"], q1: ["a"], q2: ["b"], cond: ["c"] }, THEMES);
+  it("compte les questions de thème non répondues (les générales ne comptent pas)", () => {
+    expect(questionsRestantes(questionnaire, {})).toBe(2);
+  });
+  it("une réponse la retire du compte", () => {
+    expect(questionsRestantes(questionnaire, { q1: "x" })).toBe(1);
+  });
+  it("une question conditionnelle ne compte qu'une fois sa condition remplie", () => {
+    expect(questionsRestantes(questionnaire, { age: "x" })).toBe(3);
+    expect(questionsRestantes(questionnaire, { age: "y" })).toBe(2);
+  });
+  it("sans question de thème : zéro", () => {
+    expect(questionsRestantes(construireQuestionnaire([Q("age")], { age: ["a", "b"] }, THEMES), {})).toBe(0);
   });
 });

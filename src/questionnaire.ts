@@ -39,6 +39,15 @@ export function questionsDuTheme(questionnaire: Questionnaire, themeId: string):
   return questionnaire.parTheme.find((s) => s.theme.id === themeId)?.questions ?? [];
 }
 
+// Questions propres aux thèmes que le visiteur n'a pas encore répondues (parmi celles visibles), tous thèmes confondus.
+export function questionsRestantes(questionnaire: Questionnaire, profil: ProfilPartiel): number {
+  const ids = new Set<string>();
+  for (const section of questionnaire.parTheme) {
+    for (const q of questionsVisibles(section.questions, profil)) if (!estRepondue(q, profil)) ids.add(q.id);
+  }
+  return ids.size;
+}
+
 // Questions actuellement visibles (les conditionnelles n'apparaissent que si leur condition est remplie).
 export function questionsVisibles(questions: ChampProfil[], profil: ProfilPartiel): ChampProfil[] {
   return questions.filter((q) => questionVisible(q, profil));

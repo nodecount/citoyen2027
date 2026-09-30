@@ -26,6 +26,14 @@ describe("simulateur à l'aveugle", () => {
     expect(new Set(correspondance.map((c) => c.lettre)).size).toBe(correspondance.length);
   });
 
+  it("la correspondance donne aussi le slug et le parti (pour la card candidat idéal)", () => {
+    const base = chargerBase("agregateurs");
+    const candidats = candidatsDeBase(base).avecDonnees;
+    const { correspondance } = anonymiserCards(construireCards(base.themes, candidats, null), 7);
+    const premier = candidats[0].meta;
+    expect(correspondance.find((c) => c.slug === premier.slug)).toMatchObject({ nom: premier.nom, parti: premier.parti });
+  });
+
   it("la même graine donne les mêmes lettres, une autre graine les mélange autrement", () => {
     const base = chargerBase("agregateurs");
     const cards = construireCards(base.themes, candidatsDeBase(base).avecDonnees, null);

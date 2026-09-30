@@ -16,6 +16,8 @@ export const PREFIXE_ANONYME = "anonyme-";
 export interface Correspondance {
   lettre: string;
   nom: string;
+  slug: string;
+  parti: string;
 }
 
 const MOTS_OUTILS = new Set(["de", "du", "des", "le", "la", "les", "van", "von", "der", "den", "el", "al"]);
@@ -120,6 +122,6 @@ export function anonymiserCards(cards: CardTheme[], graine: number): { cards: Ca
       lignes: [...card.lignes].sort((a, b) => rangDe(a) - rangDe(b)).map(ligneAnonyme),
       absents: card.absents.map(anonyme),
     })),
-    correspondance: ordre.map((slug, i) => ({ lettre: lettreDuRang(i), nom: metas.get(slug)!.nom })),
+    correspondance: ordre.map((slug, i) => ({ lettre: lettreDuRang(i), nom: metas.get(slug)!.nom, slug, parti: metas.get(slug)!.parti })),
   };
 }
