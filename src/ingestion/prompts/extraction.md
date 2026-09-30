@@ -86,6 +86,8 @@ Correspondances exactes (à appliquer telles quelles quand le texte les vise) :
   [`apprenti`] ; « étudiants étrangers » → `statut_professionnel` : [`etudiant`] ET `nationalite` : [`europeenne`, `hors_ue`].
 - « propriétaires de 4 logements ou plus (hors résidence principale) » → `logements_hors_residence` : [`quatre_ou_plus`].
 - « propriétaires de véhicules thermiques » → `vehicule` : [`thermique`].
+- « usagers de l'autoroute » ou « péages » → `vehicule` : [`thermique`, `electrique_hybride`] ET `usage_autoroute` :
+  [`oui`] (les deux critères ensemble : `usage_autoroute` n'est posé qu'aux personnes qui ont un véhicule).
 - « métiers pénibles » → `metier_penible` : [`oui`] ; « carrière longue / commencé à travailler avant 20 ans » →
   `carriere_longue` : [`oui`] ; « aidants familiaux » → `aidant_familial` : [`oui`].
 - « nés en France de parents étrangers » → `ne_en_france_parents_etrangers` : [`oui`] ; « habitants des zones rurales » →

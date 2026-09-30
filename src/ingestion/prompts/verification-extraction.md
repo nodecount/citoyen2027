@@ -9,6 +9,11 @@ document ne précise pas** (« le calendrier n'est pas précisé ») ne peut pas
 sanctionne pas. Sanctionne seulement ce que les passages **contredisent** ou ce qu'ils **ne permettent pas
 d'affirmer** parmi les affirmations positives de la fiche.
 
+Tu rends **deux verdicts indépendants** par mesure : `verdict` porte sur la mesure elle-même (points 1, 2, 4 et
+5 ci-dessous) ; `verdict_effets` porte sur ses effets (point 3 seulement). Un défaut de ciblage ou de sens d'un
+effet donne « FAIL » sur `verdict_effets` et **ne doit pas** faire échouer `verdict` : la mesure reste alors
+affichable, sans effet. Une mesure sans effet a `verdict_effets` à « PASS ».
+
 Pour chaque mesure, vérifie que :
 
 1. **`resume_factuel`** n'affirme rien que les passages ne soutiennent (pas de mécanisme, de montant, de
@@ -25,6 +30,23 @@ Pour chaque mesure, vérifie que :
 5. **Neutralité** : `titre` et `resume_factuel` ne contiennent aucun vocabulaire évaluatif (favorable,
    défavorable, avantageux, injuste, ambitieux…) ni slogan non cité.
 
+Précisions de lecture :
+
+- **Critères du profil** (libellés exacts des valeurs possibles) : une valeur couvre tout ce que son libellé
+  couvre, par exemple `apprenti` = « Apprenti(e) ou alternant(e) ». Ne sanctionne pas une cible parce qu'elle
+  n'énumère pas un synonyme déjà compris dans le libellé.
+{{LIBELLES_PROFIL}}
+- **Attribution** : la liste des documents du corpus est fournie avant les mesures. Un document hébergé sur le
+  site du parti (adresse) est bien une publication du parti, même si le passage lui-même ne le dit pas ; ne
+  sanctionne pas une attribution qui s'appuie sur cette liste.
+- **Critère voisin = FAIL** : un critère du profil qui ne décrit pas exactement le public du passage, mais un
+  groupe plus large qui le contient (ex : `vehicule` pour les usagers d'autoroute, `tranche_age: 65_plus` pour les
+  résidents d'un EHPAD, `enfants_a_charge: au_moins_un` pour « dès le deuxième enfant »), est une approximation :
+  FAIL, le public doit alors passer en critère `autre`. Le même critère de rigueur vaut pour tous les candidats.
+- **Rien d'autre que le passage** : le résumé ne reprend que les mots du passage ; sanctionne tout mécanisme,
+  public ou ampleur (« réduire à 10 % » n'est pas « réduire de 10 % ») que le passage ne dit pas.
+
 Ne corrige jamais une fiche toi-même. Réponds uniquement par le tableau JSON demandé : pour chaque mesure son
-`titre` exact, un `verdict` (« PASS » ou « FAIL ») et, si « FAIL », une `raison` concise et concrète qui nomme
-le point en cause. Une seule anomalie suffit pour un FAIL.
+`titre` exact, `verdict` et `verdict_effets` (« PASS » ou « FAIL »), et, pour chaque « FAIL », la `raison` (mesure)
+ou la `raison_effets` (effets), concise et concrète, qui nomme le point en cause. Une seule anomalie suffit pour un
+FAIL de ce verdict.

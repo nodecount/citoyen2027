@@ -33,8 +33,9 @@ function proposition(id: string, overrides: Partial<Proposition> = {}): Proposit
 
 describe("evaluerProposition", () => {
   it("utilise la règle dédiée quand elle existe", () => {
-    const impact = evaluerProposition(profil, proposition("le-pen-fisc-002"));
-    expect(impact.concerne).toBe(true);
+    // Profil étudiant : la règle de philippe-pa-001 (mesure des actifs) conclut « non concerné ».
+    const impact = evaluerProposition(profil, proposition("philippe-pa-001"));
+    expect(impact.concerne).toBe(false);
   });
 
   it("retombe sur le comportement par défaut pour un id sans règle dédiée", () => {
@@ -44,14 +45,14 @@ describe("evaluerProposition", () => {
   });
 
   it("n'applique pas une règle dédiée quand le visiteur n'a pas répondu aux questions dont elle dépend", () => {
-    // Sans la tranche d'âge, « moins de 30 ans » ne peut pas être conclu : explication générale, jamais « non concerné ».
-    const impact = evaluerProposition({ logement: "locataire" }, proposition("le-pen-fisc-002"));
+    // Sans le statut professionnel, « actif » ne peut pas être conclu : explication générale, jamais « non concerné ».
+    const impact = evaluerProposition({ logement: "locataire" }, proposition("philippe-pa-001"));
     expect(impact.concerne).toBe(true);
-    expect(impact.explication).not.toContain("cible les moins de 30 ans");
+    expect(impact.explication).not.toContain("concerne les actifs");
   });
 
   it("applique la règle dédiée dès que ses questions sont répondues", () => {
-    expect(evaluerProposition({ tranche_age: "65_plus" }, proposition("le-pen-fisc-002")).concerne).toBe(false);
+    expect(evaluerProposition({ statut_professionnel: "etudiant" }, proposition("philippe-pa-001")).concerne).toBe(false);
   });
 
   it("déclare les champs requis de chaque règle dédiée, et rien de plus", () => {

@@ -74,6 +74,10 @@ describe("erreurSynthese (contrôles déterministes)", () => {
     expect(erreurSynthese(synthese({ texte: "x".repeat(1300) }), IDS)).toContain("long");
   });
 
+  it("refuse les balises parasites de la sortie du modèle", () => {
+    expect(erreurSynthese(synthese({ texte: `${TEXTE_VALIDE}</texte>\n</invoke>\n` }), IDS)).toContain("balises");
+  });
+
   it("refuse une URL ou un identifiant interne dans le texte : les sources sont ajoutées par l'interface", () => {
     expect(erreurSynthese(synthese({ texte: `${TEXTE_VALIDE} Voir https://exemple.fr/page.` }), IDS)).toContain("URL");
     expect(erreurSynthese(synthese({ texte: `${TEXTE_VALIDE} (test-fisc-001)` }), IDS)).toContain("identifiant");

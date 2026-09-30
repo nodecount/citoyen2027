@@ -1,4 +1,6 @@
 export type ModeIngestion = "corpus" | "recherche-web";
+// « api » : API payante (crédit). « cli » : commande `claude -p`, sur l'abonnement (mode corpus seulement).
+export type MoteurIngestion = "api" | "cli";
 
 export interface OptionsCLI {
   candidats: string[];
@@ -19,6 +21,9 @@ export interface OptionsCLI {
   // Refait contrôles, relecture et synthèse à partir des extractions DÉJÀ payées (cache), sans jamais rappeler
   // l'extraction : quelques centimes par thème, utile après un changement des règles de contrôle.
   retraiter: boolean;
+  moteur: MoteurIngestion;
+  // Moteur « cli » : plafond du nombre d'appels du run (les fenêtres de quota de l'abonnement remplacent le solde en euros).
+  maxAppels?: number;
 }
 
 export const BUDGET_PAR_DEFAUT_EUR = 2;
@@ -40,6 +45,7 @@ export function analyserArguments(argv: string[]): OptionsCLI {
     actualiserSources: false,
     syntheseSeule: false,
     retraiter: false,
+    moteur: "api",
   };
 
   for (const argument of argv) {
@@ -61,6 +67,14 @@ export function analyserArguments(argv: string[]): OptionsCLI {
         throw new Error(`--mode inconnu (« ${mode} ») : « corpus » ou « recherche-web » attendu`);
       }
       options.mode = mode;
+    } else if (argument.startsWith("--moteur=")) {
+      const moteur = argument.slice("--moteur=".length);
+      if (moteur !== "api" && moteur !== "cli") throw new Error(`--moteur inconnu (« ${moteur} ») : « api » ou « cli » attendu`);
+      options.moteur = moteur;
+    } else if (argument.startsWith("--max-appels=")) {
+      const n = Number(argument.slice("--max-appels=".length));
+      if (!Number.isInteger(n) || n <= 0) throw new Error("--max-appels invalide : un entier strictement positif est attendu");
+      options.maxAppels = n;
     } else if (argument.startsWith("--candidats=")) {
       options.candidats = argument.slice("--candidats=".length).split(",").filter(Boolean);
     } else if (argument.startsWith("--themes=")) {

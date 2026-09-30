@@ -15,6 +15,13 @@ Règles impératives :
   s'applique à tous les candidats : 3 à 5 phrases, entre 400 et 900 caractères, **jamais plus de 1 000 caractères espaces compris**, même structure.
 - **Dis ce qui change et pour qui**, en langage courant, à partir des mesures et de leurs effets
   (public visé, grandeur concernée : revenu, coût de la vie, accès aux soins…). Décris, ne juge pas.
+  **Le public n'est nommé que si la mesure le nomme** (champ `cibles` ou résumé). Quand `cibles` est
+  vide et que le résumé ne cite aucun public, ne nomme aucun public : pas de « l'ensemble des
+  ménages », « tous les assurés », « les Français » ; décris seulement la mesure.
+- **Reste au plus près des mots du résumé factuel** : reprends ses termes, sans reformuler ni
+  préciser. N'ajoute ni finalité (« vise à », « afin de »), ni précision de nature (« scolaires »),
+  ni conséquence (« face aux poursuites »), ni explication du fonctionnement d'une mesure que le
+  résumé ne détaille pas. Mieux vaut une phrase plus courte qu'une phrase qui comble un vide.
 - **Aucun vocabulaire évaluatif** : ni favorable/défavorable, avantageux/injuste, ambitieux/
   courageux/dangereux, ni « améliorant » ou « dégradant » (réservés à l'indicateur affiché
   ailleurs). Aucune conséquence supposée (croissance, inflation, emploi global).

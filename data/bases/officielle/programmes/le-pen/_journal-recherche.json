@@ -1,0 +1,326 @@
+[
+  {
+    "theme": "aides-etat",
+    "date": "2026-09-29",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 11,
+    "arret": "end_turn",
+    "duree_ms": 42554,
+    "jetons_entree": 21331,
+    "jetons_sortie": 5544,
+    "requetes": [],
+    "urls_lues": [
+      "https://mlafrance.fr/programme",
+      "https://rassemblementnational.fr/22-mesures",
+      "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+      "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-29T13-40-30-756Z-extraction-le-pen-aides-etat.json",
+    "empreinte_corpus": "9e423f78dbf48517",
+    "empreintes_documents": {
+      "programme-2022": "16fe5fb00cf36744",
+      "22-mesures": "9229eb047acd5574",
+      "petition-tva-100-produits": "0de02a458b0d4e2d",
+      "petition-tva-electricite": "c68d189aeb022115"
+    }
+  },
+  {
+    "theme": "education",
+    "date": "2026-09-29",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 5,
+    "arret": "end_turn",
+    "duree_ms": 20985,
+    "jetons_entree": 21363,
+    "jetons_sortie": 2310,
+    "requetes": [],
+    "urls_lues": [
+      "https://mlafrance.fr/programme",
+      "https://rassemblementnational.fr/22-mesures",
+      "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+      "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-29T16-16-38-351Z-extraction-le-pen-education.json",
+    "empreinte_corpus": "9e423f78dbf48517",
+    "empreintes_documents": {
+      "programme-2022": "16fe5fb00cf36744",
+      "22-mesures": "9229eb047acd5574",
+      "petition-tva-100-produits": "0de02a458b0d4e2d",
+      "petition-tva-electricite": "c68d189aeb022115"
+    }
+  },
+  {
+    "theme": "environnement",
+    "date": "2026-09-29",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 2,
+    "arret": "end_turn",
+    "duree_ms": 16856,
+    "jetons_entree": 21636,
+    "jetons_sortie": 1895,
+    "requetes": [],
+    "urls_lues": [
+      "https://mlafrance.fr/programme",
+      "https://rassemblementnational.fr/22-mesures",
+      "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+      "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-29T16-19-58-985Z-extraction-le-pen-environnement.json",
+    "empreinte_corpus": "9e423f78dbf48517",
+    "empreintes_documents": {
+      "programme-2022": "16fe5fb00cf36744",
+      "22-mesures": "9229eb047acd5574",
+      "petition-tva-100-produits": "0de02a458b0d4e2d",
+      "petition-tva-electricite": "c68d189aeb022115"
+    }
+  },
+  {
+    "theme": "fiscalite",
+    "date": "2026-09-29",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 8,
+    "arret": "end_turn",
+    "duree_ms": 29577,
+    "jetons_entree": 21167,
+    "jetons_sortie": 3870,
+    "requetes": [],
+    "urls_lues": [
+      "https://mlafrance.fr/programme",
+      "https://rassemblementnational.fr/22-mesures",
+      "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+      "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-29T13-28-21-986Z-extraction-le-pen-fiscalite.json",
+    "empreinte_corpus": "9e423f78dbf48517",
+    "empreintes_documents": {
+      "programme-2022": "16fe5fb00cf36744",
+      "22-mesures": "9229eb047acd5574",
+      "petition-tva-100-produits": "0de02a458b0d4e2d",
+      "petition-tva-electricite": "c68d189aeb022115"
+    }
+  },
+  {
+    "theme": "immigration",
+    "date": "2026-09-29",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 7,
+    "arret": "end_turn",
+    "duree_ms": 17408,
+    "jetons_entree": 21580,
+    "jetons_sortie": 2190,
+    "requetes": [],
+    "urls_lues": [
+      "https://mlafrance.fr/programme",
+      "https://rassemblementnational.fr/22-mesures",
+      "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+      "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-29T16-18-57-254Z-extraction-le-pen-immigration.json",
+    "empreinte_corpus": "9e423f78dbf48517",
+    "empreintes_documents": {
+      "programme-2022": "16fe5fb00cf36744",
+      "22-mesures": "9229eb047acd5574",
+      "petition-tva-100-produits": "0de02a458b0d4e2d",
+      "petition-tva-electricite": "c68d189aeb022115"
+    }
+  },
+  {
+    "theme": "libertes-fondamentales",
+    "date": "2026-09-29",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 2,
+    "arret": "end_turn",
+    "duree_ms": 20412,
+    "jetons_entree": 21643,
+    "jetons_sortie": 1870,
+    "requetes": [],
+    "urls_lues": [
+      "https://mlafrance.fr/programme",
+      "https://rassemblementnational.fr/22-mesures",
+      "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+      "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-29T16-21-17-532Z-extraction-le-pen-libertes-fondamentales.json",
+    "empreinte_corpus": "9e423f78dbf48517",
+    "empreintes_documents": {
+      "programme-2022": "16fe5fb00cf36744",
+      "22-mesures": "9229eb047acd5574",
+      "petition-tva-100-produits": "0de02a458b0d4e2d",
+      "petition-tva-electricite": "c68d189aeb022115"
+    }
+  },
+  {
+    "theme": "logement",
+    "date": "2026-09-29",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 4,
+    "arret": "end_turn",
+    "duree_ms": 17456,
+    "jetons_entree": 21433,
+    "jetons_sortie": 1971,
+    "requetes": [],
+    "urls_lues": [
+      "https://mlafrance.fr/programme",
+      "https://rassemblementnational.fr/22-mesures",
+      "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+      "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-29T13-41-45-402Z-extraction-le-pen-logement.json",
+    "empreinte_corpus": "9e423f78dbf48517",
+    "empreintes_documents": {
+      "programme-2022": "16fe5fb00cf36744",
+      "22-mesures": "9229eb047acd5574",
+      "petition-tva-100-produits": "0de02a458b0d4e2d",
+      "petition-tva-electricite": "c68d189aeb022115"
+    }
+  },
+  {
+    "theme": "pouvoir-achat",
+    "date": "2026-09-29",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 7,
+    "arret": "end_turn",
+    "duree_ms": 26466,
+    "jetons_entree": 21509,
+    "jetons_sortie": 3189,
+    "requetes": [],
+    "urls_lues": [
+      "https://mlafrance.fr/programme",
+      "https://rassemblementnational.fr/22-mesures",
+      "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+      "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-29T23-20-53-079Z-extraction-le-pen-pouvoir-achat.json",
+    "empreinte_corpus": "9e423f78dbf48517",
+    "empreintes_documents": {
+      "programme-2022": "16fe5fb00cf36744",
+      "22-mesures": "9229eb047acd5574",
+      "petition-tva-100-produits": "0de02a458b0d4e2d",
+      "petition-tva-electricite": "c68d189aeb022115"
+    }
+  },
+  {
+    "theme": "retraites",
+    "date": "2026-09-29",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 2,
+    "arret": "end_turn",
+    "duree_ms": 12286,
+    "jetons_entree": 21358,
+    "jetons_sortie": 1166,
+    "requetes": [],
+    "urls_lues": [
+      "https://mlafrance.fr/programme",
+      "https://rassemblementnational.fr/22-mesures",
+      "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+      "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-29T13-39-17-946Z-extraction-le-pen-retraites.json",
+    "empreinte_corpus": "9e423f78dbf48517",
+    "empreintes_documents": {
+      "programme-2022": "16fe5fb00cf36744",
+      "22-mesures": "9229eb047acd5574",
+      "petition-tva-100-produits": "0de02a458b0d4e2d",
+      "petition-tva-electricite": "c68d189aeb022115"
+    }
+  },
+  {
+    "theme": "sante",
+    "date": "2026-09-29",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 3,
+    "arret": "end_turn",
+    "duree_ms": 14644,
+    "jetons_entree": 21446,
+    "jetons_sortie": 1714,
+    "requetes": [],
+    "urls_lues": [
+      "https://mlafrance.fr/programme",
+      "https://rassemblementnational.fr/22-mesures",
+      "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+      "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-29T16-15-40-221Z-extraction-le-pen-sante.json",
+    "empreinte_corpus": "9e423f78dbf48517",
+    "empreintes_documents": {
+      "programme-2022": "16fe5fb00cf36744",
+      "22-mesures": "9229eb047acd5574",
+      "petition-tva-100-produits": "0de02a458b0d4e2d",
+      "petition-tva-electricite": "c68d189aeb022115"
+    }
+  },
+  {
+    "theme": "securite",
+    "date": "2026-09-29",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 9,
+    "arret": "end_turn",
+    "duree_ms": 14707,
+    "jetons_entree": 21441,
+    "jetons_sortie": 1900,
+    "requetes": [],
+    "urls_lues": [
+      "https://mlafrance.fr/programme",
+      "https://rassemblementnational.fr/22-mesures",
+      "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+      "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-29T16-17-55-051Z-extraction-le-pen-securite.json",
+    "empreinte_corpus": "9e423f78dbf48517",
+    "empreintes_documents": {
+      "programme-2022": "16fe5fb00cf36744",
+      "22-mesures": "9229eb047acd5574",
+      "petition-tva-100-produits": "0de02a458b0d4e2d",
+      "petition-tva-electricite": "c68d189aeb022115"
+    }
+  },
+  {
+    "theme": "travail",
+    "date": "2026-09-29",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 2,
+    "arret": "end_turn",
+    "duree_ms": 17551,
+    "jetons_entree": 21346,
+    "jetons_sortie": 1859,
+    "requetes": [],
+    "urls_lues": [
+      "https://mlafrance.fr/programme",
+      "https://rassemblementnational.fr/22-mesures",
+      "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+      "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-09-29T13-38-24-563Z-extraction-le-pen-travail.json",
+    "empreinte_corpus": "9e423f78dbf48517",
+    "empreintes_documents": {
+      "programme-2022": "16fe5fb00cf36744",
+      "22-mesures": "9229eb047acd5574",
+      "petition-tva-100-produits": "0de02a458b0d4e2d",
+      "petition-tva-electricite": "c68d189aeb022115"
+    }
+  }
+]

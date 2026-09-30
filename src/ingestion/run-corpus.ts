@@ -40,6 +40,8 @@ export interface OptionsCorpus {
   extracteurPdf?: (octets: Buffer) => Promise<TextePdf>;
   // Refait contrôles, relecture et synthèse depuis les extractions en cache ; jamais d'appel d'extraction.
   retraiter?: boolean;
+  // Nombre de relectures indépendantes des mesures (défaut : NOMBRE_LECTURES) ; une mesure n'est acceptée que si toutes disent PASS.
+  lectures?: number;
   // Injecté par run.ts (évite une dépendance circulaire) : produit le texte de synthèse d'un thème.
   synthese?: (client: ClientAnthropicMinimal, meta: CandidatMeta, themeId: string, themeLibelle: string, options: { racine?: string; force?: boolean }) => Promise<unknown>;
 }
@@ -301,13 +303,19 @@ async function executerTheme(
     else enAttente.push({ theme: theme.id, proposition: propositionBrute(mesure), raison: r.raison });
   }
 
-  const verdicts = await verifierMesuresParPassages(client, meta, assemblees);
+  const verdicts = await verifierMesuresParPassages(client, meta, assemblees, options.lectures);
   const fusionnees: Proposition[] = [];
   let index = 1; // les mesures du thème sont REMPLACÉES : la numérotation repart de 1
   for (const { proposition } of assemblees) {
     const verdict = verdicts.get(proposition.titre);
     if (verdict?.statut === "PASS") {
-      fusionnees.push({ ...proposition, id: genererIdProposition(meta.slug, theme.id, index), candidat: meta.slug, theme: theme.id });
+      // Mesure valide mais effets refusés : elle est gardée SANS aucun effet (pas d'indicateur plutôt qu'un mauvais
+      // indicateur) ; la fiche complète et la raison restent dans « à vérifier » pour la relecture humaine.
+      const retenue = verdict.effetsEcartes ? { ...proposition, effets: [] } : proposition;
+      if (verdict.effetsEcartes) {
+        enAttente.push({ theme: theme.id, proposition, raison: `Effets écartés (mesure conservée sans effet) : ${verdict.effetsEcartes}` });
+      }
+      fusionnees.push({ ...retenue, id: genererIdProposition(meta.slug, theme.id, index), candidat: meta.slug, theme: theme.id });
       index += 1;
     } else {
       enAttente.push({ theme: theme.id, proposition, raison: verdict?.statut === "FAIL" ? verdict.raison : "Aucun verdict reçu" });

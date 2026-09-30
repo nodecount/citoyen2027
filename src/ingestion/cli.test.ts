@@ -76,6 +76,15 @@ describe("analyserArguments — --synthese-seule", () => {
 });
 
 describe("analyserArguments — --retraiter", () => {
+  it("lit --moteur et --max-appels (abonnement) ; moteur « api » par défaut", () => {
+    expect(analyserArguments(["--candidats=le-pen"]).moteur).toBe("api");
+    const o = analyserArguments(["--candidats=le-pen", "--moteur=cli", "--max-appels=20"]);
+    expect(o.moteur).toBe("cli");
+    expect(o.maxAppels).toBe(20);
+    expect(() => analyserArguments(["--moteur=autre"])).toThrow(/moteur/);
+    expect(() => analyserArguments(["--max-appels=0"])).toThrow(/max-appels/);
+  });
+
   it("lit --retraiter : refaire relecture et synthèse depuis les extractions déjà payées", () => {
     expect(analyserArguments(["--candidats=retailleau", "--retraiter"]).retraiter).toBe(true);
     expect(analyserArguments(["--candidats=retailleau"]).retraiter).toBe(false);

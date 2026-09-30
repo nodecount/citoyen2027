@@ -41,6 +41,32 @@ describe("construireRequeteVerificationExtraction", () => {
   });
 });
 
+describe("informations de contexte de la relecture", () => {
+  it("donne les libellés exacts des critères du profil (apprenti = apprenti ou alternant)", () => {
+    const { system } = construireRequeteVerificationExtraction(META, [item("M1")]);
+    expect(system).toContain("`apprenti` = Apprenti(e) ou alternant(e)");
+    // Les champs dérivés (non posés tels quels dans le formulaire) sont des critères valides eux aussi.
+    expect(system).toContain("`enfants_a_charge`");
+    expect(system).toContain("`autre`");
+  });
+
+  it("sanctionne un critère voisin plus large que le public réel (règle commune à tous les candidats)", () => {
+    const { system } = construireRequeteVerificationExtraction(META, [item("M1")]);
+    expect(system).toContain("Critère voisin = FAIL");
+    expect(system).not.toMatch(/\{\{[A-Z_]+\}\}/);
+  });
+
+  it("liste les documents du corpus (éditeur, année) pour juger l'attribution au parti", () => {
+    const meta: CandidatMeta = {
+      ...META,
+      documents: [{ id: "22-mesures", url: "https://parti.example/22-mesures", nom: "parti.example (22 mesures 2022)", annee: 2022 }],
+    };
+    const contenu = String(construireRequeteVerificationExtraction(meta, [item("M1")]).messages[0].content);
+    expect(contenu).toContain("https://parti.example/22-mesures");
+    expect(contenu.indexOf("parti.example")).toBeLessThan(contenu.indexOf("M1")); // documents d'abord, puis les mesures
+  });
+});
+
 describe("verifierMesuresParPassages", () => {
   let espions: Array<ReturnType<typeof vi.spyOn>>;
   beforeEach(() => {
@@ -57,6 +83,55 @@ describe("verifierMesuresParPassages", () => {
     const verdicts = await verifierMesuresParPassages(c, META, [item("M1"), item("M2")]);
     expect(verdicts.get("M1")).toEqual({ statut: "PASS" });
     expect(verdicts.get("M2")).toEqual({ statut: "FAIL", raison: "effet trop large" });
+  });
+
+  it("n'accepte une mesure que si toutes les relectures disent PASS (relecteur non stable)", async () => {
+    const lecture = (verdict: string) => ({ content: [{ type: "text", text: JSON.stringify([{ titre: "M1", verdict, raison: "trop large" }]) }], stop_reason: "end_turn" });
+    const c = { messages: { create: vi.fn().mockResolvedValueOnce(lecture("PASS")).mockResolvedValueOnce(lecture("FAIL")) } };
+    const verdicts = await verifierMesuresParPassages(c, META, [item("M1")]);
+    expect(c.messages.create).toHaveBeenCalledTimes(2);
+    expect(verdicts.get("M1")).toEqual({ statut: "FAIL", raison: "trop large" });
+  });
+
+  it("une lecture sans verdict pour une mesure suffit à ne pas l'accepter", async () => {
+    const pass = { content: [{ type: "text", text: JSON.stringify([{ titre: "M1", verdict: "PASS" }]) }], stop_reason: "end_turn" };
+    const vide = { content: [{ type: "text", text: "[]" }], stop_reason: "end_turn" };
+    const c = { messages: { create: vi.fn().mockResolvedValueOnce(pass).mockResolvedValueOnce(vide) } };
+    expect((await verifierMesuresParPassages(c, META, [item("M1")])).has("M1")).toBe(false);
+  });
+
+  describe("verdict sur les effets, distinct de celui sur la mesure", () => {
+    const avecEffet = (titre: string): MesureAVerifier => {
+      const m = item(titre);
+      m.proposition.effets = [{ cibles: [], dimension: "revenu_disponible", sens: "hausse", source_url: "u", extrait: "suppression de la C3S, soit 5,3 milliards" }];
+      return m;
+    };
+    const lecture = (o: Record<string, unknown>) => ({ content: [{ type: "text", text: JSON.stringify([{ titre: "M1", ...o }]) }], stop_reason: "end_turn" });
+
+    it("mesure PASS et effets FAIL : mesure gardée, effets écartés avec la raison", async () => {
+      const c = client(lecture({ verdict: "PASS", verdict_effets: "FAIL", raison_effets: "cible trop large" }));
+      expect((await verifierMesuresParPassages(c, META, [avecEffet("M1")])).get("M1")).toEqual({ statut: "PASS", effetsEcartes: "cible trop large" });
+    });
+
+    it("effets refusés par UNE SEULE lecture : écartés (toutes les lectures doivent les valider)", async () => {
+      const c = { messages: { create: vi.fn().mockResolvedValueOnce(lecture({ verdict: "PASS", verdict_effets: "PASS" })).mockResolvedValueOnce(lecture({ verdict: "PASS", verdict_effets: "FAIL", raison_effets: "sens douteux" })) } };
+      expect((await verifierMesuresParPassages(c, META, [avecEffet("M1")])).get("M1")).toMatchObject({ statut: "PASS", effetsEcartes: "sens douteux" });
+    });
+
+    it("relecteur silencieux sur les effets d'une mesure qui en a : effets écartés, jamais validés par défaut", async () => {
+      const c = client(lecture({ verdict: "PASS" }));
+      expect((await verifierMesuresParPassages(c, META, [avecEffet("M1")])).get("M1")).toMatchObject({ statut: "PASS", effetsEcartes: expect.stringContaining("pas rendu") });
+    });
+
+    it("mesure FAIL : la mesure est refusée, même si les effets sont PASS", async () => {
+      const c = client(lecture({ verdict: "FAIL", raison: "mécanisme inventé", verdict_effets: "PASS" }));
+      expect((await verifierMesuresParPassages(c, META, [avecEffet("M1")])).get("M1")).toEqual({ statut: "FAIL", raison: "mécanisme inventé" });
+    });
+
+    it("mesure et effets PASS : acceptée telle quelle, sans marque", async () => {
+      const c = client(lecture({ verdict: "PASS", verdict_effets: "PASS" }));
+      expect((await verifierMesuresParPassages(c, META, [avecEffet("M1")])).get("M1")).toEqual({ statut: "PASS" });
+    });
   });
 
   it("ne renvoie rien pour une mesure sans verdict : jamais de PASS par défaut", async () => {

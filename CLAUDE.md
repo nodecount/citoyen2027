@@ -238,25 +238,27 @@ Champs possibles : statut (salarié, indépendant, fonctionnaire, retraité, ét
 5. **Statut des programmes** : certains candidats n'ont pas encore publié de programme complet à cette date — le prévoir dans le modèle de données (champ de statut "provisoire / partiel / complet") plutôt que de combler les trous avec des suppositions.
 6. **Stack technique** : fixée — React/Vite/TypeScript, vitest pour les tests (voir « État actuel »). Un changement de stack se discute avec le porteur du projet, ne se décide pas seul.
 
-## État actuel du projet (mis à jour le 2026-09-27)
+## État actuel du projet (mis à jour le 2026-10-01)
 
 Le moteur de calcul (`src/engine/`), le formulaire par thème (`src/questionnaire.ts`, `src/ui/Questions*.tsx`,
 `data/profils-schema.json` : 23 questions, générales + par thème, sensibles facultatives posées au même niveau que les autres) et l'interface
 (`src/ui/`, portraits cliquables, React/Vite/TypeScript) sont construits et fonctionnels. **Aucune donnée, dans
 aucune des deux bases, n'a encore été relue ni validée par le porteur du projet.**
 
-- **`officielle`** (pipeline `src/ingestion/`, en pause : crédit API épuisé) : `retailleau` (60 propositions, 11
-  thèmes sur 12, 37 avec effets) et `attal` (5 propositions, thème fiscalité seul, toutes avec effets) sont passés
-  par le pipeline « corpus » actuel. `le-pen`, `melenchon`, `philippe` (22 à 25 propositions chacun, 11 thèmes)
-  restent sur l'**ancienne collecte manuelle pré-pipeline** (sources secondaires acceptées, pas d'`effets` donc pas
-  de badge) : à repasser par le pipeline corpus dès que le budget le permet, puis à remplacer d'un coup. Les 12
-  autres candidats des niveaux 1-2 de l'étude n'ont pas encore de données.
+- **`officielle`** (pipeline `src/ingestion/`, **en pause depuis le 2026-10-01** au profit d'une troisième base ;
+  progression détaillée et commandes de reprise : `docs/progression-base-officielle.md`). Le pipeline tourne
+  maintenant **sur l'abonnement** (`--moteur=cli`, plus besoin du crédit API). `le-pen` (56 propositions, 12 thèmes,
+  12 synthèses) est passé par la chaîne complète actuelle (double relecture, verdict séparé sur les effets, synthèses
+  relues) ; `retailleau` (60, 11 thèmes) et `attal` (5, fiscalité seule) datent d'avant ces règles. `melenchon` et
+  `philippe` restent sur l'**ancienne collecte manuelle** (sans synthèse) : à repasser par le pipeline corpus. Les
+  autres candidats des niveaux 1-2 n'ont pas de données : il faut d'abord déclarer leurs `documents` (adresses et
+  années réelles) dans `meta.json`.
 - **`agregateurs`** (`src/scraping/`) : 22 candidats scrapés depuis iFRAP (`npm run scrape:ifrap`), 1 186
   propositions, 128 avec effets structurés par un modèle appelé via la commande `claude -p` (`npm run
   scrape:structurer`, sur abonnement, pas sur le crédit API).
 
 Prochaines étapes probables :
 - Faire relire et valider le contenu par le porteur du projet (exactitude factuelle, neutralité du ton, cohérence entre candidats), sur les deux bases.
-- Recharger le crédit API pour reprendre l'ingestion `officielle` : repasser `le-pen`/`melenchon`/`philippe` par le pipeline corpus, puis étendre aux candidats restants.
+- Reprendre l'ingestion `officielle` (sur abonnement) quand la troisième base sera lancée : repasser `melenchon`/`philippe` par le pipeline corpus, puis étendre aux candidats restants (voir `docs/progression-base-officielle.md`).
 - Décider du thème « pouvoir d'achat » (retrait ou maintien) — en suspens.
 - Si `candidatspresidentielles2027.fr` redevient accessible un jour (accord de son éditeur), l'ajouter à `agregateurs`.

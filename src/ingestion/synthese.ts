@@ -82,6 +82,8 @@ export function erreurSynthese(valeur: unknown, idsAttendus: string[]): string |
   if (texte.length < TEXTE_MIN) return `texte trop court (${texte.length} caractères, minimum ${TEXTE_MIN})`;
   if (texte.length > TEXTE_MAX) return `texte trop long (${texte.length} caractères, maximum ${TEXTE_MAX})`;
   if (/https?:\/\/|www\./i.test(texte)) return "le texte contient une URL : les sources sont ajoutées par l'interface";
+  // Balises parasites de la sortie du modèle (ex : « </texte></invoke> » en fin de chaîne) : jamais du contenu.
+  if (/<\/?[a-z_][\w-]*[^>]*>/i.test(texte)) return "le texte contient des balises (résidu de format) : les retirer";
   const idCite = idsAttendus.find((id) => texte.includes(id));
   if (idCite) return `le texte cite un identifiant interne (${idCite})`;
   const mots = motsEvaluatifsTrouves(texte);
@@ -148,16 +150,33 @@ const TENTATIVES_MAX = 2;
 // Un refus déterministe (texte trop long, mesure omise, mot évaluatif…) se corrige presque toujours en
 // renvoyant l'erreur au modèle : une seule nouvelle tentative, pour ~1 centime. Refus, troncature et pannes
 // d'outil lèvent sans nouvelle tentative.
+// `retour` : refus d'un relecteur indépendant sur une première rédaction (texte refusé + raison). Le rédacteur le voit et
+// corrige ce point précis, sans rien changer d'autre ; le relecteur, lui, ne voit jamais ce retour.
+export interface RetourRelecteur {
+  texte: string;
+  raison: string;
+}
+
 export async function genererSynthese(
   client: ClientAnthropicMinimal,
   meta: CandidatMeta,
   themeId: string,
   themeLibelle: string,
   propositions: Proposition[],
+  retour?: RetourRelecteur,
 ): Promise<ResultatSynthese> {
   const ids = propositions.map((p) => p.id);
   const requeteInitiale = construireRequeteSynthese(meta, themeId, themeLibelle, propositions);
-  let messages = requeteInitiale.messages;
+  let messages: RequeteGeneration["messages"] = retour
+    ? [
+        ...requeteInitiale.messages,
+        { role: "assistant", content: JSON.stringify({ texte: retour.texte, propositions_utilisees: ids }) },
+        {
+          role: "user",
+          content: `Un relecteur indépendant a refusé ce texte : ${retour.raison}\nCorrige ce point précis (rapproche-toi des mots de la mesure, sans rien ajouter ni retirer d'autre) et renvoie l'objet JSON complet.`,
+        },
+      ]
+    : requeteInitiale.messages;
   let dernier: ResultatSynthese = { ok: false, erreur: "aucune tentative" };
 
   for (let tentative = 1; tentative <= TENTATIVES_MAX; tentative += 1) {
@@ -188,7 +207,7 @@ export async function genererSynthese(
     dernier = { ok: false, erreur, texte: refuse };
     if (tentative < TENTATIVES_MAX) {
       messages = [
-        ...requeteInitiale.messages,
+        ...messages.slice(0, retour ? 3 : 1),
         { role: "assistant", content: texte ?? "" },
         { role: "user", content: `Ta réponse est refusée par un contrôle automatique : ${erreur}. Corrige ce point précis et renvoie l'objet JSON complet, sans rien changer d'autre.` },
       ];

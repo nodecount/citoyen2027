@@ -57,7 +57,7 @@ export class BudgetDepasse extends Error {}
 // façon, autant s'arrêter tout de suite plutôt que de parcourir les thèmes restants.
 export function estPanneDeCompte(erreur: unknown): boolean {
   const message = erreur instanceof Error ? erreur.message : String(erreur);
-  return /credit balance is too low|authentication_error|invalid x-api-key|permission_error|billing/i.test(message);
+  return /credit balance is too low|authentication_error|invalid x-api-key|permission_error|billing|problème de compte|Impossible de lancer la commande claude|Plafond de \d+ appel/i.test(message);
 }
 
 const DUREE_CACHE_MS = 4.5 * 60_000; // durée de vie du cache de prompt : 5 minutes, avec une marge

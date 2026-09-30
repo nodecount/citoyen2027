@@ -568,17 +568,40 @@ describe("executerSynthese", () => {
     expect(await executerSynthese(client, META, "fiscalite", "Mes impôts et taxes", { racine })).toBe("enregistree");
   });
 
-  it("met en attente une synthèse refusée par le relecteur, sans toucher à synthese.json", async () => {
+  it("met en attente une synthèse refusée deux fois par le relecteur, sans toucher à synthese.json", async () => {
     preparerRacine();
     enregistrerPropositions("candidat-x", [prop("candidat-x-fisc-001", "fiscalite")], racine);
-    const client = clientAvec(reponseSynthese(["candidat-x-fisc-001"]), reponseVerdict("FAIL", "affirmation non étayée"));
+    const client = clientAvec(
+      reponseSynthese(["candidat-x-fisc-001"]), reponseVerdict("FAIL", "première raison"),
+      reponseSynthese(["candidat-x-fisc-001"]), reponseVerdict("FAIL", "affirmation non étayée"),
+    );
 
     expect(await executerSynthese(client, META, "fiscalite", "Mes impôts et taxes", { racine })).toBe("a_verifier");
+    expect(client.messages.create).toHaveBeenCalledTimes(4);
     expect(chargerSyntheses("candidat-x", racine)).toEqual([]);
     const enAttente = chargerSynthesesAVerifier("candidat-x", racine);
     expect(enAttente).toHaveLength(1);
-    expect(enAttente[0].raison).toBe("affirmation non étayée");
+    expect(enAttente[0].raison).toBe("affirmation non étayée"); // le dernier motif
     expect(enAttente[0].texte).toBe(TEXTE);
+  });
+
+  it("refuse une première rédaction, renvoie le motif du relecteur au rédacteur, et enregistre la seconde si elle passe", async () => {
+    preparerRacine();
+    enregistrerPropositions("candidat-x", [prop("candidat-x-fisc-001", "fiscalite")], racine);
+    const TEXTE_CORRIGE = `${TEXTE} Le calendrier n'est pas précisé.`;
+    const client = clientAvec(
+      reponseSynthese(["candidat-x-fisc-001"]), reponseVerdict("FAIL", "omet le public visé"),
+      reponseSynthese(["candidat-x-fisc-001"], TEXTE_CORRIGE), reponseVerdict("PASS"),
+    );
+
+    expect(await executerSynthese(client, META, "fiscalite", "Mes impôts et taxes", { racine })).toBe("enregistree");
+    expect(chargerSyntheses("candidat-x", racine)[0].texte).toBe(TEXTE_CORRIGE);
+    expect(chargerSynthesesAVerifier("candidat-x", racine)).toEqual([]);
+
+    const appels = client.messages.create.mock.calls;
+    // Le rédacteur (2e appel de génération = 3e appel) voit le motif ; le relecteur (2e et 4e appels) ne le voit jamais.
+    expect(JSON.stringify(appels[2][0].messages)).toContain("omet le public visé");
+    expect(JSON.stringify(appels[3][0].messages)).not.toContain("omet le public visé");
   });
 
   it("met en attente une synthèse qui échoue les contrôles déterministes, sans appeler le relecteur", async () => {
@@ -599,7 +622,8 @@ describe("executerSynthese", () => {
     preparerRacine();
     enregistrerPropositions("candidat-x", [prop("candidat-x-fisc-001", "fiscalite"), prop("candidat-x-fisc-002", "fiscalite")], racine);
     enregistrerSynthese("candidat-x", { theme: "fiscalite", texte: "Ancien texte.", propositions: ["candidat-x-fisc-001", "candidat-x-fisc-009"], date_derniere_verification: "2026-09-20" }, racine);
-    const client = clientAvec(reponseSynthese(["candidat-x-fisc-001", "candidat-x-fisc-002"]), reponseVerdict("FAIL", "affirmation non étayée"));
+    const ids = ["candidat-x-fisc-001", "candidat-x-fisc-002"];
+    const client = clientAvec(reponseSynthese(ids), reponseVerdict("FAIL", "affirmation non étayée"), reponseSynthese(ids), reponseVerdict("FAIL", "affirmation non étayée"));
 
     expect(await executerSynthese(client, META, "fiscalite", "Mes impôts et taxes", { racine })).toBe("a_verifier");
     expect(chargerSyntheses("candidat-x", racine)).toEqual([]);

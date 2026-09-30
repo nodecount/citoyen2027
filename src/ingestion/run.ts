@@ -22,11 +22,15 @@ import {
   supprimerSyntheseAVerifier,
   type EntreeAVerifier,
 } from "./depot";
-import { genererSynthese, verifierSyntheseParModele } from "./synthese";
+import { genererSynthese, verifierSyntheseParModele, type RetourRelecteur } from "./synthese";
+
+// Rédactions maximales d'une synthèse : la seconde reçoit le motif de refus du relecteur pour la première.
+const MANCHES_SYNTHESE = 2;
 import { chargerEnv } from "./env";
 import { analyserArguments, type OptionsCLI } from "./cli";
-import { Budget, BudgetDepasse, TARIFS_PAR_MODELE } from "./budget";
+import { Budget, BudgetDepasse, TARIFS_PAR_MODELE, estPanneDeCompte } from "./budget";
 import { definirBudget } from "./appel";
+import { clientCli } from "./client-cli";
 import { chargerCorpus, executerCandidatCorpus, formaterPlan, planifier } from "./run-corpus";
 import themesData from "../../data/bases/officielle/themes.json";
 
@@ -243,45 +247,50 @@ export async function executerSynthese(
 
   // À partir d'ici, l'éventuelle synthèse existante ne décrit plus les mesures actuelles (ou est refaite de force) :
   // si la nouvelle est refusée, on préfère aucune synthèse à une synthèse périmée.
-  const genere = await genererSynthese(client, meta, themeId, themeLibelle, affichables);
-  if (!genere.ok) {
-    supprimerSynthese(meta.slug, themeId, options.racine);
-    enregistrerSyntheseAVerifier(
-      meta.slug,
-      { theme: themeId, texte: genere.texte ?? "", propositions: ids, raison: genere.erreur },
-      options.racine,
-    );
-    return "a_verifier";
-  }
+  // Deux manches au plus : si le relecteur refuse la première rédaction, le rédacteur reçoit son motif et corrige ce point
+  // précis ; la seconde rédaction repasse par le relecteur (qui ne voit jamais le motif). Un refus déterministe (texte
+  // trop long, mesure omise, balise…) a déjà sa propre nouvelle tentative dans genererSynthese : pas de manche de plus.
+  let retour: RetourRelecteur | undefined;
+  for (let manche = 1; manche <= MANCHES_SYNTHESE; manche += 1) {
+    const genere = await genererSynthese(client, meta, themeId, themeLibelle, affichables, retour);
+    if (!genere.ok) {
+      supprimerSynthese(meta.slug, themeId, options.racine);
+      enregistrerSyntheseAVerifier(
+        meta.slug,
+        { theme: themeId, texte: genere.texte ?? "", propositions: ids, raison: genere.erreur },
+        options.racine,
+      );
+      return "a_verifier";
+    }
 
-  const verdict = await verifierSyntheseParModele(client, meta, themeLibelle, affichables, genere.synthese);
-  if (verdict.statut === "FAIL") {
-    supprimerSynthese(meta.slug, themeId, options.racine);
-    enregistrerSyntheseAVerifier(
-      meta.slug,
-      {
-        theme: themeId,
-        texte: genere.synthese.texte,
-        propositions: genere.synthese.propositions_utilisees,
-        raison: verdict.raison,
-      },
-      options.racine,
-    );
-    return "a_verifier";
-  }
+    const verdict = await verifierSyntheseParModele(client, meta, themeLibelle, affichables, genere.synthese);
+    if (verdict.statut === "PASS") {
+      enregistrerSynthese(
+        meta.slug,
+        {
+          theme: themeId,
+          texte: genere.synthese.texte,
+          propositions: ids,
+          date_derniere_verification: new Date().toISOString().slice(0, 10),
+        },
+        options.racine,
+      );
+      supprimerSyntheseAVerifier(meta.slug, themeId, options.racine);
+      return "enregistree";
+    }
 
-  enregistrerSynthese(
-    meta.slug,
-    {
-      theme: themeId,
-      texte: genere.synthese.texte,
-      propositions: ids,
-      date_derniere_verification: new Date().toISOString().slice(0, 10),
-    },
-    options.racine,
-  );
-  supprimerSyntheseAVerifier(meta.slug, themeId, options.racine);
-  return "enregistree";
+    if (manche === MANCHES_SYNTHESE) {
+      supprimerSynthese(meta.slug, themeId, options.racine);
+      enregistrerSyntheseAVerifier(
+        meta.slug,
+        { theme: themeId, texte: genere.synthese.texte, propositions: genere.synthese.propositions_utilisees, raison: verdict.raison },
+        options.racine,
+      );
+      return "a_verifier";
+    }
+    retour = { texte: genere.synthese.texte, raison: verdict.raison };
+  }
+  return "a_verifier"; // inatteignable : la dernière manche retourne toujours
 }
 
 export async function executerSyntheses(
@@ -311,8 +320,10 @@ async function mainSyntheseSeule(options: OptionsCLI): Promise<void> {
     console.log("[dry-run] synthèse seule : aucun appel n'a été envoyé.");
     return;
   }
-  definirBudget(budget);
-  const client = clientEnFlux(creerClient());
+  const cli = options.moteur === "cli" ? clientCli({ maxAppels: options.maxAppels }) : undefined;
+  if (cli) console.log(`[moteur] commande claude -p (abonnement)${options.maxAppels ? `, plafond ${options.maxAppels} appel(s)` : ""}`);
+  else definirBudget(budget);
+  const client = cli ?? clientEnFlux(creerClient());
   for (const slug of options.candidats) {
     const meta = chargerMeta(slug);
     for (const theme of themesACouvrir) {
@@ -325,10 +336,15 @@ async function mainSyntheseSeule(options: OptionsCLI): Promise<void> {
           return;
         }
         console.error(`[erreur synthèse] ${slug} × ${theme.id} : ${erreur instanceof Error ? erreur.message : String(erreur)}`);
+        if (estPanneDeCompte(erreur)) {
+          console.error("[arrêt] Panne de compte ou plafond d'appels atteint : relancer la même commande reprend là où c'est resté.");
+          return;
+        }
       }
     }
   }
-  console.log(`[budget] dépensé ${budget.depenseEur.toFixed(2)} € sur ${budget.plafondEur.toFixed(2)} €`);
+  if (cli) console.log(`[moteur] ${cli.appels()} appel(s), coût de référence ≈ ${cli.coutReferenceUsd().toFixed(2)} $ (indicatif, décompté de l'abonnement)`);
+  else console.log(`[budget] dépensé ${budget.depenseEur.toFixed(2)} € sur ${budget.plafondEur.toFixed(2)} €`);
 }
 
 async function mainCorpus(options: OptionsCLI): Promise<void> {
@@ -370,9 +386,13 @@ async function mainCorpus(options: OptionsCLI): Promise<void> {
     return;
   }
 
-  // 2. Exécuter, sous plafond dur : tout appel qui ferait dépasser le budget est refusé avant d'être envoyé.
-  definirBudget(budget);
-  const client = clientEnFlux(creerClient());
+  // 2. Exécuter. Moteur « api » : sous plafond dur en euros (tout appel qui ferait dépasser le budget est refusé avant
+  // d'être envoyé). Moteur « cli » : abonnement, donc plafond en nombre d'appels ; une panne de quota arrête le run, qui
+  // reprend tel quel à la relance (extractions en cache, journal).
+  const cli = options.moteur === "cli" ? clientCli({ maxAppels: options.maxAppels }) : undefined;
+  if (cli) console.log(`[moteur] commande claude -p (abonnement)${options.maxAppels ? `, plafond ${options.maxAppels} appel(s)` : ""}`);
+  else definirBudget(budget);
+  const client = cli ?? clientEnFlux(creerClient());
   for (const meta of retenus) {
     const resume = await executerCandidatCorpus(client, meta, themesACouvrir, {
       force: options.force,
@@ -381,11 +401,18 @@ async function mainCorpus(options: OptionsCLI): Promise<void> {
     });
     if (resume.arretBudget) break;
   }
+  if (cli) console.log(`[moteur] ${cli.appels()} appel(s), coût de référence ≈ ${cli.coutReferenceUsd().toFixed(2)} $ (indicatif, décompté de l'abonnement)`);
 }
 
 async function main(): Promise<void> {
   chargerEnv();
   const options = analyserArguments(process.argv.slice(2));
+  // Moteur « cli » : la commande claude doit utiliser l'abonnement. Une clé API présente dans l'environnement (chargée
+  // depuis .env) aurait priorité sur la connexion à l'abonnement et ferait consommer le crédit API.
+  if (options.moteur === "cli") {
+    delete process.env.ANTHROPIC_API_KEY;
+    delete process.env.ANTHROPIC_AUTH_TOKEN;
+  }
 
   if (options.syntheseSeule && !options.refresh) {
     await mainSyntheseSeule(options);

@@ -33,7 +33,9 @@ afterEach(() => {
 });
 
 const fetchOk = async () => new Response(PAGE_HTML, { status: 200, headers: { "content-type": "text/html" } });
-const options = (surcharge = {}) => ({ racine, dossierCache: cache, fetchImpl: fetchOk, ...surcharge });
+// lectures: 1 — ces tests portent sur l'orchestration (un appel de relecture scripté par thème) ; le double passage de
+// la relecture est testé dans verification-extraction.test.ts.
+const options = (surcharge = {}) => ({ racine, dossierCache: cache, fetchImpl: fetchOk, lectures: 1, ...surcharge });
 
 function mesure(surcharge: Record<string, unknown> = {}) {
   return {
@@ -125,6 +127,23 @@ describe("executerCandidatCorpus", () => {
     await executerCandidatCorpus({ messages: { create } }, META, [THEME], options({ synthese: vi.fn() }));
     expect(chargerPropositions("candidat-x", racine)).toEqual([]);
     expect(chargerAVerifier("candidat-x", racine)[0].raison).toBe("portée élargie");
+  });
+
+  it("garde une mesure valide dont seuls les effets sont refusés, SANS aucun effet, et trace la raison", async () => {
+    const effet = { cibles: [{ champ: "tranche_age", valeurs: ["moins_30"] }], dimension: "revenu_disponible", sens: "hausse", document: "programme", extrait: "suppression de la C3S, soit 5,3 milliards d'euros" };
+    const create = vi
+      .fn()
+      .mockResolvedValueOnce(texte([mesure({ effets: [effet] })]))
+      .mockResolvedValueOnce(verdicts([{ titre: "Suppression de la C3S", verdict: "PASS", verdict_effets: "FAIL", raison_effets: "critère voisin trop large" }]));
+    await executerCandidatCorpus({ messages: { create } }, META, [THEME], options({ synthese: vi.fn() }));
+    const props = chargerPropositions("candidat-x", racine);
+    expect(props).toHaveLength(1);
+    expect(props[0].effets).toEqual([]); // jamais un badge fondé sur un effet refusé
+    const trace = chargerAVerifier("candidat-x", racine);
+    expect(trace).toHaveLength(1);
+    expect(trace[0].raison).toContain("Effets écartés");
+    expect(trace[0].raison).toContain("critère voisin trop large");
+    expect(trace[0].proposition.effets).toHaveLength(1); // la fiche complète reste pour la relecture humaine
   });
 
   it("traite l'absence de verdict comme un échec, jamais comme un PASS", async () => {

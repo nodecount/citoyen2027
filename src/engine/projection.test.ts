@@ -45,6 +45,38 @@ function proposition(effets: Effet[] | undefined, surcharge: Partial<Proposition
   };
 }
 
+describe("péages : véhicule + « Utilisez-vous l'autoroute ? »", () => {
+  // Baisse des péages : le coût de la vie baisse, pour les personnes qui ont un véhicule ET utilisent l'autoroute.
+  const peages = proposition([
+    effet({
+      dimension: "cout_de_la_vie",
+      sens: "baisse",
+      cibles: [
+        { champ: "vehicule", valeurs: ["thermique", "electrique_hybride"] },
+        { champ: "usage_autoroute", valeurs: ["oui"] },
+      ],
+    }),
+  ]);
+
+  it("avec un véhicule mais sans réponse sur l'autoroute : « mixte à préciser », la question manquante est nommée", () => {
+    const p = projeterTheme({ vehicule: "thermique" }, [peages]);
+    expect(p.niveau).toBe("mixte");
+    expect(p.incertain).toBe(true);
+    expect(p.champsManquants).toContain("usage_autoroute");
+  });
+
+  it("usager de l'autoroute : l'indicateur est déterminé (situation qui s'améliore, le coût baisse)", () => {
+    const p = projeterTheme({ vehicule: "electrique_hybride", usage_autoroute: "oui" }, [peages]);
+    expect(p.niveau).toBe("ameliorant");
+    expect(p.incertain).toBe(false);
+  });
+
+  it("n'utilise pas l'autoroute, ou n'a pas de véhicule : non concerné, sans attendre de réponse sur l'autoroute", () => {
+    expect(projeterTheme({ vehicule: "thermique", usage_autoroute: "non" }, [peages]).niveau).toBe("non_concerne");
+    expect(projeterTheme({ vehicule: "aucun" }, [peages]).niveau).toBe("non_concerne");
+  });
+});
+
 describe("polarite (table documentée : quel sens améliore la situation matérielle du citoyen)", () => {
   it("couvre chaque dimension, avec des polarités opposées pour hausse et baisse", () => {
     for (const dimension of DIMENSIONS_EFFET) {

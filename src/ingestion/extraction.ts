@@ -143,8 +143,9 @@ export function construireRequeteExtraction(
             text:
               `Thème : « ${themeLibelle} » (id interne : ${themeId}). Périmètre : ${themeDescription}\n` +
               `Extrais toutes les mesures du corpus qui relèvent de ce périmètre, avec leurs preuves.\n` +
-              `Mesures déjà écrites pour ce candidat sur d'autres thèmes (n'en fais pas de doublon ; si une mesure recoupe l'une d'elles, ` +
-              `dis-le en clair dans resume_factuel) :\n${titres}`,
+              `Mesures déjà écrites pour ce candidat sur d'autres thèmes, à titre d'information : une mesure qui relève AUSSI de ce ` +
+              `périmètre figure ici aussi (une mesure qui touche deux thèmes est présente dans les deux, avec la même formulation ` +
+              `fidèle au texte) :\n${titres}`,
           },
         ],
       },

@@ -12,37 +12,15 @@ function avecConcerneAffine(
   return { ...base, concerne, explication };
 }
 
-// Seules 5 des 12 propositions réelles disposent ici d'une règle d'éligibilité dédiée ;
-// les 7 autres retombent sur le comportement universel/qualitatif par défaut
+// Seules quelques propositions disposent ici d'une règle d'éligibilité dédiée ;
+// les autres retombent sur le comportement universel/qualitatif par défaut
 // (`evaluerParDefaut`). C'est intentionnel : le profil ne comporte pas encore assez de
 // granularité pour déterminer l'éligibilité sur ces autres propositions. Cette liste doit
 // être étendue au fur et à mesure que de nouvelles conditions deviennent déterminables —
 // son état actuel ne doit pas être lu comme une personnalisation « complète ».
 export const regles: Record<string, (profil: Profil, proposition: Proposition) => Impact> = {
-  "le-pen-fisc-002": (profil, proposition) => {
-    const concerne = profil.tranche_age === "moins_30";
-    return avecConcerneAffine(
-      profil,
-      proposition,
-      concerne,
-      concerne
-        ? "Vous avez moins de 30 ans : cette mesure vous concerne directement."
-        : "Cette mesure cible les moins de 30 ans."
-    );
-  },
-
-  "le-pen-pa-002": (profil, proposition) => {
-    const concerne = profil.statut_professionnel === "retraite";
-    return avecConcerneAffine(
-      profil,
-      proposition,
-      concerne,
-      concerne
-        ? "Vous êtes retraité : cette mesure vous concerne directement."
-        : "Cette mesure concerne les retraités."
-    );
-  },
-
+  // Les règles de le-pen (fisc-002, pa-002) ont été retirées le 2026-09-29 : ses mesures ont été refaites par le
+  // pipeline corpus, les identifiants ne désignent plus les mêmes mesures et leurs cibles sont portées par `effets`.
   "melenchon-fisc-002": (profil, proposition) => {
     const concerne = profil.tranche_patrimoine === "500k_1_3m" || profil.tranche_patrimoine === "plus_1_3m";
     const nuance =
@@ -89,8 +67,6 @@ export const regles: Record<string, (profil: Profil, proposition: Proposition) =
 // Champs du profil dont chaque règle a besoin : sans eux, la règle n'est pas appliquée (une réponse manquante se lirait
 // « non concerné »). L'évaluation retombe alors sur l'explication générale.
 export const champsRequis: Record<string, string[]> = {
-  "le-pen-fisc-002": ["tranche_age"],
-  "le-pen-pa-002": ["statut_professionnel"],
   "melenchon-fisc-002": ["tranche_patrimoine"],
   "melenchon-pa-001": ["statut_professionnel", "tranche_revenus"],
   "philippe-pa-001": ["statut_professionnel"],

@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { describe, it, expect } from "vitest";
 import { regles } from "../engine/regles";
 import themesRaw from "../../data/bases/officielle/themes.json";
@@ -32,8 +34,9 @@ const THEMES_PEUPLES = themes.filter((t) => t.statut === "populated").map((t) =>
 // chez ce candidat, au-delà du site de campagne et du Manifeste du parti).
 const EXCEPTIONS_UN_SEUL_COMPLET = new Set(["philippe|aides-etat", "philippe|libertes-fondamentales"]);
 
+// Ces règles (≥ 2 sources, ≥ 2 propositions par thème, hypothèses non vides) décrivent l'ancienne collecte manuelle.
+// `le-pen` en est sorti le 2026-09-29 (refait par le pipeline corpus, voir plus bas), comme `retailleau` et `attal`.
 const candidats = [
-  { slug: "le-pen", meta: lePenMeta, propositions: lePenProps },
   { slug: "melenchon", meta: melenchonMeta, propositions: melenchonProps },
   { slug: "philippe", meta: philippeMeta, propositions: philippeProps },
 ];
@@ -105,7 +108,41 @@ describe("ids des propositions", () => {
   it("les ids de propositions, tous candidats confondus, sont uniques", () => {
     const allProps = [...lePenProps, ...melenchonProps, ...philippeProps];
     const ids = allProps.map((p) => p.id);
-    expect(ids.length).toBe(71);
+    expect(ids.length).toBeGreaterThan(0);
+    expect(new Set(ids).size).toBe(ids.length);
+  });
+});
+
+// Données produites par le pipeline corpus (extrait retrouvé mot pour mot dans le document : une source primaire suffit,
+// voir SOURCES_MINIMUM ; une mesure sans chiffre a des hypothèses vides ; un thème peut compter moins de 2 mesures).
+describe("candidat le-pen (pipeline corpus)", () => {
+  it("a un meta.json complet, avec ses documents datés", () => {
+    expect(lePenMeta.slug).toBe("le-pen");
+    expect(lePenMeta.documents?.length).toBeGreaterThan(0);
+    for (const d of lePenMeta.documents ?? []) expect(Number.isInteger(d.annee)).toBe(true);
+  });
+
+  it("chaque proposition référence un thème connu, un statut valide, et porte au moins une source primaire datée", () => {
+    for (const p of lePenProps) {
+      expect(THEME_IDS.has(p.theme)).toBe(true);
+      expect(STATUTS.has(p.statut)).toBe(true);
+      expect(p.candidat).toBe("le-pen");
+      expect(p.titre.length).toBeGreaterThan(0);
+      expect(p.resume_factuel.length).toBeGreaterThan(0);
+      expect(p.sources.some((s) => s.type === "primaire")).toBe(true);
+      for (const s of p.sources) expect(Number.isInteger(s.annee)).toBe(true);
+    }
+  });
+
+  it("aucun texte produit ne contient de balise parasite (résidu de la sortie du modèle)", () => {
+    const dossier = resolve(__dirname, "../../data/bases/officielle/programmes/le-pen");
+    for (const fichier of ["propositions.json", "synthese.json"]) {
+      expect(readFileSync(resolve(dossier, fichier), "utf-8"), fichier).not.toMatch(/<\/?[a-z_][\w-]*[^>]*>/i);
+    }
+  });
+
+  it("les ids sont uniques", () => {
+    const ids = lePenProps.map((p) => p.id);
     expect(new Set(ids).size).toBe(ids.length);
   });
 });
