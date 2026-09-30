@@ -7,6 +7,7 @@ import { construireCards } from "./cards";
 import { GROUPES_SOCIAUX } from "../convictions";
 import { ecartesParIntegrite, meilleurs, soldesConvictions, soldesSituation, type Meilleurs } from "../engine/candidatIdeal";
 import { anonymiserCards } from "./aveugle";
+import { apresChangementDeMode, cleIdentites, etatPourBase, recommencer, tirerGraine, type EtatIdeal } from "./etatIdeal";
 import { CardCandidatIdeal, type ResultatAffiche } from "./CardCandidatIdeal";
 import { BlocConvictions, convictionsVisibles, integritesVisibles } from "./Convictions";
 import { CONVICTIONS_VIDES, lireConvictions, memoriserConvictions, type Convictions } from "./memoireConvictions";
@@ -57,10 +58,18 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   // Simulateur À L'AVEUGLE, sans interrupteur (voir aveugle.ts) : les identités n'apparaissent qu'en « Explorer les mesures »
   // ou, plus tard, dans la card « candidat idéal » une fois révélée. Lettres retirées au sort à chaque entrée en simulateur.
   const aveugle = simulateur;
-  const [graine, setGraine] = useState(() => Math.floor(Math.random() * 2 ** 31));
-  const nouvelleGraine = () => setGraine(Math.floor(Math.random() * 2 ** 31));
+  // État de la card « candidat idéal » et graine des lettres (voir etatIdeal.ts : ce qui se réinitialise, et quand).
+  const [ideal, setIdeal] = useState<EtatIdeal>(() => ({ revele: releveInitial ?? false, graine: tirerGraine() }));
+  const { graine, revele } = ideal;
+  // Un autre jeu de candidats (changement de base) : card refloutée, nouvelles lettres, jamais le gagnant révélé d'office.
+  const [baseAffichee, setBaseAffichee] = useState(base.info.id);
+  if (baseAffichee !== base.info.id) {
+    setBaseAffichee(base.info.id);
+    setIdeal(etatPourBase(ideal, baseAffichee, base.info.id));
+  }
+  // Quitter ou entrer en simulateur repart de zéro : jamais de retour sur une card déjà révélée.
   const changerMode = (suivant: ModeAffichage) => {
-    if (suivant === "simulateur" && mode !== "simulateur") nouvelleGraine();
+    setIdeal(apresChangementDeMode(ideal, mode, suivant));
     setMode(suivant);
   };
   const anonymisation = aveugle ? anonymiserCards(cardsNommees, graine) : null;
@@ -73,7 +82,6 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   // Card « candidat idéal » (voir CardCandidatIdeal.tsx) : seulement quand des indicateurs existent. Calculée sur les
   // données RÉELLES (cardsNommees) : l'anonymisation ne change que l'affichage, et l'identité n'est transmise à la card
   // qu'une fois révélée.
-  const [revele, setRevele] = useState(releveInitial ?? false);
   const correspondance = anonymisation?.correspondance ?? [];
   const versAffiche = (titre: string, unite: ResultatAffiche["unite"], m: Meilleurs | null): ResultatAffiche | null =>
     m && {
@@ -99,10 +107,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   const situationIdeale = personnalise ? versAffiche("Selon votre situation", "thèmes", meilleurs(soldesSituation(cardsNommees))) : null;
   const convictionsIdeales =
     personnalise && groupesChoisis.length > 0 ? versAffiche("Selon vos convictions", "constats", meilleurs(soldesConvictions(cardsNommees, groupesChoisis), ecartes)) : null;
-  const recommencer = () => {
-    setRevele(false);
-    nouvelleGraine();
-  };
+  const relancerLaSimulation = () => setIdeal(recommencer());
   // Une fois le candidat idéal révélé, le formulaire disparaît (réponses et convictions gardées, « Recommencer » le rouvre).
   const formulaireVisible = simulateur && !revele;
   useEffect(() => {
@@ -160,7 +165,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           setConfirmerEffacement(false);
           setFormulaireOuvert(false);
           setConvictions(CONVICTIONS_VIDES); // un seul effacement pour tout ce que le visiteur a saisi
-          setRevele(false);
+          setIdeal({ ...ideal, revele: false });
           onEffacer();
         }}
         onAnnuler={() => setConfirmerEffacement(false)}
@@ -199,12 +204,14 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           convictions={convictionsIdeales}
           questionsRestantes={questionsRestantes(base.questionnaire, profil)}
           revele={revele}
-          onReveler={() => setRevele(true)}
-          onRecommencer={recommencer}
+          onReveler={() => setIdeal({ ...ideal, revele: true })}
+          onRecommencer={relancerLaSimulation}
         />
       )}
 
+      {/* La clé referme les détails ouverts quand les lettres changent de sens (« Recommencer », autre base, retour en simulateur). */}
       <VueThemes
+        key={cleIdentites(aveugle, graine)}
         convictions={convictionsVisibles(simulateur, convictions)}
         integrites={integrites}
         cards={cards}
