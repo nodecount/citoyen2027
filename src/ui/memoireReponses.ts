@@ -66,25 +66,6 @@ export function lireMode(): ModeAffichage {
   }
 }
 
-// Affichage des candidats (« oui » par défaut) ; « non » = simulateur à l'aveugle, sans identité (voir aveugle.ts).
-const CLE_AVEUGLE = "candidats-masques";
-
-export function lireAveugle(): boolean {
-  try {
-    return window.localStorage.getItem(CLE_AVEUGLE) === "oui";
-  } catch {
-    return false;
-  }
-}
-
-export function memoriserAveugle(aveugle: boolean): void {
-  try {
-    window.localStorage.setItem(CLE_AVEUGLE, aveugle ? "oui" : "non");
-  } catch {
-    // sans conséquence : le choix vaut pour cette session seulement
-  }
-}
-
 export function memoriserMode(mode: ModeAffichage): void {
   try {
     window.localStorage.setItem(CLE_MODE, mode);

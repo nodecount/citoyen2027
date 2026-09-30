@@ -15,9 +15,11 @@ function uneReponseValide(champ: { type: string; options?: string[] }): string |
 const AUCUNE_REPONSE: ProfilPartiel = {};
 const UNE_REPONSE: ProfilPartiel = { tranche_age: "30_49" };
 
-function rendre(baseId: string, profil: ProfilPartiel, generalSoumis: boolean): string {
+// `mode` absent : le mode par défaut de la page (« simulateur », donc à l'aveugle). Les tests qui vérifient des noms, des
+// photos ou l'ordre alphabétique demandent « exploration », seul mode où les identités sont visibles.
+function rendre(baseId: string, profil: ProfilPartiel, generalSoumis: boolean, mode?: "simulateur" | "exploration"): string {
   return renderToStaticMarkup(
-    <PageThemes base={chargerBase(baseId)} profil={profil} generalSoumis={generalSoumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} />,
+    <PageThemes base={chargerBase(baseId)} profil={profil} generalSoumis={generalSoumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} />,
   );
 }
 
@@ -48,7 +50,7 @@ describe("page des thèmes, sur les données réelles", () => {
   });
 
   it("base « agregateurs » : thèmes du comparateur, portraits avec photo, aucun thème de l'autre base", () => {
-    const rendu = rendre("agregateurs", AUCUNE_REPONSE, false);
+    const rendu = rendre("agregateurs", AUCUNE_REPONSE, false, "exploration");
     expect(rendu).toContain("Finances publiques");
     expect(rendu).toContain("Retraites &amp; Travail");
     expect(rendu).not.toContain("Mes impôts");
@@ -63,7 +65,7 @@ describe("page des thèmes, sur les données réelles", () => {
   it.each(["officielle", "agregateurs"])("base « %s » : signale les résumés manquants (mesures présentes, résumé absent), sans jamais les cacher", (id) => {
     const base = chargerBase(id);
     const manquants = resumesManquants(base, candidatsDeBase(base).avecDonnees);
-    const rendu = rendre(id, AUCUNE_REPONSE, false);
+    const rendu = rendre(id, AUCUNE_REPONSE, false, "exploration");
     if (manquants.length > 0) {
       expect(rendu).toContain("Résumé pas encore disponible");
       expect(rendu).toContain(manquants[0].nom);
@@ -74,7 +76,7 @@ describe("page des thèmes, sur les données réelles", () => {
   });
 
   it("l'ordre des portraits reste alphabétique dans une carte, quelle que soit la base", () => {
-    const rendu = rendre("agregateurs", AUCUNE_REPONSE, false);
+    const rendu = rendre("agregateurs", AUCUNE_REPONSE, false, "exploration");
     const carte = rendu.slice(rendu.indexOf('id="theme-finances-publiques"'), rendu.indexOf('id="theme-interieur-justice"'));
     const liste = noms(carte);
     expect(liste.length).toBeGreaterThan(5);
@@ -117,10 +119,12 @@ describe("les indicateurs n'apparaissent qu'après la validation du formulaire g
 
   it("garde les mêmes portraits qu'au départ : répondre n'ajoute ni ne retire aucun candidat (seul le rangement en zones change)", () => {
     // Par défaut, les « non concernés » et « sans indicateur » sont masqués : on ne peut qu'en retrouver moins, jamais de nouveaux.
+    // Le simulateur est à l'aveugle : après la réponse, les portraits sont des lettres (jamais des noms) ; au départ, en
+    // exploration, ce sont les noms.
     const apres = noms(rendre("agregateurs", UNE_REPONSE, true));
-    const avant = noms(rendre("agregateurs", AUCUNE_REPONSE, false));
+    const avant = noms(rendre("agregateurs", AUCUNE_REPONSE, false, "exploration"));
     expect(apres.length).toBeLessThanOrEqual(avant.length);
-    for (const nom of apres) expect(avant).toContain(nom);
+    for (const libelle of apres) expect(libelle).toMatch(/^Candidat [A-Z0-9]+$/);
   });
 
   it("range le tiroir en trois zones (gauche : améliorent, milieu : mixtes et neutres, droite : dégradent) une fois les indicateurs affichés", () => {
@@ -136,6 +140,31 @@ describe("les indicateurs n'apparaissent qu'après la validation du formulaire g
     expect(rendre("agregateurs", AUCUNE_REPONSE, false)).not.toContain("data-zone");
   });
 
+});
+
+describe("simulateur à l'aveugle par défaut", () => {
+  const base = chargerBase("agregateurs");
+  const noms = candidatsDeBase(base).avecDonnees.map((c) => c.meta.nom);
+  const page = (mode: "simulateur" | "exploration") =>
+    renderToStaticMarkup(<PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} />);
+
+  it("simulateur : aucun nom réel, aucune photo réelle, des lettres à la place", () => {
+    const html = page("simulateur");
+    for (const nom of noms) expect(html, nom).not.toContain(nom);
+    expect(html).not.toContain('src="/candidats/');
+    expect(html).toContain("Candidat A");
+  });
+  it("simulateur : plus d'interrupteur « Afficher les candidats » ni de « Qui était qui ? »", () => {
+    const html = page("simulateur");
+    expect(html).not.toContain("Afficher les candidats");
+    expect(html).not.toContain("Qui était qui");
+  });
+  it("exploration : les identités sont visibles (noms réels, photos), aucune lettre « Candidat A »", () => {
+    const html = page("exploration");
+    expect(html).toContain('src="/candidats/le-pen.');
+    expect(html).toContain(noms[0]);
+    expect(html).not.toContain("Candidat A");
+  });
 });
 
 describe("bascule entre exploration des mesures et simulateur", () => {

@@ -4,10 +4,10 @@ import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/base
 import { lireOuverture } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
-import { anonymiserCards, type Correspondance } from "./aveugle";
+import { anonymiserCards } from "./aveugle";
 import { BlocConvictions, convictionsVisibles, integritesVisibles } from "./Convictions";
 import { CONVICTIONS_VIDES, lireConvictions, memoriserConvictions, type Convictions } from "./memoireConvictions";
-import { lireAveugle, lireMode, memoriserAveugle, memoriserMode, type ModeAffichage } from "./memoireReponses";
+import { lireMode, memoriserMode, type ModeAffichage } from "./memoireReponses";
 import { ModaleConfirmation } from "./ModaleConfirmation";
 import PageQuestionsGenerales from "./PageQuestionsGenerales";
 import { compterReponses } from "../questionnaire";
@@ -33,9 +33,12 @@ interface PageThemesProps {
 // Page du simulateur : les thèmes, et sur chacun les portraits cliquables des candidats concernés. Aucun indicateur
 // tant que le formulaire général n'a pas été validé (et qu'il contient au moins une réponse).
 export default function PageThemes({ base, profil, generalSoumis, onValider, onEffacer, onReponse, modeInitial, convictionsInitiales }: PageThemesProps) {
-  // « Explorer les mesures » : les programmes seuls (ni indicateur, ni légende, ni formulaire, ni questions par thème).
-  // « Simuler pour moi » : tout ce qui rattache les mesures à la situation du visiteur.
-  const [mode, setMode] = useState<ModeAffichage>(() => modeInitial ?? lireMode());
+  // Arrivée depuis le tableau de l'accueil (ou une adresse partagée) : la carte du thème, avec ce candidat ouvert. Ce lien
+  // nomme un candidat : on l'ouvre donc en « Explorer les mesures », seul mode où les identités sont visibles.
+  const [ouverture] = useState(() => (typeof window === "undefined" ? null : lireOuverture(window.location.href)));
+  // « Explorer les mesures » : les programmes seuls (ni indicateur, ni légende, ni formulaire, ni questions par thème),
+  // identités visibles. « Simuler pour moi » : tout ce qui rattache les mesures à la situation du visiteur, à l'aveugle.
+  const [mode, setMode] = useState<ModeAffichage>(() => modeInitial ?? (ouverture ? "exploration" : lireMode()));
   useEffect(() => memoriserMode(mode), [mode]);
   const simulateur = mode === "simulateur";
   // Le formulaire général s'ouvre ici, avant les cartes de thèmes, plutôt que de rediriger vers une autre page.
@@ -46,11 +49,15 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   const personnalise = simulateur && generalSoumis && aDesInformations(profil);
   const reponsesGenerales = compterReponses(base.questionnaire.generales, profil);
   const cardsNommees = construireCards(base.themes, candidats, personnalise ? profil : null);
-  // « Afficher les candidats : non » : simulateur à l'aveugle (voir aveugle.ts). Les lettres sont retirées au sort à
-  // chaque activation ; à la révélation, on garde la correspondance le temps de la montrer.
-  const [aveugle, setAveugle] = useState(lireAveugle);
-  useEffect(() => memoriserAveugle(aveugle), [aveugle]);
+  // Simulateur À L'AVEUGLE, sans interrupteur (voir aveugle.ts) : les identités n'apparaissent qu'en « Explorer les mesures »
+  // ou, plus tard, dans la card « candidat idéal » une fois révélée. Lettres retirées au sort à chaque entrée en simulateur.
+  const aveugle = simulateur;
   const [graine, setGraine] = useState(() => Math.floor(Math.random() * 2 ** 31));
+  const nouvelleGraine = () => setGraine(Math.floor(Math.random() * 2 ** 31));
+  const changerMode = (suivant: ModeAffichage) => {
+    if (suivant === "simulateur" && mode !== "simulateur") nouvelleGraine();
+    setMode(suivant);
+  };
   const anonymisation = aveugle ? anonymiserCards(cardsNommees, graine) : null;
   const cards = anonymisation?.cards ?? cardsNommees;
   // Convictions : bloc et panneau seulement en mode « Simuler pour moi » (elles rattachent les mesures au visiteur).
@@ -58,19 +65,6 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   useEffect(() => memoriserConvictions(convictions), [convictions]);
   // Faits d'intégrité : seulement si le visiteur y tient, en simulateur, et jamais à l'aveugle (un casier identifie).
   const integrites = integritesVisibles({ simulateur, exemplarite: convictions.exemplarite, aveugle, slugs: candidats.map((c) => c.meta.slug) });
-  const [revelation, setRevelation] = useState<Correspondance[] | null>(null);
-  const basculerAveugle = (afficher: boolean) => {
-    if (afficher) {
-      setRevelation(anonymisation?.correspondance ?? null);
-      setAveugle(false);
-    } else {
-      setGraine(Math.floor(Math.random() * 2 ** 31));
-      setRevelation(null);
-      setAveugle(true);
-    }
-  };
-  // Arrivée depuis le tableau de l'accueil (ou une adresse partagée) : la carte du thème, avec ce candidat ouvert.
-  const [ouverture] = useState(() => (typeof window === "undefined" ? null : lireOuverture(window.location.href)));
   useEffect(() => {
     if (ouverture) document.getElementById(`theme-${ouverture.theme}`)?.scrollIntoView({ block: "center" });
   }, [ouverture]);
@@ -84,30 +78,11 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           <BookOpen size={18} aria-hidden="true" focusable="false" />
           Explorer les mesures
         </button>
-        <button type="button" aria-pressed={simulateur} onClick={() => setMode("simulateur")}>
+        <button type="button" aria-pressed={simulateur} onClick={() => changerMode("simulateur")}>
           <SlidersHorizontal size={18} aria-hidden="true" focusable="false" />
           Simuler pour moi
         </button>
       </div>
-
-      <label className="interrupteur interrupteur--candidats">
-        <input type="checkbox" role="switch" checked={!aveugle} onChange={(e) => basculerAveugle(e.target.checked)} />
-        <span className="interrupteur-piste" aria-hidden="true" />
-        Afficher les candidats
-      </label>
-      {aveugle && <p className="hint">Candidats masqués : les lettres sont tirées au hasard et changent à chaque activation.</p>}
-      {revelation && !aveugle && (
-        <details className="revelation">
-          <summary>Qui était qui ?</summary>
-          <ul>
-            {revelation.map(({ lettre, nom }) => (
-              <li key={lettre}>
-                {lettre} : {nom}
-              </li>
-            ))}
-          </ul>
-        </details>
-      )}
 
       {simulateur && formulaireOuvert && (
         <PageQuestionsGenerales
@@ -195,7 +170,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   },
                 }
-              : { type: "simuler", onClick: () => setMode("simulateur") }
+              : { type: "simuler", onClick: () => changerMode("simulateur") }
         }
         questionnaire={base.questionnaire}
         questionsActives={simulateur && generalSoumis}
