@@ -69,6 +69,14 @@ export interface Meilleurs {
   // n'est meilleur qu'un autre). Une égalité à un solde non nul reste désignée : tous les ex æquo sont montrés.
   departageable: boolean;
   ecartes: number;
+  // Des candidats avec des données existent, mais l'intégrité les a TOUS écartés : ce n'est pas un manque de données.
+  tousEcartes: boolean;
+}
+
+// Rien à désigner et rien à expliquer : aucun gagnant et personne d'écarté (aucun candidat n'a d'indicateur). Le résultat
+// « convictions » est alors omis plutôt que de promettre un résultat qui n'existe pas.
+export function sansDonnees(m: Meilleurs): boolean {
+  return m.gagnants.length === 0 && m.ecartes === 0;
 }
 
 // Un candidat sans aucun indicateur (`analyses === 0`) n'est pas éligible : il gagnerait par simple absence de données.
@@ -78,11 +86,14 @@ export function meilleurs(soldes: Solde[], ecartes: ReadonlySet<string> = new Se
   const retenus = soldes.filter((s) => !ecartes.has(s.slug));
   const eligibles = retenus.filter((s) => s.analyses > 0);
   const nombreEcartes = soldes.length - retenus.length;
-  if (eligibles.length === 0) return { solde: 0, gagnants: [], departageable: false, ecartes: nombreEcartes };
+  if (eligibles.length === 0) {
+    const tousEcartes = soldes.some((s) => s.analyses > 0);
+    return { solde: 0, gagnants: [], departageable: false, ecartes: nombreEcartes, tousEcartes };
+  }
   const max = Math.max(...eligibles.map((s) => s.solde));
   const gagnants = eligibles.filter((s) => s.solde === max);
   const toutALegalite = gagnants.length === eligibles.length && eligibles.length > 1;
-  return { solde: max, gagnants, departageable: !(toutALegalite && max === 0), ecartes: nombreEcartes };
+  return { solde: max, gagnants, departageable: !(toutALegalite && max === 0), ecartes: nombreEcartes, tousEcartes: false };
 }
 
 // Faits d'intégrité (voir data/integrite.ts) : seuls les candidats à condamnation définitive RECENSÉE sont écartés ; un

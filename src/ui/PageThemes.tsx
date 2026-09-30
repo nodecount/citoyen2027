@@ -5,10 +5,11 @@ import { lireOuverture } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
 import { GROUPES_SOCIAUX } from "../convictions";
-import { ecartesParIntegrite, meilleurs, soldesConvictions, soldesSituation, type Meilleurs } from "../engine/candidatIdeal";
+import { ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation } from "../engine/candidatIdeal";
 import { anonymiserCards } from "./aveugle";
-import { apresChangementDeMode, cleIdentites, etatPourBase, recommencer, tirerGraine, type EtatIdeal } from "./etatIdeal";
-import { CardCandidatIdeal, type ResultatAffiche } from "./CardCandidatIdeal";
+import { choisirMode, cleIdentites, etatPourBase, recommencer, tirerGraine, type EtatIdeal } from "./etatIdeal";
+import { CardCandidatIdeal } from "./CardCandidatIdeal";
+import { versResultatAffiche } from "./resultatIdeal";
 import { BlocConvictions, convictionsVisibles, integritesVisibles } from "./Convictions";
 import { CONVICTIONS_VIDES, lireConvictions, memoriserConvictions, type Convictions } from "./memoireConvictions";
 import { lireMode, memoriserMode, type ModeAffichage } from "./memoireReponses";
@@ -45,7 +46,6 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   // « Explorer les mesures » : les programmes seuls (ni indicateur, ni légende, ni formulaire, ni questions par thème),
   // identités visibles. « Simuler pour moi » : tout ce qui rattache les mesures à la situation du visiteur, à l'aveugle.
   const [mode, setMode] = useState<ModeAffichage>(() => modeInitial ?? (ouverture ? "exploration" : lireMode()));
-  useEffect(() => memoriserMode(mode), [mode]);
   const simulateur = mode === "simulateur";
   // Le formulaire général s'ouvre ici, avant les cartes de thèmes, plutôt que de rediriger vers une autre page.
   const [formulaireOuvert, setFormulaireOuvert] = useState(false);
@@ -68,8 +68,9 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
     setIdeal(etatPourBase(ideal, baseAffichee, base.info.id));
   }
   // Quitter ou entrer en simulateur repart de zéro : jamais de retour sur une card déjà révélée.
+  // Le mode n'est mémorisé que s'il est choisi par un clic (voir choisirMode) : un mode imposé par un lien n'est pas retenu.
   const changerMode = (suivant: ModeAffichage) => {
-    setIdeal(apresChangementDeMode(ideal, mode, suivant));
+    setIdeal(choisirMode(ideal, mode, suivant, memoriserMode));
     setMode(suivant);
   };
   const anonymisation = aveugle ? anonymiserCards(cardsNommees, graine) : null;
@@ -83,30 +84,15 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   // données RÉELLES (cardsNommees) : l'anonymisation ne change que l'affichage, et l'identité n'est transmise à la card
   // qu'une fois révélée.
   const correspondance = anonymisation?.correspondance ?? [];
-  const versAffiche = (titre: string, unite: ResultatAffiche["unite"], m: Meilleurs | null): ResultatAffiche | null =>
-    m && {
-      titre,
-      unite,
-      solde: m.solde,
-      departageable: m.departageable,
-      ecartes: m.ecartes,
-      gagnants: m.gagnants.map((g) => {
-        const c = correspondance.find((x) => x.slug === g.slug);
-        return {
-          lettre: c?.lettre ?? "?",
-          identite: revele && c ? { slug: c.slug, nom: c.nom, parti: c.parti } : null,
-          ameliorants: g.ameliorants,
-          degradants: g.degradants,
-          analyses: g.analyses,
-        };
-      }),
-    };
   const groupesChoisis = GROUPES_SOCIAUX.filter((g) => convictions.groupes.includes(g.id));
   // L'écart par intégrité se calcule sur les faits réels (jamais affichés à l'aveugle : seul le nombre d'écartés l'est).
   const ecartes = ecartesParIntegrite(integritesVisibles({ simulateur, exemplarite: convictions.exemplarite, aveugle: false, slugs: candidats.map((c) => c.meta.slug) }));
-  const situationIdeale = personnalise ? versAffiche("Selon votre situation", "thèmes", meilleurs(soldesSituation(cardsNommees))) : null;
+  const situationIdeale = personnalise ? versResultatAffiche("Selon votre situation", "thèmes", meilleurs(soldesSituation(cardsNommees)), correspondance, revele) : null;
+  // Résultat « convictions » : omis quand aucun candidat n'a de donnée pour les groupes choisis (et que personne n'est écarté) —
+  // plutôt que de promettre « le meilleur programme selon vos convictions » quand il n'existe pas.
+  const meilleursConvictions = personnalise && groupesChoisis.length > 0 ? meilleurs(soldesConvictions(cardsNommees, groupesChoisis), ecartes) : null;
   const convictionsIdeales =
-    personnalise && groupesChoisis.length > 0 ? versAffiche("Selon vos convictions", "constats", meilleurs(soldesConvictions(cardsNommees, groupesChoisis), ecartes)) : null;
+    meilleursConvictions && !sansDonnees(meilleursConvictions) ? versResultatAffiche("Selon vos convictions", "constats", meilleursConvictions, correspondance, revele) : null;
   const relancerLaSimulation = () => setIdeal(recommencer());
   // Une fois le candidat idéal révélé, le formulaire disparaît (réponses et convictions gardées, « Recommencer » le rouvre).
   const formulaireVisible = simulateur && !revele;
@@ -119,7 +105,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
       <h1>Simulateur</h1>
 
       <div className="bascule-mode" role="group" aria-label="Mode d'affichage">
-        <button type="button" aria-pressed={!simulateur} onClick={() => setMode("exploration")}>
+        <button type="button" aria-pressed={!simulateur} onClick={() => changerMode("exploration")}>
           <BookOpen size={18} aria-hidden="true" focusable="false" />
           Explorer les mesures
         </button>

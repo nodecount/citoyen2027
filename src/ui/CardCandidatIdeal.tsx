@@ -21,6 +21,8 @@ export interface ResultatAffiche {
   solde: number;
   departageable: boolean;
   ecartes: number;
+  // Tous les candidats avec des données sont écartés par l'intégrité (≠ « les données ne permettent pas de départager »).
+  tousEcartes: boolean;
 }
 
 interface CardCandidatIdealProps {
@@ -38,6 +40,12 @@ function BlocFlou({ resultat }: { resultat: ResultatAffiche }) {
   return (
     <div className="ideal-bloc">
       <h3>{resultat.titre}</h3>
+      {/* Seul le NOMBRE d'ex æquo est dit : jamais leur identité. */}
+      {resultat.departageable && resultat.gagnants.length > 1 && (
+        <p>
+          <strong>{resultat.gagnants.length} candidats à égalité</strong>
+        </p>
+      )}
       <div className="ideal-flou" aria-hidden="true">
         {lettres.map((lettre) => (
           <Pastille key={lettre} slug={`${PREFIXE_ANONYME}${lettre}`} nom={`Candidat ${lettre}`} />
@@ -79,12 +87,16 @@ function BlocRevele({ resultat }: { resultat: ResultatAffiche }) {
             )}
           </ul>
         </>
+      ) : resultat.tousEcartes ? (
+        <p>
+          <strong>Tous les candidats pour lesquels des données existent sont écartés</strong> : condamnation définitive recensée.
+        </p>
       ) : (
         <p>
           <strong>Les données ne permettent pas de départager les candidats.</strong>
         </p>
       )}
-      {ecartes > 0 && (
+      {ecartes > 0 && !resultat.tousEcartes && (
         <p className="hint">
           {ecartes} candidat{ecartes > 1 ? "s" : ""} {ecartes > 1 ? "écartés" : "écarté"} : condamnation définitive recensée.
         </p>

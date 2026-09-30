@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { CardCandidatIdeal, type GagnantAffiche, type ResultatAffiche } from "./CardCandidatIdeal";
 
 const gagnant = (lettre: string, nom: string, slug: string): GagnantAffiche => ({ lettre, identite: { slug, nom, parti: "Parti-test" }, ameliorants: 3, degradants: 1, analyses: 7 });
-const resultat = (titre: string, gagnants: GagnantAffiche[], extra: Partial<ResultatAffiche> = {}): ResultatAffiche => ({ titre, unite: "thèmes", gagnants, solde: 2, departageable: true, ecartes: 0, ...extra });
+const resultat = (titre: string, gagnants: GagnantAffiche[], extra: Partial<ResultatAffiche> = {}): ResultatAffiche => ({ titre, unite: "thèmes", gagnants, solde: 2, departageable: true, ecartes: 0, tousEcartes: false, ...extra });
 const SITUATION = resultat("Selon votre situation", [gagnant("C", "Nom-Reel-Situation", "slug-reel-a")]);
 const CONVICTIONS = resultat("Selon vos convictions", [gagnant("F", "Nom-Reel-Convictions", "slug-reel-b")], { unite: "constats" });
 
@@ -36,6 +36,17 @@ describe("CardCandidatIdeal floutée", () => {
   it("aucune question restante : la phrase sur l'affinage disparaît ; une seule : singulier", () => {
     expect(rendre({ questionsRestantes: 0 })).not.toContain("affiné");
     expect(rendre({ questionsRestantes: 1 })).toContain("à la question propre aux thèmes");
+  });
+  it("égalité : la card floutée dit seulement le nombre d'ex æquo, sans nom", () => {
+    const html = rendre({ convictions: null, situation: resultat("Selon votre situation", [gagnant("A", "Nom-A", "sa"), gagnant("B", "Nom-B", "sb"), gagnant("D", "Nom-D", "sd")]) });
+    expect(html).toContain("3 candidats à égalité");
+    for (const secret of ["Nom-A", "Nom-B", "Nom-D", "sa", "sb"]) expect(html).not.toContain(`>${secret}<`);
+    expect(html).not.toContain("Nom-");
+  });
+  it("un seul gagnant : pas de mention d'égalité ; non départageable : pas de nombre non plus", () => {
+    expect(rendre()).not.toContain("à égalité");
+    const html = rendre({ convictions: null, situation: resultat("Selon votre situation", [gagnant("A", "Nom-A", "sa"), gagnant("B", "Nom-B", "sb")], { departageable: false }) });
+    expect(html).not.toContain("à égalité");
   });
   it("aucun résultat du tout : rien", () => {
     expect(rendre({ situation: null, convictions: null })).toBe("");
@@ -70,6 +81,11 @@ describe("CardCandidatIdeal révélée", () => {
     const html = rendre({ revele: true, convictions: null, situation: resultat("Selon votre situation", [gagnant("A", "Nom-A", "sa")], { departageable: false }) });
     expect(html).toContain("Les données ne permettent pas de départager les candidats.");
     expect(html).not.toContain("Nom-A");
+  });
+  it("tous les candidats avec données sont écartés : le dit, au lieu de « données insuffisantes »", () => {
+    const html = rendre({ revele: true, situation: null, convictions: resultat("Selon vos convictions", [], { departageable: false, ecartes: 3, tousEcartes: true }) });
+    expect(html).toContain("Tous les candidats pour lesquels des données existent sont écartés");
+    expect(html).not.toContain("ne permettent pas de départager");
   });
   it("candidats écartés par l'intégrité : le dit, au pluriel si besoin", () => {
     expect(rendre({ revele: true, convictions: resultat("Selon vos convictions", [gagnant("F", "N", "s")], { ecartes: 1 }) })).toContain("1 candidat écarté : condamnation définitive recensée");

@@ -20,6 +20,13 @@ export function apresChangementDeMode(etat: EtatIdeal, courant: ModeAffichage, s
   return suivant === courant ? etat : recommencer();
 }
 
+// Choix du mode PAR LE VISITEUR (clic) : seul endroit où le mode est mémorisé dans le navigateur. Un mode imposé (arrivée par
+// un lien de l'accueil qui nomme un candidat) n'est jamais mémorisé : il ne doit pas devenir le mode des visites suivantes.
+export function choisirMode(etat: EtatIdeal, courant: ModeAffichage, suivant: ModeAffichage, memoriser: (mode: ModeAffichage) => void): EtatIdeal {
+  if (suivant !== courant) memoriser(suivant);
+  return apresChangementDeMode(etat, courant, suivant);
+}
+
 // Un autre jeu de candidats : le gagnant de la nouvelle base ne doit pas s'afficher révélé sans nouveau clic.
 export function etatPourBase(etat: EtatIdeal, baseAffichee: string, baseCourante: string): EtatIdeal {
   return baseAffichee === baseCourante ? etat : recommencer();

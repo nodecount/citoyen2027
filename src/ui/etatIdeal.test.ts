@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { apresChangementDeMode, cleIdentites, etatPourBase, recommencer, type EtatIdeal } from "./etatIdeal";
+import { apresChangementDeMode, choisirMode, cleIdentites, etatPourBase, recommencer, type EtatIdeal } from "./etatIdeal";
 
 const REVELE: EtatIdeal = { revele: true, graine: 42 };
 
@@ -21,6 +21,20 @@ describe("changement de mode (simulateur, exploration, simulateur)", () => {
   });
   it("rester dans le même mode ne change rien (clic sur le bouton déjà actif)", () => {
     expect(apresChangementDeMode(REVELE, "simulateur", "simulateur")).toBe(REVELE);
+  });
+});
+
+describe("choisirMode : le mode n'est mémorisé que s'il est choisi par le visiteur", () => {
+  it("un vrai changement est mémorisé et remet la card à zéro", () => {
+    const memorises: string[] = [];
+    const apres = choisirMode(REVELE, "exploration", "simulateur", (m) => memorises.push(m));
+    expect(memorises).toEqual(["simulateur"]);
+    expect(apres.revele).toBe(false);
+  });
+  it("cliquer sur le mode déjà actif ne mémorise rien", () => {
+    const memorises: string[] = [];
+    expect(choisirMode(REVELE, "simulateur", "simulateur", (m) => memorises.push(m))).toBe(REVELE);
+    expect(memorises).toEqual([]);
   });
 });
 

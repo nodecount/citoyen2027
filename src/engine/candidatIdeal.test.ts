@@ -3,7 +3,7 @@ import { GROUPES_SOCIAUX } from "../convictions";
 import type { Effet } from "../effets";
 import type { ConstatIntegrite } from "../data/integrite";
 import type { Proposition } from "../types";
-import { ecartesParIntegrite, meilleurs, soldesConvictions, soldesSituation, type CardPourSolde, type Solde } from "./candidatIdeal";
+import { ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation, type CardPourSolde, type Solde } from "./candidatIdeal";
 import type { NiveauProjection } from "./projection";
 
 const ligne = (slug: string, niveau: NiveauProjection | null, propositions: Proposition[] = []) => ({ meta: { slug }, projection: niveau === null ? null : { niveau }, propositions });
@@ -85,6 +85,21 @@ describe("meilleurs", () => {
   it("personne d'éligible : aucun gagnant, non départageable, pas d'erreur", () => {
     const m = meilleurs([solde("a", 0, 0, 0), solde("b", 0, 0, 0)])!;
     expect(m).toMatchObject({ gagnants: [], departageable: false });
+  });
+  it("tousEcartes : des candidats avec données existent mais tous sont écartés (et pas « aucune donnée »)", () => {
+    expect(meilleurs([solde("a", 3, 0), solde("b", 1, 0)], new Set(["a", "b"]))).toMatchObject({ gagnants: [], tousEcartes: true, ecartes: 2 });
+    // un candidat sans donnée n'est pas éligible : écarter le seul éligible suffit
+    expect(meilleurs([solde("a", 3, 0), solde("vide", 0, 0, 0)], new Set(["a"]))!.tousEcartes).toBe(true);
+  });
+  it("tousEcartes est faux quand il reste un éligible, ou quand personne n'avait de données", () => {
+    expect(meilleurs([solde("a", 3, 0), solde("b", 1, 0)], new Set(["a"]))!.tousEcartes).toBe(false);
+    expect(meilleurs([solde("a", 0, 0, 0)])!.tousEcartes).toBe(false);
+    expect(meilleurs([solde("a", 3, 0)])!.tousEcartes).toBe(false);
+  });
+  it("sansDonnees : rien à désigner ni à expliquer (aucun gagnant et personne d'écarté)", () => {
+    expect(sansDonnees(meilleurs([solde("a", 0, 0, 0)])!)).toBe(true);
+    expect(sansDonnees(meilleurs([solde("a", 3, 0)], new Set(["a"]))!)).toBe(false); // écarté : à expliquer
+    expect(sansDonnees(meilleurs([solde("a", 3, 0)])!)).toBe(false);
   });
   it("liste vide : null", () => {
     expect(meilleurs([])).toBeNull();
