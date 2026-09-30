@@ -65,7 +65,8 @@ export function soldesConvictions(cards: CardPourSolde[], groupes: GroupeSocial[
 export interface Meilleurs {
   solde: number;
   gagnants: Solde[];
-  // Faux quand tous les candidats éligibles sont à égalité (rien ne permet de les départager) ou quand aucun n'est éligible.
+  // Faux seulement quand rien ne ressort : aucun candidat éligible, ou tous les éligibles à égalité à un solde NUL (aucun
+  // n'est meilleur qu'un autre). Une égalité à un solde non nul reste désignée : tous les ex æquo sont montrés.
   departageable: boolean;
   ecartes: number;
 }
@@ -80,7 +81,8 @@ export function meilleurs(soldes: Solde[], ecartes: ReadonlySet<string> = new Se
   if (eligibles.length === 0) return { solde: 0, gagnants: [], departageable: false, ecartes: nombreEcartes };
   const max = Math.max(...eligibles.map((s) => s.solde));
   const gagnants = eligibles.filter((s) => s.solde === max);
-  return { solde: max, gagnants, departageable: gagnants.length === 1 || gagnants.length < eligibles.length, ecartes: nombreEcartes };
+  const toutALegalite = gagnants.length === eligibles.length && eligibles.length > 1;
+  return { solde: max, gagnants, departageable: !(toutALegalite && max === 0), ecartes: nombreEcartes };
 }
 
 // Faits d'intégrité (voir data/integrite.ts) : seuls les candidats à condamnation définitive RECENSÉE sont écartés ; un

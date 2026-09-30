@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { PREFIXE_ANONYME } from "./aveugle";
 import { Pastille } from "./Pastille";
 
@@ -93,16 +94,32 @@ function BlocRevele({ resultat }: { resultat: ResultatAffiche }) {
 }
 
 export function CardCandidatIdeal({ situation, convictions, questionsRestantes, revele, onReveler, onRecommencer }: CardCandidatIdealProps) {
+  // À la révélation (et à « Recommencer »), le bouton cliqué disparaît : le focus passe au titre de la card, sinon il
+  // retomberait sur la page et un lecteur d'écran n'entendrait pas le résultat. Pas de focus au premier affichage.
+  const titre = useRef<HTMLHeadingElement>(null);
+  const dejaAffichee = useRef(false);
+  useEffect(() => {
+    if (!dejaAffichee.current) {
+      dejaAffichee.current = true;
+      return;
+    }
+    titre.current?.focus();
+  }, [revele]);
+
   const resultats = [situation, convictions].filter((r): r is ResultatAffiche => r !== null);
   if (resultats.length === 0) return null;
   const n = questionsRestantes;
   return (
     <section className={`carte-ideal${revele ? "" : " carte-ideal--floue"}`} aria-label="Candidat idéal">
       <div className="carte-ideal-card">
-        <h2>Votre candidat idéal</h2>
-        {resultats.map((r) => (revele ? <BlocRevele key={r.titre} resultat={r} /> : <BlocFlou key={r.titre} resultat={r} />))}
+        <h2 ref={titre} tabIndex={-1}>
+          Votre candidat idéal
+        </h2>
+        <div aria-live="polite">
+          {resultats.map((r) => (revele ? <BlocRevele key={r.titre} resultat={r} /> : <BlocFlou key={r.titre} resultat={r} />))}
+        </div>
         <p className="hint regle-ideal">
-          Solde = améliorants moins dégradants. Aucune pondération, même règle pour tous les candidats ; les égalités sont toutes montrées. Il dépend du nombre d'indicateurs disponibles.
+          Solde = améliorants moins dégradants : il compense un thème par un autre. Aucune pondération, même règle pour tous les candidats ; une égalité n'est jamais départagée arbitrairement. Il dépend du nombre d'indicateurs disponibles.
         </p>
       </div>
       <div className="bandeau-accueil bandeau-accueil--compact">

@@ -42,6 +42,16 @@ describe("CardCandidatIdeal floutée", () => {
   });
 });
 
+describe("CardCandidatIdeal, clavier et lecteurs d'écran", () => {
+  it("le résultat est annoncé (zone aria-live) et le titre peut recevoir le focus après la révélation", () => {
+    for (const revele of [false, true]) {
+      const html = rendre({ revele });
+      expect(html).toContain('aria-live="polite"');
+      expect(html).toMatch(/<h2[^>]*tabindex="-1"[^>]*>Votre candidat idéal<\/h2>/);
+    }
+  });
+});
+
 describe("CardCandidatIdeal révélée", () => {
   it("montre noms, partis, lettres et le solde avec sa couverture ; plus de flou ; bouton Recommencer", () => {
     const html = rendre({ revele: true });
@@ -65,9 +75,11 @@ describe("CardCandidatIdeal révélée", () => {
     expect(rendre({ revele: true, convictions: resultat("Selon vos convictions", [gagnant("F", "N", "s")], { ecartes: 1 }) })).toContain("1 candidat écarté : condamnation définitive recensée");
     expect(rendre({ revele: true, convictions: resultat("Selon vos convictions", [gagnant("F", "N", "s")], { ecartes: 2 }) })).toContain("2 candidats écartés");
   });
-  it("affiche la règle du solde, sans pondération", () => {
+  it("affiche la règle du solde : sans pondération, et dit qu'il compense un thème par un autre", () => {
     const html = rendre({ revele: true });
     expect(html).toContain("Aucune pondération");
+    expect(html).toContain("compense un thème par un autre");
+    expect(html).not.toContain("les égalités sont toutes montrées"); // faux quand tous les candidats sont à égalité
   });
   it("ne montre pas le parti « non renseigné par la source »", () => {
     const g: GagnantAffiche = { ...gagnant("A", "Nom-A", "sa"), identite: { slug: "sa", nom: "Nom-A", parti: "non renseigné par la source" } };

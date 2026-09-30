@@ -65,6 +65,11 @@ describe("meilleurs", () => {
     const m = meilleurs([solde("a", 1, 1), solde("b", 1, 1), solde("c", 2, 2)])!;
     expect(m.departageable).toBe(false);
   });
+  it("tous les éligibles à égalité mais à un solde non nul : les ex æquo sont désignés, pas de message d'impuissance", () => {
+    const m = meilleurs([solde("le-pen", 1, 0), solde("retailleau", 1, 0), solde("vide", 0, 0, 0)])!;
+    expect(m.departageable).toBe(true);
+    expect(m.gagnants.map((x) => x.slug).sort()).toEqual(["le-pen", "retailleau"]);
+  });
   it("un seul candidat éligible : désigné", () => {
     const m = meilleurs([solde("a", 0, 2), solde("b", 0, 0, 0)])!;
     expect(m.gagnants.map((x) => x.slug)).toEqual(["a"]);
