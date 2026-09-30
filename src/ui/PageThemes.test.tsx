@@ -152,7 +152,7 @@ describe("simulateur à l'aveugle par défaut", () => {
     const html = page("simulateur");
     for (const nom of noms) expect(html, nom).not.toContain(nom);
     expect(html).not.toContain('src="/candidats/');
-    expect(html).toContain("Candidat A");
+    expect(html).toMatch(/Candidat [A-Z]/); // lettres tirées au hasard : jamais une lettre précise
   });
   it("simulateur : plus d'interrupteur « Afficher les candidats » ni de « Qui était qui ? »", () => {
     const html = page("simulateur");
@@ -164,6 +164,57 @@ describe("simulateur à l'aveugle par défaut", () => {
     expect(html).toContain('src="/candidats/le-pen.');
     expect(html).toContain(noms[0]);
     expect(html).not.toContain("Candidat A");
+  });
+});
+
+describe("card candidat idéal sur la page du simulateur", () => {
+  const base = chargerBase("agregateurs");
+  const noms = candidatsDeBase(base).avecDonnees.map((c) => c.meta.nom);
+  const page = (extra: Partial<Parameters<typeof PageThemes>[0]> = {}) =>
+    renderToStaticMarkup(
+      <PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial="simulateur" {...extra} />,
+    );
+
+  it("floutée par défaut : la card est là, le bouton aussi, et aucun nom réel n'est dans la page", () => {
+    const html = page();
+    expect(html).toContain("carte-ideal--floue");
+    expect(html).toContain("Révéler mon programme de candidat idéal pour 2027");
+    for (const nom of noms) expect(html, nom).not.toContain(nom);
+  });
+  it("placée avant les cards de thèmes", () => {
+    const html = page();
+    expect(html.indexOf("carte-ideal")).toBeGreaterThan(-1);
+    expect(html.indexOf("carte-ideal")).toBeLessThan(html.indexOf('class="grille-themes"'));
+  });
+  it("sans réponse (pas d'indicateur) : pas de card", () => {
+    expect(page({ profil: {}, generalSoumis: false })).not.toContain("carte-ideal");
+  });
+  it("révélée : le bouton Recommencer remplace celui de révélation, le formulaire et le bloc convictions disparaissent", () => {
+    const html = page({ releveInitial: true });
+    expect(html).toContain("Recommencer la simulation");
+    expect(html).not.toContain("Révéler mon programme");
+    expect(html).not.toContain("Mes convictions");
+    expect(html).not.toContain("Modifier mes réponses");
+    expect(html).not.toContain("carte-ideal--floue");
+  });
+  it("révélée : les cards de thèmes restent masquées (lettres, pas de photo)", () => {
+    const html = page({ releveInitial: true });
+    // La card idéale montre la vraie photo du gagnant ; les cards de thèmes, elles, restent masquées.
+    const themes = html.slice(html.indexOf('class="grille-themes"'));
+    expect(themes).toMatch(/Candidat [A-Z]/); // lettres tirées au hasard : jamais une lettre précise
+    expect(themes).not.toContain('src="/candidats/');
+  });
+  it("floutée : le bloc convictions et le récapitulatif de la situation restent visibles", () => {
+    const html = page();
+    expect(html).toContain("Mes convictions");
+    expect(html).toContain("Modifier mes réponses");
+  });
+  it("exploration : aucune card idéale", () => {
+    expect(page({ modeInitial: "exploration" })).not.toContain("carte-ideal");
+  });
+  it("résultat convictions seulement si un groupe est choisi", () => {
+    expect(page()).not.toContain("Selon vos convictions");
+    expect(page({ convictionsInitiales: { groupes: ["tranche_age:30_49"], exemplarite: false } })).toContain("Selon vos convictions");
   });
 });
 
@@ -219,7 +270,7 @@ describe("bloc « Mes convictions » sur la page du simulateur", () => {
     const base = chargerBase("agregateurs");
     const page = (mode: "simulateur" | "exploration") =>
       renderToStaticMarkup(
-        <PageThemes base={base} profil={{}} generalSoumis={false} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} convictionsInitiales={{ groupes: ["jeunes"], exemplarite: true }} />,
+        <PageThemes base={base} profil={{}} generalSoumis={false} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} convictionsInitiales={{ groupes: ["tranche_age:moins_30"], exemplarite: true }} />,
       );
     expect(page("simulateur")).toContain("Mes convictions");
     expect(page("exploration")).not.toContain("Mes convictions");

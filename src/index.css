@@ -2521,6 +2521,62 @@ button.bouton-en-ligne {
   display: block;
   margin: 0.25rem 0;
 }
+.carte-ideal {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+  margin: 1rem 0;
+}
+.carte-ideal-card {
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ccd;
+  border-radius: 0.75rem;
+}
+.carte-ideal .bandeau-accueil--compact {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.ideal-bloc + .ideal-bloc {
+  margin-top: 1rem;
+}
+.ideal-flou {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  filter: blur(7px);
+  user-select: none;
+  pointer-events: none;
+  transition: filter 0.4s ease;
+}
+.ideal-gagnants {
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+.ideal-gagnants li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+}
+.regle-ideal {
+  margin-top: 1rem;
+}
+@media (max-width: 800px) {
+  .carte-ideal {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ideal-flou {
+    transition: none;
+  }
+}
 .panneau-convictions {
   margin: 0.75rem 0;
   padding: 0.5rem 0.75rem;

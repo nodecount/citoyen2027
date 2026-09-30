@@ -4,13 +4,16 @@ import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/base
 import { lireOuverture } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
+import { GROUPES_SOCIAUX } from "../convictions";
+import { ecartesParIntegrite, meilleurs, soldesConvictions, soldesSituation, type Meilleurs } from "../engine/candidatIdeal";
 import { anonymiserCards } from "./aveugle";
+import { CardCandidatIdeal, type ResultatAffiche } from "./CardCandidatIdeal";
 import { BlocConvictions, convictionsVisibles, integritesVisibles } from "./Convictions";
 import { CONVICTIONS_VIDES, lireConvictions, memoriserConvictions, type Convictions } from "./memoireConvictions";
 import { lireMode, memoriserMode, type ModeAffichage } from "./memoireReponses";
 import { ModaleConfirmation } from "./ModaleConfirmation";
 import PageQuestionsGenerales from "./PageQuestionsGenerales";
-import { compterReponses } from "../questionnaire";
+import { compterReponses, questionsRestantes } from "../questionnaire";
 import type { SurReponse } from "./Questions";
 import { VueThemes } from "./VueThemes";
 
@@ -28,11 +31,13 @@ interface PageThemesProps {
   modeInitial?: ModeAffichage;
   // Convictions de départ (par défaut : celles gardées dans le navigateur).
   convictionsInitiales?: Convictions;
+  // État « révélé » de départ (tests) : chaque visite recommence floutée, il n'est jamais mémorisé.
+  releveInitial?: boolean;
 }
 
 // Page du simulateur : les thèmes, et sur chacun les portraits cliquables des candidats concernés. Aucun indicateur
 // tant que le formulaire général n'a pas été validé (et qu'il contient au moins une réponse).
-export default function PageThemes({ base, profil, generalSoumis, onValider, onEffacer, onReponse, modeInitial, convictionsInitiales }: PageThemesProps) {
+export default function PageThemes({ base, profil, generalSoumis, onValider, onEffacer, onReponse, modeInitial, convictionsInitiales, releveInitial }: PageThemesProps) {
   // Arrivée depuis le tableau de l'accueil (ou une adresse partagée) : la carte du thème, avec ce candidat ouvert. Ce lien
   // nomme un candidat : on l'ouvre donc en « Explorer les mesures », seul mode où les identités sont visibles.
   const [ouverture] = useState(() => (typeof window === "undefined" ? null : lireOuverture(window.location.href)));
@@ -65,6 +70,41 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   useEffect(() => memoriserConvictions(convictions), [convictions]);
   // Faits d'intégrité : seulement si le visiteur y tient, en simulateur, et jamais à l'aveugle (un casier identifie).
   const integrites = integritesVisibles({ simulateur, exemplarite: convictions.exemplarite, aveugle, slugs: candidats.map((c) => c.meta.slug) });
+  // Card « candidat idéal » (voir CardCandidatIdeal.tsx) : seulement quand des indicateurs existent. Calculée sur les
+  // données RÉELLES (cardsNommees) : l'anonymisation ne change que l'affichage, et l'identité n'est transmise à la card
+  // qu'une fois révélée.
+  const [revele, setRevele] = useState(releveInitial ?? false);
+  const correspondance = anonymisation?.correspondance ?? [];
+  const versAffiche = (titre: string, unite: ResultatAffiche["unite"], m: Meilleurs | null): ResultatAffiche | null =>
+    m && {
+      titre,
+      unite,
+      solde: m.solde,
+      departageable: m.departageable,
+      ecartes: m.ecartes,
+      gagnants: m.gagnants.map((g) => {
+        const c = correspondance.find((x) => x.slug === g.slug);
+        return {
+          lettre: c?.lettre ?? "?",
+          identite: revele && c ? { slug: c.slug, nom: c.nom, parti: c.parti } : null,
+          ameliorants: g.ameliorants,
+          degradants: g.degradants,
+          analyses: g.analyses,
+        };
+      }),
+    };
+  const groupesChoisis = GROUPES_SOCIAUX.filter((g) => convictions.groupes.includes(g.id));
+  // L'écart par intégrité se calcule sur les faits réels (jamais affichés à l'aveugle : seul le nombre d'écartés l'est).
+  const ecartes = ecartesParIntegrite(integritesVisibles({ simulateur, exemplarite: convictions.exemplarite, aveugle: false, slugs: candidats.map((c) => c.meta.slug) }));
+  const situationIdeale = personnalise ? versAffiche("Selon votre situation", "thèmes", meilleurs(soldesSituation(cardsNommees))) : null;
+  const convictionsIdeales =
+    personnalise && groupesChoisis.length > 0 ? versAffiche("Selon vos convictions", "constats", meilleurs(soldesConvictions(cardsNommees, groupesChoisis), ecartes)) : null;
+  const recommencer = () => {
+    setRevele(false);
+    nouvelleGraine();
+  };
+  // Une fois le candidat idéal révélé, le formulaire disparaît (réponses et convictions gardées, « Recommencer » le rouvre).
+  const formulaireVisible = simulateur && !revele;
   useEffect(() => {
     if (ouverture) document.getElementById(`theme-${ouverture.theme}`)?.scrollIntoView({ block: "center" });
   }, [ouverture]);
@@ -84,7 +124,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
         </button>
       </div>
 
-      {simulateur && formulaireOuvert && (
+      {formulaireVisible && formulaireOuvert && (
         <PageQuestionsGenerales
           integre
           questions={base.questionnaire.generales}
@@ -120,6 +160,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           setConfirmerEffacement(false);
           setFormulaireOuvert(false);
           setConvictions(CONVICTIONS_VIDES); // un seul effacement pour tout ce que le visiteur a saisi
+          setRevele(false);
           onEffacer();
         }}
         onAnnuler={() => setConfirmerEffacement(false)}
@@ -128,7 +169,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
       {/* Après enregistrement : une simple ligne (pas tout le formulaire, qui prendrait la place des thèmes). « Modifier »
           rouvre le même formulaire, toujours avec son bouton d'enregistrement : on peut changer ou compléter ses réponses
           à tout moment. */}
-      {personnalise && !formulaireOuvert && (
+      {personnalise && formulaireVisible && !formulaireOuvert && (
         <div className="recap-situation" role="region" aria-label="Vos réponses générales">
           <p>
             <strong>Ma situation</strong> : {reponsesGenerales.repondues} réponse{reponsesGenerales.repondues > 1 ? "s" : ""} sur {reponsesGenerales.total}
@@ -138,7 +179,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           </button>
         </div>
       )}
-      {simulateur && !personnalise && !formulaireOuvert && (
+      {formulaireVisible && !personnalise && !formulaireOuvert && (
         <div className="bandeau-accueil bandeau-accueil--compact">
           <p className="chapeau">
             {generalSoumis && <strong>Aucune réponse donnée. </strong>}
@@ -150,7 +191,18 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           </button>
         </div>      )}
 
-      {simulateur && <BlocConvictions convictions={convictions} onChange={setConvictions} aveugle={aveugle} />}
+      {formulaireVisible && <BlocConvictions convictions={convictions} onChange={setConvictions} aveugle={aveugle} />}
+
+      {personnalise && (situationIdeale || convictionsIdeales) && (
+        <CardCandidatIdeal
+          situation={situationIdeale}
+          convictions={convictionsIdeales}
+          questionsRestantes={questionsRestantes(base.questionnaire, profil)}
+          revele={revele}
+          onReveler={() => setRevele(true)}
+          onRecommencer={recommencer}
+        />
+      )}
 
       <VueThemes
         convictions={convictionsVisibles(simulateur, convictions)}
