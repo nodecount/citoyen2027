@@ -220,7 +220,7 @@ type VueInitiale = "resume" | "polarite" | "detail";
 
 // Le détail d'un candidat sur un thème, ouvert depuis son portrait : programme d'abord (synthèse, sources, mesures),
 // puis — seulement si le visiteur a donné des informations — ce que cela change pour lui.
-function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", actionProfil, convictions, integrite }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string; onFermer?: () => void; vueInitiale?: VueInitiale; actionProfil?: ActionProfil; convictions?: Convictions; integrite?: ConstatIntegrite | null }) {
+function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil, convictions, integrite, anonyme = false, onExplorer }: { ligne: LigneCandidat; profil: ProfilPartiel; id: string; onFermer?: () => void; vueInitiale?: VueInitiale; actionProfil?: ActionProfil; convictions?: Convictions; integrite?: ConstatIntegrite | null; anonyme?: boolean; onExplorer?: () => void }) {
   const { meta, projection, synthese, resume, sources, messagesSansBadge, messagesIncertitude, messagesEffetsExclus, propositions, remarques } = ligne;
   const niveau = projection?.niveau ?? null;
   // Trois onglets possibles, ouverts sur « Résumé » : le résumé (à défaut, la synthèse texte ; à défaut encore, un
@@ -228,7 +228,10 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", a
   // soit son niveau), et le détail des mesures. Avec un résumé, ce dernier est celui de ses références citées ; sans,
   // c'est la liste complète des mesures.
   const vueDetail = resume ? "citations" : "detail";
-  const [vue, setVue] = useState<"resume" | "polarite" | "citations" | "detail">(vueInitiale === "detail" ? vueDetail : vueInitiale);
+  // Le détail s'ouvre toujours sur « Résumé », en exploration comme en simulateur (à l'étape « mesures adaptées », le résumé
+  // se limite à l'analyse de la situation du visiteur).
+  const vueDepart = vueInitiale ?? "resume";
+  const [vue, setVue] = useState<"resume" | "polarite" | "citations" | "detail">(vueDepart === "detail" ? vueDetail : vueDepart);
   const vueActive = vue;
   const nombre = propositions.length;
   // Répartition entre mesures favorables et défavorables, pour TOUT candidat ayant une projection — pas seulement un
@@ -257,9 +260,13 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", a
           <button type="button" aria-pressed={vueActive === "resume"} onClick={() => setVue("resume")}>
             Résumé
           </button>
-          <button type="button" aria-pressed={vueActive === vueDetail} onClick={() => setVue(vueDetail)}>
-            Mesures ({nombre})
-          </button>
+          {/* Mode anonyme : pas de liste complète des mesures (ni de décompte, qui identifierait le candidat) ; elle est dans
+              « Explorer les mesures », comme le dit l'appel à l'action en bas du détail. */}
+          {!anonyme && (
+            <button type="button" aria-pressed={vueActive === vueDetail} onClick={() => setVue(vueDetail)}>
+              Mesures ({nombre})
+            </button>
+          )}
           <button type="button" aria-pressed={vueActive === "polarite"} onClick={() => setVue("polarite")}>
             Favorable / défavorable
           </button>
@@ -286,7 +293,7 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", a
         <>
           <GroupeMesures titre="Mesures favorables" sens="favorable" propositions={favorables} profil={profil} remarques={remarques} resume={resume} />
           <GroupeMesures titre="Mesures défavorables" sens="defavorable" propositions={defavorables} profil={profil} remarques={remarques} resume={resume} />
-          <GroupeMesures titre="Autres mesures" sens="neutre" propositions={autres} profil={profil} remarques={remarques} resume={resume} />
+          {!anonyme && <GroupeMesures titre="Autres mesures" sens="neutre" propositions={autres} profil={profil} remarques={remarques} resume={resume} />}
         </>
       ) : vueActive === "detail" ? (
         <ul className="liste-mesures">
@@ -296,6 +303,10 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", a
         </ul>
       ) : vueActive === "citations" && resume ? (
         <CitationsResume resume={resume} propositions={propositions} />
+      ) : anonyme && projection ? (
+        // Simulateur anonyme : l'onglet Résumé ne reprend pas le résumé du programme (c'est celui de l'exploration), seulement
+        // l'analyse de la situation du visiteur, affichée ci-dessous (« Pour votre profil »).
+        null
       ) : resume ? (
         <Resume resume={resume} />
       ) : synthese ? (
@@ -365,6 +376,15 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", a
           </ul>
         </details>
       )}
+
+      {anonyme && onExplorer && (
+        <div className="appel-profil">
+          <p>En mode anonyme, nous n'affichons pas toutes les mesures du candidat. Le mode « Explorer les mesures » les montre toutes, avec leurs sources.</p>
+          <button type="button" className="bouton-en-ligne" onClick={onExplorer}>
+            Explorer toutes les mesures
+          </button>
+        </div>
+      )}
       </div>
     </div>
   );
@@ -419,14 +439,23 @@ const useEffetLayout = typeof window === "undefined" ? useEffect : useLayoutEffe
 // façon de connaître le niveau, seulement la façon la plus rapide une fois la légende lue. Tant qu'aucun candidat
 // n'est sélectionné, chaque portrait affiche son nombre de mesures, comme un compteur de notifications. Le pied de
 // carte garde toujours la même taille (rétractée), qu'un candidat soit ouvert ou non.
-function Portrait({ ligne, ouvert, idDetail, onBasculer, neutre = false }: { ligne: LigneCandidat; ouvert: boolean; idDetail: string; onBasculer: () => void; neutre?: boolean }) {
+function Portrait({ ligne, ouvert, idDetail, onBasculer, neutre = false, simulateur = false }: { ligne: LigneCandidat; ouvert: boolean; idDetail: string; onBasculer: () => void; neutre?: boolean; simulateur?: boolean }) {
   // `neutre` : portrait sans indicateur (candidats non concernés affichés à part) — ni couleur, ni niveau dans son nom.
   const niveau = neutre ? null : (ligne.projection?.niveau ?? null);
   const { nom } = ligne.meta;
   const parti = partiAffichable(ligne.meta.parti);
   const nombre = ligne.propositions.length;
   const precision = niveau ? ` — ${NIVEAUX[niveau].libelle}${ligne.projection?.incertain ? ", à préciser" : ""}` : "";
-  const label = `${nom}${parti ? ` (${parti})` : ""}${precision} : ${nombre} mesure${nombre > 1 ? "s" : ""} sur ce thème`;
+  // Exploration : le nombre de mesures du candidat. Simulateur : pas le total (40 mesures suffit à reconnaître un candidat),
+  // mais ce qui compte pour le visiteur — mesures favorables pour « améliorant », défavorables pour « dégradant », les deux
+  // pour « mixte » —, sur un fond de la couleur de l'indicateur ; rien pour « non concerné » et « sans indicateur ».
+  const { favorables, defavorables } = simulateur && niveau && ligne.projection ? grouperParPolarite(ligne.projection, ligne.propositions) : { favorables: [], defavorables: [] };
+  const comptes: Array<{ sens: "favorable" | "defavorable"; nombre: number }> = [];
+  if ((niveau === "ameliorant" || niveau === "mixte") && favorables.length > 0) comptes.push({ sens: "favorable", nombre: favorables.length });
+  if ((niveau === "degradant" || niveau === "mixte") && defavorables.length > 0) comptes.push({ sens: "defavorable", nombre: defavorables.length });
+  const pluriel = (n: number) => `${n} mesure${n > 1 ? "s" : ""}`;
+  const resumeComptes = comptes.map((c) => `${pluriel(c.nombre)} ${c.sens === "favorable" ? "favorable" : "défavorable"}${c.nombre > 1 ? "s" : ""}`).join(", ");
+  const label = `${nom}${parti ? ` (${parti})` : ""}${precision}${simulateur ? (resumeComptes ? ` : ${resumeComptes}` : "") : ` : ${pluriel(nombre)} sur ce thème`}`;
   return (
     <li className="avec-infobulle">
       <button
@@ -439,9 +468,21 @@ function Portrait({ ligne, ouvert, idDetail, onBasculer, neutre = false }: { lig
         onClick={onBasculer}
       >
         <Pastille slug={ligne.meta.slug} nom={nom} />
-        <span className="portrait-compte" aria-hidden="true">
-          {nombre}
-        </span>
+        {simulateur ? (
+          comptes.length > 0 && (
+            <span className="portrait-comptes" aria-hidden="true">
+              {comptes.map((c) => (
+                <span key={c.sens} className={`portrait-compte portrait-compte--${c.sens}`}>
+                  {c.nombre}
+                </span>
+              ))}
+            </span>
+          )
+        ) : (
+          <span className="portrait-compte" aria-hidden="true">
+            {nombre}
+          </span>
+        )}
       </button>
       {/* Nom du candidat : vraie infobulle au survol et au focus (le nom complet est déjà dans le nom accessible du
           bouton, d'où aria-hidden). */}
@@ -476,9 +517,14 @@ function CarteTheme({
   masquerNonConcernes,
   simulateur,
   sansFlux,
+  anonyme,
+  onExplorer,
   convictions,
   integrites,
 }: {
+  // Simulateur à l'aveugle : pas de liste complète des mesures ; l'appel à l'action renvoie vers « Explorer les mesures ».
+  anonyme: boolean;
+  onExplorer?: () => void;
   convictions?: Convictions;
   // Faits d'intégrité par slug ; null quand ils ne doivent pas s'afficher (option désactivée, mode aveugle).
   integrites?: Record<string, ConstatIntegrite> | null;
@@ -525,7 +571,7 @@ function CarteTheme({
       </li>
     ) : null;
   const portraitsDe = (liste: LigneCandidat[], neutre = false) =>
-    liste.map((ligne) => <Portrait key={ligne.meta.slug} ligne={ligne} ouvert={ouvert === ligne.meta.slug} idDetail={idDetail} onBasculer={() => basculer(ligne.meta.slug)} neutre={neutre} />);
+    liste.map((ligne) => <Portrait key={ligne.meta.slug} ligne={ligne} ouvert={ouvert === ligne.meta.slug} idDetail={idDetail} onBasculer={() => basculer(ligne.meta.slug)} neutre={neutre} simulateur={simulateur} />);
   const neutres = lignes.filter((l) => zoneDe(l) === "neutres");
   // Zones du tiroir seulement quand des indicateurs existent (mode simulateur, formulaire enregistré).
   const enZones = lignes.some((l) => l.projection);
@@ -632,7 +678,7 @@ function CarteTheme({
         ) : (
           <>
             {ligneOuverte ? (
-              <DetailCandidat ligne={ligneOuverte} profil={profil} id={idDetail} onFermer={fermer} vueInitiale={vueInitiale} actionProfil={actionProfil} convictions={convictions} integrite={integrites ? (integrites[ligneOuverte.meta.slug] ?? NON_VERIFIE) : null} />
+              <DetailCandidat ligne={ligneOuverte} profil={profil} id={idDetail} onFermer={fermer} vueInitiale={vueInitiale} actionProfil={actionProfil} convictions={convictions} anonyme={anonyme} onExplorer={onExplorer} integrite={integrites ? (integrites[ligneOuverte.meta.slug] ?? NON_VERIFIE) : null} />
             ) : (
               <>
                 {lignes.length > 0 && questionsTheme.length === 0 && !sansFlux && <FluxCandidats key={lignes.map((l) => l.meta.slug).join("|")} lignes={lignes} />}
@@ -696,6 +742,9 @@ interface VueThemesProps {
   ouvertInitial?: { theme: string; candidat: string; vue?: VueInitiale };
   // Mode « Simuler pour moi » : le flux de bulles de paroles n'est pas affiché.
   sansFlux?: boolean;
+  // Mode anonyme (simulateur) et passage en « Explorer les mesures » proposé dans le détail d'un candidat.
+  anonyme?: boolean;
+  onExplorer?: () => void;
   // Appel à l'action de l'onglet « Favorable / défavorable » tant qu'aucun indicateur n'existe.
   actionProfil?: ActionProfil;
   // Convictions du visiteur et faits d'intégrité (voir Convictions.tsx) : affichés dans le détail de chaque candidat.
@@ -703,7 +752,7 @@ interface VueThemesProps {
   integrites?: Record<string, ConstatIntegrite> | null;
 }
 
-export function VueThemes({ cards, profil, personnalise, questionnaire, questionsActives, onReponse, ouvertInitial, sansFlux = false, actionProfil, convictions = CONVICTIONS_VIDES, integrites = null }: VueThemesProps) {
+export function VueThemes({ cards, profil, personnalise, questionnaire, questionsActives, onReponse, ouvertInitial, sansFlux = false, anonyme = false, onExplorer, actionProfil, convictions = CONVICTIONS_VIDES, integrites = null }: VueThemesProps) {
   const [masquer, setMasquer] = useState(true);
   const masquerNonConcernes = personnalise && masquer;
   // Exploration : tous les tiroirs de portraits ont la même hauteur (celle du plus haut) : on mesure le plus haut à sa
@@ -771,6 +820,8 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
             masquerNonConcernes={masquerNonConcernes}
             simulateur={personnalise}
             sansFlux={sansFlux}
+            anonyme={anonyme}
+            onExplorer={onExplorer}
             actionProfil={actionProfil}
             convictions={convictions}
             integrites={integrites}

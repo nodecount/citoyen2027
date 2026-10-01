@@ -936,8 +936,10 @@ article {
   border-right: 1px solid var(--filet);
 }
 
-/* Simulateur : le portrait ET la bulle portent la couleur de l'indicateur du candidat sur ce thème (mêmes couleurs que la
-   légende et que les portraits du tiroir). Mixte : moitié vert, moitié rouge. Sans indicateur : rien (comme en exploration). */
+/* Simulateur : deux couleurs, deux sens. Le PORTRAIT porte l'indicateur du candidat sur ce thème (mêmes couleurs que la
+   légende et que le tiroir ; mixte : moitié vert, moitié rouge). La BULLE porte le sens de la mesure qu'elle cite : verte si
+   la mesure est favorable, rouge si elle est défavorable, neutre si son sens n'est pas établi — un candidat « mixte » cite
+   tantôt une mesure verte, tantôt une rouge. */
 .flux-item[data-niveau="ameliorant"] { --niveau-couleur: var(--ameliorant); }
 .flux-item[data-niveau="mixte"] { --niveau-couleur: var(--mixte); }
 .flux-item[data-niveau="degradant"] { --niveau-couleur: var(--degradant); }
@@ -945,28 +947,21 @@ article {
   border-color: var(--niveau-couleur);
   border-width: 4px;
 }
-.flux-item[data-niveau] .flux-bulle {
-  border: 3px solid var(--niveau-couleur);
-}
-.flux-item[data-niveau] .flux-bulle::before {
-  border-width: 3px;
-  border-color: var(--niveau-couleur);
-}
 .flux-item[data-niveau="mixte"] .pastille {
   border-color: transparent;
   background:
     linear-gradient(#eef1f6, #eef1f6) padding-box,
     linear-gradient(90deg, var(--ameliorant) 50%, var(--degradant) 50%) border-box;
 }
-.flux-item[data-niveau="mixte"] .flux-bulle {
-  border-color: transparent;
-  background:
-    linear-gradient(var(--surface), var(--surface)) padding-box,
-    linear-gradient(90deg, var(--ameliorant) 50%, var(--degradant) 50%) border-box;
+.flux-item[data-sens="favorable"] { --sens-couleur: var(--ameliorant); }
+.flux-item[data-sens="defavorable"] { --sens-couleur: var(--degradant); }
+.flux-item[data-sens] .flux-bulle {
+  border: 3px solid var(--sens-couleur);
 }
-/* La pointe est du côté du portrait : vert à gauche, rouge à droite pour le mixte. */
-.flux-item--bulle-droite[data-niveau="mixte"] .flux-bulle::before { border-color: var(--ameliorant); }
-.flux-item--bulle-gauche[data-niveau="mixte"] .flux-bulle::before { border-color: var(--degradant); }
+.flux-item[data-sens] .flux-bulle::before {
+  border-width: 3px;
+  border-color: var(--sens-couleur);
+}
 
 /* Du bas de la zone (apparition en fondu) vers le haut, où le portrait s'efface complètement. */
 @keyframes flux-montee {
@@ -1022,6 +1017,25 @@ article {
   font-weight: 700;
   line-height: 1;
   transition: min-width 0.25s ease, height 0.25s ease, font-size 0.25s ease;
+}
+
+/* Simulateur : au lieu du total, le nombre de mesures favorables (vert) et/ou défavorables (rouge), côte à côte pour un
+   candidat « mixte ». Le chiffre prend la couleur de l'indicateur ; le sens reste dit dans le nom accessible du portrait. */
+.portrait-comptes {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+  display: flex;
+  gap: 0.15rem;
+}
+.portrait-comptes .portrait-compte {
+  position: static;
+}
+.portrait-compte--favorable {
+  background: var(--ameliorant);
+}
+.portrait-compte--defavorable {
+  background: var(--degradant);
 }
 
 /* Tiroir : plaqué aux bords de la carte, effet verre (glassmorphism) : fond blanc translucide teinté de bleu,
@@ -2984,12 +2998,37 @@ button.bouton-en-ligne {
   font-size: 1.125rem;
   line-height: 1.5;
 }
+/* Une idée par paragraphe, avec une ligne d'air entre eux. */
+.intro-texte p + p {
+  margin-top: 0.75rem;
+}
+/* Phrase d'introduction avec sa propre icône (œil barré devant l'anonymisation, cadenas devant la sécurité des données) :
+   l'icône n'est jamais devant l'objectif. */
+.intro-ligne-icone {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.intro-ligne-icone svg {
+  flex: none;
+  margin-top: 0.15rem;
+  color: var(--bleu);
+}
 .intro-etape strong {
   color: var(--bleu-fonce);
 }
 /* Navigation en haut de l'écran (pour ne pas avoir à défiler) comme en bas : même boutons, marges adaptées. */
 .nav-etape--haut {
   margin: 0 0 1rem;
+}
+/* Bouton « Compléter ma situation », dans l'introduction de l'écran des mesures. */
+.intro-etape .bouton-completer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0.4rem 0 0;
+  padding: 0.3rem 0.9rem;
+  font-size: 1rem;
 }
 
 /* ---- Légende des indicateurs : une « règle graduée » ---------------------------------------------------------------------

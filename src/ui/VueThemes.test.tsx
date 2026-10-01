@@ -331,9 +331,9 @@ describe("après avoir eu des informations sur le visiteur", () => {
     const defavorable = { ...prop("a", [BAISSE]), id: "a-fiscalite-002", titre: "Mesure défavorable de a" };
     const synthese: SyntheseTheme = { theme: "fiscalite", texte: "Synthèse du candidat.", propositions: [favorable.id, defavorable.id], date_derniere_verification: "2026-09-24" };
     const r = html([candidat("a", [favorable, defavorable], [synthese])], PROFIL, { theme: "fiscalite", candidat: "a" });
-    expect(r).toContain("Synthèse du candidat."); // vue par défaut : le résumé
     expect(r).toContain("Favorable / défavorable"); // l'onglet existe
     expect(r).toContain("Pour votre profil");
+    expect(r).toContain("Synthèse du candidat."); // vue par défaut : le résumé
     expect(r).not.toContain("Mesures favorables"); // la répartition n'apparaît que dans son onglet
   });
 

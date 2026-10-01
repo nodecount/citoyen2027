@@ -12,9 +12,11 @@ interface Tirage {
   slug: string;
   nom: string;
   mesure: string;
-  // Niveau de l'indicateur du candidat sur ce thème (simulateur) : colore le portrait ET la bulle, comme la légende. « Non
-  // concerné » n'a pas de couleur (comme sur les portraits), pas plus qu'en exploration où il n'y a pas d'indicateur.
+  // Niveau de l'indicateur du CANDIDAT sur ce thème (simulateur) : colore son portrait, comme la légende. « Non concerné »
+  // n'a pas de couleur (comme sur les portraits), pas plus qu'en exploration où il n'y a pas d'indicateur.
   niveau: NiveauProjection | null;
+  // Sens de la MESURE citée dans la bulle : colore la bulle (vert ou rouge) ; absent quand il n'est pas établi.
+  sens: "favorable" | "defavorable" | null;
   // Position horizontale du portrait, en % de la largeur : X_GAUCHE ou X_DROITE selon la parité du curseur.
   x: number;
 }
@@ -27,9 +29,16 @@ const majuscule = (texte: string) => texte.charAt(0).toUpperCase() + texte.slice
 
 // Ce que dit la bulle : de préférence un mot clé du résumé du candidat sur ce thème (la version résumée d'une mesure,
 // celle qu'on retrouve en accentué dans l'onglet Résumé) ; à défaut de résumé, le titre d'une mesure.
-function textesPossibles(ligne: LigneCandidat): string[] {
-  const motsCles = (ligne.resume?.segments ?? []).filter((s) => s.mesures.length > 0).map((s) => s.texte.trim()).filter(Boolean);
-  return motsCles.length > 0 ? motsCles : ligne.propositions.map((p) => p.titre);
+function textesPossibles(ligne: LigneCandidat): Array<{ texte: string; ids: string[] }> {
+  const motsCles = (ligne.resume?.segments ?? []).filter((s) => s.mesures.length > 0 && s.texte.trim()).map((s) => ({ texte: s.texte.trim(), ids: s.mesures }));
+  return motsCles.length > 0 ? motsCles : ligne.propositions.map((p) => ({ texte: p.titre, ids: [p.id] }));
+}
+
+// Sens de LA mesure citée (pas du candidat : un candidat « mixte » a des mesures favorables ET défavorables, chacune est
+// l'une ou l'autre) : favorable ou défavorable si tous ses effets retenus vont dans le même sens, sinon pas de couleur.
+function sensDeLaMesure(ligne: LigneCandidat, ids: string[]): "favorable" | "defavorable" | null {
+  const sens = new Set((ligne.projection?.effetsRetenus ?? []).filter((e) => ids.includes(e.propositionId)).map((e) => e.polarite));
+  return sens.size === 1 ? ([...sens][0] as "favorable" | "defavorable") : null;
 }
 
 // Un candidat tiré au hasard (jamais l'un de ceux déjà à l'écran tant qu'il en reste d'autres, sans quoi le même
@@ -39,9 +48,10 @@ function tirer(lignes: LigneCandidat[], curseur: number, dejaLa: string[]): Tira
   const choix = libres.length > 0 ? libres : lignes;
   const ligne = choix[Math.floor(Math.random() * choix.length)];
   const textes = textesPossibles(ligne);
-  const mesure = majuscule(textes[Math.floor(Math.random() * textes.length)]);
+  const choisi = textes[Math.floor(Math.random() * textes.length)];
+  const mesure = majuscule(choisi.texte);
   const niveau = ligne.projection?.niveau;
-  return { curseur, slug: ligne.meta.slug, nom: ligne.meta.nom, mesure, niveau: niveau && niveau !== "non_concerne" ? niveau : null, x: curseur % 2 === 0 ? X_GAUCHE : X_DROITE };
+  return { curseur, slug: ligne.meta.slug, nom: ligne.meta.nom, mesure, sens: sensDeLaMesure(ligne, choisi.ids), niveau: niveau && niveau !== "non_concerne" ? niveau : null, x: curseur % 2 === 0 ? X_GAUCHE : X_DROITE };
 }
 
 // Tirages de départ : chacun exclut les précédents.
@@ -77,6 +87,7 @@ export function FluxCandidats({ lignes }: { lignes: LigneCandidat[] }) {
           key={i}
           className={`flux-item ${t.x < 50 ? "flux-item--bulle-droite" : "flux-item--bulle-gauche"}`}
           data-niveau={t.niveau ?? undefined}
+          data-sens={t.sens ?? undefined}
           style={{ animationDelay: `${(i * DUREE_S) / nombre}s`, animationDuration: `${DUREE_S}s` } as React.CSSProperties}
           onAnimationIteration={() => relancer(i)}
         >

@@ -187,7 +187,7 @@ describe("card candidat idéal sur la page du simulateur", () => {
     const themes = page({ etapeInitiale: "themes" });
     expect(themes).toContain('class="grille-themes"');
     expect(themes).not.toContain("carte-ideal");
-    expect(themes).toContain("anonymisés");
+    expect(themes).toContain("masquons");
   });
   it("sans réponse (pas d'indicateur) : pas de card", () => {
     expect(page({ profil: {}, generalSoumis: false })).not.toContain("carte-ideal");
@@ -214,7 +214,7 @@ describe("card candidat idéal sur la page du simulateur", () => {
   });
   it("le résultat commence par le rappel de ce sur quoi repose le calcul, avec les compteurs de réponses et de convictions", () => {
     const html = page({ convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
-    expect(html).toContain("Calcul fondé sur les réponses données");
+    expect(html).toContain("Nous calculons ce résultat à partir de vos réponses");
     expect(html).toMatch(/1 question répondue sur \d+/);
     expect(html).toContain("1 conviction complétée sur 8");
     expect(html.indexOf("bandeau-pertinence")).toBeLessThan(html.indexOf("carte-ideal"));

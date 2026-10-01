@@ -1,4 +1,4 @@
-import { BookOpen, SlidersHorizontal } from "lucide-react";
+import { BookOpen, Lock, SlidersHorizontal } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/bases";
 import { lireOuverture } from "./router";
@@ -9,11 +9,11 @@ import { anonymiserCards } from "./aveugle";
 import { choisirMode, cleIdentites, etatPourBase, recommencer, tirerGraine, type EtatIdeal } from "./etatIdeal";
 import { CardCandidatIdeal } from "./CardCandidatIdeal";
 import { versResultatAffiche } from "./resultatIdeal";
-import { BlocConvictions, convictionsVisibles, integritesVisibles } from "./Convictions";
+import { BlocConvictions, integritesVisibles } from "./Convictions";
 import { CONVICTIONS_VIDES, lireConvictions, memoriserConvictions, type Convictions } from "./memoireConvictions";
 import { lireMode, memoriserMode, type ModeAffichage } from "./memoireReponses";
 import { ModaleConfirmation } from "./ModaleConfirmation";
-import { BandeauPertinence, Etapes, IntroEtape, NavEtape, RecapReponses, type Etape } from "./ParcoursSimulateur";
+import { BandeauPertinence, Etapes, IntroEtape, IntroMesures, NavEtape, RecapReponses, type Etape } from "./ParcoursSimulateur";
 import PageQuestionsGenerales from "./PageQuestionsGenerales";
 import { questionsRestantes } from "../questionnaire";
 import type { SurReponse } from "./Questions";
@@ -178,7 +178,14 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           <div hidden={etape !== "situation"}>
             <NavEtape haut {...navSituation} />
             <IntroEtape etape="situation">
-              <strong>Objectif :</strong> mesurer l'effet des mesures sur sa propre situation. Indiquer son âge, ses revenus, sa famille… Réponses facultatives, gardées dans le navigateur jusqu'à leur effacement.
+              <p>
+                <strong>Objectif :</strong> mesurer l'effet des mesures sur sa propre situation, en donnant des informations sur votre situation.
+              </p>
+              <p>Toutes les questions sont facultatives, mais plus vous répondez, plus l'estimation est précise.</p>
+              <p className="intro-ligne-icone">
+                <Lock size={22} aria-hidden="true" focusable="false" />
+                <span>Vos informations sont sécurisées : votre navigateur les garde, sans jamais les envoyer, jusqu'à ce que vous les effaciez.</span>
+              </p>
             </IntroEtape>
             <PageQuestionsGenerales
               key={versionFormulaire}
@@ -212,7 +219,14 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           <div hidden={etape !== "convictions"}>
             <NavEtape haut {...navConvictions} />
             <IntroEtape etape="convictions">
-              <strong>Objectif :</strong> tenir compte de ses idées, pas seulement de sa situation. Choisir une position sur les sujets qui comptent ; sujet sans choix = aucune influence sur le résultat. Choix facultatifs, gardés dans le navigateur jusqu'à leur effacement.
+              <p>
+                <strong>Objectif :</strong> tenir compte de ses idées, pas seulement de sa situation.
+              </p>
+              <p>Vous choisissez une position sur les sujets qui comptent pour vous. Un sujet sans choix n'influence pas le résultat.</p>
+              <p className="intro-ligne-icone">
+                <Lock size={22} aria-hidden="true" focusable="false" />
+                <span>Vos informations sont sécurisées : votre navigateur les garde, sans jamais les envoyer, jusqu'à ce que vous les effaciez.</span>
+              </p>
             </IntroEtape>
             <BlocConvictions
               convictions={convictions}
@@ -254,15 +268,18 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
       {simulateur && etape === "themes" && (
         <>
           <NavEtape haut {...navThemes} />
-          <IntroEtape etape="themes">
-            <strong>Objectif :</strong> repérer, thème par thème, les mesures qui touchent sa situation et leur effet. Candidats <strong>anonymisés</strong> pour éviter les biais : lettres (Candidat A, B…) identiques d'un thème à l'autre.
-          </IntroEtape>
+          <IntroMesures questionnaire={base.questionnaire} profil={profil} convictions={convictions} onCompleter={() => allerA("situation")} />
         </>
       )}
       {(!simulateur || etape === "themes") && (
         <VueThemes
           key={cleIdentites(aveugle, graine)}
-          convictions={convictionsVisibles(simulateur, convictions)}
+          convictions={CONVICTIONS_VIDES}
+          anonyme={aveugle}
+          onExplorer={() => {
+            changerMode("exploration");
+            if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           integrites={integrites}
           cards={cards}
           profil={profil}

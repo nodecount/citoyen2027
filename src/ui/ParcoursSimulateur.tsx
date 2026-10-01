@@ -1,7 +1,7 @@
-import { ArrowLeft, ArrowRight, Calculator, Compass, EyeOff, RotateCcw, UserRound, type LucideIcon } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calculator, Compass, EyeOff, RotateCcw, Target, UserRound, type LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import type { ProfilPartiel } from "../profil";
-import { estRepondue, questionsVisibles, type Questionnaire } from "../questionnaire";
+import { compterReponses, estRepondue, questionsVisibles, type Questionnaire } from "../questionnaire";
 import type { ChampProfil } from "../types";
 import { SUJETS_CONVICTION, trouverPosition, trouverSujet } from "../positions";
 import { aDesConvictions, type Convictions } from "./memoireConvictions";
@@ -21,13 +21,13 @@ const ETAPES: Array<{ id: Etape; libelle: string }> = [
 
 // Texte d'introduction de chaque écran du parcours : toujours le même bloc (icône + une ou deux phrases, corps de texte lisible),
 // jamais une autre mise en forme d'un écran à l'autre.
-const ICONES_ETAPES: Record<Etape, LucideIcon> = { situation: UserRound, convictions: Compass, themes: EyeOff, resultat: Calculator };
+const ICONES_ETAPES: Record<Etape, LucideIcon> = { situation: UserRound, convictions: Compass, themes: Target, resultat: Calculator };
 export function IntroEtape({ etape, children }: { etape: Etape; children: ReactNode }) {
   const Icone = ICONES_ETAPES[etape];
   return (
     <div className="intro-etape">
       <Icone size={28} aria-hidden="true" focusable="false" />
-      <p>{children}</p>
+      <div className="intro-texte">{children}</div>
     </div>
   );
 }
@@ -94,15 +94,57 @@ export function BandeauPertinence({ questionnaire, profil, convictions }: { ques
   const n = compteurs(questionnaire, profil, convictions);
   return (
     <IntroEtape etape="resultat">
-      <strong>Objectif :</strong> trouver le candidat dont le programme convient le mieux à sa situation et à ses convictions. Calcul fondé sur les réponses données : plus de réponses, et plus précises = résultat plus pertinent.{" "}
-      <strong>
-        {n.repondues} question{n.repondues > 1 ? "s" : ""} répondue{n.repondues > 1 ? "s" : ""} sur {n.questions}
-      </strong>{" "}
-      ·{" "}
-      <strong>
-        {n.convictions} conviction{n.convictions > 1 ? "s" : ""} complétée{n.convictions > 1 ? "s" : ""} sur {n.sujets}
-      </strong>
-      .
+      <p>
+        <strong>Objectif :</strong> trouver le candidat dont le programme convient le mieux à sa situation et à ses convictions.
+      </p>
+      <p>Nous calculons ce résultat à partir de vos réponses : plus elles sont nombreuses et précises, plus il est pertinent.</p>
+      <p>
+        <strong>
+          {n.repondues} question{n.repondues > 1 ? "s" : ""} répondue{n.repondues > 1 ? "s" : ""} sur {n.questions}
+        </strong>
+        <br />
+        <strong>
+          {n.convictions} conviction{n.convictions > 1 ? "s" : ""} complétée{n.convictions > 1 ? "s" : ""} sur {n.sujets}
+        </strong>
+      </p>
+    </IntroEtape>
+  );
+}
+
+// Introduction de l'écran « mesures adaptées » : l'objectif, puis ce dont dépend la fiabilité de l'estimation (qualité et
+// nombre des réponses données), avec le décompte et, tant que tout n'est pas répondu, un bouton pour retourner compléter.
+export function IntroMesures({ questionnaire, profil, convictions, onCompleter }: { questionnaire: Questionnaire; profil: ProfilPartiel; convictions: Convictions; onCompleter: () => void }) {
+  // Même décompte que l'en-tête de « Ma situation » (questions générales), pour ne pas afficher deux totaux différents.
+  const { repondues, total: questions } = compterReponses(questionnaire.generales, profil);
+  const complet = questions > 0 && repondues >= questions;
+  return (
+    <IntroEtape etape="themes">
+      <p>
+        <strong>Objectif :</strong> repérer, thème par thème, les mesures qui touchent sa situation, et leur effet.
+      </p>
+      <p>
+        L'estimation est d'autant plus fiable que vos réponses sont nombreuses et précises. Vous avez donné{" "}
+        <strong>
+          {repondues} réponse{repondues > 1 ? "s" : ""} sur {questions}
+        </strong>
+        .
+        {!complet && " Nous vous conseillons de compléter votre situation pour obtenir une estimation plus fiable."}
+        {!complet && (
+          <>
+            <br />
+            <button type="button" className="secondaire bouton-completer" onClick={onCompleter}>
+              <ArrowLeft size={18} aria-hidden="true" focusable="false" />
+              Compléter ma situation
+            </button>
+          </>
+        )}
+      </p>
+      <p className="intro-ligne-icone">
+        <EyeOff size={22} aria-hidden="true" focusable="false" />
+        <span>
+          Nous <strong>masquons</strong> le nom des candidats pour éviter les biais : chaque candidat garde la même lettre (A, B…) d'un thème à l'autre.
+        </span>
+      </p>
     </IntroEtape>
   );
 }
