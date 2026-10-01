@@ -24,8 +24,8 @@ describe("versResultatAffiche : le pont entre les soldes (slugs réels) et la ca
     expect(JSON.stringify(r)).not.toContain('"un"'); // pas même le slug réel
   });
   it("reprend le solde, la couverture et les indicateurs de la règle", () => {
-    const r = versResultatAffiche("T", "constats", meilleur([solde("un", 3, 1, 9)], { solde: 2, ecartes: 1, tousEcartes: false }), CORRESPONDANCE, true)!;
-    expect(r).toMatchObject({ titre: "T", unite: "constats", solde: 2, departageable: true, ecartes: 1, tousEcartes: false });
+    const r = versResultatAffiche("T", "sujets", meilleur([solde("un", 3, 1, 9)], { solde: 2, ecartes: 1, tousEcartes: false }), CORRESPONDANCE, true)!;
+    expect(r).toMatchObject({ titre: "T", unite: "sujets", solde: 2, departageable: true, ecartes: 1, tousEcartes: false });
     expect(r.gagnants[0]).toMatchObject({ ameliorants: 3, degradants: 1, analyses: 9 });
   });
   it("correspondance introuvable pour un slug : lettre « ? » et aucune identité (jamais un nom deviné)", () => {

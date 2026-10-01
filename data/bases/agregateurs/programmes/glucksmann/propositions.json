@@ -19,7 +19,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-finances-publiques-002",
@@ -41,7 +42,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-finances-publiques-003",
@@ -63,7 +65,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-finances-publiques-004",
@@ -122,6 +125,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Taxer les méga-héritages, ciblant les 1 % des successions les plus importantes."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Taxer les méga-héritages, ciblant les 1 % des successions les plus importantes."
+      }
     ]
   },
   {
@@ -143,7 +154,15 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un impôt plancher annuel de 2% sur les patrimoines supérieurs à 100 millions d'euros (taxe Zucman)."
+      }
+    ]
   },
   {
     "id": "glucksmann-finances-publiques-007",
@@ -165,7 +184,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne pour éviter l'exil fiscal."
+      }
+    ]
   },
   {
     "id": "glucksmann-finances-publiques-008",
@@ -230,7 +257,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "ouverture",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger la loi immigration de 2024."
+      }
+    ]
   },
   {
     "id": "glucksmann-interieur-justice-003",
@@ -317,7 +352,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-interieur-justice-007",
@@ -339,7 +375,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-interieur-justice-008",
@@ -361,7 +398,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer les moyens d’enquête contre le narcotrafic."
+      }
+    ]
   },
   {
     "id": "glucksmann-interieur-justice-009",
@@ -383,7 +428,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-interieur-justice-010",
@@ -435,7 +481,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Doubler le nombre de Maisons du droit et de la justice."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "glucksmann-interieur-justice-012",
@@ -457,7 +504,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-001",
@@ -494,7 +542,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mieux rémunérer les soignants."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-002",
@@ -516,7 +565,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-003",
@@ -560,7 +610,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-005",
@@ -582,7 +633,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-006",
@@ -604,7 +656,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-007",
@@ -625,7 +678,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-008",
@@ -647,7 +701,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-009",
@@ -669,7 +724,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-010",
@@ -691,7 +747,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Culture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-011",
@@ -713,7 +770,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Culture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-012",
@@ -735,7 +793,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Culture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-013",
@@ -757,7 +816,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Culture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-014",
@@ -779,7 +839,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-015",
@@ -800,7 +861,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-016",
@@ -822,7 +884,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-017",
@@ -844,7 +907,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-018",
@@ -866,7 +930,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-019",
@@ -888,7 +953,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Transports",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-020",
@@ -910,7 +976,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Transports",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-021",
@@ -931,7 +998,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports"
+    "sous_theme": "Transports",
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-022",
@@ -953,7 +1021,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Transports",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-023",
@@ -975,7 +1044,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Transports",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-024",
@@ -1019,7 +1089,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-002",
@@ -1040,7 +1111,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-003",
@@ -1077,7 +1149,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "revaloriser durablement les rémunérations pour renforcer l’attractivité de la fonction publique, indexant leur point d’indice sur l’inflation"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-004",
@@ -1099,7 +1172,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-005",
@@ -1121,7 +1195,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-006",
@@ -1143,7 +1218,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-007",
@@ -1165,7 +1241,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-008",
@@ -1187,7 +1264,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-009",
@@ -1209,7 +1287,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-010",
@@ -1230,7 +1309,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-011",
@@ -1252,7 +1332,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "age_actuel",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger la réforme Macron de 2023."
+      }
+    ]
   },
   {
     "id": "glucksmann-retraites-travail-012",
@@ -1274,7 +1362,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-013",
@@ -1296,7 +1385,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-014",
@@ -1318,7 +1408,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-015",
@@ -1340,7 +1431,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-016",
@@ -1362,7 +1454,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-017",
@@ -1384,7 +1477,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-018",
@@ -1406,7 +1500,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-001",
@@ -1450,7 +1545,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ecologie",
+        "position": "garder_nucleaire",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Conforter le rôle du nucléaire."
+      }
+    ]
   },
   {
     "id": "glucksmann-envi-003",
@@ -1472,7 +1575,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ecologie",
+        "position": "renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Investir dans le réseau électrique et de nouvelles capacités de stockage pour mieux relier les sites de production d’énergies renouvelables et les lieux de consommation."
+      }
+    ]
   },
   {
     "id": "glucksmann-envi-004",
@@ -1493,7 +1604,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Energie"
+    "sous_theme": "Energie",
+    "positions": []
   },
   {
     "id": "glucksmann-envi-005",
@@ -1523,7 +1635,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Annuler la hausse de taxe sur l’électricité imposée en 2024."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-006",
@@ -1545,7 +1658,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-007",
@@ -1567,7 +1681,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-008",
@@ -1589,7 +1704,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-009",
@@ -1611,7 +1727,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-010",
@@ -1633,7 +1750,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-011",
@@ -1655,7 +1773,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-012",
@@ -1677,7 +1796,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-013",
@@ -1699,7 +1819,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-014",
@@ -1721,7 +1842,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-015",
@@ -1743,7 +1865,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-016",
@@ -1765,7 +1888,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-017",
@@ -1787,7 +1911,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-018",
@@ -1809,7 +1934,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-019",
@@ -1831,7 +1957,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-020",
@@ -1853,7 +1980,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-021",
@@ -1875,7 +2003,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-022",
@@ -1896,7 +2025,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Agriculture"
+    "sous_theme": "Agriculture",
+    "positions": []
   },
   {
     "id": "glucksmann-envi-023",
@@ -1918,7 +2048,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-024",
@@ -1948,7 +2079,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "taxer davantage les boissons trop sucrées"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-025",
@@ -1970,7 +2102,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-026",
@@ -1992,7 +2125,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-027",
@@ -2014,7 +2148,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-028",
@@ -2036,7 +2171,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-029",
@@ -2058,7 +2194,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-030",
@@ -2080,7 +2217,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-031",
@@ -2101,7 +2239,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Agriculture"
+    "sous_theme": "Agriculture",
+    "positions": []
   },
   {
     "id": "glucksmann-envi-032",
@@ -2123,7 +2262,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-europe-international-001",
@@ -2145,7 +2285,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-europe-international-002",
@@ -2189,7 +2330,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un fonds européen de défense de 500 Md€ via un emprunt commun, pour investir massivement dans nos capacités industrielles"
+      }
+    ]
   },
   {
     "id": "glucksmann-europe-international-004",
@@ -2211,7 +2360,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-europe-international-005",
@@ -2233,7 +2383,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-europe-international-006",
@@ -2255,7 +2406,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Porter d’ici 2030 un grand traité de réunification européenne qui sera aussi un traité de refondation institutionnelle : clarifier et démocratiser le fonctionnement de l’UE."
+      }
+    ]
   },
   {
     "id": "glucksmann-europe-international-007",
@@ -2277,7 +2436,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Porter un Buy European Act pour prioriser les productions européennes dans les marchés publics."
+      }
+    ]
   },
   {
     "id": "glucksmann-europe-international-008",
@@ -2299,7 +2466,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un label européen pour l'épargne pour garantir que l'épargne des Européens finance des entreprises et des projets en Europe, plutôt que des économies extra européennes."
+      }
+    ]
   },
   {
     "id": "glucksmann-gouvernance-republique-001",
@@ -2321,7 +2496,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-002",
@@ -2343,7 +2519,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-003",
@@ -2365,7 +2542,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-004",
@@ -2387,7 +2565,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-005",
@@ -2409,7 +2588,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-006",
@@ -2452,7 +2632,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-008",
@@ -2474,7 +2655,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-009",
@@ -2496,7 +2678,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-010",
@@ -2518,7 +2701,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-011",
@@ -2540,7 +2724,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-012",
@@ -2561,7 +2746,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif"
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-013",
@@ -2605,7 +2791,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Egalité, laïcité & droits individuels",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-015",
@@ -2730,6 +2917,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Interdire les réseaux sociaux pour les moins de 15 ans."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "cadre_collectif",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire les réseaux sociaux pour les moins de 15 ans."
+      }
     ]
   },
   {
@@ -2752,7 +2947,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-021",
@@ -2774,7 +2970,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "encadrer_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Impulser un traité international de l'IA qui poserait les bases d'une régulation internationale des usages de l'IA dans les domaines à très haut risque."
+      }
+    ]
   },
   {
     "id": "glucksmann-education-jeunesse-001",
@@ -2796,7 +3000,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-002",
@@ -2818,7 +3023,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-003",
@@ -2840,7 +3046,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-004",
@@ -2861,7 +3068,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-005",
@@ -2883,7 +3091,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-006",
@@ -2905,7 +3114,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-007",
@@ -2926,7 +3136,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "sous_theme": "Education nationale",
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-008",
@@ -2948,7 +3159,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-009",
@@ -2970,7 +3182,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Enseignement supérieur",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-010",
@@ -2992,7 +3205,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Enseignement supérieur",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-011",
@@ -3014,7 +3228,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Enseignement supérieur",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-012",
@@ -3036,7 +3251,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Enseignement supérieur",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-013",
@@ -3057,7 +3273,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Enseignement supérieur"
+    "sous_theme": "Enseignement supérieur",
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-014",
@@ -3079,7 +3296,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Enseignement supérieur",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-education-jeunesse-015",
@@ -3101,7 +3319,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Enseignement supérieur",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-defense-001",
@@ -3123,7 +3342,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-defense-002",
@@ -3145,7 +3365,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "travailler à l’intégration de l’IA dans notre outil de défense"
+      }
+    ]
   },
   {
     "id": "glucksmann-defense-003",
@@ -3167,7 +3395,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-defense-004",
@@ -3189,7 +3418,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-defense-005",
@@ -3211,7 +3441,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un fonds européen de défense de 500 Mds€ via un emprunt commun."
+      }
+    ]
   },
   {
     "id": "glucksmann-defense-006",
@@ -3255,7 +3493,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-defense-008",
@@ -3277,6 +3516,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   }
 ]

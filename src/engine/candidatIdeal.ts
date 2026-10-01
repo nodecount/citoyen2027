@@ -1,7 +1,7 @@
-import type { GroupeSocial } from "../convictions";
 import type { ConstatIntegrite } from "../data/integrite";
 import type { Proposition } from "../types";
-import { projeterConviction } from "./convictions";
+import type { ChoixPositions } from "../positions";
+import { projeterPosition } from "./positions";
 import type { NiveauProjection } from "./projection";
 
 // « Candidat idéal » : le SEUL endroit du produit où l'on désigne un candidat (exception décidée le 2026-09-30, voir
@@ -51,12 +51,12 @@ export function soldesSituation(cards: CardPourSolde[]): Solde[] {
   return [...soldes.values()];
 }
 
-// Convictions : un constat par groupe choisi et par thème (jamais une union de groupes, voir engine/convictions.ts).
-export function soldesConvictions(cards: CardPourSolde[], groupes: GroupeSocial[]): Solde[] {
+// Convictions : un constat par sujet choisi et par thème (voir engine/positions.ts). « Pas d'avis » n'entre pas dans le solde.
+export function soldesConvictions(cards: CardPourSolde[], choix: ChoixPositions): Solde[] {
   const soldes = soldesVides(cards);
   for (const card of cards) {
     for (const l of card.lignes) {
-      for (const g of groupes) compter(soldes.get(l.meta.slug)!, projeterConviction([g], l.propositions).niveau);
+      for (const [sujet, position] of Object.entries(choix)) compter(soldes.get(l.meta.slug)!, projeterPosition(sujet, position, l.propositions).niveau);
     }
   }
   return [...soldes.values()];

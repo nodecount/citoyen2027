@@ -1,0 +1,43 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "5c0854bfdb065fe3",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 13,
+    "sans_position": 12,
+    "rejetees": [],
+    "cout_reference_usd": 0.0864,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "7c90d866a7afe2ba",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 1,
+    "sans_position": 23,
+    "rejetees": [
+      {
+        "id": "parti-socialiste-retraites-travail-003",
+        "raison": "relecture : Négocier un assouplissement de règles européennes dans le cadre de l'UE ne constitue pas une reprise de compétence ou une réduction du rôle de l'UE au profit de la souveraineté nationale, mais une adaptation négociée au sein du cadre européen."
+      }
+    ],
+    "cout_reference_usd": 0.0473,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "8c6592087d4cac21",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 24,
+    "etiquetees": 1,
+    "sans_position": 23,
+    "rejetees": [],
+    "cout_reference_usd": 0.0281,
+    "appels": 2
+  }
+]

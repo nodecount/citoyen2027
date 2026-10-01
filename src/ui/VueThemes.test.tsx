@@ -93,7 +93,8 @@ describe("page de départ : aucune information sur le visiteur", () => {
   it("montre les candidats en portraits cliquables dans le pied de carte, toujours de même taille, avec leur nombre de mesures", () => {
     expect(rendu).toMatch(/<button[^>]*class="portrait"[^>]*aria-expanded="false"/);
     expect(rendu).not.toContain("carte-pied--grand");
-    expect(rendu).toContain('aria-label="Gabriel Attal : 1 mesure sur ce thème"');
+    // Le parti connu est rappelé dans le nom accessible et dans l'infobulle ; un parti inconnu n'ajoute rien.
+    expect(rendu).toMatch(/aria-label="Gabriel Attal( \([^"]+\))? : 1 mesure sur ce thème"/);
     expect(rendu).toMatch(/class="infobulle infobulle--nom"[^>]*>Gabriel Attal</); // vraie infobulle, pas de title natif
     expect(rendu).not.toContain('title="Gabriel Attal"');
     expect(rendu).toContain(">MLP<"); // pas de photo pour ce slug de test : initiales
@@ -164,7 +165,7 @@ describe("le détail s'ouvre depuis le portrait", () => {
     expect(r).toContain("Détail : Nom a");
     expect(r).not.toContain("Détail : Nom b");
     // Le nom du candidat est en tête du texte révélé.
-    expect(r).toContain('<h3 class="detail-titre">Nom a</h3>');
+    expect(r).toMatch(/<h3 class="detail-titre">Nom a(<span class="detail-parti">[^<]+<\/span>)?<\/h3>/);
   });
 
   it("recouvre le texte de la carte (question du thème) par le texte du candidat, avec une croix pour refermer", () => {
@@ -190,7 +191,7 @@ describe("le détail s'ouvre depuis le portrait", () => {
     expect(r).not.toContain("(ancien)");
     expect(r).toContain('class="portrait-compte" aria-hidden="true">1<');
     expect(r).not.toContain("Pour votre profil");
-    expect(r).not.toContain("Pourquoi cet indicateur");
+    expect(r).not.toContain("Pourquoi ce résultat");
   });
 
   it("sans résumé : les onglets sont là, ouverts sur Résumé, qui dit qu'il n'y a pas de résumé ; le détail des mesures est à un clic", () => {
@@ -254,13 +255,13 @@ describe("après avoir eu des informations sur le visiteur", () => {
     const r = html([candidat("a", [prop("a", [HAUSSE])])], PROFIL);
     expect(r).toContain("Comment lire les indicateurs");
     for (const libelle of ["Améliorant", "Mixte", "Non concerné", "Dégradant"]) expect(r).toContain(libelle);
-    expect(r).toContain("pas de score global");
+    expect(r).toContain("Plus vous répondez, plus c&#x27;est précis");
   });
 
   it("explique l'indicateur dans le détail : mesure, effet et extrait de source", () => {
     const r = html([candidat("a", [prop("a", [BAISSE])])], PROFIL, { theme: "fiscalite", candidat: "a" });
     expect(r).toContain("Pour votre profil");
-    expect(r).toContain("Pourquoi cet indicateur ?");
+    expect(r).toContain("Pourquoi ce résultat ?");
     expect(r).toContain("Revenu disponible en baisse");
     expect(r).toContain("une contribution sur les revenus");
   });
@@ -268,7 +269,7 @@ describe("après avoir eu des informations sur le visiteur", () => {
   it("sans effets analysés : pas d'indicateur, et l'explication est donnée", () => {
     const r = html([candidat("a", [prop("a", undefined)])], PROFIL, { theme: "fiscalite", candidat: "a" });
     expect(portraits(r)).not.toContain("niveau"); // aucun badge sur le portrait
-    expect(r).toContain("pas d&#x27;indicateur pour l&#x27;instant");
+    expect(r).toContain("impossible de conclure pour l&#x27;instant");
     expect(r).toContain("pas encore disponible");
   });
 
@@ -504,5 +505,16 @@ describe("en-tête de carte", () => {
     const html = rendu({ theme: "fiscalite", candidat: "a" });
     expect(html).toMatch(/class="carte-entete carte-entete--ouvert"[\s\S]*<h2[^>]*>Mes impôts et taxes<\/h2>/);
     expect(html).not.toContain("Sujets abordés");
+  });
+});
+
+describe("rappel du parti", () => {
+  it("n'affiche aucun parti quand il est inconnu ou masqué", async () => {
+    const { partiAffichable } = await import("./parti");
+    expect(partiAffichable("Renaissance")).toBe("Renaissance");
+    expect(partiAffichable("")).toBeNull();
+    expect(partiAffichable("  ")).toBeNull();
+    expect(partiAffichable("non renseigné par la source")).toBeNull();
+    expect(partiAffichable(undefined)).toBeNull();
   });
 });

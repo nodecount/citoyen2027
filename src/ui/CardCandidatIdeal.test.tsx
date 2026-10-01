@@ -5,7 +5,7 @@ import { CardCandidatIdeal, type GagnantAffiche, type ResultatAffiche } from "./
 const gagnant = (lettre: string, nom: string, slug: string): GagnantAffiche => ({ lettre, identite: { slug, nom, parti: "Parti-test" }, ameliorants: 3, degradants: 1, analyses: 7 });
 const resultat = (titre: string, gagnants: GagnantAffiche[], extra: Partial<ResultatAffiche> = {}): ResultatAffiche => ({ titre, unite: "thèmes", gagnants, solde: 2, departageable: true, ecartes: 0, tousEcartes: false, ...extra });
 const SITUATION = resultat("Selon votre situation", [gagnant("C", "Nom-Reel-Situation", "slug-reel-a")]);
-const CONVICTIONS = resultat("Selon vos convictions", [gagnant("F", "Nom-Reel-Convictions", "slug-reel-b")], { unite: "constats" });
+const CONVICTIONS = resultat("Selon vos convictions", [gagnant("F", "Nom-Reel-Convictions", "slug-reel-b")], { unite: "sujets" });
 
 const rendre = (p: Partial<Parameters<typeof CardCandidatIdeal>[0]> = {}) =>
   renderToStaticMarkup(<CardCandidatIdeal situation={SITUATION} convictions={CONVICTIONS} questionsRestantes={3} revele={false} onReveler={() => {}} onRecommencer={() => {}} {...p} />);
@@ -23,19 +23,29 @@ describe("CardCandidatIdeal floutée", () => {
   });
   it("bandeau : texte verbatim et bouton de révélation", () => {
     const html = rendre();
-    expect(html).toContain("Cette card contient le meilleur programme selon votre situation et le meilleur programme selon vos convictions.");
-    expect(html).toContain("Votre résultat peut être affiné si vous répondez aux 3 questions propres aux thèmes, directement dans ceux-ci.");
+    expect(html).toContain("Votre candidat idéal selon votre situation et selon vos convictions est prêt.");
+    expect(html).toContain("3 questions restent à traiter dans les thèmes : y répondre affine le résultat.");
     expect(html).toContain("Révéler mon programme de candidat idéal pour 2027");
     expect(html).not.toContain("Recommencer la simulation");
   });
-  it("sans résultat convictions : le bandeau ne parle que de la situation", () => {
+  it("sans résultat convictions : le voile ne promet que la situation, et la card dit que les convictions n'ont pas (encore) de résultat", () => {
     const html = rendre({ convictions: null });
-    expect(html).toContain("le meilleur programme selon votre situation.");
-    expect(html).not.toContain("selon vos convictions");
+    expect(html).toContain("Votre candidat idéal selon votre situation est prêt.");
+    expect(html).not.toContain("selon votre situation et selon vos convictions");
+    expect(html).toContain("Selon vos convictions");
+    expect(html).toContain("Pas encore de résultat");
+  });
+  it("une seule card : le bouton de révélation est posé sur les résultats, pas dans une seconde card", () => {
+    const html = rendre();
+    expect(html.match(/<section/g)).toHaveLength(1);
+    expect(html.indexOf("ideal-colonnes")).toBeLessThan(html.indexOf("ideal-voile"));
+    expect(html.match(/class="ideal-voile"/g)).toHaveLength(1);
+    expect(html).toContain("Selon votre situation");
+    expect(html).toContain("Selon vos convictions");
   });
   it("aucune question restante : la phrase sur l'affinage disparaît ; une seule : singulier", () => {
-    expect(rendre({ questionsRestantes: 0 })).not.toContain("affiné");
-    expect(rendre({ questionsRestantes: 1 })).toContain("à la question propre aux thèmes");
+    expect(rendre({ questionsRestantes: 0 })).not.toContain("affine");
+    expect(rendre({ questionsRestantes: 1 })).toContain("Une question reste à traiter dans les thèmes");
   });
   it("égalité : la card floutée dit seulement le nombre d'ex æquo, sans nom", () => {
     const html = rendre({ convictions: null, situation: resultat("Selon votre situation", [gagnant("A", "Nom-A", "sa"), gagnant("B", "Nom-B", "sb"), gagnant("D", "Nom-D", "sd")]) });
@@ -58,7 +68,7 @@ describe("CardCandidatIdeal, clavier et lecteurs d'écran", () => {
     for (const revele of [false, true]) {
       const html = rendre({ revele });
       expect(html).toContain('aria-live="polite"');
-      expect(html).toMatch(/<h2[^>]*tabindex="-1"[^>]*>Votre candidat idéal<\/h2>/);
+      expect(html).toMatch(/<h2[^>]*tabindex="-1"[^>]*>(<svg[\s\S]*?<\/svg>)?Votre candidat idéal<\/h2>/);
     }
   });
 });
@@ -66,7 +76,7 @@ describe("CardCandidatIdeal, clavier et lecteurs d'écran", () => {
 describe("CardCandidatIdeal révélée", () => {
   it("montre noms, partis, lettres et le solde avec sa couverture ; plus de flou ; bouton Recommencer", () => {
     const html = rendre({ revele: true });
-    for (const t of ["Nom-Reel-Situation", "Nom-Reel-Convictions", "Parti-test", "Candidat C", "Candidat F", "améliorants : 3", "dégradants : 1", "sur 7 thèmes analysés", "sur 7 constats analysés"]) expect(html, t).toContain(t);
+    for (const t of ["Nom-Reel-Situation", "Nom-Reel-Convictions", "Parti-test", "Candidat C", "Candidat F", "3 en votre faveur", "1 en votre défaveur", "sur 7 thèmes étudiés", "sur 7 sujets étudiés"]) expect(html, t).toContain(t);
     expect(html).not.toContain("carte-ideal--floue");
     expect(html).toContain("Recommencer la simulation");
     expect(html).not.toContain("Révéler mon programme");
@@ -79,22 +89,22 @@ describe("CardCandidatIdeal révélée", () => {
   });
   it("non départageable : message, et aucune liste de noms", () => {
     const html = rendre({ revele: true, convictions: null, situation: resultat("Selon votre situation", [gagnant("A", "Nom-A", "sa")], { departageable: false }) });
-    expect(html).toContain("Les données ne permettent pas de départager les candidats.");
+    expect(html).toContain("Égalité parfaite");
     expect(html).not.toContain("Nom-A");
   });
   it("tous les candidats avec données sont écartés : le dit, au lieu de « données insuffisantes »", () => {
     const html = rendre({ revele: true, situation: null, convictions: resultat("Selon vos convictions", [], { departageable: false, ecartes: 3, tousEcartes: true }) });
-    expect(html).toContain("Tous les candidats pour lesquels des données existent sont écartés");
+    expect(html).toContain("Tous les candidats étudiés sont écartés");
     expect(html).not.toContain("ne permettent pas de départager");
   });
   it("candidats écartés par l'intégrité : le dit, au pluriel si besoin", () => {
-    expect(rendre({ revele: true, convictions: resultat("Selon vos convictions", [gagnant("F", "N", "s")], { ecartes: 1 }) })).toContain("1 candidat écarté : condamnation définitive recensée");
+    expect(rendre({ revele: true, convictions: resultat("Selon vos convictions", [gagnant("F", "N", "s")], { ecartes: 1 }) })).toContain("1 candidat écarté (condamnation définitive connue)");
     expect(rendre({ revele: true, convictions: resultat("Selon vos convictions", [gagnant("F", "N", "s")], { ecartes: 2 }) })).toContain("2 candidats écartés");
   });
-  it("affiche la règle du solde : sans pondération, et dit qu'il compense un thème par un autre", () => {
+  it("affiche la règle du score : comment il est calculé, et qu'aucun thème ne pèse plus qu'un autre", () => {
     const html = rendre({ revele: true });
-    expect(html).toContain("Aucune pondération");
-    expect(html).toContain("compense un thème par un autre");
+    expect(html).toContain("aucun thème ne compte plus qu&#x27;un autre");
+    expect(html).toContain("Comment est calculé le score");
     expect(html).not.toContain("les égalités sont toutes montrées"); // faux quand tous les candidats sont à égalité
   });
   it("ne montre pas le parti « non renseigné par la source »", () => {

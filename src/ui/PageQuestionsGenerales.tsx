@@ -1,5 +1,6 @@
-import { Eye, ListChecks, Lock } from "lucide-react";
-import { useState, type FormEvent } from "react";
+import { Eraser, Eye, Highlighter, ListChecks, Lock } from "lucide-react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
+import { IndicateurEnregistrement, type EtatEnregistrement } from "./IndicateurEnregistrement";
 import { CHAMPS_PROFIL, compterReponses, questionsVisibles, type SectionTheme } from "../questionnaire";
 import { mettreAJourReponse, type ProfilPartiel } from "../profil";
 import type { ChampProfil } from "../types";
@@ -29,6 +30,27 @@ interface PageQuestionsGeneralesProps {
 export default function PageQuestionsGenerales({ questions, profilInitial, onValider, onAnnuler, integre = false, onEffacer, sectionsThemes = [], profilThemes = profilInitial, onReponseTheme }: PageQuestionsGeneralesProps) {
   const [brouillon, setBrouillon] = useState<ProfilPartiel>(profilInitial);
   const { repondues, total } = compterReponses(questions, brouillon);
+  const [manquantesEnValeur, setManquantesEnValeur] = useState(false);
+
+  // Enregistrement automatique (formulaire intégré) : chaque modification est appliquée après une courte pause, sans bouton.
+  // « enregistrement » pendant la pause, « enregistre » une fois appliquée ; rien n'est affiché tant que rien n'a changé.
+  const [etatEnregistrement, setEtatEnregistrement] = useState<EtatEnregistrement>("repos");
+  const premierRendu = useRef(true);
+  const surValider = useRef(onValider);
+  surValider.current = onValider;
+  useEffect(() => {
+    if (!integre) return;
+    if (premierRendu.current) {
+      premierRendu.current = false;
+      return;
+    }
+    setEtatEnregistrement("enregistrement");
+    const minuteur = setTimeout(() => {
+      surValider.current(brouillon);
+      setEtatEnregistrement("enregistre");
+    }, 500);
+    return () => clearTimeout(minuteur);
+  }, [brouillon, integre]);
 
   function repondre(champ: ChampProfil, brut: string | string[]) {
     setBrouillon((precedent) => mettreAJourReponse(precedent, champ, brut, CHAMPS_PROFIL));
@@ -42,12 +64,15 @@ export default function PageQuestionsGenerales({ questions, profilInitial, onVal
   const progression = `${repondues} réponse${repondues > 1 ? "s" : ""} sur ${total} question${total > 1 ? "s" : ""}`;
   const actions = (
     <div className="actions">
-      <button type="submit">Enregistrer et voir les indicateurs</button>
-      <button type="button" className="secondaire" onClick={onAnnuler}>
-        {integre ? "Fermer" : "Retour aux thèmes"}
-      </button>
+      {!integre && <button type="submit">Enregistrer et voir les indicateurs</button>}
+      {!integre && (
+        <button type="button" className="secondaire" onClick={onAnnuler}>
+          Retour aux thèmes
+        </button>
+      )}
       {onEffacer && (
         <button type="button" className="secondaire" onClick={onEffacer}>
+          <Eraser size={18} aria-hidden="true" focusable="false" />
           Effacer mes réponses
         </button>
       )}
@@ -62,39 +87,48 @@ export default function PageQuestionsGenerales({ questions, profilInitial, onVal
           <p className="progression" aria-live="polite">
             {progression}
           </p>
+          <button type="button" className="secondaire bouton-manquantes" aria-pressed={manquantesEnValeur} onClick={() => setManquantesEnValeur((v) => !v)}>
+            <Highlighter size={18} aria-hidden="true" focusable="false" />
+            Mettre en valeur les réponses manquantes
+          </button>
+          <IndicateurEnregistrement etat={etatEnregistrement} />
           {actions}
         </div>
       ) : (
         <h1>Ma situation</h1>
       )}
-      <ul className="aide-formulaire">
-        <li>
-          <ListChecks aria-hidden="true" />
-          <span>
-            Les questions sont toutes <strong>facultatives</strong> : répondez à celles que vous voulez. Une question sans
-            réponse n'est jamais comptée comme « non ».
-          </span>
-        </li>
-        <li>
-          <Lock aria-hidden="true" />
-          <span>
-            Vos réponses restent <strong>dans votre navigateur</strong> : jamais envoyées, gardées pour votre prochaine
-            visite tant que vous ne les effacez pas.
-          </span>
-        </li>
-        <li>
-          <Eye aria-hidden="true" />
-          <span>
-            Une fois enregistrées, les indicateurs apparaissent autour des portraits ; vous pourrez préciser d'autres
-            informations thème par thème.
-          </span>
-        </li>
-      </ul>      {!integre && (
-        <p className="progression" aria-live="polite">
-          {progression}
-        </p>
+      {integre ? null : (
+        <>
+          <ul className="aide-formulaire">
+            <li>
+              <ListChecks aria-hidden="true" />
+              <span>
+                Les questions sont toutes <strong>facultatives</strong> : répondez à celles que vous voulez. Une question sans
+                réponse n'est jamais comptée comme « non ».
+              </span>
+            </li>
+            <li>
+              <Lock aria-hidden="true" />
+              <span>
+                Vos réponses restent <strong>dans votre navigateur</strong> : jamais envoyées, gardées pour votre prochaine
+                visite tant que vous ne les effacez pas.
+              </span>
+            </li>
+            <li>
+              <Eye aria-hidden="true" />
+              <span>
+                Une fois enregistrées, les indicateurs apparaissent autour des portraits ; vous pourrez préciser d'autres
+                informations thème par thème.
+              </span>
+            </li>
+          </ul>
+          <p className="progression" aria-live="polite">
+            {progression}
+          </p>
+        </>
       )}
-      <SectionQuestions questions={questions} profil={brouillon} onReponse={repondre} idPrefixe={integre ? "general-ouvert" : "general"} carte={integre} />
+      <div className={integre ? "grille-questions" : undefined}>
+      <SectionQuestions questions={questions} profil={brouillon} onReponse={repondre} idPrefixe={integre ? "general-ouvert" : "general"} carte={integre} mettreEnValeurManquantes={manquantesEnValeur} />
       {/* Questions propres à un thème, rangées par thème : toutes visibles ici (répondues ou non) pour pouvoir les revoir
           et les modifier ; chaque réponse s'applique tout de suite, sans attendre l'enregistrement. */}
       {sectionsThemes.map(({ theme, questions: questionsTheme }) => {
@@ -102,10 +136,11 @@ export default function PageQuestionsGenerales({ questions, profilInitial, onVal
         return (
           <section key={theme.id} className="questionnaire-theme" aria-labelledby={`form-theme-${theme.id}`}>
             <h3 id={`form-theme-${theme.id}`}>{theme.libelle}</h3>
-            <SectionQuestions questions={questionsTheme} profil={profilThemes} onReponse={onReponseTheme!} idPrefixe={`form-theme-${theme.id}`} carte={integre} />
+            <SectionQuestions questions={questionsTheme} profil={profilThemes} onReponse={onReponseTheme!} idPrefixe={`form-theme-${theme.id}`} carte={integre} mettreEnValeurManquantes={manquantesEnValeur} />
           </section>
         );
       })}
+      </div>
       {!integre && actions}
     </form>
   );

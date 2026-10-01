@@ -19,7 +19,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Appliquer la taxe Zucman."
+      }
+    ]
   },
   {
     "id": "faure-retraites-travail-001",
@@ -41,7 +49,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "faure-retraites-travail-002",
@@ -63,7 +72,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "age_actuel",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger la réforme des retraites dite réforme Borne."
+      }
+    ]
   },
   {
     "id": "faure-retraites-travail-003",
@@ -100,7 +117,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "les personnes exerçant des métiers à fortes pénibilités puissent partir à la retraite avec moins d'annuités"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "faure-envi-001",
@@ -122,7 +140,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "faure-education-jeunesse-001",
@@ -161,7 +180,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place un petit-déjeuner gratuit pour tous les élèves dans les établissements scolaires."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "faure-education-jeunesse-002",
@@ -183,7 +203,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "faure-education-jeunesse-003",
@@ -222,7 +243,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Garantir la présence d’un psychologue et d’une infirmière scolaires dans chaque établissement."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "faure-education-jeunesse-004",
@@ -244,7 +266,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "faure-education-jeunesse-005",
@@ -266,7 +289,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "faure-education-jeunesse-006",
@@ -288,7 +312,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "faure-education-jeunesse-007",
@@ -310,6 +335,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   }
 ]

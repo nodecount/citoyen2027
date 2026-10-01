@@ -62,7 +62,7 @@ export function messagesSansBadge(projection: Projection, propositions: Proposit
   const messages: string[] = [];
   if (projection.raisons.includes("informations_manquantes")) {
     const champs = projection.champsManquants.map((c) => `« ${libelleChamp(c)} »`).join(", ");
-    messages.push(`Renseignez ${champs} pour affiner cet indicateur.`);
+    messages.push(`Renseignez ${champs} pour affiner ce résultat.`);
   }
   if (projection.raisons.includes("critere_hors_formulaire")) {
     messages.push("Le programme vise un public que le formulaire ne permet pas encore d'identifier.");
@@ -75,7 +75,7 @@ export function messagesSansBadge(projection: Projection, propositions: Proposit
     messages.push(
       pasEncoreAnalysees
         ? "Projection pas encore disponible : l'effet de ces mesures sur un citoyen n'a pas encore été analysé."
-        : "Aucun effet direct sur un citoyen n'est déterminable d'après le programme publié.",
+        : "Le programme publié ne permet pas de dire ce que ces mesures changeraient pour un citoyen.",
     );
   }
   return messages;
@@ -85,7 +85,7 @@ export function messagesSansBadge(projection: Projection, propositions: Proposit
 // mais le constat que le moteur ne sait pas si le visiteur est concerné.
 export function messagesIncertitude(projection: Projection): string[] {
   if (!projection.incertain) return [];
-  const messages = ["Nous ne savons pas encore si certaines mesures vous concernent : par prudence, l'indicateur est « mixte »."];
+  const messages = ["Nous ne savons pas encore si certaines mesures vous concernent : par prudence, le résultat est « mixte »."];
   if (projection.champsManquants.length > 0) {
     const champs = projection.champsManquants.map((c) => `« ${libelleChamp(c)} »`).join(", ");
     messages.push(`Répondez à ${champs} pour le préciser.`);
@@ -104,7 +104,7 @@ export function messagesEffetsExclus(projection: Projection): string[] {
   const n = projection.effetsNonPrisEnCompte;
   return [
     n === 1
-      ? "Une mesure supplémentaire vise un public que le formulaire ne permet pas encore de décrire : elle n'est pas prise en compte dans cet indicateur."
-      : `${n} mesures supplémentaires visent un public que le formulaire ne permet pas encore de décrire : elles ne sont pas prises en compte dans cet indicateur.`,
+      ? "Une mesure supplémentaire vise un public que le formulaire ne permet pas encore de décrire : elle n'est pas prise en compte dans ce résultat."
+      : `${n} mesures supplémentaires visent un public que le formulaire ne permet pas encore de décrire : elles ne sont pas prises en compte dans ce résultat.`,
   ];
 }

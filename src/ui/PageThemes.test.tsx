@@ -19,7 +19,7 @@ const UNE_REPONSE: ProfilPartiel = { tranche_age: "30_49" };
 // photos ou l'ordre alphabétique demandent « exploration », seul mode où les identités sont visibles.
 function rendre(baseId: string, profil: ProfilPartiel, generalSoumis: boolean, mode?: "simulateur" | "exploration"): string {
   return renderToStaticMarkup(
-    <PageThemes base={chargerBase(baseId)} profil={profil} generalSoumis={generalSoumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} />,
+    <PageThemes base={chargerBase(baseId)} profil={profil} generalSoumis={generalSoumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} etapeInitiale="themes" />,
   );
 }
 
@@ -38,10 +38,8 @@ describe("page des thèmes, sur les données réelles", () => {
     expect(portraits(rendu)).not.toContain("data-niveau"); // aucune couleur autour des portraits
     expect(portraits(rendu)).not.toContain("niveau--"); // aucun badge
     expect(rendu).not.toContain("Comment lire les indicateurs");
-    expect(rendu).toContain("changerait pour votre situation personnelle pendant le mandat");
-    expect(rendu).toMatch(/Pour cela,\s*<\/p>\s*<button[^>]*class="bouton-en-ligne"[^>]*>Renseignez des informations<\/button>/);
     expect(rendu).not.toMatch(/mettez en valeur|profiterai/i); // aucune formulation qui trie les candidats
-    expect(rendu).not.toContain("<form"); // aucun formulaire imposé avant de voir les programmes
+    expect(rendu).toContain("Étapes du simulateur"); // le parcours est proposé, sans rien imposer
     expect(rendu).not.toContain("Pour affiner"); // les questions par thème viennent après
   });
 
@@ -90,16 +88,14 @@ describe("les indicateurs n'apparaissent qu'après la validation du formulaire g
   it("des réponses en brouillon (formulaire non validé) ne colorent aucun portrait", () => {
     const rendu = rendre("agregateurs", UNE_REPONSE, false);
     expect(portraits(rendu)).not.toContain("data-niveau");
-    expect(rendu).toContain("Renseignez des informations");
   });
 
   it("après validation avec au moins une réponse : couleurs autour des portraits, réponses générales affichées, légende permanente", () => {
     const rendu = rendre("agregateurs", UNE_REPONSE, true);
     expect(rendu).toContain("Comment lire les indicateurs");
     expect(rendu).not.toContain('<details class="legende"'); // la légende n'est plus un spoiler : toujours affichée
-    expect(rendu).toContain("Vos réponses générales");
-    expect(rendu).toContain("Modifier mes réponses"); // le formulaire se rouvre à tout moment, avec son bouton d'enregistrement
-    expect(rendu).not.toContain("<form"); // mais il ne prend pas la place des thèmes tant qu'on ne le rouvre pas
+    expect(rendu).toContain("Étapes du simulateur"); // le parcours est proposé ; le rappel des réponses est à l'étape du résultat
+    expect(rendu).toContain("<form");
     expect(portraits(rendu)).toMatch(/data-niveau="[a-z_]+"/);
     expect(rendu).toMatch(/[▲◆○▼]/); // le mot et le symbole restent affichés, dans la légende permanente
   });
@@ -107,14 +103,17 @@ describe("les indicateurs n'apparaissent qu'après la validation du formulaire g
   it("après validation d'un formulaire resté vide : toujours aucun indicateur, et on invite à répondre", () => {
     const rendu = rendre("agregateurs", AUCUNE_REPONSE, true);
     expect(portraits(rendu)).not.toContain("data-niveau");
-    expect(rendu).toContain("Aucune réponse donnée");
   });
 
   it("ouvre alors les questions propres à chaque thème, sur les thèmes qui en ont", () => {
     const rendu = rendre("officielle", UNE_REPONSE, true);
     expect(rendu).toContain("Pour affiner : ");
     const base = chargerBase("officielle");
-    expect((rendu.match(/class="questions-theme"/g) ?? []).length).toBe(base.questionnaire.parTheme.length);
+    // Aucune section vide : chaque section affichée contient au moins une question.
+    const sections = rendu.match(/<section class="questions-theme"[\s\S]*?<\/section>/g) ?? [];
+    expect(sections.length).toBeGreaterThan(0);
+    expect(sections.length).toBeLessThanOrEqual(base.questionnaire.parTheme.length);
+    for (const section of sections) expect(section).toContain("Pour affiner : ");
   });
 
   it("garde les mêmes portraits qu'au départ : répondre n'ajoute ni ne retire aucun candidat (seul le rangement en zones change)", () => {
@@ -146,7 +145,7 @@ describe("simulateur à l'aveugle par défaut", () => {
   const base = chargerBase("agregateurs");
   const noms = candidatsDeBase(base).avecDonnees.map((c) => c.meta.nom);
   const page = (mode: "simulateur" | "exploration") =>
-    renderToStaticMarkup(<PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} />);
+    renderToStaticMarkup(<PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} etapeInitiale="themes" />);
 
   it("simulateur : aucun nom réel, aucune photo réelle, des lettres à la place", () => {
     const html = page("simulateur");
@@ -181,54 +180,81 @@ describe("card candidat idéal sur la page du simulateur", () => {
     expect(html).toContain("Révéler mon programme de candidat idéal pour 2027");
     for (const nom of noms) expect(html, nom).not.toContain(nom);
   });
-  it("placée avant les cards de thèmes", () => {
-    const html = page();
-    expect(html.indexOf("carte-ideal")).toBeGreaterThan(-1);
-    expect(html.indexOf("carte-ideal")).toBeLessThan(html.indexOf('class="grille-themes"'));
+  it("le résultat n'affiche plus les cards de thèmes (elles ont leur propre étape) et l'étape des thèmes n'affiche pas la card", () => {
+    const resultat = page();
+    expect(resultat).toContain("carte-ideal");
+    expect(resultat).not.toContain('class="grille-themes"');
+    const themes = page({ etapeInitiale: "themes" });
+    expect(themes).toContain('class="grille-themes"');
+    expect(themes).not.toContain("carte-ideal");
+    expect(themes).toContain("anonymisés");
   });
   it("sans réponse (pas d'indicateur) : pas de card", () => {
     expect(page({ profil: {}, generalSoumis: false })).not.toContain("carte-ideal");
   });
-  it("révélée : le bouton Recommencer remplace celui de révélation, le formulaire et le bloc convictions disparaissent", () => {
+  it("révélée : le bouton Recommencer remplace celui de révélation, et le formulaire reste disponible (le modifier réinitialise le résultat)", () => {
     const html = page({ releveInitial: true });
     expect(html).toContain("Recommencer la simulation");
     expect(html).not.toContain("Révéler mon programme");
-    expect(html).not.toContain("Mes convictions");
-    expect(html).not.toContain("Modifier mes réponses");
+    expect(html).toContain("Mes réponses");
     expect(html).not.toContain("carte-ideal--floue");
   });
   it("révélée : les cards de thèmes restent masquées (lettres, pas de photo)", () => {
-    const html = page({ releveInitial: true });
+    const html = page({ releveInitial: true, etapeInitiale: "themes" });
     // La card idéale montre la vraie photo du gagnant ; les cards de thèmes, elles, restent masquées.
     const themes = html.slice(html.indexOf('class="grille-themes"'));
     expect(themes).toMatch(/Candidat [A-Z]/); // lettres tirées au hasard : jamais une lettre précise
     expect(themes).not.toContain('src="/candidats/');
   });
-  it("floutée : le bloc convictions et le récapitulatif de la situation restent visibles", () => {
+  it("floutée : le rappel des réponses (situation et convictions) est sous la card, avec le bouton pour recommencer", () => {
     const html = page();
-    expect(html).toContain("Mes convictions");
-    expect(html).toContain("Modifier mes réponses");
+    expect(html).toContain("Mes réponses");
+    expect(html).toContain("Recommencer pour corriger ou compléter");
+    expect(html.indexOf("carte-ideal")).toBeLessThan(html.indexOf("Mes réponses"));
+  });
+  it("le résultat commence par le rappel de ce sur quoi repose le calcul, avec les compteurs de réponses et de convictions", () => {
+    const html = page({ convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
+    expect(html).toContain("Calcul fondé sur les réponses données");
+    expect(html).toMatch(/1 question répondue sur \d+/);
+    expect(html).toContain("1 conviction complétée sur 8");
+    expect(html.indexOf("bandeau-pertinence")).toBeLessThan(html.indexOf("carte-ideal"));
+  });
+  it("sans réponse : le parcours commence par la situation, sans thèmes ni résultat", () => {
+    const html = page({ profil: {}, generalSoumis: false });
+    expect(html).toContain("Voir les mesures adaptées à ma situation");
+    expect(html).not.toContain('class="grille-themes"');
+    expect(html).not.toContain("Mes réponses");
+  });
+  it("étape convictions : les thèmes et le résultat ne sont pas encore affichés", () => {
+    const html = page({ etapeInitiale: "convictions" });
+    expect(html).toContain("Voir mon candidat idéal");
+    expect(html).not.toContain('class="grille-themes"');
+    expect(html).not.toContain("carte-ideal");
   });
   it("exploration : aucune card idéale", () => {
     expect(page({ modeInitial: "exploration" })).not.toContain("carte-ideal");
   });
-  it("résultat convictions seulement si un groupe est choisi", () => {
-    expect(page()).not.toContain("Selon vos convictions");
-    expect(page({ convictionsInitiales: { groupes: ["tranche_age:30_49"], exemplarite: false } })).toContain("Selon vos convictions");
+  it("résultat convictions seulement si une position est choisie ET que des mesures sont étiquetées dessus", () => {
+    expect(page()).toContain("Pas encore de résultat");
+    expect(page()).not.toContain("selon votre situation et selon vos convictions");
+    // Aucune mesure n'est encore étiquetée : promettre un « meilleur programme selon vos convictions » serait faux, on l'omet.
+    const avecPosition = page({ convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
+    // Selon les données étiquetées à cet instant, le résultat existe ou la card dit pourquoi il n'existe pas : jamais de silence.
+    expect(avecPosition).toMatch(/selon votre situation et selon vos convictions|pas encore été étudiées sur les sujets/);
   });
 });
 
 describe("bascule entre exploration des mesures et simulateur", () => {
   const rendreEnMode = (mode: "simulateur" | "exploration", profil: ProfilPartiel, soumis: boolean) =>
     renderToStaticMarkup(
-      <PageThemes base={chargerBase("agregateurs")} profil={profil} generalSoumis={soumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} />,
+      <PageThemes base={chargerBase("agregateurs")} profil={profil} generalSoumis={soumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} etapeInitiale="themes" />,
     );
 
   it("propose les deux modes, avec le mode courant indiqué", () => {
     const rendu = rendreEnMode("exploration", AUCUNE_REPONSE, false);
     expect(rendu).toContain("Explorer les mesures");
     expect(rendu).toContain("Simuler pour moi");
-    expect(rendu).toMatch(/aria-pressed="true"[^>]*>(<svg[\s\S]*?<\/svg>)?Explorer les mesures/);
+    expect(rendu).toMatch(/aria-pressed="true"[^>]*>(<svg[\s\S]*?<\/svg>)?<span class="bascule-libelle">Explorer les mesures/);
   });
 
   it("en exploration : ni indicateur, ni légende, ni formulaire, ni invitation, ni questions par thème — même avec des réponses enregistrées", () => {
@@ -248,18 +274,22 @@ describe("bascule entre exploration des mesures et simulateur", () => {
     expect(portraits(rendu)).toMatch(/data-niveau="[a-z_]+"/);
   });
 
-  it("le flux de bulles de paroles n'existe qu'en mode exploration", () => {
-    expect(rendreEnMode("simulateur", AUCUNE_REPONSE, false)).not.toContain("flux-candidats");
-    expect(rendreEnMode("simulateur", UNE_REPONSE, true)).not.toContain("flux-candidats");
+  it("le flux de bulles de paroles existe dans les deux modes ; en simulateur, il porte la couleur de l'indicateur", () => {
     expect(rendreEnMode("exploration", AUCUNE_REPONSE, false)).toContain("flux-candidats");
+    expect(rendreEnMode("exploration", AUCUNE_REPONSE, false)).not.toMatch(/class="flux-item[^"]*" data-niveau/);
+    const simulateur = rendreEnMode("simulateur", UNE_REPONSE, true);
+    expect(simulateur).toContain("flux-candidats");
+    expect(simulateur).toMatch(/class="flux-item[^"]*" data-niveau="(ameliorant|mixte|degradant)"/);
   });
 
   it("légende : « non concerné » et « pas d'indicateur » ne font qu'une catégorie, la dernière, qui porte l'interrupteur de masquage", () => {
     const rendu = rendreEnMode("simulateur", UNE_REPONSE, true);
     expect(rendu).not.toContain("Pas d&#x27;indicateur</span>");
-    const tuiles = [...rendu.matchAll(/<div data-niveau="([a-z_]+)">/g)].map((m) => m[1]);
-    expect(tuiles).toEqual(["ameliorant", "mixte", "degradant", "non_concerne"]);
-    const derniere = rendu.slice(rendu.indexOf('data-niveau="non_concerne"'));
+    const legende = rendu.slice(rendu.indexOf('class="echelle"'), rendu.indexOf('class="grille-themes"'));
+    const reperes = [...legende.matchAll(/data-niveau="([a-z_]+)"/g)].map((m) => m[1]);
+    // Trois repères sur la règle, puis « non concerné » hors règle, dernier, avec l'interrupteur.
+    expect(reperes).toEqual(["ameliorant", "mixte", "degradant", "non_concerne"]);
+    const derniere = legende.slice(legende.indexOf('class="echelle-hors"'));
     expect(derniere).toContain('role="switch"');
     expect(derniere).toContain("Masquer les candidats dont les mesures ne changent rien à ma situation");
   });
@@ -270,7 +300,7 @@ describe("bloc « Mes convictions » sur la page du simulateur", () => {
     const base = chargerBase("agregateurs");
     const page = (mode: "simulateur" | "exploration") =>
       renderToStaticMarkup(
-        <PageThemes base={base} profil={{}} generalSoumis={false} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} convictionsInitiales={{ groupes: ["tranche_age:moins_30"], exemplarite: true }} />,
+        <PageThemes base={base} profil={{}} generalSoumis={false} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} etapeInitiale="themes" convictionsInitiales={{ positions: { ia: "plus_ia" }, exemplarite: true }} />,
       );
     expect(page("simulateur")).toContain("Mes convictions");
     expect(page("exploration")).not.toContain("Mes convictions");

@@ -19,7 +19,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser les charges sur le travail par des économies"
+      }
+    ]
   },
   {
     "id": "attal-finances-publiques-002",
@@ -41,7 +49,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-finances-publiques-003",
@@ -63,7 +72,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-finances-publiques-004",
@@ -85,7 +95,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-finances-publiques-005",
@@ -107,7 +118,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-finances-publiques-006",
@@ -137,6 +149,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Faire une année blanche sur l’ensemble des prestations sociales pour le budget 2028 sans toucher aux petites retraites."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire une année blanche sur l’ensemble des prestations sociales"
+      }
     ]
   },
   {
@@ -159,7 +179,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer 100 000 postes de fonctionnaires"
+      }
+    ]
   },
   {
     "id": "attal-finances-publiques-008",
@@ -181,7 +209,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-finances-publiques-009",
@@ -203,7 +232,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Dette & déficit",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Atteindre 0 % du PIB du déficit public à horizon 2037"
+      }
+    ]
   },
   {
     "id": "attal-finances-publiques-010",
@@ -262,6 +299,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Baisser de 2 Md€ les impôts pour les classes moyennes."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser de 2 Md€ les impôts pour les classes moyennes"
+      }
     ]
   },
   {
@@ -284,7 +329,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser de façon ciblée les impôts"
+      }
+    ]
   },
   {
     "id": "attal-finances-publiques-013",
@@ -306,7 +359,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser les impôts de production"
+      }
+    ]
   },
   {
     "id": "attal-interieur-justice-001",
@@ -350,7 +411,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Restreindre le regroupement familial"
+      }
+    ]
   },
   {
     "id": "attal-interieur-justice-003",
@@ -372,7 +441,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire voter au Parlement des quotas d’immigration par secteur d’activité"
+      }
+    ]
   },
   {
     "id": "attal-interieur-justice-004",
@@ -394,7 +471,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un permis à points pour l’immigration sur le modèle canadien"
+      }
+    ]
   },
   {
     "id": "attal-interieur-justice-005",
@@ -431,6 +516,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Interdire le voile pour les moins de 15 ans."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "cadre_collectif",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire le voile pour les moins de 15 ans"
+      }
     ]
   },
   {
@@ -453,7 +546,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "cadre_collectif",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un délit de contrainte au port du voile"
+      }
+    ]
   },
   {
     "id": "attal-interieur-justice-007",
@@ -475,7 +576,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Soutenir la loi de comparution immédiate pour certains mineurs"
+      }
+    ]
   },
   {
     "id": "attal-social-solidarite-001",
@@ -517,7 +626,15 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Allocations & prestations sociales"
+    "sous_theme": "Allocations & prestations sociales",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "faire une année blanche sur l’ensemble des prestations sociales"
+      }
+    ]
   },
   {
     "id": "attal-social-solidarite-003",
@@ -539,7 +656,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-social-solidarite-004",
@@ -561,7 +679,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-retraites-travail-001",
@@ -598,6 +717,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Défiscaliser les heures supplémentaires."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Défiscaliser les heures supplémentaires"
+      }
     ]
   },
   {
@@ -620,7 +747,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-retraites-travail-003",
@@ -642,7 +770,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-retraites-travail-004",
@@ -664,7 +793,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "travailler_plus",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer le plafond de 220 heures supplémentaires annuelles autorisées."
+      }
+    ]
   },
   {
     "id": "attal-retraites-travail-005",
@@ -686,7 +823,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Plannifier la formation de 20 M de salariés sur 5 ans pour l’intelligence artificielle."
+      }
+    ]
   },
   {
     "id": "attal-retraites-travail-006",
@@ -723,6 +868,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Faire baisser les charges salariales pour augmenter les salaires."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire baisser les charges salariales pour augmenter les salaires."
+      }
     ]
   },
   {
@@ -745,7 +898,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-retraites-travail-008",
@@ -767,7 +921,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-envi-001",
@@ -789,7 +944,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ecologie",
+        "position": "renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Doubler la part du fonds chaleur, NDLR dédiée au financement de la géoénergie de 80 M€ à 160 M€."
+      }
+    ]
   },
   {
     "id": "attal-envi-002",
@@ -811,7 +974,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-gouvernance-republique-001",
@@ -833,7 +997,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-gouvernance-republique-002",
@@ -855,7 +1020,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire émerger des géants de l’intelligence artificielle en France, grâce à des investissments privés notamment."
+      }
+    ]
   },
   {
     "id": "attal-reformes-etat-001",
@@ -877,7 +1050,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fonction publique",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un plan de départs volontaires de fonctionnaires, avec un objectif de 100 000 postes supprimés."
+      }
+    ]
   },
   {
     "id": "attal-reformes-etat-002",
@@ -899,7 +1080,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fonction publique",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Assurer le non-remplacement de certains départs à la retraite pour les agents d’État."
+      }
+    ]
   },
   {
     "id": "attal-education-jeunesse-001",
@@ -921,7 +1110,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-education-jeunesse-002",
@@ -943,7 +1133,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "cadre_collectif",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Soutenir la mesure de l’interdiction des réseaux sociaux pour les moins de 15 ans."
+      }
+    ]
   },
   {
     "id": "attal-education-jeunesse-003",
@@ -965,7 +1163,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-defense-001",
@@ -987,7 +1186,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-defense-002",
@@ -1009,6 +1209,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   }
 ]

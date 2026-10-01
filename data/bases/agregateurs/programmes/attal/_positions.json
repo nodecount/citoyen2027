@@ -1,0 +1,39 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "59dd7b7ebd75b010",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 15,
+    "sans_position": 7,
+    "rejetees": [
+      {
+        "id": "attal-finances-publiques-010",
+        "raison": "relecture : Une règle d'or budgétaire vise l'équilibre des comptes mais n'implique pas nécessairement une baisse des impôts ou de la dépense publique, elle pourrait aussi se traduire par des hausses de prélèvements."
+      },
+      {
+        "id": "attal-interieur-justice-001",
+        "raison": "relecture : Privilégier une immigration de travail exprime une préférence de type d'immigration mais ne montre pas explicitement une restriction globale des entrées."
+      },
+      {
+        "id": "attal-social-solidarite-001",
+        "raison": "relecture : Le durcissement de l'assurance chômage relève du sujet travail/emploi et non de la fiscalité ou de la dépense publique au sens strict."
+      }
+    ],
+    "cout_reference_usd": 0.096,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "05ddcaabcfb431d0",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 18,
+    "etiquetees": 8,
+    "sans_position": 10,
+    "rejetees": [],
+    "cout_reference_usd": 0.057,
+    "appels": 2
+  }
+]

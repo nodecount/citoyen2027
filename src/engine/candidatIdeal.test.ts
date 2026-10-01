@@ -1,6 +1,4 @@
 import { describe, expect, it } from "vitest";
-import { GROUPES_SOCIAUX } from "../convictions";
-import type { Effet } from "../effets";
 import type { ConstatIntegrite } from "../data/integrite";
 import type { Proposition } from "../types";
 import { ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation, type CardPourSolde, type Solde } from "./candidatIdeal";
@@ -33,22 +31,19 @@ describe("soldesSituation", () => {
 });
 
 describe("soldesConvictions", () => {
-  const effet = (cibles: Effet["cibles"], sens: Effet["sens"]): Effet => ({ cibles, dimension: "revenu_disponible", sens, source_url: "https://exemple.fr", extrait: "extrait suffisamment long" });
-  const prop = (effets: Effet[]): Proposition => ({ id: "p", candidat: "x", theme: "t", titre: "t", resume_factuel: "", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-09-30", effets });
-  const g = (id: string) => GROUPES_SOCIAUX.find((x) => x.id === id)!;
-  const JEUNES = [{ champ: "tranche_age", valeurs: ["moins_30"] }];
+  const prop = (positions: NonNullable<Proposition["positions"]>): Proposition => ({ id: "p", candidat: "x", theme: "t", titre: "t", resume_factuel: "", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-10-01", positions });
+  const tag = (sujet: string, position: string) => ({ sujet, position, source_url: "https://exemple.fr", extrait: "extrait suffisamment long" });
 
-  it("compte un constat par groupe et par thème", () => {
-    const cards = [card([ligne("a", null, [prop([effet(JEUNES, "hausse")])])]), card([ligne("a", null, [prop([effet(JEUNES, "baisse")])])])];
-    const s = soldesConvictions(cards, [g("tranche_age:moins_30"), g("statut_professionnel:retraite")])[0];
-    // jeunes : +1 puis -1 ; retraités : incertain (autre champ) donc non analysé
+  it("compte un constat par sujet choisi et par thème", () => {
+    const cards = [card([ligne("a", null, [prop([tag("ia", "plus_ia")])])]), card([ligne("a", null, [prop([tag("ia", "encadrer_ia")])])])];
+    const s = soldesConvictions(cards, { ia: "plus_ia", europe: "plus_europe" })[0];
+    // IA : +1 puis -1 ; Europe : aucune mesure étiquetée, donc non analysé
     expect(s).toMatchObject({ ameliorants: 1, degradants: 1, solde: 0, analyses: 2 });
   });
-  it("sans groupe : tous à zéro analyse", () => {
-    expect(soldesConvictions([card([ligne("a", null, [prop([effet(JEUNES, "hausse")])])])], []).every((x) => x.analyses === 0)).toBe(true);
+  it("sans position choisie (« pas d'avis » partout) : tous à zéro analyse", () => {
+    expect(soldesConvictions([card([ligne("a", null, [prop([tag("ia", "plus_ia")])])])], {}).every((x) => x.analyses === 0)).toBe(true);
   });
 });
-
 describe("meilleurs", () => {
   it("désigne le plus fort solde", () => {
     const m = meilleurs([solde("a", 2, 0), solde("b", 1, 0), solde("c", 0, 1)])!;

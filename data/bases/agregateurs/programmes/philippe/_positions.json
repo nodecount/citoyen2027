@@ -1,0 +1,71 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "c9f6222ca2aeba39",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 10,
+    "sans_position": 10,
+    "rejetees": [
+      {
+        "id": "philippe-finances-publiques-002",
+        "raison": "relecture : Une règle limitant le déficit ne précise pas si elle passe par une baisse d'impôts/dépenses ou par une hausse de recettes, donc la position baisse_impots n'est pas établie par le texte."
+      },
+      {
+        "id": "philippe-finances-publiques-004",
+        "raison": "relecture : Interdire de financer les dépenses courantes par la dette ne dit pas si cela se traduit par une baisse d'impôts ou de dépenses, l'étiquette n'est pas directement fondée."
+      },
+      {
+        "id": "philippe-finances-publiques-005",
+        "raison": "relecture : Ramener le déficit à 2% du PIB peut s'obtenir par hausse de recettes comme par baisse de dépenses/impôts, le texte ne fonde pas spécifiquement baisse_impots."
+      },
+      {
+        "id": "philippe-finances-publiques-010",
+        "raison": "relecture : S'engager à ne pas créer de nouvel impôt n'est pas une baisse d'impôts ni de dépense publique, cela ne correspond pas à la définition de baisse_impots."
+      },
+      {
+        "id": "philippe-interieur-justice-004",
+        "raison": "relecture : L'expulsion d'étrangers délinquants est une mesure d'immigration/administrative et non un durcissement des peines ou des moyens judiciaires, l'étiquette securite/repression n'est pas fondée."
+      }
+    ],
+    "cout_reference_usd": 0.0798,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "266e524b8054f54f",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 9,
+    "sans_position": 16,
+    "rejetees": [],
+    "cout_reference_usd": 0.0473,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "474f39c062dac8b6",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 7,
+    "sans_position": 18,
+    "rejetees": [],
+    "cout_reference_usd": 0.059,
+    "appels": 2
+  },
+  {
+    "groupe": 3,
+    "empreinte": "35e0cfeab99f29d5",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 20,
+    "etiquetees": 1,
+    "sans_position": 19,
+    "rejetees": [],
+    "cout_reference_usd": 0.0248,
+    "appels": 2
+  }
+]

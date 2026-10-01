@@ -1,6 +1,5 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
-import type { Effet } from "../effets";
 import type { ConstatIntegrite } from "../data/integrite";
 import type { Proposition } from "../types";
 import type { CandidatCharge } from "../data/chargerCandidats";
@@ -12,132 +11,120 @@ import { CONVICTIONS_VIDES } from "./memoireConvictions";
 import { VueThemes } from "./VueThemes";
 import { construireQuestionnaire, CHAMPS_PROFIL } from "../questionnaire";
 
-const MODESTES = [{ champ: "tranche_revenus", valeurs: ["moins_1200"] }];
-const RETRAITES = [{ champ: "statut_professionnel", valeurs: ["retraite"] }];
-const effet = (cibles: Effet["cibles"] = MODESTES): Effet => ({ cibles, dimension: "revenu_disponible", sens: "hausse", source_url: "https://exemple.fr/a", extrait: "extrait-de-test suffisamment long" });
-const prop = (effets: Effet[]): Proposition => ({ id: "a", candidat: "x", theme: "fiscalite", titre: "titre-mesure", resume_factuel: "", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-09-29", effets });
+const prop = (positions: NonNullable<Proposition["positions"]> = [{ sujet: "ecologie", position: "garder_nucleaire", source_url: "https://exemple.fr/a", extrait: "extrait-de-test suffisamment long" }]): Proposition => ({ id: "a", candidat: "x", theme: "fiscalite", titre: "titre-mesure", resume_factuel: "", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-09-29", positions });
 const src = { type: "primaire" as const, nom: "Legifrance", annee: 2026, url: "https://www.legifrance.gouv.fr/decision-x" };
 const RECENSEE: ConstatIntegrite = { etat: "recensee", verifieLe: "2026-09-29", condamnations: [{ nature: "nature-x", juridiction: "juridiction-x", date_decision: "2025-06-10", peine: "peine-x", sources: [src, { ...src, type: "secondaire", url: "https://presse.fr/y" }] }] };
 const AUCUNE: ConstatIntegrite = { etat: "aucune_recensee", verifieLe: "2026-09-29", sources: [src] };
-const FAIBLES = "tranche_revenus:moins_1200";
+const NUCLEAIRE = { ecologie: "garder_nucleaire" };
 
 const rendre = (c: Parameters<typeof PanneauConvictions>[0]) => renderToStaticMarkup(<PanneauConvictions {...c} />);
 
 describe("BlocConvictions", () => {
-  it("propose les groupes par rubrique en cases à cocher et l'exemplarité en interrupteur, facultatifs", () => {
+  it("propose les huit sujets, chacun avec « Pas d'avis » et ses positions, et l'exemplarité en interrupteur", () => {
     const html = renderToStaticMarkup(<BlocConvictions convictions={CONVICTIONS_VIDES} onChange={() => {}} />);
     expect(html).toContain("Mes convictions");
-    for (const t of ["Situation professionnelle", "Indépendant(e)", "Retraité(e)", "Propriétaire", "Familles avec enfants à charge", "Moins de 1 200 €", "Plus de 5 000 €"]) expect(html).toContain(t);
-    expect(html).toContain('type="checkbox"');
+    for (const t of ["Écologie et énergie", "Sortir du nucléaire", "Garder et développer le nucléaire", "Intelligence artificielle", "Encourager davantage l&#x27;IA", "Encadrer et limiter l&#x27;IA", "Europe", "Immigration", "Fiscalité et dépense publique", "Sécurité et justice", "Travail et retraites", "Libertés et société"]) expect(html, t).toContain(t);
+    expect((html.match(/Pas d&#x27;avis<\/option>/g) ?? []).length).toBe(8);
     expect(html).toContain('role="switch"');
     expect(html).toContain("sans condamnation définitive");
-    expect(html).toContain("gardés dans votre navigateur");
   });
-  it("coche exactement ce que le visiteur a choisi", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ groupes: ["tranche_age:moins_30"], exemplarite: false }} onChange={() => {}} />);
-    const cochees = html.match(/<input[^>]*type="checkbox"[^>]*checked=""[^>]*>/g) ?? [];
-    expect(cochees).toHaveLength(1);
-    expect(html).toMatch(/checked=""[^>]*\/?>Moins de 30 ans/);
-  });
-  it("donne une légende propre à l'axe : mêmes niveaux que « Ma situation » mais pour les groupes choisis, sans symboles qui ne s'affichent jamais", () => {
+  it("ne cible plus de groupe précis (âge, statut, territoire) : uniquement des sujets", () => {
     const html = renderToStaticMarkup(<BlocConvictions convictions={CONVICTIONS_VIDES} onChange={() => {}} />);
-    expect(html).toContain("pour les groupes choisis, pas pour vous");
-    for (const symbole of ["▲", "◆", "○", "▼"]) expect(html).toContain(symbole);
-    // Les faits d'intégrité ne sont jamais affichés (simulateur à l'aveugle) : pas de légende pour leurs symboles.
-    for (const symbole of ["■", "□", "Intégrité :"]) expect(html).not.toContain(symbole);
+    for (const t of ["Retraité(e)", "Propriétaire", "Moins de 30 ans", "Situation professionnelle"]) expect(html, t).not.toContain(t);
+    expect(html).not.toContain('type="checkbox" checked');
+  });
+  it("présélectionne exactement ce que le visiteur a choisi et compte les positions", () => {
+    const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "encadrer_ia" }, exemplarite: false }} onChange={() => {}} />);
+    expect(html).toMatch(/<option value="encadrer_ia" selected="">/);
+    expect((html.match(/selected=""/g) ?? []).length).toBe(8); // 1 choix + les sept autres sujets, restés sur « Pas d'avis »
+    expect(html).toContain("1 position sur 8 sujets");
   });
   it("l'effacement est confirmé : la modale est fermée par défaut", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ groupes: ["tranche_age:moins_30"], exemplarite: false }} onChange={() => {}} />);
+    const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "plus_ia" }, exemplarite: false }} onChange={() => {}} />);
     expect(html).toContain("Effacer mes convictions");
     expect(html).not.toContain("alertdialog");
   });
-  it("« sans condamnation définitive » cochée sans groupe : dit qu'elle ne change rien", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ groupes: [], exemplarite: true }} onChange={() => {}} />);
+  it("« sans condamnation définitive » cochée sans position : dit qu'elle ne change rien", () => {
+    const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: {}, exemplarite: true }} onChange={() => {}} />);
     expect(html).toContain("ne change rien");
-    expect(html).toContain("choisi au moins un groupe");
+    expect(html).toContain("au moins une position");
   });
-  it("« sans condamnation définitive » cochée avec un groupe : dit ce qu'elle fait (écarter), et que les faits ne s'affichent pas", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ groupes: ["tranche_age:moins_30"], exemplarite: true }} onChange={() => {}} />);
+  it("« sans condamnation définitive » cochée avec une position : dit ce qu'elle fait (écarter), et que les faits ne s'affichent pas", () => {
+    const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "plus_ia" }, exemplarite: true }} onChange={() => {}} />);
     expect(html).toContain("écartés du résultat");
     expect(html).toContain("ne sont pas affichés");
     expect(html).not.toContain("ne change rien");
-    expect(html).not.toContain("masqués tant que"); // ancien texte, faux : le masquage n'a plus rien de temporaire
   });
   it("option décochée : aucune mention de l'option", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ groupes: ["tranche_age:moins_30"], exemplarite: false }} onChange={() => {}} />);
+    const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "plus_ia" }, exemplarite: false }} onChange={() => {}} />);
     expect(html).not.toContain("ne change rien");
     expect(html).not.toContain("écartés du résultat");
   });
 });
-
 describe("PanneauConvictions", () => {
   it("sans conviction : rien", () => {
-    expect(rendre({ propositions: [prop([effet()])], convictions: CONVICTIONS_VIDES, integrite: null })).toBe("");
+    expect(rendre({ propositions: [prop()], convictions: CONVICTIONS_VIDES, integrite: null })).toBe("");
   });
-  it("valeurs sociales : mot + symbole du niveau, sans score", () => {
-    const html = rendre({ propositions: [prop([effet()])], convictions: { groupes: [FAIBLES], exemplarite: false }, integrite: null });
-    expect(html).toContain("Améliorant");
+  it("convictions : mot + symbole du niveau, sans score", () => {
+    const html = rendre({ propositions: [prop()], convictions: { positions: NUCLEAIRE, exemplarite: false }, integrite: null });
+    expect(html).toContain("proche de votre position");
     expect(html).toContain("▲");
     expect(html).not.toMatch(/score|note|classement/i);
   });
-  it("un constat par groupe choisi : une mesure pour les seuls retraités n'améliore pas les faibles revenus", () => {
-    const html = rendre({
-      propositions: [prop([effet(RETRAITES)])],
-      convictions: { groupes: ["statut_professionnel:retraite", FAIBLES], exemplarite: false },
-      integrite: null,
-    });
-    const items = html.split("<li").filter((i) => i.includes("Retraité(e)") || i.includes("Moins de 1 200"));
-    const retraites = items.find((i) => i.includes("Retraité(e)"))!;
-    const faibles = items.find((i) => i.includes("Moins de 1 200"))!;
-    expect(retraites).toContain("Améliorant");
-    expect(faibles).toContain("pas d&#x27;indicateur");
-    expect(faibles).not.toContain("Améliorant");
+  it("une mesure pour une autre position du même sujet : opposé à la position choisie", () => {
+    const html = rendre({ propositions: [prop([{ sujet: "ecologie", position: "sortir_nucleaire", source_url: "https://exemple.fr/a", extrait: "extrait-de-test suffisamment long" }])], convictions: { positions: NUCLEAIRE, exemplarite: false }, integrite: null });
+    expect(html).toContain("opposé à votre position");
+    expect(html).toContain("▼");
   });
-  it("explique le constat : mesure, effet et extrait de source", () => {
-    const html = rendre({ propositions: [prop([effet()])], convictions: { groupes: [FAIBLES], exemplarite: false }, integrite: null });
+  it("un constat par sujet choisi : une mesure sur l'écologie ne dit rien sur l'IA", () => {
+    const html = rendre({ propositions: [prop()], convictions: { positions: { ...NUCLEAIRE, ia: "plus_ia" }, exemplarite: false }, integrite: null });
+    const items = html.split("<li").filter((i) => i.includes("Écologie et énergie :") || i.includes("Intelligence artificielle :"));
+    const ecologie = items.find((i) => i.includes("Écologie et énergie :"))!;
+    const ia = items.find((i) => i.includes("Intelligence artificielle :"))!;
+    expect(ecologie).toContain("proche de votre position");
+    expect(ia).toContain("pas de mesure sur ce sujet");
+    expect(ia).not.toContain("proche de votre position");
+  });
+  it("explique le constat : mesure, position défendue et extrait de source", () => {
+    const html = rendre({ propositions: [prop()], convictions: { positions: NUCLEAIRE, exemplarite: false }, integrite: null });
     expect(html).toContain("Pourquoi");
     expect(html).toContain("titre-mesure");
+    expect(html).toContain("Garder et développer le nucléaire");
     expect(html).toContain("extrait-de-test suffisamment long");
   });
-  it("signale les mesures au public non précisé, non comptées", () => {
-    const html = rendre({ propositions: [prop([effet(), effet([{ champ: "autre", valeurs: ["mères isolées"] }])])], convictions: { groupes: [FAIBLES], exemplarite: false }, integrite: null });
-    expect(html).toContain("1 mesure");
-    expect(html).toContain("non comptée");
-  });
-  it("candidat sans effet structuré : pas d'indicateur, jamais « non concerné »", () => {
-    const html = rendre({ propositions: [prop([])], convictions: { groupes: [FAIBLES], exemplarite: false }, integrite: null });
-    expect(html).toContain("pas d&#x27;indicateur");
-    expect(html).not.toContain("Non concerné");
-  });
-  it("intégrité recensée : nature, juridiction, date et liens vers les sources", () => {
-    const html = rendre({ propositions: [], convictions: { groupes: [], exemplarite: true }, integrite: RECENSEE });
+  it("candidat sans mesure étiquetée : pas de mesure sur ce sujet, jamais « opposé »", () => {
+    const html = rendre({ propositions: [prop([])], convictions: { positions: NUCLEAIRE, exemplarite: false }, integrite: null });
+    expect(html).toContain("pas de mesure sur ce sujet");
+    expect(html).not.toContain("opposé");
+  });  it("intégrité recensée : nature, juridiction, date et liens vers les sources", () => {
+    const html = rendre({ propositions: [], convictions: { positions: {}, exemplarite: true }, integrite: RECENSEE });
     for (const t of ["nature-x", "juridiction-x", "10 juin 2025", "https://www.legifrance.gouv.fr/decision-x", "https://presse.fr/y"]) expect(html).toContain(t);
   });
   it("aucune condamnation recensée : datée et attribuée aux sources consultées", () => {
-    const html = rendre({ propositions: [], convictions: { groupes: [], exemplarite: true }, integrite: AUCUNE });
+    const html = rendre({ propositions: [], convictions: { positions: {}, exemplarite: true }, integrite: AUCUNE });
     expect(html).toContain("29 septembre 2026");
     expect(html).toContain("d&#x27;après les sources consultées");
   });
   it("non vérifié : ne dit jamais « aucune condamnation », et n'accole pas de jugement au nom", () => {
-    const html = rendre({ propositions: [], convictions: { groupes: [], exemplarite: true }, integrite: { etat: "non_verifie" } });
+    const html = rendre({ propositions: [], convictions: { positions: {}, exemplarite: true }, integrite: { etat: "non_verifie" } });
     expect(html).toContain("non vérifiées par cet outil");
     expect(html).not.toMatch(/aucune condamnation/i);
     expect(html).not.toContain("Intégrité");
   });
   it("dates en clair et libellé au pluriel quand il y a plusieurs condamnations", () => {
     const deux: ConstatIntegrite = { ...RECENSEE, condamnations: [RECENSEE.condamnations[0], { ...RECENSEE.condamnations[0], nature: "nature-y" }] } as ConstatIntegrite;
-    const html = rendre({ propositions: [], convictions: { groupes: [], exemplarite: true }, integrite: deux });
+    const html = rendre({ propositions: [], convictions: { positions: {}, exemplarite: true }, integrite: deux });
     expect(html).toContain("Condamnations définitives recensées");
     expect(html).toContain("10 juin 2025");
     expect(html).not.toContain("2025-06-10");
     expect(html).toContain("29 septembre 2026");
-    expect(rendre({ propositions: [], convictions: { groupes: [], exemplarite: true }, integrite: RECENSEE })).toContain("Condamnation définitive recensée");
+    expect(rendre({ propositions: [], convictions: { positions: {}, exemplarite: true }, integrite: RECENSEE })).toContain("Condamnation définitive recensée");
   });
   it("aucune condamnation recensée : date en clair aussi", () => {
-    expect(rendre({ propositions: [], convictions: { groupes: [], exemplarite: true }, integrite: AUCUNE })).toContain("29 septembre 2026");
+    expect(rendre({ propositions: [], convictions: { positions: {}, exemplarite: true }, integrite: AUCUNE })).toContain("29 septembre 2026");
   });
   it("intégrité masquée (integrite null, mode aveugle) : aucun fait rendu", () => {
-    const html = rendre({ propositions: [prop([effet()])], convictions: { groupes: [FAIBLES], exemplarite: true }, integrite: null });
+    const html = rendre({ propositions: [prop()], convictions: { positions: NUCLEAIRE, exemplarite: true }, integrite: null });
     expect(html).not.toContain("condamnation");
   });
 });
@@ -160,7 +147,7 @@ describe("garde-fous d'affichage", () => {
     expect(integritesVisibles({ ...base, ...difference })).toBeNull();
   });
   it("exploration : les convictions enregistrées ne sont pas transmises", () => {
-    const enregistrees = { groupes: ["tranche_age:moins_30"], exemplarite: true };
+    const enregistrees = { positions: { ia: "plus_ia" }, exemplarite: true };
     expect(convictionsVisibles(false, enregistrees)).toEqual(CONVICTIONS_VIDES);
     expect(convictionsVisibles(true, enregistrees)).toEqual(enregistrees);
   });
@@ -170,7 +157,7 @@ describe("détail d'un candidat ouvert", () => {
   const THEMES: Theme[] = [{ id: "fiscalite", libelle: "Mes impôts", question_citoyen: "Combien ?", description: "d", statut: "populated" }];
   const candidat: CandidatCharge = {
     meta: { slug: "a", nom: "Nom a", parti: "P", sources_officielles: [], date_derniere_maj: "2026-09-29" },
-    propositions: [prop([effet()])],
+    propositions: [prop()],
     syntheses: [],
   };
   const QUESTIONNAIRE = construireQuestionnaire(CHAMPS_PROFIL, {}, THEMES);
@@ -189,15 +176,15 @@ describe("détail d'un candidat ouvert", () => {
       />,
     );
 
-  it("affiche le panneau : valeurs sociales et intégrité, quand les deux sont fournis", () => {
-    const html = detail({ groupes: [FAIBLES], exemplarite: true }, { a: { etat: "non_verifie" } });
+  it("affiche le panneau : convictions et intégrité, quand les deux sont fournis", () => {
+    const html = detail({ positions: NUCLEAIRE, exemplarite: true }, { a: { etat: "non_verifie" } });
     expect(html).toContain('aria-label="Convictions"');
-    expect(html).toContain("Améliorant");
+    expect(html).toContain("proche de votre position");
     expect(html).toContain("non vérifiées par cet outil");
   });
   it("integrites null (aveugle, exploration, option désactivée) : aucun fait d'intégrité, même avec l'option cochée", () => {
-    const html = detail({ groupes: [FAIBLES], exemplarite: true }, null);
-    expect(html).toContain("Améliorant");
+    const html = detail({ positions: NUCLEAIRE, exemplarite: true }, null);
+    expect(html).toContain("proche de votre position");
     expect(html).not.toMatch(/condamnation/i);
   });
   it("convictions vides (exploration) : pas de panneau du tout", () => {

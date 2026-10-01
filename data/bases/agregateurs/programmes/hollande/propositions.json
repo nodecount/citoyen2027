@@ -18,7 +18,15 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre à contribution les patrimoines supérieurs à 10 millions d'euros lors de la transmission pour financer des mesures sociales."
+      }
+    ]
   },
   {
     "id": "hollande-finances-publiques-002",
@@ -45,6 +53,14 @@
         "cibles": [],
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer la TVA sur les produits alimentaires et les travaux de rénovation énergétique, en passant de 5,5 % à 0 %."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer la TVA sur les produits alimentaires et les travaux de rénovation énergétique, en passant de 5,5 % à 0 %."
       }
@@ -92,6 +108,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "financé par une hausse de 4 points de la TVA"
       }
-    ]
+    ],
+    "positions": []
   }
 ]

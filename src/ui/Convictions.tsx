@@ -1,11 +1,12 @@
+import { Briefcase, Coins, Cpu, Eraser, Highlighter, Landmark, Leaf, Scale, ShieldCheck, Users, type LucideIcon } from "lucide-react";
 import { useState } from "react";
-import { GROUPES_SOCIAUX } from "../convictions";
 import { constatIntegrite, INTEGRITES, type ConstatIntegrite, type Integrite } from "../data/integrite";
-import { projeterConviction } from "../engine/convictions";
+import { projeterPosition } from "../engine/positions";
+import { SUJETS_CONVICTION, trouverPosition, trouverSujet } from "../positions";
 import type { Proposition } from "../types";
 import { aDesConvictions, CONVICTIONS_VIDES, type Convictions } from "./memoireConvictions";
+import { IndicateurEnregistrement, useSignalEnregistrement } from "./IndicateurEnregistrement";
 import { ModaleConfirmation } from "./ModaleConfirmation";
-import { decrireEffet, NIVEAUX } from "./projection";
 
 const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 
@@ -27,57 +28,100 @@ export function convictionsVisibles(simulateur: boolean, convictions: Conviction
   return simulateur ? convictions : CONVICTIONS_VIDES;
 }
 
-// Rubriques dans l'ordre du catalogue (généré depuis le schéma du formulaire : aucun public n'est mis en avant).
-const RUBRIQUES = [...new Set(GROUPES_SOCIAUX.map((g) => g.rubrique))];
+const ICONES_SUJETS: Record<string, LucideIcon> = {
+  ecologie: Leaf,
+  ia: Cpu,
+  europe: Landmark,
+  immigration: Users,
+  fiscalite: Coins,
+  securite: ShieldCheck,
+  travail: Briefcase,
+  libertes: Scale,
+};
 
-// Bloc de questions « Mes convictions » : facultatif, séparé de « Ma situation » (aucun score, aucun classement).
-export function BlocConvictions({ convictions, onChange }: { convictions: Convictions; onChange: (c: Convictions) => void }) {
-  const basculer = (id: string, coche: boolean) =>
-    onChange({ ...convictions, groupes: coche ? [...convictions.groupes, id] : convictions.groupes.filter((g) => g !== id) });
+// Bloc « Mes convictions » : un sujet par carte, une position au choix, « Pas d'avis » par défaut (aucun score, aucun
+// classement ici : les positions ne servent qu'au résultat « convictions » de la card « candidat idéal »).
+export function BlocConvictions({ convictions, onChange: appliquer }: { convictions: Convictions; onChange: (c: Convictions) => void }) {
+  const { etat, signaler } = useSignalEnregistrement();
+  const onChange = (c: Convictions) => {
+    signaler();
+    appliquer(c);
+  };
+  const choisir = (sujet: string, position: string) => {
+    const positions = { ...convictions.positions };
+    if (position === "") delete positions[sujet];
+    else positions[sujet] = position;
+    onChange({ ...convictions, positions });
+  };
   const [confirmerEffacement, setConfirmerEffacement] = useState(false);
+  const [manquantesEnValeur, setManquantesEnValeur] = useState(false);
+  const nombre = Object.keys(convictions.positions).length;
   return (
-    <section className="convictions" aria-label="Mes convictions">
-      <h2>Mes convictions</h2>
-      <p className="hint">
-        Facultatif. Ces choix s'affichent à part, dans le détail de chaque candidat : ils ne changent pas les indicateurs « Ma situation ». Ils sont gardés dans votre navigateur tant que vous ne les effacez pas.
-      </p>
-      <p className="hint">
-        Repères : ▲ améliorant, ◆ mixte, ○ non concerné, ▼ dégradant, pour les groupes choisis, pas pour vous.
-      </p>
-      <p className="question-convictions">Je veux un candidat dont les mesures améliorent la situation de :</p>
-      {RUBRIQUES.map((rubrique) => (
-        <fieldset key={rubrique}>
-          <legend>{rubrique}</legend>
-          {GROUPES_SOCIAUX.filter((g) => g.rubrique === rubrique).map((g) => (
-            <label key={g.id} className="case">
-              <input type="checkbox" checked={convictions.groupes.includes(g.id)} onChange={(e) => basculer(g.id, e.target.checked)} />
-              {g.libelle}
-            </label>
-          ))}
-        </fieldset>
-      ))}
+    <section className="convictions questionnaire questionnaire--integre" aria-label="Mes convictions">
+      <div className="questionnaire-entete">
+        <h2>Mes convictions</h2>
+        <p className="progression">
+          {nombre} position{nombre > 1 ? "s" : ""} sur {SUJETS_CONVICTION.length} sujets
+        </p>
+        <button type="button" className="secondaire bouton-manquantes" aria-pressed={manquantesEnValeur} onClick={() => setManquantesEnValeur((v) => !v)}>
+          <Highlighter size={18} aria-hidden="true" focusable="false" />
+          Mettre en valeur les réponses manquantes
+        </button>
+        <IndicateurEnregistrement etat={etat} />
+        {aDesConvictions(convictions) && (
+          <div className="actions">
+            <button type="button" className="secondaire" onClick={() => setConfirmerEffacement(true)}>
+              <Eraser size={18} aria-hidden="true" focusable="false" />
+              Effacer mes convictions
+            </button>
+          </div>
+        )}
+      </div>
+      <div className="section-questions--cartes">
+        {SUJETS_CONVICTION.map((sujet) => {
+          const Icone = ICONES_SUJETS[sujet.id] ?? Scale;
+          const id = `conviction-${sujet.id}`;
+          return (
+            <div key={sujet.id} className={manquantesEnValeur && !convictions.positions[sujet.id] ? "question-carte question-carte--manquante" : "question-carte"}>
+              <div className="question">
+                <div className="question-tete">
+                  <span className="question-icone" aria-hidden="true">
+                    <Icone size={22} focusable="false" />
+                  </span>
+                  <label className="question-libelle" htmlFor={id}>
+                    {sujet.libelle}
+                  </label>
+                </div>
+                <select id={id} value={convictions.positions[sujet.id] ?? ""} onChange={(e) => choisir(sujet.id, e.target.value)}>
+                  <option value="">Pas d'avis</option>
+                  {sujet.positions.map((p) => (
+                    <option key={p.id} value={p.id}>
+                      {p.libelle}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          );
+        })}
+      </div>
       <label className="interrupteur">
         <input type="checkbox" role="switch" checked={convictions.exemplarite} onChange={(e) => onChange({ ...convictions, exemplarite: e.target.checked })} />
         <span className="interrupteur-piste" aria-hidden="true" />
         Je tiens à un candidat sans condamnation définitive
       </label>
       {/* Le simulateur est toujours à l'aveugle : les faits d'intégrité ne s'affichent jamais, ils servent seulement à écarter
-          des candidats du résultat « convictions » de la card « candidat idéal », qui n'existe qu'avec au moins un groupe. */}
+          des candidats du résultat « convictions » de la card « candidat idéal », qui n'existe qu'avec au moins une position. */}
       {convictions.exemplarite &&
-        (convictions.groupes.length === 0 ? (
-          <p className="hint">Cette option ne change rien tant que vous n'avez pas choisi au moins un groupe : elle écarte seulement des candidats du résultat « convictions ».</p>
+        (nombre === 0 ? (
+          <p className="hint">Sans position choisie, cette option ne change rien : elle sert seulement à écarter des candidats du résultat « convictions ». Choisissez au moins une position.</p>
         ) : (
-          <p className="hint">Les candidats à condamnation définitive recensée sont écartés du résultat « convictions » ; les faits eux-mêmes ne sont pas affichés (simulateur à l'aveugle).</p>
+          <p className="hint">Les candidats ayant une condamnation définitive connue sont écartés du résultat « convictions ». Les faits ne sont pas affichés, pour ne pas dévoiler les noms.</p>
         ))}
-      {aDesConvictions(convictions) && (
-        <button type="button" className="secondaire" onClick={() => setConfirmerEffacement(true)}>
-          Effacer mes convictions
-        </button>
-      )}
       <ModaleConfirmation
         ouverte={confirmerEffacement}
         titre="Effacer vos convictions ?"
-        message="Vos choix (groupes et intégrité) seront effacés de ce navigateur. Cette action ne peut pas être annulée."
+        message="Vos choix (positions et intégrité) seront effacés de ce navigateur. Cette action ne peut pas être annulée."
         libelleConfirmer="Oui, tout effacer"
         onConfirmer={() => {
           setConfirmerEffacement(false);
@@ -88,7 +132,6 @@ export function BlocConvictions({ convictions, onChange }: { convictions: Convic
     </section>
   );
 }
-
 function ListeSourcesIntegrite({ sources }: { sources: Array<{ nom: string; annee: number; url: string }> }) {
   return (
     <>
@@ -139,40 +182,36 @@ function ConstatIntegriteTexte({ integrite }: { integrite: ConstatIntegrite }) {
   );
 }
 
-// Constat « valeurs sociales » d'UN groupe : niveau (mot + symbole), mesures au public non précisé (non comptées), et
-// l'explication — quelles mesures fondent le niveau, comme « Pourquoi cet indicateur ? » pour « Ma situation ».
-function ConstatGroupe({ groupeId, propositions }: { groupeId: string; propositions: Proposition[] }) {
-  const groupe = GROUPES_SOCIAUX.find((g) => g.id === groupeId);
-  if (!groupe) return null;
-  const constat = projeterConviction([groupe], propositions);
-  const n = constat.effetsIncertains;
+// Mots propres à cet axe : on parle de proximité avec la position choisie, pas d'« amélioration » d'une situation.
+const MOTS_POSITION = { ameliorant: { symbole: "▲", libelle: "proche de votre position" }, mixte: { symbole: "◆", libelle: "mixte" }, degradant: { symbole: "▼", libelle: "opposé à votre position" } } as const;
+
+// Constat d'UN sujet choisi : niveau (mot + symbole) et, en « Pourquoi ? », les mesures étiquetées avec leur extrait.
+function ConstatSujet({ sujetId, positionId, propositions }: { sujetId: string; positionId: string; propositions: Proposition[] }) {
+  const sujet = trouverSujet(sujetId);
+  const position = trouverPosition(sujetId, positionId);
+  if (!sujet || !position) return null;
+  const constat = projeterPosition(sujetId, positionId, propositions);
   return (
     <li>
-      {groupe.rubrique} : {groupe.libelle} —{" "}
+      {sujet.libelle} : {position.libelle} —{" "}
       {constat.niveau ? (
         <>
-          <span aria-hidden="true">{NIVEAUX[constat.niveau].symbole}</span> <strong>{NIVEAUX[constat.niveau].libelle}</strong>
+          <span aria-hidden="true">{MOTS_POSITION[constat.niveau].symbole}</span> <strong>{MOTS_POSITION[constat.niveau].libelle}</strong>
         </>
       ) : (
-        <strong>pas d'indicateur</strong>
+        <strong>pas de mesure sur ce sujet</strong>
       )}
-      {n > 0 && (
-        <span className="hint">
-          {" "}
-          ({n} mesure{n > 1 ? "s" : ""} au public non précisé, non comptée{n > 1 ? "s" : ""})
-        </span>
-      )}
-      {constat.effetsRetenus.length > 0 && (
+      {constat.retenues.length > 0 && (
         <details className="pourquoi">
           <summary>Pourquoi ?</summary>
           <ul>
-            {constat.effetsRetenus.map(({ propositionId, effet, polarite }, index) => (
+            {constat.retenues.map(({ propositionId, etiquette, conforme }, index) => (
               <li key={`${propositionId}-${index}`}>
                 <strong>{propositions.find((p) => p.id === propositionId)?.titre ?? propositionId}</strong>
                 <br />
-                {decrireEffet(effet)} — {polarite === "favorable" ? "favorable" : "défavorable"} pour ce groupe.
+                Défend « {trouverPosition(etiquette.sujet, etiquette.position)?.libelle} » — {conforme ? "proche de votre position" : "opposé à votre position"}.
                 <br />
-                <q>{effet.extrait}</q>
+                <q>{etiquette.extrait}</q>
               </li>
             ))}
           </ul>
@@ -182,22 +221,21 @@ function ConstatGroupe({ groupeId, propositions }: { groupeId: string; propositi
   );
 }
 
-// Panneau du détail d'un candidat : deux constats séparés, sans score. Valeurs sociales : un constat PAR groupe choisi
-// (jamais une union qui laisserait croire que tous les groupes sont servis). `integrite` est null quand les faits
+// Panneau du détail d'un candidat : un constat par sujet choisi, sans score. `integrite` est null quand les faits
 // d'intégrité ne doivent pas s'afficher (option désactivée, ou mode aveugle : un casier identifie le candidat).
 export function PanneauConvictions({ propositions, convictions, integrite }: { propositions: Proposition[]; convictions: Convictions; integrite: ConstatIntegrite | null }) {
-  const groupes = convictions.groupes.filter((id) => GROUPES_SOCIAUX.some((g) => g.id === id));
-  if (groupes.length === 0 && !integrite) return null;
+  const choix = Object.entries(convictions.positions).filter(([sujet, position]) => trouverPosition(sujet, position));
+  if (choix.length === 0 && !integrite) return null;
   return (
     <section className="panneau-convictions" aria-label="Convictions">
-      {groupes.length > 0 && (
+      {choix.length > 0 && (
         <>
           <p>
-            <strong>Valeurs sociales</strong>, groupe par groupe :
+            <strong>Vos convictions</strong>, sujet par sujet :
           </p>
           <ul>
-            {groupes.map((id) => (
-              <ConstatGroupe key={id} groupeId={id} propositions={propositions} />
+            {choix.map(([sujet, position]) => (
+              <ConstatSujet key={sujet} sujetId={sujet} positionId={position} propositions={propositions} />
             ))}
           </ul>
         </>

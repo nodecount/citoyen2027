@@ -13,8 +13,6 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
   const credits = Object.entries(PORTRAITS).sort(([a], [b]) => a.localeCompare(b));
   return (
     <section className="a-propos">
-      <h1>À propos</h1>
-
       <div className="sections-a-propos">
         <article className="bloc-a-propos">
           <Scale aria-hidden="true" />

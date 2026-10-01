@@ -65,7 +65,7 @@ describe("messagesSansBadge", () => {
       sansBadge({ raisons: ["informations_manquantes"], champsManquants: ["logement"] }),
       [proposition([])],
     );
-    expect(messages).toEqual(["Renseignez « Statut de logement » pour affiner cet indicateur."]);
+    expect(messages).toEqual(["Renseignez « Statut de logement » pour affiner ce résultat."]);
   });
 
   it("explique qu'un public non identifiable par le formulaire empêche la projection", () => {

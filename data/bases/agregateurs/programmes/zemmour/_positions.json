@@ -1,0 +1,55 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "4d8563f20f94c33d",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 20,
+    "sans_position": 5,
+    "rejetees": [],
+    "cout_reference_usd": 0.0892,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "b6adcbecf78d7018",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 13,
+    "sans_position": 12,
+    "rejetees": [],
+    "cout_reference_usd": 0.0575,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "69ea6c594d8677c7",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 9,
+    "sans_position": 15,
+    "rejetees": [
+      {
+        "id": "zemmour-gouvernance-republique-004",
+        "raison": "relecture : La mesure porte sur la primauté du droit national sur les textes internationaux en général (article 55 de la Constitution), pas spécifiquement sur l'Union européenne, donc l'étiquette europe/souverainete n'est pas directement fondée par le texte."
+      }
+    ],
+    "cout_reference_usd": 0.0583,
+    "appels": 2
+  },
+  {
+    "groupe": 3,
+    "empreinte": "5290e30129b1e5e2",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 16,
+    "etiquetees": 2,
+    "sans_position": 14,
+    "rejetees": [],
+    "cout_reference_usd": 0.0234,
+    "appels": 2
+  }
+]

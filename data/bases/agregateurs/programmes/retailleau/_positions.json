@@ -1,0 +1,106 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "1ba945ea59ae29bb",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 16,
+    "sans_position": 9,
+    "rejetees": [],
+    "cout_reference_usd": 0.0844,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "e60db9a4c1398275",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 13,
+    "sans_position": 11,
+    "rejetees": [
+      {
+        "id": "retailleau-social-solidarite-019",
+        "raison": "relecture : L'extrait décrit un effet de second ordre (production de logements) et non la mesure fiscale elle-même qui fonderait baisse_impots."
+      }
+    ],
+    "cout_reference_usd": 0.0777,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "93abf0b12de8ecdb",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 7,
+    "sans_position": 15,
+    "rejetees": [
+      {
+        "id": "retailleau-retraites-travail-002",
+        "raison": "relecture : L'extrait ne cite que le gain budgétaire, qui est un effet secondaire de la fusion de dispositifs sociaux, et non une action directe de baisse d'impôt ou de dépense."
+      },
+      {
+        "id": "retailleau-retraites-travail-003",
+        "raison": "relecture : L'extrait décrit un objectif et un constat statistique sans mesure concrète d'allongement du temps ou de l'âge de travail, donc ne fonde pas travailler_plus."
+      },
+      {
+        "id": "retailleau-retraites-travail-007",
+        "raison": "relecture : L'extrait sur les 40 Md€ d'économies est une conséquence budgétaire indirecte du report de l'âge de la retraite, pas une mesure fiscale directe de baisse d'impôts ou de dépense."
+      }
+    ],
+    "cout_reference_usd": 0.0738,
+    "appels": 2
+  },
+  {
+    "groupe": 3,
+    "empreinte": "549e0dd7d6f62795",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 8,
+    "sans_position": 15,
+    "rejetees": [
+      {
+        "id": "retailleau-envi-003",
+        "raison": "relecture : Le texte vante une baisse de facture grâce au nucléaire existant, mais ne décrit aucune mesure de maintien ou développement du parc nucléaire, c'est un effet de second ordre sur le prix."
+      },
+      {
+        "id": "retailleau-envi-021",
+        "raison": "relecture : Un différé d'imposition est un report de paiement et non une baisse d'impôt, l'extrait ne fonde donc pas clairement la position baisse_impots."
+      }
+    ],
+    "cout_reference_usd": 0.0646,
+    "appels": 2
+  },
+  {
+    "groupe": 4,
+    "empreinte": "4c5ae81489c86447",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 12,
+    "sans_position": 13,
+    "rejetees": [],
+    "cout_reference_usd": 0.0744,
+    "appels": 2
+  },
+  {
+    "groupe": 5,
+    "empreinte": "97a4c89e50937131",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 13,
+    "etiquetees": 3,
+    "sans_position": 9,
+    "rejetees": [
+      {
+        "id": "retailleau-defense-005",
+        "raison": "relecture : La mesure concerne l'usage militaire de l'IA et des drones pour la défense, pas une position sur la régulation/promotion générale de l'IA en tant que sujet de société."
+      }
+    ],
+    "cout_reference_usd": 0.0227,
+    "appels": 2
+  }
+]

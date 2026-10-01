@@ -1,0 +1,19 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "f4a7fcf86eaa846c",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 6,
+    "etiquetees": 1,
+    "sans_position": 4,
+    "rejetees": [
+      {
+        "id": "brun-retraites-travail-002",
+        "raison": "relecture : Désindexer les pensions élevées est une réduction de prestation ciblée, non une augmentation d'impôt sur les aisés ni une extension de dépense de solidarité, donc ne correspond pas à la définition de redistribution."
+      }
+    ],
+    "cout_reference_usd": 0.0404,
+    "appels": 2
+  }
+]

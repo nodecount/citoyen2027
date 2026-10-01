@@ -96,6 +96,8 @@ export function anonymiserCards(cards: CardTheme[], graine: number): { cards: Ca
         sous_theme: p.sous_theme === undefined ? undefined : epurer(p.sous_theme),
         sources: [],
         effets: p.effets?.map(sansSource),
+        // Les étiquettes de position portent aussi l'adresse de la source (qui trahit l'auteur) et un extrait à épurer.
+        positions: p.positions?.map(sansSource),
       })),
       projection: l.projection && {
         ...l.projection,

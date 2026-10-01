@@ -20,12 +20,12 @@ afterEach(() => vi.unstubAllGlobals());
 describe("aller-retour dans le navigateur", () => {
   it("mémorise puis relit les convictions", () => {
     faussePage();
-    memoriserConvictions({ groupes: ["tranche_age:moins_30"], exemplarite: true });
-    expect(lireConvictions()).toEqual({ groupes: ["tranche_age:moins_30"], exemplarite: true });
+    memoriserConvictions({ positions: { ecologie: "garder_nucleaire" }, exemplarite: true });
+    expect(lireConvictions()).toEqual({ positions: { ecologie: "garder_nucleaire" }, exemplarite: true });
   });
   it("effacer (convictions vides) supprime la clé : plus rien n'est gardé", () => {
     const stockage = faussePage();
-    memoriserConvictions({ groupes: ["tranche_age:moins_30"], exemplarite: false });
+    memoriserConvictions({ positions: { ia: "plus_ia" }, exemplarite: false });
     expect(Object.keys(stockage)).toEqual(["convictions-visiteur"]);
     memoriserConvictions(CONVICTIONS_VIDES);
     expect(stockage).toEqual({});
@@ -37,33 +37,38 @@ describe("aller-retour dans le navigateur", () => {
   });
   it("stockage refusé (navigation privée) : ni lecture ni écriture ne lèvent d'erreur", () => {
     faussePage({}, true);
-    expect(() => memoriserConvictions({ groupes: [], exemplarite: true })).not.toThrow();
+    expect(() => memoriserConvictions({ positions: {}, exemplarite: true })).not.toThrow();
     expect(lireConvictions()).toEqual(CONVICTIONS_VIDES);
   });
 });
 
 describe("assainirConvictions", () => {
-  it("garde les groupes connus et l'exemplarité", () => {
-    expect(assainirConvictions({ groupes: ["tranche_age:moins_30", "statut_professionnel:retraite"], exemplarite: true })).toEqual({ groupes: ["tranche_age:moins_30", "statut_professionnel:retraite"], exemplarite: true });
+  it("garde les positions connues et l'exemplarité", () => {
+    expect(assainirConvictions({ positions: { ecologie: "sortir_nucleaire", ia: "encadrer_ia" }, exemplarite: true })).toEqual({ positions: { ecologie: "sortir_nucleaire", ia: "encadrer_ia" }, exemplarite: true });
   });
-  it("écarte un groupe disparu du catalogue, sans erreur", () => {
-    expect(assainirConvictions({ groupes: ["tranche_age:moins_30", "inconnu"], exemplarite: false }).groupes).toEqual(["tranche_age:moins_30"]);
+  it("écarte un sujet ou une position disparus du catalogue, sans erreur", () => {
+    expect(assainirConvictions({ positions: { ecologie: "sortir_nucleaire", inconnu: "x", ia: "inventee" }, exemplarite: false }).positions).toEqual({ ecologie: "sortir_nucleaire" });
   });
-  it("écarte les doublons et les types inattendus", () => {
-    expect(assainirConvictions({ groupes: ["tranche_age:moins_30", "tranche_age:moins_30", 3, null], exemplarite: "oui" })).toEqual({ groupes: ["tranche_age:moins_30"], exemplarite: false });
+  it("une position d'un autre sujet n'est pas acceptée", () => {
+    expect(assainirConvictions({ positions: { ecologie: "plus_ia" } }).positions).toEqual({});
   });
-  it.each([null, undefined, "x", 4, [], { groupes: "tranche_age:moins_30" }])("valeur corrompue %j : convictions vides", (brut) => {
+  it("ignore les anciens choix « par groupes » d'une version précédente", () => {
+    expect(assainirConvictions({ groupes: ["tranche_age:moins_30"], exemplarite: true })).toEqual({ positions: {}, exemplarite: true });
+  });
+  it("écarte les types inattendus", () => {
+    expect(assainirConvictions({ positions: { ia: 3, europe: null }, exemplarite: "oui" })).toEqual(CONVICTIONS_VIDES);
+  });
+  it.each([null, undefined, "x", 4, [], { positions: "ia" }, { positions: ["ia"] }])("valeur corrompue %j : convictions vides", (brut) => {
     expect(assainirConvictions(brut)).toEqual(CONVICTIONS_VIDES);
   });
 });
-
 describe("lireConvictions / aDesConvictions", () => {
   it("sans stockage disponible (rendu serveur) : convictions vides", () => {
     expect(lireConvictions()).toEqual(CONVICTIONS_VIDES);
   });
   it("aDesConvictions est faux pour le vide, vrai dès un choix", () => {
     expect(aDesConvictions(CONVICTIONS_VIDES)).toBe(false);
-    expect(aDesConvictions({ groupes: [], exemplarite: true })).toBe(true);
-    expect(aDesConvictions({ groupes: ["tranche_age:moins_30"], exemplarite: false })).toBe(true);
+    expect(aDesConvictions({ positions: {}, exemplarite: true })).toBe(true);
+    expect(aDesConvictions({ positions: { ia: "plus_ia" }, exemplarite: false })).toBe(true);
   });
 });

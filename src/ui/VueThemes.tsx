@@ -4,7 +4,7 @@ import { flushSync } from "react-dom";
 import { libelleCitation } from "../citations";
 import { evaluerProposition } from "../engine";
 import type { NiveauProjection, Projection } from "../engine/projection";
-import { estRepondue, questionsDuTheme, type Questionnaire } from "../questionnaire";
+import { estRepondue, questionsDuTheme, questionsVisibles, type Questionnaire } from "../questionnaire";
 import type { ProfilPartiel } from "../profil";
 import type { ChampProfil, Proposition, Remarque, ResumeTheme } from "../types";
 import type { CardTheme, LigneCandidat } from "./cards";
@@ -14,10 +14,10 @@ import { FluxCandidats } from "./FluxCandidats";
 import { aDesConvictions, CONVICTIONS_VIDES, type Convictions } from "./memoireConvictions";
 import { IconeTheme } from "./icones";
 import { Pastille } from "./Pastille";
+import { partiAffichable } from "./parti";
 import { NIVEAUX, decrireEffet } from "./projection";
 import { SectionQuestions, type SurReponse } from "./Questions";
 
-const ORDRE_LEGENDE: NiveauProjection[] = ["ameliorant", "mixte", "degradant", "non_concerne"];
 
 function BadgeNiveau({ niveau }: { niveau: NiveauProjection }) {
   const { libelle, symbole, sens } = NIVEAUX[niveau];
@@ -25,6 +25,16 @@ function BadgeNiveau({ niveau }: { niveau: NiveauProjection }) {
     <span className={`niveau niveau--${niveau.replace("_", "-")}`} title={sens}>
       <span aria-hidden="true">{symbole}</span> {libelle}
     </span>
+  );
+}
+
+// Légende : le niveau en simple texte (symbole + mot, dans sa couleur), sans cadre — les quatre pareils, « mixte » compris.
+function MotNiveau({ niveau }: { niveau: NiveauProjection }) {
+  const { libelle, symbole } = NIVEAUX[niveau];
+  return (
+    <strong className="echelle-mot">
+      <span aria-hidden="true">{symbole}</span> {libelle}
+    </strong>
   );
 }
 
@@ -239,7 +249,10 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", a
         <span className="detail-avatar">
           <Pastille slug={meta.slug} nom={meta.nom} />
         </span>
-        <h3 className="detail-titre">{meta.nom}</h3>
+        <h3 className="detail-titre">
+          {meta.nom}
+          {partiAffichable(meta.parti) && <span className="detail-parti">{partiAffichable(meta.parti)}</span>}
+        </h3>
         <div className="onglets-detail" role="group" aria-label="Affichage">
           <button type="button" aria-pressed={vueActive === "resume"} onClick={() => setVue("resume")}>
             Résumé
@@ -267,7 +280,7 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", a
             </button>
           </div>
         ) : (
-          <p className="hint">Pas d'indicateur pour ce candidat sur ce thème.</p>
+          <p className="hint">Impossible de dire ce que ce candidat changerait pour vous sur ce thème.</p>
         )
       ) : vueActive === "polarite" ? (
         <>
@@ -317,7 +330,7 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", a
         ) : (
           <>
             <p className="pour-votre-profil">
-              <strong>Pour votre profil :</strong> pas d'indicateur pour l'instant.
+              <strong>Pour vous :</strong> impossible de conclure pour l'instant.
             </p>
             {messagesSansBadge.map((message) => (
               <p className="pour-votre-profil" key={message}>
@@ -335,7 +348,7 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale = "resume", a
 
       {projection && projection.effetsRetenus.length > 0 && (
         <details className="pourquoi">
-          <summary>Pourquoi cet indicateur ?</summary>
+          <summary>Pourquoi ce résultat ?</summary>
           <ul>
             {projection.effetsRetenus.map(({ propositionId, effet, polarite }, index) => {
               const mesure = propositions.find((p) => p.id === propositionId);
@@ -410,9 +423,10 @@ function Portrait({ ligne, ouvert, idDetail, onBasculer, neutre = false }: { lig
   // `neutre` : portrait sans indicateur (candidats non concernés affichés à part) — ni couleur, ni niveau dans son nom.
   const niveau = neutre ? null : (ligne.projection?.niveau ?? null);
   const { nom } = ligne.meta;
+  const parti = partiAffichable(ligne.meta.parti);
   const nombre = ligne.propositions.length;
   const precision = niveau ? ` — ${NIVEAUX[niveau].libelle}${ligne.projection?.incertain ? ", à préciser" : ""}` : "";
-  const label = `${nom}${precision} : ${nombre} mesure${nombre > 1 ? "s" : ""} sur ce thème`;
+  const label = `${nom}${parti ? ` (${parti})` : ""}${precision} : ${nombre} mesure${nombre > 1 ? "s" : ""} sur ce thème`;
   return (
     <li className="avec-infobulle">
       <button
@@ -433,6 +447,7 @@ function Portrait({ ligne, ouvert, idDetail, onBasculer, neutre = false }: { lig
           bouton, d'où aria-hidden). */}
       <span className="infobulle infobulle--nom" aria-hidden="true">
         {nom}
+        {parti && <span className="infobulle-parti">{parti}</span>}
       </span>
     </li>
   );
@@ -712,62 +727,44 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
   return (
     <section className="themes">
       {personnalise && (
-        <section className="legende" aria-label="Comment lire les indicateurs">
-          <div className="legende-tete">
-            <p className="legende-titre">
-              <Info size={20} aria-hidden="true" focusable="false" />
-              Comment lire les indicateurs
-            </p>
-            <p className="legende-intro">
-              Ce que deviendrait votre situation si les mesures du candidat sur ce thème s'appliquaient. Règles explicites,
-              pas de score global : plus vous répondez, plus l'indicateur s'affine.
-            </p>
-          </div>
-          <dl>
-            {ORDRE_LEGENDE.map((niveau) => (
-              <div key={niveau} data-niveau={niveau}>
-                <dt>
-                  <BadgeNiveau niveau={niveau} />
-                </dt>
-                <dd>
-                  {NIVEAUX[niveau].sens}
-                  {/* Même niveau, pas un cinquième : « à préciser » n'est qu'une mention posée sur « mixte ». */}
-                  {niveau === "mixte" && (
-                    <span className="legende-precision">
-                      <span className="a-preciser">à préciser</span> quand nous ne savons pas encore si les mesures vous
-                      concernent : répondez aux questions du thème.
-                    </span>
-                  )}
-                  {/* « Pas d'indicateur » (mesures ou réponses qui ne permettent pas de conclure) est la même catégorie. */}
-                  {niveau === "non_concerne" && (
-                    <span className="legende-precision">
-                      Vaut aussi quand les mesures ou vos réponses ne permettent pas de conclure : mieux vaut ne rien afficher
-                      qu'un indicateur douteux.
-                    </span>
-                  )}
-                </dd>
-                {niveau === "non_concerne" && (
-                  <dd className="legende-option">
-                    <label className="interrupteur">
-                      <input type="checkbox" role="switch" checked={masquer} onChange={(e) => setMasquer(e.target.checked)} />
-                      <span className="interrupteur-piste" aria-hidden="true" />
-                      Masquer les candidats dont les mesures ne changent rien à ma situation
-                    </label>
-                  </dd>
-                )}
-              </div>
+        // Légende en « règle graduée » : la même lecture gauche → droite que les tiroirs de portraits (mieux · mixte · moins
+        // bien), avec un point par niveau sur la ligne, le point « dégradant » en étant le bout. « Non concerné » est HORS ligne : un
+        // point gris seul, au bout, non rattaché.
+        <section className="echelle" aria-label="Comment lire les indicateurs">
+          <p className="echelle-question">
+            <Info size={22} aria-hidden="true" focusable="false" />
+            <span>
+              <strong>Si ce candidat était élu, ma situation sur ce thème serait…</strong> Plus vous répondez, plus c'est précis.
+            </span>
+          </p>
+          <ol className="echelle-reperes">
+            {(["ameliorant", "mixte", "degradant"] as NiveauProjection[]).map((niveau) => (
+              <li key={niveau} data-niveau={niveau}>
+                <MotNiveau niveau={niveau} />
+                <span className="echelle-sens">{NIVEAUX[niveau].sens}</span>
+              </li>
             ))}
-          </dl>
+            {/* Hors règle : un point gris seul au bout de la ligne, non rattaché. « Pas d'indicateur » (mesures ou réponses qui
+                ne permettent pas de conclure) est la même catégorie. */}
+            <li className="echelle-hors" data-niveau="non_concerne">
+              <MotNiveau niveau="non_concerne" />
+              <span className="echelle-sens">{NIVEAUX.non_concerne.sens}</span>
+              <label className="interrupteur">
+                <input type="checkbox" role="switch" checked={masquer} onChange={(e) => setMasquer(e.target.checked)} />
+                <span className="interrupteur-piste" aria-hidden="true" />
+                Masquer les candidats dont les mesures ne changent rien à ma situation
+              </label>
+            </li>
+          </ol>
         </section>
       )}
-
       <div className="grille-themes" ref={grille}>
         {cards.map((card) => (
           <CarteTheme
             key={card.theme.id}
             card={card}
             profil={profil}
-            questionsTheme={questionsActives ? questionsDuTheme(questionnaire, card.theme.id).filter((q) => !estRepondue(q, profil)) : []}
+            questionsTheme={questionsActives ? questionsVisibles(questionsDuTheme(questionnaire, card.theme.id), profil).filter((q) => !estRepondue(q, profil)) : []}
             onReponse={onReponse}
             ouvertInitial={ouvertInitial?.theme === card.theme.id ? ouvertInitial.candidat : undefined}
             vueInitiale={ouvertInitial?.theme === card.theme.id ? ouvertInitial.vue : undefined}

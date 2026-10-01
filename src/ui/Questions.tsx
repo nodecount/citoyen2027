@@ -1,6 +1,6 @@
 import { ChevronDown, CircleHelp } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { questionsVisibles } from "../questionnaire";
+import { estRepondue, questionsVisibles } from "../questionnaire";
 import { iconeDeQuestion } from "./icones";
 import type { ProfilPartiel } from "../profil";
 import type { ChampProfil } from "../types";
@@ -16,9 +16,11 @@ interface ChampQuestionProps {
   carte?: boolean;
   // Texte placé devant le libellé de la question (ex. « Pour affiner : » sur les questions propres à un thème).
   prefixe?: string;
+  // Cartes des questions sans réponse mises en valeur (bouton « Mettre en valeur les réponses manquantes »).
+  mettreEnValeurManquantes?: boolean;
 }
 
-function libelleOption(champ: ChampProfil, option: string): string {
+export function libelleOption(champ: ChampProfil, option: string): string {
   return champ.libelles?.[option] ?? option;
 }
 
@@ -116,7 +118,7 @@ function SelectMultiple({ champ, choisis, onChoix, id, idEtiquette, decrit }: { 
 // Une question. Aucune réponse n'est présélectionnée : « Je préfère ne pas répondre » est l'état de départ, et laisser une
 // question telle quelle n'est jamais compté comme « non ». Chaque question tient sur peu de place : une ligne d'en-tête
 // (icône en mode carte, libellé à droite de l'icône, « ? » de la finalité tout à droite), puis le champ.
-export function ChampQuestion({ champ, profil, onReponse, idPrefixe, carte = false, prefixe = "" }: ChampQuestionProps) {
+export function ChampQuestion({ champ, profil, onReponse, idPrefixe, carte = false, prefixe = "", mettreEnValeurManquantes = false }: ChampQuestionProps) {
   const libelle = prefixe + champ.label;
   const id = `${idPrefixe}-${champ.id}`;
   const idEtiquette = `${id}-etiquette`;
@@ -185,7 +187,9 @@ export function ChampQuestion({ champ, profil, onReponse, idPrefixe, carte = fal
       </div>
     );
 
-  return carte ? <div className="question-carte">{corps}</div> : corps;
+  if (!carte) return corps;
+  const manquante = mettreEnValeurManquantes && !estRepondue(champ, profil);
+  return <div className={manquante ? "question-carte question-carte--manquante" : "question-carte"}>{corps}</div>;
 }
 
 interface SectionQuestionsProps {
@@ -195,16 +199,17 @@ interface SectionQuestionsProps {
   idPrefixe: string;
   carte?: boolean;
   prefixe?: string;
+  mettreEnValeurManquantes?: boolean;
 }
 
 // Questions d'une section, toutes au même niveau : les questions sensibles ne sont ni regroupées ni précédées d'une case
 // d'accord (un seul geste pour répondre). Elles restent facultatives, chacune explique sa finalité, et « Je préfère ne
 // pas répondre » est l'état de départ. Les questions conditionnelles n'apparaissent que si leur condition est remplie.
-export function SectionQuestions({ questions, profil, onReponse, idPrefixe, carte = false, prefixe }: SectionQuestionsProps) {
+export function SectionQuestions({ questions, profil, onReponse, idPrefixe, carte = false, prefixe, mettreEnValeurManquantes }: SectionQuestionsProps) {
   return (
     <div className={`section-questions${carte ? " section-questions--cartes" : ""}`}>
       {questionsVisibles(questions, profil).map((champ) => (
-        <ChampQuestion key={champ.id} champ={champ} profil={profil} onReponse={onReponse} idPrefixe={idPrefixe} carte={carte} prefixe={prefixe} />
+        <ChampQuestion key={champ.id} champ={champ} profil={profil} onReponse={onReponse} idPrefixe={idPrefixe} carte={carte} prefixe={prefixe} mettreEnValeurManquantes={mettreEnValeurManquantes} />
       ))}
     </div>
   );

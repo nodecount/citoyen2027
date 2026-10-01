@@ -38,8 +38,18 @@ export function conserverEffets(nouvelles: Proposition[], anciennes: Proposition
 // Écrit meta.json et propositions.json de chaque candidat dans <racineBase>/programmes/<slug>/ : la même structure
 // que la base officielle, donc lue sans code supplémentaire par le moteur et l'interface. Remplace les deux fichiers
 // (jamais de cumul) ; les autres fichiers du dossier ne sont pas touchés.
+// Parti affiché : celui de la base « officielle » quand le candidat y figure (nom complet et à jour, ex. « Renaissance » et non
+// « LREM »), sinon celui de la source. Un comparateur peut garder un ancien nom de parti ou laisser le champ vide.
+export function partiDeReference(racineBase: string, slug: string): string | null {
+  const chemin = resolve(racineBase, "..", "officielle", "programmes", slug, "meta.json");
+  if (!existsSync(chemin)) return null;
+  const parti = (JSON.parse(readFileSync(chemin, "utf-8")) as { parti?: unknown }).parti;
+  return typeof parti === "string" && parti.trim() !== "" ? parti : null;
+}
+
 export function ecrireCandidats(racineBase: string, candidats: CandidatConverti[]): void {
-  for (const { meta, propositions } of candidats) {
+  for (const { meta: metaSource, propositions } of candidats) {
+    const meta = { ...metaSource, parti: partiDeReference(racineBase, metaSource.slug) ?? metaSource.parti };
     const dossier = dossierCandidat(racineBase, meta.slug);
     ecrireJson(resolve(dossier, "meta.json"), meta);
     ecrirePropositionsCandidat(racineBase, meta.slug, conserverEffets(propositions, chargerPropositionsCandidat(racineBase, meta.slug)));

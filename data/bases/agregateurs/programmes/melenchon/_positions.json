@@ -1,0 +1,214 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "e6f27a9b80db89c0",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 7,
+    "sans_position": 18,
+    "rejetees": [],
+    "cout_reference_usd": 0.0581,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "a59778e2d6f3e505",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 6,
+    "sans_position": 18,
+    "rejetees": [
+      {
+        "id": "melenchon-interieur-justice-009",
+        "raison": "relecture : Augmenter les effectifs des services anti-fraude financière relève de moyens de lutte contre la délinquance économique mais ne correspond pas clairement à 'répression' au sens pénal/carcéral défini (durcir peines, police, prison), c'est plutôt un renforcement de moyens d'enquête qui ne fonde pas nécessairement la position répression par opposition à prévention."
+      }
+    ],
+    "cout_reference_usd": 0.0475,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "69c348e1f56c3aeb",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 8,
+    "sans_position": 11,
+    "rejetees": [
+      {
+        "id": "melenchon-interieur-justice-020",
+        "raison": "relecture : Renforcer des effectifs/moyens de surveillance ne relève pas de la définition de 'prevention' (privilégier éducation, insertion, peines alternatives) mais plutôt d'un renforcement de moyens proche de la répression."
+      },
+      {
+        "id": "melenchon-interieur-justice-023",
+        "raison": "relecture : Interdire des équipements policiers est une restriction des moyens répressifs, ce n'est pas 'privilégier la prévention, l'éducation, l'insertion ou la réinsertion' au sens de la définition."
+      },
+      {
+        "id": "melenchon-interieur-justice-024",
+        "raison": "relecture : Interdire des techniques d'immobilisation ne correspond pas à la définition de prevention (éducation, insertion, peines alternatives) mais à une limitation des moyens policiers."
+      },
+      {
+        "id": "melenchon-interieur-justice-025",
+        "raison": "relecture : Interdire une technique de maintien de l'ordre n'illustre pas la définition de prevention (privilégier éducation/insertion/réinsertion)."
+      },
+      {
+        "id": "melenchon-interieur-justice-027",
+        "raison": "relecture : Abroger une loi sur l'usage des armes ne correspond pas à la définition de prevention telle que donnée."
+      },
+      {
+        "id": "melenchon-interieur-justice-031",
+        "raison": "relecture : Démanteler une unité de police ne relève pas de la définition de prevention (éducation, insertion, peines alternatives)."
+      }
+    ],
+    "cout_reference_usd": 0.0896,
+    "appels": 2
+  },
+  {
+    "groupe": 3,
+    "empreinte": "d136c621578eb1dc",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 12,
+    "sans_position": 13,
+    "rejetees": [],
+    "cout_reference_usd": 0.064,
+    "appels": 2
+  },
+  {
+    "groupe": 4,
+    "empreinte": "ae56f3b634eb474b",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 9,
+    "sans_position": 15,
+    "rejetees": [
+      {
+        "id": "melenchon-social-solidarite-042",
+        "raison": "relecture : La garantie universelle des loyers est un filet de sécurité mutualisé bénéficiant à la fois aux locataires et aux propriétaires, ce n'est pas une mesure de redistribution fiscale ou une prestation de solidarité ciblée telle que définie."
+      }
+    ],
+    "cout_reference_usd": 0.0672,
+    "appels": 2
+  },
+  {
+    "groupe": 5,
+    "empreinte": "7e3919fd5bde45da",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 4,
+    "sans_position": 19,
+    "rejetees": [
+      {
+        "id": "melenchon-social-solidarite-050",
+        "raison": "relecture : La réquisition et redistribution de logements n'est ni une hausse d'impôt ni une dépense de solidarité au sens fiscal, c'est une politique du logement, donc mauvais sujet."
+      },
+      {
+        "id": "melenchon-retraites-travail-006",
+        "raison": "relecture : Une garantie d'emploi pour les chômeurs de longue durée relève de la politique de l'emploi, pas d'une mesure fiscale de redistribution (ni impôt ni prestation sociale)."
+      }
+    ],
+    "cout_reference_usd": 0.0415,
+    "appels": 2
+  },
+  {
+    "groupe": 6,
+    "empreinte": "6b8f95f8f5e38c9a",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 4,
+    "sans_position": 20,
+    "rejetees": [
+      {
+        "id": "melenchon-retraites-travail-017",
+        "raison": "relecture : Une hausse du SMIC et une indexation salariale relèvent de la politique du travail/salaires, pas de la fiscalité ou de la dépense publique."
+      }
+    ],
+    "cout_reference_usd": 0.0336,
+    "appels": 2
+  },
+  {
+    "groupe": 7,
+    "empreinte": "f5bff6e2479f4297",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 4,
+    "sans_position": 21,
+    "rejetees": [],
+    "cout_reference_usd": 0.0384,
+    "appels": 2
+  },
+  {
+    "groupe": 8,
+    "empreinte": "89f6b8ad3a205a13",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 4,
+    "sans_position": 21,
+    "rejetees": [],
+    "cout_reference_usd": 0.0301,
+    "appels": 2
+  },
+  {
+    "groupe": 9,
+    "empreinte": "e134a3362cff80aa",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 2,
+    "sans_position": 21,
+    "rejetees": [
+      {
+        "id": "melenchon-gouvernance-republique-024",
+        "raison": "relecture : Une amnistie est une mesure de clémence/second ordre qui ne relève pas de la prévention (éducation, insertion, peines alternatives) ni de la répression ; l'étiquette 'prevention' n'est pas fondée par le texte."
+      },
+      {
+        "id": "melenchon-gouvernance-republique-037",
+        "raison": "relecture : La neutralité du Net est une règle commune d'égalité de traitement imposée aux opérateurs, ce qui relève davantage d'un cadre collectif que d'une extension de liberté individuelle."
+      }
+    ],
+    "cout_reference_usd": 0.0418,
+    "appels": 2
+  },
+  {
+    "groupe": 10,
+    "empreinte": "6fdab8318f6ea20c",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 1,
+    "sans_position": 23,
+    "rejetees": [
+      {
+        "id": "melenchon-education-jeunesse-033",
+        "raison": "relecture : La mesure concerne la gratuité pour tous les étudiants indépendamment de la nationalité, ce n'est pas une mesure sur l'immigration mais sur la politique universitaire/fiscalité."
+      }
+    ],
+    "cout_reference_usd": 0.0297,
+    "appels": 2
+  },
+  {
+    "groupe": 11,
+    "empreinte": "74d30d43da0d2f55",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 7,
+    "etiquetees": 0,
+    "sans_position": 6,
+    "rejetees": [
+      {
+        "id": "melenchon-defense-004",
+        "raison": "relecture : L'OTAN n'est pas l'Union européenne : se retirer du commandement intégré de l'OTAN ne relève pas du sujet 'europe' tel que défini (compétences/budget/politiques de l'UE)."
+      }
+    ],
+    "cout_reference_usd": 0.0139,
+    "appels": 2
+  }
+]

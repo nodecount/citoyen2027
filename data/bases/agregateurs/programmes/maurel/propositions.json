@@ -19,7 +19,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "maurel-finances-publiques-002",
@@ -84,7 +85,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Energie"
+    "sous_theme": "Energie",
+    "positions": []
   },
   {
     "id": "maurel-envi-003",
@@ -121,7 +123,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Subventionner le rétrofit électrique : changer les moteurs thermiques en moteurs électriques."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "maurel-envi-004",
@@ -143,6 +146,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   }
 ]

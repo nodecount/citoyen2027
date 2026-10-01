@@ -19,7 +19,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer l'impôt sur la fortune financière (IFF), inspiré de l’ancien ISF"
+      }
+    ]
   },
   {
     "id": "le-pen-interieur-justice-001",
@@ -41,7 +49,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Atteindre 85 000 places de prison disponibles d'ici à 2028."
+      }
+    ]
   },
   {
     "id": "le-pen-interieur-justice-002",
@@ -78,6 +94,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place une présomption de légitime défense pour les policiers et gendarmes."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place une présomption de légitime défense pour les policiers et gendarmes."
+      }
     ]
   },
   {
@@ -100,7 +124,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Sécurité intérieure",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer 7000 postes de policiers et gendarmes."
+      }
+    ]
   },
   {
     "id": "le-pen-interieur-justice-004",
@@ -122,7 +154,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Sécurité intérieure",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Obligation pour les communes de plus de 10 000 habitants à se doter d'une police municipale."
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-001",
@@ -144,7 +184,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-002",
@@ -181,7 +222,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants et revaloriser leurs salaires."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-003",
@@ -203,7 +245,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-004",
@@ -225,7 +268,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-005",
@@ -247,7 +291,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-006",
@@ -284,7 +329,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Cette filière spécifique doit permettre de limiter l’attente aux urgences, d’améliorer la prise en charge et de mieux orienter le patient âgé."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-007",
@@ -306,7 +352,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-008",
@@ -328,7 +375,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-009",
@@ -350,7 +398,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-010",
@@ -372,7 +421,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-011",
@@ -393,7 +443,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-012",
@@ -415,7 +466,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-013",
@@ -437,7 +489,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-014",
@@ -458,7 +511,15 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "les français seront favorisés pour l'accès au logement et aux APL"
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-015",
@@ -480,7 +541,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-retraites-travail-001",
@@ -502,7 +564,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-retraites-travail-002",
@@ -524,7 +587,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-retraites-travail-003",
@@ -546,7 +610,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-retraites-travail-004",
@@ -583,7 +648,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Permettre un départ à 60 ans pour ceux qui ont commencé à travailler avant 20 ans."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "le-pen-retraites-travail-005",
@@ -605,7 +671,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-retraites-travail-006",
@@ -627,7 +694,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-envi-001",
@@ -649,7 +717,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Sortir du marché européen de l’électricité."
+      }
+    ]
   },
   {
     "id": "le-pen-envi-002",
@@ -671,7 +747,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Retourner à un prix national de l’électricité."
+      }
+    ]
   },
   {
     "id": "le-pen-envi-003",
@@ -701,6 +785,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Baisser la TVA sur l’énergie et les carburants de 20 % à 5,5 %."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser la TVA sur l’énergie et les carburants de 20 % à 5,5 %."
+      }
     ]
   },
   {
@@ -723,7 +815,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ecologie",
+        "position": "garder_nucleaire",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un « grand plan nucléaire »"
+      }
+    ]
   },
   {
     "id": "le-pen-envi-005",
@@ -745,7 +845,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-envi-006",
@@ -782,7 +883,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Garantir aux paysans des prix respectueux de leur travail"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "le-pen-envi-007",
@@ -804,7 +906,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-envi-008",
@@ -826,7 +929,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-envi-009",
@@ -848,7 +952,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-envi-010",
@@ -870,7 +975,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-envi-011",
@@ -892,7 +998,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-envi-012",
@@ -914,7 +1021,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-envi-013",
@@ -936,7 +1044,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Protéger l'agriculture française en l'excluant de tous les traités de libre-échange, qu'ils soient déjà signés ou en projet."
+      }
+    ]
   },
   {
     "id": "le-pen-envi-014",
@@ -958,7 +1074,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire les importations de produits agricole ne respectant pas les normes de production françaises."
+      }
+    ]
   },
   {
     "id": "le-pen-envi-015",
@@ -980,7 +1104,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-envi-016",
@@ -1002,7 +1127,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-europe-international-001",
@@ -1024,7 +1150,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire de moitié la contribution de la France au budget de l’UE."
+      }
+    ]
   },
   {
     "id": "le-pen-gouvernance-republique-001",
@@ -1046,7 +1180,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Inscrire la « priorité nationale » dans la Constitution par référendum pour l’accès aux logements sociaux et aux allocations."
+      }
+    ]
   },
   {
     "id": "le-pen-gouvernance-republique-002",
@@ -1090,7 +1232,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place au niveau de l'UE ou de l'OCDE de taxes extraordinaires pour les entreprises étrangères du numérique."
+      }
+    ]
   },
   {
     "id": "le-pen-gouvernance-republique-004",
@@ -1112,7 +1262,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-gouvernance-republique-005",
@@ -1134,7 +1285,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-gouvernance-republique-006",
@@ -1156,7 +1308,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-gouvernance-republique-007",
@@ -1200,7 +1353,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-education-jeunesse-002",
@@ -1222,7 +1376,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-education-jeunesse-003",
@@ -1244,7 +1399,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "cadre_collectif",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Port de l'uniforme au primaire et au collège."
+      }
+    ]
   },
   {
     "id": "le-pen-education-jeunesse-004",
@@ -1266,7 +1429,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-education-jeunesse-005",
@@ -1288,7 +1452,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-education-jeunesse-006",
@@ -1310,7 +1475,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-education-jeunesse-007",
@@ -1332,7 +1498,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "instauration de peines plancher et généralisation de la vidéoprotection"
+      }
+    ]
   },
   {
     "id": "le-pen-education-jeunesse-008",
@@ -1354,7 +1528,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "cadre_collectif",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdiction légale du port du voile islamique."
+      }
+    ]
   },
   {
     "id": "le-pen-education-jeunesse-009",
@@ -1391,7 +1573,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Revalorisation des professeurs du primaire au lycée de 3% par an chaque année du quinquennat."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "le-pen-education-jeunesse-010",
@@ -1413,6 +1596,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   }
 ]

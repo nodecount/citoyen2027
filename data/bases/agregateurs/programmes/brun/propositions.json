@@ -19,7 +19,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "brun-retraites-travail-002",
@@ -62,7 +63,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "brun-retraites-travail-004",
@@ -99,6 +101,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "permettre un départ anticipé à la retraite pour les métiers les plus pénibles"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "age_actuel",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Maintenir l’âge d’ouverture des droits à 62 ans"
+      }
     ]
   },
   {
@@ -121,7 +131,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "brun-retraites-travail-006",
@@ -143,6 +154,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": []
   }
 ]

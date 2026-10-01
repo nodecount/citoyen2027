@@ -19,7 +19,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-finances-publiques-002",
@@ -41,7 +42,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter la taxe sur les services numériques à 10 %."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-finances-publiques-003",
@@ -78,6 +87,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Créer une taxe « anti-rente » ciblant les multipropriétaires (dès le 4e logement hors résidence principale)."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer une taxe « anti-rente » ciblant les multipropriétaires (dès le 4e logement hors résidence principale)."
+      }
     ]
   },
   {
@@ -100,7 +117,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-finances-publiques-005",
@@ -122,7 +140,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Flécher des revenus de l’imposition du capital et supprimer les exonérations de cotisations sociales sur les plus hauts salaires."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-finances-publiques-006",
@@ -144,7 +170,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser les charges des artisans et commerçants"
+      }
+    ]
   },
   {
     "id": "parti-socialiste-finances-publiques-007",
@@ -165,7 +199,15 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place une fiscalité favorable aux produits alimentaires de base pour en diminuer le coût."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-finances-publiques-008",
@@ -186,7 +228,15 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un impôt plancher annuel de 2 % sur les patrimoines supérieurs à 100 millions d'euros (taxe Zucman)."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-finances-publiques-009",
@@ -208,7 +258,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un impôt sur les grandes successions."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-interieur-justice-001",
@@ -230,7 +288,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-interieur-justice-002",
@@ -264,6 +323,14 @@
         ],
         "dimension": "droits_et_libertes",
         "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre le renouvellement automatique des titres de séjour de longue durée."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "ouverture",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Permettre le renouvellement automatique des titres de séjour de longue durée."
       }
@@ -304,7 +371,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Créer une caisse de sécurité sociale spécifique à destination des travailleurs indépendants."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-002",
@@ -326,7 +394,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-003",
@@ -347,7 +416,15 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "sous_theme": "Santé",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Favoriser la tarification sociale dans les cantines selon le quotient familial (pouvant aller jusqu’à la gratuité pour les plus modestes)."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-social-solidarite-004",
@@ -369,7 +446,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "cadre_collectif",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Adopter une « loi Evin de l’alimentation » pour interdire toute publicité en faveur de produits trop gras, trop salés et trop sucrés."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-social-solidarite-005",
@@ -391,7 +476,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-006",
@@ -413,7 +499,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Libérer le plein potentiel des données de santé grâce à l’IA pour améliorer les diagnostics et les thérapies, alléger les soignants et optimiser les parcours de soin."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-social-solidarite-007",
@@ -435,7 +529,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "cadre_collectif",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mieux lutter contre les addictions en limitant le lobbying et le marketing du tabac, des cigarettes électroniques, de l’alcool, des réseaux sociaux addictogènes et des produits ultra-transformés."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-social-solidarite-008",
@@ -457,7 +559,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-009",
@@ -479,7 +582,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-010",
@@ -501,7 +605,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-011",
@@ -523,7 +628,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-012",
@@ -553,6 +659,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "assurant le remboursement intégral des soins essentiels par la suppression des franchises sur les médicaments concernés"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "assurant le remboursement intégral des soins essentiels par la suppression des franchises sur les médicaments concernés"
+      }
     ]
   },
   {
@@ -575,7 +689,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-014",
@@ -597,7 +712,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-015",
@@ -619,7 +735,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-016",
@@ -641,7 +758,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-017",
@@ -663,7 +781,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-018",
@@ -685,7 +804,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-019",
@@ -707,7 +827,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-020",
@@ -729,7 +850,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-021",
@@ -751,7 +873,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-022",
@@ -773,7 +896,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-023",
@@ -795,7 +919,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-024",
@@ -817,7 +942,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-025",
@@ -839,7 +965,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-026",
@@ -876,7 +1003,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Stopper la diminution des aides au logement."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-027",
@@ -897,7 +1025,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-028",
@@ -918,7 +1047,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "positions": []
   },
   {
     "id": "parti-socialiste-retraites-travail-001",
@@ -940,7 +1070,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-retraites-travail-002",
@@ -962,7 +1093,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-retraites-travail-003",
@@ -1006,7 +1138,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-retraites-travail-005",
@@ -1028,7 +1161,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-retraites-travail-006",
@@ -1050,7 +1184,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-retraites-travail-007",
@@ -1072,7 +1207,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-001",
@@ -1102,6 +1238,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place des « chèques-soleil » pour aider les Français à s’équiper de panneaux solaires."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "ecologie",
+        "position": "renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place des « chèques-soleil » pour aider les Français à s’équiper de panneaux solaires."
+      }
     ]
   },
   {
@@ -1124,7 +1268,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-003",
@@ -1146,7 +1291,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-004",
@@ -1168,7 +1314,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-005",
@@ -1190,7 +1337,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-006",
@@ -1227,7 +1375,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "renforcer le soutien public à l’acquisition de véhicules peu polluants par les ménages modestes"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-007",
@@ -1249,7 +1398,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-008",
@@ -1271,7 +1421,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-009",
@@ -1293,7 +1444,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-010",
@@ -1315,7 +1467,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-011",
@@ -1337,7 +1490,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-012",
@@ -1359,7 +1513,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-013",
@@ -1381,7 +1536,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-014",
@@ -1403,7 +1559,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-015",
@@ -1425,7 +1582,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-016",
@@ -1447,7 +1605,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-017",
@@ -1469,7 +1628,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-018",
@@ -1491,7 +1651,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-019",
@@ -1513,7 +1674,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-reformes-etat-001",
@@ -1535,7 +1697,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Administrations et opérateurs",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-reformes-etat-002",
@@ -1557,7 +1720,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Administrations et opérateurs",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-reformes-etat-003",
@@ -1579,7 +1743,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Administrations et opérateurs",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-reformes-etat-004",
@@ -1601,7 +1766,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Administrations et opérateurs",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-reformes-etat-005",
@@ -1623,7 +1789,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Administrations et opérateurs",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-reformes-etat-006",
@@ -1645,7 +1812,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Administrations et opérateurs",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les doublons entre l’État et les collectivités, par une clarification stricte des compétences. Cela représenterait une économie de plus de 7,5Md€"
+      }
+    ]
   },
   {
     "id": "parti-socialiste-education-jeunesse-001",
@@ -1667,7 +1842,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-education-jeunesse-002",
@@ -1704,7 +1880,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Revaloriser le salaire des enseignants pour atteindre la moyenne de l’OCDE."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "parti-socialiste-education-jeunesse-003",
@@ -1726,6 +1903,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   }
 ]

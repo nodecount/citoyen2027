@@ -1,0 +1,47 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "e5a61785df834a57",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 6,
+    "sans_position": 19,
+    "rejetees": [],
+    "cout_reference_usd": 0.0647,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "74e847ab9f29ce2b",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 9,
+    "sans_position": 14,
+    "rejetees": [
+      {
+        "id": "le-pen-gouvernance-republique-002",
+        "raison": "relecture : La mesure concerne le contrôle des investissements étrangers dans le numérique, pas un transfert de compétences entre France et UE."
+      },
+      {
+        "id": "le-pen-gouvernance-republique-007",
+        "raison": "relecture : L'obligation d'hébergement des données en France ou en UE ne relève pas d'un choix entre intégration européenne et souveraineté nationale au sens de la définition."
+      }
+    ],
+    "cout_reference_usd": 0.0644,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "dd78335e7aabcff0",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 10,
+    "etiquetees": 3,
+    "sans_position": 7,
+    "rejetees": [],
+    "cout_reference_usd": 0.0289,
+    "appels": 2
+  }
+]

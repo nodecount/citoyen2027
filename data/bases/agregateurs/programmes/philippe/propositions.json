@@ -19,7 +19,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "baisser de 50 Md€ les impôts de production par an pendant 5 ans"
+      }
+    ]
   },
   {
     "id": "philippe-finances-publiques-002",
@@ -63,7 +71,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-finances-publiques-004",
@@ -129,7 +138,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-finances-publiques-007",
@@ -150,7 +160,15 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter les plafonds d'exonération fiscale des donations"
+      }
+    ]
   },
   {
     "id": "philippe-finances-publiques-008",
@@ -172,7 +190,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-finances-publiques-009",
@@ -194,7 +213,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "baisser de 50 Md€ les impôts de production et supprimer 50 Md€ d'aides publiques improductives"
+      }
+    ]
   },
   {
     "id": "philippe-finances-publiques-010",
@@ -237,7 +264,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "positions": []
   },
   {
     "id": "philippe-interieur-justice-001",
@@ -259,7 +287,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-interieur-justice-002",
@@ -281,7 +310,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Restreindre l'immigration familiale"
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-003",
@@ -303,7 +340,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place une politique de quotas migratoires permettant de choisir notre immigration économique"
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-004",
@@ -369,7 +414,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-interieur-justice-006",
@@ -391,7 +437,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-interieur-justice-007",
@@ -413,7 +460,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Dénoncer l'accord de 1968 avec l'Algérie pour reprendre le contrôle des flux migratoires Algérie/France"
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-008",
@@ -435,7 +490,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place des peines courtes mais dissuasives dès la première infraction"
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-009",
@@ -457,7 +520,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place des peines planchers pour les infractions graves"
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-010",
@@ -479,7 +550,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer le juge d'application des peines pour que la peine décidée soit appliquée"
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-011",
@@ -501,7 +580,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-interieur-justice-012",
@@ -523,7 +603,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-interieur-justice-013",
@@ -545,7 +626,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-interieur-justice-014",
@@ -567,7 +649,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Donner aux maires un pouvoir de sanction pénale afin qu'ils puissent réprimer les petites infractions"
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-015",
@@ -589,7 +679,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-interieur-justice-016",
@@ -611,7 +702,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place l'imprescriptibilité pour les crimes sur mineurs."
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-017",
@@ -633,7 +732,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un \"état d'urgence narco\" avec des moyens juridiques d'exception"
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-018",
@@ -655,7 +762,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Constituer une \"fiche S financière\" soit un profil bancaire spécifique pour les personnes condamnées pour narcotrafic."
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-019",
@@ -677,7 +792,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lever l'excuse de minorité pour les faits en lien avec le narcotrafic et créer la comparution immédiate des mineurs pour ces infractions."
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-020",
@@ -699,7 +822,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "prevention",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer des établissements de réinsertion et de soin pour les mineurs condamnés pour narcotrafic."
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-021",
@@ -721,7 +852,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Aligner le régime de l'application des peines des grands narcotrafiquants sur celui des terroristes."
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-022",
@@ -743,7 +882,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-interieur-justice-023",
@@ -765,7 +905,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-interieur-justice-024",
@@ -787,7 +928,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-interieur-justice-025",
@@ -809,7 +951,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer une \"tolérance zéro\" avec les consommateurs, par la mise en place d'opérations “place nette” dans les boîtes de nuit et festivals, le recouvrement forcé des amendes"
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-026",
@@ -831,7 +981,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-interieur-justice-027",
@@ -853,7 +1004,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Sécurité intérieure",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lutter contre le proxénétisme en ligne en faisant fermer tous les sites qui le laissent prospérer."
+      }
+    ]
   },
   {
     "id": "philippe-social-solidarite-001",
@@ -875,7 +1034,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-social-solidarite-002",
@@ -897,7 +1057,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-social-solidarite-003",
@@ -918,7 +1079,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "positions": []
   },
   {
     "id": "philippe-social-solidarite-004",
@@ -940,7 +1102,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Transports",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-retraites-travail-001",
@@ -961,7 +1124,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "positions": []
   },
   {
     "id": "philippe-retraites-travail-002",
@@ -1004,7 +1168,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "temps partiel parental, à 80 % rémunéré 100 % pendant 2 mois"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "philippe-retraites-travail-003",
@@ -1026,7 +1191,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-retraites-travail-004",
@@ -1048,7 +1214,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-retraites-travail-005",
@@ -1070,7 +1237,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "travailler_plus",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Relever l’âge légal de départ à la retraite, en fonction des métiers et de leur pénibilité."
+      }
+    ]
   },
   {
     "id": "philippe-retraites-travail-006",
@@ -1092,7 +1267,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-envi-001",
@@ -1114,7 +1290,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-envi-002",
@@ -1136,7 +1313,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-envi-003",
@@ -1158,7 +1336,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-envi-004",
@@ -1180,7 +1359,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-envi-005",
@@ -1202,7 +1382,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-envi-006",
@@ -1224,7 +1405,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-envi-007",
@@ -1246,7 +1428,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-envi-008",
@@ -1268,7 +1451,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-envi-009",
@@ -1290,7 +1474,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-envi-010",
@@ -1312,7 +1497,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-envi-011",
@@ -1334,7 +1520,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-europe-international-001",
@@ -1356,7 +1543,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-europe-international-002",
@@ -1378,7 +1566,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-europe-international-003",
@@ -1400,7 +1589,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Achever la mise en œuvre du marché unique européen en supprimant les spécifications nationales qui agissent comme des droits de douane"
+      }
+    ]
   },
   {
     "id": "philippe-europe-international-004",
@@ -1422,7 +1619,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Construire une Union européenne des marchés de capitaux capable de rivaliser avec les géants américains."
+      }
+    ]
   },
   {
     "id": "philippe-europe-international-005",
@@ -1444,7 +1649,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un Buy European Tech Act et des achats technologiques groupés entre Etats membres."
+      }
+    ]
   },
   {
     "id": "philippe-gouvernance-republique-001",
@@ -1466,7 +1679,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-gouvernance-republique-002",
@@ -1488,7 +1702,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-gouvernance-republique-003",
@@ -1510,7 +1725,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-gouvernance-republique-004",
@@ -1532,7 +1748,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-gouvernance-republique-005",
@@ -1554,7 +1771,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-gouvernance-republique-006",
@@ -1576,7 +1794,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "encadrer_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre obligatoire le consentement aux algorithmes dans les suggestions de contenus sur les plateformes."
+      }
+    ]
   },
   {
     "id": "philippe-gouvernance-republique-007",
@@ -1598,7 +1824,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "encadrer_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer une « réserve algorithmique pré-électorale » sur les plateformes pendant une période définie en amont du scrutin afin d’éviter toute manipulation"
+      }
+    ]
   },
   {
     "id": "philippe-gouvernance-republique-008",
@@ -1620,7 +1854,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "cadre_collectif",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre rapidement et effectivement en place, au niveau européen ou, à défaut, à l’échelle nationale, une majorité numérique conditionnant l’accès aux réseaux sociaux."
+      }
+    ]
   },
   {
     "id": "philippe-gouvernance-republique-009",
@@ -1642,7 +1884,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Développer une infrastructure d'IA européenne souveraine en soutenant nos champions et en doublant notre capacité de calcul en cinq ans."
+      }
+    ]
   },
   {
     "id": "philippe-gouvernance-republique-010",
@@ -1664,7 +1914,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-gouvernance-republique-011",
@@ -1686,7 +1937,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-gouvernance-republique-012",
@@ -1707,7 +1959,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Numérique et IA"
+    "sous_theme": "Numérique et IA",
+    "positions": []
   },
   {
     "id": "philippe-gouvernance-republique-013",
@@ -1729,7 +1982,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-reformes-etat-001",
@@ -1751,7 +2005,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Administrations et opérateurs",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-reformes-etat-002",
@@ -1773,7 +2028,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Administrations et opérateurs",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-reformes-etat-003",
@@ -1795,7 +2051,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Administrations et opérateurs",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Regrouper ou privatiser les agences et opérateurs de l'Etat enchevêtrés."
+      }
+    ]
   },
   {
     "id": "philippe-reformes-etat-004",
@@ -1817,7 +2081,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Administrations et opérateurs",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-education-jeunesse-001",
@@ -1854,7 +2119,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "permettre aux parents de saisir la police pour faire vérifier l'absence d'antécédents d'une personne entrant au contact de leur enfant"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "philippe-education-jeunesse-002",
@@ -1876,7 +2142,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Périscolaire",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-education-jeunesse-003",
@@ -1898,7 +2165,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Périscolaire",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-education-jeunesse-004",
@@ -1920,7 +2188,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-education-jeunesse-005",
@@ -1957,7 +2226,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Augmenter de 20 % en moyenne le salaire des enseignants sur un quinquennat"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "philippe-education-jeunesse-006",
@@ -1979,7 +2249,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-education-jeunesse-007",
@@ -2001,7 +2272,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-education-jeunesse-008",
@@ -2023,7 +2295,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-education-jeunesse-009",
@@ -2045,7 +2318,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-defense-001",
@@ -2067,7 +2341,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-defense-002",
@@ -2089,7 +2364,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-defense-003",
@@ -2111,7 +2387,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-defense-004",
@@ -2133,7 +2410,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-defense-005",
@@ -2155,6 +2433,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   }
 ]

@@ -1,0 +1,38 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "cfa1b497f43c4153",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 17,
+    "sans_position": 8,
+    "rejetees": [],
+    "cout_reference_usd": 0.0821,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "cd10b990797fc56e",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 2,
+    "sans_position": 23,
+    "rejetees": [],
+    "cout_reference_usd": 0.0464,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "b618b42faf76cf5f",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 13,
+    "etiquetees": 0,
+    "sans_position": 13,
+    "rejetees": [],
+    "cout_reference_usd": 0.0151,
+    "appels": 1
+  }
+]

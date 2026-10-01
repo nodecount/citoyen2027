@@ -1,0 +1,50 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "fdca36f5ff514219",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 11,
+    "sans_position": 14,
+    "rejetees": [],
+    "cout_reference_usd": 0.0607,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "4f57943539940387",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 3,
+    "sans_position": 22,
+    "rejetees": [],
+    "cout_reference_usd": 0.0253,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "2002ded7e48737dd",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 0,
+    "sans_position": 25,
+    "rejetees": [],
+    "cout_reference_usd": 0.0181,
+    "appels": 1
+  },
+  {
+    "groupe": 3,
+    "empreinte": "f62d4f820208eb7f",
+    "date": "2026-10-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 9,
+    "etiquetees": 0,
+    "sans_position": 9,
+    "rejetees": [],
+    "cout_reference_usd": 0.0083,
+    "appels": 1
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "062e8aa26792d55b",
+    "date": "2026-09-30",
+    "modele": "claude-sonnet-5",
+    "propositions": 6,
+    "etiquetees": 0,
+    "sans_position": 4,
+    "rejetees": [
+      {
+        "id": "maurel-finances-publiques-002",
+        "raison": "relecture : Le texte ne précise pas que les recettes supplémentaires viseraient les plus aisés ou le capital, ni une extension de prestations de solidarité ; l'étiquette 'redistribution' n'est pas établie par cet extrait vague."
+      },
+      {
+        "id": "maurel-envi-001",
+        "raison": "relecture : Investir dans l'électrification ne désigne pas spécifiquement les renouvelables (cela peut inclure le nucléaire), donc la position 'renouvelables' n'est pas fondée par le texte."
+      }
+    ],
+    "cout_reference_usd": 0.0386,
+    "appels": 2
+  }
+]

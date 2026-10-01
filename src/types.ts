@@ -8,6 +8,7 @@
 export type StatutProposition = "complet" | "partiel" | "provisoire";
 
 import type { Effet } from "./effets";
+import type { PositionMesure } from "./positions";
 
 export interface Source {
   type: "primaire" | "secondaire";
@@ -33,6 +34,9 @@ export interface Proposition {
   // Optionnel tant que les propositions collectées avant le fil rouge n'ont pas été enrichies.
   // Sans effets, le moteur ne peut pas projeter : il ne devine pas.
   effets?: Effet[];
+  // Positions que la mesure défend sur les sujets de convictions (écologie, IA, Europe…) : étiquetées par un modèle puis
+  // vérifiées par le code (extrait retrouvé mot pour mot). Absentes quand la mesure ne prend pas clairement position.
+  positions?: PositionMesure[];
   // Rubrique de la source quand elle range ses propositions plus finement que nos thèmes (bases issues de comparateurs).
   sous_theme?: string;
   // `titre` reprend le texte de la source mot pour mot (jamais le cas base « officielle », où `titre` est une

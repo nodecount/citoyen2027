@@ -19,7 +19,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Redresser les finances publiques de 120 Md€ d'ici 2032 uniquement par la baisse des dépenses et sans hausses d'impôts"
+      }
+    ]
   },
   {
     "id": "retailleau-finances-publiques-002",
@@ -41,7 +49,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser de 10% et recentrer les crédits de l’aide publique au développement (APD) : 1,2 Md€ d’économies."
+      }
+    ]
   },
   {
     "id": "retailleau-finances-publiques-003",
@@ -63,7 +79,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Ne pas remplacer systématiquement les agents publics partants à la retraite pour les fonctions supports"
+      }
+    ]
   },
   {
     "id": "retailleau-finances-publiques-004",
@@ -85,7 +109,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser les dotations aux agences de l’État."
+      }
+    ]
   },
   {
     "id": "retailleau-finances-publiques-005",
@@ -122,6 +154,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Baisser le nombre de bénéficiaires de l’AME, et réduire le panier de soins couvert."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser le nombre de bénéficiaires de l’AME, et réduire le panier de soins couvert."
+      }
     ]
   },
   {
@@ -144,7 +184,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Dette & déficit",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-finances-publiques-007",
@@ -165,7 +206,15 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rehausser le seuil d’exonération des donations à 150 000 euros."
+      }
+    ]
   },
   {
     "id": "retailleau-finances-publiques-008",
@@ -187,7 +236,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire de 40 milliards d’euros les cotisations sociales afin de diminuer le coût du travail pour les entreprises."
+      }
+    ]
   },
   {
     "id": "retailleau-finances-publiques-009",
@@ -230,6 +287,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Exonérer totalement de cotisations sociales les heures supplémentaires effectuées au-delà de 35 heures par semaine"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Exonérer totalement de cotisations sociales les heures supplémentaires effectuées au-delà de 35 heures par semaine"
+      }
     ]
   },
   {
@@ -252,7 +317,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Secteur bancaire & finance",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-finances-publiques-011",
@@ -274,7 +340,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Secteur bancaire & finance",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-finances-publiques-012",
@@ -296,7 +363,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Secteur bancaire & finance",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-finances-publiques-013",
@@ -318,7 +386,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Secteur bancaire & finance",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-interieur-justice-001",
@@ -340,7 +409,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-interieur-justice-002",
@@ -362,7 +432,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-interieur-justice-003",
@@ -384,7 +455,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-interieur-justice-004",
@@ -406,7 +478,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les JAP (juge d’application des peines)."
+      }
+    ]
   },
   {
     "id": "retailleau-interieur-justice-005",
@@ -428,7 +508,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer des « peines planchers » pour les violences commises envers ceux qui détiennent l’autorité publique."
+      }
+    ]
   },
   {
     "id": "retailleau-interieur-justice-006",
@@ -450,7 +538,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre la castration chimique pour lutter contre la pédocriminalité."
+      }
+    ]
   },
   {
     "id": "retailleau-interieur-justice-007",
@@ -472,7 +568,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un « état d’urgence anti-trafics » dans les quartiers les plus touchés par le narcotrafic."
+      }
+    ]
   },
   {
     "id": "retailleau-interieur-justice-008",
@@ -509,6 +613,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Boucler 24h/24 les quartiers gangrenés par le trafic de drogue, en contrôlant les entrées et sorties"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Boucler 24h/24 les quartiers gangrenés par le trafic de drogue, en contrôlant les entrées et sorties, avec la possibilité de mobiliser des véhicules blindés de la gendarmerie et de couper les télécommunications."
+      }
     ]
   },
   {
@@ -531,7 +643,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Durcir la réponse judiciaire, notamment en allongeant la durée de détention provisoire pour les narcotrafiquants."
+      }
+    ]
   },
   {
     "id": "retailleau-interieur-justice-010",
@@ -553,7 +673,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer les sanctions contre les mineurs impliqués dans les trafics, avec de courtes peines dès les premiers délits."
+      }
+    ]
   },
   {
     "id": "retailleau-interieur-justice-011",
@@ -590,6 +718,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "en renforçant les outils administratifs permettant de saisir ou neutraliser leurs ressources et leur patrimoine"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Frapper financièrement les narcotrafiquants, en renforçant les outils administratifs permettant de saisir ou neutraliser leurs ressources et leur patrimoine."
+      }
     ]
   },
   {
@@ -612,7 +748,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-interieur-justice-013",
@@ -634,7 +771,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Sécurité intérieure",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Utiliser les technologies modernes comme la reconnaissance faciale."
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-001",
@@ -656,7 +801,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire l’assistance grâce au Compte social unique (CSU)"
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-002",
@@ -693,6 +846,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Instaurer un revenu familial (RF) mensuel de 240 € par enfant, dès le premier enfant, de la naissance à ses 18 ans"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un revenu familial (RF) mensuel de 240 € par enfant, dès le premier enfant, de la naissance à ses 18 ans"
+      }
     ]
   },
   {
@@ -715,7 +876,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Conditionner le revenu familial à une résidence régulière en France et à l’exercice d’une activité professionnelle depuis au moins cinq ans"
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-004",
@@ -737,7 +906,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "proposition qui réduit de 25Md€ les prestations"
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-005",
@@ -774,6 +951,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "avec un RF doublé pour le troisième enfant mineur à charge"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Encourager financièrement les familles nombreuses avec un RF doublé pour le troisième enfant mineur à charge"
+      }
     ]
   },
   {
@@ -795,7 +980,15 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Allocations & prestations sociales"
+    "sous_theme": "Allocations & prestations sociales",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre aux familles ayant des enfants mineurs à charge de déduire une partie des intérêts de leur emprunt immobilier de leur impôt sur le revenu"
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-007",
@@ -832,6 +1025,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Etendre le congé de naissance jusqu’aux six mois de l’enfant, ouvert à l’un des deux parents qui serait indemnisé à 70 % de sa rémunération antérieure"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Etendre le congé de naissance jusqu’aux six mois de l’enfant, ouvert à l’un des deux parents qui serait indemnisé à 70 % de sa rémunération antérieure"
+      }
     ]
   },
   {
@@ -854,7 +1055,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer le forfait social pour encourager participation et intéressement."
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-009",
@@ -897,6 +1106,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Réduire l’impôt sur le revenu des ménages qui achètent une résidence principale"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire l’impôt sur le revenu des ménages qui achètent une résidence principale, grâce à la déduction d’une quote-part des intérêts d’emprunt"
+      }
     ]
   },
   {
@@ -918,7 +1135,15 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "relèvement temporaire du plafond des dons familiaux exonérés à 150 000 € pour les bénéficiaires de moins de 30 ans"
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-011",
@@ -940,7 +1165,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-012",
@@ -962,7 +1188,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir la tolérance zéro envers le squat."
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-013",
@@ -984,7 +1218,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-014",
@@ -1006,7 +1241,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-015",
@@ -1028,7 +1264,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-016",
@@ -1050,7 +1287,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-017",
@@ -1072,7 +1310,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-018",
@@ -1094,7 +1333,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-019",
@@ -1137,7 +1377,15 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre les intérêts d’emprunt déductibles (pour les familles : 50 % avec un enfant, 75 % avec deux, 100 % à partir de trois)."
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-021",
@@ -1159,7 +1407,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-022",
@@ -1181,7 +1430,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-023",
@@ -1203,7 +1453,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-024",
@@ -1225,7 +1476,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-025",
@@ -1246,7 +1498,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-026",
@@ -1297,7 +1550,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "recentrer l’accès au logement social pour : ceux qui travaillent, les familles avec enfant"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-027",
@@ -1318,7 +1572,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "sous_theme": "Logement",
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-028",
@@ -1340,7 +1595,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-029",
@@ -1362,7 +1618,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-030",
@@ -1384,7 +1641,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre fin au programme de rénovation urbaine en 2030. Économies : 100 à 150 M€."
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-031",
@@ -1427,6 +1692,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Exclure de l’APL les étudiants dont les parents appartiennent aux deux derniers déciles de revenus."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Exclure de l’APL les étudiants dont les parents appartiennent aux deux derniers déciles de revenus. Economies : 200 à 300 M€ / an."
+      }
     ]
   },
   {
@@ -1449,7 +1722,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-retraites-travail-001",
@@ -1471,7 +1745,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "grâce au seuil « zéro cotisation »"
+      }
+    ]
   },
   {
     "id": "retailleau-retraites-travail-002",
@@ -1537,7 +1819,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-retraites-travail-005",
@@ -1559,7 +1842,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-retraites-travail-006",
@@ -1595,6 +1879,20 @@
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "heures supplémentaires qui ne donnent lieu ni à cotisations sociales, ni patronales, ni salariales"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "travailler_plus",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place, au-delà de la 35ᵉ heure travaillée, des heures supplémentaires"
+      },
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "qui ne donnent lieu ni à cotisations sociales, ni patronales, ni salariales"
       }
     ]
   },
@@ -1640,7 +1938,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "travailler_plus",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lier par une équation proportionnelle l'âge de la retraite et l'espérance de vie."
+      }
+    ]
   },
   {
     "id": "retailleau-retraites-travail-009",
@@ -1661,7 +1967,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite"
+    "sous_theme": "Système de retraite",
+    "positions": []
   },
   {
     "id": "retailleau-retraites-travail-010",
@@ -1683,7 +1990,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-retraites-travail-011",
@@ -1726,6 +2034,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer les cotisations retraite et chômage pour les personnes (et leurs employeurs) ayant atteint toutes leurs annuités à 62 ans, pour augmenter de 15 % leur salaire net."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les cotisations retraite et chômage pour les personnes (et leurs employeurs) ayant atteint toutes leurs annuités à 62 ans"
+      }
     ]
   },
   {
@@ -1748,7 +2064,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-retraites-travail-013",
@@ -1770,7 +2087,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire franchement les prélèvements obligatoires."
+      }
+    ]
   },
   {
     "id": "retailleau-retraites-travail-014",
@@ -1792,7 +2117,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-retraites-travail-015",
@@ -1814,7 +2140,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-retraites-travail-016",
@@ -1836,7 +2163,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-retraites-travail-017",
@@ -1858,7 +2186,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-retraites-travail-018",
@@ -1880,7 +2209,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-retraites-travail-019",
@@ -1902,7 +2232,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Alléger la production par un choc fiscal de 40 Md€ financé par les économies."
+      }
+    ]
   },
   {
     "id": "retailleau-envi-001",
@@ -1924,7 +2262,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ecologie",
+        "position": "garder_nucleaire",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Consolider le parc nucléaire par la construction de 6 nouveaux réacteurs APR2 sans dérapage et 8 réacteurs supplémentaires dès le début du mandat."
+      }
+    ]
   },
   {
     "id": "retailleau-envi-002",
@@ -1946,7 +2292,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-003",
@@ -1997,6 +2344,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "suppression des CEE avec effet immédiat ce qui permet -5 % sur la facture"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les taxes pour faire baisser la facture : suppression des CEE avec effet immédiat ce qui permet -5 % sur la facture."
+      }
     ]
   },
   {
@@ -2019,7 +2374,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-006",
@@ -2041,7 +2397,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-007",
@@ -2063,7 +2420,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ecologie",
+        "position": "garder_nucleaire",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Inscrire le parc nucléaire dans une trajectoire « 80 ans »."
+      }
+    ]
   },
   {
     "id": "retailleau-envi-008",
@@ -2085,7 +2450,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ecologie",
+        "position": "garder_nucleaire",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Confirmer les nouveaux EPR2 en veillant à la tenue des coûts et des délais."
+      }
+    ]
   },
   {
     "id": "retailleau-envi-009",
@@ -2107,7 +2480,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-010",
@@ -2129,7 +2503,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Bloquer l’European grid package et réaffirmer la souveraineté française."
+      }
+    ]
   },
   {
     "id": "retailleau-envi-011",
@@ -2151,7 +2533,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-012",
@@ -2173,7 +2556,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-013",
@@ -2203,7 +2587,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Economies : baisse directe des factures d’électricité."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "retailleau-envi-014",
@@ -2225,7 +2610,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ecologie",
+        "position": "garder_nucleaire",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Franchir la frontière de la 4e génération nucléaire : les réacteurs à neutrons rapides."
+      }
+    ]
   },
   {
     "id": "retailleau-envi-015",
@@ -2247,7 +2640,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire respecter le principe de subsidiarité et la souveraineté française sur son mix énergétique au niveau européen."
+      }
+    ]
   },
   {
     "id": "retailleau-envi-016",
@@ -2269,7 +2670,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-017",
@@ -2291,7 +2693,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-018",
@@ -2313,7 +2716,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-019",
@@ -2335,7 +2739,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-020",
@@ -2357,7 +2762,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-021",
@@ -2401,7 +2807,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-023",
@@ -2423,7 +2830,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-024",
@@ -2445,7 +2853,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-envi-025",
@@ -2467,7 +2876,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-gouvernance-republique-001",
@@ -2489,7 +2899,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-gouvernance-republique-002",
@@ -2511,7 +2922,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-gouvernance-republique-003",
@@ -2533,7 +2945,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire primer le droit français sur le droit européen dans certains cas."
+      }
+    ]
   },
   {
     "id": "retailleau-gouvernance-republique-004",
@@ -2555,7 +2975,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-gouvernance-republique-005",
@@ -2577,7 +2998,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Former massivement les Français à l’IA, avec plusieurs millions d’actifs formés, un doublement du nombre d’ingénieurs spécialisés et l’intégration de l’IA dans les cursus du supérieur."
+      }
+    ]
   },
   {
     "id": "retailleau-gouvernance-republique-006",
@@ -2599,7 +3028,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "ouverture",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Attirer et faire revenir les meilleurs talents, grâce à des dispositifs dédiés de retour en France et à un visa « Talents Tech »."
+      }
+    ]
   },
   {
     "id": "retailleau-gouvernance-republique-007",
@@ -2621,7 +3058,21 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lever les freins réglementaires à l’innovation, en refusant toute surtransposition européenne et en expérimentant des dérogations au RGPD et à l’AI Act pour les projets stratégiques."
+      },
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "en refusant toute surtransposition européenne et en expérimentant des dérogations au RGPD et à l’AI Act pour les projets stratégiques"
+      }
+    ]
   },
   {
     "id": "retailleau-gouvernance-republique-008",
@@ -2643,7 +3094,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire émerger des champions français et européens de l’IA, en comblant le déficit de financement et en développant des infrastructures souveraines, notamment des data centers."
+      }
+    ]
   },
   {
     "id": "retailleau-gouvernance-republique-009",
@@ -2665,7 +3124,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Déployer massivement l’IA dans les entreprises, notamment les PME et ETI, grâce à un « Starter Pack IA », au suramortissement des investissements et à la formation des salariés."
+      }
+    ]
   },
   {
     "id": "retailleau-gouvernance-republique-010",
@@ -2687,7 +3154,21 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Simplifier l’État grâce à l’IA, en automatisant les tâches répétitives pour mobiliser l’équivalent de 250 000 agents publics"
+      },
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "dont 125 000 redéployés sur le terrain et 125 000 départs non remplacés, avec un objectif d’environ 15 Md€ d’économies nettes annuelles."
+      }
+    ]
   },
   {
     "id": "retailleau-gouvernance-republique-011",
@@ -2709,7 +3190,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Donner à chaque Français un assistant administratif unique, « Marianne », et utiliser davantage l’IA pour lutter contre la fraude et simplifier les démarches administratives."
+      }
+    ]
   },
   {
     "id": "retailleau-gouvernance-republique-012",
@@ -2731,7 +3220,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire de l’IA un pilier de la souveraineté et de la sécurité nationales, en multipliant par cinq les moyens consacrés à l’IA de défense"
+      }
+    ]
   },
   {
     "id": "retailleau-reformes-etat-001",
@@ -2753,7 +3250,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fonction publique",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "travailler_plus",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Aligner complètement le temps de travail des agents publics sur le droit commun (1 607 heures par an), pour générer 4 Md€ d’économies."
+      }
+    ]
   },
   {
     "id": "retailleau-reformes-etat-002",
@@ -2775,7 +3280,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fonction publique",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Ne pas remplacer systématiquement les agents publics partants à la retraite pour les fonctions supports et améliorer la productivité par l’usage de l’IA pour supprimer au total 250 000 à 300 000 postes sur le quinquennat"
+      }
+    ]
   },
   {
     "id": "retailleau-education-jeunesse-001",
@@ -2797,7 +3310,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Services de la petite enfance",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-education-jeunesse-002",
@@ -2819,7 +3333,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Services de la petite enfance",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-education-jeunesse-003",
@@ -2840,7 +3355,15 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Services de la petite enfance"
+    "sous_theme": "Services de la petite enfance",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "supprimer le plafond de 500 000 € qui limite aujourd’hui le crédit d’impôt famille dont bénéficient les entreprises finançant des places en crèche pour leurs salariés ; • relever de 2 421 € à 7 000 € par an le plafond d’exonération de cotisations sociales et d’impôt sur le revenu applicable à la participation financière versée par l’employeur à chaque salarié pour la garde de son enfant"
+      }
+    ]
   },
   {
     "id": "retailleau-education-jeunesse-004",
@@ -2877,7 +3400,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "ouvrir un accès prioritaire au logement social à proximité de leur lieu de travail"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "retailleau-education-jeunesse-005",
@@ -2914,7 +3438,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "+135 €/mois net en début de carrière, +300 €/mois net au cœur de la carrière"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "retailleau-education-jeunesse-006",
@@ -2936,7 +3461,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-education-jeunesse-007",
@@ -2958,7 +3484,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-education-jeunesse-008",
@@ -2980,7 +3507,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-education-jeunesse-009",
@@ -3002,7 +3530,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-education-jeunesse-010",
@@ -3024,7 +3553,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-education-jeunesse-011",
@@ -3046,7 +3576,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-education-jeunesse-012",
@@ -3068,7 +3599,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "cadre_collectif",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "interdire l’usage du téléphone jusqu’à la fin du lycée et faire signer un contrat d’engagement aux familles"
+      }
+    ]
   },
   {
     "id": "retailleau-education-jeunesse-013",
@@ -3090,7 +3629,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "instaurant des sanctions claires contre le harcèlement et les violences envers les enseignants et les dépositaires de l’autorité de l'Etat"
+      }
+    ]
   },
   {
     "id": "retailleau-education-jeunesse-014",
@@ -3112,7 +3659,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Apprendre aux élèves à se servir de l'IA"
+      }
+    ]
   },
   {
     "id": "retailleau-education-jeunesse-015",
@@ -3134,7 +3689,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-education-jeunesse-016",
@@ -3156,7 +3712,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-defense-001",
@@ -3178,7 +3735,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-defense-002",
@@ -3200,7 +3758,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-defense-003",
@@ -3222,7 +3781,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-defense-004",
@@ -3244,7 +3804,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "retailleau-defense-005",
@@ -3288,6 +3849,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "effets": [],
+    "positions": []
   }
 ]

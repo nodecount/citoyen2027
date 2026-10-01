@@ -80,6 +80,9 @@ a {
 /* ---- Menu (accueil / thèmes / base) --------------------------------------------------------- */
 
 .menu {
+  position: sticky;
+  top: 0.5rem;
+  z-index: 50;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -650,7 +653,7 @@ article {
 }
 
 .hint {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--encre-douce);
   margin-top: 0.75rem;
   margin-bottom: 0;
@@ -670,110 +673,6 @@ article {
 
 /* ---- Résultats : une card par thème ---------------------------------------------------------- */
 
-/* Légende des indicateurs : un bandeau blanc pleine largeur. Titre + une phrase, puis une rangée de tuiles teintées à la
-   couleur de leur niveau (fond pâle, liseré fin) : badge en haut, sens dessous. La couleur ne porte jamais seule
-   l'information : le mot et le symbole sont dans le badge. */
-.legende {
-  margin: 1rem 0 0;
-  padding: 1.1rem 1.25rem 1.25rem;
-  border: 1px solid var(--filet);
-  border-radius: 14px;
-  background: var(--surface);
-  box-shadow: var(--ombre);
-  font-size: 0.9375rem;
-}
-
-.legende-tete {
-  display: grid;
-  gap: 0.2rem;
-  margin-bottom: 0.9rem;
-}
-
-.legende-titre {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0;
-  font-family: var(--titre);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--bleu-fonce);
-}
-
-.legende-titre svg {
-  flex: none;
-  color: var(--bleu);
-}
-
-.legende-intro {
-  margin: 0;
-  color: var(--encre-douce);
-}
-
-.legende dl {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
-  gap: 0.6rem;
-  margin: 0;
-}
-
-.legende dl > div {
-  --niv: var(--non-concerne);
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-  padding: 0.8rem 0.9rem;
-  border: 1px solid color-mix(in srgb, var(--niv) 30%, #ffffff);
-  border-radius: 12px;
-  background: color-mix(in srgb, var(--niv) 8%, #ffffff);
-}
-
-.legende dl > div[data-niveau="ameliorant"] { --niv: var(--ameliorant); }
-.legende dl > div[data-niveau="mixte"] { --niv: var(--mixte); }
-.legende dl > div[data-niveau="non_concerne"] { --niv: var(--non-concerne); }
-.legende dl > div[data-niveau="degradant"] { --niv: var(--degradant); }
-.legende dl > div[data-niveau="aucun"] { --niv: #8a94a8; }
-.legende dl > div[data-niveau="mixte"] {
-  border-color: color-mix(in srgb, var(--ameliorant) 30%, #ffffff) color-mix(in srgb, var(--degradant) 30%, #ffffff) color-mix(in srgb, var(--degradant) 30%, #ffffff) color-mix(in srgb, var(--ameliorant) 30%, #ffffff);
-  background: linear-gradient(90deg, color-mix(in srgb, var(--ameliorant) 8%, #ffffff) 50%, color-mix(in srgb, var(--degradant) 8%, #ffffff) 50%);
-}
-
-.legende dt,
-.legende dd {
-  margin: 0;
-}
-
-.legende dt {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.legende dd {
-  line-height: 1.4;
-  color: var(--encre);
-}
-
-.legende-precision {
-  display: block;
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px dashed color-mix(in srgb, var(--niv) 40%, #ffffff);
-  color: var(--encre-douce);
-}
-
-/* Interrupteur de masquage, au pied de la tuile « Pas d'indicateur ». */
-.legende dd.legende-option {
-  margin-top: auto;
-  padding-top: 0.6rem;
-  border-top: 1px dashed color-mix(in srgb, var(--niv) 40%, #ffffff);
-}
-
-.legende-option .interrupteur {
-  margin: 0;
-  font-size: 0.9375rem;
-}
 .grille-themes {
   display: flex;
   flex-wrap: wrap;
@@ -1036,6 +935,38 @@ article {
   border-top: 1px solid var(--filet);
   border-right: 1px solid var(--filet);
 }
+
+/* Simulateur : le portrait ET la bulle portent la couleur de l'indicateur du candidat sur ce thème (mêmes couleurs que la
+   légende et que les portraits du tiroir). Mixte : moitié vert, moitié rouge. Sans indicateur : rien (comme en exploration). */
+.flux-item[data-niveau="ameliorant"] { --niveau-couleur: var(--ameliorant); }
+.flux-item[data-niveau="mixte"] { --niveau-couleur: var(--mixte); }
+.flux-item[data-niveau="degradant"] { --niveau-couleur: var(--degradant); }
+.flux-item[data-niveau] .pastille {
+  border-color: var(--niveau-couleur);
+  border-width: 4px;
+}
+.flux-item[data-niveau] .flux-bulle {
+  border: 3px solid var(--niveau-couleur);
+}
+.flux-item[data-niveau] .flux-bulle::before {
+  border-width: 3px;
+  border-color: var(--niveau-couleur);
+}
+.flux-item[data-niveau="mixte"] .pastille {
+  border-color: transparent;
+  background:
+    linear-gradient(#eef1f6, #eef1f6) padding-box,
+    linear-gradient(90deg, var(--ameliorant) 50%, var(--degradant) 50%) border-box;
+}
+.flux-item[data-niveau="mixte"] .flux-bulle {
+  border-color: transparent;
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    linear-gradient(90deg, var(--ameliorant) 50%, var(--degradant) 50%) border-box;
+}
+/* La pointe est du côté du portrait : vert à gauche, rouge à droite pour le mixte. */
+.flux-item--bulle-droite[data-niveau="mixte"] .flux-bulle::before { border-color: var(--ameliorant); }
+.flux-item--bulle-gauche[data-niveau="mixte"] .flux-bulle::before { border-color: var(--degradant); }
 
 /* Du bas de la zone (apparition en fondu) vers le haut, où le portrait s'efface complètement. */
 @keyframes flux-montee {
@@ -1439,9 +1370,24 @@ article {
   gap: 0.5rem;
 }
 
-.questionnaire-entete .actions > button {
+.questionnaire-entete .actions {
   margin-top: 0;
-  padding: 0.35rem 0.9rem;
+  margin-bottom: 0;
+  align-self: center;
+}
+
+.questionnaire-entete .actions > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0.3rem 0.9rem;
+  line-height: 1.35;
+}
+
+.questionnaire-entete .enregistrement {
+  align-self: center;
+  line-height: 1.35;
 }
 
 /* Aide du formulaire : trois idées courtes, chacune avec son icône, en colonnes (lignes de moins de 60 caractères, texte à
@@ -1459,7 +1405,7 @@ article {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.45;
   color: var(--encre);
 }
@@ -1520,7 +1466,7 @@ article {
 
 .question-carte .question label,
 .question-carte .question legend {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.3;
 }
 
@@ -1534,12 +1480,12 @@ article {
 .question-carte input[type="text"] {
   width: 100%;
   padding: 0.3rem 0.4rem;
-  font-size: 0.9375rem;
+  font-size: 1rem;
 }
 
 .question-carte .option-multi {
   margin: 0.1rem 0;
-  font-size: 0.9375rem;
+  font-size: 1rem;
 }
 
 /* Le « pourquoi » reste visible mais discret : petit texte gris sous la question, sans encadré. */
@@ -1548,7 +1494,7 @@ article {
   align-items: flex-start;
   gap: 0.35rem;
   margin-top: 0.15rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.35;
   color: var(--encre-douce);
 }
@@ -2221,7 +2167,7 @@ button.bouton-en-ligne {
   flex: 1 1 auto;
   min-width: 0;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.3;
 }
 
@@ -2384,10 +2330,14 @@ button.bouton-en-ligne {
 
 
 /* ---- Bascule « Explorer les mesures » / « Simuler pour moi » -------------------------------------- */
+.bascule-emplacement {
+  margin: 0 0 1rem;
+}
+
 .bascule-mode {
   display: inline-flex;
   gap: 0.25rem;
-  margin: 0 0 1rem;
+  margin: 0;
   padding: 0.25rem;
   border: 1px solid var(--filet);
   border-radius: 999px;
@@ -2397,17 +2347,40 @@ button.bouton-en-ligne {
 .bascule-mode button {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.65rem;
   margin: 0;
-  padding: 0.45rem 1.1rem;
+  padding: 0.85rem 1.9rem;
   border: 0;
   border-radius: 999px;
   background: transparent;
   box-shadow: none;
   color: var(--bleu-fonce);
-  font-size: 0.9375rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
   transition: background 0.15s, color 0.15s;
+}
+
+/* Rangée sur le côté quand on fait défiler : colonne d'icônes fixée à gauche, centrée en hauteur. */
+.bascule-mode--cote {
+  position: fixed;
+  top: 50%;
+  left: 0.75rem;
+  z-index: 40;
+  flex-direction: column;
+  margin: 0;
+  transform: translateY(-50%);
+  box-shadow: var(--ombre);
+}
+.bascule-mode--cote button {
+  padding: 0.75rem;
+}
+.bascule-mode--cote .bascule-libelle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .bascule-mode button:hover {
@@ -2481,12 +2454,6 @@ button.bouton-en-ligne {
   border-top: 1px dashed var(--filet);
 }
 
-/* Légende : la tuile « Non concerné » (dernière) est blanche, sans teinte de couleur. */
-.legende dl > div[data-niveau="non_concerne"] {
-  background: #ffffff;
-  border-color: var(--filet);
-}
-
 /* Questions par thème, rangées sous le formulaire général. */
 .questionnaire-theme {
   margin-top: 1.25rem;
@@ -2495,55 +2462,144 @@ button.bouton-en-ligne {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
 }
-.convictions {
-  margin: 1rem 0;
-  padding: 1rem;
-  border: 1px solid #ccd;
-  border-radius: 0.75rem;
+/* Convictions : même conteneur, même en-tête et mêmes cartes que « Ma situation » (.questionnaire--integre). */
+.convictions .question-carte.groupe-convictions {
+  display: block;
+  margin: 0;
 }
-.convictions fieldset {
-  border: 0;
-  margin: 0.75rem 0;
+.convictions .groupe-convictions legend {
   padding: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
 }
 .convictions .case {
   display: block;
-  margin: 0.25rem 0;
+  margin: 0.15rem 0;
+  font-size: 1rem;
 }
+.convictions .question-convictions {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+.convictions .interrupteur {
+  margin-top: 0.75rem;
+}
+.convictions > .hint {
+  margin: 0.5rem 0 0;
+}
+/* Card « candidat idéal » : UNE seule card, liseré tricolore en tête. Floutée, le bouton de révélation est posé par-dessus les
+   résultats (situation et convictions) qui restent devinables derrière ; il n'y a pas de seconde card à côté. */
 .carte-ideal {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-  gap: 1rem;
-  align-items: stretch;
-  margin: 1rem 0;
+  position: relative;
+  overflow: hidden;
+  margin: 1rem 0 1.5rem;
+  padding: 1.25rem 1.25rem 1rem;
+  border: 1px solid var(--filet);
+  border-top: 0;
+  border-radius: var(--rayon);
+  background: var(--surface);
+  box-shadow: var(--ombre);
 }
-.carte-ideal-card {
-  padding: 1rem;
-  background: #fff;
-  border: 1px solid #ccd;
-  border-radius: 0.75rem;
+.carte-ideal::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--bleu) 0 33.3%, #fff 33.3% 66.6%, var(--rouge) 66.6% 100%);
+  box-shadow: inset 0 -1px 0 var(--filet);
 }
-/* Le libellé du bouton est long (49 caractères) : il se replie au lieu de déborder de la card (reflow, écran étroit ou zoom). */
-.carte-ideal .bandeau-accueil--compact button {
-  flex: 0 1 auto;
-  white-space: normal;
-  text-align: center;
-  max-width: 100%;
+.carte-ideal > h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.25rem 0 1rem;
+  color: var(--bleu-fonce);
 }
-/* Le contour de focus global (bleu) est invisible sur le dégradé bleu du bandeau : contour clair. */
-.carte-ideal .bandeau-accueil--compact button:focus-visible {
-  outline: 3px solid #fff;
-  outline-offset: 3px;
+.carte-ideal > h2 svg {
+  flex: none;
+  color: var(--bleu);
 }
-.carte-ideal-card h2:focus {
+.carte-ideal > h2:focus {
   outline: none;
 }
-.carte-ideal .bandeau-accueil--compact {
-  margin: 0;
+.ideal-colonnes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem;
+}
+.ideal-colonne {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--filet);
+  border-radius: 10px;
+  background: var(--fond);
+}
+.ideal-bloc h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.6rem;
+  font-size: 1.125rem;
+  color: var(--bleu-fonce);
+}
+.ideal-bloc h3 svg {
+  flex: none;
+  color: var(--bleu);
+}
+.ideal-bloc--absent {
+  color: var(--encre-douce);
+}
+/* Voile : recouvre la card floutée ; fond translucide pour laisser voir les titres et les silhouettes floutées. */
+.ideal-voile {
+  position: absolute;
+  inset: 6px 0 0 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(244, 246, 251, 0.55);
+}
+.ideal-voile-contenu {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   gap: 0.75rem;
+  max-width: 34rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(23, 60, 140, 0.18);
+  text-align: center;
+}
+.ideal-voile-contenu .chapeau {
+  margin: 0;
+}
+/* Le libellé du bouton est long (49 caractères) : il se replie au lieu de déborder de la card (reflow, écran étroit ou zoom). */
+.ideal-voile-contenu button,
+.ideal-pied button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+.ideal-pied {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--filet);
+}
+.ideal-pied .chapeau {
+  margin: 0;
+  font-weight: 700;
+  color: var(--bleu-fonce);
 }
 .ideal-bloc + .ideal-bloc {
   margin-top: 1rem;
@@ -2570,14 +2626,565 @@ button.bouton-en-ligne {
 .regle-ideal {
   margin-top: 1rem;
 }
-@media (max-width: 800px) {
-  .carte-ideal {
-    grid-template-columns: 1fr;
-  }
-}
 .panneau-convictions {
   margin: 0.75rem 0;
   padding: 0.5rem 0.75rem;
   border-left: 4px solid #1f3f9e;
   background: #f4f6fc;
+}
+
+
+/* La liste du choix multiple reste fermée tant que le visiteur ne l'ouvre pas (aucune règle de display ne doit l'emporter sur hidden). */
+.select-multiple-liste[hidden] {
+  display: none !important;
+}
+
+/* Panneau rétractable des formulaires, avec onglets. */
+.panneau-formulaires {
+  margin: 1rem 0 1.25rem;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  background: var(--surface);
+  box-shadow: var(--ombre);
+}
+.panneau-formulaires > summary {
+  padding: 0.75rem 1.1rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--bleu-fonce);
+  cursor: pointer;
+}
+.panneau-formulaires[open] > summary {
+  border-bottom: 1px solid var(--filet);
+}
+.panneau-formulaires > .aide-formulaire {
+  margin: 0.9rem 1.1rem 0.6rem;
+}
+.onglets {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0 1.1rem;
+  border-bottom: 2px solid var(--filet);
+}
+.onglets button {
+  margin: 0 0 -2px;
+  padding: 0.5rem 1.1rem;
+  border: 2px solid transparent;
+  border-radius: 8px 8px 0 0;
+  background: transparent;
+  color: var(--bleu-fonce);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.onglets button[aria-selected="true"] {
+  border-color: var(--filet);
+  border-bottom-color: var(--surface);
+  background: var(--surface);
+  color: var(--bleu);
+  box-shadow: inset 0 3px 0 var(--bleu);
+}
+.panneau-formulaires .questionnaire--integre {
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+/* « Ma situation » : questions générales et questions par thème sur UNE SEULE grille (les sections deviennent transparentes).
+   Le titre de thème reste dans la page pour les lecteurs d'écran (il nomme la section) mais n'occupe plus de place. */
+.grille-questions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+  gap: 0.6rem;
+  align-items: start;
+}
+.grille-questions .section-questions,
+.grille-questions .section-questions--cartes,
+.grille-questions .questionnaire-theme {
+  display: contents;
+}
+.grille-questions .questionnaire-theme h3 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* « ? » de la finalité : en haut à droite de la carte (le libellé laisse la place, même sur plusieurs lignes). */
+.question-carte {
+  position: relative;
+}
+.question-carte .question-tete {
+  padding-right: 1.6rem;
+}
+.question-carte .aide-question {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.45rem;
+  margin: 0;
+}
+
+/* Carte de question : icône puis titre, collés et alignés à gauche ; le « ? » reste en haut à droite. */
+.question-carte .question-tete {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  text-align: left;
+}
+.question-carte .question-icone {
+  flex: none;
+  order: 0;
+}
+.question-carte .question-libelle {
+  flex: 0 1 auto;
+  order: 1;
+  text-align: left;
+}
+.question-carte .question,
+.question-carte .question label,
+.question-carte .question legend {
+  text-align: left;
+}
+
+
+/* La règle globale « form div » impose une colonne : les en-têtes en ligne le redisent explicitement. */
+.question-carte .question-tete,
+.questionnaire-entete,
+.questionnaire-entete .actions {
+  flex-direction: row;
+}
+.question-carte .question-tete {
+  margin-bottom: 0.4rem;
+}
+
+.questionnaire-entete .progression {
+  font-size: 1rem;
+}
+
+/* Indicateur d'enregistrement automatique : sa place est réservée (pas de saut de mise en page). */
+.enregistrement {
+  min-width: 9rem;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--bleu-fonce);
+}
+
+
+/* ---- Parcours du simulateur : étapes, navigation, rappel des réponses ---------------------------------- */
+.etapes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+.etapes .etape {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0.5rem 1.1rem 0.5rem 0.6rem;
+  border: 2px solid var(--filet);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--bleu-fonce);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.etapes .etape:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.etapes .etape-numero {
+  display: grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: var(--bleu-pale);
+  color: var(--bleu);
+}
+.etapes .etape[aria-current="step"] {
+  border-color: var(--bleu);
+  background: var(--bleu-pale);
+}
+.etapes .etape[aria-current="step"] .etape-numero {
+  background: var(--bleu);
+  color: #fff;
+}
+.nav-etape {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+}
+.nav-etape button,
+.recap-entete button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+.nav-etape button:first-child:not(:last-child) {
+  margin-right: auto;
+}
+.recap-reponses {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  background: var(--surface);
+}
+.recap-entete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.recap-entete h2,
+.recap-reponses h3 {
+  margin: 0;
+}
+.recap-colonnes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 0.75rem;
+}
+.recap-liste {
+  margin: 0.5rem 0 0;
+}
+.recap-liste > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin: 0;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--filet);
+}
+.recap-liste dt {
+  font-weight: 600;
+}
+.recap-liste dd {
+  margin: 0;
+  font-weight: 700;
+  color: var(--bleu-fonce);
+}
+.recap-reponses .recap-vide,
+.recap-vide {
+  color: var(--encre-douce);
+  font-style: italic;
+  font-weight: 400;
+}
+.recap-convictions {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+
+/* Étapes du parcours : volontairement plus discrètes que la bascule « Explorer / Simuler » (qui est le choix principal).
+   Un simple fil numéroté, à plat (ni pastille, ni cadre), relié par un trait ; l'étape en cours est soulignée en bleu. */
+.etapes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: etape;
+}
+.etapes li {
+  display: flex;
+  align-items: center;
+}
+.etapes li + li::before {
+  content: "";
+  width: 2rem;
+  height: 2px;
+  margin: 0 0.25rem;
+  background: var(--filet);
+}
+.etapes .etape {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.4rem 0.25rem;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--encre-douce);
+  font: inherit;
+  font-weight: 400;
+  cursor: pointer;
+}
+.etapes .etape-numero {
+  display: grid;
+  place-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 2px solid var(--filet);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--encre-douce);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.etapes .etape:hover:not(:disabled) {
+  color: var(--bleu-fonce);
+}
+.etapes .etape[aria-current="step"] {
+  border-bottom-color: var(--bleu);
+  background: none;
+  color: var(--bleu-fonce);
+  font-weight: 700;
+}
+.etapes .etape[aria-current="step"] .etape-numero {
+  border-color: var(--bleu);
+  background: var(--bleu);
+  color: #fff;
+}
+.etapes .etape:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Introduction de chaque écran du parcours : un seul style (icône + texte), toujours lisible. */
+.intro-etape {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--filet);
+  border-left: 5px solid var(--bleu);
+  border-radius: var(--rayon);
+  background: var(--surface);
+  box-shadow: var(--ombre);
+}
+.intro-etape svg {
+  flex: none;
+  margin-top: 0.1rem;
+  color: var(--bleu);
+}
+.intro-etape p {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+.intro-etape strong {
+  color: var(--bleu-fonce);
+}
+/* Navigation en haut de l'écran (pour ne pas avoir à défiler) comme en bas : même boutons, marges adaptées. */
+.nav-etape--haut {
+  margin: 0 0 1rem;
+}
+
+/* ---- Légende des indicateurs : une « règle graduée » ---------------------------------------------------------------------
+   Même lecture que les tiroirs de portraits, de gauche à droite : situation meilleure · mixte · moins bonne. Un point par
+   niveau sur la ligne ; « Non concerné » est un point gris seul, hors ligne. Le mot et le symbole sont dans
+   chaque badge : la couleur de la règle ne fait qu'accompagner. */
+.echelle {
+  margin: 0 0 1.75rem;
+  padding: 1.1rem 1.5rem 1.25rem;
+  border: 1px solid var(--filet);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--ombre);
+  font-size: 1rem;
+}
+.echelle-question {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 0 0 1.1rem;
+  line-height: 1.5;
+}
+.echelle-question svg {
+  flex: none;
+  margin-top: 0.15rem;
+  color: var(--bleu);
+}
+.echelle-question strong {
+  color: var(--bleu-fonce);
+}
+
+/* La ligne : trois points reliés (améliorant · mixte · dégradant), le point « dégradant » en étant le bout ; la ligne passe du
+   vert au rouge par un milieu neutre. Un quatrième point, gris, reste seul au-delà du bout : « non concerné », non rattaché. */
+.echelle-reperes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.35fr;
+  gap: 0 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.echelle-reperes li {
+  --niv: var(--ameliorant);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-top: 2.1rem;
+}
+.echelle-reperes li[data-niveau="mixte"] {
+  --niv: var(--mixte);
+}
+.echelle-reperes li[data-niveau="degradant"] {
+  --niv: var(--degradant);
+}
+.echelle-reperes li[data-niveau="non_concerne"] {
+  --niv: var(--non-concerne);
+}
+/* Le point : un rond posé sur la ligne, au-dessus de son badge. Le mixte est mi-vert, mi-rouge. */
+.echelle-reperes li::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0.15rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  box-sizing: border-box;
+  border: 3px solid var(--surface);
+  border-radius: 50%;
+  background: var(--niv);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--niv) 60%, #ffffff);
+}
+.echelle-reperes li[data-niveau="mixte"]::before {
+  background: linear-gradient(90deg, var(--ameliorant) 50%, var(--degradant) 50%);
+}
+/* Tronçons de ligne : du centre d'un point au centre du suivant. Le dernier point (dégradant) n'en a pas : il est le bout. */
+.echelle-reperes li:nth-child(-n + 2)::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0.575rem;
+  left: 1rem;
+  width: calc(100% + 1rem);
+  height: 0.55rem;
+  background: linear-gradient(90deg, var(--ameliorant), #c9ced6);
+}
+.echelle-reperes li:nth-child(2)::after {
+  background: linear-gradient(90deg, #c9ced6, var(--degradant));
+}
+.echelle-mot {
+  font-size: 1.125rem;
+  color: var(--niv);
+}
+.echelle-sens {
+  line-height: 1.45;
+}
+
+/* « Non concerné » (et « sans indicateur », même catégorie) : point gris seul, détaché, avec l'interrupteur de masquage. */
+.echelle-reperes li.echelle-hors {
+  padding-left: 1.25rem;
+  border-left: 2px dashed var(--filet);
+}
+.echelle-reperes li.echelle-hors::before {
+  left: 1.4rem;
+}
+.echelle-hors .interrupteur {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+@media (max-width: 52rem) {
+  .echelle-reperes {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+  .echelle-reperes li,
+  .echelle-reperes li.echelle-hors {
+    padding: 0 0 0 2.4rem;
+    border-left: 0;
+  }
+  .echelle-reperes li::before,
+  .echelle-reperes li.echelle-hors::before {
+    top: 0.1rem;
+    left: 0.15rem;
+  }
+  .echelle-reperes li::after {
+    display: none;
+  }
+}
+
+/* Indicateur d'enregistrement : pastille colorée, à droite de l'en-tête, juste avant « Effacer » (Ma situation et Mes convictions).
+   Le mot et le ✓ portent le sens ; la couleur ne fait que l'accompagner. */
+.questionnaire-entete .enregistrement {
+  margin: 0 0 0 auto;
+}
+.questionnaire-entete .enregistrement + .actions {
+  margin-left: 0;
+}
+.enregistrement {
+  min-width: 10rem;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.enregistrement--enregistrement {
+  border-color: color-mix(in srgb, var(--bleu) 35%, #ffffff);
+  background: var(--bleu-pale);
+  color: var(--bleu);
+}
+.enregistrement--enregistre {
+  border-color: color-mix(in srgb, var(--ameliorant) 40%, #ffffff);
+  background: color-mix(in srgb, var(--ameliorant) 12%, #ffffff);
+  color: var(--ameliorant);
+}
+
+/* Parti rappelé sous le nom du candidat (détail) et dans l'infobulle du portrait. Lisible : jamais sous 1rem. */
+.detail-parti {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--bleu-fonce) 30%, #ffffff);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bleu-fonce) 8%, #ffffff);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bleu-fonce);
+  vertical-align: middle;
+}
+.infobulle-parti {
+  display: block;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Bouton « Mettre en valeur les réponses manquantes » (à droite du décompte) et cartes sans réponse mises en valeur : cadre
+   bleu épais + fond bleu pâle, jamais de rouge (le rouge signifie « dégradant »). */
+.questionnaire-entete .bouton-manquantes {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0.3rem 0.9rem;
+  line-height: 1.35;
+}
+.bouton-manquantes[aria-pressed="true"] {
+  background: var(--bleu);
+  color: #ffffff;
+}
+.question-carte--manquante {
+  border: 2px solid var(--bleu);
+  background: var(--bleu-pale);
 }

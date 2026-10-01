@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { LigneCandidat } from "./cards";
 import { Pastille } from "./Pastille";
+import type { NiveauProjection } from "../engine/projection";
 
 // Durée d'une traversée (du bas au haut de la carte), en secondes, et nombre maximal de portraits en même temps.
 const DUREE_S = 20;
@@ -11,6 +12,9 @@ interface Tirage {
   slug: string;
   nom: string;
   mesure: string;
+  // Niveau de l'indicateur du candidat sur ce thème (simulateur) : colore le portrait ET la bulle, comme la légende. « Non
+  // concerné » n'a pas de couleur (comme sur les portraits), pas plus qu'en exploration où il n'y a pas d'indicateur.
+  niveau: NiveauProjection | null;
   // Position horizontale du portrait, en % de la largeur : X_GAUCHE ou X_DROITE selon la parité du curseur.
   x: number;
 }
@@ -36,7 +40,8 @@ function tirer(lignes: LigneCandidat[], curseur: number, dejaLa: string[]): Tira
   const ligne = choix[Math.floor(Math.random() * choix.length)];
   const textes = textesPossibles(ligne);
   const mesure = majuscule(textes[Math.floor(Math.random() * textes.length)]);
-  return { curseur, slug: ligne.meta.slug, nom: ligne.meta.nom, mesure, x: curseur % 2 === 0 ? X_GAUCHE : X_DROITE };
+  const niveau = ligne.projection?.niveau;
+  return { curseur, slug: ligne.meta.slug, nom: ligne.meta.nom, mesure, niveau: niveau && niveau !== "non_concerne" ? niveau : null, x: curseur % 2 === 0 ? X_GAUCHE : X_DROITE };
 }
 
 // Tirages de départ : chacun exclut les précédents.
@@ -71,6 +76,7 @@ export function FluxCandidats({ lignes }: { lignes: LigneCandidat[] }) {
         <div
           key={i}
           className={`flux-item ${t.x < 50 ? "flux-item--bulle-droite" : "flux-item--bulle-gauche"}`}
+          data-niveau={t.niveau ?? undefined}
           style={{ animationDelay: `${(i * DUREE_S) / nombre}s`, animationDuration: `${DUREE_S}s` } as React.CSSProperties}
           onAnimationIteration={() => relancer(i)}
         >
