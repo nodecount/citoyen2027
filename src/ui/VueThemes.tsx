@@ -231,7 +231,7 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil
   // Le détail s'ouvre toujours sur « Résumé », en exploration comme en simulateur (à l'étape « mesures adaptées », le résumé
   // se limite à l'analyse de la situation du visiteur).
   const vueDepart = vueInitiale ?? "resume";
-  const [vue, setVue] = useState<"resume" | "polarite" | "citations" | "detail">(vueDepart === "detail" ? vueDetail : vueDepart);
+  const [vue, setVue] = useState<"resume" | "polarite" | "citations" | "detail" | "mesures">(vueDepart === "detail" ? vueDetail : vueDepart);
   const vueActive = vue;
   const nombre = propositions.length;
   // Répartition entre mesures favorables et défavorables, pour TOUT candidat ayant une projection — pas seulement un
@@ -260,9 +260,13 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil
           <button type="button" aria-pressed={vueActive === "resume"} onClick={() => setVue("resume")}>
             Résumé
           </button>
-          {/* Mode anonyme : pas de liste complète des mesures (ni de décompte, qui identifierait le candidat) ; elle est dans
-              « Explorer les mesures », comme le dit l'appel à l'action en bas du détail. */}
-          {!anonyme && (
+          {/* Mode anonyme : l'onglet « Mesures » existe, sans décompte (il identifierait le candidat) ; au lieu de la liste
+              complète, il explique qu'elle est dans « Explorer les mesures » et y renvoie. */}
+          {anonyme ? (
+            <button type="button" aria-pressed={vueActive === "mesures"} onClick={() => setVue("mesures")}>
+              Mesures
+            </button>
+          ) : (
             <button type="button" aria-pressed={vueActive === vueDetail} onClick={() => setVue(vueDetail)}>
               Mesures ({nombre})
             </button>
@@ -289,6 +293,15 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil
         ) : (
           <p className="hint">Impossible de dire ce que ce candidat changerait pour vous sur ce thème.</p>
         )
+      ) : vueActive === "mesures" ? (
+        <div className="appel-profil">
+          <p>En mode anonyme, nous n'affichons pas toutes les mesures du candidat. Le mode « Explorer les mesures » les montre toutes, avec leurs sources.</p>
+          {onExplorer && (
+            <button type="button" className="bouton-en-ligne" onClick={onExplorer}>
+              Explorer toutes les mesures
+            </button>
+          )}
+        </div>
       ) : vueActive === "polarite" ? (
         <>
           <GroupeMesures titre="Mesures favorables" sens="favorable" propositions={favorables} profil={profil} remarques={remarques} resume={resume} />
@@ -326,6 +339,10 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil
         <PanneauConvictions propositions={propositions} convictions={convictions} integrite={convictions.exemplarite ? (integrite ?? null) : null} />
       )}
 
+      {/* Simulateur anonyme : l'analyse de la situation (et le détail de ses effets) n'est que dans « Résumé » ; « Favorable /
+          défavorable » ne la répète pas sous la répartition des mesures. */}
+      {(!anonyme || vueActive === "resume") && (
+      <>
       {projection &&
         (niveau ? (
           <>
@@ -358,8 +375,9 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil
       ))}
 
       {projection && projection.effetsRetenus.length > 0 && (
-        <details className="pourquoi">
-          <summary>Pourquoi ce résultat ?</summary>
+        // Simulateur anonyme : pas de spoiler « Pourquoi ce résultat ? », le texte est affiché directement.
+        <details className="pourquoi" open={anonyme || undefined}>
+          {!anonyme && <summary>Pourquoi ce résultat ?</summary>}
           <ul>
             {projection.effetsRetenus.map(({ propositionId, effet, polarite }, index) => {
               const mesure = propositions.find((p) => p.id === propositionId);
@@ -376,14 +394,7 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil
           </ul>
         </details>
       )}
-
-      {anonyme && onExplorer && (
-        <div className="appel-profil">
-          <p>En mode anonyme, nous n'affichons pas toutes les mesures du candidat. Le mode « Explorer les mesures » les montre toutes, avec leurs sources.</p>
-          <button type="button" className="bouton-en-ligne" onClick={onExplorer}>
-            Explorer toutes les mesures
-          </button>
-        </div>
+      </>
       )}
       </div>
     </div>
