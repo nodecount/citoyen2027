@@ -25,6 +25,13 @@ describe("validerIntegrite", () => {
       expect(validerIntegrite({ ...valide(), condamnations_definitives: [c] }).length).toBeGreaterThan(0);
     }
   });
+  it("recours en cours : accepté avec deux sources secondaires et un recours décrit, refusé sans recours ni avec une seule source", () => {
+    const enCours = { ...condamnation(), statut: "non_definitive" as const, recours: "pourvoi en cassation formé", sources: [src("secondaire"), src("secondaire")] };
+    expect(validerIntegrite({ ...valide(), condamnations_definitives: [enCours] })).toEqual([]);
+    expect(validerIntegrite({ ...valide(), condamnations_definitives: [{ ...enCours, recours: "" }] }).length).toBeGreaterThan(0);
+    expect(validerIntegrite({ ...valide(), condamnations_definitives: [{ ...enCours, sources: [src("secondaire")] }] }).length).toBeGreaterThan(0);
+    expect(validerIntegrite({ ...valide(), condamnations_definitives: [{ ...condamnation(), statut: "autre" }] }).length).toBeGreaterThan(0);
+  });
   it("refuse une source sans URL http(s), sans nom ou sans année", () => {
     for (const mauvaise of [{ ...src(), url: "legifrance" }, { ...src(), nom: "" }, { ...src(), annee: "2026" }]) {
       expect(validerIntegrite({ ...valide(), sources_consultees: [mauvaise] }).length).toBeGreaterThan(0);
@@ -82,6 +89,10 @@ describe("chargerIntegrites", () => {
 });
 
 describe("données réelles", () => {
+  it("aucun fichier de data/integrite n'est ignoré en silence (invalide ou slug différent du nom de fichier)", () => {
+    const bruts = import.meta.glob("../../data/integrite/*.json", { eager: true }) as Record<string, { default: unknown }>;
+    expect(Object.keys(INTEGRITES).sort()).toEqual(Object.keys(bruts).map((c) => c.split("/").pop()!.replace(/\.json$/, "")).sort());
+  });
   it("tous les fichiers de data/integrite sont valides (le dossier peut être vide)", () => {
     for (const [slug, integrite] of Object.entries(INTEGRITES)) {
       expect(validerIntegrite(integrite), slug).toEqual([]);

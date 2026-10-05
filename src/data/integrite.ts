@@ -15,6 +15,10 @@ export interface Condamnation {
   date_decision: string;
   peine: string;
   sources: SourceIntegrite[];
+  // Absent = définitive. « non_definitive » (décision du 2026-10-05) : décision rendue mais recours encore ouvert ou
+  // pendant, décrit dans `recours` ; deux sources suffisent alors, sans exigence de source primaire.
+  statut?: "definitive" | "non_definitive";
+  recours?: string;
 }
 
 export interface Integrite {
@@ -57,11 +61,14 @@ function erreursCondamnation(c: unknown, chemin: string, aujourdhui: Date): stri
   const erreurs: string[] = [];
   for (const champ of ["nature", "juridiction", "peine"] as const) if (!texte(c[champ])) erreurs.push(`${chemin}.${champ} manquant`);
   if (!dateValide(c.date_decision, aujourdhui)) erreurs.push(`${chemin}.date_decision doit etre une date AAAA-MM-JJ existante, pas dans le futur`);
+  if (c.statut !== undefined && c.statut !== "definitive" && c.statut !== "non_definitive") erreurs.push(`${chemin}.statut doit valoir definitive ou non_definitive`);
+  const recoursEnCours = c.statut === "non_definitive";
+  if (recoursEnCours && !texte(c.recours)) erreurs.push(`${chemin}.recours : le recours en cours doit etre decrit`);
   if (!Array.isArray(c.sources) || c.sources.length < 2) {
     erreurs.push(`${chemin}.sources : au moins deux sources sont requises`);
   } else {
     c.sources.forEach((s, i) => erreurs.push(...erreursSource(s, `${chemin}.sources[${i}]`)));
-    if (!c.sources.some((s) => objet(s) && s.type === "primaire")) erreurs.push(`${chemin}.sources : au moins une source primaire est requise`);
+    if (!recoursEnCours && !c.sources.some((s) => objet(s) && s.type === "primaire")) erreurs.push(`${chemin}.sources : au moins une source primaire est requise`);
   }
   return erreurs;
 }

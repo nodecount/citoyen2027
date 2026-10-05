@@ -1,0 +1,39 @@
+{
+  "slug": "melenchon",
+  "verifie_le": "2026-10-05",
+  "sources_consultees": [
+    {"type":"secondaire","nom":"Public Sénat, Mélenchon condamné à trois mois avec sursis pour la perquisition houleuse à LFI","annee":2019,"url":"https://www.publicsenat.fr/actualites/politique/melenchon-condamne-a-trois-mois-avec-sursis-pour-la-perquisition-houleuse-a-lfi"},
+    {"type":"secondaire","nom":"Encyclopædia Universalis, France. Condamnation de Jean-Luc Mélenchon, 9 décembre 2019","annee":2019,"url":"https://www.universalis.fr/evenement/9-decembre-2019-condamnation-de-jean-luc-melenchon/"},
+    {"type":"secondaire","nom":"franceinfo, Jean-Luc Mélenchon condamné en appel pour diffamation envers un ex-journaliste du Monde","annee":2022,"url":"https://www.franceinfo.fr/politique/melenchon/jean-luc-melenchon-condamne-en-appel-pour-diffamation-envers-un-ex-journaliste-du-monde_5227360.html"},
+    {"type":"secondaire","nom":"France 24, Jean-Luc Mélenchon condamné en appel pour diffamation envers un ex-journaliste","annee":2022,"url":"https://www.france24.com/fr/info-en-continu/20220629-jean-luc-m%C3%A9lenchon-condamn%C3%A9-en-appel-pour-diffamation-envers-un-ex-journaliste"},
+    {"type":"secondaire","nom":"Poligraph, Condamnation de Jean-Luc Mélenchon pour diffamation envers Paulo Paranagua","annee":2026,"url":"https://poligraph.fr/affaires/jean-luc-melenchon-condamnation-de-jean-luc-melenchon-pour-diffamation-envers-paulo-paranagua"},
+    {"type":"secondaire","nom":"Wikipédia, Jean-Luc Mélenchon (rubrique affaires judiciaires)","annee":2026,"url":"https://fr.wikipedia.org/wiki/Jean-Luc_M%C3%A9lenchon"}
+  ],
+  "condamnations_definitives": [
+    {
+      "statut": "non_definitive",
+      "recours": "Mélenchon a annoncé ne pas faire appel (Public Sénat), ce qui rend la décision vraisemblablement définitive ; aucune source primaire ne le confirme, ni l'absence d'appel du parquet",
+      "nature": "Rébellion, provocation à la rébellion et actes d'intimidation envers des magistrats (perquisitions d'octobre 2018)",
+      "juridiction": "Tribunal correctionnel de Bobigny",
+      "date_decision": "2019-12-09",
+      "peine": "3 mois d'emprisonnement avec sursis et 8 000 euros d'amende",
+      "sources": [
+        {"type":"secondaire","nom":"Public Sénat, Mélenchon condamné à trois mois avec sursis pour la perquisition houleuse à LFI","annee":2019,"url":"https://www.publicsenat.fr/actualites/politique/melenchon-condamne-a-trois-mois-avec-sursis-pour-la-perquisition-houleuse-a-lfi"},
+        {"type":"secondaire","nom":"Encyclopædia Universalis, France. Condamnation de Jean-Luc Mélenchon, 9 décembre 2019","annee":2019,"url":"https://www.universalis.fr/evenement/9-decembre-2019-condamnation-de-jean-luc-melenchon/"}
+      ]
+    },
+    {
+      "statut": "non_definitive",
+      "recours": "arrêt d'appel du 29 juin 2022 ; aucune source consultée ne mentionne de pourvoi (Poligraph le présente comme la dernière décision), mais aucun arrêt ni constat d'expiration du délai n'a été retrouvé",
+      "nature": "Diffamation publique envers Paulo Paranagua, ancien journaliste du Monde (propos de 2016 et 2018)",
+      "juridiction": "Cour d'appel de Paris (jugement du tribunal correctionnel de Paris du 24 septembre 2021 confirmé)",
+      "date_decision": "2022-06-29",
+      "peine": "500 euros d'amende avec sursis, 1 000 euros de dommages-intérêts et 3 500 euros de frais",
+      "sources": [
+        {"type":"secondaire","nom":"franceinfo, Jean-Luc Mélenchon condamné en appel pour diffamation envers un ex-journaliste du Monde","annee":2022,"url":"https://www.franceinfo.fr/politique/melenchon/jean-luc-melenchon-condamne-en-appel-pour-diffamation-envers-un-ex-journaliste-du-monde_5227360.html"},
+        {"type":"secondaire","nom":"France 24, Jean-Luc Mélenchon condamné en appel pour diffamation envers un ex-journaliste","annee":2022,"url":"https://www.france24.com/fr/info-en-continu/20220629-jean-luc-m%C3%A9lenchon-condamn%C3%A9-en-appel-pour-diffamation-envers-un-ex-journaliste"},
+        {"type":"secondaire","nom":"Poligraph, Condamnation de Jean-Luc Mélenchon pour diffamation envers Paulo Paranagua","annee":2026,"url":"https://poligraph.fr/affaires/jean-luc-melenchon-condamnation-de-jean-luc-melenchon-pour-diffamation-envers-paulo-paranagua"}
+      ]
+    }
+  ]
+}
