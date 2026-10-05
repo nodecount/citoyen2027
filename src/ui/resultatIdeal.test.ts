@@ -3,7 +3,7 @@ import type { Meilleurs, Solde } from "../engine/candidatIdeal";
 import type { Correspondance } from "./aveugle";
 import { versResultatAffiche } from "./resultatIdeal";
 
-const solde = (slug: string, ameliorants: number, degradants: number, analyses = 7): Solde => ({ slug, ameliorants, degradants, analyses, solde: ameliorants - degradants });
+const solde = (slug: string, ameliorants: number, degradants: number, analyses = 7): Solde => ({ slug, ameliorants, degradants, analyses, solde: ameliorants - degradants, pour: [], contre: [] });
 const CORRESPONDANCE: Correspondance[] = [
   { lettre: "C", nom: "Nom Réel Un", slug: "un", parti: "Parti Un" },
   { lettre: "F", nom: "Nom Réel Deux", slug: "deux", parti: "Parti Deux" },

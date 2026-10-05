@@ -2725,30 +2725,17 @@ button.bouton-en-ligne {
 }
 .ideal-poursontres {
   flex-basis: 100%;
-  display: grid;
-  /* Les deux listes se partagent toute la largeur de la card (auto-fit retire les pistes vides) et ne s'empilent que si
-     elles ne tiennent plus côte à côte. */
-  grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr));
-  gap: 0.75rem 1.25rem;
   width: 100%;
+  min-width: 0;
 }
-/* Deux colonnes sans cadre ni bordure : seuls le titre coloré et les badges les distinguent. */
+.ideal-badges-total {
+  margin: 0.5rem 0 0;
+}
 .ideal-voir-plus {
-  grid-column: 1 / -1;
-  justify-self: start;
-  margin: 0;
+  margin: 0.6rem 0 0;
 }
-.ideal-raisons h4 {
-  margin: 0 0 0.4rem;
-  font-size: 1rem;
-}
-.ideal-raisons--pour h4 {
-  color: var(--ameliorant);
-}
-.ideal-raisons--contre h4 {
-  color: var(--degradant);
-}
-/* Un badge par groupe de mesures : l'icône du thème devant, puis son nom. */
+/* Un seul flux de badges, sur toute la largeur : les « pour » (vert) puis les « contre » (rouge), à la suite. Un badge :
+   icône du thème, puis le nom du groupe de mesures. */
 .ideal-badges {
   display: flex;
   flex-wrap: wrap;
@@ -2771,11 +2758,11 @@ button.bouton-en-ligne {
   line-height: 1.35;
   color: var(--encre);
 }
-.ideal-raisons--pour .ideal-badge {
+.ideal-badge--pour {
   border-color: color-mix(in srgb, var(--ameliorant) 45%, #ffffff);
   background: color-mix(in srgb, var(--ameliorant) 10%, #ffffff);
 }
-.ideal-raisons--contre .ideal-badge {
+.ideal-badge--contre {
   border-color: color-mix(in srgb, var(--degradant) 45%, #ffffff);
   background: color-mix(in srgb, var(--degradant) 10%, #ffffff);
 }

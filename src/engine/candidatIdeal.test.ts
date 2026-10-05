@@ -5,8 +5,8 @@ import { ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesS
 import type { NiveauProjection } from "./projection";
 
 const ligne = (slug: string, niveau: NiveauProjection | null, propositions: Proposition[] = []) => ({ meta: { slug }, projection: niveau === null ? null : { niveau }, propositions });
-const card = (lignes: ReturnType<typeof ligne>[], absents: string[] = []): CardPourSolde => ({ lignes, absents: absents.map((slug) => ({ slug })) });
-const solde = (slug: string, ameliorants: number, degradants: number, analyses = ameliorants + degradants): Solde => ({ slug, ameliorants, degradants, analyses, solde: ameliorants - degradants });
+const card = (lignes: ReturnType<typeof ligne>[], absents: string[] = []): CardPourSolde => ({ theme: { id: "logement" }, lignes, absents: absents.map((slug) => ({ slug })) });
+const solde = (slug: string, ameliorants: number, degradants: number, analyses = ameliorants + degradants): Solde => ({ slug, ameliorants, degradants, analyses, solde: ameliorants - degradants, pour: [], contre: [] });
 
 describe("soldesSituation", () => {
   it("améliorants moins dégradants ; mixte, non concerné et sans indicateur comptent zéro", () => {
@@ -24,6 +24,23 @@ describe("soldesSituation", () => {
     const cards = [card([ligne("a", "ameliorant")]), card([ligne("a", "degradant")]), card([ligne("a", "degradant")])];
     expect(soldesSituation(cards)[0].solde).toBe(-1);
   });
+  it("garde les titres des mesures des thèmes comptés ; un thème mixte n'en apporte aucune", () => {
+    const p = (id: string): Proposition => ({ id, candidat: "x", theme: "t", titre: `Titre ${id}`, resume_factuel: "", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-10-01" });
+    const avecEffets = (niveau: NiveauProjection, ids: string[]) => ({ meta: { slug: "a" }, projection: { niveau, effetsRetenus: ids.map((propositionId) => ({ propositionId })) }, propositions: [p("1"), p("2"), p("3")] });
+    const s = soldesSituation([card([avecEffets("ameliorant", ["1"])]), card([avecEffets("degradant", ["2", "3"])]), card([avecEffets("mixte", ["1", "2"])])])[0];
+    // Un point par thème compté : autant de blocs que le score en compte, chacun avec les titres de ses mesures.
+    expect(s.pour).toEqual([{ theme: "logement", groupes: ["Titre 1"] }]);
+    expect(s.contre).toEqual([{ theme: "logement", groupes: ["Titre 2", "Titre 3"] }]);
+    expect([s.pour.length, s.contre.length]).toEqual([s.ameliorants, s.degradants]);
+  });
+  it("nomme les points par les groupes du résumé (mots clés), une fois chacun, jamais par le contenu des mesures", () => {
+    const p = (id: string): Proposition => ({ id, candidat: "x", theme: "t", titre: `Titre ${id}`, resume_factuel: "Contenu long", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-10-01" });
+    const resume = { segments: [{ texte: "Interdire des armes policières", mesures: ["1", "2"] }, { texte: ", ", mesures: [] }, { texte: "renforcer la formation", mesures: ["3"] }] };
+    const ligneResume = { meta: { slug: "a" }, projection: { niveau: "ameliorant" as const, effetsRetenus: [{ propositionId: "1" }, { propositionId: "2" }, { propositionId: "4" }] }, propositions: [p("1"), p("2"), p("3"), p("4")], resume };
+    const s = soldesSituation([card([ligneResume])])[0];
+    // 1 et 2 : même groupe, nommé une fois ; 4 : absente du résumé, garde son titre ; 3 : pas retenue, absente.
+    expect(s.pour).toEqual([{ theme: "logement", groupes: ["Interdire des armes policières", "Titre 4"] }]);
+  });
   it("un candidat présent seulement dans les absents est listé, à zéro analyse", () => {
     const s = soldesSituation([card([ligne("a", "ameliorant")], ["z"])]);
     expect(s.find((x) => x.slug === "z")).toMatchObject({ solde: 0, analyses: 0 });
@@ -39,6 +56,12 @@ describe("soldesConvictions", () => {
     const s = soldesConvictions(cards, { ia: "plus_ia", europe: "plus_europe" })[0];
     // IA : +1 puis -1 ; Europe : aucune mesure étiquetée, donc non analysé
     expect(s).toMatchObject({ ameliorants: 1, degradants: 1, solde: 0, analyses: 2 });
+  });
+  it("range les mesures dans le sens de la position choisie en « pour », les autres en « contre », avec sujet · thème", () => {
+    const cards = [card([ligne("a", null, [{ ...prop([tag("ia", "plus_ia")]), id: "p1", titre: "Plus d'IA" }])]), card([ligne("a", null, [{ ...prop([tag("ia", "encadrer_ia")]), id: "p2", titre: "Encadrer l'IA" }])])];
+    const s = soldesConvictions(cards, { ia: "plus_ia" })[0];
+    expect(s.pour).toEqual([{ theme: "logement", groupes: ["Plus d'IA"] }]);
+    expect(s.contre).toEqual([{ theme: "logement", groupes: ["Encadrer l'IA"] }]);
   });
   it("sans position choisie (« pas d'avis » partout) : tous à zéro analyse", () => {
     expect(soldesConvictions([card([ligne("a", null, [prop([tag("ia", "plus_ia")])])])], {}).every((x) => x.analyses === 0)).toBe(true);

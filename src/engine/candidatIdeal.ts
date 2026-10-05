@@ -9,14 +9,26 @@ import type { NiveauProjection } from "./projection";
 // « non concerné » et l'absence d'indicateur comptent zéro ; aucune pondération entre thèmes.
 export interface LignePourSolde {
   meta: { slug: string };
-  projection: { niveau: NiveauProjection | null } | null;
+  projection: { niveau: NiveauProjection | null; effetsRetenus?: Array<{ propositionId: string }> } | null;
   propositions: Proposition[];
+  // Résumé du candidat sur le thème (mots clés qui regroupent ses mesures) : sert à nommer les groupes derrière le score.
+  resume?: { segments: Array<{ texte: string; mesures: string[] }> } | null;
 }
 
 // Structure minimale d'une card de thème (`CardTheme` y est assignable) : ce module ne dépend pas de l'interface.
 export interface CardPourSolde {
+  theme: { id: string };
   lignes: LignePourSolde[];
   absents: Array<{ slug: string }>;
+}
+
+// Un point du score : un thème (situation) ou un sujet × thème (convictions) compté +1 ou −1, avec les GROUPES de mesures qui le
+// fondent (mots clés du résumé du candidat, ceux numérotés en « Explorer les mesures » ; le titre de la mesure s'il n'y a pas de
+// résumé). Le nombre de points de chaque liste est donc exactement celui du score.
+export interface Raison {
+  // Identifiant du thème où le point compte (l'interface n'en montre que l'icône).
+  theme: string;
+  groupes: string[];
 }
 
 export interface Solde {
@@ -26,6 +38,9 @@ export interface Solde {
   // Thèmes (situation) ou constats groupe × thème (convictions) où le candidat a un niveau : la couverture du solde.
   analyses: number;
   solde: number;
+  // Les mesures derrière le score : seuls les thèmes (ou constats) comptés +1 ou −1 y figurent, jamais les « mixte ».
+  pour: Raison[];
+  contre: Raison[];
 }
 
 function soldesVides(cards: CardPourSolde[]): Map<string, Solde> {
@@ -34,20 +49,50 @@ function soldesVides(cards: CardPourSolde[]): Map<string, Solde> {
     for (const l of card.lignes) slugs.add(l.meta.slug);
     for (const a of card.absents) slugs.add(a.slug);
   }
-  return new Map([...slugs].sort().map((slug) => [slug, { slug, ameliorants: 0, degradants: 0, analyses: 0, solde: 0 }]));
+  return new Map([...slugs].sort().map((slug) => [slug, { slug, ameliorants: 0, degradants: 0, analyses: 0, solde: 0, pour: [], contre: [] }]));
 }
 
-function compter(s: Solde, niveau: NiveauProjection | null): void {
+// `pour` / `contre` : le point à ajouter à la liste correspondante si le niveau est « améliorant » / « dégradant ».
+function compter(s: Solde, niveau: NiveauProjection | null, pour?: Raison, contre?: Raison): void {
   if (niveau === null) return;
   s.analyses += 1;
-  if (niveau === "ameliorant") s.ameliorants += 1;
-  if (niveau === "degradant") s.degradants += 1;
+  if (niveau === "ameliorant") {
+    s.ameliorants += 1;
+    if (pour) s.pour.push(pour);
+  }
+  if (niveau === "degradant") {
+    s.degradants += 1;
+    if (contre) s.contre.push(contre);
+  }
   s.solde = s.ameliorants - s.degradants;
+}
+
+// Groupes (mots clés du résumé) qui couvrent les mesures de `ids`, dans l'ordre du résumé, une fois chacun. Une mesure absente du
+// résumé (pas de résumé, ou résumé périmé) garde son titre : jamais de point sans rien à lire.
+function groupes(ligne: LignePourSolde, ids: Set<string>): string[] {
+  const noms: string[] = [];
+  const couverts = new Set<string>();
+  for (const s of ligne.resume?.segments ?? []) {
+    const touches = s.mesures.filter((id) => ids.has(id));
+    const nom = s.texte.trim();
+    if (touches.length === 0 || !nom) continue;
+    touches.forEach((id) => couverts.add(id));
+    if (!noms.includes(nom)) noms.push(nom);
+  }
+  for (const p of ligne.propositions) if (ids.has(p.id) && !couverts.has(p.id) && !noms.includes(p.titre)) noms.push(p.titre);
+  return noms;
 }
 
 export function soldesSituation(cards: CardPourSolde[]): Solde[] {
   const soldes = soldesVides(cards);
-  for (const card of cards) for (const l of card.lignes) compter(soldes.get(l.meta.slug)!, l.projection?.niveau ?? null);
+  for (const card of cards) {
+    for (const l of card.lignes) {
+      const ids = new Set((l.projection?.effetsRetenus ?? []).map((e) => e.propositionId));
+      const point = { theme: card.theme.id, groupes: groupes(l, ids) };
+      // Un thème « améliorant » ne retient que des effets favorables, un thème « dégradant » que des défavorables.
+      compter(soldes.get(l.meta.slug)!, l.projection?.niveau ?? null, point, point);
+    }
+  }
   return [...soldes.values()];
 }
 
@@ -56,7 +101,16 @@ export function soldesConvictions(cards: CardPourSolde[], choix: ChoixPositions)
   const soldes = soldesVides(cards);
   for (const card of cards) {
     for (const l of card.lignes) {
-      for (const [sujet, position] of Object.entries(choix)) compter(soldes.get(l.meta.slug)!, projeterPosition(sujet, position, l.propositions).niveau);
+      for (const [sujet, position] of Object.entries(choix)) {
+        const constat = projeterPosition(sujet, position, l.propositions);
+        const ids = (conforme: boolean) => new Set(constat.retenues.filter((r) => r.conforme === conforme).map((r) => r.propositionId));
+        compter(
+          soldes.get(l.meta.slug)!,
+          constat.niveau,
+          { theme: card.theme.id, groupes: groupes(l, ids(true)) },
+          { theme: card.theme.id, groupes: groupes(l, ids(false)) },
+        );
+      }
     }
   }
   return [...soldes.values()];
