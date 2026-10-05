@@ -167,6 +167,58 @@ function Resume({ resume }: { resume: ResumeTheme }) {
   );
 }
 
+// Simulateur anonyme, onglet « Résumé » : une phrase continue, comme le résumé de l'exploration, bâtie avec les seuls mots clés
+// du résumé du thème (à défaut, les titres des mesures) qui touchent la situation du visiteur. Vert : mesures favorables ;
+// rouge : défavorables ; les deux : souligné moitié vert, moitié rouge. Le mot « favorable » / « défavorable » est dit aux
+// lecteurs d'écran : la couleur n'est jamais seule.
+function ResumeSituation({ resume, propositions, favorables, defavorables }: { resume: ResumeTheme | null; propositions: Proposition[]; favorables: Proposition[]; defavorables: Proposition[] }) {
+  const idsF = new Set(favorables.map((p) => p.id));
+  const idsD = new Set(defavorables.map((p) => p.id));
+  const elements = resume
+    ? resume.segments.filter((s) => s.mesures.length > 0).map((s) => ({ texte: s.texte, f: s.mesures.some((id) => idsF.has(id)), d: s.mesures.some((id) => idsD.has(id)) }))
+    : propositions.map((p) => ({ texte: p.titre, f: idsF.has(p.id), d: idsD.has(p.id) }));
+  const retenus = elements.filter((e) => e.f || e.d);
+  if (retenus.length === 0) return null;
+  // Les mots clés sont des morceaux de la phrase d'origine : on les recolle (virgules, « et » avant le dernier, point final).
+  // Majuscule au début ; minuscule ensuite, sauf sigle ou nom propre (deuxième lettre en capitale).
+  const nettoyer = (t: string) => t.trim().replace(/[.;,\s]+$/, "");
+  const milieuDePhrase = (t: string) => (/^[A-ZÀ-ÖØ-Þ][a-zß-öø-ÿ]/.test(t) ? t.charAt(0).toLowerCase() + t.slice(1) : t);
+  return (
+    <p className="resume">
+      {retenus.map((e, index) => {
+        const sens = e.f && e.d ? "mixte" : e.f ? "favorable" : "defavorable";
+        const brut = nettoyer(e.texte);
+        const texte = index === 0 ? brut.charAt(0).toUpperCase() + brut.slice(1) : milieuDePhrase(brut);
+        const separateur = index === 0 ? "" : index === retenus.length - 1 ? " et " : ", ";
+        return (
+          <span key={index}>
+            {separateur}
+            <span className={`mot-cle mot-cle--${sens}`}>
+              {texte}
+              <span className="cache-visuel"> ({sens === "mixte" ? "favorable et défavorable" : sens === "favorable" ? "favorable" : "défavorable"} pour votre situation)</span>
+            </span>
+          </span>
+        );
+      })}
+      .
+    </p>
+  );
+}
+
+// Simulateur anonyme : les mesures ne sont pas toutes affichées ; le bouton ouvre le mode exploration, qui les montre.
+function AppelExplorer({ onExplorer }: { onExplorer?: () => void }) {
+  return (
+    <div className="appel-profil">
+      <p>En mode anonyme, nous n'affichons pas toutes les mesures du candidat.</p>
+      {onExplorer && (
+        <button type="button" className="bouton-en-ligne" onClick={onExplorer}>
+          Explorer les mesures
+        </button>
+      )}
+    </div>
+  );
+}
+
 // `titre` n'est mis entre guillemets que lorsqu'il reprend vraiment la source mot pour mot (voir `titre_litteral` sur
 // Proposition) : jamais sur une reformulation neutre, qui ne doit jamais se faire passer pour une citation.
 export function texteMesure(p: Proposition): string {
@@ -294,14 +346,7 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil
           <p className="hint">Impossible de dire ce que ce candidat changerait pour vous sur ce thème.</p>
         )
       ) : vueActive === "mesures" ? (
-        <div className="appel-profil">
-          <p>En mode anonyme, nous n'affichons pas toutes les mesures du candidat. Le mode « Explorer les mesures » les montre toutes, avec leurs sources.</p>
-          {onExplorer && (
-            <button type="button" className="bouton-en-ligne" onClick={onExplorer}>
-              Explorer toutes les mesures
-            </button>
-          )}
-        </div>
+        <AppelExplorer onExplorer={onExplorer} />
       ) : vueActive === "polarite" ? (
         <>
           <GroupeMesures titre="Mesures favorables" sens="favorable" propositions={favorables} profil={profil} remarques={remarques} resume={resume} />
@@ -317,9 +362,12 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil
       ) : vueActive === "citations" && resume ? (
         <CitationsResume resume={resume} propositions={propositions} />
       ) : anonyme && projection ? (
-        // Simulateur anonyme : l'onglet Résumé ne reprend pas le résumé du programme (c'est celui de l'exploration), seulement
-        // l'analyse de la situation du visiteur, affichée ci-dessous (« Pour votre profil »).
-        null
+        // Simulateur anonyme : même forme de résumé qu'en exploration, mais limitée aux mesures qui touchent la situation du
+        // visiteur (vert : favorables, rouge : défavorables), puis un rappel que les autres ne sont pas affichées.
+        <>
+          <ResumeSituation resume={resume} propositions={propositions} favorables={favorables} defavorables={defavorables} />
+          <AppelExplorer onExplorer={onExplorer} />
+        </>
       ) : resume ? (
         <Resume resume={resume} />
       ) : synthese ? (
@@ -346,9 +394,11 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil
       {projection &&
         (niveau ? (
           <>
-            <p className="pour-votre-profil">
-              <strong>Pour votre profil :</strong> {NIVEAUX[niveau].sens}
-            </p>
+            {!anonyme && (
+              <p className="pour-votre-profil">
+                <strong>Pour votre profil :</strong> {NIVEAUX[niveau].sens}
+              </p>
+            )}
             {messagesIncertitude.map((message) => (
               <p className="pour-votre-profil incertitude" key={message}>
                 {message}
@@ -368,16 +418,17 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil
           </>
         ))}
       {/* Toujours affiché quand il s'applique, même à côté d'un badge : jamais l'impression que l'indicateur tient compte de tout. */}
-      {messagesEffetsExclus.map((message) => (
+      {/* Simulateur anonyme : ce décompte (« 6 mesures supplémentaires… ») trahirait le candidat. */}
+      {!anonyme && messagesEffetsExclus.map((message) => (
         <p className="pour-votre-profil exclus" key={message}>
           {message}
         </p>
       ))}
 
-      {projection && projection.effetsRetenus.length > 0 && (
-        // Simulateur anonyme : pas de spoiler « Pourquoi ce résultat ? », le texte est affiché directement.
-        <details className="pourquoi" open={anonyme || undefined}>
-          {!anonyme && <summary>Pourquoi ce résultat ?</summary>}
+      {/* Simulateur anonyme : le résumé coloré ci-dessus remplace ce détail. */}
+      {!anonyme && projection && projection.effetsRetenus.length > 0 && (
+        <details className="pourquoi">
+          <summary>Pourquoi ce résultat ?</summary>
           <ul>
             {projection.effetsRetenus.map(({ propositionId, effet, polarite }, index) => {
               const mesure = propositions.find((p) => p.id === propositionId);

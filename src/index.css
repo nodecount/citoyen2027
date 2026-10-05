@@ -1970,6 +1970,17 @@ button.bouton-en-ligne {
   color: var(--encre-douce);
 }
 
+/* Simulateur anonyme, onglet Résumé : mots clés qui touchent la situation du visiteur, vert (favorable) ou rouge (défavorable). */
+.mot-cle--favorable { color: var(--ameliorant); }
+.mot-cle--defavorable { color: var(--degradant); }
+.mot-cle--mixte {
+  color: var(--encre);
+  background-image: linear-gradient(to right, var(--ameliorant) 50%, var(--degradant) 50%);
+  background-position: 0 100%;
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+}
+
 .pour-votre-profil {
   max-width: 65ch;
   margin: 0.5rem 0;
@@ -2611,7 +2622,9 @@ button.bouton-en-ligne {
 }
 .ideal-colonnes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+  /* « Situation » et « convictions » ne se mettent côte à côte que si chacune garde assez de place pour ses deux listes ; sinon
+     elles s'empilent et chaque liste prend toute la largeur de la card. */
+  grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
   gap: 1rem;
 }
 .ideal-colonne {
@@ -2713,8 +2726,11 @@ button.bouton-en-ligne {
 .ideal-poursontres {
   flex-basis: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
-  gap: 0.75rem;
+  /* Les deux listes se partagent toute la largeur de la card (auto-fit retire les pistes vides) et ne s'empilent que si
+     elles ne tiennent plus côte à côte. */
+  grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr));
+  gap: 0.75rem 1.25rem;
+  width: 100%;
 }
 /* Deux colonnes sans cadre ni bordure : seuls le titre coloré et les badges les distinguent. */
 .ideal-voir-plus {
@@ -3175,6 +3191,11 @@ button.bouton-en-ligne {
   margin: 0.4rem 0 0;
   padding: 0.3rem 0.9rem;
   font-size: 1rem;
+}
+
+/* Dans le bandeau du résultat : le bouton suit le décompte sur la même ligne. */
+.intro-etape .bouton-completer--ligne {
+  margin: 0 0 0 0.75rem;
 }
 
 /* ---- Légende des indicateurs : une « règle graduée » ---------------------------------------------------------------------

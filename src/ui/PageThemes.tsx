@@ -7,7 +7,7 @@ import { construireCards } from "./cards";
 import { ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation } from "../engine/candidatIdeal";
 import { anonymiserCards } from "./aveugle";
 import { choisirMode, cleIdentites, etatPourBase, recommencer, tirerGraine, type EtatIdeal } from "./etatIdeal";
-import { CardCandidatIdeal } from "./CardCandidatIdeal";
+import { BandeauRevelation, CardCandidatIdeal } from "./CardCandidatIdeal";
 import { versResultatAffiche } from "./resultatIdeal";
 import { BlocConvictions, integritesVisibles } from "./Convictions";
 import { CONVICTIONS_VIDES, lireConvictions, memoriserConvictions, type Convictions } from "./memoireConvictions";
@@ -17,6 +17,7 @@ import { BandeauPertinence, Etapes, IntroEtape, IntroMesures, NavEtape, RecapRep
 import PageQuestionsGenerales from "./PageQuestionsGenerales";
 import { questionsRestantes } from "../questionnaire";
 import type { SurReponse } from "./Questions";
+import { TableauResultat } from "./TableauResultat";
 import { VueThemes } from "./VueThemes";
 
 interface PageThemesProps {
@@ -90,13 +91,14 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   const correspondance = anonymisation?.correspondance ?? [];
   const choixPositions = convictions.positions;
   // L'écart par intégrité se calcule sur les faits réels (jamais affichés à l'aveugle : seul le nombre d'écartés l'est).
-  const ecartes = ecartesParIntegrite(integritesVisibles({ simulateur, exemplarite: convictions.exemplarite, aveugle: false, slugs: candidats.map((c) => c.meta.slug) }));
-  const situationIdeale = personnalise ? versResultatAffiche("Selon votre situation", "thèmes", meilleurs(soldesSituation(cardsNommees)), correspondance, revele) : null;
+  const integritesReelles = integritesVisibles({ simulateur, exemplarite: convictions.exemplarite, aveugle: false, slugs: candidats.map((c) => c.meta.slug) });
+  const ecartes = ecartesParIntegrite(integritesReelles);
+  const situationIdeale = personnalise ? versResultatAffiche("Selon votre situation", "thèmes", meilleurs(soldesSituation(cardsNommees)), correspondance, revele, anonymisation ? soldesSituation(cards) : []) : null;
   // Résultat « convictions » : omis quand aucun candidat n'a de mesure sur les sujets choisis (et que personne n'est écarté) —
   // plutôt que de promettre « le meilleur programme selon vos convictions » quand il n'existe pas.
   const meilleursConvictions = personnalise && Object.keys(choixPositions).length > 0 ? meilleurs(soldesConvictions(cardsNommees, choixPositions), ecartes) : null;
   const convictionsIdeales =
-    meilleursConvictions && !sansDonnees(meilleursConvictions) ? versResultatAffiche("Selon vos convictions", "sujets", meilleursConvictions, correspondance, revele) : null;
+    meilleursConvictions && !sansDonnees(meilleursConvictions) ? versResultatAffiche("Selon vos convictions", "sujets", meilleursConvictions, correspondance, revele, anonymisation ? soldesConvictions(cards, choixPositions) : []) : null;
   // « Recommencer » : on revient à la première étape, réponses gardées, et la card repasse floutée (nouvelles lettres).
   const relancerLaSimulation = () => setIdeal(recommencer());
   const allerA = (suivante: Etape) => {
@@ -119,6 +121,22 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   useEffect(() => {
     if (ouverture) document.getElementById(`theme-${ouverture.theme}`)?.scrollIntoView({ block: "center" });
   }, [ouverture]);
+
+  // Le bandeau de révélation de la card est-il à l'écran ? Tant qu'il l'est, le tableau n'affiche pas le sien. Sans card ou sans
+  // IntersectionObserver, le tableau garde son bandeau (c'est alors le seul moyen de révéler).
+  const [voileCardVisible, setVoileCardVisible] = useState(true);
+  const carteAffichee = situationIdeale !== null || convictionsIdeales !== null;
+  useEffect(() => {
+    if (revele || etape !== "resultat") return;
+    const voile = document.querySelector(".carte-ideal .ideal-voile");
+    if (!voile || typeof IntersectionObserver === "undefined") {
+      setVoileCardVisible(false);
+      return;
+    }
+    const observateur = new IntersectionObserver(([entree]) => setVoileCardVisible(entree.isIntersecting));
+    observateur.observe(voile);
+    return () => observateur.disconnect();
+  }, [revele, etape, carteAffichee]);
 
   // Dès que la bascule sort de l'écran, elle se range sur le côté (icônes seules) ; son emplacement garde sa hauteur pour
   // que la page ne saute pas.
@@ -190,6 +208,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
             <PageQuestionsGenerales
               key={versionFormulaire}
               integre
+              champs={base.champs}
               questions={base.questionnaire.generales}
               profilInitial={profil}
               sectionsThemes={generalSoumis ? base.questionnaire.parTheme : []}
@@ -243,7 +262,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
       {simulateur && etape === "resultat" && (
         <>
           <NavEtape haut {...navResultat} />
-          <BandeauPertinence questionnaire={base.questionnaire} profil={profil} convictions={convictions} />
+          <BandeauPertinence questionnaire={base.questionnaire} profil={profil} convictions={convictions} onCompleterSituation={() => allerA("situation")} onCompleterConvictions={() => allerA("convictions")} />
           {personnalise && (situationIdeale || convictionsIdeales) ? (
             <CardCandidatIdeal
               situation={situationIdeale}
@@ -256,6 +275,23 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
             />
           ) : (
             <p className="recap-vide">Aucun résultat à révéler pour l'instant : répondez d'abord à au moins une question.</p>
+          )}
+          {personnalise && (
+            // Le tableau garde les lettres tant que l'identité n'est pas révélée. Son bandeau (même texte et même bouton que la
+            // card) n'apparaît que lorsque celui de la card est hors écran : jamais deux messages identiques en même temps.
+            <TableauResultat
+              cards={revele ? cardsNommees : cards}
+              positions={choixPositions}
+              bandeau={
+                !revele && !voileCardVisible ? (
+                  <BandeauRevelation
+                    avecConvictions={convictionsIdeales !== null}
+                    questionsRestantes={questionsRestantes(base.questionnaire, profil)}
+                    onReveler={() => setIdeal({ ...ideal, revele: true })}
+                  />
+                ) : null
+              }
+            />
           )}
           <RecapReponses questionnaire={base.questionnaire} profil={profil} convictions={convictions} onRecommencer={recommencerLeParcours} />
           <NavEtape {...navResultat} />

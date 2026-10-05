@@ -1,9 +1,11 @@
 import { ArrowLeft, ArrowRight, Calculator, Compass, EyeOff, RotateCcw, Target, UserRound, type LucideIcon } from "lucide-react";
-import type { ReactNode } from "react";
+import { useContext, type ReactNode } from "react";
 import type { ProfilPartiel } from "../profil";
 import { compterReponses, estRepondue, questionsVisibles, type Questionnaire } from "../questionnaire";
-import type { ChampProfil } from "../types";
-import { SUJETS_CONVICTION, trouverPosition, trouverSujet } from "../positions";
+import type { ChampProfil, Proposition } from "../types";
+import { trouverPosition, trouverSujet } from "../positions";
+import { sujetsDisponibles } from "../engine/positions";
+import { PropositionsBase } from "./PropositionsContexte";
 import { aDesConvictions, type Convictions } from "./memoireConvictions";
 import { libelleOption } from "./Questions";
 
@@ -77,21 +79,22 @@ function reponseEnClair(champ: ChampProfil, valeur: ProfilPartiel[string]): stri
 
 // Nombres qui fondent le calcul du programme idéal : questions répondues (parmi celles actuellement posées) et sujets
 // de convictions renseignés.
-function compteurs(questionnaire: Questionnaire, profil: ProfilPartiel, convictions: Convictions) {
+function compteurs(questionnaire: Questionnaire, profil: ProfilPartiel, convictions: Convictions, propositions: Proposition[] | null) {
+  const sujets = sujetsDisponibles(propositions);
   const questions = [...new Map([...questionnaire.generales, ...questionnaire.parTheme.flatMap((s) => s.questions)].map((q) => [q.id, q])).values()];
   const visibles = questionsVisibles(questions, profil);
   return {
     visibles,
     repondues: visibles.filter((q) => estRepondue(q, profil)).length,
     questions: visibles.length,
-    convictions: Object.keys(convictions.positions).length,
-    sujets: SUJETS_CONVICTION.length,
+    convictions: sujets.filter((s) => convictions.positions[s.id] !== undefined).length,
+    sujets: sujets.length,
   };
 }
 
 // Message placé en tête du résultat : sur quoi repose le calcul, et à quel point les réponses le rendent précis.
-export function BandeauPertinence({ questionnaire, profil, convictions }: { questionnaire: Questionnaire; profil: ProfilPartiel; convictions: Convictions }) {
-  const n = compteurs(questionnaire, profil, convictions);
+export function BandeauPertinence({ questionnaire, profil, convictions, onCompleterSituation, onCompleterConvictions }: { questionnaire: Questionnaire; profil: ProfilPartiel; convictions: Convictions; onCompleterSituation?: () => void; onCompleterConvictions?: () => void }) {
+  const n = compteurs(questionnaire, profil, convictions, useContext(PropositionsBase));
   return (
     <IntroEtape etape="resultat">
       <p>
@@ -102,10 +105,22 @@ export function BandeauPertinence({ questionnaire, profil, convictions }: { ques
         <strong>
           {n.repondues} question{n.repondues > 1 ? "s" : ""} répondue{n.repondues > 1 ? "s" : ""} sur {n.questions}
         </strong>
+        {n.repondues < n.questions && onCompleterSituation && (
+          <button type="button" className="secondaire bouton-completer bouton-completer--ligne" onClick={onCompleterSituation}>
+            <ArrowLeft size={18} aria-hidden="true" focusable="false" />
+            Compléter ma situation
+          </button>
+        )}
         <br />
         <strong>
           {n.convictions} conviction{n.convictions > 1 ? "s" : ""} complétée{n.convictions > 1 ? "s" : ""} sur {n.sujets}
         </strong>
+        {n.convictions < n.sujets && onCompleterConvictions && (
+          <button type="button" className="secondaire bouton-completer bouton-completer--ligne" onClick={onCompleterConvictions}>
+            <ArrowLeft size={18} aria-hidden="true" focusable="false" />
+            Compléter mes convictions
+          </button>
+        )}
       </p>
     </IntroEtape>
   );
@@ -152,7 +167,7 @@ export function IntroMesures({ questionnaire, profil, convictions, onCompleter }
 // Rappel des réponses : tout ce qui a été demandé, avec « Non répondu » pour ce qui est resté en « Je préfère ne pas répondre ».
 // Le bouton rouvre le parcours (réponses gardées) pour corriger ou compléter.
 export function RecapReponses({ questionnaire, profil, convictions, onRecommencer }: { questionnaire: Questionnaire; profil: ProfilPartiel; convictions: Convictions; onRecommencer: () => void }) {
-  const { visibles, repondues, questions } = compteurs(questionnaire, profil, convictions);
+  const { visibles, repondues, questions } = compteurs(questionnaire, profil, convictions, useContext(PropositionsBase));
   const sansReponse = questions - repondues;
   return (
     <section className="recap-reponses" aria-labelledby="recap-titre">
@@ -187,7 +202,7 @@ export function RecapReponses({ questionnaire, profil, convictions, onRecommence
                   {trouverSujet(sujet)?.libelle} : <strong>{trouverPosition(sujet, position)?.libelle}</strong>
                 </li>
               ))}
-              {convictions.exemplarite && <li>Candidat sans condamnation définitive</li>}
+              {convictions.exemplarite && <li>Candidat sans condamnation</li>}
             </ul>
           ) : (
             <p className="recap-vide">Aucune position choisie.</p>
