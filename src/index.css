@@ -395,6 +395,78 @@ a {
   color: #9aa3b5;
 }
 
+/* Tableau du résultat : une cellule = une ou deux moitiés (vert pour les mesures qui améliorent, rouge pour celles qui
+   dégradent) ; mixte = les deux côte à côte. */
+.tableau-resultat td.cellule-resultat {
+  display: table-cell;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.tableau-resultat .demi-resultat {
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 50%;
+  padding: 0.7rem 0.4rem;
+}
+
+/* Bandeau de révélation posé au-dessus du tableau (non superposé : les chiffres restent lisibles). */
+/* Il colle en haut de l'écran tant que le tableau est visible, et n'existe que quand le bandeau de la card est hors écran
+   (jamais deux messages identiques en même temps). Mise en page compacte : texte et bouton sur une ligne quand il y a la place. */
+.bandeau-revelation-tableau {
+  position: sticky;
+  top: 0.5rem;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+}
+
+.bandeau-revelation-tableau .ideal-voile-contenu {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  padding: 0.6rem 1rem;
+  text-align: left;
+}
+
+.tableaux-resultat {
+  display: grid;
+  /* minmax(0, 1fr) : sans cela, la largeur du tableau élargit la page au lieu de le faire défiler dans son cadre. */
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tableaux-resultat .tableau-defilement {
+  margin-top: 0;
+  min-width: 0;
+}
+
+/* Onglets du résultat : mêmes onglets que ceux des formulaires, collés au tableau ; sur écran étroit ils se partagent la
+   largeur au lieu de la dépasser. */
+.onglets--tableaux {
+  margin: 0;
+}
+
+.onglets--tableaux button {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-inline: 0.6rem;
+  white-space: normal;
+}
+
+@media (min-width: 40rem) {
+  .onglets--tableaux button {
+    flex: 0 0 auto;
+    padding-inline: 1.1rem;
+  }
+}
+
+.tableau-resultat .demi-resultat:only-child {
+  display: block;
+}
+
 .candidat-ligne {
   display: inline-flex;
   align-items: center;
@@ -1153,7 +1225,7 @@ article {
 }
 
 .avec-infobulle:hover .infobulle,
-.avec-infobulle:focus-within .infobulle {
+.avec-infobulle:has(:focus-visible) .infobulle {
   opacity: 1;
   visibility: visible;
   transform: translate(-50%, 0);
@@ -2539,10 +2611,11 @@ button.bouton-en-ligne {
 }
 .ideal-colonnes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
   gap: 1rem;
 }
 .ideal-colonne {
+  min-width: 0;
   padding: 0.9rem 1rem;
   border: 1px solid var(--filet);
   border-radius: 10px;
@@ -2618,10 +2691,16 @@ button.bouton-en-ligne {
 .ideal-bloc + .ideal-bloc {
   margin-top: 1rem;
 }
-.ideal-flou {
+.ideal-flou-candidat + .ideal-flou-candidat {
+  margin-top: 1rem;
+}
+.ideal-flou-entete {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+.ideal-flou {
+  display: block;
   filter: blur(7px);
   user-select: none;
   pointer-events: none;
@@ -2631,8 +2710,75 @@ button.bouton-en-ligne {
   margin: 0.5rem 0;
   padding: 0;
 }
-.ideal-gagnants li {
+.ideal-poursontres {
+  flex-basis: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
+  gap: 0.75rem;
+}
+/* Deux colonnes sans cadre ni bordure : seuls le titre coloré et les badges les distinguent. */
+.ideal-voir-plus {
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin: 0;
+}
+.ideal-raisons h4 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+}
+.ideal-raisons--pour h4 {
+  color: var(--ameliorant);
+}
+.ideal-raisons--contre h4 {
+  color: var(--degradant);
+}
+/* Un badge par groupe de mesures : l'icône du thème devant, puis son nom. */
+.ideal-badges {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ideal-badge {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 0.45rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.25rem 0.7rem 0.25rem 0.5rem;
+  border: 1px solid;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: var(--encre);
+}
+.ideal-raisons--pour .ideal-badge {
+  border-color: color-mix(in srgb, var(--ameliorant) 45%, #ffffff);
+  background: color-mix(in srgb, var(--ameliorant) 10%, #ffffff);
+}
+.ideal-raisons--contre .ideal-badge {
+  border-color: color-mix(in srgb, var(--degradant) 45%, #ffffff);
+  background: color-mix(in srgb, var(--degradant) 10%, #ffffff);
+}
+.ideal-raison-icone {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  /* Hauteur d'une ligne de texte : l'icône reste alignée sur la première ligne, même quand le nom passe sur deux lignes. */
+  height: 1.35em;
+  color: var(--bleu-fonce);
+}
+.ideal-raison-titre {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+/* `>` : seule la ligne du candidat est une rangée à retour à la ligne, pas les badges qu'elle contient. */
+.ideal-gagnants > li {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
   margin: 0.5rem 0;
@@ -3226,4 +3372,14 @@ button.bouton-en-ligne {
 .question-carte--manquante {
   border: 2px solid var(--bleu);
   background: var(--bleu-pale);
+}
+
+/* Sous la réponse d'une question : nombre de mesures des programmes qui la concernent. */
+.question-impact {
+  margin: 0.4rem 0 0;
+  padding-left: 0.6rem;
+  border-left: 3px solid var(--bleu, #1f4fb4);
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--texte, inherit);
 }
