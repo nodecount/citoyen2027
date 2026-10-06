@@ -76,7 +76,7 @@ describe("CardCandidatIdeal, clavier et lecteurs d'écran", () => {
 describe("CardCandidatIdeal révélée", () => {
   it("montre noms, partis, lettres et le solde avec sa couverture ; plus de flou ; bouton Recommencer", () => {
     const html = rendre({ revele: true });
-    for (const t of ["Nom-Reel-Situation", "Nom-Reel-Convictions", "Parti-test", "Candidat C", "Candidat F", "Ce qui joue pour vous"]) expect(html, t).toContain(t);
+    for (const t of ["Nom-Reel-Situation", "Nom-Reel-Convictions", "Parti-test", "Candidat C", "Candidat F", "Favorables à votre situation"]) expect(html, t).toContain(t);
     expect(html).not.toContain("Score +");
     expect(html).not.toContain("carte-ideal--floue");
     expect(html).toContain("Recommencer la simulation");
@@ -111,11 +111,11 @@ describe("CardCandidatIdeal révélée", () => {
   });
   it("révélée, liste les mesures pour et contre, sens dit en mots pour les lecteurs d'écran", () => {
     const html = rendre({ revele: true });
-    for (const t of ["Mesure-pour", "Mesure-contre", "Ce qui joue pour vous", "Ce qui joue contre vous", "Dans le sens de vos convictions", "À l&#x27;opposé de vos convictions"]) expect(html, t).toContain(t);
+    for (const t of ["Mesure-pour", "Mesure-contre", "Favorables à votre situation", "Défavorables à votre situation", "Proches de vos convictions", "Opposées à vos convictions"]) expect(html, t).toContain(t);
   });
   it("floutée, montre tout sauf l'identité : score et mesures pour/contre sont dans la page (floutés)", () => {
     const html = rendre({ revele: false });
-    for (const t of ["Mesure-pour", "Mesure-contre", "Ce qui joue pour vous"]) expect(html, t).toContain(t);
+    for (const t of ["Mesure-pour", "Mesure-contre", "Favorables à votre situation"]) expect(html, t).toContain(t);
     expect(html).not.toContain("croisements");
     expect(html).not.toContain("Score +");
   });
@@ -134,7 +134,7 @@ describe("CardCandidatIdeal révélée", () => {
     const beaucoup = (theme: string, n: number) => [{ theme, groupes: Array.from({ length: n }, (_, i) => `Groupe-${theme}-${i}`) }];
     const html = renderToStaticMarkup(<PoursContres pour={beaucoup("logement", 5)} contre={beaucoup("retraite", 1)} unite="thèmes" deplieInitial />);
     expect(html.match(/class="ideal-badge ideal-badge--/g)).toHaveLength(6);
-    expect(html).toContain("Au total : 5 groupes pour, 1 groupe contre.");
+    expect(html).toContain("Au total : 5 groupes de mesures favorables à votre situation, 1 groupe de mesures défavorable à votre situation.");
     expect(html).toContain("Voir moins");
     // Replié, le total n'est pas répété (les listes sont courtes à lire).
     expect(renderToStaticMarkup(<PoursContres pour={beaucoup("logement", 5)} contre={beaucoup("retraite", 1)} unite="thèmes" />)).not.toContain("Au total");

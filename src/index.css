@@ -2728,6 +2728,21 @@ button.bouton-en-ligne {
   width: 100%;
   min-width: 0;
 }
+/* Intitulé d'une série de badges : dans le même flux, en gras et dans la couleur du sens. */
+.ideal-badges-etiquette {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.25rem 0.2rem 0.25rem 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.ideal-badges-etiquette--pour {
+  color: var(--ameliorant);
+}
+.ideal-badges-etiquette--contre {
+  color: var(--degradant);
+}
 .ideal-badges-total {
   margin: 0.5rem 0 0;
 }

@@ -133,44 +133,48 @@ export function PoursContres({
   const visibles = (liste: Array<{ theme: string; groupe: string }>) =>
     deplie ? liste : liste.slice(0, MESURES_VISIBLES);
   const convictions = unite === "sujets";
+  // Intitulés des deux côtés (ceux de l'écran des mesures : favorables / défavorables à la situation ; proches / opposées aux
+  // convictions), au pluriel pour l'étiquette et au singulier accordé pour le total.
+  const intitule = convictions
+    ? { pour: "proches de vos convictions", contre: "opposées à vos convictions", pourSing: "proche de vos convictions", contreSing: "opposé à vos convictions" }
+    : { pour: "favorables à votre situation", contre: "défavorables à votre situation", pourSing: "favorable à votre situation", contreSing: "défavorable à votre situation" };
+  const majuscule = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
+  const etiquette = (sens: "pour" | "contre") => (
+    <li key={`etiquette-${sens}`} className={`ideal-badges-etiquette ideal-badges-etiquette--${sens}`}>
+      {majuscule(intitule[sens])}
+    </li>
+  );
   const badge = (
     sens: "pour" | "contre",
     b: { theme: string; groupe: string },
     i: number,
-  ) => {
-    const mot =
-      sens === "pour"
-        ? convictions
-          ? "Dans le sens de vos convictions"
-          : "Ce qui joue pour vous"
-        : convictions
-          ? "À l'opposé de vos convictions"
-          : "Ce qui joue contre vous";
-    return (
-      <li
-        key={`${sens}-${b.theme}-${i}`}
-        className={`ideal-badge ideal-badge--${sens}`}
-      >
-        {/* Le sens est dit en mots pour les lecteurs d'écran, et par l'ordre (les « pour » d'abord) : pas de signe à l'écran. */}
-        <span className="cache-visuel">{mot} : </span>
-        <span className="ideal-raison-icone">
-          <IconeTheme themeId={b.theme} taille={18} />
-        </span>
-        <span className="ideal-raison-titre">{b.groupe}</span>
-      </li>
-    );
-  };
+  ) => (
+    <li
+      key={`${sens}-${b.theme}-${i}`}
+      className={`ideal-badge ideal-badge--${sens}`}
+    >
+      <span className="ideal-raison-icone">
+        <IconeTheme themeId={b.theme} taille={18} />
+      </span>
+      <span className="ideal-raison-titre">{b.groupe}</span>
+    </li>
+  );
+  const total = (n: number, pluriel: string, singulier: string) =>
+    `${n} groupe${n > 1 ? "s" : ""} de mesures ${n > 1 ? pluriel : singulier}`;
   return (
     <div className="ideal-poursontres">
-      {/* Une seule ligne de badges (qui passe à la suivante quand elle est pleine) : les « pour » d'abord, les « contre » ensuite. */}
+      {/* Une seule ligne de badges (qui passe à la suivante quand elle est pleine) : les « pour » d'abord, les « contre » ensuite,
+          chaque série précédée de son intitulé. */}
       <ul className="ideal-badges">
+        {listePour.length > 0 && etiquette("pour")}
         {visibles(listePour).map((b, i) => badge("pour", b, i))}
+        {listeContre.length > 0 && etiquette("contre")}
         {visibles(listeContre).map((b, i) => badge("contre", b, i))}
       </ul>
       {/* Une fois tout déplié : le total de chaque côté, en groupes de mesures (c'est ce que comptent les badges). */}
       {deplie && (
         <p className="hint ideal-badges-total">
-          Au total : {listePour.length} groupe{listePour.length > 1 ? "s" : ""} pour, {listeContre.length} groupe{listeContre.length > 1 ? "s" : ""} contre.
+          Au total : {total(listePour.length, intitule.pour, intitule.pourSing)}, {total(listeContre.length, intitule.contre, intitule.contreSing)}.
         </p>
       )}
       {interactif && aDeplier && (
