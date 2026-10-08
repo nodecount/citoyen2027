@@ -23,24 +23,52 @@
       {
         "cibles": [
           {
+            "champ": "heritage",
+            "valeurs": [
+              "recu",
+              "a_venir"
+            ]
+          },
+          {
             "champ": "autre",
             "valeurs": [
-              "héritiers d'héritages dépassant 4 millions d'euros"
+              "successions dépassant 4 millions d'euros"
             ]
           }
         ],
-        "dimension": "patrimoine",
+        "dimension": "revenu_disponible",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "une contribution de 10 % sur les héritages dépassant 4 millions d’euros, puis de 10 % supplémentaires au-delà de 13 millions d’euros"
+        "extrait": "contribution de 10 % sur les héritages dépassant 4 millions d’euros"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "recu",
+              "a_venir"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "successions dépassant 13 millions d'euros"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "10 % supplémentaires au-delà de 13 millions d’euros"
       }
     ],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Renforcer la fiscalité sur les successions en instaurant une contribution de 10 % sur les héritages dépassant 4 millions d’euros"
+        "extrait": "une contribution de 10 % sur les héritages dépassant 4 millions d’euros, puis de 10 % supplémentaires au-delà de 13 millions d’euros"
       }
     ]
   },
@@ -64,13 +92,35 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [],
-    "positions": [
+    "effets": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "recu",
+              "a_venir"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "transmissions d'entreprises éligibles au pacte Dutreil"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Abaisser de 75 % à 50 % l’exonération prévue par le pacte Dutreil."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abaisser de 75 % à 50 % l’exonération prévue par le pacte Dutreil"
       }
     ]
   },
@@ -94,13 +144,28 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [],
-    "positions": [
+    "effets": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes ayant recours au démembrement de propriété"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer les avantages fiscaux liés au démembrement de propriété."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les avantages fiscaux liés au démembrement de propriété"
       }
     ]
   },
@@ -130,22 +195,22 @@
           {
             "champ": "autre",
             "valeurs": [
-              "contribuables dont la fortune dépasse 100 millions d'euros"
+              "fortune dépassant 100 millions d'euros"
             ]
           }
         ],
         "dimension": "patrimoine",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer un impôt plancher de 2 % sur le patrimoine des contribuables dont la fortune dépasse 100 millions d’euros"
+        "extrait": "impôt plancher de 2 % sur le patrimoine des contribuables dont la fortune dépasse 100 millions d’euros"
       }
     ],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer un impôt plancher de 2 % sur le patrimoine des contribuables dont la fortune dépasse 100 millions d’euros (taxe Zucman)."
+        "extrait": "un impôt plancher de 2 % sur le patrimoine des contribuables dont la fortune dépasse 100 millions d’euros"
       }
     ]
   },
@@ -169,13 +234,12 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rétablir un ISF avec une dimension climatique, afin de taxer les hauts patrimoines en fonction de leur impact environnemental."
+        "extrait": "Rétablir un ISF avec une dimension climatique, afin de taxer les hauts patrimoines"
       }
     ]
   },
@@ -200,7 +264,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Secteur bancaire & finance",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Orienter le pôle public bancaire (Caisse des dépôts, BPI, …) vers la transition sociale et écologique"
+      }
+    ]
   },
   {
     "id": "tondelier-finances-publiques-007",
@@ -225,10 +296,10 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "ecologie",
-        "position": "renouvelables",
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Proposer un taux zéro pour les projets d’énergie renouvelable."
+        "extrait": "Proposer un taux zéro pour les projets d’énergie renouvelable"
       }
     ]
   },
@@ -253,7 +324,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Secteur bancaire & finance",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire la part des actifs fossiles"
+      }
+    ]
   },
   {
     "id": "tondelier-finances-publiques-009",
@@ -298,8 +376,30 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger les réformes de l’assurance chômage adoptées sous Emmanuel Macron"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger les réformes de l’assurance chômage adoptées sous Emmanuel Macron"
+      }
+    ]
   },
   {
     "id": "tondelier-social-solidarite-002",
@@ -436,13 +536,12 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "effets": [],
     "positions": [
       {
         "sujet": "travail",
         "position": "age_actuel",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abroger les dispositions de la réforme Borne."
+        "extrait": "Abroger les dispositions de la réforme Borne"
       }
     ]
   },
@@ -470,24 +569,24 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "aides_percues",
             "valeurs": [
-              "bénéficiaires du minimum vieillesse"
+              "aspa"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter les minimums vieillesse."
+        "extrait": "Augmenter les minimums vieillesse"
       }
     ],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter les minimums vieillesse."
+        "extrait": "Augmenter les minimums vieillesse"
       }
     ]
   },
@@ -534,8 +633,30 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "retraite"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Indexer le montant des pensions"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Indexer le montant des pensions"
+      }
+    ]
   },
   {
     "id": "tondelier-social-solidarite-011",
@@ -563,22 +684,22 @@
           {
             "champ": "autre",
             "valeurs": [
-              "titulaires de petites retraites"
+              "petites retraites"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Améliorer les petites retraites."
+        "extrait": "Améliorer les petites retraites"
       }
     ],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Améliorer les petites retraites."
+        "extrait": "Améliorer les petites retraites"
       }
     ]
   },
@@ -625,13 +746,28 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "rsa"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Remplacer le RSA par une garantie d’autonomie qui respecte la dignité et les droits des personnes allocataires"
+      }
+    ],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Remplacer le RSA par une garantie d’autonomie qui respecte la dignité et les droits des personnes allocataires."
+        "extrait": "Remplacer le RSA par une garantie d’autonomie qui respecte la dignité et les droits des personnes allocataires"
       }
     ]
   },
@@ -678,7 +814,16 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Plafonner les frais bancaires"
+      }
+    ]
   },
   {
     "id": "tondelier-social-solidarite-016",
@@ -713,15 +858,15 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Revaloriser les APL de 10%."
+        "extrait": "Revaloriser les APL de 10%"
       }
     ],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Revaloriser les APL de 10%."
+        "extrait": "Revaloriser les APL de 10%"
       }
     ]
   },
@@ -791,8 +936,14 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Améliorer les conditions de travail à l’hôpital public."
+      }
+    ]
   },
   {
     "id": "tondelier-social-solidarite-020",
@@ -815,7 +966,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Conditonner le remboursement public des soins dans les cliniques privées."
+      }
+    ]
   },
   {
     "id": "tondelier-social-solidarite-021",
@@ -860,8 +1018,30 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "métiers de la psychiatrie et de la pédopsychiatrie publique"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter les moyens et revaloriser les métiers de la psychiatrie et de la pédopsychiatrie publique"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter les moyens et revaloriser les métiers de la psychiatrie et de la pédopsychiatrie publique."
+      }
+    ]
   },
   {
     "id": "tondelier-social-solidarite-023",
@@ -912,7 +1092,7 @@
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir un remboursement total des soins essentiels."
+        "extrait": "Garantir un remboursement total des soins essentiels"
       }
     ],
     "positions": [
@@ -944,8 +1124,30 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "soignant"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Combler les postes manquants de professionnels du soin et du médico-social"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Combler les postes manquants de professionnels du soin et du médico-social."
+      }
+    ]
   },
   {
     "id": "tondelier-social-solidarite-026",
@@ -967,7 +1169,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir l’accès à l’Aide médicale d’État (AME)."
+      }
+    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -1090,7 +1307,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Transports",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "voiture",
+        "position": "restreindre_voiture",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire adopter une loi de programmation des infrastructures ferroviaires à 10 ans."
+      }
+    ]
   },
   {
     "id": "tondelier-social-solidarite-032",
@@ -1115,8 +1339,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "ecologie",
-        "position": "renouvelables",
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Plafonner le trafic aérien."
       }
@@ -1143,7 +1367,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Transports",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "voiture",
+        "position": "restreindre_voiture",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Doubler le kilométrage des voies cyclables en 3 ans."
+      }
+    ]
   },
   {
     "id": "tondelier-social-solidarite-034",
@@ -1165,8 +1396,14 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Transports",
-    "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "voiture",
+        "position": "restreindre_voiture",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un ticket climat mensuel."
+      }
+    ]
   },
   {
     "id": "tondelier-social-solidarite-035",
@@ -1235,7 +1472,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir l’engagement réel des entreprises en conditionnant les aides publiques à des critères environnementaux et sociaux."
+      }
+    ]
   },
   {
     "id": "tondelier-retraites-travail-002",
@@ -1281,7 +1525,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un prêt à taux zéro pour les projets de décarbonation des PME et ETI."
+      }
+    ]
   },
   {
     "id": "tondelier-retraites-travail-004",
@@ -1303,7 +1554,28 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "entreprises de plus de 250 salariés"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un droit effectif à la participation des travailleurs dans les entreprises de plus de 250 salariés."
+      }
+    ],
     "positions": []
   },
   {
@@ -1326,7 +1598,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Soutenir le droit syndical et les moyens d’auto-organisation des salariés."
+      }
+    ],
     "positions": []
   },
   {
@@ -1372,7 +1659,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter les fonds dédiés à la formation professionnelle et les affecter à l’ensemble des salariés."
+      }
+    ],
     "positions": []
   },
   {
@@ -1441,7 +1743,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "travailleurs exposés aux températures extrêmes"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Protéger les travailleurs face aux températures extrêmes."
+      }
+    ],
     "positions": []
   },
   {
@@ -1472,6 +1789,12 @@
             "valeurs": [
               "sans_emploi"
             ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "chômeurs de longue durée"
+            ]
           }
         ],
         "dimension": "emploi",
@@ -1479,8 +1802,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Instaurer une garantie d’emploi pour les chômeurs longue durée."
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "tondelier-retraites-travail-012",
@@ -1525,7 +1847,14 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "hausse_smic",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter le SMIC à 1600€ en deux ans."
+      }
+    ]
   },
   {
     "id": "tondelier-retraites-travail-014",
@@ -1562,8 +1891,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Indexer le point d’indice des fonctionnaires sur l’inflation."
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "tondelier-retraites-travail-015",
@@ -1609,7 +1937,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place une politique nationale de protection et de développement des continuités écologiques."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-002",
@@ -1632,7 +1967,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer la trajectoire de la Zéro artificialisation nette (ZAN)."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-003",
@@ -1655,7 +1997,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abandonner les projets menaçant les zones humides."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-004",
@@ -1678,7 +2027,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Adopter et financer une stratégie de restauration de la biodiversité."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-005",
@@ -1701,7 +2057,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Refonder le service public de suivi et de protection de la nature."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-006",
@@ -1724,7 +2087,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Défendre, étendre et financer les parcs et les réserves naturels."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-007",
@@ -1747,7 +2117,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire l'ensemble des polluants éternels (PFAS) et des perturbateurs endoctriniens."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-008",
@@ -1792,7 +2169,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "victimes du chlordécone"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "l’indemnisation des victimes du chlordécone"
+      }
+    ],
     "positions": []
   },
   {
@@ -1816,7 +2208,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire l'usage du plomb laminé en France."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-011",
@@ -1839,7 +2238,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Décréter un moratoire sur tous les projets de méga-bassine."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-012",
@@ -1861,7 +2267,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre applicable le droit à l’eau potable."
+      }
+    ],
     "positions": []
   },
   {
@@ -1907,7 +2321,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "chasseurs"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire la chasse le dimanche, les jours fériés et les vacances."
+      }
+    ],
     "positions": []
   },
   {
@@ -1930,8 +2359,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "tondelier-envi-016",
@@ -2000,7 +2428,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer le service public forestier."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-019",
@@ -2119,10 +2554,17 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter de 15 % les salaires des enseignants, en plus de l’inflation"
+        "extrait": "Augmenter de 15 % les salaires des enseignants, en plus de l’inflation, sur la durée du quinquennat."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter de 15 % les salaires des enseignants, en plus de l’inflation, sur la durée du quinquennat."
+      }
+    ]
   },
   {
     "id": "tondelier-education-jeunesse-002",
@@ -2143,24 +2585,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "enfants_scolarises",
-            "valeurs": [
-              "maternelle_primaire"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire à 19 le nombre maximum d’élèves par classe dans les écoles primaires."
-      }
-    ],
-    "positions": []
+    "sous_theme": "Education nationale"
   },
   {
     "id": "tondelier-education-jeunesse-003",

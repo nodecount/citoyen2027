@@ -1,6 +1,7 @@
+import { BASE_INGESTION } from "./base";
 import type { Proposition, Source, StatutProposition } from "../types";
 import {
-  CHAMPS_CIBLES,
+  champsCibles,
   DIMENSIONS_EFFET,
   SENS_EFFET,
   validerEffet,
@@ -45,7 +46,7 @@ export const SCHEMA_PROPOSITION_GENEREE = {
             items: {
               type: "object",
               properties: {
-                champ: { type: "string", enum: [...CHAMPS_CIBLES] },
+                champ: { type: "string", enum: champsCibles(BASE_INGESTION) },
                 valeurs: { type: "array", items: { type: "string" } },
               },
               required: ["champ", "valeurs"],
@@ -118,7 +119,7 @@ export function validerPropositionGeneree(valeur: unknown): valeur is Propositio
 
   if (!Array.isArray(p.effets)) return false;
   const urlsSources = (p.sources as Array<{ url: string }>).map((s) => s.url);
-  if (!p.effets.every((effet) => validerEffet(effet, urlsSources))) return false;
+  if (!p.effets.every((effet) => validerEffet(effet, urlsSources, BASE_INGESTION))) return false;
 
   return true;
 }

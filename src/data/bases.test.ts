@@ -122,7 +122,7 @@ describe.each(listerBases())("base « $id »", (info) => {
 
 function baseAvecMetas(dates: string[]): BaseCharge {
   const metas = Object.fromEntries(dates.map((d, i) => [`c${i}`, { slug: `c${i}`, nom: `C${i}`, parti: "P", sources_officielles: [], date_derniere_maj: d }]));
-  return { info: BASES[0], themes: [], questionnaire: { generales: [], parTheme: [] }, metas, propositions: {}, syntheses: {}, resumes: {}, remarques: {}, resumesRefuses: {}, aVerifier: {} };
+  return { info: BASES[0], themes: [], champs: [], questionnaire: { generales: [], parTheme: [] }, metas, propositions: {}, syntheses: {}, resumes: {}, remarques: {}, resumesRefuses: {}, aVerifier: {} };
 }
 
 describe("resumesManquants", () => {

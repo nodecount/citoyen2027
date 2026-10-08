@@ -22,8 +22,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Appliquer la taxe Zucman."
       }
@@ -72,7 +72,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "50_64"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger la réforme des retraites dite réforme Borne."
+      }
+    ],
     "positions": [
       {
         "sujet": "travail",
@@ -141,7 +156,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire le versement de dividendes aux entreprises qui ne s’engagent pas résolument dans la transition écologique."
+      }
+    ]
   },
   {
     "id": "faure-education-jeunesse-001",
@@ -203,8 +225,30 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "accompagnants d'élèves en situation de handicap (AESH)"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mieux rémunérer et former les accompagnants d’élèves en situation de handicap (AESH)."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mieux rémunérer et former les accompagnants d’élèves en situation de handicap (AESH)."
+      }
+    ]
   },
   {
     "id": "faure-education-jeunesse-003",
@@ -244,7 +288,14 @@
         "extrait": "Garantir la présence d’un psychologue et d’une infirmière scolaires dans chaque établissement."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir la présence d’un psychologue et d’une infirmière scolaires dans chaque établissement."
+      }
+    ]
   },
   {
     "id": "faure-education-jeunesse-004",
@@ -266,7 +317,24 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire",
+              "college",
+              "lycee"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre à chaque élève de participer à une classe de découverte au cours de sa scolarité."
+      }
+    ],
     "positions": []
   },
   {
@@ -290,7 +358,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "ecole_continuite",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Relancer la politique d'éducation prioritaire."
+      }
+    ]
   },
   {
     "id": "faure-education-jeunesse-006",

@@ -21,7 +21,8 @@ export function valeursDuProfil(profil: ProfilPartiel, champ: string): string[] 
   if (champ === "enfants_a_charge") {
     const n = profil.nombre_enfants;
     if (typeof n !== "number" || !Number.isFinite(n)) return null;
-    return [n > 0 ? "au_moins_un" : "aucun"];
+    // Trois enfants ou plus : les deux valeurs conviennent (une mesure ciblant « au moins un » vise aussi ces familles).
+    return n >= 3 ? ["au_moins_un", "trois_ou_plus"] : n > 0 ? ["au_moins_un"] : ["aucun"];
   }
   const valeur = profil[champ];
   if (Array.isArray(valeur)) return valeur.length > 0 ? valeur : null;

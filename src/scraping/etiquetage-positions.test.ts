@@ -27,7 +27,7 @@ describe("catalogue donné au modèle", () => {
       }
     }
     expect(systeme).not.toContain("{{");
-    expect(descriptionSujets()).toContain("Écologie et énergie");
+    expect(descriptionSujets()).toContain("Nucléaire");
   });
   it("le schéma de réponse n'accepte que des sujets et positions du catalogue", () => {
     const item = schemaEtiquetage().properties.resultats.items.properties.positions.items.properties;
@@ -41,7 +41,7 @@ describe("catalogue donné au modèle", () => {
 });
 
 describe("controlerReponsePositions", () => {
-  const bonne = { sujet: "ecologie", position: "sortir_nucleaire", extrait: "Sortir progressivement du nucléaire d'ici 2050" };
+  const bonne = { sujet: "nucleaire", position: "sortir_nucleaire", extrait: "Sortir progressivement du nucléaire d'ici 2050" };
   it("accepte une étiquette dont l'extrait est retrouvé mot pour mot", () => {
     const r = controlerReponsePositions({ resultats: [{ id: "a", positions: [bonne] }] }, [A]);
     expect(r.get("a")).toEqual({ statut: "etiquetee", positions: [{ ...bonne, source_url: "https://exemple.fr/a" }] });
@@ -57,7 +57,7 @@ describe("controlerReponsePositions", () => {
   });
   it("rejette deux positions sur un même sujet", () => {
     const r = controlerReponsePositions(
-      { resultats: [{ id: "a", positions: [bonne, { sujet: "ecologie", position: "garder_nucleaire", extrait: "fermer les réacteurs les plus anciens" }] }] },
+      { resultats: [{ id: "a", positions: [bonne, { sujet: "nucleaire", position: "garder_nucleaire", extrait: "fermer les réacteurs les plus anciens" }] }] },
       [A],
     );
     expect((r.get("a") as { raison: string }).raison).toContain("même sujet");
@@ -76,7 +76,7 @@ describe("controlerReponsePositions", () => {
 });
 
 describe("appliquerVerdictsPositions", () => {
-  const etiquetee = { statut: "etiquetee" as const, positions: [{ sujet: "ecologie", position: "sortir_nucleaire", source_url: "u", extrait: "e".repeat(20) }] };
+  const etiquetee = { statut: "etiquetee" as const, positions: [{ sujet: "nucleaire", position: "sortir_nucleaire", source_url: "u", extrait: "e".repeat(20) }] };
   it("PASS garde l'étiquette ; FAIL ou verdict absent la retire avec la raison", () => {
     const entrees = new Map([["a", etiquetee], ["b", etiquetee], ["c", etiquetee]]);
     const final = appliquerVerdictsPositions(entrees, { verdicts: [{ id: "a", verdict: "PASS" }, { id: "b", verdict: "FAIL", raison: "sens inversé" }] });
@@ -102,7 +102,7 @@ describe("etiqueterGroupe", () => {
         }
         return sortie({
           resultats: [
-            { id: "a", positions: [{ sujet: "ecologie", position: "sortir_nucleaire", extrait: "Sortir progressivement du nucléaire d'ici 2050" }] },
+            { id: "a", positions: [{ sujet: "nucleaire", position: "sortir_nucleaire", extrait: "Sortir progressivement du nucléaire d'ici 2050" }] },
             { id: "b", positions: [{ sujet: "travail", position: "travailler_plus", extrait: "Relever l'âge légal de départ à la retraite à 65 ans" }] },
             { id: "c", positions: [] },
           ],

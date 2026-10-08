@@ -1,71 +1,82 @@
 [
   {
     "groupe": 0,
-    "empreinte": "c9f6222ca2aeba39",
-    "date": "2026-10-01",
+    "empreinte": "07ee1fd16c325792",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 10,
-    "sans_position": 10,
+    "etiquetees": 16,
+    "sans_position": 6,
     "rejetees": [
       {
-        "id": "philippe-finances-publiques-002",
-        "raison": "relecture : Une règle limitant le déficit ne précise pas si elle passe par une baisse d'impôts/dépenses ou par une hausse de recettes, donc la position baisse_impots n'est pas établie par le texte."
+        "id": "philippe-finances-publiques-007",
+        "raison": "relecture : L'augmentation des plafonds d'exonération sur les donations est une mesure générale sur la transmission de patrimoine, non spécifique aux très hauts patrimoines visés par le sujet ultra_riches."
       },
       {
-        "id": "philippe-finances-publiques-004",
-        "raison": "relecture : Interdire de financer les dépenses courantes par la dette ne dit pas si cela se traduit par une baisse d'impôts ou de dépenses, l'étiquette n'est pas directement fondée."
-      },
-      {
-        "id": "philippe-finances-publiques-005",
-        "raison": "relecture : Ramener le déficit à 2% du PIB peut s'obtenir par hausse de recettes comme par baisse de dépenses/impôts, le texte ne fonde pas spécifiquement baisse_impots."
+        "id": "philippe-finances-publiques-008",
+        "raison": "relecture : Favoriser la transmission anticipée du patrimoine vise tous les patrimoines, pas spécifiquement les ultra-riches comme l'exige la définition du sujet."
       },
       {
         "id": "philippe-finances-publiques-010",
-        "raison": "relecture : S'engager à ne pas créer de nouvel impôt n'est pas une baisse d'impôts ni de dépense publique, cela ne correspond pas à la définition de baisse_impots."
-      },
-      {
-        "id": "philippe-interieur-justice-004",
-        "raison": "relecture : L'expulsion d'étrangers délinquants est une mesure d'immigration/administrative et non un durcissement des peines ou des moyens judiciaires, l'étiquette securite/repression n'est pas fondée."
+        "raison": "relecture : S'engager à ne pas créer de nouvel impôt est un maintien du statu quo, pas une baisse d'impôts ou de dépense publique telle que définie."
       }
     ],
-    "cout_reference_usd": 0.0798,
+    "cout_reference_usd": 0.1309,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "266e524b8054f54f",
-    "date": "2026-10-01",
+    "empreinte": "994b7d69c11ab896",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 9,
-    "sans_position": 16,
-    "rejetees": [],
-    "cout_reference_usd": 0.0473,
+    "sans_position": 15,
+    "rejetees": [
+      {
+        "id": "philippe-envi-002",
+        "raison": "relecture : La climatisation de bâtiments publics est une mesure d'adaptation à la chaleur, pas un développement des énergies renouvelables ni une mesure de sobriété/transition écologique au sens de la définition."
+      }
+    ],
+    "cout_reference_usd": 0.0904,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "474f39c062dac8b6",
-    "date": "2026-10-01",
+    "empreinte": "82e2bfef8421cbea",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 7,
-    "sans_position": 18,
-    "rejetees": [],
-    "cout_reference_usd": 0.059,
+    "etiquetees": 8,
+    "sans_position": 16,
+    "rejetees": [
+      {
+        "id": "philippe-gouvernance-republique-006",
+        "raison": "relecture : Le consentement aux algorithmes de recommandation concerne la régulation des plateformes, pas la surveillance étatique ou la vie privée face à l'État telle que définie par le sujet."
+      }
+    ],
+    "cout_reference_usd": 0.0594,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "35e0cfeab99f29d5",
-    "date": "2026-10-01",
+    "empreinte": "b35f3f1c4bc193a5",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 20,
-    "etiquetees": 1,
-    "sans_position": 19,
-    "rejetees": [],
-    "cout_reference_usd": 0.0248,
+    "etiquetees": 11,
+    "sans_position": 7,
+    "rejetees": [
+      {
+        "id": "philippe-reformes-etat-003",
+        "raison": "relecture : Regrouper/privatiser des agences ne dit pas explicitement supprimer des postes de fonctionnaires ou geler des embauches, c'est une déduction."
+      },
+      {
+        "id": "philippe-education-jeunesse-004",
+        "raison": "relecture : Donner de l'autonomie aux chefs d'établissement sur la discipline n'établit pas un durcissement des sanctions, ce n'est pas l'exigence/sanction elle-même."
+      }
+    ],
+    "cout_reference_usd": 0.0713,
     "appels": 2
   }
 ]

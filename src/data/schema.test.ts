@@ -1,10 +1,10 @@
 import { describe, it, expect } from "vitest";
 import themesRaw from "../../data/bases/officielle/themes.json";
-import profilSchemaRaw from "../../data/profils-schema.json";
+import { champsDeBase } from "../schemaBase";
 import type { Theme, ChampProfil } from "../types";
 
 const themes: Theme[] = themesRaw as Theme[];
-const profilSchema: ChampProfil[] = profilSchemaRaw as ChampProfil[];
+const profilSchema: ChampProfil[] = champsDeBase("officielle");
 
 const THEME_IDS = [
   "fiscalite",
@@ -58,7 +58,7 @@ describe("themes.json", () => {
 
 // Les questions du formulaire (catalogue) : la validité fine de chaque question et de sa pertinence par base est
 // vérifiée dans src/questionnaire.test.ts. Ici, les invariants du fichier lui-même.
-describe("profils-schema.json", () => {
+describe("profils-schema.json (base officielle)", () => {
   const ids = profilSchema.map((f) => f.id);
 
   it("garde les questions historiques du profil, avec leurs identifiants (les effets déjà structurés les ciblent)", () => {

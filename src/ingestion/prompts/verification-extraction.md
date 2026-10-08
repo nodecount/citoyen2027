@@ -26,7 +26,9 @@ Pour chaque mesure, vérifie que :
    emploi global…) ou tout sens que le passage n'établit pas.
 4. **Datation et attribution** : chaque source a une année ; si elle est **antérieure à 2026**, le
    `resume_factuel` doit dire « position de <année> » et ne jamais présenter la mesure comme un engagement de
-   2027 ; si le document émane du parti plutôt que du candidat, la mesure lui est attribuée.
+   2027 ; si le document émane du **parti du candidat** (programme, convention ou motion du parti dont il est le candidat),
+   la mesure est attribuée au candidat lui-même : ce n'est jamais un motif de FAIL. Seule une mesure tirée d'une
+   autre organisation que son parti (association, think tank, autre parti) est refusée.
 5. **Neutralité** : `titre` et `resume_factuel` ne contiennent aucun vocabulaire évaluatif (favorable,
    défavorable, avantageux, injuste, ambitieux…) ni slogan non cité.
 

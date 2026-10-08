@@ -1,7 +1,8 @@
 import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { CHAMPS_CIBLES, DIMENSIONS_EFFET, SENS_EFFET, validerEffet, type CritereCible, type DimensionEffet, type Effet, type SensEffet } from "../effets";
+import { BASE_INGESTION } from "./base";
+import { champsCibles, DIMENSIONS_EFFET, SENS_EFFET, validerEffet, type CritereCible, type DimensionEffet, type Effet, type SensEffet } from "../effets";
 import type { CandidatMeta, Source, StatutProposition } from "../types";
 import { appeler } from "./appel";
 import { verifierChiffresPresents } from "./checks";
@@ -83,7 +84,7 @@ export const SCHEMA_EXTRACTION = {
               items: {
                 type: "object",
                 properties: {
-                  champ: { type: "string", enum: [...CHAMPS_CIBLES] },
+                  champ: { type: "string", enum: champsCibles(BASE_INGESTION) },
                   valeurs: { type: "array", items: { type: "string" } },
                 },
                 required: ["champ", "valeurs"],
@@ -120,7 +121,7 @@ export function construireRequeteExtraction(
   const system = remplirGabarit(gabarit, {
     CANDIDAT: meta.nom,
     DATE: new Date().toISOString().slice(0, 10),
-    CHAMPS_PROFIL: descriptionChampsProfil(),
+    CHAMPS_PROFIL: descriptionChampsProfil(BASE_INGESTION),
   });
   const titres =
     titresExistants.length > 0
@@ -176,7 +177,7 @@ export function validerMesureModele(valeur: unknown, idsDocuments: string[]): va
     if (!preuveValide(e, idsDocuments)) return false;
     const effet = e as unknown as EffetModele;
     // On réutilise les règles de validerEffet (cibles, dimension, sens, longueur de l'extrait).
-    if (!validerEffet({ cibles: effet.cibles, dimension: effet.dimension, sens: effet.sens, source_url: "x", extrait: effet.extrait }, ["x"])) {
+    if (!validerEffet({ cibles: effet.cibles, dimension: effet.dimension, sens: effet.sens, source_url: "x", extrait: effet.extrait }, ["x"], BASE_INGESTION)) {
       return false;
     }
   }
@@ -193,6 +194,24 @@ export type Assemblage = { ok: true; proposition: PropositionGeneree; fenetres: 
 
 function debut(extrait: string): string {
   return extrait.length > 70 ? `${extrait.slice(0, 70)}…` : extrait;
+}
+
+// Année à partir de laquelle une source est « de la campagne » : une mesure qui ne s'appuie que sur des documents plus
+// anciens est une position ancienne encore défendue, jamais un engagement de 2027 (CLAUDE.md). La consigne d'extraction
+// le demande au modèle, qui l'oublie parfois : c'est donc le CODE qui l'écrit, à partir de l'année structurée des sources.
+export const ANNEE_DE_REFERENCE = 2026;
+
+// Ajoute « Position de <année> : » devant le résumé quand TOUTES les sources sont antérieures à ANNEE_DE_REFERENCE et que le
+// résumé ne l'a pas déjà dit (« position de 2025 »). Dès qu'une source de l'année de référence existe, elle prime : rien
+// n'est ajouté. Ne touche pas à l'attribution (candidat ou parti) : elle reste contrôlée par la relecture.
+export function avecMentionDeDate(resume: string, sources: Pick<Source, "annee">[]): string {
+  const annees = [...new Set(sources.flatMap((s) => (s.annee === undefined ? [] : [s.annee])))].sort((a, b) => a - b);
+  const derniere = annees[annees.length - 1];
+  if (derniere === undefined || derniere >= ANNEE_DE_REFERENCE) return resume;
+  const dejaDit = annees.every((a) => new RegExp(`positions? de (?:[^.:;]*\\b)?${a}\\b`, "i").test(resume));
+  if (dejaDit) return resume;
+  const libelle = annees.length === 1 ? `${derniere}` : `${annees.slice(0, -1).join(", ")} et ${derniere}`;
+  return `${annees.length === 1 ? "Position" : "Positions"} de ${libelle} : ${resume}`;
 }
 
 // Contrôles déterministes + assemblage : chaque extrait doit être retrouvé mot pour mot dans le texte
@@ -256,7 +275,7 @@ export function assemblerProposition(mesure: MesureModele, corpus: Corpus, dateI
     fenetres,
     proposition: {
       titre: mesure.titre,
-      resume_factuel: mesure.resume_factuel,
+      resume_factuel: avecMentionDeDate(mesure.resume_factuel, sources),
       sources,
       chiffrage_disponible: mesure.chiffrage_disponible,
       hypotheses_calcul: mesure.hypotheses_calcul,

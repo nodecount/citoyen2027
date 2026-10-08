@@ -1,7 +1,8 @@
 import { describe, expect, it, vi } from "vitest";
 import { construireRequeteGeneration, creerClient, genererPropositions, genererPropositionsDetaillee } from "./generate";
 import { DOMAINES_INSTITUTIONNELS } from "./domaines";
-import { VALEURS_PAR_CHAMP } from "../effets";
+import { valeursParChamp } from "../schemaBase";
+const VALEURS_PAR_CHAMP = valeursParChamp("officielle");
 import themesData from "../../data/bases/officielle/themes.json";
 import type { CandidatMeta } from "../types";
 import Anthropic from "@anthropic-ai/sdk";

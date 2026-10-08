@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
-import profilSchema from "../../data/profils-schema.json";
-import { VALEURS_PAR_CHAMP } from "../effets";
+import { champsDeBase, valeursParChamp } from "../schemaBase";
+import { BASE_INGESTION } from "./base";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { CandidatMeta } from "../types";
@@ -41,13 +41,13 @@ const SCHEMA_VERDICTS = {
 
 // Libellés exacts des critères du profil : sans eux, le relecteur juge « apprenti » plus étroit qu'« apprentis et
 // alternants » alors que le formulaire dit « Apprenti(e) ou alternant(e) ».
-// La liste vient de VALEURS_PAR_CHAMP (tous les critères que les effets peuvent cibler, y compris les champs dérivés
+// La liste vient de valeursParChamp (tous les critères que les effets peuvent cibler, y compris les champs dérivés
 // comme `enfants_a_charge`) : le relecteur ne doit jamais croire qu'un critère valide « n'existe pas ».
 export function descriptionLibellesProfil(): string {
-  const schema = new Map((profilSchema as Array<{ id: string; label: string; libelles?: Record<string, string> }>).map((c) => [c.id, c]));
-  const lignes = Object.entries(VALEURS_PAR_CHAMP).map(([champ, valeurs]) => {
+  const schema = new Map(champsDeBase(BASE_INGESTION).map((c) => [c.id, c]));
+  const lignes = Object.entries(valeursParChamp(BASE_INGESTION)).map(([champ, valeurs]) => {
     const def = schema.get(champ);
-    const nom = def?.label ?? (champ === "enfants_a_charge" ? "Enfants à charge (déduit du nombre d'enfants)" : champ);
+    const nom = def?.label ?? (champ === "enfants_a_charge" ? "Enfants à charge (déduit du nombre d'enfants ; trois_ou_plus = au moins trois)" : champ);
     return `- \`${champ}\` (${nom}) : ${valeurs.map((v) => `\`${v}\` = ${def?.libelles?.[v] ?? v}`).join(" ; ")}`;
   });
   lignes.push("- `autre` : critère de secours pour un public que le profil ne sait pas décrire (voir plus haut).");

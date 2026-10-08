@@ -1,32 +1,28 @@
 [
   {
     "groupe": 0,
-    "empreinte": "0aef0d6a7d7e7c39",
-    "date": "2026-09-30",
+    "empreinte": "a3e187cda6e622cf",
+    "date": "2026-10-05",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 5,
-    "sans_position": 12,
+    "etiquetees": 6,
+    "sans_position": 11,
     "rejetees": [
       {
         "id": "glucksmann-finances-publiques-004",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Supprimer les exonérations de TVA et de taxe sur le kérosène… »"
       },
       {
-        "id": "glucksmann-finances-publiques-008",
-        "raison": "relecture : La mesure principale est une baisse des cotisations sociales (baisse_impots), la taxation des héritages n'étant qu'un mode de financement annexe, donc l'étiquette redistribution ne correspond pas à l'action première décrite."
-      },
-      {
         "id": "glucksmann-interieur-justice-001",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Créer des voies légales et sécurisées d’immigration de trava… »"
       },
       {
-        "id": "glucksmann-interieur-justice-003",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Généraliser la carte de séjour pluriannuelle en en faisant l… »"
+        "id": "glucksmann-interieur-justice-002",
+        "raison": "relecture : Le texte se contente d'abroger une loi sans en préciser le contenu ; déduire 'ouverture' suppose de savoir que la loi immigration de 2024 était restrictive, ce qui relève d'une interprétation externe au texte."
       },
       {
-        "id": "glucksmann-interieur-justice-004",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « appliquer celles délivrées »"
+        "id": "glucksmann-interieur-justice-003",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Généraliser la carte de séjour pluriannuelle en en faisant l… »"
       },
       {
         "id": "glucksmann-interieur-justice-005",
@@ -37,76 +33,132 @@
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Renforcer la lutte contre le terrorisme, juger en France les… »"
       },
       {
-        "id": "glucksmann-social-solidarite-003",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Créer un fonds territorial de prévention, permettant de fina… »"
+        "id": "glucksmann-interieur-justice-012",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Augmenter les effectifs des services judiciaires et pénitent… »"
+      },
+      {
+        "id": "glucksmann-social-solidarite-002",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « en finir avec la tarification à l’acte à l’hôpital, proposer… »"
       }
     ],
-    "cout_reference_usd": 0.0624,
+    "cout_reference_usd": 0.0949,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "6959b27f7ddfd44d",
-    "date": "2026-09-30",
+    "empreinte": "67fd9d3123517e15",
+    "date": "2026-10-05",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 0,
-    "sans_position": 24,
+    "etiquetees": 5,
+    "sans_position": 11,
     "rejetees": [
       {
+        "id": "glucksmann-social-solidarite-014",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « accélérer la construction de logements sociaux en rehaussant… »"
+      },
+      {
+        "id": "glucksmann-social-solidarite-017",
+        "raison": "relecture : La loi Kasbarian concerne la procédure d'expulsion pour squat/impayés, pas l'encadrement des loyers ou le logement social ; l'étiquette 'encadrer_logement' n'est pas fondée par cet extrait."
+      },
+      {
+        "id": "glucksmann-social-solidarite-018",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Réguler et maîtriser davantage les meublés touristiques comm… »"
+      },
+      {
+        "id": "glucksmann-social-solidarite-019",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « démultiplier les aides à SNCF Réseau afin de moderniser les … »"
+      },
+      {
+        "id": "glucksmann-social-solidarite-020",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Relancer les trains de nuit, accélérer les LGV et les liaiso… »"
+      },
+      {
+        "id": "glucksmann-social-solidarite-021",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Mettre en place un Ticket climat : un titre de transport uni… »"
+      },
+      {
+        "id": "glucksmann-social-solidarite-022",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Développer les tramways, voies réservées aux bus, services e… »"
+      },
+      {
+        "id": "glucksmann-social-solidarite-023",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Créer un service public de transport rural pour désenclaver … »"
+      },
+      {
         "id": "glucksmann-social-solidarite-024",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « taxation des plus gros pollueurs individuels (jets privés, y… »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Repenser le système autoroutier, faire un moratoire sur les … »"
       }
     ],
-    "cout_reference_usd": 0.0283,
-    "appels": 1
+    "cout_reference_usd": 0.085,
+    "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "d1b9807d4a752955",
-    "date": "2026-09-30",
+    "empreinte": "9ba0ee04e83f686c",
+    "date": "2026-10-05",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 3,
-    "sans_position": 21,
+    "etiquetees": 5,
+    "sans_position": 16,
     "rejetees": [
+      {
+        "id": "glucksmann-retraites-travail-016",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Renforcer nos outils de défense commerciale pour activer des… »"
+      },
       {
         "id": "glucksmann-envi-001",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Lancer un grand plan d’investissement pluriannuel dans toute… »"
+      },
+      {
+        "id": "glucksmann-envi-005",
+        "raison": "relecture : Annuler une hausse de taxe spécifique sur l'électricité n'établit pas une position générale de baisse d'impôts/dépense publique au sens de la définition."
+      },
+      {
+        "id": "glucksmann-envi-006",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Devenir souverain par la sobriété, le réusage, la réparation… »"
       }
     ],
-    "cout_reference_usd": 0.0261,
+    "cout_reference_usd": 0.0466,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "1c4f387f95d923b0",
-    "date": "2026-09-30",
+    "empreinte": "2ac95d1fec745dc6",
+    "date": "2026-10-05",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 2,
-    "sans_position": 22,
+    "etiquetees": 8,
+    "sans_position": 15,
     "rejetees": [
+      {
+        "id": "glucksmann-envi-032",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Éliminer les produits chimiques dangereux en interdisant les… »"
+      },
       {
         "id": "glucksmann-europe-international-002",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Augmenter massivement le budget de l’Union européenne pour l… »"
       }
     ],
-    "cout_reference_usd": 0.0312,
+    "cout_reference_usd": 0.063,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "d64e2c5c17b2c6c2",
-    "date": "2026-09-30",
+    "empreinte": "2dc04d96f65a9ff4",
+    "date": "2026-10-05",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 4,
-    "sans_position": 15,
+    "etiquetees": 8,
+    "sans_position": 12,
     "rejetees": [
       {
-        "id": "glucksmann-gouvernance-republique-006",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Ouvrir le droit de vote à 16 ans et pour les étrangers extra… »"
+        "id": "glucksmann-gouvernance-republique-003",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Instaurer la proportionnelle, de préférence par circonscript… »"
+      },
+      {
+        "id": "glucksmann-gouvernance-republique-005",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Lancer en parallèle une grande convention citoyenne qui jett… »"
       },
       {
         "id": "glucksmann-gouvernance-republique-013",
@@ -117,36 +169,32 @@
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « qui pilotera un plan national d’investissement dans les infr… »"
       },
       {
-        "id": "glucksmann-gouvernance-republique-016",
-        "raison": "relecture : Un campus formant conjointement codeurs, juristes et scientifiques vise autant l'encadrement que le développement de l'IA, le texte ne défend pas clairement un simple encouragement à 'plus d'IA'."
-      },
-      {
-        "id": "glucksmann-gouvernance-republique-017",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Faire de l’IA un levier de transformation des services publi… »"
-      },
-      {
         "id": "glucksmann-gouvernance-republique-018",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « qui mettra en place un cadre strict incluant la vérification… »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Créer une Autorité indépendante de protection des mineurs en… »"
       }
     ],
-    "cout_reference_usd": 0.0493,
+    "cout_reference_usd": 0.0504,
     "appels": 2
   },
   {
     "groupe": 5,
-    "empreinte": "215dcca2711decd0",
-    "date": "2026-09-30",
+    "empreinte": "ffa42405a683fe74",
+    "date": "2026-10-05",
     "modele": "claude-sonnet-5",
     "propositions": 21,
-    "etiquetees": 2,
-    "sans_position": 18,
+    "etiquetees": 7,
+    "sans_position": 12,
     "rejetees": [
+      {
+        "id": "glucksmann-education-jeunesse-007",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Revaloriser le salaire de tous les enseignants de manière co… »"
+      },
       {
         "id": "glucksmann-defense-006",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Proposer à nos partenaires de l’UE d’étendre la dissuasion n… »"
       }
     ],
-    "cout_reference_usd": 0.0231,
+    "cout_reference_usd": 0.049,
     "appels": 2
   }
 ]

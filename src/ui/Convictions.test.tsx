@@ -1,3 +1,4 @@
+import { SUJETS_CONVICTION } from "../positions";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import type { ConstatIntegrite } from "../data/integrite";
@@ -9,24 +10,27 @@ import { construireCards } from "./cards";
 import { BlocConvictions, convictionsVisibles, integritesVisibles, PanneauConvictions } from "./Convictions";
 import { CONVICTIONS_VIDES } from "./memoireConvictions";
 import { VueThemes } from "./VueThemes";
-import { construireQuestionnaire, CHAMPS_PROFIL } from "../questionnaire";
+import { PropositionsBase } from "./PropositionsContexte";
+import { construireQuestionnaire } from "../questionnaire";
+import { champsDeBase } from "../schemaBase";
+const CHAMPS_PROFIL = champsDeBase("officielle");
 
-const prop = (positions: NonNullable<Proposition["positions"]> = [{ sujet: "ecologie", position: "garder_nucleaire", source_url: "https://exemple.fr/a", extrait: "extrait-de-test suffisamment long" }]): Proposition => ({ id: "a", candidat: "x", theme: "fiscalite", titre: "titre-mesure", resume_factuel: "", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-09-29", positions });
+const prop = (positions: NonNullable<Proposition["positions"]> = [{ sujet: "nucleaire", position: "garder_nucleaire", source_url: "https://exemple.fr/a", extrait: "extrait-de-test suffisamment long" }]): Proposition => ({ id: "a", candidat: "x", theme: "fiscalite", titre: "titre-mesure", resume_factuel: "", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-09-29", positions });
 const src = { type: "primaire" as const, nom: "Legifrance", annee: 2026, url: "https://www.legifrance.gouv.fr/decision-x" };
 const RECENSEE: ConstatIntegrite = { etat: "recensee", verifieLe: "2026-09-29", condamnations: [{ nature: "nature-x", juridiction: "juridiction-x", date_decision: "2025-06-10", peine: "peine-x", sources: [src, { ...src, type: "secondaire", url: "https://presse.fr/y" }] }] };
 const AUCUNE: ConstatIntegrite = { etat: "aucune_recensee", verifieLe: "2026-09-29", sources: [src] };
-const NUCLEAIRE = { ecologie: "garder_nucleaire" };
+const NUCLEAIRE = { nucleaire: "garder_nucleaire" };
 
 const rendre = (c: Parameters<typeof PanneauConvictions>[0]) => renderToStaticMarkup(<PanneauConvictions {...c} />);
 
 describe("BlocConvictions", () => {
-  it("propose les huit sujets, chacun avec « Pas d'avis » et ses positions, et l'exemplarité en interrupteur", () => {
+  it("propose tous les sujets du catalogue, chacun avec « Pas d'avis » et ses positions, et l'exemplarité en interrupteur", () => {
     const html = renderToStaticMarkup(<BlocConvictions convictions={CONVICTIONS_VIDES} onChange={() => {}} />);
     expect(html).toContain("Mes convictions");
-    for (const t of ["Écologie et énergie", "Sortir du nucléaire", "Garder et développer le nucléaire", "Intelligence artificielle", "Encourager davantage l&#x27;IA", "Encadrer et limiter l&#x27;IA", "Europe", "Immigration", "Fiscalité et dépense publique", "Sécurité et justice", "Travail et retraites", "Libertés et société"]) expect(html, t).toContain(t);
-    expect((html.match(/Pas d&#x27;avis<\/option>/g) ?? []).length).toBe(8);
+    for (const t of ["Nucléaire", "Énergies renouvelables et transition écologique", "Sortir du nucléaire", "Garder et développer le nucléaire", "Intelligence artificielle", "Encourager davantage l&#x27;IA", "Encadrer et limiter l&#x27;IA", "Europe", "Immigration", "Fiscalité et dépense publique", "Sécurité et justice", "Travail et retraites", "Libertés et société"]) expect(html, t).toContain(t);
+    expect((html.match(/Pas d&#x27;avis<\/option>/g) ?? []).length).toBe(SUJETS_CONVICTION.length);
     expect(html).toContain('role="switch"');
-    expect(html).toContain("sans condamnation définitive");
+    expect(html).toContain("sans condamnation");
   });
   it("ne cible plus de groupe précis (âge, statut, territoire) : uniquement des sujets", () => {
     const html = renderToStaticMarkup(<BlocConvictions convictions={CONVICTIONS_VIDES} onChange={() => {}} />);
@@ -36,20 +40,20 @@ describe("BlocConvictions", () => {
   it("présélectionne exactement ce que le visiteur a choisi et compte les positions", () => {
     const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "encadrer_ia" }, exemplarite: false }} onChange={() => {}} />);
     expect(html).toMatch(/<option value="encadrer_ia" selected="">/);
-    expect((html.match(/selected=""/g) ?? []).length).toBe(8); // 1 choix + les sept autres sujets, restés sur « Pas d'avis »
-    expect(html).toContain("1 position sur 8 sujets");
+    expect((html.match(/selected=""/g) ?? []).length).toBe(SUJETS_CONVICTION.length); // 1 choix + les sept autres sujets, restés sur « Pas d'avis »
+    expect(html).toContain(`1 position sur ${SUJETS_CONVICTION.length} sujets`);
   });
   it("l'effacement est confirmé : la modale est fermée par défaut", () => {
     const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "plus_ia" }, exemplarite: false }} onChange={() => {}} />);
     expect(html).toContain("Effacer mes convictions");
     expect(html).not.toContain("alertdialog");
   });
-  it("« sans condamnation définitive » cochée sans position : dit qu'elle ne change rien", () => {
+  it("« sans condamnation » cochée sans position : dit qu'elle ne change rien", () => {
     const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: {}, exemplarite: true }} onChange={() => {}} />);
     expect(html).toContain("ne change rien");
     expect(html).toContain("au moins une position");
   });
-  it("« sans condamnation définitive » cochée avec une position : dit ce qu'elle fait (écarter), et que les faits ne s'affichent pas", () => {
+  it("« sans condamnation » cochée avec une position : dit ce qu'elle fait (écarter), et que les faits ne s'affichent pas", () => {
     const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "plus_ia" }, exemplarite: true }} onChange={() => {}} />);
     expect(html).toContain("écartés du résultat");
     expect(html).toContain("ne sont pas affichés");
@@ -72,16 +76,16 @@ describe("PanneauConvictions", () => {
     expect(html).not.toMatch(/score|note|classement/i);
   });
   it("une mesure pour une autre position du même sujet : opposé à la position choisie", () => {
-    const html = rendre({ propositions: [prop([{ sujet: "ecologie", position: "sortir_nucleaire", source_url: "https://exemple.fr/a", extrait: "extrait-de-test suffisamment long" }])], convictions: { positions: NUCLEAIRE, exemplarite: false }, integrite: null });
+    const html = rendre({ propositions: [prop([{ sujet: "nucleaire", position: "sortir_nucleaire", source_url: "https://exemple.fr/a", extrait: "extrait-de-test suffisamment long" }])], convictions: { positions: NUCLEAIRE, exemplarite: false }, integrite: null });
     expect(html).toContain("opposé à votre position");
     expect(html).toContain("▼");
   });
   it("un constat par sujet choisi : une mesure sur l'écologie ne dit rien sur l'IA", () => {
     const html = rendre({ propositions: [prop()], convictions: { positions: { ...NUCLEAIRE, ia: "plus_ia" }, exemplarite: false }, integrite: null });
-    const items = html.split("<li").filter((i) => i.includes("Écologie et énergie :") || i.includes("Intelligence artificielle :"));
-    const ecologie = items.find((i) => i.includes("Écologie et énergie :"))!;
+    const items = html.split("<li").filter((i) => i.includes("Nucléaire :") || i.includes("Intelligence artificielle :"));
+    const nucleaire = items.find((i) => i.includes("Nucléaire :"))!;
     const ia = items.find((i) => i.includes("Intelligence artificielle :"))!;
-    expect(ecologie).toContain("proche de votre position");
+    expect(nucleaire).toContain("proche de votre position");
     expect(ia).toContain("pas de mesure sur ce sujet");
     expect(ia).not.toContain("proche de votre position");
   });
@@ -114,11 +118,11 @@ describe("PanneauConvictions", () => {
   it("dates en clair et libellé au pluriel quand il y a plusieurs condamnations", () => {
     const deux: ConstatIntegrite = { ...RECENSEE, condamnations: [RECENSEE.condamnations[0], { ...RECENSEE.condamnations[0], nature: "nature-y" }] } as ConstatIntegrite;
     const html = rendre({ propositions: [], convictions: { positions: {}, exemplarite: true }, integrite: deux });
-    expect(html).toContain("Condamnations définitives recensées");
+    expect(html).toContain("Condamnations recensées");
     expect(html).toContain("10 juin 2025");
     expect(html).not.toContain("2025-06-10");
     expect(html).toContain("29 septembre 2026");
-    expect(rendre({ propositions: [], convictions: { positions: {}, exemplarite: true }, integrite: RECENSEE })).toContain("Condamnation définitive recensée");
+    expect(rendre({ propositions: [], convictions: { positions: {}, exemplarite: true }, integrite: RECENSEE })).toContain("Condamnation recensée");
   });
   it("aucune condamnation recensée : date en clair aussi", () => {
     expect(rendre({ propositions: [], convictions: { positions: {}, exemplarite: true }, integrite: AUCUNE })).toContain("29 septembre 2026");
@@ -189,5 +193,24 @@ describe("détail d'un candidat ouvert", () => {
   });
   it("convictions vides (exploration) : pas de panneau du tout", () => {
     expect(detail(CONVICTIONS_VIDES, null)).not.toContain('aria-label="Convictions"');
+  });
+});
+
+describe("compteur de mesures sous la position choisie", () => {
+  const etiquette = (sujet: string, position: string) => ({ sujet, position, source_url: "https://exemple.fr/a", extrait: "extrait-de-test suffisamment long" });
+  const avec = (positions: Record<string, string>) =>
+    renderToStaticMarkup(
+      <PropositionsBase.Provider value={[prop([etiquette("immigration", "restriction")]), { ...prop([etiquette("immigration", "restriction")]), id: "b" }]}>
+        <BlocConvictions convictions={{ positions, exemplarite: false }} onChange={() => {}} />
+      </PropositionsBase.Provider>,
+    );
+  it("rien sous « Pas d'avis »", () => {
+    expect(avec({})).not.toContain("question-impact");
+  });
+  it("sous la position choisie : le nombre de mesures qui la défendent", () => {
+    expect(avec({ immigration: "restriction" })).toContain("2 mesures des programmes défendent cette position.");
+  });
+  it("zéro mesure : le dit clairement", () => {
+    expect(avec({ immigration: "ouverture" })).toContain("Aucune mesure des programmes ne défend cette position.");
   });
 });

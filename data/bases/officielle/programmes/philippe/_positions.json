@@ -1,0 +1,102 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "c0c24665a2be51fc",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 2,
+    "sans_position": 16,
+    "rejetees": [
+      {
+        "id": "philippe-fisc-002",
+        "raison": "relecture : Un moratoire empêchant toute nouvelle norme ou impôt n'est pas une baisse d'impôts ni une réduction de dépense publique, c'est un gel ; la position baisse_impots n'est pas établie."
+      },
+      {
+        "id": "philippe-fisc-003",
+        "raison": "relecture : Le texte vise une hausse du salaire net via un changement d'assiette de financement, pas un refus de hausse du SMIC/salaires ni une baisse de cotisations explicite ; le lien avec moderer_salaires est une interprétation du mécanisme non précisé."
+      },
+      {
+        "id": "philippe-fisc-007",
+        "raison": "relecture : Refuser de taxer davantage les entreprises est un refus de hausse, pas une baisse d'impôt ni une réduction de dépense publique telle que définie par baisse_impots."
+      },
+      {
+        "id": "philippe-fisc-008",
+        "raison": "relecture : L'extrait mêle baisse de dépenses sociales et suppression de niches fiscales (qui équivaut à une hausse d'impôt) sans engagement ferme de non-augmentation, ce qui ne fonde pas clairement baisse_impots."
+      },
+      {
+        "id": "philippe-pa-001",
+        "raison": "relecture : Le texte vise une hausse du salaire net via un changement d'assiette de financement non précisé, ce qui ne fonde pas directement moderer_salaires (refus de hausse imposée)."
+      },
+      {
+        "id": "philippe-pa-007",
+        "raison": "relecture : L'extrait associe baisse de dépenses sociales et suppression de niches fiscales (hausse d'impôt effective) sans garantie de non-augmentation, ce qui ne fonde pas clairement baisse_impots."
+      },
+      {
+        "id": "philippe-trav-002",
+        "raison": "relecture : Le texte vise une hausse du salaire net via un changement d'assiette de financement non précisé, ce qui ne fonde pas directement moderer_salaires."
+      }
+    ],
+    "cout_reference_usd": 0.1352,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "7430ef82179d6c20",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 11,
+    "sans_position": 13,
+    "rejetees": [
+      {
+        "id": "philippe-educ-002",
+        "raison": "relecture : Le texte décrit une révision du recrutement et de la formation des enseignants, ce qui relève d'une réforme et non d'une simple consolidation du cadre actuel ; l'étiquette ecole_continuite contredit le contenu réformateur de l'extrait."
+      }
+    ],
+    "cout_reference_usd": 0.0878,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "c1d6172453f90755",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 15,
+    "sans_position": 7,
+    "rejetees": [
+      {
+        "id": "philippe-secu-011",
+        "raison": "relecture : Le recouvrement forcé d'amendes sur les prestations sociales n'est pas une conditionnalité des aides (contrepartie d'activité ou durcissement de l'indemnisation chômage) mais une saisie pour dette, ce qui ne correspond pas à la définition de conditionner_aides."
+      },
+      {
+        "id": "philippe-secu-015",
+        "raison": "relecture : L'information systématique des employeurs publics sur une poursuite pénale n'est pas de la vidéosurveillance, reconnaissance faciale ou accès aux données/messageries au sens de la définition de plus_surveillance, c'est un partage administratif ciblé."
+      },
+      {
+        "id": "philippe-secu-016",
+        "raison": "relecture : Le recouvrement forcé des amendes sur les prestations sociales ne correspond pas à la définition de conditionner_aides (contrepartie d'activité ou durcissement de l'indemnisation chômage)."
+      }
+    ],
+    "cout_reference_usd": 0.0917,
+    "appels": 2
+  },
+  {
+    "groupe": 3,
+    "empreinte": "e46697a15429ffb3",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 14,
+    "etiquetees": 4,
+    "sans_position": 9,
+    "rejetees": [
+      {
+        "id": "philippe-lib-006",
+        "raison": "relecture : Il s'agit d'une vérification d'antécédents à la demande de parents pour protéger un enfant, pas d'une extension de la surveillance de masse (vidéosurveillance, reconnaissance faciale, accès aux messageries) visée par la définition du sujet."
+      }
+    ],
+    "cout_reference_usd": 0.0472,
+    "appels": 2
+  }
+]

@@ -2,89 +2,108 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "f3d9f1b200e225d0",
-    "date": "2026-09-27",
+    "empreinte": "d406e08bb492477f",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 3,
-    "avec_effets": 2,
+    "avec_effets": 1,
     "sans_effet": 1,
-    "rejetees": [],
-    "cout_reference_usd": 0.0367,
+    "rejetees": [
+      {
+        "id": "tondelier-education-jeunesse-002",
+        "raison": "relecture : La réduction du nombre d'élèves par classe est une mesure d'organisation scolaire qui ne constitue pas directement une hausse d'accès aux services, c'est un effet déduit d'un mécanisme supposé (amélioration de l'encadrement)."
+      }
+    ],
+    "cout_reference_usd": 0.0436,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "3397b3719e622fae",
-    "date": "2026-09-27",
+    "empreinte": "ac1e9f45d4f7819a",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 21,
-    "avec_effets": 1,
-    "sans_effet": 20,
+    "avec_effets": 4,
+    "sans_effet": 17,
     "rejetees": [],
-    "cout_reference_usd": 0.0416,
+    "cout_reference_usd": 0.0613,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "5f8fd44bdd53281e",
-    "date": "2026-09-27",
+    "empreinte": "eefab76765a61199",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 9,
-    "avec_effets": 2,
-    "sans_effet": 7,
-    "rejetees": [],
-    "cout_reference_usd": 0.0409,
+    "avec_effets": 4,
+    "sans_effet": 4,
+    "rejetees": [
+      {
+        "id": "tondelier-finances-publiques-005",
+        "raison": "relecture : Le texte dit que la taxation dépend de l'impact environnemental du patrimoine, donc une baisse uniforme pour tous les hauts patrimoines n'est pas fondée : le sens devrait être indéterminé selon le profil."
+      }
+    ],
+    "cout_reference_usd": 0.0623,
     "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "5aac66e5482bf178",
-    "date": "2026-09-27",
+    "empreinte": "f85481f8275c1822",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 15,
-    "avec_effets": 2,
-    "sans_effet": 12,
+    "avec_effets": 6,
+    "sans_effet": 8,
     "rejetees": [
       {
         "id": "tondelier-retraites-travail-013",
-        "raison": "relecture : Le périmètre est élargi : la cible « salarie » vise tous les salariés alors que le texte ne concerne que les salariés rémunérés au SMIC (la seconde cible, fidèle au texte, suffit)."
+        "raison": "relecture : Le ciblage par tranche de revenus 'moins_1200' n'est pas fondé par le texte, qui parle d'un SMIC porté à 1600€ et non d'un seuil de revenu de 1200€."
       }
     ],
-    "cout_reference_usd": 0.0453,
+    "cout_reference_usd": 0.0616,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "f65a8bebb85ab154",
-    "date": "2026-09-27",
+    "empreinte": "16398948435bb64b",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 4,
-    "sans_effet": 20,
+    "avec_effets": 10,
+    "sans_effet": 13,
     "rejetees": [
       {
-        "id": "tondelier-social-solidarite-015",
-        "raison": "relecture : Cibles vides (tout citoyen) alors que le plafonnement des frais bancaires ne vise que les clients concernés par ces frais ; le texte ne précise pas le public et l'effet sur le coût de la vie est supposé."
+        "id": "tondelier-social-solidarite-007",
+        "raison": "relecture : Le texte ne mentionne pas une tranche d'âge 50-64 ans spécifique, c'est un périmètre élargi non fondé par l'extrait."
+      },
+      {
+        "id": "tondelier-social-solidarite-019",
+        "raison": "relecture : Améliorer les conditions de travail ne fonde pas une hausse du volume d'emploi, qui est une dimension différente non abordée par le texte."
       }
     ],
-    "cout_reference_usd": 0.0555,
+    "cout_reference_usd": 0.0866,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 1,
-    "empreinte": "b756073c7dd332b8",
-    "date": "2026-09-27",
+    "empreinte": "637fcff9cd102f14",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 11,
-    "avec_effets": 0,
-    "sans_effet": 11,
-    "rejetees": [],
-    "cout_reference_usd": 0.0273,
-    "appels": 1
+    "avec_effets": 1,
+    "sans_effet": 9,
+    "rejetees": [
+      {
+        "id": "tondelier-social-solidarite-034",
+        "raison": "relecture : Le texte ne précise ni le montant, ni le mécanisme, ni les bénéficiaires du 'ticket climat' : l'extrait ne fonde pas une hausse du revenu disponible, c'est une déduction non étayée."
+      }
+    ],
+    "cout_reference_usd": 0.0295,
+    "appels": 2
   }
 ]

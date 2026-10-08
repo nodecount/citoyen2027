@@ -1,106 +1,135 @@
 [
   {
     "groupe": 0,
-    "empreinte": "1ba945ea59ae29bb",
-    "date": "2026-10-01",
+    "empreinte": "18558d260d296844",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 16,
-    "sans_position": 9,
-    "rejetees": [],
-    "cout_reference_usd": 0.0844,
+    "etiquetees": 12,
+    "sans_position": 8,
+    "rejetees": [
+      {
+        "id": "retailleau-finances-publiques-007",
+        "raison": "relecture : Le relèvement du seuil d'exonération des donations est une mesure fiscale générale, pas ciblée sur les très hauts patrimoines ou revenus, donc ne fonde pas l'étiquette ultra_riches."
+      },
+      {
+        "id": "retailleau-finances-publiques-013",
+        "raison": "relecture : L'extrait ne porte pas sur l'âge ou la durée de travail mais sur la constitution d'un fonds de capital, il ne fonde pas la position travailler_plus."
+      },
+      {
+        "id": "retailleau-interieur-justice-001",
+        "raison": "relecture : Le texte dit 'permettre une immigration de travail', ce qui va dans le sens de l'ouverture et non de la restriction malgré la mention d'un contrôle accru."
+      },
+      {
+        "id": "retailleau-interieur-justice-008",
+        "raison": "relecture : Le bouclage de quartiers et la mobilisation de blindés relèvent de la répression sécuritaire (sujet securite) et non de la surveillance des données/vie privée."
+      },
+      {
+        "id": "retailleau-interieur-justice-012",
+        "raison": "relecture : Réformer la Constitution va dans le sens de nouvelles_institutions et non du maintien des institutions actuelles."
+      }
+    ],
+    "cout_reference_usd": 0.0705,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "e60db9a4c1398275",
-    "date": "2026-10-01",
+    "empreinte": "f42c4e91221dd1e4",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 13,
-    "sans_position": 11,
+    "etiquetees": 19,
+    "sans_position": 3,
     "rejetees": [
       {
-        "id": "retailleau-social-solidarite-019",
-        "raison": "relecture : L'extrait décrit un effet de second ordre (production de logements) et non la mesure fiscale elle-même qui fonderait baisse_impots."
+        "id": "retailleau-social-solidarite-006",
+        "raison": "relecture : La mesure restreint l'accès au logement social selon l'activité professionnelle : elle relève du sujet logement, pas du sujet aides_sociales (RSA/chômage)."
+      },
+      {
+        "id": "retailleau-social-solidarite-009",
+        "raison": "relecture : La déduction d'intérêts d'emprunt vise les acheteurs de résidence principale, pas une libération de l'offre de logement locatif/construction ; le lien avec liberer_offre_logement n'est pas établi par le texte."
+      },
+      {
+        "id": "retailleau-social-solidarite-020",
+        "raison": "relecture : La déduction d'intérêts d'emprunt pour les familles est une mesure fiscale pour les emprunteurs, pas une libération de l'offre de logement ; elle relève plutôt de la fiscalité (baisse_impots)."
       }
     ],
-    "cout_reference_usd": 0.0777,
+    "cout_reference_usd": 0.1063,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "93abf0b12de8ecdb",
-    "date": "2026-10-01",
+    "empreinte": "6118b336906d3c9e",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 7,
-    "sans_position": 15,
+    "sans_position": 14,
     "rejetees": [
       {
+        "id": "retailleau-social-solidarite-026",
+        "raison": "relecture : La mesure établit un ordre de priorité d'accès au logement social existant, elle ne relève pas de l'encadrement des loyers ni du développement du logement social défini par 'encadrer_logement'."
+      },
+      {
+        "id": "retailleau-social-solidarite-029",
+        "raison": "relecture : Supprimer une exonération fiscale des HLM revient à augmenter leur fiscalité, ce qui est l'inverse de 'baisse_impots'."
+      },
+      {
         "id": "retailleau-retraites-travail-002",
-        "raison": "relecture : L'extrait ne cite que le gain budgétaire, qui est un effet secondaire de la fusion de dispositifs sociaux, et non une action directe de baisse d'impôt ou de dépense."
+        "raison": "relecture : Le texte décrit une fusion de dispositifs pour rendre le travail plus incitatif, mais ne mentionne pas de contrepartie d'activité imposée ni de durcissement des contrôles, ce qui ne fonde pas 'conditionner_aides'."
       },
       {
-        "id": "retailleau-retraites-travail-003",
-        "raison": "relecture : L'extrait décrit un objectif et un constat statistique sans mesure concrète d'allongement du temps ou de l'âge de travail, donc ne fonde pas travailler_plus."
-      },
-      {
-        "id": "retailleau-retraites-travail-007",
-        "raison": "relecture : L'extrait sur les 40 Md€ d'économies est une conséquence budgétaire indirecte du report de l'âge de la retraite, pas une mesure fiscale directe de baisse d'impôts ou de dépense."
+        "id": "retailleau-retraites-travail-004",
+        "raison": "relecture : Le texte renvoie vaguement à un 'décret Attal' et des 'mesures complémentaires' sans préciser leur contenu, il faut une connaissance extérieure pour en déduire un durcissement de l'indemnisation."
       }
     ],
-    "cout_reference_usd": 0.0738,
+    "cout_reference_usd": 0.0616,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "549e0dd7d6f62795",
-    "date": "2026-10-01",
+    "empreinte": "988ac96d8fe3e4b8",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 8,
-    "sans_position": 15,
-    "rejetees": [
-      {
-        "id": "retailleau-envi-003",
-        "raison": "relecture : Le texte vante une baisse de facture grâce au nucléaire existant, mais ne décrit aucune mesure de maintien ou développement du parc nucléaire, c'est un effet de second ordre sur le prix."
-      },
-      {
-        "id": "retailleau-envi-021",
-        "raison": "relecture : Un différé d'imposition est un report de paiement et non une baisse d'impôt, l'extrait ne fonde donc pas clairement la position baisse_impots."
-      }
-    ],
-    "cout_reference_usd": 0.0646,
+    "etiquetees": 17,
+    "sans_position": 8,
+    "rejetees": [],
+    "cout_reference_usd": 0.086,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "4c5ae81489c86447",
-    "date": "2026-10-01",
+    "empreinte": "8613d6d84f5f4614",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 12,
-    "sans_position": 13,
-    "rejetees": [],
-    "cout_reference_usd": 0.0744,
+    "etiquetees": 17,
+    "sans_position": 7,
+    "rejetees": [
+      {
+        "id": "retailleau-gouvernance-republique-004",
+        "raison": "relecture : La mesure vise la souveraineté technologique/numérique via l'hébergement européen des données, pas une reprise de compétences à l'UE au profit de la souveraineté nationale française."
+      }
+    ],
+    "cout_reference_usd": 0.0892,
     "appels": 2
   },
   {
     "groupe": 5,
-    "empreinte": "97a4c89e50937131",
-    "date": "2026-10-01",
+    "empreinte": "ef30495bf9033492",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "etiquetees": 3,
-    "sans_position": 9,
+    "etiquetees": 9,
+    "sans_position": 3,
     "rejetees": [
       {
-        "id": "retailleau-defense-005",
-        "raison": "relecture : La mesure concerne l'usage militaire de l'IA et des drones pour la défense, pas une position sur la régulation/promotion générale de l'IA en tant que sujet de société."
+        "id": "retailleau-defense-002",
+        "raison": "relecture : Le sujet nucleaire porte sur la production d'électricité nucléaire, pas sur la dissuasion nucléaire militaire : mauvais sujet."
       }
     ],
-    "cout_reference_usd": 0.0227,
+    "cout_reference_usd": 0.0409,
     "appels": 2
   }
 ]

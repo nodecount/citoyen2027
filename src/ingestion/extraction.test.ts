@@ -1,9 +1,10 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { VALEURS_PAR_CHAMP } from "../effets";
+import { valeursParChamp } from "../schemaBase";
+const VALEURS_PAR_CHAMP = valeursParChamp("officielle");
 import type { CandidatMeta } from "../types";
 import { construireCorpus } from "./corpus";
 import type { TexteDocument } from "./documents";
-import { SCHEMA_EXTRACTION, assemblerProposition, construireRequeteExtraction, extraireMesures, validerMesureModele, type MesureModele } from "./extraction";
+import { SCHEMA_EXTRACTION, assemblerProposition, avecMentionDeDate, construireRequeteExtraction, extraireMesures, validerMesureModele, type MesureModele } from "./extraction";
 import { validerPropositionGeneree } from "./schema";
 
 const META: CandidatMeta = { slug: "test", nom: "Candidat Test", parti: "Parti Test", sources_officielles: [], date_derniere_maj: "2026-09-26" };
@@ -210,5 +211,30 @@ describe("extraireMesures", () => {
     await expect(appel(client(texte("pas du JSON")))).rejects.toThrow("JSON");
     await expect(appel(client(texte({ pas: "un tableau" })))).rejects.toThrow("tableau");
     await expect(appel(client({ ...texte([]), stop_reason: "max_tokens" }))).rejects.toThrow("TRONQUÉE");
+  });
+});
+
+describe("avecMentionDeDate : la date d'une position ancienne est écrite par le code", () => {
+  it("source unique antérieure à 2026 : « Position de 2025 : » est ajouté", () => {
+    expect(avecMentionDeDate("Gabriel Attal propose un bilan psy.", [{ annee: 2025 }])).toBe("Position de 2025 : Gabriel Attal propose un bilan psy.");
+  });
+  it("plusieurs sources anciennes : toutes les années, sans doublon", () => {
+    expect(avecMentionDeDate("Le candidat propose X.", [{ annee: 2025 }, { annee: 2022 }, { annee: 2025 }])).toBe("Positions de 2022 et 2025 : Le candidat propose X.");
+  });
+  it("le modèle l'a déjà dit : rien n'est ajouté (jamais deux fois)", () => {
+    expect(avecMentionDeDate("Position de 2025 : le candidat propose X.", [{ annee: 2025 }])).toBe("Position de 2025 : le candidat propose X.");
+    expect(avecMentionDeDate("Le candidat propose X (position de 2022 du parti).", [{ annee: 2022 }])).toBe("Le candidat propose X (position de 2022 du parti).");
+  });
+  it("une source de 2026 prime : aucune mention ajoutée, même avec une source plus ancienne", () => {
+    expect(avecMentionDeDate("Le candidat propose X.", [{ annee: 2026 }])).toBe("Le candidat propose X.");
+    expect(avecMentionDeDate("Le candidat propose X.", [{ annee: 2022 }, { annee: 2026 }])).toBe("Le candidat propose X.");
+  });
+  it("sans source : inchangé", () => {
+    expect(avecMentionDeDate("Le candidat propose X.", [])).toBe("Le candidat propose X.");
+  });
+  it("à l'assemblage : une mesure appuyée sur le seul document de 2022 reçoit la mention", () => {
+    const r = assemblerProposition(mesure({ preuves: [{ document: "page", extrait: "baisse de la TVA sur l'énergie" }], hypotheses_calcul: "", chiffrage_disponible: false }), CORPUS, "2026-09-26");
+    if (!r.ok) throw new Error(r.raison);
+    expect(r.proposition.resume_factuel.startsWith("Position de 2022 : ")).toBe(true);
   });
 });

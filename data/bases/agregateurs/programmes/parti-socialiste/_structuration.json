@@ -2,128 +2,138 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "8c16033b32c2d801",
-    "date": "2026-09-27",
+    "empreinte": "daad3c1396c90c65",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 3,
     "avec_effets": 1,
-    "sans_effet": 2,
-    "rejetees": [],
-    "cout_reference_usd": 0.0345,
+    "sans_effet": 1,
+    "rejetees": [
+      {
+        "id": "parti-socialiste-education-jeunesse-001",
+        "raison": "relecture : L'effet emploi sur les enseignants est déduit d'un mécanisme supposé (besoin de recrutement) que le texte ne mentionne pas explicitement."
+      }
+    ],
+    "cout_reference_usd": 0.0458,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "ea9c229e597efb0c",
-    "date": "2026-09-27",
+    "empreinte": "160c323d42d42da4",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 19,
     "avec_effets": 2,
     "sans_effet": 17,
     "rejetees": [],
-    "cout_reference_usd": 0.045,
+    "cout_reference_usd": 0.0505,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "3506dee4509a21bf",
-    "date": "2026-09-27",
+    "empreinte": "625697d3bb511747",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 9,
-    "avec_effets": 1,
-    "sans_effet": 6,
+    "avec_effets": 3,
+    "sans_effet": 3,
     "rejetees": [
       {
-        "id": "parti-socialiste-finances-publiques-007",
-        "raison": "relecture : Le texte ne précise ni le mécanisme ni le public ; la baisse du coût de la vie découle d'une fiscalité supposée répercutée sur les prix, sans cible définie."
+        "id": "parti-socialiste-finances-publiques-005",
+        "raison": "relecture : Le texte vise 'les plus hauts salaires' sans seuil précis, alors que la cible 'plus_5000' introduit un seuil chiffré non mentionné."
       },
       {
         "id": "parti-socialiste-finances-publiques-008",
-        "raison": "relecture : La cible tranche_patrimoine « plus_1_3m » élargit le périmètre à des patrimoines bien inférieurs aux 100 millions visés par le texte."
+        "raison": "relecture : Le texte cible les patrimoines supérieurs à 100 millions d'euros, alors que la cible 'plus_1_3m' élargit considérablement le périmètre à des patrimoines bien moindres."
+      },
+      {
+        "id": "parti-socialiste-finances-publiques-009",
+        "raison": "relecture : Le texte vise les 'grandes successions' alors que la cible retenue (héritage à venir, sans restriction de montant) élargit le périmètre à toutes les successions."
       }
     ],
-    "cout_reference_usd": 0.0447,
+    "cout_reference_usd": 0.0628,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "e6af8c56d1347e31",
-    "date": "2026-09-27",
+    "empreinte": "3ed3da728dddba86",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 1,
     "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.034,
+    "cout_reference_usd": 0.0481,
     "appels": 2
   },
   {
     "theme": "reformes-etat",
     "groupe": 0,
-    "empreinte": "b22c092587f0c9a2",
-    "date": "2026-09-27",
+    "empreinte": "9855192db376ea2d",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 6,
     "avec_effets": 0,
-    "sans_effet": 6,
-    "rejetees": [],
-    "cout_reference_usd": 0.0263,
-    "appels": 1
+    "sans_effet": 5,
+    "rejetees": [
+      {
+        "id": "parti-socialiste-reformes-etat-002",
+        "raison": "relecture : La dimension 'emploi' en baisse est erronée : le texte décrit une réduction du temps de travail, pas une perte d'emploi."
+      }
+    ],
+    "cout_reference_usd": 0.0455,
+    "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "6a81781a02b4a112",
-    "date": "2026-09-27",
+    "empreinte": "caf5a5e56b89900d",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 7,
     "avec_effets": 0,
     "sans_effet": 7,
     "rejetees": [],
-    "cout_reference_usd": 0.0262,
+    "cout_reference_usd": 0.0313,
     "appels": 1
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "01a613bd80acf6bd",
-    "date": "2026-09-27",
+    "empreinte": "803fb6c3a95f97e3",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 2,
-    "sans_effet": 22,
+    "avec_effets": 10,
+    "sans_effet": 14,
     "rejetees": [
       {
-        "id": "parti-socialiste-social-solidarite-003",
-        "raison": "relecture : La tarification sociale selon le quotient familial ne vise que les familles modestes, or les cibles couvrent tous les enfants scolarisés sans distinction de revenu (périmètre élargi), et le coût baisse seulement pour certains."
+        "id": "parti-socialiste-social-solidarite-018",
+        "raison": "relecture : La mesure vise explicitement les établissements scolaires et universitaires, donc le public concerné est les élèves/étudiants et non l'ensemble des citoyens (cibles vide = périmètre élargi)."
       }
     ],
-    "cout_reference_usd": 0.0486,
+    "cout_reference_usd": 0.0666,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 1,
-    "empreinte": "059e1b6ea74b0ea5",
-    "date": "2026-09-27",
+    "empreinte": "0cd12e06de5dd3c9",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 3,
-    "avec_effets": 1,
+    "avec_effets": 2,
     "sans_effet": 0,
     "rejetees": [
       {
-        "id": "parti-socialiste-social-solidarite-027",
-        "raison": "relecture : Le texte vise l'accès à la propriété en général (BRS, PTZ) sans limiter aux personnes ayant un projet d'achat, et la dimension « acces_aux_services » ne correspond pas à un accès à un service; la cible et la grandeur ne sont pas fidèles au texte."
-      },
-      {
-        "id": "parti-socialiste-social-solidarite-028",
-        "raison": "relecture : Le texte ne dit pas que le patrimoine des locataires augmente : c'est un mécanisme supposé (déduction des loyers du prix d'achat), et la cible combine projet d'achat ET locataire alors que le texte vise ceux qui accèdent à la propriété en leasing."
+        "id": "parti-socialiste-social-solidarite-026",
+        "raison": "relecture : Le texte dit seulement stopper une diminution (statu quo), ce qui n'est pas une hausse du revenu disponible mais l'absence de baisse supplémentaire."
       }
     ],
-    "cout_reference_usd": 0.0226,
+    "cout_reference_usd": 0.0274,
     "appels": 2
   }
 ]

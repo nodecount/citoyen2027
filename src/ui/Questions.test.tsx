@@ -2,6 +2,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import type { ChampProfil } from "../types";
 import PageQuestionsGenerales from "./PageQuestionsGenerales";
+import { PropositionsBase } from "./PropositionsContexte";
 import { ChampQuestion, SectionQuestions } from "./Questions";
 
 const ENUM: ChampProfil = { id: "logement", label: "Statut de logement", type: "enum", options: ["locataire", "proprietaire"], libelles: { locataire: "Locataire", proprietaire: "Propriétaire" }, finalite: "Locataires et propriétaires ne sont pas concernés pareil." };
@@ -75,7 +76,7 @@ describe("SectionQuestions", () => {
 
 describe("PageQuestionsGenerales", () => {
   const rendre = (profil = {}) =>
-    renderToStaticMarkup(<PageQuestionsGenerales questions={[ENUM, NOMBRE]} profilInitial={profil} onValider={() => {}} onAnnuler={() => {}} />);
+    renderToStaticMarkup(<PageQuestionsGenerales champs={[ENUM, NOMBRE]} questions={[ENUM, NOMBRE]} profilInitial={profil} onValider={() => {}} onAnnuler={() => {}} />);
 
   it("annonce que tout est facultatif, que rien n'est envoyé, et que valider fait apparaître les indicateurs", () => {
     const html = rendre();
@@ -94,5 +95,42 @@ describe("PageQuestionsGenerales", () => {
 
   it("ne rend aucune question obligatoire", () => {
     expect(rendre()).not.toContain("required");
+  });
+});
+
+describe("compteur de mesures sous la réponse", () => {
+  const mesure = {
+    id: "m1",
+    candidat: "x",
+    theme: "logement",
+    titre: "Mesure",
+    resume_factuel: "",
+    sources: [],
+    chiffrage_disponible: false,
+    hypotheses_calcul: "",
+    statut: "complet" as const,
+    date_derniere_verification: "2026-10-05",
+    effets: [{ cibles: [{ champ: "logement", valeurs: ["locataire"] }], dimension: "revenu_disponible" as const, sens: "hausse" as const, source_url: "u", extrait: "extrait de test suffisamment long" }],
+  };
+  const avecMesures = (profil: object) =>
+    renderToStaticMarkup(
+      <PropositionsBase.Provider value={[mesure, { ...mesure, id: "m2" }]}>
+        <ChampQuestion champ={ENUM} profil={profil} onReponse={() => {}} idPrefixe="t" />
+      </PropositionsBase.Provider>,
+    );
+
+  it("n'affiche rien tant que la question n'a pas de réponse", () => {
+    expect(avecMesures({})).not.toContain("question-impact");
+  });
+  it("une fois répondue : le nombre de mesures concernées, sous la réponse", () => {
+    const html = avecMesures({ logement: "locataire" });
+    expect(html).toContain("2 mesures des programmes concernent cette réponse.");
+    expect(html.indexOf("</select>")).toBeLessThan(html.indexOf("question-impact"));
+  });
+  it("dit clairement quand aucune mesure ne concerne la réponse", () => {
+    expect(avecMesures({ logement: "proprietaire" })).toContain("Aucune mesure des programmes ne concerne cette réponse.");
+  });
+  it("sans fournisseur de mesures (hors page du simulateur) : pas de compteur", () => {
+    expect(champ(ENUM, { logement: "locataire" })).not.toContain("question-impact");
   });
 });

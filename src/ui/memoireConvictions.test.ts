@@ -20,8 +20,8 @@ afterEach(() => vi.unstubAllGlobals());
 describe("aller-retour dans le navigateur", () => {
   it("mémorise puis relit les convictions", () => {
     faussePage();
-    memoriserConvictions({ positions: { ecologie: "garder_nucleaire" }, exemplarite: true });
-    expect(lireConvictions()).toEqual({ positions: { ecologie: "garder_nucleaire" }, exemplarite: true });
+    memoriserConvictions({ positions: { nucleaire: "garder_nucleaire" }, exemplarite: true });
+    expect(lireConvictions()).toEqual({ positions: { nucleaire: "garder_nucleaire" }, exemplarite: true });
   });
   it("effacer (convictions vides) supprime la clé : plus rien n'est gardé", () => {
     const stockage = faussePage();
@@ -44,13 +44,13 @@ describe("aller-retour dans le navigateur", () => {
 
 describe("assainirConvictions", () => {
   it("garde les positions connues et l'exemplarité", () => {
-    expect(assainirConvictions({ positions: { ecologie: "sortir_nucleaire", ia: "encadrer_ia" }, exemplarite: true })).toEqual({ positions: { ecologie: "sortir_nucleaire", ia: "encadrer_ia" }, exemplarite: true });
+    expect(assainirConvictions({ positions: { nucleaire: "sortir_nucleaire", ia: "encadrer_ia" }, exemplarite: true })).toEqual({ positions: { nucleaire: "sortir_nucleaire", ia: "encadrer_ia" }, exemplarite: true });
   });
   it("écarte un sujet ou une position disparus du catalogue, sans erreur", () => {
-    expect(assainirConvictions({ positions: { ecologie: "sortir_nucleaire", inconnu: "x", ia: "inventee" }, exemplarite: false }).positions).toEqual({ ecologie: "sortir_nucleaire" });
+    expect(assainirConvictions({ positions: { nucleaire: "sortir_nucleaire", inconnu: "x", ia: "inventee" }, exemplarite: false }).positions).toEqual({ nucleaire: "sortir_nucleaire" });
   });
   it("une position d'un autre sujet n'est pas acceptée", () => {
-    expect(assainirConvictions({ positions: { ecologie: "plus_ia" } }).positions).toEqual({});
+    expect(assainirConvictions({ positions: { nucleaire: "plus_ia" } }).positions).toEqual({});
   });
   it("ignore les anciens choix « par groupes » d'une version précédente", () => {
     expect(assainirConvictions({ groupes: ["tranche_age:moins_30"], exemplarite: true })).toEqual({ positions: {}, exemplarite: true });

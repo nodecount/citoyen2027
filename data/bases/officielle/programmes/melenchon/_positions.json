@@ -1,0 +1,213 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "ffd6039a31752b91",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 16,
+    "sans_position": 9,
+    "rejetees": [],
+    "cout_reference_usd": 0.1232,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "bb6eb9205311573e",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 10,
+    "sans_position": 15,
+    "rejetees": [],
+    "cout_reference_usd": 0.1087,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "a88e1f4cee233c1b",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 9,
+    "sans_position": 12,
+    "rejetees": [
+      {
+        "id": "melenchon-trav-033",
+        "raison": "relecture : L'extrait porte sur la cotisation des revenus d'intéressement/participation/épargne salariale et des revenus financiers d'entreprises, ce qui concerne le financement des retraites et non spécifiquement une taxation des très hauts patrimoines ou revenus individuels ; mauvais sujet (devrait relever de fiscalite/redistribution, pas ultra_riches)."
+      },
+      {
+        "id": "melenchon-trav-034",
+        "raison": "relecture : L'extrait concerne l'indexation des retraites sur les salaires, un mécanisme de calcul des pensions, et ne fonde pas une position de hausse du SMIC ou des salaires eux-mêmes ; mauvais sujet."
+      },
+      {
+        "id": "melenchon-retr-004",
+        "raison": "relecture : L'extrait porte sur la cotisation des revenus d'intéressement/participation/épargne salariale et des revenus financiers d'entreprises pour financer les retraites, pas sur une taxation des très hauts patrimoines ou revenus individuels ; mauvais sujet."
+      },
+      {
+        "id": "melenchon-retr-005",
+        "raison": "relecture : L'extrait concerne l'indexation des retraites sur les salaires, un mécanisme de calcul des pensions, et ne fonde pas une position de hausse du SMIC ou des salaires ; mauvais sujet."
+      }
+    ],
+    "cout_reference_usd": 0.1236,
+    "appels": 2
+  },
+  {
+    "groupe": 3,
+    "empreinte": "4a5c478c34659afa",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 12,
+    "sans_position": 8,
+    "rejetees": [
+      {
+        "id": "melenchon-logt-001",
+        "raison": "relecture : L'interdiction d'expulsion sans relogement ne correspond à aucun des critères définissant encadrer_logement (loyers, logement social, logements vacants, locations touristiques)."
+      },
+      {
+        "id": "melenchon-logt-002",
+        "raison": "relecture : Une garantie universelle des loyers contre les impayés n'est pas un encadrement des loyers ni du logement social au sens de la définition."
+      },
+      {
+        "id": "melenchon-logt-006",
+        "raison": "relecture : La taxation des transactions immobilières élevées ne correspond pas aux critères de la position (loyers, logement social, logements vacants, locations touristiques)."
+      },
+      {
+        "id": "melenchon-logt-007",
+        "raison": "relecture : L'obligation de rénovation des passoires thermiques avant location ne relève pas des critères définissant encadrer_logement."
+      },
+      {
+        "id": "melenchon-logt-008",
+        "raison": "relecture : Le permis de louer et le plan de rénovation ne correspondent pas précisément aux critères listés pour encadrer_logement."
+      }
+    ],
+    "cout_reference_usd": 0.0898,
+    "appels": 2
+  },
+  {
+    "groupe": 4,
+    "empreinte": "efd87fb622465ba9",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 15,
+    "sans_position": 7,
+    "rejetees": [
+      {
+        "id": "melenchon-sante-016",
+        "raison": "relecture : L'extrait ne parle pas de minima sociaux ou d'assurance chômage mais d'une extension générale du principe de Sécurité sociale, ce qui relève plutôt de l'organisation de la santé/protection sociale que du sujet aides_sociales défini par le RSA et le chômage."
+      },
+      {
+        "id": "melenchon-educ-006",
+        "raison": "relecture : Abroger les contre-réformes du lycée, du collège et de la voie professionnelle constitue une refonte structurelle, ce qui correspond à reformer_ecole et non à ecole_continuite."
+      },
+      {
+        "id": "melenchon-educ-008",
+        "raison": "relecture : La mesure porte sur l'alimentation des cantines scolaires, pas sur des normes agricoles directes (pesticides, soutien à la production bio), c'est un effet de second ordre sur l'agriculture."
+      }
+    ],
+    "cout_reference_usd": 0.0893,
+    "appels": 2
+  },
+  {
+    "groupe": 5,
+    "empreinte": "659a129c0cb09170",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 12,
+    "sans_position": 11,
+    "rejetees": [
+      {
+        "id": "melenchon-educ-016",
+        "raison": "relecture : Construire des logements étudiants ne relève pas d'encadrer_logement (encadrement des loyers/logement social privé), c'est une mesure de construction de logements publics spécifiques aux étudiants, pas clairement fondée par cette position."
+      },
+      {
+        "id": "melenchon-secu-015",
+        "raison": "relecture : La mesure concerne l'organisation de la police de proximité et le démantèlement de BAC/BRAV-M, pas le droit de manifester ni l'encadrement des manifestations ; le sujet est inadéquat."
+      }
+    ],
+    "cout_reference_usd": 0.0785,
+    "appels": 2
+  },
+  {
+    "groupe": 6,
+    "empreinte": "46ab5ad9fe02d2ad",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 11,
+    "sans_position": 11,
+    "rejetees": [
+      {
+        "id": "melenchon-secu-017",
+        "raison": "relecture : L'extrait porte sur la fin de la politique du chiffre et l'augmentation d'effectifs contre la criminalité financière, ce qui ne montre pas une priorité donnée à la prévention plutôt qu'à la répression."
+      },
+      {
+        "id": "melenchon-lib-006",
+        "raison": "relecture : Le droit de vote à 16 ans relève du sujet institutions (réforme électorale) et non du sujet libertés individuelles tel que défini."
+      },
+      {
+        "id": "melenchon-lib-009",
+        "raison": "relecture : L'extrait porte sur la neutralité des élus/préfets et le financement public d'édifices religieux, pas sur l'interdiction de signes religieux dans l'espace public, ce qui ne fonde pas la position laicite_stricte telle que définie."
+      }
+    ],
+    "cout_reference_usd": 0.0669,
+    "appels": 2
+  },
+  {
+    "groupe": 7,
+    "empreinte": "62ea42b42e88f5c8",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 16,
+    "sans_position": 8,
+    "rejetees": [
+      {
+        "id": "melenchon-lib-029",
+        "raison": "relecture : Le texte reste vague et ne décrit aucune mesure concrète de prévention (éducation, insertion, peines alternatives) ; il se contente de rejeter une approche 'uniquement sécuritaire', ce qui ne fonde pas solidement l'étiquette 'prevention'."
+      }
+    ],
+    "cout_reference_usd": 0.0876,
+    "appels": 2
+  },
+  {
+    "groupe": 8,
+    "empreinte": "002f4afda43d19f9",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 8,
+    "sans_position": 14,
+    "rejetees": [
+      {
+        "id": "melenchon-envi-011",
+        "raison": "relecture : L'extrait mentionne seulement 'plans d'autonomie énergétique' sans préciser qu'il s'agit de développer les renouvelables, ce qui est une interprétation non établie par le texte."
+      },
+      {
+        "id": "melenchon-envi-013",
+        "raison": "relecture : L'extrait porte sur la suppression de lignes aériennes concurrencées par le train, ce qui ne concerne pas la voiture ni une restriction de son usage."
+      },
+      {
+        "id": "melenchon-envi-019",
+        "raison": "relecture : La mesure porte sur la reconversion des travailleurs et non sur la décision de sortir du nucléaire, qui n'est qu'un arrière-plan présupposé et non le contenu direct défendu ici."
+      }
+    ],
+    "cout_reference_usd": 0.0849,
+    "appels": 2
+  },
+  {
+    "groupe": 9,
+    "empreinte": "602a64429c68d3bd",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 3,
+    "etiquetees": 2,
+    "sans_position": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0172,
+    "appels": 2
+  }
+]

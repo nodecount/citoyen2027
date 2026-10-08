@@ -1,4 +1,4 @@
-import { CHAMPS_PROFIL } from "../questionnaire";
+import { champsToutesBases } from "../schemaBase";
 import { mettreAJourReponse, type ProfilPartiel } from "../profil";
 
 // Les réponses du visiteur sont gardées dans SON navigateur (localStorage) pour survivre à un rechargement de la page.
@@ -15,18 +15,20 @@ export interface ReponsesMemorisees {
 const VIDE: ReponsesMemorisees = { profil: {}, soumis: false };
 
 // Relit un profil stocké en ne gardant que des réponses valides pour les questions actuelles : un champ retiré ou une
-// option devenue inconnue (le questionnaire a pu changer depuis) est écarté, jamais deviné.
+// option devenue inconnue (le questionnaire a pu changer depuis) est écarté, jamais deviné. Les questions de toutes les
+// bases sont admises : les réponses suivent le visiteur quand il change de base (chaque base n'utilise que les siennes).
 export function assainirProfil(brut: unknown): ProfilPartiel {
   if (typeof brut !== "object" || brut === null || Array.isArray(brut)) return {};
   const stocke = brut as Record<string, unknown>;
+  const champs = champsToutesBases();
   let profil: ProfilPartiel = {};
   // Deux passes : une question conditionnelle dépend d'une autre réponse, qui peut venir après elle dans la liste.
   for (let passe = 0; passe < 2; passe++) {
-    for (const champ of CHAMPS_PROFIL) {
+    for (const champ of champs) {
       const valeur = stocke[champ.id];
       if (valeur === undefined) continue;
       const saisie = Array.isArray(valeur) ? valeur.map(String) : String(valeur);
-      profil = mettreAJourReponse(profil, champ, saisie, CHAMPS_PROFIL);
+      profil = mettreAJourReponse(profil, champ, saisie, champs);
     }
   }
   return profil;
@@ -53,23 +55,6 @@ export function memoriserReponses(reponses: ReponsesMemorisees): void {
   }
 }
 
-// Mode d'affichage du simulateur : « exploration » (les mesures seules, sans indicateur ni formulaire) ou « simulateur »
-// (indicateurs et questions pour le visiteur). Retenu dans le navigateur, comme les réponses.
+// Mode d'affichage de la page des thèmes : « exploration » (les mesures seules, sans indicateur ni formulaire) ou « simulateur »
+// (indicateurs et questions pour le visiteur). C'est la page (/exploration ou /simulateur) qui le fixe.
 export type ModeAffichage = "simulateur" | "exploration";
-const CLE_MODE = "mode-affichage";
-
-export function lireMode(): ModeAffichage {
-  try {
-    return window.localStorage.getItem(CLE_MODE) === "exploration" ? "exploration" : "simulateur";
-  } catch {
-    return "simulateur";
-  }
-}
-
-export function memoriserMode(mode: ModeAffichage): void {
-  try {
-    window.localStorage.setItem(CLE_MODE, mode);
-  } catch {
-    // sans conséquence : le choix vaut pour cette session seulement
-  }
-}

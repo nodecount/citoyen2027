@@ -2,160 +2,163 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "31872238fc22873d",
-    "date": "2026-09-27",
+    "empreinte": "eadbc36ece9a56b4",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 16,
-    "avec_effets": 2,
-    "sans_effet": 13,
+    "avec_effets": 7,
+    "sans_effet": 8,
     "rejetees": [
       {
         "id": "retailleau-education-jeunesse-003",
-        "raison": "relecture : Le texte vise les salariés dont l'employeur verse une participation garde d'enfant, pas tous les salariés avec enfant ; le gain dépend de la décision de l'employeur (périmètre élargi, effet supposé)."
+        "raison": "relecture : Le texte ne bénéficie qu'aux salariés dont l'employeur finance une garde d'enfant, pas à l'ensemble des salariés comme le suggère la cible 'salarie'."
       }
     ],
-    "cout_reference_usd": 0.0497,
+    "cout_reference_usd": 0.0873,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "4fe3b63a43455897",
-    "date": "2026-09-27",
+    "empreinte": "3c511264c714a316",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 2,
-    "sans_effet": 22,
+    "avec_effets": 5,
+    "sans_effet": 18,
     "rejetees": [
       {
-        "id": "retailleau-envi-003",
-        "raison": "relecture : Il s'agit d'un simple objectif chiffré (-5 % à -15 %) sans mécanisme décrit dans le texte, donc un effet supposé plutôt que fondé."
+        "id": "retailleau-envi-005",
+        "raison": "relecture : L'effet sur l'accès au logement des locataires est déduit d'un mécanisme supposé (plus de logements remis en location n'implique pas automatiquement un meilleur accès pour un locataire donné), le texte ne décrit qu'un effet sur la mise en location par les bailleurs."
+      },
+      {
+        "id": "retailleau-envi-021",
+        "raison": "relecture : Un différé d'imposition n'est pas une hausse du revenu disponible mais un report de charge, et la facilitation de la transmission ne fonde pas directement une hausse de revenu pour l'agriculteur."
       }
     ],
-    "cout_reference_usd": 0.0506,
+    "cout_reference_usd": 0.0768,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "3390b96daab165cb",
-    "date": "2026-09-27",
+    "empreinte": "f8d1e6952870d2c3",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "avec_effets": 2,
-    "sans_effet": 10,
-    "rejetees": [
-      {
-        "id": "retailleau-finances-publiques-007",
-        "raison": "relecture : Le texte ne parle que d'un seuil d'exonération des donations ; le lien avec une hausse du patrimoine est une déduction, et la cible (donateurs et bénéficiaires confondus) est élargie sans que le texte distingue qui gagne."
-      }
-    ],
-    "cout_reference_usd": 0.0515,
+    "avec_effets": 4,
+    "sans_effet": 9,
+    "rejetees": [],
+    "cout_reference_usd": 0.062,
     "appels": 2
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "8cdbf431d5ad3448",
-    "date": "2026-09-27",
+    "empreinte": "85b83a86364a1c82",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 12,
     "avec_effets": 0,
     "sans_effet": 12,
     "rejetees": [],
-    "cout_reference_usd": 0.0302,
+    "cout_reference_usd": 0.0353,
     "appels": 1
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "49f6e474bf587a50",
-    "date": "2026-09-27",
+    "empreinte": "d582bb0b4aba72a3",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 13,
     "avec_effets": 2,
     "sans_effet": 11,
     "rejetees": [],
-    "cout_reference_usd": 0.0459,
+    "cout_reference_usd": 0.0563,
     "appels": 2
   },
   {
     "theme": "reformes-etat",
     "groupe": 0,
-    "empreinte": "8fa542055ff4a97d",
-    "date": "2026-09-27",
+    "empreinte": "47c21fa784adfd86",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 0,
     "sans_effet": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.0236,
+    "cout_reference_usd": 0.031,
     "appels": 1
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "9fb842647357a719",
-    "date": "2026-09-27",
+    "empreinte": "5577e3960988baec",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 19,
-    "avec_effets": 2,
-    "sans_effet": 16,
+    "avec_effets": 4,
+    "sans_effet": 13,
     "rejetees": [
       {
-        "id": "retailleau-retraites-travail-009",
-        "raison": "relecture : Le texte cible ceux qui entreront sur le marché du travail en 2027 (montée en puissance progressive), pas tous les salariés : périmètre élargi ; de plus, la cotisation finance une retraite future, donc l'effet sur le revenu disponible est à nuancer."
+        "id": "retailleau-retraites-travail-004",
+        "raison": "relecture : Le texte ne précise pas de baisse de revenu pour les sans-emploi, c'est un mécanisme supposé (durcissement de l'assurance chômage) non explicité par l'extrait cité."
+      },
+      {
+        "id": "retailleau-retraites-travail-007",
+        "raison": "relecture : La cible tranche_age 50_64 est trop large : seules les personnes choisissant un départ anticipé à 63-64 ans avec décote sont concernées, pas toute la classe d'âge."
       }
     ],
-    "cout_reference_usd": 0.0513,
+    "cout_reference_usd": 0.0907,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "cf7d1d4fdd83f8d8",
-    "date": "2026-09-27",
+    "empreinte": "faa90035bce9e17d",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 4,
-    "sans_effet": 17,
+    "avec_effets": 10,
+    "sans_effet": 11,
     "rejetees": [
       {
         "id": "retailleau-social-solidarite-006",
-        "raison": "relecture : La déduction ne bénéficie qu'aux familles ayant un emprunt immobilier, or la cible est tous les foyers avec enfant (périmètre élargi) ; de plus le texte évoque aussi un recentrage du logement social non retenu."
+        "raison": "relecture : Le texte vise les critères d'attribution futurs du logement social selon l'emploi, pas une perte d'accès pour les occupants actuels sans emploi déjà logés, ce qui est un effet déduit non fondé par l'extrait."
       },
       {
         "id": "retailleau-social-solidarite-010",
-        "raison": "relecture : Image trompeuse : le texte vise aussi les moins de 40 ans (100 000 €) mais seul le public moins de 30 ans est retenu, et l'effet ne vaut que pour ceux recevant un don."
+        "raison": "relecture : La cible tranche_age '30_49' est plus large que le public visé par le texte ('moins de 40 ans'), incluant à tort les 40-49 ans."
       },
       {
-        "id": "retailleau-social-solidarite-020",
-        "raison": "relecture : La mesure concerne les emprunteurs (déductibilité des intérêts), pas tous les foyers avec enfants : cibles élargies faute de critère d'emprunt/projet d'achat."
+        "id": "retailleau-social-solidarite-013",
+        "raison": "relecture : La cible englobe tous les propriétaires de logements hors résidence principale alors que le texte ne concerne que ceux touchés par une interdiction de louer liée au DPE."
       },
       {
         "id": "retailleau-social-solidarite-025",
-        "raison": "relecture : Image trompeuse : le texte prévoit aussi 100 000 € pour les moins de 40 ans, non retenu, et l'effet ne concerne que les bénéficiaires d'un don."
+        "raison": "relecture : La cible tranche_age '30_49' est plus large que le public visé par le texte ('moins de 40 ans'), incluant à tort les 40-49 ans."
       }
     ],
-    "cout_reference_usd": 0.0714,
+    "cout_reference_usd": 0.1415,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 1,
-    "empreinte": "a8594bbe6f6f2f83",
-    "date": "2026-09-27",
+    "empreinte": "d1fd35c16cb05e33",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 7,
-    "avec_effets": 2,
-    "sans_effet": 4,
+    "avec_effets": 3,
+    "sans_effet": 3,
     "rejetees": [
       {
-        "id": "retailleau-social-solidarite-027",
-        "raison": "relecture : Le texte ne précise pas que tous les salariés obtiennent un accès accru : restituer le parc Action Logement est une réorganisation institutionnelle, l'effet sur l'accès des salariés est supposé (mécanisme non établi)."
+        "id": "retailleau-social-solidarite-032",
+        "raison": "relecture : Le texte facilite la mobilité résidentielle via le transfert de prêt, mais n'indique pas de hausse du patrimoine : c'est un mécanisme supposé et une dimension non fondée par l'extrait."
       }
     ],
-    "cout_reference_usd": 0.0205,
+    "cout_reference_usd": 0.0434,
     "appels": 2
   }
 ]

@@ -2,130 +2,115 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "558054aefe9db822",
-    "date": "2026-09-27",
+    "empreinte": "5921225defb372c4",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "avec_effets": 2,
-    "sans_effet": 11,
+    "avec_effets": 5,
+    "sans_effet": 8,
     "rejetees": [],
-    "cout_reference_usd": 0.0431,
+    "cout_reference_usd": 0.062,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "0170b3cf8dba8dd7",
-    "date": "2026-09-27",
+    "empreinte": "7fa884b6715a8c1c",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 7,
     "avec_effets": 0,
     "sans_effet": 7,
     "rejetees": [],
-    "cout_reference_usd": 0.0258,
+    "cout_reference_usd": 0.0313,
     "appels": 1
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "2dc9b06d79b1f043",
-    "date": "2026-09-27",
+    "empreinte": "d55eb7541ce5a4f9",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 7,
-    "avec_effets": 2,
+    "avec_effets": 3,
     "sans_effet": 4,
-    "rejetees": [
-      {
-        "id": "zemmour-finances-publiques-007",
-        "raison": "relecture : La prime est facultative (les chefs d'entreprise « peuvent » l'instaurer) : le texte ne garantit pas de hausse de revenu pour tous les salariés, l'effet dépend d'une décision patronale supposée."
-      }
-    ],
-    "cout_reference_usd": 0.0466,
+    "rejetees": [],
+    "cout_reference_usd": 0.0536,
     "appels": 2
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "e4a63874cce3a397",
-    "date": "2026-09-27",
+    "empreinte": "5ba6426a2f3a0b79",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 8,
     "avec_effets": 1,
     "sans_effet": 7,
     "rejetees": [],
-    "cout_reference_usd": 0.0373,
+    "cout_reference_usd": 0.0431,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "3c31c3fa96930a69",
-    "date": "2026-09-27",
+    "empreinte": "620072981da427c9",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 2,
-    "sans_effet": 22,
-    "rejetees": [
-      {
-        "id": "zemmour-interieur-justice-009",
-        "raison": "relecture : Le texte cible les étrangers extra-européens (hors UE) mais vise aussi le minimum vieillesse, absent des aides listées, et l'effet croise nationalité et aides perçues ; le périmètre des aides est tronqué (minimum vieillesse omis), ce qui donne une image incomplète."
-      }
-    ],
-    "cout_reference_usd": 0.0536,
+    "avec_effets": 13,
+    "sans_effet": 12,
+    "rejetees": [],
+    "cout_reference_usd": 0.0943,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 1,
-    "empreinte": "5f1000bc653f664c",
-    "date": "2026-09-27",
+    "empreinte": "2c3f0728a1f99f6e",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 6,
-    "avec_effets": 1,
-    "sans_effet": 4,
+    "avec_effets": 2,
+    "sans_effet": 3,
     "rejetees": [
       {
-        "id": "zemmour-interieur-justice-030",
-        "raison": "relecture : Une présomption de légitime défense est un changement de cadre juridique dont l'effet sur les droits et libertés des policiers et gendarmes est supposé (protection juridique), et le texte ne précise pas de gain ni de perte concrète pour eux ; le sens est au mieux indéterminé."
+        "id": "zemmour-interieur-justice-031",
+        "raison": "relecture : L'armement des policiers municipaux ne fonde pas directement une hausse de leur propre sécurité personnelle, c'est un mécanisme supposé non affirmé par le texte."
       }
     ],
-    "cout_reference_usd": 0.0151,
+    "cout_reference_usd": 0.0205,
     "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "b7913725bb13c433",
-    "date": "2026-09-27",
+    "empreinte": "6442f8dacfbc25e3",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 19,
-    "avec_effets": 4,
-    "sans_effet": 14,
+    "avec_effets": 8,
+    "sans_effet": 10,
     "rejetees": [
       {
-        "id": "zemmour-retraites-travail-007",
-        "raison": "relecture : Le texte vise les chercheurs d'emploi qui déménagent pour un nouvel emploi (et non tous les sans-emploi), et il s'agit d'un versement anticipé de droits existants, pas d'une hausse nette de revenu disponible ; le périmètre est élargi et le sens douteux."
+        "id": "zemmour-retraites-travail-013",
+        "raison": "relecture : L'impôt sur les sociétés est payé par l'entreprise, pas directement par l'agriculteur/artisan/commerçant en tant que personne ; attribuer une hausse de revenu disponible personnel suppose un mécanisme de transmission économique non énoncé dans le texte."
       }
     ],
-    "cout_reference_usd": 0.0556,
+    "cout_reference_usd": 0.0964,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "c5f3e9b5234cc8ac",
-    "date": "2026-09-27",
+    "empreinte": "b3414da9d3fd98c1",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 6,
-    "avec_effets": 3,
+    "avec_effets": 4,
     "sans_effet": 2,
-    "rejetees": [
-      {
-        "id": "zemmour-social-solidarite-003",
-        "raison": "relecture : Une garde obligatoire des médecins sur tout le territoire n'a pas de cible précisée et l'effet sur l'accès aux services est déduit d'un mécanisme supposé (fonctionnement du système de garde), non affirmé par le texte."
-      }
-    ],
-    "cout_reference_usd": 0.0433,
+    "rejetees": [],
+    "cout_reference_usd": 0.0498,
     "appels": 2
   }
 ]

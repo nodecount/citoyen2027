@@ -1,8 +1,11 @@
-import { Briefcase, Coins, Cpu, Eraser, Highlighter, Landmark, Leaf, Scale, ShieldCheck, Users, type LucideIcon } from "lucide-react";
-import { useState } from "react";
+import { Atom, Banknote, Briefcase, Car, Coins, Cpu, GraduationCap, Gavel, HeartPulse, House, Lock, Megaphone, Stethoscope, Swords, Wheat, Eraser, Highlighter, Landmark, Leaf, Scale, ShieldCheck, Users, type LucideIcon } from "lucide-react";
+import { useContext, useState } from "react";
+import { compterMesuresPosition } from "../engine/mesuresImpactees";
+import { PropositionsBase } from "./PropositionsContexte";
 import { constatIntegrite, INTEGRITES, type ConstatIntegrite, type Integrite } from "../data/integrite";
 import { projeterPosition } from "../engine/positions";
-import { SUJETS_CONVICTION, trouverPosition, trouverSujet } from "../positions";
+import { trouverPosition, trouverSujet } from "../positions";
+import { sujetsDisponibles } from "../engine/positions";
 import type { Proposition } from "../types";
 import { aDesConvictions, CONVICTIONS_VIDES, type Convictions } from "./memoireConvictions";
 import { IndicateurEnregistrement, useSignalEnregistrement } from "./IndicateurEnregistrement";
@@ -29,8 +32,34 @@ export function convictionsVisibles(simulateur: boolean, convictions: Conviction
 }
 
 const ICONES_SUJETS: Record<string, LucideIcon> = {
-  ecologie: Leaf,
+  nucleaire: Atom,
+  renouvelables: Leaf,
   ia: Cpu,
+  police_armement: Swords,
+  ultra_riches: Banknote,
+  ecole_organisation: GraduationCap,
+  ecole_discipline: GraduationCap,
+  manifestations: Megaphone,
+  parents_mineurs: Users,
+  justice_mineurs: Gavel,
+  prison: Lock,
+  salaires: Coins,
+  temps_travail: Briefcase,
+  aides_sociales: Users,
+  fonction_publique: Landmark,
+  sante_organisation: Stethoscope,
+  logement: House,
+  droit_du_sol: Users,
+  laicite: Scale,
+  fin_de_vie: HeartPulse,
+  cannabis: Leaf,
+  defense: ShieldCheck,
+  agriculture_normes: Wheat,
+  voiture: Car,
+  institutions: Landmark,
+  surveillance: Lock,
+  dette: Coins,
+  commerce: Banknote,
   europe: Landmark,
   immigration: Users,
   fiscalite: Coins,
@@ -39,9 +68,16 @@ const ICONES_SUJETS: Record<string, LucideIcon> = {
   libertes: Scale,
 };
 
+function phraseMesuresPosition(n: number): string {
+  if (n === 0) return "Aucune mesure des programmes ne défend cette position.";
+  return n === 1 ? "1 mesure des programmes défend cette position." : `${n} mesures des programmes défendent cette position.`;
+}
+
 // Bloc « Mes convictions » : un sujet par carte, une position au choix, « Pas d'avis » par défaut (aucun score, aucun
 // classement ici : les positions ne servent qu'au résultat « convictions » de la card « candidat idéal »).
 export function BlocConvictions({ convictions, onChange: appliquer }: { convictions: Convictions; onChange: (c: Convictions) => void }) {
+  const propositions = useContext(PropositionsBase);
+  const sujets = sujetsDisponibles(propositions);
   const { etat, signaler } = useSignalEnregistrement();
   const onChange = (c: Convictions) => {
     signaler();
@@ -54,14 +90,15 @@ export function BlocConvictions({ convictions, onChange: appliquer }: { convicti
     onChange({ ...convictions, positions });
   };
   const [confirmerEffacement, setConfirmerEffacement] = useState(false);
-  const [manquantesEnValeur, setManquantesEnValeur] = useState(false);
-  const nombre = Object.keys(convictions.positions).length;
+  // Actif par défaut : les sujets sans position sont mis en valeur dès l'arrivée, le visiteur peut le désactiver.
+  const [manquantesEnValeur, setManquantesEnValeur] = useState(true);
+  const nombre = sujets.filter((s) => convictions.positions[s.id] !== undefined).length;
   return (
     <section className="convictions questionnaire questionnaire--integre" aria-label="Mes convictions">
       <div className="questionnaire-entete">
         <h2>Mes convictions</h2>
         <p className="progression">
-          {nombre} position{nombre > 1 ? "s" : ""} sur {SUJETS_CONVICTION.length} sujets
+          {nombre} position{nombre > 1 ? "s" : ""} sur {sujets.length} sujets
         </p>
         <button type="button" className="secondaire bouton-manquantes" aria-pressed={manquantesEnValeur} onClick={() => setManquantesEnValeur((v) => !v)}>
           <Highlighter size={18} aria-hidden="true" focusable="false" />
@@ -78,7 +115,7 @@ export function BlocConvictions({ convictions, onChange: appliquer }: { convicti
         )}
       </div>
       <div className="section-questions--cartes">
-        {SUJETS_CONVICTION.map((sujet) => {
+        {sujets.map((sujet) => {
           const Icone = ICONES_SUJETS[sujet.id] ?? Scale;
           const id = `conviction-${sujet.id}`;
           return (
@@ -100,6 +137,11 @@ export function BlocConvictions({ convictions, onChange: appliquer }: { convicti
                     </option>
                   ))}
                 </select>
+                {propositions && convictions.positions[sujet.id] && (
+                  <p className="question-impact" aria-live="polite">
+                    {phraseMesuresPosition(compterMesuresPosition(sujet.id, convictions.positions[sujet.id]!, propositions))}
+                  </p>
+                )}
               </div>
             </div>
           );
@@ -108,7 +150,7 @@ export function BlocConvictions({ convictions, onChange: appliquer }: { convicti
       <label className="interrupteur">
         <input type="checkbox" role="switch" checked={convictions.exemplarite} onChange={(e) => onChange({ ...convictions, exemplarite: e.target.checked })} />
         <span className="interrupteur-piste" aria-hidden="true" />
-        Je tiens à un candidat sans condamnation définitive
+        Je tiens à un candidat sans condamnation
       </label>
       {/* Le simulateur est toujours à l'aveugle : les faits d'intégrité ne s'affichent jamais, ils servent seulement à écarter
           des candidats du résultat « convictions » de la card « candidat idéal », qui n'existe qu'avec au moins une position. */}
@@ -116,7 +158,7 @@ export function BlocConvictions({ convictions, onChange: appliquer }: { convicti
         (nombre === 0 ? (
           <p className="hint">Sans position choisie, cette option ne change rien : elle sert seulement à écarter des candidats du résultat « convictions ». Choisissez au moins une position.</p>
         ) : (
-          <p className="hint">Les candidats ayant une condamnation définitive connue sont écartés du résultat « convictions ». Les faits ne sont pas affichés, pour ne pas dévoiler les noms.</p>
+          <p className="hint">Les candidats ayant une condamnation connue, même avec un recours en cours, sont écartés du résultat « convictions ». Les faits ne sont pas affichés, pour ne pas dévoiler les noms.</p>
         ))}
       <ModaleConfirmation
         ouverte={confirmerEffacement}
@@ -152,7 +194,7 @@ function ConstatIntegriteTexte({ integrite }: { integrite: ConstatIntegrite }) {
     return (
       <p>
         <span aria-hidden="true">? </span>
-        <strong>Condamnations définitives : non vérifiées par cet outil</strong>, faute de données sourcées.
+        <strong>Condamnations : non vérifiées par cet outil</strong>, faute de données sourcées.
       </p>
     );
   }
@@ -160,7 +202,7 @@ function ConstatIntegriteTexte({ integrite }: { integrite: ConstatIntegrite }) {
     return (
       <p>
         <span aria-hidden="true">□ </span>
-        <strong>Aucune condamnation définitive recensée</strong>, d'après les sources consultées le {dateEnClair(integrite.verifieLe)} : <ListeSourcesIntegrite sources={integrite.sources} />.
+        <strong>Aucune condamnation recensée</strong>, d'après les sources consultées le {dateEnClair(integrite.verifieLe)} : <ListeSourcesIntegrite sources={integrite.sources} />.
       </p>
     );
   }
@@ -169,12 +211,12 @@ function ConstatIntegriteTexte({ integrite }: { integrite: ConstatIntegrite }) {
     <div>
       <p>
         <span aria-hidden="true">■ </span>
-        <strong>Condamnation{pluriel} définitive{pluriel} recensée{pluriel}</strong> (sources consultées le {dateEnClair(integrite.verifieLe)})
+        <strong>Condamnation{pluriel} recensée{pluriel}</strong> (sources consultées le {dateEnClair(integrite.verifieLe)})
       </p>
       <ul>
         {integrite.condamnations.map((c, i) => (
           <li key={`${i}-${c.date_decision}-${c.nature}`}>
-            {c.nature}, {c.juridiction}, décision du {dateEnClair(c.date_decision)} ({c.peine}). <ListeSourcesIntegrite sources={c.sources} />
+            {c.nature}, {c.juridiction}, décision du {dateEnClair(c.date_decision)} ({c.peine}). {c.statut === "non_definitive" && <strong>Pas établie comme définitive : {c.recours}. </strong>}<ListeSourcesIntegrite sources={c.sources} />
           </li>
         ))}
       </ul>

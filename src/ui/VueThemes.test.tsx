@@ -3,10 +3,12 @@ import { describe, expect, it } from "vitest";
 import type { CandidatCharge } from "../data/chargerCandidats";
 import type { Effet } from "../effets";
 import { aDesInformations, type ProfilPartiel } from "../profil";
-import { construireQuestionnaire, CHAMPS_PROFIL, type Questionnaire } from "../questionnaire";
+import { construireQuestionnaire, type Questionnaire } from "../questionnaire";
 import type { Proposition, SyntheseTheme, Theme } from "../types";
 import { construireCards } from "./cards";
 import { CitationsResume, VueThemes, type ActionProfil } from "./VueThemes";
+import { champsDeBase } from "../schemaBase";
+const CHAMPS_PROFIL = champsDeBase("officielle");
 
 // Seulement la liste des portraits : la légende, elle, décrit les niveaux et contient leurs classes.
 const portraits = (rendu: string): string => (rendu.match(/<ul class="portraits"[\s\S]*?<\/ul>/g) ?? []).join("");

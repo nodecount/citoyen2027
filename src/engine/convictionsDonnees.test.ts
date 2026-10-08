@@ -11,7 +11,7 @@ describe("convictions sur les données réelles", () => {
   const cards = construireCards(base.themes, candidatsDeBase(base).avecDonnees, null);
   const gagnants = (choix: Record<string, string>) => (meilleurs(soldesConvictions(cards, choix))?.gagnants ?? []).map((g) => g.slug).sort();
 
-  it("des mesures sont étiquetées sur les huit sujets", () => {
+  it("des mesures sont étiquetées sur les neuf sujets", () => {
     const sujets = new Set(cards.flatMap((c) => c.lignes.flatMap((l) => l.propositions.flatMap((p) => (p.positions ?? []).map((e) => e.sujet)))));
     expect(sujets.size).toBeGreaterThanOrEqual(6);
     expect(sujets.has("immigration")).toBe(true);

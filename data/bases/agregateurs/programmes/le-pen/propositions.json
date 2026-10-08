@@ -19,11 +19,10 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Créer l'impôt sur la fortune financière (IFF), inspiré de l’ancien ISF"
       }
@@ -52,8 +51,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "prison",
+        "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Atteindre 85 000 places de prison disponibles d'ici à 2028."
       }
@@ -92,7 +91,7 @@
         "dimension": "droits_et_libertes",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place une présomption de légitime défense pour les policiers et gendarmes."
+        "extrait": "présomption de légitime défense pour les policiers et gendarmes"
       }
     ],
     "positions": [
@@ -127,8 +126,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Créer 7000 postes de policiers et gendarmes."
       }
@@ -155,14 +154,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Sécurité intérieure",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Obligation pour les communes de plus de 10 000 habitants à se doter d'une police municipale."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-001",
@@ -220,10 +212,37 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants et revaloriser leurs salaires."
+        "extrait": "revaloriser leurs salaires"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "soignant"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants et revaloriser leurs salaires."
+      },
+      {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants et revaloriser leurs salaires."
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-003",
@@ -246,7 +265,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Fixer un plafond de 10% de postes administratifs dans les hôpitaux, ce qui dégagera des marges de manœuvre pour recruter davantage de personnel soignant."
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-004",
@@ -268,8 +294,23 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un moratoire sur la suppression des lits à l'hôpital public"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un moratoire sur la suppression des lits à l’hôpital public."
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-005",
@@ -327,7 +368,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Cette filière spécifique doit permettre de limiter l’attente aux urgences, d’améliorer la prise en charge et de mieux orienter le patient âgé."
+        "extrait": "Créer une filière distincte pour les personnes les plus âgées... d'améliorer la prise en charge et de mieux orienter le patient âgé"
       }
     ],
     "positions": []
@@ -353,7 +394,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Redéfinir le mode de financement de l’hôpital public en revenant à un budget sous forme de dotation globale, afin de garantir la qualité des soins."
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-008",
@@ -375,7 +423,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "desert_medical",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire le nombre de déserts médicaux grâce à des incitations financières fortes"
+      }
+    ],
     "positions": []
   },
   {
@@ -398,7 +461,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Développer la télémédecine sous toutes ses formes : téléconsultation, télésoins, téléexpertise"
+      }
+    ],
     "positions": []
   },
   {
@@ -421,7 +492,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "proprietaire"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Remplacer les subventions à la rénovation thermique des logements de MaPrimeRénov' par un dispositif de prêts à taux zéro 100 % Rénov"
+      }
+    ],
     "positions": []
   },
   {
@@ -444,7 +530,14 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "liberer_offre_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Durcir les sanctions contre les locataires qui ne paient pas leur loyer et accélérer les procédures d’expulsion en cas d’impayés."
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-012",
@@ -466,8 +559,36 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "proprietaire"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "logements classés F et G"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les interdictions de louer les logements mal notés (classes F et G) pour éviter une crise du logement et préserver les propriétaires"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "liberer_offre_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les interdictions de louer les logements mal notés (classes F et G) pour éviter une crise du logement et préserver les propriétaires."
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-013",
@@ -490,7 +611,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "liberer_offre_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abrogation de la loi SRU."
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-014",
@@ -517,6 +645,37 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mise en place d'une préference nationale : les français seront favorisés pour l'accès au logement et aux APL."
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "francaise"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "les français seront favorisés pour l'accès au logement et aux APL"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "europeenne",
+              "hors_ue"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "les français seront favorisés pour l'accès au logement et aux APL"
       }
     ]
@@ -541,8 +700,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "le-pen-retraites-travail-001",
@@ -649,7 +807,14 @@
         "extrait": "Permettre un départ à 60 ans pour ceux qui ont commencé à travailler avant 20 ans."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "age_actuel",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre un départ à 60 ans pour ceux qui ont commencé à travailler avant 20 ans."
+      }
+    ]
   },
   {
     "id": "le-pen-retraites-travail-005",
@@ -695,7 +860,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre la priorité nationale de la commande publique."
+      }
+    ]
   },
   {
     "id": "le-pen-envi-001",
@@ -818,10 +990,16 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "ecologie",
+        "sujet": "nucleaire",
         "position": "garder_nucleaire",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place un « grand plan nucléaire »"
+      },
+      {
+        "sujet": "renouvelables",
+        "position": "freiner_transition",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "le démantèlement progressif des parcs éoliens existants lorsqu’ils arrivent en fin de vie."
       }
     ]
   },
@@ -907,7 +1085,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lutter contre l’artificialisation des terres agricoles."
+      }
+    ]
   },
   {
     "id": "le-pen-envi-008",
@@ -953,7 +1138,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "assouplir_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lutter contre les effets néfastes de la stratégie européenne \" de la ferme à la fourchette \" qui menace la souveraineté européenne."
+      }
+    ]
   },
   {
     "id": "le-pen-envi-010",
@@ -998,8 +1190,30 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "agriculteurs pratiquant l'agriculture biologique"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mise en place d'un plan de soutien spécifique pour l'agriculture biologique."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mise en place d'un plan de soutien spécifique pour l'agriculture biologique."
+      }
+    ]
   },
   {
     "id": "le-pen-envi-012",
@@ -1021,7 +1235,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": [],
     "positions": []
   },
   {
@@ -1047,8 +1260,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "europe",
-        "position": "souverainete",
+        "sujet": "commerce",
+        "position": "protectionnisme",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Protéger l'agriculture française en l'excluant de tous les traités de libre-échange, qu'ils soient déjà signés ou en projet."
       }
@@ -1077,8 +1290,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "europe",
-        "position": "souverainete",
+        "sujet": "commerce",
+        "position": "protectionnisme",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Interdire les importations de produits agricole ne respectant pas les normes de production françaises."
       }
@@ -1105,7 +1318,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "assouplir_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Aucune interdiction de produits phytosanitaires sans alternatives."
+      }
+    ]
   },
   {
     "id": "le-pen-envi-016",
@@ -1128,7 +1348,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Atteindre 80% de produits français dans les cantines."
+      }
+    ]
   },
   {
     "id": "le-pen-europe-international-001",
@@ -1180,7 +1407,37 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "francaise"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "la « priorité nationale » dans la Constitution … pour l’accès aux logements sociaux et aux allocations"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "europeenne",
+              "hors_ue"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "la « priorité nationale » dans la Constitution … pour l’accès aux logements sociaux et aux allocations"
+      }
+    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -1235,8 +1492,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "commerce",
+        "position": "protectionnisme",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place au niveau de l'UE ou de l'OCDE de taxes extraordinaires pour les entreprises étrangères du numérique."
       }
@@ -1285,7 +1542,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "habitants des zones blanches numériques"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place une couverture numérique plus large du territoire afin de supprimer les zones blanches"
+      }
+    ],
     "positions": []
   },
   {
@@ -1308,7 +1580,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes âgées en situation d'illettrisme numérique"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "lutte contre l'illettrisme numérique, en particulier chez les personnes âgées"
+      }
+    ],
     "positions": []
   },
   {
@@ -1354,7 +1641,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Valoriser les filières professionnelles et manuelles grâce à un collège modulaire."
+      }
+    ]
   },
   {
     "id": "le-pen-education-jeunesse-002",
@@ -1377,7 +1671,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abrogation de la réforme Blanquer du Baccalauréat."
+      }
+    ]
   },
   {
     "id": "le-pen-education-jeunesse-003",
@@ -1402,8 +1703,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "libertes",
-        "position": "cadre_collectif",
+        "sujet": "ecole_discipline",
+        "position": "ecole_exigence",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Port de l'uniforme au primaire et au collège."
       }
@@ -1430,7 +1731,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Grande réforme de l'enseignement du primaire : recentrage autour d'un tronc commun et hausse conséquente du volume horaire."
+      }
+    ]
   },
   {
     "id": "le-pen-education-jeunesse-005",
@@ -1452,7 +1760,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "outre_mer"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mise en place d'un plan d'urgence éducative pour l'Outre-Mer, en particulier la Guyane et Mayotte"
+      }
+    ],
     "positions": []
   },
   {
@@ -1501,10 +1824,16 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "ecole_discipline",
+        "position": "ecole_exigence",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "instauration de peines plancher et généralisation de la vidéoprotection"
+        "extrait": "Retour aux principes de la loi Ciotti de 2010 : valorisation de l'assiduité, instauration de peines plancher et généralisation de la vidéoprotection."
+      },
+      {
+        "sujet": "surveillance",
+        "position": "plus_surveillance",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "généralisation de la vidéoprotection"
       }
     ]
   },
@@ -1531,8 +1860,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "libertes",
-        "position": "cadre_collectif",
+        "sujet": "laicite",
+        "position": "laicite_stricte",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Interdiction légale du port du voile islamique."
       }
@@ -1574,7 +1903,14 @@
         "extrait": "Revalorisation des professeurs du primaire au lycée de 3% par an chaque année du quinquennat."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "ecole_continuite",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revalorisation des professeurs du primaire au lycée de 3% par an chaque année du quinquennat."
+      }
+    ]
   },
   {
     "id": "le-pen-education-jeunesse-010",
@@ -1597,6 +1933,13 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Suppression des instituts nationaux supérieurs du professorat et de l'éducation."
+      }
+    ]
   }
 ]

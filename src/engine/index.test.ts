@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { afterEach, beforeEach, describe, it, expect } from "vitest";
 import { evaluerProposition } from "./index";
 import { champsRequis, regles } from "./regles";
 import type { Profil, Proposition } from "../types";
@@ -32,10 +32,19 @@ function proposition(id: string, overrides: Partial<Proposition> = {}): Proposit
 }
 
 describe("evaluerProposition", () => {
-  it("utilise la règle dédiée quand elle existe", () => {
-    // Profil étudiant : la règle de philippe-pa-001 (mesure des actifs) conclut « non concerné ».
-    const impact = evaluerProposition(profil, proposition("philippe-pa-001"));
-    expect(impact.concerne).toBe(false);
+  // Le mécanisme se teste avec une règle fictive : aucune règle n'est attachée à une mesure réelle (voir regles.ts).
+  const ID = "test-regle-001";
+  beforeEach(() => {
+    regles[ID] = (_profil, p) => ({ concerne: false, niveau: "qualitatif", explication: p.resume_factuel });
+    champsRequis[ID] = ["statut_professionnel"];
+  });
+  afterEach(() => {
+    delete regles[ID];
+    delete champsRequis[ID];
+  });
+
+  it("utilise la règle dédiée quand elle existe et que ses questions sont répondues", () => {
+    expect(evaluerProposition(profil, proposition(ID)).concerne).toBe(false);
   });
 
   it("retombe sur le comportement par défaut pour un id sans règle dédiée", () => {
@@ -45,14 +54,8 @@ describe("evaluerProposition", () => {
   });
 
   it("n'applique pas une règle dédiée quand le visiteur n'a pas répondu aux questions dont elle dépend", () => {
-    // Sans le statut professionnel, « actif » ne peut pas être conclu : explication générale, jamais « non concerné ».
-    const impact = evaluerProposition({ logement: "locataire" }, proposition("philippe-pa-001"));
-    expect(impact.concerne).toBe(true);
-    expect(impact.explication).not.toContain("concerne les actifs");
-  });
-
-  it("applique la règle dédiée dès que ses questions sont répondues", () => {
-    expect(evaluerProposition({ statut_professionnel: "etudiant" }, proposition("philippe-pa-001")).concerne).toBe(false);
+    // Sans le statut professionnel, la règle ne peut pas conclure : explication générale, jamais « non concerné ».
+    expect(evaluerProposition({ logement: "locataire" }, proposition(ID)).concerne).toBe(true);
   });
 
   it("déclare les champs requis de chaque règle dédiée, et rien de plus", () => {

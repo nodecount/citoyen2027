@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { listerBases, chargerBase } from "./data/bases";
-import { CHAMPS_PROFIL, compterReponses, construireQuestionnaire, questionsDuTheme, questionsRestantes, questionsVisibles } from "./questionnaire";
+import { compterReponses, construireQuestionnaire, questionsDuTheme, questionsRestantes, questionsVisibles } from "./questionnaire";
 import type { ChampProfil, Theme } from "./types";
+import { champsDeBase } from "./schemaBase";
+const CHAMPS_PROFIL = champsDeBase("officielle");
 
 const THEMES: Theme[] = ["a", "b", "c"].map((id) => ({ id, libelle: id, question_citoyen: "?", description: "d", statut: "populated" as const }));
 const Q = (id: string, extra: Partial<ChampProfil> = {}): ChampProfil => ({ id, label: id, type: "enum", options: ["x", "y"], ...extra });

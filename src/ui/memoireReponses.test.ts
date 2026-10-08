@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { CHAMPS_PROFIL } from "../questionnaire";
+
 import { assainirProfil } from "./memoireReponses";
+import { champsDeBase } from "../schemaBase";
+const CHAMPS_PROFIL = champsDeBase("officielle");
 
 describe("assainirProfil", () => {
   const enums = CHAMPS_PROFIL.find((c) => c.type === "enum" && (c.options?.length ?? 0) > 0)!;

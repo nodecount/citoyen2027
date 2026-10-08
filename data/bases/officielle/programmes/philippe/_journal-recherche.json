@@ -1,0 +1,350 @@
+[
+  {
+    "theme": "aides-etat",
+    "date": "2026-10-06",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 10,
+    "arret": "end_turn",
+    "duree_ms": 63065,
+    "jetons_entree": 42209,
+    "jetons_sortie": 7016,
+    "requetes": [],
+    "urls_lues": [
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+      "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-10-06T12-54-04-207Z-extraction-philippe-aides-etat.json",
+    "empreinte_corpus": "66c816b6fcefd9d3",
+    "empreintes_documents": {
+      "priorite-prospere": "56db775f70334f72",
+      "priorite-enfants": "e8842fbbb5edbab0",
+      "priorite-sure": "163cd354ff0a5d28",
+      "priorite-conquerante": "9f7c6f9b412456fb",
+      "meeting-adidas-arena": "9823fec2115cf08f"
+    }
+  },
+  {
+    "theme": "education",
+    "date": "2026-10-06",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 9,
+    "arret": "end_turn",
+    "duree_ms": 34520,
+    "jetons_entree": 41921,
+    "jetons_sortie": 3878,
+    "requetes": [],
+    "urls_lues": [
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+      "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-10-06T13-22-24-678Z-extraction-philippe-education.json",
+    "empreinte_corpus": "66c816b6fcefd9d3",
+    "empreintes_documents": {
+      "priorite-prospere": "56db775f70334f72",
+      "priorite-enfants": "e8842fbbb5edbab0",
+      "priorite-sure": "163cd354ff0a5d28",
+      "priorite-conquerante": "9f7c6f9b412456fb",
+      "meeting-adidas-arena": "9823fec2115cf08f"
+    }
+  },
+  {
+    "theme": "environnement",
+    "date": "2026-10-06",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 13,
+    "arret": "end_turn",
+    "duree_ms": 30329,
+    "jetons_entree": 42362,
+    "jetons_sortie": 3397,
+    "requetes": [],
+    "urls_lues": [
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+      "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-10-06T13-39-06-275Z-extraction-philippe-environnement.json",
+    "empreinte_corpus": "66c816b6fcefd9d3",
+    "empreintes_documents": {
+      "priorite-prospere": "56db775f70334f72",
+      "priorite-enfants": "e8842fbbb5edbab0",
+      "priorite-sure": "163cd354ff0a5d28",
+      "priorite-conquerante": "9f7c6f9b412456fb",
+      "meeting-adidas-arena": "9823fec2115cf08f"
+    }
+  },
+  {
+    "theme": "fiscalite",
+    "date": "2026-10-06",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 8,
+    "arret": "end_turn",
+    "duree_ms": 71136,
+    "jetons_entree": 41909,
+    "jetons_sortie": 6626,
+    "requetes": [],
+    "urls_lues": [
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+      "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-10-06T12-43-21-344Z-extraction-philippe-fiscalite.json",
+    "empreinte_corpus": "66c816b6fcefd9d3",
+    "empreintes_documents": {
+      "priorite-prospere": "56db775f70334f72",
+      "priorite-enfants": "e8842fbbb5edbab0",
+      "priorite-sure": "163cd354ff0a5d28",
+      "priorite-conquerante": "9f7c6f9b412456fb",
+      "meeting-adidas-arena": "9823fec2115cf08f"
+    }
+  },
+  {
+    "theme": "immigration",
+    "date": "2026-10-06",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 7,
+    "arret": "end_turn",
+    "duree_ms": 37975,
+    "jetons_entree": 42328,
+    "jetons_sortie": 3776,
+    "requetes": [],
+    "urls_lues": [
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+      "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-10-06T13-37-16-864Z-extraction-philippe-immigration.json",
+    "empreinte_corpus": "66c816b6fcefd9d3",
+    "empreintes_documents": {
+      "priorite-prospere": "56db775f70334f72",
+      "priorite-enfants": "e8842fbbb5edbab0",
+      "priorite-sure": "163cd354ff0a5d28",
+      "priorite-conquerante": "9f7c6f9b412456fb",
+      "meeting-adidas-arena": "9823fec2115cf08f"
+    }
+  },
+  {
+    "theme": "libertes-fondamentales",
+    "date": "2026-10-06",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 6,
+    "arret": "end_turn",
+    "duree_ms": 61701,
+    "jetons_entree": 42527,
+    "jetons_sortie": 5668,
+    "requetes": [],
+    "urls_lues": [
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+      "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-10-06T13-43-37-585Z-extraction-philippe-libertes-fondamentales.json",
+    "empreinte_corpus": "66c816b6fcefd9d3",
+    "empreintes_documents": {
+      "priorite-prospere": "56db775f70334f72",
+      "priorite-enfants": "e8842fbbb5edbab0",
+      "priorite-sure": "163cd354ff0a5d28",
+      "priorite-conquerante": "9f7c6f9b412456fb",
+      "meeting-adidas-arena": "9823fec2115cf08f"
+    }
+  },
+  {
+    "theme": "logement",
+    "date": "2026-10-06",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 1,
+    "arret": "end_turn",
+    "duree_ms": 15832,
+    "jetons_entree": 42203,
+    "jetons_sortie": 1183,
+    "requetes": [],
+    "urls_lues": [
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+      "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-10-06T12-56-27-122Z-extraction-philippe-logement.json",
+    "empreinte_corpus": "66c816b6fcefd9d3",
+    "empreintes_documents": {
+      "priorite-prospere": "56db775f70334f72",
+      "priorite-enfants": "e8842fbbb5edbab0",
+      "priorite-sure": "163cd354ff0a5d28",
+      "priorite-conquerante": "9f7c6f9b412456fb",
+      "meeting-adidas-arena": "9823fec2115cf08f"
+    }
+  },
+  {
+    "theme": "pouvoir-achat",
+    "date": "2026-10-06",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 8,
+    "arret": "end_turn",
+    "duree_ms": 76835,
+    "jetons_entree": 42048,
+    "jetons_sortie": 7696,
+    "requetes": [],
+    "urls_lues": [
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+      "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-10-06T12-46-32-431Z-extraction-philippe-pouvoir-achat.json",
+    "empreinte_corpus": "66c816b6fcefd9d3",
+    "empreintes_documents": {
+      "priorite-prospere": "56db775f70334f72",
+      "priorite-enfants": "e8842fbbb5edbab0",
+      "priorite-sure": "163cd354ff0a5d28",
+      "priorite-conquerante": "9f7c6f9b412456fb",
+      "meeting-adidas-arena": "9823fec2115cf08f"
+    }
+  },
+  {
+    "theme": "retraites",
+    "date": "2026-10-06",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 3,
+    "arret": "end_turn",
+    "duree_ms": 15447,
+    "jetons_entree": 42235,
+    "jetons_sortie": 1395,
+    "requetes": [],
+    "urls_lues": [
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+      "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-10-06T12-51-59-199Z-extraction-philippe-retraites.json",
+    "empreinte_corpus": "66c816b6fcefd9d3",
+    "empreintes_documents": {
+      "priorite-prospere": "56db775f70334f72",
+      "priorite-enfants": "e8842fbbb5edbab0",
+      "priorite-sure": "163cd354ff0a5d28",
+      "priorite-conquerante": "9f7c6f9b412456fb",
+      "meeting-adidas-arena": "9823fec2115cf08f"
+    }
+  },
+  {
+    "theme": "sante",
+    "date": "2026-10-06",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 1,
+    "arret": "end_turn",
+    "duree_ms": 8807,
+    "jetons_entree": 42123,
+    "jetons_sortie": 532,
+    "requetes": [],
+    "urls_lues": [
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+      "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-10-06T12-57-32-515Z-extraction-philippe-sante.json",
+    "empreinte_corpus": "66c816b6fcefd9d3",
+    "empreintes_documents": {
+      "priorite-prospere": "56db775f70334f72",
+      "priorite-enfants": "e8842fbbb5edbab0",
+      "priorite-sure": "163cd354ff0a5d28",
+      "priorite-conquerante": "9f7c6f9b412456fb",
+      "meeting-adidas-arena": "9823fec2115cf08f"
+    }
+  },
+  {
+    "theme": "securite",
+    "date": "2026-10-06",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 20,
+    "arret": "end_turn",
+    "duree_ms": 49203,
+    "jetons_entree": 42004,
+    "jetons_sortie": 6021,
+    "requetes": [],
+    "urls_lues": [
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+      "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-10-06T13-25-53-891Z-extraction-philippe-securite.json",
+    "empreinte_corpus": "66c816b6fcefd9d3",
+    "empreintes_documents": {
+      "priorite-prospere": "56db775f70334f72",
+      "priorite-enfants": "e8842fbbb5edbab0",
+      "priorite-sure": "163cd354ff0a5d28",
+      "priorite-conquerante": "9f7c6f9b412456fb",
+      "meeting-adidas-arena": "9823fec2115cf08f"
+    }
+  },
+  {
+    "theme": "travail",
+    "date": "2026-10-06",
+    "resultat": "propositions_generees",
+    "nombre_propositions": 5,
+    "arret": "end_turn",
+    "duree_ms": 39816,
+    "jetons_entree": 42082,
+    "jetons_sortie": 4028,
+    "requetes": [],
+    "urls_lues": [
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+      "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+      "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena"
+    ],
+    "urls_echouees": [],
+    "ecartees": 0,
+    "chemin_trace": "F:\\citoyen2027\\logs\\ingestion\\2026-10-06T12-49-28-433Z-extraction-philippe-travail.json",
+    "empreinte_corpus": "66c816b6fcefd9d3",
+    "empreintes_documents": {
+      "priorite-prospere": "56db775f70334f72",
+      "priorite-enfants": "e8842fbbb5edbab0",
+      "priorite-sure": "163cd354ff0a5d28",
+      "priorite-conquerante": "9f7c6f9b412456fb",
+      "meeting-adidas-arena": "9823fec2115cf08f"
+    }
+  }
+]

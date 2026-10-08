@@ -21,8 +21,8 @@
     "sous_theme": "Fiscalité",
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre à contribution les patrimoines supérieurs à 10 millions d'euros lors de la transmission pour financer des mesures sociales."
       }
@@ -57,14 +57,7 @@
         "extrait": "Supprimer la TVA sur les produits alimentaires et les travaux de rénovation énergétique, en passant de 5,5 % à 0 %."
       }
     ],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer la TVA sur les produits alimentaires et les travaux de rénovation énergétique, en passant de 5,5 % à 0 %."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "hollande-finances-publiques-003",
@@ -108,7 +101,6 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "financé par une hausse de 4 points de la TVA"
       }
-    ],
-    "positions": []
+    ]
   }
 ]

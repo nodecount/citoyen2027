@@ -23,9 +23,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "tranche_patrimoine",
             "valeurs": [
-              "contribuables assujettis à l'ISF rétabli (impôt sur la fortune)"
+              "plus_1_3m"
             ]
           }
         ],
@@ -37,8 +37,8 @@
     ],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Rétablir l'ISF (impôt sur la fortune) et tripler son montant."
       }
@@ -94,7 +94,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire disparaître progressivement la CSG (Contribution sociale généralisée) en transférant son financement vers les cotisations sociales des entreprises."
+      }
+    ],
     "positions": []
   },
   {

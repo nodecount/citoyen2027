@@ -68,7 +68,8 @@
       "finances-publiques"
     ],
     "logements_hors_residence": [
-      "social-solidarite"
+      "social-solidarite",
+      "finances-publiques"
     ],
     "logement_social": [
       "social-solidarite"
@@ -93,6 +94,21 @@
     ],
     "ne_en_france_parents_etrangers": [
       "interieur-justice"
+    ],
+    "montant_pension": [
+      "retraites-travail",
+      "social-solidarite"
+    ],
+    "heritage": [
+      "finances-publiques"
+    ],
+    "enfant_moins_3_ans": [
+      "social-solidarite",
+      "retraites-travail",
+      "education-jeunesse"
+    ],
+    "desert_medical": [
+      "social-solidarite"
     ]
   }
 }

@@ -21,7 +21,7 @@ export function Menu({ ecran, onNaviguer, bases, baseActive, onChoisirBase }: Me
   // Le formulaire général fait partie du parcours « Simulateur » : c'est cet onglet qui reste marqué.
   const onglet = ecran === "questions-generales" ? "simulateur" : ecran;
 
-  const lien = (cible: "accueil" | "simulateur" | "a-propos", libelle: string) => (
+  const lien = (cible: "accueil" | "exploration" | "simulateur" | "a-propos", libelle: string) => (
     <button
       type="button"
       className={onglet === cible ? "lien-menu lien-menu--actif" : "lien-menu"}
@@ -39,6 +39,7 @@ export function Menu({ ecran, onNaviguer, bases, baseActive, onChoisirBase }: Me
       </span>
       <nav aria-label="Navigation principale">
         {lien("accueil", "Accueil")}
+        {lien("exploration", "Exploration")}
         {lien("simulateur", "Simulateur")}
         {lien("a-propos", "À propos")}
       </nav>
@@ -55,7 +56,13 @@ export function Menu({ ecran, onNaviguer, bases, baseActive, onChoisirBase }: Me
             <Database size={18} aria-hidden="true" />
             <span>{courante.libelle}</span>
           </button>
-          <ModaleBase ouverte={modaleOuverte} bases={bases} actif={baseActive} onChoisir={onChoisirBase} onFermer={fermer} />
+          <ModaleBase ouverte={modaleOuverte} bases={bases} actif={baseActive} onChoisir={onChoisirBase}
+            onControle={(id, cible) => {
+              onChoisirBase(id);
+              onNaviguer(cible);
+            }}
+            onFermer={fermer}
+          />
         </>
       )}
     </header>

@@ -1,7 +1,7 @@
-import profilSchema from "../../data/profils-schema.json";
+import { champsToutesBases } from "../schemaBase";
 import type { DimensionEffet, Effet } from "../effets";
 import type { NiveauProjection, Projection } from "../engine/projection";
-import type { ChampProfil, Proposition } from "../types";
+import type { Proposition } from "../types";
 
 // Textes de l'indicateur. Le sens n'est jamais porté par la couleur seule : chaque niveau a un
 // libellé ET un symbole distinct (lecture au lecteur d'écran, daltonisme, impression en noir et blanc).
@@ -49,7 +49,7 @@ export function decrireEffet(effet: Effet): string {
 const LIBELLES_CHAMPS: Record<string, string> = {
   enfants_a_charge: "Enfants à charge",
 };
-for (const champ of profilSchema as ChampProfil[]) LIBELLES_CHAMPS[champ.id] = champ.label;
+for (const champ of champsToutesBases()) LIBELLES_CHAMPS[champ.id] = champ.label;
 
 export function libelleChamp(champ: string): string {
   return LIBELLES_CHAMPS[champ] ?? champ;

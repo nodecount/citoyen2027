@@ -3,8 +3,8 @@ import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import themesData from "../../data/bases/officielle/themes.json";
-import profilSchema from "../../data/profils-schema.json";
-import { VALEURS_PAR_CHAMP } from "../effets";
+import { champsDeBase, valeursParChamp } from "../schemaBase";
+import { BASE_INGESTION } from "./base";
 import type { CandidatMeta } from "../types";
 import { DOMAINES_INSTITUTIONNELS, domainesAutorises, domainesAvecInstitutions } from "./domaines";
 import { SCHEMA_PROPOSITION_GENEREE, validerPropositionGeneree, type PropositionGeneree } from "./schema";
@@ -41,12 +41,12 @@ export function remplirGabarit(gabarit: string, valeurs: Record<string, string>)
   return texte;
 }
 
-// Les champs ciblables et leurs valeurs viennent du formulaire citoyen (data/profils-schema.json) :
+// Les champs ciblables et leurs valeurs viennent du formulaire citoyen (data/bases/<id>/profils-schema.json) :
 // une seule source de vérité, donc le prompt suit automatiquement toute évolution du profil.
-export function descriptionChampsProfil(): string {
-  const libelles: Record<string, string> = { enfants_a_charge: "Enfants à charge (déduit du nombre d'enfants)" };
-  for (const champ of profilSchema as Array<{ id: string; label: string }>) libelles[champ.id] = champ.label;
-  return Object.entries(VALEURS_PAR_CHAMP)
+export function descriptionChampsProfil(baseId: string): string {
+  const libelles: Record<string, string> = { enfants_a_charge: "Enfants à charge (déduit du nombre d'enfants ; 	rois_ou_plus = au moins trois enfants à charge)" };
+  for (const champ of champsDeBase(baseId)) libelles[champ.id] = champ.label;
+  return Object.entries(valeursParChamp(baseId))
     .map(
       ([champ, valeurs]) =>
         `- \`${champ}\` (${libelles[champ] ?? champ}) : ${valeurs.map((v) => `\`${v}\``).join(" | ")}`,
@@ -152,7 +152,7 @@ export function construireRequeteGeneration(
     THEME_DESCRIPTION: descriptionDuTheme(themeId),
     DATE: new Date().toISOString().slice(0, 10),
     DOMAINES_INSTITUTIONNELS: DOMAINES_INSTITUTIONNELS.join(", "),
-    CHAMPS_PROFIL: descriptionChampsProfil(),
+    CHAMPS_PROFIL: descriptionChampsProfil(BASE_INGESTION),
     TITRES_EXISTANTS: listeTitresExistants,
   });
 

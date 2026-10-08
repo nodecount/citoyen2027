@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { apresChangementDeMode, choisirMode, cleIdentites, etatPourBase, recommencer, type EtatIdeal } from "./etatIdeal";
+import { cleIdentites, etatPourBase, recommencer, type EtatIdeal } from "./etatIdeal";
 
 const REVELE: EtatIdeal = { revele: true, graine: 42 };
 
@@ -8,33 +8,6 @@ describe("recommencer", () => {
     const tirages = new Set(Array.from({ length: 20 }, () => recommencer().graine));
     expect(recommencer().revele).toBe(false);
     expect(tirages.size).toBeGreaterThan(1);
-  });
-});
-
-describe("changement de mode (simulateur, exploration, simulateur)", () => {
-  it("quitter le simulateur puis y revenir ne garde JAMAIS la card révélée", () => {
-    const enExploration = apresChangementDeMode(REVELE, "simulateur", "exploration");
-    expect(enExploration.revele).toBe(false);
-    const deRetour = apresChangementDeMode({ ...enExploration, revele: true }, "exploration", "simulateur");
-    expect(deRetour.revele).toBe(false);
-    expect(deRetour.graine).not.toBe(REVELE.graine); // de nouvelles lettres
-  });
-  it("rester dans le même mode ne change rien (clic sur le bouton déjà actif)", () => {
-    expect(apresChangementDeMode(REVELE, "simulateur", "simulateur")).toBe(REVELE);
-  });
-});
-
-describe("choisirMode : le mode n'est mémorisé que s'il est choisi par le visiteur", () => {
-  it("un vrai changement est mémorisé et remet la card à zéro", () => {
-    const memorises: string[] = [];
-    const apres = choisirMode(REVELE, "exploration", "simulateur", (m) => memorises.push(m));
-    expect(memorises).toEqual(["simulateur"]);
-    expect(apres.revele).toBe(false);
-  });
-  it("cliquer sur le mode déjà actif ne mémorise rien", () => {
-    const memorises: string[] = [];
-    expect(choisirMode(REVELE, "simulateur", "simulateur", (m) => memorises.push(m))).toBe(REVELE);
-    expect(memorises).toEqual([]);
   });
 });
 

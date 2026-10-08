@@ -1,14 +1,19 @@
 [
   {
     "groupe": 0,
-    "empreinte": "bccbbfb2583fd093",
-    "date": "2026-09-30",
+    "empreinte": "12772e94878a8ea7",
+    "date": "2026-10-05",
     "modele": "claude-sonnet-5",
     "propositions": 3,
-    "etiquetees": 2,
+    "etiquetees": 1,
     "sans_position": 1,
-    "rejetees": [],
-    "cout_reference_usd": 0.0359,
+    "rejetees": [
+      {
+        "id": "hollande-finances-publiques-003",
+        "raison": "relecture : La mesure baisse les cotisations salariales (hausse du net via baisse de prélèvement), ce n'est pas une hausse imposée du SMIC/salaires mais plutôt un allègement, donc relève de 'moderer_salaires' et non de 'hausse_smic'."
+      }
+    ],
+    "cout_reference_usd": 0.07,
     "appels": 2
   }
 ]

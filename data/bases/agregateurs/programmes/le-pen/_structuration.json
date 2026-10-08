@@ -2,101 +2,107 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "f60cf5081dd52f09",
-    "date": "2026-09-27",
+    "empreinte": "e1640e53857b43ca",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 10,
-    "avec_effets": 1,
-    "sans_effet": 9,
+    "avec_effets": 2,
+    "sans_effet": 8,
     "rejetees": [],
-    "cout_reference_usd": 0.0381,
+    "cout_reference_usd": 0.0458,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "c89444752c689958",
-    "date": "2026-09-27",
+    "empreinte": "bce06f2e1c085141",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 16,
-    "avec_effets": 2,
-    "sans_effet": 14,
-    "rejetees": [],
-    "cout_reference_usd": 0.0415,
+    "avec_effets": 3,
+    "sans_effet": 12,
+    "rejetees": [
+      {
+        "id": "le-pen-envi-012",
+        "raison": "relecture : Faire d'un sujet une 'cause nationale' est une déclaration de principe, pas une mesure concrète dont on peut déduire une hausse effective de la protection sociale."
+      }
+    ],
+    "cout_reference_usd": 0.0612,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "11f57434a0b1a044",
-    "date": "2026-09-27",
+    "empreinte": "608c038a4eaa171f",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
-    "sans_effet": 1,
-    "rejetees": [],
-    "cout_reference_usd": 0.0243,
-    "appels": 1
+    "sans_effet": 0,
+    "rejetees": [
+      {
+        "id": "le-pen-finances-publiques-001",
+        "raison": "relecture : Le seuil de patrimoine (plus de 1,3M) n'est pas mentionné dans le texte, il est déduit par analogie avec l'ancien ISF, ce qui est un mécanisme supposé."
+      }
+    ],
+    "cout_reference_usd": 0.0419,
+    "appels": 2
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "555500b7c8f60b18",
-    "date": "2026-09-27",
+    "empreinte": "fcd36f7e8526a4b6",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 7,
-    "avec_effets": 0,
-    "sans_effet": 7,
+    "avec_effets": 3,
+    "sans_effet": 4,
     "rejetees": [],
-    "cout_reference_usd": 0.0264,
-    "appels": 1
+    "cout_reference_usd": 0.0544,
+    "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "98780e6d845ef404",
-    "date": "2026-09-27",
+    "empreinte": "33eaf96d1ba76ab5",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 4,
     "avec_effets": 1,
     "sans_effet": 3,
     "rejetees": [],
-    "cout_reference_usd": 0.0362,
+    "cout_reference_usd": 0.0405,
     "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "336a038f01d94446",
-    "date": "2026-09-27",
+    "empreinte": "262625e1349e6d34",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 6,
     "avec_effets": 1,
     "sans_effet": 5,
     "rejetees": [],
-    "cout_reference_usd": 0.036,
+    "cout_reference_usd": 0.0421,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "f7d1f07bc8162247",
-    "date": "2026-09-27",
+    "empreinte": "db963f84331a84a1",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 15,
-    "avec_effets": 2,
-    "sans_effet": 11,
+    "avec_effets": 8,
+    "sans_effet": 6,
     "rejetees": [
       {
         "id": "le-pen-social-solidarite-011",
-        "raison": "relecture : Le périmètre est élargi : la cible « locataire » vise tous les locataires alors que le texte ne vise que ceux qui ne paient pas leur loyer. De plus, la dimension « droits_et_libertes » est douteuse pour des sanctions et des expulsions, qui relèvent plutôt du logement ou de la sécurité du logement."
-      },
-      {
-        "id": "le-pen-social-solidarite-014",
-        "raison": "relecture : La cible « europeenne » et « hors_ue » regroupe tous les non-Français, y compris ceux en situation régulière. Le texte dit seulement que les Français seront favorisés, sans préciser le statut des autres. De plus, la « hausse » pour les Français suppose un mécanisme de rationnement que le texte ne décrit pas."
+        "raison": "relecture : La cible inclut tous les locataires (champ logement:locataire) alors que le texte ne vise que les locataires en situation d'impayés, élargissant le périmètre de l'effet."
       }
     ],
-    "cout_reference_usd": 0.0533,
+    "cout_reference_usd": 0.092,
     "appels": 2
   }
 ]

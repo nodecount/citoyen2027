@@ -1,7 +1,5 @@
-import type { ModeAffichage } from "./memoireReponses";
-
 // État de la card « candidat idéal » et des lettres de candidats : ce qui doit se réinitialiser dès que le sens des lettres
-// change (nouvelle graine) ou que le contexte change (mode, base). Logique pure, testée à part : la page ne fait que la brancher.
+// change (nouvelle graine) ou que le contexte change (base). Logique pure, testée à part : la page ne fait que la brancher.
 export interface EtatIdeal {
   revele: boolean;
   // Graine du tirage des lettres (voir aveugle.ts) : une nouvelle graine, c'est d'autres candidats derrière « Candidat C ».
@@ -13,18 +11,6 @@ export const tirerGraine = (): number => Math.floor(Math.random() * 2 ** 31);
 // Card refloutée, nouvelles lettres (le formulaire, lui, est rouvert par la page : réponses et convictions intactes).
 export function recommencer(): EtatIdeal {
   return { revele: false, graine: tirerGraine() };
-}
-
-// Quitter le simulateur, ou y entrer, repart de zéro : on ne revient jamais sur une card déjà révélée.
-export function apresChangementDeMode(etat: EtatIdeal, courant: ModeAffichage, suivant: ModeAffichage): EtatIdeal {
-  return suivant === courant ? etat : recommencer();
-}
-
-// Choix du mode PAR LE VISITEUR (clic) : seul endroit où le mode est mémorisé dans le navigateur. Un mode imposé (arrivée par
-// un lien de l'accueil qui nomme un candidat) n'est jamais mémorisé : il ne doit pas devenir le mode des visites suivantes.
-export function choisirMode(etat: EtatIdeal, courant: ModeAffichage, suivant: ModeAffichage, memoriser: (mode: ModeAffichage) => void): EtatIdeal {
-  if (suivant !== courant) memoriser(suivant);
-  return apresChangementDeMode(etat, courant, suivant);
 }
 
 // Un autre jeu de candidats : le gagnant de la nouvelle base ne doit pas s'afficher révélé sans nouveau clic.

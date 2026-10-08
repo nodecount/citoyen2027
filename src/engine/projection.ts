@@ -1,3 +1,4 @@
+import { champsToutesBases } from "../schemaBase";
 import { CHAMP_AUTRE, type Effet } from "../effets";
 import { valeursDuProfil, type ProfilPartiel } from "../profil";
 import type { Proposition } from "../types";
@@ -41,15 +42,31 @@ export interface Projection {
   effetsNonPrisEnCompte: number;
 }
 
-type StatutEffet =
+export type StatutEffet =
   | { type: "hors_cible" }
   | { type: "applicable" }
   | { type: "a_confirmer"; champsManquants: string[]; horsFormulaire: boolean };
 
+const CONDITIONS_AFFICHAGE = new Map(
+  champsToutesBases()
+    .filter((c) => c.afficher_si)
+    .map((c) => [c.id, c.afficher_si!] as const)
+);
+
+// Vrai si le champ est conditionnel ET que la réponse (connue) à sa question parente le masque, ou masque elle-même
+// la question parente en cascade. Un parent non répondu n'écarte rien : la question reste à poser.
+function questionMasquee(profil: ProfilPartiel, champ: string): boolean {
+  const condition = CONDITIONS_AFFICHAGE.get(champ);
+  if (!condition) return false;
+  const valeursParent = valeursDuProfil(profil, condition.champ);
+  if (valeursParent === null) return questionMasquee(profil, condition.champ);
+  return !valeursParent.some((v) => condition.valeurs.includes(v));
+}
+
 // ET à trois valeurs : un critère faux exclut l'effet même si un autre est inconnu — y compris un critère « autre » : un
 // critère répondable qui exclut déjà le profil prime sur un doute qu'aucune réponse ne lèvera jamais. Une réponse à
 // plusieurs choix correspond si l'un de ses choix est visé.
-function statutEffet(profil: ProfilPartiel, effet: Effet): StatutEffet {
+export function statutEffet(profil: ProfilPartiel, effet: Effet): StatutEffet {
   const champsManquants: string[] = [];
   let horsFormulaire = false;
   for (const critere of effet.cibles) {
@@ -59,6 +76,9 @@ function statutEffet(profil: ProfilPartiel, effet: Effet): StatutEffet {
     }
     const valeurs = valeursDuProfil(profil, critere.champ);
     if (valeurs === null) {
+      // Question conditionnelle que le visiteur ne verra jamais (sa réponse à la question parente l'écarte) : il n'a
+      // pas la caractéristique visée, il n'y a rien à lui demander. Sinon l'effet resterait « à préciser » sans issue.
+      if (questionMasquee(profil, critere.champ)) return { type: "hors_cible" };
       champsManquants.push(critere.champ);
     } else if (!valeurs.some((v) => critere.valeurs.includes(v))) {
       return { type: "hors_cible" };

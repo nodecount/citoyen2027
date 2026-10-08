@@ -2,19 +2,14 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "4a51647320d8c2b3",
-    "date": "2026-09-27",
+    "empreinte": "7baaa91c4e7e6796",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 6,
-    "avec_effets": 1,
-    "sans_effet": 4,
-    "rejetees": [
-      {
-        "id": "brun-retraites-travail-002",
-        "raison": "relecture : Le texte vise les pensions supérieures à 3 000 € bruts, mais la cible tranche_revenus 3000_5000 et plus_5000 est appliquée à tous les retraités de ces tranches (revenu net/total, pas seulement la pension), ce qui élargit le périmètre et la tranche de revenus n'est pas équivalente au seuil de pension brute ; en outre la désindexation n'est pas une baisse nominale certaine."
-      }
-    ],
-    "cout_reference_usd": 0.0401,
+    "avec_effets": 4,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0573,
     "appels": 2
   }
 ]

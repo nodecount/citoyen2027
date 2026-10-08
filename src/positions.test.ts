@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 import { SUJETS_CONVICTION, trouverPosition, validerPositionMesure } from "./positions";
 
 describe("catalogue des sujets de convictions", () => {
-  it("huit sujets, chacun avec au moins deux positions opposées (aucune n'est seule)", () => {
-    expect(SUJETS_CONVICTION).toHaveLength(8);
+  it("au moins neuf sujets, chacun avec au moins deux positions opposées (aucune n'est seule)", () => {
+    expect(SUJETS_CONVICTION.length).toBeGreaterThanOrEqual(9);
     for (const s of SUJETS_CONVICTION) expect(s.positions.length, s.id).toBeGreaterThanOrEqual(2);
   });
   it("identifiants uniques, libellés et définitions renseignés", () => {

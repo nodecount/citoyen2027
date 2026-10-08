@@ -2,7 +2,7 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { CHAMPS_CIBLES, DIMENSIONS_EFFET, SENS_EFFET, validerEffet, type CritereCible, type Effet } from "../effets";
+import { champsCibles, DIMENSIONS_EFFET, SENS_EFFET, validerEffet, type CritereCible, type Effet } from "../effets";
 import { localiserExtrait } from "../ingestion/corpus";
 import { descriptionChampsProfil, remplirGabarit } from "../ingestion/generate";
 import type { SortieCli } from "./claude-cli";
@@ -12,6 +12,10 @@ import type { SortieCli } from "./claude-cli";
 // texte de la proposition, qu'un second appel relit les effets, et la polarité (favorable/défavorable) reste dans le
 // moteur. Un effet invalide ou refusé à la relecture fait perdre à la proposition TOUS ses effets : mieux vaut pas de
 // badge qu'un badge fondé sur une moitié de la mesure.
+
+// Cette chaîne ne structure que la base « agregateurs » : critères ciblables, consigne au modèle et validation viennent du
+// formulaire de CETTE base (data/bases/agregateurs/profils-schema.json), jamais de celui d'une autre source.
+export const BASE_STRUCTURATION = "agregateurs";
 
 const ICI = dirname(fileURLToPath(import.meta.url));
 
@@ -38,7 +42,7 @@ const SCHEMA_EFFET = {
       type: "array",
       items: {
         type: "object",
-        properties: { champ: { type: "string", enum: [...CHAMPS_CIBLES] }, valeurs: { type: "array", items: { type: "string" } } },
+        properties: { champ: { type: "string", enum: champsCibles(BASE_STRUCTURATION) }, valeurs: { type: "array", items: { type: "string" } } },
         required: ["champ", "valeurs"],
         additionalProperties: false,
       },
@@ -95,7 +99,7 @@ export function empreintePrompts(): string {
   return createHash("sha256")
     .update(lirePrompt("structuration.md"))
     .update(lirePrompt("verification-structuration.md"))
-    .update(descriptionChampsProfil())
+    .update(descriptionChampsProfil(BASE_STRUCTURATION))
     .digest("hex")
     .slice(0, 16);
 }
@@ -119,7 +123,7 @@ function listeNumerotee(entrees: EntreeStructuration[]): string {
 }
 
 export function construireRequete(candidat: string, theme: string, entrees: EntreeStructuration[]): { systeme: string; prompt: string } {
-  const systeme = remplirGabarit(lirePrompt("structuration.md"), { CANDIDAT: candidat, THEME: theme, CHAMPS_PROFIL: descriptionChampsProfil() });
+  const systeme = remplirGabarit(lirePrompt("structuration.md"), { CANDIDAT: candidat, THEME: theme, CHAMPS_PROFIL: descriptionChampsProfil(BASE_STRUCTURATION) });
   return { systeme, prompt: `Propositions à structurer (${entrees.length}) :\n${listeNumerotee(entrees)}` };
 }
 
@@ -168,7 +172,7 @@ export function controlerReponse(structure: unknown, entrees: EntreeStructuratio
     let raison: string | null = null;
     for (const e of effetsBruts) {
       const effet = { ...(e as Record<string, unknown>), source_url: entree.url };
-      if (!validerEffet(effet, [entree.url])) {
+      if (!validerEffet(effet, [entree.url], BASE_STRUCTURATION)) {
         raison = "un effet est invalide (cibles, dimension, sens ou longueur de l'extrait)";
         break;
       }

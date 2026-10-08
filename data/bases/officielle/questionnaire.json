@@ -1,5 +1,5 @@
 {
-  "description": "Pour chaque question du profil (data/profils-schema.json), les thèmes de CETTE base auxquels elle sert. Une question pertinente pour au moins deux thèmes est posée dans les questions générales ; pertinente pour un seul thème, elle est posée dans ce thème.",
+  "description": "Pour chaque question du profil (data/bases/officielle/profils-schema.json), les thèmes de CETTE base auxquels elle sert. Une question pertinente pour au moins deux thèmes est posée dans les questions générales ; pertinente pour un seul thème, elle est posée dans ce thème.",
   "pertinence": {
     "tranche_age": ["fiscalite", "travail", "retraites", "aides-etat", "sante", "education", "logement"],
     "statut_professionnel": ["fiscalite", "pouvoir-achat", "travail", "retraites", "aides-etat", "education"],
@@ -23,6 +23,9 @@
     "carriere_longue": ["retraites"],
     "aidant_familial": ["sante"],
     "enfants_scolarises": ["education"],
-    "ne_en_france_parents_etrangers": ["immigration"]
+    "ne_en_france_parents_etrangers": ["immigration"],
+    "heritage": ["fiscalite"],
+    "parent_isole": ["aides-etat", "fiscalite", "logement"],
+    "anciennete_france": ["immigration", "aides-etat"]
   }
 }

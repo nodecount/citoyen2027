@@ -98,7 +98,7 @@
             ]
           }
         ],
-        "dimension": "protection_sociale",
+        "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Revenir sur les trois jours de carence pour les arrêts maladie des agents de la fonction publique."
@@ -153,14 +153,6 @@
       {
         "cibles": [
           {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie",
-              "independant",
-              "fonctionnaire"
-            ]
-          },
-          {
             "champ": "autre",
             "valeurs": [
               "travailleurs modestes"
@@ -178,7 +170,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter le salaire des travailleurs modestes du public, du privé et des indépendants par la baisse de la CSG."
+        "extrait": "Augmenter le salaire des travailleurs modestes du public, du privé et des indépendants par la baisse de la CSG"
       }
     ]
   },
@@ -204,8 +196,24 @@
     "sous_theme": "Fiscalité",
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
+        "sujet": "salaires",
+        "position": "moderer_salaires",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre aux chefs d’entreprises de récompenser leurs salariés en instaurant une prime \"zéro charge\""
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Permettre aux chefs d’entreprises de récompenser leurs salariés en instaurant une prime \"zéro charge\"."
       }
@@ -231,7 +239,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "familles étrangères souhaitant un regroupement familial"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer le droit au « regroupement familial » et tous les droits automatiques liés à l’immigration familiale."
+      }
+    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -306,7 +329,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "demandeur_asile"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Exiger que les demandes d’asile soient déposées en dehors du territoire national, dans nos consulats"
+      }
+    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -336,7 +374,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étrangers provenant de pays dont sont majoritairement issus les immigrés clandestins demandant un visa"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer une caution obligatoire de 10 000 euros pour l’obtention d’un visa pour les étrangers provenant de pays dont sont majoritairement issus les immigrés clandestins"
+      }
+    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -366,15 +419,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "immigration",
-        "position": "restriction",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Dénoncer les accords bilatéraux, en particulier l’accord franco-algérien de 1968."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "zemmour-interieur-justice-006",
@@ -493,6 +538,31 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer les aides sociales non-contributives (allocations familiales, aides au logement, RSA, minimum vieillesse…) pour les étrangers extra-européens."
       }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "hors_ue"
+            ]
+          },
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "allocations_familiales",
+              "aide_logement",
+              "rsa",
+              "aspa"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les aides sociales non-contributives (allocations familiales, aides au logement, RSA, minimum vieillesse…) pour les étrangers extra-européens."
+      }
     ]
   },
   {
@@ -560,7 +630,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire définitivement la régularisation de tout étranger entré illégalement sur le territoire français."
+      }
+    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -590,11 +675,26 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "ne_en_france_parents_etrangers",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer le droit du sol."
+      }
+    ],
     "positions": [
       {
-        "sujet": "immigration",
-        "position": "restriction",
+        "sujet": "droit_du_sol",
+        "position": "droit_sol_restreint",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer le droit du sol."
       }
@@ -620,11 +720,27 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "europeenne",
+              "hors_ue"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Durcir les conditions de naturalisation, en augmentant la durée minimale de résidence en France de 5 ans à 10 ans, en exigeant une parfaite maitrise de la langue, une assimilation réelle, ainsi qu’une absence totale de condamnation judiciaire."
+      }
+    ],
     "positions": [
       {
-        "sujet": "immigration",
-        "position": "restriction",
+        "sujet": "droit_du_sol",
+        "position": "droit_sol_restreint",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Durcir les conditions de naturalisation, en augmentant la durée minimale de résidence en France de 5 ans à 10 ans, en exigeant une parfaite maitrise de la langue, une assimilation réelle, ainsi qu’une absence totale de condamnation judiciaire."
       }
@@ -650,7 +766,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réinstaurer le délit de séjour irrégulier supprimé en 2012."
+      }
+    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -680,7 +811,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "délinquants et criminels étrangers condamnés"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Expulser systématiquement tous les délinquants étrangers dès leur condamnation et les criminels à l’issue de leur peine."
+      }
+    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -710,7 +856,29 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "europeenne",
+              "hors_ue"
+            ]
+          },
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Expulser les étrangers au chômage au terme d’un délai de six mois de recherche d’emploi infructueuse."
+      }
+    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -773,8 +941,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "prison",
+        "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Introduire des peines planchers pour tous les crimes et délits."
       }
@@ -803,8 +971,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "prison",
+        "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Appliquer les condamnations en mettant fin aux aménagements de peine."
       }
@@ -884,7 +1052,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Recruter davantage de magistrats et élargir leur recrutement aux professionnels de la sécurité publique"
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-023",
@@ -906,11 +1081,26 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "criminels binationaux et délinquants récidivistes"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Déchoir de la nationalité française les criminels binationaux et les délinquants récidivistes."
+      }
+    ],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "droit_du_sol",
+        "position": "droit_sol_restreint",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Déchoir de la nationalité française les criminels binationaux et les délinquants récidivistes."
       }
@@ -937,14 +1127,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Expulser tous les squatteurs en moins de 72h, grâce au recours obligatoire à la force publique par les préfets."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "zemmour-interieur-justice-025",
@@ -995,20 +1178,12 @@
           {
             "champ": "autre",
             "valeurs": [
-              "délinquants percevant des aides sociales"
+              "délinquants"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Suspendre les aides sociales aux délinquants."
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Suspendre les aides sociales aux délinquants."
       }
@@ -1083,8 +1258,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "prison",
+        "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Construire 10 000 places de prison supplémentaires en simplifiant le processus administratif."
       }
@@ -1110,10 +1285,18 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Sécurité intérieure",
-    "positions": [
+    "effets": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "forces_ordre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Accorder aux policiers et aux gendarmes une présomption de légitime défense en cas d’usage de leurs armes."
       }
@@ -1139,11 +1322,10 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Sécurité intérieure",
-    "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "police_armement",
+        "position": "police_armee",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Généraliser progressivement l’armement obligatoire des polices municipales."
       }
@@ -1173,9 +1355,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "desert_medical",
             "valeurs": [
-              "habitants des déserts médicaux"
+              "oui"
             ]
           }
         ],
@@ -1185,7 +1367,14 @@
         "extrait": "Recruter 1 000 médecins salariés par l’État sur 5 ans dans les déserts médicaux."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Recruter 1 000 médecins salariés par l’État sur 5 ans dans les déserts médicaux."
+      }
+    ]
   },
   {
     "id": "zemmour-social-solidarite-002",
@@ -1211,19 +1400,26 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "desert_medical",
             "valeurs": [
-              "habitants des déserts médicaux"
+              "oui"
             ]
           }
         ],
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer des services hospitaliers de proximité dans les déserts médicaux"
+        "extrait": "Créer des services hospitaliers de proximité dans les déserts médicaux (services de maternité, chimiothérapie, dépistage et chirurgie-dentaire)."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer des services hospitaliers de proximité dans les déserts médicaux"
+      }
+    ]
   },
   {
     "id": "zemmour-social-solidarite-003",
@@ -1245,7 +1441,23 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rétablir un système de garde obligatoire pour les médecins sur l’ensemble du territoire national."
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rétablir un système de garde obligatoire pour les médecins sur l’ensemble du territoire national."
+      }
+    ]
   },
   {
     "id": "zemmour-social-solidarite-004",
@@ -1374,7 +1586,28 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "tranche_revenus",
+            "valeurs": [
+              "moins_1200"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Maintenir l’exonération de cotisations patronales et salariales à hauteur du SMIC pendant deux ans."
+      }
+    ],
     "positions": [
       {
         "sujet": "fiscalite",
@@ -1417,17 +1650,10 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "simplifiant et défiscalisant la prime de participation des salariés"
+        "extrait": "Rémunérer les salariés qui participent à la création de richesse de leur entreprise en simplifiant et défiscalisant la prime de participation des salariés."
       }
     ],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "en simplifiant et défiscalisant la prime de participation des salariés."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "zemmour-retraites-travail-004",
@@ -1465,14 +1691,7 @@
         "extrait": "Permettre le déblocage immédiat de la prime de participation sans aucun impôt sur le revenu et sans aucune condition pour le salarié."
       }
     ],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Permettre le déblocage immédiat de la prime de participation sans aucun impôt sur le revenu et sans aucune condition pour le salarié."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "zemmour-retraites-travail-005",
@@ -1554,7 +1773,23 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Favoriser la mobilité des chercheurs d’emploi sur le territoire en versant directement la moitié des droits au chômage en cas de déménagement pour prendre un nouvel emploi."
+      }
+    ]
   },
   {
     "id": "zemmour-retraites-travail-008",
@@ -1589,7 +1824,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "en augmentant le niveau d’exonération des cotisations salariales pour l’apprentissage de 79 % à 100 % du SMIC"
+        "extrait": "Favoriser le pouvoir d’achat des apprentis en augmentant le niveau d’exonération des cotisations salariales pour l’apprentissage de 79 % à 100 % du SMIC."
       }
     ],
     "positions": []
@@ -1614,7 +1849,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "apprenti"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Favoriser l’embauche des apprentis en CDI en réinstaurant et maintenant l’exonération de cotisations patronales et salariales à hauteur du SMIC pendant 2 ans en cas d’embauche de l’apprenti par l’entreprise d’accueil."
+      }
+    ],
     "positions": []
   },
   {
@@ -1720,13 +1970,12 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [],
     "positions": [
       {
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser le taux d’impôt sur les sociétés à 15 % pour les petites et moyennes entreprises, artisans, commerçants et agriculteurs jusqu’à 300 000 euros de bénéfices."
+        "extrait": "Baisser le taux d’impôt sur les sociétés à 15 % pour les petites et moyennes entreprises"
       }
     ]
   },
@@ -1750,7 +1999,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "transmission d'entreprises familiales"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les droits de donation et de succession pour la transmission des entreprises familiales."
+      }
+    ],
     "positions": [
       {
         "sujet": "fiscalite",
@@ -1790,9 +2054,10 @@
             ]
           },
           {
-            "champ": "autre",
+            "champ": "montant_pension",
             "valeurs": [
-              "retraites inférieures à 1300 € / mois"
+              "moins_1000",
+              "1000_1300"
             ]
           }
         ],
@@ -1805,7 +2070,7 @@
     "positions": [
       {
         "sujet": "fiscalite",
-        "position": "redistribution",
+        "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Revaloriser jusqu’à 600 € / an les petites retraites inférieures à 1300 € / mois par l’exonération de CSG et CRDS."
       }
@@ -1900,8 +2165,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "zemmour-envi-001",
@@ -1926,7 +2190,7 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "ecologie",
+        "sujet": "nucleaire",
         "position": "garder_nucleaire",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer l’objectif de réduire à 50 % la part du nucléaire dans notre mix électrique en 2035 et allonger la durée de vie du parc existant à 60 ans au moins."
@@ -1956,7 +2220,7 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "ecologie",
+        "sujet": "nucleaire",
         "position": "garder_nucleaire",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Stopper la fermeture prévue des 12 réacteurs nucléaires annoncée pour 2030."
@@ -1986,7 +2250,7 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "ecologie",
+        "sujet": "nucleaire",
         "position": "garder_nucleaire",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Relancer la recherche dans le nucléaire du futur, comme les réacteurs de 4e génération (programme ASTRID) et la fusion nucléaire (projet international ITER)."
@@ -2014,7 +2278,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "freiner_transition",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre fin à tous les projets d’éoliennes actuels et futurs, sur terre comme sur mer."
+      }
+    ]
   },
   {
     "id": "zemmour-envi-005",
@@ -2037,14 +2308,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Aggraver les sanctions contre la pratique des décharges sauvages."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "zemmour-envi-006",
@@ -2112,8 +2376,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "zemmour-gouvernance-republique-002",
@@ -2136,7 +2399,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "institutions",
+        "position": "nouvelles_institutions",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Favoriser l’usage du référendum afin de faire adopter directement par le peuple français les mesures qui intéressent la Nation."
+      }
+    ]
   },
   {
     "id": "zemmour-gouvernance-republique-003",
@@ -2159,7 +2429,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "institutions",
+        "position": "nouvelles_institutions",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un référendum obligatoire pour toute proposition de révision de la Constitution, ratification de traité européen ou élargissement de l’UE."
+      }
+    ]
   },
   {
     "id": "zemmour-gouvernance-republique-004",
@@ -2181,7 +2458,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer la supériorité des nouvelles lois nationales sur tout texte international antérieur et sur tout acte dérivé qui en résulte en modifiant l’article 55 de la Constitution."
+      }
+    ]
   },
   {
     "id": "zemmour-gouvernance-republique-005",
@@ -2204,7 +2489,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "institutions",
+        "position": "nouvelles_institutions",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre au Parlement d’avoir le dernier mot en cas d’inconstitutionnalité d’une loi par un vote du Parlement réuni en Congrès à la majorité des 3/5e."
+      }
+    ]
   },
   {
     "id": "zemmour-gouvernance-republique-006",
@@ -2226,8 +2518,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "zemmour-gouvernance-republique-007",
@@ -2303,8 +2594,30 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "rural"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "suspendant la fermeture des écoles rurales sans l’accord du maire"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "ecole_continuite",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "en suspendant la fermeture des écoles rurales sans l’accord du maire"
+      }
+    ]
   },
   {
     "id": "zemmour-education-jeunesse-002",
@@ -2327,7 +2640,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_discipline",
+        "position": "ecole_exigence",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Pour la fin du primaire, instaurer un certificat de fin d’études."
+      }
+    ]
   },
   {
     "id": "zemmour-education-jeunesse-003",
@@ -2350,7 +2670,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Remettre en place des parcours cohérents et lisibles en restaurant les trois filières scientifique, littéraire et économique au lycée."
+      }
+    ]
   },
   {
     "id": "zemmour-education-jeunesse-004",
@@ -2373,14 +2700,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "libertes",
-        "position": "cadre_collectif",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Interdire l’écriture inclusive jusque dans l’enseignement supérieur."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "zemmour-education-jeunesse-005",
@@ -2426,7 +2746,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre un terme au collège unique en instituant des classes de niveaux."
+      }
+    ]
   },
   {
     "id": "zemmour-education-jeunesse-007",
@@ -2448,7 +2775,23 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "college",
+              "lycee"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Étendre l’enseignement du latin et du grec à tous les établissements du territoire national"
+      }
+    ],
     "positions": []
   },
   {
@@ -2479,21 +2822,22 @@
             "valeurs": [
               "allocations_familiales"
             ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "parents d'élèves perturbateurs ou absentéistes"
-            ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Suspendre les allocations familales des parents d’élèves perturbateurs ou absentéistes."
+        "extrait": "Suspendre les allocations familales des parents d’élèves perturbateurs ou absentéistes"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "parents_mineurs",
+        "position": "sanctionner_parents",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Suspendre les allocations familales des parents d’élèves perturbateurs ou absentéistes."
+      }
+    ]
   },
   {
     "id": "zemmour-education-jeunesse-009",
@@ -2516,7 +2860,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_discipline",
+        "position": "ecole_exigence",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Transformer les Conseillers Principaux d’Éducation en Surveillants Généraux ayant pour but exclusif le maintien de l’ordre scolaire au sein des établissements."
+      }
+    ]
   },
   {
     "id": "zemmour-education-jeunesse-010",
@@ -2539,7 +2890,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_discipline",
+        "position": "ecole_exigence",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer des internats de réinsertion pour les élèves perturbateurs."
+      }
+    ]
   },
   {
     "id": "zemmour-education-jeunesse-011",
@@ -2561,11 +2919,26 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre le port de la blouse obligatoire au primaire"
+      }
+    ],
     "positions": [
       {
-        "sujet": "libertes",
-        "position": "cadre_collectif",
+        "sujet": "ecole_discipline",
+        "position": "ecole_exigence",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Rendre le port de la blouse obligatoire au primaire."
       }

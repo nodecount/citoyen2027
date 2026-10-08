@@ -1,5 +1,7 @@
 import { ChevronDown, CircleHelp } from "lucide-react";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useContext, useEffect, useRef, useState, type ReactNode } from "react";
+import { compterMesuresImpactees } from "../engine/mesuresImpactees";
+import { PropositionsBase } from "./PropositionsContexte";
 import { estRepondue, questionsVisibles } from "../questionnaire";
 import { iconeDeQuestion } from "./icones";
 import type { ProfilPartiel } from "../profil";
@@ -126,6 +128,15 @@ export function ChampQuestion({ champ, profil, onReponse, idPrefixe, carte = fal
   const valeur = profil[champ.id];
   const decrit = champ.finalite ? idFinalite : undefined;
   const Icone = iconeDeQuestion(champ.id);
+  const propositions = useContext(PropositionsBase);
+  const impactees = propositions ? compterMesuresImpactees(champ, profil, propositions) : null;
+  // Sous la réponse, une fois la question répondue : combien de mesures des programmes la concernent (tous candidats, sans les nommer).
+  const impact =
+    impactees === null ? null : (
+      <p className="question-impact" aria-live="polite">
+        {impactees === 0 ? "Aucune mesure des programmes ne concerne cette réponse." : impactees === 1 ? "1 mesure des programmes concerne cette réponse." : `${impactees} mesures des programmes concernent cette réponse.`}
+      </p>
+    );
 
   const entete = (etiquette: ReactNode) => (
     <div className="question-tete">
@@ -155,6 +166,7 @@ export function ChampQuestion({ champ, profil, onReponse, idPrefixe, carte = fal
           idEtiquette={idEtiquette}
           decrit={decrit}
         />
+        {impact}
       </div>
     ) : (
       <div className="question">
@@ -184,6 +196,7 @@ export function ChampQuestion({ champ, profil, onReponse, idPrefixe, carte = fal
             aria-describedby={decrit}
           />
         )}
+        {impact}
       </div>
     );
 

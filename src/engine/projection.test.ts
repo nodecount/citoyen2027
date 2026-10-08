@@ -371,3 +371,58 @@ describe("projeterTheme — traçabilité", () => {
     expect(projeterTheme(PROFIL, [a, b]).niveau).toBe(projeterTheme(PROFIL, [b, a]).niveau);
   });
 });
+
+describe("question conditionnelle masquée : le visiteur n'est pas concerné, il n'y a rien à préciser", () => {
+  const asile = proposition([
+    effet({ dimension: "droits_et_libertes", sens: "baisse", cibles: [{ champ: "statut_sejour", valeurs: ["demandeur_asile"] }] }),
+  ]);
+
+  it("nationalité française : la question de séjour n'est jamais posée, la mesure ne concerne pas ce visiteur", () => {
+    const p = projeterTheme({ nationalite: "francaise" }, [asile]);
+    expect(p.niveau).toBe("non_concerne");
+    expect(p.incertain).toBe(false);
+  });
+
+  it("nationalité non répondue : « mixte à préciser », la réponse à donner reste possible", () => {
+    const p = projeterTheme({}, [asile]);
+    expect(p.niveau).toBe("mixte");
+    expect(p.champsManquants).toContain("statut_sejour");
+  });
+
+  it("hors UE sans réponse sur le séjour : toujours à préciser", () => {
+    const p = projeterTheme({ nationalite: "hors_ue" }, [asile]);
+    expect(p.niveau).toBe("mixte");
+    expect(p.incertain).toBe(true);
+  });
+
+  it("enfants scolarisés : sans enfant à charge, la mesure ne concerne pas le visiteur (parent déduit du nombre d'enfants)", () => {
+    const ecole = proposition([
+      effet({ dimension: "acces_aux_services", sens: "hausse", cibles: [{ champ: "enfants_scolarises", valeurs: ["lycee"] }] }),
+    ]);
+    expect(projeterTheme({ nombre_enfants: 0 }, [ecole]).niveau).toBe("non_concerne");
+    expect(projeterTheme({ nombre_enfants: 2 }, [ecole]).incertain).toBe(true);
+  });
+});
+
+describe("famille de trois enfants ou plus", () => {
+  const nombreuse = proposition([
+    effet({ dimension: "revenu_disponible", sens: "hausse", cibles: [{ champ: "enfants_a_charge", valeurs: ["trois_ou_plus"] }] }),
+  ]);
+  it("trois enfants : la mesure s'applique", () => {
+    expect(projeterTheme({ nombre_enfants: 3 }, [nombreuse]).niveau).toBe("ameliorant");
+  });
+  it("deux enfants ou aucun : non concerné", () => {
+    expect(projeterTheme({ nombre_enfants: 2 }, [nombreuse]).niveau).toBe("non_concerne");
+    expect(projeterTheme({ nombre_enfants: 0 }, [nombreuse]).niveau).toBe("non_concerne");
+  });
+  it("une mesure visant « au moins un enfant » vise aussi une famille nombreuse", () => {
+    const famille = proposition([effet({ cibles: [{ champ: "enfants_a_charge", valeurs: ["au_moins_un"] }] })]);
+    expect(projeterTheme({ nombre_enfants: 4 }, [famille]).niveau).toBe("ameliorant");
+  });
+  it("question conditionnelle au parent seul(e) : sans enfant, la mesure ne concerne pas le visiteur", () => {
+    const isole = proposition([effet({ cibles: [{ champ: "parent_isole", valeurs: ["oui"] }] })]);
+    expect(projeterTheme({ nombre_enfants: 0 }, [isole]).niveau).toBe("non_concerne");
+    expect(projeterTheme({ nombre_enfants: 1 }, [isole]).incertain).toBe(true);
+    expect(projeterTheme({ nombre_enfants: 1, parent_isole: "oui" }, [isole]).niveau).toBe("ameliorant");
+  });
+});

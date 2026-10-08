@@ -37,8 +37,10 @@ Date du jour : {{DATE}}
 - Chaque document a une **année** dans son en-tête. Si une mesure s'appuie sur un document **antérieur à
   2026**, écris dans `resume_factuel` « position de <année> » : c'est une position ancienne encore défendue
   faute de source plus récente, jamais un engagement de 2027.
-- Si un document émane du **parti** ou d'un mouvement plutôt que du candidat lui-même, attribue la mesure à
-  cette organisation dans `resume_factuel`.
+- Un document du **parti du candidat** (programme, convention, motion adopté par le parti dont il est le candidat)
+  est une source du candidat : attribue la mesure au candidat, comme pour son propre site (décision du porteur du
+  projet, 2026-10-06). Ne l'attribue pas à une autre organisation que son parti (association, think tank, autre
+  parti) : dans ce cas, n'en tire pas de mesure.
 
 ## Champs de la fiche
 

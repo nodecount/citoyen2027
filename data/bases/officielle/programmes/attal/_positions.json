@@ -1,0 +1,122 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "35ce15219e475f35",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 9,
+    "sans_position": 13,
+    "rejetees": [
+      {
+        "id": "attal-pa-005",
+        "raison": "relecture : Le texte concerne l'électrification des véhicules (sujet voiture), pas le développement des énergies renouvelables de production."
+      },
+      {
+        "id": "attal-pa-006",
+        "raison": "relecture : Le texte concerne la conversion de véhicules thermiques en électriques (sujet voiture), pas les énergies renouvelables."
+      },
+      {
+        "id": "attal-trav-002",
+        "raison": "relecture : Le texte précise lui-même que les modalités ne sont pas détaillées ; 'inciter au travail' ne montre pas clairement un durcissement/conditionnement de l'indemnisation."
+      }
+    ],
+    "cout_reference_usd": 0.1219,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "ee076a91b2d9bd15",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 3,
+    "sans_position": 22,
+    "rejetees": [],
+    "cout_reference_usd": 0.0862,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "768123a646bfc2cd",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 11,
+    "sans_position": 14,
+    "rejetees": [],
+    "cout_reference_usd": 0.1287,
+    "appels": 2
+  },
+  {
+    "groupe": 3,
+    "empreinte": "a555e4a7979a48e6",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 9,
+    "sans_position": 15,
+    "rejetees": [
+      {
+        "id": "attal-secu-022",
+        "raison": "relecture : Le renforcement de la sécurité des établissements (anti-drones, clôtures, formation aux armes) ne relève pas de la définition de 'plus_de_prison' (places, peines planchers, allongement des peines, limitation des aménagements), c'est une mesure de sécurisation matérielle sans lien direct avec la définition."
+      }
+    ],
+    "cout_reference_usd": 0.0547,
+    "appels": 2
+  },
+  {
+    "groupe": 4,
+    "empreinte": "e8847b0a898dc9f3",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 18,
+    "sans_position": 4,
+    "rejetees": [
+      {
+        "id": "attal-secu-032",
+        "raison": "relecture : La création de places en CRA (rétention administrative) n'est pas de la prison mais relève du sujet immigration, pas du sujet prison."
+      },
+      {
+        "id": "attal-secu-040",
+        "raison": "relecture : Le texte parle de résilience face aux cyberattaques sur les infrastructures, pas d'extension de la surveillance des citoyens (vidéosurveillance, données, messageries) telle que définie pour plus_surveillance."
+      },
+      {
+        "id": "attal-immi-010",
+        "raison": "relecture : Transposer intégralement un pacte déjà adopté par l'UE ne constitue pas en soi un renforcement des compétences ou du rôle de l'UE (plus_europe) mais une simple application du droit existant."
+      }
+    ],
+    "cout_reference_usd": 0.0812,
+    "appels": 2
+  },
+  {
+    "groupe": 5,
+    "empreinte": "0c0995324537dbc9",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 6,
+    "sans_position": 18,
+    "rejetees": [
+      {
+        "id": "attal-lib-002",
+        "raison": "relecture : Interdire le voile pour les enfants dans l'espace public est une extension des interdits religieux, cela relève bien de laicite_stricte mais c'est aussi une restriction de liberté pouvant aussi relever de cadre_collectif ; néanmoins le sujet/position choisis correspondent correctement au texte - en fait l'étiquette est fondée, donc reconsidération: PASS"
+      }
+    ],
+    "cout_reference_usd": 0.0508,
+    "appels": 2
+  },
+  {
+    "groupe": 6,
+    "empreinte": "abbfa2cf4491f239",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 6,
+    "etiquetees": 5,
+    "sans_position": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0302,
+    "appels": 2
+  }
+]

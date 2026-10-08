@@ -20,7 +20,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "2,3 à 3 Md€ d'économies sur le fonctionnement de l'Etat"
+      }
+    ]
   },
   {
     "id": "glucksmann-finances-publiques-002",
@@ -114,19 +121,32 @@
       {
         "cibles": [
           {
+            "champ": "heritage",
+            "valeurs": [
+              "recu",
+              "a_venir"
+            ]
+          },
+          {
             "champ": "autre",
             "valeurs": [
-              "héritiers des 1 % des successions les plus importantes"
+              "1 % des successions les plus importantes"
             ]
           }
         ],
-        "dimension": "patrimoine",
+        "dimension": "revenu_disponible",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Taxer les méga-héritages, ciblant les 1 % des successions les plus importantes."
       }
     ],
     "positions": [
+      {
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Taxer les méga-héritages, ciblant les 1 % des successions les plus importantes."
+      },
       {
         "sujet": "fiscalite",
         "position": "redistribution",
@@ -156,6 +176,12 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
     "positions": [
+      {
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un impôt plancher annuel de 2% sur les patrimoines supérieurs à 100 millions d'euros (taxe Zucman)."
+      },
       {
         "sujet": "fiscalite",
         "position": "redistribution",
@@ -187,8 +213,14 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne pour éviter l'exil fiscal."
+      },
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne pour éviter l'exil fiscal."
       }
@@ -213,7 +245,52 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité"
+    "sous_theme": "Fiscalité",
+    "positions": [
+      {
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "grâce à une taxation des gros héritages"
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser les cotisations sociales pour rapprocher le salaire brut du net"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "recu",
+              "a_venir"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "gros héritages"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "grâce à une taxation des gros héritages"
+      }
+    ]
   },
   {
     "id": "glucksmann-interieur-justice-001",
@@ -257,15 +334,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "immigration",
-        "position": "ouverture",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abroger la loi immigration de 2024."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "glucksmann-interieur-justice-003",
@@ -308,7 +377,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "positions": []
   },
   {
     "id": "glucksmann-interieur-justice-005",
@@ -352,7 +421,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
     "positions": []
   },
   {
@@ -504,8 +572,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "glucksmann-social-solidarite-001",
@@ -565,8 +632,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "glucksmann-social-solidarite-003",
@@ -588,7 +654,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-004",
@@ -610,7 +677,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "jeunes (santé mentale)"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Santé mentale des jeunes : instaurer un dépistage précoce des troubles psychiques et addictologiques."
+      }
+    ],
     "positions": []
   },
   {
@@ -656,8 +738,30 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger la réforme Macron de l’assurance chômage."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger la réforme Macron de l’assurance chômage."
+      }
+    ]
   },
   {
     "id": "glucksmann-social-solidarite-007",
@@ -679,7 +783,23 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "aidant_familial",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer une indemnité d’aidant familial pour ceux qui réduisent ou arrêtent leur travail pour s’occuper des aînés."
+      }
+    ]
   },
   {
     "id": "glucksmann-social-solidarite-008",
@@ -770,7 +890,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Culture",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "bénéficiaires de la part individuelle du pass Culture"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer la part individuelle du pass Culture au profit du financement d’artistes intervenant en milieu scolaire."
+      }
+    ],
     "positions": []
   },
   {
@@ -816,7 +951,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Culture",
-    "effets": [],
     "positions": []
   },
   {
@@ -839,8 +973,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "glucksmann-social-solidarite-015",
@@ -885,7 +1018,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Accélérer la rénovation énergétique pour éviter les passoires thermiques."
+      }
+    ]
   },
   {
     "id": "glucksmann-social-solidarite-017",
@@ -907,8 +1047,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "locataire"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger la loi Kasbarian."
+      }
+    ]
   },
   {
     "id": "glucksmann-social-solidarite-018",
@@ -930,8 +1084,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "glucksmann-social-solidarite-019",
@@ -952,9 +1105,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports",
-    "effets": [],
-    "positions": []
+    "sous_theme": "Transports"
   },
   {
     "id": "glucksmann-social-solidarite-020",
@@ -975,9 +1126,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports",
-    "effets": [],
-    "positions": []
+    "sous_theme": "Transports"
   },
   {
     "id": "glucksmann-social-solidarite-021",
@@ -998,8 +1147,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports",
-    "positions": []
+    "sous_theme": "Transports"
   },
   {
     "id": "glucksmann-social-solidarite-022",
@@ -1020,9 +1168,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports",
-    "effets": [],
-    "positions": []
+    "sous_theme": "Transports"
   },
   {
     "id": "glucksmann-social-solidarite-023",
@@ -1043,9 +1189,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports",
-    "effets": [],
-    "positions": []
+    "sous_theme": "Transports"
   },
   {
     "id": "glucksmann-social-solidarite-024",
@@ -1066,8 +1210,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports",
-    "effets": []
+    "sous_theme": "Transports"
   },
   {
     "id": "glucksmann-retraites-travail-001",
@@ -1112,7 +1255,30 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "hausse_smic",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter le SMIC à 1600€ net."
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_revenus",
+            "valeurs": [
+              "moins_1200"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter le SMIC à 1600€ net."
+      }
+    ]
   },
   {
     "id": "glucksmann-retraites-travail-003",
@@ -1150,7 +1316,14 @@
         "extrait": "revaloriser durablement les rémunérations pour renforcer l’attractivité de la fonction publique, indexant leur point d’indice sur l’inflation"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Soutenir les fonctionnaires, revaloriser durablement les rémunérations pour renforcer l’attractivité de la fonction publique, indexant leur point d’indice sur l’inflation"
+      }
+    ]
   },
   {
     "id": "glucksmann-retraites-travail-004",
@@ -1173,7 +1346,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "travailler à une « taxe Amazon » sur les grandes plateformes de e-commerce pour financer ce soutien"
+      }
+    ]
   },
   {
     "id": "glucksmann-retraites-travail-005",
@@ -1264,7 +1444,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [],
     "positions": []
   },
   {
@@ -1287,7 +1466,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [],
     "positions": []
   },
   {
@@ -1332,7 +1510,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "50_64"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger la réforme Macron de 2023."
+      }
+    ],
     "positions": [
       {
         "sujet": "travail",
@@ -1454,8 +1647,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "glucksmann-retraites-travail-017",
@@ -1478,7 +1670,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Défendre le « Fabriqué en France », en orientant la commande publique française avec des critères durables et souverains et un indice d’achat local."
+      }
+    ]
   },
   {
     "id": "glucksmann-retraites-travail-018",
@@ -1501,7 +1700,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Relocaliser la production de batteries et accélérer l’innovation sur toute la chaine"
+      }
+    ]
   },
   {
     "id": "glucksmann-envi-001",
@@ -1548,7 +1754,7 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "ecologie",
+        "sujet": "nucleaire",
         "position": "garder_nucleaire",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Conforter le rôle du nucléaire."
@@ -1578,8 +1784,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "ecologie",
-        "position": "renouvelables",
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Investir dans le réseau électrique et de nouvelles capacités de stockage pour mieux relier les sites de production d’énergies renouvelables et les lieux de consommation."
       }
@@ -1633,10 +1839,9 @@
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Annuler la hausse de taxe sur l’électricité imposée en 2024."
+        "extrait": "Annuler la hausse de taxe sur l’électricité imposée en 2024"
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "glucksmann-envi-006",
@@ -1658,8 +1863,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "glucksmann-envi-007",
@@ -1704,7 +1908,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "proprietaire"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Relancer et simplifier MaPrimeRénov'"
+      }
+    ],
     "positions": []
   },
   {
@@ -1842,7 +2061,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": [],
     "positions": []
   },
   {
@@ -1889,7 +2107,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "un score carbone obligatoire sur les produits, l'extinction des pubs lumineuses la nuit et la fin des plastiques à usage unique"
+      }
+    ]
   },
   {
     "id": "glucksmann-envi-017",
@@ -1911,7 +2136,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réformer la PAC pour soutenir l’emploi et le revenu agricole"
+      }
+    ],
     "positions": []
   },
   {
@@ -1934,7 +2174,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "pêche artisanale et côtière"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rééquilibrer la répartition des quotas de pêche pour favoriser la pêche artisanale et côtière"
+      }
+    ],
     "positions": []
   },
   {
@@ -1958,7 +2213,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire les intrants chimiques et soutenir les alternatives durables pour rendre les fermes plus autonomes."
+      }
+    ]
   },
   {
     "id": "glucksmann-envi-020",
@@ -1981,7 +2243,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Imposer des mesures miroirs aux importations agricoles, contre le dumping social, sanitaire et environnemental."
+      }
+    ]
   },
   {
     "id": "glucksmann-envi-021",
@@ -2003,7 +2272,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": [],
     "positions": []
   },
   {
@@ -2048,7 +2316,24 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire",
+              "college",
+              "lycee"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre à disposition des produits BIO à la cantine pour les enfants"
+      }
+    ],
     "positions": []
   },
   {
@@ -2218,7 +2503,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Refuser les méga-bassines."
+      }
+    ]
   },
   {
     "id": "glucksmann-envi-031",
@@ -2262,8 +2554,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "glucksmann-europe-international-001",
@@ -2333,10 +2624,16 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "europe",
-        "position": "plus_europe",
+        "sujet": "defense",
+        "position": "plus_defense",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place un fonds européen de défense de 500 Md€ via un emprunt commun, pour investir massivement dans nos capacités industrielles"
+      },
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "en réservant les investissements européens aux productions européennes (EDIP)"
       }
     ]
   },
@@ -2361,7 +2658,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Etendre la dissuasion nucléaire française aux autres pays de l'UE, en conservant la souveraineté française sur la décision de l'emploi."
+      }
+    ]
   },
   {
     "id": "glucksmann-europe-international-005",
@@ -2384,7 +2688,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter l'aide militaire à l'Ukraine et notre soutien aux alliés européens comme la Moldavie et l'Arménie."
+      }
+    ]
   },
   {
     "id": "glucksmann-europe-international-006",
@@ -2439,10 +2750,10 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "europe",
-        "position": "plus_europe",
+        "sujet": "commerce",
+        "position": "protectionnisme",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Porter un Buy European Act pour prioriser les productions européennes dans les marchés publics."
+        "extrait": "Buy European Act pour prioriser les productions européennes dans les marchés publics"
       }
     ]
   },
@@ -2467,14 +2778,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "europe",
-        "position": "plus_europe",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un label européen pour l'épargne pour garantir que l'épargne des Européens finance des entreprises et des projets en Europe, plutôt que des économies extra européennes."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-001",
@@ -2497,7 +2801,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "institutions",
+        "position": "institutions_actuelles",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Investir le Premier ministre par un vote de confiance de l’AN et instaurer la « motion de censure constructive » pour mettre fin au 49.3"
+      }
+    ]
   },
   {
     "id": "glucksmann-gouvernance-republique-002",
@@ -2542,8 +2853,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "glucksmann-gouvernance-republique-004",
@@ -2588,8 +2898,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "glucksmann-gouvernance-republique-006",
@@ -2610,7 +2919,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif"
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-007",
@@ -2702,7 +3012,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "institutions",
+        "position": "nouvelles_institutions",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un droit d’initiative citoyenne."
+      }
+    ]
   },
   {
     "id": "glucksmann-gouvernance-republique-011",
@@ -2747,7 +3064,30 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser les salaires des agents, recruter là où les besoins sont criants et renforcer l’attractivité de la fonction publique."
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "fonctionnaire"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser les salaires des agents"
+      }
+    ]
   },
   {
     "id": "glucksmann-gouvernance-republique-013",
@@ -2836,7 +3176,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Ouvrir un campus international de l’IA pour former ensemble codeurs, juristes et scientifiques."
+      }
+    ]
   },
   {
     "id": "glucksmann-gouvernance-republique-017",
@@ -2858,7 +3206,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire de l’IA un levier de transformation des services publics en investissant massivement dans les usages à fort impact social"
+      }
+    ]
   },
   {
     "id": "glucksmann-gouvernance-republique-018",
@@ -2879,8 +3235,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Numérique et IA",
-    "effets": []
+    "sous_theme": "Numérique et IA"
   },
   {
     "id": "glucksmann-gouvernance-republique-019",
@@ -2908,7 +3263,7 @@
           {
             "champ": "autre",
             "valeurs": [
-              "mineurs de moins de 15 ans"
+              "moins de 15 ans"
             ]
           }
         ],
@@ -3114,8 +3469,32 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire",
+              "college",
+              "lycee"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire le nombre d’élèves par enseignant."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire le nombre d’élèves par enseignant."
+      }
+    ]
   },
   {
     "id": "glucksmann-education-jeunesse-007",
@@ -3136,8 +3515,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale",
-    "positions": []
+    "sous_theme": "Education nationale"
   },
   {
     "id": "glucksmann-education-jeunesse-008",
@@ -3205,7 +3583,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Enseignement supérieur",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "lycéens en orientation avant Parcoursup"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer l'accompagnement personnalisé pour l'orientation des élèves en amont de Parcoursup."
+      }
+    ],
     "positions": []
   },
   {
@@ -3274,7 +3667,23 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Enseignement supérieur",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "création d'une aide nationale pour compenser les frais liés à l'éloignement"
+      }
+    ]
   },
   {
     "id": "glucksmann-education-jeunesse-014",
@@ -3320,7 +3729,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Enseignement supérieur",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "avec priorité à l’efficacité énergétique et à la biodiversité pour des campus adaptés au climat de demain"
+      }
+    ]
   },
   {
     "id": "glucksmann-defense-001",
@@ -3343,7 +3759,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Accélérer la production industrielle pour faire face à un conflit de haute intensité sur le sol européen"
+      }
+    ]
   },
   {
     "id": "glucksmann-defense-002",
@@ -3367,6 +3790,12 @@
     "sous_theme": "Défense & armées",
     "effets": [],
     "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lancer de grands programmes de production de drones, de modernisation de nos capacités spatiales"
+      },
       {
         "sujet": "ia",
         "position": "plus_ia",
@@ -3419,7 +3848,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter drastiquement la réserve opérationnelle."
+      }
+    ]
   },
   {
     "id": "glucksmann-defense-005",
@@ -3443,6 +3879,12 @@
     "sous_theme": "Défense & armées",
     "effets": [],
     "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un fonds européen de défense de 500 Mds€ via un emprunt commun."
+      },
       {
         "sujet": "europe",
         "position": "plus_europe",
@@ -3517,6 +3959,13 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter drastiquement l’aide militaire à l’Ukraine."
+      }
+    ]
   }
 ]

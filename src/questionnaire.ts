@@ -1,12 +1,9 @@
-import profilSchema from "../data/profils-schema.json";
 import { questionVisible, type ProfilPartiel } from "./profil";
 import type { ChampProfil, Theme } from "./types";
 
 // Le formulaire est découpé par thème, avec un socle de questions générales : une question utile à au moins DEUX thèmes
 // est « générale » (posée d'abord, une seule fois) ; utile à un seul thème, elle est posée dans ce thème, au rythme du
-// visiteur. La pertinence (question → thèmes de la base) est une donnée de chaque base : data/bases/<id>/questionnaire.json.
-
-export const CHAMPS_PROFIL: ChampProfil[] = profilSchema as ChampProfil[];
+// visiteur. La pertinence (question → thèmes de la base) est une donnée de chaque base : data/bases/<id>/questionnaire.json ; les questions elles-mêmes, de la base : data/bases/<id>/profils-schema.json.
 
 export interface SectionTheme {
   theme: Theme;

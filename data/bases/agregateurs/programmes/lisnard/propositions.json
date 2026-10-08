@@ -21,8 +21,16 @@
     "sous_theme": "Fiscalité",
     "effets": [
       {
-        "cibles": [],
-        "dimension": "patrimoine",
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "recu",
+              "a_venir"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Baisser la fiscalité sur les héritages et les donations afin de faciliter la transmission du patrimoine."
@@ -30,8 +38,8 @@
     ],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
+        "sujet": "ultra_riches",
+        "position": "ne_pas_taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Baisser la fiscalité sur les héritages et les donations afin de faciliter la transmission du patrimoine."
       }
@@ -59,8 +67,25 @@
     "sous_theme": "Fiscalité",
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
+        "sujet": "ultra_riches",
+        "position": "ne_pas_taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter les abattements sur les donations, jugés aujourd’hui insuffisants"
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "a_venir",
+              "recu"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Augmenter les abattements sur les donations, jugés aujourd’hui insuffisants, pour permettre aux parents de transmettre davantage à leurs enfants de leur vivant."
       }
@@ -112,8 +137,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "prison",
+        "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer les réductions de peine automatiques."
       }
@@ -142,8 +167,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "prison",
+        "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre fin aux aménagements dès l’audience."
       }
@@ -171,6 +196,12 @@
     "sous_theme": "Justice & pénitentiaire",
     "effets": [],
     "positions": [
+      {
+        "sujet": "prison",
+        "position": "plus_de_prison",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rétablir les peines planchers pour les récidivistes."
+      },
       {
         "sujet": "securite",
         "position": "repression",
@@ -255,8 +286,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Doubler les effectifs dans les juridictions correctionnelles."
       }
@@ -283,7 +314,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer les greffes."
+      }
+    ]
   },
   {
     "id": "lisnard-interieur-justice-008",
@@ -328,11 +366,26 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "mineurs de 16 à 18 ans"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abaisser la majorité pénale à 16 ans."
+      }
+    ],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "justice_mineurs",
+        "position": "durcir_justice_mineurs",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Abaisser la majorité pénale à 16 ans."
       }
@@ -358,11 +411,26 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "mineurs dès 13 ans soumis à l'excuse de minorité"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Inverser le principe de l’excuse de minorité dès 13 ans."
+      }
+    ],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "justice_mineurs",
+        "position": "durcir_justice_mineurs",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Inverser le principe de l’excuse de minorité dès 13 ans."
       }
@@ -389,14 +457,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un nouveau délit d’instrumentalisation de mineur."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "lisnard-interieur-justice-012",
@@ -418,15 +479,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place des internats disciplinaires fermés."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "lisnard-interieur-justice-013",
@@ -448,11 +501,26 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "mineurs dès 13 ans pour les cas graves"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Etendre la comparution immédiate dès 13 ans pour les cas graves."
+      }
+    ],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "justice_mineurs",
+        "position": "durcir_justice_mineurs",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Etendre la comparution immédiate dès 13 ans pour les cas graves."
       }
@@ -481,8 +549,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "prevention",
+        "sujet": "prison",
+        "position": "alternatives_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Généraliser les travaux d’intérêt général dès le premier acte délictueux."
       }
@@ -585,7 +653,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Sécurité intérieure",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "surveillance",
+        "position": "plus_surveillance",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Moderniser les outils (vidéoprotection, radios numériques, IA de prévention)."
+      }
+    ]
   },
   {
     "id": "lisnard-interieur-justice-019",
@@ -633,10 +708,10 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "police_armement",
+        "position": "police_armee",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Permettre aux communes volontaires d’armer leur police municipale et de disposer d’outils réels : accès aux fichiers, possibilité de verbalisation renforcée, procédures d’amendes forfaitaires délictuelles."
+        "extrait": "Permettre aux communes volontaires d’armer leur police municipale et de disposer d’outils réels"
       }
     ]
   },
@@ -666,7 +741,7 @@
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Face au narcotrafic, mettre en place des cellules locales anti-stups sous autorité du préfet, confisquer de façon ciblée et visible, infiltrer au niveau numérique les réseaux sociaux, coopérer au niveau international."
+        "extrait": "Face au narcotrafic, mettre en place des cellules locales anti-stups sous autorité du préfet, confisquer de façon ciblée et visible"
       }
     ]
   },
@@ -690,13 +765,42 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Sécurité intérieure",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "prêcheurs radicaux"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "expulser les prêcheurs radicaux"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes portant le voile à l'université"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "interdire le voile à l’université"
+      }
+    ],
     "positions": [
       {
-        "sujet": "libertes",
-        "position": "cadre_collectif",
+        "sujet": "laicite",
+        "position": "laicite_stricte",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Face à l’islamisme, désigner de façon claire l’ennemi idéologique, interdire les Frères musulmans, contrôler les écoles hors contrat, expulser les prêcheurs radicaux, interdire le voile à l’université, mettre en place une campagne républicaine de contre-discours."
+        "extrait": "interdire les Frères musulmans, contrôler les écoles hors contrat, expulser les prêcheurs radicaux, interdire le voile à l’université"
       }
     ]
   },
@@ -724,16 +828,30 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "desert_medical",
             "valeurs": [
-              "habitants des zones sous-dotées en médecins"
+              "oui"
             ]
           }
         ],
-        "dimension": "cout_de_la_vie",
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "la Sécurité sociale rembourse mieux les actes dans les zones sous-dotées"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "desert_medical",
+            "valeurs": [
+              "non"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "la Sécurité sociale rembourse mieux les actes dans les zones sous-dotées que dans les zones saturées"
+        "extrait": "que dans les zones saturées"
       }
     ],
     "positions": []
@@ -787,7 +905,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rendre l'accès aux infirmiers, kinés, et pharmaciens direct pour désengorger les généralistes et fluidifier les parcours."
+        "extrait": "Rendre l'accès aux infirmiers, kinés, et pharmaciens direct pour désengorger les généralistes et fluidifier les parcours"
       }
     ],
     "positions": []
@@ -858,7 +976,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
     "positions": []
   },
   {
@@ -882,7 +999,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "garantir des prix et relocaliser les chaines de valeur"
+      }
+    ]
   },
   {
     "id": "lisnard-social-solidarite-008",
@@ -905,7 +1029,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réinvestir dans la recherche publique en santé"
+      }
+    ]
   },
   {
     "id": "lisnard-social-solidarite-009",
@@ -927,15 +1058,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "ia",
-        "position": "plus_ia",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Construire une réglementation agile et sécurisée pour l’innovation médicale : télésurveillance, IA diagnostique, robotique chirurgicale."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "lisnard-retraites-travail-001",
@@ -981,7 +1104,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "la mise en œuvre de clauses miroirs obligatoires pour les produits importés"
+      }
+    ]
   },
   {
     "id": "lisnard-envi-002",
@@ -1027,7 +1157,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "assouplir_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Autoriser des nouvelles techniques génomiques (NTG), l’usage raisonné des phytosanitaires sur base scientifique, et une réduction de la part des aides conditionnées à des critères idéologiques."
+      }
+    ]
   },
   {
     "id": "lisnard-envi-004",
@@ -1049,7 +1186,23 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "transfert d’une part des charges vers la valeur ajoutée pour améliorer les revenus nets"
+      }
+    ]
   },
   {
     "id": "lisnard-envi-005",
@@ -1072,7 +1225,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "reconstruire une filière française d’engrais azotés décarbonés, mobiliser l’agriculture dans une stratégie géopolitique : diplomatie du blé, sécurisation des filières, souveraineté logistique"
+      }
+    ]
   },
   {
     "id": "lisnard-envi-006",
@@ -1095,7 +1255,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "assouplir_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "une simplification radicale du statut de l’exploitation agricole, avec un cadre unique"
+      }
+    ]
   },
   {
     "id": "lisnard-envi-007",
@@ -1141,7 +1308,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "assouplir_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Remettre à plat le carcan normatif viticole, notamment dans les AOC, pour favoriser l’innovation, les cépages résistants, les usages du biocontrôle."
+      }
+    ]
   },
   {
     "id": "lisnard-envi-009",
@@ -1164,7 +1338,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "assouplir_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "les bassines sont possibles lorsqu’elles sont techniquement justifiées et localement décidées"
+      }
+    ]
   },
   {
     "id": "lisnard-reformes-etat-001",
@@ -1189,8 +1370,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
+        "sujet": "fonction_publique",
+        "position": "moins_fonctionnaires",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Digitaliser le service public pour réduire la masse salariale"
       }
@@ -1355,7 +1536,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Administrations et opérateurs",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "moins_fonctionnaires",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer l’ARS, la Dreal, la MRAE, la Dreets"
+      }
+    ]
   },
   {
     "id": "lisnard-reformes-etat-009",
@@ -1377,8 +1565,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Administrations et opérateurs",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "lisnard-education-jeunesse-001",
@@ -1404,9 +1591,11 @@
       {
         "cibles": [
           {
-            "champ": "enfants_a_charge",
+            "champ": "enfants_scolarises",
             "valeurs": [
-              "au_moins_un"
+              "maternelle_primaire",
+              "college",
+              "lycee"
             ]
           }
         ],
@@ -1416,7 +1605,14 @@
         "extrait": "Abroger la carte scolaire qui enferme les familles dans leur quartier pour proposer un libre choix de l’école."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger la carte scolaire qui enferme les familles dans leur quartier pour proposer un libre choix de l’école."
+      }
+    ]
   },
   {
     "id": "lisnard-education-jeunesse-002",
@@ -1438,8 +1634,14 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer progressivement un chèque-éducation : un financement public équivalent, que la famille choisisse l’enseignement public ou privé."
+      }
+    ]
   },
   {
     "id": "lisnard-education-jeunesse-003",
@@ -1462,7 +1664,20 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Liberté donnée aux chefs d’établissement de recruter leurs équipes pédagogiques, d’appliquer leurs méthodes, de gérer leur budget, de refuser des élèves pouvant nuire au collectif."
+      },
+      {
+        "sujet": "ecole_discipline",
+        "position": "ecole_exigence",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "de refuser des élèves pouvant nuire au collectif"
+      }
+    ]
   },
   {
     "id": "lisnard-education-jeunesse-004",
@@ -1484,8 +1699,30 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instauration d’un certificat de fin de primaire dont la validation conditionnera l’entrée au collège."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ecole_discipline",
+        "position": "ecole_exigence",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instauration d’un certificat de fin de primaire dont la validation conditionnera l’entrée au collège."
+      }
+    ]
   },
   {
     "id": "lisnard-education-jeunesse-005",
@@ -1507,8 +1744,30 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer le grec, le latin et la philosophie dès le primaire."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer le grec, le latin et la philosophie dès le primaire."
+      }
+    ]
   },
   {
     "id": "lisnard-education-jeunesse-006",
@@ -1543,10 +1802,9 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter de 20 % les rémunérations en 5 ans, proposition conditionnée à une réorganisation"
+        "extrait": "Augmenter de 20 % les rémunérations en 5 ans"
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "lisnard-education-jeunesse-007",
@@ -1569,7 +1827,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mise en place d’un corps unique d’enseignants contractuels, recrutés sur concours avec des missions élargies et des perspectives de carrière attractives."
+      }
+    ]
   },
   {
     "id": "lisnard-education-jeunesse-008",
@@ -1592,7 +1857,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Recentrement de l’Éducation nationale sur le tronc commun obligatoire (6-16 ans), l’éveil (1-6 ans) étant confié aux communes dans une logique de subsidiarité."
+      }
+    ]
   },
   {
     "id": "lisnard-education-jeunesse-009",
@@ -1614,7 +1886,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
     "positions": []
   },
   {
@@ -1637,7 +1908,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
-    "positions": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "college",
+              "lycee"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer des classes d’excellence en mathématiques et en sciences dans chaque académie."
+      }
+    ]
   }
 ]

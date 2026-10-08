@@ -1,12 +1,14 @@
 import { Eraser, Eye, Highlighter, ListChecks, Lock } from "lucide-react";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { IndicateurEnregistrement, type EtatEnregistrement } from "./IndicateurEnregistrement";
-import { CHAMPS_PROFIL, compterReponses, questionsVisibles, type SectionTheme } from "../questionnaire";
+import { compterReponses, questionsVisibles, type SectionTheme } from "../questionnaire";
 import { mettreAJourReponse, type ProfilPartiel } from "../profil";
 import type { ChampProfil } from "../types";
 import { SectionQuestions, type SurReponse } from "./Questions";
 
 interface PageQuestionsGeneralesProps {
+  // Les questions de la base active (sert à retirer une réponse devenue sans objet quand une question conditionnelle disparaît).
+  champs: ChampProfil[];
   questions: ChampProfil[];
   profilInitial: ProfilPartiel;
   onValider: (profil: ProfilPartiel) => void;
@@ -27,10 +29,11 @@ interface PageQuestionsGeneralesProps {
 // tant que le visiteur n'a pas enregistré : c'est l'enregistrement qui fait apparaître (ou met à jour) les indicateurs
 // sur les portraits. Le visiteur peut y revenir à tout moment pour changer ou compléter ses réponses ; ensuite, chaque
 // thème permet de préciser d'autres informations, à son rythme.
-export default function PageQuestionsGenerales({ questions, profilInitial, onValider, onAnnuler, integre = false, onEffacer, sectionsThemes = [], profilThemes = profilInitial, onReponseTheme }: PageQuestionsGeneralesProps) {
+export default function PageQuestionsGenerales({ champs, questions, profilInitial, onValider, onAnnuler, integre = false, onEffacer, sectionsThemes = [], profilThemes = profilInitial, onReponseTheme }: PageQuestionsGeneralesProps) {
   const [brouillon, setBrouillon] = useState<ProfilPartiel>(profilInitial);
   const { repondues, total } = compterReponses(questions, brouillon);
-  const [manquantesEnValeur, setManquantesEnValeur] = useState(false);
+  // Actif par défaut : les questions sans réponse sont mises en valeur dès l'arrivée, le visiteur peut le désactiver.
+  const [manquantesEnValeur, setManquantesEnValeur] = useState(true);
 
   // Enregistrement automatique (formulaire intégré) : chaque modification est appliquée après une courte pause, sans bouton.
   // « enregistrement » pendant la pause, « enregistre » une fois appliquée ; rien n'est affiché tant que rien n'a changé.
@@ -53,7 +56,7 @@ export default function PageQuestionsGenerales({ questions, profilInitial, onVal
   }, [brouillon, integre]);
 
   function repondre(champ: ChampProfil, brut: string | string[]) {
-    setBrouillon((precedent) => mettreAJourReponse(precedent, champ, brut, CHAMPS_PROFIL));
+    setBrouillon((precedent) => mettreAJourReponse(precedent, champ, brut, champs));
   }
 
   function valider(event: FormEvent) {

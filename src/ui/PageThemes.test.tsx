@@ -1,3 +1,4 @@
+import { SUJETS_CONVICTION } from "../positions";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { candidatsDeBase, chargerBase, resumesManquants } from "../data/bases";
@@ -19,7 +20,7 @@ const UNE_REPONSE: ProfilPartiel = { tranche_age: "30_49" };
 // photos ou l'ordre alphabétique demandent « exploration », seul mode où les identités sont visibles.
 function rendre(baseId: string, profil: ProfilPartiel, generalSoumis: boolean, mode?: "simulateur" | "exploration"): string {
   return renderToStaticMarkup(
-    <PageThemes base={chargerBase(baseId)} profil={profil} generalSoumis={generalSoumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} etapeInitiale="themes" />,
+    <PageThemes base={chargerBase(baseId)} profil={profil} generalSoumis={generalSoumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode={mode ?? "simulateur"} etapeInitiale="themes" />,
   );
 }
 
@@ -145,7 +146,7 @@ describe("simulateur à l'aveugle par défaut", () => {
   const base = chargerBase("agregateurs");
   const noms = candidatsDeBase(base).avecDonnees.map((c) => c.meta.nom);
   const page = (mode: "simulateur" | "exploration") =>
-    renderToStaticMarkup(<PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} etapeInitiale="themes" />);
+    renderToStaticMarkup(<PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode={mode} etapeInitiale="themes" />);
 
   it("simulateur : aucun nom réel, aucune photo réelle, des lettres à la place", () => {
     const html = page("simulateur");
@@ -171,7 +172,7 @@ describe("card candidat idéal sur la page du simulateur", () => {
   const noms = candidatsDeBase(base).avecDonnees.map((c) => c.meta.nom);
   const page = (extra: Partial<Parameters<typeof PageThemes>[0]> = {}) =>
     renderToStaticMarkup(
-      <PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial="simulateur" {...extra} />,
+      <PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode="simulateur" {...extra} />,
     );
 
   it("floutée par défaut : la card est là, le bouton aussi, et aucun nom réel n'est dans la page", () => {
@@ -216,7 +217,7 @@ describe("card candidat idéal sur la page du simulateur", () => {
     const html = page({ convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
     expect(html).toContain("Nous calculons ce résultat à partir de vos réponses");
     expect(html).toMatch(/1 question répondue sur \d+/);
-    expect(html).toContain("1 conviction complétée sur 8");
+    expect(html).toContain(`1 conviction complétée sur ${SUJETS_CONVICTION.length}`);
     expect(html.indexOf("bandeau-pertinence")).toBeLessThan(html.indexOf("carte-ideal"));
   });
   it("sans réponse : le parcours commence par la situation, sans thèmes ni résultat", () => {
@@ -232,7 +233,7 @@ describe("card candidat idéal sur la page du simulateur", () => {
     expect(html).not.toContain("carte-ideal");
   });
   it("exploration : aucune card idéale", () => {
-    expect(page({ modeInitial: "exploration" })).not.toContain("carte-ideal");
+    expect(page({ mode: "exploration" })).not.toContain("carte-ideal");
   });
   it("résultat convictions seulement si une position est choisie ET que des mesures sont étiquetées dessus", () => {
     expect(page()).toContain("Pas encore de résultat");
@@ -244,17 +245,15 @@ describe("card candidat idéal sur la page du simulateur", () => {
   });
 });
 
-describe("bascule entre exploration des mesures et simulateur", () => {
+describe("pages Exploration et Simulateur", () => {
   const rendreEnMode = (mode: "simulateur" | "exploration", profil: ProfilPartiel, soumis: boolean) =>
     renderToStaticMarkup(
-      <PageThemes base={chargerBase("agregateurs")} profil={profil} generalSoumis={soumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} etapeInitiale="themes" />,
+      <PageThemes base={chargerBase("agregateurs")} profil={profil} generalSoumis={soumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode={mode ?? "simulateur"} etapeInitiale="themes" />,
     );
 
-  it("propose les deux modes, avec le mode courant indiqué", () => {
-    const rendu = rendreEnMode("exploration", AUCUNE_REPONSE, false);
-    expect(rendu).toContain("Explorer les mesures");
-    expect(rendu).toContain("Simuler pour moi");
-    expect(rendu).toMatch(/aria-pressed="true"[^>]*>(<svg[\s\S]*?<\/svg>)?<span class="bascule-libelle">Explorer les mesures/);
+  it("n'a plus de bascule : le mode est celui de la page (/exploration ou /simulateur)", () => {
+    expect(rendreEnMode("exploration", AUCUNE_REPONSE, false)).not.toContain("bascule-mode");
+    expect(rendreEnMode("simulateur", AUCUNE_REPONSE, false)).not.toContain("bascule-mode");
   });
 
   it("en exploration : ni indicateur, ni légende, ni formulaire, ni invitation, ni questions par thème — même avec des réponses enregistrées", () => {
@@ -300,7 +299,7 @@ describe("bloc « Mes convictions » sur la page du simulateur", () => {
     const base = chargerBase("agregateurs");
     const page = (mode: "simulateur" | "exploration") =>
       renderToStaticMarkup(
-        <PageThemes base={base} profil={{}} generalSoumis={false} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} modeInitial={mode} etapeInitiale="themes" convictionsInitiales={{ positions: { ia: "plus_ia" }, exemplarite: true }} />,
+        <PageThemes base={base} profil={{}} generalSoumis={false} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode={mode} etapeInitiale="themes" convictionsInitiales={{ positions: { ia: "plus_ia" }, exemplarite: true }} />,
       );
     expect(page("simulateur")).toContain("Mes convictions");
     expect(page("exploration")).not.toContain("Mes convictions");

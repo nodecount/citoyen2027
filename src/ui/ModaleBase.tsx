@@ -7,12 +7,14 @@ interface ModaleBaseProps {
   bases: InfoBase[];
   actif: string;
   onChoisir: (id: string) => void;
+  // Ouvre une page de contrôle (monitoring, tests de situations) POUR cette base : chaque source a son propre découpage.
+  onControle: (id: string, cible: "monitoring" | "tests-situations") => void;
   onFermer: () => void;
 }
 
 // Choix de la base de connaissances, dans une modale. Rendue seulement quand elle est ouverte (rien dans la page
 // sinon). Se ferme par Échap, par un clic hors du panneau, par le bouton de fermeture, ou en choisissant une base.
-export function ModaleBase({ ouverte, bases, actif, onChoisir, onFermer }: ModaleBaseProps) {
+export function ModaleBase({ ouverte, bases, actif, onChoisir, onControle, onFermer }: ModaleBaseProps) {
   const panneau = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -56,6 +58,22 @@ export function ModaleBase({ ouverte, bases, actif, onChoisir, onFermer }: Modal
                   <span className="choix-base-description">{base.description}</span>
                 </span>
               </label>
+              <p className="choix-base-controles">
+                <span>Contrôle de cette source :</span>
+                {([["monitoring", "Monitoring"], ["tests-situations", "Tests de situations"]] as const).map(([cible, libelle]) => (
+                  <button
+                    key={cible}
+                    type="button"
+                    className="lien-menu"
+                    onClick={() => {
+                      onControle(base.id, cible);
+                      onFermer();
+                    }}
+                  >
+                    {libelle}
+                  </button>
+                ))}
+              </p>
             </li>
           ))}
         </ul>

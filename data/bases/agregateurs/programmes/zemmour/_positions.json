@@ -1,55 +1,78 @@
 [
   {
     "groupe": 0,
-    "empreinte": "4d8563f20f94c33d",
-    "date": "2026-10-01",
+    "empreinte": "6bdc242047bb8e77",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 20,
+    "etiquetees": 19,
     "sans_position": 5,
-    "rejetees": [],
-    "cout_reference_usd": 0.0892,
+    "rejetees": [
+      {
+        "id": "zemmour-interieur-justice-005",
+        "raison": "relecture : La dénonciation d'un accord bilatéral franco-algérien relève de l'immigration/souveraineté nationale, pas d'une position sur l'intégration européenne (ce n'est pas l'UE qui est concernée)."
+      }
+    ],
+    "cout_reference_usd": 0.1193,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "b6adcbecf78d7018",
-    "date": "2026-10-01",
+    "empreinte": "361d8b26ac5c4388",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 13,
-    "sans_position": 12,
-    "rejetees": [],
-    "cout_reference_usd": 0.0575,
+    "etiquetees": 12,
+    "sans_position": 11,
+    "rejetees": [
+      {
+        "id": "zemmour-interieur-justice-026",
+        "raison": "relecture : Suspendre les aides aux délinquants est une sanction punitive liée à la délinquance, pas une mise sous contrepartie d'activité ou un durcissement de l'indemnisation chômage/RSA comme le définit 'conditionner_aides'."
+      },
+      {
+        "id": "zemmour-interieur-justice-030",
+        "raison": "relecture : Une présomption légale de légitime défense porte sur le cadre juridique de l'usage des armes, pas sur le maintien ou le renforcement de l'armement lui-même."
+      }
+    ],
+    "cout_reference_usd": 0.0827,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "69ea6c594d8677c7",
-    "date": "2026-10-01",
+    "empreinte": "d50cef3febfe4fa7",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 9,
-    "sans_position": 15,
+    "etiquetees": 13,
+    "sans_position": 10,
     "rejetees": [
       {
-        "id": "zemmour-gouvernance-republique-004",
-        "raison": "relecture : La mesure porte sur la primauté du droit national sur les textes internationaux en général (article 55 de la Constitution), pas spécifiquement sur l'Union européenne, donc l'étiquette europe/souverainete n'est pas directement fondée par le texte."
+        "id": "zemmour-retraites-travail-019",
+        "raison": "relecture : Le contrôle des investissements étrangers relève du contrôle des capitaux/souveraineté, pas de la protection commerciale (taxes à l'import, préférence nationale) visée par 'protectionnisme'."
+      },
+      {
+        "id": "zemmour-gouvernance-republique-001",
+        "raison": "relecture : Organiser un référendum sur des sujets précis via le mécanisme constitutionnel existant (art. 11) n'équivaut pas à changer les institutions (nouvelle République, proportionnelle, RIC)."
       }
     ],
-    "cout_reference_usd": 0.0583,
+    "cout_reference_usd": 0.0656,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "5290e30129b1e5e2",
-    "date": "2026-10-01",
+    "empreinte": "704a327f8cf5e063",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 16,
-    "etiquetees": 2,
-    "sans_position": 14,
-    "rejetees": [],
-    "cout_reference_usd": 0.0234,
+    "etiquetees": 8,
+    "sans_position": 7,
+    "rejetees": [
+      {
+        "id": "zemmour-gouvernance-republique-006",
+        "raison": "relecture : Le texte porte sur l'hébergement souverain des données (localisation, sécurité), pas sur une limitation de la surveillance ou de l'accès aux données à des fins policières/étatiques comme le définit 'vie_privee' ; c'est plutôt une mesure de souveraineté numérique, hors des deux positions du sujet surveillance."
+      }
+    ],
+    "cout_reference_usd": 0.0441,
     "appels": 2
   }
 ]

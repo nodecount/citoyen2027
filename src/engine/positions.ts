@@ -1,4 +1,4 @@
-import { trouverPosition, type PositionMesure } from "../positions";
+import { SUJETS_CONVICTION, trouverPosition, type PositionMesure, type SujetConviction } from "../positions";
 import type { Proposition } from "../types";
 
 // Constat « convictions » d'un candidat sur un thème, pour UN sujet choisi par le visiteur : ce que ses mesures étiquetées
@@ -32,4 +32,17 @@ export function projeterPosition(sujetId: string, positionChoisie: string, propo
   }
   const niveau: ConstatPosition["niveau"] = conformes > 0 && opposees > 0 ? "mixte" : conformes > 0 ? "ameliorant" : opposees > 0 ? "degradant" : null;
   return { niveau, retenues };
+}
+
+// Sujets de convictions à proposer pour une base : ceux qu'au moins une de SES mesures étiquette. Poser une question qui ne
+// peut influencer aucun résultat ne servirait à rien (« minimum nécessaire ») : chaque source a ainsi les sujets que ses
+// propres mesures permettent de départager. Sans mesures fournies (null), tout le catalogue.
+export function sujetsDisponibles(propositions: Proposition[] | null): SujetConviction[] {
+  if (propositions === null) return SUJETS_CONVICTION;
+  const etiquetes = new Set<string>();
+  for (const p of propositions) {
+    if (p.statut === "provisoire") continue;
+    for (const e of p.positions ?? []) etiquetes.add(e.sujet);
+  }
+  return SUJETS_CONVICTION.filter((s) => etiquetes.has(s.id));
 }

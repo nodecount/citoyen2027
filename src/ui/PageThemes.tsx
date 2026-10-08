@@ -1,17 +1,17 @@
-import { BookOpen, Lock, SlidersHorizontal } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { Lock } from "lucide-react";
+import { useEffect, useState } from "react";
 import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/bases";
-import { lireOuverture } from "./router";
+import { lireOuverture, type Ecran } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
 import { ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation } from "../engine/candidatIdeal";
 import { anonymiserCards } from "./aveugle";
-import { choisirMode, cleIdentites, etatPourBase, recommencer, tirerGraine, type EtatIdeal } from "./etatIdeal";
+import { cleIdentites, etatPourBase, recommencer, tirerGraine, type EtatIdeal } from "./etatIdeal";
 import { BandeauRevelation, CardCandidatIdeal } from "./CardCandidatIdeal";
 import { versResultatAffiche } from "./resultatIdeal";
 import { BlocConvictions, integritesVisibles } from "./Convictions";
 import { CONVICTIONS_VIDES, lireConvictions, memoriserConvictions, type Convictions } from "./memoireConvictions";
-import { lireMode, memoriserMode, type ModeAffichage } from "./memoireReponses";
+import type { ModeAffichage } from "./memoireReponses";
 import { ModaleConfirmation } from "./ModaleConfirmation";
 import { BandeauPertinence, Etapes, IntroEtape, IntroMesures, NavEtape, RecapReponses, type Etape } from "./ParcoursSimulateur";
 import PageQuestionsGenerales from "./PageQuestionsGenerales";
@@ -30,8 +30,10 @@ interface PageThemesProps {
   onValider: (profil: ProfilPartiel) => void;
   onEffacer: () => void;
   onReponse: SurReponse;
-  // Mode d'affichage de départ (par défaut : le dernier choix du visiteur, sinon « simulateur »).
-  modeInitial?: ModeAffichage;
+  // Mode d'affichage, fixé par la page : « exploration » sur /exploration, « simulateur » sur /simulateur.
+  mode: ModeAffichage;
+  // Changement de page (liens entre l'exploration et le simulateur).
+  onNaviguer?: (ecran: Ecran) => void;
   // Convictions de départ (par défaut : celles gardées dans le navigateur).
   convictionsInitiales?: Convictions;
   // État « révélé » de départ (tests) : chaque visite recommence floutée, il n'est jamais mémorisé.
@@ -40,15 +42,14 @@ interface PageThemesProps {
   etapeInitiale?: Etape;
 }
 
-// Page du simulateur : en « Explorer les mesures », les thèmes et sur chacun les portraits cliquables des candidats concernés ;
-// en « Simuler pour moi », un parcours en quatre écrans (situation, mesures adaptées, convictions, candidat idéal).
-export default function PageThemes({ base, profil, generalSoumis, onValider, onEffacer, onReponse, modeInitial, convictionsInitiales, releveInitial, etapeInitiale }: PageThemesProps) {
-  // Arrivée depuis le tableau de l'accueil (ou une adresse partagée) : la carte du thème, avec ce candidat ouvert. Ce lien
-  // nomme un candidat : on l'ouvre donc en « Explorer les mesures », seul mode où les identités sont visibles.
+// Pages « Exploration » et « Simulateur » : en exploration, les thèmes et sur chacun les portraits cliquables des candidats
+// concernés ; en simulateur, un parcours en quatre écrans (situation, mesures adaptées, convictions, candidat idéal).
+export default function PageThemes({ base, profil, generalSoumis, onValider, onEffacer, onReponse, mode, onNaviguer, convictionsInitiales, releveInitial, etapeInitiale }: PageThemesProps) {
+  // Arrivée depuis le tableau de l'accueil (ou une adresse partagée) : la carte du thème, avec ce candidat ouvert (page
+  // Exploration, seul endroit où les identités sont visibles).
   const [ouverture] = useState(() => (typeof window === "undefined" ? null : lireOuverture(window.location.href)));
-  // « Explorer les mesures » : les programmes seuls (ni indicateur, ni légende, ni formulaire, ni questions par thème),
-  // identités visibles. « Simuler pour moi » : tout ce qui rattache les mesures à la situation du visiteur, à l'aveugle.
-  const [mode, setMode] = useState<ModeAffichage>(() => modeInitial ?? (ouverture ? "exploration" : lireMode()));
+  // Exploration : les programmes seuls (ni indicateur, ni légende, ni formulaire, ni questions par thème), identités
+  // visibles. Simulateur : tout ce qui rattache les mesures à la situation du visiteur, à l'aveugle.
   const simulateur = mode === "simulateur";
   // Incrémenté à chaque effacement : le formulaire repart d'un brouillon vide au lieu de garder d'anciennes réponses affichées.
   const [versionFormulaire, setVersionFormulaire] = useState(0);
@@ -72,12 +73,9 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
     setBaseAffichee(base.info.id);
     setIdeal(etatPourBase(ideal, baseAffichee, base.info.id));
   }
-  // Quitter ou entrer en simulateur repart de zéro : jamais de retour sur une card déjà révélée.
-  // Le mode n'est mémorisé que s'il est choisi par un clic (voir choisirMode) : un mode imposé par un lien n'est pas retenu.
-  const changerMode = (suivant: ModeAffichage) => {
-    setIdeal(choisirMode(ideal, mode, suivant, memoriserMode));
-    setMode(suivant);
-  };
+  // Changer de mode, c'est changer de page : la page est remontée, donc nouvelle graine et card floutée (jamais de retour sur
+  // une card déjà révélée).
+  const changerMode = (suivant: ModeAffichage) => onNaviguer?.(suivant);
   const anonymisation = aveugle ? anonymiserCards(cardsNommees, graine) : null;
   const cards = anonymisation?.cards ?? cardsNommees;
   // Convictions : bloc et panneau seulement en mode « Simuler pour moi » (elles rattachent les mesures au visiteur).
@@ -138,39 +136,8 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
     return () => observateur.disconnect();
   }, [revele, etape, carteAffichee]);
 
-  // Dès que la bascule sort de l'écran, elle se range sur le côté (icônes seules) ; son emplacement garde sa hauteur pour
-  // que la page ne saute pas.
-  const emplacement = useRef<HTMLDivElement>(null);
-  const [hauteurBascule, setHauteurBascule] = useState(0);
-  const [aCote, setACote] = useState(false);
-  useEffect(() => {
-    const maj = () => {
-      const el = emplacement.current;
-      if (!el) return;
-      const { bottom } = el.getBoundingClientRect();
-      if (bottom < 80 && !aCote) setHauteurBascule(el.offsetHeight);
-      setACote(bottom < 80);
-    };
-    maj();
-    window.addEventListener("scroll", maj, { passive: true });
-    return () => window.removeEventListener("scroll", maj);
-  }, [aCote]);
-
   return (
     <>
-      <div ref={emplacement} className="bascule-emplacement" style={aCote ? { minHeight: hauteurBascule } : undefined}>
-        <div className={aCote ? "bascule-mode bascule-mode--cote" : "bascule-mode"} role="group" aria-label="Mode d'affichage">
-          <button type="button" aria-pressed={!simulateur} title="Explorer les mesures" onClick={() => changerMode("exploration")}>
-            <BookOpen size={26} aria-hidden="true" focusable="false" />
-            <span className="bascule-libelle">Explorer les mesures</span>
-          </button>
-          <button type="button" aria-pressed={simulateur} title="Simuler pour moi" onClick={() => changerMode("simulateur")}>
-            <SlidersHorizontal size={26} aria-hidden="true" focusable="false" />
-            <span className="bascule-libelle">Simuler pour moi</span>
-          </button>
-        </div>
-      </div>
-
       <ModaleConfirmation
         ouverte={confirmerEffacement}
         titre="Effacer vos réponses ?"

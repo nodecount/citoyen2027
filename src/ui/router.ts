@@ -1,13 +1,17 @@
 // Navigation par adresse, sans bibliothèque : chaque écran a sa propre adresse (partageable, bouton précédent/suivant
-// du navigateur fonctionnel), sans recharger la page. « /monitoring » reste un cas à part, géré par App.tsx.
+// du navigateur fonctionnel), sans recharger la page. « /monitoring » et « /tests-situations » sont des pages de contrôle,
+// propres à chaque base, ouvertes depuis la modale de choix de la base.
 
-export type Ecran = "accueil" | "simulateur" | "questions-generales" | "a-propos";
+export type Ecran = "accueil" | "exploration" | "simulateur" | "questions-generales" | "a-propos" | "monitoring" | "tests-situations";
 
 const CHEMIN_PAR_ECRAN: Record<Ecran, string> = {
   accueil: "/",
+  exploration: "/exploration",
   simulateur: "/simulateur",
   "questions-generales": "/ma-situation",
   "a-propos": "/a-propos",
+  monitoring: "/monitoring",
+  "tests-situations": "/tests-situations",
 };
 
 const ECRAN_PAR_CHEMIN: Record<string, Ecran> = Object.fromEntries(

@@ -18,6 +18,7 @@ export function PiedDePage({ onNaviguer }: { onNaviguer: (ecran: Ecran) => void 
       <nav aria-label="Pied de page">
         <ul>
           {lien("accueil", "Accueil")}
+          {lien("exploration", "Exploration")}
           {lien("simulateur", "Simulateur")}
           {lien("a-propos", "À propos")}
         </ul>

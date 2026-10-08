@@ -1,43 +1,56 @@
 [
   {
     "groupe": 0,
-    "empreinte": "5c0854bfdb065fe3",
-    "date": "2026-10-01",
+    "empreinte": "e08786817c93d32f",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 13,
+    "etiquetees": 12,
     "sans_position": 12,
-    "rejetees": [],
-    "cout_reference_usd": 0.0864,
+    "rejetees": [
+      {
+        "id": "parti-socialiste-social-solidarite-012",
+        "raison": "relecture : La régulation des prix des médicaments et la suppression de franchises relèvent du remboursement/solidarité sociale, pas de l'axe public/privé de l'organisation de la santé (hôpital public vs liberté d'installation) ; mauvais sujet."
+      }
+    ],
+    "cout_reference_usd": 0.14,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "7c90d866a7afe2ba",
-    "date": "2026-10-01",
+    "empreinte": "51b7ab56e9fe6027",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 1,
-    "sans_position": 23,
-    "rejetees": [
-      {
-        "id": "parti-socialiste-retraites-travail-003",
-        "raison": "relecture : Négocier un assouplissement de règles européennes dans le cadre de l'UE ne constitue pas une reprise de compétence ou une réduction du rôle de l'UE au profit de la souveraineté nationale, mais une adaptation négociée au sein du cadre européen."
-      }
-    ],
-    "cout_reference_usd": 0.0473,
+    "etiquetees": 10,
+    "sans_position": 15,
+    "rejetees": [],
+    "cout_reference_usd": 0.0569,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "8c6592087d4cac21",
-    "date": "2026-10-01",
+    "empreinte": "48e20025d22b30ce",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 24,
-    "etiquetees": 1,
-    "sans_position": 23,
-    "rejetees": [],
-    "cout_reference_usd": 0.0281,
+    "etiquetees": 11,
+    "sans_position": 10,
+    "rejetees": [
+      {
+        "id": "parti-socialiste-envi-009",
+        "raison": "relecture : L'interdiction du plastique à usage unique relève de la lutte contre la pollution, pas du sujet 'renouvelables' (énergies/transition écologique)."
+      },
+      {
+        "id": "parti-socialiste-envi-010",
+        "raison": "relecture : L'installation de filtres à microplastiques ne relève pas des énergies renouvelables ni de la transition écologique au sens défini, mauvais sujet."
+      },
+      {
+        "id": "parti-socialiste-envi-015",
+        "raison": "relecture : L'interdiction des PFAS ne relève pas du sujet 'renouvelables' (énergies/transition écologique), mauvais sujet."
+      }
+    ],
+    "cout_reference_usd": 0.0773,
     "appels": 2
   }
 ]

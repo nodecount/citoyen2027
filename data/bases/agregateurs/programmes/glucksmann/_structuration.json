@@ -2,12 +2,12 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "57f8473f47afc5a5",
-    "date": "2026-09-27",
+    "empreinte": "70c975ac15e3fdd8",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 15,
-    "avec_effets": 0,
-    "sans_effet": 12,
+    "avec_effets": 3,
+    "sans_effet": 10,
     "rejetees": [
       {
         "id": "glucksmann-education-jeunesse-004",
@@ -16,42 +16,46 @@
       {
         "id": "glucksmann-education-jeunesse-007",
         "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Revaloriser le salaire de tous les enseignants de manière co… »"
-      },
-      {
-        "id": "glucksmann-education-jeunesse-013",
-        "raison": "relecture : Le texte vise une aide pour compenser les frais d'éloignement, donc les étudiants éloignés des lieux de formation. La cible retenue, tous les étudiants, est plus large que cela."
       }
     ],
-    "cout_reference_usd": 0.0476,
+    "cout_reference_usd": 0.0653,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "82f5e16e072dcba6",
-    "date": "2026-09-27",
+    "empreinte": "b346a19527117a45",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 2,
-    "sans_effet": 21,
+    "avec_effets": 6,
+    "sans_effet": 15,
     "rejetees": [
       {
         "id": "glucksmann-envi-004",
-        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Faire baisser les prix de l’électricité : fixer une partie d… »"
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Faire baisser les prix de l’électricité »"
+      },
+      {
+        "id": "glucksmann-envi-014",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Instaurer une Garantie universelle d’Assurance climatique, f… »"
+      },
+      {
+        "id": "glucksmann-envi-021",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Faciliter l’accès au foncier pour protéger les terres agrico… »"
       },
       {
         "id": "glucksmann-envi-022",
         "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Garantir le revenu des agriculteurs par la mise en place de … »"
       }
     ],
-    "cout_reference_usd": 0.0491,
+    "cout_reference_usd": 0.0821,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 1,
-    "empreinte": "805dc27d08f3903c",
-    "date": "2026-09-27",
+    "empreinte": "20b4012d37899c2b",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 7,
     "avec_effets": 0,
@@ -59,120 +63,148 @@
     "rejetees": [
       {
         "id": "glucksmann-envi-031",
-        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « avec des aides automatiques pour les foyers dont la facture … »"
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « des aides automatiques pour les foyers dont la facture dépas… »"
       }
     ],
-    "cout_reference_usd": 0.0101,
+    "cout_reference_usd": 0.0096,
     "appels": 1
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "41cbdb6537a2ec2c",
-    "date": "2026-09-27",
+    "empreinte": "f635c5bef3b4e180",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 8,
-    "avec_effets": 1,
+    "avec_effets": 2,
     "sans_effet": 5,
     "rejetees": [
       {
         "id": "glucksmann-finances-publiques-006",
-        "raison": "relecture : La cible tranche_patrimoine « plus_1_3m » élargit le périmètre (le texte vise les patrimoines supérieurs à 100 millions d'euros, pas dès 1,3 M€)."
-      },
-      {
-        "id": "glucksmann-finances-publiques-008",
-        "raison": "relecture : Le texte ne dit pas que la baisse des cotisations augmente le revenu disponible (elle rapproche brut et net) ; de plus il omet l'effet de la taxation des gros héritages, ce qui donne une image partielle."
+        "raison": "relecture : La tranche de patrimoine 'plus_1_3m' englobe des patrimoines bien inférieurs aux 100 millions d'euros visés par le texte, élargissant indûment le périmètre."
       }
     ],
-    "cout_reference_usd": 0.048,
+    "cout_reference_usd": 0.0808,
     "appels": 2
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "08a791ea542bc3a2",
-    "date": "2026-09-27",
+    "empreinte": "b95511ec06ea03fa",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 21,
-    "avec_effets": 1,
-    "sans_effet": 18,
+    "avec_effets": 2,
+    "sans_effet": 17,
     "rejetees": [
       {
         "id": "glucksmann-gouvernance-republique-006",
-        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Ouvrir le droit de vote à 16 ans et pour les étrangers extra… »"
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « pour les étrangers extra-communautaires aux élections locale… »"
       },
       {
-        "id": "glucksmann-gouvernance-republique-012",
-        "raison": "relecture : Le texte parle d'« agents » de la fonction publique (pas seulement des fonctionnaires titulaires, les contractuels étant exclus de la cible) et l'effet sur le revenu disponible est étendu ; le périmètre « fonctionnaire » est plus restrictif/différent du texte « agents »."
+        "id": "glucksmann-gouvernance-republique-018",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « la vérification de l’âge et la classification des contenus »"
       }
     ],
-    "cout_reference_usd": 0.0502,
+    "cout_reference_usd": 0.0704,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "833a0cbfb24eb000",
-    "date": "2026-09-27",
+    "empreinte": "e9c15e8c1d827275",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 12,
     "avec_effets": 1,
-    "sans_effet": 10,
+    "sans_effet": 8,
     "rejetees": [
       {
         "id": "glucksmann-interieur-justice-003",
         "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Généraliser la carte de séjour pluriannuelle en en faisant l… »"
+      },
+      {
+        "id": "glucksmann-interieur-justice-004",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Mettre fin au système de la politique du chiffre sur les OQT… »"
+      },
+      {
+        "id": "glucksmann-interieur-justice-006",
+        "raison": "relecture : Alléger les tâches administratives ne fonde pas une hausse de l'emploi des forces de l'ordre, c'est un effet déduit sans rapport avec la dimension emploi."
       }
     ],
-    "cout_reference_usd": 0.0402,
+    "cout_reference_usd": 0.0512,
     "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "1f9c91fcc3bee6d2",
-    "date": "2026-09-27",
+    "empreinte": "e93fd3df9e161c9b",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 18,
-    "avec_effets": 1,
-    "sans_effet": 15,
+    "avec_effets": 3,
+    "sans_effet": 12,
     "rejetees": [
       {
-        "id": "glucksmann-retraites-travail-002",
-        "raison": "relecture : Le SMIC ne concerne que les salariés rémunérés au SMIC (ou proche), pas tous les salariés : la cible « salarie » élargit le périmètre au-delà de ce que dit le texte."
+        "id": "glucksmann-retraites-travail-008",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Généraliser le dispositif Territoires Zéro Chômeur de longue… »"
+      },
+      {
+        "id": "glucksmann-retraites-travail-009",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Créer un guichet unique territorial pour l’emploi et l’inser… »"
       },
       {
         "id": "glucksmann-retraites-travail-010",
         "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « créer des guichets uniques jeunesse dans chaque territoire o… »"
       }
     ],
-    "cout_reference_usd": 0.0484,
+    "cout_reference_usd": 0.0678,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "ae58fdff37d32e3e",
-    "date": "2026-09-27",
+    "empreinte": "6ba783f3173e5da7",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 24,
-    "avec_effets": 1,
-    "sans_effet": 20,
+    "avec_effets": 6,
+    "sans_effet": 10,
     "rejetees": [
       {
-        "id": "glucksmann-social-solidarite-007",
-        "raison": "relecture : Le texte vise les aidants qui réduisent ou arrêtent leur travail pour s'occuper des aînés, mais la cible « aidant_familial = oui » englobe tous les aidants familiaux, ce qui élargit le périmètre."
+        "id": "glucksmann-social-solidarite-013",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Renforcer le statut des artistes-auteurs par une loi garanti… »"
       },
       {
         "id": "glucksmann-social-solidarite-015",
-        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « le BRS permettant d’acheter un logement sans le terrain afin… »"
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Développer les logements en Bail réel solidaire (BRS) pour e… »"
+      },
+      {
+        "id": "glucksmann-social-solidarite-019",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « développer les trains légers en zones rurales »"
+      },
+      {
+        "id": "glucksmann-social-solidarite-020",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Relancer les trains de nuit, accélérer les LGV et les liaiso… »"
       },
       {
         "id": "glucksmann-social-solidarite-021",
         "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « un titre de transport unique, à tarif fixe, abordable et val… »"
+      },
+      {
+        "id": "glucksmann-social-solidarite-022",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « la tarification solidaire pour les jeunes et les ménages mod… »"
+      },
+      {
+        "id": "glucksmann-social-solidarite-023",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Créer un service public de transport rural pour désenclaver … »"
+      },
+      {
+        "id": "glucksmann-social-solidarite-024",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « taxation des plus gros pollueurs individuels (jets privés, y… »"
       }
     ],
-    "cout_reference_usd": 0.0532,
+    "cout_reference_usd": 0.0949,
     "appels": 2
   }
 ]

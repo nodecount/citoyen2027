@@ -91,7 +91,7 @@ candidat à 12 thèmes : 20 à 25 appels d'extraction, 45 à 50 avec la double r
 ## État du dépôt au moment de la pause
 
 - **Rien n'est commité** pour ce travail (une trentaine de fichiers modifiés ou nouveaux, dont
-  `src/ingestion/client-cli.ts`, `data/bases/officielle/programmes/le-pen/*`, `data/profils-schema.json`).
+  `src/ingestion/client-cli.ts`, `data/bases/officielle/programmes/le-pen/*`, `data/bases/officielle/profils-schema.json`).
 - Dossier temporaire `.avant-retraitement/` à la racine (copies de contrôle de `le-pen`) : à supprimer.
 - `src/engine/candidatIdeal.test.ts` (travail « candidat idéal », hors de cette base) échouait au chargement
   faute de module `./candidatIdeal` lors de la dernière exécution complète des tests.

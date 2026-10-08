@@ -1,7 +1,8 @@
 import basesJson from "../../data/bases/bases.json";
 import type { EntreeAVerifier } from "../ingestion/depot";
-import { CHAMPS_PROFIL, construireQuestionnaire, type Questionnaire } from "../questionnaire";
-import type { CandidatMeta, Proposition, Remarque, ResumeRefuse, ResumeTheme, SyntheseTheme, Theme } from "../types";
+import { construireQuestionnaire, type Questionnaire } from "../questionnaire";
+import { champsDeBase } from "../schemaBase";
+import type { CandidatMeta, ChampProfil, Proposition, Remarque, ResumeRefuse, ResumeTheme, SyntheseTheme, Theme } from "../types";
 import { assemblerCandidats, type CandidatCharge, type CandidatsCharges } from "./chargerCandidats";
 
 // Une « base de connaissances » = un référentiel de thèmes + un dossier par candidat, dans data/bases/<id>/.
@@ -21,6 +22,8 @@ export interface InfoBase {
 export interface BaseCharge {
   info: InfoBase;
   themes: Theme[];
+  // Les questions de CETTE base (data/bases/<id>/profils-schema.json) : une autre source en pose d'autres.
+  champs: ChampProfil[];
   // Questions générales + questions par thème, calculées depuis la pertinence propre à la base.
   questionnaire: Questionnaire;
   metas: Record<string, CandidatMeta>;
@@ -87,7 +90,8 @@ export function chargerBase(id: string): BaseCharge {
   return {
     info,
     themes,
-    questionnaire: construireQuestionnaire(CHAMPS_PROFIL, pertinence, themes),
+    champs: champsDeBase(info.id),
+    questionnaire: construireQuestionnaire(champsDeBase(info.id), pertinence, themes),
     metas: regrouperParBaseEtSlug(metaModules, info.id),
     propositions: regrouperParBaseEtSlug(propositionsModules, info.id),
     syntheses: regrouperParBaseEtSlug(synthesesModules, info.id),

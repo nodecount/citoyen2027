@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { CHAMPS_CIBLES, DIMENSIONS_EFFET, SENS_EFFET } from "../effets";
+import { champsCibles, DIMENSIONS_EFFET, SENS_EFFET } from "../effets";
+const CHAMPS_CIBLES = champsCibles("officielle");
 import { SCHEMA_PROPOSITION_GENEREE, SOURCES_MINIMUM, validerPropositionGeneree } from "./schema";
 
 describe("SCHEMA_PROPOSITION_GENEREE (contrainte de l'API structured outputs)", () => {

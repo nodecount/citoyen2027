@@ -2,102 +2,106 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "25e151d4dd53b228",
-    "date": "2026-09-27",
+    "empreinte": "81beda0bb1db09f1",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 10,
-    "avec_effets": 2,
-    "sans_effet": 8,
-    "rejetees": [],
-    "cout_reference_usd": 0.0414,
+    "avec_effets": 5,
+    "sans_effet": 3,
+    "rejetees": [
+      {
+        "id": "lisnard-education-jeunesse-002",
+        "raison": "relecture : Le chèque-éducation ne fait que remplacer le financement existant par un montant équivalent ; pour les familles déjà en école publique gratuite, le texte ne permet pas de déduire une baisse du coût de la vie."
+      },
+      {
+        "id": "lisnard-education-jeunesse-009",
+        "raison": "relecture : La cible 'etudiant' élargit le périmètre : le texte parle de lycées professionnels et CFA, dont le public relève du statut lycéen/apprenti, pas d'étudiant."
+      }
+    ],
+    "cout_reference_usd": 0.0772,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "1e7fa003e3ff6ff3",
-    "date": "2026-09-27",
+    "empreinte": "646b1c26c26476d3",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 9,
-    "avec_effets": 0,
+    "avec_effets": 1,
     "sans_effet": 8,
-    "rejetees": [
-      {
-        "id": "lisnard-envi-004",
-        "raison": "relecture : Le texte cite agriculteurs et forestiers, mais seul « agriculteur » est retenu (périmètre incomplet/image partielle) ; de plus, c'est une proposition de réforme (« proposer une réforme ») dont l'effet sur le revenu net est un objectif affiché, pas un effet établi."
-      }
-    ],
-    "cout_reference_usd": 0.0416,
+    "rejetees": [],
+    "cout_reference_usd": 0.0482,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "dabe59bfc556f998",
-    "date": "2026-09-27",
+    "empreinte": "4d80077c164e1025",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 3,
-    "avec_effets": 1,
+    "avec_effets": 2,
     "sans_effet": 1,
-    "rejetees": [
-      {
-        "id": "lisnard-finances-publiques-002",
-        "raison": "relecture : Les cibles « enfants à charge » désignent les parents de mineurs à charge, alors que le texte vise les parents donateurs de leurs enfants (potentiellement adultes) et les enfants receveurs, sans condition de charge : périmètre faux."
-      }
-    ],
-    "cout_reference_usd": 0.0378,
+    "rejetees": [],
+    "cout_reference_usd": 0.0435,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "5dc97a8201eba767",
-    "date": "2026-09-27",
+    "empreinte": "fbfe272737606d46",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 22,
-    "avec_effets": 0,
-    "sans_effet": 22,
+    "avec_effets": 4,
+    "sans_effet": 18,
     "rejetees": [],
-    "cout_reference_usd": 0.0093,
-    "appels": 1
+    "cout_reference_usd": 0.0807,
+    "appels": 2
   },
   {
     "theme": "reformes-etat",
     "groupe": 0,
-    "empreinte": "e8157c56c8dcf7d4",
-    "date": "2026-09-27",
+    "empreinte": "a6f3e91502c459ba",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 9,
     "avec_effets": 0,
     "sans_effet": 9,
     "rejetees": [],
-    "cout_reference_usd": 0.0273,
+    "cout_reference_usd": 0.0323,
     "appels": 1
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "f2b218fbc3d84092",
-    "date": "2026-09-27",
+    "empreinte": "56e1d063031ce997",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
     "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.0229,
+    "cout_reference_usd": 0.0307,
     "appels": 1
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "68aae8870ed061fb",
-    "date": "2026-09-27",
+    "empreinte": "2cff9272badbeba2",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 9,
     "avec_effets": 2,
-    "sans_effet": 7,
-    "rejetees": [],
-    "cout_reference_usd": 0.0171,
+    "sans_effet": 6,
+    "rejetees": [
+      {
+        "id": "lisnard-social-solidarite-006",
+        "raison": "relecture : Le texte vise les étudiants en médecine spécifiquement, alors que le critère 'statut_professionnel: etudiant' élargit la cible à tous les étudiants."
+      }
+    ],
+    "cout_reference_usd": 0.0552,
     "appels": 2
   }
 ]

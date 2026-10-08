@@ -12,9 +12,9 @@ function rendre(ecran: Ecran, bases = DEUX_BASES) {
 }
 
 describe("Menu", () => {
-  it("propose Accueil, Simulateur et À propos, et marque l'onglet actif", () => {
+  it("propose Accueil, Exploration, Simulateur et À propos, et marque l'onglet actif", () => {
     const html = rendre("accueil");
-    for (const libelle of ["Accueil", "Simulateur", "À propos"]) expect(html).toContain(`>${libelle}<`);
+    for (const libelle of ["Accueil", "Exploration", "Simulateur", "À propos"]) expect(html).toContain(`>${libelle}<`);
     expect(html).toMatch(/lien-menu--actif"[^>]*aria-current="page"[^>]*>Accueil/);
     expect(rendre("a-propos")).toMatch(/lien-menu--actif"[^>]*aria-current="page"[^>]*>À propos/);
   });

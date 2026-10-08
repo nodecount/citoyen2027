@@ -2,131 +2,126 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "c8fefdb826b2b124",
-    "date": "2026-09-27",
+    "empreinte": "e89fb02715627c22",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 9,
-    "avec_effets": 2,
-    "sans_effet": 7,
+    "avec_effets": 4,
+    "sans_effet": 5,
     "rejetees": [],
-    "cout_reference_usd": 0.0405,
+    "cout_reference_usd": 0.0524,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "f451e620f50b8d8c",
-    "date": "2026-09-27",
+    "empreinte": "f65e362663357525",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 11,
     "avec_effets": 0,
     "sans_effet": 11,
     "rejetees": [],
-    "cout_reference_usd": 0.0275,
+    "cout_reference_usd": 0.0325,
     "appels": 1
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "8e1c610584bd64da",
-    "date": "2026-09-27",
+    "empreinte": "a6e7a1859c4ba72e",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 11,
-    "avec_effets": 0,
+    "avec_effets": 2,
     "sans_effet": 9,
-    "rejetees": [
-      {
-        "id": "philippe-finances-publiques-007",
-        "raison": "relecture : Cibles vides (tout le monde) alors que seuls les donateurs/bénéficiaires de donations sont visés, et l'exonération des donations est un effet fiscal (transmission), pas une hausse de patrimoine pour tout citoyen."
-      },
-      {
-        "id": "philippe-finances-publiques-011",
-        "raison": "relecture : Le texte vise les familles à partir du deuxième enfant, mais la cible « au moins un enfant » élargit le périmètre aux foyers avec un seul enfant."
-      }
-    ],
-    "cout_reference_usd": 0.042,
+    "rejetees": [],
+    "cout_reference_usd": 0.0558,
     "appels": 2
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "cd5fafe7843c79fd",
-    "date": "2026-09-27",
+    "empreinte": "7a8b2e17d70ce296",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "avec_effets": 0,
-    "sans_effet": 12,
-    "rejetees": [
-      {
-        "id": "philippe-gouvernance-republique-012",
-        "raison": "relecture : Un droit à la reconversion ne garantit pas une hausse de l'emploi : le texte ne dit rien sur le niveau d'emploi, cet effet est déduit par un mécanisme supposé (la dimension emploi et son sens ne sont pas fondés par l'extrait)."
-      }
-    ],
-    "cout_reference_usd": 0.0415,
+    "avec_effets": 4,
+    "sans_effet": 9,
+    "rejetees": [],
+    "cout_reference_usd": 0.0637,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "9a7b93f8647b0789",
-    "date": "2026-09-27",
+    "empreinte": "4f8f5a47d191e8cf",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 1,
-    "sans_effet": 24,
-    "rejetees": [],
-    "cout_reference_usd": 0.0475,
+    "avec_effets": 6,
+    "sans_effet": 18,
+    "rejetees": [
+      {
+        "id": "philippe-interieur-justice-018",
+        "raison": "relecture : Le texte décrit un 'profil bancaire spécifique' (surveillance/fichage) mais n'indique pas que cela entraîne une baisse du patrimoine, ce qui est une dimension déduite et non fondée par l'extrait."
+      }
+    ],
+    "cout_reference_usd": 0.0892,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 1,
-    "empreinte": "856102292af3be98",
-    "date": "2026-09-27",
+    "empreinte": "6bd340c3f85f1207",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 0,
     "sans_effet": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.005,
+    "cout_reference_usd": 0.0051,
     "appels": 1
   },
   {
     "theme": "reformes-etat",
     "groupe": 0,
-    "empreinte": "8dda7bd055c60b6e",
-    "date": "2026-09-27",
+    "empreinte": "9c4bc3a433d195eb",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 4,
     "avec_effets": 0,
     "sans_effet": 4,
     "rejetees": [],
-    "cout_reference_usd": 0.0244,
+    "cout_reference_usd": 0.0293,
     "appels": 1
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "3f0ba4c72280f5da",
-    "date": "2026-09-27",
+    "empreinte": "fe417fde9e490ddb",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 6,
     "avec_effets": 1,
-    "sans_effet": 4,
+    "sans_effet": 3,
     "rejetees": [
       {
-        "id": "philippe-retraites-travail-001",
-        "raison": "relecture : Le texte vise « les actifs » sans nommer de statuts précis : la liste salarié/indépendant/fonctionnaire élargit ou précise le périmètre au-delà du texte, et la hausse du salaire net repose sur une déclaration de principe sans mesure concrète."
+        "id": "philippe-retraites-travail-002",
+        "raison": "relecture : Le dispositif prévoit un temps partiel à 80% payé 100% seulement pendant 2 mois, donc après cette période la rémunération peut redescendre à 80% (baisse), et l'effet ne retient que la hausse temporaire sans mentionner cette contrepartie, donnant une image incomplète."
+      },
+      {
+        "id": "philippe-retraites-travail-005",
+        "raison": "relecture : Le texte ne précise aucune tranche d'âge et indique que le relèvement dépend des métiers et de leur pénibilité, donc cibler toute la tranche 50-64 ans élargit le périmètre au-delà de ce que dit le texte."
       }
     ],
-    "cout_reference_usd": 0.0398,
+    "cout_reference_usd": 0.063,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "debc76cdc532b18f",
-    "date": "2026-09-27",
+    "empreinte": "c60132d7432cb27f",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 4,
     "avec_effets": 0,
@@ -134,10 +129,10 @@
     "rejetees": [
       {
         "id": "philippe-social-solidarite-003",
-        "raison": "relecture : Un prêt à taux zéro est un crédit à rembourser, pas un revenu ; la hausse du revenu disponible n'est pas soutenue (sens indéterminé), et le public visé est les familles avec une naissance, pas tous les foyers ayant au moins un enfant à charge."
+        "raison": "relecture : La cible 'enfant_moins_3_ans' est un critère d'âge inventé non présent dans le texte (qui parle de naissance et de familles s'agrandissant), et un prêt à taux zéro est un crédit remboursable, pas directement une hausse du revenu disponible."
       }
     ],
-    "cout_reference_usd": 0.0362,
+    "cout_reference_usd": 0.0456,
     "appels": 2
   }
 ]

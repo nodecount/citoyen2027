@@ -1,0 +1,61 @@
+[
+  {
+    "groupe": 0,
+    "empreinte": "4251345df0295d1e",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 11,
+    "sans_position": 11,
+    "rejetees": [
+      {
+        "id": "retailleau-fisc-006",
+        "raison": "relecture : La suppression d'une exonération d'IS pour les organismes HLM n'est pas une hausse d'impôt sur les plus aisés ou le capital, et les économies sont redistribuées à des bailleurs constructeurs, non à des dispositifs de solidarité, ce qui ne correspond pas à la définition de redistribution."
+      },
+      {
+        "id": "retailleau-pa-003",
+        "raison": "relecture : L'exclusion de l'APL selon le revenu des parents est un ciblage par ressources, pas une conditionnalité en contrepartie d'une activité ou un durcissement de l'indemnisation comme le définit 'conditionner_aides'."
+      },
+      {
+        "id": "retailleau-aides-002",
+        "raison": "relecture : L'exclusion de l'APL selon le revenu des parents est un ciblage par ressources, pas une conditionnalité en contrepartie d'une activité ou un durcissement de l'indemnisation comme le définit 'conditionner_aides'."
+      }
+    ],
+    "cout_reference_usd": 0.1626,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "cdc2eeb815db814f",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 13,
+    "sans_position": 11,
+    "rejetees": [
+      {
+        "id": "retailleau-logt-012",
+        "raison": "relecture : L'expulsion administrative des squats relève de la politique du logement et non du sujet sécurité/justice tel que défini (peines, police, prison), c'est un mauvais sujet."
+      }
+    ],
+    "cout_reference_usd": 0.0904,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "28d34ad970bbd55a",
+    "date": "2026-10-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 19,
+    "etiquetees": 17,
+    "sans_position": 1,
+    "rejetees": [
+      {
+        "id": "retailleau-lib-002",
+        "raison": "relecture : L'extrait sur la lutte contre le séparatisme et l'entrisme religieux ne porte pas sur l'interdiction de signes religieux ou la neutralité dans l'espace public, il ne fonde pas clairement l'étiquette laicite_stricte."
+      }
+    ],
+    "cout_reference_usd": 0.0744,
+    "appels": 2
+  }
+]

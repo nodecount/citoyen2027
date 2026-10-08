@@ -1,38 +1,61 @@
 [
   {
     "groupe": 0,
-    "empreinte": "cfa1b497f43c4153",
-    "date": "2026-09-30",
+    "empreinte": "efe86a96d01af7a3",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 17,
-    "sans_position": 8,
-    "rejetees": [],
-    "cout_reference_usd": 0.0821,
+    "sans_position": 7,
+    "rejetees": [
+      {
+        "id": "lisnard-interieur-justice-012",
+        "raison": "relecture : Le texte « internats disciplinaires fermés » ne mentionne pas l'école ; rien n'établit qu'il s'agit du système scolaire plutôt que d'un dispositif judiciaire pour mineurs délinquants, donc l'étiquette ecole_discipline/ecole_exigence n'est pas fondée par l'extrait."
+      }
+    ],
+    "cout_reference_usd": 0.1367,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "cd10b990797fc56e",
-    "date": "2026-09-30",
+    "empreinte": "132931a55e751c7e",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 2,
-    "sans_position": 23,
-    "rejetees": [],
-    "cout_reference_usd": 0.0464,
+    "etiquetees": 9,
+    "sans_position": 15,
+    "rejetees": [
+      {
+        "id": "lisnard-social-solidarite-009",
+        "raison": "relecture : Le texte parle de construire une réglementation (encadrement) pour l'innovation médicale, ce qui relève plutôt d'encadrer_ia que de plus_ia ; l'extrait ne montre pas un soutien direct au développement de l'IA mais un cadre régulatoire."
+      }
+    ],
+    "cout_reference_usd": 0.1107,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "b618b42faf76cf5f",
-    "date": "2026-09-30",
+    "empreinte": "9e0471af917ee392",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "etiquetees": 0,
-    "sans_position": 13,
-    "rejetees": [],
-    "cout_reference_usd": 0.0151,
-    "appels": 1
+    "etiquetees": 8,
+    "sans_position": 2,
+    "rejetees": [
+      {
+        "id": "lisnard-reformes-etat-009",
+        "raison": "relecture : Interdire la surtransposition rapproche le droit national du minimum européen plutôt que de reprendre des compétences à l'UE ou d'y déroger ; ce n'est pas un acte de souveraineté au sens de la définition."
+      },
+      {
+        "id": "lisnard-education-jeunesse-006",
+        "raison": "relecture : Une hausse de rémunération des enseignants ne relève pas de la définition de plus_services_publics (création de postes ou renforcement des moyens des services publics), c'est une mesure salariale et non d'effectifs ou de moyens."
+      },
+      {
+        "id": "lisnard-education-jeunesse-010",
+        "raison": "relecture : La création de classes d'excellence relève de l'organisation pédagogique et non de la discipline/sanction visée par ecole_exigence."
+      }
+    ],
+    "cout_reference_usd": 0.0561,
+    "appels": 2
   }
 ]

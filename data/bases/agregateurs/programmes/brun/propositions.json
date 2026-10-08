@@ -41,7 +41,30 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite"
+    "sous_theme": "Système de retraite",
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "retraite"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "pensions supérieures à 3 000 € bruts par mois"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Désindexer les pensions supérieures à 3 000 € bruts par mois."
+      }
+    ]
   },
   {
     "id": "brun-retraites-travail-003",
@@ -63,7 +86,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "retraite"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Remplacer l’abattement fiscal de 10 % sur les pensions par un abattement forfaitaire de 2 000 €."
+      }
+    ],
     "positions": []
   },
   {
@@ -107,7 +145,7 @@
         "sujet": "travail",
         "position": "age_actuel",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Maintenir l’âge d’ouverture des droits à 62 ans"
+        "extrait": "Maintenir l’âge d’ouverture des droits à 62 ans et permettre un départ anticipé à la retraite pour les métiers les plus pénibles."
       }
     ]
   },
@@ -131,7 +169,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "retraite"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Indexer les pensions sur les salaires plutôt que sur les prix, avec un coefficient démographique tenant compte du rapport entre cotisants et retraités et un plancher empêchant une baisse des pensions."
+      }
+    ],
     "positions": []
   },
   {

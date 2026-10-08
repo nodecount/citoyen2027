@@ -1,50 +1,68 @@
 [
   {
     "groupe": 0,
-    "empreinte": "fdca36f5ff514219",
-    "date": "2026-10-01",
+    "empreinte": "c2353a917d1aaba1",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 11,
-    "sans_position": 14,
+    "etiquetees": 15,
+    "sans_position": 10,
     "rejetees": [],
-    "cout_reference_usd": 0.0607,
+    "cout_reference_usd": 0.0907,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "4f57943539940387",
-    "date": "2026-10-01",
+    "empreinte": "ae5d5c7a2be6a31e",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 3,
-    "sans_position": 22,
+    "etiquetees": 12,
+    "sans_position": 13,
     "rejetees": [],
-    "cout_reference_usd": 0.0253,
+    "cout_reference_usd": 0.0875,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "2002ded7e48737dd",
-    "date": "2026-10-01",
+    "empreinte": "354ebc7a64e217aa",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 0,
-    "sans_position": 25,
-    "rejetees": [],
-    "cout_reference_usd": 0.0181,
-    "appels": 1
+    "etiquetees": 10,
+    "sans_position": 12,
+    "rejetees": [
+      {
+        "id": "tondelier-retraites-travail-011",
+        "raison": "relecture : Une garantie d'emploi est une mesure d'emploi, pas une protection des minima sociaux ou de l'assurance chômage visée par le sujet aides_sociales."
+      },
+      {
+        "id": "tondelier-retraites-travail-014",
+        "raison": "relecture : Indexer le point d'indice relève des salaires des fonctionnaires, non de la création de postes ou du renforcement des services publics visé par plus_services_publics."
+      },
+      {
+        "id": "tondelier-envi-015",
+        "raison": "relecture : La personnalité juridique des animaux ne relève pas des libertés individuelles humaines définies par le sujet libertes."
+      }
+    ],
+    "cout_reference_usd": 0.0483,
+    "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "f62d4f820208eb7f",
-    "date": "2026-10-01",
+    "empreinte": "2004431ed0c08433",
+    "date": "2026-10-06",
     "modele": "claude-sonnet-5",
     "propositions": 9,
-    "etiquetees": 0,
-    "sans_position": 9,
-    "rejetees": [],
-    "cout_reference_usd": 0.0083,
-    "appels": 1
+    "etiquetees": 2,
+    "sans_position": 6,
+    "rejetees": [
+      {
+        "id": "tondelier-education-jeunesse-002",
+        "raison": "relecture : La réduction du nombre d'élèves par classe relève du renforcement des services publics (fonction_publique), pas de l'organisation structurelle de l'école ; le texte ne dit rien sur le maintien du cadre actuel vs réforme."
+      }
+    ],
+    "cout_reference_usd": 0.021,
+    "appels": 2
   }
 ]

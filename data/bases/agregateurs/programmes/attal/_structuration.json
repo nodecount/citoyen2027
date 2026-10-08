@@ -2,114 +2,124 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "baacc69e203117f8",
-    "date": "2026-09-27",
+    "empreinte": "cf9a071f2f5e92f2",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 3,
-    "avec_effets": 0,
-    "sans_effet": 3,
-    "rejetees": [],
-    "cout_reference_usd": 0.0238,
-    "appels": 1
+    "avec_effets": 1,
+    "sans_effet": 1,
+    "rejetees": [
+      {
+        "id": "attal-education-jeunesse-002",
+        "raison": "relecture : La cible 'moins_30' élargit le périmètre au-delà des moins de 15 ans visés par le texte."
+      }
+    ],
+    "cout_reference_usd": 0.0442,
+    "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "987da69981c1bbcd",
-    "date": "2026-09-27",
+    "empreinte": "7feefb673811ee07",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 0,
     "sans_effet": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.0231,
+    "cout_reference_usd": 0.0297,
     "appels": 1
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "bb597c90d95b2b9e",
-    "date": "2026-09-27",
+    "empreinte": "16059fd34dcc9a62",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 13,
     "avec_effets": 2,
-    "sans_effet": 11,
-    "rejetees": [],
-    "cout_reference_usd": 0.045,
+    "sans_effet": 10,
+    "rejetees": [
+      {
+        "id": "attal-finances-publiques-006",
+        "raison": "relecture : Le texte exclut explicitement les petites retraites, mais l'ASPA (minimum vieillesse) est incluse dans les cibles alors qu'elle en relève directement."
+      }
+    ],
+    "cout_reference_usd": 0.0544,
     "appels": 2
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "e6a73fe6d1030a29",
-    "date": "2026-09-27",
+    "empreinte": "b19a395a3b1acb8e",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 0,
     "sans_effet": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.0232,
+    "cout_reference_usd": 0.028,
     "appels": 1
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "7042d8d3cee39522",
-    "date": "2026-09-27",
+    "empreinte": "7266f430c8796174",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 7,
-    "avec_effets": 1,
-    "sans_effet": 6,
+    "avec_effets": 2,
+    "sans_effet": 5,
     "rejetees": [],
-    "cout_reference_usd": 0.0391,
+    "cout_reference_usd": 0.048,
     "appels": 2
   },
   {
     "theme": "reformes-etat",
     "groupe": 0,
-    "empreinte": "62852f2472f6c30f",
-    "date": "2026-09-27",
+    "empreinte": "5912c949088a9bf2",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 0,
     "sans_effet": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.0234,
+    "cout_reference_usd": 0.0283,
     "appels": 1
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "a7aaf81ed004d037",
-    "date": "2026-09-27",
+    "empreinte": "921946647d5d86c4",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 8,
-    "avec_effets": 2,
-    "sans_effet": 6,
-    "rejetees": [],
-    "cout_reference_usd": 0.039,
+    "avec_effets": 5,
+    "sans_effet": 1,
+    "rejetees": [
+      {
+        "id": "attal-retraites-travail-002",
+        "raison": "relecture : La dimension 'emploi' n'est pas fondée : le texte permet de travailler un jour donné, ce qui relève du temps de travail, pas de la création/destruction d'emploi."
+      },
+      {
+        "id": "attal-retraites-travail-005",
+        "raison": "relecture : La hausse d'emploi est un effet macroéconomique déduit d'un plan de formation, non affirmé par le texte."
+      }
+    ],
+    "cout_reference_usd": 0.072,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "2e2e7bfc9d7b4153",
-    "date": "2026-09-27",
+    "empreinte": "0a72eab7d95c2755",
+    "date": "2026-10-04",
     "modele": "claude-sonnet-5",
     "propositions": 4,
-    "avec_effets": 0,
-    "sans_effet": 2,
-    "rejetees": [
-      {
-        "id": "attal-social-solidarite-001",
-        "raison": "relecture : Le texte vise le durcissement de l'assurance chômage sans préciser quelles protections baissent ; cible « sans_emploi » trop large (chômeurs indemnisés) et « protection_sociale » baisse est déduite d'un mécanisme supposé, le sens réel étant indéterminé."
-      },
-      {
-        "id": "attal-social-solidarite-002",
-        "raison": "relecture : L'année blanche gèle les prestations (pas de revalorisation) sans les baisser nominalement, et le texte vise « l'ensemble des prestations sociales » alors que la liste de cinq aides est arbitraire et exclut les petites retraites épargnées ; périmètre non fidèle."
-      }
-    ],
-    "cout_reference_usd": 0.0426,
+    "avec_effets": 3,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0544,
     "appels": 2
   }
 ]

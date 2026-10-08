@@ -1,12 +1,15 @@
 import { describe, expect, it } from "vitest";
 import { cheminDeLEcran, ecranDepuisChemin, lireOuverture, type Ecran } from "./router";
 
-const ECRANS: Ecran[] = ["accueil", "simulateur", "questions-generales", "a-propos"];
+const ECRANS: Ecran[] = ["accueil", "exploration", "simulateur", "questions-generales", "a-propos", "monitoring", "tests-situations"];
 
 describe("routeur", () => {
   it("donne à chaque écran sa propre adresse", () => {
     expect(cheminDeLEcran("accueil")).toBe("/");
+    expect(cheminDeLEcran("exploration")).toBe("/exploration");
     expect(cheminDeLEcran("simulateur")).toBe("/simulateur");
+    expect(cheminDeLEcran("monitoring")).toBe("/monitoring");
+    expect(cheminDeLEcran("tests-situations")).toBe("/tests-situations");
     expect(cheminDeLEcran("questions-generales")).toBe("/ma-situation");
     expect(cheminDeLEcran("a-propos")).toBe("/a-propos");
     expect(new Set(ECRANS.map(cheminDeLEcran)).size).toBe(ECRANS.length);

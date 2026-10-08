@@ -9,7 +9,7 @@ const BASES: InfoBase[] = [
 ];
 
 const rendre = (ouverte: boolean) =>
-  renderToStaticMarkup(<ModaleBase ouverte={ouverte} bases={BASES} actif="b" onChoisir={() => {}} onFermer={() => {}} />);
+  renderToStaticMarkup(<ModaleBase ouverte={ouverte} bases={BASES} actif="b" onChoisir={() => {}} onControle={() => {}} onFermer={() => {}} />);
 
 describe("ModaleBase", () => {
   it("n'existe pas dans la page tant qu'elle est fermée", () => {
@@ -31,5 +31,11 @@ describe("ModaleBase", () => {
     expect(radio("b")).toContain("checked");
     expect(radio("a")).not.toContain("checked");
     expect(html).toContain("choix-base choix-base--actif");
+  });
+
+  it("propose, pour chaque base, son monitoring et ses tests de situations", () => {
+    const html = rendre(true);
+    expect(html.match(/>Monitoring</g)).toHaveLength(BASES.length);
+    expect(html.match(/>Tests de situations</g)).toHaveLength(BASES.length);
   });
 });

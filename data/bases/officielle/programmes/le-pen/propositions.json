@@ -1,7 +1,7 @@
 [
   {
-    "titre": "Hausse des salaires nets jusqu'à 3 SMIC via exonération de cotisations patronales",
-    "resume_factuel": "Le programme (position de 2022) propose de permettre aux entreprises d'augmenter les salaires de 10% (jusqu'à 3 SMIC) en exonérant cette hausse de cotisations patronales. Le mécanisme de mise en œuvre exact et son caractère obligatoire ou incitatif ne sont pas davantage précisés.",
+    "titre": "Baisse de la TVA sur les produits énergétiques de 20% à 5,5%",
+    "resume_factuel": "Le programme de 2022, repris par le Rassemblement National, propose de baisser la TVA de 20% à 5,5% sur les produits énergétiques (carburants, fioul, gaz et électricité) considérés comme biens de première nécessité. Une pétition de 2024 réitère cette proposition face à la hausse des prix de l'électricité.",
     "sources": [
       {
         "type": "primaire",
@@ -9,20 +9,43 @@
         "url": "https://mlafrance.fr/programme",
         "nom": "mlafrance.fr (programme 2022)",
         "annee": 2022
+      },
+      {
+        "type": "primaire",
+        "label": "rassemblementnational.fr — petition-tva-electricite",
+        "url": "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez",
+        "nom": "rassemblementnational.fr",
+        "annee": 2024
       }
     ],
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-pa-001",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Baisser la TVA de 20% à 5.5% sur les produits énergétiques (carburants, fioul, gaz et électricité) en tant que biens de première nécessité."
+      }
+    ],
+    "id": "le-pen-fisc-001",
     "candidat": "le-pen",
-    "theme": "pouvoir-achat"
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "baisser la TVA de 20% à 5,5% sur les produits énergétiques"
+      }
+    ]
   },
   {
-    "titre": "Renationalisation des autoroutes pour baisser les péages de 15%",
-    "resume_factuel": "Position de 2022 : le programme propose de renationaliser les autoroutes afin de baisser les péages de 15%. Les modalités de rachat des concessions et le calendrier ne sont pas précisés.",
+    "titre": "Exonération d'impôt sur le revenu pour les jeunes actifs jusqu'à 30 ans",
+    "resume_factuel": "Position de 2022 : exonération d'impôt sur le revenu pour tous les jeunes actifs jusqu'à 30 ans, afin qu'ils restent en France et fondent leur famille.",
     "sources": [
       {
         "type": "primaire",
@@ -35,7 +58,306 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-fisc-002",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "exonération d'impôt sur le revenu pour tous les jeunes actifs jusqu'à 30 ans"
+      }
+    ]
+  },
+  {
+    "titre": "Suppression de l'impôt sur les sociétés pour les jeunes entrepreneurs pendant 5 ans",
+    "resume_factuel": "Position de 2022 : suppression de l'impôt sur les sociétés pour les entrepreneurs de moins de 30 ans pendant les 5 premières années, pour éviter leur départ à l'étranger. Il s'agit d'un impôt payé par l'entreprise, non directement par le particulier.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-fisc-003",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "suppression de l'impôt sur les sociétés pour les entrepreneurs de moins de 30 ans pendant les 5 premières années"
+      }
+    ]
+  },
+  {
+    "titre": "Instauration d'une part fiscale complète dès le deuxième enfant",
+    "resume_factuel": "Position de 2022 : instauration d'une part fiscale complète dès le deuxième enfant, dans le cadre du quotient familial de l'impôt sur le revenu.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-fisc-004",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "instauration d'une part fiscale complète dès le deuxième enfant, dans le cadre du quotient familial de l'impôt sur le revenu"
+      }
+    ]
+  },
+  {
+    "titre": "Suppression des impôts sur l'héritage direct pour les familles modestes et les classes moyennes",
+    "resume_factuel": "Position de 2022 : suppression des impôts sur l'héritage direct (droits de succession en ligne directe) pour les familles modestes et les classes moyennes. Le seuil exact de « modeste » et « classe moyenne » n'est pas précisé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "familles modestes et classes moyennes recevant un héritage en ligne directe"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Supprimer les impôts sur l’héritage direct pour les familles modestes et les classes moyennes."
+      }
+    ],
+    "id": "le-pen-fisc-005",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "suppression des impôts sur l'héritage direct (droits de succession en ligne directe) pour les familles modestes et les classes moyennes"
+      }
+    ]
+  },
+  {
+    "titre": "Exonération des donations familiales jusqu'à 100 000€ par enfant tous les dix ans",
+    "resume_factuel": "Position de 2022 : exonération des donations des parents et des grands-parents à leurs enfants et petits-enfants, jusqu'à 100 000€ par enfant tous les dix ans.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "a_venir"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Exonérer les donations des parents mais aussi des grands-parents à leurs enfants et petits-enfants jusqu’à 100 000€ par enfant tous les dix ans."
+      }
+    ],
+    "id": "le-pen-fisc-006",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "exonération des donations des parents et des grands-parents à leurs enfants et petits-enfants, jusqu'à 100 000€ par enfant tous les dix ans"
+      }
+    ]
+  },
+  {
+    "titre": "Restauration de la demi-part fiscale pour les veuves et veufs",
+    "resume_factuel": "Position de 2022 : restauration de la demi-part fiscale en faveur des veuves et veufs, dans le calcul de l'impôt sur le revenu.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "situation_familiale",
+            "valeurs": [
+              "veuf_veuve"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Restaurer la demi-part fiscale en faveur des veuves et veufs."
+      }
+    ],
+    "id": "le-pen-fisc-007",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "restauration de la demi-part fiscale en faveur des veuves et veufs"
+      }
+    ]
+  },
+  {
+    "titre": "Suppression de l'IFI et création d'un impôt sur la fortune financière (IFF)",
+    "resume_factuel": "Position de 2022 : suppression de l'Impôt sur la Fortune Immobilière (IFI), présenté comme taxant « l'enracinement », et création d'un Impôt sur la Fortune Financière (IFF) destiné à taxer la spéculation. Les modalités précises (seuils, taux) de l'IFF ne sont pas détaillées.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-fisc-008",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": []
+  },
+  {
+    "titre": "Suppression de la Cotisation Foncière des Entreprises (CFE) et des impôts de production",
+    "resume_factuel": "Position de 2022 : suppression de la Cotisation Foncière des Entreprises (CFE) qui pénalise les PME-TPE locales, et des impôts de production, pour favoriser la relocalisation. Il s'agit d'impôts payés par les entreprises.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-fisc-009",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "suppression de la Cotisation Foncière des Entreprises (CFE) qui pénalise les PME-TPE locales, et des impôts de production"
+      }
+    ]
+  },
+  {
+    "titre": "Hausse des salaires nets jusqu'à 3 SMIC via exonération de cotisations patronales",
+    "resume_factuel": "Position de 2022 : permettre aux entreprises une hausse des salaires de 10% (jusqu'à 3 SMIC) en exonérant cette augmentation de cotisations patronales.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-fisc-010",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "moderer_salaires",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "permettre aux entreprises une hausse des salaires de 10% (jusqu'à 3 SMIC) en exonérant cette augmentation de cotisations patronales"
+      }
+    ]
+  },
+  {
+    "titre": "Renationalisation des autoroutes pour baisser les péages de 15% et suppression de la redevance audiovisuelle",
+    "resume_factuel": "Position de 2022 : renationaliser les autoroutes pour baisser de 15% les péages, et privatiser l'audiovisuel public pour supprimer les 138€ de redevance.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
@@ -56,16 +378,75 @@
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Renationaliser les autoroutes pour baisser de 15% les péages et privatiser l'audiovisuel public pour supprimer les 138€ de redevance."
+        "extrait": "Renationaliser les autoroutes pour baisser de 15% les péages et privatiser l’audiovisuel public pour supprimer les 138€ de redevance."
+      },
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "privatiser l’audiovisuel public pour supprimer les 138€ de redevance."
       }
     ],
-    "id": "le-pen-pa-002",
+    "id": "le-pen-fisc-011",
     "candidat": "le-pen",
-    "theme": "pouvoir-achat"
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "privatiser l'audiovisuel public pour supprimer les 138€ de redevance"
+      }
+    ]
   },
   {
-    "titre": "Exonération d'impôt sur le revenu pour les jeunes actifs jusqu'à 30 ans",
-    "resume_factuel": "Position de 2022 : exonération d'impôt sur le revenu pour tous les jeunes actifs jusqu'à 30 ans. Le seuil de revenu, la durée exacte et le mécanisme fiscal précis ne sont pas détaillés.",
+    "titre": "Baisse de la TVA de 20% à 5,5% sur les produits énergétiques",
+    "resume_factuel": "Marine Le Pen propose de baisser la TVA de 20% à 5,5% sur les produits énergétiques (carburants, fioul, gaz et électricité), considérés comme des biens de première nécessité (programme 2022). Cette position est réaffirmée dans des pétitions ultérieures du RN appelant à baisser la TVA sur l'électricité.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      },
+      {
+        "type": "primaire",
+        "label": "rassemblementnational.fr — petition-tva-electricite",
+        "url": "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez",
+        "nom": "rassemblementnational.fr",
+        "annee": 2024
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Baisser la TVA de 20% à 5.5% sur les produits énergétiques (carburants, fioul, gaz et électricité) en tant que biens de première nécessité."
+      }
+    ],
+    "id": "le-pen-pa-001",
+    "candidat": "le-pen",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "baisser la TVA de 20% à 5,5% sur les produits énergétiques (carburants, fioul, gaz et électricité), considérés comme des biens de première nécessité"
+      }
+    ]
+  },
+  {
+    "titre": "Hausse des salaires nets jusqu'à 3 SMIC via exonération de cotisations patronales",
+    "resume_factuel": "Permettre aux entreprises d'augmenter les salaires de 10% (jusqu'à 3 SMIC) en exonérant cette hausse de cotisations patronales (programme 2022). Le mécanisme précis d'application et le calendrier ne sont pas détaillés.",
     "sources": [
       {
         "type": "primaire",
@@ -78,15 +459,45 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-pa-002",
+    "candidat": "le-pen",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "moderer_salaires",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Permettre aux entreprises d'augmenter les salaires de 10% (jusqu'à 3 SMIC) en exonérant cette hausse de cotisations patronales"
+      }
+    ]
+  },
+  {
+    "titre": "Renationalisation des autoroutes et baisse des péages de 15%",
+    "resume_factuel": "Renationaliser les autoroutes afin de baisser les péages de 15% (programme 2022). Les modalités et le calendrier de la renationalisation ne sont pas précisés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
     "effets": [],
     "id": "le-pen-pa-003",
     "candidat": "le-pen",
-    "theme": "pouvoir-achat"
+    "theme": "pouvoir-achat",
+    "positions": []
   },
   {
-    "titre": "Réindexation des retraites sur l'inflation et revalorisation du minimum vieillesse",
-    "resume_factuel": "Position de 2022 : réindexation des pensions de retraite sur l'inflation et revalorisation du minimum vieillesse à 1000€ par mois, avec augmentation des petites retraites. Le calendrier et le financement précis ne sont pas détaillés.",
+    "titre": "Privatisation de l'audiovisuel public et suppression de la redevance",
+    "resume_factuel": "Privatiser l'audiovisuel public afin de supprimer les 138€ de redevance audiovisuelle (programme 2022). Les modalités de la privatisation ne sont pas détaillées.",
     "sources": [
       {
         "type": "primaire",
@@ -99,30 +510,31 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "retraite"
-            ]
-          }
-        ],
+        "cibles": [],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Réindexer les retraites sur l'inflation pour un pouvoir d'achat respectueux d'une vie de travail."
+        "extrait": "privatiser l'audiovisuel public pour supprimer les 138€ de redevance."
       }
     ],
     "id": "le-pen-pa-004",
     "candidat": "le-pen",
-    "theme": "pouvoir-achat"
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Privatiser l'audiovisuel public afin de supprimer les 138€ de redevance audiovisuelle"
+      }
+    ]
   },
   {
-    "titre": "Prix garantis aux agriculteurs et fin des marges abusives de la grande distribution",
-    "resume_factuel": "Position de 2022 : garantir aux paysans des prix respectueux de leur travail et mettre fin aux marges abusives de la grande distribution, dans le but affiché de préserver une alimentation de qualité pour tous. Le mécanisme précis (contrôle des prix, régulation) n'est pas détaillé.",
+    "titre": "Indépendance énergétique et sortie du marché européen de l'électricité",
+    "resume_factuel": "Plan visant à assurer l'indépendance énergétique pour baisser la facture d'électricité des Français : restitution des subventions versées à l'éolien, arrêt des projets éoliens, relance du nucléaire, de l'hydroélectrique et de l'hydrogène, et sortie du marché européen de l'électricité pour retrouver des prix décents (programme 2022). Le mécanisme précis de restitution des 5 milliards aux ménages n'est pas détaillé.",
     "sources": [
       {
         "type": "primaire",
@@ -135,7 +547,56 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Assurer notre indépendance énergétique pour baisser la facture des Français."
+      }
+    ],
+    "id": "le-pen-pa-005",
+    "candidat": "le-pen",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "nucleaire",
+        "position": "garder_nucleaire",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "relance du nucléaire, de l'hydroélectrique et de l'hydrogène"
+      },
+      {
+        "sujet": "renouvelables",
+        "position": "freiner_transition",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "restitution des subventions versées à l'éolien, arrêt des projets éoliens"
+      },
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "sortie du marché européen de l'électricité pour retrouver des prix décents"
+      }
+    ]
+  },
+  {
+    "titre": "Défense des agriculteurs et de l'alimentation de qualité",
+    "resume_factuel": "Garantir aux paysans des prix respectueux de leur travail et mettre un terme aux marges abusives de la grande distribution, interdire les importations agricoles ne respectant pas les normes françaises, contraindre les cantines à 80% de produits français, plan abattoirs, et généralisation de l'étiquetage sur l'origine et la qualité des produits alimentaires (programme 2022).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
@@ -152,13 +613,21 @@
         "extrait": "Garantir aux paysans des prix respectueux de leur travail et mettre un terme aux marges abusives de la grande distribution."
       }
     ],
-    "id": "le-pen-pa-005",
+    "id": "le-pen-pa-006",
     "candidat": "le-pen",
-    "theme": "pouvoir-achat"
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "interdire les importations agricoles ne respectant pas les normes françaises"
+      }
+    ]
   },
   {
-    "titre": "Suppression de la TVA sur 100 produits de première nécessité",
-    "resume_factuel": "Le Rassemblement National, dans une pétition de 2023, propose la suppression de la TVA sur un panier de 100 produits de première nécessité, reprenant une proposition déjà portée par Marine Le Pen pendant la campagne présidentielle. Le contenu exact du panier de 100 produits et le calendrier ne sont pas détaillés.",
+    "titre": "Suppression de la TVA sur un panier de 100 produits de première nécessité",
+    "resume_factuel": "Le RN propose, dans une pétition relayant une proposition déjà portée par Marine Le Pen pendant la présidentielle, la suppression de la TVA sur un panier de 100 produits de première nécessité, en réaction à la hausse des prix alimentaires constatée en 2022.",
     "sources": [
       {
         "type": "primaire",
@@ -171,258 +640,31 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [],
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
-        "extrait": "nous proposons, comme l'avait déjà fait Marine le Pen pendant l'élection présidentielle, la suppression de la TVA sur un panier de 100 produits de première nécessité"
+        "extrait": "nous proposons, comme l'avait déjà fait Marine le Pen pendant l'élection présidentielle, la suppression de la TVA sur un panier de 100 produits de première nécessité."
       }
     ],
-    "id": "le-pen-pa-006",
+    "id": "le-pen-pa-007",
     "candidat": "le-pen",
-    "theme": "pouvoir-achat"
-  },
-  {
-    "titre": "Exonération d'impôt sur le revenu pour les jeunes actifs jusqu'à 30 ans",
-    "resume_factuel": "Position de 2022 : exonérer d'impôt sur le revenu tous les jeunes actifs jusqu'à 30 ans, dans le but qu'ils restent en France et y fondent leur famille.",
-    "sources": [
+    "theme": "pouvoir-achat",
+    "positions": [
       {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+        "extrait": "la suppression de la TVA sur un panier de 100 produits de première nécessité"
       }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "tranche_age",
-            "valeurs": [
-              "moins_30"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Exonérer d’impôt sur le revenu tous les jeunes actifs jusqu’à 30 ans pour qu’ils restent en France et fondent leur famille chez nous."
-      }
-    ],
-    "id": "le-pen-fisc-001",
-    "candidat": "le-pen",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Suppression de l'impôt sur les sociétés pour les jeunes entrepreneurs pendant 5 ans",
-    "resume_factuel": "Position de 2022 : supprimer l'impôt sur les sociétés pour les entrepreneurs de moins de 30 ans pendant leurs 5 premières années d'activité, afin d'éviter leur départ à l'étranger. Le texte cible les entrepreneurs eux-mêmes (et non les entreprises en général) mais ne précise pas le mécanisme de calcul de l'avantage pour le revenu personnel de l'entrepreneur.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-fisc-002",
-    "candidat": "le-pen",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Suppression des impôts sur l'héritage direct pour les familles modestes et les classes moyennes",
-    "resume_factuel": "Position de 2022 : supprimer les impôts sur l'héritage direct (transmission en ligne directe) pour les familles modestes et les classes moyennes. Le texte ne précise pas de seuil chiffré délimitant ces catégories.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "familles modestes et classes moyennes héritant en ligne directe"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Supprimer les impôts sur l’héritage direct pour les familles modestes et les classes moyennes."
-      }
-    ],
-    "id": "le-pen-fisc-003",
-    "candidat": "le-pen",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Exonération des donations familiales jusqu'à 100 000€ par enfant tous les dix ans",
-    "resume_factuel": "Position de 2022 : exonérer de droits les donations des parents mais aussi des grands-parents à leurs enfants et petits-enfants, jusqu'à 100 000€ par enfant, renouvelable tous les dix ans.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "enfants et petits-enfants bénéficiaires d'une donation familiale jusqu'à 100 000€"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Exonérer les donations des parents mais aussi des grands-parents à leurs enfants et petits-enfants jusqu’à 100 000€ par enfant tous les dix ans."
-      }
-    ],
-    "id": "le-pen-fisc-004",
-    "candidat": "le-pen",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Suppression de l'IFI et création d'un impôt sur la fortune financière (IFF)",
-    "resume_factuel": "Position de 2022 : supprimer l'Impôt sur la Fortune Immobilière (IFI), présenté comme taxant l'enracinement, et créer un nouvel Impôt sur la Fortune Financière (IFF) visant à taxer la spéculation. Le texte ne précise ni seuil ni taux du nouvel impôt.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-fisc-005",
-    "candidat": "le-pen",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Restauration de la demi-part fiscale pour les veuves et veufs",
-    "resume_factuel": "Position de 2022 : restaurer la demi-part fiscale en faveur des veuves et veufs, ce qui réduit leur impôt sur le revenu.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "veuves et veufs"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Restaurer la demi-part fiscale en faveur des veuves et veufs."
-      }
-    ],
-    "id": "le-pen-fisc-006",
-    "candidat": "le-pen",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Suppression de la Cotisation Foncière des Entreprises (CFE) et des impôts de production",
-    "resume_factuel": "Position de 2022 : supprimer la Cotisation Foncière des Entreprises (CFE), présentée comme pénalisant les PME-TPE locales, ainsi que les impôts de production, dans le cadre d'une politique de patriotisme économique visant la réindustrialisation. Ces impôts sont payés par les entreprises, le corpus ne précise pas de répercussion directe sur les particuliers.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-fisc-007",
-    "candidat": "le-pen",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Hausse des salaires jusqu'à 10% (jusqu'à 3 SMIC) exonérée de cotisations patronales",
-    "resume_factuel": "Position de 2022 (programme présidentiel repris dans les « 22 mesures » du Rassemblement National) : permettre aux entreprises d'augmenter les salaires jusqu'à 10%, pour les rémunérations allant jusqu'à 3 SMIC, en exonérant cette augmentation de cotisations patronales. Le mécanisme précis (obligation ou incitation pour l'employeur, calendrier) n'est pas détaillé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      },
-      {
-        "type": "primaire",
-        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
-        "url": "https://rassemblementnational.fr/22-mesures",
-        "nom": "rassemblementnational.fr (22 mesures 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-trav-001",
-    "candidat": "le-pen",
-    "theme": "travail"
+    ]
   },
   {
     "titre": "Priorité nationale d'accès à l'emploi",
-    "resume_factuel": "Position de 2022, dans le cadre du référendum sur l'immigration : réserver, sous condition de nationalité, l'accès prioritaire à l'emploi aux Français, aux côtés de la priorité nationale déjà décrite pour le logement social (mesure déjà répertoriée sous le thème immigration/référendum). Le mécanisme précis de mise en œuvre pour l'emploi n'est pas détaillé.",
+    "resume_factuel": "Le programme 2022 de Marine Le Pen (document mlafrance.fr) prévoit d'assurer une priorité nationale d'accès à l'emploi (et au logement social) pour les Français, sans préciser le mécanisme juridique de mise en œuvre.",
     "sources": [
       {
         "type": "primaire",
@@ -430,19 +672,12 @@
         "url": "https://mlafrance.fr/programme",
         "nom": "mlafrance.fr (programme 2022)",
         "annee": 2022
-      },
-      {
-        "type": "primaire",
-        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
-        "url": "https://rassemblementnational.fr/22-mesures",
-        "nom": "rassemblementnational.fr (22 mesures 2022)",
-        "annee": 2022
       }
     ],
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-29",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
@@ -474,13 +709,233 @@
         "extrait": "Assurer la priorité nationale d’accès au logement social et à l’emploi."
       }
     ],
+    "id": "le-pen-trav-001",
+    "candidat": "le-pen",
+    "theme": "travail",
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "une priorité nationale d'accès à l'emploi (et au logement social) pour les Français"
+      }
+    ]
+  },
+  {
+    "titre": "Hausse des salaires jusqu'à 3 SMIC via exonération de cotisations patronales",
+    "resume_factuel": "Le programme 2022 (document mlafrance.fr) propose de permettre aux entreprises une hausse des salaires de 10% (jusqu'à 3 SMIC) en exonérant cette augmentation de cotisations patronales ; le mécanisme précis d'application par les entreprises (obligation ou incitation) n'est pas détaillé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
     "id": "le-pen-trav-002",
     "candidat": "le-pen",
-    "theme": "travail"
+    "theme": "travail",
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "moderer_salaires",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "permettre aux entreprises une hausse des salaires de 10% (jusqu'à 3 SMIC) en exonérant cette augmentation de cotisations patronales"
+      }
+    ]
+  },
+  {
+    "titre": "Suppression de l'autorisation de séjour après un an sans travail",
+    "resume_factuel": "Le programme 2022 (document mlafrance.fr) propose de supprimer l'autorisation de séjour pour tout étranger n'ayant pas travaillé depuis un an en France.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "europeenne",
+              "hors_ue"
+            ]
+          },
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Supprimer l’autorisation de séjour pour tout étranger n’ayant pas travaillé depuis un an en France."
+      }
+    ],
+    "id": "le-pen-trav-003",
+    "candidat": "le-pen",
+    "theme": "travail",
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "supprimer l'autorisation de séjour pour tout étranger n'ayant pas travaillé depuis un an en France"
+      }
+    ]
+  },
+  {
+    "titre": "Conditionnement des subventions aux entreprises à la création d'emplois",
+    "resume_factuel": "Le programme 2022 (document mlafrance.fr) prévoit, dans le cadre du patriotisme économique, de conditionner les subventions à la création d'emplois au titre d'une politique d'aménagement du territoire ; le mécanisme et les critères précis ne sont pas détaillés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-trav-004",
+    "candidat": "le-pen",
+    "theme": "travail",
+    "positions": []
+  },
+  {
+    "titre": "Chèque-formation mensuel pour les apprentis et alternants",
+    "resume_factuel": "Le programme 2022 (document mlafrance.fr) propose de créer un chèque-formation mensuel de 200 à 300€ pour les apprentis, les alternants et leurs employeurs.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "apprenti"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Créer un chèque-formation mensuel de 200 à 300€ pour les apprentis, les alternants et leurs employeurs."
+      }
+    ],
+    "id": "le-pen-trav-005",
+    "candidat": "le-pen",
+    "theme": "travail",
+    "positions": []
+  },
+  {
+    "titre": "Réindexation des retraites sur l'inflation",
+    "resume_factuel": "Position de 2022 (programme présidentiel de Marine Le Pen, reprise par le RN) : réindexer les pensions de retraite sur l'inflation pour préserver le pouvoir d'achat des retraités.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "retraite"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Réindexer les retraites sur l’inflation pour un pouvoir d’achat respectueux d’une vie de travail."
+      }
+    ],
+    "id": "le-pen-retr-001",
+    "candidat": "le-pen",
+    "theme": "retraites",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "réindexer les pensions de retraite sur l'inflation pour préserver le pouvoir d'achat des retraités"
+      }
+    ]
+  },
+  {
+    "titre": "Revalorisation du minimum vieillesse à 1000€ par mois",
+    "resume_factuel": "Position de 2022 : porter le minimum vieillesse à 1 000 € par mois et augmenter les petites retraites.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-retr-002",
+    "candidat": "le-pen",
+    "theme": "retraites",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "porter le minimum vieillesse à 1 000 € par mois et augmenter les petites retraites"
+      }
+    ]
   },
   {
     "titre": "Refus de tout allongement de l'âge de départ à la retraite",
-    "resume_factuel": "Marine Le Pen (programme 2022, repris par le Rassemblement National) s'engage à refuser tout allongement de l'âge légal de départ à la retraite.",
+    "resume_factuel": "Position de 2022 : refuser tout allongement de l'âge légal de départ à la retraite.",
     "sources": [
       {
         "type": "primaire",
@@ -488,27 +943,36 @@
         "url": "https://mlafrance.fr/programme",
         "nom": "mlafrance.fr (programme 2022)",
         "annee": 2022
-      },
-      {
-        "type": "primaire",
-        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
-        "url": "https://rassemblementnational.fr/22-mesures",
-        "nom": "rassemblementnational.fr (22 mesures 2022)",
-        "annee": 2022
       }
     ],
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-retr-001",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "protection_sociale",
+        "sens": "indetermine",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Refuser tout allongement de l’âge de départ à la retraite."
+      }
+    ],
+    "id": "le-pen-retr-003",
     "candidat": "le-pen",
-    "theme": "retraites"
+    "theme": "retraites",
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "age_actuel",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "refuser tout allongement de l'âge légal de départ à la retraite"
+      }
+    ]
   },
   {
-    "titre": "Départ à la retraite à 60 ans pour carrière longue (40 annuités, début avant 20 ans)",
-    "resume_factuel": "Le programme 2022 de Marine Le Pen prévoit de permettre aux personnes ayant commencé à travailler avant 20 ans, avec 40 annuités de cotisation, de partir à la retraite à 60 ans.",
+    "titre": "Retraite à 60 ans pour les carrières longues (40 annuités)",
+    "resume_factuel": "Position de 2022 : permettre aux personnes ayant commencé à travailler avant 20 ans et cotisé 40 annuités de partir à la retraite à 60 ans.",
     "sources": [
       {
         "type": "primaire",
@@ -516,19 +980,12 @@
         "url": "https://mlafrance.fr/programme",
         "nom": "mlafrance.fr (programme 2022)",
         "annee": 2022
-      },
-      {
-        "type": "primaire",
-        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
-        "url": "https://rassemblementnational.fr/22-mesures",
-        "nom": "rassemblementnational.fr (22 mesures 2022)",
-        "annee": 2022
       }
     ],
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
@@ -545,50 +1002,21 @@
         "extrait": "Permettre à ceux qui ont commencé à travailler avant 20 ans pendant 40 annuités de prendre leur retraite à 60 ans."
       }
     ],
-    "id": "le-pen-retr-002",
+    "id": "le-pen-retr-004",
     "candidat": "le-pen",
-    "theme": "retraites"
-  },
-  {
-    "titre": "Réservation des aides sociales aux Français et condition de 5 ans de travail pour les prestations de solidarité",
-    "resume_factuel": "Position de 2022 (programme M La France, repris dans les 22 mesures du RN) : réserver les aides sociales aux Français et conditionner l'accès aux prestations de solidarité à 5 années de travail en France. Cette mesure recoupe partiellement la réforme de l'immigration par référendum déjà répertoriée, mais porte spécifiquement sur l'accès aux prestations sociales, non sur l'entrée ou le séjour.",
-    "sources": [
+    "theme": "retraites",
+    "positions": [
       {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "nationalite",
-            "valeurs": [
-              "europeenne",
-              "hors_ue"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "baisse",
+        "sujet": "travail",
+        "position": "age_actuel",
         "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Réserver les aides sociales aux Français, et conditionner à 5 années de travail en France l'accès aux prestations de solidarité."
+        "extrait": "permettre aux personnes ayant commencé à travailler avant 20 ans et cotisé 40 annuités de partir à la retraite à 60 ans"
       }
-    ],
-    "id": "le-pen-aides-001",
-    "candidat": "le-pen",
-    "theme": "aides-etat"
+    ]
   },
   {
-    "titre": "Doublement du soutien aux mères isolées et renforcement des contrôles anti-fraude",
-    "resume_factuel": "Position de 2022 (programme M La France) : doubler le soutien aux mères isolées élevant des enfants, tout en renforçant les contrôles pour éviter les fraudes. Le montant de référence et le mécanisme précis ne sont pas détaillés.",
+    "titre": "Restauration de la demi-part fiscale pour les veuves et veufs",
+    "resume_factuel": "Position de 2022 : restaurer la demi-part fiscale en faveur des veuves et veufs.",
     "sources": [
       {
         "type": "primaire",
@@ -601,30 +1029,31 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "situation_familiale",
             "valeurs": [
-              "mères isolées élevant des enfants"
+              "veuf_veuve"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Doubler le soutien aux mères isolées élevant des enfants tout en renforçant les contrôles pour éviter les fraudes."
+        "extrait": "Restaurer la demi-part fiscale en faveur des veuves et veufs."
       }
     ],
-    "id": "le-pen-aides-002",
+    "id": "le-pen-retr-005",
     "candidat": "le-pen",
-    "theme": "aides-etat"
+    "theme": "retraites",
+    "positions": []
   },
   {
-    "titre": "Prêt à 0% pour les jeunes familles, transformé en subvention pour un troisième enfant",
-    "resume_factuel": "Position de 2022 (programme M La France) : créer un prêt à taux zéro pour les jeunes familles françaises, prêt qui serait transformé en subvention pour les couples ayant un troisième enfant. Les conditions d'éligibilité (âge, revenus) ne sont pas précisées.",
+    "titre": "Droit opposable aux visites en EHPAD et renforcement du personnel médical",
+    "resume_factuel": "Position de 2022 : créer un droit opposable aux visites dans les établissements et accroître fortement la présence de personnel médical dans les EHPAD.",
     "sources": [
       {
         "type": "primaire",
@@ -637,36 +1066,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [],
-    "id": "le-pen-aides-003",
+    "id": "le-pen-retr-006",
     "candidat": "le-pen",
-    "theme": "aides-etat"
-  },
-  {
-    "titre": "Instauration d'une part fiscale complète dès le deuxième enfant",
-    "resume_factuel": "Position de 2022 (programme M La France) : instituer une part fiscale complète dès le deuxième enfant, ce qui réduit l'impôt sur le revenu des foyers concernés. Le mécanisme précis de calcul n'est pas détaillé au-delà de cette annonce.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-aides-004",
-    "candidat": "le-pen",
-    "theme": "aides-etat"
+    "theme": "retraites",
+    "positions": []
   },
   {
     "titre": "Déconjugalisation et revalorisation de l'Allocation Adulte Handicapé (AAH)",
-    "resume_factuel": "Position de 2022 (programme M La France) : déconjugaliser (calcul sans prise en compte des revenus du conjoint) et revaloriser l'Allocation Adulte Handicapée. Le montant de la revalorisation n'est pas précisé.",
+    "resume_factuel": "Position de 2022 : le programme propose de déconjugaliser et revaloriser l'Allocation Adulte Handicapée, sans préciser le montant de la revalorisation ni le calendrier.",
     "sources": [
       {
         "type": "primaire",
@@ -677,9 +1086,9 @@
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
+    "hypotheses_calcul": "Aucun chiffrage ni montant précis n'est donné dans le corpus.",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
@@ -696,13 +1105,21 @@
         "extrait": "Déconjugaliser et revaloriser l'Allocation Adulte Handicapée."
       }
     ],
-    "id": "le-pen-aides-005",
+    "id": "le-pen-aides-001",
     "candidat": "le-pen",
-    "theme": "aides-etat"
+    "theme": "aides-etat",
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "déconjugaliser et revaloriser l'Allocation Adulte Handicapée"
+      }
+    ]
   },
   {
-    "titre": "Plan sur l'accès à la scolarité pour les enfants en situation de handicap",
-    "resume_factuel": "Position de 2022 (programme M La France) : lancer un grand plan sur l'accès à la scolarité pour les enfants touchés par le handicap. Les moyens et le calendrier de ce plan ne sont pas précisés.",
+    "titre": "Plan sur l'accès à la scolarité des enfants en situation de handicap",
+    "resume_factuel": "Position de 2022 : lancement d'un grand plan sur l'accès à la scolarité pour les enfants touchés par le handicap, sans précision de mécanisme ou de budget.",
     "sources": [
       {
         "type": "primaire",
@@ -713,9 +1130,9 @@
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
+    "hypotheses_calcul": "Aucun chiffrage fourni dans le corpus.",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
@@ -732,13 +1149,14 @@
         "extrait": "Lancer un grand plan sur l'accès à la scolarité pour les enfants touchés par le handicap."
       }
     ],
-    "id": "le-pen-aides-006",
+    "id": "le-pen-aides-002",
     "candidat": "le-pen",
-    "theme": "aides-etat"
+    "theme": "aides-etat",
+    "positions": []
   },
   {
-    "titre": "Application effective de la loi sur l'accès des personnes handicapées aux lieux et transports publics",
-    "resume_factuel": "Position de 2022 (programme M La France) : appliquer la loi sur l'accès à tous les lieux et transports publics pour les personnes en situation de handicap. Le texte ne précise pas de nouveaux moyens financiers ou de calendrier au-delà de l'application de la loi existante.",
+    "titre": "Application de la loi sur l'accès aux lieux et transports publics pour les personnes handicapées",
+    "resume_factuel": "Position de 2022 : application effective de la loi existante sur l'accessibilité de tous les lieux et transports publics aux personnes en situation de handicap, sans nouvelle mesure ni calendrier précisés.",
     "sources": [
       {
         "type": "primaire",
@@ -749,9 +1167,9 @@
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
+    "hypotheses_calcul": "Aucun chiffrage disponible.",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
@@ -768,13 +1186,14 @@
         "extrait": "Appliquer la loi sur l'accès à tous les lieux et transports publics."
       }
     ],
-    "id": "le-pen-aides-007",
+    "id": "le-pen-aides-003",
     "candidat": "le-pen",
-    "theme": "aides-etat"
+    "theme": "aides-etat",
+    "positions": []
   },
   {
     "titre": "Revalorisation et allongement de la durée des aides aux proches aidants",
-    "resume_factuel": "Position de 2022 (programme M La France) : revaloriser et augmenter la durée des aides destinées aux proches aidants. Le montant précis de la revalorisation n'est pas donné.",
+    "resume_factuel": "Position de 2022 : revalorisation et augmentation de la durée des aides destinées aux proches aidants, sans précision du montant ni de la durée exacte.",
     "sources": [
       {
         "type": "primaire",
@@ -785,9 +1204,9 @@
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
+    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
@@ -804,13 +1223,107 @@
         "extrait": "Revaloriser et augmenter la durée des aides destinées aux proches aidants."
       }
     ],
-    "id": "le-pen-aides-008",
+    "id": "le-pen-aides-004",
     "candidat": "le-pen",
-    "theme": "aides-etat"
+    "theme": "aides-etat",
+    "positions": []
   },
   {
-    "titre": "Chèque-formation mensuel pour les apprentis et alternants",
-    "resume_factuel": "Position de 2022 (programme M La France) : créer un chèque-formation mensuel de 200 à 300€ destiné aux apprentis, aux alternants et à leurs employeurs. Les modalités de répartition entre apprenti et employeur ne sont pas précisées.",
+    "titre": "Doublement du soutien aux mères isolées",
+    "resume_factuel": "Position de 2022 : doublement du soutien aux mères isolées élevant des enfants, avec un renforcement parallèle des contrôles pour éviter les fraudes ; le montant précis de l'aide concernée et son mécanisme ne sont pas détaillés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage précis fourni dans le corpus.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-aides-005",
+    "candidat": "le-pen",
+    "theme": "aides-etat",
+    "positions": []
+  },
+  {
+    "titre": "Priorité nationale d'accès au logement social",
+    "resume_factuel": "Le programme 2022 prévoit d'assurer la priorité nationale d'accès au logement social pour les Français, dans le cadre de la politique de contrôle de l'immigration.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      },
+      {
+        "type": "primaire",
+        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
+        "url": "https://rassemblementnational.fr/22-mesures",
+        "nom": "rassemblementnational.fr (22 mesures 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-logt-001",
+    "candidat": "le-pen",
+    "theme": "logement",
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "assurer la priorité nationale d'accès au logement social pour les Français, dans le cadre de la politique de contrôle de l'immigration"
+      }
+    ]
+  },
+  {
+    "titre": "Plan de soutien d'urgence pour la santé de 20 milliards d'euros",
+    "resume_factuel": "Position de 2022 (programme présidentiel M la France / 22 mesures). Marine Le Pen propose un plan de soutien d'urgence pour la santé de 20 milliards d'euros, incluant l'arrêt des fermetures de lits et de maternités, la revalorisation des salaires des soignants, l'investissement dans les technologies de santé et le rapatriement de la fabrication des médicaments, la création d'urgences gériatriques, la suppression des ARS et la réduction des postes administratifs dans les hôpitaux, des incitations financières contre les déserts médicaux, et le rétablissement des visites médicales scolaires systématiques.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Le corpus chiffre le plan à 20 milliards d'euros sans préciser la répartition ni le calendrier exact de déploiement.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-sante-001",
+    "candidat": "le-pen",
+    "theme": "sante",
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "l'arrêt des fermetures de lits et de maternités, la revalorisation des salaires des soignants"
+      },
+      {
+        "sujet": "fonction_publique",
+        "position": "moins_fonctionnaires",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "la suppression des ARS et la réduction des postes administratifs dans les hôpitaux"
+      }
+    ]
+  },
+  {
+    "titre": "Restauration du système éducatif : fondamentaux, uniforme, autorité, moyens",
+    "resume_factuel": "Position de 2022 (programme présidentiel de Marine Le Pen, reprise par le Rassemblement National) : remettre l'enseignement du français, des mathématiques et de l'histoire au cœur des programmes, revaloriser les salaires des enseignants et refonder leur formation, instaurer un uniforme au primaire et au collège, sanctionner les absences et incivilités, supprimer la bureaucratie de l'Education nationale pour réduire les effectifs des classes et arrêter les fermetures d'écoles.",
     "sources": [
       {
         "type": "primaire",
@@ -823,7 +1336,28 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-educ-001",
+    "candidat": "le-pen",
+    "theme": "education"
+  },
+  {
+    "titre": "Chèque-formation mensuel pour les apprentis et alternants",
+    "resume_factuel": "Position de 2022 (programme présidentiel de Marine Le Pen) : création d'un chèque-formation mensuel de 200 à 300€ destiné aux apprentis, aux alternants et à leurs employeurs.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Montant indiqué : chèque-formation mensuel de 200 à 300€.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
@@ -840,13 +1374,14 @@
         "extrait": "Créer un chèque-formation mensuel de 200 à 300€ pour les apprentis, les alternants et leurs employeurs."
       }
     ],
-    "id": "le-pen-aides-009",
+    "id": "le-pen-educ-002",
     "candidat": "le-pen",
-    "theme": "aides-etat"
+    "theme": "education",
+    "positions": []
   },
   {
-    "titre": "Droit opposable aux visites en EHPAD et renforcement du personnel médical",
-    "resume_factuel": "Position de 2022 (programme M La France) : créer un droit opposable aux visites dans les établissements (EHPAD) pour les familles et accroître fortement la présence de personnel médical dans ces établissements. Distinct du plan de soutien d'urgence pour la santé déjà répertorié, cette mesure vise spécifiquement les résidents et leurs proches en EHPAD.",
+    "titre": "Construction de 100 000 logements étudiants en cinq ans",
+    "resume_factuel": "Position de 2022 (programme présidentiel de Marine Le Pen) : construire en cinq ans 100 000 nouveaux logements étudiants.",
     "sources": [
       {
         "type": "primaire",
@@ -859,49 +1394,7 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-aides-010",
-    "candidat": "le-pen",
-    "theme": "aides-etat"
-  },
-  {
-    "titre": "Création d'un ministère de la lutte contre les fraudes (fiscales, cotisations, prestations sociales)",
-    "resume_factuel": "Position de 2022 (programme M La France) : créer un ministère de la lutte contre les fraudes fiscales, aux cotisations et prestations sociales, aux importations, ententes, etc. Le corpus ne précise pas de mécanisme direct affectant les citoyens en dehors de la lutte contre la fraude elle-même.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-aides-011",
-    "candidat": "le-pen",
-    "theme": "aides-etat"
-  },
-  {
-    "titre": "Construction de 100 000 nouveaux logements étudiants",
-    "resume_factuel": "Position de 2022. Dans le cadre du soutien aux familles, construction en cinq ans de 100 000 nouveaux logements étudiants. Modalités de financement et de répartition territoriale non précisées.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
@@ -918,190 +1411,14 @@
         "extrait": "Construire en cinq ans 100 000 nouveaux logements étudiants."
       }
     ],
-    "id": "le-pen-logt-001",
-    "candidat": "le-pen",
-    "theme": "logement"
-  },
-  {
-    "titre": "Construction de 100 000 logements sociaux par an, dont 20 000 pour étudiants et jeunes travailleurs",
-    "resume_factuel": "Position de 2022. Le programme prévoit la construction de 100 000 logements sociaux par an, dont 20 000 réservés aux étudiants et jeunes travailleurs, ainsi qu'un plan de réhabilitation de l'habitat ancien et la création d'un Fonds de Garantie des Loyers destiné à protéger les propriétaires bailleurs. Modalités de financement, calendrier précis et critères d'attribution non détaillés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-logt-002",
-    "candidat": "le-pen",
-    "theme": "logement"
-  },
-  {
-    "titre": "Prêt à 0% pour les jeunes familles, transformable en subvention au 3e enfant",
-    "resume_factuel": "Position de 2022. Création d'un prêt à taux zéro pour les jeunes familles françaises, converti en subvention pour les couples ayant un troisième enfant. Ce prêt peut concerner l'accession au logement mais le corpus ne précise pas explicitement son objet exact (logement ou autre usage), ni les montants ou conditions de revenus.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-logt-003",
-    "candidat": "le-pen",
-    "theme": "logement"
-  },
-  {
-    "titre": "Lutte contre les déserts médicaux par incitations financières aux soignants",
-    "resume_factuel": "Position de 2022 : le programme prévoit d'agir contre les déserts médicaux grâce à des incitations financières fortes pour les soignants et l'augmentation du nombre de maisons de santé, ainsi que le retour de visites médicales scolaires systématiques pour renforcer la prévention.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-sante-001",
-    "candidat": "le-pen",
-    "theme": "sante"
-  },
-  {
-    "titre": "Création d'un droit opposable aux visites en EHPAD et renforcement du personnel médical",
-    "resume_factuel": "Position de 2022 : le programme prévoit de créer un droit opposable aux visites dans les établissements pour personnes âgées et d'accroître fortement la présence de personnel médical dans les EHPAD.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-sante-002",
-    "candidat": "le-pen",
-    "theme": "sante"
-  },
-  {
-    "titre": "Chèque-formation mensuel pour les apprentis et alternants",
-    "resume_factuel": "Le programme 2022 de Marine Le Pen propose de créer un chèque-formation mensuel de 200 à 300€ destiné aux apprentis, aux alternants et à leurs employeurs, sans détail sur les modalités précises d'attribution ni sur le financement.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "apprenti"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Créer un chèque-formation mensuel de 200 à 300€ pour les apprentis, les alternants et leurs employeurs."
-      }
-    ],
-    "id": "le-pen-educ-001",
-    "candidat": "le-pen",
-    "theme": "education"
-  },
-  {
-    "titre": "Recentrage des programmes scolaires sur le français, les mathématiques et l'histoire",
-    "resume_factuel": "Le programme 2022 propose de remettre au cœur des programmes scolaires l'enseignement du français, des mathématiques et de l'histoire, sans autre précision sur le contenu ou le calendrier.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-educ-002",
-    "candidat": "le-pen",
-    "theme": "education"
-  },
-  {
-    "titre": "Revalorisation des salaires des enseignants et refonte de leur formation",
-    "resume_factuel": "Le programme 2022 prévoit de revaloriser les salaires des enseignants et de refonder leur formation, sans montant ni calendrier précisés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "metier",
-            "valeurs": [
-              "enseignant"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Revaloriser les salaires des enseignants et refonder leur formation."
-      }
-    ],
     "id": "le-pen-educ-003",
     "candidat": "le-pen",
-    "theme": "education"
+    "theme": "education",
+    "positions": []
   },
   {
-    "titre": "Instauration de l'uniforme au primaire et au collège et sanctions des absences et incivilités",
-    "resume_factuel": "Le programme 2022 propose de rétablir l'autorité de l'institution scolaire par l'instauration d'un uniforme au primaire et au collège, en sanctionnant les absences et les incivilités, sans détail sur les modalités de mise en œuvre.",
+    "titre": "Visites médicales scolaires systématiques",
+    "resume_factuel": "Position de 2022 (programme présidentiel de Marine Le Pen) : donner plus de place à la prévention, notamment en rétablissant le caractère systématique des visites médicales scolaires.",
     "sources": [
       {
         "type": "primaire",
@@ -1114,15 +1431,33 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
+    "date_derniere_verification": "2026-10-04",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire",
+              "college",
+              "lycee"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Donner plus de place à la prévention, notamment grâce aux visites médicales scolaires qui redeviendront systématiques."
+      }
+    ],
     "id": "le-pen-educ-004",
     "candidat": "le-pen",
-    "theme": "education"
+    "theme": "education",
+    "positions": []
   },
   {
-    "titre": "Suppression de la bureaucratie de l'Éducation nationale, réduction des effectifs de classe et arrêt des fermetures d'écoles",
-    "resume_factuel": "Le programme 2022 propose de supprimer une partie de la bureaucratie de l'Éducation nationale afin de libérer des moyens financiers, de réduire les effectifs des classes et d'arrêter les fermetures d'écoles, sans détail chiffré sur les moyens dégagés.",
+    "titre": "Référendum sur l'immigration",
+    "resume_factuel": "Position de 2022 : organisation d'un référendum pour permettre aux Français de se prononcer sur la politique migratoire.",
     "sources": [
       {
         "type": "primaire",
@@ -1135,129 +1470,182 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-secu-001",
+    "candidat": "le-pen",
+    "theme": "securite",
+    "positions": []
+  },
+  {
+    "titre": "Expulsion systématique des clandestins, délinquants et criminels étrangers",
+    "resume_factuel": "Position de 2022 : expulsion systématique des personnes en situation irrégulière ainsi que des délinquants et criminels de nationalité étrangère.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-secu-002",
+    "candidat": "le-pen",
+    "theme": "securite",
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "expulsion systématique des personnes en situation irrégulière ainsi que des délinquants et criminels de nationalité étrangère"
+      }
+    ]
+  },
+  {
+    "titre": "Lutte contre les idéologies islamistes",
+    "resume_factuel": "Position de 2022 : éradication des idéologies islamistes et de leurs réseaux sur le territoire national, via une proposition de loi dédiée.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-secu-003",
+    "candidat": "le-pen",
+    "theme": "securite",
+    "positions": []
+  },
+  {
+    "titre": "Rétablissement des peines planchers",
+    "resume_factuel": "Position de 2022 : rétablissement de peines planchers afin que tout criminel et délinquant se voie infliger une sanction.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-secu-004",
+    "candidat": "le-pen",
+    "theme": "securite",
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "rétablissement de peines planchers afin que tout criminel et délinquant se voie infliger une sanction"
+      },
+      {
+        "sujet": "prison",
+        "position": "plus_de_prison",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "rétablissement de peines planchers afin que tout criminel et délinquant se voie infliger une sanction"
+      }
+    ]
+  },
+  {
+    "titre": "Suppression des réductions et aménagements de peine pour violences contre les personnes",
+    "resume_factuel": "Position de 2022 : suppression de toute possibilité de réduction et d'aménagement de peine, en particulier pour les violences contre les personnes.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-secu-005",
+    "candidat": "le-pen",
+    "theme": "securite",
+    "positions": [
+      {
+        "sujet": "prison",
+        "position": "plus_de_prison",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "suppression de toute possibilité de réduction et d'aménagement de peine, en particulier pour les violences contre les personnes"
+      }
+    ]
+  },
+  {
+    "titre": "Présomption de légitime défense pour les forces de l'ordre",
+    "resume_factuel": "Position de 2022 : instauration d'une présomption de légitime défense en faveur des forces de l'ordre.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-secu-006",
+    "candidat": "le-pen",
+    "theme": "securite"
+  },
+  {
+    "titre": "Doublement du nombre de magistrats",
+    "resume_factuel": "Position de 2022 : accélération des procédures judiciaires par le doublement du nombre de magistrats.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [],
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Supprimer la bureaucratie de l’Education nationale pour libérer des moyens financiers, réduire les effectifs des classes et arrêter les fermetures d’écoles."
+        "extrait": "Accélérer les procédures judiciaires en engageant le doublement du nombre de magistrats."
       }
     ],
-    "id": "le-pen-educ-005",
+    "id": "le-pen-secu-007",
     "candidat": "le-pen",
-    "theme": "education"
-  },
-  {
-    "titre": "Rétablissement des peines planchers",
-    "resume_factuel": "Position de 2022 (M la France / 22 mesures) : rétablir les peines planchers pour que tout criminel et délinquant ait une sanction.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      },
-      {
-        "type": "primaire",
-        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
-        "url": "https://rassemblementnational.fr/22-mesures",
-        "nom": "rassemblementnational.fr (22 mesures 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-secu-001",
-    "candidat": "le-pen",
-    "theme": "securite"
-  },
-  {
-    "titre": "Suppression des réductions et aménagements de peine pour violences contre les personnes",
-    "resume_factuel": "Position de 2022 : supprimer toute possibilité de réduction et d'aménagements de peine, en particulier pour les violences contre les personnes.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-secu-002",
-    "candidat": "le-pen",
-    "theme": "securite"
-  },
-  {
-    "titre": "Présomption de légitime défense pour les forces de l'ordre",
-    "resume_factuel": "Position de 2022 : instituer une présomption de légitime défense pour les forces de l'ordre.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "metier",
-            "valeurs": [
-              "forces_ordre"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Instituer une présomption de légitime défense pour les forces de l’ordre."
-      }
-    ],
-    "id": "le-pen-secu-003",
-    "candidat": "le-pen",
-    "theme": "securite"
-  },
-  {
-    "titre": "Doublement du nombre de magistrats pour accélérer les procédures judiciaires",
-    "resume_factuel": "Position de 2022 : accélérer les procédures judiciaires en engageant le doublement du nombre de magistrats.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-secu-004",
-    "candidat": "le-pen",
-    "theme": "securite"
+    "theme": "securite",
+    "positions": []
   },
   {
     "titre": "Inscription des harceleurs de rue au fichier des délinquants sexuels",
-    "resume_factuel": "Position de 2022 : inscrire au fichier des délinquants sexuels les harceleurs de rue.",
+    "resume_factuel": "Position de 2022 : inscription au fichier des délinquants sexuels des auteurs de harcèlement de rue.",
     "sources": [
       {
         "type": "primaire",
@@ -1270,14 +1658,22 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [],
-    "id": "le-pen-secu-005",
+    "id": "le-pen-secu-008",
     "candidat": "le-pen",
-    "theme": "securite"
+    "theme": "securite",
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "inscription au fichier des délinquants sexuels des auteurs de harcèlement de rue"
+      }
+    ]
   },
   {
-    "titre": "Atteindre 85 000 places de prison en 2027",
+    "titre": "Objectif de 85 000 places de prison en 2027",
     "resume_factuel": "Position de 2022 : atteindre 85 000 places de prison en 2027.",
     "sources": [
       {
@@ -1291,128 +1687,173 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-secu-006",
-    "candidat": "le-pen",
-    "theme": "securite"
-  },
-  {
-    "titre": "Instauration de la perpétuité réelle",
-    "resume_factuel": "Position de 2022 : établir une perpétuité réelle.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-secu-007",
-    "candidat": "le-pen",
-    "theme": "securite"
-  },
-  {
-    "titre": "Lutte contre les idéologies islamistes et leurs réseaux",
-    "resume_factuel": "Position de 2022 : éradiquer les idéologies islamistes et l'ensemble de leurs réseaux du territoire national, via une proposition de loi dédiée.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [],
-    "id": "le-pen-secu-008",
-    "candidat": "le-pen",
-    "theme": "securite"
-  },
-  {
-    "titre": "Budget de la défense porté à 55 milliards d'euros à horizon 2027",
-    "resume_factuel": "Position de 2022 : porter le budget de la défense à 55 milliards d'euros à l'horizon 2027, avec garantie d'équipement et de moyens pour les soldats.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": true,
-    "hypotheses_calcul": "Chiffre cité : 55 milliards d'euros à horizon 2027.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [],
     "id": "le-pen-secu-009",
     "candidat": "le-pen",
-    "theme": "securite"
+    "theme": "securite",
+    "positions": [
+      {
+        "sujet": "prison",
+        "position": "plus_de_prison",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "atteindre 85 000 places de prison en 2027"
+      }
+    ]
+  },
+  {
+    "titre": "Instauration de la perpétuité réelle",
+    "resume_factuel": "Position de 2022 : établissement d'une peine de perpétuité réelle.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-secu-010",
+    "candidat": "le-pen",
+    "theme": "securite",
+    "positions": [
+      {
+        "sujet": "prison",
+        "position": "plus_de_prison",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "établissement d'une peine de perpétuité réelle"
+      },
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "établissement d'une peine de perpétuité réelle"
+      }
+    ]
+  },
+  {
+    "titre": "Référendum d'Initiative Citoyenne et proportionnelle",
+    "resume_factuel": "Position de 2022 : instauration du Référendum d'Initiative Citoyenne et mise en place de la proportionnelle aux élections.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-secu-011",
+    "candidat": "le-pen",
+    "theme": "securite",
+    "positions": [
+      {
+        "sujet": "institutions",
+        "position": "nouvelles_institutions",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "instauration du Référendum d'Initiative Citoyenne et mise en place de la proportionnelle aux élections"
+      }
+    ]
+  },
+  {
+    "titre": "Ministère de la lutte contre les fraudes",
+    "resume_factuel": "Position de 2022 : création d'un ministère de la lutte contre les fraudes fiscales, aux cotisations et prestations sociales, aux importations et aux ententes.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-secu-012",
+    "candidat": "le-pen",
+    "theme": "securite",
+    "positions": []
+  },
+  {
+    "titre": "Référendum sur l'immigration",
+    "resume_factuel": "Position de 2022 reprise du programme présidentiel : organiser un référendum pour permettre aux Français de se prononcer sur la politique migratoire.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
+        "url": "https://rassemblementnational.fr/22-mesures",
+        "nom": "rassemblementnational.fr (22 mesures 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-immi-001",
+    "candidat": "le-pen",
+    "theme": "immigration",
+    "positions": []
   },
   {
     "titre": "Fin de l'immigration de peuplement et du regroupement familial",
-    "resume_factuel": "Position de 2022 : mettre fin à ce que le programme qualifie d'« immigration de peuplement » et au regroupement familial, sans préciser les critères ou modalités juridiques exacts.",
+    "resume_factuel": "Position de 2022 : mettre fin à l'immigration dite de peuplement et au regroupement familial, sans préciser le mécanisme juridique exact.",
     "sources": [
       {
         "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
+        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
+        "url": "https://rassemblementnational.fr/22-mesures",
+        "nom": "rassemblementnational.fr (22 mesures 2022)",
         "annee": 2022
       }
     ],
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "nationalite",
-            "valeurs": [
-              "europeenne",
-              "hors_ue"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Mettre fin à l’immigration de peuplement et au regroupement familial."
-      }
-    ],
-    "id": "le-pen-immi-001",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-immi-002",
     "candidat": "le-pen",
-    "theme": "immigration"
+    "theme": "immigration",
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://rassemblementnational.fr/22-mesures",
+        "extrait": "mettre fin à l'immigration dite de peuplement et au regroupement familial"
+      }
+    ]
   },
   {
     "titre": "Traitement des demandes d'asile uniquement à l'étranger",
-    "resume_factuel": "Position de 2022 : les demandes de droit d'asile seraient traitées exclusivement hors du territoire français, sans précision sur le dispositif concret de mise en œuvre.",
+    "resume_factuel": "Position de 2022 : les demandes de droit d'asile seraient traitées uniquement à l'étranger, et non plus sur le territoire français.",
     "sources": [
       {
         "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
+        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
+        "url": "https://rassemblementnational.fr/22-mesures",
+        "nom": "rassemblementnational.fr (22 mesures 2022)",
         "annee": 2022
       }
     ],
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
@@ -1425,30 +1866,38 @@
         ],
         "dimension": "droits_et_libertes",
         "sens": "baisse",
-        "source_url": "https://mlafrance.fr/programme",
+        "source_url": "https://rassemblementnational.fr/22-mesures",
         "extrait": "Traiter les demandes de droit d’asile uniquement à l’étranger."
       }
     ],
-    "id": "le-pen-immi-002",
+    "id": "le-pen-immi-003",
     "candidat": "le-pen",
-    "theme": "immigration"
+    "theme": "immigration",
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://rassemblementnational.fr/22-mesures",
+        "extrait": "les demandes de droit d'asile seraient traitées uniquement à l'étranger, et non plus sur le territoire français"
+      }
+    ]
   },
   {
-    "titre": "Réservation des aides sociales aux Français et conditions de durée de travail pour les prestations de solidarité",
-    "resume_factuel": "Position de 2022 : réserver les aides sociales aux Français et conditionner l'accès aux prestations de solidarité à 5 années de travail en France, pour les étrangers.",
+    "titre": "Réservation des aides sociales aux Français et condition de 5 ans de travail",
+    "resume_factuel": "Position de 2022 : réserver les aides sociales aux Français et conditionner l'accès aux prestations de solidarité à 5 années de travail en France.",
     "sources": [
       {
         "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
+        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
+        "url": "https://rassemblementnational.fr/22-mesures",
+        "nom": "rassemblementnational.fr (22 mesures 2022)",
         "annee": 2022
       }
     ],
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
@@ -1462,13 +1911,58 @@
         ],
         "dimension": "protection_sociale",
         "sens": "baisse",
-        "source_url": "https://mlafrance.fr/programme",
+        "source_url": "https://rassemblementnational.fr/22-mesures",
         "extrait": "Réserver les aides sociales aux Français, et conditionner à 5 années de travail en France l’accès aux prestations de solidarité."
       }
     ],
-    "id": "le-pen-immi-003",
+    "id": "le-pen-immi-004",
     "candidat": "le-pen",
     "theme": "immigration"
+  },
+  {
+    "titre": "Priorité nationale d'accès au logement social et à l'emploi",
+    "resume_factuel": "Position de 2022 : instaurer une priorité d'accès au logement social et à l'emploi en faveur des Français par rapport aux étrangers.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
+        "url": "https://rassemblementnational.fr/22-mesures",
+        "nom": "rassemblementnational.fr (22 mesures 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "europeenne",
+              "hors_ue"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://rassemblementnational.fr/22-mesures",
+        "extrait": "Assurer la priorité nationale d’accès au logement social et à l’emploi."
+      }
+    ],
+    "id": "le-pen-immi-005",
+    "candidat": "le-pen",
+    "theme": "immigration",
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://rassemblementnational.fr/22-mesures",
+        "extrait": "instaurer une priorité d'accès au logement social et à l'emploi en faveur des Français par rapport aux étrangers"
+      }
+    ]
   },
   {
     "titre": "Suppression de l'autorisation de séjour après un an sans travail",
@@ -1476,58 +1970,74 @@
     "sources": [
       {
         "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
+        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
+        "url": "https://rassemblementnational.fr/22-mesures",
+        "nom": "rassemblementnational.fr (22 mesures 2022)",
         "annee": 2022
       }
     ],
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [],
-    "id": "le-pen-immi-004",
+    "id": "le-pen-immi-006",
     "candidat": "le-pen",
-    "theme": "immigration"
+    "theme": "immigration",
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://rassemblementnational.fr/22-mesures",
+        "extrait": "supprimer l'autorisation de séjour pour tout étranger n'ayant pas travaillé depuis un an en France"
+      }
+    ]
   },
   {
     "titre": "Expulsion systématique des clandestins, délinquants et criminels étrangers",
-    "resume_factuel": "Position de 2022 : expulser systématiquement les personnes en situation irrégulière ainsi que les délinquants et criminels étrangers, sans détail sur la procédure.",
+    "resume_factuel": "Position de 2022 : expulser systématiquement les personnes en situation irrégulière ainsi que les délinquants et criminels étrangers.",
     "sources": [
       {
         "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
+        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
+        "url": "https://rassemblementnational.fr/22-mesures",
+        "nom": "rassemblementnational.fr (22 mesures 2022)",
         "annee": 2022
       }
     ],
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [],
-    "id": "le-pen-immi-005",
+    "id": "le-pen-immi-007",
     "candidat": "le-pen",
-    "theme": "immigration"
+    "theme": "immigration",
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://rassemblementnational.fr/22-mesures",
+        "extrait": "expulser systématiquement les personnes en situation irrégulière ainsi que les délinquants et criminels étrangers"
+      }
+    ]
   },
   {
-    "titre": "Suppression du droit du sol et accès à la nationalité par naturalisation au mérite",
-    "resume_factuel": "Position de 2022 : supprimer le droit du sol et limiter l'accès à la nationalité française à la seule naturalisation, sur des critères de mérite et d'assimilation non détaillés.",
+    "titre": "Suppression du droit du sol et accès à la nationalité par naturalisation méritocratique",
+    "resume_factuel": "Position de 2022 : supprimer le droit du sol et limiter l'accès à la nationalité française à la seule naturalisation, sur des critères de mérite et d'assimilation, sans préciser les critères exacts.",
     "sources": [
       {
         "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
+        "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
+        "url": "https://rassemblementnational.fr/22-mesures",
+        "nom": "rassemblementnational.fr (22 mesures 2022)",
         "annee": 2022
       }
     ],
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
       {
         "cibles": [
@@ -1540,97 +2050,26 @@
         ],
         "dimension": "droits_et_libertes",
         "sens": "baisse",
-        "source_url": "https://mlafrance.fr/programme",
+        "source_url": "https://rassemblementnational.fr/22-mesures",
         "extrait": "Supprimer le droit du sol et limiter l’accès à la nationalité à la seule naturalisation sur des critères de mérite et d’assimilation."
       }
     ],
-    "id": "le-pen-immi-006",
+    "id": "le-pen-immi-008",
     "candidat": "le-pen",
-    "theme": "immigration"
+    "theme": "immigration",
+    "positions": [
+      {
+        "sujet": "droit_du_sol",
+        "position": "droit_sol_restreint",
+        "source_url": "https://rassemblementnational.fr/22-mesures",
+        "extrait": "supprimer le droit du sol et limiter l'accès à la nationalité française à la seule naturalisation, sur des critères de mérite et d'assimilation"
+      }
+    ]
   },
   {
-    "titre": "Indépendance énergétique et sortie du marché européen de l'électricité",
-    "resume_factuel": "Position de 2022 (programme M La France / 22 mesures du Rassemblement National). Marine Le Pen propose d'assurer l'indépendance énergétique de la France pour baisser la facture des Français : rendre aux ménages les 5 milliards de subventions versées notamment aux éoliennes, arrêter les projets éoliens et démanteler progressivement les parcs existants, relancer les filières nucléaire, hydroélectrique et investir dans l'hydrogène, et sortir du marché européen de l'électricité pour retrouver des prix décents. Le mécanisme précis de restitution des subventions aux ménages et le calendrier de sortie du marché européen de l'électricité ne sont pas détaillés.",
+    "titre": "Lutte contre les idéologies islamistes",
+    "resume_factuel": "Position de 2022 : éradiquer les idéologies islamistes et leurs réseaux du territoire national, avec une proposition de loi dédiée, sans détail du dispositif.",
     "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Rendre aux ménages les 5 milliards de subventions versées notamment aux éoliennes."
-      },
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Sortir du marché européen de l'électricité pour retrouver des prix décents."
-      }
-    ],
-    "id": "le-pen-envi-001",
-    "candidat": "le-pen",
-    "theme": "environnement"
-  },
-  {
-    "titre": "Défense des agriculteurs et de l'alimentation de qualité",
-    "resume_factuel": "Position de 2022 (programme M La France / 22 mesures du Rassemblement National). Marine Le Pen propose de garantir aux paysans des prix respectueux de leur travail et de mettre un terme aux marges abusives de la grande distribution, d'interdire les importations de produits agricoles ne respectant pas les normes de production française, de contraindre les cantines à utiliser 80% de produits agricoles français, de mettre en place un « plan abattoirs » pour assurer des conditions dignes et interdire l'abattage sans étourdissement, et de généraliser l'étiquetage sur l'origine et la qualité des produits alimentaires. Cette mesure recoupe partiellement des enjeux de protection animale et de normes de production, mais aucun mécanisme chiffré n'est précisé pour l'impact sur le revenu des citoyens.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "metier",
-            "valeurs": [
-              "agriculteur"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Garantir aux paysans des prix respectueux de leur travail et mettre un terme aux marges abusives de la grande distribution."
-      }
-    ],
-    "id": "le-pen-envi-002",
-    "candidat": "le-pen",
-    "theme": "environnement"
-  },
-  {
-    "titre": "Privatisation de l'audiovisuel public et suppression de la redevance",
-    "resume_factuel": "Le programme de 2022 (position de 2022) propose de privatiser l'audiovisuel public afin de supprimer la redevance de 138€ payée par les ménages, dans le cadre d'une mesure conjointe avec la renationalisation des autoroutes pour baisser les péages de 15%. Le corpus ne précise pas les modalités de la privatisation ni son calendrier.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      },
       {
         "type": "primaire",
         "label": "rassemblementnational.fr (22 mesures 2022) — 22-mesures",
@@ -1642,18 +2081,104 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-09-29",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [],
+    "id": "le-pen-immi-009",
+    "candidat": "le-pen",
+    "theme": "immigration",
+    "positions": []
+  },
+  {
+    "titre": "Indépendance énergétique, arrêt de l'éolien et relance du nucléaire",
+    "resume_factuel": "Position de 2022 : arrêt des projets éoliens et démantèlement progressif des parcs existants, relance de la filière nucléaire, hydroélectrique et investissement dans l'hydrogène, sortie du marché européen de l'électricité, et reversement aux ménages des 5 milliards d'euros de subventions versées notamment aux éoliennes.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
     "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Assurer notre indépendance énergétique pour baisser la facture des Français."
+      },
       {
         "cibles": [],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://mlafrance.fr/programme",
-        "extrait": "privatiser l’audiovisuel public pour supprimer les 138€ de redevance"
+        "extrait": "Rendre aux ménages les 5 milliards de subventions versées notamment aux éoliennes."
       }
     ],
-    "id": "le-pen-lib-001",
+    "id": "le-pen-envi-001",
     "candidat": "le-pen",
-    "theme": "libertes-fondamentales"
+    "theme": "environnement",
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "freiner_transition",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "arrêt des projets éoliens et démantèlement progressif des parcs existants"
+      },
+      {
+        "sujet": "nucleaire",
+        "position": "garder_nucleaire",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "relance de la filière nucléaire, hydroélectrique et investissement dans l'hydrogène"
+      },
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "sortie du marché européen de l'électricité"
+      }
+    ]
+  },
+  {
+    "titre": "Baisse de la TVA à 5,5% sur l'électricité",
+    "resume_factuel": "Position de 2024 (RN) : réduction de la TVA sur les produits énergétiques, dont l'électricité, de son taux actuel à 5,5%, présentée comme une réponse à la hausse des tarifs de l'électricité.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "rassemblementnational.fr — petition-tva-electricite",
+        "url": "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez",
+        "nom": "rassemblementnational.fr",
+        "annee": 2024
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-04",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez",
+        "extrait": "Les propositions portées par Marine Le Pen depuis des années telles que la réduction de la TVA à 5,5% sur les produits énergétiques allègerait ce fardeau financier qui pèse sur les ménages français !"
+      }
+    ],
+    "id": "le-pen-envi-002",
+    "candidat": "le-pen",
+    "theme": "environnement",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez",
+        "extrait": "réduction de la TVA sur les produits énergétiques, dont l'électricité, de son taux actuel à 5,5%"
+      }
+    ]
   }
 ]

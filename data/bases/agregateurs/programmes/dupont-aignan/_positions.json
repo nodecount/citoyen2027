@@ -1,48 +1,69 @@
 [
   {
     "groupe": 0,
-    "empreinte": "f7732507276545f3",
-    "date": "2026-09-30",
+    "empreinte": "1688c2c2f918abd6",
+    "date": "2026-10-05",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 20,
-    "sans_position": 4,
+    "etiquetees": 16,
+    "sans_position": 8,
     "rejetees": [
       {
-        "id": "dupont-aignan-interieur-justice-016",
-        "raison": "relecture : Faire payer aux détenus le coût de leur incarcération est une mesure financière et non un durcissement des peines, un renforcement des moyens policiers/pénitentiaires ou des pouvoirs de sanction."
+        "id": "dupont-aignan-interieur-justice-014",
+        "raison": "relecture : Ces dispositifs visent la sécurité en milieu carcéral (empêcher communications illicites), ce n'est pas une mesure de surveillance de la population au sens de la définition (vidéosurveillance, reconnaissance faciale, accès aux données/messageries à des fins de sécurité générale)."
       }
     ],
-    "cout_reference_usd": 0.0911,
+    "cout_reference_usd": 0.124,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "67330f605cad223b",
-    "date": "2026-09-30",
+    "empreinte": "11b8caba96e00557",
+    "date": "2026-10-05",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 9,
-    "sans_position": 15,
+    "etiquetees": 6,
+    "sans_position": 14,
     "rejetees": [
       {
+        "id": "dupont-aignan-europe-international-001",
+        "raison": "relecture : Sortir du commandement militaire intégré de l'OTAN concerne l'OTAN, pas l'Union européenne ni ses compétences : mauvais sujet pour l'étiquette 'europe'."
+      },
+      {
+        "id": "dupont-aignan-gouvernance-republique-003",
+        "raison": "relecture : La définition de 'conditionner_aides' vise la contrepartie d'activité ou le durcissement de l'assurance chômage, pas une suspension d'aides pour infraction aux principes de laïcité : mauvais sujet/position."
+      },
+      {
+        "id": "dupont-aignan-gouvernance-republique-005",
+        "raison": "relecture : Fermer des lieux de culte ne refusant pas de signer une charte relève de la liberté d'association/religieuse et non du port de signes religieux visé par la définition de 'laicite_stricte'."
+      },
+      {
         "id": "dupont-aignan-gouvernance-republique-010",
-        "raison": "relecture : Le texte défend une préférence nationale dans l'attribution des marchés, ce qui relève de protectionnisme économique et non d'un soutien direct au développement ou à l'usage de l'IA."
+        "raison": "relecture : La préférence nationale dans les marchés de l'IA relève du protectionnisme commercial et ne montre pas un soutien direct au développement/usage de l'IA comme l'exige 'plus_ia'."
+      },
+      {
+        "id": "dupont-aignan-gouvernance-republique-011",
+        "raison": "relecture : L'extrait parle de start-ups françaises en général sans mentionner l'IA, ce qui ne fonde pas clairement l'étiquette 'ia'."
       }
     ],
-    "cout_reference_usd": 0.0681,
+    "cout_reference_usd": 0.0532,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "32477e36223119d8",
-    "date": "2026-09-30",
+    "empreinte": "455444b8e169df41",
+    "date": "2026-10-05",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "etiquetees": 3,
-    "sans_position": 10,
-    "rejetees": [],
-    "cout_reference_usd": 0.0228,
+    "etiquetees": 9,
+    "sans_position": 3,
+    "rejetees": [
+      {
+        "id": "dupont-aignan-gouvernance-republique-014",
+        "raison": "relecture : L'extraction de terres rares sur territoires et fonds marins relève des normes minières/environnementales, pas des normes agricoles ; le sujet agriculture_normes est inadapté."
+      }
+    ],
+    "cout_reference_usd": 0.0367,
     "appels": 2
   }
 ]
