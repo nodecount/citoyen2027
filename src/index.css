@@ -2746,8 +2746,15 @@ button.bouton-en-ligne {
 .ideal-badges-total {
   margin: 0.5rem 0 0;
 }
-.ideal-voir-plus {
-  margin: 0.6rem 0 0;
+/* Boutons sous les badges (« Voir plus » et « Voir les mesures ») : sur une ligne, à la suite, qui passe à la suivante au besoin. */
+.ideal-actions-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+.ideal-actions-badges button {
+  margin: 0;
 }
 /* Un seul flux de badges, sur toute la largeur : les « pour » (vert) puis les « contre » (rouge), à la suite. Un badge :
    icône du thème, puis le nom du groupe de mesures. */

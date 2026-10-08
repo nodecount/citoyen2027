@@ -100,6 +100,7 @@ export function PoursContres({
   unite,
   interactif = true,
   deplieInitial = false,
+  parMesureInitial = false,
 }: {
   pour: Raison[];
   contre: Raison[];
@@ -108,15 +109,19 @@ export function PoursContres({
   interactif?: boolean;
   // Pour les tests de rendu statique, qui ne peuvent pas cliquer sur « Voir plus ».
   deplieInitial?: boolean;
+  parMesureInitial?: boolean;
 }) {
   // Un seul bouton par card : il déplie les pour et les contre ensemble.
   const [deplie, setDeplie] = useState(deplieInitial);
+  // Un seul bouton par card aussi pour passer des groupes de mesures aux mesures elles-mêmes (les deux séries changent ensemble).
+  const [parMesure, setParMesure] = useState(parMesureInitial);
   if (pour.length === 0 && contre.length === 0) return null;
-  // Un badge par groupe de mesures (et non un par point du score) : un même groupe n'apparaît qu'une fois par thème.
+  // Un badge par groupe de mesures (et non un par point du score), ou par mesure quand le visiteur les demande : un même
+  // badge n'apparaît qu'une fois par thème.
   const badges = (points: Raison[]) => {
     const vus = new Set<string>();
     return points
-      .flatMap((p) => p.groupes.map((groupe) => ({ theme: p.theme, groupe })))
+      .flatMap((p) => (parMesure ? p.mesures : p.groupes).map((groupe) => ({ theme: p.theme, groupe })))
       .filter(
         (b) =>
           !vus.has(`${b.theme}|${b.groupe}`) &&
@@ -159,8 +164,8 @@ export function PoursContres({
       <span className="ideal-raison-titre">{b.groupe}</span>
     </li>
   );
-  const total = (n: number, pluriel: string, singulier: string) =>
-    `${n} groupe${n > 1 ? "s" : ""} de mesures ${n > 1 ? pluriel : singulier}`;
+  const nom = (n: number) => (parMesure ? (n > 1 ? "mesures" : "mesure") : n > 1 ? "groupes de mesures" : "groupe de mesures");
+  const total = (n: number, pluriel: string, singulier: string) => `${n} ${nom(n)} ${n > 1 ? pluriel : singulier}`;
   return (
     <div className="ideal-poursontres">
       {/* Une seule ligne de badges (qui passe à la suivante quand elle est pleine) : les « pour » d'abord, les « contre » ensuite,
@@ -177,15 +182,28 @@ export function PoursContres({
           Au total : {total(listePour.length, intitule.pour, intitule.pourSing)}, {total(listeContre.length, intitule.contre, intitule.contreSing)}.
         </p>
       )}
-      {interactif && aDeplier && (
-        <button
-          type="button"
-          className="secondaire ideal-voir-plus"
-          aria-expanded={deplie}
-          onClick={() => setDeplie(!deplie)}
-        >
-          {deplie ? "Voir moins" : `Voir plus (${cachés} autres)`}
-        </button>
+      {interactif && (
+        <div className="ideal-actions-badges">
+          {aDeplier && (
+            <button
+              type="button"
+              className="secondaire ideal-voir-plus"
+              aria-expanded={deplie}
+              onClick={() => setDeplie(!deplie)}
+            >
+              {deplie ? "Voir moins" : `Voir plus (${cachés} autres)`}
+            </button>
+          )}
+          {/* Passe des groupes de mesures (mots clés du résumé) aux mesures elles-mêmes, et inversement. */}
+          <button
+            type="button"
+            className="secondaire ideal-voir-mesures"
+            aria-pressed={parMesure}
+            onClick={() => setParMesure(!parMesure)}
+          >
+            {parMesure ? "Voir les groupes de mesures" : "Voir les mesures"}
+          </button>
+        </div>
       )}
     </div>
   );
@@ -357,7 +375,9 @@ export function CardCandidatIdeal({
         que, sur un thème, ses mesures vont dans le sens d'une position que vous
         avez choisie, −1 point quand elles vont à l'opposé ; un même sujet peut
         donc compter dans plusieurs thèmes. Chaque badge des deux listes est un
-        groupe de mesures du candidat : l'icône indique son thème. Un thème à la
+        groupe de mesures du candidat : l'icône indique son thème. « Voir plus »
+        affiche les badges suivants, et « Voir les mesures » remplace les
+        groupes par les mesures elles-mêmes. Un thème à la
         fois favorable et défavorable vaut 0 et n'apparaît pas. Même règle pour
         tous, aucun thème ni sujet ne compte plus qu'un autre. En cas d'égalité,
         tous les candidats concernés sont montrés. Plus il y a de thèmes

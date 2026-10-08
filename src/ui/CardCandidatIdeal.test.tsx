@@ -2,7 +2,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { CardCandidatIdeal, PoursContres, type GagnantAffiche, type ResultatAffiche } from "./CardCandidatIdeal";
 
-const gagnant = (lettre: string, nom: string, slug: string): GagnantAffiche => ({ lettre, identite: { slug, nom, parti: "Parti-test" }, ameliorants: 3, degradants: 1, analyses: 7, pour: [{ theme: "logement", groupes: ["Mesure-pour"] }], contre: [{ theme: "retraite", groupes: ["Mesure-contre"] }] });
+const gagnant = (lettre: string, nom: string, slug: string): GagnantAffiche => ({ lettre, identite: { slug, nom, parti: "Parti-test" }, ameliorants: 3, degradants: 1, analyses: 7, pour: [{ theme: "logement", groupes: ["Mesure-pour"], mesures: ["Vraie-mesure-pour"] }], contre: [{ theme: "retraite", groupes: ["Mesure-contre"], mesures: ["Vraie-mesure-contre"] }] });
 const resultat = (titre: string, gagnants: GagnantAffiche[], extra: Partial<ResultatAffiche> = {}): ResultatAffiche => ({ titre, unite: "thèmes", gagnants, solde: 2, departageable: true, ecartes: 0, tousEcartes: false, ...extra });
 const SITUATION = resultat("Selon votre situation", [gagnant("C", "Nom-Reel-Situation", "slug-reel-a")]);
 const CONVICTIONS = resultat("Selon vos convictions", [gagnant("F", "Nom-Reel-Convictions", "slug-reel-b")], { unite: "sujets" });
@@ -120,18 +120,36 @@ describe("CardCandidatIdeal révélée", () => {
     expect(html).not.toContain("Score +");
   });
   it("au plus 3 badges par colonne, et un seul bouton « Voir plus » par card pour les deux colonnes", () => {
-    const beaucoup = (theme: string, n: number) => [{ theme, groupes: Array.from({ length: n }, (_, i) => `Groupe-${theme}-${i}`) }];
+    const beaucoup = (theme: string, n: number) => [{ theme, groupes: Array.from({ length: n }, (_, i) => `Groupe-${theme}-${i}`), mesures: [] }];
     const g = { ...gagnant("C", "Nom-Reel-Situation", "slug-reel-a"), pour: beaucoup("logement", 5), contre: beaucoup("retraite", 4) };
     const html = rendre({ revele: true, convictions: null, situation: resultat("Selon votre situation", [g]) });
     expect(html.match(/class="ideal-badge ideal-badge--/g)).toHaveLength(6);
-    expect(html.match(/Voir plus/g)).toHaveLength(1);
+    expect(html.match(/class="secondaire ideal-voir-plus"/g)).toHaveLength(1);
     // 5 pour et 4 contre, 3 visibles de chaque côté : 2 + 1 badges de plus.
     expect(html).toContain("Voir plus (3 autres)");
     expect(html).not.toContain("Groupe-logement-3");
     expect(html).not.toContain("Groupe-retraite-3");
   });
+  it("bouton « Voir les mesures » : bascule des groupes de mesures aux mesures elles-mêmes, sur la card révélée seulement", () => {
+    const point = { theme: "logement", groupes: ["Groupe-A"], mesures: ["Mesure-A1", "Mesure-A2"] };
+    const html = rendre({ revele: true, convictions: null, situation: resultat("Selon votre situation", [{ ...gagnant("C", "N", "s"), pour: [point], contre: [] }]) });
+    expect(html).toContain("Voir les mesures");
+    expect(html).toContain('aria-pressed="false"');
+    expect(html).toContain("Groupe-A");
+    expect(html).not.toContain("Mesure-A1");
+    const parMesure = renderToStaticMarkup(<PoursContres pour={[point]} contre={[]} unite="thèmes" parMesureInitial />);
+    expect(parMesure).toContain("Mesure-A1");
+    expect(parMesure).toContain("Mesure-A2");
+    expect(parMesure).not.toContain("Groupe-A");
+    expect(parMesure).toContain("Voir les groupes de mesures");
+    expect(parMesure).toContain('aria-pressed="true"');
+    // Le total parle alors de mesures.
+    expect(renderToStaticMarkup(<PoursContres pour={[point]} contre={[]} unite="thèmes" parMesureInitial deplieInitial />)).toContain("Au total : 2 mesures favorables à votre situation, 0 mesure défavorable à votre situation.");
+    // Sous le flou : aucun bouton.
+    expect(renderToStaticMarkup(<PoursContres pour={[point]} contre={[]} unite="thèmes" interactif={false} />)).not.toContain("Voir les mesures");
+  });
   it("une fois déplié : tous les badges, le total de groupes pour et contre, et « Voir moins »", () => {
-    const beaucoup = (theme: string, n: number) => [{ theme, groupes: Array.from({ length: n }, (_, i) => `Groupe-${theme}-${i}`) }];
+    const beaucoup = (theme: string, n: number) => [{ theme, groupes: Array.from({ length: n }, (_, i) => `Groupe-${theme}-${i}`), mesures: [] }];
     const html = renderToStaticMarkup(<PoursContres pour={beaucoup("logement", 5)} contre={beaucoup("retraite", 1)} unite="thèmes" deplieInitial />);
     expect(html.match(/class="ideal-badge ideal-badge--/g)).toHaveLength(6);
     expect(html).toContain("Au total : 5 groupes de mesures favorables à votre situation, 1 groupe de mesures défavorable à votre situation.");
@@ -140,10 +158,10 @@ describe("CardCandidatIdeal révélée", () => {
     expect(renderToStaticMarkup(<PoursContres pour={beaucoup("logement", 5)} contre={beaucoup("retraite", 1)} unite="thèmes" />)).not.toContain("Au total");
   });
   it("pas de bouton quand tout tient en 3 badges, ni quand la card est floutée", () => {
-    expect(rendre({ revele: true })).not.toContain("Voir plus");
-    const beaucoup = [{ theme: "logement", groupes: ["a", "b", "c", "d", "e"] }];
+    expect(rendre({ revele: true })).not.toContain("ideal-voir-plus");
+    const beaucoup = [{ theme: "logement", groupes: ["a", "b", "c", "d", "e"], mesures: [] }];
     const g = { ...gagnant("C", "N", "s"), pour: beaucoup };
-    expect(rendre({ revele: false, convictions: null, situation: resultat("Selon votre situation", [g]) })).not.toContain("Voir plus");
+    expect(rendre({ revele: false, convictions: null, situation: resultat("Selon votre situation", [g]) })).not.toContain("ideal-voir-plus");
   });
   it("devant chaque mesure : l'icône du thème, jamais son titre", () => {
     const html = rendre({ revele: true });
@@ -156,6 +174,8 @@ describe("CardCandidatIdeal révélée", () => {
     expect(html).toContain("aucun thème ni sujet ne compte plus qu&#x27;un autre");
     expect(html).toContain("Comment est calculé le score");
     expect(html).toContain("Chaque badge des deux listes est un groupe de mesures du candidat");
+    expect(html).toContain("« Voir plus » affiche les badges suivants");
+    expect(html).toContain("« Voir les mesures » remplace les groupes par les mesures elles-mêmes");
     expect(html).not.toContain("les égalités sont toutes montrées"); // faux quand tous les candidats sont à égalité
   });
   it("ne montre pas le parti « non renseigné par la source »", () => {

@@ -29,8 +29,8 @@ describe("soldesSituation", () => {
     const avecEffets = (niveau: NiveauProjection, ids: string[]) => ({ meta: { slug: "a" }, projection: { niveau, effetsRetenus: ids.map((propositionId) => ({ propositionId })) }, propositions: [p("1"), p("2"), p("3")] });
     const s = soldesSituation([card([avecEffets("ameliorant", ["1"])]), card([avecEffets("degradant", ["2", "3"])]), card([avecEffets("mixte", ["1", "2"])])])[0];
     // Un point par thème compté : autant de blocs que le score en compte, chacun avec les titres de ses mesures.
-    expect(s.pour).toEqual([{ theme: "logement", groupes: ["Titre 1"] }]);
-    expect(s.contre).toEqual([{ theme: "logement", groupes: ["Titre 2", "Titre 3"] }]);
+    expect(s.pour).toEqual([{ theme: "logement", groupes: ["Titre 1"], mesures: ["Titre 1"] }]);
+    expect(s.contre).toEqual([{ theme: "logement", groupes: ["Titre 2", "Titre 3"], mesures: ["Titre 2", "Titre 3"] }]);
     expect([s.pour.length, s.contre.length]).toEqual([s.ameliorants, s.degradants]);
   });
   it("nomme les points par les groupes du résumé (mots clés), une fois chacun, jamais par le contenu des mesures", () => {
@@ -39,7 +39,8 @@ describe("soldesSituation", () => {
     const ligneResume = { meta: { slug: "a" }, projection: { niveau: "ameliorant" as const, effetsRetenus: [{ propositionId: "1" }, { propositionId: "2" }, { propositionId: "4" }] }, propositions: [p("1"), p("2"), p("3"), p("4")], resume };
     const s = soldesSituation([card([ligneResume])])[0];
     // 1 et 2 : même groupe, nommé une fois ; 4 : absente du résumé, garde son titre ; 3 : pas retenue, absente.
-    expect(s.pour).toEqual([{ theme: "logement", groupes: ["Interdire des armes policières", "Titre 4"] }]);
+    // Les mesures elles-mêmes restent disponibles (bouton « Voir les mesures »), chacune une fois, dans l'ordre du programme.
+    expect(s.pour).toEqual([{ theme: "logement", groupes: ["Interdire des armes policières", "Titre 4"], mesures: ["Titre 1", "Titre 2", "Titre 4"] }]);
   });
   it("un candidat présent seulement dans les absents est listé, à zéro analyse", () => {
     const s = soldesSituation([card([ligne("a", "ameliorant")], ["z"])]);
@@ -60,8 +61,8 @@ describe("soldesConvictions", () => {
   it("range les mesures dans le sens de la position choisie en « pour », les autres en « contre », avec sujet · thème", () => {
     const cards = [card([ligne("a", null, [{ ...prop([tag("ia", "plus_ia")]), id: "p1", titre: "Plus d'IA" }])]), card([ligne("a", null, [{ ...prop([tag("ia", "encadrer_ia")]), id: "p2", titre: "Encadrer l'IA" }])])];
     const s = soldesConvictions(cards, { ia: "plus_ia" })[0];
-    expect(s.pour).toEqual([{ theme: "logement", groupes: ["Plus d'IA"] }]);
-    expect(s.contre).toEqual([{ theme: "logement", groupes: ["Encadrer l'IA"] }]);
+    expect(s.pour).toEqual([{ theme: "logement", groupes: ["Plus d'IA"], mesures: ["Plus d'IA"] }]);
+    expect(s.contre).toEqual([{ theme: "logement", groupes: ["Encadrer l'IA"], mesures: ["Encadrer l'IA"] }]);
   });
   it("sans position choisie (« pas d'avis » partout) : tous à zéro analyse", () => {
     expect(soldesConvictions([card([ligne("a", null, [prop([tag("ia", "plus_ia")])])])], {}).every((x) => x.analyses === 0)).toBe(true);

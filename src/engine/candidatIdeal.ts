@@ -29,6 +29,8 @@ export interface Raison {
   // Identifiant du thème où le point compte (l'interface n'en montre que l'icône).
   theme: string;
   groupes: string[];
+  // Titres des mesures elles-mêmes (une fois chacune), pour qui préfère les voir plutôt que leurs groupes.
+  mesures: string[];
 }
 
 export interface Solde {
@@ -69,6 +71,17 @@ function compter(s: Solde, niveau: NiveauProjection | null, pour?: Raison, contr
 
 // Groupes (mots clés du résumé) qui couvrent les mesures de `ids`, dans l'ordre du résumé, une fois chacun. Une mesure absente du
 // résumé (pas de résumé, ou résumé périmé) garde son titre : jamais de point sans rien à lire.
+function titresMesures(ligne: LignePourSolde, ids: Set<string>): string[] {
+  const titres: string[] = [];
+  for (const p of ligne.propositions) if (ids.has(p.id) && !titres.includes(p.titre)) titres.push(p.titre);
+  return titres;
+}
+
+// Un point du score pour ce candidat et ce thème : groupes et mesures qui le fondent.
+function point(ligne: LignePourSolde, theme: string, ids: Set<string>): Raison {
+  return { theme, groupes: groupes(ligne, ids), mesures: titresMesures(ligne, ids) };
+}
+
 function groupes(ligne: LignePourSolde, ids: Set<string>): string[] {
   const noms: string[] = [];
   const couverts = new Set<string>();
@@ -88,9 +101,9 @@ export function soldesSituation(cards: CardPourSolde[]): Solde[] {
   for (const card of cards) {
     for (const l of card.lignes) {
       const ids = new Set((l.projection?.effetsRetenus ?? []).map((e) => e.propositionId));
-      const point = { theme: card.theme.id, groupes: groupes(l, ids) };
+      const raison = point(l, card.theme.id, ids);
       // Un thème « améliorant » ne retient que des effets favorables, un thème « dégradant » que des défavorables.
-      compter(soldes.get(l.meta.slug)!, l.projection?.niveau ?? null, point, point);
+      compter(soldes.get(l.meta.slug)!, l.projection?.niveau ?? null, raison, raison);
     }
   }
   return [...soldes.values()];
@@ -107,8 +120,8 @@ export function soldesConvictions(cards: CardPourSolde[], choix: ChoixPositions)
         compter(
           soldes.get(l.meta.slug)!,
           constat.niveau,
-          { theme: card.theme.id, groupes: groupes(l, ids(true)) },
-          { theme: card.theme.id, groupes: groupes(l, ids(false)) },
+          point(l, card.theme.id, ids(true)),
+          point(l, card.theme.id, ids(false)),
         );
       }
     }
