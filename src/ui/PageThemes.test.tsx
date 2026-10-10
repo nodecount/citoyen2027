@@ -193,9 +193,11 @@ describe("card candidat idéal sur la page du simulateur", () => {
   it("sans réponse (pas d'indicateur) : pas de card", () => {
     expect(page({ profil: {}, generalSoumis: false })).not.toContain("carte-ideal");
   });
-  it("révélée : le bouton Recommencer remplace celui de révélation, et le formulaire reste disponible (le modifier réinitialise le résultat)", () => {
+  it("révélée : le bouton de révélation disparaît (sans pied de card), et le rappel des réponses propose de recommencer (le modifier réinitialise le résultat)", () => {
     const html = page({ releveInitial: true });
-    expect(html).toContain("Recommencer la simulation");
+    expect(html).not.toContain("Recommencer la simulation");
+    expect(html).not.toContain("Voici votre candidat idéal pour 2027");
+    expect(html).toContain("Recommencer pour corriger ou compléter");
     expect(html).not.toContain("Révéler mon programme");
     expect(html).toContain("Mes réponses");
     expect(html).not.toContain("carte-ideal--floue");

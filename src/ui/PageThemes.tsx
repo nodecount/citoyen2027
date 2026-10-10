@@ -4,7 +4,7 @@ import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/base
 import { lireOuverture, type Ecran } from "./router";
 import { aDesInformations, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
-import { ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation } from "../engine/candidatIdeal";
+import { classement, combiner, ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation } from "../engine/candidatIdeal";
 import { anonymiserCards } from "./aveugle";
 import { cleIdentites, etatPourBase, recommencer, tirerGraine, type EtatIdeal } from "./etatIdeal";
 import { BandeauRevelation, CardCandidatIdeal } from "./CardCandidatIdeal";
@@ -91,12 +91,20 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   // L'écart par intégrité se calcule sur les faits réels (jamais affichés à l'aveugle : seul le nombre d'écartés l'est).
   const integritesReelles = integritesVisibles({ simulateur, exemplarite: convictions.exemplarite, aveugle: false, slugs: candidats.map((c) => c.meta.slug) });
   const ecartes = ecartesParIntegrite(integritesReelles);
-  const situationIdeale = personnalise ? versResultatAffiche("Selon votre situation", "thèmes", meilleurs(soldesSituation(cardsNommees)), correspondance, revele, anonymisation ? soldesSituation(cards) : []) : null;
+  const soldesSit = personnalise ? soldesSituation(cardsNommees) : [];
+  const situationIdeale = personnalise ? versResultatAffiche("Selon votre situation", "thèmes", meilleurs(soldesSit), correspondance, revele, anonymisation ? soldesSituation(cards) : [], classement(soldesSit)) : null;
   // Résultat « convictions » : omis quand aucun candidat n'a de mesure sur les sujets choisis (et que personne n'est écarté) —
   // plutôt que de promettre « le meilleur programme selon vos convictions » quand il n'existe pas.
-  const meilleursConvictions = personnalise && Object.keys(choixPositions).length > 0 ? meilleurs(soldesConvictions(cardsNommees, choixPositions), ecartes) : null;
+  const soldesConv = personnalise && Object.keys(choixPositions).length > 0 ? soldesConvictions(cardsNommees, choixPositions) : null;
+  const meilleursConvictions = soldesConv ? meilleurs(soldesConv, ecartes) : null;
   const convictionsIdeales =
-    meilleursConvictions && !sansDonnees(meilleursConvictions) ? versResultatAffiche("Selon vos convictions", "sujets", meilleursConvictions, correspondance, revele, anonymisation ? soldesConvictions(cards, choixPositions) : []) : null;
+    soldesConv && meilleursConvictions && !sansDonnees(meilleursConvictions) ? versResultatAffiche("Selon vos convictions", "sujets", meilleursConvictions, correspondance, revele, anonymisation ? soldesConvictions(cards, choixPositions) : [], classement(soldesConv, ecartes)) : null;
+  // Candidat idéal tous critères confondus : scores de la situation et des convictions additionnés (la situation seule quand il
+  // n'y a pas de résultat « convictions »). Les écartés par l'intégrité le sont dès que le critère convictions compte.
+  const soldesCumul = convictionsIdeales && soldesConv ? combiner(soldesSit, soldesConv) : soldesSit;
+  const ecartesCumul = convictionsIdeales ? ecartes : new Set<string>();
+  const soldesCumulAnonymes = anonymisation ? (convictionsIdeales && soldesConv ? combiner(soldesSituation(cards), soldesConvictions(cards, choixPositions)) : soldesSituation(cards)) : [];
+  const idealCumule = personnalise ? versResultatAffiche("Selon votre situation et vos convictions", "thèmes", meilleurs(soldesCumul, ecartesCumul), correspondance, revele, soldesCumulAnonymes, classement(soldesCumul, ecartesCumul)) : null;
   // « Recommencer » : on revient à la première étape, réponses gardées, et la card repasse floutée (nouvelles lettres).
   const relancerLaSimulation = () => setIdeal(recommencer());
   const allerA = (suivante: Etape) => {
@@ -234,11 +242,11 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
             <CardCandidatIdeal
               situation={situationIdeale}
               convictions={convictionsIdeales}
+              combine={idealCumule}
               questionsRestantes={questionsRestantes(base.questionnaire, profil)}
               positionsChoisies={Object.keys(convictions.positions).length > 0}
               revele={revele}
               onReveler={() => setIdeal({ ...ideal, revele: true })}
-              onRecommencer={recommencerLeParcours}
             />
           ) : (
             <p className="recap-vide">Aucun résultat à révéler pour l'instant : répondez d'abord à au moins une question.</p>

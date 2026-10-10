@@ -163,6 +163,42 @@ export function meilleurs(soldes: Solde[], ecartes: ReadonlySet<string> = new Se
   return { solde: max, gagnants, departageable: !(toutALegalite && max === 0), ecartes: nombreEcartes, tousEcartes: false };
 }
 
+// Candidat idéal « toutes critères confondus » (décision du 2026-10-10) : le score de la situation PLUS celui des convictions,
+// candidat par candidat, sans pondération (même règle +1 / −1, simplement additionnée). Sans convictions, c'est la situation seule.
+export function combiner(situation: Solde[], convictions: Solde[]): Solde[] {
+  const parSlug = new Map(convictions.map((s) => [s.slug, s]));
+  return situation.map((s) => {
+    const c = parSlug.get(s.slug);
+    if (!c) return s;
+    return {
+      slug: s.slug,
+      ameliorants: s.ameliorants + c.ameliorants,
+      degradants: s.degradants + c.degradants,
+      analyses: s.analyses + c.analyses,
+      solde: s.solde + c.solde,
+      pour: [...s.pour, ...c.pour],
+      contre: [...s.contre, ...c.contre],
+    };
+  });
+}
+
+export interface Classe {
+  solde: Solde;
+  // 1 pour le meilleur score, puis 2, 3… sans trou : les ex æquo partagent la même place (1, 1, 2, 3…).
+  rang: number;
+}
+
+// Le top de `taille` PLACES (mêmes règles que `meilleurs` : ni écartés, ni sans indicateur). Les candidats à égalité de score
+// occupent la même place et sont tous gardés : une égalité n'est jamais tranchée, ni par l'ordre alphabétique ni par la coupe.
+// L'ordre à score égal est celui des données ; l'interface le range par lettre anonyme, sans rapport avec l'identité.
+export function classement(soldes: Solde[], ecartes: ReadonlySet<string> = new Set(), taille = 3): Classe[] {
+  const tries = soldes.filter((s) => !ecartes.has(s.slug) && s.analyses > 0).sort((a, b) => b.solde - a.solde);
+  const scores = [...new Set(tries.map((s) => s.solde))];
+  return tries
+    .map((s) => ({ solde: s, rang: scores.indexOf(s.solde) + 1 }))
+    .filter((c) => c.rang <= taille);
+}
+
 // Faits d'intégrité (voir data/integrite.ts) : seuls les candidats à condamnation définitive RECENSÉE sont écartés ; un
 // candidat « non vérifié » n'est pas écarté (l'absence de donnée n'est pas une condamnation).
 export function ecartesParIntegrite(integrites: Record<string, ConstatIntegrite> | null): Set<string> {

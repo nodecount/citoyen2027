@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { ConstatIntegrite } from "../data/integrite";
 import type { Proposition } from "../types";
-import { ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation, type CardPourSolde, type Solde } from "./candidatIdeal";
+import { classement, combiner, ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation, type CardPourSolde, type Solde } from "./candidatIdeal";
 import type { NiveauProjection } from "./projection";
 
 const ligne = (slug: string, niveau: NiveauProjection | null, propositions: Proposition[] = []) => ({ meta: { slug }, projection: niveau === null ? null : { niveau }, propositions });
@@ -127,6 +127,54 @@ describe("meilleurs", () => {
     const m = meilleurs([solde("a", 3, 0), solde("b", 1, 0)], new Set(["a"]))!;
     expect(m.gagnants.map((x) => x.slug)).toEqual(["b"]);
     expect(m.ecartes).toBe(1);
+  });
+});
+
+describe("combiner", () => {
+  it("additionne les scores, les couvertures et les mesures de chaque candidat, sans pondération", () => {
+    const sit = [{ ...solde("a", 2, 0), pour: [{ theme: "t1", groupes: ["g1"], mesures: ["m1"] }] }, solde("b", 1, 1)];
+    const conv = [{ ...solde("a", 1, 2), contre: [{ theme: "t2", groupes: ["g2"], mesures: ["m2"] }] }, solde("b", 3, 0)];
+    const [a, b] = combiner(sit, conv);
+    expect(a).toMatchObject({ slug: "a", ameliorants: 3, degradants: 2, analyses: 5, solde: 1 });
+    expect(a.pour).toHaveLength(1);
+    expect(a.contre).toHaveLength(1);
+    expect(b).toMatchObject({ slug: "b", solde: 3, analyses: 5 });
+  });
+  it("un candidat absent des convictions garde son score de situation", () => {
+    expect(combiner([solde("a", 2, 0)], [])[0].solde).toBe(2);
+  });
+  it("le meilleur cumulé n'est pas forcément le meilleur d'un critère", () => {
+    const sit = [solde("a", 3, 0), solde("b", 2, 0)];
+    const conv = [solde("a", 0, 2), solde("b", 1, 0)];
+    expect(meilleurs(combiner(sit, conv))!.gagnants.map((x) => x.slug)).toEqual(["b"]);
+  });
+});
+
+describe("classement", () => {
+  it("du meilleur au moins bon, au plus `taille` places ; rang 1, 2, 3…", () => {
+    const c = classement([solde("a", 1, 0), solde("b", 3, 0), solde("c", 2, 0), solde("d", 0, 1)], new Set(), 3);
+    expect(c.map((x) => [x.solde.slug, x.rang])).toEqual([["b", 1], ["c", 2], ["a", 3]]);
+  });
+  it("le top compte des PLACES : les ex æquo partagent la même place (sans trou ensuite) et sont tous gardés", () => {
+    const c = classement([solde("a", 3, 0), solde("b", 1, 0), solde("c", 1, 0), solde("d", 1, 0), solde("e", 0, 1)], new Set(), 2);
+    expect(c.map((x) => [x.solde.slug, x.rang])).toEqual([["a", 1], ["b", 2], ["c", 2], ["d", 2]]);
+    const d = classement([solde("a", 3, 0), solde("b", 3, 0), solde("c", 2, 0), solde("d", 1, 0), solde("e", 0, 1)], new Set(), 3);
+    expect(d.map((x) => [x.solde.slug, x.rang])).toEqual([["a", 1], ["b", 1], ["c", 2], ["d", 3]]);
+  });
+  it("trois places par défaut", () => {
+    const c = classement([solde("a", 5, 0), solde("b", 4, 0), solde("c", 3, 0), solde("d", 2, 0), solde("e", 1, 0)]);
+    expect(c.map((x) => x.solde.slug)).toEqual(["a", "b", "c"]);
+  });
+  it("ni les écartés, ni les candidats sans indicateur", () => {
+    const c = classement([solde("a", 3, 0), solde("b", 2, 0), solde("vide", 0, 0, 0)], new Set(["a"]));
+    expect(c.map((x) => x.solde.slug)).toEqual(["b"]);
+  });
+  it("cohérent avec `meilleurs` : le rang 1 est exactement l'ensemble des gagnants", () => {
+    const soldes = [solde("a", 2, 0), solde("b", 2, 0), solde("c", 1, 0)];
+    expect(classement(soldes).filter((x) => x.rang === 1).map((x) => x.solde.slug).sort()).toEqual(meilleurs(soldes)!.gagnants.map((x) => x.slug).sort());
+  });
+  it("aucun éligible : liste vide", () => {
+    expect(classement([solde("a", 0, 0, 0)])).toEqual([]);
   });
 });
 

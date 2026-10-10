@@ -2522,7 +2522,7 @@ button.bouton-en-ligne {
 .convictions > .hint {
   margin: 0.5rem 0 0;
 }
-/* Card « candidat idéal » : UNE seule card, liseré tricolore en tête. Floutée, le bouton de révélation est posé par-dessus les
+/* Card « candidat idéal » : UNE seule card. Floutée, le bouton de révélation est posé par-dessus les
    résultats (situation et convictions) qui restent devinables derrière ; il n'y a pas de seconde card à côté. */
 .carte-ideal {
   position: relative;
@@ -2530,39 +2530,56 @@ button.bouton-en-ligne {
   margin: 1rem 0 1.5rem;
   padding: 1.25rem 1.25rem 1rem;
   border: 1px solid var(--filet);
-  border-top: 0;
   border-radius: var(--rayon);
   background: var(--surface);
   box-shadow: var(--ombre);
 }
-.carte-ideal::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 6px;
-  background: linear-gradient(90deg, var(--bleu) 0 33.3%, #fff 33.3% 66.6%, var(--rouge) 66.6% 100%);
-  box-shadow: inset 0 -1px 0 var(--filet);
+/* En-tête : le titre à gauche, le bouton d'aide en haut à droite (au-dessus du voile de révélation, il reste utilisable floutée). */
+.ideal-entete {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin: 0.25rem 0 1rem;
 }
-.carte-ideal > h2 {
+.ideal-entete > h2 {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  margin: 0.25rem 0 1rem;
+  margin: 0;
   color: var(--bleu-fonce);
 }
-.carte-ideal > h2 svg {
+.ideal-entete > h2 svg {
   flex: none;
   color: var(--bleu);
 }
-.carte-ideal > h2:focus {
+.ideal-entete > h2:focus {
   outline: none;
 }
-.ideal-colonnes {
+.ideal-aide {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+/* Le candidat idéal au centre « sépare la mer en deux » : situation à gauche, convictions à droite. Sur écran étroit, le candidat
+   passe en tête et les deux classements s'empilent dessous. */
+.ideal-mer {
   display: grid;
-  /* « Situation » et « convictions » ne se mettent côte à côte que si chacune garde assez de place pour ses deux listes ; sinon
-     elles s'empilent et chaque liste prend toute la largeur de la card. */
-  grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+  grid-template-columns: minmax(0, 1fr) minmax(12rem, 16rem) minmax(0, 1fr);
   gap: 1rem;
+  align-items: start;
+}
+@media (max-width: 62rem) {
+  .ideal-mer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ideal-centre {
+    order: -1;
+  }
 }
 .ideal-colonne {
   min-width: 0;
@@ -2570,6 +2587,327 @@ button.bouton-en-ligne {
   border: 1px solid var(--filet);
   border-radius: 10px;
   background: var(--fond);
+}
+.ideal-centre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  align-self: stretch;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 14px;
+  background: var(--bleu-fonce);
+  color: #fff;
+  text-align: center;
+}
+.ideal-centre p {
+  margin: 0;
+}
+.ideal-centre-etiquette {
+  font-weight: 700;
+  color: #fff;
+}
+.ideal-centre .hint {
+  color: #dbe4fb;
+}
+/* Badge du parti sur fond bleu foncé : contour et texte clairs, centré (pas de décalage de l'ancienne marge). */
+.ideal-centre .detail-parti {
+  margin-left: 0;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  color: #fff;
+}
+.ideal-centre-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ideal-centre-liste > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+.ideal-centre {
+  font-size: 1.25rem;
+}
+.ideal-centre-etiquette {
+  font-size: 1.3rem;
+}
+.ideal-centre-nom {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+.ideal-centre .detail-parti {
+  font-size: 1.15rem;
+  padding: 0.1rem 0.8rem;
+}
+.pastille--ideal {
+  width: 7rem;
+  height: 7rem;
+  font-size: 2.4rem;
+  border-color: #fff;
+  border-width: 4px;
+}
+.ideal-lignes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Une ligne du top = une place : toute la ligne est cliquable (révélée). Numéro, portrait, nom (ou « X candidats »), jauge dessous. */
+.ideal-ligne {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  margin: 0;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--filet);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--encre);
+  font: inherit;
+  text-align: left;
+}
+button.ideal-ligne {
+  cursor: pointer;
+}
+/* Le style global des boutons passe le fond en bleu foncé au survol : on fixe fond ET texte pour que la ligne reste lisible. */
+button.ideal-ligne:hover {
+  border-color: var(--bleu);
+  background: var(--bleu-pale);
+  color: var(--encre);
+}
+button.ideal-ligne:focus-visible {
+  outline: 3px solid var(--bleu);
+  outline-offset: 2px;
+}
+.ideal-ligne-rang {
+  flex: none;
+  min-width: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--bleu-fonce);
+  text-align: center;
+}
+.ideal-ligne .pastille {
+  flex: none;
+}
+/* Candidats à égalité : leurs portraits se chevauchent. */
+.ideal-pile {
+  display: flex;
+  flex: none;
+}
+.ideal-pile .pastille + .pastille {
+  margin-left: -0.9rem;
+}
+.ideal-ligne-corps {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.2rem;
+  min-width: 0;
+}
+/* Sélecteur des candidats à égalité, dans la fenêtre de détail. */
+.ideal-egales {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+.ideal-egale {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.2rem 0.8rem 0.2rem 0.2rem;
+  border: 1px solid var(--filet);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--encre);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+button.ideal-egale:hover {
+  border-color: var(--bleu);
+  background: var(--bleu-pale);
+  color: var(--encre);
+}
+button.ideal-egale[aria-selected="true"],
+button.ideal-egale[aria-selected="true"]:hover {
+  border-color: var(--bleu-fonce);
+  background: var(--bleu-fonce);
+  color: #fff;
+}
+/* Badge du parti dans l'onglet : sa largeur suit son texte, et il reste lisible sur l'onglet sélectionné (fond foncé). */
+.ideal-egale .ideal-egale-parti {
+  flex: none;
+  margin: 0;
+  font-weight: 400;
+}
+.ideal-egale[aria-selected="true"] .ideal-egale-parti {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  color: #fff;
+}
+/* Prénom Nom puis badge du parti, sur la même ligne : c'est le nom qui se replie si la place manque, jamais le badge. */
+.ideal-ligne-identite {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ideal-ligne-identite .ideal-ligne-nom {
+  min-width: 0;
+}
+.ideal-ligne .ideal-ligne-parti {
+  flex: none;
+  margin: 0;
+}
+.ideal-ligne-nom {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+/* Jauge de score : piste centrée sur zéro ; barre verte vers la droite (positif), rouge vers la gauche (négatif). */
+.ideal-jauge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ideal-jauge-piste {
+  position: relative;
+  flex: 1;
+  min-width: 4rem;
+  height: 0.7rem;
+  border: 1px solid var(--filet);
+  border-radius: 999px;
+  background: #eef1f6;
+}
+.ideal-jauge-piste::after {
+  content: "";
+  position: absolute;
+  inset: -2px auto -2px 50%;
+  width: 2px;
+  background: var(--encre-douce);
+}
+.ideal-jauge-barre {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.ideal-jauge-barre--pos {
+  left: 50%;
+  border-radius: 0 999px 999px 0;
+  background: var(--ameliorant);
+}
+.ideal-jauge-barre--neg {
+  right: 50%;
+  border-radius: 999px 0 0 999px;
+  background: var(--degradant);
+}
+.ideal-jauge-valeur {
+  flex: none;
+  min-width: 2rem;
+  font-weight: 700;
+  text-align: right;
+}
+/* Fenêtre de détail : jamais plus haute que l'écran. En-tête, totaux et onglets restent en place ; seul le corps défile. */
+.modale--ideal {
+  display: flex;
+  flex-direction: column;
+  width: min(40rem, 100%);
+  max-height: min(46rem, calc(100dvh - 2rem));
+  overflow: hidden;
+}
+.modale--ideal > * {
+  flex: none;
+}
+.modale--ideal > .ideal-modale-corps {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+/* L'aide défile en entier (pas d'onglets à garder en place). */
+.modale--aide {
+  overflow-y: auto;
+}
+.ideal-modale-titre {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+/* Nom puis badge du parti en dessous ; le badge garde la largeur de son texte. */
+.ideal-modale-titre > span:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+.ideal-modale-titre .detail-parti {
+  margin-left: 0;
+  font-family: inherit;
+}
+.ideal-totaux {
+  margin-top: 0.5rem;
+}
+.ideal-totaux p {
+  margin: 0.15rem 0;
+}
+/* Onglets « Groupes de mesures » / « Mesures » : collés en haut de la fenêtre qui défile. */
+.ideal-onglets {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0.75rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--filet);
+}
+.ideal-onglet {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--filet);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--bleu-fonce);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+/* Le style global des boutons passe le fond en bleu foncé au survol : on fixe ici fond ET texte pour que le texte reste lisible. */
+button.ideal-onglet:hover {
+  border-color: var(--bleu);
+  background: var(--bleu-pale);
+  color: var(--bleu-fonce);
+}
+.ideal-onglet[aria-selected="true"],
+button.ideal-onglet[aria-selected="true"]:hover {
+  border-color: var(--bleu-fonce);
+  background: var(--bleu-fonce);
+  color: #fff;
+}
+button.ideal-onglet:focus-visible {
+  outline: 3px solid var(--bleu);
+  outline-offset: 2px;
+}
+.ideal-onglet-nombre {
+  min-width: 1.5rem;
+  padding: 0 0.4rem;
+  border-radius: 999px;
+  background: rgba(23, 60, 140, 0.12);
+  text-align: center;
+}
+.ideal-onglet[aria-selected="true"] .ideal-onglet-nombre {
+  background: rgba(255, 255, 255, 0.25);
 }
 .ideal-bloc h3 {
   display: flex;
@@ -2589,7 +2927,7 @@ button.bouton-en-ligne {
 /* Voile : recouvre la card floutée ; fond translucide pour laisser voir les titres et les silhouettes floutées. */
 .ideal-voile {
   position: absolute;
-  inset: 6px 0 0 0;
+  inset: 0;
   display: grid;
   place-items: center;
   padding: 1rem;
@@ -2612,8 +2950,7 @@ button.bouton-en-ligne {
   margin: 0;
 }
 /* Le libellé du bouton est long (49 caractères) : il se replie au lieu de déborder de la card (reflow, écran étroit ou zoom). */
-.ideal-voile-contenu button,
-.ideal-pied button {
+.ideal-voile-contenu button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2622,21 +2959,6 @@ button.bouton-en-ligne {
   max-width: 100%;
   white-space: normal;
   text-align: center;
-}
-.ideal-pied {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem 1rem;
-  margin-top: 1rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--filet);
-}
-.ideal-pied .chapeau {
-  margin: 0;
-  font-weight: 700;
-  color: var(--bleu-fonce);
 }
 .ideal-bloc + .ideal-bloc {
   margin-top: 1rem;
@@ -2745,8 +3067,23 @@ button.bouton-en-ligne {
   gap: 0.75rem;
   margin: 0.5rem 0;
 }
-.regle-ideal {
+.modale--aide section + section {
   margin-top: 1rem;
+}
+.modale--aide h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.125rem;
+  color: var(--bleu-fonce);
+}
+.modale--aide ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.modale--aide li + li {
+  margin-top: 0.25rem;
+}
+.modale--aide .modale-entete {
+  margin-bottom: 0.75rem;
 }
 .panneau-convictions {
   margin: 0.75rem 0;
