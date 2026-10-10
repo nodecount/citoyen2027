@@ -2858,8 +2858,19 @@ button.ideal-egale[aria-selected="true"]:hover {
 .ideal-totaux {
   margin-top: 0.5rem;
 }
-.ideal-totaux p {
-  margin: 0.15rem 0;
+.ideal-total {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.3rem 0;
+}
+.ideal-total-libelle {
+  flex: 0 0 9.5rem;
+  font-weight: 600;
+  color: var(--bleu-fonce);
+}
+.ideal-total .ideal-jauge {
+  flex: 1;
 }
 /* Onglets « Groupes de mesures » / « Mesures » : collés en haut de la fenêtre qui défile. */
 .ideal-onglets {
@@ -3479,6 +3490,21 @@ button.ideal-onglet:focus-visible {
 /* Dans le bandeau du résultat : le bouton suit le décompte sur la même ligne. */
 .intro-etape .bouton-completer--ligne {
   margin: 0 0 0 0.75rem;
+  white-space: nowrap;
+}
+/* Chaque décompte et son bouton restent sur une seule ligne. */
+.intro-etape .intro-decompte {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 0 0 0.4rem;
+  white-space: nowrap;
+}
+@media (max-width: 40rem) {
+  .intro-etape .intro-decompte {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
 }
 
 /* ---- Légende des indicateurs : une « règle graduée » ---------------------------------------------------------------------

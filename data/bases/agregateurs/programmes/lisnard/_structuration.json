@@ -37,14 +37,19 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "4d80077c164e1025",
-    "date": "2026-10-04",
+    "empreinte": "b9d02c7860e2f7d1",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 3,
     "avec_effets": 2,
-    "sans_effet": 1,
-    "rejetees": [],
-    "cout_reference_usd": 0.0435,
+    "sans_effet": 0,
+    "rejetees": [
+      {
+        "id": "lisnard-finances-publiques-001",
+        "raison": "relecture : La cible inclut 'recu' (héritages déjà perçus), alors qu'une baisse de fiscalité ne peut s'appliquer qu'aux transmissions futures."
+      }
+    ],
+    "cout_reference_usd": 0.0516,
     "appels": 2
   },
   {
@@ -76,15 +81,20 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "56e1d063031ce997",
-    "date": "2026-10-04",
+    "empreinte": "c79ec86dc4f4a2f0",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
-    "sans_effet": 1,
-    "rejetees": [],
-    "cout_reference_usd": 0.0307,
-    "appels": 1
+    "sans_effet": 0,
+    "rejetees": [
+      {
+        "id": "lisnard-retraites-travail-001",
+        "raison": "relecture : Le second effet cible la tranche 1000_1300€, mais une partie de cette tranche (1200-1300€) est déjà au-dessus du socle garanti et ne connaîtrait donc pas de hausse, ce qui élargit indûment le périmètre de l'effet annoncé."
+      }
+    ],
+    "cout_reference_usd": 0.0499,
+    "appels": 2
   },
   {
     "theme": "social-solidarite",

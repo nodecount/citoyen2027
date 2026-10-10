@@ -72,19 +72,19 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "f635c5bef3b4e180",
-    "date": "2026-10-04",
+    "empreinte": "64aac7e4d137a494",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 8,
-    "avec_effets": 2,
-    "sans_effet": 5,
+    "avec_effets": 3,
+    "sans_effet": 4,
     "rejetees": [
       {
         "id": "glucksmann-finances-publiques-006",
-        "raison": "relecture : La tranche de patrimoine 'plus_1_3m' englobe des patrimoines bien inférieurs aux 100 millions d'euros visés par le texte, élargissant indûment le périmètre."
+        "raison": "relecture : La cible 'tranche_patrimoine: plus_1_3m' désigne les patrimoines supérieurs à 1-3M€, un périmètre bien plus large que les patrimoines >100 millions d'euros visés par le texte."
       }
     ],
-    "cout_reference_usd": 0.0808,
+    "cout_reference_usd": 0.0663,
     "appels": 2
   },
   {
@@ -138,27 +138,27 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "e93fd3df9e161c9b",
-    "date": "2026-10-04",
+    "empreinte": "fb4c8c7c4f751396",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 18,
     "avec_effets": 3,
     "sans_effet": 12,
     "rejetees": [
       {
-        "id": "glucksmann-retraites-travail-008",
-        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Généraliser le dispositif Territoires Zéro Chômeur de longue… »"
+        "id": "glucksmann-retraites-travail-002",
+        "raison": "relecture : La cible 'tranche_revenus moins_1200' ne correspond pas fidèlement aux travailleurs au SMIC (actuellement proche de 1400€ net), ce qui élargit ou déforme le périmètre réel visé par la mesure."
       },
       {
-        "id": "glucksmann-retraites-travail-009",
-        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Créer un guichet unique territorial pour l’emploi et l’inser… »"
+        "id": "glucksmann-retraites-travail-008",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « Généraliser le dispositif Territoires Zéro Chômeur de longue… »"
       },
       {
         "id": "glucksmann-retraites-travail-010",
         "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « créer des guichets uniques jeunesse dans chaque territoire o… »"
       }
     ],
-    "cout_reference_usd": 0.0678,
+    "cout_reference_usd": 0.0631,
     "appels": 2
   },
   {

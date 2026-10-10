@@ -2,14 +2,19 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "7baaa91c4e7e6796",
-    "date": "2026-10-04",
+    "empreinte": "c90af21a5013b23e",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 6,
-    "avec_effets": 4,
+    "avec_effets": 3,
     "sans_effet": 2,
-    "rejetees": [],
-    "cout_reference_usd": 0.0573,
+    "rejetees": [
+      {
+        "id": "brun-retraites-travail-002",
+        "raison": "relecture : Le premier effet cible 'montant_pension: plus_2000' alors que le texte vise les pensions supérieures à 3000€, élargissant le périmètre."
+      }
+    ],
+    "cout_reference_usd": 0.0548,
     "appels": 2
   }
 ]

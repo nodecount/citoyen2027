@@ -101,27 +101,30 @@ export function BandeauPertinence({ questionnaire, profil, convictions, onComple
         <strong>Objectif :</strong> trouver le candidat dont le programme convient le mieux à sa situation et à ses convictions.
       </p>
       <p>Nous calculons ce résultat à partir de vos réponses : plus elles sont nombreuses et précises, plus il est pertinent.</p>
-      <p>
-        <strong>
-          {n.repondues} question{n.repondues > 1 ? "s" : ""} répondue{n.repondues > 1 ? "s" : ""} sur {n.questions}
-        </strong>
-        {n.repondues < n.questions && onCompleterSituation && (
-          <button type="button" className="secondaire bouton-completer bouton-completer--ligne" onClick={onCompleterSituation}>
-            <ArrowLeft size={18} aria-hidden="true" focusable="false" />
-            Compléter ma situation
-          </button>
-        )}
-        <br />
-        <strong>
-          {n.convictions} conviction{n.convictions > 1 ? "s" : ""} complétée{n.convictions > 1 ? "s" : ""} sur {n.sujets}
-        </strong>
-        {n.convictions < n.sujets && onCompleterConvictions && (
-          <button type="button" className="secondaire bouton-completer bouton-completer--ligne" onClick={onCompleterConvictions}>
-            <ArrowLeft size={18} aria-hidden="true" focusable="false" />
-            Compléter mes convictions
-          </button>
-        )}
-      </p>
+      <div className="intro-decomptes">
+        <p className="intro-decompte">
+          <strong>
+            {n.repondues} question{n.repondues > 1 ? "s" : ""} répondue{n.repondues > 1 ? "s" : ""} sur {n.questions}
+          </strong>
+          {n.repondues < n.questions && onCompleterSituation && (
+            <button type="button" className="secondaire bouton-completer bouton-completer--ligne" onClick={onCompleterSituation}>
+              <ArrowLeft size={18} aria-hidden="true" focusable="false" />
+              Compléter ma situation
+            </button>
+          )}
+        </p>
+        <p className="intro-decompte">
+          <strong>
+            {n.convictions} conviction{n.convictions > 1 ? "s" : ""} complétée{n.convictions > 1 ? "s" : ""} sur {n.sujets}
+          </strong>
+          {n.convictions < n.sujets && onCompleterConvictions && (
+            <button type="button" className="secondaire bouton-completer bouton-completer--ligne" onClick={onCompleterConvictions}>
+              <ArrowLeft size={18} aria-hidden="true" focusable="false" />
+              Compléter mes convictions
+            </button>
+          )}
+        </p>
+      </div>
     </IntroEtape>
   );
 }

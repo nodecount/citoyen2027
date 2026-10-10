@@ -5,11 +5,12 @@ import { projeterPosition } from "./positions";
 import type { NiveauProjection } from "./projection";
 
 // « Candidat idéal » : le SEUL endroit du produit où l'on désigne un candidat (exception décidée le 2026-09-30, voir
-// CLAUDE.md). Règle publique et identique pour tous : solde = thèmes « améliorant » moins thèmes « dégradant » ; « mixte »,
-// « non concerné » et l'absence d'indicateur comptent zéro ; aucune pondération entre thèmes.
+// CLAUDE.md). Règle publique et identique pour tous : solde = thèmes « améliorant » moins thèmes « dégradant » ; un thème « mixte »
+// (décision du 2026-10-10) compte DANS LES DEUX : +1 pour ses mesures favorables ET −1 pour ses mesures défavorables (solde nul, mais
+// présent des deux côtés) ; « non concerné », « mixte à préciser » et l'absence d'indicateur comptent zéro ; aucune pondération.
 export interface LignePourSolde {
   meta: { slug: string };
-  projection: { niveau: NiveauProjection | null; effetsRetenus?: Array<{ propositionId: string }> } | null;
+  projection: { niveau: NiveauProjection | null; effetsRetenus?: Array<{ propositionId: string; polarite?: "favorable" | "defavorable" }> } | null;
   propositions: Proposition[];
   // Résumé du candidat sur le thème (mots clés qui regroupent ses mesures) : sert à nommer les groupes derrière le score.
   resume?: { segments: Array<{ texte: string; mesures: string[] }> } | null;
@@ -40,7 +41,8 @@ export interface Solde {
   // Thèmes (situation) ou constats groupe × thème (convictions) où le candidat a un niveau : la couverture du solde.
   analyses: number;
   solde: number;
-  // Les mesures derrière le score : seuls les thèmes (ou constats) comptés +1 ou −1 y figurent, jamais les « mixte ».
+  // Les mesures derrière le score : les thèmes (ou constats) comptés +1 ou −1 y figurent ; un « mixte » figure dans les deux listes, avec
+  // ses seules mesures favorables d'un côté et ses seules mesures défavorables de l'autre.
   pour: Raison[];
   contre: Raison[];
 }
@@ -54,15 +56,17 @@ function soldesVides(cards: CardPourSolde[]): Map<string, Solde> {
   return new Map([...slugs].sort().map((slug) => [slug, { slug, ameliorants: 0, degradants: 0, analyses: 0, solde: 0, pour: [], contre: [] }]));
 }
 
-// `pour` / `contre` : le point à ajouter à la liste correspondante si le niveau est « améliorant » / « dégradant ».
+// `pour` / `contre` : le point à ajouter à la liste correspondante si le niveau est « améliorant » / « dégradant ». Un « mixte » compte
+// +1 et −1 à la fois, à condition de recevoir les deux points (un « mixte à préciser » n'en reçoit pas : il compte zéro).
 function compter(s: Solde, niveau: NiveauProjection | null, pour?: Raison, contre?: Raison): void {
   if (niveau === null) return;
   s.analyses += 1;
-  if (niveau === "ameliorant") {
+  const mixte = niveau === "mixte" && pour !== undefined && contre !== undefined;
+  if (niveau === "ameliorant" || mixte) {
     s.ameliorants += 1;
     if (pour) s.pour.push(pour);
   }
-  if (niveau === "degradant") {
+  if (niveau === "degradant" || mixte) {
     s.degradants += 1;
     if (contre) s.contre.push(contre);
   }
@@ -100,10 +104,20 @@ export function soldesSituation(cards: CardPourSolde[]): Solde[] {
   const soldes = soldesVides(cards);
   for (const card of cards) {
     for (const l of card.lignes) {
-      const ids = new Set((l.projection?.effetsRetenus ?? []).map((e) => e.propositionId));
-      const raison = point(l, card.theme.id, ids);
-      // Un thème « améliorant » ne retient que des effets favorables, un thème « dégradant » que des défavorables.
-      compter(soldes.get(l.meta.slug)!, l.projection?.niveau ?? null, raison, raison);
+      const retenus = l.projection?.effetsRetenus ?? [];
+      const niveau = l.projection?.niveau ?? null;
+      const ids = (garde: (e: { polarite?: string }) => boolean) => new Set(retenus.filter(garde).map((e) => e.propositionId));
+      // Un thème « améliorant » ne retient que des effets favorables, un thème « dégradant » que des défavorables : tous comptent.
+      // Un « mixte » réel (favorables ET défavorables retenus) les répartit entre les deux listes ; un « mixte à préciser » n'a rien à répartir.
+      const favorables = ids((e) => e.polarite === "favorable");
+      const defavorables = ids((e) => e.polarite === "defavorable");
+      if (niveau === "mixte") {
+        const reel = favorables.size > 0 && defavorables.size > 0;
+        compter(soldes.get(l.meta.slug)!, niveau, reel ? point(l, card.theme.id, favorables) : undefined, reel ? point(l, card.theme.id, defavorables) : undefined);
+      } else {
+        const raison = point(l, card.theme.id, ids(() => true));
+        compter(soldes.get(l.meta.slug)!, niveau, raison, raison);
+      }
     }
   }
   return [...soldes.values()];

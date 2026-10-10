@@ -440,8 +440,19 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
         {/* Les deux totaux (groupes, puis mesures) d'abord, puis les onglets collés en haut de la fenêtre : on change de vue sans
             remonter, même avec beaucoup de mesures. */}
         <div className="ideal-totaux">
-          <p className="hint">{phraseTotal(ligne.pour, ligne.contre, unite, false)}</p>
-          <p className="hint">{phraseTotal(ligne.pour, ligne.contre, unite, true)}</p>
+          {[
+            { mesures: false, libelle: "Groupes de mesures" },
+            { mesures: true, libelle: "Mesures" },
+          ].map(({ mesures, libelle }) => {
+            const nPour = badgesDe(ligne.pour, mesures).length;
+            const nContre = badgesDe(ligne.contre, mesures).length;
+            return (
+              <div key={libelle} className="ideal-total">
+                <span className="ideal-total-libelle">{libelle}</span>
+                <Jauge ameliorants={nPour} degradants={nContre} echelle={Math.max(nPour, nContre, 1)} />
+              </div>
+            );
+          })}
         </div>
         <div className="ideal-onglets" role="tablist" aria-label="Affichage des mesures">
           {[

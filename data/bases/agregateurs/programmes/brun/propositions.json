@@ -42,29 +42,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "positions": [],
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "retraite"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "pensions supérieures à 3 000 € bruts par mois"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Désindexer les pensions supérieures à 3 000 € bruts par mois."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "brun-retraites-travail-003",

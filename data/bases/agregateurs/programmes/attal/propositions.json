@@ -147,6 +147,26 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Faire une année blanche sur l’ensemble des prestations sociales pour le budget 2028"
       }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "rsa",
+              "prime_activite",
+              "aide_logement",
+              "allocations_familiales",
+              "aah"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire une année blanche sur l’ensemble des prestations sociales pour le budget 2028 sans toucher aux petites retraites."
+      }
     ]
   },
   {
@@ -169,22 +189,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "fonctionnaire"
-            ]
-          }
-        ],
-        "dimension": "emploi",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer 100 000 postes de fonctionnaires. Economies : plus de 7Md€, grâce à un plan de départs volontaires, sans toucher aux ministères de l’éducation nationale, des armées, de la justice et de l’intérieur."
-      }
-    ],
+    "effets": [],
     "positions": [
       {
         "sujet": "fonction_publique",
@@ -841,7 +846,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Réformer le 1er mai chômé pour permettre aux commerçants de travailler."
       }
-    ]
+    ],
+    "effets": []
   },
   {
     "id": "attal-retraites-travail-003",
@@ -886,22 +892,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer le plafond de 220 heures supplémentaires annuelles autorisées."
-      }
-    ],
     "positions": [
       {
         "sujet": "temps_travail",
@@ -935,6 +925,22 @@
       {
         "sujet": "ia",
         "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Plannifier la formation de 20 M de salariés sur 5 ans pour l’intelligence artificielle."
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Plannifier la formation de 20 M de salariés sur 5 ans pour l’intelligence artificielle."
       }
@@ -1005,15 +1011,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "protection_sociale",
-        "sens": "indetermine",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Changer de système de retraite : supprimer l’âge de départ légal, maintenir la durée de cotisation."
-      }
-    ],
     "positions": []
   },
   {
@@ -1049,7 +1046,7 @@
         "dimension": "patrimoine",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "dotation en capital gérée par un fonds souverain, abondé automatiquement à hauteur de 1 000 € par l’État à la naissance de chaque enfant"
+        "extrait": "abondé automatiquement à hauteur de 1 000 € par l’État à la naissance de chaque enfant"
       }
     ],
     "positions": []

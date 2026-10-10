@@ -329,6 +329,15 @@ export const SUJETS_CONVICTION: SujetConviction[] = [
       { id: "libre_echange", libelle: "Défendre le libre-échange et l'ouverture", definition: "défendre le libre-échange, signer ou maintenir des accords commerciaux, s'opposer aux barrières douanières" },
     ],
   },
+  {
+    id: "entreprises",
+    libelle: "Entreprises",
+    question: "Sur les entreprises, quelle position vous parle le plus ?",
+    positions: [
+      { id: "soutenir_entreprises", libelle: "Alléger la fiscalité et les charges des entreprises", definition: "baisser l'impôt sur les sociétés, les impôts de production ou les cotisations patronales, simplifier les règles, aider l'embauche ou l'investissement des entreprises" },
+      { id: "encadrer_entreprises", libelle: "Faire davantage contribuer et encadrer les entreprises", definition: "taxer les superprofits ou les grandes entreprises, relever l'impôt sur les sociétés, conditionner les aides publiques, encadrer les dividendes, les licenciements ou les rémunérations" },
+    ],
+  },
 ];
 
 // Choix du visiteur : identifiant de sujet → identifiant de position. Un sujet absent = « pas d'avis ».

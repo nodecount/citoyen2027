@@ -275,8 +275,8 @@
             ]
           }
         ],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Restructurer les emprunts des ménages surendettés"
       },
@@ -285,7 +285,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "garantir à tous l’accès effectif aux services bancaires de base"
+        "extrait": "garantir à tous l’accès effectif aux services bancaires de base."
       }
     ],
     "positions": []
@@ -347,7 +347,7 @@
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "interdire la « réduflation »"
+        "extrait": "Indexer les prix des produits de première nécessité et interdire la « réduflation »."
       }
     ],
     "positions": []
@@ -576,22 +576,6 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Instaurer un impôt plancher annuel de 2% sur les patrimoines supérieurs à 100 millions d'euros (taxe Zucman)."
       }
-    ],
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "patrimoines supérieurs à 100 millions d'euros"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer un impôt plancher annuel de 2% sur les patrimoines supérieurs à 100 millions d'euros (taxe Zucman)."
-      }
     ]
   },
   {
@@ -614,22 +598,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "revenus du capital"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer la flat tax et imposer les revenus du capital comme ceux du travail."
-      }
-    ],
     "positions": [
       {
         "sujet": "fiscalite",
@@ -689,29 +657,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "heritage",
-            "valeurs": [
-              "recu",
-              "a_venir"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "plus hauts patrimoines, héritage maximal de 12M€"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter les droits de succession sur les plus hauts patrimoines"
-      }
-    ],
     "positions": [
       {
         "sujet": "ultra_riches",
@@ -755,14 +700,14 @@
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser la TVA sur les produits de première nécessité de 5,5 % à 5 %."
+        "extrait": "Baisser la TVA sur les produits de première nécessité de 5,5 % à 5 %"
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "produits de « grand luxe »"
+              "acheteurs de produits de « grand luxe »"
             ]
           }
         ],
@@ -816,22 +761,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes transférant leur domicile fiscal hors de France (exit tax)"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rétablir l’exit tax supprimée par Emmanuel Macron."
-      }
-    ],
+    "effets": [],
     "positions": [
       {
         "sujet": "ultra_riches",
@@ -912,36 +842,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "situation_familiale",
-            "valeurs": [
-              "marie_pacse"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre fin au quotient conjugal"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "enfants_a_charge",
-            "valeurs": [
-              "au_moins_un"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "indetermine",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "remplacer l’injuste quotient familial fiscal actuel par un crédit d’impôt par enfant que pourraient toucher toutes les familles"
-      }
-    ],
     "positions": []
   },
   {

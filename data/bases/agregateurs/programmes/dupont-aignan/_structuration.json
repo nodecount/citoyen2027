@@ -51,15 +51,15 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "0fad34fc4b9e62c0",
-    "date": "2026-10-04",
+    "empreinte": "ee7bfc88c20707b9",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 1,
-    "avec_effets": 0,
-    "sans_effet": 1,
+    "avec_effets": 1,
+    "sans_effet": 0,
     "rejetees": [],
-    "cout_reference_usd": 0.0313,
-    "appels": 1
+    "cout_reference_usd": 0.0445,
+    "appels": 2
   },
   {
     "theme": "social-solidarite",

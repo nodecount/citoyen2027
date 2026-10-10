@@ -33,8 +33,8 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "608c038a4eaa171f",
-    "date": "2026-10-04",
+    "empreinte": "8975315a0202c38c",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
@@ -42,10 +42,10 @@
     "rejetees": [
       {
         "id": "le-pen-finances-publiques-001",
-        "raison": "relecture : Le seuil de patrimoine (plus de 1,3M) n'est pas mentionné dans le texte, il est déduit par analogie avec l'ancien ISF, ce qui est un mécanisme supposé."
+        "raison": "relecture : Le texte ne précise aucun seuil de patrimoine (1,3M€ est le seuil de l'ancien ISF, non mentionné dans l'extrait), donc le ciblage 'plus_1_3m' n'est pas fondé par le texte."
       }
     ],
-    "cout_reference_usd": 0.0419,
+    "cout_reference_usd": 0.0428,
     "appels": 2
   },
   {
@@ -77,14 +77,14 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "262625e1349e6d34",
-    "date": "2026-10-04",
+    "empreinte": "8b5c421fb51bd4ba",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 6,
     "avec_effets": 1,
     "sans_effet": 5,
     "rejetees": [],
-    "cout_reference_usd": 0.0421,
+    "cout_reference_usd": 0.0464,
     "appels": 2
   },
   {

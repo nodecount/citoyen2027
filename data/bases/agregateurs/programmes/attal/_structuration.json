@@ -33,19 +33,14 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "16059fd34dcc9a62",
-    "date": "2026-10-04",
+    "empreinte": "aa4b415832ee102a",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 13,
     "avec_effets": 2,
-    "sans_effet": 10,
-    "rejetees": [
-      {
-        "id": "attal-finances-publiques-006",
-        "raison": "relecture : Le texte exclut explicitement les petites retraites, mais l'ASPA (minimum vieillesse) est incluse dans les cibles alors qu'elle en relève directement."
-      }
-    ],
-    "cout_reference_usd": 0.0544,
+    "sans_effet": 11,
+    "rejetees": [],
+    "cout_reference_usd": 0.0604,
     "appels": 2
   },
   {
@@ -90,23 +85,23 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "921946647d5d86c4",
-    "date": "2026-10-04",
+    "empreinte": "7fb39df78770b9f0",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 8,
-    "avec_effets": 5,
-    "sans_effet": 1,
+    "avec_effets": 4,
+    "sans_effet": 2,
     "rejetees": [
       {
-        "id": "attal-retraites-travail-002",
-        "raison": "relecture : La dimension 'emploi' n'est pas fondée : le texte permet de travailler un jour donné, ce qui relève du temps de travail, pas de la création/destruction d'emploi."
+        "id": "attal-retraites-travail-004",
+        "raison": "relecture : Supprimer le plafond ne garantit pas une hausse de revenu : cela dépend du choix de l'employeur/salarié de faire plus d'heures, c'est un effet déduit d'un mécanisme supposé."
       },
       {
-        "id": "attal-retraites-travail-005",
-        "raison": "relecture : La hausse d'emploi est un effet macroéconomique déduit d'un plan de formation, non affirmé par le texte."
+        "id": "attal-retraites-travail-007",
+        "raison": "relecture : Les cibles sont vides et l'extrait ne fonde pas clairement un effet sur la protection sociale, ce qui rend l'effet non étayé."
       }
     ],
-    "cout_reference_usd": 0.072,
+    "cout_reference_usd": 0.0711,
     "appels": 2
   },
   {

@@ -2,8 +2,8 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "225c91095088c788",
-    "date": "2026-10-04",
+    "empreinte": "1f4f2ff886d48e8b",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 3,
     "avec_effets": 2,
@@ -11,10 +11,10 @@
     "rejetees": [
       {
         "id": "hollande-finances-publiques-001",
-        "raison": "relecture : Le critère tranche_patrimoine 'plus_1_3m' élargit le périmètre : le texte vise les patrimoines supérieurs à 10 millions d'euros, pas dès 1-3 millions."
+        "raison": "relecture : La cible 'plus_1_3m' élargit le périmètre par rapport au texte qui vise uniquement les patrimoines supérieurs à 10 millions d'euros."
       }
     ],
-    "cout_reference_usd": 0.0487,
+    "cout_reference_usd": 0.0501,
     "appels": 2
   }
 ]

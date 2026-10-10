@@ -89,6 +89,13 @@ export const ELECTORATS: Electorat[] = [
     reponses: { tranche_age: "65_plus", statut_professionnel: "retraite", montant_pension: "moins_1000", tranche_revenus: "moins_1200", situation_familiale: "celibataire", nombre_enfants: "0", logement: "locataire", territoire: "rural", vehicule: "thermique", usage_autoroute: "non", nationalite: "francaise", aidant_familial: "oui", desert_medical: "oui", handicap: "non" },
     convictions: { fin_de_vie: "soins_palliatifs", sante_organisation: "hopital_public", travail: "age_actuel", fonction_publique: "plus_services_publics", libertes: "cadre_collectif" },
   },
+  {
+    id: "chef-entreprise",
+    nom: "Chef d'entreprise",
+    description: "50-64 ans, chef d'entreprise à plus de 5 000 €, marié avec 2 enfants, propriétaire en ville moyenne, voiture thermique.",
+    reponses: { tranche_age: "50_64", statut_professionnel: "chef_entreprise", tranche_revenus: "plus_5000", situation_familiale: "marie_pacse", nombre_enfants: "2", logement: "proprietaire", territoire: "ville_moyenne", vehicule: "thermique", usage_autoroute: "oui", nationalite: "francaise", tranche_patrimoine: "500k_1_3m" },
+    convictions: { entreprises: "soutenir_entreprises", fiscalite: "baisse_impots", ultra_riches: "ne_pas_taxer_ultra_riches", salaires: "moderer_salaires", temps_travail: "travailler_davantage", aides_sociales: "conditionner_aides", dette: "reduire_dette", commerce: "libre_echange" },
+  },
 ];
 
 export interface Gagnant {

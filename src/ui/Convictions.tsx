@@ -1,4 +1,4 @@
-import { Atom, Banknote, Briefcase, Car, Coins, Cpu, GraduationCap, Gavel, HeartPulse, House, Lock, Megaphone, Stethoscope, Swords, Wheat, Eraser, Highlighter, Landmark, Leaf, Scale, ShieldCheck, Users, type LucideIcon } from "lucide-react";
+import { Atom, Banknote, Briefcase, Building2, Car, Coins, Cpu, GraduationCap, Gavel, HeartPulse, House, Lock, Megaphone, Stethoscope, Swords, Wheat, Eraser, Highlighter, Landmark, Leaf, Scale, ShieldCheck, Users, type LucideIcon } from "lucide-react";
 import { useContext, useState } from "react";
 import { compterMesuresPosition } from "../engine/mesuresImpactees";
 import { PropositionsBase } from "./PropositionsContexte";
@@ -60,6 +60,7 @@ const ICONES_SUJETS: Record<string, LucideIcon> = {
   surveillance: Lock,
   dette: Coins,
   commerce: Banknote,
+  entreprises: Building2,
   europe: Landmark,
   immigration: Users,
   fiscalite: Coins,

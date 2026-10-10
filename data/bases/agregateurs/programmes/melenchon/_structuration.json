@@ -51,37 +51,53 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "f9688e25f9ff53cc",
-    "date": "2026-10-04",
+    "empreinte": "c1ad4f7ccea9edc5",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 8,
+    "avec_effets": 5,
     "sans_effet": 16,
     "rejetees": [
       {
         "id": "melenchon-finances-publiques-021",
-        "raison": "relecture : Le texte ne précise aucun seuil de patrimoine pour l'ISF ; le seuil 'plus_1_3m' est une connaissance extérieure non fondée par l'extrait."
+        "raison": "relecture : Le texte ne précise aucun seuil de patrimoine ; le critère 'plus_1_3m' est déduit de la connaissance externe de l'ancien seuil de l'ISF, non fondé par l'extrait."
+      },
+      {
+        "id": "melenchon-finances-publiques-022",
+        "raison": "relecture : Le texte vise uniquement les patrimoines supérieurs à 100M€, mais la cible 'plus_1_3m' élargit le périmètre à des patrimoines bien moins élevés que ne le dit le texte."
+      },
+      {
+        "id": "melenchon-finances-publiques-023",
+        "raison": "relecture : Aligner la fiscalité du capital sur celle du travail peut selon le niveau de revenu augmenter ou diminuer l'imposition ; le sens 'baisse' n'est pas certain et devrait être 'indetermine'."
+      },
+      {
+        "id": "melenchon-finances-publiques-025",
+        "raison": "relecture : Le texte vise les plus hauts patrimoines (héritage max 12M€), mais la cible 'heritage: recu/a_venir' sans restriction élargit le périmètre à tous les héritiers, non seulement aux plus hauts patrimoines."
       }
     ],
-    "cout_reference_usd": 0.0939,
+    "cout_reference_usd": 0.1005,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 1,
-    "empreinte": "028b020e4bc4c636",
-    "date": "2026-10-04",
+    "empreinte": "486cc6c34bde4042",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 15,
-    "avec_effets": 3,
-    "sans_effet": 11,
+    "avec_effets": 1,
+    "sans_effet": 12,
     "rejetees": [
       {
         "id": "melenchon-finances-publiques-030",
-        "raison": "relecture : La mesure modifie l'impôt payé (donc le revenu disponible), pas le patrimoine lui-même, qui n'est que la base de calcul."
+        "raison": "relecture : Le texte ne précise aucun seuil de patrimoine (1,3M€, 100k€) ; ces tranches sont inventées et non fondées par l'extrait."
+      },
+      {
+        "id": "melenchon-finances-publiques-031",
+        "raison": "relecture : L'effet de hausse uniforme pour toutes les familles avec enfants suppose un mécanisme de redistribution non précisé par le texte, alors que remplacer le quotient familial par un crédit d'impôt peut au contraire faire baisser le revenu disponible des familles aisées qui bénéficiaient le plus du quotient."
       }
     ],
-    "cout_reference_usd": 0.0458,
+    "cout_reference_usd": 0.0475,
     "appels": 2
   },
   {

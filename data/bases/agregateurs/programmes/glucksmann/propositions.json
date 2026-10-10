@@ -134,7 +134,7 @@
             ]
           }
         ],
-        "dimension": "revenu_disponible",
+        "dimension": "patrimoine",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Taxer les méga-héritages, ciblant les 1 % des successions les plus importantes."
@@ -210,7 +210,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "plus hauts patrimoines"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne pour éviter l'exil fiscal."
+      }
+    ],
     "positions": [
       {
         "sujet": "ultra_riches",
@@ -285,10 +300,10 @@
             ]
           }
         ],
-        "dimension": "revenu_disponible",
+        "dimension": "patrimoine",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "grâce à une taxation des gros héritages"
+        "extrait": "grâce à une taxation des gros héritages."
       }
     ]
   },
@@ -1262,22 +1277,6 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Augmenter le SMIC à 1600€ net."
       }
-    ],
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "tranche_revenus",
-            "valeurs": [
-              "moins_1200"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter le SMIC à 1600€ net."
-      }
     ]
   },
   {
@@ -1466,7 +1465,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "positions": []
+    "positions": [],
+    "effets": []
   },
   {
     "id": "glucksmann-retraites-travail-010",
@@ -1512,16 +1512,9 @@
     "sous_theme": "Système de retraite",
     "effets": [
       {
-        "cibles": [
-          {
-            "champ": "tranche_age",
-            "valeurs": [
-              "50_64"
-            ]
-          }
-        ],
+        "cibles": [],
         "dimension": "protection_sociale",
-        "sens": "hausse",
+        "sens": "indetermine",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Abroger la réforme Macron de 2023."
       }
@@ -1578,7 +1571,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier_penible",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Imaginer une réforme des retraites qui mette la pénibilité des métiers au cœur."
+      }
+    ],
     "positions": []
   },
   {

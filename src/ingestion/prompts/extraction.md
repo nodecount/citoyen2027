@@ -86,6 +86,10 @@ Correspondances exactes (à appliquer telles quelles quand le texte les vise) :
   l'aide nommée.
 - « enseignants » ou « agriculteurs » ou « soignants » → `metier` ; « apprentis et alternants » → `statut_professionnel` :
   [`apprenti`] ; « étudiants étrangers » → `statut_professionnel` : [`etudiant`] ET `nationalite` : [`europeenne`, `hors_ue`].
+- « chefs d'entreprise », « employeurs », « patrons de TPE/PME » (ou une mesure qui change ce que l'employeur paie ou reçoit : cotisations
+  patronales, impôt sur les sociétés des PME, aides à l'embauche versées à l'employeur) → `statut_professionnel` : [`chef_entreprise`].
+  Un indépendant, artisan ou profession libérale seul reste `independant` ; une mesure sur les seules grandes entreprises ou les
+  actionnaires vise un public que le formulaire ne décrit pas (`autre`).
 - « propriétaires de 4 logements ou plus (hors résidence principale) » → `logements_hors_residence` : [`quatre_ou_plus`].
 - « propriétaires de véhicules thermiques » → `vehicule` : [`thermique`].
 - « usagers de l'autoroute » ou « péages » → `vehicule` : [`thermique`, `electrique_hybride`] ET `usage_autoroute` :

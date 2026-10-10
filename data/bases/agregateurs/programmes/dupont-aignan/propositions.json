@@ -868,7 +868,28 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "francaise"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "nouveau né"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Fournir un \" minimum retraite \" de 10 000 euros à chaque nouveau né français, qui sera gelé jusqu'à 60 ans."
+      }
+    ],
     "positions": []
   },
   {

@@ -9,7 +9,7 @@ const card = (lignes: ReturnType<typeof ligne>[], absents: string[] = []): CardP
 const solde = (slug: string, ameliorants: number, degradants: number, analyses = ameliorants + degradants): Solde => ({ slug, ameliorants, degradants, analyses, solde: ameliorants - degradants, pour: [], contre: [] });
 
 describe("soldesSituation", () => {
-  it("améliorants moins dégradants ; mixte, non concerné et sans indicateur comptent zéro", () => {
+  it("améliorants moins dégradants ; mixte sans mesure retenue (à préciser), non concerné et sans indicateur comptent zéro", () => {
     const cards = [
       card([ligne("a", "ameliorant"), ligne("b", "degradant")]),
       card([ligne("a", "ameliorant"), ligne("b", "mixte")]),
@@ -24,13 +24,21 @@ describe("soldesSituation", () => {
     const cards = [card([ligne("a", "ameliorant")]), card([ligne("a", "degradant")]), card([ligne("a", "degradant")])];
     expect(soldesSituation(cards)[0].solde).toBe(-1);
   });
-  it("garde les titres des mesures des thèmes comptés ; un thème mixte n'en apporte aucune", () => {
+  it("garde les titres des mesures des thèmes comptés ; un thème mixte compte +1 ET −1, avec ses mesures de chaque sens", () => {
     const p = (id: string): Proposition => ({ id, candidat: "x", theme: "t", titre: `Titre ${id}`, resume_factuel: "", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-10-01" });
-    const avecEffets = (niveau: NiveauProjection, ids: string[]) => ({ meta: { slug: "a" }, projection: { niveau, effetsRetenus: ids.map((propositionId) => ({ propositionId })) }, propositions: [p("1"), p("2"), p("3")] });
+    const avecEffets = (niveau: NiveauProjection, ids: string[]) => ({ meta: { slug: "a" }, projection: { niveau, effetsRetenus: ids.map((propositionId) => ({ propositionId, polarite: niveau === "degradant" || propositionId === "2" && niveau === "mixte" ? ("defavorable" as const) : ("favorable" as const) })) }, propositions: [p("1"), p("2"), p("3")] });
     const s = soldesSituation([card([avecEffets("ameliorant", ["1"])]), card([avecEffets("degradant", ["2", "3"])]), card([avecEffets("mixte", ["1", "2"])])])[0];
     // Un point par thème compté : autant de blocs que le score en compte, chacun avec les titres de ses mesures.
-    expect(s.pour).toEqual([{ theme: "logement", groupes: ["Titre 1"], mesures: ["Titre 1"] }]);
-    expect(s.contre).toEqual([{ theme: "logement", groupes: ["Titre 2", "Titre 3"], mesures: ["Titre 2", "Titre 3"] }]);
+    expect(s.pour).toEqual([
+      { theme: "logement", groupes: ["Titre 1"], mesures: ["Titre 1"] },
+      { theme: "logement", groupes: ["Titre 1"], mesures: ["Titre 1"] },
+    ]);
+    expect(s.contre).toEqual([
+      { theme: "logement", groupes: ["Titre 2", "Titre 3"], mesures: ["Titre 2", "Titre 3"] },
+      { theme: "logement", groupes: ["Titre 2"], mesures: ["Titre 2"] },
+    ]);
+    // Le mixte pèse +1 et −1 : le score ne bouge pas, mais il figure des deux côtés.
+    expect(s).toMatchObject({ ameliorants: 2, degradants: 2, solde: 0, analyses: 3 });
     expect([s.pour.length, s.contre.length]).toEqual([s.ameliorants, s.degradants]);
   });
   it("nomme les points par les groupes du résumé (mots clés), une fois chacun, jamais par le contenu des mesures", () => {

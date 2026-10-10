@@ -19,23 +19,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "heritage",
-            "valeurs": [
-              "recu",
-              "a_venir"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser la fiscalité sur les héritages et les donations afin de faciliter la transmission du patrimoine."
-      }
-    ],
     "positions": [
       {
         "sujet": "ultra_riches",
@@ -79,15 +62,14 @@
           {
             "champ": "heritage",
             "valeurs": [
-              "a_venir",
-              "recu"
+              "a_venir"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter les abattements sur les donations, jugés aujourd’hui insuffisants, pour permettre aux parents de transmettre davantage à leurs enfants de leur vivant."
+        "extrait": "Augmenter les abattements sur les donations"
       }
     ]
   },
@@ -111,7 +93,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "a_venir"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre à chacun de transmettre son patrimoine aux personnes de son choix, au-delà de sa famille"
+      }
+    ],
     "positions": []
   },
   {
@@ -1080,7 +1077,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": [],
     "positions": []
   },
   {

@@ -267,16 +267,13 @@ describe("Détail d'une ligne (fenêtre)", () => {
     expect(html).not.toContain("ideal-voir-mesures");
     expect(html).not.toContain("ideal-voir-plus");
   });
-  it("au-dessus des onglets : les deux phrases de total (groupes puis mesures), et elles ne sont pas répétées sous les onglets", () => {
+  it("au-dessus des onglets : deux jauges de total (groupes puis mesures), à la place des phrases", () => {
     const l = { ...ligne, pour: [{ theme: "logement", groupes: ["G1", "G2"], mesures: ["Mes-un", "Mes-deux", "Mes-trois"] }], contre: [{ theme: "retraite", groupes: ["G3"], mesures: ["Mes-quatre"] }] };
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
-    const groupes = "Au total : 2 groupes de mesures favorables à votre situation, 1 groupe de mesures défavorable à votre situation.";
-    const mesures = "Au total : 3 mesures favorables à votre situation, 1 mesure défavorable à votre situation.";
-    expect(html).toContain(groupes);
-    expect(html).toContain(mesures);
-    expect(html.indexOf(groupes)).toBeLessThan(html.indexOf(mesures));
-    expect(html.indexOf(mesures)).toBeLessThan(html.indexOf('role="tablist"'));
-    expect(html.match(/Au total/g)).toHaveLength(2);
+    expect(html).not.toContain("Au total");
+    const jauges = html.match(/aria-label="Score [^"]*"/g) ?? [];
+    expect(jauges).toEqual(['aria-label="Score +1 : 2 favorables moins 1 défavorable, sur 2 étudiés"', 'aria-label="Score +2 : 3 favorables moins 1 défavorable, sur 3 étudiés"']);
+    expect(html.indexOf("ideal-total-libelle")).toBeLessThan(html.indexOf('role="tablist"'));
   });
   it("égalité : des onglets, un par candidat de la ligne, avec le premier sélectionné ; pas d'onglets pour un seul candidat", () => {
     const b = { ...gagnant("D", "Nom-Deux", "slug-d", 3), rang: 1 };
