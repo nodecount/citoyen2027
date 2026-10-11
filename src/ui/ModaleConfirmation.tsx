@@ -37,7 +37,7 @@ export function ModaleConfirmation({ ouverte, titre, message, libelleConfirmer, 
           <button type="button" className="secondaire" ref={annuler} onClick={onAnnuler}>
             Annuler
           </button>
-          <button type="button" onClick={onConfirmer}>
+          <button type="button" className="bouton-danger" onClick={onConfirmer}>
             {libelleConfirmer}
           </button>
         </div>

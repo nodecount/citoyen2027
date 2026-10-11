@@ -10,7 +10,8 @@ import { cleIdentites, etatPourBase, recommencer, tirerGraine, type EtatIdeal } 
 import { BandeauRevelation, CardCandidatIdeal } from "./CardCandidatIdeal";
 import { versResultatAffiche } from "./resultatIdeal";
 import { BlocConvictions, integritesVisibles } from "./Convictions";
-import { CONVICTIONS_VIDES, lireConvictions, memoriserConvictions, type Convictions } from "./memoireConvictions";
+import { aDesConvictions, CONVICTIONS_VIDES, lireConvictions, memoriserConvictions, type Convictions } from "./memoireConvictions";
+import { etapeDeDepart, lireEtape, memoriserEtape } from "./memoireEtape";
 import type { ModeAffichage } from "./memoireReponses";
 import { ModaleConfirmation } from "./ModaleConfirmation";
 import { BandeauPertinence, Etapes, IntroEtape, IntroMesures, NavEtape, RecapReponses, type Etape } from "./ParcoursSimulateur";
@@ -54,12 +55,19 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   // Incrémenté à chaque effacement : le formulaire repart d'un brouillon vide au lieu de garder d'anciennes réponses affichées.
   const [versionFormulaire, setVersionFormulaire] = useState(0);
   const [confirmerEffacement, setConfirmerEffacement] = useState(false);
-  const { avecDonnees: candidats, enCoursAnalyse } = candidatsDeBase(base);
+  const [confirmerConvictions, setConfirmerConvictions] = useState(false);
+  const { avecDonnees: candidats } = candidatsDeBase(base);
   const manquants = resumesManquants(base, candidats);
   const personnalise = simulateur && generalSoumis && aDesInformations(profil);
   // Le simulateur est un parcours : situation, mesures adaptées à cette situation, convictions, puis candidat idéal (card et
-  // rappel des réponses). Un visiteur qui revient avec des réponses gardées arrive directement sur son résultat.
-  const [etape, setEtape] = useState<Etape>(() => etapeInitiale ?? (releveInitial || personnalise ? "resultat" : "situation"));
+  // rappel des réponses). Un visiteur qui revient arrive sur l'étape où il s'était arrêté (voir memoireEtape.ts), à défaut sur
+  // celle que déduisent ses réponses et convictions gardées : 1 par défaut, puis 2 ou 3.
+  const [etape, setEtape] = useState<Etape>(
+    () => etapeInitiale ?? (releveInitial ? "resultat" : etapeDeDepart({ memorisee: lireEtape(), aDesReponses: personnalise, aDesConvictions: aDesConvictions(convictionsInitiales ?? lireConvictions()) })),
+  );
+  useEffect(() => {
+    if (simulateur) memoriserEtape(etape);
+  }, [simulateur, etape]);
   const cardsNommees = construireCards(base.themes, candidats, personnalise ? profil : null);
   // Simulateur À L'AVEUGLE, sans interrupteur (voir aveugle.ts) : les identités n'apparaissent qu'en « Explorer les mesures »
   // ou, plus tard, dans la card « candidat idéal » une fois révélée. Lettres retirées au sort à chaque entrée en simulateur.
@@ -161,6 +169,18 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
         }}
         onAnnuler={() => setConfirmerEffacement(false)}
       />
+      <ModaleConfirmation
+        ouverte={confirmerConvictions}
+        titre="Effacer vos convictions ?"
+        message="Vos choix (positions et intégrité) seront effacés de ce navigateur. Cette action ne peut pas être annulée."
+        libelleConfirmer="Oui, tout effacer"
+        onConfirmer={() => {
+          setConfirmerConvictions(false);
+          invaliderIdeal();
+          setConvictions(CONVICTIONS_VIDES);
+        }}
+        onAnnuler={() => setConfirmerConvictions(false)}
+      />
 
       {/* Parcours : l'écran de la situation et celui des convictions restent montés, seulement masqués, pour ne perdre aucun
           brouillon en changeant d'écran. */}
@@ -205,9 +225,8 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
                 onValider(fusion);
               }}
               onAnnuler={() => {}}
-              onEffacer={personnalise ? () => setConfirmerEffacement(true) : undefined}
             />
-            <NavEtape {...navSituation} />
+            <NavEtape {...navSituation} milieu={personnalise ? { libelle: "Effacer mes réponses", onClick: () => setConfirmerEffacement(true) } : undefined} />
           </div>
 
           <div hidden={etape !== "convictions"}>
@@ -229,7 +248,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
                 setConvictions(c);
               }}
             />
-            <NavEtape {...navConvictions} />
+            <NavEtape {...navConvictions} milieu={aDesConvictions(convictions) ? { libelle: "Effacer mes convictions", onClick: () => setConfirmerConvictions(true) } : undefined} />
           </div>
         </>
       )}
@@ -315,9 +334,6 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
         />
       )}
       {simulateur && etape === "themes" && <NavEtape {...navThemes} />}
-      {!aveugle && enCoursAnalyse.length > 0 && (
-        <p className="hint">Programmes pas encore analysés : {enCoursAnalyse.map((meta) => meta.nom).join(", ")}.</p>
-      )}
       {!aveugle && manquants.length > 0 && (
         <p className="hint">
           Résumé pas encore disponible (le détail complet des mesures reste affiché) : {manquants.map((m) => `${m.nom} (${m.themeLibelle})`).join(", ")}.

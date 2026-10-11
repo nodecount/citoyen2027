@@ -41,12 +41,28 @@ describe("BlocConvictions", () => {
     const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "encadrer_ia" }, exemplarite: false }} onChange={() => {}} />);
     expect(html).toMatch(/<option value="encadrer_ia" selected="">/);
     expect((html.match(/selected=""/g) ?? []).length).toBe(SUJETS_CONVICTION.length); // 1 choix + les sept autres sujets, restés sur « Pas d'avis »
-    expect(html).toContain(`1 position sur ${SUJETS_CONVICTION.length} sujets`);
+    expect(html).toContain(`1 conviction complétée sur ${SUJETS_CONVICTION.length}`);
   });
-  it("l'effacement est confirmé : la modale est fermée par défaut", () => {
+  it("le panneau de progression est au-dessus des cartes : % des positions, interrupteur des manquantes (actif au départ), pas de bouton", () => {
+    const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "encadrer_ia" }, exemplarite: false }} onChange={() => {}} />);
+    expect(html).toContain(`${Math.round((1 / SUJETS_CONVICTION.length) * 100)} %`);
+    expect(html).toMatch(/role="progressbar"[^>]*aria-valuenow="\d+"/);
+    expect(html).toMatch(/<input type="checkbox" role="switch" checked=""[^>]*\/><span class="interrupteur-piste"[^>]*><\/span>Mettre en valeur les réponses manquantes/);
+    expect(html).not.toContain("bouton-manquantes");
+    // Une div à part, avant la section des cartes (et non dedans).
+    expect(html.indexOf("panneau-progression")).toBeLessThan(html.indexOf('<section class="convictions'));
+    expect(html.slice(html.indexOf('<section class="convictions'))).not.toContain("panneau-progression");
+  });
+  it("le bloc ne porte plus le bouton d'effacement (il est en bas de l'écran) ; l'indicateur d'enregistrement est hors des divs, une seule fois, sous les cartes", () => {
     const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "plus_ia" }, exemplarite: false }} onChange={() => {}} />);
-    expect(html).toContain("Effacer mes convictions");
+    expect(html).not.toContain("Effacer mes convictions");
     expect(html).not.toContain("alertdialog");
+    expect(html.match(/class="rangee-enregistrement"/g)).toHaveLength(1);
+    expect(html.indexOf("rangee-enregistrement")).toBeGreaterThan(html.indexOf("</section>"));
+    // Rien de l'indicateur ni de l'effacement dans le panneau.
+    const panneau = html.slice(html.indexOf("panneau-progression"), html.indexOf('<section class="convictions'));
+    expect(panneau).not.toContain("enregistrement");
+    expect(panneau).not.toContain("Effacer");
   });
   it("« sans condamnation » cochée sans position : dit qu'elle ne change rien", () => {
     const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: {}, exemplarite: true }} onChange={() => {}} />);

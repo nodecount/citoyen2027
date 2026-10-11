@@ -8,8 +8,8 @@ const BASES: InfoBase[] = [
   { id: "b", libelle: "Base B", description: "Description B.", avertissement: "" },
 ];
 
-const rendre = (ouverte: boolean) =>
-  renderToStaticMarkup(<ModaleBase ouverte={ouverte} bases={BASES} actif="b" onChoisir={() => {}} onControle={() => {}} onFermer={() => {}} />);
+const rendre = (ouverte: boolean, sansMesure?: Record<string, string[]>) =>
+  renderToStaticMarkup(<ModaleBase ouverte={ouverte} bases={BASES} actif="b" onChoisir={() => {}} onControle={() => {}} onFermer={() => {}} sansMesure={sansMesure} />);
 
 describe("ModaleBase", () => {
   it("n'existe pas dans la page tant qu'elle est fermée", () => {
@@ -31,6 +31,13 @@ describe("ModaleBase", () => {
     expect(radio("b")).toContain("checked");
     expect(radio("a")).not.toContain("checked");
     expect(html).toContain("choix-base choix-base--actif");
+  });
+
+  it("dit, sous chaque base, les candidats qu'elle ne couvre pas du tout ; rien quand la liste est vide ou absente", () => {
+    const html = rendre(true, { a: ["Nom-Un", "Nom-Deux"], b: [] });
+    expect(html).toContain("Sans mesure dans cette source pour le moment : Nom-Un, Nom-Deux.");
+    expect(html.match(/Sans mesure dans cette source/g)).toHaveLength(1);
+    expect(rendre(true)).not.toContain("Sans mesure dans cette source");
   });
 
   it("propose, pour chaque base, son monitoring et ses tests de situations", () => {

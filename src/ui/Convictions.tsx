@@ -1,4 +1,4 @@
-import { Atom, Banknote, Briefcase, Building2, Car, Coins, Cpu, GraduationCap, Gavel, HeartPulse, House, Lock, Megaphone, Stethoscope, Swords, Wheat, Eraser, Highlighter, Landmark, Leaf, Scale, ShieldCheck, Users, type LucideIcon } from "lucide-react";
+import { Atom, Banknote, Briefcase, Building2, Car, Coins, Cpu, GraduationCap, Gavel, HeartPulse, House, Lock, Megaphone, Stethoscope, Swords, Wheat, Landmark, Leaf, Scale, ShieldCheck, Users, type LucideIcon } from "lucide-react";
 import { useContext, useState } from "react";
 import { compterMesuresPosition } from "../engine/mesuresImpactees";
 import { PropositionsBase } from "./PropositionsContexte";
@@ -7,9 +7,9 @@ import { projeterPosition } from "../engine/positions";
 import { trouverPosition, trouverSujet } from "../positions";
 import { sujetsDisponibles } from "../engine/positions";
 import type { Proposition } from "../types";
-import { aDesConvictions, CONVICTIONS_VIDES, type Convictions } from "./memoireConvictions";
-import { IndicateurEnregistrement, useSignalEnregistrement } from "./IndicateurEnregistrement";
-import { ModaleConfirmation } from "./ModaleConfirmation";
+import { CONVICTIONS_VIDES, type Convictions } from "./memoireConvictions";
+import { RangeeEnregistrement, useSignalEnregistrement } from "./IndicateurEnregistrement";
+import { PanneauProgression } from "./PanneauProgression";
 
 const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 
@@ -90,31 +90,21 @@ export function BlocConvictions({ convictions, onChange: appliquer }: { convicti
     else positions[sujet] = position;
     onChange({ ...convictions, positions });
   };
-  const [confirmerEffacement, setConfirmerEffacement] = useState(false);
   // Actif par défaut : les sujets sans position sont mis en valeur dès l'arrivée, le visiteur peut le désactiver.
   const [manquantesEnValeur, setManquantesEnValeur] = useState(true);
   const nombre = sujets.filter((s) => convictions.positions[s.id] !== undefined).length;
   return (
-    <section className="convictions questionnaire questionnaire--integre" aria-label="Mes convictions">
-      <div className="questionnaire-entete">
-        <h2>Mes convictions</h2>
-        <p className="progression">
-          {nombre} position{nombre > 1 ? "s" : ""} sur {sujets.length} sujets
-        </p>
-        <button type="button" className="secondaire bouton-manquantes" aria-pressed={manquantesEnValeur} onClick={() => setManquantesEnValeur((v) => !v)}>
-          <Highlighter size={18} aria-hidden="true" focusable="false" />
-          Mettre en valeur les réponses manquantes
-        </button>
-        <IndicateurEnregistrement etat={etat} />
-        {aDesConvictions(convictions) && (
-          <div className="actions">
-            <button type="button" className="secondaire" onClick={() => setConfirmerEffacement(true)}>
-              <Eraser size={18} aria-hidden="true" focusable="false" />
-              Effacer mes convictions
-            </button>
-          </div>
-        )}
-      </div>
+    <>
+      {/* La progression dans une div à part, au-dessus de celle des cartes ; l'indicateur d'enregistrement, hors des divs, en bas à
+          droite sous les cartes ; l'effacement est en bas de l'écran (PageThemes). */}
+      <PanneauProgression
+        repondues={nombre}
+        total={sujets.length}
+        compte={`${nombre} conviction${nombre > 1 ? "s" : ""} complétée${nombre > 1 ? "s" : ""} sur ${sujets.length}`}
+        manquantesEnValeur={manquantesEnValeur}
+        onManquantes={setManquantesEnValeur}
+      />
+      <section className="convictions questionnaire questionnaire--integre" aria-label="Mes convictions">
       <div className="section-questions--cartes">
         {sujets.map((sujet) => {
           const Icone = ICONES_SUJETS[sujet.id] ?? Scale;
@@ -161,18 +151,9 @@ export function BlocConvictions({ convictions, onChange: appliquer }: { convicti
         ) : (
           <p className="hint">Les candidats ayant une condamnation connue, même avec un recours en cours, sont écartés du résultat « convictions ». Les faits ne sont pas affichés, pour ne pas dévoiler les noms.</p>
         ))}
-      <ModaleConfirmation
-        ouverte={confirmerEffacement}
-        titre="Effacer vos convictions ?"
-        message="Vos choix (positions et intégrité) seront effacés de ce navigateur. Cette action ne peut pas être annulée."
-        libelleConfirmer="Oui, tout effacer"
-        onConfirmer={() => {
-          setConfirmerEffacement(false);
-          onChange(CONVICTIONS_VIDES);
-        }}
-        onAnnuler={() => setConfirmerEffacement(false)}
-      />
-    </section>
+      </section>
+      <RangeeEnregistrement etat={etat} />
+    </>
   );
 }
 function ListeSourcesIntegrite({ sources }: { sources: Array<{ nom: string; annee: number; url: string }> }) {

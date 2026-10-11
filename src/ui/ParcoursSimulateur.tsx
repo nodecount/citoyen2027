@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, Calculator, Compass, EyeOff, RotateCcw, Target, UserRound, type LucideIcon } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calculator, Compass, Eraser, EyeOff, RotateCcw, Target, UserRound, type LucideIcon } from "lucide-react";
 import { useContext, type ReactNode } from "react";
 import type { ProfilPartiel } from "../profil";
 import { compterReponses, estRepondue, questionsVisibles, type Questionnaire } from "../questionnaire";
@@ -53,15 +53,24 @@ export function Etapes({ etape, onAller, resultatAccessible }: { etape: Etape; o
 }
 
 // Boutons de bas d'écran : retour à l'étape précédente, passage à la suivante.
-export function NavEtape({ precedent, suivant, haut = false }: { precedent?: { libelle: string; onClick: () => void }; suivant?: { libelle: string; onClick: () => void }; haut?: boolean }) {
+// `milieu` : un bouton placé AU MILIEU des deux (par exemple « Effacer mes réponses » en bas des étapes 1 et 3).
+export function NavEtape({ precedent, suivant, haut = false, milieu }: { precedent?: { libelle: string; onClick: () => void }; suivant?: { libelle: string; onClick: () => void }; haut?: boolean; milieu?: { libelle: string; onClick: () => void } }) {
   return (
-    <div className={`nav-etape${haut ? " nav-etape--haut" : ""}`}>
+    <div className={`nav-etape${haut ? " nav-etape--haut" : ""}${milieu ? " nav-etape--milieu" : ""}`}>
+      {milieu && !precedent && <span aria-hidden="true" />}
       {precedent && (
         <button type="button" className="secondaire" onClick={precedent.onClick}>
           <ArrowLeft size={18} aria-hidden="true" focusable="false" />
           {precedent.libelle}
         </button>
       )}
+      {milieu && (
+        <button type="button" className="bouton-effacer" onClick={milieu.onClick}>
+          <Eraser size={18} aria-hidden="true" focusable="false" />
+          {milieu.libelle}
+        </button>
+      )}
+      {milieu && !suivant && <span aria-hidden="true" />}
       {suivant && (
         <button type="button" onClick={suivant.onClick}>
           {suivant.libelle}

@@ -28,6 +28,8 @@ export interface GagnantAffiche {
 // Une ligne du top : le rang est partagé par les ex æquo.
 export interface LigneClassement extends GagnantAffiche {
   rang: number;
+  // Score noté sur 100 (100 = le nombre de mesures du candidat qui en a le plus), jamais négatif : c'est ce que montre la barre du top.
+  note?: number;
 }
 
 export interface ResultatAffiche {
@@ -224,6 +226,40 @@ export function Jauge({ ameliorants, degradants, echelle, barres = true }: { ame
   );
 }
 
+// Barre du top : le score noté sur 100, de 0 à 100, qui part de la gauche dans les deux colonnes. Le chiffre est écrit : la couleur ne
+// porte jamais seule l'information.
+export function JaugeNote({ note }: { note: number }) {
+  return (
+    <span className="ideal-note" role="img" aria-label={`Score ${note} sur 100`}>
+      <span className="ideal-note-piste" aria-hidden="true">
+        <span className="ideal-note-barre" style={{ width: `${Math.min(100, Math.max(0, note))}%` }} />
+      </span>
+      <span className="ideal-note-valeur" aria-hidden="true">
+        {note}
+        <small>/100</small>
+      </span>
+    </span>
+  );
+}
+
+// Rappel du score dans la fenêtre de détail : un rond dont le contour se remplit comme la barre du top (100 = le maximum), avec la
+// note écrite au centre.
+export function RondScore({ note }: { note: number }) {
+  const n = Math.min(100, Math.max(0, note));
+  return (
+    <span className="ideal-rond" role="img" aria-label={`Score ${n} sur 100`}>
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <circle className="ideal-rond-piste" cx="32" cy="32" r="27" />
+        <circle className="ideal-rond-arc" cx="32" cy="32" r="27" pathLength="100" strokeDasharray={`${n} 100`} transform="rotate(-90 32 32)" />
+      </svg>
+      <span className="ideal-rond-valeur" aria-hidden="true">
+        {n}
+        <small>/100</small>
+      </span>
+    </span>
+  );
+}
+
 // Même en-tête pour les deux résultats : une icône, et la question à laquelle il répond.
 function TitreResultat({ titre }: { titre: string }) {
   const Icone = titre === "Selon votre situation" ? UserRound : Compass;
@@ -245,11 +281,10 @@ function PortraitTop({ ligne, revele }: { ligne: LigneClassement; revele: boolea
 // égalité : leurs portraits en pile et « X candidats » à la place du nom et du parti (le détail de chacun est dans la fenêtre).
 // Révélée, toute la ligne est un bouton qui ouvre cette fenêtre ; floutée, une simple ligne (le voile la recouvre, et rien
 // d'identifiant n'y figure).
-function LignePlace({ place, echelle, revele, onOuvrir }: { place: LigneClassement[]; echelle: number; revele: boolean; onOuvrir: () => void }) {
+function LignePlace({ place, revele, onOuvrir }: { place: LigneClassement[]; revele: boolean; onOuvrir: () => void }) {
   const premier = place[0];
   const identite = revele ? premier.identite : null;
-  // Mêmes points favorables et défavorables chez tous les candidats de la ligne : barres communes ; sinon, le score seul.
-  const memeDetail = place.every((l) => l.ameliorants === premier.ameliorants && l.degradants === premier.degradants);
+  // Des ex æquo ont le même score, donc la même note : une seule barre pour toute la ligne.
   const contenu = (
     <>
       <span className="ideal-ligne-rang">{premier.rang}</span>
@@ -271,16 +306,17 @@ function LignePlace({ place, echelle, revele, onOuvrir }: { place: LigneClasseme
         ) : (
           <span className="ideal-ligne-nom">{place.length} candidats</span>
         )}
-        <Jauge ameliorants={premier.ameliorants} degradants={premier.degradants} echelle={echelle} barres={memeDetail} />
+        <JaugeNote note={premier.note ?? 0} />
       </span>
     </>
   );
+  const classe = "ideal-ligne";
   return revele && identite ? (
-    <button type="button" className="ideal-ligne" aria-haspopup="dialog" onClick={onOuvrir}>
+    <button type="button" className={classe} aria-haspopup="dialog" onClick={onOuvrir}>
       {contenu}
     </button>
   ) : (
-    <div className="ideal-ligne">{contenu}</div>
+    <div className={classe}>{contenu}</div>
   );
 }
 
@@ -288,7 +324,6 @@ function LignePlace({ place, echelle, revele, onOuvrir }: { place: LigneClasseme
 // dans la même ligne, sous un seul numéro et une seule jauge (sans mention d'égalité : ils sont côte à côte). Les titres restent nets sous le flou ; seules les lignes sont floutées.
 function ColonneTop({ resultat, revele, onOuvrir }: { resultat: ResultatAffiche; revele: boolean; onOuvrir: (place: LigneClassement[]) => void }) {
   const lignes = resultat.classement;
-  const echelle = Math.max(1, ...lignes.flatMap((l) => [l.ameliorants, l.degradants]));
   const places = [...new Set(lignes.map((l) => l.rang))].map((rang) => lignes.filter((l) => l.rang === rang));
   return (
     <div className="ideal-bloc ideal-top">
@@ -305,7 +340,7 @@ function ColonneTop({ resultat, revele, onOuvrir }: { resultat: ResultatAffiche;
         <ol className={`ideal-lignes${revele ? "" : " ideal-flou"}`} {...(revele ? {} : { "aria-hidden": true as const })}>
           {places.map((place) => (
             <li key={place[0].rang}>
-              <LignePlace place={place} echelle={echelle} revele={revele} onOuvrir={() => onOuvrir(place)} />
+              <LignePlace place={place} revele={revele} onOuvrir={() => onOuvrir(place)} />
             </li>
           ))}
         </ol>
@@ -418,6 +453,7 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
               </span>
             </h2>
           )}
+          <RondScore note={ligne.note ?? 0} />
           <button type="button" className="bouton-icone" ref={fermer} onClick={onFermer} aria-label="Fermer le détail">
             <X size={20} aria-hidden="true" focusable="false" />
           </button>
@@ -531,12 +567,13 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
           </ul>
         </section>
         <section>
-          <h3>La jauge</h3>
+          <h3>La barre de score</h3>
           <ul>
-            <li>Le vert, à droite du zéro, représente les mesures favorables.</li>
-            <li>Le rouge, à gauche, représente les mesures défavorables.</li>
-            <li>Le chiffre est la simple différence : 8 mesures favorables et 3 défavorables font +5.</li>
-            <li>La longueur des barres se compare à celle des autres candidats de la même colonne.</li>
+            <li>Le score brut est la simple différence : 8 mesures favorables et 3 défavorables font +5.</li>
+            <li>Dans les classements, il est présenté sur 100 : 100 correspond au nombre de mesures du candidat qui en propose le plus.</li>
+            <li>La barre part de la gauche. Cliquez sur un candidat : son score sur 100 est rappelé dans un rond, dont le contour se remplit comme la barre.</li>
+            <li>Un score nul ou négatif s'affiche 0 : la barre ne descend jamais sous zéro.</li>
+            <li>Dans la fenêtre de détail, le vert représente les mesures favorables et le rouge les défavorables.</li>
           </ul>
         </section>
         <section>

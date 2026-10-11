@@ -1,12 +1,12 @@
 import { describe, expect, it } from "vitest";
 import type { ConstatIntegrite } from "../data/integrite";
 import type { Proposition } from "../types";
-import { classement, combiner, ecartesParIntegrite, meilleurs, sansDonnees, selonPrisme, soldesConvictions, soldesSituation, type CardPourSolde, type Solde } from "./candidatIdeal";
+import { classement, combiner, ecartesParIntegrite, meilleurs, noteSur100, sansDonnees, selonPrisme, soldesConvictions, soldesSituation, type CardPourSolde, type Solde } from "./candidatIdeal";
 import type { NiveauProjection } from "./projection";
 
 const ligne = (slug: string, niveau: NiveauProjection | null, propositions: Proposition[] = []) => ({ meta: { slug }, projection: niveau === null ? null : { niveau }, propositions });
 const card = (lignes: ReturnType<typeof ligne>[], absents: string[] = []): CardPourSolde => ({ theme: { id: "logement" }, lignes, absents: absents.map((slug) => ({ slug })) });
-const solde = (slug: string, ameliorants: number, degradants: number, analyses = ameliorants + degradants): Solde => ({ slug, ameliorants, degradants, analyses, solde: ameliorants - degradants, pour: [], contre: [] });
+const solde = (slug: string, ameliorants: number, degradants: number, analyses = ameliorants + degradants): Solde => ({ slug, ameliorants, degradants, analyses, solde: ameliorants - degradants, totalMesures: 0, pour: [], contre: [] });
 
 describe("soldesSituation", () => {
   const mesure = (id: string): Proposition => ({ id, candidat: "x", theme: "t", titre: `Mesure ${id}`, resume_factuel: "", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-10-01" });
@@ -178,6 +178,35 @@ describe("combiner", () => {
     const sit = [solde("a", 3, 0), solde("b", 2, 0)];
     const conv = [solde("a", 0, 2), solde("b", 1, 0)];
     expect(meilleurs(combiner(sit, conv))!.gagnants.map((x) => x.slug)).toEqual(["b"]);
+  });
+});
+
+describe("classement : score noté sur 100", () => {
+  const avec = (slug: string, ameliorants: number, degradants: number, totalMesures: number): Solde => ({ ...solde(slug, ameliorants, degradants), totalMesures });
+  it("100 = le nombre de mesures du candidat qui en a le plus ; le score est rapporté à ce nombre", () => {
+    const c = classement([avec("gros", 40, 0, 200), avec("petit", 10, 0, 20), avec("moyen", 25, 5, 100)]);
+    expect(Object.fromEntries(c.map((x) => [x.solde.slug, x.note]))).toEqual({ gros: 20, moyen: 10, petit: 5 });
+  });
+  it("jamais négatif ni au-dessus de 100 ; un score nul ou négatif vaut 0, et la référence ne dépend pas des candidats écartés", () => {
+    const c = classement([avec("a", 0, 5, 50), avec("b", 3, 0, 10), avec("ecarte", 0, 0, 1000)], new Set(["ecarte"]));
+    expect(Object.fromEntries(c.map((x) => [x.solde.slug, x.note]))).toEqual({ a: 0, b: 0 });
+    expect(noteSur100(500, 100)).toBe(100);
+    expect(noteSur100(-3, 100)).toBe(0);
+    expect(noteSur100(5, 0)).toBe(100);
+  });
+  it("le classement suit le score brut, pas la note arrondie", () => {
+    const c = classement([avec("a", 3, 0, 1000), avec("b", 2, 0, 1000)]);
+    expect(c.map((x) => [x.solde.slug, x.rang, x.note])).toEqual([["a", 1, 0], ["b", 2, 0]]);
+  });
+});
+
+describe("totalMesures", () => {
+  it("compte les mesures distinctes du candidat dans les thèmes étudiés, une fois par thème", () => {
+    const p = (id: string, titre: string): Proposition => ({ id, candidat: "x", theme: "t", titre, resume_factuel: "", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-10-01" });
+    const l = (props: Proposition[]) => ({ meta: { slug: "a" }, projection: null, propositions: props });
+    const cards = [card([l([p("1", "Un"), p("2", "Deux")])]), { ...card([l([p("1", "Un"), p("3", "Trois")])]), theme: { id: "sante" } }];
+    // « Un » existe dans deux thèmes : compté deux fois ; « Deux » et « Trois » une fois chacun.
+    expect(soldesSituation(cards)[0].totalMesures).toBe(4);
   });
 });
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import type { BaseCharge } from "../data/bases";
+import { candidatsDeBase, type BaseCharge } from "../data/bases";
+import { ProgrammesSansMesure } from "./ProgrammesSansMesure";
 import { calculerCouverture, type CouvertureCandidat } from "./monitoring/couverture";
 import type { RequeteRelance, ResultatRelance } from "../ingestion/serveur-local";
 
@@ -87,6 +88,7 @@ export default function Monitoring({ base }: { base: BaseCharge }) {
     <section className="monitoring">
       <h1>Monitoring du pipeline d'ingestion</h1>
       <p>Base affichée : {base.info.libelle}.</p>
+      <ProgrammesSansMesure noms={candidatsDeBase(base).enCoursAnalyse.map((m) => m.nom)} />
 
       {couverture.length === 0 && <p>Aucune donnée de candidat trouvée dans data/bases/{base.info.id}/programmes/.</p>}
 

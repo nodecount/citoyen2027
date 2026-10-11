@@ -32,6 +32,6 @@ export function versResultatAffiche(titre: string, unite: ResultatAffiche["unite
     tousEcartes: m.tousEcartes,
     gagnants: m.gagnants.map(afficher),
     // À place égale, rangés par lettre (tirée au hasard : aucun rapport avec l'identité, donc aucun ordre entre candidats).
-    classement: classes.map((c) => ({ rang: c.rang, ...afficher(c.solde) })).sort((a, b) => a.rang - b.rang || a.lettre.localeCompare(b.lettre)),
+    classement: classes.map((c) => ({ rang: c.rang, note: c.note, ...afficher(c.solde) })).sort((a, b) => a.rang - b.rang || a.lettre.localeCompare(b.lettre)),
   };
 }

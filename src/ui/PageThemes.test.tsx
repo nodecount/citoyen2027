@@ -172,9 +172,37 @@ describe("card candidat idéal sur la page du simulateur", () => {
   const noms = candidatsDeBase(base).avecDonnees.map((c) => c.meta.nom);
   const page = (extra: Partial<Parameters<typeof PageThemes>[0]> = {}) =>
     renderToStaticMarkup(
-      <PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode="simulateur" {...extra} />,
+      <PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode="simulateur" etapeInitiale="resultat" {...extra} />,
     );
 
+  it("arrivée sans étape mémorisée : 1 sans réponse, 2 avec des réponses gardées, 3 avec des convictions gardées (jamais directement le résultat)", () => {
+    expect(page({ etapeInitiale: undefined, profil: {}, generalSoumis: false })).toContain("Voir les mesures adaptées à ma situation");
+    const avecReponses = page({ etapeInitiale: undefined });
+    expect(avecReponses).toContain('class="grille-themes"');
+    expect(avecReponses).not.toContain("carte-ideal");
+    const avecConvictions = page({ etapeInitiale: undefined, convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
+    expect(avecConvictions).toContain("Voir mon candidat idéal");
+    expect(avecConvictions).not.toContain("carte-ideal");
+  });
+  it("les deux sections secondaires (panneau de progression, légende) partagent la même classe de style, sans icône dans la légende", () => {
+    const panneau = page({ etapeInitiale: "situation" });
+    expect(panneau).toContain('class="section-secondaire panneau-progression"');
+    const themes = page({ etapeInitiale: "themes" });
+    const legende = themes.slice(themes.indexOf('class="section-secondaire echelle"'), themes.indexOf('class="echelle-reperes"'));
+    expect(legende).toContain("Si ce candidat était élu");
+    expect(legende).not.toContain("<svg");
+  });
+  it("étapes 1 et 3 : « Effacer … » est en bas de l'écran, entre les deux boutons de navigation, et plus dans le formulaire", () => {
+    const situation = page({ etapeInitiale: "situation" });
+    const nav = situation.slice(situation.lastIndexOf("nav-etape nav-etape--milieu"));
+    expect(nav).toContain("Effacer mes réponses");
+    expect(nav).toContain("bouton-effacer"); // bouton danger (rouge), pas la couleur du thème
+    expect(situation.slice(0, situation.lastIndexOf("nav-etape nav-etape--milieu"))).not.toContain("Effacer mes réponses");
+    const convictions = page({ etapeInitiale: "convictions", convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
+    expect(convictions.slice(convictions.lastIndexOf("nav-etape nav-etape--milieu"))).toContain("Effacer mes convictions");
+    // Rien à effacer : pas de bouton.
+    expect(page({ etapeInitiale: "convictions" })).not.toContain("Effacer mes convictions");
+  });
   it("floutée par défaut : la card est là, le bouton aussi, et aucun nom réel n'est dans la page", () => {
     const html = page();
     expect(html).toContain("carte-ideal--floue");
@@ -223,7 +251,7 @@ describe("card candidat idéal sur la page du simulateur", () => {
     expect(html.indexOf("bandeau-pertinence")).toBeLessThan(html.indexOf("carte-ideal"));
   });
   it("sans réponse : le parcours commence par la situation, sans thèmes ni résultat", () => {
-    const html = page({ profil: {}, generalSoumis: false });
+    const html = page({ etapeInitiale: undefined, profil: {}, generalSoumis: false });
     expect(html).toContain("Voir les mesures adaptées à ma situation");
     expect(html).not.toContain('class="grille-themes"');
     expect(html).not.toContain("Mes réponses");
@@ -286,7 +314,7 @@ describe("pages Exploration et Simulateur", () => {
   it("légende : « non concerné » et « pas d'indicateur » ne font qu'une catégorie, la dernière, qui porte l'interrupteur de masquage", () => {
     const rendu = rendreEnMode("simulateur", UNE_REPONSE, true);
     expect(rendu).not.toContain("Pas d&#x27;indicateur</span>");
-    const legende = rendu.slice(rendu.indexOf('class="echelle"'), rendu.indexOf('class="grille-themes"'));
+    const legende = rendu.slice(rendu.indexOf('class="section-secondaire echelle"'), rendu.indexOf('class="grille-themes"'));
     const reperes = [...legende.matchAll(/data-niveau="([a-z_]+)"/g)].map((m) => m[1]);
     // Trois repères sur la règle, puis « non concerné » hors règle, dernier, avec l'interrupteur.
     expect(reperes).toEqual(["ameliorant", "mixte", "degradant", "non_concerne"]);

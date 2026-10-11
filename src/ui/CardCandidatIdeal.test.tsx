@@ -1,6 +1,6 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
-import { CardCandidatIdeal, Jauge, ModaleAideScore, ModaleDetail, PoursContres, type GagnantAffiche, type ResultatAffiche } from "./CardCandidatIdeal";
+import { CardCandidatIdeal, Jauge, JaugeNote, ModaleAideScore, ModaleDetail, PoursContres, RondScore, type GagnantAffiche, type ResultatAffiche } from "./CardCandidatIdeal";
 
 const gagnant = (lettre: string, nom: string, slug: string, solde = 2): GagnantAffiche => ({ lettre, identite: { slug, nom, parti: "Parti-test" }, ameliorants: 3, degradants: 1, analyses: 7, solde, pour: [{ theme: "logement", groupes: ["Mesure-pour"], mesures: ["Vraie-mesure-pour"] }], contre: [{ theme: "retraite", groupes: ["Mesure-contre"], mesures: ["Vraie-mesure-contre"] }] });
 // Par défaut, le classement reprend les gagnants au rang 1 ; `classement` permet d'en fournir un autre.
@@ -39,7 +39,7 @@ describe("CardCandidatIdeal floutée", () => {
     const html = rendre();
     expect(html).not.toMatch(/class="ideal-ligne"[^>]*aria-haspopup/);
     expect(html).toContain("Candidat C");
-    expect(html).toContain("ideal-jauge");
+    expect(html).toContain("ideal-note");
   });
   it("bandeau : texte verbatim et bouton de révélation", () => {
     const html = rendre();
@@ -114,6 +114,7 @@ describe("CardCandidatIdeal révélée", () => {
     const html = rendre({ revele: true });
     const centre = html.slice(html.indexOf("ideal-centre"), html.indexOf("ideal-colonne--droite"));
     expect(centre).not.toContain("ideal-jauge");
+    expect(centre).not.toContain("ideal-note");
   });
   it("chaque ligne du top est un bouton qui ouvre le détail (fenêtre) ; le centre ne l'est pas", () => {
     const html = rendre({ revele: true });
@@ -134,8 +135,8 @@ describe("CardCandidatIdeal révélée", () => {
     expect(html.match(/class="ideal-ligne"[^>]*aria-haspopup="dialog"/g)).toHaveLength(2);
     expect(html).toContain("2 candidats<");
     expect(html).not.toContain("à égalité");
-    // Une seule jauge par place : 2 jauges en tout, pas 3.
-    expect(html.match(/class="ideal-jauge"/g)).toHaveLength(2);
+    // Une seule barre par place : 2 barres en tout, pas 3.
+    expect(html.match(/class="ideal-note"/g)).toHaveLength(2);
     expect(html).toContain("Nom-A");
     for (const t of ["Nom-B", "Nom-D"]) expect(html, t).not.toContain(t);
   });
@@ -181,11 +182,11 @@ describe("CardCandidatIdeal révélée", () => {
 describe("Aide « Comment est calculé le score ? »", () => {
   const html = renderToStaticMarkup(<ModaleAideScore onFermer={() => {}} />);
   it("fenêtre modale en sections courtes : situation, convictions, classements, jauge, mesures, bon à savoir", () => {
-    for (const t of ['role="dialog"', "Selon votre situation", "Selon vos convictions", "Les classements", "La jauge", "Les mesures d&#x27;un candidat", "Bon à savoir", "Fermer l&#x27;aide"]) expect(html, t).toContain(t);
+    for (const t of ['role="dialog"', "Selon votre situation", "Selon vos convictions", "Les classements", "La barre de score", "Les mesures d&#x27;un candidat", "Bon à savoir", "Fermer l&#x27;aide"]) expect(html, t).toContain(t);
     expect(html.match(/<h3>/g)).toHaveLength(6);
   });
   it("dit la règle : points, cumul au centre, 5 meilleurs, jauge, ex æquo, même règle pour tous", () => {
-    for (const t of ["rapporte 1 point", "fait perdre 1 point", "Chaque mesure du candidat qui améliore votre situation", "additionnés", "3 meilleures places de chaque critère", "8 mesures favorables et 3 défavorables font +5", "on compte des mesures, pas leur importance", "simple différence", "tous les candidats concernés sont montrés", "même pour tous", "Les onglets en haut de la fenêtre"]) expect(html, t).toContain(t);
+    for (const t of ["rapporte 1 point", "fait perdre 1 point", "Chaque mesure du candidat qui améliore votre situation", "additionnés", "3 meilleures places de chaque critère", "8 mesures favorables et 3 défavorables font +5", "présenté sur 100", "La barre part de la gauche", "dont le contour se remplit comme la barre", "on compte des mesures, pas leur importance", "simple différence", "tous les candidats concernés sont montrés", "même pour tous", "Les onglets en haut de la fenêtre"]) expect(html, t).toContain(t);
   });
   it("aucun tiret cadratin dans le texte", () => {
     expect(html).not.toContain("—");
@@ -194,7 +195,7 @@ describe("Aide « Comment est calculé le score ? »", () => {
 
 describe("Top : une ligne par place", () => {
   const g = (lettre: string, nom: string, solde: number, ameliorants: number, degradants: number): GagnantAffiche => ({ ...gagnant(lettre, nom, `s-${lettre}`, solde), ameliorants, degradants });
-  const top = (lignes: Array<GagnantAffiche & { rang: number }>) => resultat("Selon votre situation", [lignes[0]], { classement: lignes });
+  const top = (lignes: Array<GagnantAffiche & { rang: number; note?: number }>) => resultat("Selon votre situation", [lignes[0]], { classement: lignes });
   it("trois places donnent trois lignes, même avec des égalités : les ex æquo restent dans la même ligne, sans nom", () => {
     const t = top([{ ...g("A", "Nom-A", 5, 5, 0), rang: 1 }, { ...g("B", "Nom-B", 4, 4, 0), rang: 2 }, { ...g("D", "Nom-D", 4, 4, 0), rang: 2 }, { ...g("E", "Nom-E", 4, 4, 0), rang: 2 }, { ...g("F", "Nom-F", 3, 3, 0), rang: 3 }]);
     const html = rendre({ revele: true, situation: t, convictions: null });
@@ -209,17 +210,62 @@ describe("Top : une ligne par place", () => {
     expect(html).toContain("2 candidats<");
     expect(html).not.toContain("Nom-");
   });
-  it("égalité de score avec des points différents : une jauge sans barres (le score seul), jamais les barres d'un seul", () => {
-    const t = top([{ ...g("A", "Nom-A", 2, 3, 1), rang: 1 }, { ...g("B", "Nom-B", 2, 2, 0), rang: 1 }]);
+  it("la barre du top est notée sur 100 : le chiffre et la largeur suivent la note, sans négatif", () => {
+    const t = top([{ ...g("A", "Nom-A", 5, 5, 0), rang: 1, note: 40 }, { ...g("B", "Nom-B", 0, 1, 1), rang: 2, note: 0 }]);
     const html = rendre({ revele: true, situation: t, convictions: null });
-    const place = html.slice(html.indexOf('class="ideal-ligne"'), html.indexOf("ideal-colonne--droite"));
-    expect(place).toContain("+2");
-    expect(place).not.toContain("ideal-jauge-barre");
+    expect(html).toContain('aria-label="Score 40 sur 100"');
+    expect(html).toContain('aria-label="Score 0 sur 100"');
+    expect(html).toMatch(/ideal-note-barre" style="width:40%"/);
+    expect(html).toContain("/100");
+    expect(html).not.toContain("ideal-jauge");
   });
-  it("égalité avec les mêmes points : les barres sont partagées", () => {
-    const t = top([{ ...g("A", "Nom-A", 2, 2, 0), rang: 1 }, { ...g("B", "Nom-B", 2, 2, 0), rang: 1 }]);
+  it("dans les deux colonnes, tout est aligné à gauche : une seule disposition, sans variante miroir", () => {
+    const gauche = top([{ ...g("A", "Nom-A", 5, 5, 0), rang: 1, note: 40 }]);
+    const droite = resultat("Selon vos convictions", [g("F", "Nom-F", 3, 3, 0)], { classement: [{ ...g("F", "Nom-F", 3, 3, 0), rang: 1, note: 20 }], unite: "sujets" });
+    const html = rendre({ revele: true, situation: gauche, convictions: droite });
+    expect(html).not.toContain("ideal-ligne--");
+    expect(html).not.toContain("ideal-note--");
+    expect(html.match(/class="ideal-note"/g)).toHaveLength(2);
+  });
+  it("égalité de score : une seule note pour toute la ligne", () => {
+    const t = top([{ ...g("A", "Nom-A", 2, 3, 1), rang: 1, note: 12 }, { ...g("B", "Nom-B", 2, 2, 0), rang: 1, note: 12 }]);
     const html = rendre({ revele: true, situation: t, convictions: null });
-    expect(html).toContain("ideal-jauge-barre--pos");
+    expect(html.match(/class="ideal-note"/g)).toHaveLength(1);
+    expect(html).toContain('aria-label="Score 12 sur 100"');
+  });
+});
+
+describe("RondScore dans la fenêtre de détail", () => {
+  it("le rond rappelle la note sur 100 : contour rempli à la hauteur de la note, chiffre au centre", () => {
+    const html = renderToStaticMarkup(<RondScore note={40} />);
+    expect(html).toContain('aria-label="Score 40 sur 100"');
+    expect(html).toContain('stroke-dasharray="40 100"');
+    expect(html).toContain('pathLength="100"');
+    expect(html).toContain(">40<");
+  });
+  it("bornée de 0 à 100", () => {
+    expect(renderToStaticMarkup(<RondScore note={250} />)).toContain('stroke-dasharray="100 100"');
+    expect(renderToStaticMarkup(<RondScore note={-3} />)).toContain('stroke-dasharray="0 100"');
+  });
+  it("la fenêtre de détail affiche le rond du candidat ouvert, dans son en-tête", () => {
+    const l = { ...gagnant("C", "Nom-Reel-Situation", "slug-reel-a", 3), rang: 1, note: 37 };
+    const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
+    expect(html).toContain('aria-label="Score 37 sur 100"');
+    expect(html.indexOf("ideal-rond")).toBeLessThan(html.indexOf('aria-label="Fermer le détail"'));
+    expect(html.indexOf("ideal-rond")).toBeLessThan(html.indexOf("ideal-totaux"));
+  });
+  it("égalité : le rond suit le candidat sélectionné (même score, donc même note)", () => {
+    const a = { ...gagnant("C", "Nom-A", "sa", 3), rang: 1, note: 37 };
+    const b = { ...gagnant("D", "Nom-B", "sb", 3), rang: 1, note: 37 };
+    const html = renderToStaticMarkup(<ModaleDetail ligne={a} egales={[a, b]} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
+    expect(html.match(/class="ideal-rond"/g)).toHaveLength(1);
+  });
+});
+
+describe("JaugeNote", () => {
+  it("est bornée de 0 à 100 et écrit le chiffre", () => {
+    expect(renderToStaticMarkup(<JaugeNote note={130} />)).toContain("width:100%");
+    expect(renderToStaticMarkup(<JaugeNote note={-5} />)).toContain("width:0%");
   });
 });
 
@@ -271,7 +317,7 @@ describe("Détail d'une ligne (fenêtre)", () => {
     const l = { ...ligne, pour: [{ theme: "logement", groupes: ["G1", "G2"], mesures: ["Mes-un", "Mes-deux", "Mes-trois"] }], contre: [{ theme: "retraite", groupes: ["G3"], mesures: ["Mes-quatre"] }] };
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
     expect(html).not.toContain("Au total");
-    const jauges = html.match(/aria-label="Score [^"]*"/g) ?? [];
+    const jauges = html.match(/aria-label="Score [^"]*favorable[^"]*"/g) ?? [];
     expect(jauges).toEqual(['aria-label="Score +1 : 2 favorables moins 1 défavorable"', 'aria-label="Score +2 : 3 favorables moins 1 défavorable"']);
     expect(html.indexOf("ideal-total-libelle")).toBeLessThan(html.indexOf('role="tablist"'));
   });

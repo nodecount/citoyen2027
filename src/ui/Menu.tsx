@@ -1,6 +1,6 @@
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { Database } from "lucide-react";
-import type { InfoBase } from "../data/bases";
+import { candidatsDeBase, chargerBase, type InfoBase } from "../data/bases";
 import { ModaleBase } from "./ModaleBase";
 import type { Ecran } from "./router";
 
@@ -20,6 +20,12 @@ export function Menu({ ecran, onNaviguer, bases, baseActive, onChoisirBase }: Me
   const courante = bases.find((b) => b.id === baseActive);
   // Le formulaire général fait partie du parcours « Simulateur » : c'est cet onglet qui reste marqué.
   const onglet = ecran === "questions-generales" ? "simulateur" : ecran;
+  // Candidats sans mesure dans chaque source, dits dans la modale ; jamais pendant le simulateur, où les candidats sont masqués.
+  const enSimulateur = onglet === "simulateur";
+  const sansMesure = useMemo(
+    () => (modaleOuverte && !enSimulateur ? Object.fromEntries(bases.map((b) => [b.id, candidatsDeBase(chargerBase(b.id)).enCoursAnalyse.map((m) => m.nom)])) : undefined),
+    [modaleOuverte, enSimulateur, bases],
+  );
 
   const lien = (cible: "accueil" | "exploration" | "simulateur" | "a-propos", libelle: string) => (
     <button
@@ -56,7 +62,7 @@ export function Menu({ ecran, onNaviguer, bases, baseActive, onChoisirBase }: Me
             <Database size={18} aria-hidden="true" />
             <span>{courante.libelle}</span>
           </button>
-          <ModaleBase ouverte={modaleOuverte} bases={bases} actif={baseActive} onChoisir={onChoisirBase}
+          <ModaleBase ouverte={modaleOuverte} bases={bases} actif={baseActive} onChoisir={onChoisirBase} sansMesure={sansMesure}
             onControle={(id, cible) => {
               onChoisirBase(id);
               onNaviguer(cible);

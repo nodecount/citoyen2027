@@ -93,6 +93,28 @@ describe("PageQuestionsGenerales", () => {
     expect(rendre({ logement: "locataire" })).toContain("1 réponse sur 2 questions");
   });
 
+  it("formulaire intégré : un panneau au-dessus des questions avec le %, « N questions répondues sur M » et l'interrupteur des manquantes", () => {
+    const html = renderToStaticMarkup(
+      <PageQuestionsGenerales champs={[ENUM, NOMBRE]} questions={[ENUM, NOMBRE]} profilInitial={{ logement: "locataire" }} onValider={() => {}} onAnnuler={() => {}} integre />,
+    );
+    expect(html).toContain("Complétion des réponses :");
+    expect(html.indexOf("Complétion des réponses :")).toBeLessThan(html.indexOf('role="progressbar"'));
+    expect(html).toContain("50 %");
+    expect(html).toContain("1 question répondue sur 2");
+    expect(html).toMatch(/role="progressbar"[^>]*aria-valuenow="50"/);
+    expect(html).toMatch(/role="switch" checked=""/);
+    expect(html).toContain("Mettre en valeur les réponses manquantes");
+    expect(html).not.toContain("bouton-manquantes");
+    expect(html).not.toContain("<h2>Ma situation</h2>");
+    // Une div à part, AVANT la div des questions (et non dedans).
+    expect(html.indexOf("panneau-progression")).toBeLessThan(html.indexOf("<form"));
+    expect(html.indexOf("<form")).toBeLessThan(html.indexOf("</form>"));
+    expect(html.slice(html.indexOf("<form"))).not.toContain("panneau-progression");
+    // L'indicateur d'enregistrement est hors des divs, une seule fois, sous le formulaire.
+    expect(html.match(/class="rangee-enregistrement"/g)).toHaveLength(1);
+    expect(html.indexOf("rangee-enregistrement")).toBeGreaterThan(html.indexOf("</form>"));
+  });
+
   it("ne rend aucune question obligatoire", () => {
     expect(rendre()).not.toContain("required");
   });

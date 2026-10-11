@@ -58,6 +58,8 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
           <li>Nous retenons seulement l'effet direct d'une mesure sur vous, pas ses conséquences sur l'économie.</li>
           <li>Le score d'un candidat est le nombre de mesures qui améliorent votre situation, moins le nombre de mesures qui la dégradent. Il n'y a ni pourcentage ni pondération.</li>
           <li>Un candidat qui propose plus de mesures qui vous avantagent obtient donc un meilleur score : c'est un parti pris assumé.</li>
+          <li>Pour la lecture, le score des classements est noté sur 100 : 100 correspond au nombre de mesures du candidat qui en propose le plus, et un score nul ou négatif s'affiche 0. Le classement, lui, suit le score brut.</li>
+          <li>Cette note dépend donc du programme le plus fourni : elle montre la part du « maximum possible » atteinte, pas une probabilité de convenir.</li>
           <li>Une grande mesure et une petite mesure comptent chacune pour une. Aucun thème ne pèse plus qu'un autre.</li>
         </ul>
         <h3>Ce qui reste à vous</h3>

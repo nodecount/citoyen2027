@@ -13,6 +13,15 @@ export function IndicateurEnregistrement({ etat }: { etat: EtatEnregistrement })
   );
 }
 
+// Rangée de l'indicateur, HORS du panneau et du formulaire (sous eux), alignée à droite. Sa hauteur est réservée.
+export function RangeeEnregistrement({ etat }: { etat: EtatEnregistrement }) {
+  return (
+    <div className="rangee-enregistrement">
+      <IndicateurEnregistrement etat={etat} />
+    </div>
+  );
+}
+
 // Pour un formulaire dont les changements sont déjà appliqués à chaque action (cases, listes) : l'indicateur suit le même
 // parcours que l'enregistrement différé de l'autre formulaire. `signaler()` à chaque modification.
 export function useSignalEnregistrement(delaiMs = 400): { etat: EtatEnregistrement; signaler: () => void } {

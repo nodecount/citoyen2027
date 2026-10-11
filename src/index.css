@@ -172,7 +172,7 @@ a {
 .modale-fond {
   position: fixed;
   inset: 0;
-  z-index: 10;
+  z-index: 100; /* au-dessus du menu collant (z-index 50) : le menu passe derrière les modales */
   display: grid;
   place-items: center;
   padding: 1rem;
@@ -194,7 +194,14 @@ a {
 }
 
 .modale--confirmation .actions {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.modale--confirmation .actions > button {
+  margin: 0;
 }
 
 .modale-entete {
@@ -641,6 +648,11 @@ a {
 .bloc-credits,
 .bloc-limites {
   margin-top: 1.25rem;
+}
+
+/* Nom d'un candidat cité dans une phrase : la couleur du thème (bleu foncé), jamais le rouge (qui veut dire « dégradant »). */
+.nom-candidat {
+  color: var(--bleu-fonce);
 }
 
 .bloc-limites h3 {
@@ -2826,6 +2838,84 @@ button.ideal-egale[aria-selected="true"]:hover {
   font-weight: 700;
   text-align: right;
 }
+/* Barre du top : score noté sur 100, de 0 à 100 (le même bleu que le candidat idéal). Dans les deux colonnes, tout est aligné à
+   gauche : rang, portraits, nom, et barre qui part de la gauche. */
+.ideal-note {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.ideal-note-piste {
+  display: flex;
+  flex: 1;
+  min-width: 4rem;
+  height: 0.9rem;
+  overflow: hidden;
+  border: 1px solid var(--filet);
+  border-radius: 999px;
+  background: #eef1f6;
+}
+.ideal-note-barre {
+  flex: none;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--bleu-fonce);
+}
+.ideal-note-valeur {
+  flex: none;
+  min-width: 3.6rem;
+  font-weight: 700;
+  color: var(--bleu-fonce);
+  text-align: right;
+}
+/* Rond du score dans la fenêtre de détail : le contour se remplit comme la barre du top (100 = le maximum). */
+.ideal-rond {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-left: auto;
+}
+.ideal-rond svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.ideal-rond circle {
+  fill: none;
+  stroke-width: 7;
+}
+.ideal-rond-piste {
+  stroke: #e1e8f7;
+}
+.ideal-rond-arc {
+  stroke: var(--bleu-fonce);
+  stroke-linecap: round;
+}
+.ideal-rond-valeur {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--bleu-fonce);
+}
+.ideal-rond-valeur small {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--encre-douce);
+}
+.ideal-note-valeur small {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--encre-douce);
+}
+
 /* Fenêtre de détail : jamais plus haute que l'écran. En-tête, totaux et onglets restent en place ; seul le corps défile. */
 .modale--ideal {
   display: flex;
@@ -3437,8 +3527,38 @@ button.ideal-onglet:focus-visible {
   cursor: not-allowed;
   opacity: 0.5;
 }
+/* Largeur FIXE des quatre étapes, sélectionnées ou non (décision du 2026-10-11) : quatre colonnes égales, le libellé passe à la ligne
+   s'il est long, et le même gras partout pour que la sélection ne change jamais une largeur. Deux colonnes sur écran étroit. */
+.etapes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem 1rem;
+}
+.etapes li {
+  min-width: 0;
+}
+.etapes li + li::before {
+  content: none;
+}
+.etapes .etape {
+  width: 100%;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: left;
+}
+.etapes .etape-numero {
+  flex: none;
+}
+@media (max-width: 48rem) {
+  .etapes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
-/* Introduction de chaque écran du parcours : un seul style (icône + texte), toujours lisible. */
+/* Deux sections d'ouverture, deux styles pour deux fonctions (décision du 2026-10-11) :
+   1. l'INTRODUCTION de l'écran (« Objectif », explications) : bloc clair à liseré bleu à gauche ; il explique ;
+   2. le PANNEAU de l'écran (progression, réglages, légende des indicateurs : voir .panneau-progression et .echelle) : bloc bleu
+      foncé thématique, texte blanc, comme le candidat idéal ; il se manipule ou se consulte. */
 .intro-etape {
   display: flex;
   align-items: flex-start;
@@ -3451,7 +3571,7 @@ button.ideal-onglet:focus-visible {
   background: var(--surface);
   box-shadow: var(--ombre);
 }
-.intro-etape svg {
+.intro-etape > svg {
   flex: none;
   margin-top: 0.1rem;
   color: var(--bleu);
@@ -3499,12 +3619,28 @@ button.ideal-onglet:focus-visible {
   margin: 0 0 0 0.75rem;
   white-space: nowrap;
 }
-/* Chaque décompte et son bouton restent sur une seule ligne. */
+/* Les deux décomptes (questions, convictions), chacun avec son bouton, sur une même ligne ; ils ne passent dessous que faute de place. */
+.intro-etape .intro-decomptes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 1.5rem;
+}
+/* Écran large : tout (décomptes et boutons) reste sur une seule ligne. */
+@media (min-width: 60rem) {
+  .intro-etape .intro-decomptes {
+    flex-wrap: nowrap;
+  }
+  .intro-etape .bouton-completer--ligne {
+    margin-left: 0.6rem;
+    padding-inline: 0.7rem;
+  }
+}
 .intro-etape .intro-decompte {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  margin: 0 0 0.4rem;
+  margin: 0;
   white-space: nowrap;
 }
 @media (max-width: 40rem) {
@@ -3518,29 +3654,13 @@ button.ideal-onglet:focus-visible {
    Même lecture que les tiroirs de portraits, de gauche à droite : situation meilleure · mixte · moins bonne. Un point par
    niveau sur la ligne ; « Non concerné » est un point gris seul, hors ligne. Le mot et le symbole sont dans
    chaque badge : la couleur de la règle ne fait qu'accompagner. */
-.echelle {
-  margin: 0 0 1.75rem;
-  padding: 1.1rem 1.5rem 1.25rem;
-  border: 1px solid var(--filet);
-  border-radius: 14px;
-  background: var(--surface);
-  box-shadow: var(--ombre);
-  font-size: 1rem;
+/* Le style bleu foncé (fond, rayon, ombre, padding, texte, police, interrupteur) est COMMUN aux deux sections secondaires : voir
+   .section-secondaire, plus bas. Ici seulement ce qui est propre à la légende. */
+.echelle > * {
+  flex: 1 1 100%;
 }
 .echelle-question {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  margin: 0 0 1.1rem;
-  line-height: 1.5;
-}
-.echelle-question svg {
-  flex: none;
-  margin-top: 0.15rem;
-  color: var(--bleu);
-}
-.echelle-question strong {
-  color: var(--bleu-fonce);
+  margin: 0 0 0.4rem;
 }
 
 /* La ligne : trois points reliés (améliorant · mixte · dégradant), le point « dégradant » en étant le bout ; la ligne passe du
@@ -3620,8 +3740,6 @@ button.ideal-onglet:focus-visible {
   left: 1.4rem;
 }
 .echelle-hors .interrupteur {
-  margin: 0;
-  font-size: 1rem;
   line-height: 1.35;
 }
 @media (max-width: 52rem) {
@@ -3644,32 +3762,76 @@ button.ideal-onglet:focus-visible {
   }
 }
 
-/* Indicateur d'enregistrement : pastille colorée, à droite de l'en-tête, juste avant « Effacer » (Ma situation et Mes convictions).
-   Le mot et le ✓ portent le sens ; la couleur ne fait que l'accompagner. */
-.questionnaire-entete .enregistrement {
-  margin: 0 0 0 auto;
-}
-.questionnaire-entete .enregistrement + .actions {
-  margin-left: 0;
+/* Indicateur d'enregistrement : « ghost » (ni bordure ni fond, juste le texte), petit, HORS du panneau et du formulaire, en bas à
+   droite sous le formulaire (Ma situation et Mes convictions). Le mot et le ✓ portent le sens ; la couleur ne fait que l'accompagner. */
+.rangee-enregistrement {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 1.5rem;
+  margin: 0.3rem 0 0;
 }
 .enregistrement {
-  min-width: 10rem;
-  padding: 0.3rem 0.9rem;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 700;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: right;
+  font-size: 0.9375rem;
+  font-weight: 600;
 }
 .enregistrement--enregistrement {
-  border-color: color-mix(in srgb, var(--bleu) 35%, #ffffff);
-  background: var(--bleu-pale);
   color: var(--bleu);
 }
 .enregistrement--enregistre {
-  border-color: color-mix(in srgb, var(--ameliorant) 40%, #ffffff);
-  background: color-mix(in srgb, var(--ameliorant) 12%, #ffffff);
   color: var(--ameliorant);
+}
+
+/* Actions destructrices (décision du 2026-10-11, dérogation à « jamais de rouge sur un bouton ») : « Effacer … » est un bouton danger,
+   en rouge. Contour rouge et texte rouge, fond transparent ; au survol, fond rouge pâle. La confirmation (« Oui, tout effacer »)
+   est un danger plein. Le mot porte le sens : la couleur ne fait que l'accompagner. */
+button.bouton-effacer {
+  border: 1px solid var(--degradant);
+  background: transparent;
+  color: var(--degradant);
+}
+button.bouton-effacer:hover {
+  border-color: var(--degradant);
+  background: color-mix(in srgb, var(--degradant) 10%, #ffffff);
+  color: var(--degradant);
+}
+button.bouton-danger,
+button.bouton-danger:focus-visible {
+  border: 1px solid var(--degradant);
+  background: var(--degradant);
+  color: #ffffff;
+}
+button.bouton-danger:hover {
+  border-color: color-mix(in srgb, var(--degradant) 80%, #000000);
+  background: color-mix(in srgb, var(--degradant) 80%, #000000);
+  color: #ffffff;
+}
+/* Bas d'écran avec un bouton au milieu : précédent à gauche, effacer au centre, suivant à droite. */
+.nav-etape--milieu {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+.nav-etape--milieu > :first-child {
+  justify-self: start;
+  margin-right: 0 !important;
+}
+.nav-etape--milieu > :last-child {
+  justify-self: end;
+}
+@media (max-width: 40rem) {
+  .nav-etape--milieu {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+  }
+  .nav-etape--milieu > * {
+    justify-self: stretch;
+  }
 }
 
 /* Parti rappelé sous le nom du candidat (détail) et dans l'infobulle du portrait. Lisible : jamais sous 1rem. */
@@ -3692,19 +3854,87 @@ button.ideal-onglet:focus-visible {
   opacity: 0.9;
 }
 
-/* Bouton « Mettre en valeur les réponses manquantes » (à droite du décompte) et cartes sans réponse mises en valeur : cadre
-   bleu épais + fond bleu pâle, jamais de rouge (le rouge signifie « dégradant »). */
-.questionnaire-entete .bouton-manquantes {
-  display: inline-flex;
+/* Panneau de progression au-dessus du formulaire (étapes 1 et 3) : % des champs remplis, nombre de réponses, interrupteur « Mettre en
+   valeur les réponses manquantes », puis enregistrement et actions. Cartes sans réponse mises en valeur : cadre bleu épais + fond
+   bleu pâle, jamais de rouge (le rouge signifie « dégradant »). */
+/* Style COMMUN des deux sections secondaires (décision du 2026-10-11) : le panneau de progression (étapes 1 et 3) et la légende
+   « Si ce candidat était élu… » (étape 2). Carte claire, fond blanc, contour fin, coins très arrondis, ombre douce et filet bleu en
+   haut (l'introduction, elle, a son liseré à gauche) ; même padding, même marge, même police, même taille, même interrupteur ;
+   pas d'icône. Ne reste dans chaque section que ce qui lui est propre. */
+.section-secondaire {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.45rem;
-  margin: 0;
-  padding: 0.3rem 0.9rem;
-  line-height: 1.35;
+  gap: 0.6rem 1.25rem;
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--filet);
+  border-top: 4px solid var(--bleu);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 0 6px 18px -12px rgba(15, 27, 51, 0.35);
+  color: var(--encre);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
 }
-.bouton-manquantes[aria-pressed="true"] {
-  background: var(--bleu);
-  color: #ffffff;
+.section-secondaire p {
+  margin: 0;
+}
+.section-secondaire strong {
+  color: var(--bleu-fonce);
+  font-weight: 700;
+}
+.section-secondaire .interrupteur {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.panneau-progression .interrupteur {
+  margin-left: auto;
+}
+/* Barre épaisse en pilule, avec son % au centre : blanc sur la partie remplie (bleu), bleu foncé sur le reste. */
+.panneau-barre {
+  position: relative;
+  flex: 1 1 14rem;
+  max-width: 22rem;
+  height: 1.9rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e8eefb;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--bleu) 18%, #ffffff);
+}
+.panneau-barre-remplie {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--bleu), var(--bleu-fonce));
+  transition: width 0.25s;
+}
+.panneau-barre-texte {
+  position: relative;
+  display: block;
+  font-weight: 700;
+  line-height: 1.9rem;
+  text-align: center;
+  color: var(--bleu-fonce);
+}
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .panneau-barre-texte {
+    background: linear-gradient(90deg, #ffffff var(--pct), var(--bleu-fonce) var(--pct));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
+.panneau-progression-titre {
+  white-space: nowrap;
+}
+@media (prefers-reduced-motion: reduce) {
+  .panneau-barre-remplie {
+    transition: none;
+  }
 }
 .question-carte--manquante {
   border: 2px solid var(--bleu);

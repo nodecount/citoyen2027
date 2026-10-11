@@ -1,6 +1,7 @@
-import { Eraser, Eye, Highlighter, ListChecks, Lock } from "lucide-react";
+import { Eraser, Eye, ListChecks, Lock } from "lucide-react";
+import { PanneauProgression } from "./PanneauProgression";
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { IndicateurEnregistrement, type EtatEnregistrement } from "./IndicateurEnregistrement";
+import { RangeeEnregistrement, type EtatEnregistrement } from "./IndicateurEnregistrement";
 import { compterReponses, questionsVisibles, type SectionTheme } from "../questionnaire";
 import { mettreAJourReponse, type ProfilPartiel } from "../profil";
 import type { ChampProfil } from "../types";
@@ -65,6 +66,7 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
   }
 
   const progression = `${repondues} réponse${repondues > 1 ? "s" : ""} sur ${total} question${total > 1 ? "s" : ""}`;
+  const compte = `${repondues} question${repondues > 1 ? "s" : ""} répondue${repondues > 1 ? "s" : ""} sur ${total}`;
   const actions = (
     <div className="actions">
       {!integre && <button type="submit">Enregistrer et voir les indicateurs</button>}
@@ -73,7 +75,7 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
           Retour aux thèmes
         </button>
       )}
-      {onEffacer && (
+      {!integre && onEffacer && (
         <button type="button" className="secondaire" onClick={onEffacer}>
           <Eraser size={18} aria-hidden="true" focusable="false" />
           Effacer mes réponses
@@ -83,23 +85,12 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
   );
 
   return (
-    <form onSubmit={valider} className={`questionnaire${integre ? " questionnaire--integre" : ""}`} id={integre ? "formulaire-general" : undefined}>
-      {integre ? (
-        <div className="questionnaire-entete">
-          <h2>Ma situation</h2>
-          <p className="progression" aria-live="polite">
-            {progression}
-          </p>
-          <button type="button" className="secondaire bouton-manquantes" aria-pressed={manquantesEnValeur} onClick={() => setManquantesEnValeur((v) => !v)}>
-            <Highlighter size={18} aria-hidden="true" focusable="false" />
-            Mettre en valeur les réponses manquantes
-          </button>
-          <IndicateurEnregistrement etat={etatEnregistrement} />
-          {actions}
-        </div>
-      ) : (
-        <h1>Ma situation</h1>
-      )}
+    <>
+    {/* Formulaire intégré : la progression dans une div à part, au-dessus de celle des questions ; l'indicateur d'enregistrement,
+        hors des divs, en bas à droite sous le formulaire ; l'effacement est en bas de l'écran (PageThemes). */}
+    {integre && <PanneauProgression repondues={repondues} total={total} compte={compte} manquantesEnValeur={manquantesEnValeur} onManquantes={setManquantesEnValeur} />}
+    <form onSubmit={valider} className={`questionnaire${integre ? " questionnaire--integre" : ""}`} id={integre ? "formulaire-general" : undefined} aria-label={integre ? "Ma situation" : undefined}>
+      {integre ? null : <h1>Ma situation</h1>}
       {integre ? null : (
         <>
           <ul className="aide-formulaire">
@@ -146,5 +137,7 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
       </div>
       {!integre && actions}
     </form>
+    {integre && <RangeeEnregistrement etat={etatEnregistrement} />}
+    </>
   );
 }

@@ -23,6 +23,8 @@ describe("PageAPropos", () => {
     expect(html).toContain("nombre de mesures qui améliorent votre situation, moins le nombre de mesures qui la dégradent");
     expect(html).toContain("Il n&#x27;y a ni pourcentage ni pondération");
     expect(html).toContain("C&#x27;est à vous de peser les mesures");
+    expect(html).toContain("noté sur 100");
+    expect(html).toContain("nombre de mesures du candidat qui en propose le plus");
     expect(html).not.toContain("—");
   });
 

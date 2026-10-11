@@ -346,7 +346,7 @@ describe("après avoir eu des informations sur le visiteur", () => {
     expect(sans.indexOf("Mesures (1)")).toBeLessThan(sans.indexOf("Favorable / défavorable"));
     const polarite = { ...ouvert, vue: "polarite" as const };
     const simuler = html([candidat("a", [prop("a", undefined)])], {}, polarite, false, { type: "simuler", onClick: () => {} });
-    expect(simuler).toContain("Passer en mode « Simuler pour moi »");
+    expect(simuler).toContain("Simuler selon ma situation et mes convictions");
     const renseigner = html([candidat("a", [prop("a", undefined)])], {}, polarite, false, { type: "renseigner", onClick: () => {} });
     expect(renseigner).toContain("Renseigner mes informations");
   });
@@ -427,7 +427,9 @@ describe("résumé en 40 à 60 mots d'un candidat sur un thème", () => {
   it("CitationsResume : un spoiler par renvoi numéroté, avec le libellé du résumé et les mesures citées entre guillemets quand c'en est une", () => {
     const litterale: Proposition = { ...mesure, titre: "Baisser les impôts de production.", titre_litteral: true };
     const r = renderToStaticMarkup(<CitationsResume resume={resume} propositions={[litterale]} />);
-    expect(r).toContain("<summary>1. baisser l&#x27;impôt</summary>");
+    // La première lettre du groupe est forcée en majuscule, même si le mot clé du résumé est en minuscules.
+    expect(r).toContain("<summary>1. Baisser l&#x27;impôt</summary>");
+    expect(r).not.toContain("1. baisser");
     expect(r).toContain("« Baisser les impôts de production. »");
   });
 

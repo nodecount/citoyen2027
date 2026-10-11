@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Info, X } from "lucide-react";
+import { X } from "lucide-react";
 import { flushSync } from "react-dom";
 import { libelleCitation } from "../citations";
 import { evaluerProposition } from "../engine";
@@ -225,6 +225,12 @@ export function texteMesure(p: Proposition): string {
   return p.titre_litteral ? `« ${p.titre} »` : p.titre;
 }
 
+// Les groupes de mesures sont des morceaux d'une phrase (souvent en minuscules) : en tête d'un groupe, la première lettre est une majuscule.
+export function premiereEnMajuscule(texte: string): string {
+  const t = texte.trim();
+  return t.charAt(0).toUpperCase() + t.slice(1);
+}
+
 // Un spoiler par mot clé du résumé, numéroté comme son renvoi : à l'intérieur, les mesures qu'il recouvre, citées
 // (entre guillemets quand c'en est une), avec leurs sources.
 export function CitationsResume({ resume, propositions }: { resume: ResumeTheme; propositions: Proposition[] }) {
@@ -236,7 +242,7 @@ export function CitationsResume({ resume, propositions }: { resume: ResumeTheme;
         <li key={index}>
           <details className="citation-reference">
             <summary>
-              {index + 1}. {segment.texte}
+              {index + 1}. {premiereEnMajuscule(segment.texte)}
             </summary>
             <ul className="citation-reference-corps">
               {segment.mesures
@@ -334,12 +340,16 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil
         actionProfil ? (
           <div className="appel-profil">
             <p>
-              {actionProfil.type === "simuler"
-                ? "Ce que ce programme change pour vous n'est pas affiché en mode exploration."
-                : "Pour savoir ce que ce programme change pour vous, renseignez quelques informations."}
+              {actionProfil.type === "simuler" ? (
+                <>
+                  Pour estimer ce que le programme de <strong className="nom-candidat">{meta.nom}</strong> pourrait changer pour vous, accédez au simulateur :
+                </>
+              ) : (
+                "Pour savoir ce que ce programme change pour vous, renseignez quelques informations."
+              )}
             </p>
             <button type="button" className="bouton-en-ligne" onClick={actionProfil.onClick}>
-              {actionProfil.type === "simuler" ? "Passer en mode « Simuler pour moi »" : "Renseigner mes informations"}
+              {actionProfil.type === "simuler" ? "Simuler selon ma situation et mes convictions" : "Renseigner mes informations"}
             </button>
           </div>
         ) : (
@@ -841,12 +851,9 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
         // Légende en « règle graduée » : la même lecture gauche → droite que les tiroirs de portraits (mieux · mixte · moins
         // bien), avec un point par niveau sur la ligne, le point « dégradant » en étant le bout. « Non concerné » est HORS ligne : un
         // point gris seul, au bout, non rattaché.
-        <section className="echelle" aria-label="Comment lire les indicateurs">
+        <section className="section-secondaire echelle" aria-label="Comment lire les indicateurs">
           <p className="echelle-question">
-            <Info size={22} aria-hidden="true" focusable="false" />
-            <span>
-              <strong>Si ce candidat était élu, ma situation sur ce thème serait…</strong> Plus vous répondez, plus c'est précis.
-            </span>
+            <strong>Si ce candidat était élu, ma situation sur ce thème serait…</strong> Plus vous répondez, plus c'est précis.
           </p>
           <ol className="echelle-reperes">
             {(["ameliorant", "mixte", "degradant"] as NiveauProjection[]).map((niveau) => (
