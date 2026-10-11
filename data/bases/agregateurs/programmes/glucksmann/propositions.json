@@ -25,7 +25,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "2,3 à 3 Md€ d'économies sur le fonctionnement de l'Etat"
+        "extrait": "économies sur le fonctionnement de l'Etat"
       }
     ]
   },
@@ -50,7 +50,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rediriger 211 Md€ d'exonérations et aides aux entreprises"
+      }
+    ]
   },
   {
     "id": "glucksmann-finances-publiques-003",
@@ -145,13 +152,7 @@
         "sujet": "ultra_riches",
         "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Taxer les méga-héritages, ciblant les 1 % des successions les plus importantes."
-      },
-      {
-        "sujet": "fiscalite",
-        "position": "redistribution",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Taxer les méga-héritages, ciblant les 1 % des successions les plus importantes."
+        "extrait": "Taxer les méga-héritages, ciblant les 1 % des successions les plus importantes"
       }
     ]
   },
@@ -180,13 +181,7 @@
         "sujet": "ultra_riches",
         "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer un impôt plancher annuel de 2% sur les patrimoines supérieurs à 100 millions d'euros (taxe Zucman)."
-      },
-      {
-        "sujet": "fiscalite",
-        "position": "redistribution",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer un impôt plancher annuel de 2% sur les patrimoines supérieurs à 100 millions d'euros (taxe Zucman)."
+        "extrait": "Instaurer un impôt plancher annuel de 2% sur les patrimoines supérieurs à 100 millions d'euros"
       }
     ]
   },
@@ -231,13 +226,13 @@
         "sujet": "ultra_riches",
         "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne pour éviter l'exil fiscal."
+        "extrait": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne"
       },
       {
         "sujet": "europe",
         "position": "plus_europe",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne pour éviter l'exil fiscal."
+        "extrait": "à l'échelle européenne pour éviter l'exil fiscal"
       }
     ]
   },
@@ -262,6 +257,12 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
     "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser les cotisations sociales pour rapprocher le salaire brut du net"
+      },
       {
         "sujet": "ultra_riches",
         "position": "taxer_ultra_riches",
@@ -349,7 +350,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "ouverture",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger la loi immigration de 2024"
+      }
+    ]
   },
   {
     "id": "glucksmann-interieur-justice-003",
@@ -487,7 +496,7 @@
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Renforcer les moyens d’enquête contre le narcotrafic."
+        "extrait": "Renforcer les moyens d'enquête contre le narcotrafic"
       }
     ]
   },
@@ -1320,7 +1329,7 @@
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Soutenir les fonctionnaires, revaloriser durablement les rémunérations pour renforcer l’attractivité de la fonction publique, indexant leur point d’indice sur l’inflation"
+        "extrait": "Soutenir les fonctionnaires, revaloriser durablement les rémunérations pour renforcer l’attractivité de la fonction publique, indexant leur point d’indice sur l’inflation et corrigeant les écarts de rémunérations entre ministères."
       }
     ]
   },
@@ -1375,7 +1384,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Multiplier les centrales villageoises d’énergie renouvelable, épiceries coopératives, commerces de proximité solidaire… en déployant les Sociétés coopératives d’intérêt collectif."
+      }
+    ]
   },
   {
     "id": "glucksmann-retraites-travail-006",
@@ -1397,8 +1413,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "glucksmann-retraites-travail-007",
@@ -1708,14 +1723,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Relocaliser la production de batteries et accélérer l’innovation sur toute la chaine"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "glucksmann-envi-001",
@@ -1790,14 +1798,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "renouvelables",
-        "position": "plus_renouvelables",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Investir dans le réseau électrique et de nouvelles capacités de stockage pour mieux relier les sites de production d’énergies renouvelables et les lieux de consommation."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "glucksmann-envi-004",
@@ -1849,6 +1850,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Annuler la hausse de taxe sur l’électricité imposée en 2024"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Annuler la hausse de taxe sur l’électricité imposée en 2024."
+      }
     ]
   },
   {
@@ -1871,7 +1880,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-envi-007",
@@ -2046,8 +2056,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "glucksmann-envi-014",
@@ -2115,14 +2124,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "renouvelables",
-        "position": "plus_renouvelables",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "un score carbone obligatoire sur les produits, l'extinction des pubs lumineuses la nuit et la fin des plastiques à usage unique"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "glucksmann-envi-017",
@@ -2226,7 +2228,7 @@
         "sujet": "agriculture_normes",
         "position": "renforcer_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire les intrants chimiques et soutenir les alternatives durables pour rendre les fermes plus autonomes."
+        "extrait": "Réduire les intrants chimiques et soutenir les alternatives durables"
       }
     ]
   },
@@ -2511,14 +2513,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "agriculture_normes",
-        "position": "renforcer_normes_agri",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Refuser les méga-bassines."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "glucksmann-envi-031",
@@ -2636,12 +2631,6 @@
         "position": "plus_defense",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place un fonds européen de défense de 500 Md€ via un emprunt commun, pour investir massivement dans nos capacités industrielles"
-      },
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "en réservant les investissements européens aux productions européennes (EDIP)"
       }
     ]
   },
@@ -2666,14 +2655,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "defense",
-        "position": "plus_defense",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Etendre la dissuasion nucléaire française aux autres pays de l'UE, en conservant la souveraineté française sur la décision de l'emploi."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "glucksmann-europe-international-005",
@@ -2695,15 +2677,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Union Européenne",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "defense",
-        "position": "plus_defense",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter l'aide militaire à l'Ukraine et notre soutien aux alliés européens comme la Moldavie et l'Arménie."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "glucksmann-europe-international-006",
@@ -2809,14 +2783,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "institutions",
-        "position": "institutions_actuelles",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Investir le Premier ministre par un vote de confiance de l’AN et instaurer la « motion de censure constructive » pour mettre fin au 49.3"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-002",
@@ -2883,8 +2850,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "glucksmann-gouvernance-republique-005",
@@ -2927,8 +2893,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "positions": []
+    "sous_theme": "Démocratie, élections et pouvoir législatif"
   },
   {
     "id": "glucksmann-gouvernance-republique-007",
@@ -3339,7 +3304,7 @@
         "sujet": "ia",
         "position": "encadrer_ia",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Impulser un traité international de l'IA qui poserait les bases d'une régulation internationale des usages de l'IA dans les domaines à très haut risque."
+        "extrait": "un traité international de l'IA qui poserait les bases d'une régulation internationale des usages de l'IA dans les domaines à très haut risque"
       }
     ]
   },
@@ -3497,8 +3462,8 @@
     ],
     "positions": [
       {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
+        "sujet": "ecole_organisation",
+        "position": "ecole_continuite",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Réduire le nombre d’élèves par enseignant."
       }
@@ -3545,8 +3510,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "glucksmann-education-jeunesse-009",
@@ -3737,14 +3701,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Enseignement supérieur",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "renouvelables",
-        "position": "plus_renouvelables",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "avec priorité à l’efficacité énergétique et à la biodiversité pour des campus adaptés au climat de demain"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "glucksmann-defense-001",
@@ -3803,12 +3760,6 @@
         "position": "plus_defense",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Lancer de grands programmes de production de drones, de modernisation de nos capacités spatiales"
-      },
-      {
-        "sujet": "ia",
-        "position": "plus_ia",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "travailler à l’intégration de l’IA dans notre outil de défense"
       }
     ]
   },
@@ -3888,14 +3839,14 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "defense",
-        "position": "plus_defense",
+        "sujet": "europe",
+        "position": "plus_europe",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place un fonds européen de défense de 500 Mds€ via un emprunt commun."
       },
       {
-        "sujet": "europe",
-        "position": "plus_europe",
+        "sujet": "defense",
+        "position": "plus_defense",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place un fonds européen de défense de 500 Mds€ via un emprunt commun."
       }
@@ -3966,14 +3917,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Défense & armées",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "defense",
-        "position": "plus_defense",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter drastiquement l’aide militaire à l’Ukraine."
-      }
-    ]
+    "effets": []
   }
 ]

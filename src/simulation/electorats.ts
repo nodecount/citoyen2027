@@ -1,5 +1,5 @@
 import { candidatsDeBase, chargerBase, listerBases } from "../data/bases";
-import { meilleurs, soldesConvictions, soldesSituation, type Solde } from "../engine/candidatIdeal";
+import { combiner, meilleurs, selonPrisme, soldesConvictions, soldesSituation, type Prisme, type Solde } from "../engine/candidatIdeal";
 import type { ChoixPositions } from "../positions";
 import { aDesInformations, mettreAJourReponse, type ProfilPartiel } from "../profil";
 import { construireCards } from "../ui/cards";
@@ -106,9 +106,16 @@ export interface Gagnant {
   analyses: number;
 }
 
+export type Classement = { gagnants: Gagnant[]; departageable: boolean; suivants: Gagnant[] };
+
+// Le même résultat compté de trois façons (thèmes, groupes de mesures, mesures), pour la situation, les convictions et les deux
+// additionnés (le candidat idéal du centre de la card).
+export type SelonPrismes = Record<Prisme, Classement | null>;
+
 export interface ResultatBase {
   base: string;
   reponsesRetenues: number;
+  prismes: { situation: SelonPrismes | null; convictions: SelonPrismes | null; combine: SelonPrismes | null };
   situation: { gagnants: Gagnant[]; departageable: boolean; suivants: Gagnant[] } | null;
   convictions: { gagnants: Gagnant[]; departageable: boolean; suivants: Gagnant[]; sujetsPris: number } | null;
 }
@@ -149,6 +156,23 @@ export function simuler(electorat: Electorat, baseId: string): ResultatBase {
   // Positions valides seulement (un sujet ou une position inconnus sont écartés, comme au rechargement de la page).
   const positions: ChoixPositions = Object.fromEntries(Object.entries(electorat.convictions).filter(([, p]) => p !== ""));
 
+  const selonPrismes = (soldes: Solde[]): SelonPrismes => {
+    const un = (prisme: Prisme): Classement | null => {
+      const comptes = soldes.map((s) => selonPrisme(s, prisme));
+      const m = meilleurs(comptes);
+      if (!m || m.gagnants.length === 0) return null;
+      return { gagnants: m.gagnants.map((g) => versGagnant(g, noms)), departageable: m.departageable, suivants: suivants(comptes, noms, new Set(m.gagnants.map((g) => g.slug))) };
+    };
+    return { themes: un("themes"), groupes: un("groupes"), mesures: un("mesures") };
+  };
+  const soldesSit = personnalise ? soldesSituation(cards) : null;
+  const soldesConv = Object.keys(positions).length > 0 ? soldesConvictions(cards, positions) : null;
+  const prismes = {
+    situation: soldesSit ? selonPrismes(soldesSit) : null,
+    convictions: soldesConv ? selonPrismes(soldesConv) : null,
+    combine: soldesSit ? selonPrismes(soldesConv ? combiner(soldesSit, soldesConv) : soldesSit) : null,
+  };
+
   let situation: ResultatBase["situation"] = null;
   if (personnalise) {
     const soldes = soldesSituation(cards);
@@ -165,7 +189,7 @@ export function simuler(electorat: Electorat, baseId: string): ResultatBase {
       convictions = { gagnants: m.gagnants.map((g) => versGagnant(g, noms)), departageable: m.departageable, suivants: suivants(soldes, noms, new Set(m.gagnants.map((g) => g.slug))), sujetsPris: Object.keys(positions).length };
     }
   }
-  return { base: baseId, reponsesRetenues: Object.keys(profil).length, situation, convictions };
+  return { base: baseId, reponsesRetenues: Object.keys(profil).length, prismes, situation, convictions };
 }
 
 export function basesASimuler(): string[] {

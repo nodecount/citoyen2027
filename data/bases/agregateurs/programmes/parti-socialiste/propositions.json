@@ -20,7 +20,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "conditionner toutes les aides publiques à des engagements clairs"
+      }
+    ]
   },
   {
     "id": "parti-socialiste-finances-publiques-002",
@@ -43,7 +50,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter la taxe sur les services numériques à 10 %."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-finances-publiques-003",
@@ -86,7 +100,7 @@
         "sujet": "logement",
         "position": "encadrer_logement",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer une taxe « anti-rente » ciblant les multipropriétaires (dès le 4e logement hors résidence principale)"
+        "extrait": "Créer une taxe « anti-rente » ciblant les multipropriétaires (dès le 4e logement hors résidence principale)."
       }
     ]
   },
@@ -110,8 +124,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "parti-socialiste-finances-publiques-005",
@@ -138,7 +151,7 @@
         "sujet": "fiscalite",
         "position": "redistribution",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Flécher des revenus de l’imposition du capital et supprimer les exonérations de cotisations sociales sur les plus hauts salaires"
+        "extrait": "supprimer les exonérations de cotisations sociales sur les plus hauts salaires"
       }
     ]
   },
@@ -162,32 +175,10 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "independant"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "artisans et commerçants"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser les charges des artisans et commerçants"
-      }
-    ],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Baisser les charges des artisans et commerçants"
       }
@@ -249,7 +240,7 @@
         "sujet": "ultra_riches",
         "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer un impôt plancher annuel de 2 % sur les patrimoines supérieurs à 100 millions d'euros (taxe Zucman)"
+        "extrait": "Instaurer un impôt plancher annuel de 2 % sur les patrimoines supérieurs à 100 millions d'euros (taxe Zucman)."
       }
     ]
   },
@@ -278,7 +269,7 @@
         "sujet": "ultra_riches",
         "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place un impôt sur les grandes successions"
+        "extrait": "Mettre en place un impôt sur les grandes successions."
       }
     ]
   },
@@ -346,7 +337,7 @@
         "sujet": "immigration",
         "position": "ouverture",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Permettre le renouvellement automatique des titres de séjour de longue durée"
+        "extrait": "Permettre le renouvellement automatique des titres de séjour de longue durée."
       }
     ]
   },
@@ -431,7 +422,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "positions": [],
     "effets": [
       {
         "cibles": [
@@ -476,14 +466,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "libertes",
-        "position": "cadre_collectif",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Adopter une « loi Evin de l’alimentation » pour interdire toute publicité en faveur de produits trop gras, trop salés et trop sucrés"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-005",
@@ -534,7 +517,7 @@
         "sujet": "ia",
         "position": "plus_ia",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Libérer le plein potentiel des données de santé grâce à l’IA pour améliorer les diagnostics et les thérapies, alléger les soignants et optimiser les parcours de soin"
+        "extrait": "Libérer le plein potentiel des données de santé grâce à l’IA pour améliorer les diagnostics et les thérapies"
       }
     ]
   },
@@ -559,14 +542,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "libertes",
-        "position": "cadre_collectif",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mieux lutter contre les addictions en limitant le lobbying et le marketing du tabac, des cigarettes électroniques, de l’alcool, des réseaux sociaux addictogènes et des produits ultra-transformés"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-008",
@@ -694,7 +670,7 @@
         "sujet": "sante_organisation",
         "position": "hopital_public",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réguler l’installation des professionnels de santé conventionnés « secteur 2 »"
+        "extrait": "Réguler l’installation des professionnels de santé conventionnés « secteur 2 »."
       }
     ]
   },
@@ -726,6 +702,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "assurant le remboursement intégral des soins essentiels par la suppression des franchises sur les médicaments concernés."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réguler les prix des médicaments et garantir leur disponibilité, tout en assurant le remboursement intégral des soins essentiels par la suppression des franchises sur les médicaments concernés."
+      }
     ]
   },
   {
@@ -749,14 +733,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "sante_organisation",
-        "position": "hopital_public",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réformer le financement des hôpitaux réservant les tarifications à l’acte à des soins bien définis"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-014",
@@ -779,14 +756,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "sante_organisation",
-        "position": "hopital_public",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Définir pluriannuellement les budgets des hôpitaux comme des soins de ville et du secteur médico-social, sur la base des besoins étudiés et votés par le Parlement"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "parti-socialiste-social-solidarite-015",
@@ -822,7 +792,7 @@
         "sujet": "sante_organisation",
         "position": "hopital_public",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer autant de lits que nécessaire pour les besoins d’hospitalisation en aval des urgences"
+        "extrait": "Créer autant de lits que nécessaire pour les besoins d’hospitalisation en aval des urgences, en gériatrie, pédiatrie, maternité et psychiatrie."
       }
     ]
   },
@@ -890,7 +860,7 @@
         "sujet": "sante_organisation",
         "position": "hopital_public",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Lutter contre les déserts médicaux en régulant l’installation des médecins libéraux"
+        "extrait": "régulant l’installation des médecins libéraux"
       }
     ]
   },
@@ -964,7 +934,7 @@
         "sujet": "sante_organisation",
         "position": "hopital_public",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir l’accès aux soins psychologiques et psychiatriques partout en France, en mettant à niveau les financements de la psychiatrie"
+        "extrait": "mettant à niveau les financements de la psychiatrie et en renforçant les capacités d’hébergement"
       }
     ]
   },
@@ -1337,7 +1307,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "l’État pourra mettre en urgence sous tutelle un site"
+      }
+    ]
   },
   {
     "id": "parti-socialiste-retraites-travail-005",
@@ -1359,15 +1336,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Industrie & relocalisation",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "europe",
-        "position": "plus_europe",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Au niveau européen, mener des coalitions de projets pour développer l’industrie."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "parti-socialiste-retraites-travail-006",
@@ -1479,7 +1448,7 @@
         "sujet": "renouvelables",
         "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place un plan de rénovation des logements financé par un grand emprunt remboursé par les gains liés aux économies d’énergie"
+        "extrait": "Mettre en place un plan de rénovation des logements financé par un grand emprunt"
       }
     ]
   },
@@ -1623,7 +1592,7 @@
         "sujet": "voiture",
         "position": "restreindre_voiture",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Développer les transports en commun et le vélo dans les zones les plus polluées, avec comme objectif de doubler les pistes cyclables d’ici 2030, et généraliser les zones piétonnes autour des écoles."
+        "extrait": "Développer les transports en commun et le vélo dans les zones les plus polluées"
       }
     ]
   },
@@ -1653,7 +1622,7 @@
         "sujet": "renouvelables",
         "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Massifier les rénovations de bâtiments sur le modèle de la construction bioclimatique."
+        "extrait": "Massifier les rénovations de bâtiments sur le modèle de la construction bioclimatique"
       }
     ]
   },
@@ -1677,7 +1646,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Stopper la pollution plastique en interdisant tous les plastiques à usage unique"
+      }
+    ]
   },
   {
     "id": "parti-socialiste-envi-010",
@@ -1699,7 +1676,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-011",
@@ -1727,7 +1705,7 @@
         "sujet": "agriculture_normes",
         "position": "renforcer_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Protéger les cours d’eau en créant des zones tampons végétalisées le long de 50 % des rivières d’ici 2030."
+        "extrait": "Protéger les cours d'eau en créant des zones tampons végétalisées le long de 50 % des rivières"
       }
     ]
   },
@@ -1757,7 +1735,7 @@
         "sujet": "agriculture_normes",
         "position": "renforcer_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire drastiquement l’usage des pesticides."
+        "extrait": "Réduire drastiquement l'usage des pesticides."
       }
     ]
   },
@@ -1787,7 +1765,7 @@
         "sujet": "agriculture_normes",
         "position": "renforcer_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Dépolluer les sites contaminés et interdire l’épandage de boues industrielles contenant des métaux lourds."
+        "extrait": "interdire l'épandage de boues industrielles contenant des métaux lourds"
       }
     ]
   },
@@ -1817,7 +1795,7 @@
         "sujet": "agriculture_normes",
         "position": "renforcer_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Généraliser l’agroécologie pour remplacer en 15 ans les engrais et pesticides chimiques par des alternatives non agressives."
+        "extrait": "Généraliser l'agroécologie pour remplacer en 15 ans les engrais et pesticides chimiques par des alternatives non agressives"
       }
     ]
   },
@@ -1841,7 +1819,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "parti-socialiste-envi-016",
@@ -1983,7 +1962,7 @@
         "sujet": "temps_travail",
         "position": "reduire_temps_travail",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Expérimenter la semaine de quatre jours pour les postes administratifs et réduire le temps de travail sur les fonctions les plus pénibles."
+        "extrait": "Expérimenter la semaine de quatre jours pour les postes administratifs et réduire le temps de travail sur les fonctions les plus pénibles"
       }
     ]
   },
@@ -2036,7 +2015,7 @@
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "renforcer les services déconcentrés de l’État (préfectures, rectorats, ARS)."
+        "extrait": "renforcer les services déconcentrés de l'État (préfectures, rectorats, ARS)"
       }
     ]
   },
@@ -2089,7 +2068,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer les doublons entre l’État et les collectivités, par une clarification stricte des compétences. Cela représenterait une économie de plus de 7,5Md€"
+        "extrait": "Supprimer les doublons entre l'État et les collectivités, par une clarification stricte des compétences. Cela représenterait une économie de plus de 7,5Md€"
       }
     ]
   },
@@ -2118,7 +2097,7 @@
         "sujet": "ecole_organisation",
         "position": "ecole_continuite",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire le nombre d’enfants par classe (maximum 19 élèves)."
+        "extrait": "Réduire le nombre d'enfants par classe (maximum 19 élèves)"
       }
     ]
   },
@@ -2160,10 +2139,10 @@
     ],
     "positions": [
       {
-        "sujet": "ecole_organisation",
-        "position": "ecole_continuite",
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Revaloriser le salaire des enseignants pour atteindre la moyenne de l’OCDE."
+        "extrait": "Revaloriser le salaire des enseignants pour atteindre la moyenne de l'OCDE"
       }
     ]
   },

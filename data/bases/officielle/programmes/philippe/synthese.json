@@ -53,7 +53,7 @@
   },
   {
     "theme": "fiscalite",
-    "texte": "Édouard Philippe propose un pacte fiscal avec les entreprises : 50 Md€ de baisses d'impôts de production contre 50 Md€ d'aides publiques en moins, sans détailler le mécanisme. Il promet un moratoire fiscal et normatif pendant le quinquennat, sans création de nouvel impôt. Il souhaite rééquilibrer le financement du modèle social pour augmenter le salaire net des actifs, sans préciser le financement de substitution, et instaurer une part fiscale dès le deuxième enfant. Il annonce vouloir faire contribuer davantage les retraités, dans le cadre du redressement des comptes publics, et les catégories les plus aisées, au redressement national, sans détailler les mécanismes. Il refuse d'alourdir la fiscalité des entreprises et priorise la baisse des dépenses sociales et la suppression des niches fiscales avant toute hausse d'impôt pour les actifs, sans engagement ferme.",
+    "texte": "Édouard Philippe propose un pacte fiscal avec les entreprises associant 50 Md€ de baisses d'impôts de production à 50 Md€ de réductions d'aides publiques jugées improductives, sans préciser les impôts concernés ni le calendrier. Il s'engage à ne créer aucun nouvel impôt ni nouvelle norme pendant le quinquennat, et à ne pas augmenter les impôts des entreprises, qu'il juge déjà trop imposées. Il propose de rééquilibrer le financement du modèle social pour qu'il ne repose plus uniquement sur le travail, avec pour objectif d'augmenter le salaire net des actifs, et d'accorder une part fiscale supplémentaire dès le deuxième enfant, contre la troisième actuellement, sans préciser le montant. Il souhaite baisser les dépenses sociales et supprimer des niches fiscales avant toute hausse d'impôt pour les personnes qui travaillent, et demander aux catégories les plus aisées de contribuer davantage au redressement des comptes publics, sans créer de nouveaux impôts. Le programme ne détaille pas les mécanismes précis de ces mesures.",
     "propositions": [
       "philippe-fisc-001",
       "philippe-fisc-002",
@@ -61,10 +61,9 @@
       "philippe-fisc-004",
       "philippe-fisc-005",
       "philippe-fisc-006",
-      "philippe-fisc-007",
-      "philippe-fisc-008"
+      "philippe-fisc-007"
     ],
-    "date_derniere_verification": "2026-10-06"
+    "date_derniere_verification": "2026-10-10"
   },
   {
     "theme": "immigration",
@@ -103,7 +102,7 @@
   },
   {
     "theme": "pouvoir-achat",
-    "texte": "Édouard Philippe propose de rééquilibrer le financement du modèle social pour augmenter le salaire net des salariés, indépendants, fonctionnaires et apprentis, sans préciser le mécanisme de remplacement. Il prévoit une part fiscale supplémentaire dès le deuxième enfant pour les familles ayant au moins deux enfants, et une aide financière unique et universelle fusionnant les dispositifs existants pour les familles ayant au moins un enfant à charge, sans préciser l'effet sur le total perçu. Il propose un temps partiel parental payé à 100 % pendant deux mois pour les parents reprenant le travail après un congé parental. Il annonce que les retraités et les catégories les plus aisées devront contribuer davantage au redressement des comptes publics, sans préciser le mécanisme. Il affirme vouloir baisser les dépenses sociales et supprimer des niches fiscales avant d'envisager une hausse d'impôt pour ceux qui travaillent.",
+    "texte": "Le candidat propose de rééquilibrer le financement du modèle social, pour qu'il ne repose plus seulement sur le travail, avec pour objectif d'augmenter le salaire net des actifs ; mécanisme non précisé. Pour les familles, il prévoit une part fiscale dès le deuxième enfant, une aide unique et universelle remplaçant les dispositifs existants (montant non précisé), un prêt à taux zéro à chaque naissance (conditions non précisées), et un temps partiel parental payé à 100 % pour 80 % du temps pendant deux mois après un congé parental. Il propose la suppression des aides sociales pour les étrangers délinquants expulsés, et le prélèvement forcé des amendes non recouvrées sur les prestations sociales des redevables. Il annonce enfin vouloir une contribution accrue des retraités pour le financement du système social, et des catégories les plus aisées pour le redressement national, sans nouvel impôt spécifique selon ses propos, mécanisme non détaillé.",
     "propositions": [
       "philippe-pa-001",
       "philippe-pa-002",
@@ -111,9 +110,11 @@
       "philippe-pa-004",
       "philippe-pa-005",
       "philippe-pa-006",
-      "philippe-pa-007"
+      "philippe-pa-007",
+      "philippe-pa-008",
+      "philippe-pa-009"
     ],
-    "date_derniere_verification": "2026-10-06"
+    "date_derniere_verification": "2026-10-10"
   },
   {
     "theme": "retraites",
@@ -161,14 +162,16 @@
   },
   {
     "theme": "travail",
-    "texte": "Le programme propose d'instaurer un droit à la reconversion pour les métiers menacés par l'intelligence artificielle, en adaptant l'enseignement, le recrutement et la formation continue, sans préciser le financement. Il prévoit de rééquilibrer le financement du modèle social pour qu'il ne repose plus uniquement sur le travail, avec l'objectif d'augmenter le salaire net des actifs, sans préciser les sources ni le montant. Il propose de créer un « temps partiel parental » permettant aux parents reprenant le travail après un congé parental de travailler à 80 % tout en étant payés à 100 % pendant deux mois. Le candidat souhaite enfin donner plus de liberté aux partenaires sociaux pour discuter en entreprise des règles et des façons de produire, et propose de reprendre la politique de l'offre interrompue en 2020, sans détailler de mesure concrète pour l'une ou l'autre.",
+    "texte": "Le candidat propose de rééquilibrer le financement du modèle social pour augmenter le salaire net des actifs. Pour l'équilibre des retraites, il veut faire travailler plus longtemps, créer un pilier de capitalisation de 10 à 15 % des pensions d'ici quinze ans, et confier la gestion du régime aux partenaires sociaux ; il demande aux cadres et employés du secteur public et privé de travailler plus longtemps. Il propose un temps partiel parental à 80 % du temps payé 100 % pendant deux mois pour la reprise du travail des parents après un congé parental, un droit à la reconversion pour les salariés dont le métier est menacé par l'intelligence artificielle, et plus de liberté aux partenaires sociaux pour négocier le travail en entreprise. Il veut reprendre la politique de l'offre interrompue en 2020. Le programme ne précise ni le mécanisme de financement, ni l'âge de départ, ni ces modalités.",
     "propositions": [
       "philippe-trav-001",
       "philippe-trav-002",
       "philippe-trav-003",
       "philippe-trav-004",
-      "philippe-trav-005"
+      "philippe-trav-005",
+      "philippe-trav-006",
+      "philippe-trav-007"
     ],
-    "date_derniere_verification": "2026-10-06"
+    "date_derniere_verification": "2026-10-10"
   }
 ]

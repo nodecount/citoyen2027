@@ -1,649 +1,5 @@
 [
   {
-    "titre": "Pacte fiscal avec les entreprises : baisse des impôts de production compensée par une baisse des aides publiques",
-    "resume_factuel": "Le candidat propose de conclure un « pacte fiscal inédit » avec les entreprises : 50 Md€ de baisses d'impôts de production contre 50 Md€ d'aides publiques improductives en moins. Le mécanisme précis de redistribution, le calendrier et les impôts concernés ne sont pas détaillés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr — priorite-prospere",
-        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
-        "nom": "edouardphilippe.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": true,
-    "hypotheses_calcul": "Le corpus chiffre les deux montants à 50 Md€ chacun, sans préciser la méthode de calcul ni le calendrier de mise en œuvre.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "philippe-fisc-001",
-    "candidat": "philippe",
-    "theme": "fiscalite",
-    "positions": []
-  },
-  {
-    "titre": "Moratoire fiscal et normatif pendant le quinquennat",
-    "resume_factuel": "Le candidat propose de sceller un moratoire normatif et fiscal : aucune nouvelle norme ni aucun nouvel impôt ne serait créé pendant la durée du quinquennat. Les contours exacts (exceptions éventuelles, portée) ne sont pas précisés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr — priorite-prospere",
-        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
-        "nom": "edouardphilippe.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "philippe-fisc-002",
-    "candidat": "philippe",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Rééquilibrage du financement du modèle social pour augmenter le salaire net des actifs",
-    "resume_factuel": "Le candidat souhaite rééquilibrer le financement du modèle social pour qu'il ne repose plus uniquement sur le travail, afin d'augmenter le salaire net des actifs. Le mécanisme de financement de substitution (autre assiette, autre impôt) n'est pas précisé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr — priorite-prospere",
-        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
-        "nom": "edouardphilippe.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie",
-              "independant",
-              "fonctionnaire",
-              "apprenti"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
-        "extrait": "Rééquilibrer le financement du modèle social pour qu'il ne repose plus uniquement sur le travail et augmenter le salaire net des actifs."
-      }
-    ],
-    "id": "philippe-fisc-003",
-    "candidat": "philippe",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Part fiscale dès le deuxième enfant",
-    "resume_factuel": "Le candidat propose d'accorder une part fiscale supplémentaire (quotient familial) dès le deuxième enfant, alors qu'elle n'est aujourd'hui accordée qu'à partir du troisième. Les barèmes précis et le coût pour les finances publiques ne sont pas détaillés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr — priorite-enfants",
-        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
-        "nom": "edouardphilippe.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "philippe-fisc-004",
-    "candidat": "philippe",
-    "theme": "fiscalite",
-    "positions": []
-  },
-  {
-    "titre": "Contribution accrue des retraités au financement du système social",
-    "resume_factuel": "Lors de son discours de lancement de campagne, le candidat annonce qu'il demandera aux retraités de contribuer davantage au financement du système social dans le cadre du redressement des comptes publics. Le mécanisme précis (fiscalisation accrue des pensions, hausse de CSG, autre) n'est pas détaillé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
-        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "retraite"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "extrait": "J'assume de dire aux retraités qu'il faudra contribuer davantage au financement de notre système social."
-      }
-    ],
-    "id": "philippe-fisc-005",
-    "candidat": "philippe",
-    "theme": "fiscalite",
-    "positions": []
-  },
-  {
-    "titre": "Contribution des catégories les plus aisées au redressement national",
-    "resume_factuel": "Le candidat annonce qu'il demandera aux « catégories les plus aisées » de contribuer au redressement national, sans créer de nouveaux impôts spécifiques pour elles. Le mécanisme exact de cette contribution (via les prélèvements existants) n'est pas précisé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
-        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "catégories les plus aisées"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "extrait": "Aux catégories les plus aisées, qu'on n'a pas besoin de réinventer des impôts idiots pour leur demander, à elles aussi, de contribuer au redressement national."
-      }
-    ],
-    "id": "philippe-fisc-006",
-    "candidat": "philippe",
-    "theme": "fiscalite",
-    "positions": []
-  },
-  {
-    "titre": "Refus d'alourdir la fiscalité des entreprises",
-    "resume_factuel": "Le candidat affirme qu'il ne taxera pas davantage les entreprises, qu'il estime déjà trop imposées, dans le cadre du partage des efforts budgétaires envisagés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
-        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "philippe-fisc-007",
-    "candidat": "philippe",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Priorité à la baisse de la dépense sociale et à la suppression des niches fiscales avant toute hausse d'impôt sur les actifs",
-    "resume_factuel": "Le candidat déclare qu'il faut baisser les dépenses sociales et supprimer les niches fiscales avant d'envisager une hausse des impôts pour « ceux qui travaillent ». Aucun engagement ferme de non-augmentation n'est formulé, ni aucune liste de niches fiscales visées.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
-        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "philippe-fisc-008",
-    "candidat": "philippe",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Rééquilibrage du financement du modèle social pour augmenter le salaire net des actifs",
-    "resume_factuel": "Édouard Philippe propose de rééquilibrer le financement du modèle social pour qu'il ne repose plus uniquement sur le travail, afin d'augmenter le salaire net des actifs. Le corpus ne précise pas le mécanisme de financement de remplacement, ni le montant ou le calendrier de cette hausse de salaire net.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr — priorite-prospere",
-        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
-        "nom": "edouardphilippe.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie",
-              "independant",
-              "fonctionnaire",
-              "apprenti"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
-        "extrait": "Rééquilibrer le financement du modèle social pour qu'il ne repose plus uniquement sur le travail et augmenter le salaire net des actifs."
-      }
-    ],
-    "id": "philippe-pa-001",
-    "candidat": "philippe",
-    "theme": "pouvoir-achat"
-  },
-  {
-    "titre": "Part fiscale accordée dès le deuxième enfant",
-    "resume_factuel": "Le quotient familial accorderait une part fiscale supplémentaire dès le deuxième enfant, et non plus seulement à partir du troisième comme actuellement. Le corpus ne précise pas le montant de l'avantage fiscal résultant ni son calendrier de mise en œuvre.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr — priorite-enfants",
-        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
-        "nom": "edouardphilippe.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "familles ayant au moins deux enfants"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
-        "extrait": "Accorder une part fiscale dès le deuxième enfant pour que chaque naissance soit reconnue et soutenue par la nation, pas seulement à partir de la troisième."
-      }
-    ],
-    "id": "philippe-pa-002",
-    "candidat": "philippe",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Aide financière unique et universelle pour les familles",
-    "resume_factuel": "Édouard Philippe propose de fusionner les dispositifs d'aide aux familles existants, jugés trop complexes et éparpillés, en une aide financière unique, lisible et universelle. Le corpus ne précise ni le montant de cette aide unique, ni si la fusion se traduit par une hausse ou une baisse du total perçu par les familles, ni son calendrier.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr — priorite-enfants",
-        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
-        "nom": "edouardphilippe.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "enfants_a_charge",
-            "valeurs": [
-              "au_moins_un"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "indetermine",
-        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
-        "extrait": "Créer une aide financière unique, lisible et universelle pour les familles, en fusionnant les dispositifs existants trop complexes et trop éparpillés."
-      }
-    ],
-    "id": "philippe-pa-003",
-    "candidat": "philippe",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Temps partiel parental payé à 100 % après le congé parental",
-    "resume_factuel": "Édouard Philippe propose de créer un « temps partiel parental » permettant aux parents, après leurs congés parentaux, de travailler à 80 % du temps tout en étant payés à 100 %, pendant une durée de deux mois, afin de faciliter la reprise du travail.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr — priorite-enfants",
-        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
-        "nom": "edouardphilippe.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus ; mécanisme précisé uniquement sur une durée de deux mois (80 % du temps payé 100 %).",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "parents reprenant le travail après un congé parental"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
-        "extrait": "Créer le temps partiel parental : passer à 80% payés 100 pendant 2 mois pour faciliter la reprise du travail des parents après les congés parentaux."
-      }
-    ],
-    "id": "philippe-pa-004",
-    "candidat": "philippe",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Contribution accrue des retraités au financement du système social",
-    "resume_factuel": "Édouard Philippe annonce qu'il faudra demander aux retraités de contribuer davantage au financement du système social, dans le cadre d'un effort de redressement des comptes publics. Le corpus ne précise pas le mécanisme exact (fiscalité, cotisation, désindexation) ni le montant.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
-        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "retraite"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "extrait": "J'assume de dire aux retraités qu'il faudra contribuer davantage au financement de notre système social."
-      }
-    ],
-    "id": "philippe-pa-005",
-    "candidat": "philippe",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Contribution accrue des catégories les plus aisées au redressement national",
-    "resume_factuel": "Édouard Philippe annonce que les catégories les plus aisées devront contribuer davantage au redressement des comptes publics, sans passer, selon lui, par de nouveaux impôts qu'il qualifie d'« idiots ». Le corpus ne précise pas le mécanisme concret ni le seuil de revenu ou de patrimoine visé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
-        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "catégories les plus aisées"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "extrait": "Aux catégories les plus aisées, qu'on n'a pas besoin de réinventer des impôts idiots pour leur demander, à elles aussi, de contribuer au redressement national."
-      }
-    ],
-    "id": "philippe-pa-006",
-    "candidat": "philippe",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Priorité à la baisse des dépenses sociales et à la suppression des niches fiscales avant toute hausse d'impôt sur les actifs",
-    "resume_factuel": "Édouard Philippe affirme vouloir baisser les dépenses sociales et supprimer des niches fiscales avant d'envisager une hausse des impôts de « ceux qui travaillent ». Le corpus ne précise ni les dépenses sociales concernées, ni les niches fiscales visées, ni de garantie ferme d'absence de hausse d'impôt.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
-        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie",
-              "independant",
-              "fonctionnaire",
-              "apprenti"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "indetermine",
-        "source_url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "extrait": "il faut baisser les dépenses sociales, supprimer les niches fiscales, avant de songer à augmenter les impôts de ceux qui travaillent."
-      }
-    ],
-    "id": "philippe-pa-007",
-    "candidat": "philippe",
-    "theme": "pouvoir-achat"
-  },
-  {
-    "titre": "Engagement de préserver les ouvriers, salariés modestes et indépendants dans l'effort budgétaire",
-    "resume_factuel": "Édouard Philippe déclare vouloir préserver les ouvriers, les salariés modestes et les indépendants dans le partage des efforts budgétaires qu'il prévoit de demander aux Français, sans préciser de mécanisme concret (exonération, plafond, dispositif) garantissant cette préservation.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
-        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible dans le corpus ; aucun mécanisme précis n'est décrit.",
-    "statut": "provisoire",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "philippe-pa-008",
-    "candidat": "philippe",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Droit à la reconversion pour les métiers menacés par l'intelligence artificielle",
-    "resume_factuel": "Le candidat propose d'adapter l'enseignement, le recrutement et la formation continue à l'intelligence artificielle, en instaurant un droit à la reconversion pour les métiers menacés par cette transformation. Le mécanisme précis (financement, modalités d'accès, durée) n'est pas détaillé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr — priorite-conquerante",
-        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
-        "nom": "edouardphilippe.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "philippe-trav-001",
-    "candidat": "philippe",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Rééquilibrage du financement du modèle social pour augmenter le salaire net des actifs",
-    "resume_factuel": "Le candidat propose de rééquilibrer le financement du modèle social afin qu'il ne repose plus uniquement sur le travail, avec l'objectif d'augmenter le salaire net des actifs. Les sources de financement alternatives et le montant de la hausse ne sont pas précisés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr — priorite-prospere",
-        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
-        "nom": "edouardphilippe.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "actifs"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
-        "extrait": "Rééquilibrer le financement du modèle social pour qu'il ne repose plus uniquement sur le travail et augmenter le salaire net des actifs."
-      }
-    ],
-    "id": "philippe-trav-002",
-    "candidat": "philippe",
-    "theme": "travail"
-  },
-  {
-    "titre": "Création d'un temps partiel parental rémunéré à 100 % pendant deux mois",
-    "resume_factuel": "Le candidat propose de créer un « temps partiel parental » permettant de travailler à 80 % tout en étant payé 100 % pendant deux mois, afin de faciliter la reprise du travail des parents après les congés parentaux.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr — priorite-enfants",
-        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
-        "nom": "edouardphilippe.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "parents reprenant le travail après un congé parental"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
-        "extrait": "Créer le temps partiel parental : passer à 80% payés 100 pendant 2 mois pour faciliter la reprise du travail des parents après les congés parentaux."
-      }
-    ],
-    "id": "philippe-trav-003",
-    "candidat": "philippe",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Plus de liberté laissée aux partenaires sociaux pour négocier les règles du travail en entreprise",
-    "resume_factuel": "Le candidat souhaite donner plus de liberté aux partenaires sociaux pour construire le monde du travail de demain et discuter au sein de l'entreprise des règles et des façons de produire. Aucun mécanisme précis (quelles règles, quel cadre légal modifié) n'est donné.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
-        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "philippe-trav-004",
-    "candidat": "philippe",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Reprise de la politique de l'offre interrompue en 2020",
-    "resume_factuel": "Le candidat propose de reprendre la politique de l'offre interrompue en 2020, en affirmant qu'elle avait donné de bons résultats en matière d'investissements, de baisse du chômage et de croissance. Aucune mesure concrète ni mécanisme n'est précisé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
-        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
-        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "philippe-trav-005",
-    "candidat": "philippe",
-    "theme": "travail",
-    "positions": []
-  },
-  {
     "titre": "Garantir l'équilibre du système de retraites par un travail plus long et un pilier de capitalisation",
     "resume_factuel": "Le candidat propose de garantir l'équilibre du système de retraites en faisant travailler plus longtemps, en tenant compte de la diversité des carrières, en créant un pilier de capitalisation représentant 10 à 15 % des pensions d'ici quinze ans, et en confiant la gestion du régime à l'équilibre aux partenaires sociaux. Les modalités précises de l'allongement de la durée de travail ne sont pas détaillées.",
     "sources": [
@@ -2661,5 +2017,656 @@
     "id": "philippe-lib-006",
     "candidat": "philippe",
     "theme": "libertes-fondamentales"
+  },
+  {
+    "titre": "Pacte fiscal avec les entreprises : baisse des impôts de production contre réduction des aides publiques",
+    "resume_factuel": "Édouard Philippe propose de conclure un pacte fiscal avec les entreprises prévoyant 50 Md€ de baisses d'impôts de production en échange de 50 Md€ de réductions d'aides publiques jugées improductives. Le texte ne précise pas quels impôts de production précis sont concernés ni le calendrier de mise en œuvre.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-prospere",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Le montant de 50 Md€ est cité des deux côtés (baisses d'impôts et aides supprimées) dans le corpus, sans détail de répartition par impôt.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "philippe-fisc-001",
+    "candidat": "philippe",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Moratoire fiscal et normatif pendant le quinquennat",
+    "resume_factuel": "Le candidat propose un engagement de ne créer aucun nouvel impôt ni aucune nouvelle norme pendant toute la durée du quinquennat. Le mécanisme précis de ce moratoire (quels impôts sont concernés, dérogations éventuelles) n'est pas détaillé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-prospere",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "philippe-fisc-002",
+    "candidat": "philippe",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Rééquilibrage du financement du modèle social pour augmenter le salaire net des actifs",
+    "resume_factuel": "Le candidat propose de rééquilibrer le financement du modèle social afin qu'il ne repose plus uniquement sur le travail, avec pour objectif d'augmenter le salaire net des actifs. Le mécanisme de ce rééquilibrage (nouvelles recettes, répartition entre cotisations et autres prélèvements) n'est pas précisé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-prospere",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "actifs (personnes en emploi)"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+        "extrait": "Rééquilibrer le financement du modèle social pour qu'il ne repose plus uniquement sur le travail et augmenter le salaire net des actifs."
+      }
+    ],
+    "id": "philippe-fisc-003",
+    "candidat": "philippe",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Part fiscale accordée dès le deuxième enfant",
+    "resume_factuel": "Le candidat propose d'accorder une part fiscale supplémentaire dès le deuxième enfant, alors que le système actuel du quotient familial n'accorde une part entière qu'à partir du troisième enfant. Les modalités précises (montant de l'avantage, plafonnement) ne sont pas détaillées.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-enfants",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "philippe-fisc-004",
+    "candidat": "philippe",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Engagement de ne pas augmenter les impôts des entreprises",
+    "resume_factuel": "Lors de son discours de lancement de campagne, le candidat affirme ne pas vouloir taxer davantage les entreprises, qu'il juge déjà trop imposées. Aucun mécanisme ni aucun impôt précis n'est cité ; il s'agit d'un engagement général.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
+        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
+        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "philippe-fisc-005",
+    "candidat": "philippe",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Priorité à la baisse des dépenses et à la suppression des niches fiscales avant toute hausse d'impôt sur les actifs",
+    "resume_factuel": "Le candidat affirme qu'il faut baisser les dépenses sociales et supprimer les niches fiscales avant d'envisager une hausse des impôts pour les personnes qui travaillent. Les niches fiscales visées et l'ampleur de la baisse de dépenses ne sont pas précisées.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
+        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
+        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "philippe-fisc-006",
+    "candidat": "philippe",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Contribution accrue demandée aux catégories les plus aisées",
+    "resume_factuel": "Le candidat affirme vouloir demander aux catégories les plus aisées de contribuer davantage au redressement des comptes publics, sans passer par la création de nouveaux impôts qu'il qualifie d'« idiots ». Le mécanisme précis de cette contribution (quel impôt, quel seuil) n'est pas détaillé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
+        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
+        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "catégories les plus aisées"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
+        "extrait": "Aux catégories les plus aisées, qu'on n'a pas besoin de réinventer des impôts idiots pour leur demander, à elles aussi, de contribuer au redressement national."
+      }
+    ],
+    "id": "philippe-fisc-007",
+    "candidat": "philippe",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Rééquilibrage du financement du modèle social pour augmenter le salaire net des actifs",
+    "resume_factuel": "Le candidat propose de rééquilibrer le financement du modèle social afin qu'il ne repose plus uniquement sur le travail, avec pour objectif d'augmenter le salaire net des actifs. Le mécanisme précis (nature des nouvelles ressources, montant, calendrier) n'est pas détaillé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-prospere",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "actifs (personnes en emploi)"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+        "extrait": "Rééquilibrer le financement du modèle social pour qu'il ne repose plus uniquement sur le travail et augmenter le salaire net des actifs."
+      }
+    ],
+    "id": "philippe-pa-001",
+    "candidat": "philippe",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Part fiscale accordée dès le deuxième enfant",
+    "resume_factuel": "Le candidat propose d'accorder une part fiscale supplémentaire dès le deuxième enfant, et non plus seulement à partir du troisième comme actuellement.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-enfants",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "foyers ayant au moins deux enfants"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+        "extrait": "Accorder une part fiscale dès le deuxième enfant pour que chaque naissance soit reconnue et soutenue par la nation, pas seulement à partir de la troisième."
+      }
+    ],
+    "id": "philippe-pa-002",
+    "candidat": "philippe",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Aide financière unique et universelle pour les familles",
+    "resume_factuel": "Le candidat propose de créer une aide financière unique, lisible et universelle pour les familles, en fusionnant les dispositifs existants jugés trop complexes et trop éparpillés. Le montant de cette nouvelle aide n'est pas précisé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-enfants",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "philippe-pa-003",
+    "candidat": "philippe",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Prêt à taux zéro pour faciliter le déménagement des familles qui s'agrandissent",
+    "resume_factuel": "Le candidat propose un prêt à taux zéro accordé à chaque naissance pour faciliter le déménagement des familles qui s'agrandissent. Les conditions d'octroi (montant, plafond de revenus) ne sont pas précisées.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-enfants",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "familles qui s'agrandissent (à chaque naissance)"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+        "extrait": "Faciliter le déménagement des familles qui s'agrandissent grâce à un prêt à taux zéro pour chaque naissance."
+      }
+    ],
+    "id": "philippe-pa-004",
+    "candidat": "philippe",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Création d'un temps partiel parental rémunéré à 100 % pendant deux mois",
+    "resume_factuel": "Le candidat propose de créer un « temps partiel parental » permettant de travailler à 80 % du temps tout en étant payé à 100 % pendant deux mois, afin de faciliter la reprise du travail des parents après les congés parentaux.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-enfants",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "parents reprenant le travail après un congé parental"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+        "extrait": "Créer le temps partiel parental : passer à 80% payés 100 pendant 2 mois pour faciliter la reprise du travail des parents après les congés parentaux."
+      }
+    ],
+    "id": "philippe-pa-005",
+    "candidat": "philippe",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Fin des aides sociales pour les étrangers délinquants",
+    "resume_factuel": "Le candidat propose que les étrangers délinquants fassent l'objet d'une expulsion immédiate et perdent le bénéfice des aides sociales.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-sure",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étrangers délinquants faisant l'objet d'une expulsion"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+        "extrait": "Être intraitables avec les étrangers délinquants : expulsion immédiate et fin des aides sociales."
+      }
+    ],
+    "id": "philippe-pa-006",
+    "candidat": "philippe",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Recouvrement forcé des amendes sur les prestations sociales",
+    "resume_factuel": "Le candidat propose de lutter contre les amendes non recouvrées en permettant le recouvrement forcé de ces amendes directement sur les prestations sociales perçues par les personnes redevables.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-sure",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes redevables d'amendes non recouvrées percevant des prestations sociales"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+        "extrait": "Lutter contre le scandale des amendes non-recouvrées : permettre le recouvrement forcé des amendes sur les prestations sociales."
+      }
+    ],
+    "id": "philippe-pa-007",
+    "candidat": "philippe",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Contribution accrue des retraités au financement du système social",
+    "resume_factuel": "Le candidat annonce vouloir demander aux retraités de contribuer davantage au financement du système social, sans préciser le mécanisme (fiscalité, cotisation, désindexation des pensions).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
+        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
+        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "retraite"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
+        "extrait": "J'assume de dire aux retraités qu'il faudra contribuer davantage au financement de notre système social."
+      }
+    ],
+    "id": "philippe-pa-008",
+    "candidat": "philippe",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Contribution accrue demandée aux catégories les plus aisées",
+    "resume_factuel": "Le candidat annonce vouloir demander aux catégories les plus aisées de contribuer au redressement national, sans créer de nouvel impôt spécifique selon ses propos, le mécanisme précis n'étant pas détaillé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
+        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
+        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "catégories les plus aisées"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
+        "extrait": "Aux catégories les plus aisées, qu'on n'a pas besoin de réinventer des impôts idiots pour leur demander, à elles aussi, de contribuer au redressement national."
+      }
+    ],
+    "id": "philippe-pa-009",
+    "candidat": "philippe",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Rééquilibrage du financement du modèle social pour augmenter le salaire net des actifs",
+    "resume_factuel": "Le candidat propose de rééquilibrer le financement du modèle social afin qu'il ne repose plus uniquement sur le travail, dans le but d'augmenter le salaire net des actifs. Le mécanisme précis (nouvelle assiette, taux) n'est pas détaillé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-prospere",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie",
+              "independant",
+              "chef_entreprise",
+              "fonctionnaire"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+        "extrait": "Rééquilibrer le financement du modèle social pour qu'il ne repose plus uniquement sur le travail et augmenter le salaire net des actifs."
+      }
+    ],
+    "id": "philippe-trav-001",
+    "candidat": "philippe",
+    "theme": "travail"
+  },
+  {
+    "titre": "Garantir l'équilibre du système de retraites par un travail plus long et un pilier de capitalisation",
+    "resume_factuel": "Le candidat propose de garantir l'équilibre du système de retraites en travaillant plus tout en tenant compte de la diversité des carrières, de créer un pilier de capitalisation représentant 10 à 15 % des pensions d'ici quinze ans, et de confier la gestion du régime à l'équilibre aux partenaires sociaux.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-prospere",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "philippe-trav-002",
+    "candidat": "philippe",
+    "theme": "travail"
+  },
+  {
+    "titre": "Demander aux cadres et employés du secteur public et privé de travailler plus longtemps",
+    "resume_factuel": "Le candidat annonce qu'il demandera aux cadres et employés du secteur public et privé de travailler plus longtemps, sans préciser de mesure d'âge ou de durée de cotisation chiffrée.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
+        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
+        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "philippe-trav-003",
+    "candidat": "philippe",
+    "theme": "travail"
+  },
+  {
+    "titre": "Création d'un temps partiel parental rémunéré à 100 % pendant deux mois",
+    "resume_factuel": "Le candidat propose de créer un temps partiel parental permettant de passer à 80 % du temps de travail tout en étant payé 100 %, pendant deux mois, pour faciliter la reprise du travail des parents après les congés parentaux.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-enfants",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "philippe-trav-004",
+    "candidat": "philippe",
+    "theme": "travail"
+  },
+  {
+    "titre": "Droit à la reconversion pour les métiers menacés par l'intelligence artificielle",
+    "resume_factuel": "Le candidat propose d'adapter l'enseignement, le recrutement et la formation continue à l'IA, en instaurant un droit à la reconversion pour les salariés dont le métier est menacé par cette technologie. Les modalités concrètes (financement, durée) ne sont pas précisées.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr — priorite-conquerante",
+        "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+        "nom": "edouardphilippe.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "philippe-trav-005",
+    "candidat": "philippe",
+    "theme": "travail"
+  },
+  {
+    "titre": "Plus de liberté pour les partenaires sociaux dans la négociation des règles du travail en entreprise",
+    "resume_factuel": "Le candidat souhaite donner plus de liberté aux partenaires sociaux pour construire le monde du travail de demain et discuter au sein de l'entreprise des règles et des façons de produire. Aucun mécanisme législatif précis n'est détaillé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
+        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
+        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "philippe-trav-006",
+    "candidat": "philippe",
+    "theme": "travail"
+  },
+  {
+    "titre": "Reprise de la politique de l'offre interrompue en 2020",
+    "resume_factuel": "Le candidat annonce vouloir reprendre la politique de l'offre interrompue en 2020, qu'il présente comme ayant donné de bons résultats en matière d'investissements, de baisse du chômage et de croissance économique. Les mesures concrètes de relance ne sont pas détaillées.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "edouardphilippe.fr (meeting du 5 juillet 2026) — meeting-adidas-arena",
+        "url": "https://www.edouardphilippe.fr/actualites/grand-meeting-edouard-philippe-adidas-arena",
+        "nom": "edouardphilippe.fr (meeting du 5 juillet 2026)",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "philippe-trav-007",
+    "candidat": "philippe",
+    "theme": "travail"
   }
 ]

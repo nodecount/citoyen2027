@@ -1,52 +1,53 @@
 [
   {
     "groupe": 0,
-    "empreinte": "22a99c02fad02b74",
-    "date": "2026-10-06",
+    "empreinte": "79c1756b6243f7a0",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 13,
-    "sans_position": 11,
+    "etiquetees": 14,
+    "sans_position": 10,
     "rejetees": [
       {
-        "id": "le-pen-social-solidarite-015",
-        "raison": "relecture : La norme ZAN concerne l'artificialisation des sols/urbanisme et non directement le logement ; l'étiquette suppose une interprétation non établie par le texte lui-même."
+        "id": "le-pen-social-solidarite-011",
+        "raison": "relecture : L'extrait porte sur les sanctions contre les locataires impayés et l'accélération des expulsions, ce qui ne relève pas de la 'libération de l'offre de logement' (construction, normes, fiscalité des propriétaires) telle que définie."
       }
     ],
-    "cout_reference_usd": 0.0669,
+    "cout_reference_usd": 0.132,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "5df9b0142a28fb12",
-    "date": "2026-10-05",
+    "empreinte": "ee715720818b515e",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 15,
-    "sans_position": 8,
+    "etiquetees": 14,
+    "sans_position": 10,
     "rejetees": [
       {
         "id": "le-pen-gouvernance-republique-002",
-        "raison": "relecture : La mesure protège l'économie française contre le rachat par des intérêts étrangers/non européens, ce qui relève du protectionnisme économique (commerce) et non d'une réduction du rôle de l'UE au profit de la souveraineté nationale."
-      },
-      {
-        "id": "le-pen-gouvernance-republique-007",
-        "raison": "relecture : La mesure impose une localisation des données en France ou dans l'UE (donc compatible avec un cadre européen) ; elle ne relève pas d'une réduction du rôle de l'UE au profit de la souveraineté nationale mais plutôt d'une protection économique/numérique (commerce)."
+        "raison": "relecture : La mesure vise à bloquer le rachat d'entreprises stratégiques par des intérêts étrangers/non européens, ce qui relève du protectionnisme économique et non d'une reprise de compétences vis-à-vis de l'UE (le texte inclut même les opérateurs européens dans le périmètre autorisé)."
       }
     ],
-    "cout_reference_usd": 0.1124,
+    "cout_reference_usd": 0.0917,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "bfd21e199bdfbe21",
-    "date": "2026-10-05",
+    "empreinte": "d48378827f30cd42",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 10,
-    "etiquetees": 8,
-    "sans_position": 2,
-    "rejetees": [],
-    "cout_reference_usd": 0.0655,
+    "etiquetees": 6,
+    "sans_position": 3,
+    "rejetees": [
+      {
+        "id": "le-pen-education-jeunesse-007",
+        "raison": "relecture : La loi Ciotti de 2010 concerne l'assiduité scolaire et la discipline générale ; le texte ne précise pas que les peines plancher visent spécifiquement les mineurs, ce qui ne fonde pas clairement l'étiquette justice_mineurs."
+      }
+    ],
+    "cout_reference_usd": 0.0369,
     "appels": 2
   }
 ]

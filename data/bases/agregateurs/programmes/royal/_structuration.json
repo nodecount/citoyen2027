@@ -2,19 +2,14 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "b5f9ee11ad0dfecb",
-    "date": "2026-10-04",
+    "empreinte": "0da33edf3cefea66",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 5,
-    "avec_effets": 0,
+    "avec_effets": 1,
     "sans_effet": 4,
-    "rejetees": [
-      {
-        "id": "royal-finances-publiques-005",
-        "raison": "relecture : Le texte ne précise pas de seuil de patrimoine ('plus_1_3m'), ce chiffre provient d'une connaissance extérieure sur l'ancien ISF et non de l'extrait cité."
-      }
-    ],
-    "cout_reference_usd": 0.0447,
+    "rejetees": [],
+    "cout_reference_usd": 0.0452,
     "appels": 2
   }
 ]

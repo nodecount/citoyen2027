@@ -1,134 +1,119 @@
 [
   {
     "groupe": 0,
-    "empreinte": "ffd6039a31752b91",
-    "date": "2026-10-06",
+    "empreinte": "8d214e05fae1edc9",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 16,
-    "sans_position": 9,
-    "rejetees": [],
-    "cout_reference_usd": 0.1232,
+    "etiquetees": 17,
+    "sans_position": 6,
+    "rejetees": [
+      {
+        "id": "melenchon-aides-003",
+        "raison": "relecture : Le doublement de places d'accueil pour sans-abri relève de l'hébergement d'urgence, pas du logement social ou de l'encadrement des loyers visés par la définition d'encadrer_logement."
+      },
+      {
+        "id": "melenchon-logt-001",
+        "raison": "relecture : L'interdiction des expulsions sans relogement ne correspond ni à l'encadrement des loyers ni à la construction de logement social visés par la définition d'encadrer_logement."
+      }
+    ],
+    "cout_reference_usd": 0.0986,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "bb6eb9205311573e",
-    "date": "2026-10-06",
+    "empreinte": "10f19b391248fc39",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 10,
-    "sans_position": 15,
-    "rejetees": [],
-    "cout_reference_usd": 0.1087,
+    "etiquetees": 17,
+    "sans_position": 7,
+    "rejetees": [
+      {
+        "id": "melenchon-sante-014",
+        "raison": "relecture : L'extrait mélange accueil scolaire et gratuité des soins Outre-mer sans montrer une réorganisation de l'hôpital public (moyens, installation des médecins, centres de santé) ; c'est plus proche d'une mesure de gratuité/redistribution que d'organisation sanitaire."
+      }
+    ],
+    "cout_reference_usd": 0.0889,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "a88e1f4cee233c1b",
-    "date": "2026-10-06",
+    "empreinte": "ad5a5090e7655100",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 9,
-    "sans_position": 12,
-    "rejetees": [
-      {
-        "id": "melenchon-trav-033",
-        "raison": "relecture : L'extrait porte sur la cotisation des revenus d'intéressement/participation/épargne salariale et des revenus financiers d'entreprises, ce qui concerne le financement des retraites et non spécifiquement une taxation des très hauts patrimoines ou revenus individuels ; mauvais sujet (devrait relever de fiscalite/redistribution, pas ultra_riches)."
-      },
-      {
-        "id": "melenchon-trav-034",
-        "raison": "relecture : L'extrait concerne l'indexation des retraites sur les salaires, un mécanisme de calcul des pensions, et ne fonde pas une position de hausse du SMIC ou des salaires eux-mêmes ; mauvais sujet."
-      },
-      {
-        "id": "melenchon-retr-004",
-        "raison": "relecture : L'extrait porte sur la cotisation des revenus d'intéressement/participation/épargne salariale et des revenus financiers d'entreprises pour financer les retraites, pas sur une taxation des très hauts patrimoines ou revenus individuels ; mauvais sujet."
-      },
-      {
-        "id": "melenchon-retr-005",
-        "raison": "relecture : L'extrait concerne l'indexation des retraites sur les salaires, un mécanisme de calcul des pensions, et ne fonde pas une position de hausse du SMIC ou des salaires ; mauvais sujet."
-      }
-    ],
-    "cout_reference_usd": 0.1236,
+    "sans_position": 16,
+    "rejetees": [],
+    "cout_reference_usd": 0.0673,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "4a5c478c34659afa",
-    "date": "2026-10-06",
+    "empreinte": "ef673ce0496a17bb",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 12,
-    "sans_position": 8,
+    "etiquetees": 13,
+    "sans_position": 10,
     "rejetees": [
       {
-        "id": "melenchon-logt-001",
-        "raison": "relecture : L'interdiction d'expulsion sans relogement ne correspond à aucun des critères définissant encadrer_logement (loyers, logement social, logements vacants, locations touristiques)."
+        "id": "melenchon-secu-012",
+        "raison": "relecture : Le texte exprime une préférence méthodologique antiterroriste (infiltration humaine vs technologique) sans affirmer directement une protection de la vie privée des citoyens, c'est une inférence."
       },
       {
-        "id": "melenchon-logt-002",
-        "raison": "relecture : Une garantie universelle des loyers contre les impayés n'est pas un encadrement des loyers ni du logement social au sens de la définition."
-      },
-      {
-        "id": "melenchon-logt-006",
-        "raison": "relecture : La taxation des transactions immobilières élevées ne correspond pas aux critères de la position (loyers, logement social, logements vacants, locations touristiques)."
-      },
-      {
-        "id": "melenchon-logt-007",
-        "raison": "relecture : L'obligation de rénovation des passoires thermiques avant location ne relève pas des critères définissant encadrer_logement."
-      },
-      {
-        "id": "melenchon-logt-008",
-        "raison": "relecture : Le permis de louer et le plan de rénovation ne correspondent pas précisément aux critères listés pour encadrer_logement."
+        "id": "melenchon-secu-023",
+        "raison": "relecture : Le texte ne précise pas le contenu de l'ordonnance de 1945 ; conclure à la priorité éducative nécessite une connaissance extérieure du droit français non fournie par l'extrait."
       }
     ],
-    "cout_reference_usd": 0.0898,
+    "cout_reference_usd": 0.0985,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "efd87fb622465ba9",
-    "date": "2026-10-06",
-    "modele": "claude-sonnet-5",
-    "propositions": 25,
-    "etiquetees": 15,
-    "sans_position": 7,
-    "rejetees": [
-      {
-        "id": "melenchon-sante-016",
-        "raison": "relecture : L'extrait ne parle pas de minima sociaux ou d'assurance chômage mais d'une extension générale du principe de Sécurité sociale, ce qui relève plutôt de l'organisation de la santé/protection sociale que du sujet aides_sociales défini par le RSA et le chômage."
-      },
-      {
-        "id": "melenchon-educ-006",
-        "raison": "relecture : Abroger les contre-réformes du lycée, du collège et de la voie professionnelle constitue une refonte structurelle, ce qui correspond à reformer_ecole et non à ecole_continuite."
-      },
-      {
-        "id": "melenchon-educ-008",
-        "raison": "relecture : La mesure porte sur l'alimentation des cantines scolaires, pas sur des normes agricoles directes (pesticides, soutien à la production bio), c'est un effet de second ordre sur l'agriculture."
-      }
-    ],
-    "cout_reference_usd": 0.0893,
-    "appels": 2
-  },
-  {
-    "groupe": 5,
-    "empreinte": "659a129c0cb09170",
-    "date": "2026-10-06",
+    "empreinte": "cb7c7a933f7729cd",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 12,
     "sans_position": 11,
     "rejetees": [
       {
-        "id": "melenchon-educ-016",
-        "raison": "relecture : Construire des logements étudiants ne relève pas d'encadrer_logement (encadrement des loyers/logement social privé), c'est une mesure de construction de logements publics spécifiques aux étudiants, pas clairement fondée par cette position."
+        "id": "melenchon-lib-012",
+        "raison": "relecture : L'extrait porte sur l'abrogation de mesures liberticides de l'état d'urgence et le contrôle judiciaire antiterroriste, pas sur la surveillance de masse, la reconnaissance faciale ou l'accès aux données/messageries définissant le sujet 'surveillance'."
       },
       {
-        "id": "melenchon-secu-015",
-        "raison": "relecture : La mesure concerne l'organisation de la police de proximité et le démantèlement de BAC/BRAV-M, pas le droit de manifester ni l'encadrement des manifestations ; le sujet est inadéquat."
+        "id": "melenchon-lib-029",
+        "raison": "relecture : L'extrait reste une déclaration d'intention vague sur le rejet du tout-sécuritaire, sans mesure concrète de prévention, d'éducation ou de réinsertion qui fonde réellement la position 'prevention'."
       }
     ],
-    "cout_reference_usd": 0.0785,
+    "cout_reference_usd": 0.0779,
+    "appels": 2
+  },
+  {
+    "groupe": 5,
+    "empreinte": "48d678f6e7bf6a9f",
+    "date": "2026-10-10",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 13,
+    "sans_position": 9,
+    "rejetees": [
+      {
+        "id": "melenchon-envi-012",
+        "raison": "relecture : L'investissement est présenté comme financé par la suppression de cadeaux fiscaux aux entreprises, non comme un choix d'accepter un déficit accru : l'étiquette dette/investir_dette n'est pas fondée par le texte."
+      },
+      {
+        "id": "melenchon-envi-017",
+        "raison": "relecture : La renationalisation d'EDF/Engie et l'arrêt de la libéralisation relèvent de la propriété publique de l'énergie, pas de 'faire contribuer et encadrer les entreprises' au sens fiscal/social visé par la définition d'entreprises."
+      },
+      {
+        "id": "melenchon-envi-019",
+        "raison": "relecture : L'extrait porte sur la reconversion des salariés et les conditions de travail, pas sur la décision de sortir du nucléaire elle-même, qui n'est que présupposée."
+      }
+    ],
+    "cout_reference_usd": 0.0807,
     "appels": 2
   },
   {

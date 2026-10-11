@@ -1,1100 +1,5 @@
 [
   {
-    "titre": "Baisse de la TVA sur les véhicules électriques neufs de 20% à 5,5% pendant 5 ans",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (document de convention 2025) propose d'abaisser le taux de TVA applicable aux véhicules électriques de 20% à 5,5% pendant cinq ans, en substitution partielle de la prime à l'achat actuelle, avec application de critères d'écoconditionnalité. Après cette période, le taux de TVA serait relevé une fois les coûts de production des véhicules électriques baissés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=62",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage global n'est fourni ; seul le taux de TVA (20% à 5,5%) et la durée (5 ans) sont précisés.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-fisc-001",
-    "candidat": "attal",
-    "theme": "fiscalite",
-    "positions": []
-  },
-  {
-    "titre": "Suppression de la réduction d'impôt au titre des frais de scolarité",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (document de convention 2025) propose de supprimer la réduction d'impôt pour frais de scolarité, jugée d'efficacité non attestée, afin de financer la réforme des bourses étudiantes sur critères sociaux.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=43",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun montant chiffré n'est donné pour cette suppression ; elle est présentée comme devant conforter le financement du nouveau système de bourses.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "parents payant des frais de scolarité et bénéficiant actuellement de la réduction d'impôt correspondante"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=43",
-        "extrait": "La suppression de la réduction d’impôts au titre des frais de scolarité, dont l’efficacité n’est pas attestée, pourra conforter le financement de ce nouveau système de bourse"
-      }
-    ],
-    "id": "attal-fisc-002",
-    "candidat": "attal",
-    "theme": "fiscalite",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "redistribution",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=43",
-        "extrait": "supprimer la réduction d'impôt pour frais de scolarité, jugée d'efficacité non attestée, afin de financer la réforme des bourses étudiantes sur critères sociaux"
-      }
-    ]
-  },
-  {
-    "titre": "TVA réduite à 5,5% pour les entreprises de réemploi, réparation et reconditionnement (statut \"entreprise de seconde vie\")",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (document de convention 2025) propose de créer un label national « entreprise de seconde vie » pour les acteurs consacrant au moins 70% de leur chiffre d'affaires au reconditionnement, à la réparation ou à la vente de produits remis à neuf, avec une TVA réduite à 5,5% sur leurs ventes et prestations (contre 20% au taux normal), l'écart étant financé par un redéploiement des recettes de l'éco-contribution des filières DEEE et textile.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=80",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": true,
-    "hypotheses_calcul": "Coût fiscal net estimé à 350 millions d'euros par an (TVA réduite), compensé selon le document par les recettes sociales et la baisse des déchets mis à la benne ; objectif de +50 000 emplois d'ici 2030.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-fisc-003",
-    "candidat": "attal",
-    "theme": "fiscalite",
-    "positions": []
-  },
-  {
-    "titre": "Refonte de la fiscalité carbone pour la rendre plus juste (compte épargne-carbone ou taxe carbone progressive)",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (document de convention 2025) propose d'explorer deux pistes de refonte de la fiscalité carbone payée par les ménages : un \"compte épargne-carbone\" qui abonderait un compte personnel avec les taxes carbone déjà payées (sur le chauffage ou le carburant), ces crédits non convertibles en argent servant uniquement à financer isolation, remplacement de chaudière ou achat de véhicule zéro-émission, éventuellement majorés pour les premiers déciles ; ou une taxe carbone rendue plus progressive selon les revenus et le lieu de vie. Le mécanisme précis reste à expertiser et expérimenter.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=58",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage n'est fourni ; le document indique que le défi technique et opérationnel nécessitera des phases d'expertise et d'expérimentation.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-fisc-004",
-    "candidat": "attal",
-    "theme": "fiscalite",
-    "positions": []
-  },
-  {
-    "titre": "Fiscalité de l'assurance-vie orientée vers l'investissement de long terme",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (document de convention 2025) propose, dans le cadre d'un plan « Épargne souveraine », des adaptations fiscales progressives sur l'assurance-vie : baisse de la fiscalité pour les unités de compte européennes bloquées 20 ans (prélèvement forfaitaire unique divisé par deux à la sortie), soutien à l'assurance-vie de type eurocroissance, et en contrepartie une hausse de la fiscalité sur l'épargne de court terme.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=17",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun montant chiffré n'est donné pour l'effet de ces adaptations fiscales sur les épargnants ; l'objectif global visé est de mobiliser plusieurs centaines de milliards d'euros d'épargne au service de l'économie.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "épargnants en assurance-vie investissant sur le long terme (unités de compte européennes bloquées 20 ans)"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=17",
-        "extrait": "la baisse de la fiscalité sur l’assurance vie investie dans le long terme (UC européenne bloquée sur 20 ans avec un PFU divisé par deux à la sortie"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "épargnants en assurance-vie investissant sur le court terme"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "baisse",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=17",
-        "extrait": "la hausse de la fiscalité sur le court terme"
-      }
-    ],
-    "id": "attal-fisc-005",
-    "candidat": "attal",
-    "theme": "fiscalite",
-    "positions": []
-  },
-  {
-    "titre": "Réduction des charges salariales pour augmenter le salaire net",
-    "resume_factuel": "Gabriel Attal propose de faire monter les salaires nets en réduisant les charges salariales, estimant que les dépenses sociales ne peuvent plus reposer autant sur les Français qui travaillent. Le mécanisme précis de cette baisse de charges et son financement ne sont pas détaillés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "attalpresident.fr — programme-travail-salaires",
-        "url": "https://attalpresident.fr/programme/travail-salaires",
-        "nom": "attalpresident.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun montant chiffré de la baisse de charges salariales n'est fourni dans ce document.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "nous y arriverons enfin en réduisant les charges salariales pour faire monter le salaire net"
-      }
-    ],
-    "id": "attal-fisc-006",
-    "candidat": "attal",
-    "theme": "fiscalite",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "faire monter les salaires nets en réduisant les charges salariales"
-      },
-      {
-        "sujet": "salaires",
-        "position": "moderer_salaires",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "faire monter les salaires nets en réduisant les charges salariales, estimant que les dépenses sociales ne peuvent plus reposer autant sur les Français qui travaillent"
-      }
-    ]
-  },
-  {
-    "titre": "Détaxation massive du travail pour augmenter les salaires",
-    "resume_factuel": "Position de 2025 : Gabriel Attal, dans l'édito de la convention Nouvelle donne économique et climatique (parti Renaissance, 2025), annonce que des réflexions seront menées pour « détaxer massivement le travail » afin d'augmenter sensiblement les salaires des travailleurs français, dans le cadre du choc de productivité visant à porter le salaire médian de 2000 à 3000€ par mois. Le mécanisme précis (quel prélèvement serait réduit, pour qui, selon quel calendrier) n'est pas détaillé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=6",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Objectif cité : porter le salaire médian français d'environ 2000 à 3000€ par mois ; aucun chiffrage du coût ou du mécanisme de détaxation n'est fourni.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-fisc-007",
-    "candidat": "attal",
-    "theme": "fiscalite",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=6",
-        "extrait": "détaxer massivement le travail » afin d'augmenter sensiblement les salaires des travailleurs français"
-      }
-    ]
-  },
-  {
-    "titre": "Réduction des charges salariales pour augmenter le salaire net",
-    "resume_factuel": "Gabriel Attal propose de réduire les charges salariales afin de faire monter le salaire net des travailleurs, dans le cadre de sa stratégie pour une hausse des salaires. Le mécanisme précis (montant, calendrier) n'est pas précisé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "attalpresident.fr — programme-travail-salaires",
-        "url": "https://attalpresident.fr/programme/travail-salaires",
-        "nom": "attalpresident.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "nous y arriverons enfin en réduisant les charges salariales pour faire monter le salaire net"
-      }
-    ],
-    "id": "attal-pa-001",
-    "candidat": "attal",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "réduire les charges salariales afin de faire monter le salaire net des travailleurs"
-      },
-      {
-        "sujet": "salaires",
-        "position": "moderer_salaires",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "réduire les charges salariales afin de faire monter le salaire net des travailleurs"
-      }
-    ]
-  },
-  {
-    "titre": "Détaxation massive du travail pour augmenter les salaires",
-    "resume_factuel": "Position de 2025 (convention Nouvelle donne de Renaissance) : le parti propose des réflexions pour détaxer massivement le travail afin d'augmenter sensiblement les salaires des travailleurs français, avec l'objectif de porter le salaire médian de 2000 à 3000€ par mois. Les modalités précises de détaxation ne sont pas détaillées.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=6",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Objectif cité : porter le salaire médian d'environ 2000 à 3000€ par mois.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=6",
-        "extrait": "Notre choc de productivité et les réflexions à mener pour détaxer massivement le travail vont permettre d’augmenter sensiblement les salaires de tous les travailleurs français."
-      }
-    ],
-    "id": "attal-pa-002",
-    "candidat": "attal",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=6",
-        "extrait": "détaxer massivement le travail afin d'augmenter sensiblement les salaires des travailleurs français"
-      }
-    ]
-  },
-  {
-    "titre": "Suppression du plafond légal d'heures supplémentaires",
-    "resume_factuel": "Gabriel Attal propose de supprimer le plafond d'heures supplémentaires fixé par le Code du travail, aujourd'hui fixé, à défaut d'accord collectif, à 220 heures par an et par salarié, afin de permettre à chaque salarié qui le souhaite de travailler davantage.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "attalpresident.fr — programme-travail-salaires",
-        "url": "https://attalpresident.fr/programme/travail-salaires",
-        "nom": "attalpresident.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "je veux que chaque Français qui le souhaite puisse travailler, sans que la loi l’en empêche. À côté du droit du travail, il faut instaurer un droit au travail. Je proposerai de supprimer le plafond d’heures supplémentaires fixé par le Code du travai l, aujourd’hui fixé, à défaut d’accord collectif, à deux cent vingt heures par an et par salarié."
-      }
-    ],
-    "id": "attal-pa-003",
-    "candidat": "attal",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "temps_travail",
-        "position": "travailler_davantage",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "supprimer le plafond d'heures supplémentaires fixé par le Code du travail... afin de permettre à chaque salarié qui le souhaite de travailler davantage"
-      }
-    ]
-  },
-  {
-    "titre": "Baisse de la TVA sur les véhicules électriques neufs de 20% à 5,5% pendant 5 ans",
-    "resume_factuel": "Position de 2025 (convention Nouvelle donne de Renaissance) : abaisser le taux de TVA des véhicules électriques neufs à 5,5% pendant 5 ans, en substitution partielle de la prime à l'achat actuelle, afin de rendre l'électrification de la mobilité plus accessible.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=62",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Après 5 ans, la baisse des coûts de production des véhicules électriques permettrait de relever la TVA sans surcoût pour les consommateurs.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "vehicule",
-            "valeurs": [
-              "electrique_hybride"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=62",
-        "extrait": "nous proposons d’abaisser le taux de TVA des véhicules électriques à 5,5% considérant que l’électrification de la mobilité est une première nécessité pour les ménages"
-      }
-    ],
-    "id": "attal-pa-004",
-    "candidat": "attal",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Leasing social recentré sur les véhicules électriques d'occasion",
-    "resume_factuel": "Position de 2025 (convention Nouvelle donne de Renaissance) : étendre le dispositif de leasing social en le centrant sur les véhicules électriques d'occasion pour viser des loyers inférieurs à 100€ par mois, avec une priorité pour les travailleurs de première ligne comme les aides à domicile, pour permettre aux ménages modestes, notamment en milieu rural et en ZFE, d'accéder à l'électrique.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=63",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Objectif : tarifs inférieurs à 100€ par mois ; 50 000 véhicules déjà acquis par des ménages modestes dans le cadre du dispositif actuel.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "ménages modestes, notamment en milieu rural et en ZFE"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=63",
-        "extrait": "Nous voulons étendre ce dispositif en le centrant sur les véhicules électriques d’occasion. Cela permettra de mettre en circulation davantage de véhicules et de rendre le leasing encore plus abordable en visant des tarifs inférieurs à 100 € par mois"
-      }
-    ],
-    "id": "attal-pa-005",
-    "candidat": "attal",
-    "theme": "pouvoir-achat"
-  },
-  {
-    "titre": "Développement du rétrofit automobile accessible",
-    "resume_factuel": "Position de 2025 (convention Nouvelle donne de Renaissance) : soutenir la filière de conversion de véhicules thermiques en électrique ou très basse émission (rétrofit), moins coûteuse que l'achat d'un véhicule neuf (8 000€ pour une petite voiture, jusqu'à 20 000€ pour les modèles plus grands), en encadrant les prix et en créant un réseau national de garages qualifiés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=63",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": true,
-    "hypotheses_calcul": "Coût du rétrofit cité : 8 000€ à 20 000€ selon la taille du véhicule, contre l'achat d'un véhicule neuf.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "vehicule",
-            "valeurs": [
-              "thermique"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=63",
-        "extrait": "En soutenant activement la filière rétrofit en France, en encadrant les prix pour en faciliter l’accès, et en créant un réseau national de garages et professionnels qualifiés, nous permettrons à chacun de verdir son véhicule sans avoir à remplacer son parc automobile."
-      }
-    ],
-    "id": "attal-pa-006",
-    "candidat": "attal",
-    "theme": "pouvoir-achat"
-  },
-  {
-    "titre": "Garages solidaires pour véhicules reconditionnés accessibles aux familles modestes",
-    "resume_factuel": "Position de 2025 (convention Nouvelle donne de Renaissance) : soutenir le déploiement de garages solidaires reconditionnant des véhicules donnés par des entreprises pour les revendre à des prix accessibles aux familles modestes.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=64",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "familles modestes"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=64",
-        "extrait": "pour les revendre à des prix accessibles aux familles modestes"
-      }
-    ],
-    "id": "attal-pa-007",
-    "candidat": "attal",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Assurance automobile au kilomètre par défaut",
-    "resume_factuel": "Position de 2025 (convention Nouvelle donne de Renaissance) : faire de l'assurance au kilomètre l'option par défaut pour l'assurance automobile, ajustant les primes en fonction de la distance parcourue, tout en maintenant la possibilité de souscrire une assurance illimitée pour les gros rouleurs.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=65",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-pa-008",
-    "candidat": "attal",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Refonte de la fiscalité carbone pour la rendre plus juste",
-    "resume_factuel": "Position de 2025 (convention Nouvelle donne de Renaissance) : explorer deux pistes pour refonder la fiscalité carbone payée par les ménages (chauffage, carburant) : un compte épargne-carbone qui réaffecte les taxes carbone payées par un ménage au financement de travaux d'isolation ou de véhicule zéro-émission (majoré pour les premiers déciles), ou une taxe carbone rendue plus progressive selon les revenus et le lieu de vie.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=58",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Nécessite des phases d'expertise et d'expérimentation ; aucun chiffrage de montant de taxe n'est fourni.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "indetermine",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=58",
-        "extrait": "La seconde consisterait à rendre plus progressive la taxe carbone, en fonction des revenus et des lieux de vie."
-      }
-    ],
-    "id": "attal-pa-009",
-    "candidat": "attal",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "TVA réduite à 5,5% pour les entreprises de réemploi, réparation et reconditionnement",
-    "resume_factuel": "Position de 2025 (convention Nouvelle donne de Renaissance) : créer un statut d'\"entreprise de seconde vie\" pour les acteurs consacrant au moins 70% de leur chiffre d'affaires au reconditionnement, à la réparation ou à la vente de produits remis à neuf, avec une TVA réduite à 5,5% sur leurs ventes et prestations (contre 20% normalement).",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=80",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": true,
-    "hypotheses_calcul": "Coût fiscal net estimé à 350 M€/an, compensé par un redéploiement des recettes de l'éco-contribution des filières DEEE et textile ainsi que par les recettes sociales et la baisse des déchets.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-pa-010",
-    "candidat": "attal",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Suppression de la réduction d'impôt au titre des frais de scolarité",
-    "resume_factuel": "Position de 2025 (convention Nouvelle donne de Renaissance) : supprimer la réduction d'impôts au titre des frais de scolarité, dont l'efficacité n'est pas attestée, afin de financer un nouveau système de bourses étudiantes plus juste et plus généreux.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=43",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-pa-011",
-    "candidat": "attal",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "redistribution",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=43",
-        "extrait": "supprimer la réduction d'impôts au titre des frais de scolarité, dont l'efficacité n'est pas attestée, afin de financer un nouveau système de bourses étudiantes plus juste et plus généreux"
-      }
-    ]
-  },
-  {
-    "titre": "Fiscalité de l'assurance-vie orientée vers l'investissement de long terme",
-    "resume_factuel": "Position de 2025 (convention Nouvelle donne de Renaissance) : adapter la fiscalité de l'épargne pour favoriser le long terme, avec notamment une baisse de la fiscalité sur l'assurance-vie investie en unités de compte européennes bloquées 20 ans (PFU divisé par deux à la sortie) et un soutien à l'assurance-vie de type eurocroissance, en contrepartie d'une hausse de la fiscalité sur le court terme.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=17",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-pa-012",
-    "candidat": "attal",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Suppression du plafond légal d'heures supplémentaires",
-    "resume_factuel": "Gabriel Attal propose de supprimer le plafond d'heures supplémentaires fixé par le Code du travail, aujourd'hui fixé à défaut d'accord collectif à 220 heures par an et par salarié, afin d'instaurer un droit au travail permettant à chaque Français qui le souhaite de travailler davantage.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "attalpresident.fr — programme-travail-salaires",
-        "url": "https://attalpresident.fr/programme/travail-salaires",
-        "nom": "attalpresident.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage financier n'est donné pour cette mesure.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "je veux que chaque Français qui le souhaite puisse travailler, sans que la loi l'en empêche"
-      }
-    ],
-    "id": "attal-trav-001",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "temps_travail",
-        "position": "travailler_davantage",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "supprimer le plafond d'heures supplémentaires fixé par le Code du travail... afin d'instaurer un droit au travail permettant à chaque Français qui le souhaite de travailler davantage"
-      }
-    ]
-  },
-  {
-    "titre": "Réforme de l'assurance chômage incitant au travail",
-    "resume_factuel": "Gabriel Attal porte une réforme de l'assurance chômage visant à inciter davantage au travail, qui créerait selon lui 100 000 emplois supplémentaires. Le détail précis des modalités (durée, montant des allocations) n'est pas précisé dans le corpus, hormis la mention d'une réforme engagée en 2024 à Matignon et empêchée par la dissolution.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "attalpresident.fr — programme-travail-salaires",
-        "url": "https://attalpresident.fr/programme/travail-salaires",
-        "nom": "attalpresident.fr",
-        "annee": 2026
-      },
-      {
-        "type": "primaire",
-        "label": "attalpresident.fr — programme-dette-etat",
-        "url": "https://attalpresident.fr/programme/dette-de-letat",
-        "nom": "attalpresident.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": true,
-    "hypotheses_calcul": "Le chiffrage de 100 000 emplois supplémentaires créés figure dans le corpus, ainsi qu'une économie de plus de 4 milliards d'euros mentionnée pour la réforme engagée en 2024.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-trav-002",
-    "candidat": "attal",
-    "theme": "travail"
-  },
-  {
-    "titre": "Repenser les retraites en se concentrant sur la durée de cotisation plutôt que l'âge de départ",
-    "resume_factuel": "Gabriel Attal propose que pour augmenter le taux d'emploi des seniors, l'enjeu ne soit plus l'âge de départ à la retraite mais la durée de cotisation. Aucun mécanisme précis (durée visée, calendrier) n'est détaillé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "attalpresident.fr — programme-travail-salaires",
-        "url": "https://attalpresident.fr/programme/travail-salaires",
-        "nom": "attalpresident.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-trav-003",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Réforme du Code du travail en « Constitution du travail »",
-    "resume_factuel": "Gabriel Attal propose de simplifier le droit du travail en réécrivant le Code du travail (passé de 5000 à 11000 articles entre 2004 et 2025) autour de quelques grands principes fondamentaux formant une « Constitution du travail », le reste relevant des branches et des entreprises, avec plus de liberté laissée au dialogue social pour fixer l'organisation du travail.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "attalpresident.fr — programme-travail-salaires",
-        "url": "https://attalpresident.fr/programme/travail-salaires",
-        "nom": "attalpresident.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage financier disponible ; chiffre cité : évolution du Code du travail de 5000 à 11000 articles entre 2004 et 2025.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-trav-004",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Promotion de la semaine en 4 jours et adaptation des horaires de travail",
-    "resume_factuel": "Gabriel Attal propose de promouvoir, là où c'est possible, la semaine en 4 jours ainsi qu'une meilleure adaptation des horaires entre employeur et salarié, pour les rendre compatibles avec la situation personnelle (garde alternée, accompagnement d'un proche dépendant), en maintenant le nombre d'heures mensuelles et le bon fonctionnement de l'entreprise.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "attalpresident.fr — programme-travail-salaires",
-        "url": "https://attalpresident.fr/programme/travail-salaires",
-        "nom": "attalpresident.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-trav-005",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Réduction des charges salariales pour augmenter le salaire net",
-    "resume_factuel": "Gabriel Attal propose de réduire les charges salariales pour faire monter le salaire net, considérant que les dépenses sociales ne peuvent plus reposer autant sur les Français qui travaillent.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "attalpresident.fr — programme-travail-salaires",
-        "url": "https://attalpresident.fr/programme/travail-salaires",
-        "nom": "attalpresident.fr",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "Nous y arriverons enfin en réduisant les charges salariales pour faire monter le salaire net."
-      }
-    ],
-    "id": "attal-trav-006",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "réduire les charges salariales pour faire monter le salaire net"
-      },
-      {
-        "sujet": "salaires",
-        "position": "moderer_salaires",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "réduire les charges salariales pour faire monter le salaire net, considérant que les dépenses sociales ne peuvent plus reposer autant sur les Français qui travaillent"
-      }
-    ]
-  },
-  {
-    "titre": "Extension de la protection sociale complémentaire aux assurances liées à la mobilité",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (2025) propose d'étendre le champ de la protection sociale complémentaire (financée en partie par l'employeur) aux assurances mobilité (type assistance 0 km ou véhicule de remplacement), pour inciter les employeurs à financer des protections utiles aux salariés des classes moyennes et modestes dépendants de leur véhicule, notamment dans des secteurs comme l'intérim, l'industrie agro-alimentaire, la grande distribution ou le BTP.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=29",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=29",
-        "extrait": "Il est proposé d'étendre le champ de la protection sociale complémentaire aux assurances liées à la mobilité permettant de réduire l'absentéisme (assistance 0 km etc.), pour donner aux employeurs et aux partenaires sociaux un intérêt à négocier sur ce type de garantie."
-      }
-    ],
-    "id": "attal-trav-007",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Obligation de transparence des salaires dans les offres d'emploi",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (2025) propose d'imposer une obligation de transparence des salaires dans les offres d'emploi afin de continuer à lutter contre les inégalités salariales.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=30",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-trav-008",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Couverture santé obligatoire pour les salariés de particuliers employeurs",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (2025) propose de rendre obligatoire une couverture complémentaire santé pour les salariés de particuliers employeurs (femmes de ménage, aides à domicile, assistantes maternelles — environ 1,2 million de salariés), qui sont aujourd'hui les seuls salariés sans financement de leur complémentaire santé par leur employeur, en donnant d'abord les mêmes avantages sociaux d'exonération que pour les autres salariés, puis en rendant la couverture obligatoire dans le secteur.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=32",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": true,
-    "hypotheses_calcul": "Chiffres cités : environ 1,2 million de salariés de particuliers employeurs, dont 550 000 aidants à domicile, 370 000 pour la garde d'enfants, 340 000 pour le soutien du quotidien ; population à 85% féminine, taux horaire net moyen entre 10 et 12€.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "salariés de particuliers employeurs (aides à domicile, assistantes maternelles, femmes de ménage)"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=32",
-        "extrait": "Rendre la couverture complémentaire santé obligatoire dans le secteur."
-      }
-    ],
-    "id": "attal-trav-009",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Généralisation des dispositifs de partage de la valeur aux entreprises de moins de 10 salariés",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (2025) propose d'étendre les dispositifs de partage de la valeur aux entreprises de moins de 10 salariés : accord de participation ou d'intéressement, abondement d'un plan épargne salariale, ou prime de partage de la valeur, obligatoires pour tous les employeurs.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=23",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-trav-010",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Filet de sécurité chômage pour les entrepreneurs",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (2025) propose de donner aux entrepreneurs la possibilité de cotiser et d'avoir droit aux allocations chômage, et de corriger le droit des faillites pour réduire les sanctions et les délais et protéger les cautions personnelles.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=23",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "independant"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=23",
-        "extrait": "Nous donnerons la possibilité aux entrepreneurs de cotiser et d'avoir droit aux allocations chômage."
-      }
-    ],
-    "id": "attal-trav-011",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Contrat de travail « Réussite étudiante »",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (2025) propose un nouveau type de contrat de travail labellisé « Réussite étudiante » pour sécuriser et développer l'emploi étudiant : limitation du temps de travail à 15h/semaine pour les entreprises en échange d'un allègement de cotisations, engagement de l'employeur à libérer l'étudiant pendant les examens, en contrepartie d'une sécurisation des ressources et droits sociaux pour les étudiants sous condition d'assiduité.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=42",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": true,
-    "hypotheses_calcul": "Limitation du temps de travail à 15h/semaine ; aucun chiffrage budgétaire global n'est donné.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "etudiant"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=42",
-        "extrait": "Pour les étudiants, ce contrat offrirait sécurisation, visibilité et ouverture de droits sociaux en contrepartie d'un engagement d'assiduité dans l'emploi et aux modalités de contrôles."
-      }
-    ],
-    "id": "attal-trav-012",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Dispositif « auto-TPE » pour simplifier l'embauche par les auto-entrepreneurs",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (2025) propose de créer le dispositif « auto-TPE », donnant accès aux TPE qui le souhaitent, en alternative au système actuel, à un dispositif simplifié et forfaitaire avec déclaration mensuelle en 5 minutes pour celles qui ont des salariés, en s'inspirant de la simplicité du régime des auto-entrepreneurs.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=23",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage disponible.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-trav-013",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Droit à la reconversion professionnelle pour les métiers pénibles",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (2025) propose de créer un droit à la reconversion professionnelle avec pour objectif qu'on ne puisse pas faire plus de 10 à 15 ans dans des métiers exposés et pénibles, avec un financement ciblé sur ces publics et un accompagnement dédié identifié précocement grâce à l'IA.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=32",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Objectif cité : pas plus de 10 ans dans des métiers très exposés.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-trav-014",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Droit à la reprise d'études avec capital formation",
-    "resume_factuel": "Position de 2025 : Le parti Renaissance (2025) propose de doter chaque jeune d'un capital reprise d'études via le CPF, avec un montant maximal pour les non-qualifiés ou titulaires de CAP et décroissant selon le niveau de qualification initiale, et d'assouplir le congé formation.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "doc.parti.re — convention-nouvelle-donne",
-        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=42",
-        "nom": "doc.parti.re",
-        "annee": 2025
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun chiffrage budgétaire global disponible.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "attal-trav-015",
-    "candidat": "attal",
-    "theme": "travail",
-    "positions": []
-  },
-  {
     "titre": "Repenser les retraites en se concentrant sur la durée de cotisation plutôt que l'âge de départ",
     "resume_factuel": "Gabriel Attal propose que, pour augmenter le taux d'emploi des seniors, l'enjeu ne soit plus l'âge légal de départ à la retraite mais la durée de cotisation. Le mécanisme précis (durée exacte requise, calendrier) n'est pas détaillé dans le corpus.",
     "sources": [
@@ -1114,14 +19,7 @@
     "id": "attal-retr-001",
     "candidat": "attal",
     "theme": "retraites",
-    "positions": [
-      {
-        "sujet": "travail",
-        "position": "travailler_plus",
-        "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "l'enjeu ne soit plus l'âge légal de départ à la retraite mais la durée de cotisation"
-      }
-    ]
+    "positions": []
   },
   {
     "titre": "Créer une couche de retraite par capitalisation ('retraite par investissement')",
@@ -1268,7 +166,14 @@
     "id": "attal-aides-005",
     "candidat": "attal",
     "theme": "aides-etat",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=32",
+        "extrait": "mise en place d'une aide d'urgence à la garde d'enfants pour les mères élevant seules leurs enfants"
+      }
+    ]
   },
   {
     "titre": "Finalisation de la réforme des bourses étudiantes sur critères sociaux",
@@ -1468,14 +373,7 @@
     "id": "attal-logt-002",
     "candidat": "attal",
     "theme": "logement",
-    "positions": [
-      {
-        "sujet": "logement",
-        "position": "liberer_offre_logement",
-        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=79",
-        "extrait": "exploiter le potentiel inexploité des villes (surélévation des bâtiments existants, division des parcelles, constructions en second rideau) pour créer jusqu'à 500 000 logements supplémentaires"
-      }
-    ]
+    "positions": []
   },
   {
     "titre": "Repenser les zones commerciales en quartiers de vie mixtes",
@@ -1738,7 +636,7 @@
         "sujet": "ecole_organisation",
         "position": "ecole_continuite",
         "source_url": "https://attalpresident.fr/programme/education",
-        "extrait": "ne pas considérer cela comme une source d'économies mais de viser moins de 20 élèves par classe"
+        "extrait": "viser moins de 20 élèves par classe, notamment en primaire"
       }
     ]
   },
@@ -1767,7 +665,7 @@
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://attalpresident.fr/programme/education",
-        "extrait": "devront aussi servir à mieux rémunérer les professeurs et les personnels tels que les accompagnants d'élèves en situation de handicap"
+        "extrait": "mieux rémunérer les professeurs et les personnels tels que les accompagnants d'élèves en situation de handicap"
       }
     ]
   },
@@ -1840,7 +738,7 @@
         "sujet": "ecole_organisation",
         "position": "reformer_ecole",
         "source_url": "https://attalpresident.fr/programme/travail-salaires",
-        "extrait": "démassifier l'enseignement supérieur, de valoriser les métiers manuels, techniques et industriels et de réduire la durée initiale des études"
+        "extrait": "de démassifier l'enseignement supérieur, de valoriser les métiers manuels, techniques et industriels et de réduire la durée initiale des études"
       }
     ]
   },
@@ -1891,7 +789,7 @@
         "sujet": "ia",
         "position": "plus_ia",
         "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=20",
-        "extrait": "former 10 millions de salariés aux outils de l'IA et du numérique via le CPF"
+        "extrait": "former 10 millions de salariés aux outils de l'IA et du numérique via le CPF et la formation professionnelle"
       }
     ]
   },
@@ -2113,7 +1011,7 @@
         "sujet": "ecole_discipline",
         "position": "ecole_exigence",
         "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=12",
-        "extrait": "bâtir une échelle nationale des sanctions et créer l'équivalent d'un conseil de discipline dès l'école primaire"
+        "extrait": "bâtir une échelle nationale des sanctions et créer l'équivalent d'un conseil de discipline dès l'école primaire, pour que chaque faute conduise à une sanction adaptée à la gravité de l'acte et à l'âge de l'enfant"
       }
     ]
   },
@@ -2202,7 +1100,7 @@
         "sujet": "prison",
         "position": "plus_de_prison",
         "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=34",
-        "extrait": "accélérer la construction de prisons et de CRA"
+        "extrait": "adoption d'une loi d'urgence ouvrant des règles spécifiques d'acquisition du foncier, des dérogations aux règles d'urbanisme local et une simplification des procédures contentieuses pour accélérer la construction de prisons et de CRA"
       }
     ]
   },
@@ -2231,7 +1129,7 @@
         "sujet": "ecole_discipline",
         "position": "ecole_exigence",
         "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=12",
-        "extrait": "création d'une échelle nationale des sanctions et d'un conseil de discipline dès l'école primaire pour que chaque faute, dès les premiers écarts de conduite, conduise à une sanction adaptée"
+        "extrait": "création d'une échelle nationale des sanctions et d'un conseil de discipline dès l'école primaire pour que chaque faute, dès les premiers écarts de conduite, conduise à une sanction adaptée à la gravité de l'acte et à l'âge de l'enfant"
       }
     ]
   },
@@ -2318,7 +1216,7 @@
         "sujet": "surveillance",
         "position": "plus_surveillance",
         "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=16",
-        "extrait": "assouplir davantage l'usage des drones par les forces de l'ordre"
+        "extrait": "assouplir davantage l'usage des drones par les forces de l'ordre et créer une unité d'élite conjointe police nationale / gendarmerie / préfecture de police spécialisée dans la lutte anti-drone"
       }
     ]
   },
@@ -2420,7 +1318,7 @@
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=19",
-        "extrait": "autoriser les policiers municipaux à interroger certains fichiers, effectuer des contrôles d'identité et délivrer des amendes forfaitaires délictuelles"
+        "extrait": "donner aux directeurs de police municipale le statut d'officier de police judiciaire, autoriser les policiers municipaux à interroger certains fichiers, effectuer des contrôles d'identité et délivrer des amendes forfaitaires délictuelles"
       }
     ]
   },
@@ -2449,7 +1347,7 @@
         "sujet": "police_armement",
         "position": "police_armee",
         "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=20",
-        "extrait": "rendre obligatoire l'armement des polices municipales selon un niveau d'équipement minimal fixé en fonction de la taille de la commune"
+        "extrait": "rendre obligatoire l'armement des polices municipales selon un niveau d'équipement minimal fixé en fonction de la taille de la commune, avec soutien financier de l'État"
       }
     ]
   },
@@ -2473,14 +1371,7 @@
     "id": "attal-secu-011",
     "candidat": "attal",
     "theme": "securite",
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=23",
-        "extrait": "créer une procédure d'expulsion accélérée (actuellement plus de deux ans) contre les occupants de logements sociaux qui dégradent et gênent la vie des lieux, avec une attention particulière pour les trafiquants de drogue"
-      }
-    ]
+    "positions": []
   },
   {
     "titre": "Multiplication des « Opérations Colbert » aux frontières contre la contrebande",
@@ -2502,14 +1393,7 @@
     "id": "attal-secu-012",
     "candidat": "attal",
     "theme": "securite",
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=23",
-        "extrait": "multiplier les opérations coordonnées de filtrage et de contrôle systématisé aux frontières, ports et aéroports pour lutter contre les trafics de contrebande"
-      }
-    ]
+    "positions": []
   },
   {
     "titre": "Plateforme unique de signalement des délits (cybercriminalité, haine en ligne, violences sexuelles)",
@@ -2582,8 +1466,7 @@
     ],
     "id": "attal-secu-014",
     "candidat": "attal",
-    "theme": "securite",
-    "positions": []
+    "theme": "securite"
   },
   {
     "titre": "Création de Centres de prise en charge des victimes de violences sexuelles et sexistes",
@@ -2706,7 +1589,7 @@
         "sujet": "prison",
         "position": "alternatives_prison",
         "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=35",
-        "extrait": "favoriser le recours à la détention à domicile sous surveillance électronique notamment pour les primo-condamnés et les détenus non dangereux, les parquets étant incités à requérir ce type de peine"
+        "extrait": "favoriser le recours à la détention à domicile sous surveillance électronique notamment pour les primo-condamnés et les détenus non dangereux"
       }
     ]
   },
@@ -2824,7 +1707,8 @@
     ],
     "id": "attal-secu-022",
     "candidat": "attal",
-    "theme": "securite"
+    "theme": "securite",
+    "positions": []
   },
   {
     "titre": "Suppression des aménagements de peine automatiques (libération sous contrainte) pour les multirécidivistes",
@@ -3125,7 +2009,15 @@
     "effets": [],
     "id": "attal-secu-032",
     "candidat": "attal",
-    "theme": "securite"
+    "theme": "securite",
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=53",
+        "extrait": "augmenter le délai de rétention administrative (actuellement 90 jours) et accélérer les procédures d'expulsion pour les étrangers condamnés pour actes criminels ou appartenance à une organisation criminelle"
+      }
+    ]
   },
   {
     "titre": "Interdiction de territoire systématique pour toute condamnation d'un étranger en situation irrégulière",
@@ -3280,10 +2172,10 @@
     "theme": "securite",
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "libertes",
+        "position": "cadre_collectif",
         "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=63",
-        "extrait": "créer un délit d'entrisme sanctionnant l'appel à refuser les lois de la République"
+        "extrait": "créer un délit d'entrisme sanctionnant l'appel à refuser les lois de la République ou la volonté d'imposer dans un territoire ou une association des règles contraires à celles de la République"
       }
     ]
   },
@@ -3309,8 +2201,8 @@
     "theme": "securite",
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "libertes",
+        "position": "cadre_collectif",
         "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=63",
         "extrait": "accélérer la procédure de dissolution des associations refusant les valeurs de la République"
       }
@@ -3341,7 +2233,7 @@
         "sujet": "defense",
         "position": "plus_defense",
         "source_url": "https://attalpresident.fr/programme/frontieres",
-        "extrait": "poursuivre et amplifier le réarmement militaire français engagé depuis 2017, en renforçant les capacités militaires"
+        "extrait": "poursuivre et amplifier le réarmement militaire français engagé depuis 2017, en renforçant les capacités militaires, les réserves humaines et opérationnelles, l'outil industriel et les alliances"
       }
     ]
   },
@@ -3364,7 +2256,8 @@
     "effets": [],
     "id": "attal-secu-040",
     "candidat": "attal",
-    "theme": "securite"
+    "theme": "securite",
+    "positions": []
   },
   {
     "titre": "Priorité à l'immigration de travail et encadrement du regroupement familial",
@@ -3406,7 +2299,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://attalpresident.fr/programme/frontieres",
-        "extrait": "le regroupement familial, qui devrait être « mieux encadré » et « diminuer »"
+        "extrait": "notamment le regroupement familial, qui devrait être « mieux encadré » et « diminuer »"
       }
     ]
   },
@@ -3474,14 +2367,7 @@
     "id": "attal-immi-003",
     "candidat": "attal",
     "theme": "immigration",
-    "positions": [
-      {
-        "sujet": "immigration",
-        "position": "restriction",
-        "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=53",
-        "extrait": "allongement de ce délai pour les demandeurs venant de pays considérés comme sûrs"
-      }
-    ]
+    "positions": []
   },
   {
     "titre": "Cessation du versement des prestations sociales à l'expiration du titre de séjour",
@@ -3602,7 +2488,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=53",
-        "extrait": "Augmentation du délai de rétention administrative, actuellement de 90 jours, et accélération des procédures d'expulsion pour les étrangers condamnés pour actes criminels"
+        "extrait": "Augmentation du délai de rétention administrative, actuellement de 90 jours, et accélération des procédures d'expulsion"
       }
     ]
   },
@@ -3647,15 +2533,7 @@
     "effets": [],
     "id": "attal-immi-008",
     "candidat": "attal",
-    "theme": "immigration",
-    "positions": [
-      {
-        "sujet": "immigration",
-        "position": "restriction",
-        "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=54",
-        "extrait": "Les sanctions contre les employeurs ayant recours à des travailleurs immigrés en situation irrégulière seront renforcées, notamment par une interdiction de gérance"
-      }
-    ]
+    "theme": "immigration"
   },
   {
     "titre": "Réforme de l'Aide médicale d'État (AME)",
@@ -3698,7 +2576,15 @@
     "effets": [],
     "id": "attal-immi-010",
     "candidat": "attal",
-    "theme": "immigration"
+    "theme": "immigration",
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=54",
+        "extrait": "pression pour modifier la directive « Retour » afin de limiter le délai de retour volontaire dans le cadre des OQTF"
+      }
+    ]
   },
   {
     "titre": "Contrôle annuel de la réalité des études pour l'immigration étudiante",
@@ -3749,7 +2635,14 @@
     "id": "attal-immi-012",
     "candidat": "attal",
     "theme": "immigration",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=54",
+        "extrait": "pour piloter opérationnellement le contrôle des frontières et renforcer leur protection"
+      }
+    ]
   },
   {
     "titre": "Rénovation thermique massive des logements et développement de l'électrique accessible à tous",
@@ -4078,8 +2971,7 @@
     "effets": [],
     "id": "attal-envi-010",
     "candidat": "attal",
-    "theme": "environnement",
-    "positions": []
+    "theme": "environnement"
   },
   {
     "titre": "Développement des cars express comme alternative au train en zones périurbaines et rurales",
@@ -4100,8 +2992,7 @@
     "effets": [],
     "id": "attal-envi-011",
     "candidat": "attal",
-    "theme": "environnement",
-    "positions": []
+    "theme": "environnement"
   },
   {
     "titre": "Aménagement de pistes cyclables sécurisées sur les routes départementales",
@@ -4122,8 +3013,7 @@
     "effets": [],
     "id": "attal-envi-012",
     "candidat": "attal",
-    "theme": "environnement",
-    "positions": []
+    "theme": "environnement"
   },
   {
     "titre": "Généralisation du titre unique de transport à l'échelle régionale",
@@ -4172,7 +3062,7 @@
         "sujet": "renouvelables",
         "position": "plus_renouvelables",
         "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=74",
-        "extrait": "pour les filières énergies renouvelables, matériaux bas carbone, mobilité propre et recyclage"
+        "extrait": "accès prioritaire aux aides de France 2030 et du Fonds vert, pour les filières énergies renouvelables, matériaux bas carbone, mobilité propre et recyclage"
       }
     ]
   },
@@ -4223,7 +3113,7 @@
         "sujet": "renouvelables",
         "position": "plus_renouvelables",
         "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=75",
-        "extrait": "guichet unique numérique pour les autorisations environnementales des projets solaires et éoliens … pour accélérer leur développement et réduire les coûts"
+        "extrait": "guichet unique numérique pour les autorisations environnementales des projets solaires et éoliens, avec délai plafond de 24 mois pour le solaire et 36 mois pour l'éolien, et un principe de « silence vaut accord » au-delà, pour accélérer leur développement"
       }
     ]
   },
@@ -4296,7 +3186,7 @@
         "sujet": "agriculture_normes",
         "position": "renforcer_normes_agri",
         "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=77",
-        "extrait": "interdiction de conversion en cultures intensives ou surfaces artificialisées"
+        "extrait": "avec interdiction de conversion en cultures intensives ou surfaces artificialisées"
       }
     ]
   },
@@ -4496,7 +3386,15 @@
     ],
     "id": "attal-lib-002",
     "candidat": "attal",
-    "theme": "libertes-fondamentales"
+    "theme": "libertes-fondamentales",
+    "positions": [
+      {
+        "sujet": "laicite",
+        "position": "laicite_stricte",
+        "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=61",
+        "extrait": "propose d'interdire le port du voile pour les enfants dans l'espace public, au nom de la protection de l'enfance"
+      }
+    ]
   },
   {
     "titre": "Création d'un délit de contrainte au port du voile",
@@ -4651,15 +3549,7 @@
     "effets": [],
     "id": "attal-lib-007",
     "candidat": "attal",
-    "theme": "libertes-fondamentales",
-    "positions": [
-      {
-        "sujet": "surveillance",
-        "position": "plus_surveillance",
-        "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=65",
-        "extrait": "renforcer la surveillance des groupuscules d'ultra-droite promouvant la haine et les discriminations ainsi que des groupes d'ultra-gauche appelant à la violence"
-      }
-    ]
+    "theme": "libertes-fondamentales"
   },
   {
     "titre": "Accélération des procédures de dissolution des associations refusant les valeurs de la République",
@@ -4686,7 +3576,7 @@
         "sujet": "libertes",
         "position": "cadre_collectif",
         "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=63",
-        "extrait": "rendre plus rapide la procédure de dissolution des associations"
+        "extrait": "rendre plus rapide la procédure de dissolution des associations (actuellement un décret en conseil des ministres) afin de réagir plus immédiatement face au séparatisme et à l'entrisme"
       }
     ]
   },
@@ -4712,10 +3602,10 @@
     "theme": "libertes-fondamentales",
     "positions": [
       {
-        "sujet": "surveillance",
-        "position": "plus_surveillance",
+        "sujet": "ia",
+        "position": "encadrer_ia",
         "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=63",
-        "extrait": "doter l'ARCOM de moyens d'analyse des algorithmes des réseaux sociaux pour diagnostiquer les biais favorisant les contenus séparatistes, haineux, racistes ou antisémites"
+        "extrait": "demander ou contraindre les plateformes à modifier ces algorithmes"
       }
     ]
   },
@@ -4739,7 +3629,14 @@
     "id": "attal-lib-010",
     "candidat": "attal",
     "theme": "libertes-fondamentales",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "cadre_collectif",
+        "source_url": "https://doc.parti.re/conventions/Restitution-Regalien-Une-Republique-ferme-une-France-apaisee.pdf#page=63",
+        "extrait": "abaisser de 10 000 € à 1 000 € le seuil de déclaration obligatoire des dons et financements venus de l'étranger pour les lieux de culte, afin de limiter les ingérences étrangères"
+      }
+    ]
   },
   {
     "titre": "Création d'un délit d'entrisme",
@@ -4798,5 +3695,953 @@
         "extrait": "aller « au bout » de l'interdiction des réseaux sociaux pour les moins de 15 ans"
       }
     ]
+  },
+  {
+    "titre": "Création d'une taxe Gafa européenne pour financer l'innovation",
+    "resume_factuel": "Position de 2025 : Le renforcement du soutien européen à l'innovation et à la recherche (via une politique industrielle et d'innovation commune) serait financé en partie par de la dette européenne et par une taxe Gafa européenne, sans détail sur le taux ou l'assiette précise.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=18",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-fisc-001",
+    "candidat": "attal",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=18",
+        "extrait": "Le renforcement du soutien européen à l'innovation et à la recherche (via une politique industrielle et d'innovation commune) serait financé en partie par de la dette européenne"
+      },
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=18",
+        "extrait": "une taxe Gafa européenne, sans détail sur le taux ou l'assiette précise"
+      }
+    ]
+  },
+  {
+    "titre": "Crédit d'impôt innovation pour l'adoption de l'intelligence artificielle par les entreprises (CII-IA)",
+    "resume_factuel": "Position de 2025 : Un crédit d'impôt innovation pour l'adoption de l'intelligence artificielle (CII-IA), sur le modèle du crédit d'impôt innovation existant, serait déployé pour financer les projets de déploiement de l'IA en entreprise, l'achat de logiciels et la formation des salariés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=21",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-fisc-002",
+    "candidat": "attal",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=21",
+        "extrait": "un crédit d'impôt innovation pour l'adoption de l'intelligence artificielle (CII-IA), sur le modèle du crédit d'impôt innovation existant, serait déployé pour financer les projets de déploiement de l'IA en entreprise"
+      },
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=21",
+        "extrait": "financer les projets de déploiement de l'IA en entreprise, l'achat de logiciels et la formation des salariés"
+      }
+    ]
+  },
+  {
+    "titre": "Hausse massive des salaires via productivité, baisse du chômage et baisse des charges salariales",
+    "resume_factuel": "Gabriel Attal annonce vouloir une stratégie complète pour une hausse massive des salaires, en agissant sur l'investissement et la productivité, la baisse du chômage, et la réduction des charges salariales pour faire monter le salaire net. Aucun montant ni calendrier précis n'est donné.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "attalpresident.fr — programme-travail-salaires",
+        "url": "https://attalpresident.fr/programme/travail-salaires",
+        "nom": "attalpresident.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Le texte cite un salaire médian français actuel de 2200€ net, qui serait de 3300€ net si la productivité française avait suivi la trajectoire américaine ; ceci est présenté comme un calcul rétrospectif hypothétique, pas un engagement chiffré de campagne.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://attalpresident.fr/programme/travail-salaires",
+        "extrait": "nous y arriverons enfin en réduisant les charges salariales pour faire monter le salaire net"
+      }
+    ],
+    "id": "attal-pa-001",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "moderer_salaires",
+        "source_url": "https://attalpresident.fr/programme/travail-salaires",
+        "extrait": "la réduction des charges salariales pour faire monter le salaire net"
+      }
+    ]
+  },
+  {
+    "titre": "Objectif de salaire médian porté à plus de 3000€ net par mois",
+    "resume_factuel": "Position de 2025 : La convention économique de Renaissance fixe un objectif de porter le salaire médian français de 2200€ à plus de 3000€ net par mois dans un horizon de 10 à 20 ans, via un choc de productivité, de compétitivité et d'innovation. Le mécanisme direct n'est pas détaillé : l'effet passerait par la croissance générale de l'économie.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=13",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffres cités : salaire médian actuel 2200€ net/mois, objectif supérieur à 3000€ net/mois, sur un horizon de 10 à 20 ans.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-pa-002",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": []
+  },
+  {
+    "titre": "Baisse de la TVA sur les véhicules électriques",
+    "resume_factuel": "Position de 2025 : Passage de la TVA sur les véhicules électriques de 20% à 5,5% pendant 5 ans, en substitution partielle de la prime à l'achat actuelle, avec critères d'écoconditionnalité. Après 5 ans, la baisse des coûts de production permettrait de relever la TVA sans surcoût pour les consommateurs.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=62",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffres cités : passage de 20% à 5,5% de TVA, pendant 5 ans.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-pa-003",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=62",
+        "extrait": "Passage de la TVA sur les véhicules électriques de 20% à 5,5% pendant 5 ans"
+      }
+    ]
+  },
+  {
+    "titre": "Extension et recentrage du leasing social sur les véhicules électriques d'occasion",
+    "resume_factuel": "Position de 2025 : Le leasing social permet aux ménages modestes de louer un véhicule électrique à partir de 100€/mois sans apport. La mesure propose de le centrer sur les véhicules d'occasion pour viser des tarifs inférieurs à 100€/mois, notamment pour les ménages ruraux et en ZFE, et de le proposer en priorité aux travailleurs de première ligne comme les aides à domicile.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=63",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "50 000 véhicules déjà acquis par des ménages modestes via ce dispositif ; objectif de tarifs inférieurs à 100€/mois avec le recentrage sur l'occasion.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-pa-004",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=63",
+        "extrait": "Le leasing social permet aux ménages modestes de louer un véhicule électrique à partir de 100€/mois sans apport"
+      }
+    ]
+  },
+  {
+    "titre": "Développement du rétrofit électrique accessible",
+    "resume_factuel": "Position de 2025 : Soutien à la filière de transformation d'un véhicule thermique en électrique (rétrofit), moins coûteux que l'achat d'un véhicule neuf (8 000€ pour une petite voiture, jusqu'à 20 000€ pour les modèles plus grands), avec encadrement des prix et création d'un réseau national de garages qualifiés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=63",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Coût du rétrofit cité : 8 000€ pour une petite voiture, jusqu'à 20 000€ pour des modèles plus grands.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "vehicule",
+            "valeurs": [
+              "thermique"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=63",
+        "extrait": "Ce processus est bien moins coûteux que l’achat de véhicules neufs (8 000 € pour une petite voiture et jusqu’à 20 000 € pour des modèles plus grands)"
+      }
+    ],
+    "id": "attal-pa-005",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=63",
+        "extrait": "Soutien à la filière de transformation d'un véhicule thermique en électrique (rétrofit)"
+      }
+    ]
+  },
+  {
+    "titre": "Garages solidaires pour véhicules reconditionnés à prix accessibles",
+    "resume_factuel": "Position de 2025 : Déploiement de garages solidaires qui reconditionnent des véhicules donnés par des entreprises pour les revendre à des prix accessibles aux familles modestes.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=64",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Pas de chiffrage disponible.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "familles modestes n'ayant pas les moyens de changer de véhicule"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=64",
+        "extrait": "pour les revendre à des prix accessibles aux familles modestes"
+      }
+    ],
+    "id": "attal-pa-006",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": []
+  },
+  {
+    "titre": "Covoiturage du quotidien pour les trajets domicile-travail",
+    "resume_factuel": "Position de 2025 : Développement d'un réseau d'aires de covoiturage, d'incitations financières et d'outils numériques pour encourager le covoiturage domicile-travail, en lien avec plateformes, employeurs et collectivités. Le texte cite une économie potentielle pour un salarié résidant à 30 km de son travail.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=65",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Économie chiffrée citée : jusqu'à 2 000€ par an sur les frais de transport pour un salarié résidant à 30 km de son travail pratiquant le covoiturage en alternance ; pas de montant d'aide publique précisé.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=65",
+        "extrait": "le covoiturage partagé en alternance peut également générer une économie de près de 2 000 € par an sur les frais de transport"
+      }
+    ],
+    "id": "attal-pa-007",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": []
+  },
+  {
+    "titre": "Généralisation obligatoire du Forfait mobilités durables dans les entreprises de plus de 50 salariés",
+    "resume_factuel": "Position de 2025 : Le Forfait Mobilités Durables (jusqu'à 900€/an pris en charge par l'employeur pour les frais de transport personnel : vélo, covoiturage, transports partagés) deviendrait obligatoire dans toutes les entreprises de plus de 50 salariés, non cumulable avec le versement mobilités.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=65",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Montant cité : jusqu'à 900€ par an pris en charge par l'employeur.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-pa-008",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "voiture",
+        "position": "restreindre_voiture",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=65",
+        "extrait": "jusqu'à 900€/an pris en charge par l'employeur pour les frais de transport personnel : vélo, covoiturage, transports partagés) deviendrait obligatoire dans toutes les entreprises de plus de 50 salariés"
+      }
+    ]
+  },
+  {
+    "titre": "Assurance au kilomètre par défaut pour l'assurance automobile",
+    "resume_factuel": "Position de 2025 : Faire de l'assurance au kilomètre l'option par défaut pour l'assurance automobile, ajustant les primes selon la distance parcourue, tout en maintenant possible l'assurance illimitée pour les gros rouleurs.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=65",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Pas de chiffrage disponible.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "conducteurs à usage modéré du véhicule"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=65",
+        "extrait": "L’assurance au kilomètre ajuste les primes en fonction de la distance parcourue, ce qui permet de mieux évaluer et récompenser les usages modérés."
+      }
+    ],
+    "id": "attal-pa-009",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": []
+  },
+  {
+    "titre": "Diminution d'impôts de production et bouclier fiscal productif pour les entreprises",
+    "resume_factuel": "Position de 2025 : Trajectoire à 10 ans de diminution des impôts de production, visant à ramener ces impôts sous 3% de la valeur ajoutée des entreprises (contre 3,7% aujourd'hui), via un bouclier fiscal productif. Mesure visant la fiscalité des entreprises.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=14",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Chiffres cités : impôts de production actuels 3,7% de la valeur ajoutée, objectif sous 3%, comparaison 4,5% du PIB en France contre 2,4% dans l'UE et 0,9% en Allemagne.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-pa-010",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=14",
+        "extrait": "Trajectoire à 10 ans de diminution des impôts de production, visant à ramener ces impôts sous 3% de la valeur ajoutée des entreprises"
+      }
+    ]
+  },
+  {
+    "titre": "Baisse du coût du travail dans l'industrie via réforme des allégements de charges sociales",
+    "resume_factuel": "Position de 2025 : Le volet économique de la loi de programmation économique et énergétique vise une baisse du coût du travail, en particulier dans l'industrie et les secteurs exposés à la concurrence internationale, via une réforme des allégements de charges sociales, suivant le rapport Bozio-Wasmer. Mécanisme précis non détaillé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=14",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Référence au rapport Bozio-Wasmer, sans détail chiffré du mécanisme de réforme des allégements.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-pa-011",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=14",
+        "extrait": "vise une baisse du coût du travail, en particulier dans l'industrie et les secteurs exposés à la concurrence internationale, via une réforme des allégements de charges sociales"
+      }
+    ]
+  },
+  {
+    "titre": "Prix garanti de l'électricité à une cinquantaine d'euros le MWh pour les industriels",
+    "resume_factuel": "Position de 2025 : Garantie d'un prix de l'électricité d'une cinquantaine d'euros le MWh maximum pour les industriels pendant 10 ans, en contrepartie d'objectifs de décarbonation et d'électrification. Mesure ciblant les entreprises industrielles.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=15",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Prix cité : environ 50€/MWh maximum pendant 10 ans.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-pa-012",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=15",
+        "extrait": "Garantie d'un prix de l'électricité d'une cinquantaine d'euros le MWh maximum pour les industriels pendant 10 ans"
+      }
+    ]
+  },
+  {
+    "titre": "Baisse de la facture d'énergie des entreprises via financement de l'efficacité énergétique",
+    "resume_factuel": "Position de 2025 : Développement de solutions financières avec la BEI pour que les investissements d'efficacité énergétique des entreprises soient pris en charge par des fonds publics-privés se rémunérant ensuite sur les économies réalisées, afin de baisser la facture d'énergie des entreprises.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=76",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Pas de chiffrage disponible.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-pa-013",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=76",
+        "extrait": "afin de baisser la facture d'énergie des entreprises"
+      }
+    ]
+  },
+  {
+    "titre": "Statut « entreprise de seconde vie » et TVA réduite à 5,5% pour le réemploi-réparation",
+    "resume_factuel": "Position de 2025 : Création d'un label national pour les entreprises consacrant au moins 70% de leur chiffre d'affaires au reconditionnement, à la réparation ou à la vente de produits remis à neuf, avec une TVA réduite à 5,5% (contre 20%) sur les ventes et prestations de ces entreprises, financée par redéploiement des recettes de l'éco-contribution.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=80",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "TVA réduite de 20% à 5,5% ; coût fiscal net estimé à 350 M€/an ; objectif de +50 000 emplois d'ici 2030.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-pa-014",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=80",
+        "extrait": "avec une TVA réduite à 5,5% (contre 20%) sur les ventes et prestations de ces entreprises"
+      }
+    ]
+  },
+  {
+    "titre": "Compte épargne-carbone pour recycler la fiscalité carbone en travaux de rénovation ou achat de véhicule propre",
+    "resume_factuel": "Position de 2025 : Piste explorée : un compte épargne-carbone attribué à chaque ménage, abondé par les taxes carbone déjà payées (chauffage, carburant), non convertible en argent, utilisable pour isolation du logement, remplacement de chaudière ou achat de véhicule zéro-émission, avec majoration possible pour les premiers déciles. Dispositif encore à l'étude, nécessitant expertise et expérimentation.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=58",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Pas de chiffrage disponible ; dispositif présenté comme une piste à expérimenter, non un engagement ferme.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-pa-015",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": []
+  },
+  {
+    "titre": "Fiscalité carbone rendue plus progressive selon revenus et lieu de vie",
+    "resume_factuel": "Position de 2025 : Seconde piste explorée : rendre la taxe carbone plus progressive en fonction des revenus et des lieux de vie, pour répondre aux inégalités révélées par la crise des gilets jaunes. Mécanisme non précisé, à l'état de piste à expertiser.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=58",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Pas de chiffrage disponible.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-pa-016",
+    "candidat": "attal",
+    "theme": "pouvoir-achat",
+    "positions": []
+  },
+  {
+    "titre": "Suppression du plafond d'heures supplémentaires",
+    "resume_factuel": "Gabriel Attal propose de supprimer le plafond d'heures supplémentaires fixé par le Code du travail, aujourd'hui fixé à 220 heures par an et par salarié à défaut d'accord collectif, au nom d'un 'droit au travail' permettant à chacun de travailler davantage s'il le souhaite.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "attalpresident.fr — programme-travail-salaires",
+        "url": "https://attalpresident.fr/programme/travail-salaires",
+        "nom": "attalpresident.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://attalpresident.fr/programme/travail-salaires",
+        "extrait": "Je proposerai de supprimer le plafond d’heures supplémentaires fixé par le Code du travai l, aujourd’hui fixé, à défaut d’accord collectif, à deux cent vingt heures par an et par salarié."
+      }
+    ],
+    "id": "attal-trav-001",
+    "candidat": "attal",
+    "theme": "travail",
+    "positions": [
+      {
+        "sujet": "temps_travail",
+        "position": "travailler_davantage",
+        "source_url": "https://attalpresident.fr/programme/travail-salaires",
+        "extrait": "supprimer le plafond d'heures supplémentaires fixé par le Code du travail, aujourd'hui fixé à 220 heures par an et par salarié"
+      }
+    ]
+  },
+  {
+    "titre": "Réforme de l'assurance chômage incitant au travail",
+    "resume_factuel": "Gabriel Attal porte une réforme de l'assurance chômage visant à inciter au travail, dont il affirme qu'elle créerait 100 000 emplois supplémentaires ; le mécanisme précis de cette réforme n'est pas détaillé dans le corpus. Position initialement engagée comme Premier ministre en 2024 (réforme empêchée par la dissolution de l'Assemblée nationale) et reprise comme engagement de campagne.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "attalpresident.fr — programme-travail-salaires",
+        "url": "https://attalpresident.fr/programme/travail-salaires",
+        "nom": "attalpresident.fr",
+        "annee": 2026
+      },
+      {
+        "type": "primaire",
+        "label": "attalpresident.fr — programme-dette-etat",
+        "url": "https://attalpresident.fr/programme/dette-de-letat",
+        "nom": "attalpresident.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Le chiffre de 100 000 emplois supplémentaires et l'économie associée de plus de 4 milliards d'euros sont avancés par le candidat sans détail méthodologique dans le corpus.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-trav-002",
+    "candidat": "attal",
+    "theme": "travail"
+  },
+  {
+    "titre": "Baisse des charges salariales pour augmenter le salaire net",
+    "resume_factuel": "Gabriel Attal propose de réduire les charges salariales afin de faire monter le salaire net des travailleurs, dans le cadre de sa stratégie pour faire monter les salaires. Le montant et le mécanisme de cette baisse ne sont pas précisés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "attalpresident.fr — programme-travail-salaires",
+        "url": "https://attalpresident.fr/programme/travail-salaires",
+        "nom": "attalpresident.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://attalpresident.fr/programme/travail-salaires",
+        "extrait": "nous y arriverons enfin en réduisant les charges salariales pour faire monter le salaire net."
+      }
+    ],
+    "id": "attal-trav-003",
+    "candidat": "attal",
+    "theme": "travail",
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "moderer_salaires",
+        "source_url": "https://attalpresident.fr/programme/travail-salaires",
+        "extrait": "propose de réduire les charges salariales afin de faire monter le salaire net des travailleurs"
+      }
+    ]
+  },
+  {
+    "titre": "Promotion de la semaine en 4 jours et adaptation des horaires de travail",
+    "resume_factuel": "Le candidat propose de promouvoir, là où c'est possible, la semaine de travail en quatre jours et une meilleure adaptation des horaires entre employeur et salarié (garde alternée, accompagnement d'un proche dépendant), tout en maintenant le nombre d'heures mensuelles. Aucune obligation ni calendrier n'est précisé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "attalpresident.fr — programme-travail-salaires",
+        "url": "https://attalpresident.fr/programme/travail-salaires",
+        "nom": "attalpresident.fr",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-trav-004",
+    "candidat": "attal",
+    "theme": "travail",
+    "positions": []
+  },
+  {
+    "titre": "Dispositif 'auto-TPE' pour les TPE qui embauchent",
+    "resume_factuel": "Position de 2025 (convention de parti) : création d'un dispositif simplifié et forfaitaire, avec déclaration mensuelle en 5 minutes, calqué sur le régime de l'auto-entrepreneur, pour les TPE qui souhaitent recruter des salariés, en alternative au système actuel.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=23",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-trav-005",
+    "candidat": "attal",
+    "theme": "travail",
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=23",
+        "extrait": "création d'un dispositif simplifié et forfaitaire, avec déclaration mensuelle en 5 minutes, calqué sur le régime de l'auto-entrepreneur, pour les TPE qui souhaitent recruter des salariés"
+      }
+    ]
+  },
+  {
+    "titre": "Filet de sécurité pour les entrepreneurs : accès à l'assurance chômage et réforme du droit des faillites",
+    "resume_factuel": "Position de 2025 (convention de parti) : donner aux entrepreneurs la possibilité de cotiser et d'avoir droit aux allocations chômage, et corriger le droit des faillites pour réduire les sanctions et les délais et protéger les cautions personnelles. Les modalités précises de cotisation ne sont pas détaillées.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=23",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "independant",
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=23",
+        "extrait": "Nous donnerons la possibilité aux entrepreneurs de cotiser et d’avoir droit aux allocations chômage."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "independant",
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=23",
+        "extrait": "Le droit des faillites sera corrigé pour réduire les sanctions et les délais et protéger les cautions personnelles."
+      }
+    ],
+    "id": "attal-trav-006",
+    "candidat": "attal",
+    "theme": "travail",
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=23",
+        "extrait": "corriger le droit des faillites pour réduire les sanctions et les délais et protéger les cautions personnelles"
+      }
+    ]
+  },
+  {
+    "titre": "Généralisation du partage de la valeur aux entreprises de moins de 10 salariés",
+    "resume_factuel": "Position de 2025 (convention de parti) : tous les employeurs, y compris les entreprises de moins de 10 salariés, devront mettre en place un accord de participation ou d'intéressement, l'abondement d'un plan d'épargne salariale, ou une prime de partage de la valeur.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=23",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-trav-007",
+    "candidat": "attal",
+    "theme": "travail",
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=23",
+        "extrait": "tous les employeurs, y compris les entreprises de moins de 10 salariés, devront mettre en place un accord de participation ou d'intéressement"
+      }
+    ]
+  },
+  {
+    "titre": "Extension de la protection sociale complémentaire aux assurances mobilité",
+    "resume_factuel": "Position de 2025 (convention de parti) : étendre le champ de la protection sociale complémentaire (financée en partie par l'employeur) aux assurances liées à la mobilité (assistance 0 km, véhicule de remplacement) pour les salariés des classes moyennes et modestes dépendants de leur automobile, notamment dans l'intérim, l'industrie agro-alimentaire, la grande distribution ou le BTP.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=29",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-trav-008",
+    "candidat": "attal",
+    "theme": "travail",
+    "positions": []
+  },
+  {
+    "titre": "Création du Compte Épargne Temps Universel (CETU)",
+    "resume_factuel": "Position de 2025 (convention de parti) : mise en place du Compte Épargne Temps Universel (CETU), sans précision du mécanisme dans le corpus.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=32",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-trav-009",
+    "candidat": "attal",
+    "theme": "travail",
+    "positions": []
+  },
+  {
+    "titre": "Droit à la reconversion professionnelle pour les métiers pénibles",
+    "resume_factuel": "Position de 2025 (convention de parti) : création d'un droit à la reconversion professionnelle avec pour objectif qu'on ne puisse pas faire plus de 10 à 15 ans dans des métiers très exposés et pénibles, avec un financement ciblé et une identification précoce facilitée par l'IA.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=32",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier_penible",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=32",
+        "extrait": "Pour les métiers pénibles : objectif pas plus de 10 ans dans des métiers très exposés."
+      }
+    ],
+    "id": "attal-trav-010",
+    "candidat": "attal",
+    "theme": "travail",
+    "positions": []
+  },
+  {
+    "titre": "Obligation de transparence des salaires dans les offres d'emploi",
+    "resume_factuel": "Position de 2025 (convention de parti) : imposer une obligation de transparence des salaires dans les offres d'emploi pour lutter contre les inégalités salariales. Les modalités précises ne sont pas détaillées.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=30",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-trav-011",
+    "candidat": "attal",
+    "theme": "travail",
+    "positions": []
+  },
+  {
+    "titre": "Journée continue pour les femmes de ménage",
+    "resume_factuel": "Position de 2025 (convention de parti) : promouvoir la journée continue avec des horaires décents de début et de fin pour les femmes de ménage, l'État étant exemplaire et mobilisant le secteur de la propreté sur ce point.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "doc.parti.re — convention-nouvelle-donne",
+        "url": "https://doc.parti.re/Conventions-thematiques_Nouvelle-donne.pdf#page=32",
+        "nom": "doc.parti.re",
+        "annee": 2025
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "attal-trav-012",
+    "candidat": "attal",
+    "theme": "travail",
+    "positions": []
   }
 ]

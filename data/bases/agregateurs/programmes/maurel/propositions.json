@@ -20,14 +20,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "dette",
-        "position": "investir_dette",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "participer à un grand plan d'investissement pour décarboner et électrifier"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "maurel-finances-publiques-002",
@@ -72,7 +65,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "investir de manière très conséquente dans l'électrification"
+      }
+    ]
   },
   {
     "id": "maurel-envi-002",
@@ -147,14 +148,6 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Subventionner le rétrofit électrique : changer les moteurs thermiques en moteurs électriques."
       }
-    ],
-    "positions": [
-      {
-        "sujet": "voiture",
-        "position": "restreindre_voiture",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Subventionner le rétrofit électrique : changer les moteurs thermiques en moteurs électriques."
-      }
     ]
   },
   {
@@ -176,14 +169,6 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Energie",
-    "positions": [
-      {
-        "sujet": "voiture",
-        "position": "restreindre_voiture",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Développer le leasing social pour faciliter l'accès aux voitures électriques."
-      }
-    ]
+    "sous_theme": "Energie"
   }
 ]

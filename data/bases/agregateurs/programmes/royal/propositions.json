@@ -19,8 +19,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "royal-finances-publiques-002",
@@ -43,7 +42,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "diminuer le train de vie de l'Etat et des institutions européennes"
+      }
+    ]
   },
   {
     "id": "royal-finances-publiques-003",
@@ -117,6 +123,22 @@
         "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Rétablir l'impôt de solidarité sur la fortune financière pour un rendement évalué entre 3 et 4 Md€."
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_patrimoine",
+            "valeurs": [
+              "plus_1_3m"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rétablir l'impôt de solidarité sur la fortune financière"
       }
     ]
   }

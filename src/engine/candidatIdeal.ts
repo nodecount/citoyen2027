@@ -196,6 +196,20 @@ export function combiner(situation: Solde[], convictions: Solde[]): Solde[] {
   });
 }
 
+// Trois façons de compter le même résultat, pour comparer (page de tests de situations seulement ; le produit compte les thèmes) :
+// les thèmes (règle du produit), les groupes de mesures ou les mesures elles-mêmes, favorables moins défavorables. Un groupe ou une
+// mesure n'est compté qu'une fois par thème (comme les listes de la fenêtre de détail).
+export type Prisme = "themes" | "groupes" | "mesures";
+
+export function selonPrisme(s: Solde, prisme: Prisme): Solde {
+  if (prisme === "themes") return s;
+  const compter = (points: Raison[]) =>
+    new Set(points.flatMap((p) => (prisme === "mesures" ? p.mesures : p.groupes).map((nom) => `${p.theme}|${nom}`))).size;
+  const ameliorants = compter(s.pour);
+  const degradants = compter(s.contre);
+  return { ...s, ameliorants, degradants, solde: ameliorants - degradants };
+}
+
 export interface Classe {
   solde: Solde;
   // 1 pour le meilleur score, puis 2, 3… sans trou : les ex æquo partagent la même place (1, 1, 2, 3…).

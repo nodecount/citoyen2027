@@ -19,15 +19,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "salaires",
-        "position": "moderer_salaires",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser les charges sur le travail par des économies"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "attal-finances-publiques-002",
@@ -140,14 +132,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Faire une année blanche sur l’ensemble des prestations sociales pour le budget 2028"
-      }
-    ],
     "effets": [
       {
         "cibles": [
@@ -201,7 +185,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer 100 000 postes de fonctionnaires. Economies : plus de 7Md€"
+        "extrait": "Economies : plus de 7Md€, grâce à un plan de départs volontaires"
       }
     ]
   },
@@ -254,7 +238,7 @@
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Atteindre 0 % du PIB du déficit public à horizon 2037"
+        "extrait": "Atteindre 0 % du PIB du déficit public à horizon 2037, avec un premier point d’étape à 3 % avant 2032 pour un montant d’économies de 120 à 150 milliards"
       }
     ]
   },
@@ -284,7 +268,7 @@
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Inscrire une règle d’or budgétaire dans la Constitution"
+        "extrait": "Inscrire une règle d’or budgétaire dans la Constitution, sur le modèle allemand"
       }
     ]
   },
@@ -359,7 +343,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser de façon ciblée les impôts"
+        "extrait": "Baisser de façon ciblée les impôts plutôt qu’entreprendre une réforme fiscale globale"
       }
     ]
   },
@@ -386,8 +370,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Baisser les impôts de production"
       }
@@ -684,14 +668,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "faire une année blanche sur l’ensemble des prestations sociales"
-      }
-    ],
     "effets": [
       {
         "cibles": [
@@ -839,14 +815,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "positions": [
-      {
-        "sujet": "temps_travail",
-        "position": "travailler_davantage",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réformer le 1er mai chômé pour permettre aux commerçants de travailler."
-      }
-    ],
+    "positions": [],
     "effets": []
   },
   {
@@ -1124,15 +1093,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "institutions",
-        "position": "nouvelles_institutions",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Proposer un référendum une fois par an."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "attal-gouvernance-republique-002",

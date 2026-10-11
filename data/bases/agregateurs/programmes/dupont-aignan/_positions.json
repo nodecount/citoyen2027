@@ -1,69 +1,73 @@
 [
   {
     "groupe": 0,
-    "empreinte": "1688c2c2f918abd6",
-    "date": "2026-10-05",
+    "empreinte": "dea41af7cf22dfb5",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 16,
-    "sans_position": 8,
+    "etiquetees": 15,
+    "sans_position": 7,
     "rejetees": [
       {
-        "id": "dupont-aignan-interieur-justice-014",
-        "raison": "relecture : Ces dispositifs visent la sécurité en milieu carcéral (empêcher communications illicites), ce n'est pas une mesure de surveillance de la population au sens de la définition (vidéosurveillance, reconnaissance faciale, accès aux données/messageries à des fins de sécurité générale)."
+        "id": "dupont-aignan-interieur-justice-001",
+        "raison": "relecture : Le texte ne précise pas la mission de ces agents comme restriction de l'immigration; l'extrait sert déjà à justifier l'étiquette europe et ne fonde pas clairement une seconde étiquette immigration."
+      },
+      {
+        "id": "dupont-aignan-social-solidarite-001",
+        "raison": "relecture : Le PTZ élargi est une aide à l'accession pour les acheteurs, pas un allègement de la fiscalité ou des contraintes des propriétaires bailleurs ni un encouragement à l'investissement locatif, ce qui ne correspond pas à la définition de liberer_offre_logement."
+      },
+      {
+        "id": "dupont-aignan-social-solidarite-002",
+        "raison": "relecture : Le PAP est une aide à l'achat pour les classes moyennes et ne relève pas de la libération de l'offre locative privée telle que définie (allègement fiscal des propriétaires bailleurs, suppression de l'encadrement des loyers, investissement locatif)."
       }
     ],
-    "cout_reference_usd": 0.124,
+    "cout_reference_usd": 0.1214,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "11b8caba96e00557",
-    "date": "2026-10-05",
+    "empreinte": "15e8efd7db7085ec",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 6,
-    "sans_position": 14,
+    "etiquetees": 8,
+    "sans_position": 13,
     "rejetees": [
       {
+        "id": "dupont-aignan-envi-007",
+        "raison": "relecture : La mesure porte sur la libéralisation des ventes entre producteurs pour limiter les marges des intermédiaires, un sujet économique, et non sur l'assouplissement de normes agricoles/environnementales (pesticides, eau, haies) visé par la position."
+      },
+      {
         "id": "dupont-aignan-europe-international-001",
-        "raison": "relecture : Sortir du commandement militaire intégré de l'OTAN concerne l'OTAN, pas l'Union européenne ni ses compétences : mauvais sujet pour l'étiquette 'europe'."
+        "raison": "relecture : Sortir du commandement militaire intégré de l'OTAN relève de la politique de défense/alliances militaires, pas des compétences de l'Union européenne visées par le sujet « europe »."
       },
       {
         "id": "dupont-aignan-gouvernance-republique-003",
-        "raison": "relecture : La définition de 'conditionner_aides' vise la contrepartie d'activité ou le durcissement de l'assurance chômage, pas une suspension d'aides pour infraction aux principes de laïcité : mauvais sujet/position."
-      },
-      {
-        "id": "dupont-aignan-gouvernance-republique-005",
-        "raison": "relecture : Fermer des lieux de culte ne refusant pas de signer une charte relève de la liberté d'association/religieuse et non du port de signes religieux visé par la définition de 'laicite_stricte'."
+        "raison": "relecture : La mesure sanctionne des atteintes à la laïcité et non un comportement lié à l'emploi ou à la recherche d'activité, ce qui ne correspond pas à la définition de « conditionner_aides » (contrepartie d'activité, durcissement de l'indemnisation chômage)."
       },
       {
         "id": "dupont-aignan-gouvernance-republique-010",
-        "raison": "relecture : La préférence nationale dans les marchés de l'IA relève du protectionnisme commercial et ne montre pas un soutien direct au développement/usage de l'IA comme l'exige 'plus_ia'."
-      },
-      {
-        "id": "dupont-aignan-gouvernance-republique-011",
-        "raison": "relecture : L'extrait parle de start-ups françaises en général sans mentionner l'IA, ce qui ne fonde pas clairement l'étiquette 'ia'."
+        "raison": "relecture : La préférence nationale dans les marchés de l'IA est une mesure protectionniste et ne montre pas directement un soutien, un financement ou une accélération du développement de l'IA en tant que tel."
       }
     ],
-    "cout_reference_usd": 0.0532,
+    "cout_reference_usd": 0.0587,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "455444b8e169df41",
-    "date": "2026-10-05",
+    "empreinte": "971106cb0a9577f6",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "etiquetees": 9,
-    "sans_position": 3,
+    "etiquetees": 12,
+    "sans_position": 0,
     "rejetees": [
       {
         "id": "dupont-aignan-gouvernance-republique-014",
-        "raison": "relecture : L'extraction de terres rares sur territoires et fonds marins relève des normes minières/environnementales, pas des normes agricoles ; le sujet agriculture_normes est inadapté."
+        "raison": "relecture : L'extraction de terres rares et matières premières ne relève pas du sujet renouvelables/transition écologique tel que défini (développement des énergies renouvelables ou assouplissement de normes environnementales liées à l'énergie) ; c'est une mauvaise catégorisation du sujet."
       }
     ],
-    "cout_reference_usd": 0.0367,
+    "cout_reference_usd": 0.049,
     "appels": 2
   }
 ]

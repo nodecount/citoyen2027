@@ -33,7 +33,7 @@
   },
   {
     "theme": "fiscalite",
-    "texte": "Le programme de 2022 prévoit de baisser la TVA de 20% à 5,5% sur les produits énergétiques, proposition réitérée en 2024. Il prévoit d'exonérer d'impôt sur le revenu les jeunes actifs jusqu'à 30 ans, d'instaurer une part fiscale complète dès le deuxième enfant et de restaurer la demi-part fiscale pour les veuves et veufs. Il prévoit de supprimer les droits de succession en ligne directe pour les familles modestes et classes moyennes, sans seuil précisé, d'exonérer les donations jusqu'à 100 000€ par enfant tous les dix ans, et de remplacer l'IFI par un impôt sur la fortune financière, dont les seuils ne sont pas précisés. Pour les entreprises, il prévoit de supprimer l'impôt sur les sociétés pour les jeunes entrepreneurs pendant 5 ans, la CFE et les impôts de production, et d'exonérer de cotisations patronales les hausses de salaires jusqu'à 3 SMIC. Il prévoit aussi de renationaliser les autoroutes pour baisser les péages de 15% et de supprimer la redevance audiovisuelle.",
+    "texte": "D'après une position de 2022, le programme prévoit d'exonérer d'impôt sur le revenu les jeunes actifs jusqu'à 30 ans, de supprimer l'impôt sur les sociétés pendant 5 ans pour les entrepreneurs de moins de 30 ans, et d'instaurer une part fiscale complète dès le deuxième enfant. Il prévoit aussi de supprimer les impôts sur l'héritage en ligne directe pour les familles modestes et les classes moyennes, d'exonérer les donations familiales jusqu'à 100 000€ par enfant tous les dix ans, de remplacer l'IFI par un impôt sur la fortune financière taxant la spéculation, et de supprimer la CFE et les impôts de production. Il prévoit enfin une baisse de la TVA de 20% à 5,5% sur les produits énergétiques et la suppression de la TVA sur un panier de 100 produits de première nécessité, positions réaffirmées par le Rassemblement National en 2024 et 2023. Le corpus ne précise ni plafonds, ni seuils, ni calendrier pour ces mesures.",
     "propositions": [
       "le-pen-fisc-001",
       "le-pen-fisc-002",
@@ -43,11 +43,9 @@
       "le-pen-fisc-006",
       "le-pen-fisc-007",
       "le-pen-fisc-008",
-      "le-pen-fisc-009",
-      "le-pen-fisc-010",
-      "le-pen-fisc-011"
+      "le-pen-fisc-009"
     ],
-    "date_derniere_verification": "2026-10-04"
+    "date_derniere_verification": "2026-10-10"
   },
   {
     "theme": "immigration",
@@ -75,16 +73,18 @@
   },
   {
     "theme": "pouvoir-achat",
-    "texte": "D'après une position de 2022, le programme propose d'exonérer de cotisations patronales une hausse de salaires de 10 % jusqu'à 3 SMIC, sans préciser le mécanisme. Il prévoit de renationaliser les autoroutes pour baisser les péages de 15 %, sans détailler les modalités de rachat. Il propose une exonération d'impôt sur le revenu pour les jeunes actifs jusqu'à 30 ans, sans seuil précisé, ainsi qu'une réindexation des retraites sur l'inflation et une revalorisation du minimum vieillesse à 1000 € par mois, avec une hausse des petites retraites. Il prévoit aussi des prix garantis aux agriculteurs et la fin des marges abusives de la grande distribution. Une pétition du Rassemblement National de 2023 propose enfin la suppression de la TVA sur 100 produits de première nécessité, sans détail sur ce panier.",
+    "texte": "D'après des positions de 2022 à 2024, Marine Le Pen propose de baisser la TVA de 20% à 5,5% sur les produits énergétiques. En 2023, le RN propose la suppression de la TVA sur un panier de 100 produits de première nécessité, reprenant une proposition déjà portée par Marine Le Pen. Elle propose de renationaliser les autoroutes pour baisser de 15% les péages, pour les véhicules thermiques et électriques/hybrides, et de sortir du marché européen de l'électricité, sans préciser le mécanisme qui en résulterait. La privatisation de l'audiovisuel public supprimerait les 138€ de redevance, et les 5 milliards d'euros de subventions versées notamment aux éoliennes seraient rendus aux ménages. Elle propose aussi une hausse des salaires de 10% jusqu'à 3 SMIC via exonération de cotisations patronales, et des prix garantis pour les paysans, mécanismes non précisés.",
     "propositions": [
       "le-pen-pa-001",
       "le-pen-pa-002",
       "le-pen-pa-003",
       "le-pen-pa-004",
       "le-pen-pa-005",
-      "le-pen-pa-006"
+      "le-pen-pa-006",
+      "le-pen-pa-007",
+      "le-pen-pa-008"
     ],
-    "date_derniere_verification": "2026-09-29"
+    "date_derniere_verification": "2026-10-10"
   },
   {
     "theme": "retraites",
@@ -128,14 +128,11 @@
   },
   {
     "theme": "travail",
-    "texte": "Le programme 2022 de Marine Le Pen prévoit une priorité nationale d'accès à l'emploi pour les Français, sans préciser le mécanisme juridique de mise en œuvre. Il propose de supprimer l'autorisation de séjour pour tout étranger n'ayant pas travaillé depuis un an en France. Il permet aux entreprises une hausse des salaires de 10% jusqu'à 3 SMIC en exonérant cette augmentation de cotisations patronales, sans préciser si cela relève d'une obligation ou d'une incitation pour les entreprises. Il prévoit de conditionner les subventions aux entreprises à la création d'emplois au titre d'une politique d'aménagement du territoire, sans détailler les critères. Il crée un chèque-formation mensuel de 200 à 300€ pour les apprentis, les alternants et leurs employeurs.",
+    "texte": "D'après une position de 2022, le programme de Marine Le Pen prévoit une exonération de cotisations patronales sur une hausse de salaire de 10%, jusqu'à 3 SMIC, pour les entreprises qui augmentent les salaires. Le programme ne précise pas la durée ni les conditions d'application de ce mécanisme. Toujours d'après cette position de 2022, il propose un chèque-formation mensuel de 200 à 300€ pour les apprentis, les alternants et leurs employeurs. Le programme ne précise pas les conditions d'éligibilité ni le calendrier de mise en œuvre de ce chèque-formation.",
     "propositions": [
       "le-pen-trav-001",
-      "le-pen-trav-002",
-      "le-pen-trav-003",
-      "le-pen-trav-004",
-      "le-pen-trav-005"
+      "le-pen-trav-002"
     ],
-    "date_derniere_verification": "2026-10-04"
+    "date_derniere_verification": "2026-10-10"
   }
 ]

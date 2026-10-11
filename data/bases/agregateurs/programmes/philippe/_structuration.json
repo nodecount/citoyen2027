@@ -28,14 +28,14 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "a6e7a1859c4ba72e",
-    "date": "2026-10-04",
+    "empreinte": "ca64f7dc39388853",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 11,
     "avec_effets": 2,
     "sans_effet": 9,
     "rejetees": [],
-    "cout_reference_usd": 0.0558,
+    "cout_reference_usd": 0.0572,
     "appels": 2
   },
   {
@@ -98,23 +98,19 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "fe417fde9e490ddb",
-    "date": "2026-10-04",
+    "empreinte": "d17643c41c2a7f24",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 6,
-    "avec_effets": 1,
+    "avec_effets": 2,
     "sans_effet": 3,
     "rejetees": [
       {
-        "id": "philippe-retraites-travail-002",
-        "raison": "relecture : Le dispositif prévoit un temps partiel à 80% payé 100% seulement pendant 2 mois, donc après cette période la rémunération peut redescendre à 80% (baisse), et l'effet ne retient que la hausse temporaire sans mentionner cette contrepartie, donnant une image incomplète."
-      },
-      {
         "id": "philippe-retraites-travail-005",
-        "raison": "relecture : Le texte ne précise aucune tranche d'âge et indique que le relèvement dépend des métiers et de leur pénibilité, donc cibler toute la tranche 50-64 ans élargit le périmètre au-delà de ce que dit le texte."
+        "raison": "relecture : Le texte ne précise aucune tranche d'âge ; la cible '50_64' est une restriction inventée non fondée sur l'extrait."
       }
     ],
-    "cout_reference_usd": 0.063,
+    "cout_reference_usd": 0.0586,
     "appels": 2
   },
   {

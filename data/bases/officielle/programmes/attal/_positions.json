@@ -1,122 +1,118 @@
 [
   {
     "groupe": 0,
-    "empreinte": "35ce15219e475f35",
-    "date": "2026-10-06",
+    "empreinte": "227192b3db3d5880",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 9,
-    "sans_position": 13,
-    "rejetees": [
-      {
-        "id": "attal-pa-005",
-        "raison": "relecture : Le texte concerne l'électrification des véhicules (sujet voiture), pas le développement des énergies renouvelables de production."
-      },
-      {
-        "id": "attal-pa-006",
-        "raison": "relecture : Le texte concerne la conversion de véhicules thermiques en électriques (sujet voiture), pas les énergies renouvelables."
-      },
-      {
-        "id": "attal-trav-002",
-        "raison": "relecture : Le texte précise lui-même que les modalités ne sont pas détaillées ; 'inciter au travail' ne montre pas clairement un durcissement/conditionnement de l'indemnisation."
-      }
-    ],
-    "cout_reference_usd": 0.1219,
+    "etiquetees": 6,
+    "sans_position": 19,
+    "rejetees": [],
+    "cout_reference_usd": 0.0625,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "ee076a91b2d9bd15",
-    "date": "2026-10-06",
+    "empreinte": "860cf53e92835c5a",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 3,
-    "sans_position": 22,
-    "rejetees": [],
-    "cout_reference_usd": 0.0862,
+    "etiquetees": 10,
+    "sans_position": 14,
+    "rejetees": [
+      {
+        "id": "attal-secu-014",
+        "raison": "relecture : La mesure porte sur l'accompagnement des victimes et la discipline interne des forces de l'ordre (sanctions en cas de refus de plainte), ce qui ne relève pas directement de la définition de 'repression' (durcir les peines, renforcer les moyens de police/sanction contre les délinquants)."
+      }
+    ],
+    "cout_reference_usd": 0.0763,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "768123a646bfc2cd",
-    "date": "2026-10-06",
+    "empreinte": "e583c57f8c975bec",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 11,
-    "sans_position": 14,
+    "etiquetees": 12,
+    "sans_position": 13,
     "rejetees": [],
-    "cout_reference_usd": 0.1287,
+    "cout_reference_usd": 0.0621,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "a555e4a7979a48e6",
-    "date": "2026-10-06",
+    "empreinte": "f26ab04e906adef6",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 9,
-    "sans_position": 15,
+    "etiquetees": 11,
+    "sans_position": 10,
     "rejetees": [
       {
-        "id": "attal-secu-022",
-        "raison": "relecture : Le renforcement de la sécurité des établissements (anti-drones, clôtures, formation aux armes) ne relève pas de la définition de 'plus_de_prison' (places, peines planchers, allongement des peines, limitation des aménagements), c'est une mesure de sécurisation matérielle sans lien direct avec la définition."
+        "id": "attal-immi-008",
+        "raison": "relecture : Sanctionner les employeurs d'irréguliers ne durcit pas directement les conditions d'entrée/séjour des migrants, c'est un effet dissuasif de second ordre sur le marché du travail, pas une restriction directe de l'immigration."
+      },
+      {
+        "id": "attal-envi-010",
+        "raison": "relecture : La mesure facilite le stationnement et la tarification autour des gares TER pour favoriser le train, mais ne restreint ni ne contraint l'usage de la voiture, elle ne fonde donc pas l'étiquette restreindre_voiture."
+      },
+      {
+        "id": "attal-envi-011",
+        "raison": "relecture : Donner plus de place aux cars express sur les routes existantes vise à développer une alternative routière, mais ne restreint pas l'usage de la voiture ni n'impose de contrainte, l'extrait ne fonde pas restreindre_voiture."
+      },
+      {
+        "id": "attal-envi-012",
+        "raison": "relecture : Aménager des pistes cyclables sur des routes départementales hors centre-ville développe une offre alternative mais ne restreint pas la voiture, l'extrait ne montre aucune contrainte sur l'usage automobile."
       }
     ],
-    "cout_reference_usd": 0.0547,
+    "cout_reference_usd": 0.0996,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "e8847b0a898dc9f3",
-    "date": "2026-10-06",
+    "empreinte": "e8e9a148f264f94e",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 18,
-    "sans_position": 4,
+    "etiquetees": 15,
+    "sans_position": 9,
     "rejetees": [
       {
-        "id": "attal-secu-032",
-        "raison": "relecture : La création de places en CRA (rétention administrative) n'est pas de la prison mais relève du sujet immigration, pas du sujet prison."
-      },
-      {
-        "id": "attal-secu-040",
-        "raison": "relecture : Le texte parle de résilience face aux cyberattaques sur les infrastructures, pas d'extension de la surveillance des citoyens (vidéosurveillance, données, messageries) telle que définie pour plus_surveillance."
-      },
-      {
-        "id": "attal-immi-010",
-        "raison": "relecture : Transposer intégralement un pacte déjà adopté par l'UE ne constitue pas en soi un renforcement des compétences ou du rôle de l'UE (plus_europe) mais une simple application du droit existant."
+        "id": "attal-lib-007",
+        "raison": "relecture : La mesure porte sur la surveillance et la dissolution de groupuscules, ce qui relève du cadre collectif/libertés et non du sujet surveillance (vidéosurveillance, reconnaissance faciale, accès aux données) défini ici."
       }
     ],
-    "cout_reference_usd": 0.0812,
+    "cout_reference_usd": 0.0949,
     "appels": 2
   },
   {
     "groupe": 5,
-    "empreinte": "0c0995324537dbc9",
-    "date": "2026-10-06",
+    "empreinte": "96896b54143a882d",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 6,
-    "sans_position": 18,
+    "etiquetees": 14,
+    "sans_position": 10,
     "rejetees": [
       {
-        "id": "attal-lib-002",
-        "raison": "relecture : Interdire le voile pour les enfants dans l'espace public est une extension des interdits religieux, cela relève bien de laicite_stricte mais c'est aussi une restriction de liberté pouvant aussi relever de cadre_collectif ; néanmoins le sujet/position choisis correspondent correctement au texte - en fait l'étiquette est fondée, donc reconsidération: PASS"
+        "id": "attal-trav-002",
+        "raison": "relecture : Le mécanisme de la réforme n'est pas détaillé ('n'est pas détaillé dans le corpus'), donc l'étiquette conditionner_aides (contrepartie/dégressivité renforcée) n'est pas établie par le texte, juste une intention vague d'inciter au travail."
       }
     ],
-    "cout_reference_usd": 0.0508,
+    "cout_reference_usd": 0.0972,
     "appels": 2
   },
   {
     "groupe": 6,
-    "empreinte": "abbfa2cf4491f239",
-    "date": "2026-10-06",
+    "empreinte": "a338a6f3ce5aa4f8",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
-    "propositions": 6,
-    "etiquetees": 5,
-    "sans_position": 1,
+    "propositions": 2,
+    "etiquetees": 0,
+    "sans_position": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.0302,
-    "appels": 2
+    "cout_reference_usd": 0.0063,
+    "appels": 1
   }
 ]

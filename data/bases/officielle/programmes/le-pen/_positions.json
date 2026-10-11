@@ -1,52 +1,47 @@
 [
   {
     "groupe": 0,
-    "empreinte": "e8ec467f9c77153a",
-    "date": "2026-10-06",
+    "empreinte": "7dd9e3f62df5daa7",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 21,
-    "sans_position": 4,
-    "rejetees": [],
-    "cout_reference_usd": 0.1332,
-    "appels": 2
-  },
-  {
-    "groupe": 1,
-    "empreinte": "dfec107ee058f446",
-    "date": "2026-10-06",
-    "modele": "claude-sonnet-5",
-    "propositions": 25,
-    "etiquetees": 11,
-    "sans_position": 12,
+    "etiquetees": 14,
+    "sans_position": 9,
     "rejetees": [
       {
-        "id": "le-pen-educ-001",
-        "raison": "relecture : « réduire les effectifs des classes » signifie diminuer le nombre d'élèves par classe, ce qui implique plutôt davantage d'enseignants, et ne fonde pas l'étiquette moins_fonctionnaires."
+        "id": "le-pen-retr-006",
+        "raison": "relecture : L'extrait parle de personnel médical en EHPAD, ce qui ne correspond pas précisément à 'hopital_public' (hôpital public, installation des médecins, centres de santé) : mauvais sujet/position."
       },
       {
-        "id": "le-pen-secu-006",
-        "raison": "relecture : La présomption de légitime défense porte sur la protection juridique des forces de l'ordre, pas sur leur armement matériel ; le sujet police_armement est inadapté."
+        "id": "le-pen-secu-003",
+        "raison": "relecture : L'extrait évoque une 'éradication des idéologies islamistes' sans préciser de durcissement de peines ou de moyens policiers concrets, ce qui nécessite une interprétation pour la rattacher à 'repression'."
       }
     ],
     "cout_reference_usd": 0.0888,
     "appels": 2
   },
   {
-    "groupe": 2,
-    "empreinte": "af6e44a70f9e0c97",
-    "date": "2026-10-06",
+    "groupe": 1,
+    "empreinte": "0bc7bbf64cb7abcc",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
-    "propositions": 13,
-    "etiquetees": 9,
+    "propositions": 25,
+    "etiquetees": 21,
+    "sans_position": 4,
+    "rejetees": [],
+    "cout_reference_usd": 0.0855,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "a4735968788f43e4",
+    "date": "2026-10-10",
+    "modele": "claude-sonnet-5",
+    "propositions": 9,
+    "etiquetees": 6,
     "sans_position": 3,
-    "rejetees": [
-      {
-        "id": "le-pen-immi-004",
-        "raison": "relecture : L'étiquette aides_sociales/conditionner_aides ne correspond pas au texte : il s'agit d'une restriction par nationalité/durée de résidence, pas d'une contrepartie d'activité renforcée comme défini pour ce sujet."
-      }
-    ],
-    "cout_reference_usd": 0.0445,
+    "rejetees": [],
+    "cout_reference_usd": 0.04,
     "appels": 2
   }
 ]

@@ -1,61 +1,52 @@
 [
   {
     "groupe": 0,
-    "empreinte": "efe86a96d01af7a3",
-    "date": "2026-10-06",
+    "empreinte": "8ca9eab1a0e8e734",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 17,
-    "sans_position": 7,
-    "rejetees": [
-      {
-        "id": "lisnard-interieur-justice-012",
-        "raison": "relecture : Le texte « internats disciplinaires fermés » ne mentionne pas l'école ; rien n'établit qu'il s'agit du système scolaire plutôt que d'un dispositif judiciaire pour mineurs délinquants, donc l'étiquette ecole_discipline/ecole_exigence n'est pas fondée par l'extrait."
-      }
-    ],
-    "cout_reference_usd": 0.1367,
+    "sans_position": 8,
+    "rejetees": [],
+    "cout_reference_usd": 0.1128,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "132931a55e751c7e",
-    "date": "2026-10-06",
+    "empreinte": "d8c7be49db913eaf",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 9,
-    "sans_position": 15,
+    "etiquetees": 6,
+    "sans_position": 17,
     "rejetees": [
       {
-        "id": "lisnard-social-solidarite-009",
-        "raison": "relecture : Le texte parle de construire une réglementation (encadrement) pour l'innovation médicale, ce qui relève plutôt d'encadrer_ia que de plus_ia ; l'extrait ne montre pas un soutien direct au développement de l'IA mais un cadre régulatoire."
+        "id": "lisnard-social-solidarite-004",
+        "raison": "relecture : Le texte porte sur la gouvernance administrative des hôpitaux (ARS, préfets, maires), pas sur la liberté d'installation des médecins ou la place du privé en santé : mauvais sujet/position."
+      },
+      {
+        "id": "lisnard-social-solidarite-006",
+        "raison": "relecture : La suppression de Parcoursup et la simplification de LAS/PASS concernent l'accès aux études de médecine, pas une refonte du système éducatif scolaire (collège/lycée/bac) visé par le sujet ecole_organisation."
       }
     ],
-    "cout_reference_usd": 0.1107,
+    "cout_reference_usd": 0.0493,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "9e0471af917ee392",
-    "date": "2026-10-06",
+    "empreinte": "1f43b98460c2703c",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 13,
     "etiquetees": 8,
-    "sans_position": 2,
+    "sans_position": 4,
     "rejetees": [
       {
-        "id": "lisnard-reformes-etat-009",
-        "raison": "relecture : Interdire la surtransposition rapproche le droit national du minimum européen plutôt que de reprendre des compétences à l'UE ou d'y déroger ; ce n'est pas un acte de souveraineté au sens de la définition."
-      },
-      {
-        "id": "lisnard-education-jeunesse-006",
-        "raison": "relecture : Une hausse de rémunération des enseignants ne relève pas de la définition de plus_services_publics (création de postes ou renforcement des moyens des services publics), c'est une mesure salariale et non d'effectifs ou de moyens."
-      },
-      {
         "id": "lisnard-education-jeunesse-010",
-        "raison": "relecture : La création de classes d'excellence relève de l'organisation pédagogique et non de la discipline/sanction visée par ecole_exigence."
+        "raison": "relecture : Créer des classes d'excellence relève de l'organisation/structure scolaire (filières sélectives), pas de la discipline/sanctions visée par ecole_exigence ; mauvais sujet."
       }
     ],
-    "cout_reference_usd": 0.0561,
+    "cout_reference_usd": 0.0433,
     "appels": 2
   }
 ]

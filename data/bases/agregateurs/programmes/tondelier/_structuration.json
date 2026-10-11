@@ -33,37 +33,32 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "eefab76765a61199",
-    "date": "2026-10-04",
+    "empreinte": "126d8124f673b8af",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 9,
-    "avec_effets": 4,
+    "avec_effets": 5,
     "sans_effet": 4,
-    "rejetees": [
-      {
-        "id": "tondelier-finances-publiques-005",
-        "raison": "relecture : Le texte dit que la taxation dépend de l'impact environnemental du patrimoine, donc une baisse uniforme pour tous les hauts patrimoines n'est pas fondée : le sens devrait être indéterminé selon le profil."
-      }
-    ],
-    "cout_reference_usd": 0.0623,
+    "rejetees": [],
+    "cout_reference_usd": 0.0629,
     "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "f85481f8275c1822",
-    "date": "2026-10-04",
+    "empreinte": "d1f436eda42f73e3",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 15,
-    "avec_effets": 6,
-    "sans_effet": 8,
+    "avec_effets": 5,
+    "sans_effet": 9,
     "rejetees": [
       {
-        "id": "tondelier-retraites-travail-013",
-        "raison": "relecture : Le ciblage par tranche de revenus 'moins_1200' n'est pas fondé par le texte, qui parle d'un SMIC porté à 1600€ et non d'un seuil de revenu de 1200€."
+        "id": "tondelier-retraites-travail-007",
+        "raison": "relecture : L'effet sur l'emploi est déduit par un mécanisme supposé (formation professionnelle → emploi), alors que le texte ne parle que de fonds de formation, pas d'un effet sur l'emploi."
       }
     ],
-    "cout_reference_usd": 0.0616,
+    "cout_reference_usd": 0.0618,
     "appels": 2
   },
   {

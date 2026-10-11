@@ -1,56 +1,52 @@
 [
   {
     "groupe": 0,
-    "empreinte": "e08786817c93d32f",
-    "date": "2026-10-06",
+    "empreinte": "e8c7d052e03b3787",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 12,
+    "etiquetees": 11,
     "sans_position": 12,
     "rejetees": [
       {
-        "id": "parti-socialiste-social-solidarite-012",
-        "raison": "relecture : La régulation des prix des médicaments et la suppression de franchises relèvent du remboursement/solidarité sociale, pas de l'axe public/privé de l'organisation de la santé (hôpital public vs liberté d'installation) ; mauvais sujet."
+        "id": "parti-socialiste-finances-publiques-004",
+        "raison": "relecture : La mesure porte sur les locaux commerciaux vacants, pas sur le logement (habitat), ce qui ne relève pas du sujet logement tel que défini."
+      },
+      {
+        "id": "parti-socialiste-social-solidarite-003",
+        "raison": "relecture : La tarification sociale des cantines ne relève pas du sujet aides_sociales défini autour du chômage et des minima sociaux."
       }
     ],
-    "cout_reference_usd": 0.14,
+    "cout_reference_usd": 0.1268,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "51b7ab56e9fe6027",
-    "date": "2026-10-06",
+    "empreinte": "a4985f895582c1fb",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 10,
-    "sans_position": 15,
-    "rejetees": [],
-    "cout_reference_usd": 0.0569,
+    "sans_position": 14,
+    "rejetees": [
+      {
+        "id": "parti-socialiste-retraites-travail-005",
+        "raison": "relecture : Mener des coalitions de projets industriels entre États ne démontre pas un renforcement des compétences, du budget ou des politiques communes de l'UE, ce peut être une simple coopération intergouvernementale."
+      }
+    ],
+    "cout_reference_usd": 0.0776,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "48e20025d22b30ce",
-    "date": "2026-10-06",
+    "empreinte": "0ce83b5b15def6f7",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 24,
-    "etiquetees": 11,
-    "sans_position": 10,
-    "rejetees": [
-      {
-        "id": "parti-socialiste-envi-009",
-        "raison": "relecture : L'interdiction du plastique à usage unique relève de la lutte contre la pollution, pas du sujet 'renouvelables' (énergies/transition écologique)."
-      },
-      {
-        "id": "parti-socialiste-envi-010",
-        "raison": "relecture : L'installation de filtres à microplastiques ne relève pas des énergies renouvelables ni de la transition écologique au sens défini, mauvais sujet."
-      },
-      {
-        "id": "parti-socialiste-envi-015",
-        "raison": "relecture : L'interdiction des PFAS ne relève pas du sujet 'renouvelables' (énergies/transition écologique), mauvais sujet."
-      }
-    ],
-    "cout_reference_usd": 0.0773,
+    "etiquetees": 12,
+    "sans_position": 12,
+    "rejetees": [],
+    "cout_reference_usd": 0.067,
     "appels": 2
   }
 ]

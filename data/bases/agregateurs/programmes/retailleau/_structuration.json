@@ -42,14 +42,14 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "f8d1e6952870d2c3",
-    "date": "2026-10-04",
+    "empreinte": "24c2137008c56e95",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "avec_effets": 4,
-    "sans_effet": 9,
+    "avec_effets": 3,
+    "sans_effet": 10,
     "rejetees": [],
-    "cout_reference_usd": 0.062,
+    "cout_reference_usd": 0.0562,
     "appels": 2
   },
   {
@@ -94,23 +94,31 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "5577e3960988baec",
-    "date": "2026-10-04",
+    "empreinte": "3e08aa019117ef0d",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 19,
-    "avec_effets": 4,
+    "avec_effets": 2,
     "sans_effet": 13,
     "rejetees": [
       {
+        "id": "retailleau-retraites-travail-002",
+        "raison": "relecture : Le texte décrit un remplacement de trois dispositifs pour inciter à l'activité, mais ne dit pas que les bénéficiaires actuels du RSA/prime d'activité verront leur revenu disponible baisser : c'est une déduction du mécanisme d'économies, non un effet affirmé par le texte."
+      },
+      {
         "id": "retailleau-retraites-travail-004",
-        "raison": "relecture : Le texte ne précise pas de baisse de revenu pour les sans-emploi, c'est un mécanisme supposé (durcissement de l'assurance chômage) non explicité par l'extrait cité."
+        "raison": "relecture : Le texte ne fait qu'annoncer la publication du décret Attal et des 'mesures complémentaires' sans préciser leur contenu ; en déduire une baisse de protection sociale pour les sans-emploi est un mécanisme supposé non fondé par l'extrait."
       },
       {
         "id": "retailleau-retraites-travail-007",
-        "raison": "relecture : La cible tranche_age 50_64 est trop large : seules les personnes choisissant un départ anticipé à 63-64 ans avec décote sont concernées, pas toute la classe d'âge."
+        "raison": "relecture : La décote ne concerne que les personnes partant en retraite anticipée entre 63 et 65 ans, pas l'ensemble de la tranche d'âge 50-64 ans qui est un périmètre élargi non fondé par le texte."
+      },
+      {
+        "id": "retailleau-retraites-travail-011",
+        "raison": "relecture : Le texte cible uniquement les personnes ayant atteint toutes leurs annuités à 62 ans, pas l'ensemble des salariés de 50 à 64 ans, ce qui constitue un périmètre élargi."
       }
     ],
-    "cout_reference_usd": 0.0907,
+    "cout_reference_usd": 0.0933,
     "appels": 2
   },
   {

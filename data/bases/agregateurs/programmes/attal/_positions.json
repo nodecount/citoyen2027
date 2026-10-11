@@ -1,31 +1,48 @@
 [
   {
     "groupe": 0,
-    "empreinte": "bba8310a30f6e020",
-    "date": "2026-10-05",
+    "empreinte": "2a5bb5cf013edf67",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 16,
+    "etiquetees": 13,
     "sans_position": 8,
     "rejetees": [
       {
+        "id": "attal-finances-publiques-001",
+        "raison": "relecture : L'extrait ne montre pas de durcissement ou conditionnalité de l'assurance chômage, seulement une source d'économies : la position conditionner_aides n'est pas fondée par le texte."
+      },
+      {
         "id": "attal-finances-publiques-003",
-        "raison": "relecture : L'extrait ne montre que l'objectif d'économies budgétaires, pas que la réforme consiste à durcir/conditionner les droits, ce qui relève d'un effet de second ordre supposé."
+        "raison": "relecture : L'extrait mentionne un objectif d'économies budgétaires sans préciser de durcissement de l'indemnisation : c'est un effet de second ordre, pas la position directe du texte."
+      },
+      {
+        "id": "attal-finances-publiques-006",
+        "raison": "relecture : Une année blanche sur les prestations sociales relève des aides sociales et non de la fiscalité (impôts) : mauvais sujet."
+      },
+      {
+        "id": "attal-social-solidarite-002",
+        "raison": "relecture : Une année blanche sur les prestations sociales relève des aides sociales et non de la fiscalité (impôts) : mauvais sujet."
       }
     ],
-    "cout_reference_usd": 0.136,
+    "cout_reference_usd": 0.1413,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "5d4349185b70d8cf",
-    "date": "2026-10-05",
+    "empreinte": "63ff82dcde6635e8",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 18,
-    "etiquetees": 13,
-    "sans_position": 5,
-    "rejetees": [],
-    "cout_reference_usd": 0.0908,
+    "etiquetees": 11,
+    "sans_position": 6,
+    "rejetees": [
+      {
+        "id": "attal-gouvernance-republique-001",
+        "raison": "relecture : Proposer un référendum annuel ne correspond pas clairement à la définition de 'nouvelles_institutions' (nouvelle constitution, proportionnelle, RIC, constituante) : l'extrait ne décrit pas une refonte institutionnelle mais une pratique référendaire plus fréquente, ce qui nécessite une interprétation."
+      }
+    ],
+    "cout_reference_usd": 0.0598,
     "appels": 2
   }
 ]

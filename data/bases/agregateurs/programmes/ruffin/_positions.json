@@ -1,19 +1,14 @@
 [
   {
     "groupe": 0,
-    "empreinte": "9edb9513802e0c10",
-    "date": "2026-10-06",
+    "empreinte": "2b789f28a211181e",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 8,
     "etiquetees": 0,
-    "sans_position": 7,
-    "rejetees": [
-      {
-        "id": "ruffin-gouvernance-republique-002",
-        "raison": "relecture : La mesure est une réduction de dépense ciblée (budget de l'Élysée) et non une priorité affichée de réduction de la dette/déficit ; l'étiquette suppose un objectif (désendettement) non exprimé par le texte."
-      }
-    ],
-    "cout_reference_usd": 0.071,
-    "appels": 2
+    "sans_position": 8,
+    "rejetees": [],
+    "cout_reference_usd": 0.0385,
+    "appels": 1
   }
 ]

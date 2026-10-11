@@ -235,12 +235,6 @@
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants et revaloriser leurs salaires."
-      },
-      {
-        "sujet": "sante_organisation",
-        "position": "hopital_public",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants et revaloriser leurs salaires."
       }
     ]
   },
@@ -265,14 +259,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "sante_organisation",
-        "position": "hopital_public",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Fixer un plafond de 10% de postes administratifs dans les hôpitaux, ce qui dégagera des marges de manœuvre pour recruter davantage de personnel soignant."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-004",
@@ -333,7 +320,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "liberte_sante",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Organiser un partenariat entre les services d’urgence et des cabinets médicaux libéraux vers lesquels pourraient être réorientés les patients"
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-006",
@@ -529,15 +523,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement",
-    "positions": [
-      {
-        "sujet": "logement",
-        "position": "liberer_offre_logement",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Durcir les sanctions contre les locataires qui ne paient pas leur loyer et accélérer les procédures d’expulsion en cas d’impayés."
-      }
-    ]
+    "sous_theme": "Logement"
   },
   {
     "id": "le-pen-social-solidarite-012",
@@ -700,7 +686,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "freiner_transition",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer la norme \" ZAN\"."
+      }
+    ]
   },
   {
     "id": "le-pen-retraites-travail-001",
@@ -769,7 +763,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un fonds souverain destiné à soutenir les PME."
+      }
+    ]
   },
   {
     "id": "le-pen-retraites-travail-004",
@@ -920,14 +921,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "europe",
-        "position": "souverainete",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Retourner à un prix national de l’électricité."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-envi-003",
@@ -1085,14 +1079,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "agriculture_normes",
-        "position": "renforcer_normes_agri",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Lutter contre l’artificialisation des terres agricoles."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-envi-008",
@@ -1140,8 +1127,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "agriculture_normes",
-        "position": "assouplir_normes_agri",
+        "sujet": "europe",
+        "position": "souverainete",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Lutter contre les effets néfastes de la stratégie européenne \" de la ferme à la fourchette \" qui menace la souveraineté européenne."
       }
@@ -1492,8 +1479,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "commerce",
-        "position": "protectionnisme",
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place au niveau de l'UE ou de l'OCDE de taxes extraordinaires pour les entreprises étrangères du numérique."
       }
@@ -1618,7 +1605,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre obligatoire l'hébergement des données des français, des entreprises françaises et des services publics en France et dans l'Union Européenne par des opérateurs français ou européens."
+      }
+    ]
   },
   {
     "id": "le-pen-education-jeunesse-001",
@@ -1821,21 +1816,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "ecole_discipline",
-        "position": "ecole_exigence",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Retour aux principes de la loi Ciotti de 2010 : valorisation de l'assiduité, instauration de peines plancher et généralisation de la vidéoprotection."
-      },
-      {
-        "sujet": "surveillance",
-        "position": "plus_surveillance",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "généralisation de la vidéoprotection"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "le-pen-education-jeunesse-008",
@@ -1905,8 +1886,8 @@
     ],
     "positions": [
       {
-        "sujet": "ecole_organisation",
-        "position": "ecole_continuite",
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Revalorisation des professeurs du primaire au lycée de 3% par an chaque année du quinquennat."
       }
@@ -1933,13 +1914,6 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "reformer_ecole",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Suppression des instituts nationaux supérieurs du professorat et de l'éducation."
-      }
-    ]
+    "positions": []
   }
 ]

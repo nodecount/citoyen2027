@@ -22,6 +22,12 @@
     "effets": [],
     "positions": [
       {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "baisser de 50 Md€ les impôts de production par an pendant 5 ans"
+      },
+      {
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
@@ -55,7 +61,7 @@
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "une obligation constitutionnelle à limiter le déficit public"
+        "extrait": "Ramener le déficit à 2 % du PIB sur le quinquennat"
       }
     ]
   },
@@ -108,7 +114,7 @@
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "une « règle d’or » budgétaire pour limiter les déficits publics en empêchant l’État de financer les dépenses courantes par la dette"
+        "extrait": "« règle d’or » budgétaire pour limiter les déficits publics en empêchant l’État de financer les dépenses courantes par la dette"
       }
     ]
   },
@@ -138,7 +144,7 @@
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Ramener le déficit à 2 % du PIB en fin de quinquennat"
+        "extrait": "Ramener le déficit à 2 % du PIB en fin de quinquennat soit en 2032"
       }
     ]
   },
@@ -222,7 +228,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-finances-publiques-009",
@@ -247,8 +254,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "baisser de 50 Md€ les impôts de production et supprimer 50 Md€ d'aides publiques improductives"
       }
@@ -296,21 +303,14 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Accorder une part fiscale dès le deuxième enfant"
-      }
-    ],
+    "positions": [],
     "effets": [
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "foyers avec au moins deux enfants"
+              "dès le deuxième enfant"
             ]
           }
         ],
@@ -606,14 +606,14 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "prison",
+        "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place des peines planchers pour les infractions graves"
       },
       {
-        "sujet": "prison",
-        "position": "plus_de_prison",
+        "sujet": "securite",
+        "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place des peines planchers pour les infractions graves"
       }
@@ -641,12 +641,6 @@
     "sous_theme": "Justice & pénitentiaire",
     "effets": [],
     "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer le juge d'application des peines pour que la peine décidée soit appliquée"
-      },
       {
         "sujet": "prison",
         "position": "plus_de_prison",
@@ -856,15 +850,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Lutte contre le narcotrafic",
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "un profil bancaire spécifique pour les personnes condamnées pour narcotrafic"
-      }
-    ]
+    "sous_theme": "Lutte contre le narcotrafic"
   },
   {
     "id": "philippe-interieur-justice-019",
@@ -1123,8 +1109,8 @@
     ],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "cannabis",
+        "position": "interdit_cannabis",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Instaurer une \"tolérance zéro\" avec les consommateurs, par la mise en place d'opérations “place nette” dans les boîtes de nuit et festivals, le recouvrement forcé des amendes, y compris sur les prestations sociales."
       }
@@ -1174,14 +1160,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Sécurité intérieure",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Lutter contre le proxénétisme en ligne en faisant fermer tous les sites qui le laissent prospérer."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "philippe-social-solidarite-001",
@@ -1271,8 +1250,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Transports",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "philippe-retraites-travail-001",
@@ -1299,9 +1277,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "statut_professionnel",
             "valeurs": [
-              "actifs"
+              "salarie"
             ]
           }
         ],
@@ -1332,7 +1310,23 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "parents reprenant le travail après un congé parental"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "un temps partiel parental, à 80 % rémunéré 100 % pendant 2 mois"
+      }
+    ]
   },
   {
     "id": "philippe-retraites-travail-003",
@@ -1475,7 +1469,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-envi-003",
@@ -1625,7 +1620,7 @@
         "sujet": "agriculture_normes",
         "position": "assouplir_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer la règle de \"zéro surtransposition agricole\"."
+        "extrait": "Instaurer la règle de \"zéro surtransposition agricole\""
       }
     ]
   },
@@ -1807,7 +1802,7 @@
         "sujet": "europe",
         "position": "plus_europe",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Construire une Union européenne des marchés de capitaux capable de rivaliser avec les géants américains."
+        "extrait": "Construire une Union européenne des marchés de capitaux capable de rivaliser avec les géants américains"
       }
     ]
   },
@@ -1837,7 +1832,13 @@
         "sujet": "commerce",
         "position": "protectionnisme",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place un Buy European Tech Act et des achats technologiques groupés entre Etats membres."
+        "extrait": "Mettre en place un Buy European Tech Act et des achats technologiques groupés entre Etats membres"
+      },
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un Buy European Tech Act et des achats technologiques groupés entre Etats membres"
       }
     ]
   },
@@ -2050,7 +2051,7 @@
         "sujet": "libertes",
         "position": "cadre_collectif",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre rapidement et effectivement en place, au niveau européen ou, à défaut, à l’échelle nationale, une majorité numérique conditionnant l’accès aux réseaux sociaux."
+        "extrait": "Mettre rapidement et effectivement en place, au niveau européen ou, à défaut, à l’échelle nationale, une majorité numérique conditionnant l’accès aux réseaux sociaux"
       }
     ]
   },
@@ -2080,7 +2081,7 @@
         "sujet": "ia",
         "position": "plus_ia",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Développer une infrastructure d'IA européenne souveraine en soutenant nos champions et en doublant notre capacité de calcul en cinq ans."
+        "extrait": "Développer une infrastructure d'IA européenne souveraine en soutenant nos champions et en doublant notre capacité de calcul en cinq ans"
       }
     ]
   },
@@ -2225,7 +2226,7 @@
         "sujet": "renouvelables",
         "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "recréer une DATAR 2.0, direction de l’aménagement du territoire et de l’adaptation au réchauffement"
+        "extrait": "direction de l’aménagement du territoire et de l’adaptation au réchauffement"
       }
     ]
   },
@@ -2318,14 +2319,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Périscolaire",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "surveillance",
-        "position": "plus_surveillance",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instituer un \"droit de savoir\" pour permettre aux parents de saisir la police pour faire vérifier l'absence d'antécédents d'une personne entrant au contact de leur enfant."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "philippe-education-jeunesse-002",
@@ -2393,7 +2387,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Donner plus d'autonomie aux chefs d'établissements en matière de discipline, de méthodes, d'horaires, d'uniforme, de choix et d'évaluation des enseignants."
+      }
+    ]
   },
   {
     "id": "philippe-education-jeunesse-005",
@@ -2483,7 +2485,7 @@
         "sujet": "ia",
         "position": "plus_ia",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un service public universel du soutien scolaire, combinant assistant IA personnalisé et brigades d'anciens professeurs et d'étudiants volontaires."
+        "extrait": "combinant assistant IA personnalisé et brigades d'anciens professeurs et d'étudiants volontaires"
       },
       {
         "sujet": "fonction_publique",

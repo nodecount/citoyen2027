@@ -1,78 +1,85 @@
 [
   {
     "groupe": 0,
-    "empreinte": "6bdc242047bb8e77",
-    "date": "2026-10-06",
+    "empreinte": "44a73cd837e17b23",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 19,
+    "etiquetees": 20,
     "sans_position": 5,
-    "rejetees": [
-      {
-        "id": "zemmour-interieur-justice-005",
-        "raison": "relecture : La dénonciation d'un accord bilatéral franco-algérien relève de l'immigration/souveraineté nationale, pas d'une position sur l'intégration européenne (ce n'est pas l'UE qui est concernée)."
-      }
-    ],
-    "cout_reference_usd": 0.1193,
+    "rejetees": [],
+    "cout_reference_usd": 0.1693,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "361d8b26ac5c4388",
-    "date": "2026-10-06",
+    "empreinte": "ad5c4ad81522a593",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 12,
-    "sans_position": 11,
+    "etiquetees": 16,
+    "sans_position": 5,
     "rejetees": [
       {
         "id": "zemmour-interieur-justice-026",
-        "raison": "relecture : Suspendre les aides aux délinquants est une sanction punitive liée à la délinquance, pas une mise sous contrepartie d'activité ou un durcissement de l'indemnisation chômage/RSA comme le définit 'conditionner_aides'."
+        "raison": "relecture : La suspension des aides sociales aux délinquants est une sanction pénale et non une conditionnalité d'activité ou un durcissement de l'indemnisation chômage/RSA tel que défini par 'conditionner_aides'."
       },
       {
         "id": "zemmour-interieur-justice-030",
-        "raison": "relecture : Une présomption légale de légitime défense porte sur le cadre juridique de l'usage des armes, pas sur le maintien ou le renforcement de l'armement lui-même."
+        "raison": "relecture : Accorder une présomption de légitime défense concerne le cadre juridique d'usage des armes, pas le niveau d'armement ou les moyens d'intervention de la police défini par 'police_armee'."
+      },
+      {
+        "id": "zemmour-retraites-travail-003",
+        "raison": "relecture : La défiscalisation de la prime de participation bénéficie directement au salarié (revenu), ce n'est pas un allègement de la fiscalité ou des charges de l'entreprise comme défini par 'soutenir_entreprises'."
+      },
+      {
+        "id": "zemmour-retraites-travail-004",
+        "raison": "relecture : Le déblocage sans impôt de la prime concerne le revenu du salarié, pas la fiscalité ou les charges de l'entreprise visées par 'soutenir_entreprises'."
       }
     ],
-    "cout_reference_usd": 0.0827,
+    "cout_reference_usd": 0.122,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "d50cef3febfe4fa7",
-    "date": "2026-10-06",
+    "empreinte": "b4c74a114e2bd9ed",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 13,
+    "etiquetees": 12,
     "sans_position": 10,
     "rejetees": [
       {
-        "id": "zemmour-retraites-travail-019",
-        "raison": "relecture : Le contrôle des investissements étrangers relève du contrôle des capitaux/souveraineté, pas de la protection commerciale (taxes à l'import, préférence nationale) visée par 'protectionnisme'."
+        "id": "zemmour-retraites-travail-014",
+        "raison": "relecture : Le texte vise la transmission d'entreprises familiales, pas spécifiquement les très hauts patrimoines ; le sujet pertinent serait entreprises/fiscalité et non ultra_riches."
+      },
+      {
+        "id": "zemmour-retraites-travail-017",
+        "raison": "relecture : Le remboursement d'aides par les entreprises qui délocalisent est une sanction/conditionnalité des aides publiques (encadrer_entreprises), pas une mesure de protectionnisme commercial (pas de taxe, quota ou préférence nationale)."
       },
       {
         "id": "zemmour-gouvernance-republique-001",
-        "raison": "relecture : Organiser un référendum sur des sujets précis via le mécanisme constitutionnel existant (art. 11) n'équivaut pas à changer les institutions (nouvelle République, proportionnelle, RIC)."
+        "raison": "relecture : Organiser un référendum ponctuel sur des sujets précis relève de l'usage d'un outil institutionnel existant (article 11), non d'un changement des institutions elles-mêmes."
       }
     ],
-    "cout_reference_usd": 0.0656,
+    "cout_reference_usd": 0.0732,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "704a327f8cf5e063",
-    "date": "2026-10-06",
+    "empreinte": "2d277c40748d11d3",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 16,
-    "etiquetees": 8,
-    "sans_position": 7,
+    "etiquetees": 10,
+    "sans_position": 5,
     "rejetees": [
       {
-        "id": "zemmour-gouvernance-republique-006",
-        "raison": "relecture : Le texte porte sur l'hébergement souverain des données (localisation, sécurité), pas sur une limitation de la surveillance ou de l'accès aux données à des fins policières/étatiques comme le définit 'vie_privee' ; c'est plutôt une mesure de souveraineté numérique, hors des deux positions du sujet surveillance."
+        "id": "zemmour-education-jeunesse-008",
+        "raison": "relecture : Le sujet parents_mineurs vise les parents de mineurs délinquants, alors que la mesure cible les parents d'élèves perturbateurs ou absentéistes, ce qui n'est pas la même chose."
       }
     ],
-    "cout_reference_usd": 0.0441,
+    "cout_reference_usd": 0.055,
     "appels": 2
   }
 ]

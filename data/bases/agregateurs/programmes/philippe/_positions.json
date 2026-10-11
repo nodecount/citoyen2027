@@ -1,50 +1,50 @@
 [
   {
     "groupe": 0,
-    "empreinte": "07ee1fd16c325792",
-    "date": "2026-10-06",
+    "empreinte": "97389a80f5551bcf",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 16,
-    "sans_position": 6,
+    "etiquetees": 15,
+    "sans_position": 8,
     "rejetees": [
       {
         "id": "philippe-finances-publiques-007",
-        "raison": "relecture : L'augmentation des plafonds d'exonération sur les donations est une mesure générale sur la transmission de patrimoine, non spécifique aux très hauts patrimoines visés par le sujet ultra_riches."
-      },
-      {
-        "id": "philippe-finances-publiques-008",
-        "raison": "relecture : Favoriser la transmission anticipée du patrimoine vise tous les patrimoines, pas spécifiquement les ultra-riches comme l'exige la définition du sujet."
+        "raison": "relecture : L'augmentation des plafonds d'exonération des donations est une mesure fiscale générale non ciblée sur les très hauts patrimoines, ce n'est pas spécifiquement une mesure concernant les ultra-riches."
       },
       {
         "id": "philippe-finances-publiques-010",
-        "raison": "relecture : S'engager à ne pas créer de nouvel impôt est un maintien du statu quo, pas une baisse d'impôts ou de dépense publique telle que définie."
+        "raison": "relecture : S'engager à ne pas créer de nouvel impôt n'est pas une baisse d'impôts, c'est un maintien du statu quo fiscal."
       }
     ],
-    "cout_reference_usd": 0.1309,
+    "cout_reference_usd": 0.1209,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "994b7d69c11ab896",
-    "date": "2026-10-06",
+    "empreinte": "af946d25580939b4",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 9,
-    "sans_position": 15,
+    "etiquetees": 7,
+    "sans_position": 16,
     "rejetees": [
       {
-        "id": "philippe-envi-002",
-        "raison": "relecture : La climatisation de bâtiments publics est une mesure d'adaptation à la chaleur, pas un développement des énergies renouvelables ni une mesure de sobriété/transition écologique au sens de la définition."
+        "id": "philippe-interieur-justice-018",
+        "raison": "relecture : Un profil bancaire spécifique pour les condamnés relève du fichage/surveillance, pas d'un durcissement de peine ou de moyens répressifs classiques ; le sujet 'securite/repression' n'est pas fondé par ce texte."
+      },
+      {
+        "id": "philippe-social-solidarite-004",
+        "raison": "relecture : Le texte vise à limiter la circulation des camions de fret, pas la voiture individuelle ; le sujet 'voiture' tel que défini (ZFE, véhicules thermiques, transports collectifs) n'est pas fondé par cet extrait."
       }
     ],
-    "cout_reference_usd": 0.0904,
+    "cout_reference_usd": 0.0528,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "82e2bfef8421cbea",
-    "date": "2026-10-06",
+    "empreinte": "8272ad21596b0d64",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 8,
@@ -52,31 +52,27 @@
     "rejetees": [
       {
         "id": "philippe-gouvernance-republique-006",
-        "raison": "relecture : Le consentement aux algorithmes de recommandation concerne la régulation des plateformes, pas la surveillance étatique ou la vie privée face à l'État telle que définie par le sujet."
+        "raison": "relecture : Le consentement aux algorithmes de suggestion de contenu relève de la régulation des plateformes/libertés numériques, pas de la surveillance étatique à des fins de sécurité ni de protection de la vie privée au sens défini."
       }
     ],
-    "cout_reference_usd": 0.0594,
+    "cout_reference_usd": 0.0569,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "b35f3f1c4bc193a5",
-    "date": "2026-10-06",
+    "empreinte": "0319312ec565e0c2",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 20,
     "etiquetees": 11,
-    "sans_position": 7,
+    "sans_position": 8,
     "rejetees": [
       {
         "id": "philippe-reformes-etat-003",
-        "raison": "relecture : Regrouper/privatiser des agences ne dit pas explicitement supprimer des postes de fonctionnaires ou geler des embauches, c'est une déduction."
-      },
-      {
-        "id": "philippe-education-jeunesse-004",
-        "raison": "relecture : Donner de l'autonomie aux chefs d'établissement sur la discipline n'établit pas un durcissement des sanctions, ce n'est pas l'exigence/sanction elle-même."
+        "raison": "relecture : Le texte décrit un regroupement/privatisation d'agences sans indiquer explicitement une baisse d'impôts ou de dépense publique, c'est un effet supposé non affirmé par le texte."
       }
     ],
-    "cout_reference_usd": 0.0713,
+    "cout_reference_usd": 0.073,
     "appels": 2
   }
 ]

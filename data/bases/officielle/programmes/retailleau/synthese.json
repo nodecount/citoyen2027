@@ -39,16 +39,14 @@
   },
   {
     "theme": "fiscalite",
-    "texte": "Le parti Les Républicains propose de supprimer la C3S et la CVAE, de maintenir le forfait social à 20% en exonérant l'intéressement et l'épargne retraite, et d'exonérer la CFE industrielle, soit un allègement proche de 15 milliards d'euros. Il sanctuarise le Crédit d'Impôt Recherche, et diffère l'exigibilité des droits de mutation sur la transmission d'entreprises productives tant que l'outil est conservé. Les familles avec enfants mineurs à charge achetant leur résidence principale pourraient déduire de 50% à 100% des intérêts de leur emprunt immobilier selon le nombre d'enfants, dans la limite de 400 euros majorés de 400 euros par enfant. Le plafond des dons familiaux exonérés serait relevé pendant trois ans, et l'exonération d'impôt sur les sociétés des organismes HLM serait supprimée sur cinq ans, les économies redistribuées via le Fonds national des aides à la pierre.",
+    "texte": "Le programme prévoit de différer l'exigibilité des droits de mutation à titre gratuit (jusqu'à 45%) lors de la transmission d'une entreprise ou de titres de société à activité économique réelle, tant que l'outil de production est conservé et exploité, hors structures purement patrimoniales ou financières. Il propose de fusionner 12 dispositifs familiaux en un Revenu familial de 240 euros par mois par enfant mineur jusqu'à 18 ans, déduit du prélèvement à la source ou versé directement si le foyer n'est pas imposable, sous condition de résidence régulière en France et d'activité professionnelle depuis cinq ans. Ce montant est doublé pour le troisième enfant, porté à 480 euros, pour les familles de trois enfants ou plus. Il crée un statut fiscal du bailleur privé, avec amortissement de 4% par an, taux bonifié pour loyers modérés, ou option pour le prélèvement forfaitaire unique à 30% sans amortissement, dans un cadre garanti dix ans sans zonage.",
     "propositions": [
       "retailleau-fisc-001",
       "retailleau-fisc-002",
       "retailleau-fisc-003",
-      "retailleau-fisc-004",
-      "retailleau-fisc-005",
-      "retailleau-fisc-006"
+      "retailleau-fisc-004"
     ],
-    "date_derniere_verification": "2026-10-04"
+    "date_derniere_verification": "2026-10-10"
   },
   {
     "theme": "libertes-fondamentales",
@@ -91,13 +89,14 @@
   },
   {
     "theme": "pouvoir-achat",
-    "texte": "Le programme prévoit, avant l'âge légal de la retraite, une exonération totale de cotisations retraite et chômage pour les salariés ayant validé tous leurs trimestres. Après l'âge légal, un cumul emploi-retraite rénové remplace la surcote actuelle : exonération de cotisations sociales hors CSG-CRDS, cumul partiel entre pension minorée de 30 % du revenu d'activité et revenu d'activité, suppression du délai de carence de six mois. Les Républicains proposent de doubler le Revenu familial pour le troisième enfant mineur à charge, le portant à 480 euros. Le programme prévoit aussi de supprimer les APL pour les étudiants étrangers hors UE non boursiers et d'exclure de l'APL les étudiants dont les parents sont dans les deux derniers déciles de revenus, au-delà de 45 000 euros par unité de consommation, la perte étant compensée par le maintien de la demi-part fiscale pour cette catégorie.",
+    "texte": "Avant l'age legal, le programme prevoit une exoneration totale de cotisations retraite et chomage pour les salaries ayant valide tous leurs trimestres (hors carrieres longues, penibilite, bonification enfants). Apres l'age legal, un cumul emploi-retraite renove remplace la surcote, avec exoneration des cotisations sociales hors CSG-CRDS et cumul partiel entre pension minoree de 30% et revenu d'activite. Le Revenu familial serait double pour le troisieme enfant mineur a charge, portant le total a 960 euros pour trois enfants et 1200 euros pour quatre. Les familles avec enfants mineurs a charge pourraient deduire de leur impot une partie des interets d'emprunt immobilier pour leur residence principale (50% a 100% selon le nombre d'enfants), dans la limite de 400 euros plus 400 euros par enfant. Un contrat de long terme pour l'electricite nucleaire industrielle viserait une baisse du prix de fourniture pour l'industrie, non du tarif des particuliers.",
     "propositions": [
       "retailleau-pa-001",
       "retailleau-pa-002",
-      "retailleau-pa-003"
+      "retailleau-pa-003",
+      "retailleau-pa-004"
     ],
-    "date_derniere_verification": "2026-10-04"
+    "date_derniere_verification": "2026-10-10"
   },
   {
     "theme": "retraites",
@@ -116,5 +115,16 @@
       "retailleau-secu-003"
     ],
     "date_derniere_verification": "2026-10-04"
+  },
+  {
+    "theme": "travail",
+    "texte": "Le programme relève de 1 607 à 1 623 heures le seuil au-delà duquel les heures travaillées seraient exonérées de cotisations sociales, salariales et patronales, la CSG et la CRDS restant dues ; l'exonération d'impôt sur le revenu des heures supplémentaires serait maintenue, avec une annualisation du temps de travail. Le Code du travail serait recentré sur 50 principes, supplétif en l'absence d'accord collectif, l'accord d'entreprise devenant prioritaire et pouvant déroger aux règles actuelles ; l'extension automatique des accords de branche serait abandonnée sauf pour quelques thèmes comme les minima. Le seuil d'obligation du comité social et économique passerait de 11 à 50 salariés, supprimant le CSE réduit pour les entreprises de 11 à 49 salariés sauf accord contraire. L'obligation de sécurité des employeurs passerait d'une obligation de résultat à une obligation de moyens.",
+    "propositions": [
+      "retailleau-trav-001",
+      "retailleau-trav-002",
+      "retailleau-trav-003",
+      "retailleau-trav-004"
+    ],
+    "date_derniere_verification": "2026-10-10"
   }
 ]

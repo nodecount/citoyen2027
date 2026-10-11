@@ -2,27 +2,27 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "7a2d867c1eb934b6",
-    "date": "2026-10-04",
+    "empreinte": "c6e0d746dde2b324",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 5,
     "avec_effets": 2,
     "sans_effet": 3,
     "rejetees": [],
-    "cout_reference_usd": 0.0509,
+    "cout_reference_usd": 0.0544,
     "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "24626b23266c83c0",
-    "date": "2026-10-04",
+    "empreinte": "4c815a8b1340334e",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
     "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.0275,
+    "cout_reference_usd": 0.0289,
     "appels": 1
   }
 ]

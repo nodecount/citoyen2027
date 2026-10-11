@@ -1,24 +1,20 @@
 [
   {
     "groupe": 0,
-    "empreinte": "a3e187cda6e622cf",
-    "date": "2026-10-05",
+    "empreinte": "b961e2470e730456",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 6,
-    "sans_position": 11,
+    "etiquetees": 8,
+    "sans_position": 10,
     "rejetees": [
       {
         "id": "glucksmann-finances-publiques-004",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Supprimer les exonérations de TVA et de taxe sur le kérosène… »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Supprimer les exonérations de TVA et de taxe sur le kérosène »"
       },
       {
         "id": "glucksmann-interieur-justice-001",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Créer des voies légales et sécurisées d’immigration de trava… »"
-      },
-      {
-        "id": "glucksmann-interieur-justice-002",
-        "raison": "relecture : Le texte se contente d'abroger une loi sans en préciser le contenu ; déduire 'ouverture' suppose de savoir que la loi immigration de 2024 était restrictive, ce qui relève d'une interprétation externe au texte."
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Créer des voies légales et sécurisées d'immigration de trava… »"
       },
       {
         "id": "glucksmann-interieur-justice-003",
@@ -26,7 +22,7 @@
       },
       {
         "id": "glucksmann-interieur-justice-005",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Lancer un programme d’intervention rapide pour prévenir la d… »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Lancer un programme d'intervention rapide pour prévenir la d… »"
       },
       {
         "id": "glucksmann-interieur-justice-010",
@@ -38,28 +34,28 @@
       },
       {
         "id": "glucksmann-social-solidarite-002",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « en finir avec la tarification à l’acte à l’hôpital, proposer… »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « contrer la financiarisation du système de santé, en finir av… »"
       }
     ],
-    "cout_reference_usd": 0.0949,
+    "cout_reference_usd": 0.1184,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "67fd9d3123517e15",
-    "date": "2026-10-05",
+    "empreinte": "24a2d95e77e50e38",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 5,
-    "sans_position": 11,
+    "etiquetees": 6,
+    "sans_position": 9,
     "rejetees": [
       {
         "id": "glucksmann-social-solidarite-014",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « accélérer la construction de logements sociaux en rehaussant… »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Créer un fonds national pour aider les collectivités à acqué… »"
       },
       {
         "id": "glucksmann-social-solidarite-017",
-        "raison": "relecture : La loi Kasbarian concerne la procédure d'expulsion pour squat/impayés, pas l'encadrement des loyers ou le logement social ; l'étiquette 'encadrer_logement' n'est pas fondée par cet extrait."
+        "raison": "relecture : La loi Kasbarian porte sur la répression des squats/impayés et les expulsions, pas sur l'encadrement des loyers ou le logement social ; l'étiquette ne correspond pas au contenu de la mesure."
       },
       {
         "id": "glucksmann-social-solidarite-018",
@@ -67,7 +63,7 @@
       },
       {
         "id": "glucksmann-social-solidarite-019",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « démultiplier les aides à SNCF Réseau afin de moderniser les … »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Lancer un Plan Rail national en lien avec les régions : dému… »"
       },
       {
         "id": "glucksmann-social-solidarite-020",
@@ -87,20 +83,24 @@
       },
       {
         "id": "glucksmann-social-solidarite-024",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Repenser le système autoroutier, faire un moratoire sur les … »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Supprimer les exonérations de TVA et de taxe sur le kérosène… »"
+      },
+      {
+        "id": "glucksmann-retraites-travail-006",
+        "raison": "relecture : L'intégration de représentants des salariés au conseil d'administration relève de la gouvernance d'entreprise, ce qui ne correspond pas à la définition d'encadrer_entreprises (taxation, IS, dividendes, licenciements, rémunérations)."
       }
     ],
-    "cout_reference_usd": 0.085,
+    "cout_reference_usd": 0.068,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "9ba0ee04e83f686c",
-    "date": "2026-10-05",
+    "empreinte": "2ca4b26917a6d7d7",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 5,
-    "sans_position": 16,
+    "etiquetees": 4,
+    "sans_position": 18,
     "rejetees": [
       {
         "id": "glucksmann-retraites-travail-016",
@@ -111,25 +111,21 @@
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Lancer un grand plan d’investissement pluriannuel dans toute… »"
       },
       {
-        "id": "glucksmann-envi-005",
-        "raison": "relecture : Annuler une hausse de taxe spécifique sur l'électricité n'établit pas une position générale de baisse d'impôts/dépense publique au sens de la définition."
-      },
-      {
-        "id": "glucksmann-envi-006",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Devenir souverain par la sobriété, le réusage, la réparation… »"
+        "id": "glucksmann-envi-013",
+        "raison": "relecture : Interdire les méga-surfaces commerciales relève de la régulation de l'urbanisme commercial, pas du protectionnisme commercial international (taxes/barrières douanières, préférence nationale) défini pour ce sujet."
       }
     ],
-    "cout_reference_usd": 0.0466,
+    "cout_reference_usd": 0.0367,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "2ac95d1fec745dc6",
-    "date": "2026-10-05",
+    "empreinte": "436e89e27315194b",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 8,
-    "sans_position": 15,
+    "etiquetees": 4,
+    "sans_position": 18,
     "rejetees": [
       {
         "id": "glucksmann-envi-032",
@@ -138,27 +134,39 @@
       {
         "id": "glucksmann-europe-international-002",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Augmenter massivement le budget de l’Union européenne pour l… »"
+      },
+      {
+        "id": "glucksmann-europe-international-005",
+        "raison": "relecture : La définition de plus_defense porte sur l'augmentation du budget militaire national ou le réarmement/service militaire propre, pas sur l'aide militaire apportée à des pays tiers (Ukraine, Moldavie, Arménie)."
       }
     ],
-    "cout_reference_usd": 0.063,
+    "cout_reference_usd": 0.0441,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "2dc04d96f65a9ff4",
-    "date": "2026-10-05",
+    "empreinte": "7602cfb17802f36e",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 8,
-    "sans_position": 12,
+    "etiquetees": 7,
+    "sans_position": 11,
     "rejetees": [
       {
         "id": "glucksmann-gouvernance-republique-003",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Instaurer la proportionnelle, de préférence par circonscript… »"
       },
       {
+        "id": "glucksmann-gouvernance-republique-004",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Supprimer l’article 16 de la Constitution (pouvoirs exceptio… »"
+      },
+      {
         "id": "glucksmann-gouvernance-republique-005",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Lancer en parallèle une grande convention citoyenne qui jett… »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « une grande convention citoyenne qui jettera les bases d’une … »"
+      },
+      {
+        "id": "glucksmann-gouvernance-republique-006",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « droit de vote à 16 ans et pour les étrangers extra-communaut… »"
       },
       {
         "id": "glucksmann-gouvernance-republique-013",
@@ -173,16 +181,16 @@
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Créer une Autorité indépendante de protection des mineurs en… »"
       }
     ],
-    "cout_reference_usd": 0.0504,
+    "cout_reference_usd": 0.0444,
     "appels": 2
   },
   {
     "groupe": 5,
-    "empreinte": "ffa42405a683fe74",
-    "date": "2026-10-05",
+    "empreinte": "366c0d912e29ac9c",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 21,
-    "etiquetees": 7,
+    "etiquetees": 5,
     "sans_position": 12,
     "rejetees": [
       {
@@ -190,11 +198,19 @@
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Revaloriser le salaire de tous les enseignants de manière co… »"
       },
       {
+        "id": "glucksmann-education-jeunesse-008",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Intégrer les établissements privés sous contrat à la carte s… »"
+      },
+      {
         "id": "glucksmann-defense-006",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Proposer à nos partenaires de l’UE d’étendre la dissuasion n… »"
+      },
+      {
+        "id": "glucksmann-defense-008",
+        "raison": "relecture : L'aide militaire à l'Ukraine est une aide extérieure, pas une augmentation du budget ou de l'effort militaire français tel que défini par 'plus_defense'."
       }
     ],
-    "cout_reference_usd": 0.049,
+    "cout_reference_usd": 0.039,
     "appels": 2
   }
 ]

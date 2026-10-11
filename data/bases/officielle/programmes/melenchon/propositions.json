@@ -1,1811 +1,5 @@
 [
   {
-    "titre": "Hausse immédiate du SMIC net mensuel à 1 400 euros",
-    "resume_factuel": "Position de 2021 : porter immédiatement le SMIC mensuel à 1 400 euros nets. Mécanisme de financement non précisé dans l'extrait.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
-        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "tranche_revenus",
-            "valeurs": [
-              "moins_1200"
-            ]
-          },
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "extrait": "Porter immédiatement le SMIC mensuel à 1 400 euros nets"
-      }
-    ],
-    "id": "melenchon-pa-001",
-    "candidat": "melenchon",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "salaires",
-        "position": "hausse_smic",
-        "source_url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "extrait": "porter immédiatement le SMIC mensuel à 1 400 euros nets"
-      }
-    ]
-  },
-  {
-    "titre": "Hausse du SMIC à 1 700 euros (meeting 2026)",
-    "resume_factuel": "Lors du meeting de juin 2026, le candidat annonce que le SMIC passera à 1 700 euros. Mécanisme et calendrier précis non détaillés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "melenchon.fr (meeting du 7 juin 2026) — meeting-saint-denis",
-        "url": "https://melenchon.fr/2026/06/07/meeting-de-jean-luc-melenchon-a-saint-denis/",
-        "nom": "melenchon.fr (meeting du 7 juin 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "tranche_revenus",
-            "valeurs": [
-              "moins_1200",
-              "1200_2000"
-            ]
-          },
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://melenchon.fr/2026/06/07/meeting-de-jean-luc-melenchon-a-saint-denis/",
-        "extrait": "Le Smic passera à 1 700 euros."
-      }
-    ],
-    "id": "melenchon-pa-002",
-    "candidat": "melenchon",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "salaires",
-        "position": "hausse_smic",
-        "source_url": "https://melenchon.fr/2026/06/07/meeting-de-jean-luc-melenchon-a-saint-denis/",
-        "extrait": "le SMIC passera à 1 700 euros"
-      }
-    ]
-  },
-  {
-    "titre": "Encadrement des prix des produits alimentaires de première nécessité",
-    "resume_factuel": "Position de 2021 : encadrer le prix des produits alimentaires de première nécessité. Modalités d'encadrement non précisées.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-52",
-        "url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
-        "extrait": "Encadrer le prix des produits alimentaires de première nécessité"
-      }
-    ],
-    "id": "melenchon-pa-003",
-    "candidat": "melenchon",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Plafonnement des frais bancaires",
-    "resume_factuel": "Position de 2021 : plafonner les frais bancaires, sans préciser de montant.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-52",
-        "url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
-        "extrait": "Plafonner les frais bancaires"
-      }
-    ],
-    "id": "melenchon-pa-004",
-    "candidat": "melenchon",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Création d'une garantie d'autonomie au niveau du seuil de pauvreté",
-    "resume_factuel": "Position de 2021 : garantir que le revenu mensuel de chaque personne atteigne le seuil de pauvreté, fixé à 1 063 euros pour une personne seule dans le document.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-52",
-        "url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": true,
-    "hypotheses_calcul": "Seuil de pauvreté chiffré à 1 063 euros pour une personne seule dans le corpus.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "tranche_revenus",
-            "valeurs": [
-              "moins_1200"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
-        "extrait": "Créer une garantie d’autonomie qui permettra que nul ne soit privé de sa dignité pour vivre : le revenu mensuel de chaque personne atteindra le seuil de pauvreté (1 063 euros pour une personne seule)"
-      }
-    ],
-    "id": "melenchon-pa-005",
-    "candidat": "melenchon",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "redistribution",
-        "source_url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
-        "extrait": "garantir que le revenu mensuel de chaque personne atteigne le seuil de pauvreté"
-      }
-    ]
-  },
-  {
-    "titre": "Garantie d'autonomie financée pour les jeunes détachés du foyer fiscal parental",
-    "resume_factuel": "Position de 2021 : financer l'autonomie des jeunes détachés du foyer fiscal parental grâce à la garantie d'autonomie, portant leur revenu au-dessus du seuil de pauvreté (1 063 euros pour une personne seule).",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-53",
-        "url": "https://laec.fr/section/53/construire-lautonomie-des-jeunes",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": true,
-    "hypotheses_calcul": "Seuil de pauvreté chiffré à 1 063 euros pour une personne seule dans le corpus.",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [],
-    "id": "melenchon-pa-006",
-    "candidat": "melenchon",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "redistribution",
-        "source_url": "https://laec.fr/section/53/construire-lautonomie-des-jeunes",
-        "extrait": "financer l'autonomie des jeunes détachés du foyer fiscal parental grâce à la garantie d'autonomie, portant leur revenu au-dessus du seuil de pauvreté"
-      }
-    ]
-  },
-  {
-    "titre": "Augmentation des indemnités de stage",
-    "resume_factuel": "Position de 2021 : mettre fin à la précarité des étudiants, notamment en augmentant les indemnités de stage et en négociant avec les branches patronales les postes ouverts à stages. Montant non précisé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-53",
-        "url": "https://laec.fr/section/53/construire-lautonomie-des-jeunes",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "etudiant"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/53/construire-lautonomie-des-jeunes",
-        "extrait": "Mettre fin à la précarité des étudiants, notamment en augmentant les indemnités de stage et en négociant avec les branches patronales les postes ouverts à stages, pour en finir avec la pratique des CDD déguisés"
-      }
-    ],
-    "id": "melenchon-pa-007",
-    "candidat": "melenchon",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Augmentation de 0,25 point par an du taux de cotisation vieillesse",
-    "resume_factuel": "Position de 2021 : augmenter de 0,25 point par an durant le quinquennat le taux de cotisation vieillesse et soumettre à cotisation les revenus d'intéressement, de participation, d'épargne salariale, ainsi que les revenus financiers des entreprises.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-44",
-        "url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "extrait": "Augmenter de 0,25 point par an durant le quinquennat le taux de cotisation vieillesse et soumettre à cotisation les revenus d’intéressement, de participation, d’épargne salariale, ainsi que les revenus financiers des entreprises"
-      }
-    ],
-    "id": "melenchon-pa-008",
-    "candidat": "melenchon",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Revalorisation du traitement des fonctionnaires",
-    "resume_factuel": "Position de 2021 : revaloriser le traitement des fonctionnaires. Montant non précisé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
-        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "fonctionnaire"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "extrait": "Revaloriser le traitement des fonctionnaires"
-      }
-    ],
-    "id": "melenchon-pa-009",
-    "candidat": "melenchon",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "extrait": "revaloriser le traitement des fonctionnaires"
-      }
-    ]
-  },
-  {
-    "titre": "Indexation des retraites sur les salaires",
-    "resume_factuel": "Position de 2021 : indexer le montant des retraites sur les salaires.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-44",
-        "url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "retraite"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "extrait": "Indexer le montant des retraites sur les salaires"
-      }
-    ],
-    "id": "melenchon-pa-010",
-    "candidat": "melenchon",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Pensions portées au minimum au niveau du SMIC revalorisé pour une carrière complète",
-    "resume_factuel": "Position de 2021 : porter a minima au niveau du SMIC revalorisé toutes les pensions pour une carrière complète, et le minimum vieillesse au niveau du seuil de pauvreté.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-44",
-        "url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "retraite"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "extrait": "Porter a minima au niveau du SMIC revalorisé toutes les pensions pour une carrière complète, et le minimum vieillesse au niveau du seuil de pauvreté"
-      }
-    ],
-    "id": "melenchon-pa-011",
-    "candidat": "melenchon",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "aides_sociales",
-        "position": "proteger_droits_sociaux",
-        "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "extrait": "porter a minima au niveau du SMIC revalorisé toutes les pensions pour une carrière complète, et le minimum vieillesse au niveau du seuil de pauvreté"
-      }
-    ]
-  },
-  {
-    "titre": "Indemnisation chômage dès le premier jour et calculée sur les derniers salaires",
-    "resume_factuel": "Position de 2021 : refuser la réforme Macron de l'assurance-chômage, indemniser les chômeurs en fonction de leurs derniers salaires dès le premier jour de la fin de contrat.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-40",
-        "url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "sans_emploi"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
-        "extrait": "Indemniser les chômeurs dès le premier jour de la fin de contrat"
-      }
-    ],
-    "id": "melenchon-pa-012",
-    "candidat": "melenchon",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "aides_sociales",
-        "position": "proteger_droits_sociaux",
-        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
-        "extrait": "refuser la réforme Macron de l'assurance-chômage, indemniser les chômeurs en fonction de leurs derniers salaires dès le premier jour de la fin de contrat"
-      }
-    ]
-  },
-  {
-    "titre": "Réduction de la TVA sur les produits de première nécessité et TVA grand luxe",
-    "resume_factuel": "Position de 2021 : réduire la TVA sur les produits de première nécessité et réinstaurer une « TVA grand luxe » pour la financer.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-50",
-        "url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-05",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
-        "extrait": "Réduire la TVA sur les produits de première nécessité et réinstaurer une « TVA grand luxe » pour la financer"
-      }
-    ],
-    "id": "melenchon-pa-013",
-    "candidat": "melenchon",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Garantie d'emploi pour les chômeurs de longue durée",
-    "resume_factuel": "Position de 2021 : tout chômeur de longue durée pourrait se voir proposer un emploi dans un secteur d'urgence (transition écologique, action sociale), en lien avec ses qualifications et sur la base du volontariat, payé au moins au SMIC revalorisé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-35",
-        "url": "https://laec.fr/section/35/etablir-la-garantie-demploi",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-001",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Retour aux 35 heures et 32 heures pour métiers pénibles ou de nuit",
-    "resume_factuel": "Position de 2021 : rétablissement immédiat de la durée légale hebdomadaire à 35 heures (majoration des heures supplémentaires à 25% pour les 4 premières et 50% au-delà), passage aux 32 heures dans les métiers pénibles ou de nuit, généralisation favorisée par la négociation collective.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-36",
-        "url": "https://laec.fr/section/36/reduire-le-temps-de-travail-et-faire-naitre-une-societe-du-temps-choisi",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-002",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "temps_travail",
-        "position": "reduire_temps_travail",
-        "source_url": "https://laec.fr/section/36/reduire-le-temps-de-travail-et-faire-naitre-une-societe-du-temps-choisi",
-        "extrait": "rétablissement immédiat de la durée légale hebdomadaire à 35 heures (majoration des heures supplémentaires à 25% pour les 4 premières et 50% au-delà), passage aux 32 heures dans les métiers pénibles ou de nuit"
-      }
-    ]
-  },
-  {
-    "titre": "Sixième semaine de congés payés pour tous les salariés",
-    "resume_factuel": "Position de 2021 : généraliser une sixième semaine de congés payés pour l'ensemble des salariés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-36",
-        "url": "https://laec.fr/section/36/reduire-le-temps-de-travail-et-faire-naitre-une-societe-du-temps-choisi",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-003",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "temps_travail",
-        "position": "reduire_temps_travail",
-        "source_url": "https://laec.fr/section/36/reduire-le-temps-de-travail-et-faire-naitre-une-societe-du-temps-choisi",
-        "extrait": "généraliser une sixième semaine de congés payés pour l'ensemble des salariés"
-      }
-    ]
-  },
-  {
-    "titre": "Remise en cause du travail dominical",
-    "resume_factuel": "Position de 2021 : remettre en cause les autorisations de travail le dimanche. Modalités non précisées.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-36",
-        "url": "https://laec.fr/section/36/reduire-le-temps-de-travail-et-faire-naitre-une-societe-du-temps-choisi",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-004",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Fin de la flexibilisation, de l'annualisation et des horaires fractionnés",
-    "resume_factuel": "Position de 2021 : en finir avec la flexibilisation, l'annualisation contrainte, l'intensification et les horaires fractionnés du temps de travail.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-36",
-        "url": "https://laec.fr/section/36/reduire-le-temps-de-travail-et-faire-naitre-une-societe-du-temps-choisi",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "emploi",
-        "sens": "indetermine",
-        "source_url": "https://laec.fr/section/36/reduire-le-temps-de-travail-et-faire-naitre-une-societe-du-temps-choisi",
-        "extrait": "En finir avec la flexibilisation, l’annualisation contrainte, l’intensification et les horaires fractionnés"
-      }
-    ],
-    "id": "melenchon-trav-005",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Quota maximal de contrats précaires dans les entreprises",
-    "resume_factuel": "Position de 2021 : instaurer un quota maximal de contrats précaires dans les entreprises, 10% pour les PME et 5% pour les grandes entreprises.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-38",
-        "url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "emploi",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
-        "extrait": "Instaurer un quota maximal de contrats précaires dans les entreprises : 10 % pour les petites et moyennes entreprises (PME), 5 % pour les grandes entreprises"
-      }
-    ],
-    "id": "melenchon-trav-006",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Abrogation des ordonnances Pénicaud et de la loi El Khomri, rétablissement du principe de faveur",
-    "resume_factuel": "Position de 2021 : abroger les ordonnances Pénicaud et la loi El Khomri et rétablir le « principe de faveur » selon lequel un accord d'entreprise doit être plus favorable qu'un accord de branche, lui-même plus favorable que la loi.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-38",
-        "url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
-        "extrait": "Abroger les ordonnances Pénicaud et la loi El Khomri et rétablir le « principe de faveur » : un accord d’entreprise doit être plus favorable qu’un accord de branche, lui-même plus favorable que la loi"
-      }
-    ],
-    "id": "melenchon-trav-007",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Requalification des travailleurs des plateformes numériques en salariés",
-    "resume_factuel": "Position de 2021 : requalifier les travailleurs des plateformes numériques (Uber, Deliveroo...) et tous les salariés faussement considérés comme indépendants en contrat de travail salarié.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-38",
-        "url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "travailleurs des plateformes numériques et faux indépendants"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
-        "extrait": "Requalifier les travailleurs des plateformes numériques (Uber, Deliveroo...) et tous les salariés faussement considérés comme indépendants en contrat de travail salarié"
-      }
-    ],
-    "id": "melenchon-trav-008",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Titularisation des précaires des trois fonctions publiques",
-    "resume_factuel": "Position de 2021 : titulariser les précaires des trois fonctions publiques (État, territoriale, hospitalière).",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-38",
-        "url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-009",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Encadrement de la sous-traitance",
-    "resume_factuel": "Position de 2021 : encadrer la sous-traitance en garantissant par la loi la responsabilité des donneurs d'ordre vis-à-vis de leurs sous-traitants et en la limitant à un seul niveau.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-38",
-        "url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-010",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Hausse immédiate du SMIC net mensuel à 1 400 euros",
-    "resume_factuel": "Position de 2021 : porter immédiatement le SMIC mensuel à 1 400 euros nets.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
-        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-011",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "salaires",
-        "position": "hausse_smic",
-        "source_url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "extrait": "porter immédiatement le SMIC mensuel à 1 400 euros nets"
-      }
-    ]
-  },
-  {
-    "titre": "Sanctions contre le non-respect de l'égalité salariale femmes-hommes",
-    "resume_factuel": "Position de 2021 : punir sévèrement le non-respect de l'égalité de rémunération entre les femmes et les hommes, et créer dans l'entreprise une commission de contrôle salarié sur cette égalité.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
-        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-012",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Conférence sociale pour revaloriser les métiers du soin, du lien et du contact occupés majoritairement par des femmes",
-    "resume_factuel": "Position de 2021 : organiser une conférence sociale pour revaloriser salaires, conditions de travail et parcours professionnels des métiers occupés majoritairement par des femmes dans les secteurs du soin, du lien et du contact.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
-        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-013",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "salaires",
-        "position": "hausse_smic",
-        "source_url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "extrait": "organiser une conférence sociale pour revaloriser salaires, conditions de travail et parcours professionnels des métiers occupés majoritairement par des femmes"
-      }
-    ]
-  },
-  {
-    "titre": "Revalorisation du traitement des fonctionnaires",
-    "resume_factuel": "Position de 2021 : revaloriser le traitement des fonctionnaires.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
-        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "fonctionnaire"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "extrait": "Revaloriser le traitement des fonctionnaires"
-      }
-    ],
-    "id": "melenchon-trav-014",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "extrait": "revaloriser le traitement des fonctionnaires"
-      }
-    ]
-  },
-  {
-    "titre": "Salaire maximal autorisé dans l'entreprise (écart de 1 à 20)",
-    "resume_factuel": "Position de 2021 : fixer un salaire maximal autorisé pour limiter l'écart de 1 à 20 entre le salaire le plus bas et le salaire le plus haut dans une entreprise ; interdire parachutes dorés et retraites chapeaux ; supprimer les stock-options ; plafonner les dividendes versés aux actionnaires par rapport à la part versée aux employés ; augmenter la représentation des salariés dans les conseils d'administration.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
-        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "tranche_revenus",
-            "valeurs": [
-              "plus_5000"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
-        "extrait": "Fixer un salaire maximal autorisé pour limiter l’écart de 1 à 20 entre le salaire le plus bas et le salaire le plus haut dans une entreprise"
-      }
-    ],
-    "id": "melenchon-trav-015",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Refus de la réforme Macron de l'assurance-chômage, indemnisation dès le premier jour sur la base des derniers salaires",
-    "resume_factuel": "Position de 2021 : refuser la réforme Macron de l'assurance-chômage ; indemniser les chômeurs en fonction de leurs derniers salaires grâce à une assurance calculée à partir du premier jour de travail ; indemniser dès le premier jour de la fin de contrat ; supprimer l'obligation d'accepter une « offre raisonnable d'emploi » ; cesser les radiations pour absence au premier rendez-vous.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-40",
-        "url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "sans_emploi"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
-        "extrait": "Refuser la réforme Macron : indemniser les chômeurs en fonction de leurs derniers salaires grâce à une assurance calculée à partir du premier jour de travail"
-      }
-    ],
-    "id": "melenchon-trav-016",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "aides_sociales",
-        "position": "proteger_droits_sociaux",
-        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
-        "extrait": "refuser la réforme Macron de l'assurance-chômage ; indemniser les chômeurs en fonction de leurs derniers salaires grâce à une assurance calculée à partir du premier jour de travail ; indemniser dès le premier jour de la fin de contrat ; supprimer l'obligation d'accepter une « offre raisonnable d'emploi » ; cesser les radiations pour absence au premier rendez-vous"
-      }
-    ]
-  },
-  {
-    "titre": "Élargissement de la médecine du travail aux chômeurs",
-    "resume_factuel": "Position de 2021 : élargir la médecine du travail aux chômeurs, avec visite obligatoire au-delà de six mois.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-40",
-        "url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "sans_emploi"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
-        "extrait": "Élargir la médecine du travail aux chômeurs, avec visite obligatoire au-delà de six mois"
-      }
-    ],
-    "id": "melenchon-trav-017",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Fin de la logique de radiation des chômeurs au moindre prétexte",
-    "resume_factuel": "Position de 2021 : cesser la radiation des chômeurs à la première absence à un rendez-vous et en finir avec la logique de radiation au moindre prétexte pour faire baisser artificiellement les chiffres du chômage.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-40",
-        "url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "sans_emploi"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
-        "extrait": "Cesser la radiation des chômeurs à la première absence à un rendez-vous et en finir avec la logique de radiation au moindre prétexte pour faire baisser artificiellement les chiffres du chômage"
-      }
-    ],
-    "id": "melenchon-trav-018",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "aides_sociales",
-        "position": "proteger_droits_sociaux",
-        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
-        "extrait": "cesser la radiation des chômeurs à la première absence à un rendez-vous et en finir avec la logique de radiation au moindre prétexte pour faire baisser artificiellement les chiffres du chômage"
-      }
-    ]
-  },
-  {
-    "titre": "Régime d'assurance-chômage spécifique pour intermittents et intérimaires",
-    "resume_factuel": "Position de 2021 : rétablir un régime d'assurance-chômage spécifique pour les intermittents de l'emploi et les intérimaires permettant une meilleure couverture chômage entre deux périodes d'emploi.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-40",
-        "url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "intermittents de l'emploi et intérimaires"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
-        "extrait": "Rétablir un régime d’assurance-chômage spécifique pour les intermittents de l’emploi et les intérimaires permettant de leur assurer une meilleure couverture chômage entre deux périodes d’emploi"
-      }
-    ],
-    "id": "melenchon-trav-019",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Sécurité sociale professionnelle : continuité des droits personnels hors contrat de travail",
-    "resume_factuel": "Position de 2021 : établir une sécurité sociale professionnelle assurant la continuité des droits personnels (formation, congés, ancienneté) hors du contrat de travail et transférables d'un contrat à l'autre ; maintien du revenu en cas de reconversion ou de formation ; droit à 36 heures de formation par an librement utilisables ; intégration des stages et apprentissage dans ce dispositif.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-41",
-        "url": "https://laec.fr/section/41/une-securite-sociale-professionnelle",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/41/une-securite-sociale-professionnelle",
-        "extrait": "Assurer la continuité des droits personnels (à la formation, aux congés, à l’ancienneté…), hors du contrat de travail, et les transférer d’un contrat à l’autre"
-      }
-    ],
-    "id": "melenchon-trav-020",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Garantie de maintien du revenu en cas de reconversion ou de formation",
-    "resume_factuel": "Position de 2021 : garantir le maintien du revenu en cas de reconversion ou de formation.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-41",
-        "url": "https://laec.fr/section/41/une-securite-sociale-professionnelle",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/41/une-securite-sociale-professionnelle",
-        "extrait": "Garantir le maintien du revenu en cas de reconversion ou de formation"
-      }
-    ],
-    "id": "melenchon-trav-021",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Reconnaissance du burn-out comme maladie professionnelle",
-    "resume_factuel": "Position de 2021 : reconnaître le burn-out comme maladie professionnelle.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-42",
-        "url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
-        "extrait": "Reconnaître le burn-out comme maladie professionnelle"
-      }
-    ],
-    "id": "melenchon-trav-022",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Doublement des effectifs de l'inspection du travail",
-    "resume_factuel": "Position de 2021 : doubler les effectifs de l'inspection du travail.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-42",
-        "url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-023",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
-        "extrait": "doubler les effectifs de l'inspection du travail"
-      }
-    ]
-  },
-  {
-    "titre": "Renforcement de la médecine du travail et restauration des visites obligatoires",
-    "resume_factuel": "Position de 2021 : renforcer la médecine du travail en l'intégrant au service public de santé, restaurer la visite médicale obligatoire à l'embauche et les visites périodiques dans la carrière, y compris durant les périodes de chômage.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-42",
-        "url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie",
-              "sans_emploi"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
-        "extrait": "Renforcer la médecine du travail, en l’intégrant au service public de santé, en restaurant la visite médicale obligatoire à l’embauche et les visites périodiques dans la carrière, y compris durant les périodes de chômage"
-      }
-    ],
-    "id": "melenchon-trav-024",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Restauration des CHSCT avec avis contraignants",
-    "resume_factuel": "Position de 2021 : restaurer les Comités d'hygiène, de sécurité et des conditions de travail (CHSCT), augmenter leurs moyens et rendre leurs avis contraignants.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-42",
-        "url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-025",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Reconnaissance des produits cancérogènes (dont pesticides) comme facteurs de maladies professionnelles",
-    "resume_factuel": "Position de 2021 : inscrire tous les produits cancérogènes pointés par le Centre international de recherche sur le cancer dans les facteurs de maladies professionnelles, dont les pesticides.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-42",
-        "url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
-        "extrait": "Inscrire tous les produits cancérogènes pointés par le Centre international de recherche sur le cancer dans les facteurs de maladies professionnelles, dont les pesticides"
-      }
-    ],
-    "id": "melenchon-trav-026",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Droit à la déconnexion effectif et encadrement du télétravail",
-    "resume_factuel": "Position de 2021 : rendre effectif le droit à la déconnexion et encadrer le télétravail.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-42",
-        "url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
-        "extrait": "Rendre effectif le droit à la déconnexion et encadrer le télétravail"
-      }
-    ],
-    "id": "melenchon-trav-027",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Droit de préemption des salariés pour reprendre leur entreprise en coopérative",
-    "resume_factuel": "Position de 2021 : créer un droit de préemption pour permettre aux salariés de reprendre leur entreprise sous la forme d'une coopérative.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-43",
-        "url": "https://laec.fr/section/43/reconnaitre-la-citoyennete-dans-lentreprise-et-des-droits-nouveaux-aux-salaries",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "emploi",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/43/reconnaitre-la-citoyennete-dans-lentreprise-et-des-droits-nouveaux-aux-salaries",
-        "extrait": "Créer un droit de préemption pour permettre aux salariés de reprendre leur entreprise sous la forme d’une coopérative"
-      }
-    ],
-    "id": "melenchon-trav-028",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Droit de veto suspensif des comités d'entreprise sur les plans de licenciements",
-    "resume_factuel": "Position de 2021 : accorder aux comités d'entreprise un droit de veto suspensif sur les plans de licenciements et de nouveaux droits de contrôle sur les finances de leur entreprise.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-43",
-        "url": "https://laec.fr/section/43/reconnaitre-la-citoyennete-dans-lentreprise-et-des-droits-nouveaux-aux-salaries",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "emploi",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/43/reconnaitre-la-citoyennete-dans-lentreprise-et-des-droits-nouveaux-aux-salaries",
-        "extrait": "Accorder aux comités d'entreprise un droit de veto suspensif sur les plans de licenciements et de nouveaux droits de contrôle sur les finances de leur entreprise"
-      }
-    ],
-    "id": "melenchon-trav-029",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Retraite à 60 ans à taux plein pour 40 annuités de cotisations",
-    "resume_factuel": "Position de 2021 et confirmée lors du meeting de 2026 : restaurer le droit à la retraite à 60 ans à taux plein pour 40 annuités de cotisations ; abrogation de la réforme des retraites à 64 ans puis retour à 60 ans.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-44",
-        "url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      },
-      {
-        "type": "primaire",
-        "label": "melenchon.fr (meeting du 7 juin 2026) — meeting-saint-denis",
-        "url": "https://melenchon.fr/2026/06/07/meeting-de-jean-luc-melenchon-a-saint-denis/",
-        "nom": "melenchon.fr (meeting du 7 juin 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-030",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "travail",
-        "position": "age_actuel",
-        "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "extrait": "restaurer le droit à la retraite à 60 ans à taux plein pour 40 annuités de cotisations ; abrogation de la réforme des retraites à 64 ans puis retour à 60 ans"
-      }
-    ]
-  },
-  {
-    "titre": "Pensions portées au minimum au niveau du SMIC revalorisé",
-    "resume_factuel": "Position de 2021 : porter a minima au niveau du SMIC revalorisé toutes les pensions pour une carrière complète, et le minimum vieillesse au niveau du seuil de pauvreté.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-44",
-        "url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "retraite"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "extrait": "Porter a minima au niveau du SMIC revalorisé toutes les pensions pour une carrière complète, et le minimum vieillesse au niveau du seuil de pauvreté"
-      }
-    ],
-    "id": "melenchon-trav-031",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "aides_sociales",
-        "position": "proteger_droits_sociaux",
-        "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "extrait": "porter a minima au niveau du SMIC revalorisé toutes les pensions pour une carrière complète, et le minimum vieillesse au niveau du seuil de pauvreté"
-      }
-    ]
-  },
-  {
-    "titre": "Prise en compte du RSA pour valider des trimestres de retraite",
-    "resume_factuel": "Position de 2021 : prendre en compte le revenu de solidarité active (RSA) pour valider des trimestres en vue de la retraite.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-44",
-        "url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "aides_percues",
-            "valeurs": [
-              "rsa"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "extrait": "Prendre en compte le revenu de solidarité active (RSA) pour valider des trimestres en vue de la retraite"
-      }
-    ],
-    "id": "melenchon-trav-032",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "aides_sociales",
-        "position": "proteger_droits_sociaux",
-        "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "extrait": "prendre en compte le revenu de solidarité active (RSA) pour valider des trimestres en vue de la retraite"
-      }
-    ]
-  },
-  {
-    "titre": "Augmentation progressive du taux de cotisation vieillesse et élargissement de son assiette",
-    "resume_factuel": "Position de 2021 : augmenter de 0,25 point par an durant le quinquennat le taux de cotisation vieillesse et soumettre à cotisation les revenus d'intéressement, de participation, d'épargne salariale, ainsi que les revenus financiers des entreprises.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-44",
-        "url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "extrait": "Augmenter de 0,25 point par an durant le quinquennat le taux de cotisation vieillesse et soumettre à cotisation les revenus d’intéressement, de participation, d’épargne salariale, ainsi que les revenus financiers des entreprises"
-      }
-    ],
-    "id": "melenchon-trav-033",
-    "candidat": "melenchon",
-    "theme": "travail"
-  },
-  {
-    "titre": "Indexation des retraites sur les salaires",
-    "resume_factuel": "Position de 2021 : indexer le montant des retraites sur les salaires.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-44",
-        "url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "retraite"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "extrait": "Indexer le montant des retraites sur les salaires"
-      }
-    ],
-    "id": "melenchon-trav-034",
-    "candidat": "melenchon",
-    "theme": "travail"
-  },
-  {
-    "titre": "Hausse du SMIC à 1 700 euros (meeting 2026)",
-    "resume_factuel": "Meeting de juin 2026 : le SMIC passera à 1 700 euros, selon Jean-Luc Mélenchon.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "melenchon.fr (meeting du 7 juin 2026) — meeting-saint-denis",
-        "url": "https://melenchon.fr/2026/06/07/meeting-de-jean-luc-melenchon-a-saint-denis/",
-        "nom": "melenchon.fr (meeting du 7 juin 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-035",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "salaires",
-        "position": "hausse_smic",
-        "source_url": "https://melenchon.fr/2026/06/07/meeting-de-jean-luc-melenchon-a-saint-denis/",
-        "extrait": "le SMIC passera à 1 700 euros, selon Jean-Luc Mélenchon"
-      }
-    ]
-  },
-  {
-    "titre": "Création d'une Sécurité sociale intégrale",
-    "resume_factuel": "Meeting de juin 2026 : création d'une Sécurité sociale intégrale, gérée par ses cotisants, avec sortie du financement par la TVA sociale introduite par Macron ; extension du principe de la Sécurité sociale à d'autres domaines de l'existence.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "melenchon.fr (meeting du 7 juin 2026) — meeting-saint-denis",
-        "url": "https://melenchon.fr/2026/06/07/meeting-de-jean-luc-melenchon-a-saint-denis/",
-        "nom": "melenchon.fr (meeting du 7 juin 2026)",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [],
-    "id": "melenchon-trav-036",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Instauration d'un « emploi spécifique jeune » de cinq ans",
-    "resume_factuel": "Position de 2021 : instaurer un « emploi spécifique jeune » d'une durée de cinq ans, dans le secteur non marchand et public, pour éliminer le chômage des jeunes.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-53",
-        "url": "https://laec.fr/section/53/construire-lautonomie-des-jeunes",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "tranche_age",
-            "valeurs": [
-              "moins_30"
-            ]
-          },
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "sans_emploi"
-            ]
-          }
-        ],
-        "dimension": "emploi",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/53/construire-lautonomie-des-jeunes",
-        "extrait": "Instaurer un « emploi spécifique jeune » d’une durée de cinq ans, dans le secteur non marchand et public, pour éliminer le chômage des jeunes (trois fois supérieur à celui de leurs aînés à diplôme égal)"
-      }
-    ],
-    "id": "melenchon-trav-037",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://laec.fr/section/53/construire-lautonomie-des-jeunes",
-        "extrait": "instaurer un « emploi spécifique jeune » d'une durée de cinq ans, dans le secteur non marchand et public, pour éliminer le chômage des jeunes"
-      }
-    ]
-  },
-  {
-    "titre": "Fin de la précarité étudiante : augmentation des indemnités de stage",
-    "resume_factuel": "Position de 2021 : mettre fin à la précarité des étudiants, notamment en augmentant les indemnités de stage et en négociant avec les branches patronales les postes ouverts à stages, pour en finir avec la pratique des CDD déguisés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-53",
-        "url": "https://laec.fr/section/53/construire-lautonomie-des-jeunes",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-06",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "etudiant"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/53/construire-lautonomie-des-jeunes",
-        "extrait": "Mettre fin à la précarité des étudiants, notamment en augmentant les indemnités de stage et en négociant avec les branches patronales les postes ouverts à stages, pour en finir avec la pratique des CDD déguisés"
-      }
-    ],
-    "id": "melenchon-trav-038",
-    "candidat": "melenchon",
-    "theme": "travail",
-    "positions": []
-  },
-  {
     "titre": "Restaurer le droit à la retraite à 60 ans à taux plein pour 40 annuités",
     "resume_factuel": "Position de 2021, réaffirmée dans le discours de juin 2026 (abrogation de la réforme à 64 ans puis retour à 60 ans). Restauration du droit à la retraite à 60 ans à taux plein pour 40 annuités de cotisation.",
     "sources": [
@@ -1837,7 +31,7 @@
         "sujet": "travail",
         "position": "age_actuel",
         "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
-        "extrait": "abrogation de la réforme à 64 ans puis retour à 60 ans). Restauration du droit à la retraite à 60 ans à taux plein pour 40 annuités de cotisation"
+        "extrait": "Restauration du droit à la retraite à 60 ans à taux plein pour 40 annuités de cotisation"
       }
     ]
   },
@@ -1878,8 +72,8 @@
     "theme": "retraites",
     "positions": [
       {
-        "sujet": "aides_sociales",
-        "position": "proteger_droits_sociaux",
+        "sujet": "fiscalite",
+        "position": "redistribution",
         "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
         "extrait": "toutes les pensions pour une carrière complète seraient portées à minima au niveau du SMIC revalorisé, et le minimum vieillesse au niveau du seuil de pauvreté"
       }
@@ -1963,7 +157,15 @@
     ],
     "id": "melenchon-retr-004",
     "candidat": "melenchon",
-    "theme": "retraites"
+    "theme": "retraites",
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
+        "extrait": "extension de la cotisation aux revenus d'intéressement, de participation, d'épargne salariale, ainsi qu'aux revenus financiers des entreprises"
+      }
+    ]
   },
   {
     "titre": "Indexation des retraites sur les salaires",
@@ -1984,7 +186,8 @@
     "effets": [],
     "id": "melenchon-retr-005",
     "candidat": "melenchon",
-    "theme": "retraites"
+    "theme": "retraites",
+    "positions": []
   },
   {
     "titre": "Interdiction au Fonds de réserve pour les retraites d'investir dans des secteurs polluants",
@@ -2006,7 +209,14 @@
     "id": "melenchon-retr-006",
     "candidat": "melenchon",
     "theme": "retraites",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://laec.fr/section/44/garantir-une-retraite-digne",
+        "extrait": "interdiction faite au Fonds de réserve pour les retraites (FRR) d'investir dans des secteurs polluants"
+      }
+    ]
   },
   {
     "titre": "Garantie d'autonomie portant chaque personne au seuil de pauvreté",
@@ -2085,8 +295,7 @@
     "effets": [],
     "id": "melenchon-aides-003",
     "candidat": "melenchon",
-    "theme": "aides-etat",
-    "positions": []
+    "theme": "aides-etat"
   },
   {
     "titre": "Restructuration des dettes des ménages surendettés et accès bancaire de base",
@@ -2415,7 +624,8 @@
     ],
     "id": "melenchon-logt-002",
     "candidat": "melenchon",
-    "theme": "logement"
+    "theme": "logement",
+    "positions": []
   },
   {
     "titre": "Construction de 200 000 logements publics par an",
@@ -2573,7 +783,15 @@
     ],
     "id": "melenchon-logt-006",
     "candidat": "melenchon",
-    "theme": "logement"
+    "theme": "logement",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://laec.fr/section/54/garantir-le-droit-au-logement",
+        "extrait": "Taxation progressive des transactions immobilières les plus élevées pour financer la lutte contre le logement indigne"
+      }
+    ]
   },
   {
     "titre": "Rénovation obligatoire des passoires thermiques avant mise en location",
@@ -2616,7 +834,21 @@
     ],
     "id": "melenchon-logt-007",
     "candidat": "melenchon",
-    "theme": "logement"
+    "theme": "logement",
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "encadrer_logement",
+        "source_url": "https://laec.fr/section/54/garantir-le-droit-au-logement",
+        "extrait": "Obligation de rénover les logements qualifiés de passoires thermiques avant toute mise en location"
+      },
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://laec.fr/section/54/garantir-le-droit-au-logement",
+        "extrait": "Obligation de rénover les logements qualifiés de passoires thermiques avant toute mise en location"
+      }
+    ]
   },
   {
     "titre": "Permis de louer obligatoire et plan de rénovation contre l'habitat indigne",
@@ -2637,7 +869,15 @@
     "effets": [],
     "id": "melenchon-logt-008",
     "candidat": "melenchon",
-    "theme": "logement"
+    "theme": "logement",
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "encadrer_logement",
+        "source_url": "https://laec.fr/section/54/garantir-le-droit-au-logement",
+        "extrait": "Instauration d'un « permis de louer » obligatoire partout en France (autorisation préalable des pouvoirs publics) et lancement d'un grand plan de rénovation des logements pour lutter contre l'habitat indigne et insalubre"
+      }
+    ]
   },
   {
     "titre": "Rétablissement des aides publiques pour les HLM, blocage des hausses de loyer à la relocation",
@@ -2708,7 +948,7 @@
         "sujet": "logement",
         "position": "encadrer_logement",
         "source_url": "https://laec.fr/section/54/garantir-le-droit-au-logement",
-        "extrait": "Réquisition des logements vides pour les remettre sur le marché dans des conditions respectant les critères du logement décent"
+        "extrait": "Réquisition des logements vides pour les remettre sur le marché dans des conditions respectant les critères du logement décent."
       }
     ]
   },
@@ -2753,7 +993,7 @@
         "sujet": "logement",
         "position": "encadrer_logement",
         "source_url": "https://laec.fr/section/54/garantir-le-droit-au-logement",
-        "extrait": "Limitation des locations de courte durée de type Airbnb aux propriétaires-occupants et pour une période limitée, afin de lutter contre la spéculation sur le logement"
+        "extrait": "Limitation des locations de courte durée de type Airbnb aux propriétaires-occupants et pour une période limitée, afin de lutter contre la spéculation sur le logement."
       }
     ]
   },
@@ -2834,7 +1074,13 @@
         "sujet": "sante_organisation",
         "position": "hopital_public",
         "source_url": "https://laec.fr/section/32/faire-passer-la-sante-dabord-et-reconstruire-les-etablissements-de-sante-publics-notamment-les-hopitaux",
-        "extrait": "reconstruire le service public hospitalier et instaurer le « 100 % Sécu » en remboursant à 100 % les soins de santé prescrits, les mutuelles étant intégrées dans la Sécurité sociale"
+        "extrait": "reconstruire le service public hospitalier"
+      },
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://laec.fr/section/32/faire-passer-la-sante-dabord-et-reconstruire-les-etablissements-de-sante-publics-notamment-les-hopitaux",
+        "extrait": "instaurer le « 100 % Sécu » en remboursant à 100 % les soins de santé prescrits"
       }
     ]
   },
@@ -2926,10 +1172,10 @@
     "theme": "sante",
     "positions": [
       {
-        "sujet": "sante_organisation",
-        "position": "hopital_public",
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
         "source_url": "https://laec.fr/section/32/faire-passer-la-sante-dabord-et-reconstruire-les-etablissements-de-sante-publics-notamment-les-hopitaux",
-        "extrait": "augmenter les capacités d'accueil des établissements de santé publics, notamment les hôpitaux"
+        "extrait": "engager un plan pluriannuel de recrutement des professionnels du soin et du médico-social"
       }
     ]
   },
@@ -2958,7 +1204,7 @@
         "sujet": "sante_organisation",
         "position": "hopital_public",
         "source_url": "https://laec.fr/section/32/faire-passer-la-sante-dabord-et-reconstruire-les-etablissements-de-sante-publics-notamment-les-hopitaux",
-        "extrait": "création de réseaux de centres de santé pluridisciplinaires publics liés aux hôpitaux publics"
+        "extrait": "combattre les déserts médicaux par le recrutement de médecins publics... création de réseaux de centres de santé pluridisciplinaires publics liés aux hôpitaux publics"
       }
     ]
   },
@@ -3047,7 +1293,7 @@
         "sujet": "sante_organisation",
         "position": "hopital_public",
         "source_url": "https://laec.fr/section/32/faire-passer-la-sante-dabord-et-reconstruire-les-etablissements-de-sante-publics-notamment-les-hopitaux",
-        "extrait": "rouvrant des lits de psychiatrie publics"
+        "extrait": "dans un premier temps, rouvrant des lits de psychiatrie publics"
       }
     ]
   },
@@ -3225,15 +1471,7 @@
     ],
     "id": "melenchon-sante-014",
     "candidat": "melenchon",
-    "theme": "sante",
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://laec.fr/section/33/en-finir-avec-labandon-des-outre-mer",
-        "extrait": "garantir l'accueil scolaire et la santé publique gratuite pour tous dans les territoires d'Outre-mer, dans le cadre d'un plan pluriannuel d'investissement et de développement des services publics"
-      }
-    ]
+    "theme": "sante"
   },
   {
     "titre": "Rembourser le sport santé (« sport sur ordonnance ») par la Sécurité sociale",
@@ -3263,7 +1501,14 @@
     "id": "melenchon-sante-015",
     "candidat": "melenchon",
     "theme": "sante",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://laec.fr/section/62/le-sport-et-les-corps-liberes-de-largent",
+        "extrait": "rembourser le sport santé, ou « sport sur ordonnance », grâce à la Sécurité sociale"
+      }
+    ]
   },
   {
     "titre": "Créer une Sécurité sociale intégrale gérée par ses cotisants",
@@ -3292,7 +1537,15 @@
     ],
     "id": "melenchon-sante-016",
     "candidat": "melenchon",
-    "theme": "sante"
+    "theme": "sante",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://melenchon.fr/2026/06/07/meeting-de-jean-luc-melenchon-a-saint-denis/",
+        "extrait": "créer une Sécurité sociale intégrale, gérée par ses cotisants"
+      }
+    ]
   },
   {
     "titre": "Création d'un service public de la petite enfance et de 500 000 places en crèche",
@@ -3319,7 +1572,7 @@
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://laec.fr/section/64/faire-le-service-public-de-la-petite-enfance",
-        "extrait": "création d'un service public de la petite enfance avec ouverture de 500 000 places en crèche"
+        "extrait": "création d'un service public de la petite enfance avec ouverture de 500 000 places en crèche et modes de garde adaptés sur cinq ans"
       }
     ]
   },
@@ -3348,7 +1601,7 @@
         "sujet": "ecole_organisation",
         "position": "ecole_continuite",
         "source_url": "https://laec.fr/section/65/reconstruire-une-ecole-globale-pour-legalite-et-lemancipation",
-        "extrait": "réduire partout les effectifs par classe pour faire mieux que la moyenne européenne"
+        "extrait": "réduire partout les effectifs par classe pour faire mieux que la moyenne européenne (19 élèves par classe)"
       }
     ]
   },
@@ -3406,7 +1659,7 @@
         "sujet": "ecole_organisation",
         "position": "reformer_ecole",
         "source_url": "https://laec.fr/section/65/reconstruire-une-ecole-globale-pour-legalite-et-lemancipation",
-        "extrait": "étendre la scolarité obligatoire à 18 ans"
+        "extrait": "étendre la scolarité obligatoire à 18 ans, en proposant si nécessaire une garantie d'autonomie à partir de 16 ans"
       }
     ]
   },
@@ -3458,7 +1711,15 @@
     "effets": [],
     "id": "melenchon-educ-006",
     "candidat": "melenchon",
-    "theme": "education"
+    "theme": "education",
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://laec.fr/section/65/reconstruire-une-ecole-globale-pour-legalite-et-lemancipation",
+        "extrait": "rétablir le diplôme national du baccalauréat et abroger les contre-réformes du lycée, de la voie professionnelle et du collège"
+      }
+    ]
   },
   {
     "titre": "Abolition des privilèges de l'enseignement privé (loi Carle, subventions)",
@@ -3501,7 +1762,8 @@
     "effets": [],
     "id": "melenchon-educ-008",
     "candidat": "melenchon",
-    "theme": "education"
+    "theme": "education",
+    "positions": []
   },
   {
     "titre": "Extension du droit de réunion et d'association pour les lycéens",
@@ -3572,7 +1834,7 @@
         "sujet": "ecole_organisation",
         "position": "reformer_ecole",
         "source_url": "https://laec.fr/section/66/qualifier-tout-le-monde",
-        "extrait": "créer des centres polytechniques professionnels, rétablir l'encadrement régional des CFA"
+        "extrait": "augmenter le nombre de classes et de lycées professionnels et agricoles publics, créer des centres polytechniques professionnels, rétablir l'encadrement régional des CFA, interdire les diplômes privés professionnels, rétablir le baccalauréat professionnel en quatre ans"
       }
     ]
   },
@@ -3699,14 +1961,7 @@
     "id": "melenchon-educ-013",
     "candidat": "melenchon",
     "theme": "education",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "redistribution",
-        "source_url": "https://laec.fr/section/67/refonder-lenseignement-superieur",
-        "extrait": "instaurer la gratuité de l'enseignement supérieur, de la licence au doctorat"
-      }
-    ]
+    "positions": []
   },
   {
     "titre": "Titularisation des doctorants et jeunes chercheurs précaires",
@@ -3743,14 +1998,7 @@
     "id": "melenchon-educ-014",
     "candidat": "melenchon",
     "theme": "education",
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://laec.fr/section/67/refonder-lenseignement-superieur",
-        "extrait": "mettre fin à la précarité des doctorants et jeunes chercheurs par la titularisation des personnels effectuant des missions pérennes"
-      }
-    ]
+    "positions": []
   },
   {
     "titre": "Interdiction du caractère lucratif des écoles privées de l'enseignement supérieur",
@@ -3808,7 +2056,15 @@
     ],
     "id": "melenchon-educ-016",
     "candidat": "melenchon",
-    "theme": "education"
+    "theme": "education",
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "encadrer_logement",
+        "source_url": "https://laec.fr/section/67/refonder-lenseignement-superieur",
+        "extrait": "construire 15 000 logements supplémentaires par an destinés aux étudiants, et rénover et remettre aux normes les logements existants"
+      }
+    ]
   },
   {
     "titre": "Abrogation de l'augmentation des frais d'inscription pour les étudiants étrangers",
@@ -3908,7 +2164,7 @@
         "sujet": "defense",
         "position": "plus_defense",
         "source_url": "https://laec.fr/section/68/un-temps-de-jeunesse-au-service-de-linteret-general-et-de-la-surete-de-la-nation",
-        "extrait": "instaurer une conscription citoyenne obligatoire de neuf mois pour les femmes et les hommes de moins de 25 ans, rémunérée au SMIC revalorisé, comprenant une formation militaire initiale"
+        "extrait": "instaurer une conscription citoyenne obligatoire de neuf mois pour les femmes et les hommes de moins de 25 ans"
       }
     ]
   },
@@ -4143,7 +2399,7 @@
         "sujet": "prison",
         "position": "alternatives_prison",
         "source_url": "https://laec.fr/section/8/une-politique-de-justice-efficace",
-        "extrait": "Respecter la dignité et les droits des personnes privées de liberté, en finir avec la surpopulation carcérale et assurer les moyens de réinsertion"
+        "extrait": "en finir avec la surpopulation carcérale et assurer les moyens de réinsertion"
       }
     ]
   },
@@ -4167,14 +2423,7 @@
     "id": "melenchon-secu-009",
     "candidat": "melenchon",
     "theme": "securite",
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://laec.fr/section/8/une-politique-de-justice-efficace",
-        "extrait": "Doubler les effectifs des services de lutte contre les infractions financières, supprimer le verrou de Bercy, augmenter le nombre de juges d'instruction"
-      }
-    ]
+    "positions": []
   },
   {
     "titre": "Lutte contre l'impunité des agresseurs sexuels",
@@ -4196,14 +2445,7 @@
     "id": "melenchon-secu-010",
     "candidat": "melenchon",
     "theme": "securite",
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://laec.fr/section/8/une-politique-de-justice-efficace",
-        "extrait": "Lutter contre l'impunité des agresseurs sexuels et la correctionnalisation des viols"
-      }
-    ]
+    "positions": []
   },
   {
     "titre": "Justice pénale environnementale",
@@ -4246,15 +2488,7 @@
     "effets": [],
     "id": "melenchon-secu-012",
     "candidat": "melenchon",
-    "theme": "securite",
-    "positions": [
-      {
-        "sujet": "surveillance",
-        "position": "vie_privee",
-        "source_url": "https://laec.fr/section/9/une-politique-antiterroriste-rationnelle",
-        "extrait": "Élaborer une nouvelle stratégie antiterroriste misant sur l'infiltration humaine et le renforcement des moyens de renseignement plutôt que sur la surveillance technologique"
-      }
-    ]
+    "theme": "securite"
   },
   {
     "titre": "Sortie de l'état d'urgence permanent et contrôle judiciaire de l'antiterrorisme",
@@ -4278,10 +2512,10 @@
     "theme": "securite",
     "positions": [
       {
-        "sujet": "surveillance",
-        "position": "vie_privee",
+        "sujet": "libertes",
+        "position": "libertes_indiv",
         "source_url": "https://laec.fr/section/9/une-politique-antiterroriste-rationnelle",
-        "extrait": "Revenir sur les dispositions liberticides ayant instauré un état d'urgence permanent, garantir le contrôle par le juge judiciaire des opérations antiterroristes"
+        "extrait": "Revenir sur les dispositions liberticides ayant instauré un état d'urgence permanent, garantir le contrôle par le juge judiciaire des opérations antiterroristes."
       }
     ]
   },
@@ -4307,10 +2541,10 @@
     "theme": "securite",
     "positions": [
       {
-        "sujet": "surveillance",
-        "position": "plus_surveillance",
+        "sujet": "securite",
+        "position": "prevention",
         "source_url": "https://laec.fr/section/9/une-politique-antiterroriste-rationnelle",
-        "extrait": "Renforcer les moyens humains de la plateforme PHAROS chargée de la prévention et de la surveillance des violences sur Internet"
+        "extrait": "Renforcer les moyens humains de la plateforme PHAROS chargée de la prévention et de la surveillance des violences sur Internet."
       }
     ]
   },
@@ -4333,7 +2567,8 @@
     "effets": [],
     "id": "melenchon-secu-015",
     "candidat": "melenchon",
-    "theme": "securite"
+    "theme": "securite",
+    "positions": []
   },
   {
     "titre": "Titularisation et formation renforcée des policiers",
@@ -4355,7 +2590,14 @@
     "id": "melenchon-secu-016",
     "candidat": "melenchon",
     "theme": "securite",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://laec.fr/section/10/refonder-une-police-republicaine",
+        "extrait": "porter à deux ans la formation des gardiens de la paix et réouvrir des écoles nationales de police."
+      }
+    ]
   },
   {
     "titre": "Fin de la politique du chiffre et renforcement des effectifs spécialisés",
@@ -4376,7 +2618,15 @@
     "effets": [],
     "id": "melenchon-secu-017",
     "candidat": "melenchon",
-    "theme": "securite"
+    "theme": "securite",
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://laec.fr/section/10/refonder-une-police-republicaine",
+        "extrait": "augmenter les effectifs chargés de la délinquance financière, du trafic d'êtres humains et du démantèlement des réseaux mafieux, doubler les effectifs de la police technique et scientifique."
+      }
+    ]
   },
   {
     "titre": "Interdiction de la reconnaissance faciale dans l'espace public",
@@ -4440,7 +2690,7 @@
         "sujet": "securite",
         "position": "prevention",
         "source_url": "https://laec.fr/section/10/refonder-une-police-republicaine",
-        "extrait": "Abroger les lois sécuritaires jugées inefficaces et renforcer les logiques de prévention, notamment les moyens humains de la prévention spécialisée dans les départements."
+        "extrait": "renforcer les logiques de prévention, notamment les moyens humains de la prévention spécialisée dans les départements."
       }
     ]
   },
@@ -4559,15 +2809,7 @@
     "effets": [],
     "id": "melenchon-secu-023",
     "candidat": "melenchon",
-    "theme": "securite",
-    "positions": [
-      {
-        "sujet": "justice_mineurs",
-        "position": "priorite_educative",
-        "source_url": "https://laec.fr/section/12/proteger-les-enfants",
-        "extrait": "garantir le respect de l'ordonnance de 1945, recentraliser et augmenter les moyens de la protection de l'enfance"
-      }
-    ]
+    "theme": "securite"
   },
   {
     "titre": "Récépissé de contrôle d'identité contre le contrôle au faciès",
@@ -4778,7 +3020,7 @@
         "sujet": "immigration",
         "position": "ouverture",
         "source_url": "https://laec.fr/section/61/etre-une-grande-nation-scientifique",
-        "extrait": "abroger l'augmentation des frais d'inscription à l'université décidée par Macron pour les étudiants étrangers, ce qui réduit leurs frais d'études en France"
+        "extrait": "abroger l'augmentation des frais d'inscription à l'université décidée par Macron pour les étudiants étrangers, ce qui réduit leurs frais d'études en France."
       }
     ]
   },
@@ -4836,7 +3078,7 @@
         "sujet": "institutions",
         "position": "nouvelles_institutions",
         "source_url": "https://laec.fr/section/1/reunir-une-assemblee-constituante-pour-passer-a-la-6e-republique",
-        "extrait": "convoquer un référendum (article 11) pour engager un processus constituant, avec une Assemblée constituante chargée de rédiger une nouvelle Constitution"
+        "extrait": "convoquer un référendum (article 11) pour engager un processus constituant, avec une Assemblée constituante chargée de rédiger une nouvelle Constitution."
       }
     ]
   },
@@ -4865,7 +3107,7 @@
         "sujet": "institutions",
         "position": "nouvelles_institutions",
         "source_url": "https://laec.fr/section/2/abolir-la-monarchie-presidentielle",
-        "extrait": "Élection de l'Assemblée nationale au scrutin proportionnel départemental, obligation pour le gouvernement de rendre des comptes devant le Parlement, et abolition des procédures de « votes forcés » comme l'article 49.3"
+        "extrait": "Élection de l'Assemblée nationale au scrutin proportionnel départemental"
       }
     ]
   },
@@ -4991,7 +3233,8 @@
     ],
     "id": "melenchon-lib-006",
     "candidat": "melenchon",
-    "theme": "libertes-fondamentales"
+    "theme": "libertes-fondamentales",
+    "positions": []
   },
   {
     "titre": "Référendum obligatoire pour modifier la Constitution ou adopter un nouveau traité européen",
@@ -5013,7 +3256,14 @@
     "id": "melenchon-lib-007",
     "candidat": "melenchon",
     "theme": "libertes-fondamentales",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "institutions",
+        "position": "nouvelles_institutions",
+        "source_url": "https://laec.fr/section/4/une-republique-permettant-lintervention-populaire",
+        "extrait": "Rendre obligatoire le recours au référendum en cas de modification de la Constitution ou d'adoption d'un nouveau traité européen."
+      }
+    ]
   },
   {
     "titre": "Non-cumul effectif des mandats et amnistie pour militants condamnés",
@@ -5056,7 +3306,15 @@
     "effets": [],
     "id": "melenchon-lib-009",
     "candidat": "melenchon",
-    "theme": "libertes-fondamentales"
+    "theme": "libertes-fondamentales",
+    "positions": [
+      {
+        "sujet": "laicite",
+        "position": "laicite_stricte",
+        "source_url": "https://laec.fr/section/5/une-republique-laique",
+        "extrait": "interdire aux élus et préfets d'assister à des cérémonies religieuses au titre de leurs fonctions, refuser les financements publics pour la construction d'édifices religieux"
+      }
+    ]
   },
   {
     "titre": "Loi anti-concentration des médias et démocratisation",
@@ -5107,14 +3365,7 @@
     "id": "melenchon-lib-011",
     "candidat": "melenchon",
     "theme": "libertes-fondamentales",
-    "positions": [
-      {
-        "sujet": "libertes",
-        "position": "libertes_indiv",
-        "source_url": "https://laec.fr/section/7/la-justice-au-nom-du-peuple",
-        "extrait": "Renforcer les droits de la défense, inscrire le droit à une défense dans la Constitution"
-      }
-    ]
+    "positions": []
   },
   {
     "titre": "Revenir sur les dispositions liberticides de l'état d'urgence permanent",
@@ -5143,15 +3394,7 @@
     ],
     "id": "melenchon-lib-012",
     "candidat": "melenchon",
-    "theme": "libertes-fondamentales",
-    "positions": [
-      {
-        "sujet": "surveillance",
-        "position": "vie_privee",
-        "source_url": "https://laec.fr/section/9/une-politique-antiterroriste-rationnelle",
-        "extrait": "Revenir sur toutes les dispositions liberticides qui ont instauré un état d'urgence permanent, et garantir le contrôle par le juge judiciaire des opérations de lutte contre le terrorisme"
-      }
-    ]
+    "theme": "libertes-fondamentales"
   },
   {
     "titre": "Interdiction de la reconnaissance faciale dans l'espace public",
@@ -5186,7 +3429,7 @@
         "sujet": "surveillance",
         "position": "vie_privee",
         "source_url": "https://laec.fr/section/10/refonder-une-police-republicaine",
-        "extrait": "Interdire dans la loi tout usage des technologies de reconnaissance faciale dans les espaces et établissements publics sur le territoire français"
+        "extrait": "Interdire dans la loi tout usage des technologies de reconnaissance faciale dans les espaces et établissements publics sur le territoire français, ainsi que leur expérimentation."
       }
     ]
   },
@@ -5421,13 +3664,13 @@
         "sujet": "fin_de_vie",
         "position": "aide_active_mourir",
         "source_url": "https://laec.fr/section/56/une-nouvelle-etape-des-libertes-et-de-lemancipation-individuelle",
-        "extrait": "le droit de mourir dans la dignité (y compris avec assistance)"
+        "extrait": "le droit de mourir dans la dignité (y compris avec assistance) et l'accès garanti aux soins palliatifs"
       },
       {
         "sujet": "libertes",
         "position": "libertes_indiv",
         "source_url": "https://laec.fr/section/56/une-nouvelle-etape-des-libertes-et-de-lemancipation-individuelle",
-        "extrait": "autoriser le changement d'état civil libre et gratuit"
+        "extrait": "Constitutionnaliser la non-marchandisation du corps humain et le droit fondamental de disposer de soi"
       }
     ]
   },
@@ -5745,14 +3988,7 @@
     "id": "melenchon-envi-001",
     "candidat": "melenchon",
     "theme": "environnement",
-    "positions": [
-      {
-        "sujet": "renouvelables",
-        "position": "plus_renouvelables",
-        "source_url": "https://laec.fr/section/13/la-bifurcation-ecologique-pour-une-societe-de-lharmonie",
-        "extrait": "Adoption de lois cadres instaurant une planification écologique et démocratique"
-      }
-    ]
+    "positions": []
   },
   {
     "titre": "Moyens pour les opérateurs publics de l'environnement",
@@ -5779,7 +4015,7 @@
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://laec.fr/section/13/la-bifurcation-ecologique-pour-une-societe-de-lharmonie",
-        "extrait": "Donner des moyens humains et financiers accrus à l'État et à ses opérateurs publics (Cerema, ONF, OFB, Météo France)"
+        "extrait": "Donner des moyens humains et financiers accrus à l'État et à ses opérateurs publics"
       }
     ]
   },
@@ -5803,14 +4039,7 @@
     "id": "melenchon-envi-003",
     "candidat": "melenchon",
     "theme": "environnement",
-    "positions": [
-      {
-        "sujet": "renouvelables",
-        "position": "plus_renouvelables",
-        "source_url": "https://laec.fr/section/13/la-bifurcation-ecologique-pour-une-societe-de-lharmonie",
-        "extrait": "Création d'un Conseil à la planification écologique"
-      }
-    ]
+    "positions": []
   },
   {
     "titre": "Objectif de baisse de 65% des émissions en 2030",
@@ -5863,8 +4092,8 @@
     "theme": "environnement",
     "positions": [
       {
-        "sujet": "renouvelables",
-        "position": "plus_renouvelables",
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
         "source_url": "https://laec.fr/section/13/la-bifurcation-ecologique-pour-une-societe-de-lharmonie",
         "extrait": "Obliger les entreprises à mettre en œuvre une comptabilité carbone certifiée"
       }
@@ -5895,7 +4124,7 @@
         "sujet": "commerce",
         "position": "protectionnisme",
         "source_url": "https://laec.fr/section/13/la-bifurcation-ecologique-pour-une-societe-de-lharmonie",
-        "extrait": "chargée de recenser les secteurs industriels stratégiques et d'établir des plans de relocalisation par filière"
+        "extrait": "Création d'une Agence pour les relocalisations chargée de recenser les secteurs industriels stratégiques et d'établir des plans de relocalisation par filière"
       }
     ]
   },
@@ -6020,7 +4249,15 @@
     "effets": [],
     "id": "melenchon-envi-011",
     "candidat": "melenchon",
-    "theme": "environnement"
+    "theme": "environnement",
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://laec.fr/section/15/les-outre-mer-avant-postes-de-la-planification-ecologique",
+        "extrait": "promouvoir des plans d'autonomie énergétique"
+      }
+    ]
   },
   {
     "titre": "Plan d'investissement de 200 milliards d'euros écologiquement et socialement utiles",
@@ -6041,15 +4278,7 @@
     "effets": [],
     "id": "melenchon-envi-012",
     "candidat": "melenchon",
-    "theme": "environnement",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "redistribution",
-        "source_url": "https://laec.fr/section/17/investir-pour-lancer-la-bifurcation-de-notre-economie",
-        "extrait": "financé par l'annulation des cadeaux fiscaux aux grandes entreprises"
-      }
-    ]
+    "theme": "environnement"
   },
   {
     "titre": "Pôle public des transports et renationalisation de la SNCF",
@@ -6070,7 +4299,15 @@
     "effets": [],
     "id": "melenchon-envi-013",
     "candidat": "melenchon",
-    "theme": "environnement"
+    "theme": "environnement",
+    "positions": [
+      {
+        "sujet": "voiture",
+        "position": "restreindre_voiture",
+        "source_url": "https://laec.fr/section/18/developper-les-transports-publics-ecologiques-repenser-la-mobilite-individuelle",
+        "extrait": "Créer un pôle public des transports et de la mobilité, renationaliser la SNCF, refuser la mise en concurrence des lignes, rouvrir des lignes ferroviaires, garantir des tarifs accessibles, supprimer les lignes aériennes concurrencées par le train en moins de 4h"
+      }
+    ]
   },
   {
     "titre": "Transports publics à la demande et mobilités douces",
@@ -6164,7 +4401,14 @@
     "id": "melenchon-envi-016",
     "candidat": "melenchon",
     "theme": "environnement",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://laec.fr/section/19/organiser-le-100-denergies-renouvelables-en-2050-et-la-renovation-energetique",
+        "extrait": "Instaurer une tarification progressive de l'énergie et garantir la gratuité des premières quantités indispensables à une vie digne"
+      }
+    ]
   },
   {
     "titre": "Renationalisation d'EDF et Engie, fin de la libéralisation du marché de l'énergie",
@@ -6193,8 +4437,7 @@
     ],
     "id": "melenchon-envi-017",
     "candidat": "melenchon",
-    "theme": "environnement",
-    "positions": []
+    "theme": "environnement"
   },
   {
     "titre": "Rénovation thermique de 700 000 logements par an et lutte contre la précarité énergétique",
@@ -6236,7 +4479,7 @@
         "sujet": "logement",
         "position": "encadrer_logement",
         "source_url": "https://laec.fr/section/19/organiser-le-100-denergies-renouvelables-en-2050-et-la-renovation-energetique",
-        "extrait": "interdire réellement la location des passoires thermiques"
+        "extrait": "interdire réellement la location des passoires thermiques, cibler les aides à la rénovation selon les revenus des ménages"
       }
     ]
   },
@@ -6382,12 +4625,6 @@
         "position": "renforcer_normes_agri",
         "source_url": "https://laec.fr/section/21/souverainete-alimentaire-et-revolution-agricole-pour-une-agriculture-ecologique-et-paysanne",
         "extrait": "réduction progressive des pesticides et interdiction immédiate du glyphosate et des néonicotinoïdes"
-      },
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://laec.fr/section/21/souverainete-alimentaire-et-revolution-agricole-pour-une-agriculture-ecologique-et-paysanne",
-        "extrait": "Instaurer une agriculture relocalisée, diversifiée et écologique"
       }
     ]
   },
@@ -6419,7 +4656,14 @@
     "id": "melenchon-envi-024",
     "candidat": "melenchon",
     "theme": "environnement",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://laec.fr/section/21/souverainete-alimentaire-et-revolution-agricole-pour-une-agriculture-ecologique-et-paysanne",
+        "extrait": "Encadrer les prix alimentaires par des prix maximaux établis par un coefficient multiplicateur et limiter les marges de la grande distribution"
+      }
+    ]
   },
   {
     "titre": "Ministère de la Production alimentaire et lutte contre la malbouffe",
@@ -6694,28 +4938,7 @@
   },
   {
     "titre": "Barème de l'impôt sur le revenu à 14 tranches",
-    "resume_factuel": "Position de 2021 : rendre l'impôt sur le revenu plus progressif avec un barème à 14 tranches contre 5 aujourd'hui. Le détail des seuils et taux n'est pas précisé dans le corpus.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-50",
-        "url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "68% des Français sont pour que l'impôt sur le revenu augmente pour les personnes qui gagnent plus de 4000 euros net par mois et baisse pour les autres (Harris Interactive, juillet 2021).",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
-    "effets": [],
-    "id": "melenchon-fisc-001",
-    "candidat": "melenchon",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Refonte de l'impôt sur les sociétés selon l'usage des bénéfices",
-    "resume_factuel": "Position de 2021 : Refonder l'impôt sur les sociétés pour établir l'égalité devant l'impôt entre PME et grands groupes, instaurer un barème progressif selon les bénéfices et leur usage, favoriser l'investissement plutôt que la distribution de dividendes.",
+    "resume_factuel": "Position de 2021 : Le candidat propose de rendre l'impôt sur le revenu plus progressif en créant un barème à 14 tranches contre 5 actuellement. Le texte ne précise pas les seuils ni les taux des nouvelles tranches.",
     "sources": [
       {
         "type": "primaire",
@@ -6728,15 +4951,15 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
+    "date_derniere_verification": "2026-10-10",
     "effets": [],
-    "id": "melenchon-fisc-002",
+    "id": "melenchon-fisc-001",
     "candidat": "melenchon",
     "theme": "fiscalite"
   },
   {
-    "titre": "Rétablissement et renforcement de l'ISF avec volet climatique",
-    "resume_factuel": "Position de 2021 : Rétablir et renforcer l'impôt de solidarité sur la fortune (ISF), en y incluant un volet climatique visant à taxer les gros pollueurs. Seuils et taux non précisés.",
+    "titre": "Refonte de l'impôt sur les sociétés selon l'usage des bénéfices",
+    "resume_factuel": "Position de 2021 : Refonder l'impôt sur les sociétés pour établir l'égalité entre PME et grands groupes, instaurer un barème progressif selon les bénéfices et leur usage, favorisant l'investissement plutôt que les dividendes. Mécanisme et taux non précisés.",
     "sources": [
       {
         "type": "primaire",
@@ -6747,9 +4970,30 @@
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "78% des Français sont pour le rétablissement de l'ISF (Ifop pour l'Humanité, mai 2021).",
+    "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-fisc-002",
+    "candidat": "melenchon",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Rétablissement et renforcement de l'impôt de solidarité sur la fortune (ISF)",
+    "resume_factuel": "Position de 2021 : Rétablir et renforcer l'ISF, avec un volet climatique visant à taxer les gros pollueurs. Le texte ne précise pas le seuil d'assujettissement ni le barème.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-50",
+        "url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
     "effets": [
       {
         "cibles": [
@@ -6772,7 +5016,7 @@
   },
   {
     "titre": "Suppression de la flat tax sur les revenus du capital",
-    "resume_factuel": "Position de 2021 : Supprimer la flat tax et imposer les revenus du capital comme ceux du travail, c'est-à-dire au barème progressif de l'impôt sur le revenu plutôt qu'à taux forfaitaire.",
+    "resume_factuel": "Position de 2021 : Supprimer la flat tax et imposer les revenus du capital comme ceux du travail, c'est-à-dire au barème progressif de l'impôt sur le revenu plutôt qu'au taux forfaitaire actuel.",
     "sources": [
       {
         "type": "primaire",
@@ -6785,15 +5029,30 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
-    "effets": [],
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes percevant des revenus du capital (dividendes, intérêts, plus-values)"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
+        "extrait": "Supprimer la flat tax et imposer les revenus du capital comme ceux du travail"
+      }
+    ],
     "id": "melenchon-fisc-004",
     "candidat": "melenchon",
     "theme": "fiscalite"
   },
   {
     "titre": "CSG progressive à 14 tranches",
-    "resume_factuel": "Position de 2021 : Rendre la CSG progressive avec 14 tranches, au lieu d'un taux proportionnel unique. Les seuils précis ne sont pas donnés.",
+    "resume_factuel": "Position de 2021 : Rendre la contribution sociale généralisée (CSG) progressive avec un barème à 14 tranches, sans précision des seuils ni des taux.",
     "sources": [
       {
         "type": "primaire",
@@ -6806,7 +5065,7 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
+    "date_derniere_verification": "2026-10-10",
     "effets": [],
     "id": "melenchon-fisc-005",
     "candidat": "melenchon",
@@ -6814,7 +5073,7 @@
   },
   {
     "titre": "Augmentation des droits de succession sur les plus hauts patrimoines et héritage maximal",
-    "resume_factuel": "Position de 2021 : Augmenter les droits de succession sur les plus hauts patrimoines en comptabilisant l'ensemble des dons et héritages reçus tout au long de la vie, et créer un héritage maximal de 12 millions d'euros (soit 100 fois le patrimoine net médian).",
+    "resume_factuel": "Position de 2021 : Augmenter les droits de succession sur les plus hauts patrimoines en comptabilisant l'ensemble des dons et héritages reçus tout au long de la vie, et créer un héritage maximal de 12 millions d'euros (100 fois le patrimoine net médian).",
     "sources": [
       {
         "type": "primaire",
@@ -6825,39 +5084,17 @@
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "Plafond fixé à 12 millions d'euros, soit 100 fois le patrimoine net médian selon le texte.",
+    "hypotheses_calcul": "Le plafond est fixé à 12 millions d'euros, soit 100 fois le patrimoine net médian selon le texte.",
     "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "tranche_patrimoine",
-            "valeurs": [
-              "plus_1_3m"
-            ]
-          },
-          {
-            "champ": "heritage",
-            "valeurs": [
-              "recu",
-              "a_venir"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "baisse",
-        "source_url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
-        "extrait": "Augmenter les droits de succession sur les plus hauts patrimoines en comptabilisant l’ensemble des dons et héritages reçus tout au long de la vie et créer un héritage maximal de 12 millions d'euros (soit 100 fois le patrimoine net médian)"
-      }
-    ],
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
     "id": "melenchon-fisc-006",
     "candidat": "melenchon",
     "theme": "fiscalite"
   },
   {
     "titre": "Réduction de la TVA sur les produits de première nécessité et TVA grand luxe",
-    "resume_factuel": "Position de 2021 : Réduire la TVA sur les produits de première nécessité et réinstaurer une « TVA grand luxe » pour la financer.",
+    "resume_factuel": "Position de 2021 : Réduire la TVA sur les produits de première nécessité et créer une « TVA grand luxe » pour financer cette baisse. Les produits et taux concernés ne sont pas précisés.",
     "sources": [
       {
         "type": "primaire",
@@ -6870,12 +5107,26 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
+    "date_derniere_verification": "2026-10-10",
     "effets": [
       {
         "cibles": [],
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
+        "source_url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
+        "extrait": "Réduire la TVA sur les produits de première nécessité et réinstaurer une « TVA grand luxe » pour la financer"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "acheteurs de produits de grand luxe"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "hausse",
         "source_url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
         "extrait": "Réduire la TVA sur les produits de première nécessité et réinstaurer une « TVA grand luxe » pour la financer"
       }
@@ -6885,8 +5136,8 @@
     "theme": "fiscalite"
   },
   {
-    "titre": "Évaluation et suppression des niches fiscales injustes, transformation en crédits d'impôt",
-    "resume_factuel": "Position de 2021 : Évaluer chacune des niches fiscales et supprimer les niches injustes, inefficaces socialement ou nuisibles écologiquement ; pour les niches restantes, transformer les « réductions d'impôts » en « crédits d'impôts » afin que chacun puisse bénéficier de ces incitations financières à égalité, quels que soient ses revenus.",
+    "titre": "Transformation des réductions d'impôt en crédits d'impôt",
+    "resume_factuel": "Position de 2021 : Évaluer chaque niche fiscale et supprimer les niches injustes ou nuisibles ; pour les niches restantes, transformer les « réductions d'impôts » en « crédits d'impôts » afin que chacun en bénéficie à égalité quels que soient ses revenus.",
     "sources": [
       {
         "type": "primaire",
@@ -6899,15 +5150,15 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
+    "date_derniere_verification": "2026-10-10",
     "effets": [],
     "id": "melenchon-fisc-008",
     "candidat": "melenchon",
     "theme": "fiscalite"
   },
   {
-    "titre": "Impôt universel sur les entreprises et les revenus des particuliers",
-    "resume_factuel": "Position de 2021 : Instaurer un impôt universel sur les entreprises (basant leur taxation sur l'activité effectivement réalisée en France) et sur les revenus des particuliers pour lutter contre l'évasion fiscale.",
+    "titre": "Impôt universel sur les entreprises et les particuliers contre l'évasion fiscale",
+    "resume_factuel": "Position de 2021 : Instaurer un impôt universel basant la taxation des entreprises sur l'activité effectivement réalisée en France, et un impôt universel sur les revenus des particuliers, pour lutter contre l'évasion fiscale. Mécanisme précis non détaillé.",
     "sources": [
       {
         "type": "primaire",
@@ -6920,15 +5171,15 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
+    "date_derniere_verification": "2026-10-10",
     "effets": [],
     "id": "melenchon-fisc-009",
     "candidat": "melenchon",
     "theme": "fiscalite"
   },
   {
-    "titre": "Taxation des entreprises ayant profité de la crise sanitaire",
-    "resume_factuel": "Position de 2021 : Taxer les entreprises ayant profité de la crise sanitaire pour financer les investissements nécessaires à la reprise et à la bifurcation écologique. Taxe sur les entreprises, sans mention d'effet direct sur des particuliers.",
+    "titre": "Taxe sur les surprofits des entreprises de la crise sanitaire",
+    "resume_factuel": "Position de 2021 : Taxer les entreprises ayant profité de la crise sanitaire pour financer les investissements de la reprise et de la bifurcation écologique. Taxe pesant sur les entreprises, pas directement sur les particuliers.",
     "sources": [
       {
         "type": "primaire",
@@ -6939,17 +5190,17 @@
       }
     ],
     "chiffrage_disponible": false,
-    "hypotheses_calcul": "79% des Français se déclarent favorables à une taxe exceptionnelle sur les « surprofits » (Harris Interactive, mai 2021).",
+    "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
+    "date_derniere_verification": "2026-10-10",
     "effets": [],
     "id": "melenchon-fisc-010",
     "candidat": "melenchon",
     "theme": "fiscalite"
   },
   {
-    "titre": "Refonte de la taxe foncière pour la rendre progressive selon le patrimoine",
-    "resume_factuel": "Position de 2021 : Refonder la taxe foncière pour la rendre progressive et que chacun paie à hauteur de son patrimoine total réel, au lieu du système actuel basé sur la valeur locative cadastrale.",
+    "titre": "Refonte progressive de la taxe foncière",
+    "resume_factuel": "Position de 2021 : Refonder la taxe foncière pour la rendre progressive afin que chacun paie à hauteur de son patrimoine total réel, plutôt que sur la seule valeur du bien possédé. Barème et seuils non précisés.",
     "sources": [
       {
         "type": "primaire",
@@ -6962,58 +5213,15 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "logement",
-            "valeurs": [
-              "proprietaire"
-            ]
-          },
-          {
-            "champ": "tranche_patrimoine",
-            "valeurs": [
-              "plus_1_3m"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "baisse",
-        "source_url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
-        "extrait": "Refonder la taxe foncière pour la rendre progressive et que chacun paie à hauteur de son patrimoine total réel"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "logement",
-            "valeurs": [
-              "proprietaire"
-            ]
-          },
-          {
-            "champ": "tranche_patrimoine",
-            "valeurs": [
-              "moins_100k",
-              "100k_500k",
-              "500k_1_3m"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "indetermine",
-        "source_url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
-        "extrait": "Refonder la taxe foncière pour la rendre progressive et que chacun paie à hauteur de son patrimoine total réel"
-      }
-    ],
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
     "id": "melenchon-fisc-011",
     "candidat": "melenchon",
     "theme": "fiscalite"
   },
   {
-    "titre": "Fin du quotient conjugal et remplacement du quotient familial par un crédit d'impôt par enfant",
-    "resume_factuel": "Position de 2021 : Mettre fin au quotient conjugal, remplacer l'actuel quotient familial fiscal par un crédit d'impôt par enfant que pourraient toucher toutes les familles, y compris celles non imposables.",
+    "titre": "Fin du quotient conjugal, remplacement du quotient familial par un crédit d'impôt par enfant",
+    "resume_factuel": "Position de 2021 : Mettre fin au quotient conjugal, et remplacer le quotient familial fiscal actuel par un crédit d'impôt par enfant que pourraient toucher toutes les familles, y compris celles non imposables. Montant du crédit d'impôt non précisé.",
     "sources": [
       {
         "type": "primaire",
@@ -7026,7 +5234,7 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
+    "date_derniere_verification": "2026-10-10",
     "effets": [
       {
         "cibles": [
@@ -7039,23 +5247,9 @@
           }
         ],
         "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
-        "extrait": "remplacer l'injuste quotient familial fiscal actuel par un crédit d'impôt par enfant que pourraient toucher toutes les familles"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "situation_familiale",
-            "valeurs": [
-              "marie_pacse"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
         "sens": "indetermine",
         "source_url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
-        "extrait": "Mettre fin au quotient conjugal, système patriarcal favorisant les inégalités salariales entre les femmes et les hommes"
+        "extrait": "remplacer l'injuste quotient familial fiscal actuel par un crédit d'impôt par enfant que pourraient toucher toutes les familles"
       }
     ],
     "id": "melenchon-fisc-012",
@@ -7063,129 +5257,8 @@
     "theme": "fiscalite"
   },
   {
-    "titre": "Lutte contre la fraude et l'évasion fiscales",
-    "resume_factuel": "Position de 2021 : Faire de la lutte contre la fraude et l'évasion fiscales une priorité : débloquer tous les moyens humains et financiers nécessaires, décisions unilatérales en cas de blocage des négociations européennes ou internationales.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-50",
-        "url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
-    "effets": [],
-    "id": "melenchon-fisc-013",
-    "candidat": "melenchon",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Fin de la convention judiciaire d'intérêt public pour la fraude fiscale",
-    "resume_factuel": "Position de 2021 : Mettre fin à la convention judiciaire d'intérêt public qui permet aux entreprises de négocier leur sanction financière en cas de fraude fiscale.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-50",
-        "url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
-    "effets": [],
-    "id": "melenchon-fisc-014",
-    "candidat": "melenchon",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Durcissement des sanctions contre la fraude fiscale en col blanc",
-    "resume_factuel": "Position de 2021 : Augmenter les poursuites judiciaires et durcir les sanctions à l'encontre des criminels en col blanc, reconnus coupables de fraude fiscale.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-50",
-        "url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
-    "effets": [],
-    "id": "melenchon-fisc-015",
-    "candidat": "melenchon",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Encadrement du prix des produits alimentaires de première nécessité",
-    "resume_factuel": "Position de 2021 : Encadrer le prix des produits alimentaires de première nécessité, sans précision du mécanisme ni du niveau de plafonnement.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-52",
-        "url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
-        "extrait": "Encadrer le prix des produits alimentaires de première nécessité"
-      }
-    ],
-    "id": "melenchon-fisc-016",
-    "candidat": "melenchon",
-    "theme": "fiscalite"
-  },
-  {
-    "titre": "Plafonnement des frais bancaires",
-    "resume_factuel": "Position de 2021 : Plafonner les frais bancaires, sans précision du montant du plafond.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-52",
-        "url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
-        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
-        "annee": 2021
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "86% des Français favorables au plafonnement des frais bancaires (Harris Interactive, juin 2020).",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
-        "extrait": "Plafonner les frais bancaires"
-      }
-    ],
-    "id": "melenchon-fisc-017",
-    "candidat": "melenchon",
-    "theme": "fiscalite"
-  },
-  {
     "titre": "Taxe progressive sur les hautes transactions immobilières",
-    "resume_factuel": "Position de 2021 : Imposer les hautes transactions immobilières par une taxe progressive, pour financer la lutte contre le logement indigne. Seuils non précisés.",
+    "resume_factuel": "Position de 2021 : Imposer les hautes transactions immobilières par une taxe progressive, pour financer la lutte contre le logement indigne. Seuil de déclenchement non précisé.",
     "sources": [
       {
         "type": "primaire",
@@ -7198,10 +5271,1575 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "",
     "statut": "complet",
-    "date_derniere_verification": "2026-10-08",
-    "effets": [],
-    "id": "melenchon-fisc-018",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes réalisant une transaction immobilière de montant élevé"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://laec.fr/section/54/garantir-le-droit-au-logement",
+        "extrait": "Imposer les hautes transactions immobilières par une taxe progressive pour financer la lutte contre le logement indigne"
+      }
+    ],
+    "id": "melenchon-fisc-013",
     "candidat": "melenchon",
     "theme": "fiscalite"
+  },
+  {
+    "titre": "Taxe réelle sur les transactions financières",
+    "resume_factuel": "Position de 2021 : Instaurer une taxe réelle sur les transactions financières. Le texte ne précise pas qui, parmi les particuliers, en supporterait le coût ; il s'agit d'une taxe visant les marchés financiers.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-46",
+        "url": "https://laec.fr/section/46/mettre-au-pas-la-finance",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-fisc-014",
+    "candidat": "melenchon",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Lutte contre la fraude et l'évasion fiscales",
+    "resume_factuel": "Position de 2021 : Faire de la lutte contre la fraude et l'évasion fiscales une priorité, en débloquant tous les moyens humains et financiers nécessaires, et en prenant des décisions unilatérales en cas de blocage des négociations européennes ou internationales. Mettre fin à la convention judiciaire d'intérêt public permettant aux entreprises de négocier leur sanction financière en cas de fraude fiscale, et durcir les sanctions contre les criminels en col blanc reconnus coupables de fraude fiscale.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-50",
+        "url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-fisc-015",
+    "candidat": "melenchon",
+    "theme": "fiscalite"
+  },
+  {
+    "titre": "Hausse immédiate du SMIC net mensuel à 1 400 euros",
+    "resume_factuel": "Position de 2021 : porter immédiatement le SMIC mensuel net à 1 400 euros, sans précision sur le mécanisme de financement de la hausse.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
+        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-pa-001",
+    "candidat": "melenchon",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Hausse du SMIC à 1 700 euros",
+    "resume_factuel": "Lors du meeting de juin 2026, Jean-Luc Mélenchon annonce que le Smic passera à 1 700 euros, sans détail sur le calendrier ni le mode de calcul exact (net ou brut).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "melenchon.fr (meeting du 7 juin 2026) — meeting-saint-denis",
+        "url": "https://melenchon.fr/2026/06/07/meeting-de-jean-luc-melenchon-a-saint-denis/",
+        "nom": "melenchon.fr (meeting du 7 juin 2026)",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-pa-002",
+    "candidat": "melenchon",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Réduction de la TVA sur les produits de première nécessité et TVA grand luxe",
+    "resume_factuel": "Position de 2021 : réduire la TVA sur les produits de première nécessité, financée par une nouvelle « TVA grand luxe » sur les produits de luxe, sans précision des taux ni des listes de produits concernés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-50",
+        "url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
+        "extrait": "Réduire la TVA sur les produits de première nécessité et réinstaurer une « TVA grand luxe » pour la financer"
+      }
+    ],
+    "id": "melenchon-pa-003",
+    "candidat": "melenchon",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Encadrement du prix des produits alimentaires de première nécessité",
+    "resume_factuel": "Position de 2021 : encadrer le prix des produits alimentaires de première nécessité, sans préciser le mécanisme de plafonnement ni les produits visés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-52",
+        "url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
+        "extrait": "Encadrer le prix des produits alimentaires de première nécessité"
+      }
+    ],
+    "id": "melenchon-pa-004",
+    "candidat": "melenchon",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Plafonnement des frais bancaires",
+    "resume_factuel": "Position de 2021 : plafonner les frais bancaires, sans préciser le niveau du plafond ni les frais concernés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-52",
+        "url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
+        "extrait": "Plafonner les frais bancaires"
+      }
+    ],
+    "id": "melenchon-pa-005",
+    "candidat": "melenchon",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Garantie d'autonomie portant chaque personne au seuil de pauvreté",
+    "resume_factuel": "Position de 2021 : créer une garantie d'autonomie assurant que le revenu mensuel de chaque personne atteigne le seuil de pauvreté, chiffré à 1 063 euros pour une personne seule ; le mécanisme précis de versement et les conditions d'éligibilité ne sont pas détaillés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-52",
+        "url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "Le montant de 1 063 euros par mois pour une personne seule correspond au seuil de pauvreté cité dans le corpus.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_revenus",
+            "valeurs": [
+              "moins_1200"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
+        "extrait": "Créer une garantie d’autonomie qui permettra que nul ne soit privé de sa dignité pour vivre : le revenu mensuel de chaque personne atteindra le seuil de pauvreté (1 063 euros pour une personne seule)"
+      }
+    ],
+    "id": "melenchon-pa-006",
+    "candidat": "melenchon",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Gratuité des protections périodiques",
+    "resume_factuel": "Position de 2021 : assurer la gratuité des protections périodiques, sans préciser les modalités de distribution ni le financement.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-52",
+        "url": "https://laec.fr/section/52/eradiquer-la-pauvrete",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-pa-007",
+    "candidat": "melenchon",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Fin du quotient conjugal et remplacement du quotient familial par un crédit d'impôt par enfant",
+    "resume_factuel": "Position de 2021 : mettre fin au quotient conjugal et remplacer le quotient familial fiscal actuel par un crédit d'impôt par enfant que pourraient toucher toutes les familles, sans préciser le montant de ce crédit d'impôt.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-50",
+        "url": "https://laec.fr/section/50/faire-la-revolution-fiscale",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-pa-008",
+    "candidat": "melenchon",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Revalorisation du traitement des fonctionnaires",
+    "resume_factuel": "Position de 2021 : revaloriser le traitement des fonctionnaires, sans préciser le montant ni le calendrier de cette revalorisation.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
+        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "fonctionnaire"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
+        "extrait": "Revaloriser le traitement des fonctionnaires"
+      }
+    ],
+    "id": "melenchon-pa-009",
+    "candidat": "melenchon",
+    "theme": "pouvoir-achat"
+  },
+  {
+    "titre": "Garantie d'emploi pour les chômeurs de longue durée",
+    "resume_factuel": "Position de 2021 : tout chômeur de longue durée pourra se voir proposer un emploi dans un secteur d'urgence (transition écologique, action sociale), rémunéré au moins au SMIC revalorisé, sur la base du volontariat.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-35",
+        "url": "https://laec.fr/section/35/etablir-la-garantie-demploi",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-trav-001",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Rétablissement des 35 heures et réduction du temps de travail",
+    "resume_factuel": "Position de 2021 : rétablissement immédiat de la durée légale hebdomadaire à 35 heures, majoration des heures supplémentaires à 25% pour les 4 premières et 50% au-delà, passage aux 32 heures pour les métiers pénibles ou de nuit.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-36",
+        "url": "https://laec.fr/section/36/reduire-le-temps-de-travail-et-faire-naitre-une-societe-du-temps-choisi",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-trav-002",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Sixième semaine de congés payés pour tous les salariés",
+    "resume_factuel": "Position de 2021 : généralisation d'une sixième semaine de congés payés pour tous les salariés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-36",
+        "url": "https://laec.fr/section/36/reduire-le-temps-de-travail-et-faire-naitre-une-societe-du-temps-choisi",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-trav-003",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Remise en cause du travail le dimanche",
+    "resume_factuel": "Position de 2021 : remise en cause des autorisations de travail le dimanche.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-36",
+        "url": "https://laec.fr/section/36/reduire-le-temps-de-travail-et-faire-naitre-une-societe-du-temps-choisi",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-trav-004",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Fin de la flexibilisation et des horaires fractionnés",
+    "resume_factuel": "Position de 2021 : fin de l'annualisation contrainte, de l'intensification et des horaires fractionnés du temps de travail.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-36",
+        "url": "https://laec.fr/section/36/reduire-le-temps-de-travail-et-faire-naitre-une-societe-du-temps-choisi",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-trav-005",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Quota maximal de contrats précaires dans les entreprises",
+    "resume_factuel": "Position de 2021 : instauration d'un quota maximal de contrats précaires de 10% pour les PME et 5% pour les grandes entreprises.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-38",
+        "url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
+        "extrait": "Instaurer un quota maximal de contrats précaires dans les entreprises : 10 % pour les petites et moyennes entreprises (PME), 5 % pour les grandes entreprises"
+      }
+    ],
+    "id": "melenchon-trav-006",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Abrogation des ordonnances Pénicaud et de la loi El Khomri",
+    "resume_factuel": "Position de 2021 : abrogation des ordonnances Pénicaud et de la loi El Khomri, rétablissement du « principe de faveur » entre accord d'entreprise, accord de branche et loi.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-38",
+        "url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
+        "extrait": "Abroger les ordonnances Pénicaud et la loi El Khomri et rétablir le « principe de faveur » : un accord d’entreprise doit être plus favorable qu’un accord de branche, lui-même plus favorable que la loi"
+      }
+    ],
+    "id": "melenchon-trav-007",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Requalification des travailleurs des plateformes numériques en salariés",
+    "resume_factuel": "Position de 2021 : requalification des travailleurs des plateformes numériques (Uber, Deliveroo) et des salariés faussement considérés comme indépendants en contrat de travail salarié.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-38",
+        "url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "travailleurs des plateformes numériques faussement considérés comme indépendants"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
+        "extrait": "Requalifier les travailleurs des plateformes numériques (Uber, Deliveroo...) et tous les salariés faussement considérés comme indépendants en contrat de travail salarié"
+      }
+    ],
+    "id": "melenchon-trav-008",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Encadrement de la sous-traitance et responsabilité des donneurs d'ordre",
+    "resume_factuel": "Position de 2021 : garantie par la loi de la responsabilité des donneurs d'ordre vis-à-vis de leurs sous-traitants, limitation à un seul niveau.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-38",
+        "url": "https://laec.fr/section/38/un-emploi-stable-pour-chacun",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-trav-009",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "SMIC mensuel porté à 1 400 euros nets",
+    "resume_factuel": "Position de 2021 : relèvement immédiat du SMIC mensuel net à 1 400 euros.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
+        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "tranche_revenus",
+            "valeurs": [
+              "moins_1200"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
+        "extrait": "Porter immédiatement le SMIC mensuel à 1 400 euros nets"
+      }
+    ],
+    "id": "melenchon-trav-010",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "SMIC porté à 1 700 euros",
+    "resume_factuel": "Position de 2026 (meeting de Saint-Denis) : le SMIC passera à 1 700 euros.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "melenchon.fr (meeting du 7 juin 2026) — meeting-saint-denis",
+        "url": "https://melenchon.fr/2026/06/07/meeting-de-jean-luc-melenchon-a-saint-denis/",
+        "nom": "melenchon.fr (meeting du 7 juin 2026)",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "tranche_revenus",
+            "valeurs": [
+              "moins_1200"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://melenchon.fr/2026/06/07/meeting-de-jean-luc-melenchon-a-saint-denis/",
+        "extrait": "Le Smic passera à 1 700 euros."
+      }
+    ],
+    "id": "melenchon-trav-011",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Sanctions sur le non-respect de l'égalité salariale femmes-hommes",
+    "resume_factuel": "Position de 2021 : punition sévère du non-respect de l'égalité de rémunération entre femmes et hommes, et création d'une commission de contrôle salarié sur l'égalité dans l'entreprise.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
+        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-trav-012",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Revalorisation des métiers du soin, du lien et du contact",
+    "resume_factuel": "Position de 2021 : conférence sociale pour revaloriser salaires, conditions de travail et parcours professionnels dans les métiers occupés majoritairement par des femmes (soin, lien, contact).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
+        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-trav-013",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Revalorisation du traitement des fonctionnaires",
+    "resume_factuel": "Position de 2021 : revaloriser le traitement des fonctionnaires.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
+        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "fonctionnaire"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
+        "extrait": "Revaloriser le traitement des fonctionnaires"
+      }
+    ],
+    "id": "melenchon-trav-014",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Salaire maximal autorisé dans l'entreprise (échelle 1 à 20)",
+    "resume_factuel": "Position de 2021 : fixation d'un salaire maximal autorisé pour limiter l'écart de 1 à 20 entre le salaire le plus bas et le plus haut dans une entreprise.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
+        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_revenus",
+            "valeurs": [
+              "plus_5000"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
+        "extrait": "Fixer un salaire maximal autorisé pour limiter l’écart de 1 à 20 entre le salaire le plus bas et le salaire le plus haut dans une entreprise"
+      }
+    ],
+    "id": "melenchon-trav-015",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Interdiction des parachutes dorés et retraites chapeaux",
+    "resume_factuel": "Position de 2021 : interdiction des parachutes dorés et des retraites chapeaux pour les dirigeants.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
+        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-trav-016",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Suppression des stock-options",
+    "resume_factuel": "Position de 2021 : suppression des stock-options.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-39",
+        "url": "https://laec.fr/section/39/augmenter-les-salaires-et-reduire-les-inegalites-salariales-dans-lentreprise",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-trav-017",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Refus de la réforme Macron de l'assurance chômage",
+    "resume_factuel": "Position de 2021 : refus de la réforme Macron de l'assurance chômage, indemnisation des chômeurs en fonction de leurs derniers salaires, calcul de l'assurance à partir du premier jour de travail.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-40",
+        "url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
+        "extrait": "Refuser la réforme Macron : indemniser les chômeurs en fonction de leurs derniers salaires grâce à une assurance calculée à partir du premier jour de travail"
+      }
+    ],
+    "id": "melenchon-trav-018",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Médecine du travail élargie aux chômeurs",
+    "resume_factuel": "Position de 2021 : élargissement de la médecine du travail aux chômeurs, avec visite obligatoire au-delà de six mois de chômage.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-40",
+        "url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
+        "extrait": "Élargir la médecine du travail aux chômeurs, avec visite obligatoire au-delà de six mois"
+      }
+    ],
+    "id": "melenchon-trav-019",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Indemnisation des chômeurs dès le premier jour",
+    "resume_factuel": "Position de 2021 : indemnisation des chômeurs dès le premier jour suivant la fin du contrat de travail.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-40",
+        "url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
+        "extrait": "Indemniser les chômeurs dès le premier jour de la fin de contrat"
+      }
+    ],
+    "id": "melenchon-trav-020",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Suppression de l'obligation d'accepter une « offre raisonnable d'emploi »",
+    "resume_factuel": "Position de 2021 : suppression de l'obligation pour les chômeurs d'accepter une « offre raisonnable d'emploi ».",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-40",
+        "url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
+        "extrait": "Supprimer l'obligation d'accepter une soi-disant « offre raisonnable d'emploi »"
+      }
+    ],
+    "id": "melenchon-trav-021",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Fin des radiations abusives des chômeurs",
+    "resume_factuel": "Position de 2021 : cessation de la radiation des chômeurs à la première absence à un rendez-vous et fin de la logique de radiation au moindre prétexte.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-40",
+        "url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
+        "extrait": "Cesser la radiation des chômeurs à la première absence à un rendez-vous et en finir avec la logique de radiation au moindre prétexte pour faire baisser artificiellement les chiffres du chômage"
+      }
+    ],
+    "id": "melenchon-trav-022",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Régime d'assurance-chômage spécifique pour intermittents et intérimaires",
+    "resume_factuel": "Position de 2021 : rétablissement d'un régime d'assurance-chômage spécifique pour les intermittents de l'emploi et les intérimaires, pour une meilleure couverture entre deux périodes d'emploi.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-40",
+        "url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "intermittents de l'emploi et intérimaires"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/40/retablir-une-assurance-chomage-protectrice",
+        "extrait": "Rétablir un régime d’assurance-chômage spécifique pour les intermittents de l’emploi et les intérimaires permettant de leur assurer une meilleure couverture chômage entre deux périodes d’emploi"
+      }
+    ],
+    "id": "melenchon-trav-023",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Sécurité sociale professionnelle : continuité des droits personnels",
+    "resume_factuel": "Position de 2021 : création d'une sécurité sociale professionnelle assurant la continuité des droits personnels (formation, congés, ancienneté) hors du contrat de travail et leur transfert d'un contrat à l'autre.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-41",
+        "url": "https://laec.fr/section/41/une-securite-sociale-professionnelle",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/41/une-securite-sociale-professionnelle",
+        "extrait": "Assurer la continuité des droits personnels (à la formation, aux congés, à l’ancienneté…), hors du contrat de travail, et les transférer d’un contrat à l’autre"
+      }
+    ],
+    "id": "melenchon-trav-024",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Maintien du revenu en cas de reconversion ou de formation",
+    "resume_factuel": "Position de 2021 : garantir le maintien du revenu pendant une reconversion ou une formation professionnelle.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-41",
+        "url": "https://laec.fr/section/41/une-securite-sociale-professionnelle",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/41/une-securite-sociale-professionnelle",
+        "extrait": "Garantir le maintien du revenu en cas de reconversion ou de formation"
+      }
+    ],
+    "id": "melenchon-trav-025",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "36 heures de formation par an pour chaque salarié",
+    "resume_factuel": "Position de 2021 : droit pour chaque salarié à 36 heures de formation par an, librement utilisables dans le domaine de son choix.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-41",
+        "url": "https://laec.fr/section/41/une-securite-sociale-professionnelle",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-trav-026",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Intégration des stages et apprentissage dans la sécurité sociale professionnelle",
+    "resume_factuel": "Position de 2021 : intégrer les périodes de stages et d'apprentissage dans la sécurité sociale professionnelle (ancienneté, congés, formation).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-41",
+        "url": "https://laec.fr/section/41/une-securite-sociale-professionnelle",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "apprenti",
+              "etudiant"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/41/une-securite-sociale-professionnelle",
+        "extrait": "Intégrer les périodes de stages et d’apprentissage dans la sécurité sociale professionnelle (ancienneté, congés, formation)"
+      }
+    ],
+    "id": "melenchon-trav-027",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Reconnaissance du burn-out comme maladie professionnelle",
+    "resume_factuel": "Position de 2021 : reconnaissance du burn-out comme maladie professionnelle.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-42",
+        "url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
+        "extrait": "Reconnaître le burn-out comme maladie professionnelle"
+      }
+    ],
+    "id": "melenchon-trav-028",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Doublement des effectifs de l'inspection du travail",
+    "resume_factuel": "Position de 2021 : doublement des effectifs de l'inspection du travail.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-42",
+        "url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-trav-029",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Renforcement de la médecine du travail",
+    "resume_factuel": "Position de 2021 : intégration de la médecine du travail au service public de santé, restauration de la visite médicale obligatoire à l'embauche et des visites périodiques, y compris durant le chômage.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-42",
+        "url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie",
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
+        "extrait": "Renforcer la médecine du travail, en l’intégrant au service public de santé, en restaurant la visite médicale obligatoire à l’embauche et les visites périodiques dans la carrière, y compris durant les périodes de chômage"
+      }
+    ],
+    "id": "melenchon-trav-030",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Restauration des CHSCT avec avis contraignants",
+    "resume_factuel": "Position de 2021 : restauration des Comités d'hygiène, de sécurité et des conditions de travail (CHSCT), augmentation de leurs moyens et avis rendus contraignants.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-42",
+        "url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
+        "extrait": "Restaurer les Comités d’hygiène, de sécurité et des conditions de travail (CHSCT), augmenter leurs moyens et rendre leurs avis contraignants"
+      }
+    ],
+    "id": "melenchon-trav-031",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Accidents du travail critère d'accès aux marchés publics",
+    "resume_factuel": "Position de 2021 : faire du nombre d'accidents du travail un critère de sélection dans l'accès aux marchés publics.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-42",
+        "url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "melenchon-trav-032",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Droit à la déconnexion et encadrement du télétravail",
+    "resume_factuel": "Position de 2021 : rendre effectif le droit à la déconnexion et encadrer le télétravail.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-42",
+        "url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/42/en-finir-avec-la-souffrance-au-travail",
+        "extrait": "Rendre effectif le droit à la déconnexion et encadrer le télétravail"
+      }
+    ],
+    "id": "melenchon-trav-033",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Droit de préemption des salariés pour reprendre leur entreprise en coopérative",
+    "resume_factuel": "Position de 2021 : création d'un droit de préemption permettant aux salariés de reprendre leur entreprise sous forme de coopérative.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-43",
+        "url": "https://laec.fr/section/43/reconnaitre-la-citoyennete-dans-lentreprise-et-des-droits-nouveaux-aux-salaries",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/43/reconnaitre-la-citoyennete-dans-lentreprise-et-des-droits-nouveaux-aux-salaries",
+        "extrait": "Créer un droit de préemption pour permettre aux salariés de reprendre leur entreprise sous la forme d’une coopérative"
+      }
+    ],
+    "id": "melenchon-trav-034",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Droit de veto suspensif des comités d'entreprise sur les licenciements",
+    "resume_factuel": "Position de 2021 : accorder aux comités d'entreprise un droit de veto suspensif sur les plans de licenciements et de nouveaux droits de contrôle sur les finances de leur entreprise.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-43",
+        "url": "https://laec.fr/section/43/reconnaitre-la-citoyennete-dans-lentreprise-et-des-droits-nouveaux-aux-salaries",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/43/reconnaitre-la-citoyennete-dans-lentreprise-et-des-droits-nouveaux-aux-salaries",
+        "extrait": "Accorder aux comités d'entreprise un droit de veto suspensif sur les plans de licenciements et de nouveaux droits de contrôle sur les finances de leur entreprise"
+      }
+    ],
+    "id": "melenchon-trav-035",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Pouvoir accru des salariés dans les procédures de redressement et liquidation",
+    "resume_factuel": "Position de 2021 : plus de pouvoir aux salariés lors des procédures de redressement et de liquidation d'entreprise, et droit à un vote de défiance envers les dirigeants ou projets stratégiques.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-43",
+        "url": "https://laec.fr/section/43/reconnaitre-la-citoyennete-dans-lentreprise-et-des-droits-nouveaux-aux-salaries",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/43/reconnaitre-la-citoyennete-dans-lentreprise-et-des-droits-nouveaux-aux-salaries",
+        "extrait": "Donner plus de pouvoir aux salariés lors des procédures de redressement et de liquidation d’entreprise et instaurer le droit à un vote de défiance à l’égard des dirigeants d’entreprise ou des projets stratégiques"
+      }
+    ],
+    "id": "melenchon-trav-036",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Augmentation de la représentation des salariés dans les conseils d'administration",
+    "resume_factuel": "Position de 2021 : augmenter la représentation des salariés dans les instances de décision des grandes entreprises à au moins un tiers, et inclure d'autres parties prenantes (associations environnementales ou de consommateurs).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-43",
+        "url": "https://laec.fr/section/43/reconnaitre-la-citoyennete-dans-lentreprise-et-des-droits-nouveaux-aux-salaries",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/43/reconnaitre-la-citoyennete-dans-lentreprise-et-des-droits-nouveaux-aux-salaries",
+        "extrait": "Augmenter la représentation des salariés dans les instances de décision des grandes entreprises à au moins un tiers et inclure d’autres parties prenantes comme les associations environnementales ou de consommateurs"
+      }
+    ],
+    "id": "melenchon-trav-037",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Interdiction des licenciements boursiers et économiques dans les entreprises versant des dividendes",
+    "resume_factuel": "Position de 2021 : interdiction des licenciements boursiers et économiques par les entreprises qui versent des dividendes ou bénéficient des aides de l'État.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-45",
+        "url": "https://laec.fr/section/45/mettre-fin-au-pillage-economique-de-la-nation",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/45/mettre-fin-au-pillage-economique-de-la-nation",
+        "extrait": "Interdire les licenciements boursiers et économiques par les entreprises qui versent des dividendes ou bénéficient des aides de l’État"
+      }
+    ],
+    "id": "melenchon-trav-038",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Mettre fin à la précarité des étudiants et aux stages déguisés en CDD",
+    "resume_factuel": "Position de 2021 : lutte contre la précarité des étudiants, notamment en augmentant les indemnités de stage et en négociant avec les branches patronales les postes ouverts à stages, pour en finir avec les CDD déguisés.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-53",
+        "url": "https://laec.fr/section/53/construire-lautonomie-des-jeunes",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/53/construire-lautonomie-des-jeunes",
+        "extrait": "Mettre fin à la précarité des étudiants, notamment en augmentant les indemnités de stage et en négociant avec les branches patronales les postes ouverts à stages, pour en finir avec la pratique des CDD déguisés"
+      }
+    ],
+    "id": "melenchon-trav-039",
+    "candidat": "melenchon",
+    "theme": "travail"
+  },
+  {
+    "titre": "Emploi spécifique jeune contre le chômage des jeunes",
+    "resume_factuel": "Position de 2021 : instauration d'un « emploi spécifique jeune » d'une durée de cinq ans, dans le secteur non marchand et public, pour éliminer le chômage des jeunes.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "laec.fr (L'Avenir en commun, édition de novembre 2021) — aec-2021-section-53",
+        "url": "https://laec.fr/section/53/construire-lautonomie-des-jeunes",
+        "nom": "laec.fr (L'Avenir en commun, édition de novembre 2021)",
+        "annee": 2021
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "moins_30"
+            ]
+          },
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://laec.fr/section/53/construire-lautonomie-des-jeunes",
+        "extrait": "Instaurer un « emploi spécifique jeune » d’une durée de cinq ans, dans le secteur non marchand et public, pour éliminer le chômage des jeunes (trois fois supérieur à celui de leurs aînés à diplôme égal)"
+      }
+    ],
+    "id": "melenchon-trav-040",
+    "candidat": "melenchon",
+    "theme": "travail"
   }
 ]

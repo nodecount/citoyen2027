@@ -1,866 +1,5 @@
 [
   {
-    "titre": "Baisse de la TVA sur les produits énergétiques de 20% à 5,5%",
-    "resume_factuel": "Le programme de 2022, repris par le Rassemblement National, propose de baisser la TVA de 20% à 5,5% sur les produits énergétiques (carburants, fioul, gaz et électricité) considérés comme biens de première nécessité. Une pétition de 2024 réitère cette proposition face à la hausse des prix de l'électricité.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      },
-      {
-        "type": "primaire",
-        "label": "rassemblementnational.fr — petition-tva-electricite",
-        "url": "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez",
-        "nom": "rassemblementnational.fr",
-        "annee": 2024
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Baisser la TVA de 20% à 5.5% sur les produits énergétiques (carburants, fioul, gaz et électricité) en tant que biens de première nécessité."
-      }
-    ],
-    "id": "le-pen-fisc-001",
-    "candidat": "le-pen",
-    "theme": "fiscalite",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "baisser la TVA de 20% à 5,5% sur les produits énergétiques"
-      }
-    ]
-  },
-  {
-    "titre": "Exonération d'impôt sur le revenu pour les jeunes actifs jusqu'à 30 ans",
-    "resume_factuel": "Position de 2022 : exonération d'impôt sur le revenu pour tous les jeunes actifs jusqu'à 30 ans, afin qu'ils restent en France et fondent leur famille.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [],
-    "id": "le-pen-fisc-002",
-    "candidat": "le-pen",
-    "theme": "fiscalite",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "exonération d'impôt sur le revenu pour tous les jeunes actifs jusqu'à 30 ans"
-      }
-    ]
-  },
-  {
-    "titre": "Suppression de l'impôt sur les sociétés pour les jeunes entrepreneurs pendant 5 ans",
-    "resume_factuel": "Position de 2022 : suppression de l'impôt sur les sociétés pour les entrepreneurs de moins de 30 ans pendant les 5 premières années, pour éviter leur départ à l'étranger. Il s'agit d'un impôt payé par l'entreprise, non directement par le particulier.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [],
-    "id": "le-pen-fisc-003",
-    "candidat": "le-pen",
-    "theme": "fiscalite",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "suppression de l'impôt sur les sociétés pour les entrepreneurs de moins de 30 ans pendant les 5 premières années"
-      }
-    ]
-  },
-  {
-    "titre": "Instauration d'une part fiscale complète dès le deuxième enfant",
-    "resume_factuel": "Position de 2022 : instauration d'une part fiscale complète dès le deuxième enfant, dans le cadre du quotient familial de l'impôt sur le revenu.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [],
-    "id": "le-pen-fisc-004",
-    "candidat": "le-pen",
-    "theme": "fiscalite",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "instauration d'une part fiscale complète dès le deuxième enfant, dans le cadre du quotient familial de l'impôt sur le revenu"
-      }
-    ]
-  },
-  {
-    "titre": "Suppression des impôts sur l'héritage direct pour les familles modestes et les classes moyennes",
-    "resume_factuel": "Position de 2022 : suppression des impôts sur l'héritage direct (droits de succession en ligne directe) pour les familles modestes et les classes moyennes. Le seuil exact de « modeste » et « classe moyenne » n'est pas précisé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "familles modestes et classes moyennes recevant un héritage en ligne directe"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Supprimer les impôts sur l’héritage direct pour les familles modestes et les classes moyennes."
-      }
-    ],
-    "id": "le-pen-fisc-005",
-    "candidat": "le-pen",
-    "theme": "fiscalite",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "suppression des impôts sur l'héritage direct (droits de succession en ligne directe) pour les familles modestes et les classes moyennes"
-      }
-    ]
-  },
-  {
-    "titre": "Exonération des donations familiales jusqu'à 100 000€ par enfant tous les dix ans",
-    "resume_factuel": "Position de 2022 : exonération des donations des parents et des grands-parents à leurs enfants et petits-enfants, jusqu'à 100 000€ par enfant tous les dix ans.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "heritage",
-            "valeurs": [
-              "a_venir"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Exonérer les donations des parents mais aussi des grands-parents à leurs enfants et petits-enfants jusqu’à 100 000€ par enfant tous les dix ans."
-      }
-    ],
-    "id": "le-pen-fisc-006",
-    "candidat": "le-pen",
-    "theme": "fiscalite",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "exonération des donations des parents et des grands-parents à leurs enfants et petits-enfants, jusqu'à 100 000€ par enfant tous les dix ans"
-      }
-    ]
-  },
-  {
-    "titre": "Restauration de la demi-part fiscale pour les veuves et veufs",
-    "resume_factuel": "Position de 2022 : restauration de la demi-part fiscale en faveur des veuves et veufs, dans le calcul de l'impôt sur le revenu.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "situation_familiale",
-            "valeurs": [
-              "veuf_veuve"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Restaurer la demi-part fiscale en faveur des veuves et veufs."
-      }
-    ],
-    "id": "le-pen-fisc-007",
-    "candidat": "le-pen",
-    "theme": "fiscalite",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "restauration de la demi-part fiscale en faveur des veuves et veufs"
-      }
-    ]
-  },
-  {
-    "titre": "Suppression de l'IFI et création d'un impôt sur la fortune financière (IFF)",
-    "resume_factuel": "Position de 2022 : suppression de l'Impôt sur la Fortune Immobilière (IFI), présenté comme taxant « l'enracinement », et création d'un Impôt sur la Fortune Financière (IFF) destiné à taxer la spéculation. Les modalités précises (seuils, taux) de l'IFF ne sont pas détaillées.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [],
-    "id": "le-pen-fisc-008",
-    "candidat": "le-pen",
-    "theme": "fiscalite",
-    "positions": []
-  },
-  {
-    "titre": "Suppression de la Cotisation Foncière des Entreprises (CFE) et des impôts de production",
-    "resume_factuel": "Position de 2022 : suppression de la Cotisation Foncière des Entreprises (CFE) qui pénalise les PME-TPE locales, et des impôts de production, pour favoriser la relocalisation. Il s'agit d'impôts payés par les entreprises.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [],
-    "id": "le-pen-fisc-009",
-    "candidat": "le-pen",
-    "theme": "fiscalite",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "suppression de la Cotisation Foncière des Entreprises (CFE) qui pénalise les PME-TPE locales, et des impôts de production"
-      }
-    ]
-  },
-  {
-    "titre": "Hausse des salaires nets jusqu'à 3 SMIC via exonération de cotisations patronales",
-    "resume_factuel": "Position de 2022 : permettre aux entreprises une hausse des salaires de 10% (jusqu'à 3 SMIC) en exonérant cette augmentation de cotisations patronales.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [],
-    "id": "le-pen-fisc-010",
-    "candidat": "le-pen",
-    "theme": "fiscalite",
-    "positions": [
-      {
-        "sujet": "salaires",
-        "position": "moderer_salaires",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "permettre aux entreprises une hausse des salaires de 10% (jusqu'à 3 SMIC) en exonérant cette augmentation de cotisations patronales"
-      }
-    ]
-  },
-  {
-    "titre": "Renationalisation des autoroutes pour baisser les péages de 15% et suppression de la redevance audiovisuelle",
-    "resume_factuel": "Position de 2022 : renationaliser les autoroutes pour baisser de 15% les péages, et privatiser l'audiovisuel public pour supprimer les 138€ de redevance.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "vehicule",
-            "valeurs": [
-              "thermique",
-              "electrique_hybride"
-            ]
-          },
-          {
-            "champ": "usage_autoroute",
-            "valeurs": [
-              "oui"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Renationaliser les autoroutes pour baisser de 15% les péages et privatiser l’audiovisuel public pour supprimer les 138€ de redevance."
-      },
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "privatiser l’audiovisuel public pour supprimer les 138€ de redevance."
-      }
-    ],
-    "id": "le-pen-fisc-011",
-    "candidat": "le-pen",
-    "theme": "fiscalite",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "privatiser l'audiovisuel public pour supprimer les 138€ de redevance"
-      }
-    ]
-  },
-  {
-    "titre": "Baisse de la TVA de 20% à 5,5% sur les produits énergétiques",
-    "resume_factuel": "Marine Le Pen propose de baisser la TVA de 20% à 5,5% sur les produits énergétiques (carburants, fioul, gaz et électricité), considérés comme des biens de première nécessité (programme 2022). Cette position est réaffirmée dans des pétitions ultérieures du RN appelant à baisser la TVA sur l'électricité.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      },
-      {
-        "type": "primaire",
-        "label": "rassemblementnational.fr — petition-tva-electricite",
-        "url": "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez",
-        "nom": "rassemblementnational.fr",
-        "annee": 2024
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Baisser la TVA de 20% à 5.5% sur les produits énergétiques (carburants, fioul, gaz et électricité) en tant que biens de première nécessité."
-      }
-    ],
-    "id": "le-pen-pa-001",
-    "candidat": "le-pen",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "baisser la TVA de 20% à 5,5% sur les produits énergétiques (carburants, fioul, gaz et électricité), considérés comme des biens de première nécessité"
-      }
-    ]
-  },
-  {
-    "titre": "Hausse des salaires nets jusqu'à 3 SMIC via exonération de cotisations patronales",
-    "resume_factuel": "Permettre aux entreprises d'augmenter les salaires de 10% (jusqu'à 3 SMIC) en exonérant cette hausse de cotisations patronales (programme 2022). Le mécanisme précis d'application et le calendrier ne sont pas détaillés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [],
-    "id": "le-pen-pa-002",
-    "candidat": "le-pen",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "salaires",
-        "position": "moderer_salaires",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Permettre aux entreprises d'augmenter les salaires de 10% (jusqu'à 3 SMIC) en exonérant cette hausse de cotisations patronales"
-      }
-    ]
-  },
-  {
-    "titre": "Renationalisation des autoroutes et baisse des péages de 15%",
-    "resume_factuel": "Renationaliser les autoroutes afin de baisser les péages de 15% (programme 2022). Les modalités et le calendrier de la renationalisation ne sont pas précisés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [],
-    "id": "le-pen-pa-003",
-    "candidat": "le-pen",
-    "theme": "pouvoir-achat",
-    "positions": []
-  },
-  {
-    "titre": "Privatisation de l'audiovisuel public et suppression de la redevance",
-    "resume_factuel": "Privatiser l'audiovisuel public afin de supprimer les 138€ de redevance audiovisuelle (programme 2022). Les modalités de la privatisation ne sont pas détaillées.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "privatiser l'audiovisuel public pour supprimer les 138€ de redevance."
-      }
-    ],
-    "id": "le-pen-pa-004",
-    "candidat": "le-pen",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Privatiser l'audiovisuel public afin de supprimer les 138€ de redevance audiovisuelle"
-      }
-    ]
-  },
-  {
-    "titre": "Indépendance énergétique et sortie du marché européen de l'électricité",
-    "resume_factuel": "Plan visant à assurer l'indépendance énergétique pour baisser la facture d'électricité des Français : restitution des subventions versées à l'éolien, arrêt des projets éoliens, relance du nucléaire, de l'hydroélectrique et de l'hydrogène, et sortie du marché européen de l'électricité pour retrouver des prix décents (programme 2022). Le mécanisme précis de restitution des 5 milliards aux ménages n'est pas détaillé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Assurer notre indépendance énergétique pour baisser la facture des Français."
-      }
-    ],
-    "id": "le-pen-pa-005",
-    "candidat": "le-pen",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "nucleaire",
-        "position": "garder_nucleaire",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "relance du nucléaire, de l'hydroélectrique et de l'hydrogène"
-      },
-      {
-        "sujet": "renouvelables",
-        "position": "freiner_transition",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "restitution des subventions versées à l'éolien, arrêt des projets éoliens"
-      },
-      {
-        "sujet": "europe",
-        "position": "souverainete",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "sortie du marché européen de l'électricité pour retrouver des prix décents"
-      }
-    ]
-  },
-  {
-    "titre": "Défense des agriculteurs et de l'alimentation de qualité",
-    "resume_factuel": "Garantir aux paysans des prix respectueux de leur travail et mettre un terme aux marges abusives de la grande distribution, interdire les importations agricoles ne respectant pas les normes françaises, contraindre les cantines à 80% de produits français, plan abattoirs, et généralisation de l'étiquetage sur l'origine et la qualité des produits alimentaires (programme 2022).",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "metier",
-            "valeurs": [
-              "agriculteur"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Garantir aux paysans des prix respectueux de leur travail et mettre un terme aux marges abusives de la grande distribution."
-      }
-    ],
-    "id": "le-pen-pa-006",
-    "candidat": "le-pen",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "interdire les importations agricoles ne respectant pas les normes françaises"
-      }
-    ]
-  },
-  {
-    "titre": "Suppression de la TVA sur un panier de 100 produits de première nécessité",
-    "resume_factuel": "Le RN propose, dans une pétition relayant une proposition déjà portée par Marine Le Pen pendant la présidentielle, la suppression de la TVA sur un panier de 100 produits de première nécessité, en réaction à la hausse des prix alimentaires constatée en 2022.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "rassemblementnational.fr — petition-tva-100-produits",
-        "url": "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
-        "nom": "rassemblementnational.fr",
-        "annee": 2023
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
-        "extrait": "nous proposons, comme l'avait déjà fait Marine le Pen pendant l'élection présidentielle, la suppression de la TVA sur un panier de 100 produits de première nécessité."
-      }
-    ],
-    "id": "le-pen-pa-007",
-    "candidat": "le-pen",
-    "theme": "pouvoir-achat",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
-        "extrait": "la suppression de la TVA sur un panier de 100 produits de première nécessité"
-      }
-    ]
-  },
-  {
-    "titre": "Priorité nationale d'accès à l'emploi",
-    "resume_factuel": "Le programme 2022 de Marine Le Pen (document mlafrance.fr) prévoit d'assurer une priorité nationale d'accès à l'emploi (et au logement social) pour les Français, sans préciser le mécanisme juridique de mise en œuvre.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "nationalite",
-            "valeurs": [
-              "francaise"
-            ]
-          }
-        ],
-        "dimension": "emploi",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Assurer la priorité nationale d’accès au logement social et à l’emploi."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "nationalite",
-            "valeurs": [
-              "europeenne",
-              "hors_ue"
-            ]
-          }
-        ],
-        "dimension": "emploi",
-        "sens": "baisse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Assurer la priorité nationale d’accès au logement social et à l’emploi."
-      }
-    ],
-    "id": "le-pen-trav-001",
-    "candidat": "le-pen",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "immigration",
-        "position": "restriction",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "une priorité nationale d'accès à l'emploi (et au logement social) pour les Français"
-      }
-    ]
-  },
-  {
-    "titre": "Hausse des salaires jusqu'à 3 SMIC via exonération de cotisations patronales",
-    "resume_factuel": "Le programme 2022 (document mlafrance.fr) propose de permettre aux entreprises une hausse des salaires de 10% (jusqu'à 3 SMIC) en exonérant cette augmentation de cotisations patronales ; le mécanisme précis d'application par les entreprises (obligation ou incitation) n'est pas détaillé.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [],
-    "id": "le-pen-trav-002",
-    "candidat": "le-pen",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "salaires",
-        "position": "moderer_salaires",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "permettre aux entreprises une hausse des salaires de 10% (jusqu'à 3 SMIC) en exonérant cette augmentation de cotisations patronales"
-      }
-    ]
-  },
-  {
-    "titre": "Suppression de l'autorisation de séjour après un an sans travail",
-    "resume_factuel": "Le programme 2022 (document mlafrance.fr) propose de supprimer l'autorisation de séjour pour tout étranger n'ayant pas travaillé depuis un an en France.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "nationalite",
-            "valeurs": [
-              "europeenne",
-              "hors_ue"
-            ]
-          },
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "sans_emploi"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "baisse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Supprimer l’autorisation de séjour pour tout étranger n’ayant pas travaillé depuis un an en France."
-      }
-    ],
-    "id": "le-pen-trav-003",
-    "candidat": "le-pen",
-    "theme": "travail",
-    "positions": [
-      {
-        "sujet": "immigration",
-        "position": "restriction",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "supprimer l'autorisation de séjour pour tout étranger n'ayant pas travaillé depuis un an en France"
-      }
-    ]
-  },
-  {
-    "titre": "Conditionnement des subventions aux entreprises à la création d'emplois",
-    "resume_factuel": "Le programme 2022 (document mlafrance.fr) prévoit, dans le cadre du patriotisme économique, de conditionner les subventions à la création d'emplois au titre d'une politique d'aménagement du territoire ; le mécanisme et les critères précis ne sont pas détaillés.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [],
-    "id": "le-pen-trav-004",
-    "candidat": "le-pen",
-    "theme": "travail",
-    "positions": []
-  },
-  {
-    "titre": "Chèque-formation mensuel pour les apprentis et alternants",
-    "resume_factuel": "Le programme 2022 (document mlafrance.fr) propose de créer un chèque-formation mensuel de 200 à 300€ pour les apprentis, les alternants et leurs employeurs.",
-    "sources": [
-      {
-        "type": "primaire",
-        "label": "mlafrance.fr (programme 2022) — programme-2022",
-        "url": "https://mlafrance.fr/programme",
-        "nom": "mlafrance.fr (programme 2022)",
-        "annee": 2022
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "",
-    "statut": "complet",
-    "date_derniere_verification": "2026-10-04",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "apprenti"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "Créer un chèque-formation mensuel de 200 à 300€ pour les apprentis, les alternants et leurs employeurs."
-      }
-    ],
-    "id": "le-pen-trav-005",
-    "candidat": "le-pen",
-    "theme": "travail",
-    "positions": []
-  },
-  {
     "titre": "Réindexation des retraites sur l'inflation",
     "resume_factuel": "Position de 2022 (programme présidentiel de Marine Le Pen, reprise par le RN) : réindexer les pensions de retraite sur l'inflation pour préserver le pouvoir d'achat des retraités.",
     "sources": [
@@ -895,14 +34,7 @@
     "id": "le-pen-retr-001",
     "candidat": "le-pen",
     "theme": "retraites",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "redistribution",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "réindexer les pensions de retraite sur l'inflation pour préserver le pouvoir d'achat des retraités"
-      }
-    ]
+    "positions": []
   },
   {
     "titre": "Revalorisation du minimum vieillesse à 1000€ par mois",
@@ -926,8 +58,8 @@
     "theme": "retraites",
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
         "source_url": "https://mlafrance.fr/programme",
         "extrait": "porter le minimum vieillesse à 1 000 € par mois et augmenter les petites retraites"
       }
@@ -1070,8 +202,7 @@
     "effets": [],
     "id": "le-pen-retr-006",
     "candidat": "le-pen",
-    "theme": "retraites",
-    "positions": []
+    "theme": "retraites"
   },
   {
     "titre": "Déconjugalisation et revalorisation de l'Allocation Adulte Handicapé (AAH)",
@@ -1226,7 +357,14 @@
     "id": "le-pen-aides-004",
     "candidat": "le-pen",
     "theme": "aides-etat",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "revalorisation et augmentation de la durée des aides destinées aux proches aidants"
+      }
+    ]
   },
   {
     "titre": "Doublement du soutien aux mères isolées",
@@ -1340,7 +478,21 @@
     "effets": [],
     "id": "le-pen-educ-001",
     "candidat": "le-pen",
-    "theme": "education"
+    "theme": "education",
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "ecole_continuite",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "remettre l'enseignement du français, des mathématiques et de l'histoire au cœur des programmes, revaloriser les salaires des enseignants"
+      },
+      {
+        "sujet": "ecole_discipline",
+        "position": "ecole_exigence",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "instaurer un uniforme au primaire et au collège, sanctionner les absences et incivilités"
+      }
+    ]
   },
   {
     "titre": "Chèque-formation mensuel pour les apprentis et alternants",
@@ -1525,8 +677,7 @@
     "effets": [],
     "id": "le-pen-secu-003",
     "candidat": "le-pen",
-    "theme": "securite",
-    "positions": []
+    "theme": "securite"
   },
   {
     "titre": "Rétablissement des peines planchers",
@@ -1549,12 +700,6 @@
     "candidat": "le-pen",
     "theme": "securite",
     "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "rétablissement de peines planchers afin que tout criminel et délinquant se voie infliger une sanction"
-      },
       {
         "sujet": "prison",
         "position": "plus_de_prison",
@@ -1611,7 +756,15 @@
     "effets": [],
     "id": "le-pen-secu-006",
     "candidat": "le-pen",
-    "theme": "securite"
+    "theme": "securite",
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "instauration d'une présomption de légitime défense en faveur des forces de l'ordre"
+      }
+    ]
   },
   {
     "titre": "Doublement du nombre de magistrats",
@@ -1641,7 +794,14 @@
     "id": "le-pen-secu-007",
     "candidat": "le-pen",
     "theme": "securite",
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "accélération des procédures judiciaires par le doublement du nombre de magistrats"
+      }
+    ]
   },
   {
     "titre": "Inscription des harceleurs de rue au fichier des délinquants sexuels",
@@ -1723,14 +883,14 @@
     "theme": "securite",
     "positions": [
       {
-        "sujet": "prison",
-        "position": "plus_de_prison",
+        "sujet": "securite",
+        "position": "repression",
         "source_url": "https://mlafrance.fr/programme",
         "extrait": "établissement d'une peine de perpétuité réelle"
       },
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "prison",
+        "position": "plus_de_prison",
         "source_url": "https://mlafrance.fr/programme",
         "extrait": "établissement d'une peine de perpétuité réelle"
       }
@@ -1917,7 +1077,15 @@
     ],
     "id": "le-pen-immi-004",
     "candidat": "le-pen",
-    "theme": "immigration"
+    "theme": "immigration",
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://rassemblementnational.fr/22-mesures",
+        "extrait": "réserver les aides sociales aux Français et conditionner l'accès aux prestations de solidarité à 5 années de travail en France"
+      }
+    ]
   },
   {
     "titre": "Priorité nationale d'accès au logement social et à l'emploi",
@@ -2125,22 +1293,16 @@
     "theme": "environnement",
     "positions": [
       {
-        "sujet": "renouvelables",
-        "position": "freiner_transition",
-        "source_url": "https://mlafrance.fr/programme",
-        "extrait": "arrêt des projets éoliens et démantèlement progressif des parcs existants"
-      },
-      {
         "sujet": "nucleaire",
         "position": "garder_nucleaire",
         "source_url": "https://mlafrance.fr/programme",
         "extrait": "relance de la filière nucléaire, hydroélectrique et investissement dans l'hydrogène"
       },
       {
-        "sujet": "europe",
-        "position": "souverainete",
+        "sujet": "renouvelables",
+        "position": "freiner_transition",
         "source_url": "https://mlafrance.fr/programme",
-        "extrait": "sortie du marché européen de l'électricité"
+        "extrait": "arrêt des projets éoliens et démantèlement progressif des parcs existants"
       }
     ]
   },
@@ -2180,5 +1342,773 @@
         "extrait": "réduction de la TVA sur les produits énergétiques, dont l'électricité, de son taux actuel à 5,5%"
       }
     ]
+  },
+  {
+    "titre": "Exonération d'impôt sur le revenu pour les jeunes actifs jusqu'à 30 ans",
+    "resume_factuel": "Le programme prévoit d'exonérer d'impôt sur le revenu tous les jeunes actifs jusqu'à 30 ans. Le corpus ne précise ni plafond de revenu, ni calendrier de mise en œuvre, ni mécanisme technique d'application (position de 2022).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage n'est donné dans le corpus pour cette mesure.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "le-pen-fisc-001",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "exonérer d'impôt sur le revenu tous les jeunes actifs jusqu'à 30 ans"
+      }
+    ]
+  },
+  {
+    "titre": "Suppression de l'impôt sur les sociétés pour les jeunes entrepreneurs pendant 5 ans",
+    "resume_factuel": "Suppression de l'impôt sur les sociétés pour les entrepreneurs de moins de 30 ans pendant leurs 5 premières années d'activité. Le corpus ne précise pas de seuil de chiffre d'affaires ni de calendrier de mise en œuvre (position de 2022).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage n'est donné dans le corpus pour cette mesure.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          },
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "moins_30"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Supprimer l’impôt sur les sociétés pour les entrepreneurs de moins de 30 ans pendant les 5 premières années pour éviter leur départ à l’étranger."
+      }
+    ],
+    "id": "le-pen-fisc-002",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Suppression de l'impôt sur les sociétés pour les entrepreneurs de moins de 30 ans pendant leurs 5 premières années d'activité"
+      }
+    ]
+  },
+  {
+    "titre": "Instauration d'une part fiscale complète dès le deuxième enfant",
+    "resume_factuel": "Le programme prévoit d'instituer une part fiscale complète dès le deuxième enfant, dans le cadre du calcul de l'impôt sur le revenu (quotient familial). Le corpus ne précise pas les modalités de calcul détaillées (position de 2022).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage n'est donné dans le corpus pour cette mesure.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "le-pen-fisc-003",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "instituer une part fiscale complète dès le deuxième enfant, dans le cadre du calcul de l'impôt sur le revenu"
+      }
+    ]
+  },
+  {
+    "titre": "Suppression des impôts sur l'héritage direct pour les familles modestes et les classes moyennes",
+    "resume_factuel": "Le programme prévoit de supprimer les impôts sur l'héritage en ligne directe pour les familles modestes et les classes moyennes. Le corpus ne précise pas le seuil de revenu ou de patrimoine délimitant ces catégories (position de 2022).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage n'est donné dans le corpus pour cette mesure.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "familles modestes et classes moyennes héritant en ligne directe"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Supprimer les impôts sur l’héritage direct pour les familles modestes et les classes moyennes."
+      }
+    ],
+    "id": "le-pen-fisc-004",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "supprimer les impôts sur l'héritage en ligne directe pour les familles modestes et les classes moyennes"
+      }
+    ]
+  },
+  {
+    "titre": "Exonération des donations familiales jusqu'à 100 000€ par enfant tous les dix ans",
+    "resume_factuel": "Le programme prévoit d'exonérer les donations des parents mais aussi des grands-parents à leurs enfants et petits-enfants jusqu'à 100 000€ par enfant, renouvelable tous les dix ans. Le corpus ne précise pas de calendrier de mise en œuvre (position de 2022).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage n'est donné dans le corpus pour cette mesure.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "a_venir"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Exonérer les donations des parents mais aussi des grands-parents à leurs enfants et petits-enfants jusqu’à 100 000€ par enfant tous les dix ans."
+      }
+    ],
+    "id": "le-pen-fisc-005",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "exonérer les donations des parents mais aussi des grands-parents à leurs enfants et petits-enfants jusqu'à 100 000€ par enfant"
+      }
+    ]
+  },
+  {
+    "titre": "Suppression de l'Impôt sur la Fortune Immobilière et création d'un impôt sur la fortune financière",
+    "resume_factuel": "Le programme prévoit de supprimer l'Impôt sur la Fortune Immobilière (IFI), qui taxe selon le texte « l'enracinement », et de créer à la place un impôt sur la fortune financière (IFF) destiné à taxer la spéculation. Le corpus ne précise pas l'assiette exacte, le taux ni le seuil de déclenchement de l'IFF (position de 2022).",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage n'est donné dans le corpus pour cette mesure.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_patrimoine",
+            "valeurs": [
+              "plus_1_3m"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Supprimer l’IFI qui taxe l’enracinement et créer un IFF, impôt sur la fortune financière, pour taxer la spéculation."
+      },
+      {
+        "cibles": [],
+        "dimension": "patrimoine",
+        "sens": "indetermine",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "créer un IFF, impôt sur la fortune financière, pour taxer la spéculation"
+      }
+    ],
+    "id": "le-pen-fisc-006",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": []
+  },
+  {
+    "titre": "Suppression de la Cotisation Foncière des Entreprises et des impôts de production",
+    "resume_factuel": "Position de 2022 : Le programme prévoit de supprimer la Cotisation Foncière des Entreprises (CFE) ainsi que les impôts de production, présentés comme pénalisant les PME-TPE locales et nuisant à la relocalisation. Ce sont des impôts payés par les entreprises ; le corpus ne précise pas de bénéfice direct chiffré pour un particulier.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage n'est donné dans le corpus pour cette mesure.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "le-pen-fisc-007",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "supprimer la Cotisation Foncière des Entreprises (CFE) ainsi que les impôts de production"
+      }
+    ]
+  },
+  {
+    "titre": "Baisse de la TVA de 20% à 5,5% sur les produits énergétiques",
+    "resume_factuel": "Positions de 2022 et 2024 : Le programme prévoit de baisser la TVA de 20% à 5,5% sur les produits énergétiques (carburants, fioul, gaz et électricité), présentés comme des biens de première nécessité. Cette position est réaffirmée dans des pétitions ultérieures du Rassemblement National, notamment sur l'électricité.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      },
+      {
+        "type": "primaire",
+        "label": "rassemblementnational.fr — petition-tva-electricite",
+        "url": "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez",
+        "nom": "rassemblementnational.fr",
+        "annee": 2024
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun chiffrage précis n'est donné dans le corpus ; les pétitions citent des hausses de prix de l'énergie (jusqu'à 43% en 2 ans pour l'électricité selon le document petition-tva-electricite) comme contexte, mais pas de chiffrage de l'effet de la baisse de TVA elle-même.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Baisser la TVA de 20% à 5.5% sur les produits énergétiques (carburants, fioul, gaz et électricité) en tant que biens de première nécessité."
+      }
+    ],
+    "id": "le-pen-fisc-008",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "baisser la TVA de 20% à 5,5% sur les produits énergétiques (carburants, fioul, gaz et électricité)"
+      }
+    ]
+  },
+  {
+    "titre": "Suppression de la TVA sur un panier de 100 produits de première nécessité",
+    "resume_factuel": "Position de 2023 : Le Rassemblement National propose, par voie de pétition, la suppression de la TVA sur un panier de 100 produits de première nécessité, reprenant une proposition déjà portée par Marine Le Pen lors de l'élection présidentielle de 2022. Le corpus ne précise pas la liste exacte des 100 produits ni de calendrier législatif.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "rassemblementnational.fr — petition-tva-100-produits",
+        "url": "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+        "nom": "rassemblementnational.fr",
+        "annee": 2023
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Le document cite une hausse de +13,8% des prix alimentaires et +20,9% pour les produits premiers prix en 2022 (étude IRI) comme contexte de la mesure, mais aucun chiffrage de l'effet de la suppression de TVA elle-même n'est donné.",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+        "extrait": "nous proposons, comme l’avait déjà fait Marine le Pen pendant l’élection présidentielle, la suppression de la TVA sur un panier de 100 produits de première nécessité."
+      }
+    ],
+    "id": "le-pen-fisc-009",
+    "candidat": "le-pen",
+    "theme": "fiscalite",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+        "extrait": "suppression de la TVA sur un panier de 100 produits de première nécessité"
+      }
+    ]
+  },
+  {
+    "titre": "Baisse de la TVA de 20% à 5,5% sur les produits énergétiques",
+    "resume_factuel": "Positions de 2022 et 2024 : Marine Le Pen (position de 2022) propose de baisser la TVA de 20% à 5,5% sur les produits énergétiques (carburants, fioul, gaz et électricité), considérés comme des biens de première nécessité. Une pétition de 2024 confirme que cette proposition est toujours portée.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      },
+      {
+        "type": "primaire",
+        "label": "rassemblementnational.fr — petition-tva-electricite",
+        "url": "https://rassemblementnational.fr/petition/pour-baisser-la-tva-a-55-sur-le-prix-de-lelectricite-signez",
+        "nom": "rassemblementnational.fr",
+        "annee": 2024
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Baisser la TVA de 20% à 5.5% sur les produits énergétiques (carburants, fioul, gaz et électricité) en tant que biens de première nécessité."
+      }
+    ],
+    "id": "le-pen-pa-001",
+    "candidat": "le-pen",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "baisser la TVA de 20% à 5,5% sur les produits énergétiques (carburants, fioul, gaz et électricité)"
+      }
+    ]
+  },
+  {
+    "titre": "Suppression de la TVA sur un panier de 100 produits de première nécessité",
+    "resume_factuel": "Position de 2023 : Le RN propose la suppression de la TVA sur un panier de 100 produits de première nécessité, reprenant une proposition déjà portée par Marine Le Pen pendant l'élection présidentielle, face à la hausse des prix alimentaires.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "rassemblementnational.fr — petition-tva-100-produits",
+        "url": "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+        "nom": "rassemblementnational.fr",
+        "annee": 2023
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+        "extrait": "nous proposons, comme l’avait déjà fait Marine le Pen pendant l’élection présidentielle, la suppression de la TVA sur un panier de 100 produits de première nécessité."
+      }
+    ],
+    "id": "le-pen-pa-002",
+    "candidat": "le-pen",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://rassemblementnational.fr/petition/supprimer-la-tva-sur-100-produits-de-premiere-necessite-cest-possible",
+        "extrait": "suppression de la TVA sur un panier de 100 produits de première nécessité"
+      }
+    ]
+  },
+  {
+    "titre": "Renationalisation des autoroutes pour baisser les péages",
+    "resume_factuel": "Position de 2022 : Marine Le Pen propose de renationaliser les autoroutes afin de baisser de 15% les péages.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "vehicule",
+            "valeurs": [
+              "thermique",
+              "electrique_hybride"
+            ]
+          },
+          {
+            "champ": "usage_autoroute",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Renationaliser les autoroutes pour baisser de 15% les péages et privatiser l’audiovisuel public pour supprimer les 138€ de redevance."
+      }
+    ],
+    "id": "le-pen-pa-003",
+    "candidat": "le-pen",
+    "theme": "pouvoir-achat",
+    "positions": []
+  },
+  {
+    "titre": "Privatisation de l'audiovisuel public et suppression de la redevance",
+    "resume_factuel": "Position de 2022 : privatiser l'audiovisuel public pour supprimer les 138€ de redevance.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "privatiser l’audiovisuel public pour supprimer les 138€ de redevance."
+      }
+    ],
+    "id": "le-pen-pa-004",
+    "candidat": "le-pen",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "privatiser l'audiovisuel public pour supprimer les 138€ de redevance"
+      }
+    ]
+  },
+  {
+    "titre": "Hausse des salaires jusqu'à 3 SMIC via exonération de cotisations patronales",
+    "resume_factuel": "Position de 2022 : permettre aux entreprises une hausse des salaires de 10% (jusqu'à 3 SMIC) en exonérant cette augmentation de cotisations patronales, le mécanisme de mise en œuvre n'étant pas davantage précisé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [],
+    "id": "le-pen-pa-005",
+    "candidat": "le-pen",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "moderer_salaires",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "permettre aux entreprises une hausse des salaires de 10% (jusqu'à 3 SMIC) en exonérant cette augmentation de cotisations patronales"
+      },
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "exonérant cette augmentation de cotisations patronales"
+      }
+    ]
+  },
+  {
+    "titre": "Rendre aux ménages les subventions versées aux éoliennes",
+    "resume_factuel": "Position de 2022 : rendre aux ménages les 5 milliards d'euros de subventions versées notamment aux éoliennes, dans le cadre de l'indépendance énergétique.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": true,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Rendre aux ménages les 5 milliards de subventions versées notamment aux éoliennes."
+      }
+    ],
+    "id": "le-pen-pa-006",
+    "candidat": "le-pen",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "freiner_transition",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "rendre aux ménages les 5 milliards d'euros de subventions versées notamment aux éoliennes"
+      }
+    ]
+  },
+  {
+    "titre": "Sortie du marché européen de l'électricité pour baisser les prix",
+    "resume_factuel": "Position de 2022 : sortir du marché européen de l'électricité pour retrouver des prix décents, sans précision du mécanisme de fixation des prix qui en résulterait.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Sortir du marché européen de l'électricité pour retrouver des prix décents."
+      }
+    ],
+    "id": "le-pen-pa-007",
+    "candidat": "le-pen",
+    "theme": "pouvoir-achat",
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "sortir du marché européen de l'électricité pour retrouver des prix décents"
+      }
+    ]
+  },
+  {
+    "titre": "Garantir aux agriculteurs des prix respectueux de leur travail",
+    "resume_factuel": "Position de 2022 : garantir aux paysans des prix respectueux de leur travail et mettre fin aux marges abusives de la grande distribution ; mécanisme non précisé.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Garantir aux paysans des prix respectueux de leur travail et mettre un terme aux marges abusives de la grande distribution."
+      }
+    ],
+    "id": "le-pen-pa-008",
+    "candidat": "le-pen",
+    "theme": "pouvoir-achat",
+    "positions": []
+  },
+  {
+    "titre": "Exonération de cotisations patronales sur une hausse de salaire jusqu'à 3 SMIC",
+    "resume_factuel": "Position de 2022 : Le programme propose de permettre aux entreprises d'augmenter les salaires de 10% (jusqu'à 3 SMIC) en exonérant cette augmentation de cotisations patronales. Le mécanisme précis (durée, conditions d'application) n'est pas davantage détaillé dans le corpus.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "tranche_revenus",
+            "valeurs": [
+              "moins_1200",
+              "1200_2000",
+              "2000_3000",
+              "3000_4000"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Permettre aux entreprises une hausse des salaires de 10% (jusqu'à 3 smic) en exonérant cette augmentation de cotisations patronales."
+      }
+    ],
+    "id": "le-pen-trav-001",
+    "candidat": "le-pen",
+    "theme": "travail",
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "moderer_salaires",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "permettre aux entreprises d'augmenter les salaires de 10% (jusqu'à 3 SMIC) en exonérant cette augmentation de cotisations patronales"
+      },
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "en exonérant cette augmentation de cotisations patronales"
+      }
+    ]
+  },
+  {
+    "titre": "Chèque-formation mensuel pour les apprentis et alternants",
+    "resume_factuel": "Position de 2022 : Création d'un chèque-formation mensuel de 200 à 300€ pour les apprentis, les alternants et leurs employeurs. Le corpus ne précise pas les conditions d'éligibilité ni le calendrier de mise en œuvre.",
+    "sources": [
+      {
+        "type": "primaire",
+        "label": "mlafrance.fr (programme 2022) — programme-2022",
+        "url": "https://mlafrance.fr/programme",
+        "nom": "mlafrance.fr (programme 2022)",
+        "annee": 2022
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "",
+    "statut": "complet",
+    "date_derniere_verification": "2026-10-10",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "apprenti"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Créer un chèque-formation mensuel de 200 à 300€ pour les apprentis, les alternants et leurs employeurs."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://mlafrance.fr/programme",
+        "extrait": "Créer un chèque-formation mensuel de 200 à 300€ pour les apprentis, les alternants et leurs employeurs."
+      }
+    ],
+    "id": "le-pen-trav-002",
+    "candidat": "le-pen",
+    "theme": "travail",
+    "positions": []
   }
 ]

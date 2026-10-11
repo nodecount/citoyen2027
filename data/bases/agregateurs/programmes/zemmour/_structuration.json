@@ -28,14 +28,14 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "d55eb7541ce5a4f9",
-    "date": "2026-10-04",
+    "empreinte": "bc55633e5c7b011d",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 7,
-    "avec_effets": 3,
-    "sans_effet": 4,
+    "avec_effets": 2,
+    "sans_effet": 5,
     "rejetees": [],
-    "cout_reference_usd": 0.0536,
+    "cout_reference_usd": 0.0522,
     "appels": 2
   },
   {
@@ -85,19 +85,31 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "6442f8dacfbc25e3",
-    "date": "2026-10-04",
+    "empreinte": "b80a8aec6853bc1e",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 19,
-    "avec_effets": 8,
-    "sans_effet": 10,
+    "avec_effets": 6,
+    "sans_effet": 9,
     "rejetees": [
       {
+        "id": "zemmour-retraites-travail-002",
+        "raison": "relecture : L'exonération de cotisations patronales réduit le coût du travail pour l'entreprise, pas directement le revenu disponible personnel du chef d'entreprise (mécanisme supposé), et la tranche 'moins_1200' n'est pas énoncée par le texte qui ne parle que du SMIC comme seuil d'exonération."
+      },
+      {
+        "id": "zemmour-retraites-travail-006",
+        "raison": "relecture : L'exonération de cotisations patronales allège une charge de l'entreprise, non le revenu disponible personnel du chef d'entreprise ; c'est un mécanisme supposé non énoncé par le texte."
+      },
+      {
+        "id": "zemmour-retraites-travail-009",
+        "raison": "relecture : La part de l'exonération de cotisations patronales bénéficie à l'entreprise d'accueil, pas directement au revenu disponible personnel du chef d'entreprise ; mécanisme supposé non énoncé par le texte."
+      },
+      {
         "id": "zemmour-retraites-travail-013",
-        "raison": "relecture : L'impôt sur les sociétés est payé par l'entreprise, pas directement par l'agriculteur/artisan/commerçant en tant que personne ; attribuer une hausse de revenu disponible personnel suppose un mécanisme de transmission économique non énoncé dans le texte."
+        "raison": "relecture : La baisse de l'impôt sur les sociétés affecte le bénéfice de l'entreprise, pas directement le revenu disponible personnel de l'indépendant, sans que le texte ne l'affirme."
       }
     ],
-    "cout_reference_usd": 0.0964,
+    "cout_reference_usd": 0.0959,
     "appels": 2
   },
   {

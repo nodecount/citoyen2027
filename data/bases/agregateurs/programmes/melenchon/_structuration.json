@@ -169,44 +169,49 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "c254bb368a304939",
-    "date": "2026-10-04",
+    "empreinte": "c932ac13f9c366a8",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 10,
-    "sans_effet": 11,
+    "avec_effets": 12,
+    "sans_effet": 9,
     "rejetees": [
       {
-        "id": "melenchon-retraites-travail-007",
-        "raison": "relecture : Le texte majore les heures supplémentaires au-delà de 35h, ce qui n'augmente le revenu disponible que des salariés effectuant des heures sup, pas de tous les salariés."
+        "id": "melenchon-retraites-travail-003",
+        "raison": "relecture : Le texte ne donne que plus de pouvoir décisionnel aux salariés lors de procédures, sans garantir un effet sur l'emploi : le lien avec une hausse d'emploi est un mécanisme supposé."
       },
       {
-        "id": "melenchon-retraites-travail-008",
-        "raison": "relecture : Le passage à 32h hebdomadaires est une réduction du temps de travail, pas une hausse de protection sociale au sens des droits/couverture sociale."
+        "id": "melenchon-retraites-travail-007",
+        "raison": "relecture : La majoration ne concerne que les heures supplémentaires effectuées, pas l'ensemble des salariés travaillant déjà à 35h ou moins ; généraliser une hausse de revenu disponible à tous les salariés est un mécanisme supposé."
       },
       {
         "id": "melenchon-retraites-travail-019",
-        "raison": "relecture : La mesure plafonne l'écart de salaire au sein d'une entreprise (1 à 20), ce qui ne concerne que les très hauts salaires dépassant ce ratio, pas toute la tranche 'plus_5000€'."
+        "raison": "relecture : Le texte ne plafonne que l'écart salarial au sein d'une même entreprise entre le plus bas et le plus haut salaire, ce qui ne concerne pas automatiquement toute personne de la tranche de revenus plus_5000 : périmètre élargi."
       },
       {
-        "id": "melenchon-retraites-travail-024",
-        "raison": "relecture : L'absence de ciblage fait croire que tous les citoyens bénéficient de cet effet, alors que seuls les actifs non encore retraités approchant de l'âge de la retraite sont concernés."
+        "id": "melenchon-retraites-travail-020",
+        "raison": "relecture : Le plafonnement des dividendes affecte le revenu perçu par les actionnaires plutôt que directement leur patrimoine : dimension mal choisie."
       }
     ],
-    "cout_reference_usd": 0.1155,
+    "cout_reference_usd": 0.1346,
     "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 1,
-    "empreinte": "56c07b298f3d70c8",
-    "date": "2026-10-04",
+    "empreinte": "66fff48e7ca5b235",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 7,
-    "avec_effets": 1,
+    "avec_effets": 0,
     "sans_effet": 6,
-    "rejetees": [],
-    "cout_reference_usd": 0.0189,
+    "rejetees": [
+      {
+        "id": "melenchon-retraites-travail-026",
+        "raison": "relecture : Indexer sur les salaires ne garantit pas une hausse du revenu disponible des retraités (les salaires peuvent évoluer moins vite que l'indexation actuelle), le sens devrait être indetermine plutôt que hausse."
+      }
+    ],
+    "cout_reference_usd": 0.0187,
     "appels": 2
   },
   {

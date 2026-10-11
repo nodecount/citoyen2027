@@ -48,14 +48,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "positions": [
-      {
-        "sujet": "ultra_riches",
-        "position": "ne_pas_taxer_ultra_riches",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter les abattements sur les donations, jugés aujourd’hui insuffisants"
-      }
-    ],
+    "positions": [],
     "effets": [
       {
         "cibles": [
@@ -194,14 +187,14 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "prison",
-        "position": "plus_de_prison",
+        "sujet": "securite",
+        "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Rétablir les peines planchers pour les récidivistes."
       },
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "prison",
+        "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Rétablir les peines planchers pour les récidivistes."
       }
@@ -476,7 +469,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "justice_mineurs",
+        "position": "durcir_justice_mineurs",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place des internats disciplinaires fermés."
+      }
+    ]
   },
   {
     "id": "lisnard-interieur-justice-013",
@@ -797,7 +798,7 @@
         "sujet": "laicite",
         "position": "laicite_stricte",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "interdire les Frères musulmans, contrôler les écoles hors contrat, expulser les prêcheurs radicaux, interdire le voile à l’université"
+        "extrait": "interdire le voile à l’université"
       }
     ]
   },
@@ -927,8 +928,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "lisnard-social-solidarite-005",
@@ -972,8 +972,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé",
-    "positions": []
+    "sous_theme": "Santé"
   },
   {
     "id": "lisnard-social-solidarite-007",
@@ -996,14 +995,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "garantir des prix et relocaliser les chaines de valeur"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "lisnard-social-solidarite-008",
@@ -1026,14 +1018,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réinvestir dans la recherche publique en santé"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "lisnard-social-solidarite-009",
@@ -1055,7 +1040,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Construire une réglementation agile et sécurisée pour l’innovation médicale : télésurveillance, IA diagnostique, robotique chirurgicale."
+      }
+    ]
   },
   {
     "id": "lisnard-retraites-travail-001",
@@ -1101,6 +1094,12 @@
     "sous_theme": "Agriculture",
     "effets": [],
     "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "assouplir_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "En finir avec les surtranspositions françaises, l’alignement réglementaire avec le marché commun"
+      },
       {
         "sujet": "commerce",
         "position": "protectionnisme",
@@ -1221,14 +1220,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "reconstruire une filière française d’engrais azotés décarbonés, mobiliser l’agriculture dans une stratégie géopolitique : diplomatie du blé, sécurisation des filières, souveraineté logistique"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "lisnard-envi-006",
@@ -1251,14 +1243,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "agriculture_normes",
-        "position": "assouplir_normes_agri",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "une simplification radicale du statut de l’exploitation agricole, avec un cadre unique"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "lisnard-envi-007",
@@ -1339,7 +1324,7 @@
         "sujet": "agriculture_normes",
         "position": "assouplir_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "les bassines sont possibles lorsqu’elles sont techniquement justifiées et localement décidées"
+        "extrait": "les bassines sont possibles lorsqu’elles sont techniquement justifiées et localement décidées."
       }
     ]
   },
@@ -1369,7 +1354,7 @@
         "sujet": "fonction_publique",
         "position": "moins_fonctionnaires",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Digitaliser le service public pour réduire la masse salariale"
+        "extrait": "Digitaliser le service public pour réduire la masse salariale tout en gardant une présence humaine pour répondre aux citoyens."
       }
     ]
   },
@@ -1561,7 +1546,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Administrations et opérateurs",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire la surtransposition des textes européens."
+      }
+    ]
   },
   {
     "id": "lisnard-education-jeunesse-001",
@@ -1756,14 +1749,7 @@
         "extrait": "Instaurer le grec, le latin et la philosophie dès le primaire."
       }
     ],
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "reformer_ecole",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer le grec, le latin et la philosophie dès le primaire."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "lisnard-education-jeunesse-006",
@@ -1800,7 +1786,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Augmenter de 20 % les rémunérations en 5 ans"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "lisnard-education-jeunesse-007",

@@ -33,27 +33,31 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "625697d3bb511747",
-    "date": "2026-10-04",
+    "empreinte": "e87d662776cf6b49",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 9,
-    "avec_effets": 3,
+    "avec_effets": 2,
     "sans_effet": 3,
     "rejetees": [
       {
         "id": "parti-socialiste-finances-publiques-005",
-        "raison": "relecture : Le texte vise 'les plus hauts salaires' sans seuil précis, alors que la cible 'plus_5000' introduit un seuil chiffré non mentionné."
+        "raison": "relecture : Le texte vise « les plus hauts salaires » sans préciser un seuil de 5000€, la cible tranche_revenus plus_5000 élargit/précise un périmètre non défini par le texte."
+      },
+      {
+        "id": "parti-socialiste-finances-publiques-006",
+        "raison": "relecture : Le texte vise spécifiquement les artisans et commerçants, alors que la cible 'independant' englobe un périmètre plus large (professions libérales, auto-entrepreneurs non commerçants, etc.)."
       },
       {
         "id": "parti-socialiste-finances-publiques-008",
-        "raison": "relecture : Le texte cible les patrimoines supérieurs à 100 millions d'euros, alors que la cible 'plus_1_3m' élargit considérablement le périmètre à des patrimoines bien moindres."
+        "raison": "relecture : Le texte cible les patrimoines supérieurs à 100 millions d'euros alors que la cible tranche_patrimoine 'plus_1_3m' élargit massivement le périmètre à des patrimoines bien inférieurs au seuil réel."
       },
       {
         "id": "parti-socialiste-finances-publiques-009",
-        "raison": "relecture : Le texte vise les 'grandes successions' alors que la cible retenue (héritage à venir, sans restriction de montant) élargit le périmètre à toutes les successions."
+        "raison": "relecture : Le texte vise les 'grandes successions' alors que la cible heritage (a_venir, recu) sans restriction de montant élargit le périmètre à toutes les successions."
       }
     ],
-    "cout_reference_usd": 0.0628,
+    "cout_reference_usd": 0.0801,
     "appels": 2
   },
   {
@@ -90,14 +94,14 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "caf5a5e56b89900d",
-    "date": "2026-10-04",
+    "empreinte": "789dbc6c403c7865",
+    "date": "2026-10-10",
     "modele": "claude-sonnet-5",
     "propositions": 7,
     "avec_effets": 0,
     "sans_effet": 7,
     "rejetees": [],
-    "cout_reference_usd": 0.0313,
+    "cout_reference_usd": 0.0334,
     "appels": 1
   },
   {

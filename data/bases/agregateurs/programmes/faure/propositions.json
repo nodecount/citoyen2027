@@ -50,7 +50,14 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Limiter les écarts de salaires au sein des entreprises dans une proportion de 1 à 20."
+      }
+    ]
   },
   {
     "id": "faure-retraites-travail-002",
@@ -142,8 +149,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "renouvelables",
-        "position": "plus_renouvelables",
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Interdire le versement de dividendes aux entreprises qui ne s’engagent pas résolument dans la transition écologique."
       }
@@ -342,14 +349,7 @@
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
     "effets": [],
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "ecole_continuite",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Relancer la politique d'éducation prioritaire."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "faure-education-jeunesse-006",
