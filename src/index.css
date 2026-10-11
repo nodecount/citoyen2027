@@ -638,8 +638,15 @@ a {
   padding-left: 1.1rem;
 }
 
-.bloc-credits {
+.bloc-credits,
+.bloc-limites {
   margin-top: 1.25rem;
+}
+
+.bloc-limites h3 {
+  margin: 1rem 0 0.25rem;
+  font-size: 1.05rem;
+  color: var(--bleu-fonce);
 }
 
 .liste-credits {

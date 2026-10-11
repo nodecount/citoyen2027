@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { ConstatIntegrite } from "../data/integrite";
 import type { Proposition } from "../types";
-import { classement, combiner, ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation, type CardPourSolde, type Solde } from "./candidatIdeal";
+import { classement, combiner, ecartesParIntegrite, meilleurs, sansDonnees, selonPrisme, soldesConvictions, soldesSituation, type CardPourSolde, type Solde } from "./candidatIdeal";
 import type { NiveauProjection } from "./projection";
 
 const ligne = (slug: string, niveau: NiveauProjection | null, propositions: Proposition[] = []) => ({ meta: { slug }, projection: niveau === null ? null : { niveau }, propositions });
@@ -9,26 +9,37 @@ const card = (lignes: ReturnType<typeof ligne>[], absents: string[] = []): CardP
 const solde = (slug: string, ameliorants: number, degradants: number, analyses = ameliorants + degradants): Solde => ({ slug, ameliorants, degradants, analyses, solde: ameliorants - degradants, pour: [], contre: [] });
 
 describe("soldesSituation", () => {
-  it("améliorants moins dégradants ; mixte sans mesure retenue (à préciser), non concerné et sans indicateur comptent zéro", () => {
+  const mesure = (id: string): Proposition => ({ id, candidat: "x", theme: "t", titre: `Mesure ${id}`, resume_factuel: "", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-10-01" });
+  // Une ligne dont les effets retenus sont des mesures, chacune avec sa polarité (favorable ou défavorable).
+  const avecMesures = (slug: string, niveau: NiveauProjection | null, effets: Array<[string, "favorable" | "defavorable"]> = []) => ({
+    meta: { slug },
+    projection: niveau === null ? null : { niveau, effetsRetenus: effets.map(([propositionId, polarite]) => ({ propositionId, polarite })) },
+    propositions: effets.map(([id]) => mesure(id)),
+  });
+  it("score = mesures favorables moins mesures défavorables ; non concerné, sans indicateur et mixte sans mesure retenue comptent zéro", () => {
     const cards = [
-      card([ligne("a", "ameliorant"), ligne("b", "degradant")]),
-      card([ligne("a", "ameliorant"), ligne("b", "mixte")]),
-      card([ligne("a", "degradant"), ligne("b", "non_concerne")]),
-      card([ligne("a", null), ligne("b", "ameliorant")]),
+      card([avecMesures("a", "ameliorant", [["1", "favorable"]]), avecMesures("b", "degradant", [["2", "defavorable"]])]),
+      card([avecMesures("a", "ameliorant", [["3", "favorable"], ["4", "favorable"]]), avecMesures("b", "mixte", [["5", "favorable"], ["6", "defavorable"]])]),
+      card([avecMesures("a", "degradant", [["7", "defavorable"]]), avecMesures("b", "non_concerne")]),
+      card([avecMesures("a", null), avecMesures("b", "ameliorant", [["8", "favorable"]]), avecMesures("c", "mixte")]),
     ];
     const par = Object.fromEntries(soldesSituation(cards).map((s) => [s.slug, s]));
-    expect(par.a).toMatchObject({ ameliorants: 2, degradants: 1, solde: 1, analyses: 3 });
-    expect(par.b).toMatchObject({ ameliorants: 1, degradants: 1, solde: 0, analyses: 4 });
+    expect(par.a).toMatchObject({ ameliorants: 3, degradants: 1, solde: 2, analyses: 3 });
+    expect(par.b).toMatchObject({ ameliorants: 2, degradants: 2, solde: 0, analyses: 4 });
+    expect(par.c).toMatchObject({ ameliorants: 0, degradants: 0, solde: 0, analyses: 1 });
   });
-  it("aucune pondération : chaque thème pèse pareil", () => {
-    const cards = [card([ligne("a", "ameliorant")]), card([ligne("a", "degradant")]), card([ligne("a", "degradant")])];
-    expect(soldesSituation(cards)[0].solde).toBe(-1);
+  it("aucune pondération : chaque mesure pèse pareil, un thème à beaucoup de mesures pèse plus qu'un thème à une seule", () => {
+    const cards = [
+      card([avecMesures("a", "ameliorant", [["1", "favorable"]])]),
+      card([avecMesures("a", "degradant", [["2", "defavorable"], ["3", "defavorable"], ["4", "defavorable"]])]),
+    ];
+    expect(soldesSituation(cards)[0]).toMatchObject({ ameliorants: 1, degradants: 3, solde: -2 });
   });
-  it("garde les titres des mesures des thèmes comptés ; un thème mixte compte +1 ET −1, avec ses mesures de chaque sens", () => {
+  it("garde les titres des mesures des thèmes comptés ; un thème mixte figure des deux côtés, avec ses mesures de chaque sens", () => {
     const p = (id: string): Proposition => ({ id, candidat: "x", theme: "t", titre: `Titre ${id}`, resume_factuel: "", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-10-01" });
     const avecEffets = (niveau: NiveauProjection, ids: string[]) => ({ meta: { slug: "a" }, projection: { niveau, effetsRetenus: ids.map((propositionId) => ({ propositionId, polarite: niveau === "degradant" || propositionId === "2" && niveau === "mixte" ? ("defavorable" as const) : ("favorable" as const) })) }, propositions: [p("1"), p("2"), p("3")] });
     const s = soldesSituation([card([avecEffets("ameliorant", ["1"])]), card([avecEffets("degradant", ["2", "3"])]), card([avecEffets("mixte", ["1", "2"])])])[0];
-    // Un point par thème compté : autant de blocs que le score en compte, chacun avec les titres de ses mesures.
+    // Un bloc par thème compté, chacun avec les titres de ses mesures.
     expect(s.pour).toEqual([
       { theme: "logement", groupes: ["Titre 1"], mesures: ["Titre 1"] },
       { theme: "logement", groupes: ["Titre 1"], mesures: ["Titre 1"] },
@@ -37,9 +48,8 @@ describe("soldesSituation", () => {
       { theme: "logement", groupes: ["Titre 2", "Titre 3"], mesures: ["Titre 2", "Titre 3"] },
       { theme: "logement", groupes: ["Titre 2"], mesures: ["Titre 2"] },
     ]);
-    // Le mixte pèse +1 et −1 : le score ne bouge pas, mais il figure des deux côtés.
-    expect(s).toMatchObject({ ameliorants: 2, degradants: 2, solde: 0, analyses: 3 });
-    expect([s.pour.length, s.contre.length]).toEqual([s.ameliorants, s.degradants]);
+    // Le score compte des mesures, chacune une fois par thème : « Titre 1 » (favorable, deux fois) = 1 ; « Titre 2 » et « Titre 3 » = 2.
+    expect(s).toMatchObject({ ameliorants: 1, degradants: 2, solde: -1, analyses: 3 });
   });
   it("nomme les points par les groupes du résumé (mots clés), une fois chacun, jamais par le contenu des mesures", () => {
     const p = (id: string): Proposition => ({ id, candidat: "x", theme: "t", titre: `Titre ${id}`, resume_factuel: "Contenu long", sources: [], chiffrage_disponible: false, hypotheses_calcul: "", statut: "complet", date_derniere_verification: "2026-10-01" });
@@ -53,6 +63,19 @@ describe("soldesSituation", () => {
   it("un candidat présent seulement dans les absents est listé, à zéro analyse", () => {
     const s = soldesSituation([card([ligne("a", "ameliorant")], ["z"])]);
     expect(s.find((x) => x.slug === "z")).toMatchObject({ solde: 0, analyses: 0 });
+  });
+});
+
+describe("selonPrisme", () => {
+  const s: Solde = {
+    ...solde("a", 3, 1),
+    pour: [{ theme: "t1", groupes: ["G1"], mesures: ["M1", "M2", "M3"] }, { theme: "t2", groupes: ["G2"], mesures: ["M4"] }],
+    contre: [{ theme: "t1", groupes: ["G3"], mesures: ["M5"] }],
+  };
+  it("mesures : une fois chacune par thème ; groupes : idem ; thèmes : un point par bloc", () => {
+    expect(selonPrisme(s, "mesures")).toMatchObject({ ameliorants: 4, degradants: 1, solde: 3 });
+    expect(selonPrisme(s, "groupes")).toMatchObject({ ameliorants: 2, degradants: 1, solde: 1 });
+    expect(selonPrisme(s, "themes")).toMatchObject({ ameliorants: 2, degradants: 1, solde: 1 });
   });
 });
 

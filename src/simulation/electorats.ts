@@ -108,7 +108,7 @@ export interface Gagnant {
 
 export type Classement = { gagnants: Gagnant[]; departageable: boolean; suivants: Gagnant[] };
 
-// Le même résultat compté de trois façons (thèmes, groupes de mesures, mesures), pour la situation, les convictions et les deux
+// Le même résultat compté de trois façons (mesures, groupes de mesures, thèmes), pour la situation, les convictions et les deux
 // additionnés (le candidat idéal du centre de la card).
 export type SelonPrismes = Record<Prisme, Classement | null>;
 
@@ -163,7 +163,7 @@ export function simuler(electorat: Electorat, baseId: string): ResultatBase {
       if (!m || m.gagnants.length === 0) return null;
       return { gagnants: m.gagnants.map((g) => versGagnant(g, noms)), departageable: m.departageable, suivants: suivants(comptes, noms, new Set(m.gagnants.map((g) => g.slug))) };
     };
-    return { themes: un("themes"), groupes: un("groupes"), mesures: un("mesures") };
+    return { mesures: un("mesures"), groupes: un("groupes"), themes: un("themes") };
   };
   const soldesSit = personnalise ? soldesSituation(cards) : null;
   const soldesConv = Object.keys(positions).length > 0 ? soldesConvictions(cards, positions) : null;

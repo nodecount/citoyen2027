@@ -5,9 +5,10 @@ import { projeterPosition } from "./positions";
 import type { NiveauProjection } from "./projection";
 
 // « Candidat idéal » : le SEUL endroit du produit où l'on désigne un candidat (exception décidée le 2026-09-30, voir
-// CLAUDE.md). Règle publique et identique pour tous : solde = thèmes « améliorant » moins thèmes « dégradant » ; un thème « mixte »
-// (décision du 2026-10-10) compte DANS LES DEUX : +1 pour ses mesures favorables ET −1 pour ses mesures défavorables (solde nul, mais
-// présent des deux côtés) ; « non concerné », « mixte à préciser » et l'absence d'indicateur comptent zéro ; aucune pondération.
+// CLAUDE.md). Règle publique et identique pour tous (décision du 2026-10-11, remplace le compte par thèmes) : score = nombre de
+// MESURES favorables moins nombre de mesures défavorables à la situation (ou aux convictions), sans pourcentage ni pondération ; un
+// thème « mixte » apporte ses mesures favorables d'un côté et ses défavorables de l'autre ; « non concerné », « mixte à préciser » et
+// l'absence d'indicateur n'apportent rien.
 export interface LignePourSolde {
   meta: { slug: string };
   projection: { niveau: NiveauProjection | null; effetsRetenus?: Array<{ propositionId: string; polarite?: "favorable" | "defavorable" }> } | null;
@@ -23,9 +24,9 @@ export interface CardPourSolde {
   absents: Array<{ slug: string }>;
 }
 
-// Un point du score : un thème (situation) ou un sujet × thème (convictions) compté +1 ou −1, avec les GROUPES de mesures qui le
-// fondent (mots clés du résumé du candidat, ceux numérotés en « Explorer les mesures » ; le titre de la mesure s'il n'y a pas de
-// résumé). Le nombre de points de chaque liste est donc exactement celui du score.
+// Ce qui fonde le score pour un thème (situation) ou un sujet × thème (convictions) : les mesures elles-mêmes, et les GROUPES qui les
+// rassemblent (mots clés du résumé du candidat, ceux numérotés en « Explorer les mesures » ; le titre de la mesure s'il n'y a pas de
+// résumé). Le score compte les mesures ; les groupes n'en sont qu'une autre lecture, affichée à côté.
 export interface Raison {
   // Identifiant du thème où le point compte (l'interface n'en montre que l'icône).
   theme: string;
@@ -36,13 +37,14 @@ export interface Raison {
 
 export interface Solde {
   slug: string;
+  // Nombres de mesures favorables et défavorables (chacune une fois par thème), et leur différence : le score.
   ameliorants: number;
   degradants: number;
-  // Thèmes (situation) ou constats groupe × thème (convictions) où le candidat a un niveau : la couverture du solde.
+  // Thèmes (situation) ou constats sujet × thème (convictions) où le candidat a un niveau : il n'est éligible que s'il y en a au moins un.
   analyses: number;
   solde: number;
-  // Les mesures derrière le score : les thèmes (ou constats) comptés +1 ou −1 y figurent ; un « mixte » figure dans les deux listes, avec
-  // ses seules mesures favorables d'un côté et ses seules mesures défavorables de l'autre.
+  // Les mesures derrière le score ; un thème « mixte » figure dans les deux listes, avec ses seules mesures favorables d'un côté et
+  // ses seules mesures défavorables de l'autre.
   pour: Raison[];
   contre: Raison[];
 }
@@ -56,21 +58,28 @@ function soldesVides(cards: CardPourSolde[]): Map<string, Solde> {
   return new Map([...slugs].sort().map((slug) => [slug, { slug, ameliorants: 0, degradants: 0, analyses: 0, solde: 0, pour: [], contre: [] }]));
 }
 
-// `pour` / `contre` : le point à ajouter à la liste correspondante si le niveau est « améliorant » / « dégradant ». Un « mixte » compte
-// +1 et −1 à la fois, à condition de recevoir les deux points (un « mixte à préciser » n'en reçoit pas : il compte zéro).
+// Le score (décision du 2026-10-11) : la DIFFÉRENCE entre le nombre de mesures favorables et le nombre de mesures défavorables,
+// sans pourcentage ni pondération. Une mesure n'est comptée qu'une fois par thème, de chaque côté (comme dans la fenêtre de détail).
+// `analyses` (thèmes ou constats où le candidat a un niveau) ne sert plus qu'à savoir s'il a un résultat, donc s'il est éligible.
+function mesurer(soldes: Map<string, Solde>): Solde[] {
+  const distinctes = (points: Raison[]) => new Set(points.flatMap((p) => p.mesures.map((titre) => `${p.theme}|${titre}`))).size;
+  for (const s of soldes.values()) {
+    s.ameliorants = distinctes(s.pour);
+    s.degradants = distinctes(s.contre);
+    s.solde = s.ameliorants - s.degradants;
+  }
+  return [...soldes.values()];
+}
+
+// `pour` / `contre` : le point à ajouter à la liste correspondante si le niveau est « améliorant » / « dégradant ». Un « mixte » reçoit
+// les deux points (ses mesures favorables d'un côté, défavorables de l'autre) ; un « mixte à préciser » n'en reçoit pas : il compte zéro.
+// Les nombres du score sont tirés de ces listes par `mesurer`.
 function compter(s: Solde, niveau: NiveauProjection | null, pour?: Raison, contre?: Raison): void {
   if (niveau === null) return;
   s.analyses += 1;
   const mixte = niveau === "mixte" && pour !== undefined && contre !== undefined;
-  if (niveau === "ameliorant" || mixte) {
-    s.ameliorants += 1;
-    if (pour) s.pour.push(pour);
-  }
-  if (niveau === "degradant" || mixte) {
-    s.degradants += 1;
-    if (contre) s.contre.push(contre);
-  }
-  s.solde = s.ameliorants - s.degradants;
+  if ((niveau === "ameliorant" || mixte) && pour) s.pour.push(pour);
+  if ((niveau === "degradant" || mixte) && contre) s.contre.push(contre);
 }
 
 // Groupes (mots clés du résumé) qui couvrent les mesures de `ids`, dans l'ordre du résumé, une fois chacun. Une mesure absente du
@@ -120,7 +129,7 @@ export function soldesSituation(cards: CardPourSolde[]): Solde[] {
       }
     }
   }
-  return [...soldes.values()];
+  return mesurer(soldes);
 }
 
 // Convictions : un constat par sujet choisi et par thème (voir engine/positions.ts). « Pas d'avis » n'entre pas dans le solde.
@@ -140,7 +149,7 @@ export function soldesConvictions(cards: CardPourSolde[], choix: ChoixPositions)
       }
     }
   }
-  return [...soldes.values()];
+  return mesurer(soldes);
 }
 
 export interface Meilleurs {
@@ -178,7 +187,7 @@ export function meilleurs(soldes: Solde[], ecartes: ReadonlySet<string> = new Se
 }
 
 // Candidat idéal « toutes critères confondus » (décision du 2026-10-10) : le score de la situation PLUS celui des convictions,
-// candidat par candidat, sans pondération (même règle +1 / −1, simplement additionnée). Sans convictions, c'est la situation seule.
+// candidat par candidat, sans pondération (même règle, simplement additionnée). Sans convictions, c'est la situation seule.
 export function combiner(situation: Solde[], convictions: Solde[]): Solde[] {
   const parSlug = new Map(convictions.map((s) => [s.slug, s]));
   return situation.map((s) => {
@@ -196,15 +205,16 @@ export function combiner(situation: Solde[], convictions: Solde[]): Solde[] {
   });
 }
 
-// Trois façons de compter le même résultat, pour comparer (page de tests de situations seulement ; le produit compte les thèmes) :
-// les thèmes (règle du produit), les groupes de mesures ou les mesures elles-mêmes, favorables moins défavorables. Un groupe ou une
-// mesure n'est compté qu'une fois par thème (comme les listes de la fenêtre de détail).
-export type Prisme = "themes" | "groupes" | "mesures";
+// Trois façons de compter le même résultat, pour les comparer dans la page « Tests de situations » (le produit utilise les mesures) :
+// les mesures (règle du produit depuis le 2026-10-11), les groupes de mesures, ou les thèmes (ancienne règle, +1 / −1 par thème ou
+// par sujet × thème). Toujours favorables moins défavorables ; un groupe ou une mesure n'est compté qu'une fois par thème.
+export type Prisme = "mesures" | "groupes" | "themes";
 
 export function selonPrisme(s: Solde, prisme: Prisme): Solde {
-  if (prisme === "themes") return s;
   const compter = (points: Raison[]) =>
-    new Set(points.flatMap((p) => (prisme === "mesures" ? p.mesures : p.groupes).map((nom) => `${p.theme}|${nom}`))).size;
+    prisme === "themes"
+      ? points.length
+      : new Set(points.flatMap((p) => (prisme === "groupes" ? p.groupes : p.mesures).map((nom) => `${p.theme}|${nom}`))).size;
   const ameliorants = compter(s.pour);
   const degradants = compter(s.contre);
   return { ...s, ameliorants, degradants, solde: ameliorants - degradants };

@@ -185,7 +185,7 @@ describe("Aide « Comment est calculé le score ? »", () => {
     expect(html.match(/<h3>/g)).toHaveLength(6);
   });
   it("dit la règle : points, cumul au centre, 5 meilleurs, jauge, ex æquo, même règle pour tous", () => {
-    for (const t of ["rapporte 1 point", "fait perdre 1 point", "1 point en moins", "additionnés", "3 meilleures places de chaque critère", "8 favorables et 3 défavorables font +5", "tous les candidats concernés sont montrés", "même pour tous", "Les onglets en haut de la fenêtre"]) expect(html, t).toContain(t);
+    for (const t of ["rapporte 1 point", "fait perdre 1 point", "Chaque mesure du candidat qui améliore votre situation", "additionnés", "3 meilleures places de chaque critère", "8 mesures favorables et 3 défavorables font +5", "on compte des mesures, pas leur importance", "simple différence", "tous les candidats concernés sont montrés", "même pour tous", "Les onglets en haut de la fenêtre"]) expect(html, t).toContain(t);
   });
   it("aucun tiret cadratin dans le texte", () => {
     expect(html).not.toContain("—");
@@ -242,7 +242,7 @@ describe("Jauge", () => {
     expect(renderToStaticMarkup(<Jauge ameliorants={9} degradants={0} echelle={3} />)).toContain("width:50%");
   });
   it("nom accessible : le score et son calcul, en mots", () => {
-    expect(renderToStaticMarkup(<Jauge ameliorants={8} degradants={3} echelle={16} />)).toContain('aria-label="Score +5 : 8 favorables moins 3 défavorables, sur 16 étudiés"');
+    expect(renderToStaticMarkup(<Jauge ameliorants={8} degradants={3} echelle={16} />)).toContain('aria-label="Score +5 : 8 favorables moins 3 défavorables"');
   });
 });
 
@@ -272,7 +272,7 @@ describe("Détail d'une ligne (fenêtre)", () => {
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
     expect(html).not.toContain("Au total");
     const jauges = html.match(/aria-label="Score [^"]*"/g) ?? [];
-    expect(jauges).toEqual(['aria-label="Score +1 : 2 favorables moins 1 défavorable, sur 2 étudiés"', 'aria-label="Score +2 : 3 favorables moins 1 défavorable, sur 3 étudiés"']);
+    expect(jauges).toEqual(['aria-label="Score +1 : 2 favorables moins 1 défavorable"', 'aria-label="Score +2 : 3 favorables moins 1 défavorable"']);
     expect(html.indexOf("ideal-total-libelle")).toBeLessThan(html.indexOf('role="tablist"'));
   });
   it("égalité : des onglets, un par candidat de la ligne, avec le premier sélectionné ; pas d'onglets pour un seul candidat", () => {

@@ -8,7 +8,7 @@ import { Pastille } from "./Pastille";
 import { partiAffichable } from "./parti";
 
 // Card « candidat idéal » (décision du 2026-09-30, refondue le 2026-10-10) : seul endroit du produit qui désigne un candidat, par
-// une règle publique et identique pour tous (score = thèmes favorables moins thèmes défavorables, sans pondération). Au centre,
+// une règle publique et identique pour tous (score = mesures favorables moins mesures défavorables, sans pourcentage ni pondération). Au centre,
 // le candidat qui cumule les deux critères (situation + convictions) ; de part et d'autre, le top 5 de chaque critère, avec la
 // jauge de score de chacun. Floutée tant qu'elle n'est pas révélée : l'identité n'est alors PAS dans la page.
 export interface GagnantAffiche {
@@ -198,15 +198,14 @@ export function PoursContres({
 }
 
 // Jauge de score : une barre centrée sur zéro, verte vers la droite (score positif), rouge vers la gauche (score négatif). Sa
-// longueur compare le score au nombre de thèmes (ou de croisements) étudiés dans le classement : même échelle pour toute la
-// colonne. Le score est aussi écrit, avec son signe : la couleur ne porte jamais seule l'information.
+// longueur compare chaque nombre de mesures au plus grand de la colonne : même échelle pour tous ses candidats. Le score est aussi écrit, avec son signe : la couleur ne porte jamais seule l'information.
 // `barres` faux : seul le score est montré (des candidats à égalité de score n'ont pas forcément les mêmes points favorables et
 // défavorables : on ne dessine alors les barres d'aucun d'eux plutôt que de prêter celles de l'un à tous).
 export function Jauge({ ameliorants, degradants, echelle, barres = true }: { ameliorants: number; degradants: number; echelle: number; barres?: boolean }) {
   const solde = ameliorants - degradants;
   const part = (n: number) => Math.min(50, (n / Math.max(1, echelle)) * 50);
   const etiquette = barres
-    ? `Score ${signe(solde)} : ${ameliorants} favorable${ameliorants > 1 ? "s" : ""} moins ${degradants} défavorable${degradants > 1 ? "s" : ""}, sur ${echelle} étudié${echelle > 1 ? "s" : ""}`
+    ? `Score ${signe(solde)} : ${ameliorants} favorable${ameliorants > 1 ? "s" : ""} moins ${degradants} défavorable${degradants > 1 ? "s" : ""}`
     : `Score ${signe(solde)}`;
   return (
     <span className="ideal-jauge" role="img" aria-label={etiquette}>
@@ -289,7 +288,7 @@ function LignePlace({ place, echelle, revele, onOuvrir }: { place: LigneClasseme
 // dans la même ligne, sous un seul numéro et une seule jauge (sans mention d'égalité : ils sont côte à côte). Les titres restent nets sous le flou ; seules les lignes sont floutées.
 function ColonneTop({ resultat, revele, onOuvrir }: { resultat: ResultatAffiche; revele: boolean; onOuvrir: (place: LigneClassement[]) => void }) {
   const lignes = resultat.classement;
-  const echelle = Math.max(1, ...lignes.map((l) => l.analyses));
+  const echelle = Math.max(1, ...lignes.flatMap((l) => [l.ameliorants, l.degradants]));
   const places = [...new Set(lignes.map((l) => l.rang))].map((rang) => lignes.filter((l) => l.rang === rang));
   return (
     <div className="ideal-bloc ideal-top">
@@ -510,17 +509,17 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
         <section>
           <h3>Selon votre situation</h3>
           <ul>
-            <li>Chaque thème où les mesures du candidat vous avantagent rapporte 1 point.</li>
-            <li>Chaque thème où elles vous désavantagent fait perdre 1 point.</li>
-            <li>Un thème à la fois favorable et défavorable vaut 0 : il n'apparaît pas.</li>
+            <li>Chaque mesure du candidat qui améliore votre situation rapporte 1 point.</li>
+            <li>Chaque mesure qui la dégrade fait perdre 1 point.</li>
+            <li>Les mesures qui ne vous concernent pas ne comptent pas.</li>
           </ul>
         </section>
         <section>
           <h3>Selon vos convictions</h3>
           <ul>
-            <li>Sur un thème, les mesures vont dans le sens d'une position que vous avez choisie : 1 point.</li>
-            <li>Elles vont à l'opposé : 1 point en moins.</li>
-            <li>Un même sujet peut compter dans plusieurs thèmes.</li>
+            <li>Une mesure qui va dans le sens d'une position que vous avez choisie rapporte 1 point.</li>
+            <li>Une mesure qui va à l'opposé fait perdre 1 point.</li>
+            <li>Une même mesure n'est comptée qu'une fois par thème.</li>
           </ul>
         </section>
         <section>
@@ -534,10 +533,10 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
         <section>
           <h3>La jauge</h3>
           <ul>
-            <li>Le vert, à droite du zéro, représente les points favorables.</li>
-            <li>Le rouge, à gauche, représente les points défavorables.</li>
-            <li>Le chiffre est la différence : 8 favorables et 3 défavorables font +5.</li>
-            <li>La longueur des barres se compare au nombre de thèmes étudiés.</li>
+            <li>Le vert, à droite du zéro, représente les mesures favorables.</li>
+            <li>Le rouge, à gauche, représente les mesures défavorables.</li>
+            <li>Le chiffre est la simple différence : 8 mesures favorables et 3 défavorables font +5.</li>
+            <li>La longueur des barres se compare à celle des autres candidats de la même colonne.</li>
           </ul>
         </section>
         <section>
@@ -552,8 +551,10 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
           <h3>Bon à savoir</h3>
           <ul>
             <li>La règle est la même pour tous les candidats.</li>
-            <li>Aucun thème ni aucun sujet ne compte plus qu'un autre.</li>
-            <li>Plus il y a de thèmes étudiés, plus le score est fiable.</li>
+            <li>Aucune mesure ni aucun thème ne compte plus qu'un autre : on compte des mesures, pas leur importance.</li>
+            <li>Un candidat qui propose plus de mesures qui vous avantagent obtient un meilleur score.</li>
+            <li>Le score est une aide à la lecture : à vous de peser les mesures qui comptent le plus pour vous.</li>
+            <li>Les limites de la méthode sont expliquées dans la page « À propos ».</li>
           </ul>
         </section>
       </div>

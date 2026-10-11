@@ -27,9 +27,9 @@ function Resultat({ titre, resultat, vide }: { titre: string; resultat: Classeme
 }
 
 const PRISMES: Array<{ id: Prisme; libelle: string }> = [
-  { id: "themes", libelle: "Thèmes (règle actuelle)" },
+  { id: "mesures", libelle: "Mesures (règle actuelle)" },
   { id: "groupes", libelle: "Groupes de mesures" },
-  { id: "mesures", libelle: "Mesures" },
+  { id: "themes", libelle: "Thèmes (ancienne règle)" },
 ];
 const BLOCS = [
   { id: "situation", libelle: "Situation" },
@@ -47,7 +47,7 @@ function TableauPrismes({ resultat }: { resultat: ResultatBase["prismes"] }) {
       {BLOCS.map((b) => {
         const lignes = resultat[b.id];
         if (!lignes) return null;
-        const identiques = cle(lignes.themes) === cle(lignes.groupes) && cle(lignes.themes) === cle(lignes.mesures);
+        const identiques = PRISMES.every((p) => cle(lignes[p.id]) === cle(lignes.mesures));
         return (
           <table key={b.id} className="test-prisme">
             <caption>
@@ -84,19 +84,19 @@ function BilanPrismes({ base }: { base: BaseCharge }) {
     const lignes = ELECTORATS.map((e) => simuler(e, base.info.id).prismes);
     return BLOCS.map((b) => {
       const pris = lignes.map((l) => l[b.id]).filter((l): l is SelonPrismes => l !== null);
-      const memes = (autre: Prisme) => pris.filter((l) => cle(l.themes) === cle(l[autre])).length;
-      return { ...b, total: pris.length, groupes: memes("groupes"), mesures: memes("mesures") };
+      const memes = (autre: Prisme) => pris.filter((l) => cle(l.mesures) === cle(l[autre])).length;
+      return { ...b, total: pris.length, groupes: memes("groupes"), themes: memes("themes") };
     });
   }, [base.info.id]);
   return (
     <table className="test-prisme test-bilan">
-      <caption>Bilan : sur combien de situations le compte donne le même candidat que celui par thèmes</caption>
+      <caption>Bilan : sur combien de situations le compte donne le même candidat que celui par mesures (règle actuelle)</caption>
       <thead>
         <tr>
           <th scope="col">Résultat</th>
           <th scope="col">Situations</th>
           <th scope="col">Groupes de mesures</th>
-          <th scope="col">Mesures</th>
+          <th scope="col">Thèmes</th>
         </tr>
       </thead>
       <tbody>
@@ -105,7 +105,7 @@ function BilanPrismes({ base }: { base: BaseCharge }) {
             <th scope="row">{b.libelle}</th>
             <td>{b.total}</td>
             <td>{b.groupes} sur {b.total}</td>
-            <td>{b.mesures} sur {b.total}</td>
+            <td>{b.themes} sur {b.total}</td>
           </tr>
         ))}
       </tbody>
@@ -162,8 +162,8 @@ export default function PageTestsSituations({ base }: { base: BaseCharge }) {
         qu'on attendrait. Vos verdicts sont gardés dans ce navigateur, pour chaque base.
       </p>
       <p className="hint">
-        Lecture : « Nom (+score = N pour − M contre, sur K) ». Le score compte les thèmes (situation) ou les croisements sujet × thème (convictions) favorables moins
-        défavorables ; K, ceux où le candidat a un résultat. {jugés} situation(s) jugée(s) sur {ELECTORATS.length}.
+        Lecture : « Nom (+score = N pour − M contre) ». Le score est le nombre de mesures favorables moins le nombre de mesures défavorables, sans pourcentage. Les
+        tableaux « trois façons » comparent ce compte à celui par groupes de mesures et à l'ancien compte par thèmes. {jugés} situation(s) jugée(s) sur {ELECTORATS.length}.
       </p>
       <BilanPrismes base={base} />
       {ELECTORATS.map((electorat) => {
