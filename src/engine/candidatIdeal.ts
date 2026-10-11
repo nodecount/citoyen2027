@@ -43,8 +43,6 @@ export interface Solde {
   // Thèmes (situation) ou constats sujet × thème (convictions) où le candidat a un niveau : il n'est éligible que s'il y en a au moins un.
   analyses: number;
   solde: number;
-  // Nombre de mesures du candidat dans les thèmes étudiés (une fois par thème) : sert à noter le score sur 100.
-  totalMesures: number;
   // Les mesures derrière le score ; un thème « mixte » figure dans les deux listes, avec ses seules mesures favorables d'un côté et
   // ses seules mesures défavorables de l'autre.
   pour: Raison[];
@@ -53,17 +51,11 @@ export interface Solde {
 
 function soldesVides(cards: CardPourSolde[]): Map<string, Solde> {
   const slugs = new Set<string>();
-  const mesures = new Map<string, Set<string>>();
   for (const card of cards) {
-    for (const l of card.lignes) {
-      slugs.add(l.meta.slug);
-      const vues = mesures.get(l.meta.slug) ?? new Set<string>();
-      for (const p of l.propositions) vues.add(`${card.theme.id}|${p.titre}`);
-      mesures.set(l.meta.slug, vues);
-    }
+    for (const l of card.lignes) slugs.add(l.meta.slug);
     for (const a of card.absents) slugs.add(a.slug);
   }
-  return new Map([...slugs].sort().map((slug) => [slug, { slug, ameliorants: 0, degradants: 0, analyses: 0, solde: 0, totalMesures: mesures.get(slug)?.size ?? 0, pour: [], contre: [] }]));
+  return new Map([...slugs].sort().map((slug) => [slug, { slug, ameliorants: 0, degradants: 0, analyses: 0, solde: 0, pour: [], contre: [] }]));
 }
 
 // Le score (décision du 2026-10-11) : la DIFFÉRENCE entre le nombre de mesures favorables et le nombre de mesures défavorables,
@@ -207,7 +199,6 @@ export function combiner(situation: Solde[], convictions: Solde[]): Solde[] {
       degradants: s.degradants + c.degradants,
       analyses: s.analyses + c.analyses,
       solde: s.solde + c.solde,
-      totalMesures: s.totalMesures,
       pour: [...s.pour, ...c.pour],
       contre: [...s.contre, ...c.contre],
     };
@@ -233,8 +224,8 @@ export interface Classe {
   solde: Solde;
   // 1 pour le meilleur score, puis 2, 3… sans trou : les ex æquo partagent la même place (1, 1, 2, 3…).
   rang: number;
-  // Score noté sur 100 (décision du 2026-10-11) : le score du candidat rapporté au nombre de mesures du candidat qui en a le plus
-  // (100 = ce nombre). Jamais négatif : un score nul ou négatif vaut 0. Sert à la barre des tops ; le classement, lui, suit le score brut.
+  // Score noté sur 100 (décision du 2026-10-11) : le score du candidat rapporté au nombre de mesures qui touchent le visiteur
+  // (favorables + défavorables) chez le candidat qui en a le plus (100 = ce nombre : toutes favorables). Jamais négatif : un score nul ou négatif vaut 0. Sert à la barre des tops ; le classement, lui, suit le score brut.
   note: number;
 }
 
@@ -248,8 +239,9 @@ export function noteSur100(score: number, reference: number): number {
 export function classement(soldes: Solde[], ecartes: ReadonlySet<string> = new Set(), taille = 3): Classe[] {
   const tries = soldes.filter((s) => !ecartes.has(s.slug) && s.analyses > 0).sort((a, b) => b.solde - a.solde);
   const scores = [...new Set(tries.map((s) => s.solde))];
-  // La référence du 100 : le plus grand nombre de mesures parmi TOUS les candidats (écartés compris : elle ne bouge pas selon eux).
-  const reference = Math.max(0, ...soldes.map((s) => s.totalMesures));
+  // La référence du 100 : le plus grand nombre de mesures qui touchent le visiteur (favorables + défavorables) parmi TOUS les
+  // candidats (écartés compris : elle ne bouge pas selon eux). Elle suit donc les réponses du visiteur.
+  const reference = Math.max(0, ...soldes.map((s) => s.ameliorants + s.degradants));
   return tries
     .map((s) => ({ solde: s, rang: scores.indexOf(s.solde) + 1, note: noteSur100(s.solde, reference) }))
     .filter((c) => c.rang <= taille);

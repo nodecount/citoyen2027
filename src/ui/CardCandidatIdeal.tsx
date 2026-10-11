@@ -570,7 +570,7 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
           <h3>La barre de score</h3>
           <ul>
             <li>Le score brut est la simple différence : 8 mesures favorables et 3 défavorables font +5.</li>
-            <li>Dans les classements, il est présenté sur 100 : 100 correspond au nombre de mesures du candidat qui en propose le plus.</li>
+            <li>Dans les classements, il est présenté sur 100 : 100 correspond au plus grand nombre de mesures qui vous concernent chez un candidat (favorables ou défavorables).</li>
             <li>La barre part de la gauche. Cliquez sur un candidat : son score sur 100 est rappelé dans un rond, dont le contour se remplit comme la barre.</li>
             <li>Un score nul ou négatif s'affiche 0 : la barre ne descend jamais sous zéro.</li>
             <li>Dans la fenêtre de détail, le vert représente les mesures favorables et le rouge les défavorables.</li>

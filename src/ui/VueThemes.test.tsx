@@ -257,7 +257,8 @@ describe("après avoir eu des informations sur le visiteur", () => {
     const r = html([candidat("a", [prop("a", [HAUSSE])])], PROFIL);
     expect(r).toContain("Comment lire les indicateurs");
     for (const libelle of ["Améliorant", "Mixte", "Non concerné", "Dégradant"]) expect(r).toContain(libelle);
-    expect(r).toContain("Plus vous répondez, plus c&#x27;est précis");
+    expect(r).toContain("l&#x27;effet sur ma situation, pour ce thème, serait :");
+    expect(r).not.toContain("Plus vous répondez");
   });
 
   it("explique l'indicateur dans le détail : mesure, effet et extrait de source", () => {

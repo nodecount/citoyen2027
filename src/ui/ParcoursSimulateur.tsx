@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, Calculator, Compass, Eraser, EyeOff, RotateCcw, Target, UserRound, type LucideIcon } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calculator, Check, Compass, Eraser, EyeOff, RotateCcw, Target, UserRound, type LucideIcon } from "lucide-react";
 import { useContext, type ReactNode } from "react";
 import type { ProfilPartiel } from "../profil";
 import { compterReponses, estRepondue, questionsVisibles, type Questionnaire } from "../questionnaire";
@@ -36,18 +36,22 @@ export function IntroEtape({ etape, children }: { etape: Etape; children: ReactN
 
 // Indicateur d'étapes : on peut revenir à toute étape ; les thèmes et le résultat ne sont accessibles qu'une fois des informations données.
 export function Etapes({ etape, onAller, resultatAccessible }: { etape: Etape; onAller: (e: Etape) => void; resultatAccessible: boolean }) {
+  const courante = ETAPES.findIndex((e) => e.id === etape);
   return (
     <ol className="etapes" aria-label="Étapes du simulateur">
-      {ETAPES.map(({ id, libelle }, i) => (
-        <li key={id}>
-          <button type="button" className="etape" aria-current={etape === id ? "step" : undefined} disabled={(id === "themes" || id === "resultat") && !resultatAccessible} onClick={() => onAller(id)}>
-            <span className="etape-numero" aria-hidden="true">
-              {i + 1}
-            </span>
-            {libelle}
-          </button>
-        </li>
-      ))}
+      {ETAPES.map(({ id, libelle }, i) => {
+        const etat = id === etape ? "courante" : i < courante ? "faite" : "a-venir";
+        return (
+          <li key={id}>
+            <button type="button" className="etape" data-etat={etat} aria-current={etat === "courante" ? "step" : undefined} disabled={(id === "themes" || id === "resultat") && !resultatAccessible} onClick={() => onAller(id)}>
+              <span className="etape-numero" aria-hidden="true">
+                {etat === "faite" ? <Check size={18} strokeWidth={3} focusable="false" /> : i + 1}
+              </span>
+              {libelle}
+            </button>
+          </li>
+        );
+      })}
     </ol>
   );
 }

@@ -3343,48 +3343,99 @@ button.ideal-onglet:focus-visible {
 
 
 /* ---- Parcours du simulateur : étapes, navigation, rappel des réponses ---------------------------------- */
+/* Menu des étapes : quatre segments de même largeur (sélectionnés ou non), avec une barre de progression sous chacun : pleine pour les
+   étapes déjà passées (pastille « ✓ ») et celle en cours (pastille pleine), vide pour les suivantes. Deux colonnes sur écran étroit. */
 .etapes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
   padding: 0;
   list-style: none;
 }
+.etapes li {
+  min-width: 0;
+}
 .etapes .etape {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.75rem;
+  width: 100%;
   margin: 0;
-  padding: 0.5rem 1.1rem 0.5rem 0.6rem;
-  border: 2px solid var(--filet);
-  border-radius: 999px;
+  padding: 0.85rem 1rem 1rem;
+  overflow: hidden;
+  border: 1px solid var(--filet);
+  border-radius: 14px;
   background: var(--surface);
-  color: var(--bleu-fonce);
+  box-shadow: 0 1px 3px rgba(20, 40, 90, 0.08);
+  color: var(--encre-douce);
   font: inherit;
   font-weight: 700;
+  line-height: 1.25;
+  text-align: left;
   cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s, background-color 0.15s;
 }
-.etapes .etape:disabled {
-  cursor: not-allowed;
-  opacity: 0.55;
+.etapes .etape::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 4px;
+  background: var(--filet);
 }
 .etapes .etape-numero {
   display: grid;
+  flex: none;
   place-items: center;
-  width: 1.9rem;
-  height: 1.9rem;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--filet);
   border-radius: 50%;
+  background: var(--surface);
+  color: var(--encre-douce);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.etapes .etape:hover:not(:disabled) {
+  border-color: var(--bleu);
+  background: var(--surface);
+  box-shadow: 0 3px 10px rgba(20, 40, 90, 0.14);
+  color: var(--bleu-fonce);
+}
+.etapes .etape[data-etat="faite"]::after,
+.etapes .etape[data-etat="courante"]::after {
+  background: var(--bleu);
+}
+.etapes .etape[data-etat="faite"] {
+  color: var(--bleu-fonce);
+}
+.etapes .etape[data-etat="faite"] .etape-numero {
+  border-color: var(--bleu);
   background: var(--bleu-pale);
   color: var(--bleu);
 }
-.etapes .etape[aria-current="step"] {
+.etapes .etape[aria-current="step"],
+.etapes .etape[aria-current="step"]:hover:not(:disabled) {
   border-color: var(--bleu);
   background: var(--bleu-pale);
+  box-shadow: 0 3px 10px rgba(20, 40, 90, 0.14);
+  color: var(--bleu-fonce);
 }
 .etapes .etape[aria-current="step"] .etape-numero {
+  border-color: var(--bleu);
   background: var(--bleu);
   color: #fff;
+}
+.etapes .etape:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  box-shadow: none;
+}
+@media (max-width: 48rem) {
+  .etapes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 .nav-etape {
   display: flex;
@@ -3458,102 +3509,6 @@ button.ideal-onglet:focus-visible {
   padding-left: 1.2rem;
 }
 
-
-/* Étapes du parcours : volontairement discrètes.
-   Un simple fil numéroté, à plat (ni pastille, ni cadre), relié par un trait ; l'étape en cours est soulignée en bleu. */
-.etapes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 0;
-  margin: 0 0 1.25rem;
-  padding: 0;
-  list-style: none;
-  counter-reset: etape;
-}
-.etapes li {
-  display: flex;
-  align-items: center;
-}
-.etapes li + li::before {
-  content: "";
-  width: 2rem;
-  height: 2px;
-  margin: 0 0.25rem;
-  background: var(--filet);
-}
-.etapes .etape {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0;
-  padding: 0.4rem 0.25rem;
-  border: 0;
-  border-bottom: 3px solid transparent;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
-  color: var(--encre-douce);
-  font: inherit;
-  font-weight: 400;
-  cursor: pointer;
-}
-.etapes .etape-numero {
-  display: grid;
-  place-items: center;
-  width: 1.6rem;
-  height: 1.6rem;
-  border: 2px solid var(--filet);
-  border-radius: 50%;
-  background: var(--surface);
-  color: var(--encre-douce);
-  font-size: 1rem;
-  font-weight: 700;
-}
-.etapes .etape:hover:not(:disabled) {
-  color: var(--bleu-fonce);
-}
-.etapes .etape[aria-current="step"] {
-  border-bottom-color: var(--bleu);
-  background: none;
-  color: var(--bleu-fonce);
-  font-weight: 700;
-}
-.etapes .etape[aria-current="step"] .etape-numero {
-  border-color: var(--bleu);
-  background: var(--bleu);
-  color: #fff;
-}
-.etapes .etape:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-/* Largeur FIXE des quatre étapes, sélectionnées ou non (décision du 2026-10-11) : quatre colonnes égales, le libellé passe à la ligne
-   s'il est long, et le même gras partout pour que la sélection ne change jamais une largeur. Deux colonnes sur écran étroit. */
-.etapes {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.5rem 1rem;
-}
-.etapes li {
-  min-width: 0;
-}
-.etapes li + li::before {
-  content: none;
-}
-.etapes .etape {
-  width: 100%;
-  font-weight: 700;
-  line-height: 1.25;
-  text-align: left;
-}
-.etapes .etape-numero {
-  flex: none;
-}
-@media (max-width: 48rem) {
-  .etapes {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
 
 /* Deux sections d'ouverture, deux styles pour deux fonctions (décision du 2026-10-11) :
    1. l'INTRODUCTION de l'écran (« Objectif », explications) : bloc clair à liseré bleu à gauche ; il explique ;

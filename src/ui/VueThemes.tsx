@@ -209,10 +209,10 @@ function ResumeSituation({ resume, propositions, favorables, defavorables }: { r
 function AppelExplorer({ onExplorer }: { onExplorer?: () => void }) {
   return (
     <div className="appel-profil">
-      <p>En mode anonyme, nous n'affichons pas toutes les mesures du candidat.</p>
+      <p>En simulation, seules les mesures vous concernant sont affichées.</p>
       {onExplorer && (
         <button type="button" className="bouton-en-ligne" onClick={onExplorer}>
-          Explorer les mesures
+          Passer en mode exploration
         </button>
       )}
     </div>
@@ -373,11 +373,8 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil
         <CitationsResume resume={resume} propositions={propositions} />
       ) : anonyme && projection ? (
         // Simulateur anonyme : même forme de résumé qu'en exploration, mais limitée aux mesures qui touchent la situation du
-        // visiteur (vert : favorables, rouge : défavorables), puis un rappel que les autres ne sont pas affichées.
-        <>
-          <ResumeSituation resume={resume} propositions={propositions} favorables={favorables} defavorables={defavorables} />
-          <AppelExplorer onExplorer={onExplorer} />
-        </>
+        // visiteur (vert : favorables, rouge : défavorables). Le rappel « pas toutes les mesures » reste dans l'onglet Mesures.
+        <ResumeSituation resume={resume} propositions={propositions} favorables={favorables} defavorables={defavorables} />
       ) : resume ? (
         <Resume resume={resume} />
       ) : synthese ? (
@@ -853,7 +850,7 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
         // point gris seul, au bout, non rattaché.
         <section className="section-secondaire echelle" aria-label="Comment lire les indicateurs">
           <p className="echelle-question">
-            <strong>Si ce candidat était élu, ma situation sur ce thème serait…</strong> Plus vous répondez, plus c'est précis.
+            <strong>Si ce candidat était élu, l'effet sur ma situation, pour ce thème, serait :</strong>
           </p>
           <ol className="echelle-reperes">
             {(["ameliorant", "mixte", "degradant"] as NiveauProjection[]).map((niveau) => (
