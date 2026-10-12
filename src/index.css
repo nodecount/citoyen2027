@@ -646,8 +646,133 @@ a {
 }
 
 .bloc-credits,
-.bloc-limites {
+.bloc-limites,
+.bloc-schema {
   margin-top: 1.25rem;
+}
+
+/* Schéma de la chaîne de traitement : une entrée, deux colonnes (situation / convictions), une sortie. Chaque étape nomme son acteur. */
+.schema-traitement {
+  margin: 1rem 0 0;
+}
+
+.schema-traitement ol {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.schema-colonnes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1rem;
+}
+
+.colonne-schema {
+  padding: 0.9rem;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  background: var(--fond);
+}
+
+.colonne-schema h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.05rem;
+  color: var(--bleu-fonce);
+}
+
+.etape-schema {
+  position: relative;
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--filet);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+/* Petite flèche vers l'étape suivante, dessinée en bordures : rien à lire pour un lecteur d'écran. */
+.colonne-schema .etape-schema:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 1.55rem;
+  bottom: -0.62rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid var(--bleu);
+  border-bottom: 2px solid var(--bleu);
+  transform: rotate(45deg);
+}
+
+.etape-schema-numero {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: var(--bleu);
+  color: #fff;
+  font-weight: 700;
+}
+
+.etape-schema h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.etape-schema p {
+  margin: 0.2rem 0;
+}
+
+.etape-schema code {
+  display: inline-block;
+  margin-top: 0.3rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 6px;
+  background: var(--bleu-pale);
+  color: var(--bleu-fonce);
+  font-size: 0.875rem;
+}
+
+/* Qui agit : le mot porte le sens, la bordure (pleine pour le code, en tirets pour le modèle) le double. */
+.acteur {
+  display: inline-block;
+  margin-left: 0.3rem;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.acteur--code {
+  border: 2px solid var(--bleu);
+  background: var(--bleu-pale);
+  color: var(--bleu-fonce);
+}
+
+.acteur--modele {
+  border: 2px dashed var(--non-concerne);
+  background: var(--surface);
+  color: var(--encre);
+}
+
+.schema-fleche {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin: 0.35rem auto 0.6rem;
+  border-right: 2px solid var(--bleu);
+  border-bottom: 2px solid var(--bleu);
+  transform: rotate(45deg);
+}
+
+.schema-traitement figcaption {
+  margin-top: 0.9rem;
+  color: var(--encre-douce);
+  font-size: 0.9375rem;
 }
 
 /* Nom d'un candidat cité dans une phrase : la couleur du thème (bleu foncé), jamais le rouge (qui veut dire « dégradant »). */

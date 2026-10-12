@@ -14,7 +14,7 @@ describe("PageAPropos", () => {
   });
 
   it("présente chaque section dans un bloc avec son icône", () => {
-    expect((html.match(/<article class="bloc-a-propos[^"]*"><svg/g) ?? []).length).toBe(5);
+    expect((html.match(/<article class="bloc-a-propos[^"]*"><svg/g) ?? []).length).toBe(6);
   });
 
   it("a un chapitre sur les limites et les partis pris (score en mesures, compromis des tranches, pondération laissée au citoyen)", () => {
@@ -26,6 +26,16 @@ describe("PageAPropos", () => {
     expect(html).toContain("noté sur 100");
     expect(html).toContain("plus grand nombre de mesures qui touchent votre situation");
     expect(html).not.toContain("—");
+  });
+
+  it("schématise la chaîne de traitement : qui agit (code ou modèle) à chaque étape, et les deux branches", () => {
+    expect(html).toContain("Comment les mesures sont traitées");
+    expect(html).toContain("Pour votre situation");
+    expect(html).toContain("Pour vos convictions");
+    expect(html).toContain("npm run scrape:positions");
+    expect((html.match(/acteur--modele/g) ?? []).length).toBe(4);
+    expect((html.match(/acteur--code/g) ?? []).length).toBe(5);
+    expect(html).toContain("mot pour mot");
   });
 
   it("crédite chaque photo : vignette, auteur, licence et source, cliquables", () => {

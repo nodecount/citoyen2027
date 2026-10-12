@@ -1,6 +1,7 @@
-import { Camera, Database, Lock, Scale, TriangleAlert } from "lucide-react";
+import { Camera, Database, Lock, Scale, TriangleAlert, Workflow } from "lucide-react";
 import type { InfoBase } from "../data/bases";
 import { Pastille, PORTRAITS } from "./Pastille";
+import SchemaTraitement from "./SchemaTraitement";
 
 interface PageAProposProps {
   bases: InfoBase[];
@@ -68,6 +69,13 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
           <li>Vos convictions sont rattachées aux mesures par une méthode automatique, avec une seconde lecture. Elles n'ont pas encore été relues une à une par une personne.</li>
           <li>Un candidat dont les mesures ne sont pas encore intégrées ne peut pas ressortir : le résultat dépend de ce qui est publié et de ce qui a été traité à ce jour.</li>
         </ul>
+      </article>
+
+      <article className="bloc-a-propos bloc-schema">
+        <Workflow aria-hidden="true" />
+        <h2>Comment les mesures sont traitées</h2>
+        <p>Chaque étape dit qui agit : le code, ou un modèle d'IA que le code contrôle.</p>
+        <SchemaTraitement />
       </article>
 
       <article className="bloc-a-propos bloc-credits">
