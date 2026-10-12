@@ -241,6 +241,15 @@ de chaque question, combien de mesures la ciblent (favorables / défavorables) e
 aucune défavorable. À lancer après chaque structuration : une réponse jamais visée ne verra jamais une mesure la dégrader, même si elle est
 touchée dans la réalité. (Avant ce correctif, `chef_entreprise` n'avait aucun effet dans `agregateurs`.)
 
+### Base `agregateurs` : iso avec iFRAP (décision du 2026-10-12)
+L'objectif est que la base soit **identique à la source** : mêmes candidats, mêmes mesures. `npm run scrape:ifrap` remplace les
+propositions et **retire les candidats que la source ne liste plus** (`retirerAbsents` : dossier supprimé, historique dans git) ; on ne garde
+jamais une fiche disparue de la source (ex. « PARTI SOCIALISTE », Hollande, Faure, Guedj, Maurel, Royal… retirés le 2026-10-12 quand
+iFRAP les a retirés ; Glucksmann représente le PS). Si la source renomme un thème, ajouter l'alias dans `THEMES_IFRAP` (cas du 2026-10-12 :
+« Travail & Retraites »). **Après chaque scrape, dans cet ordre** : `scrape:structurer` (ne refait que les groupes changés, les effets
+des textes identiques sont gardés), `scrape:couverture`, puis `scrape:positions` EN DERNIER (le scrape efface les étiquettes de
+convictions : elles sont à refaire) et la simulation (`npx vite-node src/simulation/run-electorats.ts`). La base `officielle` n'est pas concernée.
+
 ### Règles ajoutées le 2026-10-10
 - **Tranches de revenus** : `officielle` coupe à 4 000 € (3 000-4 000, 4 000-5 000) ; `agregateurs` garde 3 000-5 000.
 - **Statut** : option « Chef d'entreprise ou employeur » (`chef_entreprise`) dans les deux bases ; les prompts d'extraction la réservent aux chefs d'entreprise, employeurs, patrons de TPE/PME ; indépendants, artisans, professions libérales restent `independant` ; grandes entreprises et actionnaires seuls = `autre`.
