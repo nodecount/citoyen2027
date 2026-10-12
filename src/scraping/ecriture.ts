@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import type { Proposition, Theme } from "../types";
 import type { CandidatConverti } from "./ifrap";
@@ -54,6 +54,17 @@ export function ecrireCandidats(racineBase: string, candidats: CandidatConverti[
     ecrireJson(resolve(dossier, "meta.json"), meta);
     ecrirePropositionsCandidat(racineBase, meta.slug, conserverEffets(propositions, chargerPropositionsCandidat(racineBase, meta.slug)));
   }
+}
+
+// Objectif « iso avec la source » (décision du 2026-10-12) : un candidat que la source ne liste plus est retiré de la base, avec ses
+// propositions, ses effets et ses étiquettes (l'historique reste dans git). Renvoie les slugs retirés.
+export function retirerAbsents(racineBase: string, slugsSource: string[]): string[] {
+  const dossier = resolve(racineBase, "programmes");
+  if (!existsSync(dossier)) return [];
+  const gardes = new Set(slugsSource);
+  const retires = readdirSync(dossier, { withFileTypes: true }).filter((d) => d.isDirectory() && !gardes.has(d.name)).map((d) => d.name);
+  for (const slug of retires) rmSync(resolve(dossier, slug), { recursive: true, force: true });
+  return retires.sort();
 }
 
 // Journal de structuration d'un candidat : une entrée par groupe (thème × tranche de propositions), avec l'empreinte

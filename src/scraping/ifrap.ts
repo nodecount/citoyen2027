@@ -18,6 +18,8 @@ export const THEMES_IFRAP: Record<string, string> = {
   "Intérieur & Justice": "interieur-justice",
   "Social & Solidarité": "social-solidarite",
   "Retraites & Travail": "retraites-travail",
+  // La source a inversé l'intitulé (constaté le 2026-10-12) : même thème.
+  "Travail & Retraites": "retraites-travail",
   Environnement: "environnement",
   "Europe & international": "europe-international",
   "Gouvernance & République": "gouvernance-republique",

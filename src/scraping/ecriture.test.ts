@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import type { Proposition, Theme } from "../types";
-import { ecrireCandidats, mettreAJourStatutsThemes } from "./ecriture";
+import { ecrireCandidats, mettreAJourStatutsThemes, retirerAbsents } from "./ecriture";
 import type { CandidatConverti } from "./ifrap";
 
 let racine: string;
@@ -37,6 +37,15 @@ describe("ecrireCandidats", () => {
     ecrireCandidats(racine, [CANDIDAT]);
     expect(JSON.parse(readFileSync(join(racine, "programmes/x/propositions.json"), "utf-8"))).toHaveLength(1);
     expect(readFileSync(join(racine, "programmes/x/notes.txt"), "utf-8")).toBe("à garder");
+  });
+});
+
+describe("retirerAbsents", () => {
+  it("retire les candidats que la source ne liste plus (iso source) et garde les autres", () => {
+    ecrireCandidats(racine, [CANDIDAT, { ...CANDIDAT, meta: { ...CANDIDAT.meta, slug: "y" } }]);
+    expect(retirerAbsents(racine, ["x"])).toEqual(["y"]);
+    expect(existsSync(join(racine, "programmes/y"))).toBe(false);
+    expect(existsSync(join(racine, "programmes/x/meta.json"))).toBe(true);
   });
 });
 

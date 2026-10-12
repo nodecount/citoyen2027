@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
-import { ecrireCandidats, mettreAJourStatutsThemes } from "./ecriture";
+import { ecrireCandidats, mettreAJourStatutsThemes, retirerAbsents } from "./ecriture";
 import { URL_API_IFRAP, convertirIfrap, type DonneesIfrap } from "./ifrap";
 
 // Usage : npm run scrape:ifrap [-- --depuis-cache]
@@ -33,6 +33,8 @@ async function main(): Promise<void> {
   const date = new Date().toISOString().slice(0, 10);
   const { candidats, rapport } = convertirIfrap(donnees, date);
   ecrireCandidats(RACINE_BASE, candidats);
+  const retires = retirerAbsents(RACINE_BASE, candidats.map((c) => c.meta.slug));
+  if (retires.length > 0) console.log(`[iso source] candidats retirés (absents de la source) : ${retires.join(", ")}`);
   mettreAJourStatutsThemes(RACINE_BASE, candidats);
 
   console.log(`[terminé] ${rapport.candidats} candidats, ${rapport.propositions} propositions écrites dans ${RACINE_BASE}`);
