@@ -6,6 +6,7 @@ import { PREFIXE_ANONYME } from "./aveugle";
 import { IconeTheme } from "./icones";
 import { Pastille } from "./Pastille";
 import { partiAffichable } from "./parti";
+import { premiereEnMajuscule } from "./VueThemes";
 
 // Card « candidat idéal » (décision du 2026-09-30, refondue le 2026-10-10) : seul endroit du produit qui désigne un candidat, par
 // une règle publique et identique pour tous (score = mesures favorables moins mesures défavorables, sans pourcentage ni pondération). Au centre,
@@ -68,7 +69,8 @@ const signe = (n: number) => (n > 0 ? `+${n}` : n < 0 ? `−${Math.abs(n)}` : "0
 export function badgesDe(points: Raison[], parMesure: boolean): Array<{ theme: string; groupe: string }> {
   const vus = new Set<string>();
   return points
-    .flatMap((p) => (parMesure ? p.mesures : p.groupes).map((groupe) => ({ theme: p.theme, groupe })))
+    // Un groupe est un morceau de phrase, souvent en minuscules : sa première lettre est une majuscule (pas les titres de mesures).
+    .flatMap((p) => (parMesure ? p.mesures : p.groupes.map(premiereEnMajuscule)).map((groupe) => ({ theme: p.theme, groupe })))
     .filter((b) => !vus.has(`${b.theme}|${b.groupe}`) && vus.add(`${b.theme}|${b.groupe}`));
 }
 

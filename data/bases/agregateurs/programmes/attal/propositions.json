@@ -19,7 +19,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Economies & hausses de dépenses",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser les charges sur le travail par des économies"
+      }
+    ]
   },
   {
     "id": "attal-finances-publiques-002",
@@ -149,7 +164,7 @@
         "dimension": "revenu_disponible",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Faire une année blanche sur l’ensemble des prestations sociales pour le budget 2028 sans toucher aux petites retraites."
+        "extrait": "Faire une année blanche sur l’ensemble des prestations sociales pour le budget 2028 sans toucher aux petites retraites"
       }
     ]
   },
@@ -420,22 +435,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes souhaitant faire venir leur famille par regroupement familial"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Restreindre le regroupement familial."
-      }
-    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -593,7 +592,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "certains mineurs"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Soutenir la loi de comparution immédiate pour certains mineurs."
+      }
+    ],
     "positions": [
       {
         "sujet": "justice_mineurs",
@@ -868,6 +882,22 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer le plafond de 220 heures supplémentaires annuelles autorisées."
       }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer le plafond de 220 heures supplémentaires annuelles autorisées."
+      }
     ]
   },
   {
@@ -980,7 +1010,16 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "protection_sociale",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Changer de système de retraite : supprimer l’âge de départ légal, maintenir la durée de cotisation."
+      }
+    ]
   },
   {
     "id": "attal-retraites-travail-008",
@@ -1015,7 +1054,7 @@
         "dimension": "patrimoine",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "abondé automatiquement à hauteur de 1 000 € par l’État à la naissance de chaque enfant"
+        "extrait": "une dotation en capital gérée par un fonds souverain, abondé automatiquement à hauteur de 1 000 € par l’État à la naissance de chaque enfant"
       }
     ],
     "positions": []

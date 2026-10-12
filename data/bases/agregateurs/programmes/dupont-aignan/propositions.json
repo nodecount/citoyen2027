@@ -75,16 +75,16 @@
       {
         "cibles": [
           {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "etudiant"
-            ]
-          },
-          {
             "champ": "nationalite",
             "valeurs": [
               "europeenne",
               "hors_ue"
+            ]
+          },
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
             ]
           }
         ],
@@ -208,7 +208,7 @@
             ]
           }
         ],
-        "dimension": "protection_sociale",
+        "dimension": "acces_aux_services",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer l'AME."
@@ -509,7 +509,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "détenus"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Installer partout des dispositifs de brouillage intégral des téléphones et d'interception des drones."
+      }
+    ],
     "positions": [
       {
         "sujet": "securite",
@@ -545,6 +560,22 @@
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Remettre en vigueur les fouilles systématiques après chaque visite"
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "détenus et leurs visiteurs"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Remettre en vigueur les fouilles systématiques après chaque visite."
       }
     ]
   },
@@ -770,7 +801,7 @@
         "dimension": "patrimoine",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "augmenter le plafond de 100 000 euros, augmenter la part du PTZ dans l'emprunt global"
+        "extrait": "Elargir les conditions d'accès du Pret à taux zéro : augmenter le plafond de 100 000 euros, augmenter la part du PTZ dans l'emprunt global."
       }
     ]
   },
@@ -793,29 +824,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "projet_achat",
-            "valeurs": [
-              "oui"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "classes moyennes, pour l'achat du premier logement"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un Prêt Accession à la Propriété ( PAP) à taux d’intérêt préférentiel et de longue durée pour aider les classes moyennes à acheter leur premier logement"
-      }
-    ]
+    "sous_theme": "Logement"
   },
   {
     "id": "dupont-aignan-social-solidarite-003",
@@ -837,7 +846,37 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "a_venir"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "augmentant le plafond des donations exonérées de droits de 100 000 euros supplémentaires par enfant ou petit enfant"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "a_venir"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "réduisant de 15 à 10 ans le délai minimum entre deux donations"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-retraites-travail-001",
@@ -859,28 +898,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "nationalite",
-            "valeurs": [
-              "francaise"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "nouveau né"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Fournir un \" minimum retraite \" de 10 000 euros à chaque nouveau né français, qui sera gelé jusqu'à 60 ans."
-      }
-    ],
     "positions": []
   },
   {
@@ -986,7 +1003,30 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          },
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "recu",
+              "a_venir"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Suppression des droits de succession sur les 100 premiers hectares transmis aux jeunes agriculteurs."
+      }
+    ]
   },
   {
     "id": "dupont-aignan-envi-005",
@@ -1038,7 +1078,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": [],
     "positions": [
       {
         "sujet": "commerce",
@@ -1068,7 +1107,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "autoriser la vente libre de céréales entre producteurs et éleveurs pour limiter les marges des intermédiaires"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-europe-international-001",
@@ -1303,7 +1357,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Egalité, laïcité & droits individuels",
-    "effets": []
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Suspendre les aides sociales pour les personnes récidivistes qui enfreignent les principes de laïcité."
+      }
+    ]
   },
   {
     "id": "dupont-aignan-gouvernance-republique-004",
@@ -1611,7 +1673,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "enseignant"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "assurer une formation IA des enseignants"
+      }
+    ],
     "positions": [
       {
         "sujet": "ia",

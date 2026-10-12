@@ -2,116 +2,110 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "81beda0bb1db09f1",
-    "date": "2026-10-04",
+    "empreinte": "ee4466005db359db",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 10,
-    "avec_effets": 5,
-    "sans_effet": 3,
+    "avec_effets": 7,
+    "sans_effet": 1,
     "rejetees": [
       {
-        "id": "lisnard-education-jeunesse-002",
-        "raison": "relecture : Le chèque-éducation ne fait que remplacer le financement existant par un montant équivalent ; pour les familles déjà en école publique gratuite, le texte ne permet pas de déduire une baisse du coût de la vie."
+        "id": "lisnard-education-jeunesse-004",
+        "raison": "relecture : Le texte instaure une condition de validation, mais ne dit pas que l'accès au collège baisse globalement pour les enfants du primaire ; c'est un effet de mécanisme supposé plutôt qu'un fait établi par l'extrait."
       },
       {
-        "id": "lisnard-education-jeunesse-009",
-        "raison": "relecture : La cible 'etudiant' élargit le périmètre : le texte parle de lycées professionnels et CFA, dont le public relève du statut lycéen/apprenti, pas d'étudiant."
+        "id": "lisnard-education-jeunesse-008",
+        "raison": "relecture : Le texte confie l'éveil des enfants de 1 à 6 ans aux communes, alors que la cible retenue est restreinte aux enfants de moins de 3 ans, ce qui ne correspond pas au périmètre décrit."
       }
     ],
-    "cout_reference_usd": 0.0772,
+    "cout_reference_usd": 0.0789,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "646b1c26c26476d3",
-    "date": "2026-10-04",
+    "empreinte": "415dbb7a0f4e789b",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 9,
     "avec_effets": 1,
     "sans_effet": 8,
     "rejetees": [],
-    "cout_reference_usd": 0.0482,
+    "cout_reference_usd": 0.0514,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "b9d02c7860e2f7d1",
-    "date": "2026-10-10",
+    "empreinte": "e4cecbd98d30f8e1",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 3,
     "avec_effets": 2,
-    "sans_effet": 0,
-    "rejetees": [
-      {
-        "id": "lisnard-finances-publiques-001",
-        "raison": "relecture : La cible inclut 'recu' (héritages déjà perçus), alors qu'une baisse de fiscalité ne peut s'appliquer qu'aux transmissions futures."
-      }
-    ],
-    "cout_reference_usd": 0.0516,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0496,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "fbfe272737606d46",
-    "date": "2026-10-04",
+    "empreinte": "db7e34e4d8d855cc",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 22,
-    "avec_effets": 4,
-    "sans_effet": 18,
+    "avec_effets": 6,
+    "sans_effet": 16,
     "rejetees": [],
-    "cout_reference_usd": 0.0807,
+    "cout_reference_usd": 0.0907,
     "appels": 2
   },
   {
     "theme": "reformes-etat",
     "groupe": 0,
-    "empreinte": "a6f3e91502c459ba",
-    "date": "2026-10-04",
+    "empreinte": "64380c39828a5fdc",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 9,
     "avec_effets": 0,
     "sans_effet": 9,
     "rejetees": [],
-    "cout_reference_usd": 0.0323,
+    "cout_reference_usd": 0.0371,
     "appels": 1
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "c79ec86dc4f4a2f0",
-    "date": "2026-10-10",
+    "empreinte": "99d3805cceb7c6e4",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
-    "sans_effet": 0,
-    "rejetees": [
-      {
-        "id": "lisnard-retraites-travail-001",
-        "raison": "relecture : Le second effet cible la tranche 1000_1300€, mais une partie de cette tranche (1200-1300€) est déjà au-dessus du socle garanti et ne connaîtrait donc pas de hausse, ce qui élargit indûment le périmètre de l'effet annoncé."
-      }
-    ],
-    "cout_reference_usd": 0.0499,
-    "appels": 2
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.035,
+    "appels": 1
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "2cff9272badbeba2",
-    "date": "2026-10-04",
+    "empreinte": "c633456bde994a3e",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 9,
     "avec_effets": 2,
-    "sans_effet": 6,
+    "sans_effet": 5,
     "rejetees": [
       {
+        "id": "lisnard-social-solidarite-001",
+        "raison": "relecture : L'amélioration de l'accès aux soins dans les déserts médicaux suppose un mécanisme non énoncé (incitation des médecins à s'y installer) ; le texte ne décrit qu'un niveau de remboursement différencié, pas un effet d'accès."
+      },
+      {
         "id": "lisnard-social-solidarite-006",
-        "raison": "relecture : Le texte vise les étudiants en médecine spécifiquement, alors que le critère 'statut_professionnel: etudiant' élargit la cible à tous les étudiants."
+        "raison": "relecture : Le champ 'statut_professionnel: etudiant' vise tous les étudiants alors que le texte ne concerne que les étudiants en médecine (doublement des places, LAS/PASS)."
       }
     ],
-    "cout_reference_usd": 0.0552,
+    "cout_reference_usd": 0.0711,
     "appels": 2
   }
 ]

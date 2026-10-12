@@ -28,6 +28,10 @@ describe("soldesSituation", () => {
     expect(par.b).toMatchObject({ ameliorants: 2, degradants: 2, solde: 0, analyses: 4 });
     expect(par.c).toMatchObject({ ameliorants: 0, degradants: 0, solde: 0, analyses: 1 });
   });
+  it("un « mixte à préciser » compte ses effets déjà retenus : ses favorables d'un côté, ses défavorables de l'autre", () => {
+    const incertain = { meta: { slug: "a" }, projection: { niveau: "mixte" as const, incertain: true, effetsRetenus: [{ propositionId: "1", polarite: "favorable" as const }, { propositionId: "2", polarite: "defavorable" as const }, { propositionId: "3", polarite: "defavorable" as const }] }, propositions: [mesure("1"), mesure("2"), mesure("3")] };
+    expect(soldesSituation([card([incertain])])[0]).toMatchObject({ ameliorants: 1, degradants: 2, solde: -1 });
+  });
   it("aucune pondération : chaque mesure pèse pareil, un thème à beaucoup de mesures pèse plus qu'un thème à une seule", () => {
     const cards = [
       card([avecMesures("a", "ameliorant", [["1", "favorable"]])]),

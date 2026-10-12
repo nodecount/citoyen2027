@@ -2,27 +2,32 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "c6e0d746dde2b324",
-    "date": "2026-10-10",
+    "empreinte": "cae69b6b11f5caef",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 5,
     "avec_effets": 2,
-    "sans_effet": 3,
-    "rejetees": [],
-    "cout_reference_usd": 0.0544,
+    "sans_effet": 2,
+    "rejetees": [
+      {
+        "id": "roussel-finances-publiques-002",
+        "raison": "relecture : Le texte ne précise aucun seuil de revenu ; cibler spécifiquement 'plus_5000' n'est pas fondé par l'extrait."
+      }
+    ],
+    "cout_reference_usd": 0.0592,
     "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "4c815a8b1340334e",
-    "date": "2026-10-10",
+    "empreinte": "a60e73202723509e",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
     "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.0289,
+    "cout_reference_usd": 0.0325,
     "appels": 1
   }
 ]

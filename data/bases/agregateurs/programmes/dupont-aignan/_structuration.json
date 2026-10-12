@@ -2,81 +2,81 @@
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "b401e44879cab361",
-    "date": "2026-10-04",
+    "empreinte": "a2fbecdacd19daaa",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 7,
-    "avec_effets": 0,
-    "sans_effet": 6,
+    "avec_effets": 2,
+    "sans_effet": 4,
     "rejetees": [
       {
-        "id": "dupont-aignan-envi-004",
-        "raison": "relecture : Le texte parle de « jeunes agriculteurs » sans préciser d'âge, or le statut de jeune agriculteur en France s'étend souvent jusqu'à 40 ans, donc restreindre à 'moins_30' ajoute un critère d'âge non fondé par le texte."
+        "id": "dupont-aignan-envi-006",
+        "raison": "relecture : L'effet sur l'emploi est déduit d'un mécanisme macroéconomique supposé (plus de commandes publiques entraînant plus d'embauches) non affirmé par le texte."
       }
     ],
-    "cout_reference_usd": 0.0447,
+    "cout_reference_usd": 0.0743,
     "appels": 2
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "9b57da82970b5fa0",
-    "date": "2026-10-04",
+    "empreinte": "d4b435952db2eb27",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 16,
-    "avec_effets": 0,
-    "sans_effet": 16,
+    "avec_effets": 2,
+    "sans_effet": 14,
     "rejetees": [],
-    "cout_reference_usd": 0.0372,
-    "appels": 1
+    "cout_reference_usd": 0.0577,
+    "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "bbed63810b5e90cc",
-    "date": "2026-10-04",
+    "empreinte": "527af8fe278b51a0",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 21,
-    "avec_effets": 9,
-    "sans_effet": 11,
-    "rejetees": [
-      {
-        "id": "dupont-aignan-interieur-justice-015",
-        "raison": "relecture : Le texte ne mentionne que des fouilles après visite, sans indiquer que les visiteurs eux-mêmes sont fouillés ou subissent une baisse de droits, ce qui élargit le périmètre des cibles."
-      }
-    ],
-    "cout_reference_usd": 0.0911,
+    "avec_effets": 11,
+    "sans_effet": 10,
+    "rejetees": [],
+    "cout_reference_usd": 0.1031,
     "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "ee7bfc88c20707b9",
-    "date": "2026-10-10",
+    "empreinte": "f4fa1555ceba5b7f",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 1,
-    "avec_effets": 1,
+    "avec_effets": 0,
     "sans_effet": 0,
-    "rejetees": [],
-    "cout_reference_usd": 0.0445,
+    "rejetees": [
+      {
+        "id": "dupont-aignan-retraites-travail-001",
+        "raison": "relecture : Le texte vise les 'nouveau-nés', pas tous les 'enfants de moins de 3 ans', ce qui élargit le périmètre des cibles."
+      }
+    ],
+    "cout_reference_usd": 0.0525,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "720d83cb893b4322",
-    "date": "2026-10-04",
+    "empreinte": "4ad59694ffb676d7",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 3,
     "avec_effets": 2,
     "sans_effet": 0,
     "rejetees": [
       {
-        "id": "dupont-aignan-social-solidarite-003",
-        "raison": "relecture : La cible 'heritage: a_venir' élargit le périmètre : le texte vise les donations (transmission de son vivant) à enfants/petits-enfants, pas les successions futures au sens d'héritage."
+        "id": "dupont-aignan-social-solidarite-002",
+        "raison": "relecture : Le texte vise spécifiquement les classes moyennes achetant leur premier logement, mais la cible 'projet_achat: oui' élargit le périmètre à tous les acheteurs sans restriction de revenu."
       }
     ],
-    "cout_reference_usd": 0.048,
+    "cout_reference_usd": 0.0548,
     "appels": 2
   }
 ]

@@ -183,6 +183,22 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Instaurer un impôt plancher annuel de 2% sur les patrimoines supérieurs à 100 millions d'euros"
       }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "patrimoines supérieurs à 100 millions d'euros"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un impôt plancher annuel de 2% sur les patrimoines supérieurs à 100 millions d'euros"
+      }
     ]
   },
   {
@@ -218,7 +234,7 @@
         "dimension": "patrimoine",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne pour éviter l'exil fiscal."
+        "extrait": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne"
       }
     ],
     "positions": [
@@ -304,7 +320,7 @@
         "dimension": "patrimoine",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "grâce à une taxation des gros héritages."
+        "extrait": "grâce à une taxation des gros héritages"
       }
     ]
   },
@@ -327,8 +343,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration",
-    "effets": []
+    "sous_theme": "Immigration"
   },
   {
     "id": "glucksmann-interieur-justice-002",
@@ -707,7 +722,7 @@
           {
             "champ": "autre",
             "valeurs": [
-              "jeunes (santé mentale)"
+              "jeunes"
             ]
           }
         ],
@@ -762,22 +777,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "sans_emploi"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "indetermine",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abroger la réforme Macron de l’assurance chômage."
-      }
-    ],
+    "effets": [],
     "positions": [
       {
         "sujet": "aides_sociales",
@@ -1071,22 +1071,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "logement",
-            "valeurs": [
-              "locataire"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abroger la loi Kasbarian."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "glucksmann-social-solidarite-018",
@@ -1150,7 +1135,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports"
+    "sous_theme": "Transports",
+    "effets": []
   },
   {
     "id": "glucksmann-social-solidarite-021",
@@ -1283,6 +1269,42 @@
       {
         "sujet": "salaires",
         "position": "hausse_smic",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter le SMIC à 1600€ net."
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "tranche_revenus",
+            "valeurs": [
+              "moins_1200"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter le SMIC à 1600€ net."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Augmenter le SMIC à 1600€ net."
       }
@@ -1527,9 +1549,16 @@
     "sous_theme": "Système de retraite",
     "effets": [
       {
-        "cibles": [],
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "50_64"
+            ]
+          }
+        ],
         "dimension": "protection_sociale",
-        "sens": "indetermine",
+        "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Abroger la réforme Macron de 2023."
       }
@@ -1586,22 +1615,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "metier_penible",
-            "valeurs": [
-              "oui"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "indetermine",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Imaginer une réforme des retraites qui mette la pénibilité des métiers au cœur."
-      }
-    ],
+    "effets": [],
     "positions": []
   },
   {
@@ -1848,7 +1862,7 @@
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Annuler la hausse de taxe sur l’électricité imposée en 2024"
+        "extrait": "Annuler la hausse de taxe sur l’électricité imposée en 2024."
       }
     ],
     "positions": [
@@ -1903,7 +1917,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": [],
     "positions": []
   },
   {
@@ -1939,7 +1952,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Relancer et simplifier MaPrimeRénov'"
+        "extrait": "Relancer et simplifier MaPrimeRénov'."
       }
     ],
     "positions": []
@@ -2033,7 +2046,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": [],
     "positions": []
   },
   {
@@ -2078,7 +2090,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "positions": []
+    "positions": [],
+    "effets": []
   },
   {
     "id": "glucksmann-envi-015",
@@ -2159,7 +2172,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réformer la PAC pour soutenir l’emploi et le revenu agricole"
+        "extrait": "Réformer la PAC pour soutenir l’emploi et le revenu agricole, l’utilité écologique et l’agriculture familiale."
       }
     ],
     "positions": []
@@ -2194,10 +2207,10 @@
             ]
           }
         ],
-        "dimension": "emploi",
+        "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rééquilibrer la répartition des quotas de pêche pour favoriser la pêche artisanale et côtière"
+        "extrait": "Rééquilibrer la répartition des quotas de pêche pour favoriser la pêche artisanale et côtière en créant des labels valorisant la pêche de proximité."
       }
     ],
     "positions": []
@@ -2282,7 +2295,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "positions": []
+    "positions": [],
+    "effets": []
   },
   {
     "id": "glucksmann-envi-022",
@@ -2330,18 +2344,16 @@
       {
         "cibles": [
           {
-            "champ": "enfants_scolarises",
+            "champ": "enfants_a_charge",
             "valeurs": [
-              "maternelle_primaire",
-              "college",
-              "lycee"
+              "au_moins_un"
             ]
           }
         ],
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre à disposition des produits BIO à la cantine pour les enfants"
+        "extrait": "Mettre à disposition des produits BIO à la cantine pour les enfants."
       }
     ],
     "positions": []
@@ -2984,7 +2996,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un droit d’initiative citoyenne."
+      }
+    ],
     "positions": [
       {
         "sujet": "institutions",
@@ -3208,7 +3228,8 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Numérique et IA"
+    "sous_theme": "Numérique et IA",
+    "effets": []
   },
   {
     "id": "glucksmann-gouvernance-republique-019",
@@ -3230,22 +3251,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "moins de 15 ans"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Interdire les réseaux sociaux pour les moins de 15 ans."
-      }
-    ],
     "positions": [
       {
         "sujet": "libertes",
@@ -3559,9 +3564,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "enfants_scolarises",
             "valeurs": [
-              "lycéens en orientation avant Parcoursup"
+              "lycee"
             ]
           }
         ],
@@ -3648,6 +3653,12 @@
             "valeurs": [
               "etudiant"
             ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "frais liés à l'éloignement dans l'accès aux études supérieures"
+            ]
           }
         ],
         "dimension": "revenu_disponible",
@@ -3700,7 +3711,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Enseignement supérieur",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rénover les bâtiments et campus universitaires"
+      }
+    ],
     "positions": []
   },
   {

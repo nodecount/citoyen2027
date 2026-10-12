@@ -26,6 +26,22 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre à contribution les patrimoines supérieurs à 10 millions d'euros lors de la transmission"
       }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "patrimoines supérieurs à 10 millions d'euros lors de la transmission"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre à contribution les patrimoines supérieurs à 10 millions d'euros lors de la transmission"
+      }
     ]
   },
   {
@@ -54,7 +70,7 @@
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer la TVA sur les produits alimentaires et les travaux de rénovation énergétique, en passant de 5,5 % à 0 %."
+        "extrait": "Supprimer la TVA sur les produits alimentaires et les travaux de rénovation énergétique, en passant de 5,5 % à 0 %"
       }
     ],
     "positions": []

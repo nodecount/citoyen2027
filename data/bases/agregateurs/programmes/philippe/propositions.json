@@ -197,6 +197,7 @@
           {
             "champ": "heritage",
             "valeurs": [
+              "recu",
               "a_venir"
             ]
           }
@@ -204,7 +205,7 @@
         "dimension": "patrimoine",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter les plafonds d'exonération fiscale des donations pendant les trois premières années du quinquennat."
+        "extrait": "Augmenter les plafonds d’exonération fiscale des donations pendant les trois premières années du quinquennat."
       }
     ]
   },
@@ -303,23 +304,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "positions": [],
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "dès le deuxième enfant"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Accorder une part fiscale dès le deuxième enfant."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "philippe-interieur-justice-001",
@@ -341,7 +326,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "demandeur_asile"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire voter au Parlement chaque année une liste de « pays sûrs » pour le droit d’asile."
+      }
+    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -371,7 +371,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
     "positions": [
       {
         "sujet": "immigration",
@@ -490,7 +489,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Utiliser les centres de retour prévus par la le réglement européen retour."
+      }
+    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -768,7 +782,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "victime potentielle d'une plainte liée aux enfants"
+            ]
+          }
+        ],
+        "dimension": "securite_personnelle",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "à chaque plainte déposée liée aux enfants, une mesure de protection immédiate soit mise en place pour la victime potentielle"
+      }
+    ],
     "positions": []
   },
   {
@@ -850,7 +879,23 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Lutte contre le narcotrafic"
+    "sous_theme": "Lutte contre le narcotrafic",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes condamnées pour narcotrafic"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Constituer une \"fiche S financière\" soit un profil bancaire spécifique pour les personnes condamnées pour narcotrafic."
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-019",
@@ -878,14 +923,14 @@
           {
             "champ": "autre",
             "valeurs": [
-              "mineurs en lien avec le narcotrafic"
+              "mineurs impliqués dans le narcotrafic"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Lever l'excuse de minorité pour les faits en lien avec le narcotrafic et créer la comparution immédiate des mineurs pour ces infractions"
+        "extrait": "Lever l'excuse de minorité pour les faits en lien avec le narcotrafic et créer la comparution immédiate des mineurs pour ces infractions."
       }
     ],
     "positions": [
@@ -930,7 +975,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer des établissements de réinsertion et de soin pour les mineurs condamnés pour narcotrafic"
+        "extrait": "Créer des établissements de réinsertion et de soin pour les mineurs condamnés pour narcotrafic."
       }
     ],
     "positions": [
@@ -975,7 +1020,7 @@
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Aligner le régime de l'application des peines des grands narcotrafiquants sur celui des terroristes"
+        "extrait": "Aligner le régime de l'application des peines des grands narcotrafiquants sur celui des terroristes."
       }
     ],
     "positions": [
@@ -1053,22 +1098,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes chargées de mission de service public poursuivies pour usage de stupéfiant"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Informer systématiquement les employeurs publics lorsqu’une personne chargée de mission de service public est poursuivie pour usage de stupéfiant"
-      }
-    ],
     "positions": []
   },
   {
@@ -1097,7 +1126,7 @@
           {
             "champ": "autre",
             "valeurs": [
-              "consommateurs de stupéfiants"
+              "consommateurs verbalisés lors d'opérations place nette"
             ]
           }
         ],
@@ -1182,7 +1211,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer une aide financière unique et universelle pour les familles, en fusionnant les dispositifs existants trop complexes et éparpillés."
+      }
+    ],
     "positions": []
   },
   {
@@ -1277,9 +1321,9 @@
       {
         "cibles": [
           {
-            "champ": "statut_professionnel",
+            "champ": "autre",
             "valeurs": [
-              "salarie"
+              "actifs (personnes en emploi)"
             ]
           }
         ],
@@ -1315,16 +1359,22 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "statut_professionnel",
             "valeurs": [
-              "parents reprenant le travail après un congé parental"
+              "salarie"
+            ]
+          },
+          {
+            "champ": "enfant_moins_3_ans",
+            "valeurs": [
+              "oui"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "un temps partiel parental, à 80 % rémunéré 100 % pendant 2 mois"
+        "extrait": "Créer un temps partiel parental, à 80 % rémunéré 100 % pendant 2 mois pour faciliter la reprise des parents après les congés parentaux"
       }
     ]
   },
@@ -1400,6 +1450,22 @@
         "position": "travailler_plus",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Relever l’âge légal de départ à la retraite, en fonction des métiers et de leur pénibilité."
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "50_64"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Relever l’âge légal de départ à la retraite, en fonction des métiers et de leur pénibilité"
       }
     ]
   },
@@ -2040,7 +2106,7 @@
             ]
           }
         ],
-        "dimension": "droits_et_libertes",
+        "dimension": "acces_aux_services",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "une majorité numérique conditionnant l’accès aux réseaux sociaux"
@@ -2128,15 +2194,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Numérique et IA",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "patrimoine",
-        "sens": "indetermine",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un \"livret capital France\" pour mobiliser l'épargne des Français"
-      }
-    ],
+    "effets": [],
     "positions": []
   },
   {
@@ -2166,14 +2224,14 @@
           {
             "champ": "autre",
             "valeurs": [
-              "personnes exerçant un métier menacé par l'IA"
+              "métiers menacés par l'IA"
             ]
           }
         ],
-        "dimension": "emploi",
+        "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "en instaurant un droit à la reconversion pour les métiers menacés"
+        "extrait": "instaurant un droit à la reconversion pour les métiers menacés"
       }
     ]
   },
@@ -2430,7 +2488,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter de 20 % en moyenne le salaire des enseignants sur un quinquennat"
+        "extrait": "Augmenter de 20 % en moyenne le salaire des enseignants sur un quinquennat pour le ramener au moins au niveau de la moyenne européenne."
       }
     ],
     "positions": [
@@ -2562,22 +2620,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "enfants_scolarises",
-            "valeurs": [
-              "maternelle_primaire"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "indetermine",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Concentrer l'enseignement primaire sur les savoirs fondamentaux, lire, écrire, compter."
-      }
-    ],
+    "effets": [],
     "positions": [
       {
         "sujet": "ecole_organisation",

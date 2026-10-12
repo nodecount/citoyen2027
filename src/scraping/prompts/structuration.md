@@ -67,7 +67,8 @@ Correspondances exactes (à appliquer telles quelles quand le texte les vise) :
 **`dimension`** : la grandeur qui bouge pour le citoyen visé — `revenu_disponible` (impôts, cotisations, salaire net,
 prestations perçues), `cout_de_la_vie` (prix, loyers, énergie, frais restant à charge), `emploi`,
 `protection_sociale`, `acces_aux_services` (soins, école, transports, justice), `droits_et_libertes`,
-`securite_personnelle`, `patrimoine`. Choisis la plus directe.
+`securite_personnelle`, `patrimoine`, `cout_du_travail` (réservée à l'EMPLOYEUR : ce qu'il paie ou subit pour employer, voir plus
+bas). Choisis la plus directe.
 
 **`sens`** : `hausse` ou `baisse` de cette grandeur pour le citoyen visé, ou `indetermine` si le texte ne permet pas
 de trancher. Une hausse d'impôt est une **baisse** du `revenu_disponible`. En cas de doute : `indetermine`, ou pas
@@ -82,10 +83,22 @@ chaque morceau doit être recopié mot pour mot, dans l'ordre du texte. Si le te
 **Effets de premier ordre uniquement** : ce que la mesure fait directement au citoyen visé. Jamais de conséquences
 supposées (croissance, inflation, emploi global, réaction des marchés), même plausibles.
 
-**Impôts, taxes et cotisations payés par les entreprises** (impôts de production, C3S, CVAE, CFE, impôt sur les
-sociétés, cotisations patronales, forfait social…) : **ce ne sont pas des effets sur un citoyen**, sauf si le texte
-dit expressément que des particuliers en bénéficient ou en supportent le coût. Ne les rattache JAMAIS par déduction à
-un statut (`independant`, `salarie`…) ou à un revenu : `effets: []`.
+**Les deux faces d'une mesure sur le travail.** Une mesure qui impose quelque chose aux employeurs touche DEUX publics :
+écris un effet pour celui qui en bénéficie ou la subit en tant que salarié (ex : `salarie`, `revenu_disponible`,
+`hausse`), ET, quand le texte établit ce que l'employeur paie ou supporte, un second effet sur `statut_professionnel` :
+[`chef_entreprise`] avec la dimension `cout_du_travail` (`hausse` = l'employeur paie ou supporte davantage). Cela vaut pour :
+un salaire minimum relevé (SMIC, salaire d'apprenti), des cotisations patronales relevées ou baissées, un congé payé ou une
+heure supplémentaire majorée imposés, un salaire maximal ou un écart de salaires imposé, un quota d'embauche ou une
+interdiction de licencier imposés à l'employeur. Les deux effets s'appuient sur le MÊME extrait si le texte le permet.
+N'écris le second que si la mesure s'applique bien aux employeurs en général (le texte dit « les entreprises », « les
+employeurs », « le SMIC », « les salariés » d'une entreprise…) : une mesure réservée aux grandes entreprises ou aux
+actionnaires vise un public que le formulaire ne décrit pas (`autre`), pas `chef_entreprise`.
+
+**Autres impôts, taxes et cotisations payés par les entreprises** (impôts de production, C3S, CVAE, CFE, impôt sur les
+sociétés, forfait social…) : **ce ne sont pas des effets sur un citoyen**, sauf si le texte dit expressément que des
+particuliers en bénéficient ou en supportent le coût. Ne les rattache JAMAIS par déduction à un statut (`independant`,
+`salarie`…) ou à un revenu : `effets: []`. Les cotisations patronales et le coût du travail, eux, relèvent de la règle
+précédente.
 
 **`securite_personnelle` et `droits_et_libertes`** : n'écris un effet que si la mesure **modifie directement** une
 protection ou un droit **dont le citoyen ciblé est lui-même titulaire** (ex : un droit accordé ou retiré à une
@@ -104,6 +117,11 @@ Exemples fictifs, sans lien avec un candidat réel :
   {`autre`: [« revenus supérieurs à 250 000 € par an »]}], `dimension` `revenu_disponible`, `sens` `baisse`.
 - « Aide de 100 € par mois pour les locataires de moins de 30 ans » → `cibles` = [{`logement`: [`locataire`]},
   {`tranche_age`: [`moins_30`]}], `revenu_disponible`, `hausse`.
+- « Porter le salaire minimum à 1 600 € net » → deux effets : [{`statut_professionnel`: [`salarie`]}, {`tranche_revenus`:
+  [`moins_1200`]}] `revenu_disponible` `hausse` ; et [{`statut_professionnel`: [`chef_entreprise`]}] `cout_du_travail` `hausse`.
+- « Une sixième semaine de congés payés pour tous les salariés » → [{`statut_professionnel`: [`salarie`]}] `revenu_disponible`
+  `hausse` n'est PAS justifié (aucun revenu en plus) : écris seulement [{`statut_professionnel`: [`chef_entreprise`]}]
+  `cout_du_travail` `hausse` si le texte dit que l'employeur doit l'accorder.
 - « Réforme du financement des retraites, modalités à définir » → `effets: []`.
 - « Suppression de la cotisation sur la valeur ajoutée des entreprises » → `effets: []` (impôt payé par les entreprises).
 - « Réduire le nombre de ministères » → `effets: []`.

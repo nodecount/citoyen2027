@@ -136,15 +136,9 @@
       {
         "cibles": [
           {
-            "champ": "aides_percues",
+            "champ": "statut_sejour",
             "valeurs": [
-              "aucune"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "bénéficiaires de l'Aide Médicale d'État"
+              "sans_titre"
             ]
           }
         ],
@@ -219,8 +213,7 @@
           {
             "champ": "heritage",
             "valeurs": [
-              "a_venir",
-              "recu"
+              "a_venir"
             ]
           }
         ],
@@ -259,7 +252,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire de 40 milliards d’euros les cotisations sociales afin de diminuer le coût du travail pour les entreprises."
+      }
+    ],
     "positions": [
       {
         "sujet": "entreprises",
@@ -302,7 +310,21 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Exonérer totalement de cotisations sociales les heures supplémentaires effectuées au-delà de 35 heures par semaine, afin de rendre les heures supplémentaires plus avantageuses pour les salariés"
+        "extrait": "Exonérer totalement de cotisations sociales les heures supplémentaires effectuées au-delà de 35 heures par semaine, afin de rendre les heures supplémentaires plus avantageuses pour les salariés et moins coûteuses pour les employeurs."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Exonérer totalement de cotisations sociales les heures supplémentaires effectuées au-delà de 35 heures par semaine, afin de rendre les heures supplémentaires plus avantageuses pour les salariés et moins coûteuses pour les employeurs."
       }
     ],
     "positions": [
@@ -620,7 +642,7 @@
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Boucler 24h/24 les quartiers gangrenés par le trafic de drogue, en contrôlant les entrées et sorties, avec la possibilité de mobiliser des véhicules blindés de la gendarmerie et de couper les télécommunications."
+        "extrait": "Boucler 24h/24 les quartiers gangrenés par le trafic de drogue, en contrôlant les entrées et sorties"
       }
     ],
     "positions": [
@@ -652,7 +674,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "narcotrafiquants"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "allongeant la durée de détention provisoire pour les narcotrafiquants"
+      }
+    ],
     "positions": [
       {
         "sujet": "prison",
@@ -682,7 +719,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "mineurs impliqués dans les trafics"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer les sanctions contre les mineurs impliqués dans les trafics, avec de courtes peines dès les premiers délits"
+      }
+    ],
     "positions": [
       {
         "sujet": "justice_mineurs",
@@ -859,7 +911,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer un revenu familial (RF) mensuel de 240 € par enfant, dès le premier enfant, de la naissance à ses 18 ans"
+        "extrait": "un revenu familial (RF) mensuel de 240 € par enfant, dès le premier enfant, de la naissance à ses 18 ans"
       }
     ],
     "positions": []
@@ -897,7 +949,7 @@
         "dimension": "revenu_disponible",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Conditionner le revenu familial à une résidence régulière en France et à l’exercice d’une activité professionnelle depuis au moins cinq ans"
+        "extrait": "Conditionner le revenu familial à une résidence régulière en France"
       }
     ]
   },
@@ -964,7 +1016,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Encourager financièrement les familles nombreuses avec un RF doublé pour le troisième enfant mineur à charge"
+        "extrait": "un RF doublé pour le troisième enfant mineur à charge"
       }
     ],
     "positions": []
@@ -1023,7 +1075,7 @@
         "dimension": "protection_sociale",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Etendre le congé de naissance jusqu’aux six mois de l’enfant, ouvert à l’un des deux parents qui serait indemnisé à 70 % de sa rémunération antérieure"
+        "extrait": "Etendre le congé de naissance jusqu'aux six mois de l'enfant, ouvert à l'un des deux parents qui serait indemnisé à 70 % de sa rémunération antérieure"
       }
     ],
     "positions": []
@@ -1048,7 +1100,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Allocations & prestations sociales",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer le forfait social pour encourager participation et intéressement."
+      }
+    ],
     "positions": [
       {
         "sujet": "entreprises",
@@ -1082,22 +1149,22 @@
       {
         "cibles": [
           {
-            "champ": "enfants_a_charge",
-            "valeurs": [
-              "au_moins_un"
-            ]
-          },
-          {
             "champ": "projet_achat",
             "valeurs": [
               "oui"
+            ]
+          },
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire l’impôt sur le revenu des ménages qui achètent une résidence principale, grâce à la déduction d’une quote-part des intérêts d’emprunt"
+        "extrait": "Réduire l'impôt sur le revenu des ménages qui achètent une résidence principale, grâce à la déduction d'une quote-part des intérêts d'emprunt"
       }
     ],
     "positions": [
@@ -1135,6 +1202,54 @@
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "relèvement temporaire du plafond des dons familiaux exonérés à 150 000 € pour les bénéficiaires de moins de 30 ans"
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "moins_30"
+            ]
+          },
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "a_venir"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "relèvement temporaire du plafond des dons familiaux exonérés à 150 000 € pour les bénéficiaires de moins de 30 ans"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "30_49"
+            ]
+          },
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "a_venir"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "bénéficiaires de moins de 40 ans"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "100 000 € pour ceux de moins de 40 ans"
       }
     ]
   },
@@ -1201,7 +1316,7 @@
         "dimension": "securite_personnelle",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir la tolérance zéro envers le squat"
+        "extrait": "Garantir la tolérance zéro envers le squat."
       }
     ],
     "positions": [
@@ -1262,37 +1377,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "logement",
-            "valeurs": [
-              "locataire"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer les dispositifs d’encadrement des loyers issus de la loi ELAN. Abroger les mécanismes de plafonnement prévus par la loi de 1989"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "logements_hors_residence",
-            "valeurs": [
-              "un_a_trois",
-              "quatre_ou_plus"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "En finir avec l’encadrement des loyers"
-      }
-    ],
     "positions": [
       {
         "sujet": "logement",
@@ -1434,23 +1518,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "logements_hors_residence",
-            "valeurs": [
-              "un_a_trois",
-              "quatre_ou_plus"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Renforcer le statut de bailleur privé. L’amortissement universel à 4 % par an générera 350 000 logements supplémentaires sur la durée du quinquennat"
-      }
-    ],
     "positions": [
       {
         "sujet": "logement",
@@ -1480,28 +1547,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "enfants_a_charge",
-            "valeurs": [
-              "au_moins_un"
-            ]
-          },
-          {
-            "champ": "projet_achat",
-            "valeurs": [
-              "oui"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rendre les intérêts d’emprunt déductibles (pour les familles : 50 % avec un enfant, 75 % avec deux, 100 % à partir de trois)"
-      }
-    ],
     "positions": [
       {
         "sujet": "fiscalite",
@@ -1606,22 +1651,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "projet_achat",
-            "valeurs": [
-              "oui"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place le prêt social location-accession (PSLA) : dispositif d’accession progressive à la propriété"
-      }
-    ],
+    "effets": [],
     "positions": []
   },
   {
@@ -1644,7 +1674,55 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "moins_30"
+            ]
+          },
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "a_venir"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "150 000 € exonérés pour un bénéficiaire de moins de 30 ans"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "30_49"
+            ]
+          },
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "a_venir"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "bénéficiaire de moins de 40 ans"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "100 000 € pour un bénéficiaire de moins de 40 ans"
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-026",
@@ -1670,12 +1748,9 @@
       {
         "cibles": [
           {
-            "champ": "statut_professionnel",
+            "champ": "autre",
             "valeurs": [
-              "salarie",
-              "independant",
-              "fonctionnaire",
-              "apprenti"
+              "personnes qui travaillent"
             ]
           }
         ],
@@ -1696,7 +1771,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "les familles avec enfant"
+        "extrait": "recentrer l’accès au logement social pour : ceux qui travaillent, les familles avec enfant"
       }
     ]
   },
@@ -1734,7 +1809,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Restituer le parc Action Logement aux salariés pour les loger à proximité de leur emploi."
+        "extrait": "Restituer le parc Action Logement aux salariés pour les loger à proximité de leur emploi"
       }
     ]
   },
@@ -1803,7 +1878,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "quartier_prioritaire"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre fin au programme de rénovation urbaine en 2030"
+      }
+    ],
     "positions": [
       {
         "sujet": "fiscalite",
@@ -1852,7 +1942,7 @@
         "dimension": "revenu_disponible",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Exclure de l’APL les étudiants dont les parents appartiennent aux deux derniers déciles de revenus."
+        "extrait": "Exclure de l’APL les étudiants dont les parents appartiennent aux deux derniers déciles de revenus"
       }
     ]
   },
@@ -1898,7 +1988,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "effets": [],
     "positions": [
       {
         "sujet": "temps_travail",
@@ -1927,7 +2016,24 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail"
+    "sous_theme": "Emploi & travail",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "rsa",
+              "prime_activite"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "ce revenu remplacerait 3 dispositifs (RSA, prime d’acitivité et allocation de solidarité spécifique) pour que chaque heure travaillée apporte un bénéfice visible"
+      }
+    ]
   },
   {
     "id": "retailleau-retraites-travail-003",
@@ -2030,6 +2136,20 @@
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place, au-delà de la 35ᵉ heure travaillée, des heures supplémentaires qui ne donnent lieu ni à cotisations sociales, ni patronales, ni salariales."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place, au-delà de la 35ᵉ heure travaillée, des heures supplémentaires qui ne donnent lieu ni à cotisations sociales, ni patronales, ni salariales."
       }
     ],
     "positions": [
@@ -2125,16 +2245,30 @@
       {
         "cibles": [
           {
-            "champ": "tranche_age",
+            "champ": "autre",
             "valeurs": [
-              "moins_30"
+              "personnes entrant sur le marché du travail en 2027"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "financée par une cotisation de 1 % du revenu brut"
+        "extrait": "Mettre en place une part de retraite par capitalisation, financée par une cotisation de 1 % du revenu brut"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes entrant sur le marché du travail en 2027"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "La cible est de 25 % de capitalisation pour ceux qui entreront sur le marché du travail en 2027 avec une montée en puissance progressive."
       }
     ]
   },
@@ -2181,7 +2315,37 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes ayant atteint toutes leurs annuités à 62 ans"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les cotisations retraite et chômage pour les personnes (et leurs employeurs) ayant atteint toutes leurs annuités à 62 ans, pour augmenter de 15 % leur salaire net."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les cotisations retraite et chômage pour les personnes (et leurs employeurs) ayant atteint toutes leurs annuités à 62 ans"
+      }
+    ]
   },
   {
     "id": "retailleau-retraites-travail-012",
@@ -2467,7 +2631,7 @@
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Faire baisser la facture des Français grâce au nucléaire qu’ils ont payé (par leurs impôts) : objectif -5 % à -15 % sur la facture dès 2030."
+        "extrait": "objectif -5 % à -15 % sur la facture dès 2030"
       }
     ]
   },
@@ -2497,7 +2661,7 @@
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer les taxes pour faire baisser la facture : suppression des CEE avec effet immédiat ce qui permet -5 % sur la facture."
+        "extrait": "suppression des CEE avec effet immédiat ce qui permet -5 % sur la facture"
       }
     ],
     "positions": []
@@ -2710,7 +2874,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Energie",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "propriétaires de nouvelles installations photovoltaïques"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer l’ensemble des avantages fiscaux et tarifaires associés aux nouvelles installations photovoltaïques"
+      }
+    ],
     "positions": [
       {
         "sujet": "renouvelables",
@@ -2746,7 +2925,7 @@
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Sortir l’électricité du périmètre des CEE et concentrer l’effort sur les opérations de sortie des fossiles les plus efficaces à l’euro investi. Economies : baisse directe des factures d’électricité."
+        "extrait": "Economies : baisse directe des factures d’électricité"
       }
     ],
     "positions": []
@@ -2861,22 +3040,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "metier",
-            "valeurs": [
-              "agriculteur"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Interdire les surtranspositions françaises des normes européennes en matière agricole, aligner les règles applicables aux élevages sur le socle européen et supprimer le ZAN (Zéro Artificialisation Nette) des sols."
-      }
-    ],
+    "effets": [],
     "positions": [
       {
         "sujet": "agriculture_normes",
@@ -2936,22 +3100,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "metier",
-            "valeurs": [
-              "agriculteur"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "instaurer des délais d’instruction opposables à l’administration"
-      }
-    ],
+    "effets": [],
     "positions": []
   },
   {
@@ -2997,7 +3146,23 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "un différé d’imposition et une dissociation facilitée entre foncier et outil de production"
+      }
+    ]
   },
   {
     "id": "retailleau-envi-022",
@@ -3529,22 +3694,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Services de la petite enfance",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "enfant_moins_3_ans",
-            "valeurs": [
-              "oui"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Favoriser la création de solutions de garde par le secteur privé pour chaque enfant avant trois ans."
-      }
-    ],
+    "effets": [],
     "positions": []
   },
   {
@@ -3597,6 +3747,42 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "supprimer le plafond de 500 000 € qui limite aujourd’hui le crédit d’impôt famille dont bénéficient les entreprises finançant des places en crèche pour leurs salariés"
       }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "supprimer le plafond de 500 000 € qui limite aujourd’hui le crédit d’impôt famille dont bénéficient les entreprises finançant des places en crèche pour leurs salariés"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "enfant_moins_3_ans",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "relever de 2 421 € à 7 000 € par an le plafond d’exonération de cotisations sociales et d’impôt sur le revenu applicable à la participation financière versée par l’employeur à chaque salarié pour la garde de son enfant"
+      }
     ]
   },
   {
@@ -3623,6 +3809,12 @@
       {
         "cibles": [
           {
+            "champ": "metier",
+            "valeurs": [
+              "aucun"
+            ]
+          },
+          {
             "champ": "autre",
             "valeurs": [
               "professionnels de la petite enfance"
@@ -3632,7 +3824,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Revaloriser les professionnels de la petite enfance (ouvrir un accès prioritaire au logement social à proximité de leur lieu de travail)."
+        "extrait": "ouvrir un accès prioritaire au logement social à proximité de leur lieu de travail"
       }
     ],
     "positions": []
@@ -3670,7 +3862,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "+135 €/mois net en début de carrière, +300 €/mois net au cœur de la carrière financés sans nouveaux impôts"
+        "extrait": "+135 €/mois net en début de carrière, +300 €/mois net au cœur de la carrière"
       }
     ]
   },
@@ -3844,12 +4036,19 @@
             "valeurs": [
               "rural"
             ]
+          },
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire",
+              "college"
+            ]
           }
         ],
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Étendre l'éducation prioritaire aux campagnes oubliées."
+        "extrait": "Étendre l'éducation prioritaire aux campagnes oubliées"
       }
     ],
     "positions": []
@@ -3888,7 +4087,7 @@
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "interdire l’usage du téléphone jusqu’à la fin du lycée et faire signer un contrat d’engagement aux familles"
+        "extrait": "interdire l’usage du téléphone jusqu’à la fin du lycée"
       }
     ],
     "positions": [
@@ -3920,7 +4119,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
     "positions": [
       {
         "sujet": "ecole_discipline",
@@ -3980,22 +4178,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "enfants_scolarises",
-            "valeurs": [
-              "college"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Faire une «filière d’excellence» de l’enseignement professionnel, accessible dès 14 ans"
-      }
-    ],
+    "effets": [],
     "positions": [
       {
         "sujet": "ecole_organisation",
@@ -4025,15 +4208,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer 1 000 établissements publics gratuits et autonomes d’ici 2032, dotés d’une liberté accrue dans leur organisation pédagogique et la gestion de leurs moyens"
-      }
-    ],
+    "effets": [],
     "positions": [
       {
         "sujet": "ecole_organisation",

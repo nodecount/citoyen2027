@@ -91,7 +91,7 @@
         "dimension": "droits_et_libertes",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "présomption de légitime défense pour les policiers et gendarmes"
+        "extrait": "une présomption de légitime défense pour les policiers et gendarmes"
       }
     ],
     "positions": [
@@ -213,20 +213,6 @@
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "revaloriser leurs salaires"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "metier",
-            "valeurs": [
-              "soignant"
-            ]
-          }
-        ],
-        "dimension": "emploi",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants"
       }
     ],
     "positions": [
@@ -287,7 +273,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer un moratoire sur la suppression des lits à l'hôpital public"
+        "extrait": "Instaurer un moratoire sur la suppression des lits à l’hôpital public."
       }
     ],
     "positions": [
@@ -362,7 +348,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer une filière distincte pour les personnes les plus âgées... d'améliorer la prise en charge et de mieux orienter le patient âgé"
+        "extrait": "Créer une filière distincte pour les personnes les plus âgées."
       }
     ],
     "positions": []
@@ -461,7 +447,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Développer la télémédecine sous toutes ses formes : téléconsultation, télésoins, téléexpertise"
+        "extrait": "Développer la télémédecine sous toutes ses formes : téléconsultation, télésoins, téléexpertise."
       }
     ],
     "positions": []
@@ -499,7 +485,7 @@
         "dimension": "revenu_disponible",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Remplacer les subventions à la rénovation thermique des logements de MaPrimeRénov' par un dispositif de prêts à taux zéro 100 % Rénov"
+        "extrait": "Remplacer les subventions à la rénovation thermique des logements de MaPrimeRénov’ par un dispositif de prêts à taux zéro 100 % Rénov."
       }
     ],
     "positions": []
@@ -553,18 +539,12 @@
             "valeurs": [
               "proprietaire"
             ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "logements classés F et G"
-            ]
           }
         ],
         "dimension": "patrimoine",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer les interdictions de louer les logements mal notés (classes F et G) pour éviter une crise du logement et préserver les propriétaires"
+        "extrait": "Supprimer les interdictions de louer les logements mal notés (classes F et G) pour éviter une crise du logement et préserver les propriétaires."
       }
     ],
     "positions": [
@@ -945,6 +925,20 @@
     "sous_theme": "Energie",
     "effets": [
       {
+        "cibles": [
+          {
+            "champ": "vehicule",
+            "valeurs": [
+              "thermique"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser la TVA sur l’énergie et les carburants de 20 % à 5,5 %."
+      },
+      {
         "cibles": [],
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
@@ -1053,7 +1047,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir aux paysans des prix respectueux de leur travail"
+        "extrait": "Garantir aux paysans des prix respectueux de leur travail et mettre un terme aux marges abusives de la grande distribution."
       }
     ],
     "positions": []
@@ -1177,22 +1171,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "agriculteurs pratiquant l'agriculture biologique"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mise en place d'un plan de soutien spécifique pour l'agriculture biologique."
-      }
-    ],
     "positions": [
       {
         "sujet": "agriculture_normes",
@@ -1222,7 +1200,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Agriculture",
-    "positions": []
+    "positions": [],
+    "effets": []
   },
   {
     "id": "le-pen-envi-013",
@@ -1407,7 +1386,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "la « priorité nationale » dans la Constitution … pour l’accès aux logements sociaux et aux allocations"
+        "extrait": "la « priorité nationale » dans la Constitution par référendum pour l’accès aux logements sociaux et aux allocations"
       },
       {
         "cibles": [
@@ -1422,7 +1401,7 @@
         "dimension": "acces_aux_services",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "la « priorité nationale » dans la Constitution … pour l’accès aux logements sociaux et aux allocations"
+        "extrait": "la « priorité nationale » dans la Constitution par référendum pour l’accès aux logements sociaux et aux allocations"
       }
     ],
     "positions": [
@@ -1533,16 +1512,16 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "territoire",
             "valeurs": [
-              "habitants des zones blanches numériques"
+              "rural"
             ]
           }
         ],
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place une couverture numérique plus large du territoire afin de supprimer les zones blanches"
+        "extrait": "Mettre en place une couverture numérique plus large du territoire afin de supprimer les zones blanches."
       }
     ],
     "positions": []
@@ -1571,9 +1550,9 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "tranche_age",
             "valeurs": [
-              "personnes âgées en situation d'illettrisme numérique"
+              "65_plus"
             ]
           }
         ],

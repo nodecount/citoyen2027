@@ -92,7 +92,7 @@
         "dimension": "patrimoine",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "taxe « anti-rente » ciblant les multipropriétaires (dès le 4e logement hors résidence principale)"
+        "extrait": "Créer une taxe « anti-rente » ciblant les multipropriétaires (dès le 4e logement hors résidence principale)."
       }
     ],
     "positions": [
@@ -211,7 +211,7 @@
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "fiscalité favorable aux produits alimentaires de base pour en diminuer le coût"
+        "extrait": "Mettre en place une fiscalité favorable aux produits alimentaires de base pour en diminuer le coût."
       }
     ]
   },
@@ -271,6 +271,28 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place un impôt sur les grandes successions."
       }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "a_venir"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "grandes successions"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un impôt sur les grandes successions."
+      }
     ]
   },
   {
@@ -326,7 +348,7 @@
             ]
           }
         ],
-        "dimension": "droits_et_libertes",
+        "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Permettre le renouvellement automatique des titres de séjour de longue durée."
@@ -372,7 +394,7 @@
           }
         ],
         "dimension": "protection_sociale",
-        "sens": "indetermine",
+        "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Créer une caisse de sécurité sociale spécifique à destination des travailleurs indépendants."
       }
@@ -421,29 +443,7 @@
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "enfants_a_charge",
-            "valeurs": [
-              "au_moins_un"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "les plus modestes"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Favoriser la tarification sociale dans les cantines selon le quotient familial (pouvant aller jusqu’à la gratuité pour les plus modestes)."
-      }
-    ]
+    "sous_theme": "Santé"
   },
   {
     "id": "parti-socialiste-social-solidarite-004",
@@ -570,7 +570,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "étendre la politique vaccinale."
+        "extrait": "Défendre la vaccination et étendre la politique vaccinale."
       }
     ],
     "positions": []
@@ -601,7 +601,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "en rendant le dépistage accessible à tous."
+        "extrait": "Mettre fin à l’épidémie de VIH d’ici 2030 en rendant le dépistage accessible à tous."
       }
     ],
     "positions": []
@@ -626,22 +626,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "femmes"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Elaborer un plan spécifique de prévention en santé destiné aux femmes en informant sur tous les risques spécifiques à la santé féminine."
-      }
-    ],
+    "effets": [],
     "positions": []
   },
   {
@@ -700,7 +685,7 @@
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "assurant le remboursement intégral des soins essentiels par la suppression des franchises sur les médicaments concernés."
+        "extrait": "assurant le remboursement intégral des soins essentiels par la suppression des franchises sur les médicaments concernés"
       }
     ],
     "positions": [
@@ -843,9 +828,9 @@
       {
         "cibles": [
           {
-            "champ": "desert_medical",
+            "champ": "territoire",
             "valeurs": [
-              "oui"
+              "rural"
             ]
           }
         ],
@@ -884,7 +869,26 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire",
+              "college",
+              "lycee",
+              "superieur"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place une politique de prévention en santé mentale dès le plus jeune âge, au sein de tous les établissements scolaires et universitaires."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-social-solidarite-019",
@@ -908,13 +912,6 @@
     "sous_theme": "Santé",
     "effets": [
       {
-        "cibles": [],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir l’accès aux soins psychologiques et psychiatriques partout en France, en mettant à niveau les financements de la psychiatrie"
-      },
-      {
         "cibles": [
           {
             "champ": "handicap",
@@ -926,7 +923,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "renforçant les capacités d’hébergement pour les personnes en situation de handicap psychiatriques."
+        "extrait": "Garantir l’accès aux soins psychologiques et psychiatriques partout en France, en mettant à niveau les financements de la psychiatrie et en renforçant les capacités d’hébergement pour les personnes en situation de handicap psychiatriques."
       }
     ],
     "positions": [
@@ -1094,7 +1091,7 @@
         "dimension": "patrimoine",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "en poursuivant l’encadrement des locations touristiques et des résidences secondaires."
+        "extrait": "poursuivant l’encadrement des locations touristiques et des résidences secondaires"
       }
     ],
     "positions": [
@@ -1126,7 +1123,23 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Logement",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "aide_logement"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Stopper la diminution des aides au logement."
+      }
+    ]
   },
   {
     "id": "parti-socialiste-social-solidarite-027",
@@ -1159,7 +1172,7 @@
             ]
           }
         ],
-        "dimension": "patrimoine",
+        "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Améliorer l’accès à la propriété avec le bail réel solidaire et le prêt à taux zéro."
@@ -1191,22 +1204,16 @@
       {
         "cibles": [
           {
-            "champ": "logement",
-            "valeurs": [
-              "locataire"
-            ]
-          },
-          {
             "champ": "projet_achat",
             "valeurs": [
               "oui"
             ]
           }
         ],
-        "dimension": "patrimoine",
+        "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "après quelques années de location, les loyers payés sont déductibles du prix d’achat"
+        "extrait": "Développer la possibilité d’accéder à la propriété en « leasing » : après quelques années de location, les loyers payés sont déductibles du prix d’achat."
       }
     ]
   },
@@ -1407,8 +1414,8 @@
     "effets": [
       {
         "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place des « chèques-soleil » pour aider les Français à s’équiper de panneaux solaires."
       }
@@ -1586,7 +1593,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Ecologie",
-    "effets": [],
     "positions": [
       {
         "sujet": "voiture",
@@ -1964,7 +1970,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Expérimenter la semaine de quatre jours pour les postes administratifs et réduire le temps de travail sur les fonctions les plus pénibles"
       }
-    ]
+    ],
+    "effets": []
   },
   {
     "id": "parti-socialiste-reformes-etat-003",
@@ -2098,6 +2105,38 @@
         "position": "ecole_continuite",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Réduire le nombre d'enfants par classe (maximum 19 élèves)"
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire",
+              "college",
+              "lycee"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire le nombre d’enfants par classe (maximum 19 élèves)."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "enseignant"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire le nombre d’enfants par classe (maximum 19 élèves)."
       }
     ]
   },

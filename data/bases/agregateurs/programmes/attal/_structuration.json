@@ -2,8 +2,8 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "cf9a071f2f5e92f2",
-    "date": "2026-10-04",
+    "empreinte": "fc78b2408571127c",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 3,
     "avec_effets": 1,
@@ -11,110 +11,106 @@
     "rejetees": [
       {
         "id": "attal-education-jeunesse-002",
-        "raison": "relecture : La cible 'moins_30' élargit le périmètre au-delà des moins de 15 ans visés par le texte."
+        "raison": "relecture : La cible 'moins_30' élargit le périmètre au-delà des moins de 15 ans réellement visés par le texte."
       }
     ],
-    "cout_reference_usd": 0.0442,
+    "cout_reference_usd": 0.0501,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "7feefb673811ee07",
-    "date": "2026-10-04",
+    "empreinte": "b145efd2e50daa81",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 0,
     "sans_effet": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.0297,
+    "cout_reference_usd": 0.0375,
     "appels": 1
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "aa4b415832ee102a",
-    "date": "2026-10-10",
+    "empreinte": "5c88fb1c01d83e84",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "avec_effets": 2,
-    "sans_effet": 11,
+    "avec_effets": 3,
+    "sans_effet": 10,
     "rejetees": [],
-    "cout_reference_usd": 0.0604,
+    "cout_reference_usd": 0.0672,
     "appels": 2
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "b19a395a3b1acb8e",
-    "date": "2026-10-04",
+    "empreinte": "0286f7cb401c6624",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 0,
     "sans_effet": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.028,
+    "cout_reference_usd": 0.0329,
     "appels": 1
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "7266f430c8796174",
-    "date": "2026-10-04",
+    "empreinte": "aa67ac26fb8e42e4",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 7,
     "avec_effets": 2,
-    "sans_effet": 5,
-    "rejetees": [],
-    "cout_reference_usd": 0.048,
+    "sans_effet": 4,
+    "rejetees": [
+      {
+        "id": "attal-interieur-justice-002",
+        "raison": "relecture : Le texte ne précise aucune distinction de nationalité (européenne/hors_ue), ce qui élargit le périmètre par rapport au texte."
+      }
+    ],
+    "cout_reference_usd": 0.0599,
     "appels": 2
   },
   {
     "theme": "reformes-etat",
     "groupe": 0,
-    "empreinte": "5912c949088a9bf2",
-    "date": "2026-10-04",
+    "empreinte": "ee6435f9c9024f87",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 0,
     "sans_effet": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.0283,
+    "cout_reference_usd": 0.0331,
     "appels": 1
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "7fb39df78770b9f0",
-    "date": "2026-10-10",
+    "empreinte": "170a46eb31f772ce",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 8,
-    "avec_effets": 4,
+    "avec_effets": 6,
     "sans_effet": 2,
-    "rejetees": [
-      {
-        "id": "attal-retraites-travail-004",
-        "raison": "relecture : Supprimer le plafond ne garantit pas une hausse de revenu : cela dépend du choix de l'employeur/salarié de faire plus d'heures, c'est un effet déduit d'un mécanisme supposé."
-      },
-      {
-        "id": "attal-retraites-travail-007",
-        "raison": "relecture : Les cibles sont vides et l'extrait ne fonde pas clairement un effet sur la protection sociale, ce qui rend l'effet non étayé."
-      }
-    ],
-    "cout_reference_usd": 0.0711,
+    "rejetees": [],
+    "cout_reference_usd": 0.069,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "0a72eab7d95c2755",
-    "date": "2026-10-04",
+    "empreinte": "e0f92aeea2173edf",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 4,
     "avec_effets": 3,
     "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.0544,
+    "cout_reference_usd": 0.0567,
     "appels": 2
   }
 ]

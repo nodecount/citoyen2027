@@ -2,39 +2,39 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "e1640e53857b43ca",
-    "date": "2026-10-04",
+    "empreinte": "8bcadd4253e2bfd3",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 10,
     "avec_effets": 2,
     "sans_effet": 8,
     "rejetees": [],
-    "cout_reference_usd": 0.0458,
+    "cout_reference_usd": 0.0519,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "bce06f2e1c085141",
-    "date": "2026-10-04",
+    "empreinte": "fc31a64c6eaf51e5",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 16,
-    "avec_effets": 3,
-    "sans_effet": 12,
+    "avec_effets": 2,
+    "sans_effet": 13,
     "rejetees": [
       {
-        "id": "le-pen-envi-012",
-        "raison": "relecture : Faire d'un sujet une 'cause nationale' est une déclaration de principe, pas une mesure concrète dont on peut déduire une hausse effective de la protection sociale."
+        "id": "le-pen-envi-011",
+        "raison": "relecture : La cible inclut tous les agriculteurs (métier=agriculteur) alors que le texte vise spécifiquement l'agriculture biologique, ce qui élargit indûment le périmètre."
       }
     ],
-    "cout_reference_usd": 0.0612,
+    "cout_reference_usd": 0.063,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "8975315a0202c38c",
-    "date": "2026-10-10",
+    "empreinte": "506e4149ad79a3c2",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
@@ -42,56 +42,56 @@
     "rejetees": [
       {
         "id": "le-pen-finances-publiques-001",
-        "raison": "relecture : Le texte ne précise aucun seuil de patrimoine (1,3M€ est le seuil de l'ancien ISF, non mentionné dans l'extrait), donc le ciblage 'plus_1_3m' n'est pas fondé par le texte."
+        "raison": "relecture : Le texte ne précise aucun seuil de patrimoine (1,3M€) déclenchant l'impôt, ce seuil est une connaissance externe non fournie par l'extrait."
       }
     ],
-    "cout_reference_usd": 0.0428,
+    "cout_reference_usd": 0.0479,
     "appels": 2
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "fcd36f7e8526a4b6",
-    "date": "2026-10-04",
+    "empreinte": "2e308b246c1f6bfd",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 7,
     "avec_effets": 3,
     "sans_effet": 4,
     "rejetees": [],
-    "cout_reference_usd": 0.0544,
+    "cout_reference_usd": 0.0593,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "33eaf96d1ba76ab5",
-    "date": "2026-10-04",
+    "empreinte": "baf6df08ed2e876c",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 4,
     "avec_effets": 1,
     "sans_effet": 3,
     "rejetees": [],
-    "cout_reference_usd": 0.0405,
+    "cout_reference_usd": 0.0463,
     "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "8b5c421fb51bd4ba",
-    "date": "2026-10-10",
+    "empreinte": "77df8a3e0253264d",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 6,
     "avec_effets": 1,
     "sans_effet": 5,
     "rejetees": [],
-    "cout_reference_usd": 0.0464,
+    "cout_reference_usd": 0.0482,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "db963f84331a84a1",
-    "date": "2026-10-04",
+    "empreinte": "fe4e304e590d6401",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 15,
     "avec_effets": 8,
@@ -99,10 +99,10 @@
     "rejetees": [
       {
         "id": "le-pen-social-solidarite-011",
-        "raison": "relecture : La cible inclut tous les locataires (champ logement:locataire) alors que le texte ne vise que les locataires en situation d'impayés, élargissant le périmètre de l'effet."
+        "raison": "relecture : La cible 'logement: locataire' élargit le périmètre à tous les locataires alors que le texte ne vise que ceux qui ne paient pas leur loyer."
       }
     ],
-    "cout_reference_usd": 0.092,
+    "cout_reference_usd": 0.0906,
     "appels": 2
   }
 ]

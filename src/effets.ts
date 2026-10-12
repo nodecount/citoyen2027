@@ -15,6 +15,9 @@ export const DIMENSIONS_EFFET = [
   "droits_et_libertes",
   "securite_personnelle",
   "patrimoine",
+  // Ce que l'EMPLOYEUR paie ou subit pour employer (salaires minimaux, cotisations patronales, congés, heures majorées, obligations
+  // d'embauche ou de licenciement). Ajoutée le 2026-10-11 : sans elle, une hausse du SMIC n'apparaissait que du côté du salarié.
+  "cout_du_travail",
 ] as const;
 export type DimensionEffet = (typeof DIMENSIONS_EFFET)[number];
 

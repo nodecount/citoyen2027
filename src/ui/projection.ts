@@ -37,6 +37,7 @@ export const DIMENSIONS_LIBELLES: Record<DimensionEffet, string> = {
   droits_et_libertes: "Droits et libertés",
   securite_personnelle: "Sécurité personnelle",
   patrimoine: "Patrimoine",
+  cout_du_travail: "Coût d'emploi pour l'employeur",
 };
 
 export function decrireEffet(effet: Effet): string {

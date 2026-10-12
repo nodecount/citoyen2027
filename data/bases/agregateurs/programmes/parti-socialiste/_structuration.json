@@ -2,142 +2,128 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "daad3c1396c90c65",
-    "date": "2026-10-04",
+    "empreinte": "b382cf7022f1cfb3",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 3,
-    "avec_effets": 1,
+    "avec_effets": 2,
     "sans_effet": 1,
-    "rejetees": [
-      {
-        "id": "parti-socialiste-education-jeunesse-001",
-        "raison": "relecture : L'effet emploi sur les enseignants est déduit d'un mécanisme supposé (besoin de recrutement) que le texte ne mentionne pas explicitement."
-      }
-    ],
-    "cout_reference_usd": 0.0458,
+    "rejetees": [],
+    "cout_reference_usd": 0.05,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "160c323d42d42da4",
-    "date": "2026-10-04",
+    "empreinte": "1b55155f6534fbf0",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 19,
     "avec_effets": 2,
-    "sans_effet": 17,
-    "rejetees": [],
-    "cout_reference_usd": 0.0505,
+    "sans_effet": 16,
+    "rejetees": [
+      {
+        "id": "parti-socialiste-envi-007",
+        "raison": "relecture : L'accès aux services ne concerne pas des 'zones polluées' mais les habitants de ces zones, et le texte décrit aussi un objectif de pistes cyclables et zones piétonnes non repris, mais surtout la cible 'zones les plus polluées' n'est pas un public citoyen clairement défini par le texte."
+      }
+    ],
+    "cout_reference_usd": 0.0709,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "e87d662776cf6b49",
-    "date": "2026-10-10",
+    "empreinte": "9f57047654f2eadf",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 9,
-    "avec_effets": 2,
+    "avec_effets": 3,
     "sans_effet": 3,
     "rejetees": [
       {
         "id": "parti-socialiste-finances-publiques-005",
-        "raison": "relecture : Le texte vise « les plus hauts salaires » sans préciser un seuil de 5000€, la cible tranche_revenus plus_5000 élargit/précise un périmètre non défini par le texte."
+        "raison": "relecture : Le texte vise les « plus hauts salaires » sans seuil chiffré ; retenir la tranche 'plus_5000' ajoute un seuil précis non fondé par l'extrait."
       },
       {
         "id": "parti-socialiste-finances-publiques-006",
-        "raison": "relecture : Le texte vise spécifiquement les artisans et commerçants, alors que la cible 'independant' englobe un périmètre plus large (professions libérales, auto-entrepreneurs non commerçants, etc.)."
+        "raison": "relecture : Le texte vise spécifiquement les artisans et commerçants, alors que la cible 'independant' englobe un périmètre plus large de travailleurs indépendants."
       },
       {
         "id": "parti-socialiste-finances-publiques-008",
-        "raison": "relecture : Le texte cible les patrimoines supérieurs à 100 millions d'euros alors que la cible tranche_patrimoine 'plus_1_3m' élargit massivement le périmètre à des patrimoines bien inférieurs au seuil réel."
-      },
-      {
-        "id": "parti-socialiste-finances-publiques-009",
-        "raison": "relecture : Le texte vise les 'grandes successions' alors que la cible heritage (a_venir, recu) sans restriction de montant élargit le périmètre à toutes les successions."
+        "raison": "relecture : Le texte vise les patrimoines supérieurs à 100 millions d'euros, alors que la cible 'plus_1_3m' élargit le périmètre à des patrimoines bien moins élevés."
       }
     ],
-    "cout_reference_usd": 0.0801,
+    "cout_reference_usd": 0.0705,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "3ed3da728dddba86",
-    "date": "2026-10-04",
+    "empreinte": "191a2cec1db8cf8a",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 1,
     "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.0481,
+    "cout_reference_usd": 0.0458,
     "appels": 2
   },
   {
     "theme": "reformes-etat",
     "groupe": 0,
-    "empreinte": "9855192db376ea2d",
-    "date": "2026-10-04",
+    "empreinte": "84916d8e129f9354",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 6,
     "avec_effets": 0,
-    "sans_effet": 5,
-    "rejetees": [
-      {
-        "id": "parti-socialiste-reformes-etat-002",
-        "raison": "relecture : La dimension 'emploi' en baisse est erronée : le texte décrit une réduction du temps de travail, pas une perte d'emploi."
-      }
-    ],
-    "cout_reference_usd": 0.0455,
-    "appels": 2
+    "sans_effet": 6,
+    "rejetees": [],
+    "cout_reference_usd": 0.0428,
+    "appels": 1
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "789dbc6c403c7865",
-    "date": "2026-10-10",
+    "empreinte": "98472485dc6a6fb5",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 7,
     "avec_effets": 0,
     "sans_effet": 7,
     "rejetees": [],
-    "cout_reference_usd": 0.0334,
+    "cout_reference_usd": 0.0364,
     "appels": 1
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "803fb6c3a95f97e3",
-    "date": "2026-10-04",
+    "empreinte": "13c6811b198addaf",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 10,
-    "sans_effet": 14,
+    "avec_effets": 9,
+    "sans_effet": 15,
     "rejetees": [
       {
-        "id": "parti-socialiste-social-solidarite-018",
-        "raison": "relecture : La mesure vise explicitement les établissements scolaires et universitaires, donc le public concerné est les élèves/étudiants et non l'ensemble des citoyens (cibles vide = périmètre élargi)."
+        "id": "parti-socialiste-social-solidarite-003",
+        "raison": "relecture : Le texte ne fixe pas de tranches de revenus précises, il évoque un quotient familial et les « plus modestes », les bornes chiffrées sont inventées."
       }
     ],
-    "cout_reference_usd": 0.0666,
+    "cout_reference_usd": 0.0841,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 1,
-    "empreinte": "0cd12e06de5dd3c9",
-    "date": "2026-10-04",
+    "empreinte": "640a0a853b022aa9",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 3,
-    "avec_effets": 2,
+    "avec_effets": 3,
     "sans_effet": 0,
-    "rejetees": [
-      {
-        "id": "parti-socialiste-social-solidarite-026",
-        "raison": "relecture : Le texte dit seulement stopper une diminution (statu quo), ce qui n'est pas une hausse du revenu disponible mais l'absence de baisse supplémentaire."
-      }
-    ],
-    "cout_reference_usd": 0.0274,
+    "rejetees": [],
+    "cout_reference_usd": 0.0237,
     "appels": 2
   }
 ]

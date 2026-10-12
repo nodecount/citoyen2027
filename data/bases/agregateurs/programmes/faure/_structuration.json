@@ -2,58 +2,58 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "9644c24d16a599e6",
-    "date": "2026-10-04",
+    "empreinte": "93a264e4c6717be5",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 7,
     "avec_effets": 4,
     "sans_effet": 3,
     "rejetees": [],
-    "cout_reference_usd": 0.0577,
+    "cout_reference_usd": 0.0562,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "10ea9452f837b48d",
-    "date": "2026-10-04",
+    "empreinte": "cab2232010237f97",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
     "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.0275,
+    "cout_reference_usd": 0.0329,
     "appels": 1
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "fa95b63809f73e8c",
-    "date": "2026-10-10",
+    "empreinte": "72b6ae24b9fcc416",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
     "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.0296,
+    "cout_reference_usd": 0.0348,
     "appels": 1
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "2eba8f0baf938ef7",
-    "date": "2026-10-10",
+    "empreinte": "6e3ccccdf0e6f9d3",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 3,
-    "avec_effets": 1,
-    "sans_effet": 1,
+    "avec_effets": 2,
+    "sans_effet": 0,
     "rejetees": [
       {
         "id": "faure-retraites-travail-002",
-        "raison": "relecture : Le texte ne restreint pas l'abrogation aux 50-64 ans, cette tranche d'âge est ajoutée sans fondement dans l'extrait."
+        "raison": "relecture : Le texte vise les personnes concernées par la réforme des retraites, pas une tranche d'âge 50-64 précise non mentionnée."
       }
     ],
-    "cout_reference_usd": 0.0498,
+    "cout_reference_usd": 0.0585,
     "appels": 2
   }
 ]

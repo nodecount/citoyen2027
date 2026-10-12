@@ -2,133 +2,137 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "e89fb02715627c22",
-    "date": "2026-10-04",
+    "empreinte": "4ba2556a204bbbc4",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 9,
-    "avec_effets": 4,
-    "sans_effet": 5,
+    "avec_effets": 3,
+    "sans_effet": 6,
     "rejetees": [],
-    "cout_reference_usd": 0.0524,
+    "cout_reference_usd": 0.0562,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "f65e362663357525",
-    "date": "2026-10-04",
+    "empreinte": "4caf306caf14071a",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 11,
     "avec_effets": 0,
     "sans_effet": 11,
     "rejetees": [],
-    "cout_reference_usd": 0.0325,
+    "cout_reference_usd": 0.0419,
     "appels": 1
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "ca64f7dc39388853",
-    "date": "2026-10-10",
+    "empreinte": "c01f49ad18698629",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 11,
-    "avec_effets": 2,
+    "avec_effets": 1,
     "sans_effet": 9,
-    "rejetees": [],
-    "cout_reference_usd": 0.0572,
+    "rejetees": [
+      {
+        "id": "philippe-finances-publiques-011",
+        "raison": "relecture : La mesure requiert au moins deux enfants ('dès le deuxième enfant') mais le critère cible 'au_moins_un' enfant à charge, élargissant le périmètre."
+      }
+    ],
+    "cout_reference_usd": 0.0617,
     "appels": 2
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "7a8b2e17d70ce296",
-    "date": "2026-10-04",
+    "empreinte": "9bbcbb16a0d02028",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "avec_effets": 4,
-    "sans_effet": 9,
+    "avec_effets": 3,
+    "sans_effet": 10,
     "rejetees": [],
-    "cout_reference_usd": 0.0637,
+    "cout_reference_usd": 0.0642,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "4f8f5a47d191e8cf",
-    "date": "2026-10-04",
+    "empreinte": "46c88a3ad2c7c145",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 6,
-    "sans_effet": 18,
+    "avec_effets": 9,
+    "sans_effet": 14,
     "rejetees": [
       {
-        "id": "philippe-interieur-justice-018",
-        "raison": "relecture : Le texte décrit un 'profil bancaire spécifique' (surveillance/fichage) mais n'indique pas que cela entraîne une baisse du patrimoine, ce qui est une dimension déduite et non fondée par l'extrait."
+        "id": "philippe-interieur-justice-002",
+        "raison": "relecture : La restriction de l'immigration familiale vise les ressortissants étrangers soumis à ce régime (hors UE), pas les ressortissants européens qui bénéficient de la libre circulation : le périmètre est élargi."
+      },
+      {
+        "id": "philippe-interieur-justice-024",
+        "raison": "relecture : Le texte ne décrit qu'une information systématique de l'employeur public ; une baisse des droits et libertés suppose une conséquence (sanction, suspension) non énoncée, c'est un effet déduit par un mécanisme supposé."
       }
     ],
-    "cout_reference_usd": 0.0892,
+    "cout_reference_usd": 0.1075,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 1,
-    "empreinte": "6bd340c3f85f1207",
-    "date": "2026-10-04",
+    "empreinte": "20a5dc4b4fb6e691",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 0,
     "sans_effet": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.0051,
+    "cout_reference_usd": 0.0059,
     "appels": 1
   },
   {
     "theme": "reformes-etat",
     "groupe": 0,
-    "empreinte": "9c4bc3a433d195eb",
-    "date": "2026-10-04",
+    "empreinte": "c2e7b29fd2662ef0",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 4,
     "avec_effets": 0,
     "sans_effet": 4,
     "rejetees": [],
-    "cout_reference_usd": 0.0293,
+    "cout_reference_usd": 0.0342,
     "appels": 1
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "d17643c41c2a7f24",
-    "date": "2026-10-10",
+    "empreinte": "408ebdfebe2546be",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 6,
-    "avec_effets": 2,
+    "avec_effets": 3,
     "sans_effet": 3,
-    "rejetees": [
-      {
-        "id": "philippe-retraites-travail-005",
-        "raison": "relecture : Le texte ne précise aucune tranche d'âge ; la cible '50_64' est une restriction inventée non fondée sur l'extrait."
-      }
-    ],
-    "cout_reference_usd": 0.0586,
+    "rejetees": [],
+    "cout_reference_usd": 0.0655,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "c60132d7432cb27f",
-    "date": "2026-10-04",
+    "empreinte": "9bcdedcaea071981",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 4,
-    "avec_effets": 0,
-    "sans_effet": 3,
+    "avec_effets": 1,
+    "sans_effet": 2,
     "rejetees": [
       {
         "id": "philippe-social-solidarite-003",
-        "raison": "relecture : La cible 'enfant_moins_3_ans' est un critère d'âge inventé non présent dans le texte (qui parle de naissance et de familles s'agrandissant), et un prêt à taux zéro est un crédit remboursable, pas directement une hausse du revenu disponible."
+        "raison": "relecture : Un prêt à taux zéro est un crédit à rembourser, pas un gain de revenu disponible ; le sens hausse n'est pas fondé."
       }
     ],
-    "cout_reference_usd": 0.0456,
+    "cout_reference_usd": 0.0521,
     "appels": 2
   }
 ]

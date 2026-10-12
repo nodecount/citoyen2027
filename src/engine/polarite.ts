@@ -15,6 +15,7 @@ export type Polarite = "favorable" | "defavorable";
 //   droits_et_libertes    ↑ favorable    (droits ou libertés étendus pour le citoyen visé)
 //   securite_personnelle  ↑ favorable    (moindre exposition aux atteintes aux personnes et aux biens)
 //   patrimoine            ↑ favorable    (valeur ou détention du patrimoine du citoyen visé)
+//   cout_du_travail       ↑ défavorable  (ce que l'employeur visé paie ou subit pour employer : la seconde grandeur où une hausse dégrade)
 const HAUSSE_FAVORABLE: Record<DimensionEffet, boolean> = {
   revenu_disponible: true,
   cout_de_la_vie: false,
@@ -24,6 +25,7 @@ const HAUSSE_FAVORABLE: Record<DimensionEffet, boolean> = {
   droits_et_libertes: true,
   securite_personnelle: true,
   patrimoine: true,
+  cout_du_travail: false,
 };
 
 // Renvoie null pour un sens indéterminé : sans sens, aucune polarité — on ne devine pas.

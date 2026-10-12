@@ -361,6 +361,11 @@ describe("PoursContres", () => {
     expect(html.indexOf("ideal-badge--pour")).toBeLessThan(html.indexOf("ideal-badge--contre"));
     expect(html).not.toContain("ideal-badge-signe");
   });
+  it("la première lettre d'un groupe de mesures est une majuscule, pas celle du titre d'une mesure", () => {
+    const p = [{ theme: "logement", groupes: ["baisse des loyers"], mesures: ["encadrement des loyers"] }];
+    expect(renderToStaticMarkup(<PoursContres pour={p} contre={[]} unite="thèmes" />)).toContain(">Baisse des loyers<");
+    expect(renderToStaticMarkup(<PoursContres pour={p} contre={[]} unite="thèmes" parMesureImpose />)).toContain(">encadrement des loyers<");
+  });
   it("devant chaque mesure : l'icône du thème, jamais son titre", () => {
     const html = renderToStaticMarkup(<PoursContres pour={gagnant("C", "N", "s").pour} contre={gagnant("C", "N", "s").contre} unite="thèmes" />);
     expect(html).toContain("ideal-raison-icone");

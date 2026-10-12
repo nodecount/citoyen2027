@@ -2,8 +2,8 @@
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "6198d9dff5dc46d5",
-    "date": "2026-10-04",
+    "empreinte": "89f5d8a1fefa15ab",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 4,
     "avec_effets": 2,
@@ -11,23 +11,23 @@
     "rejetees": [
       {
         "id": "maurel-envi-004",
-        "raison": "relecture : Le leasing social réduit le coût d'accès à un véhicule électrique, mais rien dans le texte ne dit que cela baisse le coût de la vie des possesseurs actuels de véhicule thermique en tant que tels."
+        "raison": "relecture : La cible est vide alors que le texte vise spécifiquement les personnes souhaitant accéder à une voiture électrique via leasing social, ce qui élargit indûment le périmètre."
       }
     ],
-    "cout_reference_usd": 0.0471,
+    "cout_reference_usd": 0.0527,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "d483f7a93be88c08",
-    "date": "2026-10-10",
+    "empreinte": "e856fde02bf99860",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 0,
     "sans_effet": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.0298,
+    "cout_reference_usd": 0.0332,
     "appels": 1
   }
 ]

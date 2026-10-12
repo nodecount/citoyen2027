@@ -94,6 +94,11 @@ describe("polarite (table documentée : quel sens améliore la situation matéri
     expect(polarite("cout_de_la_vie", "baisse")).toBe("favorable");
   });
 
+  it("une hausse du coût d'emploi pour l'employeur le dégrade, sa baisse l'améliore", () => {
+    expect(polarite("cout_du_travail", "hausse")).toBe("defavorable");
+    expect(polarite("cout_du_travail", "baisse")).toBe("favorable");
+  });
+
   it("un sens indéterminé n'a aucune polarité : on ne devine pas", () => {
     for (const dimension of DIMENSIONS_EFFET) {
       expect(polarite(dimension, "indetermine")).toBeNull();

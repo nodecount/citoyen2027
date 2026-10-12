@@ -26,6 +26,23 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Baisser la fiscalité sur les héritages et les donations afin de faciliter la transmission du patrimoine."
       }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "recu",
+              "a_venir"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser la fiscalité sur les héritages et les donations afin de faciliter la transmission du patrimoine."
+      }
     ]
   },
   {
@@ -55,6 +72,7 @@
           {
             "champ": "heritage",
             "valeurs": [
+              "recu",
               "a_venir"
             ]
           }
@@ -62,7 +80,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter les abattements sur les donations"
+        "extrait": "Augmenter les abattements sur les donations, jugés aujourd’hui insuffisants, pour permettre aux parents de transmettre davantage à leurs enfants de leur vivant."
       }
     ]
   },
@@ -86,22 +104,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "heritage",
-            "valeurs": [
-              "a_venir"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Permettre à chacun de transmettre son patrimoine aux personnes de son choix, au-delà de sa famille"
-      }
-    ],
+    "effets": [],
     "positions": []
   },
   {
@@ -124,7 +127,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes condamnées bénéficiant de réductions de peine"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les réductions de peine automatiques."
+      }
+    ],
     "positions": [
       {
         "sujet": "prison",
@@ -154,7 +172,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes condamnées pouvant bénéficier d'aménagements de peine"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre fin aux aménagements dès l’audience."
+      }
+    ],
     "positions": [
       {
         "sujet": "prison",
@@ -362,7 +395,7 @@
           {
             "champ": "autre",
             "valeurs": [
-              "mineurs de 16 à 18 ans"
+              "mineurs de 16 à 17 ans"
             ]
           }
         ],
@@ -407,7 +440,7 @@
           {
             "champ": "autre",
             "valeurs": [
-              "mineurs dès 13 ans soumis à l'excuse de minorité"
+              "mineurs de 13 à 17 ans"
             ]
           }
         ],
@@ -505,7 +538,7 @@
           {
             "champ": "autre",
             "valeurs": [
-              "mineurs dès 13 ans pour les cas graves"
+              "mineurs de 13 ans et plus pour cas graves"
             ]
           }
         ],
@@ -781,9 +814,15 @@
       {
         "cibles": [
           {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
+            ]
+          },
+          {
             "champ": "autre",
             "valeurs": [
-              "personnes portant le voile à l'université"
+              "port du voile à l'université"
             ]
           }
         ],
@@ -822,36 +861,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "desert_medical",
-            "valeurs": [
-              "oui"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "la Sécurité sociale rembourse mieux les actes dans les zones sous-dotées"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "desert_medical",
-            "valeurs": [
-              "non"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "que dans les zones saturées"
-      }
-    ],
     "positions": []
   },
   {
@@ -950,7 +959,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Santé",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "soignant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Fonder la revalorisation salariale sur les responsabilités et non sur les statuts"
+      }
+    ],
     "positions": []
   },
   {
@@ -1070,7 +1094,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Système de retraite",
-    "positions": []
+    "positions": [],
+    "effets": []
   },
   {
     "id": "lisnard-envi-001",
@@ -1591,7 +1616,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abroger la carte scolaire qui enferme les familles dans leur quartier pour proposer un libre choix de l’école."
+        "extrait": "proposer un libre choix de l’école"
       }
     ],
     "positions": [
@@ -1630,6 +1655,24 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Instaurer progressivement un chèque-éducation : un financement public équivalent, que la famille choisisse l’enseignement public ou privé."
       }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire",
+              "college",
+              "lycee"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "un financement public équivalent, que la famille choisisse l’enseignement public ou privé"
+      }
     ]
   },
   {
@@ -1652,7 +1695,22 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "enseignant"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Liberté donnée aux chefs d’établissement de recruter leurs équipes pédagogiques"
+      }
+    ],
     "positions": [
       {
         "sujet": "ecole_organisation",
@@ -1688,22 +1746,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "enfants_scolarises",
-            "valeurs": [
-              "maternelle_primaire"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "indetermine",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instauration d’un certificat de fin de primaire dont la validation conditionnera l’entrée au collège."
-      }
-    ],
     "positions": [
       {
         "sujet": "ecole_discipline",
@@ -1746,7 +1788,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer le grec, le latin et la philosophie dès le primaire."
+        "extrait": "Instaurer le grec, le latin et la philosophie dès le primaire"
       }
     ],
     "positions": []
@@ -1839,7 +1881,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [],
     "positions": [
       {
         "sujet": "ecole_organisation",
@@ -1869,7 +1910,24 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant",
+              "apprenti"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer les lycées professionnels et les CFA en les liant aux entreprises"
+      }
+    ]
   },
   {
     "id": "lisnard-education-jeunesse-010",
@@ -1905,7 +1963,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer des classes d’excellence en mathématiques et en sciences dans chaque académie."
+        "extrait": "Créer des classes d’excellence en mathématiques et en sciences dans chaque académie"
       }
     ]
   }

@@ -64,7 +64,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Fiscalité",
-    "effets": [],
     "positions": [
       {
         "sujet": "fiscalite",
@@ -96,11 +95,32 @@
     "sous_theme": "Fiscalité",
     "effets": [
       {
-        "cibles": [],
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Faire disparaître progressivement la CSG (Contribution sociale généralisée) en transférant son financement vers les cotisations sociales des entreprises."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "en transférant son financement vers les cotisations sociales des entreprises."
       }
     ],
     "positions": []

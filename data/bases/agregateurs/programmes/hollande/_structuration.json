@@ -2,19 +2,14 @@
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "1f4f2ff886d48e8b",
-    "date": "2026-10-10",
+    "empreinte": "8fb123a1f75802df",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 3,
-    "avec_effets": 2,
+    "avec_effets": 3,
     "sans_effet": 0,
-    "rejetees": [
-      {
-        "id": "hollande-finances-publiques-001",
-        "raison": "relecture : La cible 'plus_1_3m' élargit le périmètre par rapport au texte qui vise uniquement les patrimoines supérieurs à 10 millions d'euros."
-      }
-    ],
-    "cout_reference_usd": 0.0501,
+    "rejetees": [],
+    "cout_reference_usd": 0.0576,
     "appels": 2
   }
 ]

@@ -2,127 +2,124 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "5921225defb372c4",
-    "date": "2026-10-04",
+    "empreinte": "f0e24ea63103dece",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "avec_effets": 5,
-    "sans_effet": 8,
+    "avec_effets": 4,
+    "sans_effet": 9,
     "rejetees": [],
-    "cout_reference_usd": 0.062,
+    "cout_reference_usd": 0.0653,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "7fa884b6715a8c1c",
-    "date": "2026-10-04",
+    "empreinte": "24cddbf3829eae2a",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 7,
     "avec_effets": 0,
     "sans_effet": 7,
     "rejetees": [],
-    "cout_reference_usd": 0.0313,
+    "cout_reference_usd": 0.0357,
     "appels": 1
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "bc55633e5c7b011d",
-    "date": "2026-10-10",
+    "empreinte": "9fda39d6b555b1ee",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 7,
     "avec_effets": 2,
-    "sans_effet": 5,
-    "rejetees": [],
-    "cout_reference_usd": 0.0522,
+    "sans_effet": 4,
+    "rejetees": [
+      {
+        "id": "zemmour-finances-publiques-007",
+        "raison": "relecture : La mesure est une simple possibilité offerte aux employeurs ('permettre de'), non une obligation imposée, donc l'effet cout_du_travail sur chef_entreprise ne remplit pas l'exception requise et relève d'un mécanisme supposé."
+      }
+    ],
+    "cout_reference_usd": 0.0644,
     "appels": 2
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "5ba6426a2f3a0b79",
-    "date": "2026-10-04",
+    "empreinte": "605b84655c71318b",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 8,
     "avec_effets": 1,
     "sans_effet": 7,
     "rejetees": [],
-    "cout_reference_usd": 0.0431,
+    "cout_reference_usd": 0.0512,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "620072981da427c9",
-    "date": "2026-10-04",
+    "empreinte": "4a2311a2ac43fa1d",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "avec_effets": 13,
-    "sans_effet": 12,
-    "rejetees": [],
-    "cout_reference_usd": 0.0943,
+    "sans_effet": 10,
+    "rejetees": [
+      {
+        "id": "zemmour-interieur-justice-001",
+        "raison": "relecture : Le regroupement familial concerne spécifiquement les étrangers extra-européens (les citoyens européens relèvent du droit de libre circulation), inclure la cible 'europeenne' élargit le périmètre au-delà de ce que le texte vise."
+      },
+      {
+        "id": "zemmour-interieur-justice-002",
+        "raison": "l'extrait d'un effet n'est pas retrouvé dans le texte : « le limiter à une centaine d’individus chaque année (contre p… »"
+      }
+    ],
+    "cout_reference_usd": 0.1374,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 1,
-    "empreinte": "2c3f0728a1f99f6e",
-    "date": "2026-10-04",
+    "empreinte": "19eb336229cd3bd6",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 6,
-    "avec_effets": 2,
+    "avec_effets": 3,
     "sans_effet": 3,
-    "rejetees": [
-      {
-        "id": "zemmour-interieur-justice-031",
-        "raison": "relecture : L'armement des policiers municipaux ne fonde pas directement une hausse de leur propre sécurité personnelle, c'est un mécanisme supposé non affirmé par le texte."
-      }
-    ],
-    "cout_reference_usd": 0.0205,
+    "rejetees": [],
+    "cout_reference_usd": 0.0283,
     "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "b80a8aec6853bc1e",
-    "date": "2026-10-10",
+    "empreinte": "9e9e86aa2cf2b142",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 19,
-    "avec_effets": 6,
-    "sans_effet": 9,
+    "avec_effets": 8,
+    "sans_effet": 10,
     "rejetees": [
       {
-        "id": "zemmour-retraites-travail-002",
-        "raison": "relecture : L'exonération de cotisations patronales réduit le coût du travail pour l'entreprise, pas directement le revenu disponible personnel du chef d'entreprise (mécanisme supposé), et la tranche 'moins_1200' n'est pas énoncée par le texte qui ne parle que du SMIC comme seuil d'exonération."
-      },
-      {
-        "id": "zemmour-retraites-travail-006",
-        "raison": "relecture : L'exonération de cotisations patronales allège une charge de l'entreprise, non le revenu disponible personnel du chef d'entreprise ; c'est un mécanisme supposé non énoncé par le texte."
-      },
-      {
-        "id": "zemmour-retraites-travail-009",
-        "raison": "relecture : La part de l'exonération de cotisations patronales bénéficie à l'entreprise d'accueil, pas directement au revenu disponible personnel du chef d'entreprise ; mécanisme supposé non énoncé par le texte."
-      },
-      {
         "id": "zemmour-retraites-travail-013",
-        "raison": "relecture : La baisse de l'impôt sur les sociétés affecte le bénéfice de l'entreprise, pas directement le revenu disponible personnel de l'indépendant, sans que le texte ne l'affirme."
+        "raison": "relecture : L'effet sur le revenu disponible du chef d'entreprise/indépendant repose sur une baisse de l'impôt sur les sociétés payé par l'entreprise, un mécanisme supposé de transmission à la poche personnelle non énoncé par le texte."
       }
     ],
-    "cout_reference_usd": 0.0959,
+    "cout_reference_usd": 0.1056,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "b3414da9d3fd98c1",
-    "date": "2026-10-04",
+    "empreinte": "5a73bcc506f712e1",
+    "date": "2026-10-11",
     "modele": "claude-sonnet-5",
     "propositions": 6,
     "avec_effets": 4,
     "sans_effet": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.0498,
+    "cout_reference_usd": 0.0562,
     "appels": 2
   }
 ]

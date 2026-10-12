@@ -10,6 +10,7 @@
     "ingestion": "tsx src/ingestion/run.ts",
     "scrape:ifrap": "tsx src/scraping/run-ifrap.ts",
     "scrape:structurer": "tsx src/scraping/run-structuration.ts",
+    "scrape:couverture": "tsx src/scraping/run-couverture.ts",
     "scrape:positions": "tsx src/scraping/run-positions.ts",
     "portraits": "tsx src/scraping/run-portraits.ts",
     "scrape:resumes": "tsx src/scraping/run-resumes.ts",

@@ -209,8 +209,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Permettre aux chefs d’entreprises de récompenser leurs salariés en instaurant une prime \"zéro charge\""
       }
-    ],
-    "effets": []
+    ]
   },
   {
     "id": "zemmour-interieur-justice-001",
@@ -232,22 +231,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "familles étrangères souhaitant un regroupement familial"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer le droit au « regroupement familial » et tous les droits automatiques liés à l’immigration familiale."
-      }
-    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -277,22 +260,6 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Immigration",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_sejour",
-            "valeurs": [
-              "demandeur_asile"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Revenir à l’esprit originel du droit d’asile en le limitant à une centaine d’individus chaque année"
-      }
-    ],
     "positions": [
       {
         "sujet": "immigration",
@@ -332,7 +299,7 @@
             ]
           }
         ],
-        "dimension": "droits_et_libertes",
+        "dimension": "acces_aux_services",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Exiger que les demandes d’asile soient déposées en dehors du territoire national, dans nos consulats"
@@ -373,12 +340,12 @@
           {
             "champ": "autre",
             "valeurs": [
-              "étrangers provenant de pays dont sont majoritairement issus les immigrés clandestins demandant un visa"
+              "étrangers provenant de pays dont sont majoritairement issus les immigrés clandestins"
             ]
           }
         ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
+        "dimension": "cout_de_la_vie",
+        "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Instaurer une caution obligatoire de 10 000 euros pour l’obtention d’un visa pour les étrangers provenant de pays dont sont majoritairement issus les immigrés clandestins"
       }
@@ -552,9 +519,9 @@
           {
             "champ": "aides_percues",
             "valeurs": [
-              "allocations_familiales",
-              "aide_logement",
               "rsa",
+              "aide_logement",
+              "allocations_familiales",
               "aspa"
             ]
           }
@@ -596,7 +563,7 @@
             ]
           }
         ],
-        "dimension": "acces_aux_services",
+        "dimension": "protection_sociale",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer les soins gratuits pour les étrangers clandestins (AME) pour ne conserver qu’une Aide médicale d’urgence (AMU)."
@@ -735,7 +702,7 @@
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Durcir les conditions de naturalisation, en augmentant la durée minimale de résidence en France de 5 ans à 10 ans, en exigeant une parfaite maitrise de la langue, une assimilation réelle, ainsi qu’une absence totale de condamnation judiciaire."
+        "extrait": "Durcir les conditions de naturalisation, en augmentant la durée minimale de résidence en France de 5 ans à 10 ans"
       }
     ],
     "positions": [
@@ -816,9 +783,16 @@
       {
         "cibles": [
           {
+            "champ": "nationalite",
+            "valeurs": [
+              "europeenne",
+              "hors_ue"
+            ]
+          },
+          {
             "champ": "autre",
             "valeurs": [
-              "délinquants et criminels étrangers condamnés"
+              "délinquants condamnés et criminels à l'issue de leur peine"
             ]
           }
         ],
@@ -1041,7 +1015,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instauration de la « défense-excusable », amélioration du code de la légitime-défense."
+      }
+    ],
     "positions": []
   },
   {
@@ -1139,7 +1121,36 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "squatteurs"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Expulser tous les squatteurs en moins de 72h, grâce au recours obligatoire à la force publique par les préfets."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "proprietaire"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Expulser tous les squatteurs en moins de 72h, grâce au recours obligatoire à la force publique par les préfets."
+      }
+    ],
     "positions": []
   },
   {
@@ -1349,6 +1360,22 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Généraliser progressivement l’armement obligatoire des polices municipales."
       }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "forces_ordre"
+            ]
+          }
+        ],
+        "dimension": "securite_personnelle",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Généraliser progressivement l’armement obligatoire des polices municipales."
+      }
     ]
   },
   {
@@ -1429,7 +1456,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer des services hospitaliers de proximité dans les déserts médicaux (services de maternité, chimiothérapie, dépistage et chirurgie-dentaire)."
+        "extrait": "Créer des services hospitaliers de proximité dans les déserts médicaux"
       }
     ],
     "positions": [
@@ -1469,15 +1496,7 @@
         "extrait": "Rétablir un système de garde obligatoire pour les médecins sur l’ensemble du territoire national."
       }
     ],
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rétablir un système de garde obligatoire pour les médecins sur l’ensemble du territoire national."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "zemmour-social-solidarite-004",
@@ -1499,7 +1518,23 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Transports",
-    "effets": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "vehicule",
+            "valeurs": [
+              "thermique",
+              "electrique_hybride"
+            ]
+          }
+        ],
+        "dimension": "securite_personnelle",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Restaurer la limitation de vitesse de 90km/h sur les routes nationales et départementales."
+      }
+    ],
     "positions": []
   },
   {
@@ -1634,7 +1669,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Maintenir l’exonération de cotisations patronales et salariales à hauteur du SMIC pendant deux ans."
       }
-    ]
+    ],
+    "effets": []
   },
   {
     "id": "zemmour-retraites-travail-003",
@@ -1669,7 +1705,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "simplifiant et défiscalisant la prime de participation des salariés"
+        "extrait": "en simplifiant et défiscalisant la prime de participation des salariés"
       }
     ]
   },
@@ -1706,7 +1742,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Permettre le déblocage immédiat de la prime de participation sans aucun impôt sur le revenu et sans aucune condition pour le salarié."
+        "extrait": "Permettre le déblocage immédiat de la prime de participation sans aucun impôt sur le revenu et sans aucune condition pour le salarié"
       }
     ]
   },
@@ -1766,6 +1802,22 @@
         "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Favoriser les embauches en exonérant de cotisations patronales toute petite entreprise de moins de 11 salariés pour deux embauches en CDI, pendant 2 ans."
+      }
+    ],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "en exonérant de cotisations patronales toute petite entreprise de moins de 11 salariés pour deux embauches en CDI, pendant 2 ans"
       }
     ]
   },
@@ -1865,7 +1917,37 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Emploi & travail",
-    "positions": []
+    "positions": [],
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "apprenti"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "en réinstaurant et maintenant l’exonération de cotisations patronales et salariales à hauteur du SMIC pendant 2 ans en cas d’embauche de l’apprenti par l’entreprise d’accueil"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "en réinstaurant et maintenant l’exonération de cotisations patronales et salariales à hauteur du SMIC pendant 2 ans en cas d’embauche de l’apprenti par l’entreprise d’accueil"
+      }
+    ]
   },
   {
     "id": "zemmour-retraites-travail-010",
@@ -2003,16 +2085,16 @@
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "statut_professionnel",
             "valeurs": [
-              "héritiers d'entreprises familiales"
+              "chef_entreprise"
             ]
           }
         ],
         "dimension": "patrimoine",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer les droits de donation et de succession pour la transmission des entreprises familiales."
+        "extrait": "Supprimer les droits de donation et de succession pour la transmission des entreprises familiales"
       }
     ]
   },
@@ -2056,7 +2138,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Revaloriser jusqu’à 600 € / an les petites retraites inférieures à 1300 € / mois par l’exonération de CSG et CRDS."
+        "extrait": "Revaloriser jusqu’à 600 € / an les petites retraites inférieures à 1300 € / mois par l’exonération de CSG et CRDS"
       }
     ],
     "positions": [
@@ -2775,23 +2857,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-09-26",
     "sous_theme": "Education nationale",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "enfants_scolarises",
-            "valeurs": [
-              "college",
-              "lycee"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Étendre l’enseignement du latin et du grec à tous les établissements du territoire national"
-      }
-    ],
+    "effets": [],
     "positions": []
   },
   {
@@ -2821,6 +2887,12 @@
             "champ": "aides_percues",
             "valeurs": [
               "allocations_familiales"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "parents d'élèves perturbateurs ou absentéistes"
             ]
           }
         ],

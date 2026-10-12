@@ -119,6 +119,6 @@ describe("validerEffet", () => {
 describe("référentiels", () => {
   it("ne contient que des dimensions et des sens sans jugement de valeur", () => {
     expect([...SENS_EFFET]).toEqual(["hausse", "baisse", "indetermine"]);
-    expect(DIMENSIONS_EFFET).toHaveLength(8);
+    expect(DIMENSIONS_EFFET).toHaveLength(9);
   });
 });
