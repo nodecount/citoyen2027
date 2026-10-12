@@ -16,6 +16,8 @@ import { mettreAJourReponse, type ProfilPartiel } from "./profil";
 import type { ChampProfil } from "./types";
 
 const BASES = listerBases();
+// Noms des candidats de toutes les bases : la page « À propos » ne crédite que les photos qui peuvent s'afficher.
+const nomsToutesBases: Record<string, string> = Object.fromEntries(BASES.flatMap((b) => Object.entries(chargerBase(b.id).metas).map(([slug, m]) => [slug, m.nom] as const)));
 
 export default function App() {
   // L'écran affiché suit l'adresse : « / » accueil, « /exploration », « /simulateur », « /ma-situation », « /a-propos », « /monitoring », « /tests-situations ».
@@ -61,7 +63,7 @@ export default function App() {
       {ecran === "monitoring" && <Monitoring base={base} />}
       {ecran === "tests-situations" && <PageTestsSituations base={base} />}
       {ecran === "accueil" && <Accueil base={base} onCommencer={() => allerA("simulateur")} onOuvrir={(ouverture) => allerA("exploration", ouverture)} />}
-      {ecran === "a-propos" && <PageAPropos bases={BASES} nomsParSlug={Object.fromEntries(Object.entries(base.metas).map(([slug, m]) => [slug, m.nom]))} />}
+      {ecran === "a-propos" && <PageAPropos bases={BASES} nomsParSlug={nomsToutesBases} />}
       {ecran === "questions-generales" && (
         <PageQuestionsGenerales
           champs={base.champs}

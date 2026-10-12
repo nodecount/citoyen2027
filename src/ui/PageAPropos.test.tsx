@@ -39,7 +39,9 @@ describe("PageAPropos", () => {
   });
 
   it("crédite chaque photo : vignette, auteur, licence et source, cliquables", () => {
-    expect((html.match(/>source<\/a>/g) ?? []).length).toBe(Object.keys(PORTRAITS).length);
+    expect((html.match(/>source<\/a>/g) ?? []).length).toBe(1);
+    const toutes = renderToStaticMarkup(<PageAPropos bases={listerBases()} nomsParSlug={Object.fromEntries(Object.keys(PORTRAITS).map((s) => [s, s]))} />);
+    expect((toutes.match(/>source<\/a>/g) ?? []).length).toBe(Object.keys(PORTRAITS).length);
     expect(html).toContain("<strong>Marine Le Pen</strong>");
     expect(html).toContain(PORTRAITS["le-pen"].licence);
     expect(html).toContain(`href="${PORTRAITS["le-pen"].source_url}"`);

@@ -11,7 +11,10 @@ interface PageAProposProps {
 // Page « À propos » : ce qui n'aide pas directement à choisir, mais qu'un site doit dire quelque part — une seule fois.
 // Une section = un bloc avec son icône.
 export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
-  const credits = Object.entries(PORTRAITS).sort(([a], [b]) => a.localeCompare(b));
+  // Seuls les portraits des candidats présents dans une base sont crédités (un candidat retiré de la source n'a plus de photo affichée).
+  const credits = Object.entries(PORTRAITS)
+    .filter(([slug]) => slug in nomsParSlug)
+    .sort(([a], [b]) => a.localeCompare(b));
   return (
     <section className="a-propos">
       <div className="sections-a-propos">

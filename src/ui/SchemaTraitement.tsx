@@ -88,9 +88,6 @@ export default function SchemaTraitement() {
           }}
         />
       </ol>
-      <figcaption>
-        Un modèle d'IA propose, le code contrôle. À ce jour, aucun effet ni aucune étiquette n'a encore été relu une à une par une personne.
-      </figcaption>
     </figure>
   );
 }

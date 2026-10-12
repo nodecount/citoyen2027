@@ -769,12 +769,6 @@ a {
   transform: rotate(45deg);
 }
 
-.schema-traitement figcaption {
-  margin-top: 0.9rem;
-  color: var(--encre-douce);
-  font-size: 0.9375rem;
-}
-
 /* Nom d'un candidat cité dans une phrase : la couleur du thème (bleu foncé), jamais le rouge (qui veut dire « dégradant »). */
 .nom-candidat {
   color: var(--bleu-fonce);
