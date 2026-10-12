@@ -1,14 +1,73 @@
 [
   {
     "groupe": 0,
-    "empreinte": "2b789f28a211181e",
-    "date": "2026-10-10",
+    "empreinte": "d7ea490f34260c56",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 8,
+    "propositions": 25,
+    "etiquetees": 3,
+    "sans_position": 20,
+    "rejetees": [
+      {
+        "id": "ruffin-social-solidarite-010",
+        "raison": "relecture : Augmenter la contribution des employeurs au financement du logement n'est pas un encadrement des loyers ni une imposition de logement social tel que défini, c'est une mesure de financement/fiscalité des entreprises plutôt qu'une mesure d'encadrement du logement."
+      },
+      {
+        "id": "ruffin-social-solidarite-011",
+        "raison": "relecture : Supprimer le seuil de dix salariés pour le 1% logement est une mesure sur l'obligation de cotisation des entreprises, pas un encadrement des loyers ou une création de logement social telle que définie par le sujet."
+      }
+    ],
+    "cout_reference_usd": 0.1078,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "139ba8a45da49593",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 9,
+    "sans_position": 15,
+    "rejetees": [
+      {
+        "id": "ruffin-social-solidarite-018",
+        "raison": "relecture : Abroger une loi sur les expulsions et privilégier la médiation ne correspond pas à la définition d'encadrer_logement (loyers, logement social, logements vacants, locations touristiques)."
+      }
+    ],
+    "cout_reference_usd": 0.0654,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "3f6aa56249ba66d6",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 8,
+    "sans_position": 15,
+    "rejetees": [
+      {
+        "id": "ruffin-retraites-travail-018",
+        "raison": "relecture : Le texte instaure un mécanisme spécifique de trimestres bonus pour pénibilité, sans traiter du maintien ou non de l'âge légal général ; cela ne fonde pas l'étiquette 'age_actuel'."
+      },
+      {
+        "id": "ruffin-envi-006",
+        "raison": "relecture : Le texte propose un référendum sur des mesures climatiques précises, ce qui ne fonde pas l'étiquette 'nouvelles_institutions' qui vise une réforme des institutions elles-mêmes (constitution, proportionnelle, RIC)."
+      }
+    ],
+    "cout_reference_usd": 0.0577,
+    "appels": 2
+  },
+  {
+    "groupe": 3,
+    "empreinte": "a1f0ff587a78926c",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 17,
     "etiquetees": 0,
-    "sans_position": 8,
+    "sans_position": 17,
     "rejetees": [],
-    "cout_reference_usd": 0.0385,
+    "cout_reference_usd": 0.0158,
     "appels": 1
   }
 ]

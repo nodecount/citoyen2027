@@ -17,19 +17,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "entreprises",
         "position": "soutenir_entreprises",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "baisser de 50 Md€ les impôts de production par an pendant 5 ans"
-      },
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "baisser de 50 Md€ les impôts de production par an pendant 5 ans"
       }
@@ -53,15 +48,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Ramener le déficit à 2 % du PIB sur le quinquennat"
+        "extrait": "Ramener le déficit à 2 % du PIB sur le quinquennat."
       }
     ]
   },
@@ -83,8 +79,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -106,15 +103,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Dette & déficit",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "« règle d’or » budgétaire pour limiter les déficits publics en empêchant l’État de financer les dépenses courantes par la dette"
+        "extrait": "inscrire dans la Constitution une « règle d’or » budgétaire pour limiter les déficits publics"
       }
     ]
   },
@@ -136,15 +134,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Dette & déficit",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Ramener le déficit à 2 % du PIB en fin de quinquennat soit en 2032"
+        "extrait": "Ramener le déficit à 2 % du PIB en fin de quinquennat soit en 2032."
       }
     ]
   },
@@ -166,10 +165,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
-    "effets": [],
-    "positions": []
+    "titre_litteral": true,
+    "effets": []
   },
   {
     "id": "philippe-finances-publiques-007",
@@ -189,8 +188,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -206,6 +206,14 @@
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Augmenter les plafonds d’exonération fiscale des donations pendant les trois premières années du quinquennat."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ultra_riches",
+        "position": "ne_pas_taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter les plafonds d'exonération fiscale des donations pendant les trois premières années du quinquennat."
       }
     ]
   },
@@ -227,10 +235,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
-    "effets": [],
-    "positions": []
+    "titre_litteral": true,
+    "effets": []
   },
   {
     "id": "philippe-finances-publiques-009",
@@ -250,8 +258,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -280,9 +289,18 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
-    "effets": []
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "S'engager à ne pas créer de nouvel impôt sur le quinquennat."
+      }
+    ]
   },
   {
     "id": "philippe-finances-publiques-011",
@@ -302,9 +320,17 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
-    "positions": []
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Accorder une part fiscale dès le deuxième enfant."
+      }
+    ]
   },
   {
     "id": "philippe-interieur-justice-001",
@@ -324,30 +350,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_sejour",
-            "valeurs": [
-              "demandeur_asile"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Faire voter au Parlement chaque année une liste de « pays sûrs » pour le droit d’asile."
-      }
-    ],
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Faire voter au Parlement chaque année une liste de « pays sûrs » pour le droit d’asile"
+        "extrait": "Faire voter au Parlement chaque année une liste de « pays sûrs » pour le droit d’asile."
       }
     ]
   },
@@ -369,14 +381,31 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes concernées par l'immigration familiale"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Restreindre l'immigration familiale."
+      }
+    ],
     "positions": [
       {
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Restreindre l'immigration familiale"
+        "extrait": "Restreindre l'immigration familiale."
       }
     ]
   },
@@ -398,15 +427,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place une politique de quotas migratoires permettant de choisir notre immigration économique"
+        "extrait": "Mettre en place une politique de quotas migratoires permettant de choisir notre immigration économique."
       }
     ]
   },
@@ -428,23 +458,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
+    "titre_litteral": true,
     "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étrangers délinquants"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Expulser immédiatement les étrangers délinquants"
-      },
       {
         "cibles": [
           {
@@ -465,7 +482,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Expulser immédiatement les étrangers délinquants et mettre fin à leurs aides sociales"
+        "extrait": "Expulser immédiatement les étrangers délinquants et mettre fin à leurs aides sociales."
       }
     ]
   },
@@ -487,30 +504,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_sejour",
-            "valeurs": [
-              "sans_titre"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Utiliser les centres de retour prévus par la le réglement européen retour."
-      }
-    ],
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Utiliser les centres de retour prévus par la le réglement européen retour"
+        "extrait": "Utiliser les centres de retour prévus par la le réglement européen retour."
       }
     ]
   },
@@ -532,8 +535,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -555,20 +559,151 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Dénoncer l'accord de 1968 avec l'Algérie pour reprendre le contrôle des flux migratoires Algérie/France"
+        "extrait": "Dénoncer l'accord de 1968 avec l'Algérie pour reprendre le contrôle des flux migratoires Algérie/France."
       }
     ]
   },
   {
     "id": "philippe-interieur-justice-008",
+    "candidat": "philippe",
+    "theme": "interieur-justice",
+    "titre": "Installer un centre de retour français en Afrique de l’Est, pour éloigner rapidement et massivement les étrangers en situation irrégulière installés à Mayotte.",
+    "resume_factuel": "Installer un centre de retour français en Afrique de l’Est, pour éloigner rapidement et massivement les étrangers en situation irrégulière installés à Mayotte.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Immigration",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          },
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "outre_mer"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "éloigner rapidement et massivement les étrangers en situation irrégulière installés à Mayotte"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Installer un centre de retour français en Afrique de l’Est, pour éloigner rapidement et massivement les étrangers en situation irrégulière installés à Mayotte."
+      }
+    ]
+  },
+  {
+    "id": "philippe-interieur-justice-009",
+    "candidat": "philippe",
+    "theme": "interieur-justice",
+    "titre": "Fermer totalement les vannes de l’immigration à Mayotte : suspendre le droit du sol et l'enregistrement des demandes d'asile à Mayotte pendant le prochain…",
+    "resume_factuel": "Fermer totalement les vannes de l’immigration à Mayotte : suspendre le droit du sol et l'enregistrement des demandes d'asile à Mayotte pendant le prochain quinquennat.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Immigration",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "outre_mer"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "enfants nés à Mayotte de parents étrangers concernés par le droit du sol"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "suspendre le droit du sol"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "demandeur_asile"
+            ]
+          },
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "outre_mer"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "suspendre … l'enregistrement des demandes d'asile à Mayotte pendant le prochain quinquennat"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Fermer totalement les vannes de l’immigration à Mayotte"
+      },
+      {
+        "sujet": "droit_du_sol",
+        "position": "droit_sol_restreint",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "suspendre le droit du sol et l'enregistrement des demandes d'asile à Mayotte pendant le prochain quinquennat."
+      }
+    ]
+  },
+  {
+    "id": "philippe-interieur-justice-010",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Mettre en place des peines courtes mais dissuasives dès la première infraction.",
@@ -585,20 +720,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place des peines courtes mais dissuasives dès la première infraction"
+        "extrait": "Mettre en place des peines courtes mais dissuasives dès la première infraction."
       }
     ]
   },
   {
-    "id": "philippe-interieur-justice-009",
+    "id": "philippe-interieur-justice-011",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Mettre en place des peines planchers pour les infractions graves, par exemple lorsqu'elles portent atteinte à l'intégrité physique des personnes dépositaires…",
@@ -615,26 +751,27 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
-      {
-        "sujet": "prison",
-        "position": "plus_de_prison",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place des peines planchers pour les infractions graves"
-      },
       {
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place des peines planchers pour les infractions graves"
+      },
+      {
+        "sujet": "prison",
+        "position": "plus_de_prison",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place des peines planchers pour les infractions graves, par exemple lorsqu'elles portent atteinte à l'intégrité physique des personnes dépositaires de l'autorité publique."
       }
     ]
   },
   {
-    "id": "philippe-interieur-justice-010",
+    "id": "philippe-interieur-justice-012",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Supprimer le juge d'application des peines pour que la peine décidée soit appliquée.",
@@ -651,20 +788,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "prison",
         "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer le juge d'application des peines pour que la peine décidée soit appliquée"
+        "extrait": "Supprimer le juge d'application des peines pour que la peine décidée soit appliquée."
       }
     ]
   },
   {
-    "id": "philippe-interieur-justice-011",
+    "id": "philippe-interieur-justice-013",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Développer le recrutement comme magistrats de juristes ayant exercé dans d'autres secteurs du droit.",
@@ -681,13 +819,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "philippe-interieur-justice-012",
+    "id": "philippe-interieur-justice-014",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Réviser la composition du Conseil Supérieur de la Magistrature (CSM) et instaurer un \"devoir de redevabilité\" à l'égard des victimes, pour renforcer la…",
@@ -704,13 +843,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "philippe-interieur-justice-013",
+    "id": "philippe-interieur-justice-015",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Renforcer l'autorité du ministre de la Justice, Garde des Sceaux, sur le parquet, notamment en instaurant la possibilité d'adresser des instructions…",
@@ -727,13 +867,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "philippe-interieur-justice-014",
+    "id": "philippe-interieur-justice-016",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Donner aux maires un pouvoir de sanction pénale afin qu'ils puissent réprimer les petites infractions.",
@@ -750,20 +891,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Donner aux maires un pouvoir de sanction pénale afin qu'ils puissent réprimer les petites infractions"
+        "extrait": "pouvoir de sanction pénale afin qu'ils puissent réprimer les petites infractions"
       }
     ]
   },
   {
-    "id": "philippe-interieur-justice-015",
+    "id": "philippe-interieur-justice-017",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Créer un principe de précaution pénale pour qu'à chaque plainte déposée liée aux enfants, une mesure de protection immédiate soit mise en place pour la victime…",
@@ -780,8 +922,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -795,13 +938,20 @@
         "dimension": "securite_personnelle",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "à chaque plainte déposée liée aux enfants, une mesure de protection immédiate soit mise en place pour la victime potentielle"
+        "extrait": "qu'à chaque plainte déposée liée aux enfants, une mesure de protection immédiate soit mise en place pour la victime potentielle"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "prevention",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "une mesure de protection immédiate soit mise en place pour la victime potentielle"
+      }
+    ]
   },
   {
-    "id": "philippe-interieur-justice-016",
+    "id": "philippe-interieur-justice-018",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Mettre en place l'imprescriptibilité pour les crimes sur mineurs.",
@@ -818,20 +968,52 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place l'imprescriptibilité pour les crimes sur mineurs."
+        "extrait": "Mettre en place l'imprescriptibilité pour les crimes sur mineurs"
       }
     ]
   },
   {
-    "id": "philippe-interieur-justice-017",
+    "id": "philippe-interieur-justice-019",
+    "candidat": "philippe",
+    "theme": "interieur-justice",
+    "titre": "Lutter contre le proxénétisme en ligne en faisant fermer les sites qui la laissent prospérer.",
+    "resume_factuel": "Lutter contre le proxénétisme en ligne en faisant fermer les sites qui la laissent prospérer.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lutter contre le proxénétisme en ligne en faisant fermer les sites qui la laissent prospérer"
+      }
+    ]
+  },
+  {
+    "id": "philippe-interieur-justice-020",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Créer un \"état d'urgence narco\" avec des moyens juridiques d'exception, limités dans le temps et dans l'espace, comme l'utilisation ciblée de la reconnaissance…",
@@ -848,20 +1030,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Lutte contre le narcotrafic",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "surveillance",
         "position": "plus_surveillance",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "des moyens juridiques d'exception, limités dans le temps et dans l'espace, comme l'utilisation ciblée de la reconnaissance faciale"
+        "extrait": "l'utilisation ciblée de la reconnaissance faciale"
       }
     ]
   },
   {
-    "id": "philippe-interieur-justice-018",
+    "id": "philippe-interieur-justice-021",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Constituer une \"fiche S financière\" soit un profil bancaire spécifique pour les personnes condamnées pour narcotrafic.",
@@ -878,8 +1061,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Lutte contre le narcotrafic",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -893,12 +1077,20 @@
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Constituer une \"fiche S financière\" soit un profil bancaire spécifique pour les personnes condamnées pour narcotrafic."
+        "extrait": "un profil bancaire spécifique pour les personnes condamnées pour narcotrafic"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "un profil bancaire spécifique pour les personnes condamnées pour narcotrafic"
       }
     ]
   },
   {
-    "id": "philippe-interieur-justice-019",
+    "id": "philippe-interieur-justice-022",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Lever l'excuse de minorité pour les faits en lien avec le narcotrafic et créer la comparution immédiate des mineurs pour ces infractions.",
@@ -915,35 +1107,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "mineurs impliqués dans le narcotrafic"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Lever l'excuse de minorité pour les faits en lien avec le narcotrafic et créer la comparution immédiate des mineurs pour ces infractions."
-      }
-    ],
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
         "sujet": "justice_mineurs",
         "position": "durcir_justice_mineurs",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Lever l'excuse de minorité pour les faits en lien avec le narcotrafic et créer la comparution immédiate des mineurs pour ces infractions."
+        "extrait": "Lever l'excuse de minorité pour les faits en lien avec le narcotrafic et créer la comparution immédiate des mineurs pour ces infractions"
       }
     ]
   },
   {
-    "id": "philippe-interieur-justice-020",
+    "id": "philippe-interieur-justice-023",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Créer des établissements de réinsertion et de soin pour les mineurs condamnés pour narcotrafic.",
@@ -960,8 +1138,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Lutte contre le narcotrafic",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -983,12 +1162,12 @@
         "sujet": "justice_mineurs",
         "position": "priorite_educative",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer des établissements de réinsertion et de soin pour les mineurs condamnés pour narcotrafic."
+        "extrait": "Créer des établissements de réinsertion et de soin pour les mineurs condamnés pour narcotrafic"
       }
     ]
   },
   {
-    "id": "philippe-interieur-justice-021",
+    "id": "philippe-interieur-justice-024",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Aligner le régime de l'application des peines des grands narcotrafiquants sur celui des terroristes.",
@@ -1005,35 +1184,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "grands narcotrafiquants"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Aligner le régime de l'application des peines des grands narcotrafiquants sur celui des terroristes."
-      }
-    ],
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Aligner le régime de l'application des peines des grands narcotrafiquants sur celui des terroristes."
+        "extrait": "Aligner le régime de l'application des peines des grands narcotrafiquants sur celui des terroristes"
       }
     ]
   },
   {
-    "id": "philippe-interieur-justice-022",
+    "id": "philippe-interieur-justice-025",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Mobiliser la DGSI sur le narcotrafic et mener une grande réforme du renseignement économique et financier pour mieux tracer les fonds et saisir les avoirs.",
@@ -1050,13 +1215,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Lutte contre le narcotrafic",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "philippe-interieur-justice-023",
+    "id": "philippe-interieur-justice-026",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Mettre en place un grand plan anticorruption des fonctionnaires : criblage systématique de toutes les fonctions sensibles (greffiers, agents fiscaux,…",
@@ -1073,13 +1239,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Lutte contre le narcotrafic",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "philippe-interieur-justice-024",
+    "id": "philippe-interieur-justice-027",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Informer systématiquement les employeurs publics lorsqu’une personne chargée de mission de service public est poursuivie pour usage de stupéfiant.",
@@ -1096,12 +1263,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Lutte contre le narcotrafic",
+    "titre_litteral": true,
+    "effets": [],
     "positions": []
   },
   {
-    "id": "philippe-interieur-justice-025",
+    "id": "philippe-interieur-justice-028",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Instaurer une \"tolérance zéro\" avec les consommateurs, par la mise en place d'opérations “place nette” dans les boîtes de nuit et festivals, le recouvrement…",
@@ -1118,15 +1287,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Lutte contre le narcotrafic",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "consommateurs verbalisés lors d'opérations place nette"
+              "consommateurs de stupéfiants dans boîtes de nuit et festivals verbalisés"
             ]
           }
         ],
@@ -1138,15 +1308,15 @@
     ],
     "positions": [
       {
-        "sujet": "cannabis",
-        "position": "interdit_cannabis",
+        "sujet": "securite",
+        "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer une \"tolérance zéro\" avec les consommateurs, par la mise en place d'opérations “place nette” dans les boîtes de nuit et festivals, le recouvrement forcé des amendes, y compris sur les prestations sociales."
+        "extrait": "Instaurer une \"tolérance zéro\" avec les consommateurs, par la mise en place d'opérations “place nette” dans les boîtes de nuit et festivals, le recouvrement forcé des amendes, y compris sur les prestations sociales"
       }
     ]
   },
   {
-    "id": "philippe-interieur-justice-026",
+    "id": "philippe-interieur-justice-029",
     "candidat": "philippe",
     "theme": "interieur-justice",
     "titre": "Instaurer une liste noire des pays européens non-coopératifs en matière de narcotrafic, pour une \"diplomatie narco\".",
@@ -1163,31 +1333,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Lutte contre le narcotrafic",
-    "effets": [],
-    "positions": []
-  },
-  {
-    "id": "philippe-interieur-justice-027",
-    "candidat": "philippe",
-    "theme": "interieur-justice",
-    "titre": "Lutter contre le proxénétisme en ligne en faisant fermer tous les sites qui le laissent prospérer.",
-    "resume_factuel": "Lutter contre le proxénétisme en ligne en faisant fermer tous les sites qui le laissent prospérer.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1195,8 +1343,8 @@
     "id": "philippe-social-solidarite-001",
     "candidat": "philippe",
     "theme": "social-solidarite",
-    "titre": "Créer une aide financière unique et universelle pour les familles, en fusionnant les dispositifs existants trop complexes et éparpillés.",
-    "resume_factuel": "Créer une aide financière unique et universelle pour les familles, en fusionnant les dispositifs existants trop complexes et éparpillés.",
+    "titre": "Créer une allocation familiale unique de 350 € dès le premier enfant, pour aider toutes les familles, y compris les familles monoparentales.",
+    "resume_factuel": "Créer une allocation familiale unique de 350 € dès le premier enfant, pour aider toutes les familles, y compris les familles monoparentales.",
     "sources": [
       {
         "type": "secondaire",
@@ -1209,8 +1357,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Allocations & prestations sociales",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1222,15 +1371,165 @@
           }
         ],
         "dimension": "revenu_disponible",
-        "sens": "indetermine",
+        "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer une aide financière unique et universelle pour les familles, en fusionnant les dispositifs existants trop complexes et éparpillés."
+        "extrait": "Créer une allocation familiale unique de 350 € dès le premier enfant"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer une allocation familiale unique de 350 € dès le premier enfant, pour aider toutes les familles, y compris les familles monoparentales"
+      }
+    ]
+  },
+  {
+    "id": "philippe-social-solidarite-002",
+    "candidat": "philippe",
+    "theme": "social-solidarite",
+    "titre": "Instaurer une réduction d’impôt d’environ 3 000 € pendant les trois années suivant la naissance d’un enfant.",
+    "resume_factuel": "Instaurer une réduction d’impôt d’environ 3 000 € pendant les trois années suivant la naissance d’un enfant.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Allocations & prestations sociales",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfant_moins_3_ans",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "une réduction d’impôt d’environ 3 000 € pendant les trois années suivant la naissance d’un enfant"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer une réduction d'impôt d'environ 3 000 € pendant les trois années suivant la naissance d'un enfant"
+      }
+    ]
+  },
+  {
+    "id": "philippe-social-solidarite-003",
+    "candidat": "philippe",
+    "theme": "social-solidarite",
+    "titre": "Mettre en place un prêt à taux zéro pour les familles qui doivent déménager et acheter un logement plus grand à l’arrivée d’un enfant supplémentaire.",
+    "resume_factuel": "Mettre en place un prêt à taux zéro pour les familles qui doivent déménager et acheter un logement plus grand à l’arrivée d’un enfant supplémentaire.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Allocations & prestations sociales",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          },
+          {
+            "champ": "projet_achat",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "un prêt à taux zéro pour les familles qui doivent déménager et acheter un logement plus grand à l’arrivée d’un enfant supplémentaire"
       }
     ],
     "positions": []
   },
   {
-    "id": "philippe-social-solidarite-002",
+    "id": "philippe-social-solidarite-004",
+    "candidat": "philippe",
+    "theme": "social-solidarite",
+    "titre": "Exonérer de cotisations sociales les salariés qui acceptent de travailler plus longtemps, afin d’augmenter leur rémunération tout en réduisant le coût du…",
+    "resume_factuel": "Exonérer de cotisations sociales les salariés qui acceptent de travailler plus longtemps, afin d’augmenter leur rémunération tout en réduisant le coût du travail pour les entreprises.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Allocations & prestations sociales",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Exonérer de cotisations sociales les salariés qui acceptent de travailler plus longtemps, afin d’augmenter leur rémunération"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "tout en réduisant le coût du travail pour les entreprises"
+      }
+    ]
+  },
+  {
+    "id": "philippe-social-solidarite-005",
     "candidat": "philippe",
     "theme": "social-solidarite",
     "titre": "Stabiliser les dépenses de santé en dépensant mieux et en misant notamment sur la prévention et les transformations technologiques.",
@@ -1247,13 +1546,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "philippe-social-solidarite-003",
+    "id": "philippe-social-solidarite-006",
     "candidat": "philippe",
     "theme": "social-solidarite",
     "titre": "Permettre un prêt à taux zéro à chaque naissance pour faciliter le déménagement des familles qui s'agrandissent.",
@@ -1270,12 +1570,29 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "au_moins_un"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre un prêt à taux zéro à chaque naissance pour faciliter le déménagement des familles qui s'agrandissent"
+      }
+    ],
     "positions": []
   },
   {
-    "id": "philippe-social-solidarite-004",
+    "id": "philippe-social-solidarite-007",
     "candidat": "philippe",
     "theme": "social-solidarite",
     "titre": "Mettre en place un plan fret-ferroviaire pour limiter la circulation des camions.",
@@ -1292,8 +1609,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Transports",
+    "titre_litteral": true,
     "effets": []
   },
   {
@@ -1314,16 +1632,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "positions": [],
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "statut_professionnel",
             "valeurs": [
-              "actifs (personnes en emploi)"
+              "salarie"
             ]
           }
         ],
@@ -1332,7 +1650,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "augmenter le salaire net des actifs"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "philippe-retraites-travail-002",
@@ -1352,38 +1671,33 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "positions": [],
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
           {
-            "champ": "statut_professionnel",
+            "champ": "autre",
             "valeurs": [
-              "salarie"
-            ]
-          },
-          {
-            "champ": "enfant_moins_3_ans",
-            "valeurs": [
-              "oui"
+              "parents reprenant le travail après un congé parental"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un temps partiel parental, à 80 % rémunéré 100 % pendant 2 mois pour faciliter la reprise des parents après les congés parentaux"
+        "extrait": "Créer un temps partiel parental, à 80 % rémunéré 100 % pendant 2 mois pour faciliter la reprise des parents après les congés parentaux."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "philippe-retraites-travail-003",
     "candidat": "philippe",
     "theme": "retraites-travail",
-    "titre": "Introduire 10 à 15 % de capitalisation dans les pensions d'ici 15 ans.",
-    "resume_factuel": "Introduire 10 à 15 % de capitalisation dans les pensions d'ici 15 ans.",
+    "titre": "Introduire une part de capitalisation dans notre système de retraite :",
+    "resume_factuel": "Introduire une part de capitalisation dans notre système de retraite : - Créer un fonds de capitalisation collective obligatoire (étendre celui qui existe déjà pour les fonctionnaires aux salariés), financé par les excédents de l'Agirc-Arrco qui seront dégagés par la réforme, - Instituer un plan d'épargne retraite individuel obligatoire, abondé dès le premier contrat de travail de 500 € de la part de l'Etat. L'objectif est que les jeunes qui entrent aujourd'hui sur le marché du travail puissent bénéficier de 20 % à 25 % de capitalisation sur sa pension.",
     "sources": [
       {
         "type": "secondaire",
@@ -1396,81 +1710,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Système de retraite",
-    "effets": [],
+    "titre_litteral": true,
     "positions": []
   },
   {
     "id": "philippe-retraites-travail-004",
-    "candidat": "philippe",
-    "theme": "retraites-travail",
-    "titre": "Entreprendre un référendum sur les retraites à l’issue des législatives (retraite par capitalisation, travailler plus longtemps, prise en compte des métiers…",
-    "resume_factuel": "Entreprendre un référendum sur les retraites à l’issue des législatives (retraite par capitalisation, travailler plus longtemps, prise en compte des métiers pénibles).",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite",
-    "effets": [],
-    "positions": []
-  },
-  {
-    "id": "philippe-retraites-travail-005",
-    "candidat": "philippe",
-    "theme": "retraites-travail",
-    "titre": "Relever l’âge légal de départ à la retraite, en fonction des métiers et de leur pénibilité.",
-    "resume_factuel": "Relever l’âge légal de départ à la retraite, en fonction des métiers et de leur pénibilité.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite",
-    "positions": [
-      {
-        "sujet": "travail",
-        "position": "travailler_plus",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Relever l’âge légal de départ à la retraite, en fonction des métiers et de leur pénibilité."
-      }
-    ],
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "tranche_age",
-            "valeurs": [
-              "50_64"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Relever l’âge légal de départ à la retraite, en fonction des métiers et de leur pénibilité"
-      }
-    ]
-  },
-  {
-    "id": "philippe-retraites-travail-006",
     "candidat": "philippe",
     "theme": "retraites-travail",
     "titre": "Confier la gestion du régime à l'équilibre aux partenaires sociaux.",
@@ -1487,13 +1733,97 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Système de retraite",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
+    "id": "philippe-retraites-travail-005",
+    "candidat": "philippe",
+    "theme": "retraites-travail",
+    "titre": "Porter, d'ici 10 ans au maximum, l'âge légal de départ à la retraite à 65 ans et la durée de cotisation à 45 ans. Un Français sur trois ne sera pas soumis à…",
+    "resume_factuel": "Porter, d'ici 10 ans au maximum, l'âge légal de départ à la retraite à 65 ans et la durée de cotisation à 45 ans. Un Français sur trois ne sera pas soumis à l'âge légal de 65 ans et pourra bénéficier d'un départ anticipé en fonction de la pénibilité du métier exercé. Il reviendra aux partenaires sociaux de déterminer qui sera concerné par ces départs anticipés.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Système de retraite",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "50_64"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Porter, d'ici 10 ans au maximum, l'âge légal de départ à la retraite à 65 ans et la durée de cotisation à 45 ans."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "travailler_plus",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Porter, d'ici 10 ans au maximum, l'âge légal de départ à la retraite à 65 ans et la durée de cotisation à 45 ans"
+      }
+    ]
+  },
+  {
     "id": "philippe-envi-001",
+    "candidat": "philippe",
+    "theme": "environnement",
+    "titre": "Assurer notre souveraineté énergétique en relançant le nucléaire, en développant les renouvelables et en électrifiant massivement nos usages.",
+    "resume_factuel": "Assurer notre souveraineté énergétique en relançant le nucléaire, en développant les renouvelables et en électrifiant massivement nos usages.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Energie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "nucleaire",
+        "position": "garder_nucleaire",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "relançant le nucléaire"
+      },
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "développant les renouvelables"
+      }
+    ]
+  },
+  {
+    "id": "philippe-envi-002",
     "candidat": "philippe",
     "theme": "environnement",
     "titre": "Ouvrir un accès préférentiel à notre énergie décarbonée pour les acteurs nationaux et européens, avec des règles de raccordement inspirées des Al Growth Zones…",
@@ -1510,13 +1840,38 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "philippe-envi-002",
+    "id": "philippe-envi-003",
+    "candidat": "philippe",
+    "theme": "environnement",
+    "titre": "Doter la France d’une véritable politique de sécurité climatique, pour faire de l’adaptation climatique une politique régalienne.",
+    "resume_factuel": "Doter la France d’une véritable politique de sécurité climatique, pour faire de l’adaptation climatique une politique régalienne.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "philippe-envi-004",
     "candidat": "philippe",
     "theme": "environnement",
     "titre": "Lancer un grand plan pour climatiser massivement les infrastructures qui accueillent des personnes fragiles, écoles, crèches, hôpitaux, grâce au doublement du…",
@@ -1533,13 +1888,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "philippe-envi-003",
+    "id": "philippe-envi-005",
     "candidat": "philippe",
     "theme": "environnement",
     "titre": "Concentrer l'action climatique sur ce qui réduit vraiment les émissions et crée de la croissance : fret de marchandises, rénovation, grande industrie.",
@@ -1556,13 +1912,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "philippe-envi-004",
+    "id": "philippe-envi-006",
     "candidat": "philippe",
     "theme": "environnement",
     "titre": "Accélérer la décarbonation du pays et investir massivement dans la capture de carbone pour limiter l'ampleur du réchauffement.",
@@ -1579,8 +1936,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1592,7 +1950,7 @@
     ]
   },
   {
-    "id": "philippe-envi-005",
+    "id": "philippe-envi-007",
     "candidat": "philippe",
     "theme": "environnement",
     "titre": "Lancer un plan baignade national pour rendre baignables toutes nos rivières et rénover nos piscines.",
@@ -1609,59 +1967,214 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
-    "effets": [],
-    "positions": []
-  },
-  {
-    "id": "philippe-envi-006",
-    "candidat": "philippe",
-    "theme": "environnement",
-    "titre": "Multiplier les plantations d'arbres dans nos villes et lever les règles d'urbanisme qui freinent l'adaptation des espaces publics.",
-    "resume_factuel": "Multiplier les plantations d'arbres dans nos villes et lever les règles d'urbanisme qui freinent l'adaptation des espaces publics.",
-    "sources": [
+    "titre_litteral": true,
+    "effets": [
       {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
+        "cibles": [],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lancer un plan baignade national pour rendre baignables toutes nos rivières et rénover nos piscines."
       }
     ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie",
-    "effets": [],
-    "positions": []
-  },
-  {
-    "id": "philippe-envi-007",
-    "candidat": "philippe",
-    "theme": "environnement",
-    "titre": "Créer un DATAR 2.0, opérateur unique de l'adaptation des territoires au changement climatique.",
-    "resume_factuel": "Créer un DATAR 2.0, opérateur unique de l'adaptation des territoires au changement climatique.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Ecologie",
-    "effets": [],
     "positions": []
   },
   {
     "id": "philippe-envi-008",
+    "candidat": "philippe",
+    "theme": "environnement",
+    "titre": "Donner de l'ombre à nos villes en multipliant les plantations d'arbres et en levant les règles d'urbanisme qui freinent l'adaptation des espaces publics.",
+    "resume_factuel": "Donner de l'ombre à nos villes en multipliant les plantations d'arbres et en levant les règles d'urbanisme qui freinent l'adaptation des espaces publics.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "philippe-envi-009",
+    "candidat": "philippe",
+    "theme": "environnement",
+    "titre": "Créer une DATAR 2.0, opérateur unique de l’adaptation au changement climatique qui mobilisera ingénieurs, agronomes, pour adapter les territoires.",
+    "resume_factuel": "Créer une DATAR 2.0, opérateur unique de l’adaptation au changement climatique qui mobilisera ingénieurs, agronomes, pour adapter les territoires.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "philippe-envi-010",
+    "candidat": "philippe",
+    "theme": "environnement",
+    "titre": "Instaurer une journée nationale d’alerte.",
+    "resume_factuel": "Instaurer une journée nationale d’alerte.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "philippe-envi-011",
+    "candidat": "philippe",
+    "theme": "environnement",
+    "titre": "Atteindre 10 % de réutilisation des eaux usées sur cinq ans.",
+    "resume_factuel": "Atteindre 10 % de réutilisation des eaux usées sur cinq ans.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "philippe-envi-012",
+    "candidat": "philippe",
+    "theme": "environnement",
+    "titre": "Produire des alternatives françaises à l’avion Canadair.",
+    "resume_factuel": "Produire des alternatives françaises à l’avion Canadair.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "philippe-envi-013",
+    "candidat": "philippe",
+    "theme": "environnement",
+    "titre": "Protéger les personnes et leurs biens et développer une véritable culture du risque.",
+    "resume_factuel": "Protéger les personnes et leurs biens et développer une véritable culture du risque.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "philippe-envi-014",
+    "candidat": "philippe",
+    "theme": "environnement",
+    "titre": "Renforcer les réserves communales.",
+    "resume_factuel": "Renforcer les réserves communales.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "philippe-envi-015",
+    "candidat": "philippe",
+    "theme": "environnement",
+    "titre": "Augmenter et moderniser les moyens de la sécurité civile.",
+    "resume_factuel": "Augmenter et moderniser les moyens de la sécurité civile.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "philippe-envi-016",
     "candidat": "philippe",
     "theme": "environnement",
     "titre": "Instaurer la règle de \"zéro surtransposition agricole\".",
@@ -1678,8 +2191,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1691,7 +2205,7 @@
     ]
   },
   {
-    "id": "philippe-envi-009",
+    "id": "philippe-envi-017",
     "candidat": "philippe",
     "theme": "environnement",
     "titre": "Lancer un grand plan de transmission et de modernisation.",
@@ -1708,13 +2222,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "philippe-envi-010",
+    "id": "philippe-envi-018",
     "candidat": "philippe",
     "theme": "environnement",
     "titre": "Créer 100 territoires de souveraineté alimentaire.",
@@ -1731,13 +2246,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "philippe-envi-011",
+    "id": "philippe-envi-019",
     "candidat": "philippe",
     "theme": "environnement",
     "titre": "Inscrire le développement agricole dans la Charte de l'environnement.",
@@ -1754,8 +2270,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1777,8 +2294,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1800,8 +2318,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1830,8 +2349,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1860,8 +2380,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1890,23 +2411,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place un Buy European Tech Act et des achats technologiques groupés entre Etats membres"
-      },
-      {
-        "sujet": "europe",
-        "position": "plus_europe",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place un Buy European Tech Act et des achats technologiques groupés entre Etats membres"
-      }
-    ]
+    "titre_litteral": true,
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-001",
@@ -1926,8 +2434,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1949,8 +2458,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1972,8 +2482,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1995,8 +2506,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2018,8 +2530,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2041,8 +2554,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [],
@@ -2071,8 +2585,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2094,8 +2609,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -2117,7 +2633,7 @@
         "sujet": "libertes",
         "position": "cadre_collectif",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre rapidement et effectivement en place, au niveau européen ou, à défaut, à l’échelle nationale, une majorité numérique conditionnant l’accès aux réseaux sociaux"
+        "extrait": "une majorité numérique conditionnant l'accès aux réseaux sociaux"
       }
     ]
   },
@@ -2139,15 +2655,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "ia",
         "position": "plus_ia",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Développer une infrastructure d'IA européenne souveraine en soutenant nos champions et en doublant notre capacité de calcul en cinq ans"
+        "extrait": "Développer une infrastructure d'IA européenne souveraine en soutenant nos champions et en doublant notre capacité de calcul en cinq ans."
       }
     ]
   },
@@ -2169,10 +2686,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
-    "effets": [],
-    "positions": []
+    "titre_litteral": true,
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-011",
@@ -2192,8 +2709,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2215,9 +2733,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
-    "positions": [],
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -2233,7 +2751,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "instaurant un droit à la reconversion pour les métiers menacés"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "philippe-gouvernance-republique-013",
@@ -2253,8 +2772,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2276,17 +2796,11 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "renouvelables",
-        "position": "plus_renouvelables",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "direction de l’aménagement du territoire et de l’adaptation au réchauffement"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "philippe-reformes-etat-002",
@@ -2306,8 +2820,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2329,9 +2844,18 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
-    "effets": []
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Regrouper ou privatiser les agences et opérateurs de l'Etat enchevêtrés."
+      }
+    ]
   },
   {
     "id": "philippe-reformes-etat-004",
@@ -2351,8 +2875,33 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "philippe-reformes-etat-005",
+    "candidat": "philippe",
+    "theme": "reformes-etat",
+    "titre": "Décentraliser la politique d'adaptation.",
+    "resume_factuel": "Décentraliser la politique d'adaptation.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2374,8 +2923,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Périscolaire",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Services de la petite enfance",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2397,36 +2947,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Périscolaire",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Services de la petite enfance",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
     "id": "philippe-education-jeunesse-003",
-    "candidat": "philippe",
-    "theme": "education-jeunesse",
-    "titre": "Mettre en place un \"choc de formation\".",
-    "resume_factuel": "Mettre en place un \"choc de formation\".",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Périscolaire",
-    "effets": [],
-    "positions": []
-  },
-  {
-    "id": "philippe-education-jeunesse-004",
     "candidat": "philippe",
     "theme": "education-jeunesse",
     "titre": "Donner plus d'autonomie aux chefs d'établissements en matière de discipline, de méthodes, d'horaires, d'uniforme, de choix et d'évaluation des enseignants.",
@@ -2443,8 +2971,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -2456,7 +2985,7 @@
     ]
   },
   {
-    "id": "philippe-education-jeunesse-005",
+    "id": "philippe-education-jeunesse-004",
     "candidat": "philippe",
     "theme": "education-jeunesse",
     "titre": "Augmenter de 20 % en moyenne le salaire des enseignants sur un quinquennat pour le ramener au moins au niveau de la moyenne européenne.",
@@ -2473,8 +3002,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -2488,20 +3018,13 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter de 20 % en moyenne le salaire des enseignants sur un quinquennat pour le ramener au moins au niveau de la moyenne européenne."
+        "extrait": "Augmenter de 20 % en moyenne le salaire des enseignants sur un quinquennat"
       }
     ],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter de 20 % en moyenne le salaire des enseignants sur un quinquennat pour le ramener au moins au niveau de la moyenne européenne."
-      }
-    ]
+    "positions": []
   },
   {
-    "id": "philippe-education-jeunesse-006",
+    "id": "philippe-education-jeunesse-005",
     "candidat": "philippe",
     "theme": "education-jeunesse",
     "titre": "Créer un service public universel du soutien scolaire, combinant assistant IA personnalisé et brigades d'anciens professeurs et d'étudiants volontaires.",
@@ -2518,8 +3041,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -2538,23 +3062,10 @@
         "extrait": "Créer un service public universel du soutien scolaire, combinant assistant IA personnalisé et brigades d'anciens professeurs et d'étudiants volontaires."
       }
     ],
-    "positions": [
-      {
-        "sujet": "ia",
-        "position": "plus_ia",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "combinant assistant IA personnalisé et brigades d'anciens professeurs et d'étudiants volontaires"
-      },
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un service public universel du soutien scolaire"
-      }
-    ]
+    "positions": []
   },
   {
-    "id": "philippe-education-jeunesse-007",
+    "id": "philippe-education-jeunesse-006",
     "candidat": "philippe",
     "theme": "education-jeunesse",
     "titre": "Adapter les rythmes scolaires aux besoins des enfants : journées moins longues, plus de sport et de culture, vacances d'été raccourcies pour éviter la…",
@@ -2571,37 +3082,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "enfants_scolarises",
-            "valeurs": [
-              "maternelle_primaire",
-              "college",
-              "lycee"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "indetermine",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Adapter les rythmes scolaires aux besoins des enfants : journées moins longues, plus de sport et de culture, vacances d'été raccourcies pour éviter la déperdition des savoirs."
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "reformer_ecole",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Adapter les rythmes scolaires aux besoins des enfants : journées moins longues, plus de sport et de culture, vacances d'été raccourcies pour éviter la déperdition des savoirs."
-      }
-    ]
+    "titre_litteral": true,
+    "positions": []
   },
   {
-    "id": "philippe-education-jeunesse-008",
+    "id": "philippe-education-jeunesse-007",
     "candidat": "philippe",
     "theme": "education-jeunesse",
     "titre": "Concentrer l'enseignement primaire sur les savoirs fondamentaux, lire, écrire, compter.",
@@ -2618,20 +3105,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "ecole_continuite",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Concentrer l'enseignement primaire sur les savoirs fondamentaux, lire, écrire, compter."
-      }
-    ]
+    "positions": []
   },
   {
-    "id": "philippe-education-jeunesse-009",
+    "id": "philippe-education-jeunesse-008",
     "candidat": "philippe",
     "theme": "education-jeunesse",
     "titre": "Réviser le recrutement, la formation et l'accompagnement des professeurs tout au long de la carrière.",
@@ -2648,8 +3129,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2671,8 +3153,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -2701,8 +3184,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -2731,8 +3215,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -2761,8 +3246,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -2791,8 +3277,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {

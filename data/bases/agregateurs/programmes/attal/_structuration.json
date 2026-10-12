@@ -2,76 +2,76 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "fc78b2408571127c",
-    "date": "2026-10-11",
+    "empreinte": "5cafdb836e6c32c2",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 3,
-    "avec_effets": 1,
-    "sans_effet": 1,
+    "propositions": 13,
+    "avec_effets": 9,
+    "sans_effet": 3,
     "rejetees": [
       {
-        "id": "attal-education-jeunesse-002",
-        "raison": "relecture : La cible 'moins_30' élargit le périmètre au-delà des moins de 15 ans réellement visés par le texte."
+        "id": "attal-education-jeunesse-006",
+        "raison": "relecture : L'effet suppose que davantage d'autonomie des établissements se traduira effectivement par une permanence des enseignements assurée, ce qui est un mécanisme de fonctionnement institutionnel supposé et non un effet garanti par le texte."
       }
     ],
-    "cout_reference_usd": 0.0501,
+    "cout_reference_usd": 0.0766,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "b145efd2e50daa81",
-    "date": "2026-10-11",
+    "empreinte": "ca15e0f687e5f544",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 2,
-    "avec_effets": 0,
-    "sans_effet": 2,
+    "propositions": 5,
+    "avec_effets": 1,
+    "sans_effet": 4,
     "rejetees": [],
-    "cout_reference_usd": 0.0375,
-    "appels": 1
+    "cout_reference_usd": 0.0465,
+    "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "5c88fb1c01d83e84",
-    "date": "2026-10-11",
+    "empreinte": "d567004687ac6dde",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 13,
+    "propositions": 14,
     "avec_effets": 3,
-    "sans_effet": 10,
+    "sans_effet": 11,
     "rejetees": [],
-    "cout_reference_usd": 0.0672,
+    "cout_reference_usd": 0.0648,
     "appels": 2
   },
   {
     "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "0286f7cb401c6624",
-    "date": "2026-10-11",
+    "empreinte": "b604013669748b59",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 2,
-    "avec_effets": 0,
-    "sans_effet": 2,
+    "propositions": 9,
+    "avec_effets": 1,
+    "sans_effet": 8,
     "rejetees": [],
-    "cout_reference_usd": 0.0329,
-    "appels": 1
+    "cout_reference_usd": 0.0542,
+    "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "aa67ac26fb8e42e4",
-    "date": "2026-10-11",
+    "empreinte": "3d40670c5687d2b1",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 7,
-    "avec_effets": 2,
-    "sans_effet": 4,
+    "propositions": 9,
+    "avec_effets": 3,
+    "sans_effet": 5,
     "rejetees": [
       {
         "id": "attal-interieur-justice-002",
-        "raison": "relecture : Le texte ne précise aucune distinction de nationalité (européenne/hors_ue), ce qui élargit le périmètre par rapport au texte."
+        "raison": "relecture : Le texte ne précise aucune nationalité ; cibler explicitement 'europeenne' et 'hors_ue' élargit le périmètre au-delà de ce que dit le texte sur le regroupement familial."
       }
     ],
-    "cout_reference_usd": 0.0599,
+    "cout_reference_usd": 0.0683,
     "appels": 2
   },
   {
@@ -90,27 +90,32 @@
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "170a46eb31f772ce",
-    "date": "2026-10-11",
+    "empreinte": "1de981b3778cbfcc",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 8,
-    "avec_effets": 6,
-    "sans_effet": 2,
-    "rejetees": [],
-    "cout_reference_usd": 0.069,
+    "propositions": 11,
+    "avec_effets": 3,
+    "sans_effet": 7,
+    "rejetees": [
+      {
+        "id": "attal-retraites-travail-009",
+        "raison": "relecture : Le champ cible 'enfant_moins_3_ans' n'est pas fondé par le texte, qui parle d'une dotation versée à la naissance de chaque enfant, sans condition d'âge limite à 3 ans."
+      }
+    ],
+    "cout_reference_usd": 0.0691,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "e0f92aeea2173edf",
-    "date": "2026-10-11",
+    "empreinte": "24ac2af5baeec0a0",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 4,
-    "avec_effets": 3,
-    "sans_effet": 1,
+    "propositions": 7,
+    "avec_effets": 2,
+    "sans_effet": 5,
     "rejetees": [],
-    "cout_reference_usd": 0.0567,
+    "cout_reference_usd": 0.0585,
     "appels": 2
   }
 ]

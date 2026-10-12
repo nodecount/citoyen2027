@@ -17,15 +17,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
+        "sujet": "dette",
+        "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "économies sur le fonctionnement de l'Etat"
+        "extrait": "2,3 à 3 Md€ d'économies sur le fonctionnement de l'Etat"
       }
     ]
   },
@@ -47,20 +48,60 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "entreprises",
         "position": "encadrer_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rediriger 211 Md€ d'exonérations et aides aux entreprises"
+        "extrait": "Rediriger 211 Md€ d'exonérations et aides aux entreprises."
       }
     ]
   },
   {
     "id": "glucksmann-finances-publiques-003",
+    "candidat": "glucksmann",
+    "theme": "finances-publiques",
+    "titre": "Tripler le chèque énergie pour faire face à la hausse des prix du carburant. Cibler les mesures d'aide sur les classes populaires et moyennes qui ont besoin de…",
+    "resume_factuel": "Tripler le chèque énergie pour faire face à la hausse des prix du carburant. Cibler les mesures d'aide sur les classes populaires et moyennes qui ont besoin de leur voiture pour aller travailler.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "classes populaires et moyennes qui ont besoin de leur voiture pour aller travailler"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Tripler le chèque énergie pour faire face à la hausse des prix du carburant. Cibler les mesures d'aide sur les classes populaires et moyennes qui ont besoin de leur voiture pour aller travailler."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-finances-publiques-004",
     "candidat": "glucksmann",
     "theme": "finances-publiques",
     "titre": "Mettre en place un chantier fiscal pour rééquilibrer la répartition de la taxation entre le travail, le capital, l’héritage et les retraites.",
@@ -77,13 +118,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-finances-publiques-004",
+    "id": "glucksmann-finances-publiques-005",
     "candidat": "glucksmann",
     "theme": "finances-publiques",
     "titre": "Supprimer les exonérations de TVA et de taxe sur le kérosène.",
@@ -100,16 +142,17 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
+    "titre_litteral": true,
     "effets": []
   },
   {
-    "id": "glucksmann-finances-publiques-005",
+    "id": "glucksmann-finances-publiques-006",
     "candidat": "glucksmann",
     "theme": "finances-publiques",
-    "titre": "Taxer les méga-héritages, ciblant les 1 % des successions les plus importantes.",
-    "resume_factuel": "Taxer les méga-héritages, ciblant les 1 % des successions les plus importantes.",
+    "titre": "Taxer les méga héritages, au-dessus de 2 millions d'euros.",
+    "resume_factuel": "Taxer les méga héritages, au-dessus de 2 millions d'euros.",
     "sources": [
       {
         "type": "secondaire",
@@ -122,29 +165,23 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
           {
-            "champ": "heritage",
-            "valeurs": [
-              "recu",
-              "a_venir"
-            ]
-          },
-          {
             "champ": "autre",
             "valeurs": [
-              "1 % des successions les plus importantes"
+              "méga héritages, au-dessus de 2 millions d'euros"
             ]
           }
         ],
         "dimension": "patrimoine",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Taxer les méga-héritages, ciblant les 1 % des successions les plus importantes."
+        "extrait": "Taxer les méga héritages, au-dessus de 2 millions d'euros."
       }
     ],
     "positions": [
@@ -152,12 +189,12 @@
         "sujet": "ultra_riches",
         "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Taxer les méga-héritages, ciblant les 1 % des successions les plus importantes"
+        "extrait": "Taxer les méga héritages, au-dessus de 2 millions d'euros."
       }
     ]
   },
   {
-    "id": "glucksmann-finances-publiques-006",
+    "id": "glucksmann-finances-publiques-007",
     "candidat": "glucksmann",
     "theme": "finances-publiques",
     "titre": "Instaurer un impôt plancher annuel de 2% sur les patrimoines supérieurs à 100 millions d'euros (taxe Zucman).",
@@ -174,35 +211,20 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
+    "titre_litteral": true,
     "positions": [
       {
         "sujet": "ultra_riches",
         "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer un impôt plancher annuel de 2% sur les patrimoines supérieurs à 100 millions d'euros"
-      }
-    ],
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "patrimoines supérieurs à 100 millions d'euros"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer un impôt plancher annuel de 2% sur les patrimoines supérieurs à 100 millions d'euros"
+        "extrait": "Instaurer un impôt plancher annuel de 2% sur les patrimoines supérieurs à 100 millions d'euros (taxe Zucman)."
       }
     ]
   },
   {
-    "id": "glucksmann-finances-publiques-007",
+    "id": "glucksmann-finances-publiques-008",
     "candidat": "glucksmann",
     "theme": "finances-publiques",
     "titre": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne pour éviter l'exil fiscal.",
@@ -219,41 +241,27 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "plus hauts patrimoines"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne"
-      }
-    ],
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
         "sujet": "ultra_riches",
         "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne"
+        "extrait": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne pour éviter l'exil fiscal."
       },
       {
         "sujet": "europe",
         "position": "plus_europe",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "à l'échelle européenne pour éviter l'exil fiscal"
+        "extrait": "Mettre en place une taxation des plus hauts patrimoines à l'échelle européenne"
       }
     ]
   },
   {
-    "id": "glucksmann-finances-publiques-008",
+    "id": "glucksmann-finances-publiques-009",
     "candidat": "glucksmann",
     "theme": "finances-publiques",
     "titre": "Baisser les cotisations sociales pour rapprocher le salaire brut du net grâce à une taxation des gros héritages.",
@@ -270,22 +278,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser les cotisations sociales pour rapprocher le salaire brut du net"
-      },
-      {
-        "sujet": "ultra_riches",
-        "position": "taxer_ultra_riches",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "grâce à une taxation des gros héritages"
-      }
-    ],
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -299,17 +294,10 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser les cotisations sociales pour rapprocher le salaire brut du net"
+        "extrait": "Baisser les cotisations sociales pour rapprocher le salaire brut du net grâce à une taxation des gros héritages."
       },
       {
         "cibles": [
-          {
-            "champ": "heritage",
-            "valeurs": [
-              "recu",
-              "a_venir"
-            ]
-          },
           {
             "champ": "autre",
             "valeurs": [
@@ -321,6 +309,89 @@
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "grâce à une taxation des gros héritages"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "grâce à une taxation des gros héritages"
+      }
+    ]
+  },
+  {
+    "id": "glucksmann-finances-publiques-010",
+    "candidat": "glucksmann",
+    "theme": "finances-publiques",
+    "titre": "Réviser le pacte Dutreil pour éviter l'optimisation fiscale dans les grandes holdings.",
+    "resume_factuel": "Réviser le pacte Dutreil pour éviter l'optimisation fiscale dans les grandes holdings.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fiscalité",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réviser le pacte Dutreil pour éviter l'optimisation fiscale dans les grandes holdings."
+      }
+    ]
+  },
+  {
+    "id": "glucksmann-finances-publiques-011",
+    "candidat": "glucksmann",
+    "theme": "finances-publiques",
+    "titre": "Récupérer 15 Md€ par an sur la \"Grande transmission\" ( 9 000 Md€ transmis en France d'ici 2040), pour baisser la CSG et permettre que sur un salaire de 2 000…",
+    "resume_factuel": "Récupérer 15 Md€ par an sur la \"Grande transmission\" ( 9 000 Md€ transmis en France d'ici 2040), pour baisser la CSG et permettre que sur un salaire de 2 000 euros net, un salarié récupère 120 euros supplémentaires.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fiscalité",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "tranche_revenus",
+            "valeurs": [
+              "2000_3000"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "baisser la CSG et permettre que sur un salaire de 2 000 euros net, un salarié récupère 120 euros supplémentaires"
       }
     ]
   },
@@ -342,8 +413,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Immigration",
+    "titre_litteral": true,
+    "effets": []
   },
   {
     "id": "glucksmann-interieur-justice-002",
@@ -363,15 +436,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "immigration",
         "position": "ouverture",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abroger la loi immigration de 2024"
+        "extrait": "Abroger la loi immigration de 2024."
       }
     ]
   },
@@ -393,8 +467,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Immigration"
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Immigration",
+    "titre_litteral": true
   },
   {
     "id": "glucksmann-interieur-justice-004",
@@ -414,154 +489,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
+    "titre_litteral": true,
     "positions": []
   },
   {
     "id": "glucksmann-interieur-justice-005",
-    "candidat": "glucksmann",
-    "theme": "interieur-justice",
-    "titre": "Lancer un programme d’intervention rapide pour prévenir la délinquance avec des équipes mobiles.",
-    "resume_factuel": "Lancer un programme d’intervention rapide pour prévenir la délinquance avec des équipes mobiles.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire",
-    "effets": []
-  },
-  {
-    "id": "glucksmann-interieur-justice-006",
-    "candidat": "glucksmann",
-    "theme": "interieur-justice",
-    "titre": "Alléger les tâches administratives des policiers et gendarmes.",
-    "resume_factuel": "Alléger les tâches administratives des policiers et gendarmes.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire",
-    "positions": []
-  },
-  {
-    "id": "glucksmann-interieur-justice-007",
-    "candidat": "glucksmann",
-    "theme": "interieur-justice",
-    "titre": "Revoir l’architecture de la Police avec, pour la police nationale, la suppression de l’échelon zonal, afin de renforcer les capacités opérationnelles…",
-    "resume_factuel": "Revoir l’architecture de la Police avec, pour la police nationale, la suppression de l’échelon zonal, afin de renforcer les capacités opérationnelles réelles.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
-    "positions": []
-  },
-  {
-    "id": "glucksmann-interieur-justice-008",
-    "candidat": "glucksmann",
-    "theme": "interieur-justice",
-    "titre": "Renforcer les moyens d’enquête contre le narcotrafic.",
-    "resume_factuel": "Renforcer les moyens d’enquête contre le narcotrafic.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Renforcer les moyens d'enquête contre le narcotrafic"
-      }
-    ]
-  },
-  {
-    "id": "glucksmann-interieur-justice-009",
-    "candidat": "glucksmann",
-    "theme": "interieur-justice",
-    "titre": "Mettre en place un plan national de sécurité routière contre les comportements à risque axé sur cinq priorités : vitesse, alcool, drogues, usagers…",
-    "resume_factuel": "Mettre en place un plan national de sécurité routière contre les comportements à risque axé sur cinq priorités : vitesse, alcool, drogues, usagers vulnérables, mobilités.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire",
-    "effets": [],
-    "positions": []
-  },
-  {
-    "id": "glucksmann-interieur-justice-010",
-    "candidat": "glucksmann",
-    "theme": "interieur-justice",
-    "titre": "Renforcer la lutte contre le terrorisme, juger en France les djihadistes rapatriés, empêcher toute reformation de sanctuaires à l’étranger, et mettre en…",
-    "resume_factuel": "Renforcer la lutte contre le terrorisme, juger en France les djihadistes rapatriés, empêcher toute reformation de sanctuaires à l’étranger, et mettre en place une nouvelle stratégie nationale de lutte contre toutes les formes de radicalisation.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Justice & pénitentiaire",
-    "effets": []
-  },
-  {
-    "id": "glucksmann-interieur-justice-011",
     "candidat": "glucksmann",
     "theme": "interieur-justice",
     "titre": "Doubler le nombre de Maisons du droit et de la justice.",
@@ -578,21 +512,22 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [],
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Doubler le nombre de Maisons du droit et de la justice."
+        "extrait": "Doubler le nombre de Maisons du droit et de la justice"
       }
     ],
     "positions": []
   },
   {
-    "id": "glucksmann-interieur-justice-012",
+    "id": "glucksmann-interieur-justice-006",
     "candidat": "glucksmann",
     "theme": "interieur-justice",
     "titre": "Augmenter les effectifs des services judiciaires et pénitentiaires et les revaloriser.",
@@ -609,12 +544,535 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true
+  },
+  {
+    "id": "glucksmann-interieur-justice-007",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Organiser une convention citoyenne sur la politique vis-à-vis des drogues, notamment la question de la légalisation du cannabis.",
+    "resume_factuel": "Organiser une convention citoyenne sur la politique vis-à-vis des drogues, notamment la question de la légalisation du cannabis.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-interieur-justice-008",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Proposer un choc de la justice de proximité pour traiter localement les délits mineurs et infractions du quotidien.",
+    "resume_factuel": "Proposer un choc de la justice de proximité pour traiter localement les délits mineurs et infractions du quotidien.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Proposer un choc de la justice de proximité pour traiter localement les délits mineurs et infractions du quotidien"
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-interieur-justice-009",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Déployer massivement la justice restaurative et les travaux d’intérêt général (TIG).",
+    "resume_factuel": "Déployer massivement la justice restaurative et les travaux d’intérêt général (TIG).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "prison",
+        "position": "alternatives_prison",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Déployer massivement la justice restaurative et les travaux d’intérêt général (TIG)."
+      }
+    ]
+  },
+  {
+    "id": "glucksmann-interieur-justice-010",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Former les magistrats, personnels pénitentiaires et médiateurs spécialisés à la justice restaurative et aux TIG.",
+    "resume_factuel": "Former les magistrats, personnels pénitentiaires et médiateurs spécialisés à la justice restaurative et aux TIG.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-interieur-justice-011",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Adapter les peines aux profils des détenus pour lutter contre la surpopulation carcérale.",
+    "resume_factuel": "Adapter les peines aux profils des détenus pour lutter contre la surpopulation carcérale.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "prison",
+        "position": "alternatives_prison",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Adapter les peines aux profils des détenus pour lutter contre la surpopulation carcérale."
+      }
+    ]
+  },
+  {
+    "id": "glucksmann-interieur-justice-012",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Investir dans des prisons rénovées et dignes ains que dans le Renforcement des parcours individualisés de réinsertion.",
+    "resume_factuel": "Investir dans des prisons rénovées et dignes ains que dans le Renforcement des parcours individualisés de réinsertion.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": []
   },
   {
+    "id": "glucksmann-interieur-justice-013",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Lancer un programme d’intervention rapide pour prévenir la délinquance avec des équipes mobiles.",
+    "resume_factuel": "Lancer un programme d’intervention rapide pour prévenir la délinquance avec des équipes mobiles.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true
+  },
+  {
+    "id": "glucksmann-interieur-justice-014",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Alléger les tâches administratives il des policiers et gendarmes.",
+    "resume_factuel": "Alléger les tâches administratives il des policiers et gendarmes.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-interieur-justice-015",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Supprimer l’échelon zonal de la police nationale afin de renforcer les capacités opérationnelles.",
+    "resume_factuel": "Supprimer l’échelon zonal de la police nationale afin de renforcer les capacités opérationnelles.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-interieur-justice-016",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Mettre en place un plan national de sécurité routière contre les comportements à risque axé sur cinq priorités : vitesse, alcool, drogues, usagers…",
+    "resume_factuel": "Mettre en place un plan national de sécurité routière contre les comportements à risque axé sur cinq priorités : vitesse, alcool, drogues, usagers vulnérables, mobilités.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
+    "positions": []
+  },
+  {
+    "id": "glucksmann-interieur-justice-017",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Renforcer la lutte contre le terrorisme : juger en France les djihadistes rapatriés, empêcher toute reformation de sanctuaires à l’étranger, et mettre en…",
+    "resume_factuel": "Renforcer la lutte contre le terrorisme : juger en France les djihadistes rapatriés, empêcher toute reformation de sanctuaires à l’étranger, et mettre en place une nouvelle stratégie nationale de lutte contre toutes les formes de radicalisation.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-interieur-justice-018",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Démanteler les conglomérats et les concentrations qui contribuent à la vie chère, en mobilisant les autorités de concurrence.",
+    "resume_factuel": "Démanteler les conglomérats et les concentrations qui contribuent à la vie chère, en mobilisant les autorités de concurrence.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Outre-mer",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Démanteler les conglomérats et les concentrations qui contribuent à la vie chère, en mobilisant les autorités de concurrence"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Démanteler les conglomérats et les concentrations qui contribuent à la vie chère, en mobilisant les autorités de concurrence."
+      }
+    ]
+  },
+  {
+    "id": "glucksmann-interieur-justice-019",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Accompagner la sortie des monocultures et renforcer l’agriculture locale.",
+    "resume_factuel": "Accompagner la sortie des monocultures et renforcer l’agriculture locale.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Outre-mer",
+    "titre_litteral": true,
+    "effets": []
+  },
+  {
+    "id": "glucksmann-interieur-justice-020",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Réserver une partie des recettes de l’octroi de mer au financement d’investissements locaux.",
+    "resume_factuel": "Réserver une partie des recettes de l’octroi de mer au financement d’investissements locaux.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Outre-mer",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "outre_mer"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réserver une partie des recettes de l’octroi de mer au financement d’investissements locaux"
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-interieur-justice-021",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Adapter les transports aux spécificités ultramarines en développant mobilités douces (vélo) et alternatives collectives (bus, téléphériques urbains, liaisons…",
+    "resume_factuel": "Adapter les transports aux spécificités ultramarines en développant mobilités douces (vélo) et alternatives collectives (bus, téléphériques urbains, liaisons maritimes).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Outre-mer",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "outre_mer"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Adapter les transports aux spécificités ultramarines en développant mobilités douces (vélo) et alternatives collectives (bus, téléphériques urbains, liaisons maritimes)"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "voiture",
+        "position": "restreindre_voiture",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Adapter les transports aux spécificités ultramarines en développant mobilités douces (vélo) et alternatives collectives (bus, téléphériques urbains, liaisons maritimes)."
+      }
+    ]
+  },
+  {
+    "id": "glucksmann-interieur-justice-022",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "Mettre aux normes les infrastructures pour renforcer la résilience aux catastrophes naturelles.",
+    "resume_factuel": "Mettre aux normes les infrastructures pour renforcer la résilience aux catastrophes naturelles.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Outre-mer",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-interieur-justice-023",
+    "candidat": "glucksmann",
+    "theme": "interieur-justice",
+    "titre": "En Nouvelle-Calédonie, renouer avec l’esprit des accords de Nouméa.",
+    "resume_factuel": "En Nouvelle-Calédonie, renouer avec l’esprit des accords de Nouméa.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Outre-mer",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
     "id": "glucksmann-social-solidarite-001",
+    "candidat": "glucksmann",
+    "theme": "social-solidarite",
+    "titre": "Donner un véritable statut aux familles monoparentales, qui leur garantisse un accès prioritaire à la garde d'enfants, à la caution pour le logement, aux…",
+    "resume_factuel": "Donner un véritable statut aux familles monoparentales, qui leur garantisse un accès prioritaire à la garde d'enfants, à la caution pour le logement, aux transports.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Allocations & prestations sociales",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "familles monoparentales"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "accès prioritaire à la garde d'enfants, à la caution pour le logement, aux transports"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Donner un véritable statut aux familles monoparentales, qui leur garantisse un accès prioritaire à la garde d'enfants, à la caution pour le logement, aux transports."
+      }
+    ]
+  },
+  {
+    "id": "glucksmann-social-solidarite-002",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Mieux rémunérer les soignants.",
@@ -631,8 +1089,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -652,7 +1111,7 @@
     "positions": []
   },
   {
-    "id": "glucksmann-social-solidarite-002",
+    "id": "glucksmann-social-solidarite-003",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Encourager l’exercice mixte (hôpital/ville), favoriser les structures de soins regroupés pour faciliter le travail en équipe, contrer la financiarisation du…",
@@ -669,12 +1128,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": []
   },
   {
-    "id": "glucksmann-social-solidarite-003",
+    "id": "glucksmann-social-solidarite-004",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Créer un fonds territorial de prévention, permettant de financer des actions concrètes de prévention adaptées aux besoins locaux.",
@@ -691,13 +1151,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-social-solidarite-004",
+    "id": "glucksmann-social-solidarite-005",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Santé mentale des jeunes : instaurer un dépistage précoce des troubles psychiques et addictologiques.",
@@ -714,8 +1175,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -729,13 +1191,36 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Santé mentale des jeunes : instaurer un dépistage précoce des troubles psychiques et addictologiques."
+        "extrait": "instaurer un dépistage précoce des troubles psychiques et addictologiques"
       }
     ],
     "positions": []
   },
   {
-    "id": "glucksmann-social-solidarite-005",
+    "id": "glucksmann-social-solidarite-006",
+    "candidat": "glucksmann",
+    "theme": "social-solidarite",
+    "titre": "Mutualiser les systèmes d’information entre assurance maladie obligatoire et complémentaires de santé afin de limiter les frais de fonctionnement du double…",
+    "resume_factuel": "Mutualiser les systèmes d’information entre assurance maladie obligatoire et complémentaires de santé afin de limiter les frais de fonctionnement du double système et simplifier les remboursements pour les patients.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Santé",
+    "titre_litteral": true,
+    "positions": []
+  },
+  {
+    "id": "glucksmann-social-solidarite-007",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Mettre en place une sécurité sociale qui fusionne tous les régimes.",
@@ -752,13 +1237,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-social-solidarite-006",
+    "id": "glucksmann-social-solidarite-008",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Abroger la réforme Macron de l’assurance chômage.",
@@ -775,9 +1261,25 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
-    "effets": [],
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger la réforme Macron de l'assurance chômage."
+      }
+    ],
     "positions": [
       {
         "sujet": "aides_sociales",
@@ -786,67 +1288,6 @@
         "extrait": "Abroger la réforme Macron de l’assurance chômage."
       }
     ]
-  },
-  {
-    "id": "glucksmann-social-solidarite-007",
-    "candidat": "glucksmann",
-    "theme": "social-solidarite",
-    "titre": "Instaurer une indemnité d’aidant familial pour ceux qui réduisent ou arrêtent leur travail pour s’occuper des aînés.",
-    "resume_factuel": "Instaurer une indemnité d’aidant familial pour ceux qui réduisent ou arrêtent leur travail pour s’occuper des aînés.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé",
-    "positions": [],
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "aidant_familial",
-            "valeurs": [
-              "oui"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer une indemnité d’aidant familial pour ceux qui réduisent ou arrêtent leur travail pour s’occuper des aînés."
-      }
-    ]
-  },
-  {
-    "id": "glucksmann-social-solidarite-008",
-    "candidat": "glucksmann",
-    "theme": "social-solidarite",
-    "titre": "Créer un statut spécifique de « crèche sous-contrat » pour avoir un meilleur contrôle.",
-    "resume_factuel": "Créer un statut spécifique de « crèche sous-contrat » pour avoir un meilleur contrôle.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé",
-    "effets": [],
-    "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-009",
@@ -866,13 +1307,123 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
     "id": "glucksmann-social-solidarite-010",
+    "candidat": "glucksmann",
+    "theme": "social-solidarite",
+    "titre": "Diversifier les solutions d’hébergement pour les personnes âgées.",
+    "resume_factuel": "Diversifier les solutions d’hébergement pour les personnes âgées.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Santé",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-social-solidarite-011",
+    "candidat": "glucksmann",
+    "theme": "social-solidarite",
+    "titre": "Renforcer les droits et le statut des proches aidants.",
+    "resume_factuel": "Renforcer les droits et le statut des proches aidants.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Santé",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "aidant_familial",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer les droits et le statut des proches aidants."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-social-solidarite-012",
+    "candidat": "glucksmann",
+    "theme": "social-solidarite",
+    "titre": "Créer une indemnité d’aidant familial pour ceux qui réduisent ou cessent leur activité pour prendre soin de leurs aînés chez eux.",
+    "resume_factuel": "Créer une indemnité d’aidant familial pour ceux qui réduisent ou cessent leur activité pour prendre soin de leurs aînés chez eux.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Santé",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "aidant_familial",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer une indemnité d'aidant familial pour ceux qui réduisent ou cessent leur activité pour prendre soin de leurs aînés chez eux."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer une indemnité d’aidant familial pour ceux qui réduisent ou cessent leur activité pour prendre soin de leurs aînés chez eux."
+      }
+    ]
+  },
+  {
+    "id": "glucksmann-social-solidarite-013",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Lancer un Pacte d’Aménagement culturel du Territoire (PACT), co-construit avec les collectivités, les acteurs culturels et l’État, pour garantir une…",
@@ -889,13 +1440,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Culture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-social-solidarite-011",
+    "id": "glucksmann-social-solidarite-014",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Supprimer la part individuelle du pass Culture au profit du financement d’artistes intervenant en milieu scolaire.",
@@ -912,28 +1464,29 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Culture",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "bénéficiaires de la part individuelle du pass Culture"
+              "bénéficiaires du pass Culture"
             ]
           }
         ],
-        "dimension": "cout_de_la_vie",
-        "sens": "hausse",
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer la part individuelle du pass Culture au profit du financement d’artistes intervenant en milieu scolaire."
+        "extrait": "Supprimer la part individuelle du pass Culture au profit du financement d'artistes intervenant en milieu scolaire."
       }
     ],
     "positions": []
   },
   {
-    "id": "glucksmann-social-solidarite-012",
+    "id": "glucksmann-social-solidarite-015",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Construire une histoire commune de la colonisation et de la décolonisation.",
@@ -950,13 +1503,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Culture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-social-solidarite-013",
+    "id": "glucksmann-social-solidarite-016",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Renforcer le statut des artistes-auteurs par une loi garantissant continuité de revenus et droits sociaux adaptés.",
@@ -973,12 +1527,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Culture",
+    "titre_litteral": true,
     "positions": []
   },
   {
-    "id": "glucksmann-social-solidarite-014",
+    "id": "glucksmann-social-solidarite-017",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Créer un fonds national pour aider les collectivités à acquérir du foncier et y développer du logement abordable, inciter à la densification des zones…",
@@ -995,12 +1550,12 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
-    "effets": []
+    "titre_litteral": true
   },
   {
-    "id": "glucksmann-social-solidarite-015",
+    "id": "glucksmann-social-solidarite-018",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Développer les logements en Bail réel solidaire (BRS) pour en faire une offre de masse pour que les ménages accèdent à la propriété, le BRS permettant…",
@@ -1017,12 +1572,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
+    "titre_litteral": true,
     "positions": []
   },
   {
-    "id": "glucksmann-social-solidarite-016",
+    "id": "glucksmann-social-solidarite-019",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Accélérer la rénovation énergétique pour éviter les passoires thermiques.",
@@ -1039,8 +1595,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1052,7 +1609,7 @@
     ]
   },
   {
-    "id": "glucksmann-social-solidarite-017",
+    "id": "glucksmann-social-solidarite-020",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Abroger la loi Kasbarian.",
@@ -1069,12 +1626,28 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
-    "effets": []
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "locataire"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger la loi Kasbarian."
+      }
+    ]
   },
   {
-    "id": "glucksmann-social-solidarite-018",
+    "id": "glucksmann-social-solidarite-021",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Réguler et maîtriser davantage les meublés touristiques comme au Pays basque et en Suisse pour limiter les activités des plateformes telles que Airbnb.",
@@ -1091,12 +1664,12 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
-    "effets": []
+    "titre_litteral": true
   },
   {
-    "id": "glucksmann-social-solidarite-019",
+    "id": "glucksmann-social-solidarite-022",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Lancer un Plan Rail national en lien avec les régions : démultiplier les aides à SNCF Réseau afin de moderniser les infrastructures, développer les trains…",
@@ -1113,11 +1686,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports"
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Transports",
+    "titre_litteral": true,
+    "effets": []
   },
   {
-    "id": "glucksmann-social-solidarite-020",
+    "id": "glucksmann-social-solidarite-023",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Relancer les trains de nuit, accélérer les LGV et les liaisons prioritaires.",
@@ -1134,12 +1709,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Transports",
+    "titre_litteral": true,
     "effets": []
   },
   {
-    "id": "glucksmann-social-solidarite-021",
+    "id": "glucksmann-social-solidarite-024",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Mettre en place un Ticket climat : un titre de transport unique, à tarif fixe, abordable et valable à l’échelle nationale pour les transports du quotidien,…",
@@ -1156,11 +1732,12 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports"
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Transports",
+    "titre_litteral": true
   },
   {
-    "id": "glucksmann-social-solidarite-022",
+    "id": "glucksmann-social-solidarite-025",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Développer les tramways, voies réservées aux bus, services express métropolitains en ville et périphérie, pistes cyclables et la tarification solidaire…",
@@ -1177,11 +1754,12 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports"
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Transports",
+    "titre_litteral": true
   },
   {
-    "id": "glucksmann-social-solidarite-023",
+    "id": "glucksmann-social-solidarite-026",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Créer un service public de transport rural pour désenclaver les territoires.",
@@ -1198,11 +1776,12 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports"
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Transports",
+    "titre_litteral": true
   },
   {
-    "id": "glucksmann-social-solidarite-024",
+    "id": "glucksmann-social-solidarite-027",
     "candidat": "glucksmann",
     "theme": "social-solidarite",
     "titre": "Supprimer les exonérations de TVA et de taxe sur le kérosène, étendre l’interdiction des vols intérieurs avec alternative ferroviaire viable, taxation des…",
@@ -1219,8 +1798,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Transports"
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Transports",
+    "titre_litteral": true,
+    "effets": []
   },
   {
     "id": "glucksmann-retraites-travail-001",
@@ -1240,8 +1821,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1263,16 +1845,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "positions": [
-      {
-        "sujet": "salaires",
-        "position": "hausse_smic",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter le SMIC à 1600€ net."
-      }
-    ],
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1308,55 +1883,18 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Augmenter le SMIC à 1600€ net."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "hausse_smic",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter le SMIC à 1600€ net."
+      }
     ]
   },
   {
     "id": "glucksmann-retraites-travail-003",
-    "candidat": "glucksmann",
-    "theme": "retraites-travail",
-    "titre": "Soutenir les fonctionnaires, revaloriser durablement les rémunérations pour renforcer l’attractivité de la fonction publique, indexant leur point d’indice sur…",
-    "resume_factuel": "Soutenir les fonctionnaires, revaloriser durablement les rémunérations pour renforcer l’attractivité de la fonction publique, indexant leur point d’indice sur l’inflation et corrigeant les écarts de rémunérations entre ministères.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "fonctionnaire"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "revaloriser durablement les rémunérations pour renforcer l’attractivité de la fonction publique, indexant leur point d’indice sur l’inflation"
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Soutenir les fonctionnaires, revaloriser durablement les rémunérations pour renforcer l’attractivité de la fonction publique, indexant leur point d’indice sur l’inflation et corrigeant les écarts de rémunérations entre ministères."
-      }
-    ]
-  },
-  {
-    "id": "glucksmann-retraites-travail-004",
     "candidat": "glucksmann",
     "theme": "retraites-travail",
     "titre": "Soutenir les commerces de proximité en zones rurales en priorisant les projets à vocation sociale et écologique par des accompagnements ciblés et travailler à…",
@@ -1373,20 +1911,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "travailler à une « taxe Amazon » sur les grandes plateformes de e-commerce pour financer ce soutien"
-      }
-    ]
+    "positions": []
   },
   {
-    "id": "glucksmann-retraites-travail-005",
+    "id": "glucksmann-retraites-travail-004",
     "candidat": "glucksmann",
     "theme": "retraites-travail",
     "titre": "Multiplier les centrales villageoises d’énergie renouvelable, épiceries coopératives, commerces de proximité solidaire… en déployant les Sociétés coopératives…",
@@ -1403,20 +1935,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "renouvelables",
-        "position": "plus_renouvelables",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Multiplier les centrales villageoises d’énergie renouvelable, épiceries coopératives, commerces de proximité solidaire… en déployant les Sociétés coopératives d’intérêt collectif."
-      }
-    ]
+    "positions": []
   },
   {
-    "id": "glucksmann-retraites-travail-006",
+    "id": "glucksmann-retraites-travail-005",
     "candidat": "glucksmann",
     "theme": "retraites-travail",
     "titre": "Intégrer davantage les représentants des salariés dans les conseils d’administration des entreprises, dès 100 salariés (cf chèque syndical).",
@@ -1433,12 +1959,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "effets": []
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Intégrer davantage les représentants des salariés dans les conseils d’administration des entreprises, dès 100 salariés"
+      }
+    ]
   },
   {
-    "id": "glucksmann-retraites-travail-007",
+    "id": "glucksmann-retraites-travail-006",
     "candidat": "glucksmann",
     "theme": "retraites-travail",
     "titre": "Adopter une grande stratégie « Zéro mort au travail ».",
@@ -1455,13 +1990,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-retraites-travail-008",
+    "id": "glucksmann-retraites-travail-007",
     "candidat": "glucksmann",
     "theme": "retraites-travail",
     "titre": "Généraliser le dispositif Territoires Zéro Chômeur de longue durée, créer un CDI d’insertion harmonisé pour faciliter la transition vers l’emploi durable,…",
@@ -1478,12 +2014,12 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "positions": []
+    "titre_litteral": true
   },
   {
-    "id": "glucksmann-retraites-travail-009",
+    "id": "glucksmann-retraites-travail-008",
     "candidat": "glucksmann",
     "theme": "retraites-travail",
     "titre": "Créer un guichet unique territorial pour l’emploi et l’insertion, piloté par France Travail.",
@@ -1500,13 +2036,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "positions": [],
-    "effets": []
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
   },
   {
-    "id": "glucksmann-retraites-travail-010",
+    "id": "glucksmann-retraites-travail-009",
     "candidat": "glucksmann",
     "theme": "retraites-travail",
     "titre": "Booster l’emploi des jeunes : créer des guichets uniques jeunesse dans chaque territoire où les jeunes accèdent à un accompagnement gratuit et coordonné…",
@@ -1523,8 +2060,32 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "positions": []
+  },
+  {
+    "id": "glucksmann-retraites-travail-010",
+    "candidat": "glucksmann",
+    "theme": "retraites-travail",
+    "titre": "Renforcer l’inclusion des travailleurs handicapés.",
+    "resume_factuel": "Renforcer l’inclusion des travailleurs handicapés.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
     "positions": []
   },
   {
@@ -1545,24 +2106,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Système de retraite",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "tranche_age",
-            "valeurs": [
-              "50_64"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abroger la réforme Macron de 2023."
-      }
-    ],
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
         "sujet": "travail",
@@ -1574,29 +2121,6 @@
   },
   {
     "id": "glucksmann-retraites-travail-012",
-    "candidat": "glucksmann",
-    "theme": "retraites-travail",
-    "titre": "Passer à un système qui prend en compte la durée de cotisation.",
-    "resume_factuel": "Passer à un système qui prend en compte la durée de cotisation.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite",
-    "effets": [],
-    "positions": []
-  },
-  {
-    "id": "glucksmann-retraites-travail-013",
     "candidat": "glucksmann",
     "theme": "retraites-travail",
     "titre": "Imaginer une réforme des retraites qui mette la pénibilité des métiers au cœur.",
@@ -1613,13 +2137,105 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Système de retraite",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier_penible",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Imaginer une réforme des retraites qui mette la pénibilité des métiers au cœur."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-retraites-travail-013",
+    "candidat": "glucksmann",
+    "theme": "retraites-travail",
+    "titre": "Créer une nouvelle gouvernance du système des retraites avec un Haut Conseil du Pilotage des Retraites, adossé au Comité de suivi des retraites, au sein duquel…",
+    "resume_factuel": "Créer une nouvelle gouvernance du système des retraites avec un Haut Conseil du Pilotage des Retraites, adossé au Comité de suivi des retraites, au sein duquel les partenaires sociaux seront majoritaires.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Système de retraite",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
     "id": "glucksmann-retraites-travail-014",
+    "candidat": "glucksmann",
+    "theme": "retraites-travail",
+    "titre": "Porter un plan pour accroître le nombre de cotisants en améliorant l’insertion professionnelle des seniors, en développant l’immigration légale de travail et…",
+    "resume_factuel": "Porter un plan pour accroître le nombre de cotisants en améliorant l’insertion professionnelle des seniors, en développant l’immigration légale de travail et en facilitant l’entrée des jeunes dans le monde du travail.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Système de retraite",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "50_64"
+            ]
+          },
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "améliorant l'insertion professionnelle des seniors"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "ouverture",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "en développant l’immigration légale de travail"
+      }
+    ]
+  },
+  {
+    "id": "glucksmann-retraites-travail-015",
     "candidat": "glucksmann",
     "theme": "retraites-travail",
     "titre": "Soutenir la reprise de certaines entreprises par les salariés, sous forme de Sociétés Coopératives et Participatives.",
@@ -1636,13 +2252,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Industrie & relocalisation",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-retraites-travail-015",
+    "id": "glucksmann-retraites-travail-016",
     "candidat": "glucksmann",
     "theme": "retraites-travail",
     "titre": "Création de fonds régionaux conséquents pour permettre aux régions d’entrer au capital d’entreprises clés.",
@@ -1659,13 +2276,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Industrie & relocalisation",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-retraites-travail-016",
+    "id": "glucksmann-retraites-travail-017",
     "candidat": "glucksmann",
     "theme": "retraites-travail",
     "titre": "Renforcer nos outils de défense commerciale pour activer des clauses de protection quand un secteur est menacé, sanctionner le dumping, surveiller de près…",
@@ -1682,12 +2300,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Industrie & relocalisation",
-    "effets": []
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer nos outils de défense commerciale pour activer des clauses de protection quand un secteur est menacé, sanctionner le dumping"
+      }
+    ]
   },
   {
-    "id": "glucksmann-retraites-travail-017",
+    "id": "glucksmann-retraites-travail-018",
     "candidat": "glucksmann",
     "theme": "retraites-travail",
     "titre": "Défendre le « Fabriqué en France », en orientant la commande publique française avec des critères durables et souverains et un indice d’achat local.",
@@ -1704,8 +2331,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Industrie & relocalisation",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1717,7 +2345,7 @@
     ]
   },
   {
-    "id": "glucksmann-retraites-travail-018",
+    "id": "glucksmann-retraites-travail-019",
     "candidat": "glucksmann",
     "theme": "retraites-travail",
     "titre": "Relocaliser la production de batteries et accélérer l’innovation sur toute la chaine - batteries solides, seconde vie, recyclage.",
@@ -1734,10 +2362,18 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Industrie & relocalisation",
+    "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Relocaliser la production de batteries"
+      }
+    ]
   },
   {
     "id": "glucksmann-envi-001",
@@ -1757,8 +2393,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "effets": []
   },
   {
@@ -1779,8 +2416,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1809,8 +2447,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1832,8 +2471,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "positions": []
   },
   {
@@ -1854,8 +2494,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [],
@@ -1865,14 +2506,7 @@
         "extrait": "Annuler la hausse de taxe sur l’électricité imposée en 2024."
       }
     ],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Annuler la hausse de taxe sur l’électricité imposée en 2024."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "glucksmann-envi-006",
@@ -1892,8 +2526,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1915,9 +2550,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
-    "positions": []
+    "titre_litteral": true,
+    "effets": []
   },
   {
     "id": "glucksmann-envi-008",
@@ -1937,8 +2573,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1955,7 +2592,14 @@
         "extrait": "Relancer et simplifier MaPrimeRénov'."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Relancer et simplifier MaPrimeRénov'."
+      }
+    ]
   },
   {
     "id": "glucksmann-envi-009",
@@ -1975,13 +2619,52 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
     "id": "glucksmann-envi-010",
+    "candidat": "glucksmann",
+    "theme": "environnement",
+    "titre": "Investir dans l'électrification : proposer une mesure de leasing social pour permettre à 100 000 auxiliaires de vie d'avoir accès à une voiture électrique pour…",
+    "resume_factuel": "Investir dans l'électrification : proposer une mesure de leasing social pour permettre à 100 000 auxiliaires de vie d'avoir accès à une voiture électrique pour 100 euros par mois, en soutenant la filière européenne de la voiture électrique. Coût : moins de 1 Md€ /an.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Energie",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "auxiliaires de vie"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "proposer une mesure de leasing social pour permettre à 100 000 auxiliaires de vie d'avoir accès à une voiture électrique pour 100 euros par mois"
+      }
+    ]
+  },
+  {
+    "id": "glucksmann-envi-011",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Créer une assemblée citoyenne du futur pour veiller à ce que chaque loi prenne en compte l’environnement.",
@@ -1998,13 +2681,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-envi-011",
+    "id": "glucksmann-envi-012",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Déployer des conventions citoyennes régionales et des assemblées locales pour le climat en partenariat avec les collectivités.",
@@ -2021,13 +2705,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-envi-012",
+    "id": "glucksmann-envi-013",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Créer un répertoire national des solutions écologiques, accessible à tous, avec des aides, des alternatives concrètes et des produits écoresponsables à…",
@@ -2044,12 +2729,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
+    "titre_litteral": true,
     "positions": []
   },
   {
-    "id": "glucksmann-envi-013",
+    "id": "glucksmann-envi-014",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Interdire les nouvelles méga-surfaces commerciales.",
@@ -2066,12 +2752,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
-    "effets": []
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
   },
   {
-    "id": "glucksmann-envi-014",
+    "id": "glucksmann-envi-015",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Instaurer une Garantie universelle d’Assurance climatique, financée par les assurances.",
@@ -2088,13 +2776,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
-    "positions": [],
-    "effets": []
+    "titre_litteral": true,
+    "positions": []
   },
   {
-    "id": "glucksmann-envi-015",
+    "id": "glucksmann-envi-016",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Faire une grande loi Climat engageant tous les ministères, permettant l’adaptation et l’accompagnement des politiques publiques pour qu’elles ne dépassent…",
@@ -2111,13 +2799,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
-    "effets": [],
-    "positions": []
+    "titre_litteral": true,
+    "effets": []
   },
   {
-    "id": "glucksmann-envi-016",
+    "id": "glucksmann-envi-017",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Lancer une loi contre la fast fashion, un score carbone obligatoire sur les produits, l'extinction des pubs lumineuses la nuit et la fin des plastiques à usage…",
@@ -2134,13 +2822,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
+    "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lancer une loi contre la fast fashion, un score carbone obligatoire sur les produits, l'extinction des pubs lumineuses la nuit et la fin des plastiques à usage unique."
+      }
+    ]
   },
   {
-    "id": "glucksmann-envi-017",
+    "id": "glucksmann-envi-018",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Réformer la PAC pour soutenir l’emploi et le revenu agricole, l’utilité écologique et l’agriculture familiale.",
@@ -2157,8 +2853,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -2178,7 +2875,7 @@
     "positions": []
   },
   {
-    "id": "glucksmann-envi-018",
+    "id": "glucksmann-envi-019",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Rééquilibrer la répartition des quotas de pêche pour favoriser la pêche artisanale et côtière en créant des labels valorisant la pêche de proximité.",
@@ -2195,15 +2892,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "pêche artisanale et côtière"
+              "pêcheurs artisanaux et côtiers"
             ]
           }
         ],
@@ -2216,7 +2914,7 @@
     "positions": []
   },
   {
-    "id": "glucksmann-envi-019",
+    "id": "glucksmann-envi-020",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Réduire les intrants chimiques et soutenir les alternatives durables pour rendre les fermes plus autonomes.",
@@ -2233,20 +2931,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "agriculture_normes",
         "position": "renforcer_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire les intrants chimiques et soutenir les alternatives durables"
+        "extrait": "Réduire les intrants chimiques et soutenir les alternatives durables pour rendre les fermes plus autonomes."
       }
     ]
   },
   {
-    "id": "glucksmann-envi-020",
+    "id": "glucksmann-envi-021",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Imposer des mesures miroirs aux importations agricoles, contre le dumping social, sanitaire et environnemental.",
@@ -2263,8 +2962,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -2276,7 +2976,7 @@
     ]
   },
   {
-    "id": "glucksmann-envi-021",
+    "id": "glucksmann-envi-022",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Faciliter l’accès au foncier pour protéger les terres agricoles et permettre l’installation de nouveaux agriculteurs, inciter la reprise d’exploitations en…",
@@ -2293,13 +2993,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
-    "positions": [],
-    "effets": []
+    "titre_litteral": true,
+    "positions": []
   },
   {
-    "id": "glucksmann-envi-022",
+    "id": "glucksmann-envi-023",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Garantir le revenu des agriculteurs par la mise en place de prix planchers rémunérateurs, et en mettant fin aux contournements de la loi EGALIM.",
@@ -2316,12 +3016,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "positions": []
   },
   {
-    "id": "glucksmann-envi-023",
+    "id": "glucksmann-envi-024",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Mettre à disposition des produits BIO à la cantine pour les enfants.",
@@ -2338,8 +3039,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -2355,11 +3057,10 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre à disposition des produits BIO à la cantine pour les enfants."
       }
-    ],
-    "positions": []
+    ]
   },
   {
-    "id": "glucksmann-envi-024",
+    "id": "glucksmann-envi-025",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Rendre obligatoire l’affichage du Nutriscore et taxer davantage les boissons trop sucrées.",
@@ -2376,21 +3077,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "cout_de_la_vie",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "taxer davantage les boissons trop sucrées"
-      }
-    ],
+    "titre_litteral": true,
     "positions": []
   },
   {
-    "id": "glucksmann-envi-025",
+    "id": "glucksmann-envi-026",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Mettre en place un Plan national pour l’Alimentation Solidaire pour permettre aux associations et aux bénéficiaires de récupérer plus facilement les…",
@@ -2407,13 +3100,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-envi-026",
+    "id": "glucksmann-envi-027",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Lancer un grand plan national pour lancer la résilience des forêts.",
@@ -2430,13 +3124,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-envi-027",
+    "id": "glucksmann-envi-028",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Réformer la gestion privée des forêts.",
@@ -2453,13 +3148,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-envi-028",
+    "id": "glucksmann-envi-029",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Miser sur une filière bois française durable, ancrée dans les territoires.",
@@ -2476,13 +3172,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-envi-029",
+    "id": "glucksmann-envi-030",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Lancer un Pacte bleu pour les océans.",
@@ -2499,13 +3196,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-envi-030",
+    "id": "glucksmann-envi-031",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Refuser les méga-bassines.",
@@ -2522,13 +3220,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Refuser les méga-bassines."
+      }
+    ]
   },
   {
-    "id": "glucksmann-envi-031",
+    "id": "glucksmann-envi-032",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Instaurer une tarification sociale de l’eau, via les collectivités, avec des aides automatiques pour les foyers dont la facture dépasse 3 % des revenus.",
@@ -2545,12 +3251,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "positions": []
   },
   {
-    "id": "glucksmann-envi-032",
+    "id": "glucksmann-envi-033",
     "candidat": "glucksmann",
     "theme": "environnement",
     "titre": "Éliminer les produits chimiques dangereux en interdisant les pesticides les plus néfastes, glyphosate, néonicotinoïdes tueurs d’abeilles et objets du…",
@@ -2567,12 +3274,37 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": []
   },
   {
     "id": "glucksmann-europe-international-001",
+    "candidat": "glucksmann",
+    "theme": "europe-international",
+    "titre": "Augmenter les aides de la France à l’Ukraine.",
+    "resume_factuel": "Augmenter les aides de la France à l’Ukraine.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Affaires étrangères & diplomatie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-europe-international-002",
     "candidat": "glucksmann",
     "theme": "europe-international",
     "titre": "Proposer un nouveau contrat de souveraineté qui clarifie la répartition des compétences entre les échelons européens, nationaux, régionaux et locaux, un…",
@@ -2589,13 +3321,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-europe-international-002",
+    "id": "glucksmann-europe-international-003",
     "candidat": "glucksmann",
     "theme": "europe-international",
     "titre": "Augmenter massivement le budget de l’Union européenne pour lui permettre de lancer des politiques publiques et dépasser le rôle de puissance exclusivement…",
@@ -2612,12 +3345,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
+    "titre_litteral": true,
     "effets": []
   },
   {
-    "id": "glucksmann-europe-international-003",
+    "id": "glucksmann-europe-international-004",
     "candidat": "glucksmann",
     "theme": "europe-international",
     "titre": "Mettre en place un fonds européen de défense de 500 Md€ via un emprunt commun, pour investir massivement dans nos capacités industrielles, en réservant les…",
@@ -2634,8 +3368,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -2643,11 +3378,23 @@
         "position": "plus_defense",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place un fonds européen de défense de 500 Md€ via un emprunt commun, pour investir massivement dans nos capacités industrielles"
+      },
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un fonds européen de défense de 500 Md€ via un emprunt commun"
+      },
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "en réservant les investissements européens aux productions européennes (EDIP)."
       }
     ]
   },
   {
-    "id": "glucksmann-europe-international-004",
+    "id": "glucksmann-europe-international-005",
     "candidat": "glucksmann",
     "theme": "europe-international",
     "titre": "Etendre la dissuasion nucléaire française aux autres pays de l'UE, en conservant la souveraineté française sur la décision de l'emploi.",
@@ -2664,13 +3411,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
-    "effets": [],
-    "positions": []
+    "titre_litteral": true,
+    "effets": []
   },
   {
-    "id": "glucksmann-europe-international-005",
+    "id": "glucksmann-europe-international-006",
     "candidat": "glucksmann",
     "theme": "europe-international",
     "titre": "Augmenter l'aide militaire à l'Ukraine et notre soutien aux alliés européens comme la Moldavie et l'Arménie.",
@@ -2687,12 +3434,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
-    "effets": []
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter l'aide militaire à l'Ukraine et notre soutien aux alliés européens comme la Moldavie et l'Arménie."
+      }
+    ]
   },
   {
-    "id": "glucksmann-europe-international-006",
+    "id": "glucksmann-europe-international-007",
     "candidat": "glucksmann",
     "theme": "europe-international",
     "titre": "Porter d’ici 2030 un grand traité de réunification européenne qui sera aussi un traité de refondation institutionnelle : clarifier et démocratiser le…",
@@ -2709,8 +3465,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -2722,7 +3479,7 @@
     ]
   },
   {
-    "id": "glucksmann-europe-international-007",
+    "id": "glucksmann-europe-international-008",
     "candidat": "glucksmann",
     "theme": "europe-international",
     "titre": "Porter un Buy European Act pour prioriser les productions européennes dans les marchés publics.",
@@ -2739,20 +3496,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "commerce",
         "position": "protectionnisme",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Buy European Act pour prioriser les productions européennes dans les marchés publics"
+        "extrait": "Porter un Buy European Act pour prioriser les productions européennes dans les marchés publics."
       }
     ]
   },
   {
-    "id": "glucksmann-europe-international-008",
+    "id": "glucksmann-europe-international-009",
     "candidat": "glucksmann",
     "theme": "europe-international",
     "titre": "Créer un label européen pour l'épargne pour garantir que l'épargne des Européens finance des entreprises et des projets en Europe, plutôt que des économies…",
@@ -2769,10 +3527,18 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
+    "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un label européen pour l'épargne pour garantir que l'épargne des Européens finance des entreprises et des projets en Europe, plutôt que des économies extra européennes."
+      }
+    ]
   },
   {
     "id": "glucksmann-gouvernance-republique-001",
@@ -2792,8 +3558,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2815,8 +3582,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2838,8 +3606,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": []
   },
   {
@@ -2860,8 +3629,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": []
   },
   {
@@ -2882,8 +3652,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": []
   },
   {
@@ -2904,8 +3675,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif"
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true
   },
   {
     "id": "glucksmann-gouvernance-republique-007",
@@ -2925,8 +3697,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2948,8 +3721,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2971,8 +3745,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -2994,15 +3769,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [],
         "dimension": "droits_et_libertes",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer un droit d’initiative citoyenne."
+        "extrait": "Instaurer un droit d'initiative citoyenne."
       }
     ],
     "positions": [
@@ -3032,8 +3808,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -3055,16 +3832,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Revaloriser les salaires des agents, recruter là où les besoins sont criants et renforcer l’attractivité de la fonction publique."
-      }
-    ],
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -3079,6 +3849,14 @@
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Revaloriser les salaires des agents"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser les salaires des agents, recruter là où les besoins sont criants et renforcer l’attractivité de la fonction publique."
       }
     ]
   },
@@ -3100,8 +3878,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Egalité, laïcité & droits individuels",
+    "titre_litteral": true,
     "effets": []
   },
   {
@@ -3122,13 +3901,171 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Egalité, laïcité & droits individuels",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
     "id": "glucksmann-gouvernance-republique-015",
+    "candidat": "glucksmann",
+    "theme": "gouvernance-republique",
+    "titre": "Lancer un plan « Sport pour tous » axé sur l'inclusion et la mixité.",
+    "resume_factuel": "Lancer un plan « Sport pour tous » axé sur l'inclusion et la mixité.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Egalité, laïcité & droits individuels",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-gouvernance-republique-016",
+    "candidat": "glucksmann",
+    "theme": "gouvernance-republique",
+    "titre": "Mobiliser 1 milliard d'euros contre les violences sexistes et sexuelles (modèle espagnol).",
+    "resume_factuel": "Mobiliser 1 milliard d'euros contre les violences sexistes et sexuelles (modèle espagnol).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Egalité, laïcité & droits individuels",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-gouvernance-republique-017",
+    "candidat": "glucksmann",
+    "theme": "gouvernance-republique",
+    "titre": "Garantir le droit à l'autodétermination de genre et encadrer les parcours de transition.",
+    "resume_factuel": "Garantir le droit à l'autodétermination de genre et encadrer les parcours de transition.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Egalité, laïcité & droits individuels",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes en parcours de transition de genre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir le droit à l'autodétermination de genre"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "libertes_indiv",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir le droit à l'autodétermination de genre et encadrer les parcours de transition."
+      }
+    ]
+  },
+  {
+    "id": "glucksmann-gouvernance-republique-018",
+    "candidat": "glucksmann",
+    "theme": "gouvernance-republique",
+    "titre": "Renforcer l'indépendance et le pouvoir de sanction du Défenseur des droits.",
+    "resume_factuel": "Renforcer l'indépendance et le pouvoir de sanction du Défenseur des droits.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Egalité, laïcité & droits individuels",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-gouvernance-republique-019",
+    "candidat": "glucksmann",
+    "theme": "gouvernance-republique",
+    "titre": "Rendre l’accessibilité universelle en élargissant les politiques au-delà du fauteuil roulant pour inclure tous les handicaps.",
+    "resume_factuel": "Rendre l’accessibilité universelle en élargissant les politiques au-delà du fauteuil roulant pour inclure tous les handicaps.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Egalité, laïcité & droits individuels",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "handicap",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre l'accessibilité universelle en élargissant les politiques au-delà du fauteuil roulant pour inclure tous les handicaps."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-gouvernance-republique-020",
     "candidat": "glucksmann",
     "theme": "gouvernance-republique",
     "titre": "Créer une grande Agence industrielle du numérique et de l’IA, avec un budget financé par France 2030, la BPI et une hausse ciblée de la taxe GAFAM, qui…",
@@ -3145,12 +4082,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": []
   },
   {
-    "id": "glucksmann-gouvernance-republique-016",
+    "id": "glucksmann-gouvernance-republique-021",
     "candidat": "glucksmann",
     "theme": "gouvernance-republique",
     "titre": "Ouvrir un campus international de l’IA pour former ensemble codeurs, juristes et scientifiques.",
@@ -3167,8 +4105,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -3180,7 +4119,7 @@
     ]
   },
   {
-    "id": "glucksmann-gouvernance-republique-017",
+    "id": "glucksmann-gouvernance-republique-022",
     "candidat": "glucksmann",
     "theme": "gouvernance-republique",
     "titre": "Faire de l’IA un levier de transformation des services publics en investissant massivement dans les usages à fort impact social (santé, éducation,…",
@@ -3197,8 +4136,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -3210,7 +4150,7 @@
     ]
   },
   {
-    "id": "glucksmann-gouvernance-republique-018",
+    "id": "glucksmann-gouvernance-republique-023",
     "candidat": "glucksmann",
     "theme": "gouvernance-republique",
     "titre": "Créer une Autorité indépendante de protection des mineurs en ligne chargée de réguler les contenus numériques accessibles aux mineurs et qui mettra en…",
@@ -3227,12 +4167,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": []
   },
   {
-    "id": "glucksmann-gouvernance-republique-019",
+    "id": "glucksmann-gouvernance-republique-024",
     "candidat": "glucksmann",
     "theme": "gouvernance-republique",
     "titre": "Interdire les réseaux sociaux pour les moins de 15 ans.",
@@ -3249,8 +4190,25 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "moins de 15 ans"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire les réseaux sociaux pour les moins de 15 ans."
+      }
+    ],
     "positions": [
       {
         "sujet": "libertes",
@@ -3261,7 +4219,7 @@
     ]
   },
   {
-    "id": "glucksmann-gouvernance-republique-020",
+    "id": "glucksmann-gouvernance-republique-025",
     "candidat": "glucksmann",
     "theme": "gouvernance-republique",
     "titre": "Bannir TikTok.",
@@ -3278,13 +4236,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-gouvernance-republique-021",
+    "id": "glucksmann-gouvernance-republique-026",
     "candidat": "glucksmann",
     "theme": "gouvernance-republique",
     "titre": "Impulser un traité international de l'IA qui poserait les bases d'une régulation internationale des usages de l'IA dans les domaines à très haut risque.",
@@ -3301,20 +4260,187 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "ia",
         "position": "encadrer_ia",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "un traité international de l'IA qui poserait les bases d'une régulation internationale des usages de l'IA dans les domaines à très haut risque"
+        "extrait": "Impulser un traité international de l'IA qui poserait les bases d'une régulation internationale des usages de l'IA dans les domaines à très haut risque."
       }
     ]
   },
   {
+    "id": "glucksmann-reformes-etat-001",
+    "candidat": "glucksmann",
+    "theme": "reformes-etat",
+    "titre": "Revaloriser les salaires des agents publics.",
+    "resume_factuel": "Revaloriser les salaires des agents publics.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fonction publique",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "fonctionnaire"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser les salaires des agents publics."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser les salaires des agents publics."
+      }
+    ]
+  },
+  {
+    "id": "glucksmann-reformes-etat-002",
+    "candidat": "glucksmann",
+    "theme": "reformes-etat",
+    "titre": "Renforcer l’attractivité́ de la fonction publique.",
+    "resume_factuel": "Renforcer l’attractivité́ de la fonction publique.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fonction publique",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
     "id": "glucksmann-education-jeunesse-001",
+    "candidat": "glucksmann",
+    "theme": "education-jeunesse",
+    "titre": "Renforcer les structures publiques et associatives de protection de l’enfance, exclure les structures à but lucratif du financement public, et instaurer un…",
+    "resume_factuel": "Renforcer les structures publiques et associatives de protection de l’enfance, exclure les structures à but lucratif du financement public, et instaurer un encadrement strict des crèches privées avec la création d’un statut spécifique de crèches « sous contrat ».",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Services de la petite enfance",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-education-jeunesse-002",
+    "candidat": "glucksmann",
+    "theme": "education-jeunesse",
+    "titre": "Renforcer le contrôle et la formation des professionnels en contact avec l’enfance, la santé ou l’éducation.",
+    "resume_factuel": "Renforcer le contrôle et la formation des professionnels en contact avec l’enfance, la santé ou l’éducation.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Services de la petite enfance",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-education-jeunesse-003",
+    "candidat": "glucksmann",
+    "theme": "education-jeunesse",
+    "titre": "Simplifier la chaîne de protection pour les signalements concernant les enfants et les majeurs vulnérables.",
+    "resume_factuel": "Simplifier la chaîne de protection pour les signalements concernant les enfants et les majeurs vulnérables.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Services de la petite enfance",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-education-jeunesse-004",
+    "candidat": "glucksmann",
+    "theme": "education-jeunesse",
+    "titre": "Instaurer un co-pilotage plus fort entre État et départements pour garantir une protection de l’enfance homogène sur tout le territoire.",
+    "resume_factuel": "Instaurer un co-pilotage plus fort entre État et départements pour garantir une protection de l’enfance homogène sur tout le territoire.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Services de la petite enfance",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-education-jeunesse-005",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Repenser en profondeur Parcoursup.",
@@ -3331,13 +4457,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-education-jeunesse-002",
+    "id": "glucksmann-education-jeunesse-006",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Proposer un modèle de financement renforcé pour les universités.",
@@ -3354,13 +4481,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-education-jeunesse-003",
+    "id": "glucksmann-education-jeunesse-007",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Mieux encadrer l’enseignement supérieur privé lucratif, avec transparence des financements, contrôle pédagogique renforcé et aides publiques…",
@@ -3377,13 +4505,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-education-jeunesse-004",
+    "id": "glucksmann-education-jeunesse-008",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Mettre fin aux inégalités géographiques dans l’accès aux études supérieures : création d’une aide nationale pour compenser les frais liés à…",
@@ -3400,12 +4529,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "positions": []
   },
   {
-    "id": "glucksmann-education-jeunesse-005",
+    "id": "glucksmann-education-jeunesse-009",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Réinventer les bourses étudiantes.",
@@ -3422,13 +4552,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-education-jeunesse-006",
+    "id": "glucksmann-education-jeunesse-010",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Réduire le nombre d’élèves par enseignant.",
@@ -3445,37 +4576,22 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [
       {
-        "cibles": [
-          {
-            "champ": "enfants_scolarises",
-            "valeurs": [
-              "maternelle_primaire",
-              "college",
-              "lycee"
-            ]
-          }
-        ],
+        "cibles": [],
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Réduire le nombre d’élèves par enseignant."
       }
     ],
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "ecole_continuite",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire le nombre d’élèves par enseignant."
-      }
-    ]
+    "positions": []
   },
   {
-    "id": "glucksmann-education-jeunesse-007",
+    "id": "glucksmann-education-jeunesse-011",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Revaloriser le salaire de tous les enseignants de manière continue et planifiée sur 5 ans.",
@@ -3492,11 +4608,12 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Education nationale"
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Education nationale",
+    "titre_litteral": true
   },
   {
-    "id": "glucksmann-education-jeunesse-008",
+    "id": "glucksmann-education-jeunesse-012",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Intégrer les établissements privés sous contrat à la carte scolaire.",
@@ -3513,12 +4630,53 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
-    "effets": []
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
   },
   {
-    "id": "glucksmann-education-jeunesse-009",
+    "id": "glucksmann-education-jeunesse-013",
+    "candidat": "glucksmann",
+    "theme": "education-jeunesse",
+    "titre": "Enseigner dès le primaire le décryptage des médias, images, algorithmes et mécanismes d'addiction.",
+    "resume_factuel": "Enseigner dès le primaire le décryptage des médias, images, algorithmes et mécanismes d'addiction.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Education nationale",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Enseigner dès le primaire le décryptage des médias, images, algorithmes et mécanismes d'addiction."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "glucksmann-education-jeunesse-014",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Repenser Parcoursup à travers une concertation des parents, étudiants, universités et acteurs de l'éducation.",
@@ -3535,13 +4693,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Enseignement supérieur",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-education-jeunesse-010",
+    "id": "glucksmann-education-jeunesse-015",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Renforcer l'accompagnement personnalisé pour l'orientation des élèves en amont de Parcoursup.",
@@ -3558,8 +4717,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Enseignement supérieur",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -3579,7 +4739,7 @@
     "positions": []
   },
   {
-    "id": "glucksmann-education-jeunesse-011",
+    "id": "glucksmann-education-jeunesse-016",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Conduire un grand “bilan” de l’autonomie des universités pour proposer un modèle de financement renforcé, durable et lisible, garantissant aux universités les…",
@@ -3596,13 +4756,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Enseignement supérieur",
+    "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "garantissant aux universités les moyens de remplir pleinement leurs missions d’enseignement et de recherche"
+      }
+    ]
   },
   {
-    "id": "glucksmann-education-jeunesse-012",
+    "id": "glucksmann-education-jeunesse-017",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Améliorer l'encadrement de l'enseignement supérieur privé lucratif : transparence des financements, contrôle pédagogique renforcé, aides publiques…",
@@ -3619,13 +4787,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Enseignement supérieur",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-education-jeunesse-013",
+    "id": "glucksmann-education-jeunesse-018",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Réduire les inégalités géographiques dans l'accès aux études supérieures : création d'une aide nationale pour compenser les frais liés à l'éloignement,…",
@@ -3642,9 +4811,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Enseignement supérieur",
-    "positions": [],
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -3653,12 +4822,6 @@
             "valeurs": [
               "etudiant"
             ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "frais liés à l'éloignement dans l'accès aux études supérieures"
-            ]
           }
         ],
         "dimension": "revenu_disponible",
@@ -3666,10 +4829,11 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "création d'une aide nationale pour compenser les frais liés à l'éloignement"
       }
-    ]
+    ],
+    "positions": []
   },
   {
-    "id": "glucksmann-education-jeunesse-014",
+    "id": "glucksmann-education-jeunesse-019",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Réinventer les bourses étudiantes avec un véritable droit à la formation : ouvrir un chantier ambitieux avec les syndicats et les universités pour créer un…",
@@ -3686,13 +4850,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Enseignement supérieur",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "glucksmann-education-jeunesse-015",
+    "id": "glucksmann-education-jeunesse-020",
     "candidat": "glucksmann",
     "theme": "education-jeunesse",
     "titre": "Rénover les bâtiments et campus universitaires, avec priorité à l’efficacité énergétique et à la biodiversité pour des campus adaptés au climat de demain,…",
@@ -3709,25 +4874,18 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Enseignement supérieur",
-    "effets": [
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
       {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "etudiant"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rénover les bâtiments et campus universitaires"
+        "extrait": "avec priorité à l’efficacité énergétique et à la biodiversité pour des campus adaptés au climat de demain"
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "glucksmann-defense-001",
@@ -3747,8 +4905,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -3777,8 +4936,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -3786,6 +4946,12 @@
         "position": "plus_defense",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Lancer de grands programmes de production de drones, de modernisation de nos capacités spatiales"
+      },
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "travailler à l’intégration de l’IA dans notre outil de défense"
       }
     ]
   },
@@ -3807,10 +4973,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
-    "effets": [],
-    "positions": []
+    "titre_litteral": true,
+    "effets": []
   },
   {
     "id": "glucksmann-defense-004",
@@ -3830,8 +4996,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -3860,19 +5027,20 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
-        "sujet": "europe",
-        "position": "plus_europe",
+        "sujet": "defense",
+        "position": "plus_defense",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place un fonds européen de défense de 500 Mds€ via un emprunt commun."
       },
       {
-        "sujet": "defense",
-        "position": "plus_defense",
+        "sujet": "europe",
+        "position": "plus_europe",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place un fonds européen de défense de 500 Mds€ via un emprunt commun."
       }
@@ -3896,9 +5064,11 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
-    "effets": []
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
   },
   {
     "id": "glucksmann-defense-007",
@@ -3918,8 +5088,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -3927,8 +5098,8 @@
     "id": "glucksmann-defense-008",
     "candidat": "glucksmann",
     "theme": "defense",
-    "titre": "Augmenter drastiquement l’aide militaire à l’Ukraine.",
-    "resume_factuel": "Augmenter drastiquement l’aide militaire à l’Ukraine.",
+    "titre": "Augmenter drastiquement l’aide militaire à l’Ukraine : protéger le ciel de l'Ouest et du Centre de l'Ukraine contre les missiles russes. Saisir les 210…",
+    "resume_factuel": "Augmenter drastiquement l’aide militaire à l’Ukraine : protéger le ciel de l'Ouest et du Centre de l'Ukraine contre les missiles russes. Saisir les 210 milliards d'avoirs publics russes gelés en Europe pour les affecter à l'aide à l'Ukraine.",
     "sources": [
       {
         "type": "secondaire",
@@ -3941,8 +5112,33 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
+    "titre_litteral": true,
     "effets": []
+  },
+  {
+    "id": "glucksmann-defense-009",
+    "candidat": "glucksmann",
+    "theme": "defense",
+    "titre": "Se libérer de notre dépendance américaine : réserver les fonds européens aux productions européennes pour ne plus se défendre en achetant des armes américaines…",
+    "resume_factuel": "Se libérer de notre dépendance américaine : réserver les fonds européens aux productions européennes pour ne plus se défendre en achetant des armes américaines et construire notre autonomie stratégique.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Défense & armées",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
   }
 ]

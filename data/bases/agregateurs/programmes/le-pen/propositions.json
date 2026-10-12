@@ -3,8 +3,8 @@
     "id": "le-pen-finances-publiques-001",
     "candidat": "le-pen",
     "theme": "finances-publiques",
-    "titre": "Créer l'impôt sur la fortune financière (IFF), inspiré de l’ancien ISF, mais excluant la résidence principale (ou une résidence secondaire au choix).",
-    "resume_factuel": "Créer l'impôt sur la fortune financière (IFF), inspiré de l’ancien ISF, mais excluant la résidence principale (ou une résidence secondaire au choix).",
+    "titre": "Baisser les subventions de l'Etat et des collectivités aux associations ne relevant pas de l'intérêt général.",
+    "resume_factuel": "Baisser les subventions de l'Etat et des collectivités aux associations ne relevant pas de l'intérêt général.",
     "sources": [
       {
         "type": "secondaire",
@@ -17,23 +17,622 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
-        "sujet": "ultra_riches",
-        "position": "taxer_ultra_riches",
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer l'impôt sur la fortune financière (IFF), inspiré de l’ancien ISF"
+        "extrait": "Baisser les subventions de l'Etat et des collectivités aux associations"
       }
     ]
+  },
+  {
+    "id": "le-pen-finances-publiques-002",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Baisser la dotation à l'audiovisuel public, puis privatisation (sauf FranceInfo, Arte, OM…).",
+    "resume_factuel": "Baisser la dotation à l'audiovisuel public, puis privatisation (sauf FranceInfo, Arte, OM…).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser la dotation à l'audiovisuel public"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-003",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Diminuer et rationaliser les aides à la presse (hors avantage postal).",
+    "resume_factuel": "Diminuer et rationaliser les aides à la presse (hors avantage postal).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Diminuer et rationaliser les aides à la presse"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-004",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Rationaliser les dépenses de l'Etat (baisser son train de vie).",
+    "resume_factuel": "Rationaliser les dépenses de l'Etat (baisser son train de vie).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rationaliser les dépenses de l'Etat (baisser son train de vie)"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-005",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Supprimer la niche fiscale journalistes / conseillers régionaux.",
+    "resume_factuel": "Supprimer la niche fiscale journalistes / conseillers régionaux.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "journalistes"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer la niche fiscale journalistes"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "conseillers régionaux"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "conseillers régionaux"
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "le-pen-finances-publiques-006",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Réduire de 78,8 Md€ les dépenses publiques.",
+    "resume_factuel": "Réduire de 78,8 Md€ les dépenses publiques.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire de 78,8 Md€ les dépenses publiques"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-007",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Dépenser 16 Md€ de droits nouveaux et des moyens supplémentaires sur les priorités nationales, grâce aux économies réalisées.",
+    "resume_factuel": "Dépenser 16 Md€ de droits nouveaux et des moyens supplémentaires sur les priorités nationales, grâce aux économies réalisées.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": []
+  },
+  {
+    "id": "le-pen-finances-publiques-008",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Instaurer une règle d'or budgétaire constitutionnelle. Le déficit devra obligatoirement être inférieur au seuil stabilisant de la dette, et au moins 0,5 point…",
+    "resume_factuel": "Instaurer une règle d'or budgétaire constitutionnelle. Le déficit devra obligatoirement être inférieur au seuil stabilisant de la dette, et au moins 0,5 point en dessous jusqu'à ce que la dette atteigne 60 % du PIB.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Dette & déficit",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "dette",
+        "position": "reduire_dette",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer une règle d'or budgétaire constitutionnelle. Le déficit devra obligatoirement être inférieur au seuil stabilisant de la dette"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-009",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Ramener le déficit sous les 3 % d'ici 2032.",
+    "resume_factuel": "Ramener le déficit sous les 3 % d'ici 2032.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Dette & déficit",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "dette",
+        "position": "reduire_dette",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Ramener le déficit sous les 3 % d'ici 2032"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-010",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Viser l'équilibre primaire dès 2028.",
+    "resume_factuel": "Viser l'équilibre primaire dès 2028.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Dette & déficit",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "dette",
+        "position": "reduire_dette",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Viser l'équilibre primaire dès 2028"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-011",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Supprimer 120 taxes inutiles.",
+    "resume_factuel": "Supprimer 120 taxes inutiles.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fiscalité",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer 120 taxes inutiles"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-012",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Supprimer la TVA sur 100 produits de première nécessité.",
+    "resume_factuel": "Supprimer la TVA sur 100 produits de première nécessité.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fiscalité",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer la TVA sur 100 produits de première nécessité."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer la TVA sur 100 produits de première nécessité"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-013",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Supprimer 3 impôts de production : la CFE, la C3S et la CVAE.",
+    "resume_factuel": "Supprimer 3 impôts de production : la CFE, la C3S et la CVAE.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fiscalité",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer 3 impôts de production : la CFE, la C3S et la CVAE"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-014",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Remplacer de l'IFI par l'Impôt sur la Fortune Financière (IFF).",
+    "resume_factuel": "Remplacer de l'IFI par l'Impôt sur la Fortune Financière (IFF).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fiscalité",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_patrimoine",
+            "valeurs": [
+              "plus_1_3m"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Remplacer de l'IFI par l'Impôt sur la Fortune Financière (IFF)."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "le-pen-finances-publiques-015",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Corriger l'Impôt sur les Sociétés (IS) pour les grands groupes sur la base du chiffre d'affaires réalisé en France.",
+    "resume_factuel": "Corriger l'Impôt sur les Sociétés (IS) pour les grands groupes sur la base du chiffre d'affaires réalisé en France.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fiscalité",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Corriger l'Impôt sur les Sociétés (IS) pour les grands groupes sur la base du chiffre d'affaires réalisé en France"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-016",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Exonérer de taxe les successions familiales jusqu'à 300 000 € sur l'immobilier et aligner les donations (100 000 € tous les 10 ans).",
+    "resume_factuel": "Exonérer de taxe les successions familiales jusqu'à 300 000 € sur l'immobilier et aligner les donations (100 000 € tous les 10 ans).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fiscalité",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "recu",
+              "a_venir"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Exonérer de taxe les successions familiales jusqu'à 300 000 € sur l'immobilier et aligner les donations (100 000 € tous les 10 ans)."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Exonérer de taxe les successions familiales jusqu'à 300 000 € sur l'immobilier et aligner les donations"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-017",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Instaurer une taxe sur les rachats d'actions et une taxe sur les superdividendes.",
+    "resume_factuel": "Instaurer une taxe sur les rachats d'actions et une taxe sur les superdividendes.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fiscalité",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer une taxe sur les rachats d'actions et une taxe sur les superdividendes"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-018",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Créer un fonds souverain destiné à soutenir les PME.",
+    "resume_factuel": "Créer un fonds souverain destiné à soutenir les PME.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Secteur bancaire & finance",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un fonds souverain destiné à soutenir les PME"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-finances-publiques-019",
+    "candidat": "le-pen",
+    "theme": "finances-publiques",
+    "titre": "Transférer aux établissements bancaires le financement de l'accès aux services bancaires de base.",
+    "resume_factuel": "Transférer aux établissements bancaires le financement de l'accès aux services bancaires de base.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Secteur bancaire & finance",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-interieur-justice-001",
     "candidat": "le-pen",
     "theme": "interieur-justice",
-    "titre": "Atteindre 85 000 places de prison disponibles d'ici à 2028.",
-    "resume_factuel": "Atteindre 85 000 places de prison disponibles d'ici à 2028.",
+    "titre": "Réserver les prestations familiales aux foyers ayant au moins un parent français.",
+    "resume_factuel": "Réserver les prestations familiales aux foyers ayant au moins un parent français.",
     "sources": [
       {
         "type": "secondaire",
@@ -46,20 +645,417 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Immigration",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "europeenne",
+              "hors_ue"
+            ]
+          },
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "allocations_familiales"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réserver les prestations familiales aux foyers ayant au moins un parent français."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réserver les prestations familiales aux foyers ayant au moins un parent français"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-interieur-justice-002",
+    "candidat": "le-pen",
+    "theme": "interieur-justice",
+    "titre": "Remplacer l'Aide Médicale d'État (AME) par l'Aide Médicale d'Urgence (AMU).",
+    "resume_factuel": "Remplacer l'Aide Médicale d'État (AME) par l'Aide Médicale d'Urgence (AMU).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Immigration",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Remplacer l'Aide Médicale d'État (AME) par l'Aide Médicale d'Urgence (AMU)."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Remplacer l'Aide Médicale d'État (AME) par l'Aide Médicale d'Urgence (AMU)"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-interieur-justice-003",
+    "candidat": "le-pen",
+    "theme": "interieur-justice",
+    "titre": "Réformer la politique de l'asile et supprimer le visa pour soins.",
+    "resume_factuel": "Réformer la politique de l'asile et supprimer le visa pour soins.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Immigration",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes demandant un visa pour soins médicaux"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "supprimer le visa pour soins"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réformer la politique de l'asile et supprimer le visa pour soins"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-interieur-justice-004",
+    "candidat": "le-pen",
+    "theme": "interieur-justice",
+    "titre": "Organiser le départ des étrangers sans emploi (selon la durée de résidence) ne pouvant subvenir à leurs besoins.",
+    "resume_factuel": "Organiser le départ des étrangers sans emploi (selon la durée de résidence) ne pouvant subvenir à leurs besoins.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Immigration",
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Organiser le départ des étrangers sans emploi (selon la durée de résidence) ne pouvant subvenir à leurs besoins"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-interieur-justice-005",
+    "candidat": "le-pen",
+    "theme": "interieur-justice",
+    "titre": "Créer une taxe de 1 000 €/an à l'embauche d'un travailleur extra-européen.",
+    "resume_factuel": "Créer une taxe de 1 000 €/an à l'embauche d'un travailleur extra-européen.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Immigration",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer une taxe de 1 000 €/an à l'embauche d'un travailleur extra-européen."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer une taxe de 1 000 €/an à l'embauche d'un travailleur extra-européen"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-interieur-justice-006",
+    "candidat": "le-pen",
+    "theme": "interieur-justice",
+    "titre": "Taxer à 14 % les transferts d'argent vers les pays tiers.",
+    "resume_factuel": "Taxer à 14 % les transferts d'argent vers les pays tiers.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Immigration",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes effectuant des transferts d'argent vers des pays tiers"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Taxer à 14 % les transferts d'argent vers les pays tiers."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "le-pen-interieur-justice-007",
+    "candidat": "le-pen",
+    "theme": "interieur-justice",
+    "titre": "Augmenter les frais de scolarité des étudiants étrangers.",
+    "resume_factuel": "Augmenter les frais de scolarité des étudiants étrangers.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Immigration",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
+            ]
+          },
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "europeenne",
+              "hors_ue"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter les frais de scolarité des étudiants étrangers."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter les frais de scolarité des étudiants étrangers."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-interieur-justice-008",
+    "candidat": "le-pen",
+    "theme": "interieur-justice",
+    "titre": "Construire 30 000 places de prison supplémentaires.",
+    "resume_factuel": "Construire 30 000 places de prison supplémentaires.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "prison",
         "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Atteindre 85 000 places de prison disponibles d'ici à 2028."
+        "extrait": "Construire 30 000 places de prison supplémentaires."
       }
     ]
   },
   {
-    "id": "le-pen-interieur-justice-002",
+    "id": "le-pen-interieur-justice-009",
+    "candidat": "le-pen",
+    "theme": "interieur-justice",
+    "titre": "Appliquer strictement le principe du « casseur-payeur ».",
+    "resume_factuel": "Appliquer strictement le principe du « casseur-payeur ».",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "manifestations",
+        "position": "maintien_ordre_ferme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Appliquer strictement le principe du « casseur-payeur »."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-interieur-justice-010",
+    "candidat": "le-pen",
+    "theme": "interieur-justice",
+    "titre": "Suspendre les prestations familiales des parents d'enfants délinquants ou criminels.",
+    "resume_factuel": "Suspendre les prestations familiales des parents d'enfants délinquants ou criminels.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "allocations_familiales"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "parents d'enfants délinquants ou criminels"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Suspendre les prestations familiales des parents d'enfants délinquants ou criminels."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "parents_mineurs",
+        "position": "sanctionner_parents",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Suspendre les prestations familiales des parents d'enfants délinquants ou criminels."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-interieur-justice-011",
     "candidat": "le-pen",
     "theme": "interieur-justice",
     "titre": "Mettre en place une présomption de légitime défense pour les policiers et gendarmes.",
@@ -76,8 +1072,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -91,20 +1088,12 @@
         "dimension": "droits_et_libertes",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "une présomption de légitime défense pour les policiers et gendarmes"
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place une présomption de légitime défense pour les policiers et gendarmes."
       }
     ]
   },
   {
-    "id": "le-pen-interieur-justice-003",
+    "id": "le-pen-interieur-justice-012",
     "candidat": "le-pen",
     "theme": "interieur-justice",
     "titre": "Créer 7000 postes de policiers et gendarmes.",
@@ -121,9 +1110,25 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
-    "effets": [],
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "forces_ordre"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer 7000 postes de policiers et gendarmes."
+      }
+    ],
     "positions": [
       {
         "sujet": "fonction_publique",
@@ -134,7 +1139,7 @@
     ]
   },
   {
-    "id": "le-pen-interieur-justice-004",
+    "id": "le-pen-interieur-justice-013",
     "candidat": "le-pen",
     "theme": "interieur-justice",
     "titre": "Obligation pour les communes de plus de 10 000 habitants à se doter d'une police municipale.",
@@ -151,13 +1156,322 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
+    "id": "le-pen-interieur-justice-014",
+    "candidat": "le-pen",
+    "theme": "interieur-justice",
+    "titre": "Réformer le dispositif de l'octroi de mer.",
+    "resume_factuel": "Réformer le dispositif de l'octroi de mer.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Outre-mer",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "le-pen-interieur-justice-015",
+    "candidat": "le-pen",
+    "theme": "interieur-justice",
+    "titre": "Augmenter les crédits budgétaires alloués aux territoires d'Outre-mer.",
+    "resume_factuel": "Augmenter les crédits budgétaires alloués aux territoires d'Outre-mer.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Outre-mer",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "outre_mer"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter les crédits budgétaires alloués aux territoires d'Outre-mer."
+      }
+    ],
+    "positions": []
+  },
+  {
     "id": "le-pen-social-solidarite-001",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Instaurer une part fiscale pleine dès le deuxième enfant.",
+    "resume_factuel": "Instaurer une part fiscale pleine dès le deuxième enfant.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Allocations & prestations sociales",
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer une part fiscale pleine dès le deuxième enfant."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-social-solidarite-002",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Instaurer une demi-part fiscale pour les veufs et veuves.",
+    "resume_factuel": "Instaurer une demi-part fiscale pour les veufs et veuves.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Allocations & prestations sociales",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "veufs et veuves"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer une demi-part fiscale pour les veufs et veuves."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer une demi-part fiscale pour les veufs et veuves."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-social-solidarite-003",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Garantir l'AAH systématiquement au-dessus du seuil de pauvreté.",
+    "resume_factuel": "Garantir l'AAH systématiquement au-dessus du seuil de pauvreté.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Allocations & prestations sociales",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "aah"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir l'AAH systématiquement au-dessus du seuil de pauvreté."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir l'AAH systématiquement au-dessus du seuil de pauvreté."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-social-solidarite-004",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Revaloriser les congés des proches aidants.",
+    "resume_factuel": "Revaloriser les congés des proches aidants.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Allocations & prestations sociales",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "aidant_familial",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser les congés des proches aidants."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "le-pen-social-solidarite-005",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Transformer le prêt jeunes ménages en subvention à la naissance du 3ᵉ enfant.",
+    "resume_factuel": "Transformer le prêt jeunes ménages en subvention à la naissance du 3ᵉ enfant.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Allocations & prestations sociales",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_a_charge",
+            "valeurs": [
+              "trois_ou_plus"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Transformer le prêt jeunes ménages en subvention à la naissance du 3ᵉ enfant."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "le-pen-social-solidarite-006",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Rendre le permis de conduire gratuit pour les jeunes au casier judicaire vierge.",
+    "resume_factuel": "Rendre le permis de conduire gratuit pour les jeunes au casier judicaire vierge.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Allocations & prestations sociales",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "moins_30"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "casier judiciaire vierge"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre le permis de conduire gratuit pour les jeunes au casier judicaire vierge."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "le-pen-social-solidarite-007",
     "candidat": "le-pen",
     "theme": "social-solidarite",
     "titre": "Réforme de la gouvernance hospitalière : la tutelle des hôpitaux sera de nouveau confiée aux préfets de région à travers les Directions régionales des affaires…",
@@ -174,13 +1488,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "le-pen-social-solidarite-002",
+    "id": "le-pen-social-solidarite-008",
     "candidat": "le-pen",
     "theme": "social-solidarite",
     "titre": "Recrutements massifs de personnels soignants pour combler les postes vacants et revaloriser leurs salaires. Au moins 10.000 places supplémentaires seront…",
@@ -197,8 +1512,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -212,7 +1528,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "revaloriser leurs salaires"
+        "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants et revaloriser leurs salaires."
       }
     ],
     "positions": [
@@ -225,30 +1541,7 @@
     ]
   },
   {
-    "id": "le-pen-social-solidarite-003",
-    "candidat": "le-pen",
-    "theme": "social-solidarite",
-    "titre": "Fixer un plafond de 10% de postes administratifs dans les hôpitaux, ce qui dégagera des marges de manœuvre pour recruter davantage de personnel soignant.",
-    "resume_factuel": "Fixer un plafond de 10% de postes administratifs dans les hôpitaux, ce qui dégagera des marges de manœuvre pour recruter davantage de personnel soignant.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé",
-    "effets": [],
-    "positions": []
-  },
-  {
-    "id": "le-pen-social-solidarite-004",
+    "id": "le-pen-social-solidarite-009",
     "candidat": "le-pen",
     "theme": "social-solidarite",
     "titre": "Instaurer un moratoire sur la suppression des lits à l’hôpital public.",
@@ -265,15 +1558,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [],
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer un moratoire sur la suppression des lits à l’hôpital public."
+        "extrait": "Instaurer un moratoire sur la suppression des lits à l'hôpital public."
       }
     ],
     "positions": [
@@ -286,7 +1580,7 @@
     ]
   },
   {
-    "id": "le-pen-social-solidarite-005",
+    "id": "le-pen-social-solidarite-010",
     "candidat": "le-pen",
     "theme": "social-solidarite",
     "titre": "Organiser un partenariat entre les services d’urgence et des cabinets médicaux libéraux vers lesquels pourraient être réorientés les patients relevant de la…",
@@ -303,20 +1597,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "sante_organisation",
-        "position": "liberte_sante",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Organiser un partenariat entre les services d’urgence et des cabinets médicaux libéraux vers lesquels pourraient être réorientés les patients"
-      }
-    ]
+    "positions": []
   },
   {
-    "id": "le-pen-social-solidarite-006",
+    "id": "le-pen-social-solidarite-011",
     "candidat": "le-pen",
     "theme": "social-solidarite",
     "titre": "Créer une filière distincte pour les personnes les plus âgées. Cette filière spécifique doit permettre de limiter l’attente aux urgences, d’améliorer la prise…",
@@ -333,8 +1621,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -354,7 +1643,7 @@
     "positions": []
   },
   {
-    "id": "le-pen-social-solidarite-007",
+    "id": "le-pen-social-solidarite-012",
     "candidat": "le-pen",
     "theme": "social-solidarite",
     "titre": "Redéfinir le mode de financement de l’hôpital public en revenant à un budget sous forme de dotation globale, afin de garantir la qualité des soins.",
@@ -371,8 +1660,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -384,7 +1674,7 @@
     ]
   },
   {
-    "id": "le-pen-social-solidarite-008",
+    "id": "le-pen-social-solidarite-013",
     "candidat": "le-pen",
     "theme": "social-solidarite",
     "titre": "Réduire le nombre de déserts médicaux grâce à des incitations financières fortes, celles existantes, inefficaces, étant supprimées.",
@@ -401,28 +1691,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "desert_medical",
-            "valeurs": [
-              "oui"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire le nombre de déserts médicaux grâce à des incitations financières fortes"
-      }
-    ],
+    "titre_litteral": true,
+    "effets": [],
     "positions": []
   },
   {
-    "id": "le-pen-social-solidarite-009",
+    "id": "le-pen-social-solidarite-014",
     "candidat": "le-pen",
     "theme": "social-solidarite",
     "titre": "Développer la télémédecine sous toutes ses formes : téléconsultation, télésoins, téléexpertise.",
@@ -439,8 +1715,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [],
@@ -453,7 +1730,164 @@
     "positions": []
   },
   {
-    "id": "le-pen-social-solidarite-010",
+    "id": "le-pen-social-solidarite-015",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Rembourser à 100 % les soins dentaires.",
+    "resume_factuel": "Rembourser à 100 % les soins dentaires.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Santé",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rembourser à 100 % les soins dentaires."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-social-solidarite-016",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Supprimer le passage obligatoire par le médecin traitant pour consulter un kinésithérapeute ou autre spécialiste.",
+    "resume_factuel": "Supprimer le passage obligatoire par le médecin traitant pour consulter un kinésithérapeute ou autre spécialiste.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Santé",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer le passage obligatoire par le médecin traitant pour consulter un kinésithérapeute ou autre spécialiste."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "liberte_sante",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer le passage obligatoire par le médecin traitant pour consulter un kinésithérapeute ou autre spécialiste."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-social-solidarite-017",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Réduire le coût des produits de santé (lunettes...).",
+    "resume_factuel": "Réduire le coût des produits de santé (lunettes...).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Santé",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire le coût des produits de santé (lunettes...)."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "le-pen-social-solidarite-018",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Réduire les forfaits techniques d'IRM et scanners",
+    "resume_factuel": "Réduire les forfaits techniques d'IRM et scanners",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Santé",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire les forfaits techniques d'IRM et scanners"
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "le-pen-social-solidarite-019",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Supprimer les salles de shoot.",
+    "resume_factuel": "Supprimer les salles de shoot.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Santé",
+    "titre_litteral": true,
+    "effets": []
+  },
+  {
+    "id": "le-pen-social-solidarite-020",
     "candidat": "le-pen",
     "theme": "social-solidarite",
     "titre": "Remplacer les subventions à la rénovation thermique des logements de MaPrimeRénov’ par un dispositif de prêts à taux zéro 100 % Rénov.",
@@ -470,8 +1904,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -482,16 +1917,16 @@
             ]
           }
         ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
+        "dimension": "cout_de_la_vie",
+        "sens": "indetermine",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Remplacer les subventions à la rénovation thermique des logements de MaPrimeRénov’ par un dispositif de prêts à taux zéro 100 % Rénov."
+        "extrait": "Remplacer les subventions à la rénovation thermique des logements de MaPrimeRénov' par un dispositif de prêts à taux zéro 100 % Rénov."
       }
     ],
     "positions": []
   },
   {
-    "id": "le-pen-social-solidarite-011",
+    "id": "le-pen-social-solidarite-021",
     "candidat": "le-pen",
     "theme": "social-solidarite",
     "titre": "Durcir les sanctions contre les locataires qui ne paient pas leur loyer et accélérer les procédures d’expulsion en cas d’impayés.",
@@ -508,11 +1943,20 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Logement"
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "liberer_offre_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Durcir les sanctions contre les locataires qui ne paient pas leur loyer et accélérer les procédures d’expulsion en cas d’impayés."
+      }
+    ]
   },
   {
-    "id": "le-pen-social-solidarite-012",
+    "id": "le-pen-social-solidarite-022",
     "candidat": "le-pen",
     "theme": "social-solidarite",
     "titre": "Supprimer les interdictions de louer les logements mal notés (classes F et G) pour éviter une crise du logement et préserver les propriétaires.",
@@ -529,8 +1973,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -539,15 +1984,27 @@
             "valeurs": [
               "proprietaire"
             ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "logements mal notés classes F et G"
+            ]
           }
         ],
-        "dimension": "patrimoine",
+        "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer les interdictions de louer les logements mal notés (classes F et G) pour éviter une crise du logement et préserver les propriétaires."
       }
     ],
     "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "freiner_transition",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les interdictions de louer les logements mal notés (classes F et G)"
+      },
       {
         "sujet": "logement",
         "position": "liberer_offre_logement",
@@ -557,7 +2014,7 @@
     ]
   },
   {
-    "id": "le-pen-social-solidarite-013",
+    "id": "le-pen-social-solidarite-023",
     "candidat": "le-pen",
     "theme": "social-solidarite",
     "titre": "Abrogation de la loi SRU.",
@@ -574,8 +2031,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -587,7 +2045,7 @@
     ]
   },
   {
-    "id": "le-pen-social-solidarite-014",
+    "id": "le-pen-social-solidarite-024",
     "candidat": "le-pen",
     "theme": "social-solidarite",
     "titre": "Mise en place d'une préference nationale : les français seront favorisés pour l'accès au logement et aux APL.",
@@ -604,16 +2062,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
-    "positions": [
-      {
-        "sujet": "immigration",
-        "position": "restriction",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mise en place d'une préference nationale : les français seront favorisés pour l'accès au logement et aux APL."
-      }
-    ],
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -627,7 +2078,7 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "les français seront favorisés pour l'accès au logement et aux APL"
+        "extrait": "Mise en place d'une préference nationale : les français seront favorisés pour l'accès au logement et aux APL."
       },
       {
         "cibles": [
@@ -642,16 +2093,24 @@
         "dimension": "acces_aux_services",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mise en place d'une préference nationale : les français seront favorisés pour l'accès au logement et aux APL."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "les français seront favorisés pour l'accès au logement et aux APL"
       }
     ]
   },
   {
-    "id": "le-pen-social-solidarite-015",
+    "id": "le-pen-social-solidarite-025",
     "candidat": "le-pen",
     "theme": "social-solidarite",
-    "titre": "Supprimer la norme \" ZAN\".",
-    "resume_factuel": "Supprimer la norme \" ZAN\".",
+    "titre": "Supprimer la norme \" ZAN\", zéro artificialisation nette.",
+    "resume_factuel": "Supprimer la norme \" ZAN\", zéro artificialisation nette.",
     "sources": [
       {
         "type": "secondaire",
@@ -664,24 +2123,180 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "renouvelables",
         "position": "freiner_transition",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer la norme \" ZAN\"."
+        "extrait": "Supprimer la norme \" ZAN\", zéro artificialisation nette."
       }
     ]
+  },
+  {
+    "id": "le-pen-social-solidarite-026",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Supprimer un très grand nombre de normes liées à la performance énergétique et environnementale inutiles et contraignantes. Le DPE, Diagnostic de performance…",
+    "resume_factuel": "Supprimer un très grand nombre de normes liées à la performance énergétique et environnementale inutiles et contraignantes. Le DPE, Diagnostic de performance énergétique sera conservé mais uniquement à titre indicatif.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "freiner_transition",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer un très grand nombre de normes liées à la performance énergétique et environnementale inutiles et contraignantes."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-social-solidarite-027",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Supprimer la règle dictée par la loi de Solidarité et renouvellement urbain, qui impose entre 20 % et 25 % de logements sociaux dans les communes en zone…",
+    "resume_factuel": "Supprimer la règle dictée par la loi de Solidarité et renouvellement urbain, qui impose entre 20 % et 25 % de logements sociaux dans les communes en zone urbaine.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "liberer_offre_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer la règle dictée par la loi de Solidarité et renouvellement urbain, qui impose entre 20 % et 25 % de logements sociaux dans les communes en zone urbaine."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-social-solidarite-028",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Mettre gratuitement à disposition des promoteurs privés une partie du foncier de l’Etat et des entreprises publiques, en échange de la production de logements.…",
+    "resume_factuel": "Mettre gratuitement à disposition des promoteurs privés une partie du foncier de l’Etat et des entreprises publiques, en échange de la production de logements. L’Etat ne redeviendrait propriétaire que des décennies plus tard.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "liberer_offre_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre gratuitement à disposition des promoteurs privés une partie du foncier de l’Etat et des entreprises publiques, en échange de la production de logements."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-social-solidarite-029",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Plafonner les aides au logement (APL) à 90 % du loyer.",
+    "resume_factuel": "Plafonner les aides au logement (APL) à 90 % du loyer.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "aide_logement"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Plafonner les aides au logement (APL) à 90 % du loyer."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-social-solidarite-030",
+    "candidat": "le-pen",
+    "theme": "social-solidarite",
+    "titre": "Mettre fin à l'exonération de taxe foncière sur les bailleurs sociaux.",
+    "resume_factuel": "Mettre fin à l'exonération de taxe foncière sur les bailleurs sociaux.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-retraites-travail-001",
     "candidat": "le-pen",
     "theme": "retraites-travail",
-    "titre": "Recenser les normes « toxiques » qu’il faut supprimer et celles qu’il faut simplifier par un travail « tricolore » (système de classification des normes).",
-    "resume_factuel": "Recenser les normes « toxiques » qu’il faut supprimer et celles qu’il faut simplifier par un travail « tricolore » (système de classification des normes).",
+    "titre": "Exonérer d'impôt sur le revenu les jeunes actifs jusqu'à 30 ans jusqu'à 4 fois le SMIC.",
+    "resume_factuel": "Exonérer d'impôt sur le revenu les jeunes actifs jusqu'à 30 ans jusqu'à 4 fois le SMIC.",
     "sources": [
       {
         "type": "secondaire",
@@ -694,17 +2309,40 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "effets": [],
-    "positions": []
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "moins_30"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Exonérer d'impôt sur le revenu les jeunes actifs jusqu'à 30 ans jusqu'à 4 fois le SMIC."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Exonérer d'impôt sur le revenu les jeunes actifs jusqu'à 30 ans jusqu'à 4 fois le SMIC."
+      }
+    ]
   },
   {
     "id": "le-pen-retraites-travail-002",
     "candidat": "le-pen",
     "theme": "retraites-travail",
-    "titre": "Mettre en place une vaste simplification administrative par ordonnances.",
-    "resume_factuel": "Mettre en place une vaste simplification administrative par ordonnances.",
+    "titre": "Limiter les ruptures conventionnelles à une seule tous les 10 ans.",
+    "resume_factuel": "Limiter les ruptures conventionnelles à une seule tous les 10 ans.",
     "sources": [
       {
         "type": "secondaire",
@@ -717,17 +2355,17 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "effets": [],
+    "titre_litteral": true,
     "positions": []
   },
   {
     "id": "le-pen-retraites-travail-003",
     "candidat": "le-pen",
     "theme": "retraites-travail",
-    "titre": "Créer un fonds souverain destiné à soutenir les PME.",
-    "resume_factuel": "Créer un fonds souverain destiné à soutenir les PME.",
+    "titre": "Obliger au pointage mensuel à France Travail sous peine de suspension du chômage.",
+    "resume_factuel": "Obliger au pointage mensuel à France Travail sous peine de suspension du chômage.",
     "sources": [
       {
         "type": "secondaire",
@@ -740,20 +2378,67 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "effets": [],
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Obliger au pointage mensuel à France Travail sous peine de suspension du chômage."
+      }
+    ],
     "positions": [
       {
-        "sujet": "entreprises",
-        "position": "soutenir_entreprises",
+        "sujet": "aides_sociales",
+        "position": "conditionner_aides",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un fonds souverain destiné à soutenir les PME."
+        "extrait": "Obliger au pointage mensuel à France Travail sous peine de suspension du chômage."
       }
     ]
   },
   {
     "id": "le-pen-retraites-travail-004",
+    "candidat": "le-pen",
+    "theme": "retraites-travail",
+    "titre": "Renforcer les contrôles de la Sécurité Sociale et le retour à l'emploi.",
+    "resume_factuel": "Renforcer les contrôles de la Sécurité Sociale et le retour à l'emploi.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "conditionner_aides",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer les contrôles de la Sécurité Sociale et le retour à l'emploi."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-retraites-travail-005",
     "candidat": "le-pen",
     "theme": "retraites-travail",
     "titre": "Permettre un départ à 60 ans pour ceux qui ont commencé à travailler avant 20 ans.",
@@ -770,8 +2455,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Système de retraite",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -798,7 +2484,7 @@
     ]
   },
   {
-    "id": "le-pen-retraites-travail-005",
+    "id": "le-pen-retraites-travail-006",
     "candidat": "le-pen",
     "theme": "retraites-travail",
     "titre": "Instaurer une part de capitalisation « volontaire » dans le système des retraites, dans le cadre d’un \"fonds d’investissement dans l’avenir de la France\".",
@@ -815,13 +2501,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Système de retraite",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "le-pen-retraites-travail-006",
+    "id": "le-pen-retraites-travail-007",
     "candidat": "le-pen",
     "theme": "retraites-travail",
     "titre": "Permettre la priorité nationale de la commande publique.",
@@ -838,8 +2525,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Industrie & relocalisation",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -847,6 +2535,52 @@
         "position": "protectionnisme",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Permettre la priorité nationale de la commande publique."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-retraites-travail-008",
+    "candidat": "le-pen",
+    "theme": "retraites-travail",
+    "titre": "Renforcer le pacte Dutreil (annulation de la taxation contre détention de 10 ans).",
+    "resume_factuel": "Renforcer le pacte Dutreil (annulation de la taxation contre détention de 10 ans).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economie et entreprises",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer le pacte Dutreil (annulation de la taxation contre détention de 10 ans)."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer le pacte Dutreil (annulation de la taxation contre détention de 10 ans)."
       }
     ]
   },
@@ -868,8 +2602,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -898,8 +2633,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -921,23 +2657,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "vehicule",
-            "valeurs": [
-              "thermique"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser la TVA sur l’énergie et les carburants de 20 % à 5,5 %."
-      },
       {
         "cibles": [],
         "dimension": "cout_de_la_vie",
@@ -973,8 +2696,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -987,12 +2711,75 @@
         "sujet": "renouvelables",
         "position": "freiner_transition",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "le démantèlement progressif des parcs éoliens existants lorsqu’ils arrivent en fin de vie."
+        "extrait": "démantèlement progressif des parcs éoliens existants lorsqu’ils arrivent en fin de vie"
       }
     ]
   },
   {
     "id": "le-pen-envi-005",
+    "candidat": "le-pen",
+    "theme": "environnement",
+    "titre": "Ramener la Taxe intérieure de consommation sur les produits énergétiques (TICPE) au niveau de 2017.",
+    "resume_factuel": "Ramener la Taxe intérieure de consommation sur les produits énergétiques (TICPE) au niveau de 2017.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Energie",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Ramener la Taxe intérieure de consommation sur les produits énergétiques (TICPE) au niveau de 2017."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Ramener la Taxe intérieure de consommation sur les produits énergétiques (TICPE) au niveau de 2017"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-envi-006",
+    "candidat": "le-pen",
+    "theme": "environnement",
+    "titre": "Exporter le surplus électrique en Europe via les dividendes d'EDF.",
+    "resume_factuel": "Exporter le surplus électrique en Europe via les dividendes d'EDF.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Energie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "le-pen-envi-007",
     "candidat": "le-pen",
     "theme": "environnement",
     "titre": "Respecter les accords de Paris à un rythme et avec des moyens discrétionnaires.",
@@ -1009,13 +2796,93 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "le-pen-envi-006",
+    "id": "le-pen-envi-008",
+    "candidat": "le-pen",
+    "theme": "environnement",
+    "titre": "Transformer et augmenter le Fonds Vert pour la lutte contre les risques climatiques.",
+    "resume_factuel": "Transformer et augmenter le Fonds Vert pour la lutte contre les risques climatiques.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "le-pen-envi-009",
+    "candidat": "le-pen",
+    "theme": "environnement",
+    "titre": "Supprimer les coûts indirects du carbone pour les entreprises électro-intensives.",
+    "resume_factuel": "Supprimer les coûts indirects du carbone pour les entreprises électro-intensives.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les coûts indirects du carbone pour les entreprises électro-intensives"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-envi-010",
+    "candidat": "le-pen",
+    "theme": "environnement",
+    "titre": "Faire de la prévention du suicide des agriculteurs une cause nationale.",
+    "resume_factuel": "Faire de la prévention du suicide des agriculteurs une cause nationale.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "le-pen-envi-011",
     "candidat": "le-pen",
     "theme": "environnement",
     "titre": "Garantir aux paysans des prix respectueux de leur travail et mettre un terme aux marges abusives de la grande distribution.",
@@ -1032,8 +2899,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1053,7 +2921,7 @@
     "positions": []
   },
   {
-    "id": "le-pen-envi-007",
+    "id": "le-pen-envi-012",
     "candidat": "le-pen",
     "theme": "environnement",
     "titre": "Lutter contre l’artificialisation des terres agricoles.",
@@ -1070,13 +2938,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "le-pen-envi-008",
+    "id": "le-pen-envi-013",
     "candidat": "le-pen",
     "theme": "environnement",
     "titre": "Installer une nouvelle génération d'agriculteurs pour faire face aux départs à la retraite conséquents à venir d'ici à 10 ans.",
@@ -1093,13 +2962,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "le-pen-envi-009",
+    "id": "le-pen-envi-014",
     "candidat": "le-pen",
     "theme": "environnement",
     "titre": "Lutter contre les effets néfastes de la stratégie européenne \" de la ferme à la fourchette \" qui menace la souveraineté européenne.",
@@ -1116,20 +2986,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "europe",
         "position": "souverainete",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Lutter contre les effets néfastes de la stratégie européenne \" de la ferme à la fourchette \" qui menace la souveraineté européenne."
+        "extrait": "Lutter contre les effets néfastes de la stratégie européenne \" de la ferme à la fourchette \" qui menace la souveraineté européenne"
       }
     ]
   },
   {
-    "id": "le-pen-envi-010",
+    "id": "le-pen-envi-015",
     "candidat": "le-pen",
     "theme": "environnement",
     "titre": "Faire du redressement de la balance commerciale agricole une priorité absolue.",
@@ -1146,13 +3017,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "le-pen-envi-011",
+    "id": "le-pen-envi-016",
     "candidat": "le-pen",
     "theme": "environnement",
     "titre": "Mise en place d'un plan de soutien spécifique pour l'agriculture biologique.",
@@ -1169,42 +3041,29 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
-    "positions": [
+    "titre_litteral": true,
+    "effets": [
       {
-        "sujet": "agriculture_normes",
-        "position": "renforcer_normes_agri",
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "agriculteurs pratiquant l'agriculture biologique"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mise en place d'un plan de soutien spécifique pour l'agriculture biologique."
       }
-    ]
-  },
-  {
-    "id": "le-pen-envi-012",
-    "candidat": "le-pen",
-    "theme": "environnement",
-    "titre": "Faire de la prévention du suicide des agriculteurs une cause nationale.",
-    "resume_factuel": "Faire de la prévention du suicide des agriculteurs une cause nationale.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
     ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Agriculture",
-    "positions": [],
-    "effets": []
+    "positions": []
   },
   {
-    "id": "le-pen-envi-013",
+    "id": "le-pen-envi-017",
     "candidat": "le-pen",
     "theme": "environnement",
     "titre": "Protéger l'agriculture française en l'excluant de tous les traités de libre-échange, qu'ils soient déjà signés ou en projet.",
@@ -1221,24 +3080,25 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "commerce",
         "position": "protectionnisme",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Protéger l'agriculture française en l'excluant de tous les traités de libre-échange, qu'ils soient déjà signés ou en projet."
+        "extrait": "Protéger l'agriculture française en l'excluant de tous les traités de libre-échange, qu'ils soient déjà signés ou en projet"
       }
     ]
   },
   {
-    "id": "le-pen-envi-014",
+    "id": "le-pen-envi-018",
     "candidat": "le-pen",
     "theme": "environnement",
-    "titre": "Interdire les importations de produits agricole ne respectant pas les normes de production françaises.",
-    "resume_factuel": "Interdire les importations de produits agricole ne respectant pas les normes de production françaises.",
+    "titre": "Interdire les importations de produits agricoles ne respectant pas les normes de production françaises.",
+    "resume_factuel": "Interdire les importations de produits agricoles ne respectant pas les normes de production françaises.",
     "sources": [
       {
         "type": "secondaire",
@@ -1251,24 +3111,25 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "commerce",
         "position": "protectionnisme",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Interdire les importations de produits agricole ne respectant pas les normes de production françaises."
+        "extrait": "Interdire les importations de produits agricoles ne respectant pas les normes de production françaises"
       }
     ]
   },
   {
-    "id": "le-pen-envi-015",
+    "id": "le-pen-envi-019",
     "candidat": "le-pen",
     "theme": "environnement",
-    "titre": "Aucune interdiction de produits phytosanitaires sans alternatives.",
-    "resume_factuel": "Aucune interdiction de produits phytosanitaires sans alternatives.",
+    "titre": "Autoriser les produits phytosanitaires (si aucune autre alternative).",
+    "resume_factuel": "Autoriser les produits phytosanitaires (si aucune autre alternative).",
     "sources": [
       {
         "type": "secondaire",
@@ -1281,20 +3142,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "agriculture_normes",
         "position": "assouplir_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Aucune interdiction de produits phytosanitaires sans alternatives."
+        "extrait": "Autoriser les produits phytosanitaires (si aucune autre alternative)"
       }
     ]
   },
   {
-    "id": "le-pen-envi-016",
+    "id": "le-pen-envi-020",
     "candidat": "le-pen",
     "theme": "environnement",
     "titre": "Atteindre 80% de produits français dans les cantines.",
@@ -1311,24 +3173,18 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Atteindre 80% de produits français dans les cantines."
-      }
-    ]
+    "positions": []
   },
   {
-    "id": "le-pen-europe-international-001",
+    "id": "le-pen-envi-021",
     "candidat": "le-pen",
-    "theme": "europe-international",
-    "titre": "Réduire de moitié la contribution de la France au budget de l’UE.",
-    "resume_factuel": "Réduire de moitié la contribution de la France au budget de l’UE.",
+    "theme": "environnement",
+    "titre": "Abaisser la TVA sur les frais vétérinaires à 0 % pour les refuges et 10 % pour les particuliers.",
+    "resume_factuel": "Abaisser la TVA sur les frais vétérinaires à 0 % pour les refuges et 10 % pour les particuliers.",
     "sources": [
       {
         "type": "secondaire",
@@ -1341,15 +3197,172 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "frais vétérinaires pour particuliers"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abaisser la TVA sur les frais vétérinaires à 0 % pour les refuges et 10 % pour les particuliers."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abaisser la TVA sur les frais vétérinaires à 0 % pour les refuges et 10 % pour les particuliers"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-envi-022",
+    "candidat": "le-pen",
+    "theme": "environnement",
+    "titre": "Créer un dispositif de suramortissement fiscal pour la robotisation et le numérique dans l'industrie et l'agriculture.",
+    "resume_factuel": "Créer un dispositif de suramortissement fiscal pour la robotisation et le numérique dans l'industrie et l'agriculture.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un dispositif de suramortissement fiscal pour la robotisation et le numérique dans l'industrie et l'agriculture"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-europe-international-001",
+    "candidat": "le-pen",
+    "theme": "europe-international",
+    "titre": "Plafonner la contribution de la France à l'UE à 5Md € nets.",
+    "resume_factuel": "Plafonner la contribution de la France à l'UE à 5Md € nets.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "europe",
         "position": "souverainete",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire de moitié la contribution de la France au budget de l’UE."
+        "extrait": "Plafonner la contribution de la France à l'UE à 5Md € nets"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-europe-international-002",
+    "candidat": "le-pen",
+    "theme": "europe-international",
+    "titre": "Harmoniser au niveau européen la fiscalité sur les tabacs et l'alcool afin de lutter contre la fraude.",
+    "resume_factuel": "Harmoniser au niveau européen la fiscalité sur les tabacs et l'alcool afin de lutter contre la fraude.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Union Européenne",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "le-pen-europe-international-003",
+    "candidat": "le-pen",
+    "theme": "europe-international",
+    "titre": "Instaurer une pondération climatique dans la contribution des Etats à l'UE.",
+    "resume_factuel": "Instaurer une pondération climatique dans la contribution des Etats à l'UE.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Union Européenne",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "le-pen-europe-international-004",
+    "candidat": "le-pen",
+    "theme": "europe-international",
+    "titre": "Rendre à la France sa part des droits de douane collectés par l'UE.",
+    "resume_factuel": "Rendre à la France sa part des droits de douane collectés par l'UE.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Union Européenne",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre à la France sa part des droits de douane collectés par l'UE"
       }
     ]
   },
@@ -1371,8 +3384,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1409,7 +3423,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Inscrire la « priorité nationale » dans la Constitution par référendum pour l’accès aux logements sociaux et aux allocations."
+        "extrait": "Inscrire la « priorité nationale » dans la Constitution par référendum pour l’accès aux logements sociaux et aux allocations"
       }
     ]
   },
@@ -1431,9 +3445,18 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
-    "effets": []
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un contrôle strict avec facultés d'interdiction pour des intérêts étrangers ou non européens de racheter des entreprises françaises numériques stratégiques"
+      }
+    ]
   },
   {
     "id": "le-pen-gouvernance-republique-003",
@@ -1453,15 +3476,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
-        "sujet": "entreprises",
-        "position": "encadrer_entreprises",
+        "sujet": "commerce",
+        "position": "protectionnisme",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place au niveau de l'UE ou de l'OCDE de taxes extraordinaires pour les entreprises étrangères du numérique."
+        "extrait": "taxes extraordinaires pour les entreprises étrangères du numérique"
       }
     ]
   },
@@ -1483,8 +3507,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1506,8 +3531,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1544,8 +3570,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1582,8 +3609,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1591,6 +3619,147 @@
         "position": "souverainete",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Rendre obligatoire l'hébergement des données des français, des entreprises françaises et des services publics en France et dans l'Union Européenne par des opérateurs français ou européens."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-reformes-etat-001",
+    "candidat": "le-pen",
+    "theme": "reformes-etat",
+    "titre": "Supprimer les EPCI et les métropoles.",
+    "resume_factuel": "Supprimer les EPCI et les métropoles.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "le-pen-reformes-etat-002",
+    "candidat": "le-pen",
+    "theme": "reformes-etat",
+    "titre": "Supprimer ou réinternaliser certaines agences et opérateurs.",
+    "resume_factuel": "Supprimer ou réinternaliser certaines agences et opérateurs.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer ou réinternaliser certaines agences et opérateurs."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-reformes-etat-003",
+    "candidat": "le-pen",
+    "theme": "reformes-etat",
+    "titre": "Appliquer les 35 h dans la fonction publique territoriale (mettre fin au clientélisme des élus).",
+    "resume_factuel": "Appliquer les 35 h dans la fonction publique territoriale (mettre fin au clientélisme des élus).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fonction publique",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "le-pen-reformes-etat-004",
+    "candidat": "le-pen",
+    "theme": "reformes-etat",
+    "titre": "Ajuster les effectifs à la suite de la rationalisation des compétences des collectivités (ne pas remplacer certains départs à la retraite).",
+    "resume_factuel": "Ajuster les effectifs à la suite de la rationalisation des compétences des collectivités (ne pas remplacer certains départs à la retraite).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fonction publique",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "moins_fonctionnaires",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "ne pas remplacer certains départs à la retraite"
+      }
+    ]
+  },
+  {
+    "id": "le-pen-reformes-etat-005",
+    "candidat": "le-pen",
+    "theme": "reformes-etat",
+    "titre": "Diminuer de 10% les postes administratifs dans les hôpitaux publics.",
+    "resume_factuel": "Diminuer de 10% les postes administratifs dans les hôpitaux publics.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fonction publique",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "moins_fonctionnaires",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Diminuer de 10% les postes administratifs dans les hôpitaux publics."
       }
     ]
   },
@@ -1612,8 +3781,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1642,8 +3812,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1672,8 +3843,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1702,8 +3874,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1732,8 +3905,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1770,8 +3944,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1793,8 +3968,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": []
   },
   {
@@ -1815,8 +3991,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1845,8 +4022,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1863,14 +4041,7 @@
         "extrait": "Revalorisation des professeurs du primaire au lycée de 3% par an chaque année du quinquennat."
       }
     ],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Revalorisation des professeurs du primaire au lycée de 3% par an chaque année du quinquennat."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-education-jeunesse-010",
@@ -1890,9 +4061,125 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Suppression des instituts nationaux supérieurs du professorat et de l'éducation."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-education-jeunesse-011",
+    "candidat": "le-pen",
+    "theme": "education-jeunesse",
+    "titre": "Créer une prime d'activité étudiante pour ceux réussissant leurs examens.",
+    "resume_factuel": "Créer une prime d'activité étudiante pour ceux réussissant leurs examens.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Enseignement supérieur",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer une prime d'activité étudiante pour ceux réussissant leurs examens."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "le-pen-education-jeunesse-012",
+    "candidat": "le-pen",
+    "theme": "education-jeunesse",
+    "titre": "Supprimer la CVEC compensée aux universités.",
+    "resume_factuel": "Supprimer la CVEC compensée aux universités.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Enseignement supérieur",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer la CVEC compensée aux universités."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer la CVEC compensée aux universités."
+      }
+    ]
+  },
+  {
+    "id": "le-pen-education-jeunesse-013",
+    "candidat": "le-pen",
+    "theme": "education-jeunesse",
+    "titre": "Réserver les chèques apprentissage aux étudiants avant la licence.",
+    "resume_factuel": "Réserver les chèques apprentissage aux étudiants avant la licence.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Enseignement supérieur",
+    "titre_litteral": true,
     "positions": []
   }
 ]

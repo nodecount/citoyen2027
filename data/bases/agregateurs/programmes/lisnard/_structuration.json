@@ -24,67 +24,94 @@
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "415dbb7a0f4e789b",
-    "date": "2026-10-11",
+    "empreinte": "7b9a17c0f03b67db",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 9,
-    "avec_effets": 1,
-    "sans_effet": 8,
+    "propositions": 13,
+    "avec_effets": 2,
+    "sans_effet": 11,
     "rejetees": [],
-    "cout_reference_usd": 0.0514,
+    "cout_reference_usd": 0.0559,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "e4cecbd98d30f8e1",
-    "date": "2026-10-11",
+    "empreinte": "d4c91a9355ded6ac",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 3,
-    "avec_effets": 2,
-    "sans_effet": 1,
-    "rejetees": [],
-    "cout_reference_usd": 0.0496,
-    "appels": 2
-  },
-  {
-    "theme": "interieur-justice",
-    "groupe": 0,
-    "empreinte": "db7e34e4d8d855cc",
-    "date": "2026-10-11",
-    "modele": "claude-sonnet-5",
-    "propositions": 22,
-    "avec_effets": 6,
-    "sans_effet": 16,
-    "rejetees": [],
-    "cout_reference_usd": 0.0907,
-    "appels": 2
-  },
-  {
-    "theme": "reformes-etat",
-    "groupe": 0,
-    "empreinte": "64380c39828a5fdc",
-    "date": "2026-10-11",
-    "modele": "claude-sonnet-5",
-    "propositions": 9,
+    "propositions": 5,
     "avec_effets": 0,
-    "sans_effet": 9,
-    "rejetees": [],
-    "cout_reference_usd": 0.0371,
-    "appels": 1
+    "sans_effet": 3,
+    "rejetees": [
+      {
+        "id": "lisnard-finances-publiques-003",
+        "raison": "relecture : Le texte parle de donations du vivant, pas d'héritage à venir ; la cible 'heritage/a_venir' ne correspond pas au mécanisme décrit (donation vivante aux enfants)."
+      },
+      {
+        "id": "lisnard-finances-publiques-004",
+        "raison": "relecture : Le texte permet seulement d'élargir le choix des bénéficiaires d'une transmission, il ne décrit aucun avantage fiscal ou hausse de patrimoine pour le citoyen."
+      }
+    ],
+    "cout_reference_usd": 0.0554,
+    "appels": 2
   },
   {
-    "theme": "retraites-travail",
+    "theme": "gouvernance-republique",
     "groupe": 0,
-    "empreinte": "99d3805cceb7c6e4",
-    "date": "2026-10-11",
+    "empreinte": "fd05b8119cef6a0d",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
     "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.035,
+    "cout_reference_usd": 0.0325,
     "appels": 1
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 0,
+    "empreinte": "75ca55005b946a35",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 24,
+    "avec_effets": 1,
+    "sans_effet": 23,
+    "rejetees": [],
+    "cout_reference_usd": 0.0648,
+    "appels": 2
+  },
+  {
+    "theme": "reformes-etat",
+    "groupe": 0,
+    "empreinte": "dc20da21f2effefc",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 15,
+    "avec_effets": 0,
+    "sans_effet": 15,
+    "rejetees": [],
+    "cout_reference_usd": 0.0442,
+    "appels": 1
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "ea1d49f3e05a9595",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 5,
+    "avec_effets": 3,
+    "sans_effet": 1,
+    "rejetees": [
+      {
+        "id": "lisnard-retraites-travail-005",
+        "raison": "relecture : Débloquer son capital retraite pour l'acheter un logement est une réallocation d'épargne (moins de capital retraite, plus d'immobilier) et non une hausse nette garantie du patrimoine ; le sens devrait être indeterminé."
+      }
+    ],
+    "cout_reference_usd": 0.0658,
+    "appels": 2
   },
   {
     "theme": "social-solidarite",

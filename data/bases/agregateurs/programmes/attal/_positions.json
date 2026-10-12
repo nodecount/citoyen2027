@@ -1,48 +1,93 @@
 [
   {
     "groupe": 0,
-    "empreinte": "2a5bb5cf013edf67",
-    "date": "2026-10-10",
+    "empreinte": "5d3e91a0039e51fe",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 13,
-    "sans_position": 8,
+    "sans_position": 7,
     "rejetees": [
       {
-        "id": "attal-finances-publiques-001",
-        "raison": "relecture : L'extrait ne montre pas de durcissement ou conditionnalité de l'assurance chômage, seulement une source d'économies : la position conditionner_aides n'est pas fondée par le texte."
-      },
-      {
         "id": "attal-finances-publiques-003",
-        "raison": "relecture : L'extrait mentionne un objectif d'économies budgétaires sans préciser de durcissement de l'indemnisation : c'est un effet de second ordre, pas la position directe du texte."
+        "raison": "relecture : Le texte dit seulement que la réforme doit rapporter 5 Md€ d'économies, sans préciser qu'elle durcit l'indemnisation ou impose des contreparties."
       },
       {
         "id": "attal-finances-publiques-006",
-        "raison": "relecture : Une année blanche sur les prestations sociales relève des aides sociales et non de la fiscalité (impôts) : mauvais sujet."
+        "raison": "relecture : Une année blanche sur les prestations sociales relève du sujet aides_sociales, pas de la fiscalité (impôts)."
+      },
+      {
+        "id": "attal-finances-publiques-007",
+        "raison": "relecture : La création de collectivités uniques relève de l'organisation territoriale/fonction publique, pas d'une baisse d'impôts."
+      },
+      {
+        "id": "attal-interieur-justice-008",
+        "raison": "relecture : Le texte décrit un problème (sanction tardive, impunité) sans énoncer de mesure concrète de durcissement de la justice des mineurs."
       },
       {
         "id": "attal-social-solidarite-002",
-        "raison": "relecture : Une année blanche sur les prestations sociales relève des aides sociales et non de la fiscalité (impôts) : mauvais sujet."
+        "raison": "relecture : Une année blanche sur les prestations sociales relève du sujet aides_sociales, pas de la fiscalité (impôts)."
       }
     ],
-    "cout_reference_usd": 0.1413,
+    "cout_reference_usd": 0.1354,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "63ff82dcde6635e8",
-    "date": "2026-10-10",
+    "empreinte": "41c4e55ff30fea67",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 18,
-    "etiquetees": 11,
-    "sans_position": 6,
+    "propositions": 25,
+    "etiquetees": 10,
+    "sans_position": 12,
+    "rejetees": [
+      {
+        "id": "attal-social-solidarite-003",
+        "raison": "relecture : La construction de 400 000 logements/an est une mesure générale qui ne précise pas l'encadrement des loyers ou le logement social ; elle ne correspond pas clairement à la définition d'encadrer_logement."
+      },
+      {
+        "id": "attal-retraites-travail-006",
+        "raison": "relecture : L'extrait 'incite au travail' est vague et l'étiquette s'appuie surtout sur l'effet de second ordre annoncé (créer 100 000 emplois) plutôt que sur une mesure concrète de conditionnalité des aides."
+      },
+      {
+        "id": "attal-envi-002",
+        "raison": "relecture : Le texte parle de sortir des énergies fossiles pour l'indépendance énergétique, sans mentionner les renouvelables ni la transition écologique comme priorité ; l'extrait ne fonde pas spécifiquement plus_renouvelables (pourrait tout aussi bien viser le nucléaire)."
+      }
+    ],
+    "cout_reference_usd": 0.1225,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "f1056e895c45b8d7",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 20,
+    "sans_position": 3,
     "rejetees": [
       {
         "id": "attal-gouvernance-republique-001",
-        "raison": "relecture : Proposer un référendum annuel ne correspond pas clairement à la définition de 'nouvelles_institutions' (nouvelle constitution, proportionnelle, RIC, constituante) : l'extrait ne décrit pas une refonte institutionnelle mais une pratique référendaire plus fréquente, ce qui nécessite une interprétation."
+        "raison": "relecture : Un référendum annuel classique n'est pas une refonte institutionnelle (nouvelle constitution, proportionnelle, RIC) ; l'extrait ne montre pas de changement des institutions de la Ve République."
+      },
+      {
+        "id": "attal-reformes-etat-001",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Économies : 7 Md€ »"
       }
     ],
-    "cout_reference_usd": 0.0598,
+    "cout_reference_usd": 0.1149,
+    "appels": 2
+  },
+  {
+    "groupe": 3,
+    "empreinte": "e953b0398aaa59c6",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "etiquetees": 1,
+    "sans_position": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0117,
     "appels": 2
   }
 ]

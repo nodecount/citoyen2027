@@ -1,41 +1,142 @@
 [
   {
-    "theme": "finances-publiques",
+    "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "1d029b409a81c05b",
-    "date": "2026-10-11",
-    "modele": "claude-sonnet-5",
-    "propositions": 2,
-    "avec_effets": 0,
-    "sans_effet": 2,
-    "rejetees": [],
-    "cout_reference_usd": 0.033,
-    "appels": 1
-  },
-  {
-    "theme": "gouvernance-republique",
-    "groupe": 0,
-    "empreinte": "56ceb7511d3834df",
-    "date": "2026-10-11",
-    "modele": "claude-sonnet-5",
-    "propositions": 5,
-    "avec_effets": 0,
-    "sans_effet": 5,
-    "rejetees": [],
-    "cout_reference_usd": 0.0349,
-    "appels": 1
-  },
-  {
-    "theme": "social-solidarite",
-    "groupe": 0,
-    "empreinte": "81e67f38999f50df",
-    "date": "2026-10-11",
+    "empreinte": "b42aa5f8e86c23ea",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
     "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.0332,
+    "cout_reference_usd": 0.033,
+    "appels": 1
+  },
+  {
+    "theme": "environnement",
+    "groupe": 0,
+    "empreinte": "1c01f4191c7e0a95",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 21,
+    "avec_effets": 7,
+    "sans_effet": 12,
+    "rejetees": [
+      {
+        "id": "ruffin-envi-014",
+        "raison": "relecture : La hausse de revenu des agriculteurs est déduite d'un mécanisme macroéconomique supposé (effet des prix planchers à l'import sur les prix de marché), que le texte ne décrit pas directement."
+      },
+      {
+        "id": "ruffin-envi-017",
+        "raison": "relecture : Le texte vise spécifiquement les agriculteurs en agriculture biologique, mais la cible 'agriculteur' est élargie à tous les agriculteurs."
+      }
+    ],
+    "cout_reference_usd": 0.096,
+    "appels": 2
+  },
+  {
+    "theme": "finances-publiques",
+    "groupe": 0,
+    "empreinte": "b00666a05dc9623e",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 8,
+    "avec_effets": 2,
+    "sans_effet": 5,
+    "rejetees": [
+      {
+        "id": "ruffin-finances-publiques-008",
+        "raison": "relecture : La mesure vise spécifiquement le niveau de revenu des propriétaires de résidences secondaires, mais cette dimension n'est pas conservée dans un critère de cible alors qu'elle module directement l'effet."
+      }
+    ],
+    "cout_reference_usd": 0.0637,
+    "appels": 2
+  },
+  {
+    "theme": "gouvernance-republique",
+    "groupe": 0,
+    "empreinte": "7b39d31f573d135c",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 12,
+    "avec_effets": 3,
+    "sans_effet": 9,
+    "rejetees": [],
+    "cout_reference_usd": 0.0629,
+    "appels": 2
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 0,
+    "empreinte": "913629438308f587",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 4,
+    "avec_effets": 1,
+    "sans_effet": 3,
+    "rejetees": [],
+    "cout_reference_usd": 0.0464,
+    "appels": 2
+  },
+  {
+    "theme": "reformes-etat",
+    "groupe": 0,
+    "empreinte": "f7919180e221f3da",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0324,
+    "appels": 1
+  },
+  {
+    "theme": "retraites-travail",
+    "groupe": 0,
+    "empreinte": "3a4b94570051372b",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 18,
+    "avec_effets": 13,
+    "sans_effet": 5,
+    "rejetees": [],
+    "cout_reference_usd": 0.1133,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 0,
+    "empreinte": "84088b11b8b46bf1",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 8,
+    "sans_effet": 15,
+    "rejetees": [
+      {
+        "id": "ruffin-social-solidarite-018",
+        "raison": "relecture : Le texte abroge une loi facilitant les expulsions au profit des bailleurs : seul le gain pour les locataires est retenu, occultant la perte de protection pour les bailleurs."
+      },
+      {
+        "id": "ruffin-social-solidarite-025",
+        "raison": "relecture : Aucune cible n'est précisée alors que la mesure ne concerne que les usagers du réseau TER en juillet-août, ce qui élargit indûment le périmètre à tous les citoyens."
+      }
+    ],
+    "cout_reference_usd": 0.092,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 1,
+    "empreinte": "8cd83773a6a72526",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0091,
     "appels": 1
   }
 ]

@@ -2,58 +2,178 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "404c64a0dbac5ac0",
-    "date": "2026-10-11",
+    "empreinte": "1116e42536e44f1c",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 3,
-    "avec_effets": 1,
-    "sans_effet": 2,
-    "rejetees": [],
-    "cout_reference_usd": 0.0463,
+    "propositions": 15,
+    "avec_effets": 6,
+    "sans_effet": 7,
+    "rejetees": [
+      {
+        "id": "tondelier-education-jeunesse-002",
+        "raison": "relecture : La cible devrait être les parents bénéficiaires du congé, pas l'enfant de moins de 3 ans."
+      },
+      {
+        "id": "tondelier-education-jeunesse-005",
+        "raison": "relecture : Le texte ne plafonne les classes qu'en primaire, pas en maternelle, donc la cible maternelle_primaire élargit le périmètre."
+      }
+    ],
+    "cout_reference_usd": 0.0845,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "9ff23a66305b3467",
-    "date": "2026-10-11",
+    "empreinte": "b791b6774f268da2",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 21,
+    "propositions": 25,
     "avec_effets": 4,
-    "sans_effet": 17,
+    "sans_effet": 21,
     "rejetees": [],
-    "cout_reference_usd": 0.0691,
+    "cout_reference_usd": 0.0721,
+    "appels": 2
+  },
+  {
+    "theme": "environnement",
+    "groupe": 1,
+    "empreinte": "ba1c2d51d845609f",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 18,
+    "avec_effets": 2,
+    "sans_effet": 14,
+    "rejetees": [
+      {
+        "id": "tondelier-envi-033",
+        "raison": "relecture : La tarification progressive implique une hausse du coût pour les gros consommateurs, effet omis en ne retenant que la baisse liée à la gratuité des premiers mètres cubes."
+      },
+      {
+        "id": "tondelier-envi-035",
+        "raison": "relecture : La redevance est payée par les vendeurs/metteurs sur le marché d'engrais et pesticides, et la répercussion sur le coût de la vie des agriculteurs est un mécanisme économique supposé non affirmé par le texte."
+      }
+    ],
+    "cout_reference_usd": 0.044,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "56784b5e3c57c786",
-    "date": "2026-10-11",
+    "empreinte": "fad89482b79f71ee",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 9,
-    "avec_effets": 3,
-    "sans_effet": 5,
+    "propositions": 25,
+    "avec_effets": 11,
+    "sans_effet": 13,
     "rejetees": [
       {
-        "id": "tondelier-finances-publiques-004",
-        "raison": "relecture : La cible 'tranche_patrimoine: plus_1_3m' élargit le périmètre à tous les patrimoines dépassant 1 à 3 millions d'euros, alors que le texte vise uniquement les fortunes dépassant 100 millions d'euros."
+        "id": "tondelier-finances-publiques-009",
+        "raison": "relecture : La cible tranche_patrimoine plus_1_3m élargit le périmètre : le texte vise uniquement les fortunes dépassant 100 millions d'euros, bien au-delà de 1-3M."
       }
     ],
-    "cout_reference_usd": 0.0874,
+    "cout_reference_usd": 0.1162,
+    "appels": 2
+  },
+  {
+    "theme": "finances-publiques",
+    "groupe": 1,
+    "empreinte": "6481809ca71c5b69",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0058,
+    "appels": 1
+  },
+  {
+    "theme": "gouvernance-republique",
+    "groupe": 0,
+    "empreinte": "4296bdd55e929e29",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 22,
+    "avec_effets": 6,
+    "sans_effet": 15,
+    "rejetees": [
+      {
+        "id": "tondelier-gouvernance-republique-011",
+        "raison": "relecture : La hausse de revenu disponible est déduite d'un mécanisme supposé (la transparence/sanction ne garantit pas mécaniquement une hausse de salaire)."
+      }
+    ],
+    "cout_reference_usd": 0.0908,
+    "appels": 2
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 0,
+    "empreinte": "4674965f779b7d86",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 5,
+    "sans_effet": 19,
+    "rejetees": [
+      {
+        "id": "tondelier-interieur-justice-024",
+        "raison": "relecture : Le texte ne parle que de la formation des policiers, pas de leur emploi ou effectifs ; l'effet sur l'emploi est déduit par un mécanisme supposé non évoqué dans l'extrait."
+      }
+    ],
+    "cout_reference_usd": 0.0738,
+    "appels": 2
+  },
+  {
+    "theme": "interieur-justice",
+    "groupe": 1,
+    "empreinte": "85caea5e0dda1ef1",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 13,
+    "avec_effets": 6,
+    "sans_effet": 6,
+    "rejetees": [
+      {
+        "id": "tondelier-interieur-justice-036",
+        "raison": "relecture : Le plan eau vise Mayotte selon le texte, mais l'effet cible tout le territoire outre-mer, un périmètre élargi."
+      }
+    ],
+    "cout_reference_usd": 0.0535,
+    "appels": 2
+  },
+  {
+    "theme": "reformes-etat",
+    "groupe": 0,
+    "empreinte": "a2c6e9d9075e6730",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 8,
+    "avec_effets": 4,
+    "sans_effet": 4,
+    "rejetees": [],
+    "cout_reference_usd": 0.0575,
     "appels": 2
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "973b8114221e840e",
-    "date": "2026-10-11",
+    "empreinte": "6c1368d9b8916906",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 15,
-    "avec_effets": 6,
+    "propositions": 22,
+    "avec_effets": 11,
     "sans_effet": 9,
-    "rejetees": [],
-    "cout_reference_usd": 0.0676,
+    "rejetees": [
+      {
+        "id": "tondelier-retraites-travail-001",
+        "raison": "relecture : La baisse d'emploi pour les métiers pénibles est un effet macroéconomique supposé, non stated par le texte."
+      },
+      {
+        "id": "tondelier-retraites-travail-006",
+        "raison": "relecture : Le texte vise les chômeurs de plus de 55 ans, mais la cible inclut la tranche 50-64 qui englobe des personnes de 50 à 54 ans non visées."
+      }
+    ],
+    "cout_reference_usd": 0.0961,
     "appels": 2
   },
   {
@@ -72,14 +192,45 @@
   {
     "theme": "social-solidarite",
     "groupe": 1,
-    "empreinte": "59dd5ead64095346",
-    "date": "2026-10-11",
+    "empreinte": "bf1eda3f10c5b809",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 11,
-    "avec_effets": 3,
-    "sans_effet": 8,
-    "rejetees": [],
-    "cout_reference_usd": 0.0265,
+    "propositions": 25,
+    "avec_effets": 9,
+    "sans_effet": 13,
+    "rejetees": [
+      {
+        "id": "tondelier-social-solidarite-026",
+        "raison": "relecture : Le texte ne mentionne pas le statut de séjour ; l'extrait ne fonde pas spécifiquement la cible 'sans_titre'."
+      },
+      {
+        "id": "tondelier-social-solidarite-045",
+        "raison": "relecture : L'extrait ne fonde la baisse de coût que pour les foyers modestes, pas pour l'ensemble des propriétaires visés."
+      },
+      {
+        "id": "tondelier-social-solidarite-047",
+        "raison": "relecture : Le texte n'indique pas le sens de l'effet sur le coût de la vie, le remplacement du chauffage pouvant augmenter les dépenses ; le sens devrait être indéterminé."
+      }
+    ],
+    "cout_reference_usd": 0.1019,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 2,
+    "empreinte": "f253fa5f3dd446b2",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 4,
+    "avec_effets": 0,
+    "sans_effet": 3,
+    "rejetees": [
+      {
+        "id": "tondelier-social-solidarite-052",
+        "raison": "relecture : L'extrait ne précise ni le public visé ni le montant ou mécanisme du ticket climat, ce qui ne fonde pas une hausse de revenu disponible pour une cible donnée."
+      }
+    ],
+    "cout_reference_usd": 0.0201,
     "appels": 2
   }
 ]

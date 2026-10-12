@@ -2,50 +2,45 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "8bcadd4253e2bfd3",
-    "date": "2026-10-11",
+    "empreinte": "d255e1c8408b21c3",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 10,
-    "avec_effets": 2,
+    "propositions": 13,
+    "avec_effets": 4,
     "sans_effet": 8,
-    "rejetees": [],
-    "cout_reference_usd": 0.0519,
+    "rejetees": [
+      {
+        "id": "le-pen-education-jeunesse-013",
+        "raison": "relecture : Le texte réserve le chèque apprentissage aux étudiants avant la licence, ce qui implique une perte pour les étudiants après la licence (image trompeuse) et la cible générique 'etudiant' avec hausse élargit le périmètre au-delà des seuls étudiants avant la licence."
+      }
+    ],
+    "cout_reference_usd": 0.0642,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "fc31a64c6eaf51e5",
-    "date": "2026-10-11",
+    "empreinte": "89be2b9f78d5a55e",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 16,
-    "avec_effets": 2,
-    "sans_effet": 13,
-    "rejetees": [
-      {
-        "id": "le-pen-envi-011",
-        "raison": "relecture : La cible inclut tous les agriculteurs (métier=agriculteur) alors que le texte vise spécifiquement l'agriculture biologique, ce qui élargit indûment le périmètre."
-      }
-    ],
-    "cout_reference_usd": 0.063,
+    "propositions": 22,
+    "avec_effets": 5,
+    "sans_effet": 17,
+    "rejetees": [],
+    "cout_reference_usd": 0.0759,
     "appels": 2
   },
   {
     "theme": "finances-publiques",
     "groupe": 0,
-    "empreinte": "506e4149ad79a3c2",
-    "date": "2026-10-11",
+    "empreinte": "e6c2b4cabc09b704",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 1,
-    "avec_effets": 0,
-    "sans_effet": 0,
-    "rejetees": [
-      {
-        "id": "le-pen-finances-publiques-001",
-        "raison": "relecture : Le texte ne précise aucun seuil de patrimoine (1,3M€) déclenchant l'impôt, ce seuil est une connaissance externe non fournie par l'extrait."
-      }
-    ],
-    "cout_reference_usd": 0.0479,
+    "propositions": 19,
+    "avec_effets": 4,
+    "sans_effet": 15,
+    "rejetees": [],
+    "cout_reference_usd": 0.0727,
     "appels": 2
   },
   {
@@ -64,45 +59,85 @@
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "baf6df08ed2e876c",
-    "date": "2026-10-11",
+    "empreinte": "9f1e89e022b748c0",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 4,
-    "avec_effets": 1,
-    "sans_effet": 3,
-    "rejetees": [],
-    "cout_reference_usd": 0.0463,
+    "propositions": 15,
+    "avec_effets": 10,
+    "sans_effet": 4,
+    "rejetees": [
+      {
+        "id": "le-pen-interieur-justice-004",
+        "raison": "relecture : Le texte vise seulement les étrangers sans emploi ne pouvant subvenir à leurs besoins, mais l'effet cible tous les étrangers sans emploi, un périmètre plus large."
+      }
+    ],
+    "cout_reference_usd": 0.0917,
     "appels": 2
+  },
+  {
+    "theme": "reformes-etat",
+    "groupe": 0,
+    "empreinte": "751e60b8d7c27020",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 5,
+    "avec_effets": 0,
+    "sans_effet": 5,
+    "rejetees": [],
+    "cout_reference_usd": 0.0382,
+    "appels": 1
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "77df8a3e0253264d",
-    "date": "2026-10-11",
+    "empreinte": "ecad1168e93fc33c",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 6,
-    "avec_effets": 1,
-    "sans_effet": 5,
-    "rejetees": [],
-    "cout_reference_usd": 0.0482,
+    "propositions": 8,
+    "avec_effets": 4,
+    "sans_effet": 3,
+    "rejetees": [
+      {
+        "id": "le-pen-retraites-travail-002",
+        "raison": "relecture : Le texte limite seulement le nombre de ruptures conventionnelles, il ne dit pas que cela fait baisser l'emploi : c'est un effet macroéconomique déduit non fondé par l'extrait."
+      }
+    ],
+    "cout_reference_usd": 0.0693,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "fe4e304e590d6401",
-    "date": "2026-10-11",
+    "empreinte": "3fa62312aaa8639c",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 15,
-    "avec_effets": 8,
-    "sans_effet": 6,
+    "propositions": 25,
+    "avec_effets": 16,
+    "sans_effet": 7,
     "rejetees": [
       {
-        "id": "le-pen-social-solidarite-011",
-        "raison": "relecture : La cible 'logement: locataire' élargit le périmètre à tous les locataires alors que le texte ne vise que ceux qui ne paient pas leur loyer."
+        "id": "le-pen-social-solidarite-001",
+        "raison": "relecture : La mesure s'applique dès le 2e enfant, mais la cible 'au_moins_un' enfant inclut à tort les familles avec un seul enfant."
+      },
+      {
+        "id": "le-pen-social-solidarite-021",
+        "raison": "relecture : La cible 'locataire' générique élargit le périmètre : la mesure vise uniquement les locataires en situation d'impayés, pas tous les locataires."
       }
     ],
-    "cout_reference_usd": 0.0906,
+    "cout_reference_usd": 0.1221,
+    "appels": 2
+  },
+  {
+    "theme": "social-solidarite",
+    "groupe": 1,
+    "empreinte": "c82c4e91c2ff2078",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 5,
+    "avec_effets": 1,
+    "sans_effet": 4,
+    "rejetees": [],
+    "cout_reference_usd": 0.023,
     "appels": 2
   }
 ]

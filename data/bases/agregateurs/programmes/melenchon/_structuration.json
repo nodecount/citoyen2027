@@ -240,19 +240,14 @@
   {
     "theme": "social-solidarite",
     "groupe": 2,
-    "empreinte": "0d0715940c1501df",
-    "date": "2026-10-11",
+    "empreinte": "a52d6fb85db14c90",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 7,
-    "avec_effets": 4,
-    "sans_effet": 2,
-    "rejetees": [
-      {
-        "id": "melenchon-social-solidarite-056",
-        "raison": "relecture : Le texte vise les territoires peu dotés en transports collectifs, pas spécifiquement les territoires ruraux (critère plus étroit que le texte ne le dit)."
-      }
-    ],
-    "cout_reference_usd": 0.0323,
+    "propositions": 10,
+    "avec_effets": 6,
+    "sans_effet": 4,
+    "rejetees": [],
+    "cout_reference_usd": 0.074,
     "appels": 2
   }
 ]

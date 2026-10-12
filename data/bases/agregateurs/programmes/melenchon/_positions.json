@@ -92,140 +92,143 @@
   },
   {
     "groupe": 5,
-    "empreinte": "b505c2a264ca4ff3",
-    "date": "2026-10-10",
+    "empreinte": "ab82fca5d982dca4",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 14,
+    "etiquetees": 16,
     "sans_position": 7,
     "rejetees": [
       {
-        "id": "melenchon-social-solidarite-049",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « limiter les locations de courte durée à 60 jours par an et s… »"
+        "id": "melenchon-social-solidarite-058",
+        "raison": "relecture : La mesure porte sur la suppression de lignes aériennes au profit du train, pas sur une restriction de la voiture individuelle ; mauvais sujet."
       },
       {
-        "id": "melenchon-social-solidarite-051",
-        "raison": "relecture : L'extrait porte sur la distance géographique aux services publics et aux transports, pas sur un recrutement ou un renforcement de moyens des services publics."
-      },
-      {
-        "id": "melenchon-social-solidarite-055",
-        "raison": "relecture : La mesure concerne les lignes aériennes, pas la voiture ; mauvais sujet."
-      },
-      {
-        "id": "melenchon-retraites-travail-010",
-        "raison": "relecture : Remettre en cause le travail du dimanche relève de la régulation du travail/commerce, pas des libertés individuelles ou de l'ordre moral collectif ; mauvais sujet."
+        "id": "melenchon-retraites-travail-006",
+        "raison": "relecture : La mesure propose une garantie d'embauche dans un secteur d'urgence, ce qui ne fonde pas directement la position « garantir les droits sociaux sans contrepartie » relative à l'assurance chômage/minima sociaux."
       }
     ],
-    "cout_reference_usd": 0.0846,
+    "cout_reference_usd": 0.126,
     "appels": 2
   },
   {
     "groupe": 6,
-    "empreinte": "af49d870acb84ff8",
-    "date": "2026-10-10",
+    "empreinte": "475cda23ba9a77b9",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 14,
-    "sans_position": 10,
-    "rejetees": [
-      {
-        "id": "melenchon-retraites-travail-018",
-        "raison": "relecture : Revaloriser la rémunération des apprentis ne concerne pas le SMIC ni une hausse générale des salaires, l'extrait ne fonde pas spécifiquement la position hausse_smic."
-      }
-    ],
-    "cout_reference_usd": 0.0506,
+    "etiquetees": 13,
+    "sans_position": 12,
+    "rejetees": [],
+    "cout_reference_usd": 0.0743,
     "appels": 2
   },
   {
     "groupe": 7,
-    "empreinte": "8222147e4da5f931",
-    "date": "2026-10-10",
+    "empreinte": "2a8e0b08c28002a0",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 12,
-    "sans_position": 11,
+    "etiquetees": 8,
+    "sans_position": 12,
     "rejetees": [
       {
-        "id": "melenchon-envi-010",
-        "raison": "relecture : La limitation de taille/poids des SUV ne correspond pas à la définition de restreindre_voiture (ZFE, fin des thermiques, priorité aux transports collectifs/vélo) ; c'est une norme de produit, pas une restriction de circulation ou de priorité modale."
+        "id": "melenchon-envi-009",
+        "raison": "relecture : Le texte annonce un plan d'investissement mais ne mentionne ni dette ni déficit ni refus d'austérité, l'étiquette 'investir_dette' est une déduction non fondée par l'extrait."
       },
       {
-        "id": "melenchon-envi-020",
-        "raison": "relecture : Encadrer les marges des distributeurs/industriels est un contrôle des prix, qui ne correspond pas aux critères de encadrer_entreprises (superprofits, impôt sur les sociétés, dividendes, licenciements, rémunérations)."
+        "id": "melenchon-envi-010",
+        "raison": "relecture : Limiter la taille des SUV autorisés à la vente ne correspond pas à la définition de 'restreindre_voiture' (ZFE, fin du thermique, priorité aux transports collectifs) : c'est une norme produit, pas une restriction de circulation ou de transport."
+      },
+      {
+        "id": "melenchon-envi-014",
+        "raison": "relecture : Des prix planchers agricoles et l'interdiction de la vente à perte ne correspondent pas à la définition d'encadrer_entreprises (superprofits, IS, dividendes, licenciements, conditionnalité des aides), c'est un autre type de régulation de marché."
+      },
+      {
+        "id": "melenchon-europe-international-002",
+        "raison": "relecture : La 'rupture avec le néolibéralisme international' au FMI/OMC est trop vague pour établir une position de protectionnisme (taxer ou limiter les importations) : c'est une interprétation, pas une mesure concrète décrite."
+      },
+      {
+        "id": "melenchon-europe-international-003",
+        "raison": "relecture : Renforcer des organisations internationales et organiser une conférence sur les migrations ne montre pas directement une facilitation de l'accueil ou de la régularisation des personnes étrangères, c'est une mesure institutionnelle/diplomatique et non une politique d'ouverture concrète."
       }
     ],
-    "cout_reference_usd": 0.0701,
+    "cout_reference_usd": 0.0611,
     "appels": 2
   },
   {
     "groupe": 8,
-    "empreinte": "728f64f84b020572",
-    "date": "2026-10-10",
+    "empreinte": "7c26de7361e27bbf",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 9,
-    "sans_position": 16,
-    "rejetees": [],
-    "cout_reference_usd": 0.0431,
+    "sans_position": 15,
+    "rejetees": [
+      {
+        "id": "melenchon-europe-international-012",
+        "raison": "relecture : S'opposer à la reconduction d'un Commissaire européen à la Défense ne relève pas directement du budget militaire français ni d'un refus d'augmenter l'effort militaire, c'est une question institutionnelle européenne, pas le sujet 'defense' tel que défini."
+      }
+    ],
+    "cout_reference_usd": 0.0484,
     "appels": 2
   },
   {
     "groupe": 9,
-    "empreinte": "b5d52c3bd4de6a6e",
-    "date": "2026-10-10",
+    "empreinte": "65cf2ba73d2cd3b0",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 10,
-    "sans_position": 14,
-    "rejetees": [
-      {
-        "id": "melenchon-education-jeunesse-004",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Geler les ouvertures de places du secteur privé lucratif et … »"
-      }
-    ],
-    "cout_reference_usd": 0.0675,
+    "etiquetees": 6,
+    "sans_position": 19,
+    "rejetees": [],
+    "cout_reference_usd": 0.0481,
     "appels": 2
   },
   {
     "groupe": 10,
-    "empreinte": "57dbea7582913e8a",
-    "date": "2026-10-10",
+    "empreinte": "82e0145c0d916cca",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 15,
-    "sans_position": 7,
+    "etiquetees": 13,
+    "sans_position": 10,
     "rejetees": [
       {
+        "id": "melenchon-education-jeunesse-015",
+        "raison": "relecture : Le gel du point d'indice et les grilles salariales concernent les fonctionnaires (fonction_publique), pas le SMIC/salaires du privé."
+      },
+      {
         "id": "melenchon-education-jeunesse-022",
-        "raison": "relecture : Il s'agit d'intégrer l'écologie dans les programmes scolaires, pas d'une mesure de développement des énergies renouvelables ou de transition écologique énergétique ; mauvais sujet."
-      },
-      {
-        "id": "melenchon-education-jeunesse-023",
-        "raison": "relecture : Cette mesure relève de l'agriculture/alimentation (normes agricoles, bio, réduction des protéines carnées) et non des énergies renouvelables ; mauvais sujet."
-      },
-      {
-        "id": "melenchon-education-jeunesse-029",
-        "raison": "relecture : Le texte parle d'augmenter l'investissement public dans la recherche, pas explicitement de creuser le déficit ; l'étiquette dette/investir_dette n'est pas fondée par l'extrait."
+        "raison": "relecture : La mesure porte sur le contenu des programmes scolaires, pas sur le développement des énergies renouvelables ou la transition écologique au sens du sujet 'renouvelables'."
       }
     ],
-    "cout_reference_usd": 0.0885,
+    "cout_reference_usd": 0.086,
     "appels": 2
   },
   {
     "groupe": 11,
-    "empreinte": "93b09b217e89fbe7",
-    "date": "2026-10-10",
+    "empreinte": "0bd8ac2a0def4809",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 7,
-    "etiquetees": 2,
-    "sans_position": 4,
+    "propositions": 10,
+    "etiquetees": 1,
+    "sans_position": 6,
     "rejetees": [
       {
+        "id": "melenchon-education-jeunesse-033",
+        "raison": "relecture : La gratuité de l'enseignement supérieur ne relève pas de l'organisation/structure du système éducatif (reformer_ecole) mais plutôt de la fiscalité/dépense publique ; mauvais sujet."
+      },
+      {
         "id": "melenchon-defense-004",
-        "raison": "relecture : Le retrait du commandement intégré de l'OTAN ne relève pas du sujet 'europe' (Union européenne) mais de la défense/diplomatie ; le texte ne porte pas sur les compétences de l'UE."
+        "raison": "relecture : Le retrait du commandement intégré de l'OTAN concerne la défense et les alliances militaires, pas les compétences de l'Union européenne ; mauvais sujet (devrait être defense, pas europe)."
+      },
+      {
+        "id": "melenchon-defense-005",
+        "raison": "relecture : Une loi de programmation militaire relève du sujet défense, pas des compétences de l'Union européenne ; mauvais sujet (devrait être defense, pas europe)."
       }
     ],
-    "cout_reference_usd": 0.0217,
+    "cout_reference_usd": 0.0292,
     "appels": 2
   }
 ]

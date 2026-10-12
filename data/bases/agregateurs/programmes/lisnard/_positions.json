@@ -1,52 +1,101 @@
 [
   {
     "groupe": 0,
-    "empreinte": "8ca9eab1a0e8e734",
-    "date": "2026-10-10",
+    "empreinte": "05dea0d653ec94dc",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 17,
-    "sans_position": 8,
-    "rejetees": [],
+    "etiquetees": 15,
+    "sans_position": 9,
+    "rejetees": [
+      {
+        "id": "lisnard-finances-publiques-003",
+        "raison": "relecture : Mesure générale sur les abattements de donations pour tous les parents, elle ne vise pas spécifiquement les très hauts patrimoines définis par le sujet ultra_riches."
+      }
+    ],
     "cout_reference_usd": 0.1128,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "d8c7be49db913eaf",
-    "date": "2026-10-10",
+    "empreinte": "7a7ba4a4d88969b5",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 6,
-    "sans_position": 17,
+    "etiquetees": 10,
+    "sans_position": 8,
     "rejetees": [
       {
-        "id": "lisnard-social-solidarite-004",
-        "raison": "relecture : Le texte porte sur la gouvernance administrative des hôpitaux (ARS, préfets, maires), pas sur la liberté d'installation des médecins ou la place du privé en santé : mauvais sujet/position."
+        "id": "lisnard-interieur-justice-021",
+        "raison": "relecture : Expulser des prêcheurs radicaux relève de la lutte contre l'islamisme/sécurité, pas d'une mesure d'immigration ; l'étiquette restriction sur l'immigration n'est pas fondée par cet extrait."
+      },
+      {
+        "id": "lisnard-social-solidarite-002",
+        "raison": "relecture : Les maisons de santé pluridisciplinaires ne sont pas l'hôpital public ni explicitement des centres de santé publics ; le texte ne précise pas un caractère public, l'étiquette hopital_public n'est pas clairement fondée."
+      },
+      {
+        "id": "lisnard-social-solidarite-005",
+        "raison": "relecture : Assouplir le recrutement de contractuels ne montre pas une réduction du nombre de fonctionnaires, seulement une flexibilité de recrutement."
       },
       {
         "id": "lisnard-social-solidarite-006",
-        "raison": "relecture : La suppression de Parcoursup et la simplification de LAS/PASS concernent l'accès aux études de médecine, pas une refonte du système éducatif scolaire (collège/lycée/bac) visé par le sujet ecole_organisation."
+        "raison": "relecture : Parcoursup et LAS/PASS concernent l'admission à l'université, pas l'organisation du système éducatif scolaire visé par la définition (collège, lycée, bac)."
+      },
+      {
+        "id": "lisnard-envi-003",
+        "raison": "relecture : Le respect de la réciprocité commerciale internationale n'implique pas clairement des mesures protectionnistes (taxation ou limitation des importations) ; l'extrait est trop vague pour fonder cette étiquette."
+      },
+      {
+        "id": "lisnard-envi-005",
+        "raison": "relecture : L'alignement réglementaire avec le marché commun européen va dans le sens d'une intégration au cadre européen, pas d'un retrait de souveraineté nationale ; l'étiquette souverainete est inversée par rapport à cet extrait."
+      },
+      {
+        "id": "lisnard-envi-006",
+        "raison": "relecture : L'extrait met l'accent sur l'augmentation des capacités exportatrices, ce qui relève de l'ouverture commerciale et non d'une mesure protectionniste de limitation des importations."
       }
     ],
-    "cout_reference_usd": 0.0493,
+    "cout_reference_usd": 0.0798,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "1f43b98460c2703c",
-    "date": "2026-10-10",
+    "empreinte": "ba38eb50a581b695",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 13,
-    "etiquetees": 8,
-    "sans_position": 4,
+    "propositions": 25,
+    "etiquetees": 7,
+    "sans_position": 14,
     "rejetees": [
       {
-        "id": "lisnard-education-jeunesse-010",
-        "raison": "relecture : Créer des classes d'excellence relève de l'organisation/structure scolaire (filières sélectives), pas de la discipline/sanctions visée par ecole_exigence ; mauvais sujet."
+        "id": "lisnard-envi-011",
+        "raison": "relecture : La débureaucratisation décrite est générale (guichet numérique, autonomie locale) et ne porte pas spécifiquement sur les normes agricoles ou environnementales."
+      },
+      {
+        "id": "lisnard-reformes-etat-009",
+        "raison": "relecture : Interdire la surtransposition ne reprend pas de compétence à l'UE ni ne déroge à ses règles, elle vise seulement à ne pas ajouter de contraintes nationales supplémentaires au-delà du droit européen."
+      },
+      {
+        "id": "lisnard-reformes-etat-011",
+        "raison": "relecture : Le transfert de compétences aux Provinces relève de la décentralisation territoriale, pas d'un changement des institutions politiques au sens de la définition (VIe République, proportionnelle, RIC, constituante)."
+      },
+      {
+        "id": "lisnard-education-jeunesse-003",
+        "raison": "relecture : Le droit de refuser des élèves nuisant au collectif relève de l'admission/sélection et non d'un durcissement de la discipline (sanctions, exclusions, uniforme) au sens de la définition d'ecole_exigence."
       }
     ],
-    "cout_reference_usd": 0.0433,
+    "cout_reference_usd": 0.0814,
+    "appels": 2
+  },
+  {
+    "groupe": 3,
+    "empreinte": "96f1be9165b76b58",
+    "date": "2026-10-12",
+    "modele": "claude-sonnet-5",
+    "propositions": 7,
+    "etiquetees": 7,
+    "sans_position": 0,
+    "rejetees": [],
+    "cout_reference_usd": 0.0457,
     "appels": 2
   }
 ]

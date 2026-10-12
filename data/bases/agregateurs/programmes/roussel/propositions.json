@@ -17,8 +17,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -31,14 +32,6 @@
         ],
         "dimension": "patrimoine",
         "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rétablir l'ISF (impôt sur la fortune) et tripler son montant."
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "ultra_riches",
-        "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Rétablir l'ISF (impôt sur la fortune) et tripler son montant."
       }
@@ -62,16 +55,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "redistribution",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rendre l'impôt sur le revenu plus progressif en portant son nombre de tranches à 15."
-      }
-    ]
+    "titre_litteral": true
   },
   {
     "id": "roussel-finances-publiques-003",
@@ -91,8 +77,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -122,8 +109,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "en transférant son financement vers les cotisations sociales des entreprises."
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "roussel-finances-publiques-004",
@@ -143,10 +129,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
-    "effets": [],
-    "positions": []
+    "titre_litteral": true,
+    "effets": []
   },
   {
     "id": "roussel-finances-publiques-005",
@@ -166,17 +152,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "entreprises",
-        "position": "encadrer_entreprises",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un nouvel impôt sur les sociétés (IS) progressif, dont le taux varierait selon le chiffre d'affaires et les bénéfices des entreprises."
-      }
-    ]
+    "titre_litteral": true,
+    "effets": []
   },
   {
     "id": "roussel-retraites-travail-001",
@@ -196,9 +175,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "effets": [],
-    "positions": []
+    "titre_litteral": true,
+    "effets": []
   }
 ]

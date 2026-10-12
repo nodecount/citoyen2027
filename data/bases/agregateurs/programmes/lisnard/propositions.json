@@ -3,8 +3,8 @@
     "id": "lisnard-finances-publiques-001",
     "candidat": "lisnard",
     "theme": "finances-publiques",
-    "titre": "Baisser la fiscalité sur les héritages et les donations afin de faciliter la transmission du patrimoine.",
-    "resume_factuel": "Baisser la fiscalité sur les héritages et les donations afin de faciliter la transmission du patrimoine.",
+    "titre": "Inscrire une règle constitutionnelle de limitation des déficits publics appliquée aux dépenses de fonctionnement (hors investissements).",
+    "resume_factuel": "Inscrire une règle constitutionnelle de limitation des déficits publics appliquée aux dépenses de fonctionnement (hors investissements).",
     "sources": [
       {
         "type": "secondaire",
@@ -17,31 +17,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Dette & déficit",
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
-        "sujet": "ultra_riches",
-        "position": "ne_pas_taxer_ultra_riches",
+        "sujet": "dette",
+        "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser la fiscalité sur les héritages et les donations afin de faciliter la transmission du patrimoine."
-      }
-    ],
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "heritage",
-            "valeurs": [
-              "recu",
-              "a_venir"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser la fiscalité sur les héritages et les donations afin de faciliter la transmission du patrimoine."
+        "extrait": "règle constitutionnelle de limitation des déficits publics"
       }
     ]
   },
@@ -49,8 +34,8 @@
     "id": "lisnard-finances-publiques-002",
     "candidat": "lisnard",
     "theme": "finances-publiques",
-    "titre": "Augmenter les abattements sur les donations, jugés aujourd’hui insuffisants, pour permettre aux parents de transmettre davantage à leurs enfants de leur vivant.",
-    "resume_factuel": "Augmenter les abattements sur les donations, jugés aujourd’hui insuffisants, pour permettre aux parents de transmettre davantage à leurs enfants de leur vivant.",
+    "titre": "Lancer un plan quinquennal de désendettement. D’abord par un plan de lutte contre les gaspillages et doublons pendant 5 ans, puis par l’équilibrage structurel…",
+    "resume_factuel": "Lancer un plan quinquennal de désendettement. D’abord par un plan de lutte contre les gaspillages et doublons pendant 5 ans, puis par l’équilibrage structurel des dépenses et des recettes, ensuite par le reflux de la dette en distinguant ses composantes (dette générale, dette des retraites, dette du Covid, dette climatique…).",
     "sources": [
       {
         "type": "secondaire",
@@ -63,29 +48,43 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Fiscalité",
-    "positions": [],
-    "effets": [
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Dette & déficit",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
       {
-        "cibles": [
-          {
-            "champ": "heritage",
-            "valeurs": [
-              "recu",
-              "a_venir"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
+        "sujet": "dette",
+        "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter les abattements sur les donations, jugés aujourd’hui insuffisants, pour permettre aux parents de transmettre davantage à leurs enfants de leur vivant."
+        "extrait": "Lancer un plan quinquennal de désendettement"
       }
     ]
   },
   {
     "id": "lisnard-finances-publiques-003",
+    "candidat": "lisnard",
+    "theme": "finances-publiques",
+    "titre": "Augmenter les abattements sur les donations pour permettre aux parents de transmettre davantage à leurs enfants de leur vivant.",
+    "resume_factuel": "Augmenter les abattements sur les donations pour permettre aux parents de transmettre davantage à leurs enfants de leur vivant.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fiscalité",
+    "titre_litteral": true
+  },
+  {
+    "id": "lisnard-finances-publiques-004",
     "candidat": "lisnard",
     "theme": "finances-publiques",
     "titre": "Permettre à chacun de transmettre son patrimoine aux personnes de son choix, au-delà de sa famille, mais aussi à des fonds de capitalisation ou à des causes…",
@@ -102,10 +101,41 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
-    "effets": [],
+    "titre_litteral": true,
     "positions": []
+  },
+  {
+    "id": "lisnard-finances-publiques-005",
+    "candidat": "lisnard",
+    "theme": "finances-publiques",
+    "titre": "Supprimer la C3S et la CVAE (11,5 milliards d'euros d'allègement supplémentaire pour atteindre une baisse cumulée de moitié des impôts de production).",
+    "resume_factuel": "Supprimer la C3S et la CVAE (11,5 milliards d'euros d'allègement supplémentaire pour atteindre une baisse cumulée de moitié des impôts de production).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fiscalité",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer la C3S et la CVAE (11,5 milliards d'euros d'allègement supplémentaire pour atteindre une baisse cumulée de moitié des impôts de production)"
+      }
+    ]
   },
   {
     "id": "lisnard-interieur-justice-001",
@@ -125,30 +155,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes condamnées bénéficiant de réductions de peine"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer les réductions de peine automatiques."
-      }
-    ],
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
         "sujet": "prison",
         "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer les réductions de peine automatiques."
+        "extrait": "Supprimer les réductions de peine automatiques"
       }
     ]
   },
@@ -170,30 +186,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes condamnées pouvant bénéficier d'aménagements de peine"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre fin aux aménagements dès l’audience."
-      }
-    ],
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
         "sujet": "prison",
         "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre fin aux aménagements dès l’audience."
+        "extrait": "Mettre fin aux aménagements dès l’audience"
       }
     ]
   },
@@ -215,21 +217,22 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rétablir les peines planchers pour les récidivistes."
+        "extrait": "Rétablir les peines planchers pour les récidivistes"
       },
       {
         "sujet": "prison",
         "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rétablir les peines planchers pour les récidivistes."
+        "extrait": "Rétablir les peines planchers pour les récidivistes"
       }
     ]
   },
@@ -251,15 +254,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Appliquer systématiquement une sanction."
+        "extrait": "Appliquer systématiquement une sanction"
       }
     ]
   },
@@ -281,8 +285,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -304,15 +309,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Doubler les effectifs dans les juridictions correctionnelles."
+        "extrait": "Doubler les effectifs dans les juridictions correctionnelles"
       }
     ]
   },
@@ -334,17 +340,11 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Renforcer les greffes."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "lisnard-interieur-justice-008",
@@ -364,8 +364,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -387,30 +388,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "mineurs de 16 à 17 ans"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abaisser la majorité pénale à 16 ans."
-      }
-    ],
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
         "sujet": "justice_mineurs",
         "position": "durcir_justice_mineurs",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abaisser la majorité pénale à 16 ans."
+        "extrait": "Abaisser la majorité pénale à 16 ans"
       }
     ]
   },
@@ -432,30 +419,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "mineurs de 13 à 17 ans"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Inverser le principe de l’excuse de minorité dès 13 ans."
-      }
-    ],
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
         "sujet": "justice_mineurs",
         "position": "durcir_justice_mineurs",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Inverser le principe de l’excuse de minorité dès 13 ans."
+        "extrait": "Inverser le principe de l’excuse de minorité dès 13 ans"
       }
     ]
   },
@@ -477,8 +450,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -500,15 +474,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "justice_mineurs",
         "position": "durcir_justice_mineurs",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place des internats disciplinaires fermés."
+        "extrait": "Mettre en place des internats disciplinaires fermés"
       }
     ]
   },
@@ -530,30 +505,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "mineurs de 13 ans et plus pour cas graves"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Etendre la comparution immédiate dès 13 ans pour les cas graves."
-      }
-    ],
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
         "sujet": "justice_mineurs",
         "position": "durcir_justice_mineurs",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Etendre la comparution immédiate dès 13 ans pour les cas graves."
+        "extrait": "Etendre la comparution immédiate dès 13 ans pour les cas graves"
       }
     ]
   },
@@ -575,15 +536,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "prison",
         "position": "alternatives_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Généraliser les travaux d’intérêt général dès le premier acte délictueux."
+        "extrait": "Généraliser les travaux d’intérêt général dès le premier acte délictueux"
       }
     ]
   },
@@ -605,8 +567,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -628,17 +591,11 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Ramener les forces de sécurité sur le terrain (50 % de présence minimum, contre 37 % aujourd’hui)."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "lisnard-interieur-justice-017",
@@ -658,8 +615,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -681,15 +639,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "surveillance",
         "position": "plus_surveillance",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Moderniser les outils (vidéoprotection, radios numériques, IA de prévention)."
+        "extrait": "Moderniser les outils (vidéoprotection, radios numériques, IA de prévention)"
       }
     ]
   },
@@ -711,8 +670,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -734,50 +694,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "police_armement",
         "position": "police_armee",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Permettre aux communes volontaires d’armer leur police municipale et de disposer d’outils réels"
+        "extrait": "Permettre aux communes volontaires d’armer leur police municipale"
       }
     ]
   },
   {
     "id": "lisnard-interieur-justice-021",
-    "candidat": "lisnard",
-    "theme": "interieur-justice",
-    "titre": "Face au narcotrafic, mettre en place des cellules locales anti-stups sous autorité du préfet, confisquer de façon ciblée et visible, infiltrer au niveau…",
-    "resume_factuel": "Face au narcotrafic, mettre en place des cellules locales anti-stups sous autorité du préfet, confisquer de façon ciblée et visible, infiltrer au niveau numérique les réseaux sociaux, coopérer au niveau international.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Sécurité intérieure",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Face au narcotrafic, mettre en place des cellules locales anti-stups sous autorité du préfet, confisquer de façon ciblée et visible"
-      }
-    ]
-  },
-  {
-    "id": "lisnard-interieur-justice-022",
     "candidat": "lisnard",
     "theme": "interieur-justice",
     "titre": "Face à l’islamisme, désigner de façon claire l’ennemi idéologique, interdire les Frères musulmans, contrôler les écoles hors contrat, expulser les prêcheurs…",
@@ -794,35 +725,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "prêcheurs radicaux"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "expulser les prêcheurs radicaux"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "etudiant"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "port du voile à l'université"
+              "personnes portant le voile à l'université"
             ]
           }
         ],
@@ -831,13 +743,91 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "interdire le voile à l’université"
       }
+    ]
+  },
+  {
+    "id": "lisnard-interieur-justice-022",
+    "candidat": "lisnard",
+    "theme": "interieur-justice",
+    "titre": "Déployer un plan d'investissement Capex sur 10 ans pour rééquiper les forces de l'ordre.",
+    "resume_factuel": "Déployer un plan d'investissement Capex sur 10 ans pour rééquiper les forces de l'ordre.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
     ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
+    "effets": [],
     "positions": [
       {
-        "sujet": "laicite",
-        "position": "laicite_stricte",
+        "sujet": "securite",
+        "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "interdire le voile à l’université"
+        "extrait": "rééquiper les forces de l'ordre"
+      }
+    ]
+  },
+  {
+    "id": "lisnard-interieur-justice-023",
+    "candidat": "lisnard",
+    "theme": "interieur-justice",
+    "titre": "Créer un Secrétariat d'État à la Sécurité Intérieure et instaurer une police territoriale décentralisée.",
+    "resume_factuel": "Créer un Secrétariat d'État à la Sécurité Intérieure et instaurer une police territoriale décentralisée.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "lisnard-interieur-justice-024",
+    "candidat": "lisnard",
+    "theme": "interieur-justice",
+    "titre": "Créer un corps de police territoriale avec qualité d'APJ, attribuer le rôle d'Officier du Ministère Public (OMP) aux officiers territoriaux pour verbaliser et…",
+    "resume_factuel": "Créer un corps de police territoriale avec qualité d'APJ, attribuer le rôle d'Officier du Ministère Public (OMP) aux officiers territoriaux pour verbaliser et appliquer des amendes forfaitaires délictuelles.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "attribuer le rôle d'Officier du Ministère Public (OMP) aux officiers territoriaux pour verbaliser et appliquer des amendes forfaitaires délictuelles"
       }
     ]
   },
@@ -859,8 +849,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "positions": []
   },
   {
@@ -881,10 +872,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
-    "effets": [],
-    "positions": []
+    "titre_litteral": true,
+    "effets": []
   },
   {
     "id": "lisnard-social-solidarite-003",
@@ -904,8 +895,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [],
@@ -935,9 +927,11 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
-    "effets": []
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
   },
   {
     "id": "lisnard-social-solidarite-005",
@@ -957,8 +951,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -974,8 +969,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Fonder la revalorisation salariale sur les responsabilités et non sur les statuts"
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "lisnard-social-solidarite-006",
@@ -995,8 +989,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Santé"
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Santé",
+    "titre_litteral": true
   },
   {
     "id": "lisnard-social-solidarite-007",
@@ -1016,10 +1011,18 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un consortium pharmaceutique européen pour mutualiser la demande, garantir des prix et relocaliser les chaines de valeur."
+      }
+    ]
   },
   {
     "id": "lisnard-social-solidarite-008",
@@ -1039,8 +1042,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1062,15 +1066,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "ia",
         "position": "plus_ia",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Construire une réglementation agile et sécurisée pour l’innovation médicale : télésurveillance, IA diagnostique, robotique chirurgicale."
+        "extrait": "télésurveillance, IA diagnostique, robotique chirurgicale"
       }
     ]
   },
@@ -1078,8 +1083,8 @@
     "id": "lisnard-retraites-travail-001",
     "candidat": "lisnard",
     "theme": "retraites-travail",
-    "titre": "Entreprendre une réforme structurelle comprenant une part de capitalisation pour les retraites, tout en conservant un premier étage par répartition qui…",
-    "resume_factuel": "Entreprendre une réforme structurelle comprenant une part de capitalisation pour les retraites, tout en conservant un premier étage par répartition qui garantisse un socle minimum de pension autour de 1 200 € mensuels.",
+    "titre": "Relever l'âge légal de départ à la retraite à 65 ans.",
+    "resume_factuel": "Relever l'âge légal de départ à la retraite à 65 ans.",
     "sources": [
       {
         "type": "secondaire",
@@ -1092,13 +1097,290 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Système de retraite",
-    "positions": [],
-    "effets": []
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "50_64"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Relever l'âge légal de départ à la retraite à 65 ans."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "travailler_plus",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Relever l'âge légal de départ à la retraite à 65 ans."
+      }
+    ]
+  },
+  {
+    "id": "lisnard-retraites-travail-002",
+    "candidat": "lisnard",
+    "theme": "retraites-travail",
+    "titre": "Instaurer un socle minimal par répartition (garantissant au moins 1 000 €/mois via le minimum vieillesse).",
+    "resume_factuel": "Instaurer un socle minimal par répartition (garantissant au moins 1 000 €/mois via le minimum vieillesse).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Système de retraite",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "retraite"
+            ]
+          },
+          {
+            "champ": "montant_pension",
+            "valeurs": [
+              "moins_1000"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "garantissant au moins 1 000 €/mois via le minimum vieillesse"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un socle minimal par répartition (garantissant au moins 1 000 €/mois via le minimum vieillesse)."
+      }
+    ]
+  },
+  {
+    "id": "lisnard-retraites-travail-003",
+    "candidat": "lisnard",
+    "theme": "retraites-travail",
+    "titre": "Basculer progressivement, en 8 tranches, l’ensemble des autres cotisations vers un système individuel de retraite par capitalisation obligatoire.",
+    "resume_factuel": "Basculer progressivement, en 8 tranches, l’ensemble des autres cotisations vers un système individuel de retraite par capitalisation obligatoire.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Système de retraite",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Basculer progressivement, en 8 tranches, l’ensemble des autres cotisations vers un système individuel de retraite par capitalisation obligatoire."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "lisnard-retraites-travail-004",
+    "candidat": "lisnard",
+    "theme": "retraites-travail",
+    "titre": "Créer une Agence Centrale Publique de Retraite unique gérant l'ensemble du système.",
+    "resume_factuel": "Créer une Agence Centrale Publique de Retraite unique gérant l'ensemble du système.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Système de retraite",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "lisnard-retraites-travail-005",
+    "candidat": "lisnard",
+    "theme": "retraites-travail",
+    "titre": "Rendre possible le déblocage d'une part de son capital retraite pour l'achat de sa résidence principale.",
+    "resume_factuel": "Rendre possible le déblocage d'une part de son capital retraite pour l'achat de sa résidence principale.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Système de retraite",
+    "titre_litteral": true,
+    "positions": []
   },
   {
     "id": "lisnard-envi-001",
+    "candidat": "lisnard",
+    "theme": "environnement",
+    "titre": "Prolonger les centrales nucléaires existantes jusqu'à 60 ans.",
+    "resume_factuel": "Prolonger les centrales nucléaires existantes jusqu'à 60 ans.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Energie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "nucleaire",
+        "position": "garder_nucleaire",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Prolonger les centrales nucléaires existantes jusqu'à 60 ans."
+      }
+    ]
+  },
+  {
+    "id": "lisnard-envi-002",
+    "candidat": "lisnard",
+    "theme": "environnement",
+    "titre": "Construire de nouveaux réacteurs EPR, développer des mini-réacteurs (SMR) et lancer des recherches sur les technologies laser pour le traitement des déchets et…",
+    "resume_factuel": "Construire de nouveaux réacteurs EPR, développer des mini-réacteurs (SMR) et lancer des recherches sur les technologies laser pour le traitement des déchets et la fusion.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Energie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "nucleaire",
+        "position": "garder_nucleaire",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Construire de nouveaux réacteurs EPR, développer des mini-réacteurs (SMR)"
+      }
+    ]
+  },
+  {
+    "id": "lisnard-envi-003",
+    "candidat": "lisnard",
+    "theme": "environnement",
+    "titre": "Appliquer le principe pollueur-payeur à taxation globale constante, avec redistribution des recettes aux acteurs vertueux et respect de la réciprocité…",
+    "resume_factuel": "Appliquer le principe pollueur-payeur à taxation globale constante, avec redistribution des recettes aux acteurs vertueux et respect de la réciprocité commerciale internationale.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": []
+  },
+  {
+    "id": "lisnard-envi-004",
+    "candidat": "lisnard",
+    "theme": "environnement",
+    "titre": "Instaurer un plan national de régénération forestière avec essences adaptées et fin des coupes rases au profit de forêts mélangées.",
+    "resume_factuel": "Instaurer un plan national de régénération forestière avec essences adaptées et fin des coupes rases au profit de forêts mélangées.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un plan national de régénération forestière avec essences adaptées et fin des coupes rases au profit de forêts mélangées."
+      }
+    ]
+  },
+  {
+    "id": "lisnard-envi-005",
     "candidat": "lisnard",
     "theme": "environnement",
     "titre": "En finir avec les surtranspositions françaises, l’alignement réglementaire avec le marché commun, et la mise en œuvre de clauses miroirs obligatoires pour les…",
@@ -1115,26 +1397,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "agriculture_normes",
-        "position": "assouplir_normes_agri",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "En finir avec les surtranspositions françaises, l’alignement réglementaire avec le marché commun"
-      },
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "la mise en œuvre de clauses miroirs obligatoires pour les produits importés"
-      }
-    ]
+    "titre_litteral": true,
+    "effets": []
   },
   {
-    "id": "lisnard-envi-002",
+    "id": "lisnard-envi-006",
     "candidat": "lisnard",
     "theme": "environnement",
     "titre": "Transformer la PAC pour qu'elle redevienne une politique agricole, recentrée sur la souveraineté alimentaire, la production, et l’augmentation de nos capacités…",
@@ -1151,13 +1420,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
-    "effets": [],
-    "positions": []
+    "titre_litteral": true,
+    "effets": []
   },
   {
-    "id": "lisnard-envi-003",
+    "id": "lisnard-envi-007",
     "candidat": "lisnard",
     "theme": "environnement",
     "titre": "Autoriser des nouvelles techniques génomiques (NTG), l’usage raisonné des phytosanitaires sur base scientifique, et une réduction de la part des aides…",
@@ -1174,9 +1443,25 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
-    "effets": [],
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Autoriser des nouvelles techniques génomiques (NTG), l’usage raisonné des phytosanitaires sur base scientifique"
+      }
+    ],
     "positions": [
       {
         "sujet": "agriculture_normes",
@@ -1187,7 +1472,7 @@
     ]
   },
   {
-    "id": "lisnard-envi-004",
+    "id": "lisnard-envi-008",
     "candidat": "lisnard",
     "theme": "environnement",
     "titre": "Proposer une réforme profonde du système de rémunération agricole : transfert d’une part des charges vers la valeur ajoutée pour améliorer les revenus nets et…",
@@ -1204,9 +1489,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
-    "positions": [],
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1220,12 +1505,13 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "transfert d’une part des charges vers la valeur ajoutée pour améliorer les revenus nets"
+        "extrait": "transfert d’une part des charges vers la valeur ajoutée pour améliorer les revenus nets et une juste rémunération des services environnementaux rendus par les agriculteurs et forestiers"
       }
-    ]
+    ],
+    "positions": []
   },
   {
-    "id": "lisnard-envi-005",
+    "id": "lisnard-envi-009",
     "candidat": "lisnard",
     "theme": "environnement",
     "titre": "Relancer une politique industrielle fondée sur les productions agricoles et forestières (industries de 1re et 2e transformation sur tout le territoire,…",
@@ -1242,13 +1528,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "lisnard-envi-006",
+    "id": "lisnard-envi-010",
     "candidat": "lisnard",
     "theme": "environnement",
     "titre": "Proposer une simplification radicale du statut de l’exploitation agricole, avec un cadre unique qui autorise, dans une même entité, la production agricole,…",
@@ -1265,13 +1552,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "lisnard-envi-007",
+    "id": "lisnard-envi-011",
     "candidat": "lisnard",
     "theme": "environnement",
     "titre": "Débureaucratisation massive (suppression des normes redondantes, guichet numérique unique, autonomie locale sur les modalités d’application).",
@@ -1288,13 +1576,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
-    "effets": [],
-    "positions": []
+    "titre_litteral": true,
+    "effets": []
   },
   {
-    "id": "lisnard-envi-008",
+    "id": "lisnard-envi-012",
     "candidat": "lisnard",
     "theme": "environnement",
     "titre": "Remettre à plat le carcan normatif viticole, notamment dans les AOC, pour favoriser l’innovation, les cépages résistants, les usages du biocontrôle.",
@@ -1311,8 +1599,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1324,7 +1613,7 @@
     ]
   },
   {
-    "id": "lisnard-envi-009",
+    "id": "lisnard-envi-013",
     "candidat": "lisnard",
     "theme": "environnement",
     "titre": "Fonder la gestion de l’eau sur la subsidiarité : les bassines sont possibles lorsqu’elles sont techniquement justifiées et localement décidées.",
@@ -1341,17 +1630,42 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "agriculture_normes",
         "position": "assouplir_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "les bassines sont possibles lorsqu’elles sont techniquement justifiées et localement décidées."
+        "extrait": "les bassines sont possibles lorsqu’elles sont techniquement justifiées et localement décidées"
       }
     ]
+  },
+  {
+    "id": "lisnard-gouvernance-republique-001",
+    "candidat": "lisnard",
+    "theme": "gouvernance-republique",
+    "titre": "Limiter la loi aux principes fondamentaux du droit (sauf fiscalité et droit pénal) et confier l'application aux collectivités territoriales et au gouvernement.",
+    "resume_factuel": "Limiter la loi aux principes fondamentaux du droit (sauf fiscalité et droit pénal) et confier l'application aux collectivités territoriales et au gouvernement.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
   },
   {
     "id": "lisnard-reformes-etat-001",
@@ -1371,8 +1685,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1401,8 +1716,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1424,8 +1740,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1447,8 +1764,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1470,8 +1788,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1493,8 +1812,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1516,8 +1836,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -1539,17 +1860,11 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "moins_fonctionnaires",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer l’ARS, la Dreal, la MRAE, la Dreets"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "lisnard-reformes-etat-009",
@@ -1569,17 +1884,167 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
+    "effets": []
+  },
+  {
+    "id": "lisnard-reformes-etat-010",
+    "candidat": "lisnard",
+    "theme": "reformes-etat",
+    "titre": "Proposer par référendum constitutionnel un nouveau schéma institutionnel à trois niveaux : Etat - Province - Bloc communal.",
+    "resume_factuel": "Proposer par référendum constitutionnel un nouveau schéma institutionnel à trois niveaux : Etat - Province - Bloc communal.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
-        "sujet": "europe",
-        "position": "souverainete",
+        "sujet": "institutions",
+        "position": "nouvelles_institutions",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Interdire la surtransposition des textes européens."
+        "extrait": "Proposer par référendum constitutionnel un nouveau schéma institutionnel à trois niveaux : Etat - Province - Bloc communal."
       }
     ]
+  },
+  {
+    "id": "lisnard-reformes-etat-011",
+    "candidat": "lisnard",
+    "theme": "reformes-etat",
+    "titre": "Transférer aux Provinces l'essentiel des compétences non régaliennes de l'État ainsi que le pouvoir normatif d'exécution de la loi (décrets et arrêtés…",
+    "resume_factuel": "Transférer aux Provinces l'essentiel des compétences non régaliennes de l'État ainsi que le pouvoir normatif d'exécution de la loi (décrets et arrêtés d'application).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
+    "effets": []
+  },
+  {
+    "id": "lisnard-reformes-etat-012",
+    "candidat": "lisnard",
+    "theme": "reformes-etat",
+    "titre": "Diminuer de 33% à 25% le taux de tâches administratives dans la fonction publique et rendre au service public effectif 75% des effectifs (contre 66%…",
+    "resume_factuel": "Diminuer de 33% à 25% le taux de tâches administratives dans la fonction publique et rendre au service public effectif 75% des effectifs (contre 66% actuellement soit 450 000 fonctionnaires).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fonction publique",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "lisnard-reformes-etat-013",
+    "candidat": "lisnard",
+    "theme": "reformes-etat",
+    "titre": "Recruter les directeurs d'administration centrale sur des contrats d'objectifs pour impulser une culture de la prise de risque.",
+    "resume_factuel": "Recruter les directeurs d'administration centrale sur des contrats d'objectifs pour impulser une culture de la prise de risque.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fonction publique",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "lisnard-reformes-etat-014",
+    "candidat": "lisnard",
+    "theme": "reformes-etat",
+    "titre": "Réformer les trois fonctions publiques pour développer une fonction publique de métier et généraliser les contrats dans les fonctions non régaliennes.",
+    "resume_factuel": "Réformer les trois fonctions publiques pour développer une fonction publique de métier et généraliser les contrats dans les fonctions non régaliennes.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fonction publique",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "moins_fonctionnaires",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réformer les trois fonctions publiques pour développer une fonction publique de métier et généraliser les contrats dans les fonctions non régaliennes."
+      }
+    ]
+  },
+  {
+    "id": "lisnard-reformes-etat-015",
+    "candidat": "lisnard",
+    "theme": "reformes-etat",
+    "titre": "Confier l'évaluation des politiques publiques à des experts indépendants de l'Administration.",
+    "resume_factuel": "Confier l'évaluation des politiques publiques à des experts indépendants de l'Administration.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fonction publique",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
   },
   {
     "id": "lisnard-education-jeunesse-001",
@@ -1599,8 +2064,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1646,16 +2112,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "reformer_ecole",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer progressivement un chèque-éducation : un financement public équivalent, que la famille choisisse l’enseignement public ou privé."
-      }
-    ],
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1672,6 +2131,14 @@
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "un financement public équivalent, que la famille choisisse l’enseignement public ou privé"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer progressivement un chèque-éducation : un financement public équivalent, que la famille choisisse l’enseignement public ou privé."
       }
     ]
   },
@@ -1693,8 +2160,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1709,20 +2177,6 @@
         "sens": "indetermine",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Liberté donnée aux chefs d’établissement de recruter leurs équipes pédagogiques"
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "reformer_ecole",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Liberté donnée aux chefs d’établissement de recruter leurs équipes pédagogiques, d’appliquer leurs méthodes, de gérer leur budget, de refuser des élèves pouvant nuire au collectif."
-      },
-      {
-        "sujet": "ecole_discipline",
-        "position": "ecole_exigence",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "de refuser des élèves pouvant nuire au collectif"
       }
     ]
   },
@@ -1744,12 +2198,13 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "positions": [
       {
-        "sujet": "ecole_discipline",
-        "position": "ecole_exigence",
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Instauration d’un certificat de fin de primaire dont la validation conditionnera l’entrée au collège."
       }
@@ -1773,8 +2228,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1791,7 +2247,14 @@
         "extrait": "Instaurer le grec, le latin et la philosophie dès le primaire"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer le grec, le latin et la philosophie dès le primaire."
+      }
+    ]
   },
   {
     "id": "lisnard-education-jeunesse-006",
@@ -1811,8 +2274,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1829,7 +2293,14 @@
         "extrait": "Augmenter de 20 % les rémunérations en 5 ans"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "proposition conditionnée à une réorganisation : autonomie accrue, présence renforcée dans l’établissement, formation continue obligatoire, évaluation régulière"
+      }
+    ]
   },
   {
     "id": "lisnard-education-jeunesse-007",
@@ -1849,8 +2320,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1879,8 +2351,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "positions": [
       {
         "sujet": "ecole_organisation",
@@ -1908,9 +2381,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
-    "positions": [],
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1926,6 +2399,14 @@
         "sens": "indetermine",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Renforcer les lycées professionnels et les CFA en les liant aux entreprises"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "L’ouverture et la fermeture des formations sera décidée au niveau local, en fonction des débouchés réels."
       }
     ]
   },
@@ -1947,8 +2428,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1964,6 +2446,14 @@
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Créer des classes d’excellence en mathématiques et en sciences dans chaque académie"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer des classes d’excellence en mathématiques et en sciences dans chaque académie."
       }
     ]
   }

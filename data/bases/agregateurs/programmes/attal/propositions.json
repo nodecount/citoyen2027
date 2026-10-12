@@ -17,8 +17,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -31,6 +32,14 @@
         ],
         "dimension": "cout_du_travail",
         "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser les charges sur le travail par des économies"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "moderer_salaires",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Baisser les charges sur le travail par des économies"
       }
@@ -54,8 +63,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -77,8 +87,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
     "effets": []
   },
   {
@@ -99,8 +110,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -122,8 +134,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -145,8 +158,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -172,42 +186,6 @@
     "id": "attal-finances-publiques-007",
     "candidat": "attal",
     "theme": "finances-publiques",
-    "titre": "Supprimer 100 000 postes de fonctionnaires. Economies : plus de 7Md€, grâce à un plan de départs volontaires, sans toucher aux ministères de l’éducation…",
-    "resume_factuel": "Supprimer 100 000 postes de fonctionnaires. Economies : plus de 7Md€, grâce à un plan de départs volontaires, sans toucher aux ministères de l’éducation nationale, des armées, de la justice et de l’intérieur.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Economies & hausses de dépenses",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "moins_fonctionnaires",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer 100 000 postes de fonctionnaires"
-      },
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Economies : plus de 7Md€, grâce à un plan de départs volontaires"
-      }
-    ]
-  },
-  {
-    "id": "attal-finances-publiques-008",
-    "candidat": "attal",
-    "theme": "finances-publiques",
     "titre": "Créer de nouvelles collectivités uniques pour faire des économies au niveau de l’organisation territoriale de l’État.",
     "resume_factuel": "Créer de nouvelles collectivités uniques pour faire des économies au niveau de l’organisation territoriale de l’État.",
     "sources": [
@@ -222,13 +200,61 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": []
+  },
+  {
+    "id": "attal-finances-publiques-008",
+    "candidat": "attal",
+    "theme": "finances-publiques",
+    "titre": "Responsabiliser chaque acteur public en fixant des responsabilités claires et un cadre budgétaire pluriannuel.",
+    "resume_factuel": "Responsabiliser chaque acteur public en fixant des responsabilités claires et un cadre budgétaire pluriannuel.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
     "id": "attal-finances-publiques-009",
+    "candidat": "attal",
+    "theme": "finances-publiques",
+    "titre": "Fixer trois priorités budgétaires nationales : l’éducation, l’écologie et la défense, afin de concentrer les moyens publics sur ces secteurs.",
+    "resume_factuel": "Fixer trois priorités budgétaires nationales : l’éducation, l’écologie et la défense, afin de concentrer les moyens publics sur ces secteurs.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "attal-finances-publiques-010",
     "candidat": "attal",
     "theme": "finances-publiques",
     "titre": "Atteindre 0 % du PIB du déficit public à horizon 2037, avec un premier point d’étape à 3 % avant 2032 pour un montant d’économies de 120 à 150 milliards à…",
@@ -245,20 +271,27 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Dette & déficit",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Atteindre 0 % du PIB du déficit public à horizon 2037, avec un premier point d’étape à 3 % avant 2032 pour un montant d’économies de 120 à 150 milliards"
+        "extrait": "Atteindre 0 % du PIB du déficit public à horizon 2037"
+      },
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "un montant d’économies de 120 à 150 milliards à réaliser sur cette période"
       }
     ]
   },
   {
-    "id": "attal-finances-publiques-010",
+    "id": "attal-finances-publiques-011",
     "candidat": "attal",
     "theme": "finances-publiques",
     "titre": "Inscrire une règle d’or budgétaire dans la Constitution, sur le modèle allemand.",
@@ -275,20 +308,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Dette & déficit",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Inscrire une règle d’or budgétaire dans la Constitution, sur le modèle allemand"
+        "extrait": "Inscrire une règle d’or budgétaire dans la Constitution, sur le modèle allemand."
       }
     ]
   },
   {
-    "id": "attal-finances-publiques-011",
+    "id": "attal-finances-publiques-012",
     "candidat": "attal",
     "theme": "finances-publiques",
     "titre": "Baisser de 2 Md€ les impôts pour les classes moyennes.",
@@ -305,8 +339,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -328,12 +363,12 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser de 2 Md€ les impôts pour les classes moyennes"
+        "extrait": "Baisser de 2 Md€ les impôts pour les classes moyennes."
       }
     ]
   },
   {
-    "id": "attal-finances-publiques-012",
+    "id": "attal-finances-publiques-013",
     "candidat": "attal",
     "theme": "finances-publiques",
     "titre": "Baisser de façon ciblée les impôts plutôt qu’entreprendre une réforme fiscale globale.",
@@ -350,20 +385,21 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser de façon ciblée les impôts plutôt qu’entreprendre une réforme fiscale globale"
+        "extrait": "Baisser de façon ciblée les impôts plutôt qu’entreprendre une réforme fiscale globale."
       }
     ]
   },
   {
-    "id": "attal-finances-publiques-013",
+    "id": "attal-finances-publiques-014",
     "candidat": "attal",
     "theme": "finances-publiques",
     "titre": "Baisser les impôts de production.",
@@ -380,15 +416,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "entreprises",
         "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser les impôts de production"
+        "extrait": "Baisser les impôts de production."
       }
     ]
   },
@@ -410,8 +447,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -433,14 +471,15 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
+    "titre_litteral": true,
     "positions": [
       {
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Restreindre le regroupement familial"
+        "extrait": "Restreindre le regroupement familial."
       }
     ]
   },
@@ -462,15 +501,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Faire voter au Parlement des quotas d’immigration par secteur d’activité"
+        "extrait": "Faire voter au Parlement des quotas d’immigration par secteur d’activité."
       }
     ]
   },
@@ -492,15 +532,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place un permis à points pour l’immigration sur le modèle canadien"
+        "extrait": "Mettre en place un permis à points pour l’immigration sur le modèle canadien."
       }
     ]
   },
@@ -522,15 +563,16 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "personnes de moins de 15 ans portant le voile"
+              "moins de 15 ans"
             ]
           }
         ],
@@ -545,7 +587,7 @@
         "sujet": "laicite",
         "position": "laicite_stricte",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Interdire le voile pour les moins de 15 ans"
+        "extrait": "Interdire le voile pour les moins de 15 ans."
       }
     ]
   },
@@ -567,8 +609,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -576,8 +619,8 @@
     "id": "attal-interieur-justice-007",
     "candidat": "attal",
     "theme": "interieur-justice",
-    "titre": "Soutenir la loi de comparution immédiate pour certains mineurs.",
-    "resume_factuel": "Soutenir la loi de comparution immédiate pour certains mineurs.",
+    "titre": "Reprendre la réforme de la justice des mineurs qui n'avait pas été adoptée, et notamment les mesures pour rendre possible",
+    "resume_factuel": "Reprendre la réforme de la justice des mineurs qui n'avait pas été adoptée, et notamment les mesures pour rendre possible • la comparution immédiate pour les mineurs, • l'atténuation de l'excuse de minorité.",
     "sources": [
       {
         "type": "secondaire",
@@ -590,22 +633,23 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "certains mineurs"
+              "mineurs poursuivis en justice"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Soutenir la loi de comparution immédiate pour certains mineurs."
+        "extrait": "la comparution immédiate pour les mineurs, • l'atténuation de l'excuse de minorité"
       }
     ],
     "positions": [
@@ -613,7 +657,76 @@
         "sujet": "justice_mineurs",
         "position": "durcir_justice_mineurs",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Soutenir la loi de comparution immédiate pour certains mineurs"
+        "extrait": "la comparution immédiate pour les mineurs, • l'atténuation de l'excuse de minorité."
+      }
+    ]
+  },
+  {
+    "id": "attal-interieur-justice-008",
+    "candidat": "attal",
+    "theme": "interieur-justice",
+    "titre": "Faire évoluer notre justice pénale des mineurs qui permet aujourd'hui de reconnaître la culpabilité d'une jeune mais avec une sanction qui intervient trop…",
+    "resume_factuel": "Faire évoluer notre justice pénale des mineurs qui permet aujourd'hui de reconnaître la culpabilité d'une jeune mais avec une sanction qui intervient trop tardivement, ce qui envoie un message d'impunité.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
+    "effets": []
+  },
+  {
+    "id": "attal-interieur-justice-009",
+    "candidat": "attal",
+    "theme": "interieur-justice",
+    "titre": "Permettre à un maire de s'opposer à un mariage avec une personne sous OQTF.",
+    "resume_factuel": "Permettre à un maire de s'opposer à un mariage avec une personne sous OQTF.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Sécurité intérieure",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre à un maire de s'opposer à un mariage avec une personne sous OQTF."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre à un maire de s'opposer à un mariage avec une personne sous OQTF."
       }
     ]
   },
@@ -635,16 +748,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Allocations & prestations sociales",
-    "positions": [
-      {
-        "sujet": "aides_sociales",
-        "position": "conditionner_aides",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Durcir et réformer l’assurance chômage pour inciter le retour à l’emploi et diminuer l’inactivité"
-      }
-    ],
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -658,7 +764,15 @@
         "dimension": "protection_sociale",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Durcir et réformer l’assurance chômage"
+        "extrait": "Durcir et réformer l’assurance chômage pour inciter le retour à l’emploi et diminuer l’inactivité."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "conditionner_aides",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Durcir et réformer l’assurance chômage pour inciter le retour à l’emploi et diminuer l’inactivité."
       }
     ]
   },
@@ -680,8 +794,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Allocations & prestations sociales",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -699,7 +814,7 @@
         "dimension": "revenu_disponible",
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "faire une année blanche sur l’ensemble des prestations sociales"
+        "extrait": "faire une année blanche sur l’ensemble des prestations sociales, en épargnant toutefois les petites retraites"
       }
     ]
   },
@@ -721,10 +836,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
-    "effets": [],
-    "positions": []
+    "titre_litteral": true,
+    "effets": []
   },
   {
     "id": "attal-social-solidarite-004",
@@ -744,24 +859,89 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
-    "effets": [
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "attal-social-solidarite-005",
+    "candidat": "attal",
+    "theme": "social-solidarite",
+    "titre": "Reprendre les mesures de simplification contenues dans la loi Kasbarian sur le logement abordable.",
+    "resume_factuel": "Reprendre les mesures de simplification contenues dans la loi Kasbarian sur le logement abordable.",
+    "sources": [
       {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "etudiant"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Prioriser la construction des logements étudiants et Crous"
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
       }
     ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "liberer_offre_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Reprendre les mesures de simplification contenues dans la loi Kasbarian sur le logement abordable"
+      }
+    ]
+  },
+  {
+    "id": "attal-social-solidarite-006",
+    "candidat": "attal",
+    "theme": "social-solidarite",
+    "titre": "Contre l’instabilité du dispositif MaPrimRénov’, favoriser des monogestes planifiés, à l’unisson de la Capeb.",
+    "resume_factuel": "Contre l’instabilité du dispositif MaPrimRénov’, favoriser des monogestes planifiés, à l’unisson de la Capeb.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "attal-social-solidarite-007",
+    "candidat": "attal",
+    "theme": "social-solidarite",
+    "titre": "Faire voter une une loi de programmation sur le logement pour inscrire cet enjeu dans le temps long.",
+    "resume_factuel": "Faire voter une une loi de programmation sur le logement pour inscrire cet enjeu dans le temps long.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
     "positions": []
   },
   {
@@ -782,8 +962,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -805,7 +986,7 @@
         "sujet": "temps_travail",
         "position": "travailler_davantage",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Défiscaliser les heures supplémentaires"
+        "extrait": "Défiscaliser les heures supplémentaires."
       }
     ]
   },
@@ -827,10 +1008,11 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "positions": [],
-    "effets": []
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-retraites-travail-003",
@@ -850,8 +1032,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -873,16 +1056,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "positions": [
-      {
-        "sujet": "temps_travail",
-        "position": "travailler_davantage",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer le plafond de 220 heures supplémentaires annuelles autorisées."
-      }
-    ],
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -898,55 +1074,18 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer le plafond de 220 heures supplémentaires annuelles autorisées."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "temps_travail",
+        "position": "travailler_davantage",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer le plafond de 220 heures supplémentaires annuelles autorisées."
+      }
     ]
   },
   {
     "id": "attal-retraites-travail-005",
-    "candidat": "attal",
-    "theme": "retraites-travail",
-    "titre": "Plannifier la formation de 20 M de salariés sur 5 ans pour l’intelligence artificielle.",
-    "resume_factuel": "Plannifier la formation de 20 M de salariés sur 5 ans pour l’intelligence artificielle.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Emploi & travail",
-    "positions": [
-      {
-        "sujet": "ia",
-        "position": "plus_ia",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Plannifier la formation de 20 M de salariés sur 5 ans pour l’intelligence artificielle."
-      }
-    ],
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Plannifier la formation de 20 M de salariés sur 5 ans pour l’intelligence artificielle."
-      }
-    ]
-  },
-  {
-    "id": "attal-retraites-travail-006",
     "candidat": "attal",
     "theme": "retraites-travail",
     "titre": "Faire baisser les charges salariales pour augmenter les salaires.",
@@ -963,8 +1102,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -981,21 +1121,14 @@
         "extrait": "Faire baisser les charges salariales pour augmenter les salaires."
       }
     ],
-    "positions": [
-      {
-        "sujet": "salaires",
-        "position": "moderer_salaires",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Faire baisser les charges salariales pour augmenter les salaires."
-      }
-    ]
+    "positions": []
   },
   {
-    "id": "attal-retraites-travail-007",
+    "id": "attal-retraites-travail-006",
     "candidat": "attal",
     "theme": "retraites-travail",
-    "titre": "Changer de système de retraite : supprimer l’âge de départ légal, maintenir la durée de cotisation.",
-    "resume_factuel": "Changer de système de retraite : supprimer l’âge de départ légal, maintenir la durée de cotisation.",
+    "titre": "Porter une réforme de l’assurance chômage qui incite au travail et qui créerait 100 000 emplois supplémentaires.",
+    "resume_factuel": "Porter une réforme de l’assurance chômage qui incite au travail et qui créerait 100 000 emplois supplémentaires.",
     "sources": [
       {
         "type": "secondaire",
@@ -1008,16 +1141,39 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Système de retraite",
-    "positions": [],
-    "effets": [
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": []
+  },
+  {
+    "id": "attal-retraites-travail-007",
+    "candidat": "attal",
+    "theme": "retraites-travail",
+    "titre": "Permettre la semaine de quatre jours et une meilleure adaptation des horaires entre l'employeur et le salarié.",
+    "resume_factuel": "Permettre la semaine de quatre jours et une meilleure adaptation des horaires entre l'employeur et le salarié.",
+    "sources": [
       {
-        "cibles": [],
-        "dimension": "protection_sociale",
-        "sens": "indetermine",
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "temps_travail",
+        "position": "reduire_temps_travail",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Changer de système de retraite : supprimer l’âge de départ légal, maintenir la durée de cotisation."
+        "extrait": "Permettre la semaine de quatre jours"
       }
     ]
   },
@@ -1025,8 +1181,8 @@
     "id": "attal-retraites-travail-008",
     "candidat": "attal",
     "theme": "retraites-travail",
-    "titre": "Compléter notre système de retraite par une part de capitalisation, grâce à une dotation en capital gérée par un fonds souverain, abondé automatiquement à…",
-    "resume_factuel": "Compléter notre système de retraite par une part de capitalisation, grâce à une dotation en capital gérée par un fonds souverain, abondé automatiquement à hauteur de 1 000 € par l’État à la naissance de chaque enfant. Il pourrait être abondé par la famille jusqu’à ses 18 ans, via un abattement fiscal. Cela permettrait de compléter la retraite de ceux souhaitant partir plus tôt.",
+    "titre": "Changer de système de retraite : supprimer l’âge légal de départ, maintenir la durée de cotisation. Mettre en place une décote pour ceux qui partent plus tôt…",
+    "resume_factuel": "Changer de système de retraite : supprimer l’âge légal de départ, maintenir la durée de cotisation. Mettre en place une décote pour ceux qui partent plus tôt et une surcote pour ceux qui partent plus tard.",
     "sources": [
       {
         "type": "secondaire",
@@ -1039,24 +1195,81 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Système de retraite",
-    "effets": [
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "attal-retraites-travail-009",
+    "candidat": "attal",
+    "theme": "retraites-travail",
+    "titre": "Introduire une part de capitalisation dans ce nouveau système de retraite, grâce à une dotation en capital gérée par un fonds souverain, abondé automatiquement…",
+    "resume_factuel": "Introduire une part de capitalisation dans ce nouveau système de retraite, grâce à une dotation en capital gérée par un fonds souverain, abondé automatiquement à hauteur de 1 000 € par l’État à la naissance de chaque enfant. Il pourrait être abondé par la famille jusqu’à ses 18 ans, via un abattement fiscal. Les fonds de pensions pourront alors permettre de financer nos start-ups, entreprises et PME.",
+    "sources": [
       {
-        "cibles": [
-          {
-            "champ": "enfants_a_charge",
-            "valeurs": [
-              "au_moins_un"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "une dotation en capital gérée par un fonds souverain, abondé automatiquement à hauteur de 1 000 € par l’État à la naissance de chaque enfant"
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
       }
     ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Système de retraite",
+    "titre_litteral": true,
+    "positions": []
+  },
+  {
+    "id": "attal-retraites-travail-010",
+    "candidat": "attal",
+    "theme": "retraites-travail",
+    "titre": "Créer un système de retraite universel qui garantisse les mêmes règles pour tous, c'est à dire aligner les régimes des salariés (privé), des fonctionnaires…",
+    "resume_factuel": "Créer un système de retraite universel qui garantisse les mêmes règles pour tous, c'est à dire aligner les régimes des salariés (privé), des fonctionnaires (public) et des indépendants.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Système de retraite",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "attal-retraites-travail-011",
+    "candidat": "attal",
+    "theme": "retraites-travail",
+    "titre": "Permettre aux seniors de travailler.",
+    "resume_factuel": "Permettre aux seniors de travailler.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Système de retraite",
+    "titre_litteral": true,
+    "effets": [],
     "positions": []
   },
   {
@@ -1077,20 +1290,37 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
+    "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "renouvelables",
-        "position": "plus_renouvelables",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Doubler la part du fonds chaleur, NDLR dédiée au financement de la géoénergie de 80 M€ à 160 M€."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "attal-envi-002",
+    "candidat": "attal",
+    "theme": "environnement",
+    "titre": "Sortir de la dépendance aux énergies fossiles, afin de renforcer l’indépendance énergétique nationale.",
+    "resume_factuel": "Sortir de la dépendance aux énergies fossiles, afin de renforcer l’indépendance énergétique nationale.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Energie",
+    "titre_litteral": true,
+    "effets": []
+  },
+  {
+    "id": "attal-envi-003",
     "candidat": "attal",
     "theme": "environnement",
     "titre": "Créer un droit à la climatisation, en facilitant notamment les installations.",
@@ -1107,10 +1337,236 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un droit à la climatisation, en facilitant notamment les installations."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "libertes_indiv",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un droit à la climatisation, en facilitant notamment les installations."
+      }
+    ]
+  },
+  {
+    "id": "attal-envi-004",
+    "candidat": "attal",
+    "theme": "environnement",
+    "titre": "Tripler le rythme annuel de réduction des émissions de gaz à effet de serre d’ici 2030, en passant de 1,8 % à 5 % de baisse par an.",
+    "resume_factuel": "Tripler le rythme annuel de réduction des émissions de gaz à effet de serre d’ici 2030, en passant de 1,8 % à 5 % de baisse par an.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Tripler le rythme annuel de réduction des émissions de gaz à effet de serre d’ici 2030, en passant de 1,8 % à 5 % de baisse par an."
+      }
+    ]
+  },
+  {
+    "id": "attal-envi-005",
+    "candidat": "attal",
+    "theme": "environnement",
+    "titre": "Développer une industrie décarbonée sur le territoire français, pour créer les emplois de demain tout en réduisant les émissions de gaz à effet de serre.",
+    "resume_factuel": "Développer une industrie décarbonée sur le territoire français, pour créer les emplois de demain tout en réduisant les émissions de gaz à effet de serre.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
+  },
+  {
+    "id": "attal-europe-international-001",
+    "candidat": "attal",
+    "theme": "europe-international",
+    "titre": "Mettre en place des barrières commerciales claires avec la Chine : des taxes à l'importation ciblées sur les produits chinois vendus à perte (acier, voitures…",
+    "resume_factuel": "Mettre en place des barrières commerciales claires avec la Chine : des taxes à l'importation ciblées sur les produits chinois vendus à perte (acier, voitures électriques, panneaux solaires), et un contrôle strict des investissements chinois dans nos infrastructures les plus sensibles (ports, réseaux de télécommunications, centres de données).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Affaires étrangères & diplomatie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place des barrières commerciales claires avec la Chine : des taxes à l'importation ciblées sur les produits chinois vendus à perte"
+      }
+    ]
+  },
+  {
+    "id": "attal-europe-international-002",
+    "candidat": "attal",
+    "theme": "europe-international",
+    "titre": "Réduire notre dépendance aux approvisionnements chinois dans des domaines critiques, comme les matières premières rares, les composants électroniques ou les…",
+    "resume_factuel": "Réduire notre dépendance aux approvisionnements chinois dans des domaines critiques, comme les matières premières rares, les composants électroniques ou les médicaments, en relocalisant une partie de la production et en diversifiant nos fournisseurs à l'échelle européenne.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Affaires étrangères & diplomatie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire notre dépendance aux approvisionnements chinois dans des domaines critiques, comme les matières premières rares, les composants électroniques ou les médicaments, en relocalisant une partie de la production"
+      }
+    ]
+  },
+  {
+    "id": "attal-europe-international-003",
+    "candidat": "attal",
+    "theme": "europe-international",
+    "titre": "Renforcer la réciprocité européenne dans l’accès aux marchés publics : lorsqu’une entreprise étrangère, notamment chinoise, est exclue des marchés publics d’un…",
+    "resume_factuel": "Renforcer la réciprocité européenne dans l’accès aux marchés publics : lorsqu’une entreprise étrangère, notamment chinoise, est exclue des marchés publics d’un État membre en raison de subventions publiques excessives, étendre automatiquement cette exclusion à l’ensemble des États membres de l’Union européenne.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Union Européenne",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "étendre automatiquement cette exclusion à l’ensemble des États membres de l’Union européenne"
+      }
+    ]
+  },
+  {
+    "id": "attal-europe-international-004",
+    "candidat": "attal",
+    "theme": "europe-international",
+    "titre": "Faire de l'Europe un acteur de premier plan dans les technologies qui compteront demain : l'intelligence artificielle, le quantique, les énergies propres.",
+    "resume_factuel": "Faire de l'Europe un acteur de premier plan dans les technologies qui compteront demain : l'intelligence artificielle, le quantique, les énergies propres.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Union Européenne",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire de l'Europe un acteur de premier plan dans les technologies qui compteront demain : l'intelligence artificielle, le quantique, les énergies propres."
+      }
+    ]
+  },
+  {
+    "id": "attal-europe-international-005",
+    "candidat": "attal",
+    "theme": "europe-international",
+    "titre": "Mener des investissements massifs en commun dans les nouvelles technologies, au niveau européen, en s'appuyant sur les pays membres les plus déterminés, sans…",
+    "resume_factuel": "Mener des investissements massifs en commun dans les nouvelles technologies, au niveau européen, en s'appuyant sur les pays membres les plus déterminés, sans attendre l'accord unanime des 27.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Union Européenne",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mener des investissements massifs en commun dans les nouvelles technologies, au niveau européen"
+      }
+    ]
   },
   {
     "id": "attal-gouvernance-republique-001",
@@ -1130,16 +1586,17 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
     "effets": []
   },
   {
     "id": "attal-gouvernance-republique-002",
     "candidat": "attal",
     "theme": "gouvernance-republique",
-    "titre": "Faire émerger des géants de l’intelligence artificielle en France, grâce à des investissments privés notamment.",
-    "resume_factuel": "Faire émerger des géants de l’intelligence artificielle en France, grâce à des investissments privés notamment.",
+    "titre": "Faire de la France la première puissance européenne de l’intelligence artificielle.",
+    "resume_factuel": "Faire de la France la première puissance européenne de l’intelligence artificielle.",
     "sources": [
       {
         "type": "secondaire",
@@ -1152,15 +1609,248 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
         "sujet": "ia",
         "position": "plus_ia",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Faire émerger des géants de l’intelligence artificielle en France, grâce à des investissments privés notamment."
+        "extrait": "Faire de la France la première puissance européenne de l’intelligence artificielle."
+      }
+    ]
+  },
+  {
+    "id": "attal-gouvernance-republique-003",
+    "candidat": "attal",
+    "theme": "gouvernance-republique",
+    "titre": "Développer une IA française et européenne.",
+    "resume_factuel": "Développer une IA française et européenne.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Développer une IA française et européenne."
+      }
+    ]
+  },
+  {
+    "id": "attal-gouvernance-republique-004",
+    "candidat": "attal",
+    "theme": "gouvernance-republique",
+    "titre": "Renforcer les investissements dans l’innovation et les infrastructures de l’IA.",
+    "resume_factuel": "Renforcer les investissements dans l’innovation et les infrastructures de l’IA.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer les investissements dans l’innovation et les infrastructures de l’IA."
+      }
+    ]
+  },
+  {
+    "id": "attal-gouvernance-republique-005",
+    "candidat": "attal",
+    "theme": "gouvernance-republique",
+    "titre": "Favoriser l’adoption massive de l’intelligence artificielle par les entreprises françaises, notamment les PME, afin d’améliorer leur productivité et leur…",
+    "resume_factuel": "Favoriser l’adoption massive de l’intelligence artificielle par les entreprises françaises, notamment les PME, afin d’améliorer leur productivité et leur compétitivité.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Favoriser l’adoption massive de l’intelligence artificielle par les entreprises françaises"
+      }
+    ]
+  },
+  {
+    "id": "attal-gouvernance-republique-006",
+    "candidat": "attal",
+    "theme": "gouvernance-republique",
+    "titre": "Attirer les meilleurs chercheurs en intelligence artificielle et soutenir l’écosystème français de recherche et d’innovation.",
+    "resume_factuel": "Attirer les meilleurs chercheurs en intelligence artificielle et soutenir l’écosystème français de recherche et d’innovation.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Attirer les meilleurs chercheurs en intelligence artificielle et soutenir l’écosystème français de recherche et d’innovation."
+      }
+    ]
+  },
+  {
+    "id": "attal-gouvernance-republique-007",
+    "candidat": "attal",
+    "theme": "gouvernance-republique",
+    "titre": "Former l’ensemble des Français à l’IA, du primaire à la reconversion professionnelle.",
+    "resume_factuel": "Former l’ensemble des Français à l’IA, du primaire à la reconversion professionnelle.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Former l’ensemble des Français à l’IA, du primaire à la reconversion professionnelle."
+      }
+    ]
+  },
+  {
+    "id": "attal-gouvernance-republique-008",
+    "candidat": "attal",
+    "theme": "gouvernance-republique",
+    "titre": "Plannifier la formation de 20 M de salariés sur 5 ans pour l’intelligence artificielle.",
+    "resume_factuel": "Plannifier la formation de 20 M de salariés sur 5 ans pour l’intelligence artificielle.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Plannifier la formation de 20 M de salariés sur 5 ans pour l’intelligence artificielle."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Plannifier la formation de 20 M de salariés sur 5 ans pour l’intelligence artificielle."
+      }
+    ]
+  },
+  {
+    "id": "attal-gouvernance-republique-009",
+    "candidat": "attal",
+    "theme": "gouvernance-republique",
+    "titre": "Maîtriser l’ensemble de la chaîne technologique de l’IA, de la production énergétique aux centres de données (data centers), en passant par les…",
+    "resume_factuel": "Maîtriser l’ensemble de la chaîne technologique de l’IA, de la production énergétique aux centres de données (data centers), en passant par les semi-conducteurs et la sécurisation des infrastructures critiques.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Numérique et IA",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Maîtriser l’ensemble de la chaîne technologique de l’IA"
       }
     ]
   },
@@ -1182,17 +1872,10 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fonction publique",
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "moins_fonctionnaires",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place un plan de départs volontaires de fonctionnaires, avec un objectif de 100 000 postes supprimés."
-      }
-    ]
+    "titre_litteral": true,
+    "effets": []
   },
   {
     "id": "attal-reformes-etat-002",
@@ -1212,8 +1895,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fonction publique",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1226,6 +1910,69 @@
   },
   {
     "id": "attal-education-jeunesse-001",
+    "candidat": "attal",
+    "theme": "education-jeunesse",
+    "titre": "Former 200 000 professionnels de la petite enfance d’ici 2030.",
+    "resume_factuel": "Former 200 000 professionnels de la petite enfance d’ici 2030.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Services de la petite enfance",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "aucun"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Former 200 000 professionnels de la petite enfance d’ici 2030."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "attal-education-jeunesse-002",
+    "candidat": "attal",
+    "theme": "education-jeunesse",
+    "titre": "Mettre en place un nouveau livret d’épargne, sur le modèle du livret A, pour orienter l’épargne des Français vers le financement de nouvelles places en crèche.",
+    "resume_factuel": "Mettre en place un nouveau livret d’épargne, sur le modèle du livret A, pour orienter l’épargne des Français vers le financement de nouvelles places en crèche.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Services de la petite enfance",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "attal-education-jeunesse-003",
     "candidat": "attal",
     "theme": "education-jeunesse",
     "titre": "Maintenir le « choc des savoirs » pour élever le niveau scolaire et renforcer les fondamentaux.",
@@ -1242,9 +1989,26 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
-    "effets": [],
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire",
+              "college"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Maintenir le « choc des savoirs » pour élever le niveau scolaire et renforcer les fondamentaux."
+      }
+    ],
     "positions": [
       {
         "sujet": "ecole_organisation",
@@ -1255,7 +2019,7 @@
     ]
   },
   {
-    "id": "attal-education-jeunesse-002",
+    "id": "attal-education-jeunesse-004",
     "candidat": "attal",
     "theme": "education-jeunesse",
     "titre": "Soutenir la mesure de l’interdiction des réseaux sociaux pour les moins de 15 ans.",
@@ -1272,8 +2036,25 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "jeunes de moins de 15 ans"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "l’interdiction des réseaux sociaux pour les moins de 15 ans"
+      }
+    ],
     "positions": [
       {
         "sujet": "libertes",
@@ -1284,7 +2065,7 @@
     ]
   },
   {
-    "id": "attal-education-jeunesse-003",
+    "id": "attal-education-jeunesse-005",
     "candidat": "attal",
     "theme": "education-jeunesse",
     "titre": "Raccourcir les journées de travail à l’école aux dépens des vacances scolaires.",
@@ -1301,8 +2082,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [
       {
         "cibles": [
@@ -1318,7 +2100,7 @@
         "dimension": "acces_aux_services",
         "sens": "indetermine",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Raccourcir les journées de travail à l’école aux dépens des vacances scolaires"
+        "extrait": "Raccourcir les journées de travail à l’école aux dépens des vacances scolaires."
       }
     ],
     "positions": [
@@ -1327,6 +2109,321 @@
         "position": "reformer_ecole",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Raccourcir les journées de travail à l’école aux dépens des vacances scolaires."
+      }
+    ]
+  },
+  {
+    "id": "attal-education-jeunesse-006",
+    "candidat": "attal",
+    "theme": "education-jeunesse",
+    "titre": "Accorder davantage d’autonomie et de responsabilité aux établissements afin de répondre au problème des absences de professeurs non remplacés. Chaque…",
+    "resume_factuel": "Accorder davantage d’autonomie et de responsabilité aux établissements afin de répondre au problème des absences de professeurs non remplacés. Chaque établissement doit pouvoir trouver une organisation permettant d’assurer une permanence des enseignements, notamment pour les absences de courte durée.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Education nationale",
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Accorder davantage d’autonomie et de responsabilité aux établissements"
+      }
+    ]
+  },
+  {
+    "id": "attal-education-jeunesse-007",
+    "candidat": "attal",
+    "theme": "education-jeunesse",
+    "titre": "Créer un conseil de discipline pour le primaire.",
+    "resume_factuel": "Créer un conseil de discipline pour le primaire.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Education nationale",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un conseil de discipline pour le primaire."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ecole_discipline",
+        "position": "ecole_exigence",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un conseil de discipline pour le primaire."
+      }
+    ]
+  },
+  {
+    "id": "attal-education-jeunesse-008",
+    "candidat": "attal",
+    "theme": "education-jeunesse",
+    "titre": "Etablir une échelle nationale des sanctions pour permettre au personnel éducatif et enseignant de prononcer plus facilement des sanctions quand les jeunes ne…",
+    "resume_factuel": "Etablir une échelle nationale des sanctions pour permettre au personnel éducatif et enseignant de prononcer plus facilement des sanctions quand les jeunes ne respectent pas les règles.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Education nationale",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ecole_discipline",
+        "position": "ecole_exigence",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Etablir une échelle nationale des sanctions pour permettre au personnel éducatif et enseignant de prononcer plus facilement des sanctions"
+      }
+    ]
+  },
+  {
+    "id": "attal-education-jeunesse-009",
+    "candidat": "attal",
+    "theme": "education-jeunesse",
+    "titre": "Réduire le nombre d’élèves par classe notamment en primaire où avec moins de 20 élèves par classe.",
+    "resume_factuel": "Réduire le nombre d’élèves par classe notamment en primaire où avec moins de 20 élèves par classe.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Education nationale",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "maternelle_primaire"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire le nombre d’élèves par classe notamment en primaire où avec moins de 20 élèves par classe."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "ecole_continuite",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire le nombre d’élèves par classe notamment en primaire où avec moins de 20 élèves par classe."
+      }
+    ]
+  },
+  {
+    "id": "attal-education-jeunesse-010",
+    "candidat": "attal",
+    "theme": "education-jeunesse",
+    "titre": "Augmenter le salaire des professeurs et des personnels tels que les accompagnants d'élèves en situation de handicap.",
+    "resume_factuel": "Augmenter le salaire des professeurs et des personnels tels que les accompagnants d'élèves en situation de handicap.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Education nationale",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "enseignant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter le salaire des professeurs et des personnels tels que les accompagnants d'élèves en situation de handicap."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter le salaire des professeurs et des personnels tels que les accompagnants d'élèves en situation de handicap."
+      }
+    ]
+  },
+  {
+    "id": "attal-education-jeunesse-011",
+    "candidat": "attal",
+    "theme": "education-jeunesse",
+    "titre": "Réduire la durée initiale des études.",
+    "resume_factuel": "Réduire la durée initiale des études.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Enseignement supérieur",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire la durée initiale des études."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire la durée initiale des études."
+      }
+    ]
+  },
+  {
+    "id": "attal-education-jeunesse-012",
+    "candidat": "attal",
+    "theme": "education-jeunesse",
+    "titre": "Valoriser les métiers manuels, techniques et industriels",
+    "resume_factuel": "Valoriser les métiers manuels, techniques et industriels",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Enseignement supérieur",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "attal-education-jeunesse-013",
+    "candidat": "attal",
+    "theme": "education-jeunesse",
+    "titre": "Démassifier l’enseignement supérieur",
+    "resume_factuel": "Démassifier l’enseignement supérieur",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Enseignement supérieur",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "indetermine",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Démassifier l’enseignement supérieur"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Démassifier l’enseignement supérieur"
       }
     ]
   },
@@ -1348,8 +2445,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
+    "titre_litteral": true,
     "effets": [],
     "positions": [
       {
@@ -1378,8 +2476,9 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   }

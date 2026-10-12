@@ -3,6 +3,117 @@
     "id": "ruffin-finances-publiques-001",
     "candidat": "ruffin",
     "theme": "finances-publiques",
+    "titre": "Supprimer les avantages personnels des présidents de la République et des ministres, pendant et après leur mandat.",
+    "resume_factuel": "Supprimer les avantages personnels des présidents de la République et des ministres, pendant et après leur mandat.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-finances-publiques-002",
+    "candidat": "ruffin",
+    "theme": "finances-publiques",
+    "titre": "Encadrer la rémunération du Président et des ministres en la rendant cohérente avec l’échelle des salaires, afin qu’ils ne puissent plus fixer librement leur…",
+    "resume_factuel": "Encadrer la rémunération du Président et des ministres en la rendant cohérente avec l’échelle des salaires, afin qu’ils ne puissent plus fixer librement leur propre rémunération.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-finances-publiques-003",
+    "candidat": "ruffin",
+    "theme": "finances-publiques",
+    "titre": "Réaliser 20 millions d’euros d’économies sur le budget de l’Élysée, notamment en mettant fin aux dépenses jugées excessives.",
+    "resume_factuel": "Réaliser 20 millions d’euros d’économies sur le budget de l’Élysée, notamment en mettant fin aux dépenses jugées excessives.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-finances-publiques-004",
+    "candidat": "ruffin",
+    "theme": "finances-publiques",
+    "titre": "Supprimer les rentes post-mandat à vie accordées aux anciens présidents de la République et aux anciens Premiers ministres.",
+    "resume_factuel": "Supprimer les rentes post-mandat à vie accordées aux anciens présidents de la République et aux anciens Premiers ministres.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Economies & hausses de dépenses",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "anciens présidents de la République et aux anciens Premiers ministres"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les rentes post-mandat à vie accordées aux anciens présidents de la République et aux anciens Premiers ministres."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-finances-publiques-005",
+    "candidat": "ruffin",
+    "theme": "finances-publiques",
     "titre": "Organiser des États généraux de la fiscalité : grande consultation nationale pour refondre le système fiscal.",
     "resume_factuel": "Organiser des États généraux de la fiscalité : grande consultation nationale pour refondre le système fiscal.",
     "sources": [
@@ -17,13 +128,14 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
   {
-    "id": "ruffin-finances-publiques-002",
+    "id": "ruffin-finances-publiques-006",
     "candidat": "ruffin",
     "theme": "finances-publiques",
     "titre": "Lutter contre l’évasion fiscale pour mettre fin aux stratégies d’évitement de l’impôt.",
@@ -40,9 +152,197 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
+    "titre_litteral": true,
     "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-finances-publiques-007",
+    "candidat": "ruffin",
+    "theme": "finances-publiques",
+    "titre": "Supprimer l'abattement progressif d'impôt sur les plus-values immobilières des terrains et résidences secondaires/locatives pour lutter contre la rétention…",
+    "resume_factuel": "Supprimer l'abattement progressif d'impôt sur les plus-values immobilières des terrains et résidences secondaires/locatives pour lutter contre la rétention foncière.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fiscalité",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "propriétaires de terrains et résidences secondaires/locatives vendant un bien avec plus-value"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer l'abattement progressif d'impôt sur les plus-values immobilières des terrains et résidences secondaires/locatives"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer l'abattement progressif d'impôt sur les plus-values immobilières des terrains et résidences secondaires/locatives"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-finances-publiques-008",
+    "candidat": "ruffin",
+    "theme": "finances-publiques",
+    "titre": "Rendre la taxe d'habitation sur les résidences secondaires progressive en fonction du niveau de revenu des propriétaires.",
+    "resume_factuel": "Rendre la taxe d'habitation sur les résidences secondaires progressive en fonction du niveau de revenu des propriétaires.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Fiscalité",
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre la taxe d'habitation sur les résidences secondaires progressive en fonction du niveau de revenu des propriétaires."
+      }
+    ]
+  },
+  {
+    "id": "ruffin-interieur-justice-001",
+    "candidat": "ruffin",
+    "theme": "interieur-justice",
+    "titre": "Rendre le Parquet indépendant.",
+    "resume_factuel": "Rendre le Parquet indépendant.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-interieur-justice-002",
+    "candidat": "ruffin",
+    "theme": "interieur-justice",
+    "titre": "Supprimer l’actuelle convention judiciaire d’intérêt public (CJIP).",
+    "resume_factuel": "Supprimer l’actuelle convention judiciaire d’intérêt public (CJIP).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-interieur-justice-003",
+    "candidat": "ruffin",
+    "theme": "interieur-justice",
+    "titre": "Renforcer l'indépendance du parquet en supprimant le pouvoir de nomination des magistrats du parquet par le Gouvernement.",
+    "resume_factuel": "Renforcer l'indépendance du parquet en supprimant le pouvoir de nomination des magistrats du parquet par le Gouvernement.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Justice & pénitentiaire",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-interieur-justice-004",
+    "candidat": "ruffin",
+    "theme": "interieur-justice",
+    "titre": "Plafonner le prix des billets d’avion entre l’Hexagone et les territoires dits d’Outre-Mer.",
+    "resume_factuel": "Plafonner le prix des billets d’avion entre l’Hexagone et les territoires dits d’Outre-Mer.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Outre-mer",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "outre_mer"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Plafonner le prix des billets d’avion entre l’Hexagone et les territoires dits d’Outre-Mer."
+      }
+    ],
     "positions": []
   },
   {
@@ -63,8 +363,2222 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Culture",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-002",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Reconnaître et sécuriser le bénévolat par un vrai statut et un congé bénévole rémunéré.",
+    "resume_factuel": "Reconnaître et sécuriser le bénévolat par un vrai statut et un congé bénévole rémunéré.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Culture",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-003",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Renouer entre l’État et le secteur associatif.",
+    "resume_factuel": "Renouer entre l’État et le secteur associatif.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Culture",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-004",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Proposer une loi pour des vacances accessibles à tous.",
+    "resume_factuel": "Proposer une loi pour des vacances accessibles à tous.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Culture",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-005",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Rendre le BAFA gratuit.",
+    "resume_factuel": "Rendre le BAFA gratuit.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Culture",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "candidats au BAFA"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre le BAFA gratuit."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-006",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Refonder une politique du tourisme populaire et écologique.",
+    "resume_factuel": "Refonder une politique du tourisme populaire et écologique.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Culture",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-007",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Investir dans le patrimoine du tourisme social : auberges de jeunesse, campings municipaux, villages de vacances associatifs.",
+    "resume_factuel": "Investir dans le patrimoine du tourisme social : auberges de jeunesse, campings municipaux, villages de vacances associatifs.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Culture",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-008",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Élargir le Pass Culture aux adultes les plus précaires ou isolés.",
+    "resume_factuel": "Élargir le Pass Culture aux adultes les plus précaires ou isolés.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Culture",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "adultes les plus précaires ou isolés"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Élargir le Pass Culture aux adultes les plus précaires ou isolés."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-009",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Développer le prêt gratuit de matériel de loisirs en médiathèques, structures sociales et ateliers de pratiques manuelles par quartier.",
+    "resume_factuel": "Développer le prêt gratuit de matériel de loisirs en médiathèques, structures sociales et ateliers de pratiques manuelles par quartier.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Culture",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-010",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Augmenter la contribution des employeurs au financement du logement des travailleurs essentiels, notamment dans les entreprises recourant massivement aux…",
+    "resume_factuel": "Augmenter la contribution des employeurs au financement du logement des travailleurs essentiels, notamment dans les entreprises recourant massivement aux horaires atypiques.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter la contribution des employeurs au financement du logement des travailleurs essentiels, notamment dans les entreprises recourant massivement aux horaires atypiques."
+      }
+    ]
+  },
+  {
+    "id": "ruffin-social-solidarite-011",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Supprimer la condition des dix salariés et plus pour accéder aux dispositifs du 1 % logement.",
+    "resume_factuel": "Supprimer la condition des dix salariés et plus pour accéder aux dispositifs du 1 % logement.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": []
+  },
+  {
+    "id": "ruffin-social-solidarite-012",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Prioriser les travailleurs essentiels dans l’accès aux aides au logement financées par le 1 % patronal.",
+    "resume_factuel": "Prioriser les travailleurs essentiels dans l’accès aux aides au logement financées par le 1 % patronal.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "travailleurs essentiels"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Prioriser les travailleurs essentiels dans l’accès aux aides au logement financées par le 1 % patronal."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-013",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Conditionner et plafonner strict le recours aux « compléments de loyer » aux seuls logements rénovés (étiquette énergie A, B ou C) dotés de protections…",
+    "resume_factuel": "Conditionner et plafonner strict le recours aux « compléments de loyer » aux seuls logements rénovés (étiquette énergie A, B ou C) dotés de protections solaires et de brasseurs d'air.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "encadrer_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Conditionner et plafonner strict le recours aux « compléments de loyer » aux seuls logements rénovés (étiquette énergie A, B ou C)"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-social-solidarite-014",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Doubler le montant du Prêt à Taux Zéro (PTZ) pour les accédants aux revenus modestes et moyens, et l'étendre aux ménages ayant contracté un PTZ récent.",
+    "resume_factuel": "Doubler le montant du Prêt à Taux Zéro (PTZ) pour les accédants aux revenus modestes et moyens, et l'étendre aux ménages ayant contracté un PTZ récent.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "projet_achat",
+            "valeurs": [
+              "oui"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "revenus modestes et moyens"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Doubler le montant du Prêt à Taux Zéro (PTZ) pour les accédants aux revenus modestes et moyens, et l'étendre aux ménages ayant contracté un PTZ récent."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-015",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Créer une solution publique de prêt à taux réduit « en second ressort » pour les salariés en contrat précaire essuyant un refus bancaire malgré des revenus…",
+    "resume_factuel": "Créer une solution publique de prêt à taux réduit « en second ressort » pour les salariés en contrat précaire essuyant un refus bancaire malgré des revenus réguliers.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "contrat précaire ayant essuyé un refus bancaire malgré des revenus réguliers"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer une solution publique de prêt à taux réduit « en second ressort » pour les salariés en contrat précaire essuyant un refus bancaire malgré des revenus réguliers."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-016",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Développer l'accession sociale via le Bail Réel Solidaire (BRS) en conservant son ciblage social et en exonérant les Offices Fonciers Solidaires de taxe…",
+    "resume_factuel": "Développer l'accession sociale via le Bail Réel Solidaire (BRS) en conservant son ciblage social et en exonérant les Offices Fonciers Solidaires de taxe foncière.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "encadrer_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Développer l'accession sociale via le Bail Réel Solidaire (BRS) en conservant son ciblage social"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-social-solidarite-017",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Porter les sanctions financières contre les logements illégaux ou surloués à au moins deux fois le montant des gains illicites perçus.",
+    "resume_factuel": "Porter les sanctions financières contre les logements illégaux ou surloués à au moins deux fois le montant des gains illicites perçus.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "encadrer_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Porter les sanctions financières contre les logements illégaux ou surloués"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-social-solidarite-018",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Abroger la loi Kasbarian-Bergé et privilégier la prévention des impayés et la médiation bailleur/locataire avant toute expulsion.",
+    "resume_factuel": "Abroger la loi Kasbarian-Bergé et privilégier la prévention des impayés et la médiation bailleur/locataire avant toute expulsion.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true
+  },
+  {
+    "id": "ruffin-social-solidarite-019",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Créer 8 000 places d'hébergement d'urgence supplémentaires par an dans les zones tendues et accélérer leur conversion en logements fixes accompagnés.",
+    "resume_factuel": "Créer 8 000 places d'hébergement d'urgence supplémentaires par an dans les zones tendues et accélérer leur conversion en logements fixes accompagnés.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-020",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Créer 200 000 places en résidences pour étudiants et jeunes actifs sur cinq ans via la mobilisation du foncier public et la construction hors-site.",
+    "resume_factuel": "Créer 200 000 places en résidences pour étudiants et jeunes actifs sur cinq ans via la mobilisation du foncier public et la construction hors-site.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer 200 000 places en résidences pour étudiants et jeunes actifs sur cinq ans via la mobilisation du foncier public et la construction hors-site."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-021",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Déployer un plan de création de 25 000 nouvelles places par an en résidences-autonomie et habitats inclusifs pour les séniors en perte d'autonomie légère.",
+    "resume_factuel": "Déployer un plan de création de 25 000 nouvelles places par an en résidences-autonomie et habitats inclusifs pour les séniors en perte d'autonomie légère.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-022",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Produire 200 000 logements sociaux et très sociaux à loyers modérés par an en rétablissant les crédits d'État accordés aux bailleurs sociaux.",
+    "resume_factuel": "Produire 200 000 logements sociaux et très sociaux à loyers modérés par an en rétablissant les crédits d'État accordés aux bailleurs sociaux.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "logement_social",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Produire 200 000 logements sociaux et très sociaux à loyers modérés par an en rétablissant les crédits d'État accordés aux bailleurs sociaux."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "encadrer_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Produire 200 000 logements sociaux et très sociaux à loyers modérés par an en rétablissant les crédits d'État accordés aux bailleurs sociaux"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-social-solidarite-023",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Financer la réalisation de 600 000 rénovations thermiques d'ampleur par an (isolation globale et chauffage décarboné) en mobilisant 15 milliards d'euros par an.",
+    "resume_factuel": "Financer la réalisation de 600 000 rénovations thermiques d'ampleur par an (isolation globale et chauffage décarboné) en mobilisant 15 milliards d'euros par an.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Financer la réalisation de 600 000 rénovations thermiques d'ampleur par an (isolation globale et chauffage décarboné)"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-social-solidarite-024",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Financer la réhabilitation de 60 000 à 80 000 logements vacants dégradés par an et accélérer les procédures d'expropriation ou de rachat par les collectivités…",
+    "resume_factuel": "Financer la réhabilitation de 60 000 à 80 000 logements vacants dégradés par an et accélérer les procédures d'expropriation ou de rachat par les collectivités des logements laissés à l'abandon depuis plus de deux ans.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Logement",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "encadrer_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "accélérer les procédures d'expropriation ou de rachat par les collectivités des logements laissés à l'abandon depuis plus de deux ans"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-social-solidarite-025",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Mettre en place un « billet populaire » illimité à 29 € par mois sur le réseau TER national du 1er juillet au 31 août.",
+    "resume_factuel": "Mettre en place un « billet populaire » illimité à 29 € par mois sur le réseau TER national du 1er juillet au 31 août.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Transports",
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "voiture",
+        "position": "restreindre_voiture",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un « billet populaire » illimité à 29 € par mois sur le réseau TER national"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-social-solidarite-026",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Reprendre en main les autoroutes pour abaisser le tarif des péages via une tarification publique.",
+    "resume_factuel": "Reprendre en main les autoroutes pour abaisser le tarif des péages via une tarification publique.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Transports",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-social-solidarite-027",
+    "candidat": "ruffin",
+    "theme": "social-solidarite",
+    "titre": "Développer les lignes de train du quotidien, le fret ferroviaire (tripler sa part), les trains de nuit et les liaisons européennes (pour réduire le trafic…",
+    "resume_factuel": "Développer les lignes de train du quotidien, le fret ferroviaire (tripler sa part), les trains de nuit et les liaisons européennes (pour réduire le trafic aérien de moitié).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Transports",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "voiture",
+        "position": "restreindre_voiture",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Développer les lignes de train du quotidien, le fret ferroviaire (tripler sa part), les trains de nuit et les liaisons européennes (pour réduire le trafic aérien de moitié)"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-retraites-travail-001",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Reconnaître un statut des travailleurs et travailleuses essentielles : métiers du liens, du secteur agro-alimentaire, de la santé qui sont mal rémunérés.",
+    "resume_factuel": "Reconnaître un statut des travailleurs et travailleuses essentielles : métiers du liens, du secteur agro-alimentaire, de la santé qui sont mal rémunérés.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-002",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Reconnaître aux travailleurs de la reconstruction écologique le statut de travailleurs essentiels",
+    "resume_factuel": "Reconnaître aux travailleurs de la reconstruction écologique le statut de travailleurs essentiels",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-003",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Indexer les salaires sur l’inflation afin de préserver le pouvoir d’achat des travailleurs.",
+    "resume_factuel": "Indexer les salaires sur l’inflation afin de préserver le pouvoir d’achat des travailleurs.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Indexer les salaires sur l’inflation afin de préserver le pouvoir d’achat des travailleurs."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "hausse_smic",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Indexer les salaires sur l’inflation afin de préserver le pouvoir d’achat des travailleurs."
+      }
+    ]
+  },
+  {
+    "id": "ruffin-retraites-travail-004",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Revaloriser les grilles de classification salariale pour mettre les minima conventionnels en conformité avec le SMIC et permettre une progression des…",
+    "resume_factuel": "Revaloriser les grilles de classification salariale pour mettre les minima conventionnels en conformité avec le SMIC et permettre une progression des rémunérations au cours de la carrière.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser les grilles de classification salariale pour mettre les minima conventionnels en conformité avec le SMIC et permettre une progression des rémunérations au cours de la carrière."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser les grilles de classification salariale pour mettre les minima conventionnels en conformité avec le SMIC et permettre une progression des rémunérations au cours de la carrière."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "hausse_smic",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser les grilles de classification salariale pour mettre les minima conventionnels en conformité avec le SMIC"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-retraites-travail-005",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Doubler la rémunération des heures travaillées avant 8 h et après 18 h, en créant une catégorie spécifique d’horaires atypiques dans le Code du travail.",
+    "resume_factuel": "Doubler la rémunération des heures travaillées avant 8 h et après 18 h, en créant une catégorie spécifique d’horaires atypiques dans le Code du travail.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Doubler la rémunération des heures travaillées avant 8 h et après 18 h, en créant une catégorie spécifique d’horaires atypiques dans le Code du travail."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Doubler la rémunération des heures travaillées avant 8 h et après 18 h, en créant une catégorie spécifique d’horaires atypiques dans le Code du travail."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-006",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Rémunérer les coupures de plus de deux heures imposées par l’employeur et instaurer une durée minimale de service.",
+    "resume_factuel": "Rémunérer les coupures de plus de deux heures imposées par l’employeur et instaurer une durée minimale de service.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rémunérer les coupures de plus de deux heures imposées par l’employeur et instaurer une durée minimale de service."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rémunérer les coupures de plus de deux heures imposées par l’employeur et instaurer une durée minimale de service."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-007",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Ajouter du temps rémunéré à chaque prise de poste.",
+    "resume_factuel": "Ajouter du temps rémunéré à chaque prise de poste.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Ajouter du temps rémunéré à chaque prise de poste."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Ajouter du temps rémunéré à chaque prise de poste."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-008",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Comptabiliser les temps de transport entre deux interventions comme du temps de travail effectif.",
+    "resume_factuel": "Comptabiliser les temps de transport entre deux interventions comme du temps de travail effectif.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Comptabiliser les temps de transport entre deux interventions comme du temps de travail effectif."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Comptabiliser les temps de transport entre deux interventions comme du temps de travail effectif."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-009",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Réduire l’amplitude horaire des journées de travail et mieux rémunérer les heures invisibles.",
+    "resume_factuel": "Réduire l’amplitude horaire des journées de travail et mieux rémunérer les heures invisibles.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire l’amplitude horaire des journées de travail et mieux rémunérer les heures invisibles."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire l’amplitude horaire des journées de travail et mieux rémunérer les heures invisibles."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-010",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Mettre fin aux temps partiels subis en limitant les dérogations conventionnelles à la durée minimale de travail et en sanctionnant les entreprises qui y…",
+    "resume_factuel": "Mettre fin aux temps partiels subis en limitant les dérogations conventionnelles à la durée minimale de travail et en sanctionnant les entreprises qui y recourent.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre fin aux temps partiels subis en limitant les dérogations conventionnelles à la durée minimale de travail et en sanctionnant les entreprises qui y recourent."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-011",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Garantir un droit à la reconversion professionnelle, en orientant prioritairement les financements des OPCO et l’offre de formation publique vers les…",
+    "resume_factuel": "Garantir un droit à la reconversion professionnelle, en orientant prioritairement les financements des OPCO et l’offre de formation publique vers les travailleurs essentiels.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "travailleurs essentiels"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir un droit à la reconversion professionnelle, en orientant prioritairement les financements des OPCO et l’offre de formation publique vers les travailleurs essentiels."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-012",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Garantir aux salariés sous-traitants les mêmes droits que ceux de l’entreprise donneuse d’ordre, en appliquant le régime le plus favorable en matière de…",
+    "resume_factuel": "Garantir aux salariés sous-traitants les mêmes droits que ceux de l’entreprise donneuse d’ordre, en appliquant le régime le plus favorable en matière de rémunération et d’avantages.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "salariés sous-traitants"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir aux salariés sous-traitants les mêmes droits que ceux de l’entreprise donneuse d’ordre, en appliquant le régime le plus favorable en matière de rémunération et d’avantages."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-013",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Lutter contre l’usage abusif de l’intérim pour des activités permanentes, en contrôlant et en sanctionnant les entreprises qui renouvellent abusivement les…",
+    "resume_factuel": "Lutter contre l’usage abusif de l’intérim pour des activités permanentes, en contrôlant et en sanctionnant les entreprises qui renouvellent abusivement les contrats temporaires.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-014",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Renforcer les moyens de l’inspection du travail afin de faire respecter les règles encadrant le recours à l’intérim.",
+    "resume_factuel": "Renforcer les moyens de l’inspection du travail afin de faire respecter les règles encadrant le recours à l’intérim.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-015",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Instaurer un principe de « broyeur-payeur » pour faire supporter aux employeurs le coût social des conditions de travail dégradées, notamment les conséquences…",
+    "resume_factuel": "Instaurer un principe de « broyeur-payeur » pour faire supporter aux employeurs le coût social des conditions de travail dégradées, notamment les conséquences sur la santé des salariés et les dépenses de Sécurité sociale.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un principe de « broyeur-payeur » pour faire supporter aux employeurs le coût social des conditions de travail dégradées, notamment les conséquences sur la santé des salariés et les dépenses de Sécurité sociale."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "faire supporter aux employeurs le coût social des conditions de travail dégradées"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-retraites-travail-016",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Adapter les conditions de travail aux effets du dérèglement climatique.",
+    "resume_factuel": "Adapter les conditions de travail aux effets du dérèglement climatique.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-017",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Reconnaître la canicule comme motif de chômage technique pour davantage de métiers.",
+    "resume_factuel": "Reconnaître la canicule comme motif de chômage technique pour davantage de métiers.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Emploi & travail",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Reconnaître la canicule comme motif de chômage technique pour davantage de métiers."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-retraites-travail-018",
+    "candidat": "ruffin",
+    "theme": "retraites-travail",
+    "titre": "Garantir un droit à la retraite anticipée pour pénibilité en accordant un trimestre supplémentaire de retraite pour quatre trimestres cotisés dans un métier…",
+    "resume_factuel": "Garantir un droit à la retraite anticipée pour pénibilité en accordant un trimestre supplémentaire de retraite pour quatre trimestres cotisés dans un métier exposé.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Système de retraite",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier_penible",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir un droit à la retraite anticipée pour pénibilité en accordant un trimestre supplémentaire de retraite pour quatre trimestres cotisés dans un métier exposé."
+      }
+    ]
+  },
+  {
+    "id": "ruffin-envi-001",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Interdire toute importation contenant des substances ou pesticides interdits en France.",
+    "resume_factuel": "Interdire toute importation contenant des substances ou pesticides interdits en France.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire toute importation contenant des substances ou pesticides interdits en France."
+      }
+    ]
+  },
+  {
+    "id": "ruffin-envi-002",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Lancer un grand plan « Territoire zéro chômeur » axé autour des travaux écologiques.",
+    "resume_factuel": "Lancer un grand plan « Territoire zéro chômeur » axé autour des travaux écologiques.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "sans_emploi"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lancer un grand plan « Territoire zéro chômeur » axé autour des travaux écologiques."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-envi-003",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Valoriser les métiers de la reconstruction écologique et créer des vocations.",
+    "resume_factuel": "Valoriser les métiers de la reconstruction écologique et créer des vocations.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-envi-004",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Fusionner le Secrétariat général à la planification écologique et le Haut-commissariat au plan au sein d'un Commissariat général à la planification rattaché au…",
+    "resume_factuel": "Fusionner le Secrétariat général à la planification écologique et le Haut-commissariat au plan au sein d'un Commissariat général à la planification rattaché au Premier ministre.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-envi-005",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Renforcer les prérogatives des commissions locales de l'eau (CLE) et y intégrer des collèges de citoyens tirés au sort pour le partage démocratique de l'eau.",
+    "resume_factuel": "Renforcer les prérogatives des commissions locales de l'eau (CLE) et y intégrer des collèges de citoyens tirés au sort pour le partage démocratique de l'eau.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-envi-006",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Soumettre par référendum les mesures phare de la Convention citoyenne pour le climat (interdiction de la publicité pour les produits polluants, taxe de 4 % sur…",
+    "resume_factuel": "Soumettre par référendum les mesures phare de la Convention citoyenne pour le climat (interdiction de la publicité pour les produits polluants, taxe de 4 % sur les dividendes, interdiction des vols intérieurs avec alternative en train de moins de 4 h).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": []
+  },
+  {
+    "id": "ruffin-envi-007",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Instaurer des assises de la qualité de l'air dans toutes les métropoles pour co-construire les mesures de protection de l'air avec les citoyens.",
+    "resume_factuel": "Instaurer des assises de la qualité de l'air dans toutes les métropoles pour co-construire les mesures de protection de l'air avec les citoyens.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-envi-008",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Financer un programme de solidarité climatique pour installer gratuitement des protections solaires (volets, brasseurs d'air) chez les ménages très modestes.",
+    "resume_factuel": "Financer un programme de solidarité climatique pour installer gratuitement des protections solaires (volets, brasseurs d'air) chez les ménages très modestes.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "ménages très modestes"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "installer gratuitement des protections solaires (volets, brasseurs d'air) chez les ménages très modestes"
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-envi-009",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Créer un délit de faute systémique, pénaliser le manquement au devoir de vigilance et limiter la délégation de pouvoir pour sanctionner les dirigeants de…",
+    "resume_factuel": "Créer un délit de faute systémique, pénaliser le manquement au devoir de vigilance et limiter la délégation de pouvoir pour sanctionner les dirigeants de multinationales responsables de pollutions majeures.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Ecologie",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "pénaliser le manquement au devoir de vigilance et limiter la délégation de pouvoir pour sanctionner les dirigeants de multinationales responsables de pollutions majeures"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-envi-010",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Mieux rémunérer les agriculteurs.",
+    "resume_factuel": "Mieux rémunérer les agriculteurs.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mieux rémunérer les agriculteurs."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-envi-011",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Réorienter les aides agricoles vers le travail et les premiers hectares, tout en plafonnant les aides aux plus grandes exploitations.",
+    "resume_factuel": "Réorienter les aides agricoles vers le travail et les premiers hectares, tout en plafonnant les aides aux plus grandes exploitations.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réorienter les aides agricoles vers le travail et les premiers hectares"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "plus grandes exploitations agricoles"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "plafonnant les aides aux plus grandes exploitations"
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-envi-012",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Généraliser les paiements pour services environnementaux (PSE) pour rémunérer les agriculteurs protégeant l'eau, les haies, les prairies et la biodiversité…",
+    "resume_factuel": "Généraliser les paiements pour services environnementaux (PSE) pour rémunérer les agriculteurs protégeant l'eau, les haies, les prairies et la biodiversité (entre 100 € et 150 € par hectare).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Généraliser les paiements pour services environnementaux (PSE) pour rémunérer les agriculteurs protégeant l'eau, les haies, les prairies et la biodiversité (entre 100 € et 150 € par hectare)."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Généraliser les paiements pour services environnementaux (PSE) pour rémunérer les agriculteurs protégeant l'eau, les haies, les prairies et la biodiversité"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-envi-013",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Moduler les prix planchers pour garantir une rémunération supérieure aux produits sous label et issus de l'agriculture biologique.",
+    "resume_factuel": "Moduler les prix planchers pour garantir une rémunération supérieure aux produits sous label et issus de l'agriculture biologique.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Moduler les prix planchers pour garantir une rémunération supérieure aux produits sous label et issus de l'agriculture biologique."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-envi-014",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Interdire l'importation de denrées agricoles à des prix inférieurs aux prix planchers fixés nationalement",
+    "resume_factuel": "Interdire l'importation de denrées agricoles à des prix inférieurs aux prix planchers fixés nationalement",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire l'importation de denrées agricoles à des prix inférieurs aux prix planchers fixés nationalement"
+      }
+    ]
+  },
+  {
+    "id": "ruffin-envi-015",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Rendre l'étiquetage de l'origine des aliments obligatoire et systématique, notamment sur les produits transformés.",
+    "resume_factuel": "Rendre l'étiquetage de l'origine des aliments obligatoire et systématique, notamment sur les produits transformés.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-envi-016",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Développer l'élevage herbager et la polyculture-élevage à taille humaine en sortant du modèle hors-sol dépendant des importations de soja.",
+    "resume_factuel": "Développer l'élevage herbager et la polyculture-élevage à taille humaine en sortant du modèle hors-sol dépendant des importations de soja.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Développer l'élevage herbager et la polyculture-élevage à taille humaine en sortant du modèle hors-sol dépendant des importations de soja."
+      }
+    ]
+  },
+  {
+    "id": "ruffin-envi-017",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Créer un fonds de garantie pour l'agriculture biologique rétablissant l'aide au maintien et renforçant les moyens de l'Agence Bio.",
+    "resume_factuel": "Créer un fonds de garantie pour l'agriculture biologique rétablissant l'aide au maintien et renforçant les moyens de l'Agence Bio.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un fonds de garantie pour l'agriculture biologique rétablissant l'aide au maintien et renforçant les moyens de l'Agence Bio."
+      }
+    ]
+  },
+  {
+    "id": "ruffin-envi-018",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Imposer et accompagner le respect de 30 % de produits bio en restauration collective (cantines, hôpitaux) d'ici 2030, puis 50 % d'ici 2035.",
+    "resume_factuel": "Imposer et accompagner le respect de 30 % de produits bio en restauration collective (cantines, hôpitaux) d'ici 2030, puis 50 % d'ici 2035.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Imposer et accompagner le respect de 30 % de produits bio en restauration collective (cantines, hôpitaux) d'ici 2030, puis 50 % d'ici 2035."
+      }
+    ]
+  },
+  {
+    "id": "ruffin-envi-019",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Développer les circuits courts, la vente directe et l'éducation à l'alimentation et au goût dès l'école.",
+    "resume_factuel": "Développer les circuits courts, la vente directe et l'éducation à l'alimentation et au goût dès l'école.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-envi-020",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Revaloriser les retraites agricoles et garantir le droit aux congés pour rendre le métier vivable.",
+    "resume_factuel": "Revaloriser les retraites agricoles et garantir le droit aux congés pour rendre le métier vivable.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "retraite"
+            ]
+          },
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser les retraites agricoles et garantir le droit aux congés pour rendre le métier vivable."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-envi-021",
+    "candidat": "ruffin",
+    "theme": "environnement",
+    "titre": "Intégrer l'agriculture paysanne et la transition agroécologique dans les référentiels d'enseignement et renforcer la formation continue des enseignants de…",
+    "resume_factuel": "Intégrer l'agriculture paysanne et la transition agroécologique dans les référentiels d'enseignement et renforcer la formation continue des enseignants de l'enseignement agricole public.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Agriculture",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   },
@@ -86,82 +2600,29 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": [],
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "Président de la République"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire le salaire du président de la République à un salaire équivalent au SMIC."
+      }
+    ],
     "positions": []
   },
   {
     "id": "ruffin-gouvernance-republique-002",
-    "candidat": "ruffin",
-    "theme": "gouvernance-republique",
-    "titre": "Réduire le budget de l’Élysée : 20 M€ d’économies réalisées.",
-    "resume_factuel": "Réduire le budget de l’Élysée : 20 M€ d’économies réalisées.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": [],
-    "positions": []
-  },
-  {
-    "id": "ruffin-gouvernance-republique-003",
-    "candidat": "ruffin",
-    "theme": "gouvernance-republique",
-    "titre": "Supprimer les privilèges : logements de fonction, chauffeurs, personnel. Maintien uniquement de la protection policière si nécessaire.",
-    "resume_factuel": "Supprimer les privilèges : logements de fonction, chauffeurs, personnel. Maintien uniquement de la protection policière si nécessaire.",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": [],
-    "positions": []
-  },
-  {
-    "id": "ruffin-gouvernance-republique-004",
-    "candidat": "ruffin",
-    "theme": "gouvernance-republique",
-    "titre": "Baisser les hauts salaires politiques (cabinets ministériels, parlementaires, hauts fonctionnaires).",
-    "resume_factuel": "Baisser les hauts salaires politiques (cabinets ministériels, parlementaires, hauts fonctionnaires).",
-    "sources": [
-      {
-        "type": "secondaire",
-        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
-        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "nom": "Fondation iFRAP",
-        "annee": 2026
-      }
-    ],
-    "chiffrage_disponible": false,
-    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
-    "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
-    "sous_theme": "Démocratie, élections et pouvoir législatif",
-    "effets": [],
-    "positions": []
-  },
-  {
-    "id": "ruffin-gouvernance-republique-005",
     "candidat": "ruffin",
     "theme": "gouvernance-republique",
     "titre": "Voter une « Loi de séparation de l’État et de l’argent » : limiter l’influence des grandes entreprises, des banques, des cabinets de conseil.",
@@ -178,8 +2639,327 @@
     "chiffrage_disponible": false,
     "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
     "statut": "partiel",
-    "date_derniere_verification": "2026-09-26",
+    "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-gouvernance-republique-003",
+    "candidat": "ruffin",
+    "theme": "gouvernance-republique",
+    "titre": "Renforcer les conditions de probité pour accéder aux fonctions présidentielles et ministérielles : absence de condamnation pour délit financier, justification…",
+    "resume_factuel": "Renforcer les conditions de probité pour accéder aux fonctions présidentielles et ministérielles : absence de condamnation pour délit financier, justification du paiement des impôts et absence de conflit d'intérêt.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-gouvernance-republique-004",
+    "candidat": "ruffin",
+    "theme": "gouvernance-republique",
+    "titre": "Imposer la démission immédiate d’un ministre mis en examen pendant la durée de la procédure judiciaire.",
+    "resume_factuel": "Imposer la démission immédiate d’un ministre mis en examen pendant la durée de la procédure judiciaire.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-gouvernance-republique-005",
+    "candidat": "ruffin",
+    "theme": "gouvernance-republique",
+    "titre": "Soumettre le Président de la République et les ministres aux règles judiciaires ordinaires (suppression de la Cour de justice de la République, fin de…",
+    "resume_factuel": "Soumettre le Président de la République et les ministres aux règles judiciaires ordinaires (suppression de la Cour de justice de la République, fin de l'inviolabilité pénale et civile du Président, suppression des privilèges de juridiction des ministres).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "le Président de la République et les ministres"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "suppression de la Cour de justice de la République, fin de l'inviolabilité pénale et civile du Président, suppression des privilèges de juridiction des ministres"
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-gouvernance-republique-006",
+    "candidat": "ruffin",
+    "theme": "gouvernance-republique",
+    "titre": "Imposer aux ministres des stages d’immersion dans les métiers relevant de leur ministère, au début de leur mandat puis régulièrement, au contact des…",
+    "resume_factuel": "Imposer aux ministres des stages d’immersion dans les métiers relevant de leur ministère, au début de leur mandat puis régulièrement, au contact des professionnels et sans opération de communication.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-gouvernance-republique-007",
+    "candidat": "ruffin",
+    "theme": "gouvernance-republique",
+    "titre": "Créer la Haute Autorité à la Probité, fusion de l’ensemble des organes existants de l’éthique de la vie publique.",
+    "resume_factuel": "Créer la Haute Autorité à la Probité, fusion de l’ensemble des organes existants de l’éthique de la vie publique.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-gouvernance-republique-008",
+    "candidat": "ruffin",
+    "theme": "gouvernance-republique",
+    "titre": "Mettre fin au cumul des mandats exécutifs locaux et des fonctions ministérielles.",
+    "resume_factuel": "Mettre fin au cumul des mandats exécutifs locaux et des fonctions ministérielles.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-gouvernance-republique-009",
+    "candidat": "ruffin",
+    "theme": "gouvernance-republique",
+    "titre": "Fixer un plafond de dépenses pour les activités de lobbying des acteurs lucratifs contrôlé par la Haute Autorité à la Probité.",
+    "resume_factuel": "Fixer un plafond de dépenses pour les activités de lobbying des acteurs lucratifs contrôlé par la Haute Autorité à la Probité.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-gouvernance-republique-010",
+    "candidat": "ruffin",
+    "theme": "gouvernance-republique",
+    "titre": "Interdire tout contact entre décideurs publics et lobbies dans les secteurs stratégiques (santé, défense, énergie, données, infrastructures).",
+    "resume_factuel": "Interdire tout contact entre décideurs publics et lobbies dans les secteurs stratégiques (santé, défense, énergie, données, infrastructures).",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-gouvernance-republique-011",
+    "candidat": "ruffin",
+    "theme": "gouvernance-republique",
+    "titre": "Instaurer un « cahier des visiteurs du soir » obligatoire et public consignant l'identité, l'objet et les documents remis lors des rencontres entre décideurs…",
+    "resume_factuel": "Instaurer un « cahier des visiteurs du soir » obligatoire et public consignant l'identité, l'objet et les documents remis lors des rencontres entre décideurs publics et représentants d'intérêts.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Démocratie, élections et pouvoir législatif",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-gouvernance-republique-012",
+    "candidat": "ruffin",
+    "theme": "gouvernance-republique",
+    "titre": "Instaurer un droit opposable à la formation avec maintien intégral du salaire, permettant d’acquérir le niveau du baccalauréat après cinq ans dans un métier…",
+    "resume_factuel": "Instaurer un droit opposable à la formation avec maintien intégral du salaire, permettant d’acquérir le niveau du baccalauréat après cinq ans dans un métier essentiel.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Egalité, laïcité & droits individuels",
+    "titre_litteral": true,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes ayant cinq ans dans un métier essentiel"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un « droit opposable à la formation » avec maintien intégral du salaire, permettant d’acquérir le niveau du baccalauréat après cinq ans dans un métier essentiel."
+      }
+    ],
+    "positions": []
+  },
+  {
+    "id": "ruffin-reformes-etat-001",
+    "candidat": "ruffin",
+    "theme": "reformes-etat",
+    "titre": "Lancer un plan national de cartographie et de réinternalisation des compétences stratégiques au sein des administrations publiques.",
+    "resume_factuel": "Lancer un plan national de cartographie et de réinternalisation des compétences stratégiques au sein des administrations publiques.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Administrations et opérateurs",
+    "titre_litteral": true,
+    "effets": [],
+    "positions": []
+  },
+  {
+    "id": "ruffin-education-jeunesse-001",
+    "candidat": "ruffin",
+    "theme": "education-jeunesse",
+    "titre": "Refonder la pédagogie de l'enseignement artistique à l'école en privilégiant la pratique directe et en ouvrant les établissements aux intervenants extérieurs.",
+    "resume_factuel": "Refonder la pédagogie de l'enseignement artistique à l'école en privilégiant la pratique directe et en ouvrant les établissements aux intervenants extérieurs.",
+    "sources": [
+      {
+        "type": "secondaire",
+        "label": "Fondation iFRAP — Comparateur des programmes des candidats à la présidentielle 2027",
+        "url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "nom": "Fondation iFRAP",
+        "annee": 2026
+      }
+    ],
+    "chiffrage_disponible": false,
+    "hypotheses_calcul": "Aucun calcul : proposition reprise telle que rédigée par la source, sans vérification auprès du programme officiel.",
+    "statut": "partiel",
+    "date_derniere_verification": "2026-10-12",
+    "sous_theme": "Education nationale",
+    "titre_litteral": true,
     "effets": [],
     "positions": []
   }

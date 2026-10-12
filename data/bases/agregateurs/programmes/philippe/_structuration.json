@@ -2,28 +2,33 @@
   {
     "theme": "education-jeunesse",
     "groupe": 0,
-    "empreinte": "4ba2556a204bbbc4",
-    "date": "2026-10-11",
+    "empreinte": "cecc8f004aafda77",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 9,
-    "avec_effets": 3,
-    "sans_effet": 6,
-    "rejetees": [],
-    "cout_reference_usd": 0.0562,
+    "propositions": 8,
+    "avec_effets": 2,
+    "sans_effet": 5,
+    "rejetees": [
+      {
+        "id": "philippe-education-jeunesse-006",
+        "raison": "relecture : Le texte décrit un changement de rythme scolaire (durée des journées, vacances), pas une évolution de l'accès aux services, donc la dimension choisie n'est pas fondée par l'extrait."
+      }
+    ],
+    "cout_reference_usd": 0.0582,
     "appels": 2
   },
   {
     "theme": "environnement",
     "groupe": 0,
-    "empreinte": "4caf306caf14071a",
-    "date": "2026-10-11",
+    "empreinte": "8be78cbf3aeb3ed5",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 11,
-    "avec_effets": 0,
-    "sans_effet": 11,
+    "propositions": 19,
+    "avec_effets": 1,
+    "sans_effet": 18,
     "rejetees": [],
-    "cout_reference_usd": 0.0419,
-    "appels": 1
+    "cout_reference_usd": 0.0639,
+    "appels": 2
   },
   {
     "theme": "finances-publiques",
@@ -59,80 +64,71 @@
   {
     "theme": "interieur-justice",
     "groupe": 0,
-    "empreinte": "46c88a3ad2c7c145",
-    "date": "2026-10-11",
+    "empreinte": "10d9e74c43a8bae4",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "avec_effets": 9,
-    "sans_effet": 14,
-    "rejetees": [
-      {
-        "id": "philippe-interieur-justice-002",
-        "raison": "relecture : La restriction de l'immigration familiale vise les ressortissants étrangers soumis à ce régime (hors UE), pas les ressortissants européens qui bénéficient de la libre circulation : le périmètre est élargi."
-      },
-      {
-        "id": "philippe-interieur-justice-024",
-        "raison": "relecture : Le texte ne décrit qu'une information systématique de l'employeur public ; une baisse des droits et libertés suppose une conséquence (sanction, suspension) non énoncée, c'est un effet déduit par un mécanisme supposé."
-      }
-    ],
-    "cout_reference_usd": 0.1075,
+    "avec_effets": 7,
+    "sans_effet": 18,
+    "rejetees": [],
+    "cout_reference_usd": 0.097,
     "appels": 2
   },
   {
     "theme": "interieur-justice",
     "groupe": 1,
-    "empreinte": "20a5dc4b4fb6e691",
-    "date": "2026-10-11",
+    "empreinte": "3654dfdf768020d7",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 2,
-    "avec_effets": 0,
-    "sans_effet": 2,
+    "propositions": 4,
+    "avec_effets": 1,
+    "sans_effet": 3,
     "rejetees": [],
-    "cout_reference_usd": 0.0059,
-    "appels": 1
+    "cout_reference_usd": 0.0252,
+    "appels": 2
   },
   {
     "theme": "reformes-etat",
     "groupe": 0,
-    "empreinte": "c2e7b29fd2662ef0",
-    "date": "2026-10-11",
+    "empreinte": "ffcbf060f86ada25",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 4,
+    "propositions": 5,
     "avec_effets": 0,
-    "sans_effet": 4,
+    "sans_effet": 5,
     "rejetees": [],
-    "cout_reference_usd": 0.0342,
+    "cout_reference_usd": 0.0346,
     "appels": 1
   },
   {
     "theme": "retraites-travail",
     "groupe": 0,
-    "empreinte": "408ebdfebe2546be",
-    "date": "2026-10-11",
+    "empreinte": "89669d1011c35928",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 6,
+    "propositions": 5,
     "avec_effets": 3,
-    "sans_effet": 3,
-    "rejetees": [],
-    "cout_reference_usd": 0.0655,
+    "sans_effet": 1,
+    "rejetees": [
+      {
+        "id": "philippe-retraites-travail-003",
+        "raison": "relecture : L'abondement de 500€ sur un plan d'épargne retraite obligatoire est une hausse de patrimoine (bloqué jusqu'à la retraite), pas une hausse immédiate du revenu disponible."
+      }
+    ],
+    "cout_reference_usd": 0.0762,
     "appels": 2
   },
   {
     "theme": "social-solidarite",
     "groupe": 0,
-    "empreinte": "9bcdedcaea071981",
-    "date": "2026-10-11",
+    "empreinte": "1ca724ee6cb6473b",
+    "date": "2026-10-12",
     "modele": "claude-sonnet-5",
-    "propositions": 4,
-    "avec_effets": 1,
+    "propositions": 7,
+    "avec_effets": 5,
     "sans_effet": 2,
-    "rejetees": [
-      {
-        "id": "philippe-social-solidarite-003",
-        "raison": "relecture : Un prêt à taux zéro est un crédit à rembourser, pas un gain de revenu disponible ; le sens hausse n'est pas fondé."
-      }
-    ],
-    "cout_reference_usd": 0.0521,
+    "rejetees": [],
+    "cout_reference_usd": 0.0689,
     "appels": 2
   }
 ]
