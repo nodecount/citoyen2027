@@ -25,7 +25,7 @@ describe("Accueil", () => {
 
   it("annonce le nombre de candidats à l'élection", () => {
     const rendu = rendre("agregateurs");
-    expect(rendu).toContain("19 candidats</strong><span>à l&#x27;élection présidentielle 2027</span>");
+    expect(rendu).toContain("12 candidats</strong><span>à l&#x27;élection présidentielle 2027</span>");
   });
 
   it("affiche le tableau « qui propose quoi », sans les crédits photos (ils sont sur la page À propos)", () => {

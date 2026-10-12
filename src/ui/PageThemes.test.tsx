@@ -54,7 +54,7 @@ describe("page des thèmes, sur les données réelles", () => {
     expect(rendu).toContain("Retraites &amp; Travail");
     expect(rendu).not.toContain("Mes impôts");
     expect(rendu).toContain('src="/candidats/le-pen.');
-    expect(rendu).toContain(">PS<"); // le Parti socialiste n'est pas une personne : initiales, pas de photo
+    expect(rendu).toContain(`src="/candidats/glucksmann.`);
   });
 
   it("n'écrit pas le nom des candidats sous leur portrait", () => {
