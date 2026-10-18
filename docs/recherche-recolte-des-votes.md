@@ -117,6 +117,76 @@ l'échantillon lu, mais n'est pas réutilisable (voir licence) : pas d'indicateu
 - Ce qui bouge ces indicateurs est ailleurs que dans la récolte : formulaire propre à la base (le formulaire actuel est celui
   d'`agregateurs`), étiquettes de convictions (`scrape:positions` non lancé), unité de mesure (articles clés).
 
+## Constat de recherche n° 1 (2026-10-18) : la méthode de récolte pèse peu
+
+Les trois méthodes récoltent les mêmes votes à 2,5 % près ; l'Assemblée est la plus propre (référence), NosParlementaires se
+trompe sur les députés qui ont changé de groupe, Datan est exact mais non réutilisable. Le blocage n'est pas là, il est en aval :
+un vote dit « ce groupe a soutenu cet article », et la plupart des articles parlent de procédures, d'infractions ou de dispositifs
+techniques, pas de personnes concrètes. Sur l'échantillon, 4 mesures sur 100 seulement touchent un public que le formulaire sait
+décrire, et le même candidat arrive premier pour les 11 profils de citoyens. La question de recherche devient : **à quel niveau
+du processus législatif faut-il prendre le vote pour qu'il serve au citoyen ?** Limite : un seul lot de 15 lois, un seul réglage
+de transformation.
+
+## Deuxième comparaison : le niveau du vote (loi entière, article, amendement)
+
+Un vote peut porter sur trois « objets » du même texte. Même lot (15 lois), mêmes 8 groupes, récolte par le fichier officiel (B),
+même règle de position de groupe, même structuration des effets par le modèle. Chaque niveau a été mené jusqu'à des effets
+décrits : ensemble et article sur la totalité du lot ; amendement sur un échantillon de 200 mesures (25 par groupe, réparties
+dans le temps) parce que le niveau compte plus de 5 000 mesures (coût trop élevé pour un essai).
+
+| | Vote sur l'ensemble de la loi | Vote sur un article | Vote sur un amendement |
+|---|---|---|---|
+| Scrutins du lot | 29 | 310 (242 retenus par le code actuel) | 3 254 |
+| Mesures « pour » obtenues | 114 | 823 (878 avant recherche du texte) | environ 5 560 (7 140 × 78 % d'appariement) |
+| Texte analysé par le modèle | début de la loi (2 500 caractères sur 127 000 en moyenne) | l'article voté (1 786 caractères en moyenne) | dispositif + exposé des motifs de l'auteur (1 649 caractères) |
+| Nature du texte | juridique, tronqué | juridique, sans explication | **juridique + explication en langage courant (exposé sommaire, présent dans 99 % des cas)** |
+| Ce que le vote engage | la loi entière, mélange de dispositions | un article | une modification proposée (adoptée ou rejetée) |
+| Candidats avec au moins une mesure à effet | 6 sur 8 | 7 sur 8 | 8 sur 8 |
+| Mesures à effet décrit | 30 sur 114 (26 %) | 92 sur 823 (11 %) | 28 sur 200 (14 %) |
+| Mesures exploitables (le public visé est décrit par le formulaire) | 5 (4,4 %) | 24 (2,9 %) | 9 (4,5 %) |
+| Questions du formulaire touchées | 3 (sur 114 mesures) | 5 (sur 823) | 7 (sur 200) |
+| Petit groupe (GDR) | 3 mesures | 2 mesures | 75 mesures disponibles |
+
+Écart de lecture : les trois échantillons n'ont pas la même taille, les « questions touchées » ne sont comparables qu'à taille égale.
+
+### Indicateur de complexité d'intégration
+Définition (de lecture simple, à repondérer si besoin) : **nombre d'étapes de jointure entre le vote et le texte analysé + taux
+d'échec de l'appariement en dizaines de % + volume de données à manipuler (0 sous 100 Mo, 1 de 100 Mo à 1 Go, 2 au-delà)**.
+
+| Niveau | Jointures | Échec d'appariement | Volume | **Indice** | Détail |
+|---|---|---|---|---|---|
+| Loi entière | 2 (scrutin → dossier → texte adopté) | 0 % (29 sur 29) | 0 (texte seul : 38 Mo de scrutins et dossiers) | **2,0** | Réutilise le code existant. Le texte est trop long (127 000 caractères en moyenne) : il faut le tronquer (c'est ce qui a été mesuré ici) ou le découper, ce qui revient au niveau article. |
+| Article | 3 (scrutin → dossier → texte → article) | 30 % (93 sur 310 : 68 titres non reconnus, par exemple « (examen prioritaire) », et 25 articles introuvables) | 0 | **6,0** | Découpage du texte par numéro d'article ; numérotation instable (articles « bis », lois renumérotées). Les 68 titres non reconnus sont un défaut de notre code, corrigeable. |
+| Amendement | 4 (scrutin → dossier → fichier des amendements → numéro → texte) | 22 % (719 sur 3 254) | 1 (archive de 344 Mo, 919 Mo décompressée, 140 811 fichiers dont 28 214 pour nos lois) | **7,2** | Le numéro d'amendement n'est pas unique (32 % des cas : même numéro en commission et en séance) ; levé par la date, qui laisse 22 % sans appariement, dont deux lois dont le dossier est de la XVIe. |
+
+### Indicateur de coût
+Coût de référence de la structuration par le modèle (tarif public, non facturé : l'usage compte dans l'abonnement). Indicateur
+retenu : **coût par mesure exploitable**, car c'est ce que le moteur peut utiliser.
+
+| Niveau | Mesures | Coût mesuré | Coût par mesure à effet | **Coût par mesure exploitable** | Coût du niveau complet |
+|---|---|---|---|---|---|
+| Loi entière | 114 | 1,72 $ (60 appels) | 0,057 $ | **0,34 $** | 1,72 $ (complet) |
+| Article | 823 | 5,91 $ (108 appels) | 0,064 $ | **0,25 $** | 5,91 $ (complet) |
+| Amendement | 200 (échantillon) | 2,62 $ (63 appels) | 0,094 $ | **0,29 $** | environ 38 à 73 $ extrapolé pour 5 560 mesures (selon le regroupement des appels) |
+
+Calibrage (régression sur les 69 groupes d'articles, R² = 0,91) : **0,025 $ par appel + 0,0022 $ par millier de caractères**.
+Les coûts « complet » des amendements en sont tirés, non mesurés. Gain possible hors indicateur : le texte étant le même pour tous
+les groupes, on pourrait décrire chaque texte une seule fois et rattacher l'effet à chaque groupe qui a voté pour : 114 → 29 textes
+(÷ 3,9), 823 → 217 (÷ 3,8), 5 560 → 2 535 (÷ 2,2). Le code actuel structure une mesure par groupe et paie donc ce travail
+plusieurs fois.
+
+### Constat de recherche n° 2
+- Aucun niveau ne règle seul le problème : la part de mesures dont le public est décrit par le formulaire reste entre 3 et 5 %
+  aux trois niveaux. Le formulaire (copié d'iFRAP) est le goulot commun.
+- Les trois niveaux diffèrent surtout par ce qu'ils disent et par leur complexité : la loi entière est simple à relier mais le texte
+  analysé n'est que le début de la loi (donc 26 % d'effets décrits, peu fiables) ; l'article coûte le moins par mesure exploitable
+  mais le texte est juridique ; l'amendement est le seul niveau qui porte une explication en langage courant, couvre les huit
+  candidats (y compris le petit groupe GDR), mais il est le plus complexe à relier (indice 7,2) et le plus cher (environ 40 à 70 $).
+- Un amendement voté « pour » dit ce que le groupe veut, pas ce qui a été adopté : le statut (adopté, rejeté) est dans les données et
+  n'est pas encore utilisé.
+- Limites : amendements mesurés sur 200 mesures, dont 28 à effet : l'écart avec l'article (14 % contre 11 %) n'est pas
+  statistiquement établi. Le lot est le même pour les trois niveaux, mais les échantillons ne le sont pas.
+
 ## Grille pour la décision (à compléter par le chercheur)
 
 | Critère | A | B | C |
