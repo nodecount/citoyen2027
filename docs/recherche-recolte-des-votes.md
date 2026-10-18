@@ -187,6 +187,18 @@ plusieurs fois.
 - Limites : amendements mesurés sur 200 mesures, dont 28 à effet : l'écart avec l'article (14 % contre 11 %) n'est pas
   statistiquement établi. Le lot est le même pour les trois niveaux, mais les échantillons ne le sont pas.
 
+### Pistes non appliquées (notées le 2026-10-18)
+- **Décrire chaque texte une seule fois**, puis rattacher l'effet à chaque groupe qui a voté pour : le code actuel refait l'analyse
+  pour chaque groupe (÷ 3,8 des appels pour l'article, ÷ 3,9 pour la loi entière, ÷ 2,2 pour l'amendement).
+- **Utiliser le statut de l'amendement** (adopté ou rejeté), présent dans les données et ignoré pour l'instant.
+- **Corriger la reconnaissance des titres d'articles** : 68 scrutins d'articles (titres avec « (examen prioritaire) » et variantes)
+  échappent à `articleDuScrutin` ; la base `votes` actuelle en est légèrement appauvrie.
+
+### Suite prévue
+Arbitrage à faire par le porteur du projet, plus tard : choisir le niveau (et la méthode de récolte) **le plus efficace et le moins
+coûteux**, à partir des deux indicateurs ci-dessus (complexité d'intégration, coût par mesure exploitable). Rien n'est décidé ; aucun
+changement n'a été fait dans la base `votes`, qui reste construite par la méthode A au niveau article.
+
 ## Grille pour la décision (à compléter par le chercheur)
 
 | Critère | A | B | C |
