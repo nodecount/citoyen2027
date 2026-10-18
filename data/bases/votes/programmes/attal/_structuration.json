@@ -1,0 +1,195 @@
+[
+  {
+    "theme": "agriculture",
+    "groupe": 0,
+    "empreinte": "91bad7daae332175",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 15,
+    "avec_effets": 0,
+    "sans_effet": 15,
+    "rejetees": [],
+    "cout_reference_usd": 0.0867,
+    "appels": 1
+  },
+  {
+    "theme": "armee-defense",
+    "groupe": 0,
+    "empreinte": "1105c38dedbdad50",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 0,
+    "sans_effet": 25,
+    "rejetees": [],
+    "cout_reference_usd": 0.1074,
+    "appels": 1
+  },
+  {
+    "theme": "armee-defense",
+    "groupe": 1,
+    "empreinte": "c80cc709172e6187",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 14,
+    "avec_effets": 4,
+    "sans_effet": 10,
+    "rejetees": [],
+    "cout_reference_usd": 0.0687,
+    "appels": 2
+  },
+  {
+    "theme": "budget-securite-sociale",
+    "groupe": 0,
+    "empreinte": "f7b9deebb1d27d47",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 3,
+    "sans_effet": 21,
+    "rejetees": [
+      {
+        "id": "attal-budget-securite-sociale-v4619",
+        "raison": "relecture : L'extrait précise seulement que le CHU assure le paiement de la rémunération des étudiants, sans indiquer une hausse du montant perçu ; rien ne fonde une augmentation du revenu disponible."
+      }
+    ],
+    "cout_reference_usd": 0.1768,
+    "appels": 2
+  },
+  {
+    "theme": "budget-securite-sociale",
+    "groupe": 1,
+    "empreinte": "bc49b0d2b9e95515",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 17,
+    "avec_effets": 0,
+    "sans_effet": 16,
+    "rejetees": [
+      {
+        "id": "attal-budget-securite-sociale-v5869",
+        "raison": "relecture : L'effet ne cible personne en particulier alors que le texte ne vise que les auteurs de fraude à partir de la troisième infraction, ce qui élargit le périmètre à tous les citoyens."
+      }
+    ],
+    "cout_reference_usd": 0.1071,
+    "appels": 2
+  },
+  {
+    "theme": "economie-entreprises",
+    "groupe": 0,
+    "empreinte": "86e616625aea4c11",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 12,
+    "avec_effets": 0,
+    "sans_effet": 12,
+    "rejetees": [],
+    "cout_reference_usd": 0.0775,
+    "appels": 1
+  },
+  {
+    "theme": "logement",
+    "groupe": 0,
+    "empreinte": "277237a7bcf570df",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 7,
+    "avec_effets": 0,
+    "sans_effet": 7,
+    "rejetees": [],
+    "cout_reference_usd": 0.0439,
+    "appels": 1
+  },
+  {
+    "theme": "numerique-jeunesse",
+    "groupe": 0,
+    "empreinte": "c9b45ff88211dd34",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 1,
+    "sans_effet": 0,
+    "rejetees": [],
+    "cout_reference_usd": 0.0544,
+    "appels": 2
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 0,
+    "empreinte": "a77d4d2aed483c2a",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 0,
+    "sans_effet": 24,
+    "rejetees": [
+      {
+        "id": "attal-sante-fin-de-vie-v2102",
+        "raison": "relecture : Les cibles sont vides, ce qui laisse entendre un effet universel, alors que le texte limite l'exonération de participation/franchise aux mineurs, aux bénéficiaires de la complémentaire santé solidaire et aux personnes recourant à l'aide à mourir."
+      }
+    ],
+    "cout_reference_usd": 0.1264,
+    "appels": 2
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 1,
+    "empreinte": "eba8e4f2b4c7c92f",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 7,
+    "sans_effet": 18,
+    "rejetees": [],
+    "cout_reference_usd": 0.1431,
+    "appels": 2
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 2,
+    "empreinte": "be19689d52f4aed4",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 1,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0174,
+    "appels": 2
+  },
+  {
+    "theme": "securite-justice",
+    "groupe": 0,
+    "empreinte": "66ea32ba5a6cca73",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 0,
+    "sans_effet": 25,
+    "rejetees": [],
+    "cout_reference_usd": 0.1315,
+    "appels": 1
+  },
+  {
+    "theme": "securite-justice",
+    "groupe": 1,
+    "empreinte": "d738135142dc7346",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 15,
+    "avec_effets": 3,
+    "sans_effet": 10,
+    "rejetees": [
+      {
+        "id": "attal-securite-justice-v8161",
+        "raison": "relecture : Les cibles sont vides alors que le texte vise explicitement les particuliers détenant/transportant du protoxyde d'azote au-delà du seuil, ce qui laisse le périmètre indéterminé et potentiellement trop large."
+      },
+      {
+        "id": "attal-securite-justice-v8222",
+        "raison": "relecture : L'extrait ne mentionne pas 'les gens du voyage', cette précision ajoute un public nommé que le texte cité ne désigne pas explicitement."
+      }
+    ],
+    "cout_reference_usd": 0.1222,
+    "appels": 2
+  }
+]

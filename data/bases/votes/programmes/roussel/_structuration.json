@@ -1,0 +1,28 @@
+[
+  {
+    "theme": "budget-securite-sociale",
+    "groupe": 0,
+    "empreinte": "ba3392ed90243112",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0372,
+    "appels": 1
+  },
+  {
+    "theme": "securite-justice",
+    "groupe": 0,
+    "empreinte": "7c5b876e45bf919f",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0406,
+    "appels": 1
+  }
+]

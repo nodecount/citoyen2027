@@ -1,0 +1,116 @@
+[
+  {
+    "theme": "agriculture",
+    "groupe": 0,
+    "empreinte": "52d78a05ec94c79a",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 3,
+    "avec_effets": 0,
+    "sans_effet": 3,
+    "rejetees": [],
+    "cout_reference_usd": 0.044,
+    "appels": 1
+  },
+  {
+    "theme": "armee-defense",
+    "groupe": 0,
+    "empreinte": "6090c7857e2c19f7",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 12,
+    "avec_effets": 3,
+    "sans_effet": 9,
+    "rejetees": [],
+    "cout_reference_usd": 0.0994,
+    "appels": 2
+  },
+  {
+    "theme": "budget-securite-sociale",
+    "groupe": 0,
+    "empreinte": "6a642502b7b1ba30",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 14,
+    "avec_effets": 3,
+    "sans_effet": 11,
+    "rejetees": [],
+    "cout_reference_usd": 0.1181,
+    "appels": 2
+  },
+  {
+    "theme": "economie-entreprises",
+    "groupe": 0,
+    "empreinte": "5dd5d932bb00d4b8",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0364,
+    "appels": 1
+  },
+  {
+    "theme": "numerique-jeunesse",
+    "groupe": 0,
+    "empreinte": "49fd7883dc64001c",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 0,
+    "rejetees": [
+      {
+        "id": "tondelier-numerique-jeunesse-v5167",
+        "raison": "relecture : La cible 'moins_30' élargit le périmètre : le texte interdit l'accès aux seuls mineurs de quinze ans, pas à toute la tranche d'âge des moins de 30 ans."
+      }
+    ],
+    "cout_reference_usd": 0.0548,
+    "appels": 2
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 0,
+    "empreinte": "42dd1b77e23fd42f",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 0,
+    "sans_effet": 24,
+    "rejetees": [
+      {
+        "id": "tondelier-sante-fin-de-vie-v2102",
+        "raison": "relecture : Les cibles sont vides, ce qui laisse entendre un effet pour tout citoyen alors que la baisse de coût ne concerne que les personnes engagées dans une procédure d'aide à mourir."
+      }
+    ],
+    "cout_reference_usd": 0.1225,
+    "appels": 2
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 1,
+    "empreinte": "c8ea0383bcbc62a9",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 18,
+    "avec_effets": 6,
+    "sans_effet": 12,
+    "rejetees": [],
+    "cout_reference_usd": 0.1158,
+    "appels": 2
+  },
+  {
+    "theme": "securite-justice",
+    "groupe": 0,
+    "empreinte": "296657b050e46336",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 11,
+    "avec_effets": 0,
+    "sans_effet": 11,
+    "rejetees": [],
+    "cout_reference_usd": 0.0805,
+    "appels": 1
+  }
+]

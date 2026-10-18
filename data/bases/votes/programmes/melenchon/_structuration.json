@@ -1,0 +1,129 @@
+[
+  {
+    "theme": "agriculture",
+    "groupe": 0,
+    "empreinte": "b45a7a95f67ef727",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 5,
+    "avec_effets": 0,
+    "sans_effet": 5,
+    "rejetees": [],
+    "cout_reference_usd": 0.0508,
+    "appels": 1
+  },
+  {
+    "theme": "armee-defense",
+    "groupe": 0,
+    "empreinte": "39d032a79972c3d7",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 4,
+    "avec_effets": 0,
+    "sans_effet": 4,
+    "rejetees": [],
+    "cout_reference_usd": 0.0402,
+    "appels": 1
+  },
+  {
+    "theme": "budget-securite-sociale",
+    "groupe": 0,
+    "empreinte": "e9ee81bc9c72197e",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 14,
+    "avec_effets": 0,
+    "sans_effet": 13,
+    "rejetees": [
+      {
+        "id": "melenchon-budget-securite-sociale-v4508",
+        "raison": "relecture : La cible chef_entreprise n'est pas restreinte aux entreprises d'au moins 300 salariés, alors que le texte limite explicitement le malus à ce périmètre."
+      }
+    ],
+    "cout_reference_usd": 0.0902,
+    "appels": 2
+  },
+  {
+    "theme": "economie-entreprises",
+    "groupe": 0,
+    "empreinte": "eaf061b842a9cdba",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0366,
+    "appels": 1
+  },
+  {
+    "theme": "logement",
+    "groupe": 0,
+    "empreinte": "6ef0fd2d6939ea97",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0331,
+    "appels": 1
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 0,
+    "empreinte": "90f0f5136b2542ec",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 8,
+    "sans_effet": 17,
+    "rejetees": [],
+    "cout_reference_usd": 0.1652,
+    "appels": 2
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 1,
+    "empreinte": "3711175240b742e3",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 5,
+    "sans_effet": 20,
+    "rejetees": [],
+    "cout_reference_usd": 0.1294,
+    "appels": 2
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 2,
+    "empreinte": "253f23801a2b467a",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 3,
+    "avec_effets": 1,
+    "sans_effet": 1,
+    "rejetees": [
+      {
+        "id": "melenchon-sante-fin-de-vie-v7814",
+        "raison": "relecture : L'effet cible le titulaire du contrat qui est la personne décédée par l'aide à mourir ; le gain patrimonial concerne en réalité les bénéficiaires du contrat, pas le titulaire lui-même."
+      }
+    ],
+    "cout_reference_usd": 0.06,
+    "appels": 2
+  },
+  {
+    "theme": "securite-justice",
+    "groupe": 0,
+    "empreinte": "117b6820f69e923a",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 3,
+    "avec_effets": 2,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0777,
+    "appels": 2
+  }
+]

@@ -11,5 +11,11 @@
     "libelle": "Comparateur iFRAP",
     "description": "Mesures reprises du comparateur indépendant de la Fondation iFRAP.",
     "avertissement": "Mesures reprises du comparateur iFRAP, non vérifiées dans les programmes."
+  },
+  {
+    "id": "votes",
+    "libelle": "Votes des députés",
+    "description": "Votes des groupes parlementaires sur les articles clés de 15 lois de la XVIIe législature (lot test de recherche).",
+    "avertissement": "Lot test de recherche : votes de groupes à l'Assemblée nationale (2024-2026), rattachés aux partis. Un vote n'est pas un engagement de programme."
   }
 ]

@@ -1,0 +1,155 @@
+[
+  {
+    "theme": "agriculture",
+    "groupe": 0,
+    "empreinte": "47143a226ebceb12",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 13,
+    "avec_effets": 0,
+    "sans_effet": 13,
+    "rejetees": [],
+    "cout_reference_usd": 0.0818,
+    "appels": 1
+  },
+  {
+    "theme": "armee-defense",
+    "groupe": 0,
+    "empreinte": "ccb45a2ec5aa424c",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 0,
+    "sans_effet": 25,
+    "rejetees": [],
+    "cout_reference_usd": 0.115,
+    "appels": 1
+  },
+  {
+    "theme": "armee-defense",
+    "groupe": 1,
+    "empreinte": "f39882c8b045645d",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 10,
+    "avec_effets": 5,
+    "sans_effet": 5,
+    "rejetees": [],
+    "cout_reference_usd": 0.0699,
+    "appels": 2
+  },
+  {
+    "theme": "budget-securite-sociale",
+    "groupe": 0,
+    "empreinte": "ada77e47dbe54c28",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 2,
+    "sans_effet": 22,
+    "rejetees": [
+      {
+        "id": "le-pen-budget-securite-sociale-v4663",
+        "raison": "relecture : L'extrait décrit un plafonnement à cinq ans du temps non effectif compté comme service, ce qui est une limitation et non une hausse claire de la protection sociale des fonctionnaires."
+      }
+    ],
+    "cout_reference_usd": 0.1824,
+    "appels": 2
+  },
+  {
+    "theme": "budget-securite-sociale",
+    "groupe": 1,
+    "empreinte": "6ab27988d0b6bc0a",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 6,
+    "avec_effets": 0,
+    "sans_effet": 6,
+    "rejetees": [],
+    "cout_reference_usd": 0.0229,
+    "appels": 1
+  },
+  {
+    "theme": "economie-entreprises",
+    "groupe": 0,
+    "empreinte": "256df5175117f0cc",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 14,
+    "avec_effets": 0,
+    "sans_effet": 14,
+    "rejetees": [],
+    "cout_reference_usd": 0.0914,
+    "appels": 1
+  },
+  {
+    "theme": "logement",
+    "groupe": 0,
+    "empreinte": "7dd59fc3ed1f3f05",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 5,
+    "avec_effets": 0,
+    "sans_effet": 5,
+    "rejetees": [],
+    "cout_reference_usd": 0.0409,
+    "appels": 1
+  },
+  {
+    "theme": "numerique-jeunesse",
+    "groupe": 0,
+    "empreinte": "ff705c170d2c97eb",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0387,
+    "appels": 1
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 0,
+    "empreinte": "426a944acad40b46",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 4,
+    "avec_effets": 1,
+    "sans_effet": 3,
+    "rejetees": [],
+    "cout_reference_usd": 0.0749,
+    "appels": 2
+  },
+  {
+    "theme": "securite-justice",
+    "groupe": 0,
+    "empreinte": "416fccf5acff1c84",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 4,
+    "sans_effet": 21,
+    "rejetees": [],
+    "cout_reference_usd": 0.1846,
+    "appels": 2
+  },
+  {
+    "theme": "securite-justice",
+    "groupe": 1,
+    "empreinte": "62fc58c412c5a9dc",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 13,
+    "avec_effets": 3,
+    "sans_effet": 9,
+    "rejetees": [
+      {
+        "id": "le-pen-securite-justice-v8161",
+        "raison": "relecture : Les cibles sont vides alors que la mesure ne vise que les particuliers détenant/transportant une quantité de protoxyde d'azote supérieure au maximum autorisé, ce qui élargit le périmètre à tous les citoyens."
+      }
+    ],
+    "cout_reference_usd": 0.0968,
+    "appels": 2
+  }
+]

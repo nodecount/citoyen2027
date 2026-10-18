@@ -1,5 +1,6 @@
 import schemaAgregateurs from "../data/bases/agregateurs/profils-schema.json";
 import schemaOfficielle from "../data/bases/officielle/profils-schema.json";
+import schemaVotes from "../data/bases/votes/profils-schema.json";
 import type { ChampProfil } from "./types";
 
 // Décision du 2026-10-04 : chaque base de connaissances a SON formulaire (data/bases/<id>/profils-schema.json). Les
@@ -10,6 +11,7 @@ import type { ChampProfil } from "./types";
 const SCHEMAS: Record<string, ChampProfil[]> = {
   officielle: schemaOfficielle as ChampProfil[],
   agregateurs: schemaAgregateurs as ChampProfil[],
+  votes: schemaVotes as ChampProfil[],
 };
 
 export function basesAvecSchema(): string[] {

@@ -1,0 +1,146 @@
+[
+  {
+    "theme": "agriculture",
+    "groupe": 0,
+    "empreinte": "bd582e2762a5b3b5",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 6,
+    "avec_effets": 0,
+    "sans_effet": 6,
+    "rejetees": [],
+    "cout_reference_usd": 0.0548,
+    "appels": 1
+  },
+  {
+    "theme": "armee-defense",
+    "groupe": 0,
+    "empreinte": "8df2a75f2f7ca096",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 13,
+    "avec_effets": 2,
+    "sans_effet": 10,
+    "rejetees": [
+      {
+        "id": "glucksmann-armee-defense-v6722",
+        "raison": "relecture : Le texte modifie une définition pour une catégorie de pensions militaires d'invalidité mais ne garantit pas une hausse de protection sociale; c'est un effet déduit du fonctionnement institutionnel sans certitude de gain pour le citoyen visé."
+      }
+    ],
+    "cout_reference_usd": 0.1049,
+    "appels": 2
+  },
+  {
+    "theme": "budget-securite-sociale",
+    "groupe": 0,
+    "empreinte": "3cef6adcfc6a8cc5",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 1,
+    "sans_effet": 22,
+    "rejetees": [
+      {
+        "id": "glucksmann-budget-securite-sociale-v3615",
+        "raison": "relecture : L'extrait impose une obligation vaccinale aux soignants, ce qui ne constitue pas une baisse d'accès aux services mais une contrainte professionnelle ; la dimension choisie ne correspond pas au texte."
+      },
+      {
+        "id": "glucksmann-budget-securite-sociale-v4606",
+        "raison": "relecture : L'extrait impose une obligation vaccinale aux soignants, ce qui ne constitue pas une baisse d'accès aux services mais une contrainte professionnelle ; la dimension choisie ne correspond pas au texte."
+      }
+    ],
+    "cout_reference_usd": 0.1503,
+    "appels": 2
+  },
+  {
+    "theme": "budget-securite-sociale",
+    "groupe": 1,
+    "empreinte": "867fa2c9683cd0d0",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0091,
+    "appels": 1
+  },
+  {
+    "theme": "economie-entreprises",
+    "groupe": 0,
+    "empreinte": "1a482f936b88ccb6",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0368,
+    "appels": 1
+  },
+  {
+    "theme": "logement",
+    "groupe": 0,
+    "empreinte": "687d8609c7cbf78a",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 0,
+    "sans_effet": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0348,
+    "appels": 1
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 0,
+    "empreinte": "1ed0193d6efb608f",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 4,
+    "sans_effet": 21,
+    "rejetees": [],
+    "cout_reference_usd": 0.131,
+    "appels": 2
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 1,
+    "empreinte": "94269afa0d571812",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 2,
+    "sans_effet": 23,
+    "rejetees": [],
+    "cout_reference_usd": 0.1035,
+    "appels": 2
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 2,
+    "empreinte": "a93f60d398827d27",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 3,
+    "avec_effets": 1,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0181,
+    "appels": 2
+  },
+  {
+    "theme": "securite-justice",
+    "groupe": 0,
+    "empreinte": "61aee90a5c831b69",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 9,
+    "avec_effets": 2,
+    "sans_effet": 7,
+    "rejetees": [],
+    "cout_reference_usd": 0.1086,
+    "appels": 2
+  }
+]

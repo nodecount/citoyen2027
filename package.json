@@ -9,6 +9,7 @@
     "test": "vitest run",
     "ingestion": "tsx src/ingestion/run.ts",
     "scrape:ifrap": "tsx src/scraping/run-ifrap.ts",
+    "scrape:votes": "tsx src/votes/run-votes.ts",
     "scrape:structurer": "tsx src/scraping/run-structuration.ts",
     "scrape:couverture": "tsx src/scraping/run-couverture.ts",
     "scrape:positions": "tsx src/scraping/run-positions.ts",

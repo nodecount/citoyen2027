@@ -1,0 +1,22 @@
+{
+  "slug": "retailleau",
+  "nom": "Bruno Retailleau",
+  "parti": "Les Républicains",
+  "sources_officielles": [
+    {
+      "type": "primaire",
+      "label": "Assemblée nationale — scrutins publics et textes adoptés, XVIIe législature",
+      "url": "https://data.assemblee-nationale.fr/travaux-parlementaires/votes",
+      "nom": "Assemblée nationale",
+      "annee": 2026
+    },
+    {
+      "type": "secondaire",
+      "label": "NosParlementaires — votes par député (Licence Ouverte 2.0)",
+      "url": "https://nosparlementaires.fr/donnees-ouvertes",
+      "nom": "NosParlementaires",
+      "annee": 2026
+    }
+  ],
+  "date_derniere_maj": "2026-10-18"
+}

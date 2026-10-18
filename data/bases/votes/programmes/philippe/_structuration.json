@@ -1,0 +1,125 @@
+[
+  {
+    "theme": "agriculture",
+    "groupe": 0,
+    "empreinte": "357125a761bbb34d",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 15,
+    "avec_effets": 0,
+    "sans_effet": 13,
+    "rejetees": [
+      {
+        "id": "philippe-agriculture-v7142",
+        "raison": "relecture : L'effet de hausse de sécurité personnelle est déduit d'un mécanisme de dissuasion par aggravation de peine, non constaté directement par le texte."
+      },
+      {
+        "id": "philippe-agriculture-v7148",
+        "raison": "relecture : L'effet de hausse de sécurité personnelle repose sur un mécanisme supposé de dissuasion par alourdissement de peine, non affirmé par le texte."
+      }
+    ],
+    "cout_reference_usd": 0.1047,
+    "appels": 2
+  },
+  {
+    "theme": "armee-defense",
+    "groupe": 0,
+    "empreinte": "f444d4b97748500c",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 21,
+    "avec_effets": 2,
+    "sans_effet": 18,
+    "rejetees": [
+      {
+        "id": "philippe-armee-defense-v6722",
+        "raison": "relecture : Le texte modifie une condition d'ouverture de droit à pension d'invalidité pour cause imputable au service, ce qui n'implique pas forcément une hausse effective de protection sociale pour le citoyen mais relève d'un mécanisme institutionnel déduit."
+      }
+    ],
+    "cout_reference_usd": 0.1161,
+    "appels": 2
+  },
+  {
+    "theme": "budget-securite-sociale",
+    "groupe": 0,
+    "empreinte": "f09c37cc9ce09320",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "avec_effets": 3,
+    "sans_effet": 22,
+    "rejetees": [],
+    "cout_reference_usd": 0.1519,
+    "appels": 2
+  },
+  {
+    "theme": "budget-securite-sociale",
+    "groupe": 1,
+    "empreinte": "6665540a550d3993",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 8,
+    "avec_effets": 0,
+    "sans_effet": 8,
+    "rejetees": [],
+    "cout_reference_usd": 0.057,
+    "appels": 1
+  },
+  {
+    "theme": "economie-entreprises",
+    "groupe": 0,
+    "empreinte": "ba778992db55654c",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 5,
+    "avec_effets": 0,
+    "sans_effet": 5,
+    "rejetees": [],
+    "cout_reference_usd": 0.0493,
+    "appels": 1
+  },
+  {
+    "theme": "numerique-jeunesse",
+    "groupe": 0,
+    "empreinte": "7da5d164d4461cd7",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 1,
+    "sans_effet": 0,
+    "rejetees": [],
+    "cout_reference_usd": 0.061,
+    "appels": 2
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 0,
+    "empreinte": "37061682668bfb3c",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 21,
+    "avec_effets": 2,
+    "sans_effet": 19,
+    "rejetees": [],
+    "cout_reference_usd": 0.1177,
+    "appels": 2
+  },
+  {
+    "theme": "securite-justice",
+    "groupe": 0,
+    "empreinte": "6480a4cf827fb08a",
+    "date": "2026-10-18",
+    "modele": "claude-sonnet-5",
+    "propositions": 20,
+    "avec_effets": 5,
+    "sans_effet": 14,
+    "rejetees": [
+      {
+        "id": "philippe-securite-justice-v8161",
+        "raison": "relecture : Les cibles sont vides, ce qui vise tous les citoyens, alors que le texte restreint l'interdiction aux particuliers détenant ou transportant une quantité de protoxyde d'azote supérieure au maximum légal."
+      }
+    ],
+    "cout_reference_usd": 0.1973,
+    "appels": 2
+  }
+]

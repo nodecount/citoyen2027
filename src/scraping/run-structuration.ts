@@ -1,19 +1,21 @@
+import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import themesAgregateurs from "../../data/bases/agregateurs/themes.json";
 import { appelerClaudeCli, MODELE_CLI, PanneCli } from "./claude-cli";
 import { executer, planifier, type OptionsStructuration } from "./orchestration";
 
-// Usage : npm run scrape:structurer [-- --candidats=a,b --themes=x,y --force --dry-run --concurrence=3 --plafond-ref=8 --limite=5]
-// Décrit, avec le modèle (commande `claude -p`, abonnement et non API), les effets de chaque proposition de la base
-// « agregateurs » sur un citoyen. Rejouable : un groupe dont les textes et les prompts n'ont pas changé est ignoré.
-
-const RACINE_BASE = resolve(process.cwd(), "data/bases/agregateurs");
-const libelles = new Map((themesAgregateurs as Array<{ id: string; libelle: string }>).map((t) => [t.id, t.libelle]));
+// Usage : npm run scrape:structurer [-- --base=agregateurs --candidats=a,b --themes=x,y --force --dry-run --concurrence=3 --plafond-ref=8 --limite=5]
+// Décrit, avec le modèle (commande `claude -p`, abonnement et non API), les effets de chaque proposition d'une base sur un
+// citoyen (« agregateurs » par défaut ; « votes » pour le lot test de recherche du 2026-10-18, dont le formulaire est une copie
+// de celui d'« agregateurs »). Rejouable : un groupe dont les textes et les prompts n'ont pas changé est ignoré.
 
 function valeur(nom: string): string | undefined {
   const argument = process.argv.find((a) => a.startsWith(`--${nom}=`));
   return argument?.slice(nom.length + 3);
 }
+
+const BASE = valeur("base") ?? "agregateurs";
+const RACINE_BASE = resolve(process.cwd(), "data/bases", BASE);
+const libelles = new Map((JSON.parse(readFileSync(resolve(RACINE_BASE, "themes.json"), "utf-8")) as Array<{ id: string; libelle: string }>).map((t) => [t.id, t.libelle]));
 
 async function main(): Promise<void> {
   const options: OptionsStructuration = {
