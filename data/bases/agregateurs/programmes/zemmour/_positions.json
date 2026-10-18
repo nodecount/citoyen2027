@@ -1,85 +1,81 @@
 [
   {
     "groupe": 0,
-    "empreinte": "44a73cd837e17b23",
-    "date": "2026-10-10",
+    "empreinte": "bc6993a04726db57",
+    "date": "2026-10-18",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 20,
-    "sans_position": 5,
-    "rejetees": [],
-    "cout_reference_usd": 0.1693,
+    "etiquetees": 19,
+    "sans_position": 4,
+    "rejetees": [
+      {
+        "id": "zemmour-finances-publiques-004",
+        "raison": "relecture : La mesure concerne les droits/conditions des agents (jours de carence), pas un renforcement des effectifs ou des moyens des services publics : mauvaise position pour ce sujet."
+      },
+      {
+        "id": "zemmour-interieur-justice-005",
+        "raison": "relecture : La dénonciation d'un accord bilatéral franco-algérien ne relève pas du sujet Europe/UE, mais de l'immigration."
+      }
+    ],
+    "cout_reference_usd": 0.126,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "ad5c4ad81522a593",
-    "date": "2026-10-10",
+    "empreinte": "e7e061a6509ed3a9",
+    "date": "2026-10-18",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 16,
-    "sans_position": 5,
+    "etiquetees": 17,
+    "sans_position": 4,
     "rejetees": [
       {
         "id": "zemmour-interieur-justice-026",
-        "raison": "relecture : La suspension des aides sociales aux délinquants est une sanction pénale et non une conditionnalité d'activité ou un durcissement de l'indemnisation chômage/RSA tel que défini par 'conditionner_aides'."
+        "raison": "relecture : Suspendre les aides sociales aux délinquants est une sanction punitive liée à la délinquance, pas une conditionnalité d'activité ou un durcissement de l'indemnisation chômage/RSA comme le définit 'conditionner_aides'; relève plutôt de la sécurité/répression."
       },
       {
-        "id": "zemmour-interieur-justice-030",
-        "raison": "relecture : Accorder une présomption de légitime défense concerne le cadre juridique d'usage des armes, pas le niveau d'armement ou les moyens d'intervention de la police défini par 'police_armee'."
+        "id": "zemmour-social-solidarite-004",
+        "raison": "relecture : Restaurer une limitation de vitesse à 90km/h est une mesure de sécurité routière, pas une restriction de l'usage de la voiture au sens des ZFE/transports collectifs visés par la définition."
       },
       {
-        "id": "zemmour-retraites-travail-003",
-        "raison": "relecture : La défiscalisation de la prime de participation bénéficie directement au salarié (revenu), ce n'est pas un allègement de la fiscalité ou des charges de l'entreprise comme défini par 'soutenir_entreprises'."
+        "id": "zemmour-retraites-travail-001",
+        "raison": "relecture : Le slogan générique 'travailler plus pour gagner plus' ne précise aucune mesure concrète d'allongement du temps de travail ou de défiscalisation des heures supplémentaires, nécessitant une interprétation pour l'étiqueter."
       },
       {
-        "id": "zemmour-retraites-travail-004",
-        "raison": "relecture : Le déblocage sans impôt de la prime concerne le revenu du salarié, pas la fiscalité ou les charges de l'entreprise visées par 'soutenir_entreprises'."
+        "id": "zemmour-retraites-travail-005",
+        "raison": "relecture : La lutte contre le dumping social des travailleurs détachés relève du droit du travail/protection sociale européenne, pas du commerce/protectionnisme (taxation des importations, préférence nationale)."
       }
     ],
-    "cout_reference_usd": 0.122,
+    "cout_reference_usd": 0.0842,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "b4c74a114e2bd9ed",
-    "date": "2026-10-10",
+    "empreinte": "a01bd63ef9dd5a91",
+    "date": "2026-10-18",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 12,
-    "sans_position": 10,
+    "etiquetees": 10,
+    "sans_position": 14,
     "rejetees": [
       {
         "id": "zemmour-retraites-travail-014",
-        "raison": "relecture : Le texte vise la transmission d'entreprises familiales, pas spécifiquement les très hauts patrimoines ; le sujet pertinent serait entreprises/fiscalité et non ultra_riches."
-      },
-      {
-        "id": "zemmour-retraites-travail-017",
-        "raison": "relecture : Le remboursement d'aides par les entreprises qui délocalisent est une sanction/conditionnalité des aides publiques (encadrer_entreprises), pas une mesure de protectionnisme commercial (pas de taxe, quota ou préférence nationale)."
-      },
-      {
-        "id": "zemmour-gouvernance-republique-001",
-        "raison": "relecture : Organiser un référendum ponctuel sur des sujets précis relève de l'usage d'un outil institutionnel existant (article 11), non d'un changement des institutions elles-mêmes."
+        "raison": "relecture : La suppression des droits de succession pour les entreprises familiales concerne la transmission d'entreprise (sujet 'entreprises'), pas spécifiquement les très hauts patrimoines visés par le sujet 'ultra_riches'."
       }
     ],
-    "cout_reference_usd": 0.0732,
+    "cout_reference_usd": 0.0552,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "2d277c40748d11d3",
-    "date": "2026-10-10",
+    "empreinte": "e82821955da62d78",
+    "date": "2026-10-18",
     "modele": "claude-sonnet-5",
     "propositions": 16,
     "etiquetees": 10,
-    "sans_position": 5,
-    "rejetees": [
-      {
-        "id": "zemmour-education-jeunesse-008",
-        "raison": "relecture : Le sujet parents_mineurs vise les parents de mineurs délinquants, alors que la mesure cible les parents d'élèves perturbateurs ou absentéistes, ce qui n'est pas la même chose."
-      }
-    ],
-    "cout_reference_usd": 0.055,
+    "sans_position": 6,
+    "rejetees": [],
+    "cout_reference_usd": 0.0485,
     "appels": 2
   }
 ]

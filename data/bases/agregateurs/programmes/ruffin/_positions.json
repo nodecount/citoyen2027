@@ -1,46 +1,42 @@
 [
   {
     "groupe": 0,
-    "empreinte": "d7ea490f34260c56",
-    "date": "2026-10-12",
+    "empreinte": "01aa2da10a8ba239",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 3,
-    "sans_position": 20,
+    "etiquetees": 1,
+    "sans_position": 23,
     "rejetees": [
       {
-        "id": "ruffin-social-solidarite-010",
-        "raison": "relecture : Augmenter la contribution des employeurs au financement du logement n'est pas un encadrement des loyers ni une imposition de logement social tel que défini, c'est une mesure de financement/fiscalité des entreprises plutôt qu'une mesure d'encadrement du logement."
-      },
-      {
-        "id": "ruffin-social-solidarite-011",
-        "raison": "relecture : Supprimer le seuil de dix salariés pour le 1% logement est une mesure sur l'obligation de cotisation des entreprises, pas un encadrement des loyers ou une création de logement social telle que définie par le sujet."
+        "id": "ruffin-social-solidarite-013",
+        "raison": "relecture : La mesure restreint/plafonne un dispositif de loyer sous conditions énergétiques, ce qui n'est pas un encadrement des loyers ou du logement social au sens de la définition, mais une condition technique liée à la rénovation énergétique."
       }
     ],
-    "cout_reference_usd": 0.1078,
+    "cout_reference_usd": 0.101,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "139ba8a45da49593",
-    "date": "2026-10-12",
+    "empreinte": "e53fb57ae2768788",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 9,
-    "sans_position": 15,
+    "etiquetees": 12,
+    "sans_position": 12,
     "rejetees": [
       {
         "id": "ruffin-social-solidarite-018",
-        "raison": "relecture : Abroger une loi sur les expulsions et privilégier la médiation ne correspond pas à la définition d'encadrer_logement (loyers, logement social, logements vacants, locations touristiques)."
+        "raison": "relecture : La mesure porte sur la prévention des expulsions et l'abrogation d'une loi anti-squat/expulsion, ce qui ne correspond pas à la définition d'encadrer_logement (loyers, logement social, logements vacants, locations touristiques)."
       }
     ],
-    "cout_reference_usd": 0.0654,
+    "cout_reference_usd": 0.0767,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "3f6aa56249ba66d6",
-    "date": "2026-10-12",
+    "empreinte": "b45d66ab92c8803b",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 8,
@@ -48,26 +44,26 @@
     "rejetees": [
       {
         "id": "ruffin-retraites-travail-018",
-        "raison": "relecture : Le texte instaure un mécanisme spécifique de trimestres bonus pour pénibilité, sans traiter du maintien ou non de l'âge légal général ; cela ne fonde pas l'étiquette 'age_actuel'."
+        "raison": "relecture : Le texte porte sur un bonus de trimestres pour pénibilité, pas sur le maintien de l'âge légal de départ ; l'étiquette 'age_actuel' n'est pas fondée par cet extrait."
       },
       {
         "id": "ruffin-envi-006",
-        "raison": "relecture : Le texte propose un référendum sur des mesures climatiques précises, ce qui ne fonde pas l'étiquette 'nouvelles_institutions' qui vise une réforme des institutions elles-mêmes (constitution, proportionnelle, RIC)."
+        "raison": "relecture : La mesure propose un référendum sur des mesures, sans que le texte lui-même défende l'accélération de la transition écologique, et l'extrait sur les vols intérieurs relève du sujet 'voiture' et non d'un sujet lié aux transports aériens/ferroviaires, donc étiquette multiple mal fondée."
       }
     ],
-    "cout_reference_usd": 0.0577,
+    "cout_reference_usd": 0.0764,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "a1f0ff587a78926c",
-    "date": "2026-10-12",
+    "empreinte": "ea79bf80dea22330",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 17,
     "etiquetees": 0,
     "sans_position": 17,
     "rejetees": [],
-    "cout_reference_usd": 0.0158,
+    "cout_reference_usd": 0.0212,
     "appels": 1
   }
 ]

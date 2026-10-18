@@ -1,101 +1,69 @@
 [
   {
     "groupe": 0,
-    "empreinte": "05dea0d653ec94dc",
-    "date": "2026-10-12",
+    "empreinte": "c29f65d294d8606e",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 15,
-    "sans_position": 9,
+    "etiquetees": 16,
+    "sans_position": 7,
     "rejetees": [
       {
         "id": "lisnard-finances-publiques-003",
-        "raison": "relecture : Mesure générale sur les abattements de donations pour tous les parents, elle ne vise pas spécifiquement les très hauts patrimoines définis par le sujet ultra_riches."
+        "raison": "relecture : Il s'agit d'un allègement général des droits de donation pour tous les parents, pas d'une mesure visant spécifiquement les très hauts patrimoines ou revenus ; relève plutôt de la fiscalité générale (baisse_impots) que de 'ultra_riches'."
+      },
+      {
+        "id": "lisnard-interieur-justice-002",
+        "raison": "relecture : La mesure porte sur la fin des aménagements de peine, ce qui relève spécifiquement du sujet 'prison' (position plus_de_prison, qui vise explicitement à 'limiter les aménagements de peine') et non du sujet générique 'securite'."
       }
     ],
-    "cout_reference_usd": 0.1128,
+    "cout_reference_usd": 0.1228,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "7a7ba4a4d88969b5",
-    "date": "2026-10-12",
+    "empreinte": "5c42f6d2f0d4d484",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 10,
-    "sans_position": 8,
+    "etiquetees": 12,
+    "sans_position": 12,
     "rejetees": [
       {
-        "id": "lisnard-interieur-justice-021",
-        "raison": "relecture : Expulser des prêcheurs radicaux relève de la lutte contre l'islamisme/sécurité, pas d'une mesure d'immigration ; l'étiquette restriction sur l'immigration n'est pas fondée par cet extrait."
-      },
-      {
-        "id": "lisnard-social-solidarite-002",
-        "raison": "relecture : Les maisons de santé pluridisciplinaires ne sont pas l'hôpital public ni explicitement des centres de santé publics ; le texte ne précise pas un caractère public, l'étiquette hopital_public n'est pas clairement fondée."
-      },
-      {
-        "id": "lisnard-social-solidarite-005",
-        "raison": "relecture : Assouplir le recrutement de contractuels ne montre pas une réduction du nombre de fonctionnaires, seulement une flexibilité de recrutement."
-      },
-      {
-        "id": "lisnard-social-solidarite-006",
-        "raison": "relecture : Parcoursup et LAS/PASS concernent l'admission à l'université, pas l'organisation du système éducatif scolaire visé par la définition (collège, lycée, bac)."
-      },
-      {
-        "id": "lisnard-envi-003",
-        "raison": "relecture : Le respect de la réciprocité commerciale internationale n'implique pas clairement des mesures protectionnistes (taxation ou limitation des importations) ; l'extrait est trop vague pour fonder cette étiquette."
-      },
-      {
-        "id": "lisnard-envi-005",
-        "raison": "relecture : L'alignement réglementaire avec le marché commun européen va dans le sens d'une intégration au cadre européen, pas d'un retrait de souveraineté nationale ; l'étiquette souverainete est inversée par rapport à cet extrait."
-      },
-      {
-        "id": "lisnard-envi-006",
-        "raison": "relecture : L'extrait met l'accent sur l'augmentation des capacités exportatrices, ce qui relève de l'ouverture commerciale et non d'une mesure protectionniste de limitation des importations."
+        "id": "lisnard-social-solidarite-004",
+        "raison": "relecture : Le texte porte sur la décentralisation de la gouvernance hospitalière (préfets, maires), ce qui ne fonde pas directement 'liberte_sante' (liberté d'installation des médecins ou place du privé)."
       }
     ],
-    "cout_reference_usd": 0.0798,
+    "cout_reference_usd": 0.0998,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "ba38eb50a581b695",
-    "date": "2026-10-12",
+    "empreinte": "eb5feffb3a6a36c7",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 7,
-    "sans_position": 14,
-    "rejetees": [
-      {
-        "id": "lisnard-envi-011",
-        "raison": "relecture : La débureaucratisation décrite est générale (guichet numérique, autonomie locale) et ne porte pas spécifiquement sur les normes agricoles ou environnementales."
-      },
-      {
-        "id": "lisnard-reformes-etat-009",
-        "raison": "relecture : Interdire la surtransposition ne reprend pas de compétence à l'UE ni ne déroge à ses règles, elle vise seulement à ne pas ajouter de contraintes nationales supplémentaires au-delà du droit européen."
-      },
-      {
-        "id": "lisnard-reformes-etat-011",
-        "raison": "relecture : Le transfert de compétences aux Provinces relève de la décentralisation territoriale, pas d'un changement des institutions politiques au sens de la définition (VIe République, proportionnelle, RIC, constituante)."
-      },
-      {
-        "id": "lisnard-education-jeunesse-003",
-        "raison": "relecture : Le droit de refuser des élèves nuisant au collectif relève de l'admission/sélection et non d'un durcissement de la discipline (sanctions, exclusions, uniforme) au sens de la définition d'ecole_exigence."
-      }
-    ],
-    "cout_reference_usd": 0.0814,
+    "etiquetees": 8,
+    "sans_position": 17,
+    "rejetees": [],
+    "cout_reference_usd": 0.0599,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "96f1be9165b76b58",
-    "date": "2026-10-12",
+    "empreinte": "4c2d4b225686cffb",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 7,
-    "etiquetees": 7,
-    "sans_position": 0,
-    "rejetees": [],
-    "cout_reference_usd": 0.0457,
+    "etiquetees": 2,
+    "sans_position": 4,
+    "rejetees": [
+      {
+        "id": "lisnard-education-jeunesse-010",
+        "raison": "relecture : Créer des classes d'excellence relève de l'organisation pédagogique (filières/niveaux), pas de la discipline/sanction ou de l'évaluation exigeante visée par le sujet ecole_discipline : mauvais sujet."
+      }
+    ],
+    "cout_reference_usd": 0.028,
     "appels": 2
   }
 ]

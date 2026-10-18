@@ -1,234 +1,243 @@
 [
   {
     "groupe": 0,
-    "empreinte": "54aa910705c77ab2",
-    "date": "2026-10-10",
+    "empreinte": "1225c3a50006475a",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 11,
-    "sans_position": 14,
+    "etiquetees": 12,
+    "sans_position": 13,
     "rejetees": [],
-    "cout_reference_usd": 0.1113,
+    "cout_reference_usd": 0.1216,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "fd3504eb8ebec653",
-    "date": "2026-10-10",
+    "empreinte": "4ac66b9670c7a0e6",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 10,
-    "sans_position": 14,
+    "etiquetees": 5,
+    "sans_position": 15,
     "rejetees": [
       {
-        "id": "melenchon-interieur-justice-010",
-        "raison": "relecture : Le texte porte sur la définition pénale (consentement) et la fin de la correctionnalisation des viols, pas directement sur un durcissement des peines ou des moyens répressifs : l'étiquette repression n'est pas clairement fondée par l'extrait."
+        "id": "melenchon-finances-publiques-030",
+        "raison": "relecture : La taxe foncière progressive concerne tous les propriétaires selon leur patrimoine réel, pas spécifiquement les ultra-riches ; c'est une mesure de fiscalité générale, pas un impôt ciblé sur les très hauts patrimoines."
+      },
+      {
+        "id": "melenchon-finances-publiques-033",
+        "raison": "relecture : L'obligation de publier les aides perçues est une mesure de transparence, elle ne conditionne, taxe ni n'encadre directement les entreprises comme l'exige la définition."
+      },
+      {
+        "id": "melenchon-finances-publiques-038",
+        "raison": "relecture : La socialisation de banques de détail est une mesure de nationalisation bancaire, elle ne correspond pas aux exemples de la définition (taxer, conditionner les aides, encadrer dividendes/licenciements/rémunérations des entreprises)."
+      },
+      {
+        "id": "melenchon-finances-publiques-039",
+        "raison": "relecture : La mesure concerne la régulation financière et le crédit aux entreprises selon leur comptabilité carbone, pas les normes agricoles ou environnementales en agriculture."
+      },
+      {
+        "id": "melenchon-finances-publiques-040",
+        "raison": "relecture : La mutualisation d'une contribution sociale entre entreprises via une caisse de péréquation ne correspond pas clairement à un encadrement des entreprises au sens de la définition (taxation des superprofits, IS, aides, dividendes, licenciements, rémunérations)."
       }
     ],
-    "cout_reference_usd": 0.0694,
+    "cout_reference_usd": 0.0872,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "18aeed0ab3b8f169",
-    "date": "2026-10-10",
+    "empreinte": "022eabd37c3bc3e1",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 14,
-    "sans_position": 9,
+    "etiquetees": 13,
+    "sans_position": 11,
     "rejetees": [
       {
-        "id": "melenchon-interieur-justice-015",
-        "raison": "relecture : Il s'agit de l'Aide Sociale à l'Enfance, pas du sujet aides_sociales/chômage (RSA, assurance chômage) tel que défini."
-      },
-      {
-        "id": "melenchon-interieur-justice-017",
-        "raison": "relecture : L'extrait porte sur les poursuites judiciaires contre le financement du terrorisme, pas sur une taxation des très hauts patrimoines ou revenus."
+        "id": "melenchon-interieur-justice-022",
+        "raison": "relecture : Allonger et réviser la formation des policiers relève de la qualité/organisation de la formation, pas directement d'un durcissement des peines ou des moyens de répression au sens de la définition."
       }
     ],
-    "cout_reference_usd": 0.0617,
+    "cout_reference_usd": 0.0732,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "362dd56776e6ff48",
-    "date": "2026-10-10",
+    "empreinte": "328e51d18101ad64",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 14,
-    "sans_position": 11,
-    "rejetees": [],
-    "cout_reference_usd": 0.072,
+    "etiquetees": 15,
+    "sans_position": 9,
+    "rejetees": [
+      {
+        "id": "melenchon-interieur-justice-039",
+        "raison": "relecture : Le texte parle de gratuité de l'accueil scolaire et de la santé, pas de renforcement des moyens de l'hôpital public ni de régulation de l'installation des médecins, ce qui ne fonde pas clairement 'hopital_public'."
+      }
+    ],
+    "cout_reference_usd": 0.0745,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "144c1dbb195d5095",
-    "date": "2026-10-10",
+    "empreinte": "08d4ceaf9954e71c",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 8,
-    "sans_position": 13,
+    "etiquetees": 14,
+    "sans_position": 6,
     "rejetees": [
       {
         "id": "melenchon-social-solidarite-021",
-        "raison": "relecture : Encadrer les prix alimentaires est une mesure de régulation des prix, pas une mesure fiscale ou de redistribution (impôts/prestations)."
+        "raison": "relecture : L'encadrement des prix alimentaires n'est pas une mesure fiscale ni une prestation de solidarité au sens de la définition de 'redistribution'."
       },
       {
         "id": "melenchon-social-solidarite-024",
-        "raison": "relecture : Le 100% Sécu concerne le remboursement et l'intégration des mutuelles, pas le renforcement de l'hôpital public ni la régulation de l'installation des médecins."
+        "raison": "relecture : Le remboursement à 100% et l'intégration des mutuelles relèvent de la fiscalité/protection sociale, pas de la définition de 'hopital_public' centrée sur les moyens hospitaliers ou l'installation des médecins."
       },
       {
-        "id": "melenchon-social-solidarite-040",
-        "raison": "relecture : L'interdiction des expulsions sans relogement est une protection des locataires, qui ne correspond pas aux éléments définissant encadrer_logement (loyers, logement social, logements vacants, locations touristiques)."
+        "id": "melenchon-social-solidarite-026",
+        "raison": "relecture : Le changement de mode de financement (ONDAM vers ONBAM, tarification) est une réforme technique de financement, pas clairement un renforcement des moyens de l'hôpital public tel que défini."
       },
       {
-        "id": "melenchon-social-solidarite-041",
-        "raison": "relecture : L'abrogation de la loi Kasbarian relève de la protection des locataires, non de l'encadrement des loyers ou du logement social tel que défini."
+        "id": "melenchon-social-solidarite-037",
+        "raison": "relecture : Le budget pour l'art et la culture n'est ni un impôt sur les plus aisés ni une prestation de solidarité, ne correspond pas à la définition de 'redistribution'."
+      },
+      {
+        "id": "melenchon-social-solidarite-039",
+        "raison": "relecture : L'augmentation de places d'accueil pour sans-abri n'entre pas dans les critères définis pour 'encadrer_logement' (loyers, logement social construit, logements vacants, locations touristiques)."
       }
     ],
-    "cout_reference_usd": 0.0547,
+    "cout_reference_usd": 0.0777,
     "appels": 2
   },
   {
     "groupe": 5,
-    "empreinte": "ab82fca5d982dca4",
-    "date": "2026-10-12",
+    "empreinte": "17cc2f602ba6696d",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 16,
-    "sans_position": 7,
+    "sans_position": 5,
     "rejetees": [
       {
-        "id": "melenchon-social-solidarite-058",
-        "raison": "relecture : La mesure porte sur la suppression de lignes aériennes au profit du train, pas sur une restriction de la voiture individuelle ; mauvais sujet."
+        "id": "melenchon-social-solidarite-055",
+        "raison": "relecture : Renationaliser la SNCF est une mesure de propriété publique, ce qui ne correspond pas à la définition d'encadrer_entreprises (taxation, IS, dividendes, licenciements, aides conditionnées)."
+      },
+      {
+        "id": "melenchon-social-solidarite-060",
+        "raison": "relecture : Renationaliser les autoroutes et aéroports est une mesure de propriété publique, non une mesure fiscale ou de gouvernance d'entreprise correspondant à encadrer_entreprises."
+      },
+      {
+        "id": "melenchon-retraites-travail-001",
+        "raison": "relecture : Créer des pôles publics relève de la nationalisation/propriété publique, pas de la taxation ou de l'encadrement des entreprises privées défini par le sujet entreprises."
       },
       {
         "id": "melenchon-retraites-travail-006",
-        "raison": "relecture : La mesure propose une garantie d'embauche dans un secteur d'urgence, ce qui ne fonde pas directement la position « garantir les droits sociaux sans contrepartie » relative à l'assurance chômage/minima sociaux."
+        "raison": "relecture : Il s'agit d'une garantie d'emploi, pas d'une mesure sur les minima sociaux ou l'assurance chômage correspondant au sujet aides_sociales."
       }
     ],
-    "cout_reference_usd": 0.126,
+    "cout_reference_usd": 0.0789,
     "appels": 2
   },
   {
     "groupe": 6,
-    "empreinte": "475cda23ba9a77b9",
-    "date": "2026-10-12",
+    "empreinte": "4fd49a0302e4ab6b",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 13,
-    "sans_position": 12,
-    "rejetees": [],
-    "cout_reference_usd": 0.0743,
+    "sans_position": 11,
+    "rejetees": [
+      {
+        "id": "melenchon-retraites-travail-025",
+        "raison": "relecture : Il s'agit d'une revalorisation du montant minimal des retraites, qui relève du sujet travail/retraites et non d'aides_sociales (RSA/chômage); l'étiquette traite d'un sujet non visé par le texte."
+      }
+    ],
+    "cout_reference_usd": 0.0524,
     "appels": 2
   },
   {
     "groupe": 7,
-    "empreinte": "2a8e0b08c28002a0",
-    "date": "2026-10-12",
+    "empreinte": "57c208cb674b403f",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 8,
-    "sans_position": 12,
+    "etiquetees": 7,
+    "sans_position": 16,
     "rejetees": [
       {
         "id": "melenchon-envi-009",
-        "raison": "relecture : Le texte annonce un plan d'investissement mais ne mentionne ni dette ni déficit ni refus d'austérité, l'étiquette 'investir_dette' est une déduction non fondée par l'extrait."
-      },
-      {
-        "id": "melenchon-envi-010",
-        "raison": "relecture : Limiter la taille des SUV autorisés à la vente ne correspond pas à la définition de 'restreindre_voiture' (ZFE, fin du thermique, priorité aux transports collectifs) : c'est une norme produit, pas une restriction de circulation ou de transport."
-      },
-      {
-        "id": "melenchon-envi-014",
-        "raison": "relecture : Des prix planchers agricoles et l'interdiction de la vente à perte ne correspondent pas à la définition d'encadrer_entreprises (superprofits, IS, dividendes, licenciements, conditionnalité des aides), c'est un autre type de régulation de marché."
-      },
-      {
-        "id": "melenchon-europe-international-002",
-        "raison": "relecture : La 'rupture avec le néolibéralisme international' au FMI/OMC est trop vague pour établir une position de protectionnisme (taxer ou limiter les importations) : c'est une interprétation, pas une mesure concrète décrite."
+        "raison": "relecture : Le texte ne mentionne ni dette ni déficit, seulement un plan d'investissement ; le financement par la dette est une inférence non établie par le texte."
       },
       {
         "id": "melenchon-europe-international-003",
-        "raison": "relecture : Renforcer des organisations internationales et organiser une conférence sur les migrations ne montre pas directement une facilitation de l'accueil ou de la régularisation des personnes étrangères, c'est une mesure institutionnelle/diplomatique et non une politique d'ouverture concrète."
+        "raison": "relecture : Renforcer des organisations internationales sur les migrations ne montre pas directement une volonté d'ouverture (accueil, régularisation, accès aux droits) ; c'est un soutien institutionnel, pas une mesure d'accueil."
       }
     ],
-    "cout_reference_usd": 0.0611,
+    "cout_reference_usd": 0.0476,
     "appels": 2
   },
   {
     "groupe": 8,
-    "empreinte": "7c26de7361e27bbf",
-    "date": "2026-10-12",
+    "empreinte": "58602e8533e99f4a",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 9,
+    "etiquetees": 10,
     "sans_position": 15,
-    "rejetees": [
-      {
-        "id": "melenchon-europe-international-012",
-        "raison": "relecture : S'opposer à la reconduction d'un Commissaire européen à la Défense ne relève pas directement du budget militaire français ni d'un refus d'augmenter l'effort militaire, c'est une question institutionnelle européenne, pas le sujet 'defense' tel que défini."
-      }
-    ],
-    "cout_reference_usd": 0.0484,
+    "rejetees": [],
+    "cout_reference_usd": 0.0448,
     "appels": 2
   },
   {
     "groupe": 9,
-    "empreinte": "65cf2ba73d2cd3b0",
-    "date": "2026-10-12",
+    "empreinte": "cc98fb1b00d545ed",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 6,
-    "sans_position": 19,
+    "etiquetees": 7,
+    "sans_position": 18,
     "rejetees": [],
-    "cout_reference_usd": 0.0481,
+    "cout_reference_usd": 0.0528,
     "appels": 2
   },
   {
     "groupe": 10,
-    "empreinte": "82e0145c0d916cca",
-    "date": "2026-10-12",
+    "empreinte": "ca52e88fbdff8591",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 13,
-    "sans_position": 10,
+    "etiquetees": 7,
+    "sans_position": 17,
     "rejetees": [
       {
-        "id": "melenchon-education-jeunesse-015",
-        "raison": "relecture : Le gel du point d'indice et les grilles salariales concernent les fonctionnaires (fonction_publique), pas le SMIC/salaires du privé."
-      },
-      {
-        "id": "melenchon-education-jeunesse-022",
-        "raison": "relecture : La mesure porte sur le contenu des programmes scolaires, pas sur le développement des énergies renouvelables ou la transition écologique au sens du sujet 'renouvelables'."
+        "id": "melenchon-education-jeunesse-023",
+        "raison": "relecture : La mesure porte sur l'alimentation des cantines scolaires et non sur des normes agricoles imposées aux exploitations ; elle ne fonde pas directement l'étiquette agriculture_normes."
       }
     ],
-    "cout_reference_usd": 0.086,
+    "cout_reference_usd": 0.0515,
     "appels": 2
   },
   {
     "groupe": 11,
-    "empreinte": "0bd8ac2a0def4809",
-    "date": "2026-10-12",
+    "empreinte": "5a1b4c401c82de40",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 10,
-    "etiquetees": 1,
+    "etiquetees": 2,
     "sans_position": 6,
     "rejetees": [
       {
-        "id": "melenchon-education-jeunesse-033",
-        "raison": "relecture : La gratuité de l'enseignement supérieur ne relève pas de l'organisation/structure du système éducatif (reformer_ecole) mais plutôt de la fiscalité/dépense publique ; mauvais sujet."
-      },
-      {
         "id": "melenchon-defense-004",
-        "raison": "relecture : Le retrait du commandement intégré de l'OTAN concerne la défense et les alliances militaires, pas les compétences de l'Union européenne ; mauvais sujet (devrait être defense, pas europe)."
+        "raison": "relecture : Le retrait du commandement intégré de l'OTAN relève de la défense/diplomatie militaire, pas des compétences de l'Union européenne ; mauvais sujet."
       },
       {
         "id": "melenchon-defense-005",
-        "raison": "relecture : Une loi de programmation militaire relève du sujet défense, pas des compétences de l'Union européenne ; mauvais sujet (devrait être defense, pas europe)."
+        "raison": "relecture : La loi de programmation militaire pour l'indépendance industrielle relève du sujet défense (plus_defense), pas de l'Europe/souveraineté nationale face à l'UE."
       }
     ],
-    "cout_reference_usd": 0.0292,
+    "cout_reference_usd": 0.0405,
     "appels": 2
   }
 ]

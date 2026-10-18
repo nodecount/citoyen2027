@@ -20,7 +20,21 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Sortir de Schengen"
+      },
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Sortir de Schengen et recruter 10 000 agents spécialisés"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-interieur-justice-002",
@@ -43,7 +57,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Limiter strictement le regroupement familial et supprimer les privilèges accordés aux algériens"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-interieur-justice-003",
@@ -88,6 +110,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Créer des quotas d'étudiants étrangers par filière et par niveau."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer des quotas d'étudiants étrangers par filière et par niveau"
+      }
     ]
   },
   {
@@ -126,6 +156,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Remise immédiate des mineurs isolés ou non accompagnés aux autorités de leur pays d'origine."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Remise immédiate des mineurs isolés ou non accompagnés aux autorités de leur pays d'origine"
+      }
     ]
   },
   {
@@ -149,7 +187,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Conditionner l'immigration économique au taux de chômage"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-interieur-justice-006",
@@ -186,6 +232,14 @@
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer l'AME."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer l'AME"
       }
     ]
   },
@@ -234,6 +288,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer les aides sociales non contributives pour les étrangers ( RSA, allocations familiales, aides au logement, etc.)."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "immigration",
+        "position": "restriction",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les aides sociales non contributives pour les étrangers ( RSA, allocations familiales, aides au logement, etc.)"
+      }
     ]
   },
   {
@@ -271,6 +333,14 @@
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer le droit du sol par référendum."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "droit_du_sol",
+        "position": "droit_sol_restreint",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer le droit du sol par référendum"
       }
     ]
   },
@@ -311,7 +381,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Limiter le droit de vote aux personnes qui possèdent la nationalité française."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "dupont-aignan-interieur-justice-010",
@@ -334,7 +405,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "prison",
+        "position": "plus_de_prison",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer 40 000 nouvelles places de prison"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-interieur-justice-011",
@@ -357,7 +436,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Recruter 20 000 surveillants supplémentaires"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-interieur-justice-012",
@@ -395,6 +482,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Rétablir l'uniforme de prisonnier."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rétablir l'uniforme de prisonnier"
+      }
     ]
   },
   {
@@ -418,7 +513,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-interieur-justice-014",
@@ -494,6 +590,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Remettre en vigueur les fouilles systématiques après chaque visite."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Remettre en vigueur les fouilles systématiques après chaque visite"
+      }
     ]
   },
   {
@@ -555,7 +659,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Recruter et former 10 000 policiers et gendarmes supplémentaires en 5 ans"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-interieur-justice-018",
@@ -578,7 +690,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Fixer un objectif de 10 000 douaniers et policiers supplémentaires aux frontières en 5 ans"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-interieur-justice-019",
@@ -601,7 +721,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-interieur-justice-020",
@@ -639,6 +760,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Instaurer la présomption de légitime défense pour les forces de l'ordre."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer la présomption de légitime défense pour les forces de l'ordre"
+      }
     ]
   },
   {
@@ -662,7 +791,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-social-solidarite-001",
@@ -774,7 +904,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "réduisant de 15 à 10 ans le délai minimum entre deux donations"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "dupont-aignan-retraites-travail-001",
@@ -796,7 +927,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Système de retraite",
-    "titre_litteral": true
+    "titre_litteral": true,
+    "positions": []
   },
   {
     "id": "dupont-aignan-envi-001",
@@ -819,7 +951,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rompre les accords européens de libre-échange"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-envi-002",
@@ -842,7 +982,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Se mobiliser pour une exception agricole au sein de l'OMC"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-envi-003",
@@ -865,7 +1013,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Sortir de la PAC et rétablir une politique agricole commune"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-envi-004",
@@ -910,7 +1066,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Suppression des droits de succession sur les 100 premiers hectares transmis aux jeunes agriculteurs."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "dupont-aignan-envi-005",
@@ -933,7 +1090,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "créer un label unique \" Produit en France\""
+      }
+    ]
   },
   {
     "id": "dupont-aignan-envi-006",
@@ -955,7 +1120,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
-    "titre_litteral": true
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réserver aux producteurs français 50 % puis progressivement 80 % des commandes publiques"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-envi-007",
@@ -993,7 +1166,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "autoriser la vente libre de céréales entre producteurs et éleveurs pour limiter les marges des intermédiaires"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "dupont-aignan-europe-international-001",
@@ -1016,7 +1190,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Affaires étrangères & diplomatie",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-europe-international-002",
@@ -1039,7 +1214,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Affaires étrangères & diplomatie",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-europe-international-003",
@@ -1062,7 +1238,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Affaires étrangères & diplomatie",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-europe-international-004",
@@ -1085,7 +1262,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Affaires étrangères & diplomatie",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-europe-international-005",
@@ -1108,7 +1286,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Affaires étrangères & diplomatie",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-europe-international-006",
@@ -1131,7 +1310,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Affaires étrangères & diplomatie",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-europe-international-007",
@@ -1154,7 +1334,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Affaires étrangères & diplomatie",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-gouvernance-republique-001",
@@ -1177,7 +1358,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Egalité, laïcité & droits individuels",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "laicite",
+        "position": "laicite_stricte",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire tous les signes religieux visibles dans le service public"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-gouvernance-republique-002",
@@ -1200,7 +1389,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Egalité, laïcité & droits individuels",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "laicite",
+        "position": "laicite_stricte",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Conditionner l'ouverture d'une mosquée à la signature du Serment de fidélité à la République Française"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-gouvernance-republique-003",
@@ -1231,6 +1428,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Suspendre les aides sociales pour les personnes récidivistes qui enfreignent les principes de laïcité."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "laicite",
+        "position": "laicite_stricte",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Suspendre les aides sociales pour les personnes récidivistes qui enfreignent les principes de laïcité"
+      }
     ]
   },
   {
@@ -1254,7 +1459,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Egalité, laïcité & droits individuels",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer une peine de 10 ans de prison et 100 000 euros d'amende pour les prédicateurs subversifs et séditieux"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-gouvernance-republique-005",
@@ -1277,7 +1490,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Egalité, laïcité & droits individuels",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "laicite",
+        "position": "laicite_stricte",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Fermer immédiatement toutes les associations ou lieux de culte qui refusent de signer la Charte de conformité de l'Islam"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-gouvernance-republique-006",
@@ -1300,7 +1521,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un fonds souverain IA doté de plusieurs milliards d'euros financé par l'Etat, la BPI et des investisseurs privés"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-gouvernance-republique-007",
@@ -1323,7 +1552,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-gouvernance-republique-008",
@@ -1346,7 +1576,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-gouvernance-republique-009",
@@ -1369,7 +1600,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-gouvernance-republique-010",
@@ -1415,7 +1647,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Soutenir massivement les start-ups françaises pour éviter leur fuite vers la Silicon Valley"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-gouvernance-republique-012",
@@ -1438,7 +1678,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-gouvernance-republique-013",
@@ -1461,7 +1702,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Aider à la relocalisation ou à l'implantation industrielle de secteurs critiques"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-gouvernance-republique-014",
@@ -1522,6 +1771,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "assurer une formation IA des enseignants"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Adapter le système éducatif à l'IA : assurer une formation IA des enseignants, un cursus IA au collège et création d'un pôle universitaire IA de référence."
+      }
     ]
   },
   {
@@ -1545,7 +1802,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "encadrer_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer une agence nationale de l'éthique et de la sécurité des IA."
+      }
+    ]
   },
   {
     "id": "dupont-aignan-defense-001",
@@ -1568,7 +1833,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Construire 2 nouveaux porte-avions."
+      }
+    ]
   },
   {
     "id": "dupont-aignan-defense-002",
@@ -1591,7 +1864,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Passer de 15 à 20 frégates de premier rang."
+      }
+    ]
   },
   {
     "id": "dupont-aignan-defense-003",
@@ -1614,7 +1895,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter la flotte opérationnelle de Rafale de 250 à 300."
+      }
+    ]
   },
   {
     "id": "dupont-aignan-defense-004",
@@ -1637,7 +1926,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Transformer la réserve opérationnelle en une véritable garde nationale de 100 000 réservistes."
+      }
+    ]
   },
   {
     "id": "dupont-aignan-defense-005",
@@ -1660,7 +1957,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un service national civique obligatoire de 3 mois avec option militaire d'une année."
+      }
+    ]
   },
   {
     "id": "dupont-aignan-defense-006",
@@ -1683,7 +1988,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-defense-007",
@@ -1706,7 +2012,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre l'accent sur notre souveraineté et notre autosuffisance en matière de production de matériel militaire."
+      }
+    ]
   },
   {
     "id": "dupont-aignan-defense-008",

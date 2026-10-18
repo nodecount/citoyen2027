@@ -1,93 +1,98 @@
 [
   {
     "groupe": 0,
-    "empreinte": "7e57c3c788f655b1",
-    "date": "2026-10-12",
+    "empreinte": "d324e1aaca0409f2",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 19,
-    "sans_position": 4,
+    "etiquetees": 15,
+    "sans_position": 7,
     "rejetees": [
       {
         "id": "philippe-finances-publiques-006",
-        "raison": "relecture : Le texte ne mentionne que le nom du pacte Dutreil sans en expliciter le contenu fiscal ; conclure à 'ne pas taxer les ultra-riches' suppose une connaissance externe du mécanisme."
+        "raison": "relecture : Le texte ne décrit pas en quoi consiste le pacte Dutreil ; déduire qu'il s'agit de ne pas taxer les ultra-riches suppose une connaissance extérieure du dispositif."
       },
       {
-        "id": "philippe-finances-publiques-008",
-        "raison": "relecture : L'extrait ne précise aucune mesure fiscale concrète ('favoriser' est vague), il ne montre pas clairement un allègement de la fiscalité des ultra-riches."
+        "id": "philippe-finances-publiques-007",
+        "raison": "relecture : L'exonération des donations concerne les donations en général, pas spécifiquement les très hauts patrimoines ; l'étiquette ultra_riches n'est pas fondée par le texte."
+      },
+      {
+        "id": "philippe-finances-publiques-010",
+        "raison": "relecture : S'engager à ne pas créer de nouvel impôt n'est pas une baisse d'impôt ni une réduction de la dépense publique, donc ne correspond pas à la définition de baisse_impots."
       }
     ],
-    "cout_reference_usd": 0.143,
+    "cout_reference_usd": 0.1257,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "b0bf0a0eaed886f6",
-    "date": "2026-10-12",
+    "empreinte": "9f477c186a023682",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 12,
-    "sans_position": 11,
+    "etiquetees": 10,
+    "sans_position": 13,
     "rejetees": [
       {
-        "id": "philippe-social-solidarite-004",
-        "raison": "relecture : L'étiquette entreprises/soutenir_entreprises s'appuie sur une conséquence seconde (réduction du coût du travail) et non sur une mesure visant directement les entreprises ; la mesure cible l'exonération de cotisations des salariés."
+        "id": "philippe-interieur-justice-028",
+        "raison": "relecture : Le texte vise les consommateurs de drogues/narcotrafic en général (opérations en boîtes/festivals), sans mention spécifique du cannabis, donc l'étiquette sur ce sujet précis n'est pas fondée."
       },
       {
         "id": "philippe-social-solidarite-007",
-        "raison": "relecture : Le plan fret-ferroviaire vise à limiter la circulation des camions de marchandises, ce qui ne relève pas du sujet voiture (restrictions aux véhicules particuliers, ZFE, transports collectifs)."
+        "raison": "relecture : Le texte porte sur le fret ferroviaire et la circulation des camions, non sur la voiture individuelle visée par le sujet 'voiture'."
       }
     ],
-    "cout_reference_usd": 0.0772,
+    "cout_reference_usd": 0.0726,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "9ac49fd3b78a2228",
-    "date": "2026-10-12",
+    "empreinte": "303c0f8e27563362",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 7,
     "sans_position": 18,
     "rejetees": [],
-    "cout_reference_usd": 0.0484,
+    "cout_reference_usd": 0.0408,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "a1865a69a60b135b",
-    "date": "2026-10-12",
+    "empreinte": "31a417151ecee428",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 4,
-    "sans_position": 18,
+    "etiquetees": 8,
+    "sans_position": 15,
     "rejetees": [
       {
-        "id": "philippe-europe-international-005",
-        "raison": "relecture : L'extrait décrit des achats groupés entre Etats membres, ce qui relève d'une coopération européenne renforcée (plus_europe) et non d'un repli vers la souveraineté nationale (souverainete)."
-      },
-      {
-        "id": "philippe-gouvernance-republique-006",
-        "raison": "relecture : Le consentement aux algorithmes de recommandation de contenu ne relève pas de la surveillance sécuritaire (vidéosurveillance, reconnaissance faciale, accès aux données à des fins de sécurité) définissant ce sujet."
-      },
-      {
         "id": "philippe-gouvernance-republique-010",
-        "raison": "relecture : Le texte maintient explicitement une régulation éthique et protectrice, ce qui ne fonde pas clairement une position de simple encouragement de l'IA (plus_ia) plutôt que d'encadrement (encadrer_ia)."
+        "raison": "relecture : Le texte défend aussi une régulation éthique de l'IA, ce qui contredit l'étiquette univoque plus_ia et correspondrait plutôt à encadrer_ia."
+      },
+      {
+        "id": "philippe-reformes-etat-003",
+        "raison": "relecture : Regrouper ou privatiser des agences ne correspond pas directement à la définition de moins_fonctionnaires (suppression de postes, gel d'embauches ou fin du statut)."
       }
     ],
-    "cout_reference_usd": 0.0501,
+    "cout_reference_usd": 0.0651,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "5781572d701256e2",
-    "date": "2026-10-12",
+    "empreinte": "a8571443663c3c25",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 7,
-    "etiquetees": 5,
+    "etiquetees": 4,
     "sans_position": 2,
-    "rejetees": [],
-    "cout_reference_usd": 0.0229,
+    "rejetees": [
+      {
+        "id": "philippe-defense-004",
+        "raison": "relecture : Il s'agit d'un renforcement naval pour lutter contre le narcotrafic et sécuriser les Outre-mer, relevant plutôt de sécurité/lutte contre le crime que d'un effort militaire de défense au sens strict."
+      }
+    ],
+    "cout_reference_usd": 0.0239,
     "appels": 2
   }
 ]

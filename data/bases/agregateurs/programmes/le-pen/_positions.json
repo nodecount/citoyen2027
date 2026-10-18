@@ -1,90 +1,93 @@
 [
   {
     "groupe": 0,
-    "empreinte": "147e34c4abe4f5db",
-    "date": "2026-10-12",
+    "empreinte": "398ba8177c96dbaa",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 20,
-    "sans_position": 4,
+    "etiquetees": 19,
+    "sans_position": 5,
     "rejetees": [
       {
         "id": "le-pen-finances-publiques-007",
-        "raison": "relecture : L'extrait évoque des « droits nouveaux » et « priorités nationales » sans préciser qu'il s'agit de prestations de solidarité ou de hausse d'impôts sur les plus aisés, donc la redistribution n'est pas établie par le texte."
+        "raison": "relecture : L'extrait évoque des dépenses sur des 'priorités nationales' de façon générique, sans montrer qu'il s'agit de dépenses ou prestations de solidarité, ce qui ne fonde pas spécifiquement l'étiquette redistribution."
       }
     ],
-    "cout_reference_usd": 0.0931,
+    "cout_reference_usd": 0.1361,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "a9aab35563345a53",
-    "date": "2026-10-12",
+    "empreinte": "761059a4b25c7e14",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 12,
-    "sans_position": 11,
-    "rejetees": [
-      {
-        "id": "le-pen-interieur-justice-011",
-        "raison": "relecture : Une présomption de légitime défense concerne le cadre juridique de l'usage de la force, pas l'armement de la police (sujet police_armement mal choisi)."
-      },
-      {
-        "id": "le-pen-social-solidarite-015",
-        "raison": "relecture : Le remboursement des soins dentaires relève de l'organisation de la santé, pas des minima sociaux/chômage visés par le sujet aides_sociales."
-      }
-    ],
-    "cout_reference_usd": 0.0822,
+    "etiquetees": 16,
+    "sans_position": 9,
+    "rejetees": [],
+    "cout_reference_usd": 0.0796,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "d9be5881f952b4e8",
-    "date": "2026-10-12",
+    "empreinte": "2570b44f90eb561f",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 16,
-    "sans_position": 7,
+    "etiquetees": 14,
+    "sans_position": 6,
     "rejetees": [
       {
         "id": "le-pen-social-solidarite-019",
-        "raison": "relecture : Les « salles de shoot » concernent l'injection de drogues dures (héroïne), pas le cannabis ; mauvais sujet."
+        "raison": "relecture : Les salles de shoot concernent la réduction des risques pour les drogues dures (héroïne), pas le cannabis ; le sujet est erroné."
+      },
+      {
+        "id": "le-pen-social-solidarite-020",
+        "raison": "relecture : Remplacer une subvention par un prêt à taux zéro est un changement de mécanisme d'aide, pas une libéralisation de l'offre de logement (déréglementation, allègement de contraintes)."
+      },
+      {
+        "id": "le-pen-social-solidarite-025",
+        "raison": "relecture : La norme ZAN concerne l'artificialisation des sols/urbanisme, pas l'agriculture ; le sujet agriculture_normes est inadapté, il relève plutôt de la transition écologique."
       },
       {
         "id": "le-pen-social-solidarite-029",
-        "raison": "relecture : Plafonner l'APL à 90% du loyer est une réduction du montant de l'aide, pas une conditionnalité à une activité ni un durcissement de l'indemnisation chômage comme le prévoit la définition."
+        "raison": "relecture : Plafonner les APL n'est pas une conditionnalité d'activité ou un durcissement de contrôle au sens de la définition de conditionner_aides, mais une simple réduction du niveau d'aide."
+      },
+      {
+        "id": "le-pen-retraites-travail-008",
+        "raison": "relecture : Le pacte Dutreil concerne la fiscalité de la transmission patrimoniale (héritage d'entreprise), ce qui relève du sujet ultra_riches plutôt que d'un allègement général de la fiscalité des entreprises."
       }
     ],
-    "cout_reference_usd": 0.0765,
+    "cout_reference_usd": 0.0801,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "33a882fe26ab615e",
-    "date": "2026-10-12",
+    "empreinte": "cd7d00f7e9c173d4",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 13,
-    "sans_position": 12,
+    "etiquetees": 15,
+    "sans_position": 10,
     "rejetees": [],
-    "cout_reference_usd": 0.0546,
+    "cout_reference_usd": 0.0566,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "37ecb8c81e5fdf63",
-    "date": "2026-10-12",
+    "empreinte": "6ce88fe92b4fbefe",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 23,
-    "etiquetees": 12,
-    "sans_position": 10,
+    "etiquetees": 9,
+    "sans_position": 13,
     "rejetees": [
       {
-        "id": "le-pen-education-jeunesse-007",
-        "raison": "relecture : L'extrait mélange trois mesures distinctes (assiduité, peines plancher, vidéoprotection) sous une seule étiquette ecole_discipline alors que les peines plancher et la vidéoprotection ne relèvent pas directement de la discipline scolaire ; de plus l'étiquette prison/plus_de_prison déduit des 'peines plancher' de la loi Ciotti sur l'absentéisme scolaire une politique pénale générale de prison, ce qui est un mauvais sujet."
+        "id": "le-pen-reformes-etat-002",
+        "raison": "relecture : La « réinternalisation » d'agences dans l'administration peut accroître les effectifs publics, ce qui contredit l'étiquette moins_fonctionnaires appliquée uniformément."
       }
     ],
-    "cout_reference_usd": 0.0576,
+    "cout_reference_usd": 0.0635,
     "appels": 2
   }
 ]

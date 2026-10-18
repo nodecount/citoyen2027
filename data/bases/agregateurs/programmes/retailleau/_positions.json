@@ -1,136 +1,123 @@
 [
   {
     "groupe": 0,
-    "empreinte": "778330aa6bf7ad36",
-    "date": "2026-10-10",
+    "empreinte": "e2fad9732e057191",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 15,
+    "etiquetees": 14,
     "sans_position": 9,
     "rejetees": [
       {
         "id": "retailleau-interieur-justice-001",
-        "raison": "relecture : Le texte dit « permettre » une immigration de travail, ce qui relève plutôt de l'ouverture ; le contrôle accru ne suffit pas à fonder clairement une position de restriction, le sens est ambigu/inversé."
+        "raison": "relecture : Le texte dit « permettre » une immigration de travail, ce qui relève plutôt de l'ouverture ; le « plus grand contrôle » ne suffit pas à fonder une étiquette de restriction sans interprétation."
+      },
+      {
+        "id": "retailleau-interieur-justice-008",
+        "raison": "relecture : Le bouclage physique d'un quartier (contrôle d'entrées/sorties, véhicules blindés) relève de la sécurité/répression et non de la surveillance des données ou de la vidéosurveillance définie pour ce sujet."
       }
     ],
-    "cout_reference_usd": 0.1254,
+    "cout_reference_usd": 0.1268,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "234da844b33dcec7",
-    "date": "2026-10-10",
+    "empreinte": "e19a23610db2c60a",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 16,
-    "sans_position": 5,
+    "sans_position": 7,
     "rejetees": [
       {
-        "id": "retailleau-social-solidarite-003",
-        "raison": "relecture : Conditionner une aide familiale à la régularité du séjour est une condition d'accès à une prestation sociale, pas une mesure de politique migratoire ; l'étiquette immigration/restriction n'est pas fondée par le texte."
-      },
-      {
-        "id": "retailleau-social-solidarite-006",
-        "raison": "relecture : Recentrer le logement social sur les actifs est une restriction d'accès au logement social, pas une libération de l'offre privée ; mauvaise position pour le sujet logement."
-      },
-      {
-        "id": "retailleau-social-solidarite-016",
-        "raison": "relecture : Le reversement de TVA aux communes bâtisseuses est une incitation financière aux municipalités, pas un allégement direct des contraintes ou de la fiscalité des propriétaires/investisseurs privés défini par la position liberer_offre_logement."
+        "id": "retailleau-social-solidarite-004",
+        "raison": "relecture : L'extrait ne décrit qu'une réduction globale des prestations (25Md€), pas une mise sous condition ou un durcissement de l'indemnisation comme le définit 'conditionner_aides'."
       },
       {
         "id": "retailleau-social-solidarite-022",
-        "raison": "relecture : La suppression du ZAN concerne l'artificialisation des sols et l'urbanisme/construction, pas les normes agricoles visées par le sujet agriculture_normes."
+        "raison": "relecture : Le ZAN concerne l'urbanisme/artificialisation des sols pour le logement, pas les normes agricoles ou environnementales visées par le sujet 'agriculture_normes'."
       }
     ],
-    "cout_reference_usd": 0.0896,
+    "cout_reference_usd": 0.0757,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "a5d5052143795504",
-    "date": "2026-10-10",
+    "empreinte": "9732dc05001e12eb",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 6,
+    "etiquetees": 7,
     "sans_position": 14,
     "rejetees": [
       {
         "id": "retailleau-social-solidarite-026",
-        "raison": "relecture : La mesure porte sur l'ordre de priorité d'attribution du logement social, pas sur l'encadrement des loyers ou la construction/taxation visée par 'encadrer_logement'."
+        "raison": "relecture : Le texte porte sur un ordre de priorité d'accès au logement social existant, pas sur l'encadrement des loyers ni la construction de logement social comme le définit encadrer_logement."
       },
       {
         "id": "retailleau-social-solidarite-029",
-        "raison": "relecture : Supprimer une exonération fiscale augmente la fiscalité des bailleurs HLM, ce qui va dans le sens inverse de 'baisse_impots'."
+        "raison": "relecture : Supprimer une exonération fiscale revient à augmenter l'imposition des organismes HLM, ce qui va dans le sens inverse de baisse_impots."
       },
       {
         "id": "retailleau-social-solidarite-031",
-        "raison": "relecture : C'est une exclusion fondée sur le revenu des parents, pas une mise sous condition d'activité ou un durcissement de contrôle au sens de 'conditionner_aides'."
+        "raison": "relecture : Exclure des APL selon le revenu des parents n'est pas un dispositif de contrepartie d'activité ou de durcissement de l'assurance chômage visé par conditionner_aides."
       },
       {
         "id": "retailleau-retraites-travail-002",
-        "raison": "relecture : La fusion de trois dispositifs pour inciter au travail n'impose pas explicitement une contrepartie d'activité ni un durcissement des contrôles, contrairement à la définition de 'conditionner_aides'."
-      },
-      {
-        "id": "retailleau-retraites-travail-004",
-        "raison": "relecture : Le texte renvoie au contenu du 'décret Attal' sans préciser ses mesures ; l'étiquette suppose une connaissance extérieure de ce décret, non établie par le texte."
+        "raison": "relecture : Le texte décrit une fusion de dispositifs pour rendre le travail visiblement rémunérateur, un effet incitatif, et ne prévoit pas explicitement une contrepartie d'activité obligatoire comme l'exige conditionner_aides."
       }
     ],
-    "cout_reference_usd": 0.0608,
+    "cout_reference_usd": 0.0624,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "52447fc6ac9f6964",
-    "date": "2026-10-10",
+    "empreinte": "e26fa0b3a5a7d9fd",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 14,
-    "sans_position": 10,
+    "sans_position": 9,
     "rejetees": [
       {
-        "id": "retailleau-envi-003",
-        "raison": "relecture : Le texte ne propose aucune mesure de maintien ou développement du nucléaire, il s'agit d'un effet attendu (baisse de facture) tiré d'un actif existant, pas d'une position établie sur la politique nucléaire."
+        "id": "retailleau-envi-002",
+        "raison": "relecture : L'hydroélectricité relève du sujet renouvelables, pas du nucléaire : l'étiquette nucleaire/garder_nucleaire est hors sujet pour cet extrait."
+      },
+      {
+        "id": "retailleau-envi-023",
+        "raison": "relecture : L'extrait parle de commande publique et de compétitivité, pas de taxation ou limitation des importations : la position protectionnisme n'est pas directement fondée par le texte, qui évoque plutôt un effet de second ordre (compétitivité)."
       }
     ],
-    "cout_reference_usd": 0.0594,
+    "cout_reference_usd": 0.0633,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "4dbc066c6873006a",
-    "date": "2026-10-10",
+    "empreinte": "fd6960303a0f5175",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 17,
+    "etiquetees": 19,
     "sans_position": 6,
-    "rejetees": [
-      {
-        "id": "retailleau-gouvernance-republique-001",
-        "raison": "relecture : Abaisser le seuil de signatures du RIP est un ajustement limité d'un mécanisme existant, pas un changement d'institutions comparable à une VIe République ou un RIC ; cela relève plutôt d'une réforme limitée (institutions_actuelles)."
-      },
-      {
-        "id": "retailleau-education-jeunesse-005",
-        "raison": "relecture : La mesure revalorise les salaires des professeurs (fonction publique), ce qui ne relève pas du sujet 'salaires' défini comme hausse du SMIC ou des salaires du secteur privé imposée par la loi."
-      }
-    ],
-    "cout_reference_usd": 0.1024,
+    "rejetees": [],
+    "cout_reference_usd": 0.1037,
     "appels": 2
   },
   {
     "groupe": 5,
-    "empreinte": "a33defad30de33cc",
-    "date": "2026-10-10",
+    "empreinte": "b929fe6dc806c12d",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "etiquetees": 10,
-    "sans_position": 2,
+    "etiquetees": 6,
+    "sans_position": 6,
     "rejetees": [
       {
         "id": "retailleau-education-jeunesse-010",
-        "raison": "relecture : L'extrait 'Restaurer le mérite et l'exigence' porte sur la sélection scolaire (examen, bac, Parcoursup), pas sur la discipline/sanctions visée par ecole_exigence."
+        "raison": "relecture : L'extrait 'Restaurer le mérite et l'exigence' concerne l'examen d'entrée en 6ème et le bac, pas des sanctions disciplinaires contre harcèlement/violences ; ce n'est pas le sujet ecole_discipline mais plutôt ecole_organisation."
       }
     ],
-    "cout_reference_usd": 0.0428,
+    "cout_reference_usd": 0.0349,
     "appels": 2
   }
 ]

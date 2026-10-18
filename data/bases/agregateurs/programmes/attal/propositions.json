@@ -35,14 +35,6 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Baisser les charges sur le travail par des économies"
       }
-    ],
-    "positions": [
-      {
-        "sujet": "salaires",
-        "position": "moderer_salaires",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser les charges sur le travail par des économies"
-      }
     ]
   },
   {
@@ -180,6 +172,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Faire une année blanche sur l’ensemble des prestations sociales pour le budget 2028 sans toucher aux petites retraites"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire une année blanche sur l’ensemble des prestations sociales pour le budget 2028 sans toucher aux petites retraites"
+      }
     ]
   },
   {
@@ -203,7 +203,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-finances-publiques-008",
@@ -280,13 +281,7 @@
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Atteindre 0 % du PIB du déficit public à horizon 2037"
-      },
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "un montant d’économies de 120 à 150 milliards à réaliser sur cette période"
+        "extrait": "Atteindre 0 % du PIB du déficit public à horizon 2037, avec un premier point d’étape à 3 % avant 2032 pour un montant d’économies de 120 à 150 milliards à réaliser sur cette période"
       }
     ]
   },
@@ -317,7 +312,7 @@
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Inscrire une règle d’or budgétaire dans la Constitution, sur le modèle allemand."
+        "extrait": "Inscrire une règle d’or budgétaire dans la Constitution, sur le modèle allemand"
       }
     ]
   },
@@ -363,7 +358,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser de 2 Md€ les impôts pour les classes moyennes."
+        "extrait": "Baisser de 2 Md€ les impôts pour les classes moyennes"
       }
     ]
   },
@@ -394,7 +389,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser de façon ciblée les impôts plutôt qu’entreprendre une réforme fiscale globale."
+        "extrait": "Baisser de façon ciblée les impôts plutôt qu’entreprendre une réforme fiscale globale"
       }
     ]
   },
@@ -425,7 +420,7 @@
         "sujet": "entreprises",
         "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser les impôts de production."
+        "extrait": "Baisser les impôts de production"
       }
     ]
   },
@@ -479,7 +474,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Restreindre le regroupement familial."
+        "extrait": "Restreindre le regroupement familial"
       }
     ]
   },
@@ -510,7 +505,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Faire voter au Parlement des quotas d’immigration par secteur d’activité."
+        "extrait": "Faire voter au Parlement des quotas d’immigration par secteur d’activité"
       }
     ]
   },
@@ -541,7 +536,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place un permis à points pour l’immigration sur le modèle canadien."
+        "extrait": "Mettre en place un permis à points pour l’immigration sur le modèle canadien"
       }
     ]
   },
@@ -587,7 +582,7 @@
         "sujet": "laicite",
         "position": "laicite_stricte",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Interdire le voile pour les moins de 15 ans."
+        "extrait": "Interdire le voile pour les moins de 15 ans"
       }
     ]
   },
@@ -612,8 +607,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "attal-interieur-justice-007",
@@ -657,7 +651,7 @@
         "sujet": "justice_mineurs",
         "position": "durcir_justice_mineurs",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "la comparution immédiate pour les mineurs, • l'atténuation de l'excuse de minorité."
+        "extrait": "la comparution immédiate pour les mineurs, • l'atténuation de l'excuse de minorité"
       }
     ]
   },
@@ -726,7 +720,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Permettre à un maire de s'opposer à un mariage avec une personne sous OQTF."
+        "extrait": "Permettre à un maire de s'opposer à un mariage avec une personne sous OQTF"
       }
     ]
   },
@@ -772,7 +766,7 @@
         "sujet": "aides_sociales",
         "position": "conditionner_aides",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Durcir et réformer l’assurance chômage pour inciter le retour à l’emploi et diminuer l’inactivité."
+        "extrait": "Durcir et réformer l’assurance chômage pour inciter le retour à l’emploi et diminuer l’inactivité"
       }
     ]
   },
@@ -813,6 +807,14 @@
         ],
         "dimension": "revenu_disponible",
         "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "faire une année blanche sur l’ensemble des prestations sociales, en épargnant toutefois les petites retraites"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "faire une année blanche sur l’ensemble des prestations sociales, en épargnant toutefois les petites retraites"
       }
@@ -892,7 +894,7 @@
         "sujet": "logement",
         "position": "liberer_offre_logement",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Reprendre les mesures de simplification contenues dans la loi Kasbarian sur le logement abordable"
+        "extrait": "Reprendre les mesures de simplification contenues dans la loi Kasbarian sur le logement abordable."
       }
     ]
   },
@@ -1120,8 +1122,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Faire baisser les charges salariales pour augmenter les salaires."
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "attal-retraites-travail-006",
@@ -1144,7 +1145,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "conditionner_aides",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Porter une réforme de l’assurance chômage qui incite au travail et qui créerait 100 000 emplois supplémentaires."
+      }
+    ]
   },
   {
     "id": "attal-retraites-travail-007",
@@ -1173,7 +1182,7 @@
         "sujet": "temps_travail",
         "position": "reduire_temps_travail",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Permettre la semaine de quatre jours"
+        "extrait": "Permettre la semaine de quatre jours et une meilleure adaptation des horaires entre l'employeur et le salarié."
       }
     ]
   },
@@ -1269,8 +1278,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Système de retraite",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "attal-envi-001",
@@ -1294,7 +1302,14 @@
     "sous_theme": "Energie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Doubler la part du fonds chaleur, NDLR dédiée au financement de la géoénergie de 80 M€ à 160 M€."
+      }
+    ]
   },
   {
     "id": "attal-envi-002",
@@ -1317,7 +1332,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Sortir de la dépendance aux énergies fossiles, afin de renforcer l’indépendance énergétique nationale."
+      }
+    ]
   },
   {
     "id": "attal-envi-003",
@@ -1349,14 +1372,7 @@
         "extrait": "Créer un droit à la climatisation, en facilitant notamment les installations."
       }
     ],
-    "positions": [
-      {
-        "sujet": "libertes",
-        "position": "libertes_indiv",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un droit à la climatisation, en facilitant notamment les installations."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "attal-envi-004",
@@ -1502,7 +1518,7 @@
         "sujet": "europe",
         "position": "plus_europe",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "étendre automatiquement cette exclusion à l’ensemble des États membres de l’Union européenne"
+        "extrait": "étendre automatiquement cette exclusion à l’ensemble des États membres de l’Union européenne."
       }
     ]
   },
@@ -1589,7 +1605,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-gouvernance-republique-002",
@@ -1711,7 +1728,7 @@
         "sujet": "ia",
         "position": "plus_ia",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Favoriser l’adoption massive de l’intelligence artificielle par les entreprises françaises"
+        "extrait": "Favoriser l’adoption massive de l’intelligence artificielle par les entreprises françaises, notamment les PME, afin d’améliorer leur productivité et leur compétitivité."
       }
     ]
   },
@@ -1850,7 +1867,7 @@
         "sujet": "ia",
         "position": "plus_ia",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Maîtriser l’ensemble de la chaîne technologique de l’IA"
+        "extrait": "Maîtriser l’ensemble de la chaîne technologique de l’IA, de la production énergétique aux centres de données (data centers), en passant par les semi-conducteurs et la sécurisation des infrastructures critiques."
       }
     ]
   },
@@ -1875,7 +1892,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fonction publique",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "moins_fonctionnaires",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un plan de départs volontaires de fonctionnaires, avec un objectif de 100 000 postes supprimés."
+      }
+    ]
   },
   {
     "id": "attal-reformes-etat-002",
@@ -2103,14 +2128,7 @@
         "extrait": "Raccourcir les journées de travail à l’école aux dépens des vacances scolaires."
       }
     ],
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "reformer_ecole",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Raccourcir les journées de travail à l’école aux dépens des vacances scolaires."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "attal-education-jeunesse-006",
@@ -2132,15 +2150,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
-    "titre_litteral": true,
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "reformer_ecole",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Accorder davantage d’autonomie et de responsabilité aux établissements"
-      }
-    ]
+    "titre_litteral": true
   },
   {
     "id": "attal-education-jeunesse-007",
@@ -2215,7 +2225,7 @@
         "sujet": "ecole_discipline",
         "position": "ecole_exigence",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Etablir une échelle nationale des sanctions pour permettre au personnel éducatif et enseignant de prononcer plus facilement des sanctions"
+        "extrait": "Etablir une échelle nationale des sanctions pour permettre au personnel éducatif et enseignant de prononcer plus facilement des sanctions quand les jeunes ne respectent pas les règles."
       }
     ]
   },
@@ -2252,14 +2262,6 @@
         ],
         "dimension": "acces_aux_services",
         "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire le nombre d’élèves par classe notamment en primaire où avec moins de 20 élèves par classe."
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "ecole_continuite",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Réduire le nombre d’élèves par classe notamment en primaire où avec moins de 20 élèves par classe."
       }
@@ -2302,14 +2304,7 @@
         "extrait": "Augmenter le salaire des professeurs et des personnels tels que les accompagnants d'élèves en situation de handicap."
       }
     ],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter le salaire des professeurs et des personnels tels que les accompagnants d'élèves en situation de handicap."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "attal-education-jeunesse-011",
@@ -2348,14 +2343,7 @@
         "extrait": "Réduire la durée initiale des études."
       }
     ],
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "reformer_ecole",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire la durée initiale des études."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "attal-education-jeunesse-012",
@@ -2414,14 +2402,6 @@
         ],
         "dimension": "acces_aux_services",
         "sens": "indetermine",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Démassifier l’enseignement supérieur"
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "reformer_ecole",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Démassifier l’enseignement supérieur"
       }

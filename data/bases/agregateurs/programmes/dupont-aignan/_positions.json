@@ -1,73 +1,69 @@
 [
   {
     "groupe": 0,
-    "empreinte": "dea41af7cf22dfb5",
-    "date": "2026-10-10",
+    "empreinte": "07bd13b1b84269c1",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 15,
-    "sans_position": 7,
+    "sans_position": 6,
     "rejetees": [
       {
-        "id": "dupont-aignan-interieur-justice-001",
-        "raison": "relecture : Le texte ne précise pas la mission de ces agents comme restriction de l'immigration; l'extrait sert déjà à justifier l'étiquette europe et ne fonde pas clairement une seconde étiquette immigration."
+        "id": "dupont-aignan-interieur-justice-014",
+        "raison": "relecture : Le brouillage de téléphones et l'interception de drones en milieu carcéral relève de la sécurité des prisons et non de la surveillance générale (vidéosurveillance, reconnaissance faciale, données) visée par la définition du sujet surveillance."
+      },
+      {
+        "id": "dupont-aignan-interieur-justice-016",
+        "raison": "relecture : Faire contribuer financièrement les détenus à leur incarcération n'est ni un durcissement des peines ni un renforcement des moyens de police/prison/sanction tel que défini pour 'repression', c'est une mesure budgétaire."
       },
       {
         "id": "dupont-aignan-social-solidarite-001",
-        "raison": "relecture : Le PTZ élargi est une aide à l'accession pour les acheteurs, pas un allègement de la fiscalité ou des contraintes des propriétaires bailleurs ni un encouragement à l'investissement locatif, ce qui ne correspond pas à la définition de liberer_offre_logement."
+        "raison": "relecture : Élargir le PTZ aide les acquéreurs (demande) et ne correspond pas à 'libérer l'offre de logement privée', qui vise l'allégement de contraintes pour les propriétaires/investisseurs locatifs."
       },
       {
         "id": "dupont-aignan-social-solidarite-002",
-        "raison": "relecture : Le PAP est une aide à l'achat pour les classes moyennes et ne relève pas de la libération de l'offre locative privée telle que définie (allègement fiscal des propriétaires bailleurs, suppression de l'encadrement des loyers, investissement locatif)."
+        "raison": "relecture : Créer un prêt aidé pour l'achat d'un premier logement par les classes moyennes ne relève pas de 'libérer l'offre de logement privée' (allégement fiscal/normatif pour propriétaires ou investissement locatif), c'est une aide à la demande."
       }
     ],
-    "cout_reference_usd": 0.1214,
+    "cout_reference_usd": 0.0982,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "15e8efd7db7085ec",
-    "date": "2026-10-10",
+    "empreinte": "e47260966e5997a2",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 8,
-    "sans_position": 13,
+    "etiquetees": 12,
+    "sans_position": 12,
     "rejetees": [
       {
-        "id": "dupont-aignan-envi-007",
-        "raison": "relecture : La mesure porte sur la libéralisation des ventes entre producteurs pour limiter les marges des intermédiaires, un sujet économique, et non sur l'assouplissement de normes agricoles/environnementales (pesticides, eau, haies) visé par la position."
-      },
-      {
-        "id": "dupont-aignan-europe-international-001",
-        "raison": "relecture : Sortir du commandement militaire intégré de l'OTAN relève de la politique de défense/alliances militaires, pas des compétences de l'Union européenne visées par le sujet « europe »."
-      },
-      {
-        "id": "dupont-aignan-gouvernance-republique-003",
-        "raison": "relecture : La mesure sanctionne des atteintes à la laïcité et non un comportement lié à l'emploi ou à la recherche d'activité, ce qui ne correspond pas à la définition de « conditionner_aides » (contrepartie d'activité, durcissement de l'indemnisation chômage)."
-      },
-      {
         "id": "dupont-aignan-gouvernance-republique-010",
-        "raison": "relecture : La préférence nationale dans les marchés de l'IA est une mesure protectionniste et ne montre pas directement un soutien, un financement ou une accélération du développement de l'IA en tant que tel."
+        "raison": "relecture : Le texte parle de préférence nationale dans les marchés de l'IA (protectionnisme), pas d'un encouragement direct au développement de l'IA elle-même."
       }
     ],
-    "cout_reference_usd": 0.0587,
+    "cout_reference_usd": 0.0658,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "971106cb0a9577f6",
-    "date": "2026-10-10",
+    "empreinte": "b561fb9f51f71d1c",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "etiquetees": 12,
-    "sans_position": 0,
+    "etiquetees": 9,
+    "sans_position": 2,
     "rejetees": [
       {
         "id": "dupont-aignan-gouvernance-republique-014",
-        "raison": "relecture : L'extraction de terres rares et matières premières ne relève pas du sujet renouvelables/transition écologique tel que défini (développement des énergies renouvelables ou assouplissement de normes environnementales liées à l'énergie) ; c'est une mauvaise catégorisation du sujet."
+        "raison": "relecture : L'extraction de terres rares et matières premières n'est pas une norme agricole ; le sujet agriculture_normes ne couvre pas l'extraction minière/fonds marins."
+      },
+      {
+        "id": "dupont-aignan-defense-008",
+        "raison": "relecture : Renforcer la présence de l'État au capital des groupes de défense relève de la participation/nationalisation, pas de la définition d'encadrer_entreprises (taxation, conditionnement des aides, encadrement des dividendes/licenciements/rémunérations)."
       }
     ],
-    "cout_reference_usd": 0.049,
+    "cout_reference_usd": 0.0704,
     "appels": 2
   }
 ]

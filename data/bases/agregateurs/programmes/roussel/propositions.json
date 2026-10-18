@@ -35,6 +35,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Rétablir l'ISF (impôt sur la fortune) et tripler son montant."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rétablir l'ISF (impôt sur la fortune) et tripler son montant."
+      }
     ]
   },
   {
@@ -57,7 +65,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
-    "titre_litteral": true
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre l'impôt sur le revenu plus progressif en portant son nombre de tranches à 15."
+      }
+    ]
   },
   {
     "id": "roussel-finances-publiques-003",
@@ -109,7 +125,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "en transférant son financement vers les cotisations sociales des entreprises."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "roussel-finances-publiques-004",
@@ -132,7 +149,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "roussel-finances-publiques-005",
@@ -155,7 +173,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un nouvel impôt sur les sociétés (IS) progressif, dont le taux varierait selon le chiffre d'affaires et les bénéfices des entreprises."
+      }
+    ]
   },
   {
     "id": "roussel-retraites-travail-001",
@@ -178,6 +204,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   }
 ]

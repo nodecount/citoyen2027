@@ -1,178 +1,181 @@
 [
   {
     "groupe": 0,
-    "empreinte": "2066591488a0f30d",
-    "date": "2026-10-12",
+    "empreinte": "7cf59a1f01ed99ed",
+    "date": "2026-10-17",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 15,
+    "sans_position": 8,
+    "rejetees": [
+      {
+        "id": "tondelier-finances-publiques-005",
+        "raison": "relecture : L'étiquette renouvelables est déduite d'un effet indirect (faciliter le financement) alors que la mesure décrite est une règle budgétaire sur le calcul du déficit, pas un développement direct des renouvelables."
+      },
+      {
+        "id": "tondelier-finances-publiques-021",
+        "raison": "relecture : La hausse de la Flat Tax s'applique à tous les revenus du capital et non spécifiquement aux ultra-riches, ce qui relève plutôt du sujet fiscalité/redistribution que de la taxation des très hauts patrimoines."
+      }
+    ],
+    "cout_reference_usd": 0.1276,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "41bbb71d30e5b27a",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 17,
     "sans_position": 7,
     "rejetees": [
       {
-        "id": "tondelier-finances-publiques-021",
-        "raison": "relecture : La Flat Tax s'applique à tous les revenus du capital et pas spécifiquement aux très hauts patrimoines, ce qui ne fonde pas clairement l'étiquette ultra_riches plutôt qu'une simple mesure de fiscalité générale."
-      }
-    ],
-    "cout_reference_usd": 0.1043,
-    "appels": 2
-  },
-  {
-    "groupe": 1,
-    "empreinte": "3fd3a177f07233e8",
-    "date": "2026-10-12",
-    "modele": "claude-sonnet-5",
-    "propositions": 25,
-    "etiquetees": 13,
-    "sans_position": 11,
-    "rejetees": [
-      {
         "id": "tondelier-finances-publiques-026",
-        "raison": "l'extrait d'une étiquette est absent ou de longueur invalide"
+        "raison": "relecture : Le Community Reinvestment Act vise l'accès au crédit pour les communautés défavorisées, pas la taxation des ultra-riches."
       }
     ],
-    "cout_reference_usd": 0.1057,
+    "cout_reference_usd": 0.0615,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "8a55c320b949cbfc",
-    "date": "2026-10-12",
+    "empreinte": "d119291b7fd7794a",
+    "date": "2026-10-17",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 8,
-    "sans_position": 17,
-    "rejetees": [],
-    "cout_reference_usd": 0.0466,
+    "sans_position": 16,
+    "rejetees": [
+      {
+        "id": "tondelier-interieur-justice-035",
+        "raison": "relecture : La mesure porte sur la réorientation des aides agricoles européennes vers l'autonomie alimentaire, pas sur un renforcement des normes environnementales ou agricoles (pesticides, bio, etc.)."
+      }
+    ],
+    "cout_reference_usd": 0.0463,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "69c85320004d034e",
-    "date": "2026-10-12",
+    "empreinte": "8f51db0e2d3e9f13",
+    "date": "2026-10-18",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 9,
-    "sans_position": 15,
+    "sans_position": 14,
     "rejetees": [
       {
+        "id": "tondelier-social-solidarite-016",
+        "raison": "relecture : Revaloriser les APL ne relève pas d'encadrer_logement (loyers/logement social) mais plutôt d'une aide sociale ; mauvais sujet/position."
+      },
+      {
         "id": "tondelier-social-solidarite-024",
-        "raison": "relecture : Garantir un remboursement total des soins essentiels concerne la couverture sociale des soins, non le renforcement de l'hôpital public ou la régulation de l'installation des médecins : l'étiquette hopital_public n'est pas fondée par cet extrait."
+        "raison": "relecture : Le remboursement total des soins essentiels relève de l'organisation de la santé, pas des minima sociaux/chômage visés par aides_sociales."
       }
     ],
-    "cout_reference_usd": 0.0575,
+    "cout_reference_usd": 0.0504,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "ffb57f0ee75ffc27",
-    "date": "2026-10-12",
+    "empreinte": "792a32f833cb2c8d",
+    "date": "2026-10-18",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 15,
-    "sans_position": 9,
-    "rejetees": [
-      {
-        "id": "tondelier-social-solidarite-050",
-        "raison": "relecture : Plafonner le trafic aérien n'est pas lié au développement des renouvelables ou aux normes environnementales directement, c'est une restriction de transport, sujet proche de 'voiture'/transport mais mal classé en renouvelables."
-      }
-    ],
-    "cout_reference_usd": 0.0686,
+    "etiquetees": 14,
+    "sans_position": 11,
+    "rejetees": [],
+    "cout_reference_usd": 0.0531,
     "appels": 2
   },
   {
     "groupe": 5,
-    "empreinte": "453cce4320b2368a",
-    "date": "2026-10-12",
+    "empreinte": "45710d986ad4d5ed",
+    "date": "2026-10-18",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 11,
-    "sans_position": 13,
-    "rejetees": [
-      {
-        "id": "tondelier-retraites-travail-015",
-        "raison": "relecture : L'extrait porte sur l'interdiction d'investissements fossiles des fonds de retraite, ce qui ne montre pas directement un développement des renouvelables ou une priorité donnée à la transition écologique énergétique."
-      }
-    ],
-    "cout_reference_usd": 0.0555,
+    "etiquetees": 10,
+    "sans_position": 15,
+    "rejetees": [],
+    "cout_reference_usd": 0.049,
     "appels": 2
   },
   {
     "groupe": 6,
-    "empreinte": "c32aa3abcd4f5433",
-    "date": "2026-10-12",
+    "empreinte": "1d3c44876dda2277",
+    "date": "2026-10-18",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 4,
-    "sans_position": 21,
+    "etiquetees": 5,
+    "sans_position": 20,
     "rejetees": [],
-    "cout_reference_usd": 0.0485,
+    "cout_reference_usd": 0.0492,
     "appels": 2
   },
   {
     "groupe": 7,
-    "empreinte": "1474cb99d17d7959",
-    "date": "2026-10-12",
+    "empreinte": "ea1f47ad4020a0c4",
+    "date": "2026-10-18",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 12,
-    "sans_position": 11,
+    "etiquetees": 9,
+    "sans_position": 14,
     "rejetees": [
       {
-        "id": "tondelier-envi-038",
-        "raison": "relecture : La sécurité sociale de l'alimentation ne relève pas du sujet aides_sociales/chômage tel que défini (assurance chômage, minima sociaux), c'est un mauvais sujet."
+        "id": "tondelier-europe-international-003",
+        "raison": "relecture : Le texte refuse des accords commerciaux non conformes aux critères climatiques, ce qui relève d'une conditionnalité environnementale et non d'une logique de protection de l'économie nationale (préférence nationale, taxation des importations, relocalisation)."
       },
       {
-        "id": "tondelier-gouvernance-republique-004",
-        "raison": "relecture : Supprimer le 49-3 et assouplir les initiatives parlementaires est une réforme limitée du fonctionnement de la Ve République, pas un changement d'institutions au sens de la définition (nouvelle constitution, proportionnelle, RIC, constituante)."
+        "id": "tondelier-gouvernance-republique-006",
+        "raison": "relecture : L'extension du droit de vote relève de l'organisation institutionnelle/démocratique et non des libertés individuelles telles que définies (choix de vie, expression, vie privée)."
       }
     ],
-    "cout_reference_usd": 0.0676,
+    "cout_reference_usd": 0.0525,
     "appels": 2
   },
   {
     "groupe": 8,
-    "empreinte": "9edeb3b2daf27249",
-    "date": "2026-10-12",
+    "empreinte": "0e21b29b90114285",
+    "date": "2026-10-18",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 10,
-    "sans_position": 11,
+    "etiquetees": 14,
+    "sans_position": 7,
     "rejetees": [
       {
-        "id": "tondelier-reformes-etat-006",
-        "raison": "relecture : L'indexation du point d'indice sur l'inflation relève de la fonction publique/salaires, pas de la redistribution fiscale (pas d'impôt sur les riches ni de prestation sociale)."
+        "id": "tondelier-gouvernance-republique-016",
+        "raison": "relecture : Former les fonctionnaires aux principes de 1905 n'indique pas clairement un maintien de la liberté de porter des signes religieux ni un nouvel interdit, la position est déduite et non établie."
       },
       {
-        "id": "tondelier-reformes-etat-007",
-        "raison": "relecture : Il s'agit d'une revalorisation salariale ciblée des fonctionnaires de catégories C et B, pas du SMIC ni d'une hausse générale des salaires visée par 'hausse_smic'."
+        "id": "tondelier-reformes-etat-003",
+        "raison": "relecture : Mettre fin au New Public Management et réduire la dépendance aux cabinets de conseil relève de l'organisation administrative, pas d'une baisse d'impôts ou de dépense publique au sens du sujet fiscalité."
       },
       {
-        "id": "tondelier-education-jeunesse-002",
-        "raison": "relecture : Le congé parental rémunéré n'est pas une assurance chômage ni un minimum social au sens de la définition d'aides_sociales."
+        "id": "tondelier-education-jeunesse-003",
+        "raison": "relecture : Revenir à la semaine de 5 jours modifie les rythmes scolaires, ce qui relève de reformer_ecole et non de ecole_continuite qui suppose l'absence de refonte de l'organisation."
       },
       {
         "id": "tondelier-education-jeunesse-004",
-        "raison": "relecture : La généralisation de repas bio en restauration scolaire ne constitue pas une norme agricole ou environnementale directe mais relève de la politique alimentaire/scolaire, l'effet sur l'agriculture est indirect."
+        "raison": "relecture : Généraliser des repas bio et végétariens dans la restauration scolaire ne relève pas du sujet agriculture_normes qui porte sur les normes agricoles et environnementales imposées aux exploitations."
       }
     ],
-    "cout_reference_usd": 0.0639,
+    "cout_reference_usd": 0.1018,
     "appels": 2
   },
   {
     "groupe": 9,
-    "empreinte": "0d2d71b8830de2c3",
-    "date": "2026-10-12",
+    "empreinte": "f402098b81b2bbfa",
+    "date": "2026-10-18",
     "modele": "claude-sonnet-5",
     "propositions": 12,
-    "etiquetees": 3,
-    "sans_position": 8,
+    "etiquetees": 1,
+    "sans_position": 10,
     "rejetees": [
       {
-        "id": "tondelier-education-jeunesse-012",
-        "raison": "relecture : Supprimer une contribution (CVEC) correspond à une baisse de prélèvement, pas à une hausse d'impôt sur les riches ou extension de prestation : relève plutôt de baisse_impots que de redistribution."
+        "id": "tondelier-education-jeunesse-007",
+        "raison": "relecture : L'abrogation des réformes Blanquer et du Choc des savoirs relève de l'organisation du système éducatif (ecole_organisation), pas de la discipline scolaire ; le texte ne parle pas de sanctions, bienveillance ou inclusion."
       }
     ],
-    "cout_reference_usd": 0.0264,
+    "cout_reference_usd": 0.0301,
     "appels": 2
   }
 ]

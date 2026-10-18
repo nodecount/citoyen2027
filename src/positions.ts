@@ -338,6 +338,17 @@ export const SUJETS_CONVICTION: SujetConviction[] = [
       { id: "encadrer_entreprises", libelle: "Faire davantage contribuer et encadrer les entreprises", definition: "taxer les superprofits ou les grandes entreprises, relever l'impôt sur les sociétés, conditionner les aides publiques, encadrer les dividendes, les licenciements ou les rémunérations" },
     ],
   },
+  {
+    // Décision du 2026-10-18 : Parcoursup est un sujet d'actualité (mobilisation lycéenne et étudiante d'octobre 2026) et
+    // six mesures de la base agregateurs le traitent dans des sens opposés ; « Système éducatif » ne le couvrait pas.
+    id: "enseignement_superieur",
+    libelle: "Accès à l'enseignement supérieur",
+    question: "Sur l'accès à l'enseignement supérieur (Parcoursup), quelle position vous parle le plus ?",
+    positions: [
+      { id: "selection_superieur", libelle: "Garder une sélection à l'entrée, fondée sur le mérite", definition: "maintenir ou renforcer une sélection à l'entrée des formations supérieures, au mérite ou sur dossier (Parcoursup conservé ou refondé au seul mérite, examen d'entrée, numerus clausus)" },
+      { id: "acces_libre_superieur", libelle: "Ouvrir l'accès sans sélection", definition: "supprimer ou remplacer Parcoursup par un accès sans sélection ou une orientation sans algorithme ni lettre de motivation, ouvrir davantage de places dans les universités" },
+    ],
+  },
 ];
 
 // Choix du visiteur : identifiant de sujet → identifiant de position. Un sujet absent = « pas d'avis ».

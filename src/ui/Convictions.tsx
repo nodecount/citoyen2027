@@ -39,6 +39,7 @@ const ICONES_SUJETS: Record<string, LucideIcon> = {
   ultra_riches: Banknote,
   ecole_organisation: GraduationCap,
   ecole_discipline: GraduationCap,
+  enseignement_superieur: GraduationCap,
   manifestations: Megaphone,
   parents_mineurs: Users,
   justice_mineurs: Gavel,

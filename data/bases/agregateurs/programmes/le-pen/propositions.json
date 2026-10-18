@@ -21,14 +21,7 @@
     "sous_theme": "Economies & hausses de dépenses",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser les subventions de l'Etat et des collectivités aux associations"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-finances-publiques-002",
@@ -257,7 +250,7 @@
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer une règle d'or budgétaire constitutionnelle. Le déficit devra obligatoirement être inférieur au seuil stabilisant de la dette"
+        "extrait": "Instaurer une règle d'or budgétaire constitutionnelle"
       }
     ]
   },
@@ -417,6 +410,12 @@
     "effets": [],
     "positions": [
       {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer 3 impôts de production : la CFE, la C3S et la CVAE"
+      },
+      {
         "sujet": "entreprises",
         "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
@@ -537,7 +536,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Exonérer de taxe les successions familiales jusqu'à 300 000 € sur l'immobilier et aligner les donations"
+        "extrait": "Exonérer de taxe les successions familiales jusqu'à 300 000 € sur l'immobilier et aligner les donations (100 000 € tous les 10 ans)"
       }
     ]
   },
@@ -798,7 +797,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Organiser le départ des étrangers sans emploi (selon la durée de résidence) ne pouvant subvenir à leurs besoins"
+        "extrait": "Organiser le départ des étrangers sans emploi"
       }
     ]
   },
@@ -1090,6 +1089,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre en place une présomption de légitime défense pour les policiers et gendarmes."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place une présomption de légitime défense pour les policiers et gendarmes."
+      }
     ]
   },
   {
@@ -1133,6 +1140,12 @@
       {
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer 7000 postes de policiers et gendarmes."
+      },
+      {
+        "sujet": "securite",
+        "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Créer 7000 postes de policiers et gendarmes."
       }
@@ -1384,7 +1397,14 @@
         "extrait": "Revaloriser les congés des proches aidants."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revaloriser les congés des proches aidants."
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-005",
@@ -1533,10 +1553,16 @@
     ],
     "positions": [
       {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants et revaloriser leurs salaires."
+      },
+      {
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants et revaloriser leurs salaires."
+        "extrait": "Au moins 10.000 places supplémentaires seront ouvertes dans les Instituts de Formation en Soins infirmiers (IFSI) et les centres de formation d’aides-soignants."
       }
     ]
   },
@@ -1601,7 +1627,14 @@
     "sous_theme": "Santé",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "liberte_sante",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Organiser un partenariat entre les services d’urgence et des cabinets médicaux libéraux vers lesquels pourraient être réorientés les patients relevant de la médecine de ville et non des urgences."
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-011",
@@ -1755,6 +1788,14 @@
         "cibles": [],
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rembourser à 100 % les soins dentaires."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Rembourser à 100 % les soins dentaires."
       }
@@ -1922,8 +1963,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Remplacer les subventions à la rénovation thermique des logements de MaPrimeRénov' par un dispositif de prêts à taux zéro 100 % Rénov."
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "le-pen-social-solidarite-021",
@@ -1999,12 +2039,6 @@
       }
     ],
     "positions": [
-      {
-        "sujet": "renouvelables",
-        "position": "freiner_transition",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer les interdictions de louer les logements mal notés (classes F et G)"
-      },
       {
         "sujet": "logement",
         "position": "liberer_offre_logement",
@@ -2101,7 +2135,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "les français seront favorisés pour l'accès au logement et aux APL"
+        "extrait": "Mise en place d'une préference nationale : les français seront favorisés pour l'accès au logement et aux APL."
       }
     ]
   },
@@ -2126,15 +2160,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "renouvelables",
-        "position": "freiner_transition",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer la norme \" ZAN\", zéro artificialisation nette."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "le-pen-social-solidarite-026",
@@ -2160,8 +2186,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "renouvelables",
-        "position": "freiner_transition",
+        "sujet": "logement",
+        "position": "liberer_offre_logement",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer un très grand nombre de normes liées à la performance énergétique et environnementale inutiles et contraignantes."
       }
@@ -2571,14 +2597,6 @@
         ],
         "dimension": "patrimoine",
         "sens": "hausse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Renforcer le pacte Dutreil (annulation de la taxation contre détention de 10 ans)."
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "entreprises",
-        "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Renforcer le pacte Dutreil (annulation de la taxation contre détention de 10 ans)."
       }
@@ -3060,7 +3078,14 @@
         "extrait": "Mise en place d'un plan de soutien spécifique pour l'agriculture biologique."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mise en place d'un plan de soutien spécifique pour l'agriculture biologique"
+      }
+    ]
   },
   {
     "id": "le-pen-envi-017",
@@ -3177,7 +3202,14 @@
     "sous_theme": "Agriculture",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Atteindre 80% de produits français dans les cantines"
+      }
+    ]
   },
   {
     "id": "le-pen-envi-021",
@@ -3480,14 +3512,7 @@
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "taxes extraordinaires pour les entreprises étrangères du numérique"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-gouvernance-republique-004",
@@ -3618,7 +3643,7 @@
         "sujet": "europe",
         "position": "souverainete",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rendre obligatoire l'hébergement des données des français, des entreprises françaises et des services publics en France et dans l'Union Européenne par des opérateurs français ou européens."
+        "extrait": "Rendre obligatoire l'hébergement des données des français, des entreprises françaises et des services publics en France et dans l'Union Européenne par des opérateurs français ou européens"
       }
     ]
   },
@@ -3667,15 +3692,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer ou réinternaliser certaines agences et opérateurs."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "le-pen-reformes-etat-003",
@@ -3728,7 +3745,7 @@
         "sujet": "fonction_publique",
         "position": "moins_fonctionnaires",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "ne pas remplacer certains départs à la retraite"
+        "extrait": "Ajuster les effectifs à la suite de la rationalisation des compétences des collectivités (ne pas remplacer certains départs à la retraite)."
       }
     ]
   },
@@ -3971,7 +3988,21 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ecole_discipline",
+        "position": "ecole_exigence",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Retour aux principes de la loi Ciotti de 2010 : valorisation de l'assiduité, instauration de peines plancher et généralisation de la vidéoprotection."
+      },
+      {
+        "sujet": "prison",
+        "position": "plus_de_prison",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "instauration de peines plancher"
+      }
+    ]
   },
   {
     "id": "le-pen-education-jeunesse-008",
@@ -4065,14 +4096,7 @@
     "sous_theme": "Education nationale",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "reformer_ecole",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Suppression des instituts nationaux supérieurs du professorat et de l'éducation."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-education-jeunesse-011",
@@ -4150,14 +4174,7 @@
         "extrait": "Supprimer la CVEC compensée aux universités."
       }
     ],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer la CVEC compensée aux universités."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-education-jeunesse-013",
