@@ -87,7 +87,7 @@ async function main(): Promise<void> {
   await telecharger(`${URL_NP}deputes.csv`, resolve(CACHE_NP, "deputes.csv"));
   await telecharger(`${URL_NP}votes_an.csv.gz`, resolve(CACHE_NP, "votes_an.csv.gz"));
   if (!existsSync(resolve(CACHE_AN, "x/json/dossierParlementaire"))) {
-    throw new Error(`Dossiers législatifs absents : télécharger ${URL_DOSSIERS} puis le décompresser dans ${CACHE_AN}/x (voir docs/recherche-sources-programmes-iFRAP-votes.md).`);
+    throw new Error(`Dossiers législatifs absents : télécharger ${URL_DOSSIERS} puis le décompresser dans ${CACHE_AN}/x (voir docs/recherche-recolte-des-votes.md).`);
   }
 
   const scrutins: Scrutin[] = JSON.parse(readFileSync(resolve(CACHE_NP, "scrutins_an.json"), "utf-8"));
