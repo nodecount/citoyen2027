@@ -76,6 +76,47 @@ Elle remplacerait la règle 70 % / 5 votants, sans aucun calcul.
   « ter », lois renumérotées). Un groupe n'est pas un parti ; GDR n'a que 2 mesures ; quatre candidats (Zemmour, Dupont-Aignan,
   Ruffin, Lisnard) n'ont aucun groupe.
 
+**Premier constat (comparaison des trois moyens de récolte) : validé par le porteur du projet le 2026-10-18.**
+
+## Faisabilité d'intégration dans l'outil (calculée le 2026-10-18)
+
+Question : que devient, une fois dans le moteur et l'interface, ce que chaque méthode récolte ? Mesures sur le même lot de 15 lois.
+A = base `votes` actuelle (mesurée). B = même chaîne alimentée par le fichier officiel : les 15 mesures en trop de A retirées
+(une seule avait un effet), les 5 manquantes ajoutées sans effet (non structurées). C produirait le même contenu que B sur
+l'échantillon lu, mais n'est pas réutilisable (voir licence) : pas d'indicateurs propres.
+
+| Indicateur | A. NosParlementaires | B. Assemblée | C. Datan |
+|---|---|---|---|
+| Mesures produites | 823 | 813 | non applicable (licence) |
+| Candidats couverts (sur les 13 de la base `agregateurs`) | 8, dont Roussel avec 2 mesures | 8, idem | |
+| Candidats ayant au moins une mesure à effet | 7 sur 8 | 7 sur 8 | |
+| Mesures à effet décrit | 92 (11,2 %) | 91 (11,2 %) | |
+| Mesures dont un effet vise un public que le formulaire sait décrire | 34 (4,1 %) | 33 (4,1 %) | |
+| Effets « pour tout le monde » (comptent pour chaque profil) | 10 mesures | 9 mesures | |
+| Questions du formulaire touchées par au moins une mesure | 5 sur 26 | 5 sur 26 | |
+| Réponses du formulaire touchées | 6 sur 86 | 6 sur 86 | |
+| Thèmes de la base atteints / avec un effet | 8 / 5 | 9 / 5 | |
+| Convictions (étiquettes) | 0 électorat sur 11 a un résultat | idem | |
+| Candidat désigné par la situation, 11 électorats types | le même pour les 11 (Glucksmann, +7 à +4 d'avance sur le 2e) | non rejoué : 1 seul effet retiré | |
+| Mesures sans effet faute de relecture acceptée | 20 | 25 (20 + 5 nouvelles) | |
+| Articles dont le texte est retrouvé | 217 sur 242 (89,7 %) | idem | idem |
+| Coût de structuration (référence mesurée pour A) | 5,91 $ | environ 5,84 $ + les 5 nouvelles | |
+| Réutilisation permise sans demander | oui | oui | non |
+| Couverture du mandat (XVIe + XVIIe) | non (XVIIe seule) | oui, mais XVIe non récoltée à ce jour | |
+| Modification du code pour passer de A à B | | environ 25 lignes (compter par groupe depuis le fichier, table de noms de groupes) | |
+| Tests et typage | 1 042 tests, `tsc` sans erreur | non rejoué | |
+
+### Lecture
+- **Techniquement, l'intégration est faite** : la base `votes` est chargée, testée, jouable. Rien à changer dans le moteur.
+- **Le blocage n'est pas la méthode de récolte, c'est ce que la récolte alimente.** Les trois méthodes donnent le même
+  contenu à 2,5 % près. Les indicateurs qui mesurent l'utilité pour le citoyen sont faibles pour A et B : 21 questions sur 26
+  ne sont touchées par aucune mesure (80 réponses sur 86 aussi), aucun électorat n'a de résultat « convictions », et le même
+  candidat arrive premier pour les 11 électorats parce que les 10 mesures « pour tout le monde » dominent.
+- **Les écarts entre A et B sont trop petits pour changer ces indicateurs** (1 effet retiré, 5 mesures nouvelles non
+  structurées).
+- Ce qui bouge ces indicateurs est ailleurs que dans la récolte : formulaire propre à la base (le formulaire actuel est celui
+  d'`agregateurs`), étiquettes de convictions (`scrape:positions` non lancé), unité de mesure (articles clés).
+
 ## Grille pour la décision (à compléter par le chercheur)
 
 | Critère | A | B | C |
