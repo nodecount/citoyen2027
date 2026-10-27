@@ -1,8 +1,9 @@
-import { Eraser, Eye, ListChecks, Lock } from "lucide-react";
+import { Eraser, Eye, ListChecks, ListOrdered, Lock } from "lucide-react";
 import { PanneauProgression } from "./PanneauProgression";
+import { PasAPas, type EtapeQuestion } from "./PasAPas";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { RangeeEnregistrement, type EtatEnregistrement } from "./IndicateurEnregistrement";
-import { compterReponses, questionsVisibles, type SectionTheme } from "../questionnaire";
+import { compterReponses, estRepondue, questionsVisibles, type SectionTheme } from "../questionnaire";
 import { mettreAJourReponse, type ProfilPartiel } from "../profil";
 import type { ChampProfil } from "../types";
 import { SectionQuestions, type SurReponse } from "./Questions";
@@ -60,13 +61,34 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
     setBrouillon((precedent) => mettreAJourReponse(precedent, champ, brut, champs));
   }
 
+  // Formulaire intégré : par défaut une question par écran (générales d'abord, puis celles de chaque thème) ; le visiteur peut
+  // basculer sur la grille de toutes les questions. Une réponse générale va au brouillon (enregistré après une courte pause),
+  // une réponse de thème s'applique tout de suite.
+  const [pasAPas, setPasAPas] = useState(true);
+  const idsGenerales = new Set(questions.map((q) => q.id));
+  const profilFile: ProfilPartiel = { ...profilThemes };
+  for (const q of questions) {
+    if (brouillon[q.id] === undefined) delete profilFile[q.id];
+    else profilFile[q.id] = brouillon[q.id];
+  }
+  const file: EtapeQuestion[] = [
+    ...questionsVisibles(questions, profilFile).map((champ) => ({ champ })),
+    ...sectionsThemes.flatMap(({ theme, questions: qs }) => questionsVisibles(qs, profilFile).map((champ) => ({ champ, theme: theme.libelle }))),
+  ];
+  // En pas à pas, le panneau compte la file entière (générales + thèmes), pour dire la même chose que « Question N sur M ».
+  const affiche = integre && pasAPas ? { repondues: file.filter((e) => estRepondue(e.champ, profilFile)).length, total: file.length } : { repondues, total };
+  function repondreEtape(etape: EtapeQuestion, brut: string | string[]) {
+    if (idsGenerales.has(etape.champ.id)) repondre(etape.champ, brut);
+    else onReponseTheme?.(etape.champ, brut);
+  }
+
   function valider(event: FormEvent) {
     event.preventDefault();
     onValider(brouillon);
   }
 
   const progression = `${repondues} réponse${repondues > 1 ? "s" : ""} sur ${total} question${total > 1 ? "s" : ""}`;
-  const compte = `${repondues} question${repondues > 1 ? "s" : ""} répondue${repondues > 1 ? "s" : ""} sur ${total}`;
+  const compte = `${affiche.repondues} question${affiche.repondues > 1 ? "s" : ""} répondue${affiche.repondues > 1 ? "s" : ""} sur ${affiche.total}`;
   const actions = (
     <div className="actions">
       {!integre && <button type="submit">Enregistrer et voir les indicateurs</button>}
@@ -88,7 +110,7 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
     <>
     {/* Formulaire intégré : la progression dans une div à part, au-dessus de celle des questions ; l'indicateur d'enregistrement,
         hors des divs, en bas à droite sous le formulaire ; l'effacement est en bas de l'écran (PageThemes). */}
-    {integre && <PanneauProgression repondues={repondues} total={total} compte={compte} manquantesEnValeur={manquantesEnValeur} onManquantes={setManquantesEnValeur} />}
+    {integre && <PanneauProgression repondues={affiche.repondues} total={affiche.total} compte={compte} manquantesEnValeur={manquantesEnValeur} onManquantes={setManquantesEnValeur} />}
     <form onSubmit={valider} className={`questionnaire${integre ? " questionnaire--integre" : ""}`} id={integre ? "formulaire-general" : undefined} aria-label={integre ? "Ma situation" : undefined}>
       {integre ? null : <h1>Ma situation</h1>}
       {integre ? null : (
@@ -121,6 +143,14 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
           </p>
         </>
       )}
+      {integre && pasAPas && <PasAPas etapes={file} profil={profilFile} onReponse={repondreEtape} onToutVoir={() => setPasAPas(false)} />}
+      {integre && !pasAPas && (
+        <button type="button" className="secondaire pas-a-pas-retour" onClick={() => setPasAPas(true)}>
+          <ListOrdered size={18} aria-hidden="true" focusable="false" />
+          Répondre une question à la fois
+        </button>
+      )}
+      {!(integre && pasAPas) && (
       <div className={integre ? "grille-questions" : undefined}>
       <SectionQuestions questions={questions} profil={brouillon} onReponse={repondre} idPrefixe={integre ? "general-ouvert" : "general"} carte={integre} mettreEnValeurManquantes={manquantesEnValeur} />
       {/* Questions propres à un thème, rangées par thème : toutes visibles ici (répondues ou non) pour pouvoir les revoir
@@ -135,6 +165,7 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
         );
       })}
       </div>
+      )}
       {!integre && actions}
     </form>
     {integre && <RangeeEnregistrement etat={etatEnregistrement} />}
