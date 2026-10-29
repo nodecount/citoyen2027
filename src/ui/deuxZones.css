@@ -55,3 +55,78 @@
     transition: none;
   }
 }
+
+/* Bloc central : fond bleu à tous les états */
+.suggestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: var(--rayon);
+  background: linear-gradient(160deg, var(--bleu-fonce), var(--bleu));
+  color: #fff;
+  text-align: center;
+}
+
+.suggestion h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.suggestion-nom,
+.suggestion-noms {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.suggestion-nom--flou {
+  filter: blur(5px);
+  user-select: none;
+  letter-spacing: 0.05em;
+}
+
+.suggestion-noms .detail-parti {
+  display: block;
+  font-weight: 400;
+  color: #d6def5;
+}
+
+.suggestion-message,
+.suggestion-source {
+  margin: 0;
+  font-size: 1rem;
+  color: #e3e9fa;
+}
+
+.suggestion .bouton-revele {
+  background: #fff;
+  color: var(--bleu-fonce);
+}
+
+.suggestion .bouton-revele:disabled {
+  background: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: not-allowed;
+}
+
+.suggestion .bouton-fantome {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  border: 0;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.suggestion .bouton-fantome small {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #d6def5;
+}
