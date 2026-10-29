@@ -4,7 +4,7 @@ import type { ProfilPartiel } from "../profil";
 import { compterReponses, estRepondue, questionsVisibles, type Questionnaire } from "../questionnaire";
 import type { ChampProfil, Proposition } from "../types";
 import { trouverPosition, trouverSujet } from "../positions";
-import { sujetsDisponibles } from "../engine/positions";
+import { compterAvancement } from "./compteurs";
 import { PropositionsBase } from "./PropositionsContexte";
 import { aDesConvictions, type Convictions } from "./memoireConvictions";
 import { libelleOption } from "./Questions";
@@ -90,20 +90,7 @@ function reponseEnClair(champ: ChampProfil, valeur: ProfilPartiel[string]): stri
   return libelleOption(champ, String(valeur));
 }
 
-// Nombres qui fondent le calcul du programme idéal : questions répondues (parmi celles actuellement posées) et sujets
-// de convictions renseignés.
-function compteurs(questionnaire: Questionnaire, profil: ProfilPartiel, convictions: Convictions, propositions: Proposition[] | null) {
-  const sujets = sujetsDisponibles(propositions);
-  const questions = [...new Map([...questionnaire.generales, ...questionnaire.parTheme.flatMap((s) => s.questions)].map((q) => [q.id, q])).values()];
-  const visibles = questionsVisibles(questions, profil);
-  return {
-    visibles,
-    repondues: visibles.filter((q) => estRepondue(q, profil)).length,
-    questions: visibles.length,
-    convictions: sujets.filter((s) => convictions.positions[s.id] !== undefined).length,
-    sujets: sujets.length,
-  };
-}
+const compteurs = compterAvancement;
 
 // Message placé en tête du résultat : sur quoi repose le calcul, et à quel point les réponses le rendent précis.
 export function BandeauPertinence({ questionnaire, profil, convictions, onCompleterSituation, onCompleterConvictions }: { questionnaire: Questionnaire; profil: ProfilPartiel; convictions: Convictions; onCompleterSituation?: () => void; onCompleterConvictions?: () => void }) {
