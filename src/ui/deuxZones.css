@@ -1,0 +1,57 @@
+/* Écran du simulateur à trois blocs : situation · mon candidat idéal · convictions */
+
+/* Anneau de précision (bloc central, fond bleu) */
+.anneau {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+}
+
+.anneau svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.anneau-fond,
+.anneau-valeur {
+  fill: none;
+  stroke-width: 7;
+}
+
+.anneau-fond {
+  stroke: rgba(255, 255, 255, 0.2);
+}
+
+.anneau-valeur {
+  stroke: #fff;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.anneau-disque {
+  position: absolute;
+  inset: 0.75rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--bleu-fonce);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.anneau-disque small {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--encre-douce);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anneau-valeur {
+    transition: none;
+  }
+}
