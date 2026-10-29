@@ -324,7 +324,7 @@ function LignePlace({ place, revele, onOuvrir }: { place: LigneClassement[]; rev
 
 // Un top 3 (situation ou convictions) : trois lignes au plus, une par PLACE. Les candidats à égalité de score sont regroupés
 // dans la même ligne, sous un seul numéro et une seule jauge (sans mention d'égalité : ils sont côte à côte). Les titres restent nets sous le flou ; seules les lignes sont floutées.
-function ColonneTop({ resultat, revele, onOuvrir }: { resultat: ResultatAffiche; revele: boolean; onOuvrir: (place: LigneClassement[]) => void }) {
+export function ColonneTop({ resultat, revele, onOuvrir }: { resultat: ResultatAffiche; revele: boolean; onOuvrir: (place: LigneClassement[]) => void }) {
   const lignes = resultat.classement;
   const places = [...new Set(lignes.map((l) => l.rang))].map((rang) => lignes.filter((l) => l.rang === rang));
   return (
@@ -391,7 +391,7 @@ function CentreIdeal({ combine, revele }: { combine: ResultatAffiche | null; rev
 
 // Résultat « convictions » non calculable (aucune position choisie, ou aucune mesure étiquetée sur ces sujets) : on le dit
 // plutôt que de laisser croire qu'il n'existe pas, sans rien inventer.
-function BlocAbsent({ positionsChoisies }: { positionsChoisies: boolean }) {
+export function BlocAbsent({ positionsChoisies }: { positionsChoisies: boolean }) {
   return (
     <div className="ideal-bloc ideal-bloc--absent">
       <TitreResultat titre="Selon vos convictions" />
