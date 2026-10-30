@@ -189,13 +189,19 @@ describe("tableau de bord du simulateur (trois blocs)", () => {
     expect(html).toContain("Calculé sur vos convictions seules");
     expect(html).not.toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
   });
-  it("les trois vues de travail ont un retour vers le tableau de bord, en haut et en bas", () => {
+  it("les trois vues de travail s'ouvrent en modale par-dessus le tableau de bord, qui reste affiché", () => {
     for (const vue of ["situation", "themes", "convictions"] as const) {
       const html = page({ vueInitiale: vue, convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
-      // Les vues de la situation et des convictions restent montées (masquées) pour garder les brouillons : au moins deux boutons.
-      expect(html.match(/Retour à mon candidat idéal/g)?.length ?? 0, vue).toBeGreaterThanOrEqual(2);
-      expect(html, vue).not.toContain("deux-zones"); // le tableau de bord n'est pas affiché en même temps
+      expect(html, vue).toContain("deux-zones"); // pas de changement de page : le tableau de bord reste derrière
+      expect(html, vue).toContain("modale--travail");
+      expect(html, vue).toContain(">Terminé<");
+      expect(html, vue).not.toContain("Retour à mon candidat idéal");
     }
+  });
+  it("seule la modale demandée est ouverte ; les autres sont masquées mais montées", () => {
+    const html = page({ vueInitiale: "situation" });
+    expect(html.match(/class="modale-fond" hidden=""/g)?.length).toBe(2); // convictions et mesures adaptées
+    expect(page({ vueInitiale: "zones" }).match(/class="modale-fond" hidden=""/g)?.length).toBe(3);
   });
   it("les deux sections secondaires (panneau de progression, légende) partagent la même classe de style, sans icône dans la légende", () => {
     expect(page({ vueInitiale: "situation" })).toContain('class="section-secondaire panneau-progression"');

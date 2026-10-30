@@ -15,7 +15,8 @@ import { BlocConvictions, integritesVisibles } from "./Convictions";
 import { aDesConvictions, CONVICTIONS_VIDES, lireConvictions, memoriserConvictions, type Convictions } from "./memoireConvictions";
 import type { ModeAffichage } from "./memoireReponses";
 import { ModaleConfirmation } from "./ModaleConfirmation";
-import { BarreRetour, IntroEtape, IntroMesures, type Vue } from "./ParcoursSimulateur";
+import { IntroEtape, IntroMesures, type Vue } from "./ParcoursSimulateur";
+import { ModaleTravail } from "./ModaleTravail";
 import PageQuestionsGenerales from "./PageQuestionsGenerales";
 import { PropositionsBase } from "./PropositionsContexte";
 import type { SurReponse } from "./Questions";
@@ -134,6 +135,38 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   }, [ouverture]);
 
   const retour = () => allerA("zones");
+  const vueThemes = (
+    <VueThemes
+      key={cleIdentites(aveugle, graine)}
+      convictions={CONVICTIONS_VIDES}
+      anonyme={aveugle}
+      onExplorer={() => {
+        changerMode("exploration");
+        if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+      }}
+      integrites={integrites}
+      cards={cards}
+      profil={profil}
+      personnalise={personnalise}
+      actionProfil={
+        personnalise
+          ? undefined
+          : simulateur
+            ? { type: "renseigner", onClick: () => allerA("situation") }
+            : {
+                type: "simuler",
+                onClick: () => {
+                  changerMode("simulateur");
+                  allerA("situation");
+                },
+              }
+      }
+      questionnaire={base.questionnaire}
+      questionsActives={simulateur && generalSoumis}
+      onReponse={onReponse}
+      ouvertInitial={(!aveugle && ouverture) || undefined}
+    />
+  );
   return (
     <>
       <ModaleConfirmation
@@ -169,8 +202,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           brouillon en revenant au tableau de bord. */}
       {simulateur && (
         <>
-          <div hidden={vue !== "situation"}>
-            <BarreRetour haut onRetour={retour} />
+          <ModaleTravail ouverte={vue === "situation"} titre="Ma situation" onFermer={retour}>
             <IntroEtape etape="situation">
               <p>
                 <strong>Objectif :</strong> mesurer l'effet des mesures sur sa propre situation, en donnant des informations sur votre situation.
@@ -207,11 +239,9 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
               }}
               onAnnuler={() => {}}
             />
-            <BarreRetour onRetour={retour} />
-          </div>
+          </ModaleTravail>
 
-          <div hidden={vue !== "convictions"}>
-            <BarreRetour haut onRetour={retour} />
+          <ModaleTravail ouverte={vue === "convictions"} titre="Mes convictions" onFermer={retour}>
             <IntroEtape etape="convictions">
               <p>
                 <strong>Objectif :</strong> tenir compte de ses idées, pas seulement de sa situation.
@@ -229,12 +259,11 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
                 setConvictions(c);
               }}
             />
-            <BarreRetour onRetour={retour} />
-          </div>
+          </ModaleTravail>
         </>
       )}
 
-      {simulateur && vue === "zones" && (
+      {simulateur && (
         <>
           <EcranDeuxZones
             situation={{ repondues: avance.repondues, total: avance.questions }}
@@ -265,45 +294,17 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
       {/* Mesures adaptées à la situation : les cards de thèmes avec leurs indicateurs, seules sur leur vue en simulateur. En
           exploration, elles restent la page elle-même. La clé referme les détails ouverts quand les lettres changent de sens
           (« Revenir aux questions », autre base, retour en simulateur). */}
-      {simulateur && vue === "themes" && (
-        <>
-          <BarreRetour haut onRetour={retour} />
-          <IntroMesures questionnaire={base.questionnaire} profil={profil} onCompleter={() => allerA("situation")} />
-        </>
+      {simulateur && (
+        <ModaleTravail ouverte={vue === "themes"} titre="Mesures adaptées à ma situation" onFermer={retour}>
+          {vue === "themes" && (
+            <>
+              <IntroMesures questionnaire={base.questionnaire} profil={profil} onCompleter={() => allerA("situation")} />
+              {vueThemes}
+            </>
+          )}
+        </ModaleTravail>
       )}
-      {(!simulateur || vue === "themes") && (
-        <VueThemes
-          key={cleIdentites(aveugle, graine)}
-          convictions={CONVICTIONS_VIDES}
-          anonyme={aveugle}
-          onExplorer={() => {
-            changerMode("exploration");
-            if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          integrites={integrites}
-          cards={cards}
-          profil={profil}
-          personnalise={personnalise}
-          actionProfil={
-            personnalise
-              ? undefined
-              : simulateur
-                ? { type: "renseigner", onClick: () => allerA("situation") }
-                : {
-                    type: "simuler",
-                    onClick: () => {
-                      changerMode("simulateur");
-                      allerA("situation");
-                    },
-                  }
-          }
-          questionnaire={base.questionnaire}
-          questionsActives={simulateur && generalSoumis}
-          onReponse={onReponse}
-          ouvertInitial={(!aveugle && ouverture) || undefined}
-        />
-      )}
-      {simulateur && vue === "themes" && <BarreRetour onRetour={retour} />}
+      {!simulateur && vueThemes}
       {!aveugle && manquants.length > 0 && (
         <p className="hint">
           Résumé pas encore disponible (le détail complet des mesures reste affiché) : {manquants.map((m) => `${m.nom} (${m.themeLibelle})`).join(", ")}.
