@@ -46,18 +46,6 @@ export interface ResultatAffiche {
   tousEcartes: boolean;
 }
 
-interface CardCandidatIdealProps {
-  situation: ResultatAffiche | null;
-  convictions: ResultatAffiche | null;
-  // Candidat qui cumule les deux critères (situation seule quand il n'y a pas de résultat « convictions »).
-  combine: ResultatAffiche | null;
-  questionsRestantes: number;
-  // Le visiteur a choisi au moins une position (pour expliquer l'absence de résultat « convictions »).
-  positionsChoisies?: boolean;
-  revele: boolean;
-  onReveler: () => void;
-}
-
 // Nombre de badges montrés par colonne avant « Voir plus ».
 const MESURES_VISIBLES = 3;
 
@@ -324,7 +312,7 @@ function LignePlace({ place, revele, onOuvrir }: { place: LigneClassement[]; rev
 
 // Un top 3 (situation ou convictions) : trois lignes au plus, une par PLACE. Les candidats à égalité de score sont regroupés
 // dans la même ligne, sous un seul numéro et une seule jauge (sans mention d'égalité : ils sont côte à côte). Les titres restent nets sous le flou ; seules les lignes sont floutées.
-function ColonneTop({ resultat, revele, onOuvrir }: { resultat: ResultatAffiche; revele: boolean; onOuvrir: (place: LigneClassement[]) => void }) {
+export function ColonneTop({ resultat, revele, onOuvrir }: { resultat: ResultatAffiche; revele: boolean; onOuvrir: (place: LigneClassement[]) => void }) {
   const lignes = resultat.classement;
   const places = [...new Set(lignes.map((l) => l.rang))].map((rang) => lignes.filter((l) => l.rang === rang));
   return (
@@ -351,47 +339,9 @@ function ColonneTop({ resultat, revele, onOuvrir }: { resultat: ResultatAffiche;
   );
 }
 
-// Au centre : le candidat qui cumule les deux critères. Floutée, seul le NOMBRE d'ex æquo est dit : jamais leur identité.
-function CentreIdeal({ combine, revele }: { combine: ResultatAffiche | null; revele: boolean }) {
-  const gagnants = combine && combine.departageable ? combine.gagnants : [];
-  return (
-    <div className="ideal-centre">
-      <p className="ideal-centre-etiquette">Candidat idéal, tous critères confondus</p>
-      {gagnants.length > 1 && (
-        <p>
-          <strong>{gagnants.length} candidats à égalité</strong>
-        </p>
-      )}
-      {gagnants.length === 0 ? (
-        combine?.tousEcartes ? (
-          <p>
-            <strong>Tous les candidats étudiés sont écartés</strong> : condamnation connue.
-          </p>
-        ) : (
-          <p>
-            <strong>Égalité parfaite : aucun candidat ne se détache.</strong>
-          </p>
-        )
-      ) : (
-        <ul className={`ideal-centre-liste${revele ? "" : " ideal-flou"}`} {...(revele ? {} : { "aria-hidden": true as const })}>
-          {gagnants.map((g) => {
-            const identite = revele ? g.identite : null;
-            return (
-              <li key={g.lettre}>
-                {identite ? <Pastille slug={identite.slug} nom={identite.nom} className="pastille--ideal" /> : <Pastille slug={`${PREFIXE_ANONYME}${g.lettre}`} nom={`Candidat ${g.lettre}`} className="pastille--ideal" />}
-                <strong className="ideal-centre-nom">{identite ? identite.nom : "Prénom Nom"}</strong>
-                <span className="detail-parti">{identite ? (partiAffichable(identite.parti) ?? "") : "parti du candidat"}</span>              </li>
-            );
-          })}
-        </ul>
-      )}
-    </div>
-  );
-}
-
 // Résultat « convictions » non calculable (aucune position choisie, ou aucune mesure étiquetée sur ces sujets) : on le dit
 // plutôt que de laisser croire qu'il n'existe pas, sans rien inventer.
-function BlocAbsent({ positionsChoisies }: { positionsChoisies: boolean }) {
+export function BlocAbsent({ positionsChoisies }: { positionsChoisies: boolean }) {
   return (
     <div className="ideal-bloc ideal-bloc--absent">
       <TitreResultat titre="Selon vos convictions" />
@@ -587,6 +537,13 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
           </ul>
         </section>
         <section>
+          <h3>La précision</h3>
+          <ul>
+            <li>Le pourcentage de précision est la part des questions et des sujets auxquels vous avez répondu.</li>
+            <li>Il ne mesure pas la fiabilité du résultat : il dit seulement combien vous avez répondu.</li>
+          </ul>
+        </section>
+        <section>
           <h3>Bon à savoir</h3>
           <ul>
             <li>La règle est la même pour tous les candidats.</li>
@@ -598,110 +555,5 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
         </section>
       </div>
     </div>,
-  );
-}
-
-// Annonce du résultat et bouton de révélation : même texte sur la card (posé par-dessus les résultats floutés) et sur le tableau
-// du résultat (où il lève l'anonymat des lignes).
-export function BandeauRevelation({
-  avecConvictions,
-  questionsRestantes,
-  onReveler,
-}: {
-  avecConvictions: boolean;
-  questionsRestantes: number;
-  onReveler: () => void;
-}) {
-  const n = questionsRestantes;
-  return (
-    <div className="ideal-voile-contenu">
-      <p className="chapeau">
-        Votre candidat idéal selon votre situation
-        {avecConvictions ? " et selon vos convictions" : ""} est prêt.
-        {n > 0 &&
-          ` ${n === 1 ? "Une question reste à traiter dans les thèmes" : `${n} questions restent à traiter dans les thèmes`} : y répondre affine le résultat.`}
-      </p>
-      <button type="button" onClick={onReveler}>
-        <Eye size={20} aria-hidden="true" focusable="false" />
-        Révéler mon programme de candidat idéal pour 2027
-      </button>
-    </div>
-  );
-}
-
-export function CardCandidatIdeal({
-  situation,
-  convictions,
-  combine,
-  questionsRestantes,
-  positionsChoisies = false,
-  revele,
-  onReveler,
-}: CardCandidatIdealProps) {
-  // À la révélation (et à « Recommencer »), le bouton cliqué disparaît : le focus passe au titre de la card, sinon il
-  // retomberait sur la page et un lecteur d'écran n'entendrait pas le résultat. Pas de focus au premier affichage.
-  const titre = useRef<HTMLHeadingElement>(null);
-  const dejaAffichee = useRef(false);
-  useEffect(() => {
-    if (!dejaAffichee.current) {
-      dejaAffichee.current = true;
-      return;
-    }
-    titre.current?.focus();
-  }, [revele]);
-
-  // Ligne dont le détail est ouvert (le critère d'où elle vient, pour savoir quelles mesures lire). Jamais ouvert floutée.
-  const [ouverte, setOuverte] = useState<{ place: LigneClassement[]; resultat: ResultatAffiche } | null>(null);
-  useEffect(() => {
-    if (!revele) setOuverte(null);
-  }, [revele]);
-  // Identité stable : la modale n'efface ni ne reprend le focus à chaque rendu.
-  const fermerDetail = useCallback(() => setOuverte(null), []);
-  const [aide, setAide] = useState(false);
-  const fermerAide = useCallback(() => setAide(false), []);
-
-  if (!situation && !convictions) return null;
-  const n = questionsRestantes;
-  return (
-    <section
-      className={`carte-ideal${revele ? "" : " carte-ideal--floue"}`}
-      aria-label="Candidat idéal"
-    >
-      <div className="ideal-entete">
-        <h2 ref={titre} tabIndex={-1}>
-          <Trophy size={24} aria-hidden="true" focusable="false" />
-          Votre candidat idéal
-        </h2>
-        <button type="button" className="secondaire ideal-aide" aria-haspopup="dialog" onClick={() => setAide(true)}>
-          <CircleHelp size={20} aria-hidden="true" focusable="false" />
-          Comment est calculé le score ?
-        </button>
-      </div>
-      {/* Le candidat idéal au centre, comme s'il séparait les deux classements : à gauche la situation, à droite les convictions. */}
-      <div className="ideal-mer" aria-live="polite">
-        <div className="ideal-colonne ideal-colonne--gauche">
-          {situation ? (
-            <ColonneTop resultat={situation} revele={revele} onOuvrir={(place) => setOuverte({ place, resultat: situation })} />
-          ) : null}
-        </div>
-        <CentreIdeal combine={combine} revele={revele} />
-        <div className="ideal-colonne ideal-colonne--droite">
-          {convictions ? (
-            <ColonneTop resultat={convictions} revele={revele} onOuvrir={(place) => setOuverte({ place, resultat: convictions })} />
-          ) : (
-            <BlocAbsent positionsChoisies={positionsChoisies} />
-          )}
-        </div>
-      </div>
-      {ouverte && <ModaleDetail ligne={ouverte.place[0]} egales={ouverte.place} unite={ouverte.resultat.unite} critere={ouverte.resultat.titre} onFermer={fermerDetail} />}
-      {aide && <ModaleAideScore onFermer={fermerAide} />}
-      {/* Le bouton n'est pas une card à part : il est posé PAR-DESSUS les résultats floutés, qui restent lisibles derrière (titres nets,
-          identités floutées). Révélé, il laisse place à un simple pied de card. */}
-      {revele ? null : (
-        <div className="ideal-voile">
-          <BandeauRevelation avecConvictions={convictions !== null} questionsRestantes={n} onReveler={onReveler} />
-        </div>
-      )}
-    </section>
   );
 }

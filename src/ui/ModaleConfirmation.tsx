@@ -5,13 +5,17 @@ interface ModaleConfirmationProps {
   titre: string;
   message: string;
   libelleConfirmer: string;
+  // « Annuler » par défaut.
+  libelleAnnuler?: string;
+  // Vrai par défaut : la confirmation est un bouton danger (rouge). Faux pour une action qui n'efface rien (ex. révéler).
+  destructrice?: boolean;
   onConfirmer: () => void;
   onAnnuler: () => void;
 }
 
 // Confirmation avant une action qu'on ne peut pas défaire. Même habillage que la modale de choix de base. Le focus
 // arrive sur « Annuler » (le choix sûr) ; Échap ou un clic hors du panneau annulent aussi.
-export function ModaleConfirmation({ ouverte, titre, message, libelleConfirmer, onConfirmer, onAnnuler }: ModaleConfirmationProps) {
+export function ModaleConfirmation({ ouverte, titre, message, libelleConfirmer, libelleAnnuler = "Annuler", destructrice = true, onConfirmer, onAnnuler }: ModaleConfirmationProps) {
   const annuler = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -35,9 +39,9 @@ export function ModaleConfirmation({ ouverte, titre, message, libelleConfirmer, 
         <p id="modale-confirmation-message">{message}</p>
         <div className="actions">
           <button type="button" className="secondaire" ref={annuler} onClick={onAnnuler}>
-            Annuler
+            {libelleAnnuler}
           </button>
-          <button type="button" className="bouton-danger" onClick={onConfirmer}>
+          <button type="button" className={destructrice ? "bouton-danger" : undefined} onClick={onConfirmer}>
             {libelleConfirmer}
           </button>
         </div>

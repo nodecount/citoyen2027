@@ -1,4 +1,3 @@
-import { SUJETS_CONVICTION } from "../positions";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { candidatsDeBase, chargerBase, resumesManquants } from "../data/bases";
@@ -20,7 +19,7 @@ const UNE_REPONSE: ProfilPartiel = { tranche_age: "30_49" };
 // photos ou l'ordre alphabétique demandent « exploration », seul mode où les identités sont visibles.
 function rendre(baseId: string, profil: ProfilPartiel, generalSoumis: boolean, mode?: "simulateur" | "exploration"): string {
   return renderToStaticMarkup(
-    <PageThemes base={chargerBase(baseId)} profil={profil} generalSoumis={generalSoumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode={mode ?? "simulateur"} etapeInitiale="themes" />,
+    <PageThemes base={chargerBase(baseId)} profil={profil} generalSoumis={generalSoumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode={mode ?? "simulateur"} vueInitiale="themes" />,
   );
 }
 
@@ -40,7 +39,6 @@ describe("page des thèmes, sur les données réelles", () => {
     expect(portraits(rendu)).not.toContain("niveau--"); // aucun badge
     expect(rendu).not.toContain("Comment lire les indicateurs");
     expect(rendu).not.toMatch(/mettez en valeur|profiterai/i); // aucune formulation qui trie les candidats
-    expect(rendu).toContain("Étapes du simulateur"); // le parcours est proposé, sans rien imposer
     expect(rendu).not.toContain("Pour affiner"); // les questions par thème viennent après
   });
 
@@ -95,7 +93,6 @@ describe("les indicateurs n'apparaissent qu'après la validation du formulaire g
     const rendu = rendre("agregateurs", UNE_REPONSE, true);
     expect(rendu).toContain("Comment lire les indicateurs");
     expect(rendu).not.toContain('<details class="legende"'); // la légende n'est plus un spoiler : toujours affichée
-    expect(rendu).toContain("Étapes du simulateur"); // le parcours est proposé ; le rappel des réponses est à l'étape du résultat
     expect(rendu).toContain("<form");
     expect(portraits(rendu)).toMatch(/data-niveau="[a-z_]+"/);
     expect(rendu).toMatch(/[▲◆○▼]/); // le mot et le symbole restent affichés, dans la légende permanente
@@ -146,7 +143,7 @@ describe("simulateur à l'aveugle par défaut", () => {
   const base = chargerBase("agregateurs");
   const noms = candidatsDeBase(base).avecDonnees.map((c) => c.meta.nom);
   const page = (mode: "simulateur" | "exploration") =>
-    renderToStaticMarkup(<PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode={mode} etapeInitiale="themes" />);
+    renderToStaticMarkup(<PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode={mode} vueInitiale="themes" />);
 
   it("simulateur : aucun nom réel, aucune photo réelle, des lettres à la place", () => {
     const html = page("simulateur");
@@ -167,118 +164,85 @@ describe("simulateur à l'aveugle par défaut", () => {
   });
 });
 
-describe("card candidat idéal sur la page du simulateur", () => {
+describe("tableau de bord du simulateur (trois blocs)", () => {
   const base = chargerBase("agregateurs");
   const noms = candidatsDeBase(base).avecDonnees.map((c) => c.meta.nom);
   const page = (extra: Partial<Parameters<typeof PageThemes>[0]> = {}) =>
-    renderToStaticMarkup(
-      <PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode="simulateur" etapeInitiale="resultat" {...extra} />,
-    );
+    renderToStaticMarkup(<PageThemes base={base} profil={{ tranche_age: "30_49" }} generalSoumis={true} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode="simulateur" {...extra} />);
 
-  it("arrivée sans étape mémorisée : 1 sans réponse, 2 avec des réponses gardées, 3 avec des convictions gardées (jamais directement le résultat)", () => {
-    expect(page({ etapeInitiale: undefined, profil: {}, generalSoumis: false })).toContain("Voir les mesures adaptées à ma situation");
-    const avecReponses = page({ etapeInitiale: undefined });
-    expect(avecReponses).toContain('class="grille-themes"');
-    expect(avecReponses).not.toContain("carte-ideal");
-    const avecConvictions = page({ etapeInitiale: undefined, convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
-    expect(avecConvictions).toContain("Voir mon candidat idéal");
-    expect(avecConvictions).not.toContain("carte-ideal");
+  it("arrivée : toujours le tableau de bord, non révélé, sans menu d'étapes ni card", () => {
+    for (const html of [page(), page({ profil: {}, generalSoumis: false }), page({ convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } })]) {
+      expect(html).toContain("Mon candidat idéal");
+      expect(html).toContain("deux-zones");
+      expect(html).not.toContain("Étapes du simulateur");
+      expect(html).not.toContain("carte-ideal");
+      expect(html).toContain("XXXXXX YYYYYY");
+      for (const nom of noms) expect(html, nom).not.toContain(nom);
+    }
+  });
+  it("sans réponse : « Révéler » est inactif ; avec une réponse il est actif", () => {
+    expect(page({ profil: {}, generalSoumis: false })).toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
+    expect(page()).not.toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
+  });
+  it("une seule conviction, sans aucune réponse de situation : la suggestion est accessible et dit qu'elle repose sur les convictions", () => {
+    const html = page({ profil: {}, generalSoumis: false, convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
+    expect(html).toContain("Calculé sur vos convictions seules");
+    expect(html).not.toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
+  });
+  it("les trois vues de travail ont un retour vers le tableau de bord, en haut et en bas", () => {
+    for (const vue of ["situation", "themes", "convictions"] as const) {
+      const html = page({ vueInitiale: vue, convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
+      // Les vues de la situation et des convictions restent montées (masquées) pour garder les brouillons : au moins deux boutons.
+      expect(html.match(/Retour à mon candidat idéal/g)?.length ?? 0, vue).toBeGreaterThanOrEqual(2);
+      expect(html, vue).not.toContain("deux-zones"); // le tableau de bord n'est pas affiché en même temps
+    }
   });
   it("les deux sections secondaires (panneau de progression, légende) partagent la même classe de style, sans icône dans la légende", () => {
-    const panneau = page({ etapeInitiale: "situation" });
-    expect(panneau).toContain('class="section-secondaire panneau-progression"');
-    const themes = page({ etapeInitiale: "themes" });
+    expect(page({ vueInitiale: "situation" })).toContain('class="section-secondaire panneau-progression"');
+    const themes = page({ vueInitiale: "themes" });
     const legende = themes.slice(themes.indexOf('class="section-secondaire echelle"'), themes.indexOf('class="echelle-reperes"'));
     expect(legende).toContain("Si ce candidat était élu");
     expect(legende).not.toContain("<svg");
   });
-  it("étapes 1 et 3 : « Effacer … » est en bas de l'écran, entre les deux boutons de navigation, et plus dans le formulaire", () => {
-    const situation = page({ etapeInitiale: "situation" });
-    const nav = situation.slice(situation.lastIndexOf("nav-etape nav-etape--milieu"));
-    expect(nav).toContain("Effacer mes réponses");
-    expect(nav).toContain("bouton-effacer"); // bouton danger (rouge), pas la couleur du thème
-    expect(situation.slice(0, situation.lastIndexOf("nav-etape nav-etape--milieu"))).not.toContain("Effacer mes réponses");
-    const convictions = page({ etapeInitiale: "convictions", convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
-    expect(convictions.slice(convictions.lastIndexOf("nav-etape nav-etape--milieu"))).toContain("Effacer mes convictions");
-    // Rien à effacer : pas de bouton.
-    expect(page({ etapeInitiale: "convictions" })).not.toContain("Effacer mes convictions");
-  });
-  it("floutée par défaut : la card est là, le bouton aussi, et aucun nom réel n'est dans la page", () => {
-    const html = page();
-    expect(html).toContain("carte-ideal--floue");
-    expect(html).toContain("Révéler mon programme de candidat idéal pour 2027");
-    for (const nom of noms) expect(html, nom).not.toContain(nom);
-  });
-  it("le résultat n'affiche plus les cards de thèmes (elles ont leur propre étape) et l'étape des thèmes n'affiche pas la card", () => {
-    const resultat = page();
-    expect(resultat).toContain("carte-ideal");
-    expect(resultat).not.toContain('class="grille-themes"');
-    const themes = page({ etapeInitiale: "themes" });
+  it("la vue des thèmes montre les cards masquées, le tableau de bord n'en montre pas", () => {
+    const themes = page({ vueInitiale: "themes" });
     expect(themes).toContain('class="grille-themes"');
-    expect(themes).not.toContain("carte-ideal");
     expect(themes).toContain("masquons");
+    expect(page()).not.toContain('class="grille-themes"');
   });
-  it("sans réponse (pas d'indicateur) : pas de card", () => {
-    expect(page({ profil: {}, generalSoumis: false })).not.toContain("carte-ideal");
-  });
-  it("révélée : le bouton de révélation disparaît (sans pied de card), et le rappel des réponses propose de recommencer (le modifier réinitialise le résultat)", () => {
+  it("révélé : les noms réels apparaissent au centre et dans les classements, et le bouton propose de revenir aux questions", () => {
     const html = page({ releveInitial: true });
-    expect(html).not.toContain("Recommencer la simulation");
-    expect(html).not.toContain("Voici votre candidat idéal pour 2027");
-    expect(html).toContain("Recommencer pour corriger ou compléter");
-    expect(html).not.toContain("Révéler mon programme");
-    expect(html).toContain("Mes réponses");
-    expect(html).not.toContain("carte-ideal--floue");
+    expect(html).toContain("Revenir aux questions");
+    expect(html).not.toContain("XXXXXX YYYYYY");
+    expect(html).not.toContain("Commencer");
+    expect(noms.some((n) => html.includes(n))).toBe(true);
   });
-  it("révélée : les cards de thèmes restent masquées (lettres, pas de photo)", () => {
-    const html = page({ releveInitial: true, etapeInitiale: "themes" });
-    // La card idéale montre la vraie photo du gagnant ; les cards de thèmes, elles, restent masquées.
+  it("révélé : les cards de thèmes restent masquées (lettres, pas de photo)", () => {
+    const html = page({ releveInitial: true, vueInitiale: "themes" });
     const themes = html.slice(html.indexOf('class="grille-themes"'));
-    expect(themes).toMatch(/Candidat [A-Z]/); // lettres tirées au hasard : jamais une lettre précise
+    expect(themes).toMatch(/Candidat [A-Z]/);
     expect(themes).not.toContain('src="/candidats/');
   });
-  it("floutée : le rappel des réponses (situation et convictions) est sous la card, avec le bouton pour recommencer", () => {
-    const html = page();
-    expect(html).toContain("Mes réponses");
-    expect(html).toContain("Recommencer pour corriger ou compléter");
-    expect(html.indexOf("carte-ideal")).toBeLessThan(html.indexOf("Mes réponses"));
+  it("« Effacer » est dans le bloc concerné, seulement s'il y a quelque chose à effacer", () => {
+    const avec = page({ convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
+    expect(avec).toContain("Effacer mes réponses");
+    expect(avec).toContain("Effacer mes convictions");
+    expect(avec).toContain("bouton-effacer");
+    const sans = page({ profil: {}, generalSoumis: false });
+    expect(sans).not.toContain("Effacer mes");
   });
-  it("le résultat commence par le rappel de ce sur quoi repose le calcul, avec les compteurs de réponses et de convictions", () => {
-    const html = page({ convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
-    expect(html).toContain("Nous calculons ce résultat à partir de vos réponses");
-    expect(html).toMatch(/1 question répondue sur \d+/);
-    expect(html).toContain(`1 conviction complétée sur ${SUJETS_CONVICTION.length}`);
-    expect(html.indexOf("bandeau-pertinence")).toBeLessThan(html.indexOf("carte-ideal"));
+  it("exploration : aucun tableau de bord", () => {
+    expect(page({ mode: "exploration" })).not.toContain("Mon candidat idéal");
   });
-  it("sans réponse : le parcours commence par la situation, sans thèmes ni résultat", () => {
-    const html = page({ etapeInitiale: undefined, profil: {}, generalSoumis: false });
-    expect(html).toContain("Voir les mesures adaptées à ma situation");
-    expect(html).not.toContain('class="grille-themes"');
-    expect(html).not.toContain("Mes réponses");
-  });
-  it("étape convictions : les thèmes et le résultat ne sont pas encore affichés", () => {
-    const html = page({ etapeInitiale: "convictions" });
-    expect(html).toContain("Voir mon candidat idéal");
-    expect(html).not.toContain('class="grille-themes"');
-    expect(html).not.toContain("carte-ideal");
-  });
-  it("exploration : aucune card idéale", () => {
-    expect(page({ mode: "exploration" })).not.toContain("carte-ideal");
-  });
-  it("résultat convictions seulement si une position est choisie ET que des mesures sont étiquetées dessus", () => {
-    expect(page()).toContain("Pas encore de résultat");
-    expect(page()).not.toContain("selon votre situation et selon vos convictions");
-    // Aucune mesure n'est encore étiquetée : promettre un « meilleur programme selon vos convictions » serait faux, on l'omet.
-    const avecPosition = page({ convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
-    // Selon les données étiquetées à cet instant, le résultat existe ou la card dit pourquoi il n'existe pas : jamais de silence.
-    expect(avecPosition).toMatch(/selon votre situation et selon vos convictions|pas encore été étudiées sur les sujets/);
+  it("convictions sans résultat : l'onglet Candidats dit pourquoi une fois révélé", () => {
+    expect(page({ releveInitial: true })).toContain("choisissez au moins une position");
   });
 });
 
 describe("pages Exploration et Simulateur", () => {
   const rendreEnMode = (mode: "simulateur" | "exploration", profil: ProfilPartiel, soumis: boolean) =>
     renderToStaticMarkup(
-      <PageThemes base={chargerBase("agregateurs")} profil={profil} generalSoumis={soumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode={mode ?? "simulateur"} etapeInitiale="themes" />,
+      <PageThemes base={chargerBase("agregateurs")} profil={profil} generalSoumis={soumis} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode={mode ?? "simulateur"} vueInitiale="themes" />,
     );
 
   it("n'a plus de bascule : le mode est celui de la page (/exploration ou /simulateur)", () => {
@@ -329,7 +293,7 @@ describe("bloc « Mes convictions » sur la page du simulateur", () => {
     const base = chargerBase("agregateurs");
     const page = (mode: "simulateur" | "exploration") =>
       renderToStaticMarkup(
-        <PageThemes base={base} profil={{}} generalSoumis={false} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode={mode} etapeInitiale="themes" convictionsInitiales={{ positions: { ia: "plus_ia" }, exemplarite: true }} />,
+        <PageThemes base={base} profil={{}} generalSoumis={false} onValider={() => {}} onEffacer={() => {}} onReponse={() => {}} mode={mode} vueInitiale="themes" convictionsInitiales={{ positions: { ia: "plus_ia" }, exemplarite: true }} />,
       );
     expect(page("simulateur")).toContain("Mes convictions");
     expect(page("exploration")).not.toContain("Mes convictions");

@@ -69,6 +69,7 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
         <h3>Ce qui reste à vous</h3>
         <ul>
           <li>Le candidat idéal est une suggestion. C'est à vous de peser les mesures qui comptent le plus pour vous, en les lisant.</li>
+          <li>Le pourcentage de précision ne mesure pas la fiabilité du résultat : il compte seulement les questions et les sujets auxquels vous avez répondu.</li>
           <li>Vos convictions sont rattachées aux mesures par une méthode automatique, avec une seconde lecture. Elles n'ont pas encore été relues une à une par une personne.</li>
           <li>Un candidat dont les mesures ne sont pas encore intégrées ne peut pas ressortir : le résultat dépend de ce qui est publié et de ce qui a été traité à ce jour.</li>
         </ul>

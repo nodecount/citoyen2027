@@ -1,0 +1,306 @@
+/* Écran du simulateur à trois blocs : situation · mon candidat idéal · convictions */
+
+/* Anneau de précision (bloc central, fond bleu) */
+.anneau {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+}
+
+.anneau svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.anneau-fond,
+.anneau-valeur {
+  fill: none;
+  stroke-width: 7;
+}
+
+.anneau-fond {
+  stroke: rgba(255, 255, 255, 0.2);
+}
+
+.anneau-valeur {
+  stroke: #fff;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.anneau-disque {
+  position: absolute;
+  inset: 0.75rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--bleu-fonce);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.anneau-disque small {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--encre-douce);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anneau-valeur {
+    transition: none;
+  }
+}
+
+/* Bloc central : fond bleu à tous les états */
+.suggestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: var(--rayon);
+  background: linear-gradient(160deg, var(--bleu-fonce), var(--bleu));
+  color: #fff;
+  text-align: center;
+}
+
+.suggestion h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.suggestion-nom,
+.suggestion-noms {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.suggestion-nom--flou {
+  filter: blur(5px);
+  user-select: none;
+  letter-spacing: 0.05em;
+}
+
+.suggestion-noms .detail-parti {
+  display: block;
+  font-weight: 400;
+  color: #d6def5;
+}
+
+.suggestion-message,
+.suggestion-source {
+  margin: 0;
+  font-size: 1rem;
+  color: #e3e9fa;
+}
+
+.suggestion .bouton-revele {
+  background: #fff;
+  color: var(--bleu-fonce);
+}
+
+.suggestion .bouton-revele:disabled {
+  background: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: not-allowed;
+}
+
+.suggestion .bouton-fantome {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  border: 0;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.suggestion .bouton-fantome small {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #d6def5;
+}
+
+/* Grille des trois blocs : situation · suggestion · convictions. Sur écran étroit : suggestion, situation, convictions. */
+.deux-zones {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1fr;
+  gap: 0.8rem;
+  align-items: stretch;
+  margin: 1rem 0;
+}
+
+.deux-zones-centre {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.deux-zones-centre .suggestion {
+  flex: 1;
+}
+
+@media (max-width: 52rem) {
+  .deux-zones {
+    grid-template-columns: 1fr;
+  }
+  .deux-zones-centre {
+    order: -1;
+  }
+}
+
+/* Blocs latéraux à onglets */
+.zone {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  background: var(--surface);
+}
+
+.zone--situation {
+  border-top: 4px solid var(--bleu);
+}
+
+.zone--convictions {
+  border-top: 4px solid var(--ameliorant);
+}
+
+.zone-onglets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--filet);
+}
+
+.zone-onglet {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.6rem 0.3rem;
+  border: 0;
+  border-radius: 0;
+  background: #f5f7fb;
+  color: var(--encre-douce);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.zone-onglet[aria-selected="true"] {
+  background: var(--surface);
+  color: var(--bleu-fonce);
+  box-shadow: inset 0 -3px 0 var(--bleu);
+}
+
+.zone--convictions .zone-onglet[aria-selected="true"] {
+  box-shadow: inset 0 -3px 0 var(--ameliorant);
+}
+
+.zone-onglet:disabled {
+  color: #6b7590;
+  cursor: not-allowed;
+}
+
+.zone-onglet:focus-visible {
+  outline: 3px solid var(--bleu);
+  outline-offset: -3px;
+}
+
+.zone-corps {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 1rem;
+}
+
+.zone-corps h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.zone-compte,
+.zone-aide-texte {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--encre-douce);
+}
+
+.zone-barre {
+  align-self: stretch;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--bleu-pale);
+  overflow: hidden;
+}
+
+.zone-barre span {
+  display: block;
+  height: 100%;
+  background: var(--bleu);
+  transition: width 0.25s ease;
+}
+
+.zone-barre--vert span {
+  background: var(--ameliorant);
+}
+
+.zone-aide {
+  align-self: center;
+}
+
+.zone-corps > .ideal-bloc,
+.zone-corps > .hint {
+  align-self: stretch;
+  margin: 0;
+}
+
+.zone-corps > .ideal-bloc {
+  border: 0;
+  padding: 0;
+}
+
+.suggestion-noms .detail-parti {
+  margin-left: 0;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  color: #fff;
+}
+
+/* Retour au tableau de bord, en haut et en bas des vues de travail */
+.barre-retour {
+  display: flex;
+  margin: 0.75rem 0;
+}
+
+.barre-retour button {
+  width: auto;
+}
+
+.zone-corps .lien-discret {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0;
+  border: 0;
+  background: none;
+  color: var(--bleu);
+  font: inherit;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
