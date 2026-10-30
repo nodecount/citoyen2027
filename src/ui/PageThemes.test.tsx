@@ -184,6 +184,11 @@ describe("tableau de bord du simulateur (trois blocs)", () => {
     expect(page({ profil: {}, generalSoumis: false })).toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
     expect(page()).not.toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
   });
+  it("une seule conviction, sans aucune réponse de situation : la suggestion est accessible et dit qu'elle repose sur les convictions", () => {
+    const html = page({ profil: {}, generalSoumis: false, convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
+    expect(html).toContain("Calculé sur vos convictions seules");
+    expect(html).not.toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
+  });
   it("les trois vues de travail ont un retour vers le tableau de bord, en haut et en bas", () => {
     for (const vue of ["situation", "themes", "convictions"] as const) {
       const html = page({ vueInitiale: vue, convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
