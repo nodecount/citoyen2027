@@ -262,3 +262,45 @@
 .zone-aide {
   align-self: center;
 }
+
+.zone-corps > .ideal-bloc,
+.zone-corps > .hint {
+  align-self: stretch;
+  margin: 0;
+}
+
+.zone-corps > .ideal-bloc {
+  border: 0;
+  padding: 0;
+}
+
+.suggestion-noms .detail-parti {
+  margin-left: 0;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  color: #fff;
+}
+
+/* Retour au tableau de bord, en haut et en bas des vues de travail */
+.barre-retour {
+  display: flex;
+  margin: 0.75rem 0;
+}
+
+.barre-retour button {
+  width: auto;
+}
+
+.zone-corps .lien-discret {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0;
+  border: 0;
+  background: none;
+  color: var(--bleu);
+  font: inherit;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
