@@ -12,11 +12,20 @@ describe("routeur", () => {
     expect(cheminDeLEcran("tests-situations")).toBe("/tests-situations");
     expect(cheminDeLEcran("questions-generales")).toBe("/ma-situation");
     expect(cheminDeLEcran("a-propos")).toBe("/a-propos");
-    expect(new Set(ECRANS.map(cheminDeLEcran)).size).toBe(ECRANS.length);
+    expect(new Set(ECRANS.map((e) => cheminDeLEcran(e))).size).toBe(ECRANS.length);
   });
 
   it("retrouve l'écran depuis l'adresse (aller-retour exact)", () => {
     for (const ecran of ECRANS) expect(ecranDepuisChemin(cheminDeLEcran(ecran))).toBe(ecran);
+  });
+
+  it("fonctionne sous un sous-dossier (hébergement dans /citoyen2027/)", () => {
+    const base = "/citoyen2027";
+    expect(cheminDeLEcran("accueil", base)).toBe("/citoyen2027/");
+    expect(cheminDeLEcran("simulateur", base)).toBe("/citoyen2027/simulateur");
+    for (const ecran of ECRANS) expect(ecranDepuisChemin(cheminDeLEcran(ecran, base), base)).toBe(ecran);
+    expect(ecranDepuisChemin("/citoyen2027", base)).toBe("accueil");
+    expect(ecranDepuisChemin("/simulateur", base)).toBe("accueil"); // hors du sous-dossier : inconnu
   });
 
   it("renvoie vers l'accueil pour une adresse inconnue, plutôt qu'une page blanche", () => {

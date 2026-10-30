@@ -18,13 +18,18 @@ const ECRAN_PAR_CHEMIN: Record<string, Ecran> = Object.fromEntries(
   Object.entries(CHEMIN_PAR_ECRAN).map(([ecran, chemin]) => [chemin, ecran as Ecran]),
 );
 
-export function cheminDeLEcran(ecran: Ecran): string {
-  return CHEMIN_PAR_ECRAN[ecran];
+// Sous-dossier d'hébergement (« /citoyen2027 » en ligne, vide en local), sans barre finale : fixé à la construction (vite --base).
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+export function cheminDeLEcran(ecran: Ecran, base: string = BASE): string {
+  return base + CHEMIN_PAR_ECRAN[ecran];
 }
 
-// Une adresse inconnue retombe sur l'accueil plutôt que sur une page blanche.
-export function ecranDepuisChemin(chemin: string): Ecran {
-  return ECRAN_PAR_CHEMIN[chemin] ?? "accueil";
+// Une adresse inconnue (ou hors du sous-dossier) retombe sur l'accueil plutôt que sur une page blanche.
+export function ecranDepuisChemin(chemin: string, base: string = BASE): Ecran {
+  if (!chemin.startsWith(base)) return "accueil";
+  const reste = chemin.slice(base.length).replace(/(.)\/$/, "$1") || "/";
+  return ECRAN_PAR_CHEMIN[reste] ?? "accueil";
 }
 
 // Un candidat ouvert dans une carte de thème : « /simulateur?candidat=<slug>#theme-<id> » (ancre = la carte du thème).

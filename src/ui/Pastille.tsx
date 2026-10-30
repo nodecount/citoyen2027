@@ -33,7 +33,7 @@ export function Pastille({ slug, nom, className, libelle }: PastilleProps) {
   const accessibilite = libelle ? { role: "img", "aria-label": libelle, title: libelle } : { "aria-hidden": true as const };
   return (
     <span className={classes} {...accessibilite}>
-      {photo ? <img src={`/${photo.fichier}`} alt="" loading="lazy" decoding="async" /> : contenu}
+      {photo ? <img src={`${import.meta.env.BASE_URL}${photo.fichier}`} alt="" loading="lazy" decoding="async" /> : contenu}
     </span>
   );
 }
