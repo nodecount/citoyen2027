@@ -27,15 +27,26 @@ const rendre = (p: { revele: boolean; situation: ResultatAffiche | null; convict
       {p.convictions && <ColonneTop resultat={p.convictions} revele={p.revele} onOuvrir={() => {}} />}
     </>,
   );
-describe("Aide « Comment est calculé le score ? »", () => {
+describe("Aide « Comment est suggéré le candidat ? »", () => {
   const html = renderToStaticMarkup(<ModaleAideScore onFermer={() => {}} />);
-  it("fenêtre modale en sections courtes : situation, convictions, classements, jauge, mesures, bon à savoir", () => {
-    for (const t of ['role="dialog"', "Selon votre situation", "Selon vos convictions", "Les classements", "La barre de score", "Les mesures d&#x27;un candidat", "Bon à savoir", "La précision", "Fermer l&#x27;aide"]) expect(html, t).toContain(t);
-    expect(html).toContain("ne mesure pas la fiabilité du résultat");
-    expect(html.match(/<h3>/g)).toHaveLength(7);
+  it("fenêtre modale en sections courtes : situation, convictions, classements, précision, bon à savoir", () => {
+    for (const t of ['role="dialog"', "Selon votre situation", "Selon vos convictions", "Les classements", "Bon à savoir", "La précision", "Fermer l&#x27;aide"]) expect(html, t).toContain(t);
+    expect(html).toContain("Plus vous répondez aux questions, plus la suggestion est précise.");
+    expect(html).not.toContain("pas si le résultat est fiable");
+    expect(html.match(/<h3>/g)).toHaveLength(5);
+    expect(html).toContain("Comment est suggéré le candidat ?");
   });
   it("dit la règle : points, cumul au centre, 5 meilleurs, jauge, ex æquo, même règle pour tous", () => {
-    for (const t of ["rapporte 1 point", "fait perdre 1 point", "Chaque mesure du candidat qui améliore votre situation", "additionnés", "3 meilleures places de chaque critère", "8 mesures favorables et 3 défavorables font +5", "présenté sur 100", "La barre part de la gauche", "dont le contour se remplit comme la barre", "on compte des mesures, pas leur importance", "simple différence", "tous les candidats concernés sont montrés", "même pour tous", "Les onglets en haut de la fenêtre"]) expect(html, t).toContain(t);
+    for (const t of ["rapporte 1 point au candidat", "lui retire 1 point", "Chaque mesure qui améliore votre situation","additionnés", "3 meilleures places de chaque critère", "on compte des mesures, pas leur importance","même pour tous"]) expect(html, t).toContain(t);
+  });
+  it("n'explique plus la barre dans l'aide : l'explication du score est dans la fenêtre de détail", () => {
+    expect(html).not.toContain("La barre de score");
+    expect(html).not.toContain("La barre part de la gauche");
+    expect(html).not.toContain("Les mesures d&#x27;un candidat");
+  });
+  it("ne dit plus « une fois par thème » ni « tous les candidats concernés sont montrés »", () => {
+    expect(html).not.toContain("qu'une fois par thème");
+    expect(html).not.toContain("tous les candidats concernés sont montrés");
   });
   it("aucun tiret cadratin dans le texte", () => {
     expect(html).not.toContain("—");
@@ -102,6 +113,13 @@ describe("RondScore dans la fenêtre de détail", () => {
     expect(html).toContain('aria-label="Score 37 sur 100"');
     expect(html.indexOf("ideal-rond")).toBeLessThan(html.indexOf('aria-label="Fermer le détail"'));
     expect(html.indexOf("ideal-rond")).toBeLessThan(html.indexOf("ideal-totaux"));
+  });
+  it("la fenêtre de détail explique le score en deux phrases simples", () => {
+    const l = { ...gagnant("C", "Nom-Reel-Situation", "slug-reel-a", 3), rang: 1, note: 37 };
+    const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
+    expect(html).toContain("Le score va de 0 à 100.");
+    expect(html).toContain("100 correspond au candidat qui a le plus de mesures qui vous concernent.");
+    expect(html.indexOf("Le score va de 0 à 100")).toBeLessThan(html.indexOf("ideal-totaux"));
   });
   it("égalité : le rond suit le candidat sélectionné (même score, donc même note)", () => {
     const a = { ...gagnant("C", "Nom-A", "sa", 3), rang: 1, note: 37 };

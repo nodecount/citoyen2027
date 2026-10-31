@@ -4,18 +4,20 @@
     "libelle": "Programmes officiels",
     "description": "Mesures relevées dans les documents officiels des candidats.",
     "avertissement": "Mesures relevées par IA dans les programmes officiels, pas encore relues par l'équipe.",
-    "defaut": true
+    "desactivee": true
   },
   {
     "id": "agregateurs",
     "libelle": "Comparateur iFRAP",
     "description": "Mesures reprises du comparateur indépendant de la Fondation iFRAP.",
-    "avertissement": "Mesures reprises du comparateur iFRAP, non vérifiées dans les programmes."
+    "avertissement": "Mesures reprises du comparateur iFRAP, non vérifiées dans les programmes.",
+    "defaut": true
   },
   {
     "id": "votes",
     "libelle": "Votes des députés",
     "description": "Votes des groupes parlementaires sur les articles clés de 15 lois de la XVIIe législature (lot test de recherche).",
-    "avertissement": "Lot test de recherche : votes de groupes à l'Assemblée nationale (2024-2026), rattachés aux partis. Un vote n'est pas un engagement de programme."
+    "avertissement": "Lot test de recherche : votes de groupes à l'Assemblée nationale (2024-2026), rattachés aux partis. Un vote n'est pas un engagement de programme.",
+    "desactivee": true
   }
 ]

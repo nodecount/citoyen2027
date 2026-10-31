@@ -31,6 +31,13 @@ describe("Menu", () => {
     expect(html).not.toContain('role="dialog"'); // fermée tant qu'on n'a pas cliqué
   });
 
+  it("propose un bouton burger fermé par défaut, qui commande la navigation (écran étroit)", () => {
+    const html = rendre("accueil");
+    expect(html).toMatch(/class="menu-burger"[^>]*aria-expanded="false"[^>]*aria-controls="navigation-principale"/);
+    expect(html).toContain('id="navigation-principale"');
+    expect(html).not.toContain("menu-nav--ouvert");
+  });
+
   it("n'affiche pas le choix de base quand il n'y en a qu'une", () => {
     expect(rendre("simulateur", UNE_BASE)).not.toContain("bouton-base");
   });

@@ -109,6 +109,59 @@ a {
   gap: 1.25rem;
 }
 
+.menu-burger {
+  display: none;
+}
+
+@media (max-width: 40rem) {
+  .menu {
+    gap: 0.5rem 0.75rem;
+  }
+
+  /* Ordre : marque, base, burger, puis liens sur toute la largeur. */
+  .bouton-base {
+    order: 1;
+  }
+
+  .menu .menu-burger {
+    order: 2;
+    display: inline-grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--filet);
+    border-radius: 0.6rem;
+    background: var(--surface);
+    color: var(--bleu-fonce);
+    cursor: pointer;
+  }
+
+  .menu .menu-nav {
+    order: 3;
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .menu .menu-nav--ouvert {
+    display: flex;
+  }
+
+  .menu-nav .lien-menu {
+    padding: 0.85rem 0.25rem;
+    border-top: 1px solid var(--filet);
+    text-align: left;
+  }
+
+  /* Seule l'icône reste : le nom de la base est dans le libellé accessible du bouton. */
+  .bouton-base span {
+    display: none;
+  }
+}
+
 .lien-menu {
   margin: 0;
   padding: 0;
@@ -239,6 +292,16 @@ a {
 .choix-base--actif {
   border-color: var(--bleu);
   background: var(--bleu-pale);
+}
+
+.choix-base--desactivee {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.choix-base-controles .lien-menu:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .choix-base input {
@@ -521,13 +584,13 @@ a {
 }
 
 /* Bouton sur fond bleu : blanc, texte bleu (contraste suffisant). */
-.bandeau-accueil button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone)) {
+.bandeau-accueil button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone, .menu-burger)) {
   margin: 0;
   background: #ffffff;
   color: var(--bleu-fonce);
 }
 
-.bandeau-accueil button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone)):hover {
+.bandeau-accueil button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone, .menu-burger)):hover {
   background: var(--bleu-pale);
 }
 
@@ -834,7 +897,7 @@ button {
   cursor: pointer;
 }
 
-button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone)) {
+button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone, .menu-burger)) {
   border: 1px solid transparent;
   border-radius: 8px;
   background: var(--bleu);
@@ -843,7 +906,7 @@ button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone)) {
   font-weight: 600;
 }
 
-button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone)):hover {
+button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone, .menu-burger)):hover {
   background: var(--bleu-fonce);
 }
 

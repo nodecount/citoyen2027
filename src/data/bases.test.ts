@@ -55,6 +55,11 @@ describe("choix de la base", () => {
     expect(resoudreBase("", BASES).id).toBe("b");
   });
 
+  it("ignore une base désactivée (ancien choix mémorisé, ancien lien) et retombe sur la base par défaut", () => {
+    const bases = [{ ...BASES[0], desactivee: true }, BASES[1]];
+    expect(resoudreBase("a", bases).id).toBe("b");
+  });
+
   it("prend la première base si aucune n'est marquée par défaut", () => {
     expect(baseParDefaut([{ ...BASES[0] }, { ...BASES[1], defaut: false }]).id).toBe("a");
   });

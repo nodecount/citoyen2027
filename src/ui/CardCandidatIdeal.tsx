@@ -424,6 +424,9 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
             )}
           </div>
         )}
+        <p className="hint ideal-score-explication">
+          Le score va de 0 à 100. Il monte avec les mesures qui vous avantagent et baisse avec celles qui vous désavantagent. 100 correspond au candidat qui a le plus de mesures qui vous concernent.
+        </p>
         {/* Les deux totaux (groupes, puis mesures) d'abord, puis les onglets collés en haut de la fenêtre : on change de vue sans
             remonter, même avec beaucoup de mesures. */}
         <div className="ideal-totaux">
@@ -489,7 +492,7 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
     <div className="modale-fond" onMouseDown={(e) => e.target === e.currentTarget && onFermer()}>
       <div className="modale modale--ideal modale--aide" role="dialog" aria-modal="true" aria-labelledby="modale-aide-titre">
         <div className="modale-entete">
-          <h2 id="modale-aide-titre">Comment est calculé le score ?</h2>
+          <h2 id="modale-aide-titre">Comment est suggéré le candidat ?</h2>
           <button type="button" className="bouton-icone" ref={fermer} onClick={onFermer} aria-label="Fermer l'aide">
             <X size={20} aria-hidden="true" focusable="false" />
           </button>
@@ -497,17 +500,16 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
         <section>
           <h3>Selon votre situation</h3>
           <ul>
-            <li>Chaque mesure du candidat qui améliore votre situation rapporte 1 point.</li>
-            <li>Chaque mesure qui la dégrade fait perdre 1 point.</li>
+            <li>Chaque mesure qui améliore votre situation rapporte 1 point au candidat.</li>
+            <li>Chaque mesure qui la dégrade lui retire 1 point.</li>
             <li>Les mesures qui ne vous concernent pas ne comptent pas.</li>
           </ul>
         </section>
         <section>
           <h3>Selon vos convictions</h3>
           <ul>
-            <li>Une mesure qui va dans le sens d'une position que vous avez choisie rapporte 1 point.</li>
-            <li>Une mesure qui va à l'opposé fait perdre 1 point.</li>
-            <li>Une même mesure n'est comptée qu'une fois par thème.</li>
+            <li>Une mesure qui va dans le sens d'une position que vous avez choisie rapporte 1 point au candidat.</li>
+            <li>Une mesure qui va à l'opposé lui retire 1 point.</li>
           </ul>
         </section>
         <section>
@@ -515,33 +517,12 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
           <ul>
             <li>Au centre : le candidat dont vos deux scores, additionnés, sont les plus élevés.</li>
             <li>De chaque côté : les 3 meilleures places de chaque critère, les candidats à égalité partageant la même place.</li>
-            <li>En cas d'égalité, tous les candidats concernés sont montrés.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>La barre de score</h3>
-          <ul>
-            <li>Le score brut est la simple différence : 8 mesures favorables et 3 défavorables font +5.</li>
-            <li>Dans les classements, il est présenté sur 100 : 100 correspond au plus grand nombre de mesures qui vous concernent chez un candidat (favorables ou défavorables).</li>
-            <li>La barre part de la gauche. Cliquez sur un candidat : son score sur 100 est rappelé dans un rond, dont le contour se remplit comme la barre.</li>
-            <li>Un score nul ou négatif s'affiche 0 : la barre ne descend jamais sous zéro.</li>
-            <li>Dans la fenêtre de détail, le vert représente les mesures favorables et le rouge les défavorables.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Les mesures d'un candidat</h3>
-          <ul>
-            <li>Cliquez sur un candidat du classement pour les voir.</li>
-            <li>Chaque badge est un groupe de mesures. Son icône indique le thème.</li>
-            <li>Les onglets en haut de la fenêtre passent des groupes de mesures aux mesures elles-mêmes, avec leur nombre.</li>
           </ul>
         </section>
         <section>
           <h3>La précision</h3>
           <ul>
-            <li>Le pourcentage de précision est la part des questions et des sujets auxquels vous avez répondu.</li>
-            <li>Il ne mesure pas la fiabilité du résultat : il dit seulement combien vous avez répondu.</li>
-          </ul>
+            <li>Plus vous répondez aux questions, plus la suggestion est précise.</li>          </ul>
         </section>
         <section>
           <h3>Bon à savoir</h3>

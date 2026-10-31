@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useState } from "react";
-import { Database } from "lucide-react";
+import { Database, Menu as Menu_, X } from "lucide-react";
 import { candidatsDeBase, chargerBase, type InfoBase } from "../data/bases";
 import { ModaleBase } from "./ModaleBase";
 import type { Ecran } from "./router";
@@ -27,12 +27,18 @@ export function Menu({ ecran, onNaviguer, bases, baseActive, onChoisirBase }: Me
     [modaleOuverte, enSimulateur, bases],
   );
 
+  // Sur écran étroit, les liens sont repliés derrière un bouton « burger » ; sur grand écran il est caché et les liens restent visibles.
+  const [burgerOuvert, setBurgerOuvert] = useState(false);
+
   const lien = (cible: "accueil" | "exploration" | "simulateur" | "a-propos", libelle: string) => (
     <button
       type="button"
       className={onglet === cible ? "lien-menu lien-menu--actif" : "lien-menu"}
       aria-current={onglet === cible ? "page" : undefined}
-      onClick={() => onNaviguer(cible)}
+      onClick={() => {
+        setBurgerOuvert(false);
+        onNaviguer(cible);
+      }}
     >
       {libelle}
     </button>
@@ -43,7 +49,17 @@ export function Menu({ ecran, onNaviguer, bases, baseActive, onChoisirBase }: Me
       <span className="marque">
         Citoyen 2027
       </span>
-      <nav aria-label="Navigation principale">
+      <button
+        type="button"
+        className="menu-burger"
+        aria-expanded={burgerOuvert}
+        aria-controls="navigation-principale"
+        aria-label={burgerOuvert ? "Fermer le menu" : "Ouvrir le menu"}
+        onClick={() => setBurgerOuvert((o) => !o)}
+      >
+        {burgerOuvert ? <X size={22} aria-hidden="true" /> : <Menu_ size={22} aria-hidden="true" />}
+      </button>
+      <nav id="navigation-principale" aria-label="Navigation principale" className={burgerOuvert ? "menu-nav menu-nav--ouvert" : "menu-nav"}>
         {lien("accueil", "Accueil")}
         {lien("exploration", "Exploration")}
         {lien("simulateur", "Simulateur")}

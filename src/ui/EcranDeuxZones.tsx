@@ -105,7 +105,7 @@ export function EcranDeuxZones(p: EcranDeuxZonesProps) {
           <BlocSuggestion etat={etat} pourcent={prog.pourcent} source={sourceDeLaSuggestion(p.situation, p.convictions)} combine={p.combine} onReveler={() => setConfirmer(true)} onRevenir={p.onRevenir} />
           <button type="button" className="secondaire zone-aide" aria-haspopup="dialog" onClick={() => setAide(true)}>
             <CircleHelp size={20} aria-hidden="true" focusable="false" />
-            Comment est calculé le score ?
+            Comment est suggéré le candidat ?
           </button>
         </div>
 

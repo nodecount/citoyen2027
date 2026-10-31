@@ -45,11 +45,12 @@ export function ModaleBase({ ouverte, bases, actif, onChoisir, onControle, onFer
         <ul className="choix-bases">
           {bases.map((base) => (
             <li key={base.id}>
-              <label className={base.id === actif ? "choix-base choix-base--actif" : "choix-base"}>
+              <label className={[base.id === actif ? "choix-base choix-base--actif" : "choix-base", base.desactivee ? "choix-base--desactivee" : ""].join(" ").trim()}>
                 <input
                   type="radio"
                   name="base-de-connaissances"
                   value={base.id}
+                  disabled={base.desactivee}
                   checked={base.id === actif}
                   onChange={() => {
                     onChoisir(base.id);
@@ -69,6 +70,7 @@ export function ModaleBase({ ouverte, bases, actif, onChoisir, onControle, onFer
                     key={cible}
                     type="button"
                     className="lien-menu"
+                    disabled={base.desactivee}
                     onClick={() => {
                       onControle(base.id, cible);
                       onFermer();

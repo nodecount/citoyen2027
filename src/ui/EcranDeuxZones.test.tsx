@@ -105,6 +105,6 @@ describe("EcranDeuxZones", () => {
   });
 
   it("propose l'aide sur le calcul du score", () => {
-    expect(rendre()).toContain("Comment est calculé le score ?");
+    expect(rendre()).toContain("Comment est suggéré le candidat ?");
   });
 });

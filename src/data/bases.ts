@@ -17,6 +17,8 @@ export interface InfoBase {
   // Texte affiché sur la page de résultats : ce que cette base garantit, et ce qu'elle ne garantit pas.
   avertissement: string;
   defaut?: boolean;
+  // Base mise de côté : elle ne peut plus être choisie (la modale la grise, un ancien choix mémorisé est ignoré).
+  desactivee?: boolean;
 }
 
 export interface BaseCharge {
@@ -80,7 +82,7 @@ export function baseParDefaut(bases: InfoBase[] = infosBases): InfoBase {
 
 // Base demandée (adresse ?base=… ou choix mémorisé) → une base qui existe vraiment, sinon la base par défaut.
 export function resoudreBase(demandee: string | null | undefined, bases: InfoBase[] = infosBases): InfoBase {
-  return bases.find((b) => b.id === demandee) ?? baseParDefaut(bases);
+  return bases.find((b) => b.id === demandee && !b.desactivee) ?? baseParDefaut(bases);
 }
 
 export function chargerBase(id: string): BaseCharge {

@@ -40,6 +40,15 @@ describe("ModaleBase", () => {
     expect(rendre(true)).not.toContain("Sans mesure dans cette source");
   });
 
+  it("grise le choix d'une base désactivée, et ses liens de contrôle, sans toucher aux autres", () => {
+    const bases = [{ ...BASES[0], desactivee: true }, BASES[1]];
+    const html = renderToStaticMarkup(<ModaleBase ouverte bases={bases} actif="b" onChoisir={() => {}} onControle={() => {}} onFermer={() => {}} />);
+    const radio = (id: string) => html.match(new RegExp(`<input[^>]*value="${id}"[^>]*>`))?.[0] ?? "";
+    expect(radio("a")).toContain("disabled");
+    expect(radio("b")).not.toContain("disabled");
+    expect(html.match(/<button[^>]*disabled=""[^>]*>Monitoring</g)).toHaveLength(1);
+  });
+
   it("propose, pour chaque base, son monitoring et ses tests de situations", () => {
     const html = rendre(true);
     expect(html.match(/>Monitoring</g)).toHaveLength(BASES.length);
