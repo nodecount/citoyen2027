@@ -53,6 +53,8 @@ describe("EcranDeuxZones", () => {
   it("départ : deux « Commencer », compteurs à zéro, « Révéler » inactif, onglets Candidats verrouillés, pas de lien vers les mesures", () => {
     const html = rendre();
     expect(html.match(/Commencer/g)).toHaveLength(2);
+    // Les deux boutons ont le même style (fond bleu par défaut), aucun n'est « secondaire ».
+    expect(html.match(/<button type="button">Commencer<\/button>/g)).toHaveLength(2);
     expect(html).toContain("0 question sur 18");
     expect(html).toContain("0 sujet sur 35");
     expect(html).toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);

@@ -843,7 +843,8 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
     return () => window.removeEventListener("resize", egaliser);
   }, [cards, personnalise, masquer]);
   return (
-    <section className="themes">
+    // Exploration (sans indicateurs) : sur mobile, un thème par écran, qui se fixe en place au défilement (voir .themes--plein-ecran).
+    <section className={personnalise ? "themes" : "themes themes--plein-ecran"}>
       {personnalise && (
         // Légende en « règle graduée » : la même lecture gauche → droite que les tiroirs de portraits (mieux · mixte · moins
         // bien), avec un point par niveau sur la ligne, le point « dégradant » en étant le bout. « Non concerné » est HORS ligne : un

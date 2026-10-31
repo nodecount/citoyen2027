@@ -235,6 +235,8 @@ a {
 .modale {
   width: min(34rem, 100%);
   max-height: calc(100vh - 2rem);
+  /* Sur mobile, 100vh dépasse la zone visible (barre d'adresse) : dvh suit la hauteur réellement affichée. */
+  max-height: calc(100dvh - 2rem);
   overflow-y: auto;
   padding: 1.25rem 1.4rem 1.4rem;
   border-radius: 16px;
@@ -985,6 +987,28 @@ article {
   }
 }
 
+/* Exploration sur mobile, à la manière d'un fil de vidéos : chaque thème occupe presque tout l'écran (sous le menu collant) et
+   le défilement s'arrête toujours sur un thème entier, jamais à cheval entre deux. */
+@media (max-width: 40rem) {
+  html:has(.themes--plein-ecran) {
+    scroll-snap-type: y mandatory;
+  }
+
+  .themes--plein-ecran .carte {
+    height: calc(100vh - 7.25rem);
+    height: calc(100dvh - 7.25rem);
+    min-height: 24rem;
+    scroll-snap-align: start;
+    scroll-snap-stop: always; /* un geste = un thème, même en balayant vite */
+    scroll-margin-top: 6.5rem; /* sous le menu collant, médaillon compris */
+  }
+
+  /* Le bas de page doit rester atteignable malgré l'arrêt obligatoire. */
+  html:has(.themes--plein-ecran) .pied-de-page {
+    scroll-snap-align: end;
+  }
+}
+
 .carte-entete {
   flex: none;
   text-align: center;
@@ -1251,6 +1275,18 @@ article {
   100% {
     opacity: 0;
     transform: translateY(calc(-100cqh - 2.5rem));
+  }
+}
+
+/* Mobile : la carte est étroite, les bulles passent sur beaucoup de lignes et les quatre portraits (à 5 s d'écart) se
+   chevauchent. On n'en garde qu'un sur deux (donc 10 s d'écart) et la bulle prend toute la largeur utile, donc moins de lignes. */
+@media (max-width: 40rem) {
+  .flux-item:nth-child(even) {
+    display: none;
+  }
+
+  .flux-bulle {
+    width: calc(100cqw - 6.5rem);
   }
 }
 
@@ -3785,6 +3821,24 @@ button.ideal-onglet:focus-visible {
     flex-wrap: wrap;
     white-space: normal;
   }
+
+  /* Introduction compacte : l'icône de l'écran (à gauche, elle mangeait la largeur du texte) disparaît, le texte prend toute la
+     largeur, plus serré. Le texte reste à 1 rem au moins. */
+  .intro-etape {
+    display: block;
+    margin-bottom: 0.9rem;
+    padding: 0.7rem 0.9rem;
+  }
+  .intro-etape > svg {
+    display: none;
+  }
+  .intro-etape p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .intro-texte p + p {
+    margin-top: 0.45rem;
+  }
 }
 
 /* ---- Légende des indicateurs : une « règle graduée » ---------------------------------------------------------------------
@@ -4071,6 +4125,71 @@ button.bouton-danger:hover {
 @media (prefers-reduced-motion: reduce) {
   .panneau-barre-remplie {
     transition: none;
+  }
+}
+/* Rond de progression flottant : téléphone seulement. Il remplace le panneau (barre, compte, interrupteur) qui prenait de la place. */
+.progression-flottante {
+  display: none;
+}
+@media (max-width: 52rem) {
+  .panneau-progression {
+    display: none;
+  }
+  .progression-flottante {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 40; /* sous le menu (50) et les fenêtres (100) */
+    display: grid;
+    place-items: center;
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--surface);
+    box-shadow: 0 6px 18px rgba(15, 27, 51, 0.3);
+    color: var(--bleu-fonce);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .progression-flottante svg,
+  .progression-flottante span {
+    grid-area: 1 / 1;
+  }
+  .progression-flottante svg {
+    width: 100%;
+    height: 100%;
+  }
+  .progression-flottante-fond,
+  .progression-flottante-valeur {
+    fill: none;
+    stroke-width: 4;
+  }
+  .progression-flottante-fond {
+    stroke: #e8eefb;
+  }
+  .progression-flottante-valeur {
+    stroke: var(--bleu);
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.25s;
+  }
+  /* Appuyé : les réponses manquantes sont mises en valeur. */
+  .progression-flottante[aria-pressed="true"] {
+    background: var(--bleu);
+    color: #fff;
+  }
+  .progression-flottante[aria-pressed="true"] .progression-flottante-fond {
+    stroke: rgba(255, 255, 255, 0.3);
+  }
+  .progression-flottante[aria-pressed="true"] .progression-flottante-valeur {
+    stroke: #fff;
+  }
+  .progression-flottante:focus-visible {
+    outline: 3px solid var(--bleu);
+    outline-offset: 3px;
   }
 }
 .question-carte--manquante {

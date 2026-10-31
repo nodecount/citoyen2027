@@ -281,6 +281,11 @@ describe("pages Exploration et Simulateur", () => {
     expect(simulateur).toMatch(/class="flux-item[^"]*" data-niveau="(ameliorant|mixte|degradant)"/);
   });
 
+  it("l'exploration est la seule vue à thèmes plein écran sur mobile (défilement thème par thème)", () => {
+    expect(rendreEnMode("exploration", AUCUNE_REPONSE, false)).toContain('class="themes themes--plein-ecran"');
+    expect(rendreEnMode("simulateur", UNE_REPONSE, true)).not.toContain("themes--plein-ecran");
+  });
+
   it("légende : « non concerné » et « pas d'indicateur » ne font qu'une catégorie, la dernière, qui porte l'interrupteur de masquage", () => {
     const rendu = rendreEnMode("simulateur", UNE_REPONSE, true);
     expect(rendu).not.toContain("Pas d&#x27;indicateur</span>");

@@ -25,6 +25,23 @@ export function PanneauProgression({
 }) {
   const pct = pourcentage(repondues, total);
   return (
+    <>
+    {/* Téléphone seulement (caché ailleurs) : le panneau ci-dessous disparaît, remplacé par un rond flottant qui montre le
+        pourcentage sur toute la page. Un appui met en valeur (ou non) les réponses manquantes, comme l'interrupteur du panneau. */}
+    <button
+      type="button"
+      className="progression-flottante"
+      aria-pressed={manquantesEnValeur}
+      aria-label={`Complétion des réponses : ${pct} %, ${compte}. Mettre en valeur les réponses manquantes`}
+      title="Mettre en valeur les réponses manquantes"
+      onClick={() => onManquantes(!manquantesEnValeur)}
+    >
+      <svg viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+        <circle className="progression-flottante-fond" cx="22" cy="22" r="18" />
+        <circle className="progression-flottante-valeur" cx="22" cy="22" r="18" pathLength="100" strokeDasharray={`${pct} 100`} transform="rotate(-90 22 22)" />
+      </svg>
+      <span aria-hidden="true">{pct}&nbsp;%</span>
+    </button>
     <div className="section-secondaire panneau-progression">
       <span className="panneau-progression-titre" id="panneau-progression-titre">
         Complétion des réponses :
@@ -45,5 +62,6 @@ export function PanneauProgression({
         Mettre en valeur les réponses manquantes
       </label>
     </div>
+    </>
   );
 }

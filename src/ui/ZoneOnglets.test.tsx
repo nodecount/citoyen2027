@@ -6,6 +6,16 @@ const rendre = (props: { onglet: "questions" | "candidats"; candidatsOuverts: bo
   renderToStaticMarkup(<ZoneOnglets zone="situation" {...props} onChoisir={() => {}} questions={<p>QUESTIONS</p>} candidats={<p>SECRET</p>} />);
 
 describe("ZoneOnglets", () => {
+  it("le titre du bloc vient en premier, avant les onglets, quel que soit l'onglet affiché", () => {
+    for (const onglet of ["questions", "candidats"] as const) {
+      const html = rendre({ onglet, candidatsOuverts: true });
+      expect(html).toContain('<h2 class="zone-titre">Ma situation</h2>');
+      expect(html.indexOf("zone-titre")).toBeLessThan(html.indexOf('role="tablist"'));
+    }
+    const convictions = renderToStaticMarkup(<ZoneOnglets zone="convictions" onglet="questions" candidatsOuverts={false} onChoisir={() => {}} questions={<p>Q</p>} candidats={<p>C</p>} />);
+    expect(convictions).toContain('<h2 class="zone-titre">Mes convictions</h2>');
+  });
+
   it("verrouillé : l'onglet Candidats est inactif et son contenu n'est pas dans la page", () => {
     const html = rendre({ onglet: "questions", candidatsOuverts: false });
     expect(html).toMatch(/role="tab"[^>]*aria-disabled="true"[^>]*>[^<]*(<svg[\s\S]*?<\/svg>)?[^<]*Candidats/);

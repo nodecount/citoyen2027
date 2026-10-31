@@ -79,7 +79,6 @@ export function EcranDeuxZones(p: EcranDeuxZonesProps) {
           onChoisir={(o) => p.onChoisirOnglet("gauche", o)}
           questions={
             <>
-              <h2>Ma situation</h2>
               <p className="zone-compte">{pluriel(p.situation.repondues, "question", "questions")} sur {p.situation.total}</p>
               <Barre comptes={p.situation} couleur="bleu" />
               <button type="button" onClick={() => p.onOuvrir("situation")}>
@@ -116,11 +115,10 @@ export function EcranDeuxZones(p: EcranDeuxZonesProps) {
           onChoisir={(o) => p.onChoisirOnglet("droite", o)}
           questions={
             <>
-              <h2>Mes convictions</h2>
               <p className="zone-compte">{pluriel(p.convictions.repondues, "sujet", "sujets")} sur {p.convictions.total}</p>
               <Barre comptes={p.convictions} couleur="vert" />
               <p className="zone-aide-texte">Un sujet sans avis ne compte pas.</p>
-              <button type="button" className="secondaire" onClick={() => p.onOuvrir("convictions")}>
+              <button type="button" onClick={() => p.onOuvrir("convictions")}>
                 {commence(p.convictions) ? "Continuer" : "Commencer"}
               </button>
               {p.peutEffacerConvictions && (

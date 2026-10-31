@@ -3,7 +3,7 @@
     "theme": "defense",
     "segments": [
       {
-        "texte": "Renforcer les armées",
+        "texte": "Renforcer nos armées",
         "mesures": [
           "attal-defense-001"
         ]
@@ -27,17 +27,18 @@
       "attal-defense-001",
       "attal-defense-002"
     ],
-    "empreinte": "cb7f97aac9296d5a",
-    "date": "2026-09-27",
+    "empreinte": "0ce23650c89ced56",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "education-jeunesse",
     "segments": [
       {
-        "texte": "Maintenir le choc des savoirs pour renforcer les fondamentaux",
+        "texte": "Former et financer la petite enfance",
         "mesures": [
-          "attal-education-jeunesse-001"
+          "attal-education-jeunesse-001",
+          "attal-education-jeunesse-002"
         ]
       },
       {
@@ -45,9 +46,90 @@
         "mesures": []
       },
       {
-        "texte": "soutenir l'interdiction des réseaux sociaux pour les moins de 15 ans",
+        "texte": "maintenir le choc des savoirs",
         "mesures": [
-          "attal-education-jeunesse-002"
+          "attal-education-jeunesse-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "soutenir l'interdiction des réseaux sociaux",
+        "mesures": [
+          "attal-education-jeunesse-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "raccourcir les journées d'école",
+        "mesures": [
+          "attal-education-jeunesse-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "autonomiser les établissements",
+        "mesures": [
+          "attal-education-jeunesse-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer des sanctions disciplinaires",
+        "mesures": [
+          "attal-education-jeunesse-007",
+          "attal-education-jeunesse-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire les effectifs par classe",
+        "mesures": [
+          "attal-education-jeunesse-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "augmenter le salaire des professeurs",
+        "mesures": [
+          "attal-education-jeunesse-010"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire la durée des études",
+        "mesures": [
+          "attal-education-jeunesse-011"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "valoriser les métiers manuels",
+        "mesures": [
+          "attal-education-jeunesse-012"
         ]
       },
       {
@@ -55,9 +137,9 @@
         "mesures": []
       },
       {
-        "texte": "raccourcir les journées de classe en réduisant les vacances scolaires",
+        "texte": "démassifier l'enseignement supérieur",
         "mesures": [
-          "attal-education-jeunesse-003"
+          "attal-education-jeunesse-013"
         ]
       },
       {
@@ -68,19 +150,59 @@
     "propositions": [
       "attal-education-jeunesse-001",
       "attal-education-jeunesse-002",
-      "attal-education-jeunesse-003"
+      "attal-education-jeunesse-003",
+      "attal-education-jeunesse-004",
+      "attal-education-jeunesse-005",
+      "attal-education-jeunesse-006",
+      "attal-education-jeunesse-007",
+      "attal-education-jeunesse-008",
+      "attal-education-jeunesse-009",
+      "attal-education-jeunesse-010",
+      "attal-education-jeunesse-011",
+      "attal-education-jeunesse-012",
+      "attal-education-jeunesse-013"
     ],
-    "empreinte": "22d1e37d9a519c25",
-    "date": "2026-09-27",
+    "empreinte": "e1f7ed0eccee78df",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "environnement",
     "segments": [
       {
-        "texte": "Doubler le fonds dédié à la géoénergie",
+        "texte": "Doubler le fonds chaleur",
         "mesures": [
           "attal-envi-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "sortir des énergies fossiles",
+        "mesures": [
+          "attal-envi-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer un droit à la climatisation",
+        "mesures": [
+          "attal-envi-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "tripler la baisse annuelle des émissions",
+        "mesures": [
+          "attal-envi-004"
         ]
       },
       {
@@ -88,9 +210,9 @@
         "mesures": []
       },
       {
-        "texte": "créer un droit à la climatisation en facilitant les installations",
+        "texte": "développer une industrie décarbonée",
         "mesures": [
-          "attal-envi-002"
+          "attal-envi-005"
         ]
       },
       {
@@ -100,22 +222,22 @@
     ],
     "propositions": [
       "attal-envi-001",
-      "attal-envi-002"
+      "attal-envi-002",
+      "attal-envi-003",
+      "attal-envi-004",
+      "attal-envi-005"
     ],
-    "empreinte": "ec5ada6c4099524b",
-    "date": "2026-09-27",
+    "empreinte": "b54a75628239efae",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
-    "theme": "finances-publiques",
+    "theme": "europe-international",
     "segments": [
       {
-        "texte": "Baisser les charges sur le travail et cibler des baisses d'impôts",
+        "texte": "Taxer les importations chinoises",
         "mesures": [
-          "attal-finances-publiques-001",
-          "attal-finances-publiques-011",
-          "attal-finances-publiques-012",
-          "attal-finances-publiques-013"
+          "attal-europe-international-001"
         ]
       },
       {
@@ -123,9 +245,9 @@
         "mesures": []
       },
       {
-        "texte": "réformer les retraites, l'assurance chômage et les arrêts maladie",
+        "texte": "réduire la dépendance aux approvisionnements chinois",
         "mesures": [
-          "attal-finances-publiques-003"
+          "attal-europe-international-002"
         ]
       },
       {
@@ -133,10 +255,9 @@
         "mesures": []
       },
       {
-        "texte": "supprimer des postes de fonctionnaires et fusionner des collectivités",
+        "texte": "étendre l'exclusion des marchés publics",
         "mesures": [
-          "attal-finances-publiques-007",
-          "attal-finances-publiques-008"
+          "attal-europe-international-003"
         ]
       },
       {
@@ -144,30 +265,9 @@
         "mesures": []
       },
       {
-        "texte": "geler les prestations sociales une année",
+        "texte": "devenir leader des technologies d'avenir",
         "mesures": [
-          "attal-finances-publiques-006"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "sanctionner les responsables budgétaires",
-        "mesures": [
-          "attal-finances-publiques-004"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "programmer les finances publiques et rectifier le budget",
-        "mesures": [
-          "attal-finances-publiques-002",
-          "attal-finances-publiques-005"
+          "attal-europe-international-004"
         ]
       },
       {
@@ -175,10 +275,9 @@
         "mesures": []
       },
       {
-        "texte": "inscrire une règle d'or et viser l'équilibre du déficit",
+        "texte": "investir en commun entre pays européens volontaires",
         "mesures": [
-          "attal-finances-publiques-009",
-          "attal-finances-publiques-010"
+          "attal-europe-international-005"
         ]
       },
       {
@@ -187,31 +286,75 @@
       }
     ],
     "propositions": [
-      "attal-finances-publiques-001",
-      "attal-finances-publiques-002",
-      "attal-finances-publiques-003",
-      "attal-finances-publiques-004",
-      "attal-finances-publiques-005",
-      "attal-finances-publiques-006",
-      "attal-finances-publiques-007",
-      "attal-finances-publiques-008",
-      "attal-finances-publiques-009",
-      "attal-finances-publiques-010",
-      "attal-finances-publiques-011",
-      "attal-finances-publiques-012",
-      "attal-finances-publiques-013"
+      "attal-europe-international-001",
+      "attal-europe-international-002",
+      "attal-europe-international-003",
+      "attal-europe-international-004",
+      "attal-europe-international-005"
     ],
-    "empreinte": "5188f20eef650109",
-    "date": "2026-09-27",
+    "empreinte": "57068c381af28a16",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "gouvernance-republique",
     "segments": [
       {
-        "texte": "Proposer un référendum chaque année",
+        "texte": "Proposer un référendum annuel",
         "mesures": [
           "attal-gouvernance-republique-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "viser la première puissance européenne d'IA",
+        "mesures": [
+          "attal-gouvernance-republique-002",
+          "attal-gouvernance-republique-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer les investissements dans l'innovation",
+        "mesures": [
+          "attal-gouvernance-republique-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "favoriser l'adoption de l'IA par les entreprises",
+        "mesures": [
+          "attal-gouvernance-republique-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "attirer les chercheurs et soutenir la recherche",
+        "mesures": [
+          "attal-gouvernance-republique-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "former tous les Français à l'IA",
+        "mesures": [
+          "attal-gouvernance-republique-007",
+          "attal-gouvernance-republique-008"
         ]
       },
       {
@@ -219,9 +362,9 @@
         "mesures": []
       },
       {
-        "texte": "soutenir l'investissement privé dans l'intelligence artificielle",
+        "texte": "maîtriser la chaîne technologique de l'IA",
         "mesures": [
-          "attal-gouvernance-republique-002"
+          "attal-gouvernance-republique-009"
         ]
       },
       {
@@ -231,104 +374,24 @@
     ],
     "propositions": [
       "attal-gouvernance-republique-001",
-      "attal-gouvernance-republique-002"
+      "attal-gouvernance-republique-002",
+      "attal-gouvernance-republique-003",
+      "attal-gouvernance-republique-004",
+      "attal-gouvernance-republique-005",
+      "attal-gouvernance-republique-006",
+      "attal-gouvernance-republique-007",
+      "attal-gouvernance-republique-008",
+      "attal-gouvernance-republique-009"
     ],
-    "empreinte": "d42e43ab2fd651c3",
-    "date": "2026-09-27",
-    "modele": "claude-sonnet-5"
-  },
-  {
-    "theme": "interieur-justice",
-    "segments": [
-      {
-        "texte": "Privilégier une immigration de travail",
-        "mesures": [
-          "attal-interieur-justice-001"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "restreindre le regroupement familial",
-        "mesures": [
-          "attal-interieur-justice-002"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "faire voter des quotas d'immigration par secteur",
-        "mesures": [
-          "attal-interieur-justice-003"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "mettre en place un permis à points pour l'immigration",
-        "mesures": [
-          "attal-interieur-justice-004"
-        ]
-      },
-      {
-        "texte": " ; ",
-        "mesures": []
-      },
-      {
-        "texte": "interdire le voile pour les moins de 15 ans",
-        "mesures": [
-          "attal-interieur-justice-005"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "créer un délit de contrainte au port du voile",
-        "mesures": [
-          "attal-interieur-justice-006"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "soutenir la comparution immédiate pour certains mineurs",
-        "mesures": [
-          "attal-interieur-justice-007"
-        ]
-      },
-      {
-        "texte": ".",
-        "mesures": []
-      }
-    ],
-    "propositions": [
-      "attal-interieur-justice-001",
-      "attal-interieur-justice-002",
-      "attal-interieur-justice-003",
-      "attal-interieur-justice-004",
-      "attal-interieur-justice-005",
-      "attal-interieur-justice-006",
-      "attal-interieur-justice-007"
-    ],
-    "empreinte": "8012db451990a6cc",
-    "date": "2026-09-27",
+    "empreinte": "0adb356ec2dab5fc",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "reformes-etat",
     "segments": [
       {
-        "texte": "Encourager les départs volontaires de fonctionnaires",
+        "texte": "Supprimer des postes de fonctionnaires par départs volontaires",
         "mesures": [
           "attal-reformes-etat-001"
         ]
@@ -338,7 +401,7 @@
         "mesures": []
       },
       {
-        "texte": "limiter le remplacement des départs en retraite",
+        "texte": "limiter le remplacement des retraites",
         "mesures": [
           "attal-reformes-etat-002"
         ]
@@ -352,26 +415,17 @@
       "attal-reformes-etat-001",
       "attal-reformes-etat-002"
     ],
-    "empreinte": "2be2b4114faca88f",
-    "date": "2026-09-27",
+    "empreinte": "551f89c4d7483004",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "retraites-travail",
     "segments": [
       {
-        "texte": "Défiscaliser les heures supplémentaires",
+        "texte": "Défiscaliser et déplafonner les heures supplémentaires",
         "mesures": [
-          "attal-retraites-travail-001"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "supprimer leur plafond annuel",
-        "mesures": [
+          "attal-retraites-travail-001",
           "attal-retraites-travail-004"
         ]
       },
@@ -380,17 +434,17 @@
         "mesures": []
       },
       {
-        "texte": "réformer le 1er mai chômé pour les commerçants",
+        "texte": "réformer le 1er mai chômé",
         "mesures": [
           "attal-retraites-travail-002"
         ]
       },
       {
-        "texte": ", ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "réécrire le Code du travail avec les partenaires sociaux",
+        "texte": "réécrire le Code du travail",
         "mesures": [
           "attal-retraites-travail-003"
         ]
@@ -400,17 +454,17 @@
         "mesures": []
       },
       {
-        "texte": "planifier la formation des salariés à l'intelligence artificielle",
+        "texte": "baisser les charges salariales",
         "mesures": [
           "attal-retraites-travail-005"
         ]
       },
       {
-        "texte": ", ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "baisser les charges salariales",
+        "texte": "réformer l'assurance chômage",
         "mesures": [
           "attal-retraites-travail-006"
         ]
@@ -420,7 +474,7 @@
         "mesures": []
       },
       {
-        "texte": "supprimer l'âge légal de départ en retraite",
+        "texte": "adapter les horaires de travail",
         "mesures": [
           "attal-retraites-travail-007"
         ]
@@ -430,9 +484,30 @@
         "mesures": []
       },
       {
-        "texte": "ajouter une part de capitalisation au système de retraite",
+        "texte": "permettre aux seniors de travailler",
+        "mesures": [
+          "attal-retraites-travail-011"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "remplacer l'âge légal par une décote-surcote",
         "mesures": [
           "attal-retraites-travail-008"
+        ]
+      },
+      {
+        "texte": ", et ",
+        "mesures": []
+      },
+      {
+        "texte": "créer une retraite universelle avec capitalisation",
+        "mesures": [
+          "attal-retraites-travail-009",
+          "attal-retraites-travail-010"
         ]
       },
       {
@@ -448,27 +523,30 @@
       "attal-retraites-travail-005",
       "attal-retraites-travail-006",
       "attal-retraites-travail-007",
-      "attal-retraites-travail-008"
+      "attal-retraites-travail-008",
+      "attal-retraites-travail-009",
+      "attal-retraites-travail-010",
+      "attal-retraites-travail-011"
     ],
-    "empreinte": "6cefe7b98d5ce718",
-    "date": "2026-09-27",
+    "empreinte": "30a1129e692e716d",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "social-solidarite",
     "segments": [
       {
-        "texte": "Durcir et réformer l’assurance chômage",
+        "texte": "Durcir l'assurance chômage",
         "mesures": [
           "attal-social-solidarite-001"
         ]
       },
       {
-        "texte": ", ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "geler l’ensemble des prestations sociales en épargnant les petites retraites",
+        "texte": "geler les prestations sociales de 2028",
         "mesures": [
           "attal-social-solidarite-002"
         ]
@@ -478,9 +556,39 @@
         "mesures": []
       },
       {
-        "texte": "lancer un plan de construction de logements",
+        "texte": "construire 400 000 logements par an",
         "mesures": [
           "attal-social-solidarite-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "prioriser les logements étudiants et Crous",
+        "mesures": [
+          "attal-social-solidarite-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "simplifier le logement abordable",
+        "mesures": [
+          "attal-social-solidarite-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "planifier les rénovations énergétiques par gestes",
+        "mesures": [
+          "attal-social-solidarite-006"
         ]
       },
       {
@@ -488,9 +596,9 @@
         "mesures": []
       },
       {
-        "texte": "prioriser la construction de logements étudiants et Crous",
+        "texte": "programmer la politique du logement dans la loi",
         "mesures": [
-          "attal-social-solidarite-004"
+          "attal-social-solidarite-007"
         ]
       },
       {
@@ -502,10 +610,13 @@
       "attal-social-solidarite-001",
       "attal-social-solidarite-002",
       "attal-social-solidarite-003",
-      "attal-social-solidarite-004"
+      "attal-social-solidarite-004",
+      "attal-social-solidarite-005",
+      "attal-social-solidarite-006",
+      "attal-social-solidarite-007"
     ],
-    "empreinte": "f1ee91b43f30b99d",
-    "date": "2026-09-27",
+    "empreinte": "176ee41bd36036ac",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   }
 ]

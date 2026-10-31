@@ -3,9 +3,10 @@
     "theme": "defense",
     "segments": [
       {
-        "texte": "Accélérer la production industrielle de défense",
+        "texte": "Accélérer la production industrielle d'armement",
         "mesures": [
-          "glucksmann-defense-001"
+          "glucksmann-defense-001",
+          "glucksmann-defense-007"
         ]
       },
       {
@@ -13,7 +14,7 @@
         "mesures": []
       },
       {
-        "texte": "lancer des programmes de drones, d'espace et de cyberdéfense",
+        "texte": "lancer des programmes de drones, spatial et cyber",
         "mesures": [
           "glucksmann-defense-002",
           "glucksmann-defense-003"
@@ -44,7 +45,7 @@
         "mesures": []
       },
       {
-        "texte": "étendre la dissuasion nucléaire française aux partenaires européens",
+        "texte": "étendre la dissuasion nucléaire aux partenaires européens",
         "mesures": [
           "glucksmann-defense-006"
         ]
@@ -54,9 +55,9 @@
         "mesures": []
       },
       {
-        "texte": "piloter politiquement la production et les exportations d'armement",
+        "texte": "renforcer l'aide militaire à l'Ukraine",
         "mesures": [
-          "glucksmann-defense-007"
+          "glucksmann-defense-008"
         ]
       },
       {
@@ -64,9 +65,9 @@
         "mesures": []
       },
       {
-        "texte": "augmenter l'aide militaire à l'Ukraine",
+        "texte": "construire notre autonomie stratégique européenne face aux États-Unis",
         "mesures": [
-          "glucksmann-defense-008"
+          "glucksmann-defense-009"
         ]
       },
       {
@@ -82,52 +83,23 @@
       "glucksmann-defense-005",
       "glucksmann-defense-006",
       "glucksmann-defense-007",
-      "glucksmann-defense-008"
+      "glucksmann-defense-008",
+      "glucksmann-defense-009"
     ],
-    "empreinte": "afb4d706abd1918a",
-    "date": "2026-09-27",
+    "empreinte": "d93f63cebcb59b0e",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "education-jeunesse",
     "segments": [
       {
-        "texte": "Repenser Parcoursup",
+        "texte": "Renforcer la protection de l'enfance",
         "mesures": [
           "glucksmann-education-jeunesse-001",
-          "glucksmann-education-jeunesse-009"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "renforcer l'accompagnement à l'orientation",
-        "mesures": [
-          "glucksmann-education-jeunesse-010"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "proposer un nouveau modèle de financement des universités",
-        "mesures": [
           "glucksmann-education-jeunesse-002",
-          "glucksmann-education-jeunesse-011"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "encadrer l'enseignement supérieur privé lucratif",
-        "mesures": [
           "glucksmann-education-jeunesse-003",
-          "glucksmann-education-jeunesse-012"
+          "glucksmann-education-jeunesse-004"
         ]
       },
       {
@@ -135,10 +107,44 @@
         "mesures": []
       },
       {
-        "texte": "réduire les inégalités géographiques d'accès aux études supérieures",
+        "texte": "repenser Parcoursup et l'orientation",
         "mesures": [
-          "glucksmann-education-jeunesse-004",
-          "glucksmann-education-jeunesse-013"
+          "glucksmann-education-jeunesse-005",
+          "glucksmann-education-jeunesse-014",
+          "glucksmann-education-jeunesse-015"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "refinancer les universités",
+        "mesures": [
+          "glucksmann-education-jeunesse-006",
+          "glucksmann-education-jeunesse-016"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "encadrer l'enseignement privé lucratif",
+        "mesures": [
+          "glucksmann-education-jeunesse-007",
+          "glucksmann-education-jeunesse-017"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire les inégalités géographiques d'accès",
+        "mesures": [
+          "glucksmann-education-jeunesse-008",
+          "glucksmann-education-jeunesse-018"
         ]
       },
       {
@@ -148,8 +154,8 @@
       {
         "texte": "réinventer les bourses étudiantes",
         "mesures": [
-          "glucksmann-education-jeunesse-005",
-          "glucksmann-education-jeunesse-014"
+          "glucksmann-education-jeunesse-009",
+          "glucksmann-education-jeunesse-019"
         ]
       },
       {
@@ -157,9 +163,10 @@
         "mesures": []
       },
       {
-        "texte": "réduire le nombre d'élèves par enseignant",
+        "texte": "réduire les effectifs et revaloriser les enseignants",
         "mesures": [
-          "glucksmann-education-jeunesse-006"
+          "glucksmann-education-jeunesse-010",
+          "glucksmann-education-jeunesse-011"
         ]
       },
       {
@@ -167,9 +174,9 @@
         "mesures": []
       },
       {
-        "texte": "revaloriser le salaire des enseignants",
+        "texte": "intégrer le privé à la carte scolaire",
         "mesures": [
-          "glucksmann-education-jeunesse-007"
+          "glucksmann-education-jeunesse-012"
         ]
       },
       {
@@ -177,9 +184,9 @@
         "mesures": []
       },
       {
-        "texte": "intégrer les établissements privés sous contrat à la carte scolaire",
+        "texte": "enseigner le décryptage des médias",
         "mesures": [
-          "glucksmann-education-jeunesse-008"
+          "glucksmann-education-jeunesse-013"
         ]
       },
       {
@@ -187,9 +194,9 @@
         "mesures": []
       },
       {
-        "texte": "rénover les bâtiments et campus universitaires",
+        "texte": "rénover les campus universitaires",
         "mesures": [
-          "glucksmann-education-jeunesse-015"
+          "glucksmann-education-jeunesse-020"
         ]
       },
       {
@@ -212,17 +219,22 @@
       "glucksmann-education-jeunesse-012",
       "glucksmann-education-jeunesse-013",
       "glucksmann-education-jeunesse-014",
-      "glucksmann-education-jeunesse-015"
+      "glucksmann-education-jeunesse-015",
+      "glucksmann-education-jeunesse-016",
+      "glucksmann-education-jeunesse-017",
+      "glucksmann-education-jeunesse-018",
+      "glucksmann-education-jeunesse-019",
+      "glucksmann-education-jeunesse-020"
     ],
-    "empreinte": "0610629059eeefd6",
-    "date": "2026-09-27",
+    "empreinte": "f492cee601039d1e",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "environnement",
     "segments": [
       {
-        "texte": "Renforcer la souveraineté énergétique et baisser les prix de l'électricité",
+        "texte": "Développer les énergies, baisser leur prix et exclure le gaz russe",
         "mesures": [
           "glucksmann-envi-001",
           "glucksmann-envi-002",
@@ -237,11 +249,12 @@
         "mesures": []
       },
       {
-        "texte": "moderniser l'industrie verte, les transports et le logement",
+        "texte": "développer la sobriété, le recyclage et l'électrification des transports et logements",
         "mesures": [
           "glucksmann-envi-006",
           "glucksmann-envi-007",
-          "glucksmann-envi-008"
+          "glucksmann-envi-008",
+          "glucksmann-envi-010"
         ]
       },
       {
@@ -249,23 +262,10 @@
         "mesures": []
       },
       {
-        "texte": "créer des assemblées citoyennes pour le climat",
+        "texte": "renforcer la démocratie et la loi climatique",
         "mesures": [
-          "glucksmann-envi-010",
-          "glucksmann-envi-011"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "réguler le commerce et légiférer pour le climat",
-        "mesures": [
+          "glucksmann-envi-011",
           "glucksmann-envi-012",
-          "glucksmann-envi-013",
-          "glucksmann-envi-014",
-          "glucksmann-envi-015",
           "glucksmann-envi-016"
         ]
       },
@@ -274,14 +274,27 @@
         "mesures": []
       },
       {
-        "texte": "réformer la politique agricole et garantir le revenu des agriculteurs",
+        "texte": "réguler la consommation, le commerce et les risques",
         "mesures": [
-          "glucksmann-envi-017",
+          "glucksmann-envi-013",
+          "glucksmann-envi-014",
+          "glucksmann-envi-015",
+          "glucksmann-envi-017"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer l'agriculture et la pêche, et garantir le revenu des producteurs",
+        "mesures": [
           "glucksmann-envi-018",
           "glucksmann-envi-019",
           "glucksmann-envi-020",
           "glucksmann-envi-021",
-          "glucksmann-envi-022"
+          "glucksmann-envi-022",
+          "glucksmann-envi-023"
         ]
       },
       {
@@ -289,11 +302,11 @@
         "mesures": []
       },
       {
-        "texte": "généraliser une alimentation saine et solidaire",
+        "texte": "améliorer l'alimentation solidaire et saine",
         "mesures": [
-          "glucksmann-envi-023",
           "glucksmann-envi-024",
-          "glucksmann-envi-025"
+          "glucksmann-envi-025",
+          "glucksmann-envi-026"
         ]
       },
       {
@@ -301,14 +314,11 @@
         "mesures": []
       },
       {
-        "texte": "protéger les forêts, les océans et l'eau",
+        "texte": "soutenir des forêts durables",
         "mesures": [
-          "glucksmann-envi-026",
           "glucksmann-envi-027",
           "glucksmann-envi-028",
-          "glucksmann-envi-029",
-          "glucksmann-envi-030",
-          "glucksmann-envi-031"
+          "glucksmann-envi-029"
         ]
       },
       {
@@ -316,9 +326,12 @@
         "mesures": []
       },
       {
-        "texte": "interdire les pesticides et PFAS ciblés",
+        "texte": "protéger les océans, l'eau et interdire les pesticides",
         "mesures": [
-          "glucksmann-envi-032"
+          "glucksmann-envi-030",
+          "glucksmann-envi-031",
+          "glucksmann-envi-032",
+          "glucksmann-envi-033"
         ]
       },
       {
@@ -358,28 +371,20 @@
       "glucksmann-envi-029",
       "glucksmann-envi-030",
       "glucksmann-envi-031",
-      "glucksmann-envi-032"
+      "glucksmann-envi-032",
+      "glucksmann-envi-033"
     ],
-    "empreinte": "716283214c19e865",
-    "date": "2026-09-28",
+    "empreinte": "555f8b50c4201daf",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "europe-international",
     "segments": [
       {
-        "texte": "Clarifier la répartition des compétences européennes",
+        "texte": "Augmenter l'aide à l'Ukraine",
         "mesures": [
-          "glucksmann-europe-international-001"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "porter un traité de réunification européenne",
-        "mesures": [
+          "glucksmann-europe-international-001",
           "glucksmann-europe-international-006"
         ]
       },
@@ -388,17 +393,17 @@
         "mesures": []
       },
       {
-        "texte": "augmenter le budget de l'Union européenne",
+        "texte": "clarifier les compétences entre échelons",
         "mesures": [
           "glucksmann-europe-international-002"
         ]
       },
       {
-        "texte": ", ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "créer un fonds européen de défense",
+        "texte": "augmenter le budget européen",
         "mesures": [
           "glucksmann-europe-international-003"
         ]
@@ -408,7 +413,7 @@
         "mesures": []
       },
       {
-        "texte": "étendre la dissuasion nucléaire française à l'UE",
+        "texte": "financer la défense européenne",
         "mesures": [
           "glucksmann-europe-international-004"
         ]
@@ -418,7 +423,7 @@
         "mesures": []
       },
       {
-        "texte": "renforcer l'aide militaire à l'Ukraine et alliés",
+        "texte": "étendre la dissuasion nucléaire aux partenaires européens",
         "mesures": [
           "glucksmann-europe-international-005"
         ]
@@ -428,9 +433,19 @@
         "mesures": []
       },
       {
-        "texte": "prioriser les productions européennes dans les marchés publics",
+        "texte": "refonder les institutions européennes",
         "mesures": [
           "glucksmann-europe-international-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "prioriser les productions européennes dans les achats publics",
+        "mesures": [
+          "glucksmann-europe-international-008"
         ]
       },
       {
@@ -438,9 +453,9 @@
         "mesures": []
       },
       {
-        "texte": "créer un label européen pour l'épargne",
+        "texte": "orienter l'épargne vers l'Europe",
         "mesures": [
-          "glucksmann-europe-international-008"
+          "glucksmann-europe-international-009"
         ]
       },
       {
@@ -456,134 +471,27 @@
       "glucksmann-europe-international-005",
       "glucksmann-europe-international-006",
       "glucksmann-europe-international-007",
-      "glucksmann-europe-international-008"
+      "glucksmann-europe-international-008",
+      "glucksmann-europe-international-009"
     ],
-    "empreinte": "7ecbf0190fb84c7c",
-    "date": "2026-09-27",
-    "modele": "claude-sonnet-5"
-  },
-  {
-    "theme": "finances-publiques",
-    "segments": [
-      {
-        "texte": "Économiser sur le fonctionnement de l'Etat",
-        "mesures": [
-          "glucksmann-finances-publiques-001"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "rediriger les exonérations et aides aux entreprises",
-        "mesures": [
-          "glucksmann-finances-publiques-002"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "rééquilibrer la fiscalité du travail et du capital",
-        "mesures": [
-          "glucksmann-finances-publiques-003"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "supprimer des exonérations de TVA et de kérosène",
-        "mesures": [
-          "glucksmann-finances-publiques-004"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "taxer les méga-héritages",
-        "mesures": [
-          "glucksmann-finances-publiques-005"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "instaurer un impôt plancher sur les très hauts patrimoines",
-        "mesures": [
-          "glucksmann-finances-publiques-006"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "étendre cette taxation à l'échelle européenne",
-        "mesures": [
-          "glucksmann-finances-publiques-007"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "baisser les cotisations sociales grâce à cette taxation des héritages",
-        "mesures": [
-          "glucksmann-finances-publiques-008"
-        ]
-      },
-      {
-        "texte": ".",
-        "mesures": []
-      }
-    ],
-    "propositions": [
-      "glucksmann-finances-publiques-001",
-      "glucksmann-finances-publiques-002",
-      "glucksmann-finances-publiques-003",
-      "glucksmann-finances-publiques-004",
-      "glucksmann-finances-publiques-005",
-      "glucksmann-finances-publiques-006",
-      "glucksmann-finances-publiques-007",
-      "glucksmann-finances-publiques-008"
-    ],
-    "empreinte": "bb9ed2bf33f29493",
-    "date": "2026-09-27",
+    "empreinte": "ebee8a40e503686e",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "gouvernance-republique",
     "segments": [
       {
-        "texte": "Réformer les institutions",
+        "texte": "Réformer les institutions, le mode de scrutin et la participation citoyenne",
         "mesures": [
           "glucksmann-gouvernance-republique-001",
           "glucksmann-gouvernance-republique-002",
           "glucksmann-gouvernance-republique-003",
           "glucksmann-gouvernance-republique-004",
-          "glucksmann-gouvernance-republique-005"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "élargir le droit de vote et la démocratie locale",
-        "mesures": [
+          "glucksmann-gouvernance-republique-005",
           "glucksmann-gouvernance-republique-006",
-          "glucksmann-gouvernance-republique-007",
-          "glucksmann-gouvernance-republique-008",
-          "glucksmann-gouvernance-republique-010"
+          "glucksmann-gouvernance-republique-010",
+          "glucksmann-gouvernance-republique-011"
         ]
       },
       {
@@ -591,10 +499,20 @@
         "mesures": []
       },
       {
-        "texte": "renforcer l'indépendance des médias et le financement de la vie politique",
+        "texte": "renforcer la démocratie locale",
         "mesures": [
-          "glucksmann-gouvernance-republique-009",
-          "glucksmann-gouvernance-republique-011"
+          "glucksmann-gouvernance-republique-007",
+          "glucksmann-gouvernance-republique-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "garantir l'indépendance des médias",
+        "mesures": [
+          "glucksmann-gouvernance-republique-009"
         ]
       },
       {
@@ -612,7 +530,7 @@
         "mesures": []
       },
       {
-        "texte": "réformer la laïcité et créer un rite de passage républicain",
+        "texte": "réformer la laïcité et créer un rite républicain",
         "mesures": [
           "glucksmann-gouvernance-republique-013",
           "glucksmann-gouvernance-republique-014"
@@ -623,12 +541,37 @@
         "mesures": []
       },
       {
-        "texte": "développer l'IA souveraine dans le numérique et les services publics",
+        "texte": "renforcer l'inclusion et les droits",
         "mesures": [
           "glucksmann-gouvernance-republique-015",
           "glucksmann-gouvernance-republique-016",
           "glucksmann-gouvernance-republique-017",
-          "glucksmann-gouvernance-republique-021"
+          "glucksmann-gouvernance-republique-018",
+          "glucksmann-gouvernance-republique-019"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "développer une politique industrielle de l'IA",
+        "mesures": [
+          "glucksmann-gouvernance-republique-020",
+          "glucksmann-gouvernance-republique-021",
+          "glucksmann-gouvernance-republique-022"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "protéger les mineurs en ligne",
+        "mesures": [
+          "glucksmann-gouvernance-republique-023",
+          "glucksmann-gouvernance-republique-024",
+          "glucksmann-gouvernance-republique-025"
         ]
       },
       {
@@ -636,11 +579,9 @@
         "mesures": []
       },
       {
-        "texte": "protéger les mineurs en ligne",
+        "texte": "réguler l'IA à l'international",
         "mesures": [
-          "glucksmann-gouvernance-republique-018",
-          "glucksmann-gouvernance-republique-019",
-          "glucksmann-gouvernance-republique-020"
+          "glucksmann-gouvernance-republique-026"
         ]
       },
       {
@@ -669,17 +610,22 @@
       "glucksmann-gouvernance-republique-018",
       "glucksmann-gouvernance-republique-019",
       "glucksmann-gouvernance-republique-020",
-      "glucksmann-gouvernance-republique-021"
+      "glucksmann-gouvernance-republique-021",
+      "glucksmann-gouvernance-republique-022",
+      "glucksmann-gouvernance-republique-023",
+      "glucksmann-gouvernance-republique-024",
+      "glucksmann-gouvernance-republique-025",
+      "glucksmann-gouvernance-republique-026"
     ],
-    "empreinte": "14f026126ff6e70a",
-    "date": "2026-09-27",
+    "empreinte": "3e55dd0515febc6f",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "interieur-justice",
     "segments": [
       {
-        "texte": "Réformer la politique migratoire",
+        "texte": "Réformer la politique d'immigration",
         "mesures": [
           "glucksmann-interieur-justice-001",
           "glucksmann-interieur-justice-002",
@@ -692,11 +638,10 @@
         "mesures": []
       },
       {
-        "texte": "réorganiser et renforcer les moyens des forces de sécurité",
+        "texte": "renforcer la justice de proximité",
         "mesures": [
           "glucksmann-interieur-justice-005",
           "glucksmann-interieur-justice-006",
-          "glucksmann-interieur-justice-007",
           "glucksmann-interieur-justice-008"
         ]
       },
@@ -705,9 +650,9 @@
         "mesures": []
       },
       {
-        "texte": "lancer un plan de sécurité routière",
+        "texte": "organiser une convention sur les drogues",
         "mesures": [
-          "glucksmann-interieur-justice-009"
+          "glucksmann-interieur-justice-007"
         ]
       },
       {
@@ -715,9 +660,35 @@
         "mesures": []
       },
       {
-        "texte": "intensifier la lutte contre le terrorisme et la radicalisation",
+        "texte": "développer la justice restaurative et carcérale",
         "mesures": [
-          "glucksmann-interieur-justice-010"
+          "glucksmann-interieur-justice-009",
+          "glucksmann-interieur-justice-010",
+          "glucksmann-interieur-justice-011",
+          "glucksmann-interieur-justice-012"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réorganiser la police et la prévention",
+        "mesures": [
+          "glucksmann-interieur-justice-013",
+          "glucksmann-interieur-justice-014",
+          "glucksmann-interieur-justice-015"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer la sécurité routière et antiterroriste",
+        "mesures": [
+          "glucksmann-interieur-justice-016",
+          "glucksmann-interieur-justice-017"
         ]
       },
       {
@@ -725,10 +696,14 @@
         "mesures": []
       },
       {
-        "texte": "renforcer les moyens de la justice",
+        "texte": "agir sur l'économie et les infrastructures ultramarines",
         "mesures": [
-          "glucksmann-interieur-justice-011",
-          "glucksmann-interieur-justice-012"
+          "glucksmann-interieur-justice-018",
+          "glucksmann-interieur-justice-019",
+          "glucksmann-interieur-justice-020",
+          "glucksmann-interieur-justice-021",
+          "glucksmann-interieur-justice-022",
+          "glucksmann-interieur-justice-023"
         ]
       },
       {
@@ -748,21 +723,63 @@
       "glucksmann-interieur-justice-009",
       "glucksmann-interieur-justice-010",
       "glucksmann-interieur-justice-011",
-      "glucksmann-interieur-justice-012"
+      "glucksmann-interieur-justice-012",
+      "glucksmann-interieur-justice-013",
+      "glucksmann-interieur-justice-014",
+      "glucksmann-interieur-justice-015",
+      "glucksmann-interieur-justice-016",
+      "glucksmann-interieur-justice-017",
+      "glucksmann-interieur-justice-018",
+      "glucksmann-interieur-justice-019",
+      "glucksmann-interieur-justice-020",
+      "glucksmann-interieur-justice-021",
+      "glucksmann-interieur-justice-022",
+      "glucksmann-interieur-justice-023"
     ],
-    "empreinte": "8c4ee94d06722641",
-    "date": "2026-09-27",
+    "empreinte": "d227b9f5e594457d",
+    "date": "2026-10-31",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "reformes-etat",
+    "segments": [
+      {
+        "texte": "Revaloriser les salaires des agents publics",
+        "mesures": [
+          "glucksmann-reformes-etat-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer l'attractivité de la fonction publique",
+        "mesures": [
+          "glucksmann-reformes-etat-002"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "glucksmann-reformes-etat-001",
+      "glucksmann-reformes-etat-002"
+    ],
+    "empreinte": "da0676feab93e50a",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "retraites-travail",
     "segments": [
       {
-        "texte": "Revaloriser les salaires et la fonction publique",
+        "texte": "Revaloriser les salaires et le SMIC",
         "mesures": [
           "glucksmann-retraites-travail-001",
-          "glucksmann-retraites-travail-002",
-          "glucksmann-retraites-travail-003"
+          "glucksmann-retraites-travail-002"
         ]
       },
       {
@@ -770,10 +787,10 @@
         "mesures": []
       },
       {
-        "texte": "soutenir l'économie locale et coopérative",
+        "texte": "soutenir commerces et coopératives locales",
         "mesures": [
-          "glucksmann-retraites-travail-004",
-          "glucksmann-retraites-travail-005"
+          "glucksmann-retraites-travail-003",
+          "glucksmann-retraites-travail-004"
         ]
       },
       {
@@ -783,6 +800,16 @@
       {
         "texte": "intégrer les salariés aux conseils d'administration",
         "mesures": [
+          "glucksmann-retraites-travail-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "viser zéro mort au travail",
+        "mesures": [
           "glucksmann-retraites-travail-006"
         ]
       },
@@ -791,18 +818,9 @@
         "mesures": []
       },
       {
-        "texte": "adopter une stratégie zéro mort au travail",
+        "texte": "généraliser les dispositifs d'insertion et d'emploi",
         "mesures": [
-          "glucksmann-retraites-travail-007"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "développer l'accompagnement vers l'emploi",
-        "mesures": [
+          "glucksmann-retraites-travail-007",
           "glucksmann-retraites-travail-008",
           "glucksmann-retraites-travail-009",
           "glucksmann-retraites-travail-010"
@@ -813,22 +831,12 @@
         "mesures": []
       },
       {
-        "texte": "réformer les retraites selon la durée de cotisation et la pénibilité",
+        "texte": "abroger la réforme des retraites et refonder leur gouvernance et financement",
         "mesures": [
           "glucksmann-retraites-travail-011",
           "glucksmann-retraites-travail-012",
-          "glucksmann-retraites-travail-013"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "soutenir la reprise des entreprises par les salariés et l'investissement des régions",
-        "mesures": [
-          "glucksmann-retraites-travail-014",
-          "glucksmann-retraites-travail-015"
+          "glucksmann-retraites-travail-013",
+          "glucksmann-retraites-travail-014"
         ]
       },
       {
@@ -836,11 +844,13 @@
         "mesures": []
       },
       {
-        "texte": "renforcer la protection et la relocalisation industrielle",
+        "texte": "soutenir la reprise salariée, les fonds régionaux et l'industrie stratégique",
         "mesures": [
+          "glucksmann-retraites-travail-015",
           "glucksmann-retraites-travail-016",
           "glucksmann-retraites-travail-017",
-          "glucksmann-retraites-travail-018"
+          "glucksmann-retraites-travail-018",
+          "glucksmann-retraites-travail-019"
         ]
       },
       {
@@ -866,20 +876,20 @@
       "glucksmann-retraites-travail-015",
       "glucksmann-retraites-travail-016",
       "glucksmann-retraites-travail-017",
-      "glucksmann-retraites-travail-018"
+      "glucksmann-retraites-travail-018",
+      "glucksmann-retraites-travail-019"
     ],
-    "empreinte": "c6ac15bd81033e90",
-    "date": "2026-09-27",
+    "empreinte": "1f732e57095b3f90",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "social-solidarite",
     "segments": [
       {
-        "texte": "Mieux rémunérer et réorganiser le système de santé",
+        "texte": "Garantir un statut aux familles monoparentales",
         "mesures": [
-          "glucksmann-social-solidarite-001",
-          "glucksmann-social-solidarite-002"
+          "glucksmann-social-solidarite-001"
         ]
       },
       {
@@ -887,21 +897,23 @@
         "mesures": []
       },
       {
-        "texte": "développer la prévention et la santé mentale",
+        "texte": "réorganiser la santé",
         "mesures": [
+          "glucksmann-social-solidarite-002",
           "glucksmann-social-solidarite-003",
-          "glucksmann-social-solidarite-004"
+          "glucksmann-social-solidarite-004",
+          "glucksmann-social-solidarite-005"
         ]
       },
       {
-        "texte": ", ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "réformer la sécurité sociale et l'assurance chômage",
+        "texte": "simplifier la sécurité sociale",
         "mesures": [
-          "glucksmann-social-solidarite-005",
           "glucksmann-social-solidarite-006",
+          "glucksmann-social-solidarite-007",
           "glucksmann-social-solidarite-009"
         ]
       },
@@ -910,9 +922,8 @@
         "mesures": []
       },
       {
-        "texte": "soutenir les aidants et encadrer les crèches",
+        "texte": "abroger la réforme Macron de l'assurance chômage",
         "mesures": [
-          "glucksmann-social-solidarite-007",
           "glucksmann-social-solidarite-008"
         ]
       },
@@ -921,12 +932,11 @@
         "mesures": []
       },
       {
-        "texte": "renforcer l'accès et le soutien à la culture",
+        "texte": "soutenir les personnes âgées et les aidants",
         "mesures": [
           "glucksmann-social-solidarite-010",
           "glucksmann-social-solidarite-011",
-          "glucksmann-social-solidarite-012",
-          "glucksmann-social-solidarite-013"
+          "glucksmann-social-solidarite-012"
         ]
       },
       {
@@ -934,36 +944,11 @@
         "mesures": []
       },
       {
-        "texte": "développer le logement abordable et social",
+        "texte": "renforcer la culture",
         "mesures": [
+          "glucksmann-social-solidarite-013",
           "glucksmann-social-solidarite-014",
-          "glucksmann-social-solidarite-015",
-          "glucksmann-social-solidarite-016",
-          "glucksmann-social-solidarite-017",
-          "glucksmann-social-solidarite-018"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "développer les trains et le transport rural",
-        "mesures": [
-          "glucksmann-social-solidarite-019",
-          "glucksmann-social-solidarite-020",
-          "glucksmann-social-solidarite-023"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "instaurer une tarification solidaire des transports",
-        "mesures": [
-          "glucksmann-social-solidarite-021",
-          "glucksmann-social-solidarite-022"
+          "glucksmann-social-solidarite-015"
         ]
       },
       {
@@ -971,9 +956,38 @@
         "mesures": []
       },
       {
-        "texte": "taxer les mobilités polluantes",
+        "texte": "revaloriser le statut des artistes",
         "mesures": [
-          "glucksmann-social-solidarite-024"
+          "glucksmann-social-solidarite-016"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer le logement",
+        "mesures": [
+          "glucksmann-social-solidarite-017",
+          "glucksmann-social-solidarite-018",
+          "glucksmann-social-solidarite-019",
+          "glucksmann-social-solidarite-020",
+          "glucksmann-social-solidarite-021"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer les transports",
+        "mesures": [
+          "glucksmann-social-solidarite-022",
+          "glucksmann-social-solidarite-023",
+          "glucksmann-social-solidarite-024",
+          "glucksmann-social-solidarite-025",
+          "glucksmann-social-solidarite-026",
+          "glucksmann-social-solidarite-027"
         ]
       },
       {
@@ -1005,10 +1019,13 @@
       "glucksmann-social-solidarite-021",
       "glucksmann-social-solidarite-022",
       "glucksmann-social-solidarite-023",
-      "glucksmann-social-solidarite-024"
+      "glucksmann-social-solidarite-024",
+      "glucksmann-social-solidarite-025",
+      "glucksmann-social-solidarite-026",
+      "glucksmann-social-solidarite-027"
     ],
-    "empreinte": "9266df129e004024",
-    "date": "2026-09-27",
+    "empreinte": "37b73b6b8af3e890",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   }
 ]

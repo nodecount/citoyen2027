@@ -14,7 +14,7 @@
         "mesures": []
       },
       {
-        "texte": "abroger la réforme du Baccalauréat",
+        "texte": "abroger la réforme du Bac",
         "mesures": [
           "le-pen-education-jeunesse-002"
         ]
@@ -24,7 +24,17 @@
         "mesures": []
       },
       {
-        "texte": "imposer l'uniforme et interdire le voile islamique",
+        "texte": "appliquer la loi Ciotti",
+        "mesures": [
+          "le-pen-education-jeunesse-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "imposer l'uniforme et interdire le voile",
         "mesures": [
           "le-pen-education-jeunesse-003",
           "le-pen-education-jeunesse-008"
@@ -45,10 +55,9 @@
         "mesures": []
       },
       {
-        "texte": "supprimer la discrimination positive et les INSPE",
+        "texte": "supprimer la discrimination positive",
         "mesures": [
-          "le-pen-education-jeunesse-006",
-          "le-pen-education-jeunesse-010"
+          "le-pen-education-jeunesse-006"
         ]
       },
       {
@@ -56,9 +65,10 @@
         "mesures": []
       },
       {
-        "texte": "rétablir la loi Ciotti sur la discipline scolaire",
+        "texte": "revaloriser les professeurs et supprimer les INSPE",
         "mesures": [
-          "le-pen-education-jeunesse-007"
+          "le-pen-education-jeunesse-009",
+          "le-pen-education-jeunesse-010"
         ]
       },
       {
@@ -66,9 +76,11 @@
         "mesures": []
       },
       {
-        "texte": "revaloriser les professeurs de 3% par an",
+        "texte": "réformer les aides financières aux étudiants",
         "mesures": [
-          "le-pen-education-jeunesse-009"
+          "le-pen-education-jeunesse-011",
+          "le-pen-education-jeunesse-012",
+          "le-pen-education-jeunesse-013"
         ]
       },
       {
@@ -86,21 +98,23 @@
       "le-pen-education-jeunesse-007",
       "le-pen-education-jeunesse-008",
       "le-pen-education-jeunesse-009",
-      "le-pen-education-jeunesse-010"
+      "le-pen-education-jeunesse-010",
+      "le-pen-education-jeunesse-011",
+      "le-pen-education-jeunesse-012",
+      "le-pen-education-jeunesse-013"
     ],
-    "empreinte": "9f20ea5ed8f7b7d5",
-    "date": "2026-09-27",
+    "empreinte": "4ecb6734cf7f1216",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "environnement",
     "segments": [
       {
-        "texte": "Renationaliser l'électricité et baisser la TVA",
+        "texte": "Sortir du marché électrique européen",
         "mesures": [
           "le-pen-envi-001",
-          "le-pen-envi-002",
-          "le-pen-envi-003"
+          "le-pen-envi-002"
         ]
       },
       {
@@ -108,10 +122,22 @@
         "mesures": []
       },
       {
-        "texte": "nucléariser l'énergie, réduire l'éolien et respecter Paris",
+        "texte": "baisser les taxes énergétiques et les charges électro-intensives",
+        "mesures": [
+          "le-pen-envi-003",
+          "le-pen-envi-005",
+          "le-pen-envi-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "développer le nucléaire et exporter l'électricité",
         "mesures": [
           "le-pen-envi-004",
-          "le-pen-envi-005"
+          "le-pen-envi-006"
         ]
       },
       {
@@ -119,9 +145,31 @@
         "mesures": []
       },
       {
-        "texte": "garantir des prix justes, prévenir les suicides",
+        "texte": "respecter le climat",
         "mesures": [
-          "le-pen-envi-006",
+          "le-pen-envi-007",
+          "le-pen-envi-008"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "soutenir les agriculteurs",
+        "mesures": [
+          "le-pen-envi-010",
+          "le-pen-envi-011",
+          "le-pen-envi-013"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "limiter l'artificialisation",
+        "mesures": [
           "le-pen-envi-012"
         ]
       },
@@ -130,34 +178,22 @@
         "mesures": []
       },
       {
-        "texte": "freiner l'artificialisation, installer de nouveaux agriculteurs",
+        "texte": "soutenir le bio",
         "mesures": [
-          "le-pen-envi-007",
-          "le-pen-envi-008"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "protéger l'agriculture des normes, traités et imports interdits",
-        "mesures": [
-          "le-pen-envi-009",
-          "le-pen-envi-013",
-          "le-pen-envi-014"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "redresser la balance commerciale, soutenir le bio et cantines",
-        "mesures": [
-          "le-pen-envi-010",
-          "le-pen-envi-011",
           "le-pen-envi-016"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "protéger l'agriculture du libre-échange",
+        "mesures": [
+          "le-pen-envi-014",
+          "le-pen-envi-015",
+          "le-pen-envi-017",
+          "le-pen-envi-018"
         ]
       },
       {
@@ -165,9 +201,39 @@
         "mesures": []
       },
       {
-        "texte": "refuser d'interdire les phytosanitaires sans alternatives",
+        "texte": "promouvoir les produits français",
         "mesures": [
-          "le-pen-envi-015"
+          "le-pen-envi-020"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "autoriser les phytosanitaires",
+        "mesures": [
+          "le-pen-envi-019"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "baisser la TVA vétérinaire",
+        "mesures": [
+          "le-pen-envi-021"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "soutenir la robotisation",
+        "mesures": [
+          "le-pen-envi-022"
         ]
       },
       {
@@ -191,19 +257,55 @@
       "le-pen-envi-013",
       "le-pen-envi-014",
       "le-pen-envi-015",
-      "le-pen-envi-016"
+      "le-pen-envi-016",
+      "le-pen-envi-017",
+      "le-pen-envi-018",
+      "le-pen-envi-019",
+      "le-pen-envi-020",
+      "le-pen-envi-021",
+      "le-pen-envi-022"
     ],
-    "empreinte": "b6594f399609b975",
-    "date": "2026-09-28",
+    "empreinte": "f8277c9a7205df40",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "europe-international",
     "segments": [
       {
-        "texte": "Réduire de moitié la contribution française au budget de l'Union européenne",
+        "texte": "Plafonner la contribution française à l'UE",
         "mesures": [
           "le-pen-europe-international-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "harmoniser la fiscalité sur tabac et alcool",
+        "mesures": [
+          "le-pen-europe-international-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "pondérer les contributions selon le climat",
+        "mesures": [
+          "le-pen-europe-international-003"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "restituer les droits de douane à la France",
+        "mesures": [
+          "le-pen-europe-international-004"
         ]
       },
       {
@@ -212,40 +314,25 @@
       }
     ],
     "propositions": [
-      "le-pen-europe-international-001"
+      "le-pen-europe-international-001",
+      "le-pen-europe-international-002",
+      "le-pen-europe-international-003",
+      "le-pen-europe-international-004"
     ],
-    "empreinte": "b0af402109aec23a",
-    "date": "2026-09-27",
+    "empreinte": "5a97a47428d0a9c4",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "finances-publiques",
     "segments": [
       {
-        "texte": "Créer un impôt sur la fortune financière, excluant la résidence principale",
+        "texte": "Transformer le financement des associations et médias",
         "mesures": [
-          "le-pen-finances-publiques-001"
-        ]
-      },
-      {
-        "texte": ".",
-        "mesures": []
-      }
-    ],
-    "propositions": [
-      "le-pen-finances-publiques-001"
-    ],
-    "empreinte": "1986ccacc8ab74a6",
-    "date": "2026-09-27",
-    "modele": "claude-sonnet-5"
-  },
-  {
-    "theme": "gouvernance-republique",
-    "segments": [
-      {
-        "texte": "Inscrire la priorité nationale dans la Constitution par référendum",
-        "mesures": [
-          "le-pen-gouvernance-republique-001"
+          "le-pen-finances-publiques-001",
+          "le-pen-finances-publiques-002",
+          "le-pen-finances-publiques-003",
+          "le-pen-finances-publiques-005"
         ]
       },
       {
@@ -253,11 +340,11 @@
         "mesures": []
       },
       {
-        "texte": "contrôler et taxer les entreprises numériques étrangères",
+        "texte": "réduire les dépenses de l'État",
         "mesures": [
-          "le-pen-gouvernance-republique-002",
-          "le-pen-gouvernance-republique-003",
-          "le-pen-gouvernance-republique-004"
+          "le-pen-finances-publiques-004",
+          "le-pen-finances-publiques-006",
+          "le-pen-finances-publiques-007"
         ]
       },
       {
@@ -265,9 +352,64 @@
         "mesures": []
       },
       {
-        "texte": "imposer l'hébergement des données en France ou en Europe",
+        "texte": "équilibrer durablement les comptes publics",
         "mesures": [
-          "le-pen-gouvernance-republique-007"
+          "le-pen-finances-publiques-008",
+          "le-pen-finances-publiques-009",
+          "le-pen-finances-publiques-010"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "alléger les taxes et la TVA",
+        "mesures": [
+          "le-pen-finances-publiques-011",
+          "le-pen-finances-publiques-012",
+          "le-pen-finances-publiques-013"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer la fiscalité du patrimoine",
+        "mesures": [
+          "le-pen-finances-publiques-014",
+          "le-pen-finances-publiques-016"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "corriger l'impôt des grands groupes",
+        "mesures": [
+          "le-pen-finances-publiques-015"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "taxer les rachats d'actions",
+        "mesures": [
+          "le-pen-finances-publiques-017"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer un fonds souverain",
+        "mesures": [
+          "le-pen-finances-publiques-018"
         ]
       },
       {
@@ -275,10 +417,9 @@
         "mesures": []
       },
       {
-        "texte": "étendre la couverture numérique du territoire en luttant contre l'illettrisme numérique",
+        "texte": "transférer aux banques les services bancaires de base",
         "mesures": [
-          "le-pen-gouvernance-republique-005",
-          "le-pen-gouvernance-republique-006"
+          "le-pen-finances-publiques-019"
         ]
       },
       {
@@ -287,25 +428,38 @@
       }
     ],
     "propositions": [
-      "le-pen-gouvernance-republique-001",
-      "le-pen-gouvernance-republique-002",
-      "le-pen-gouvernance-republique-003",
-      "le-pen-gouvernance-republique-004",
-      "le-pen-gouvernance-republique-005",
-      "le-pen-gouvernance-republique-006",
-      "le-pen-gouvernance-republique-007"
+      "le-pen-finances-publiques-001",
+      "le-pen-finances-publiques-002",
+      "le-pen-finances-publiques-003",
+      "le-pen-finances-publiques-004",
+      "le-pen-finances-publiques-005",
+      "le-pen-finances-publiques-006",
+      "le-pen-finances-publiques-007",
+      "le-pen-finances-publiques-008",
+      "le-pen-finances-publiques-009",
+      "le-pen-finances-publiques-010",
+      "le-pen-finances-publiques-011",
+      "le-pen-finances-publiques-012",
+      "le-pen-finances-publiques-013",
+      "le-pen-finances-publiques-014",
+      "le-pen-finances-publiques-015",
+      "le-pen-finances-publiques-016",
+      "le-pen-finances-publiques-017",
+      "le-pen-finances-publiques-018",
+      "le-pen-finances-publiques-019"
     ],
-    "empreinte": "48f68dec62e501aa",
-    "date": "2026-09-27",
+    "empreinte": "701b0dfe746c097f",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "interieur-justice",
     "segments": [
       {
-        "texte": "Atteindre 85 000 places de prison",
+        "texte": "Restreindre les prestations familiales selon nationalité et comportement",
         "mesures": [
-          "le-pen-interieur-justice-001"
+          "le-pen-interieur-justice-001",
+          "le-pen-interieur-justice-010"
         ]
       },
       {
@@ -313,9 +467,14 @@
         "mesures": []
       },
       {
-        "texte": "instaurer une présomption de légitime défense pour les forces de l'ordre",
+        "texte": "durcir les conditions d'accueil, d'emploi et de taxation des étrangers",
         "mesures": [
-          "le-pen-interieur-justice-002"
+          "le-pen-interieur-justice-002",
+          "le-pen-interieur-justice-003",
+          "le-pen-interieur-justice-004",
+          "le-pen-interieur-justice-005",
+          "le-pen-interieur-justice-006",
+          "le-pen-interieur-justice-007"
         ]
       },
       {
@@ -323,19 +482,33 @@
         "mesures": []
       },
       {
-        "texte": "créer 7000 postes de policiers et gendarmes",
+        "texte": "construire des prisons et protéger les forces de l'ordre",
         "mesures": [
-          "le-pen-interieur-justice-003"
+          "le-pen-interieur-justice-008",
+          "le-pen-interieur-justice-009",
+          "le-pen-interieur-justice-011"
         ]
       },
       {
-        "texte": " et ",
+        "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "obliger les grandes communes à créer une police municipale",
+        "texte": "renforcer les effectifs et les polices municipales",
         "mesures": [
-          "le-pen-interieur-justice-004"
+          "le-pen-interieur-justice-012",
+          "le-pen-interieur-justice-013"
+        ]
+      },
+      {
+        "texte": ", et ",
+        "mesures": []
+      },
+      {
+        "texte": "ajuster l'octroi de mer et les crédits ultramarins",
+        "mesures": [
+          "le-pen-interieur-justice-014",
+          "le-pen-interieur-justice-015"
         ]
       },
       {
@@ -347,17 +520,93 @@
       "le-pen-interieur-justice-001",
       "le-pen-interieur-justice-002",
       "le-pen-interieur-justice-003",
-      "le-pen-interieur-justice-004"
+      "le-pen-interieur-justice-004",
+      "le-pen-interieur-justice-005",
+      "le-pen-interieur-justice-006",
+      "le-pen-interieur-justice-007",
+      "le-pen-interieur-justice-008",
+      "le-pen-interieur-justice-009",
+      "le-pen-interieur-justice-010",
+      "le-pen-interieur-justice-011",
+      "le-pen-interieur-justice-012",
+      "le-pen-interieur-justice-013",
+      "le-pen-interieur-justice-014",
+      "le-pen-interieur-justice-015"
     ],
-    "empreinte": "617053c3398d2389",
-    "date": "2026-09-27",
+    "empreinte": "a6bbee4e339e8e45",
+    "date": "2026-10-31",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "reformes-etat",
+    "segments": [
+      {
+        "texte": "Supprimer les EPCI et métropoles",
+        "mesures": [
+          "le-pen-reformes-etat-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer ou réinternaliser des agences",
+        "mesures": [
+          "le-pen-reformes-etat-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "appliquer les 35 h territoriales",
+        "mesures": [
+          "le-pen-reformes-etat-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "ajuster les effectifs des collectivités",
+        "mesures": [
+          "le-pen-reformes-etat-004"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire les postes administratifs hospitaliers",
+        "mesures": [
+          "le-pen-reformes-etat-005"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "le-pen-reformes-etat-001",
+      "le-pen-reformes-etat-002",
+      "le-pen-reformes-etat-003",
+      "le-pen-reformes-etat-004",
+      "le-pen-reformes-etat-005"
+    ],
+    "empreinte": "061bc2cfef02f47f",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "retraites-travail",
     "segments": [
       {
-        "texte": "Recenser et simplifier les normes",
+        "texte": "Exonérer d'impôt les jeunes actifs",
         "mesures": [
           "le-pen-retraites-travail-001"
         ]
@@ -367,7 +616,7 @@
         "mesures": []
       },
       {
-        "texte": "simplifier l'administration par ordonnances",
+        "texte": "limiter les ruptures conventionnelles",
         "mesures": [
           "le-pen-retraites-travail-002"
         ]
@@ -377,7 +626,7 @@
         "mesures": []
       },
       {
-        "texte": "créer un fonds souverain pour les PME",
+        "texte": "obliger au pointage mensuel",
         "mesures": [
           "le-pen-retraites-travail-003"
         ]
@@ -387,7 +636,7 @@
         "mesures": []
       },
       {
-        "texte": "permettre un départ à 60 ans après un début de carrière précoce",
+        "texte": "renforcer les contrôles de chômage",
         "mesures": [
           "le-pen-retraites-travail-004"
         ]
@@ -397,9 +646,29 @@
         "mesures": []
       },
       {
-        "texte": "instaurer une capitalisation volontaire des retraites",
+        "texte": "permettre un départ à 60 ans",
         "mesures": [
           "le-pen-retraites-travail-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "instaurer une capitalisation volontaire des retraites",
+        "mesures": [
+          "le-pen-retraites-travail-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "permettre la priorité nationale des commandes publiques",
+        "mesures": [
+          "le-pen-retraites-travail-007"
         ]
       },
       {
@@ -407,9 +676,9 @@
         "mesures": []
       },
       {
-        "texte": "donner priorité nationale à la commande publique",
+        "texte": "renforcer le pacte Dutreil",
         "mesures": [
-          "le-pen-retraites-travail-006"
+          "le-pen-retraites-travail-008"
         ]
       },
       {
@@ -423,40 +692,23 @@
       "le-pen-retraites-travail-003",
       "le-pen-retraites-travail-004",
       "le-pen-retraites-travail-005",
-      "le-pen-retraites-travail-006"
+      "le-pen-retraites-travail-006",
+      "le-pen-retraites-travail-007",
+      "le-pen-retraites-travail-008"
     ],
-    "empreinte": "664d1054e621a5b3",
-    "date": "2026-09-27",
+    "empreinte": "3c9d1768198e5a19",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "social-solidarite",
     "segments": [
       {
-        "texte": "Réformer la gouvernance hospitalière",
+        "texte": "Revaloriser les aides aux familles et jeunes",
         "mesures": [
           "le-pen-social-solidarite-001",
-          "le-pen-social-solidarite-007"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "recruter des soignants et limiter les postes administratifs",
-        "mesures": [
           "le-pen-social-solidarite-002",
-          "le-pen-social-solidarite-003"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "maintenir les lits et réorganiser les urgences",
-        "mesures": [
+          "le-pen-social-solidarite-003",
           "le-pen-social-solidarite-004",
           "le-pen-social-solidarite-005",
           "le-pen-social-solidarite-006"
@@ -467,52 +719,86 @@
         "mesures": []
       },
       {
-        "texte": "lutter contre les déserts médicaux et développer la télémédecine",
+        "texte": "réorganiser la gouvernance, les moyens et le financement hospitaliers",
         "mesures": [
+          "le-pen-social-solidarite-007",
           "le-pen-social-solidarite-008",
-          "le-pen-social-solidarite-009"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "remplacer MaPrimeRénov' par des prêts à taux zéro",
-        "mesures": [
-          "le-pen-social-solidarite-010"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "durcir les sanctions contre les impayés de loyer",
-        "mesures": [
-          "le-pen-social-solidarite-011"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "assouplir les règles de location et d'urbanisme",
-        "mesures": [
+          "le-pen-social-solidarite-009",
           "le-pen-social-solidarite-012",
-          "le-pen-social-solidarite-013",
-          "le-pen-social-solidarite-015"
+          "le-pen-social-solidarite-013"
         ]
       },
       {
-        "texte": " et ",
+        "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "instaurer la préférence nationale pour le logement",
+        "texte": "réorganiser les urgences et développer la télémédecine",
         "mesures": [
+          "le-pen-social-solidarite-010",
+          "le-pen-social-solidarite-011",
           "le-pen-social-solidarite-014"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "faciliter et réduire le coût des soins",
+        "mesures": [
+          "le-pen-social-solidarite-015",
+          "le-pen-social-solidarite-016",
+          "le-pen-social-solidarite-017",
+          "le-pen-social-solidarite-018"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer les salles de shoot",
+        "mesures": [
+          "le-pen-social-solidarite-019"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer les aides et charges liées au logement",
+        "mesures": [
+          "le-pen-social-solidarite-020",
+          "le-pen-social-solidarite-021",
+          "le-pen-social-solidarite-029",
+          "le-pen-social-solidarite-030"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer de nombreuses normes et contraintes de construction",
+        "mesures": [
+          "le-pen-social-solidarite-022",
+          "le-pen-social-solidarite-023",
+          "le-pen-social-solidarite-025",
+          "le-pen-social-solidarite-026",
+          "le-pen-social-solidarite-027",
+          "le-pen-social-solidarite-028"
+        ]
+      },
+      {
+        "texte": ", et ",
+        "mesures": []
+      },
+      {
+        "texte": "favoriser les français pour l'accès au logement",
+        "mesures": [
+          "le-pen-social-solidarite-024"
         ]
       },
       {
@@ -535,10 +821,25 @@
       "le-pen-social-solidarite-012",
       "le-pen-social-solidarite-013",
       "le-pen-social-solidarite-014",
-      "le-pen-social-solidarite-015"
+      "le-pen-social-solidarite-015",
+      "le-pen-social-solidarite-016",
+      "le-pen-social-solidarite-017",
+      "le-pen-social-solidarite-018",
+      "le-pen-social-solidarite-019",
+      "le-pen-social-solidarite-020",
+      "le-pen-social-solidarite-021",
+      "le-pen-social-solidarite-022",
+      "le-pen-social-solidarite-023",
+      "le-pen-social-solidarite-024",
+      "le-pen-social-solidarite-025",
+      "le-pen-social-solidarite-026",
+      "le-pen-social-solidarite-027",
+      "le-pen-social-solidarite-028",
+      "le-pen-social-solidarite-029",
+      "le-pen-social-solidarite-030"
     ],
-    "empreinte": "7847c56d15a428ab",
-    "date": "2026-09-27",
+    "empreinte": "0214cdef864c9551",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   }
 ]

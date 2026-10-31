@@ -3,13 +3,13 @@
     "theme": "defense",
     "segments": [
       {
-        "texte": "Mettre en place une conscription citoyenne de neuf mois rémunérée",
+        "texte": "Instaurer une conscription citoyenne",
         "mesures": [
           "melenchon-defense-001"
         ]
       },
       {
-        "texte": " et ",
+        "texte": ", ",
         "mesures": []
       },
       {
@@ -23,7 +23,7 @@
         "mesures": []
       },
       {
-        "texte": "lutter contre la course à l'armement spatial",
+        "texte": "lutter contre l'armement spatial",
         "mesures": [
           "melenchon-defense-003"
         ]
@@ -43,7 +43,7 @@
         "mesures": []
       },
       {
-        "texte": "adopter une loi de programmation militaire pour l'indépendance et la souveraineté industrielle",
+        "texte": "adopter une loi de programmation militaire",
         "mesures": [
           "melenchon-defense-005"
         ]
@@ -60,15 +60,15 @@
       "melenchon-defense-004",
       "melenchon-defense-005"
     ],
-    "empreinte": "fb181925e829818d",
-    "date": "2026-09-27",
+    "empreinte": "63453c7ad12de53c",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "education-jeunesse",
     "segments": [
       {
-        "texte": "Développer l'alphabétisation et la remise à niveau",
+        "texte": "Développer l'alphabétisation et lutter contre l'illettrisme",
         "mesures": [
           "melenchon-education-jeunesse-001",
           "melenchon-education-jeunesse-002"
@@ -79,7 +79,7 @@
         "mesures": []
       },
       {
-        "texte": "créer des places de crèche publiques et gratuites",
+        "texte": "développer des crèches publiques gratuites",
         "mesures": [
           "melenchon-education-jeunesse-003",
           "melenchon-education-jeunesse-004",
@@ -91,7 +91,7 @@
         "mesures": []
       },
       {
-        "texte": "réduire les effectifs et renforcer l'accompagnement scolaire",
+        "texte": "renforcer les moyens humains à l'école",
         "mesures": [
           "melenchon-education-jeunesse-006",
           "melenchon-education-jeunesse-007",
@@ -106,12 +106,9 @@
         "mesures": []
       },
       {
-        "texte": "réformer la scolarité et la vie lycéenne",
+        "texte": "étendre les droits des jeunes",
         "mesures": [
           "melenchon-education-jeunesse-008",
-          "melenchon-education-jeunesse-011",
-          "melenchon-education-jeunesse-012",
-          "melenchon-education-jeunesse-013",
           "melenchon-education-jeunesse-024"
         ]
       },
@@ -120,11 +117,12 @@
         "mesures": []
       },
       {
-        "texte": "revaloriser les personnels et refonder l'école publique",
+        "texte": "réformer l'organisation du collège et du lycée",
         "mesures": [
+          "melenchon-education-jeunesse-011",
+          "melenchon-education-jeunesse-012",
+          "melenchon-education-jeunesse-013",
           "melenchon-education-jeunesse-014",
-          "melenchon-education-jeunesse-015",
-          "melenchon-education-jeunesse-017",
           "melenchon-education-jeunesse-019",
           "melenchon-education-jeunesse-020",
           "melenchon-education-jeunesse-021"
@@ -135,7 +133,18 @@
         "mesures": []
       },
       {
-        "texte": "intégrer l'écologie et le bio dans les cantines",
+        "texte": "revaloriser les personnels et l'accompagnement du handicap",
+        "mesures": [
+          "melenchon-education-jeunesse-015",
+          "melenchon-education-jeunesse-017"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "verdir les programmes et les cantines",
         "mesures": [
           "melenchon-education-jeunesse-022",
           "melenchon-education-jeunesse-023"
@@ -150,7 +159,6 @@
         "mesures": [
           "melenchon-education-jeunesse-025",
           "melenchon-education-jeunesse-026",
-          "melenchon-education-jeunesse-027",
           "melenchon-education-jeunesse-028"
         ]
       },
@@ -159,12 +167,10 @@
         "mesures": []
       },
       {
-        "texte": "renforcer la recherche publique",
+        "texte": "développer le logement étudiant",
         "mesures": [
-          "melenchon-education-jeunesse-029",
-          "melenchon-education-jeunesse-030",
-          "melenchon-education-jeunesse-031",
-          "melenchon-education-jeunesse-032"
+          "melenchon-education-jeunesse-027",
+          "melenchon-education-jeunesse-036"
         ]
       },
       {
@@ -172,12 +178,15 @@
         "mesures": []
       },
       {
-        "texte": "rendre l'enseignement supérieur gratuit et accessible",
+        "texte": "rendre gratuit l'enseignement supérieur et la recherche",
         "mesures": [
+          "melenchon-education-jeunesse-029",
+          "melenchon-education-jeunesse-030",
+          "melenchon-education-jeunesse-031",
+          "melenchon-education-jeunesse-032",
           "melenchon-education-jeunesse-033",
           "melenchon-education-jeunesse-034",
-          "melenchon-education-jeunesse-035",
-          "melenchon-education-jeunesse-036"
+          "melenchon-education-jeunesse-035"
         ]
       },
       {
@@ -223,87 +232,19 @@
       "melenchon-education-jeunesse-035",
       "melenchon-education-jeunesse-036"
     ],
-    "empreinte": "4f2100496f0e87e3",
-    "date": "2026-09-27",
+    "empreinte": "95e659593f825942",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "environnement",
     "segments": [
       {
-        "texte": "Planifier le passage à 100 % d'énergies renouvelables",
+        "texte": "Financer une transition énergétique renouvelable",
         "mesures": [
           "melenchon-envi-001",
-          "melenchon-envi-002"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "inscrire la règle verte",
-        "mesures": [
-          "melenchon-envi-006"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "créer un défenseur des biens communs",
-        "mesures": [
-          "melenchon-envi-003"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "confier l'eau aux régions",
-        "mesures": [
-          "melenchon-envi-007"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "garantir l'accès aux sentiers naturels",
-        "mesures": [
-          "melenchon-envi-004"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "adapter les infrastructures au climat",
-        "mesures": [
-          "melenchon-envi-005"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "faire des Outre-mer des territoires pilotes écologiques",
-        "mesures": [
-          "melenchon-envi-008"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "investir massivement dans l'écologie",
-        "mesures": [
+          "melenchon-envi-002",
+          "melenchon-envi-008",
           "melenchon-envi-009"
         ]
       },
@@ -312,7 +253,30 @@
         "mesures": []
       },
       {
-        "texte": "encadrer les véhicules et lutter contre l'obsolescence programmée",
+        "texte": "protéger les biens communs et la nature",
+        "mesures": [
+          "melenchon-envi-003",
+          "melenchon-envi-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "verdir la Constitution, adapter les territoires et régionaliser l'eau",
+        "mesures": [
+          "melenchon-envi-005",
+          "melenchon-envi-006",
+          "melenchon-envi-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réguler les véhicules et l'obsolescence programmée",
         "mesures": [
           "melenchon-envi-010",
           "melenchon-envi-011"
@@ -323,10 +287,35 @@
         "mesures": []
       },
       {
-        "texte": "protéger les forêts et le foncier agricole",
+        "texte": "protéger les forêts et terres agricoles",
         "mesures": [
           "melenchon-envi-012",
           "melenchon-envi-017"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer 300 000 emplois agricoles",
+        "mesures": [
+          "melenchon-envi-013"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer la politique agricole et réduire les pesticides",
+        "mesures": [
+          "melenchon-envi-014",
+          "melenchon-envi-015",
+          "melenchon-envi-016",
+          "melenchon-envi-018",
+          "melenchon-envi-019",
+          "melenchon-envi-020"
         ]
       },
       {
@@ -334,15 +323,8 @@
         "mesures": []
       },
       {
-        "texte": "transformer l'agriculture et l'alimentation",
+        "texte": "interdire les fermes-usines",
         "mesures": [
-          "melenchon-envi-013",
-          "melenchon-envi-014",
-          "melenchon-envi-015",
-          "melenchon-envi-016",
-          "melenchon-envi-018",
-          "melenchon-envi-019",
-          "melenchon-envi-020",
           "melenchon-envi-021"
         ]
       },
@@ -374,15 +356,15 @@
       "melenchon-envi-020",
       "melenchon-envi-021"
     ],
-    "empreinte": "475deb61aacaae43",
-    "date": "2026-09-27",
+    "empreinte": "8151a1708d45c55c",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "europe-international",
     "segments": [
       {
-        "texte": "Réaffirmer la légitimité de l'ONU",
+        "texte": "Défendre le rôle de l'ONU",
         "mesures": [
           "melenchon-europe-international-001"
         ]
@@ -392,19 +374,9 @@
         "mesures": []
       },
       {
-        "texte": "réformer le FMI, la Banque mondiale et l'OMC",
+        "texte": "réformer les institutions économiques internationales",
         "mesures": [
-          "melenchon-europe-international-002"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "renforcer l'aide aux migrations et l'aide au développement",
-        "mesures": [
-          "melenchon-europe-international-003",
+          "melenchon-europe-international-002",
           "melenchon-europe-international-004"
         ]
       },
@@ -413,8 +385,9 @@
         "mesures": []
       },
       {
-        "texte": "créer un réseau universitaire méditerranéen",
+        "texte": "renforcer la coopération migratoire et universitaire méditerranéenne",
         "mesures": [
+          "melenchon-europe-international-003",
           "melenchon-europe-international-005"
         ]
       },
@@ -423,7 +396,7 @@
         "mesures": []
       },
       {
-        "texte": "défendre le français dans les institutions internationales",
+        "texte": "défendre l'usage du français",
         "mesures": [
           "melenchon-europe-international-006"
         ]
@@ -433,7 +406,7 @@
         "mesures": []
       },
       {
-        "texte": "abroger et refuser les accords de libre-échange",
+        "texte": "abroger et bloquer les accords de libre-échange",
         "mesures": [
           "melenchon-europe-international-007",
           "melenchon-europe-international-008",
@@ -441,25 +414,16 @@
         ]
       },
       {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "conditionner le budget européen et s'affranchir de certaines règles européennes",
-        "mesures": [
-          "melenchon-europe-international-010",
-          "melenchon-europe-international-011",
-          "melenchon-europe-international-013"
-        ]
-      },
-      {
         "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "suspendre la participation à l'Europe de la défense",
+        "texte": "reprendre la main sur les règles européennes",
         "mesures": [
-          "melenchon-europe-international-012"
+          "melenchon-europe-international-010",
+          "melenchon-europe-international-011",
+          "melenchon-europe-international-012",
+          "melenchon-europe-international-013"
         ]
       },
       {
@@ -482,8 +446,8 @@
       "melenchon-europe-international-012",
       "melenchon-europe-international-013"
     ],
-    "empreinte": "1d178c421c56068f",
-    "date": "2026-09-27",
+    "empreinte": "8a914d24994a5d06",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
@@ -670,21 +634,13 @@
     "theme": "gouvernance-republique",
     "segments": [
       {
-        "texte": "Convoquer une Constituante citoyenne pour une 6e République parlementaire",
+        "texte": "Fonder une 6e République par constituante et référendum citoyen",
         "mesures": [
           "melenchon-gouvernance-republique-001",
           "melenchon-gouvernance-republique-002",
-          "melenchon-gouvernance-republique-003"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "instaurer le référendum d'initiative citoyenne et le référendum obligatoire",
-        "mesures": [
+          "melenchon-gouvernance-republique-003",
           "melenchon-gouvernance-republique-015",
+          "melenchon-gouvernance-republique-018",
           "melenchon-gouvernance-republique-020"
         ]
       },
@@ -693,26 +649,16 @@
         "mesures": []
       },
       {
-        "texte": "réformer les règles électorales",
-        "mesures": [
-          "melenchon-gouvernance-republique-016",
-          "melenchon-gouvernance-republique-017",
-          "melenchon-gouvernance-republique-018"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "renforcer la transparence et l'éthique des élus",
+        "texte": "moraliser la vie publique et limiter le cumul",
         "mesures": [
           "melenchon-gouvernance-republique-004",
           "melenchon-gouvernance-republique-005",
           "melenchon-gouvernance-republique-006",
           "melenchon-gouvernance-republique-007",
+          "melenchon-gouvernance-republique-008",
           "melenchon-gouvernance-republique-009",
           "melenchon-gouvernance-republique-012",
+          "melenchon-gouvernance-republique-013",
           "melenchon-gouvernance-republique-019",
           "melenchon-gouvernance-republique-023"
         ]
@@ -722,19 +668,7 @@
         "mesures": []
       },
       {
-        "texte": "réformer la fonction publique",
-        "mesures": [
-          "melenchon-gouvernance-republique-008",
-          "melenchon-gouvernance-republique-013",
-          "melenchon-gouvernance-republique-014"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "démocratiser la représentation patronale et la Sécurité sociale",
+        "texte": "démocratiser la représentation patronale et sociale",
         "mesures": [
           "melenchon-gouvernance-republique-010",
           "melenchon-gouvernance-republique-011"
@@ -745,9 +679,9 @@
         "mesures": []
       },
       {
-        "texte": "amnistier les militants condamnés",
+        "texte": "abolir la réforme préfectorale",
         "mesures": [
-          "melenchon-gouvernance-republique-024"
+          "melenchon-gouvernance-republique-014"
         ]
       },
       {
@@ -755,16 +689,36 @@
         "mesures": []
       },
       {
-        "texte": "réorganiser les collectivités locales",
+        "texte": "étendre et fiabiliser le droit de vote",
+        "mesures": [
+          "melenchon-gouvernance-republique-016",
+          "melenchon-gouvernance-republique-017"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "redonner liberté, moyens et parité aux communes",
         "mesures": [
           "melenchon-gouvernance-republique-021",
-          "melenchon-gouvernance-republique-022",
           "melenchon-gouvernance-republique-025",
           "melenchon-gouvernance-republique-026",
           "melenchon-gouvernance-republique-027",
           "melenchon-gouvernance-republique-028",
           "melenchon-gouvernance-republique-029",
-          "melenchon-gouvernance-republique-030",
+          "melenchon-gouvernance-republique-030"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "adapter les statuts d'Outre-mer et de Corse",
+        "mesures": [
+          "melenchon-gouvernance-republique-022",
           "melenchon-gouvernance-republique-035"
         ]
       },
@@ -773,7 +727,17 @@
         "mesures": []
       },
       {
-        "texte": "séparer l'Église et l'État",
+        "texte": "constitutionnaliser le droit de disposer de soi",
+        "mesures": [
+          "melenchon-gouvernance-republique-031"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "séparer l'Église et l'État partout",
         "mesures": [
           "melenchon-gouvernance-republique-032",
           "melenchon-gouvernance-republique-033",
@@ -781,15 +745,24 @@
         ]
       },
       {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "garantir l'accès gratuit et neutre à internet",
+        "mesures": [
+          "melenchon-gouvernance-republique-036",
+          "melenchon-gouvernance-republique-037"
+        ]
+      },
+      {
         "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "garantir des droits numériques et corporels",
+        "texte": "amnistier les militants engagés",
         "mesures": [
-          "melenchon-gouvernance-republique-031",
-          "melenchon-gouvernance-republique-036",
-          "melenchon-gouvernance-republique-037"
+          "melenchon-gouvernance-republique-024"
         ]
       },
       {
@@ -836,8 +809,8 @@
       "melenchon-gouvernance-republique-036",
       "melenchon-gouvernance-republique-037"
     ],
-    "empreinte": "f92537cfb7c077af",
-    "date": "2026-09-27",
+    "empreinte": "eea13745af762fb0",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
@@ -852,7 +825,16 @@
           "melenchon-interieur-justice-004",
           "melenchon-interieur-justice-005",
           "melenchon-interieur-justice-006",
-          "melenchon-interieur-justice-007",
+          "melenchon-interieur-justice-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "mettre fin à la surpopulation carcérale",
+        "mesures": [
           "melenchon-interieur-justice-008"
         ]
       },
@@ -861,7 +843,7 @@
         "mesures": []
       },
       {
-        "texte": "lutter contre la délinquance financière, les violences sexuelles et les pollutions",
+        "texte": "renforcer la lutte contre la délinquance financière, sexuelle et environnementale",
         "mesures": [
           "melenchon-interieur-justice-009",
           "melenchon-interieur-justice-010",
@@ -875,23 +857,13 @@
         "mesures": []
       },
       {
-        "texte": "réformer la justice et l'accueil des mineurs",
+        "texte": "réformer la justice des mineurs et la cyberpédopornographie",
         "mesures": [
           "melenchon-interieur-justice-012",
           "melenchon-interieur-justice-013",
           "melenchon-interieur-justice-014",
-          "melenchon-interieur-justice-015"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "renforcer le renseignement et la lutte contre la cyberpédopornographie",
-        "mesures": [
+          "melenchon-interieur-justice-015",
           "melenchon-interieur-justice-016",
-          "melenchon-interieur-justice-018",
           "melenchon-interieur-justice-020"
         ]
       },
@@ -900,10 +872,10 @@
         "mesures": []
       },
       {
-        "texte": "abroger l'état d'urgence et interdire la reconnaissance faciale",
+        "texte": "renforcer le renseignement et abroger l'état d'urgence permanent",
         "mesures": [
-          "melenchon-interieur-justice-019",
-          "melenchon-interieur-justice-034"
+          "melenchon-interieur-justice-018",
+          "melenchon-interieur-justice-019"
         ]
       },
       {
@@ -911,14 +883,11 @@
         "mesures": []
       },
       {
-        "texte": "réformer la police",
+        "texte": "créer une police de proximité, une garde nationale et démanteler les BAC",
         "mesures": [
           "melenchon-interieur-justice-021",
           "melenchon-interieur-justice-022",
-          "melenchon-interieur-justice-026",
-          "melenchon-interieur-justice-027",
-          "melenchon-interieur-justice-028",
-          "melenchon-interieur-justice-029",
+          "melenchon-interieur-justice-030",
           "melenchon-interieur-justice-031",
           "melenchon-interieur-justice-032",
           "melenchon-interieur-justice-033"
@@ -929,29 +898,24 @@
         "mesures": []
       },
       {
-        "texte": "interdire des armes policières",
+        "texte": "réformer les pratiques policières, remplacer l'IGPN et l'IGGN par une autorité indépendante et interdire la reconnaissance faciale",
         "mesures": [
           "melenchon-interieur-justice-023",
           "melenchon-interieur-justice-024",
-          "melenchon-interieur-justice-025"
+          "melenchon-interieur-justice-025",
+          "melenchon-interieur-justice-026",
+          "melenchon-interieur-justice-027",
+          "melenchon-interieur-justice-028",
+          "melenchon-interieur-justice-029",
+          "melenchon-interieur-justice-034"
         ]
       },
       {
-        "texte": ", ",
+        "texte": ", et ",
         "mesures": []
       },
       {
-        "texte": "créer une garde nationale civile",
-        "mesures": [
-          "melenchon-interieur-justice-030"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "soutenir les services publics d'outre-mer",
+        "texte": "soutenir les services publics, les infrastructures et l'éducation en outre-mer",
         "mesures": [
           "melenchon-interieur-justice-036",
           "melenchon-interieur-justice-037",
@@ -1009,15 +973,15 @@
       "melenchon-interieur-justice-040",
       "melenchon-interieur-justice-041"
     ],
-    "empreinte": "c96c86acffd24f52",
-    "date": "2026-09-27",
+    "empreinte": "c0b09e87e28e5571",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "retraites-travail",
     "segments": [
       {
-        "texte": "Créer des pôles publics dans les secteurs stratégiques",
+        "texte": "Créer des pôles publics stratégiques",
         "mesures": [
           "melenchon-retraites-travail-001"
         ]
@@ -1027,13 +991,23 @@
         "mesures": []
       },
       {
-        "texte": "renforcer les pouvoirs des salariés dans l'entreprise",
+        "texte": "renforcer le pouvoir des salariés dans l'entreprise",
         "mesures": [
           "melenchon-retraites-travail-002",
           "melenchon-retraites-travail-003",
           "melenchon-retraites-travail-004",
           "melenchon-retraites-travail-005",
           "melenchon-retraites-travail-022"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "garantir un emploi aux chômeurs de longue durée",
+        "mesures": [
+          "melenchon-retraites-travail-006"
         ]
       },
       {
@@ -1055,15 +1029,13 @@
         "mesures": []
       },
       {
-        "texte": "lutter contre la précarité de l'emploi",
+        "texte": "limiter la précarité de l'emploi",
         "mesures": [
-          "melenchon-retraites-travail-006",
           "melenchon-retraites-travail-012",
           "melenchon-retraites-travail-013",
           "melenchon-retraites-travail-014",
           "melenchon-retraites-travail-015",
-          "melenchon-retraites-travail-016",
-          "melenchon-retraites-travail-018"
+          "melenchon-retraites-travail-016"
         ]
       },
       {
@@ -1071,13 +1043,13 @@
         "mesures": []
       },
       {
-        "texte": "augmenter les salaires et limiter les écarts de rémunération",
+        "texte": "augmenter les salaires et plafonner les écarts de revenus",
         "mesures": [
           "melenchon-retraites-travail-017",
+          "melenchon-retraites-travail-018",
           "melenchon-retraites-travail-019",
           "melenchon-retraites-travail-020",
-          "melenchon-retraites-travail-021",
-          "melenchon-retraites-travail-027"
+          "melenchon-retraites-travail-021"
         ]
       },
       {
@@ -1100,15 +1072,16 @@
           "melenchon-retraites-travail-024",
           "melenchon-retraites-travail-025",
           "melenchon-retraites-travail-026",
+          "melenchon-retraites-travail-027",
           "melenchon-retraites-travail-028"
         ]
       },
       {
-        "texte": " et ",
+        "texte": ", et ",
         "mesures": []
       },
       {
-        "texte": "protéger et relocaliser l'industrie stratégique",
+        "texte": "protéger l'industrie en relocalisant les productions stratégiques",
         "mesures": [
           "melenchon-retraites-travail-029",
           "melenchon-retraites-travail-030",
@@ -1155,8 +1128,8 @@
       "melenchon-retraites-travail-031",
       "melenchon-retraites-travail-032"
     ],
-    "empreinte": "e4d2f7f4baf40b96",
-    "date": "2026-09-27",
+    "empreinte": "6dfd0f242491126d",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
@@ -1174,27 +1147,35 @@
         "mesures": []
       },
       {
-        "texte": "garantir l'accès aux droits sociaux et la gratuité des protections périodiques",
+        "texte": "simplifier les droits et interdire leur notation",
         "mesures": [
           "melenchon-social-solidarite-002",
           "melenchon-social-solidarite-003",
-          "melenchon-social-solidarite-004",
-          "melenchon-social-solidarite-022"
+          "melenchon-social-solidarite-004"
         ]
       },
       {
-        "texte": ", ",
+        "texte": ", et ",
         "mesures": []
       },
       {
-        "texte": "réformer l'assurance chômage et la formation professionnelle",
+        "texte": "réformer les règles du chômage",
         "mesures": [
           "melenchon-social-solidarite-005",
           "melenchon-social-solidarite-006",
-          "melenchon-social-solidarite-007",
           "melenchon-social-solidarite-008",
           "melenchon-social-solidarite-009",
-          "melenchon-social-solidarite-010",
+          "melenchon-social-solidarite-010"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "étendre la formation des travailleurs",
+        "mesures": [
+          "melenchon-social-solidarite-007",
           "melenchon-social-solidarite-011",
           "melenchon-social-solidarite-012",
           "melenchon-social-solidarite-013"
@@ -1205,17 +1186,17 @@
         "mesures": []
       },
       {
-        "texte": "augmenter les cotisations sociales",
+        "texte": "augmenter les cotisations vieillesse",
         "mesures": [
           "melenchon-social-solidarite-014"
         ]
       },
       {
-        "texte": ", ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "étendre les droits reproductifs et libertés individuelles",
+        "texte": "constitutionnaliser les droits liés au corps",
         "mesures": [
           "melenchon-social-solidarite-016",
           "melenchon-social-solidarite-017",
@@ -1225,23 +1206,33 @@
         ]
       },
       {
-        "texte": ", ",
+        "texte": " ; ",
         "mesures": []
       },
       {
-        "texte": "encadrer l'alimentation",
+        "texte": "encadrer l'alimentation essentielle",
         "mesures": [
           "melenchon-social-solidarite-021",
-          "melenchon-social-solidarite-023",
           "melenchon-social-solidarite-036"
         ]
       },
       {
-        "texte": ", ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "renforcer l'hôpital public",
+        "texte": "garantir protections et repas gratuits",
+        "mesures": [
+          "melenchon-social-solidarite-022",
+          "melenchon-social-solidarite-023"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "refonder l'hôpital et la santé publique",
         "mesures": [
           "melenchon-social-solidarite-024",
           "melenchon-social-solidarite-025",
@@ -1251,7 +1242,6 @@
           "melenchon-social-solidarite-029",
           "melenchon-social-solidarite-030",
           "melenchon-social-solidarite-031",
-          "melenchon-social-solidarite-032",
           "melenchon-social-solidarite-033",
           "melenchon-social-solidarite-034"
         ]
@@ -1261,41 +1251,9 @@
         "mesures": []
       },
       {
-        "texte": "légaliser le cannabis",
+        "texte": "lutter contre le VIH",
         "mesures": [
-          "melenchon-social-solidarite-035"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "soutenir la culture et le sport",
-        "mesures": [
-          "melenchon-social-solidarite-037",
-          "melenchon-social-solidarite-038"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "garantir le logement pour tous",
-        "mesures": [
-          "melenchon-social-solidarite-039",
-          "melenchon-social-solidarite-040",
-          "melenchon-social-solidarite-041",
-          "melenchon-social-solidarite-042",
-          "melenchon-social-solidarite-043",
-          "melenchon-social-solidarite-044",
-          "melenchon-social-solidarite-045",
-          "melenchon-social-solidarite-046",
-          "melenchon-social-solidarite-047",
-          "melenchon-social-solidarite-048",
-          "melenchon-social-solidarite-049",
-          "melenchon-social-solidarite-050"
+          "melenchon-social-solidarite-032"
         ]
       },
       {
@@ -1303,15 +1261,96 @@
         "mesures": []
       },
       {
-        "texte": "reconstruire les services publics et transports",
+        "texte": "légaliser le cannabis récréatif",
         "mesures": [
-          "melenchon-social-solidarite-051",
+          "melenchon-social-solidarite-035"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "financer la culture",
+        "mesures": [
+          "melenchon-social-solidarite-037"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "rendre gratuit le sport scolaire",
+        "mesures": [
+          "melenchon-social-solidarite-038"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "lutter contre le sans-abrisme locatif",
+        "mesures": [
+          "melenchon-social-solidarite-039",
+          "melenchon-social-solidarite-040",
+          "melenchon-social-solidarite-041",
+          "melenchon-social-solidarite-042"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "construire et réguler le logement",
+        "mesures": [
+          "melenchon-social-solidarite-043",
+          "melenchon-social-solidarite-044",
+          "melenchon-social-solidarite-045",
+          "melenchon-social-solidarite-046",
+          "melenchon-social-solidarite-047",
+          "melenchon-social-solidarite-048",
+          "melenchon-social-solidarite-049",
+          "melenchon-social-solidarite-050",
+          "melenchon-social-solidarite-051"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer une filière du recyclage",
+        "mesures": [
           "melenchon-social-solidarite-052",
-          "melenchon-social-solidarite-053",
+          "melenchon-social-solidarite-053"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer les transports ruraux",
+        "mesures": [
           "melenchon-social-solidarite-054",
+          "melenchon-social-solidarite-057",
+          "melenchon-social-solidarite-059"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "renationaliser les transports stratégiques",
+        "mesures": [
           "melenchon-social-solidarite-055",
           "melenchon-social-solidarite-056",
-          "melenchon-social-solidarite-057"
+          "melenchon-social-solidarite-058",
+          "melenchon-social-solidarite-060"
         ]
       },
       {
@@ -1376,10 +1415,13 @@
       "melenchon-social-solidarite-054",
       "melenchon-social-solidarite-055",
       "melenchon-social-solidarite-056",
-      "melenchon-social-solidarite-057"
+      "melenchon-social-solidarite-057",
+      "melenchon-social-solidarite-058",
+      "melenchon-social-solidarite-059",
+      "melenchon-social-solidarite-060"
     ],
-    "empreinte": "1d55447f7bd9c0b7",
-    "date": "2026-09-27",
+    "empreinte": "bbc0433a17c2f4e1",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   }
 ]

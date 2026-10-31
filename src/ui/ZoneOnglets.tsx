@@ -21,6 +21,7 @@ export function ZoneOnglets({ zone, onglet, candidatsOuverts, onChoisir, questio
   const idPanneau = `zone-${zone}-panneau`;
   return (
     <section className={`zone zone--${zone}`} aria-label={zone === "situation" ? "Ma situation" : "Mes convictions"}>
+      <h2 className="zone-titre">{zone === "situation" ? "Ma situation" : "Mes convictions"}</h2>
       <div className="zone-onglets" role="tablist" aria-label={zone === "situation" ? "Ma situation" : "Mes convictions"}>
         <button type="button" role="tab" id={idOnglet("questions")} aria-selected={actif === "questions"} aria-controls={idPanneau} className="zone-onglet" onClick={() => onChoisir("questions")}>
           Questions

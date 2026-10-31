@@ -254,7 +254,7 @@
     "theme": "europe-international",
     "segments": [
       {
-        "texte": "Lier sécurité commerciale, étrangère et militaire",
+        "texte": "Unifier la sécurité commerciale, étrangère et militaire",
         "mesures": [
           "philippe-europe-international-001"
         ]
@@ -264,7 +264,7 @@
         "mesures": []
       },
       {
-        "texte": "protéger le marché européen face à la concurrence chinoise",
+        "texte": "protéger le marché européen face à la Chine",
         "mesures": [
           "philippe-europe-international-002"
         ]
@@ -284,7 +284,7 @@
         "mesures": []
       },
       {
-        "texte": "construire une union des marchés de capitaux",
+        "texte": "construire une union européenne des marchés de capitaux",
         "mesures": [
           "philippe-europe-international-004"
         ]
@@ -294,7 +294,7 @@
         "mesures": []
       },
       {
-        "texte": "lancer un Buy European Tech Act avec achats technologiques groupés",
+        "texte": "mettre en place un Buy European Tech Act",
         "mesures": [
           "philippe-europe-international-005"
         ]
@@ -311,15 +311,15 @@
       "philippe-europe-international-004",
       "philippe-europe-international-005"
     ],
-    "empreinte": "5b912ced33de3982",
-    "date": "2026-09-27",
+    "empreinte": "5c0b21c3d149b558",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "finances-publiques",
     "segments": [
       {
-        "texte": "Mettre en place un pacte fiscal pour les entreprises",
+        "texte": "Baisser les impôts des entreprises",
         "mesures": [
           "philippe-finances-publiques-001",
           "philippe-finances-publiques-009"
@@ -330,15 +330,24 @@
         "mesures": []
       },
       {
-        "texte": "inscrire une règle d'or budgétaire dans la Constitution",
+        "texte": "inscrire une règle d'or budgétaire",
         "mesures": [
           "philippe-finances-publiques-002",
-          "philippe-finances-publiques-004",
+          "philippe-finances-publiques-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "ramener le déficit à 2 % du PIB",
+        "mesures": [
           "philippe-finances-publiques-005"
         ]
       },
       {
-        "texte": " et ",
+        "texte": ", ",
         "mesures": []
       },
       {
@@ -373,9 +382,9 @@
         "mesures": []
       },
       {
-        "texte": "ne pas créer de nouvel impôt",
+        "texte": "accorder une part fiscale dès le deuxième enfant",
         "mesures": [
-          "philippe-finances-publiques-010"
+          "philippe-finances-publiques-011"
         ]
       },
       {
@@ -383,9 +392,9 @@
         "mesures": []
       },
       {
-        "texte": "accorder une part fiscale dès le deuxième enfant",
+        "texte": "ne pas créer de nouvel impôt",
         "mesures": [
-          "philippe-finances-publiques-011"
+          "philippe-finances-publiques-010"
         ]
       },
       {
@@ -406,15 +415,15 @@
       "philippe-finances-publiques-010",
       "philippe-finances-publiques-011"
     ],
-    "empreinte": "c316b62a1a719e3b",
-    "date": "2026-09-27",
+    "empreinte": "88abc2196b7c04d0",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "gouvernance-republique",
     "segments": [
       {
-        "texte": "Encadrer le droit d'amendement",
+        "texte": "Encadrer le droit d'amendement parlementaire",
         "mesures": [
           "philippe-gouvernance-republique-001",
           "philippe-gouvernance-republique-002"
@@ -435,18 +444,9 @@
         "mesures": []
       },
       {
-        "texte": "créer une présomption de légalité",
+        "texte": "simplifier et reconstruire le cadre réglementaire",
         "mesures": [
-          "philippe-gouvernance-republique-004"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "abroger massivement les normes obsolètes",
-        "mesures": [
+          "philippe-gouvernance-republique-004",
           "philippe-gouvernance-republique-005"
         ]
       },
@@ -455,19 +455,10 @@
         "mesures": []
       },
       {
-        "texte": "encadrer les algorithmes des plateformes",
+        "texte": "encadrer les algorithmes et réseaux sociaux",
         "mesures": [
           "philippe-gouvernance-republique-006",
-          "philippe-gouvernance-republique-007"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "instaurer une majorité numérique",
-        "mesures": [
+          "philippe-gouvernance-republique-007",
           "philippe-gouvernance-republique-008"
         ]
       },
@@ -476,10 +467,11 @@
         "mesures": []
       },
       {
-        "texte": "développer une IA souveraine européenne",
+        "texte": "développer une IA souveraine et former des ingénieurs",
         "mesures": [
           "philippe-gouvernance-republique-009",
-          "philippe-gouvernance-republique-010"
+          "philippe-gouvernance-republique-011",
+          "philippe-gouvernance-republique-013"
         ]
       },
       {
@@ -487,9 +479,9 @@
         "mesures": []
       },
       {
-        "texte": "mobiliser l'épargne pour la tech",
+        "texte": "simplifier la régulation européenne de l'IA",
         "mesures": [
-          "philippe-gouvernance-republique-011"
+          "philippe-gouvernance-republique-010"
         ]
       },
       {
@@ -497,10 +489,9 @@
         "mesures": []
       },
       {
-        "texte": "adapter la formation à l'IA",
+        "texte": "adapter formation et reconversion à l'IA",
         "mesures": [
-          "philippe-gouvernance-republique-012",
-          "philippe-gouvernance-republique-013"
+          "philippe-gouvernance-republique-012"
         ]
       },
       {
@@ -523,8 +514,8 @@
       "philippe-gouvernance-republique-012",
       "philippe-gouvernance-republique-013"
     ],
-    "empreinte": "03880d0c4386f7cc",
-    "date": "2026-09-27",
+    "empreinte": "c196aa8e588cd138",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
@@ -676,7 +667,7 @@
     "theme": "reformes-etat",
     "segments": [
       {
-        "texte": "Fusionner des agences en une DATAR 2.0",
+        "texte": "Fusionner les agences d'aménagement",
         "mesures": [
           "philippe-reformes-etat-001"
         ]
@@ -686,7 +677,7 @@
         "mesures": []
       },
       {
-        "texte": "ne pas produire de nouvelle norme",
+        "texte": "geler la production de normes",
         "mesures": [
           "philippe-reformes-etat-002"
         ]
@@ -696,9 +687,19 @@
         "mesures": []
       },
       {
-        "texte": "regrouper ou privatiser les agences et opérateurs de l'Etat",
+        "texte": "regrouper ou privatiser les agences de l'Etat",
         "mesures": [
           "philippe-reformes-etat-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "simplifier les procédures",
+        "mesures": [
+          "philippe-reformes-etat-004"
         ]
       },
       {
@@ -706,9 +707,9 @@
         "mesures": []
       },
       {
-        "texte": "simplifier les procédures",
+        "texte": "décentraliser la politique d'adaptation",
         "mesures": [
-          "philippe-reformes-etat-004"
+          "philippe-reformes-etat-005"
         ]
       },
       {
@@ -720,10 +721,11 @@
       "philippe-reformes-etat-001",
       "philippe-reformes-etat-002",
       "philippe-reformes-etat-003",
-      "philippe-reformes-etat-004"
+      "philippe-reformes-etat-004",
+      "philippe-reformes-etat-005"
     ],
-    "empreinte": "22995b88b0f1608b",
-    "date": "2026-09-27",
+    "empreinte": "db45b66589f6fd48",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
@@ -736,7 +738,7 @@
         ]
       },
       {
-        "texte": " et ",
+        "texte": ", ",
         "mesures": []
       },
       {
@@ -750,7 +752,7 @@
         "mesures": []
       },
       {
-        "texte": "introduire une part de capitalisation dans les pensions",
+        "texte": "introduire une part de capitalisation dans les retraites",
         "mesures": [
           "philippe-retraites-travail-003"
         ]
@@ -760,19 +762,9 @@
         "mesures": []
       },
       {
-        "texte": "organiser un référendum sur les retraites",
+        "texte": "confier la gestion du régime aux partenaires sociaux",
         "mesures": [
           "philippe-retraites-travail-004"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "relever l'âge légal de départ selon la pénibilité des métiers",
-        "mesures": [
-          "philippe-retraites-travail-005"
         ]
       },
       {
@@ -780,9 +772,9 @@
         "mesures": []
       },
       {
-        "texte": "confier la gestion du régime aux partenaires sociaux",
+        "texte": "porter l'âge légal de départ à 65 ans",
         "mesures": [
-          "philippe-retraites-travail-006"
+          "philippe-retraites-travail-005"
         ]
       },
       {
@@ -795,30 +787,31 @@
       "philippe-retraites-travail-002",
       "philippe-retraites-travail-003",
       "philippe-retraites-travail-004",
-      "philippe-retraites-travail-005",
-      "philippe-retraites-travail-006"
+      "philippe-retraites-travail-005"
     ],
-    "empreinte": "aaa893dc333b177d",
-    "date": "2026-09-27",
+    "empreinte": "dc1c1a8fbd078744",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "social-solidarite",
     "segments": [
       {
-        "texte": "Créer une aide financière unique et universelle pour les familles",
+        "texte": "Verser une allocation et une réduction d'impôt",
         "mesures": [
-          "philippe-social-solidarite-001"
+          "philippe-social-solidarite-001",
+          "philippe-social-solidarite-002"
         ]
       },
       {
-        "texte": " et ",
+        "texte": " aux familles, ",
         "mesures": []
       },
       {
-        "texte": "permettre un prêt à taux zéro à chaque naissance",
+        "texte": "instaurer un prêt à taux zéro au déménagement",
         "mesures": [
-          "philippe-social-solidarite-003"
+          "philippe-social-solidarite-003",
+          "philippe-social-solidarite-006"
         ]
       },
       {
@@ -826,9 +819,19 @@
         "mesures": []
       },
       {
-        "texte": "stabiliser les dépenses de santé en misant sur la prévention",
+        "texte": "exonérer de cotisations le travail prolongé",
         "mesures": [
-          "philippe-social-solidarite-002"
+          "philippe-social-solidarite-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "stabiliser les dépenses de santé par la prévention",
+        "mesures": [
+          "philippe-social-solidarite-005"
         ]
       },
       {
@@ -836,9 +839,9 @@
         "mesures": []
       },
       {
-        "texte": "mettre en place un plan fret-ferroviaire pour limiter la circulation des camions",
+        "texte": "développer le fret ferroviaire",
         "mesures": [
-          "philippe-social-solidarite-004"
+          "philippe-social-solidarite-007"
         ]
       },
       {
@@ -850,10 +853,13 @@
       "philippe-social-solidarite-001",
       "philippe-social-solidarite-002",
       "philippe-social-solidarite-003",
-      "philippe-social-solidarite-004"
+      "philippe-social-solidarite-004",
+      "philippe-social-solidarite-005",
+      "philippe-social-solidarite-006",
+      "philippe-social-solidarite-007"
     ],
-    "empreinte": "1072a1554c1fdc31",
-    "date": "2026-09-27",
+    "empreinte": "bd49142a410c63f7",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   }
 ]

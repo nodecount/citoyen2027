@@ -3,18 +3,9 @@
     "theme": "education-jeunesse",
     "segments": [
       {
-        "texte": "Abroger la carte scolaire",
+        "texte": "Libérer le choix d'école et financement",
         "mesures": [
-          "lisnard-education-jeunesse-001"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "instaurer un chèque-éducation",
-        "mesures": [
+          "lisnard-education-jeunesse-001",
           "lisnard-education-jeunesse-002"
         ]
       },
@@ -23,7 +14,7 @@
         "mesures": []
       },
       {
-        "texte": "donner aux chefs d'établissement la liberté de gestion",
+        "texte": "donner autonomie de gestion aux établissements",
         "mesures": [
           "lisnard-education-jeunesse-003"
         ]
@@ -33,10 +24,9 @@
         "mesures": []
       },
       {
-        "texte": "créer un certificat de fin de primaire et des classes d'excellence",
+        "texte": "créer un certificat de fin primaire",
         "mesures": [
-          "lisnard-education-jeunesse-004",
-          "lisnard-education-jeunesse-010"
+          "lisnard-education-jeunesse-004"
         ]
       },
       {
@@ -44,7 +34,7 @@
         "mesures": []
       },
       {
-        "texte": "enrichir les enseignements du primaire",
+        "texte": "enseigner langues anciennes et philosophie dès primaire",
         "mesures": [
           "lisnard-education-jeunesse-005"
         ]
@@ -54,7 +44,7 @@
         "mesures": []
       },
       {
-        "texte": "revaloriser et réorganiser le métier d'enseignant",
+        "texte": "revaloriser et réorganiser le statut des enseignants",
         "mesures": [
           "lisnard-education-jeunesse-006",
           "lisnard-education-jeunesse-007"
@@ -65,9 +55,19 @@
         "mesures": []
       },
       {
-        "texte": "recentrer l'Éducation nationale sur le tronc commun",
+        "texte": "recentrer l'école sur le tronc commun",
         "mesures": [
           "lisnard-education-jeunesse-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer les lycées professionnels et CFA",
+        "mesures": [
+          "lisnard-education-jeunesse-009"
         ]
       },
       {
@@ -75,9 +75,9 @@
         "mesures": []
       },
       {
-        "texte": "renforcer les filières professionnelles locales",
+        "texte": "créer des classes d'excellence scientifique",
         "mesures": [
-          "lisnard-education-jeunesse-009"
+          "lisnard-education-jeunesse-010"
         ]
       },
       {
@@ -97,26 +97,17 @@
       "lisnard-education-jeunesse-009",
       "lisnard-education-jeunesse-010"
     ],
-    "empreinte": "71215694556fa3dc",
-    "date": "2026-09-27",
+    "empreinte": "10d9efcd5d13d77d",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "environnement",
     "segments": [
       {
-        "texte": "Aligner les normes agricoles sur le marché commun avec des clauses miroirs",
+        "texte": "Prolonger et développer le nucléaire",
         "mesures": [
-          "lisnard-envi-001"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "recentrer la PAC sur la souveraineté alimentaire",
-        "mesures": [
+          "lisnard-envi-001",
           "lisnard-envi-002"
         ]
       },
@@ -125,29 +116,9 @@
         "mesures": []
       },
       {
-        "texte": "autoriser les nouvelles techniques génomiques et l'usage raisonné des phytosanitaires",
+        "texte": "appliquer le pollueur-payeur et des clauses miroirs",
         "mesures": [
-          "lisnard-envi-003"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "réformer la rémunération et le statut des agriculteurs",
-        "mesures": [
-          "lisnard-envi-004",
-          "lisnard-envi-006"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "relancer une politique industrielle agricole et forestière souveraine",
-        "mesures": [
+          "lisnard-envi-003",
           "lisnard-envi-005"
         ]
       },
@@ -156,10 +127,43 @@
         "mesures": []
       },
       {
-        "texte": "simplifier les normes agricoles et viticoles",
+        "texte": "régénérer les forêts",
         "mesures": [
-          "lisnard-envi-007",
-          "lisnard-envi-008"
+          "lisnard-envi-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réorienter la politique agricole vers la souveraineté",
+        "mesures": [
+          "lisnard-envi-006",
+          "lisnard-envi-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "autoriser les nouvelles techniques agricoles",
+        "mesures": [
+          "lisnard-envi-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "simplifier et débureaucratiser le statut agricole",
+        "mesures": [
+          "lisnard-envi-008",
+          "lisnard-envi-010",
+          "lisnard-envi-011",
+          "lisnard-envi-012"
         ]
       },
       {
@@ -167,9 +171,9 @@
         "mesures": []
       },
       {
-        "texte": "décider localement des retenues d'eau",
+        "texte": "autoriser les bassines selon les besoins locaux",
         "mesures": [
-          "lisnard-envi-009"
+          "lisnard-envi-013"
         ]
       },
       {
@@ -186,17 +190,21 @@
       "lisnard-envi-006",
       "lisnard-envi-007",
       "lisnard-envi-008",
-      "lisnard-envi-009"
+      "lisnard-envi-009",
+      "lisnard-envi-010",
+      "lisnard-envi-011",
+      "lisnard-envi-012",
+      "lisnard-envi-013"
     ],
-    "empreinte": "353b47ff0752ed6a",
-    "date": "2026-09-27",
+    "empreinte": "8cfc5a9245328495",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "finances-publiques",
     "segments": [
       {
-        "texte": "Baisser la fiscalité sur les héritages et donations",
+        "texte": "Inscrire une règle constitutionnelle de limitation des déficits",
         "mesures": [
           "lisnard-finances-publiques-001"
         ]
@@ -206,9 +214,29 @@
         "mesures": []
       },
       {
-        "texte": "augmenter les abattements sur les donations",
+        "texte": "lancer un plan de désendettement",
         "mesures": [
           "lisnard-finances-publiques-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "augmenter les abattements sur les donations",
+        "mesures": [
+          "lisnard-finances-publiques-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "élargir la transmission hors famille",
+        "mesures": [
+          "lisnard-finances-publiques-004"
         ]
       },
       {
@@ -216,9 +244,9 @@
         "mesures": []
       },
       {
-        "texte": "permettre de transmettre son patrimoine à des bénéficiaires choisis librement",
+        "texte": "supprimer la C3S et la CVAE",
         "mesures": [
-          "lisnard-finances-publiques-003"
+          "lisnard-finances-publiques-005"
         ]
       },
       {
@@ -229,17 +257,19 @@
     "propositions": [
       "lisnard-finances-publiques-001",
       "lisnard-finances-publiques-002",
-      "lisnard-finances-publiques-003"
+      "lisnard-finances-publiques-003",
+      "lisnard-finances-publiques-004",
+      "lisnard-finances-publiques-005"
     ],
-    "empreinte": "0b4f9b7eca1c3a25",
-    "date": "2026-09-27",
+    "empreinte": "7fc5b0e92242c19f",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "interieur-justice",
     "segments": [
       {
-        "texte": "Durcir l'application des peines",
+        "texte": "Durcir les peines",
         "mesures": [
           "lisnard-interieur-justice-001",
           "lisnard-interieur-justice-002",
@@ -257,21 +287,7 @@
           "lisnard-interieur-justice-005",
           "lisnard-interieur-justice-006",
           "lisnard-interieur-justice-007",
-          "lisnard-interieur-justice-008"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "abaisser l'âge de responsabilité pénale des mineurs et créer des sanctions dédiées",
-        "mesures": [
-          "lisnard-interieur-justice-009",
-          "lisnard-interieur-justice-010",
-          "lisnard-interieur-justice-011",
-          "lisnard-interieur-justice-012",
-          "lisnard-interieur-justice-013",
+          "lisnard-interieur-justice-008",
           "lisnard-interieur-justice-014"
         ]
       },
@@ -280,13 +296,28 @@
         "mesures": []
       },
       {
-        "texte": "renforcer les moyens et le contrôle des forces de sécurité",
+        "texte": "abaisser la majorité pénale et durcir le traitement des mineurs délinquants",
+        "mesures": [
+          "lisnard-interieur-justice-009",
+          "lisnard-interieur-justice-010",
+          "lisnard-interieur-justice-011",
+          "lisnard-interieur-justice-012",
+          "lisnard-interieur-justice-013"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer les moyens et le terrain policier",
         "mesures": [
           "lisnard-interieur-justice-015",
           "lisnard-interieur-justice-016",
           "lisnard-interieur-justice-017",
           "lisnard-interieur-justice-018",
-          "lisnard-interieur-justice-019"
+          "lisnard-interieur-justice-019",
+          "lisnard-interieur-justice-022"
         ]
       },
       {
@@ -294,19 +325,11 @@
         "mesures": []
       },
       {
-        "texte": "armer et outiller les polices municipales volontaires",
+        "texte": "armer et outiller les polices municipales",
         "mesures": [
-          "lisnard-interieur-justice-020"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "combattre le narcotrafic localement et internationalement",
-        "mesures": [
-          "lisnard-interieur-justice-021"
+          "lisnard-interieur-justice-020",
+          "lisnard-interieur-justice-023",
+          "lisnard-interieur-justice-024"
         ]
       },
       {
@@ -316,7 +339,7 @@
       {
         "texte": "lutter contre l'islamisme",
         "mesures": [
-          "lisnard-interieur-justice-022"
+          "lisnard-interieur-justice-021"
         ]
       },
       {
@@ -346,19 +369,22 @@
       "lisnard-interieur-justice-019",
       "lisnard-interieur-justice-020",
       "lisnard-interieur-justice-021",
-      "lisnard-interieur-justice-022"
+      "lisnard-interieur-justice-022",
+      "lisnard-interieur-justice-023",
+      "lisnard-interieur-justice-024"
     ],
-    "empreinte": "682abdbd85b7ff93",
-    "date": "2026-09-27",
+    "empreinte": "e85447c96dfcab5c",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "reformes-etat",
     "segments": [
       {
-        "texte": "Digitaliser le service public",
+        "texte": "Digitaliser et réduire les tâches administratives",
         "mesures": [
-          "lisnard-reformes-etat-001"
+          "lisnard-reformes-etat-001",
+          "lisnard-reformes-etat-012"
         ]
       },
       {
@@ -366,9 +392,13 @@
         "mesures": []
       },
       {
-        "texte": "renforcer le rôle du Conseil National d'Évaluation des Normes",
+        "texte": "simplifier les normes, réduire les textes et renforcer les contrôles",
         "mesures": [
-          "lisnard-reformes-etat-002"
+          "lisnard-reformes-etat-002",
+          "lisnard-reformes-etat-003",
+          "lisnard-reformes-etat-005",
+          "lisnard-reformes-etat-009",
+          "lisnard-reformes-etat-007"
         ]
       },
       {
@@ -376,17 +406,7 @@
         "mesures": []
       },
       {
-        "texte": "revoir et réduire les codes",
-        "mesures": [
-          "lisnard-reformes-etat-003"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "diviser Bercy en trois administrations",
+        "texte": "diviser Bercy en trois",
         "mesures": [
           "lisnard-reformes-etat-004"
         ]
@@ -396,30 +416,32 @@
         "mesures": []
       },
       {
-        "texte": "mandater des équipes chargées de supprimer des textes",
+        "texte": "supprimer les agences régionales au profit du préfet",
         "mesures": [
-          "lisnard-reformes-etat-005"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "simplifier l'organisation territoriale de l'État autour du préfet",
-        "mesures": [
-          "lisnard-reformes-etat-006"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "renforcer les moyens de contrôle et de sanction des normes",
-        "mesures": [
-          "lisnard-reformes-etat-007",
+          "lisnard-reformes-etat-006",
           "lisnard-reformes-etat-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "transférer les compétences aux Provinces",
+        "mesures": [
+          "lisnard-reformes-etat-010",
+          "lisnard-reformes-etat-011"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer les fonctions publiques et recruter sur contrats",
+        "mesures": [
+          "lisnard-reformes-etat-013",
+          "lisnard-reformes-etat-014"
         ]
       },
       {
@@ -427,9 +449,9 @@
         "mesures": []
       },
       {
-        "texte": "interdire la surtransposition des textes européens",
+        "texte": "confier l'évaluation des politiques à des experts indépendants",
         "mesures": [
-          "lisnard-reformes-etat-009"
+          "lisnard-reformes-etat-015"
         ]
       },
       {
@@ -446,19 +468,65 @@
       "lisnard-reformes-etat-006",
       "lisnard-reformes-etat-007",
       "lisnard-reformes-etat-008",
-      "lisnard-reformes-etat-009"
+      "lisnard-reformes-etat-009",
+      "lisnard-reformes-etat-010",
+      "lisnard-reformes-etat-011",
+      "lisnard-reformes-etat-012",
+      "lisnard-reformes-etat-013",
+      "lisnard-reformes-etat-014",
+      "lisnard-reformes-etat-015"
     ],
-    "empreinte": "1cd2baa2a1bf0ae9",
-    "date": "2026-09-27",
+    "empreinte": "5ce060197dd5c117",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "retraites-travail",
     "segments": [
       {
-        "texte": "Ajouter une capitalisation aux retraites par répartition",
+        "texte": "Relever l'âge légal à 65 ans",
         "mesures": [
           "lisnard-retraites-travail-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "garantir un socle minimal par répartition",
+        "mesures": [
+          "lisnard-retraites-travail-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "basculer les cotisations vers la capitalisation individuelle",
+        "mesures": [
+          "lisnard-retraites-travail-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer une agence publique unique de retraite",
+        "mesures": [
+          "lisnard-retraites-travail-004"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "permettre de débloquer son capital pour un achat",
+        "mesures": [
+          "lisnard-retraites-travail-005"
         ]
       },
       {
@@ -467,38 +535,24 @@
       }
     ],
     "propositions": [
-      "lisnard-retraites-travail-001"
+      "lisnard-retraites-travail-001",
+      "lisnard-retraites-travail-002",
+      "lisnard-retraites-travail-003",
+      "lisnard-retraites-travail-004",
+      "lisnard-retraites-travail-005"
     ],
-    "empreinte": "2b8950b185d7c0cf",
-    "date": "2026-09-28",
+    "empreinte": "aeb74256d4dab71f",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "social-solidarite",
     "segments": [
       {
-        "texte": "Différencier le remboursement selon les zones médicales",
+        "texte": "Réorganiser l'accès aux soins selon les territoires",
         "mesures": [
-          "lisnard-social-solidarite-001"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "généraliser les maisons de santé pluridisciplinaires",
-        "mesures": [
-          "lisnard-social-solidarite-002"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "ouvrir l'accès direct aux paramédicaux",
-        "mesures": [
+          "lisnard-social-solidarite-001",
+          "lisnard-social-solidarite-002",
           "lisnard-social-solidarite-003"
         ]
       },
@@ -507,7 +561,7 @@
         "mesures": []
       },
       {
-        "texte": "supprimer les ARS au profit des élus locaux",
+        "texte": "transférer la gouvernance hospitalière aux élus locaux",
         "mesures": [
           "lisnard-social-solidarite-004"
         ]
@@ -517,7 +571,7 @@
         "mesures": []
       },
       {
-        "texte": "revaloriser les soignants selon les responsabilités",
+        "texte": "revaloriser les salaires selon les responsabilités",
         "mesures": [
           "lisnard-social-solidarite-005"
         ]
@@ -527,7 +581,7 @@
         "mesures": []
       },
       {
-        "texte": "réformer la formation pour doubler les médecins",
+        "texte": "doubler et simplifier la formation médicale",
         "mesures": [
           "lisnard-social-solidarite-006"
         ]
@@ -537,18 +591,9 @@
         "mesures": []
       },
       {
-        "texte": "mutualiser les achats pharmaceutiques en Europe",
+        "texte": "renforcer la recherche et l'industrie pharmaceutique européenne",
         "mesures": [
-          "lisnard-social-solidarite-007"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "investir dans la recherche et la biotechnologie",
-        "mesures": [
+          "lisnard-social-solidarite-007",
           "lisnard-social-solidarite-008"
         ]
       },
@@ -557,7 +602,7 @@
         "mesures": []
       },
       {
-        "texte": "faciliter la réglementation des innovations médicales",
+        "texte": "réglementer l'innovation médicale numérique",
         "mesures": [
           "lisnard-social-solidarite-009"
         ]
@@ -578,8 +623,8 @@
       "lisnard-social-solidarite-008",
       "lisnard-social-solidarite-009"
     ],
-    "empreinte": "f2d2733950353931",
-    "date": "2026-09-27",
+    "empreinte": "6e2bdb192c6156aa",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   }
 ]

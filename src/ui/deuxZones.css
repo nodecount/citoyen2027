@@ -81,18 +81,21 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 1.2rem;
+  font-size: 1.9rem;
   font-weight: 700;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
 }
 
 .suggestion-nom--flou {
-  filter: blur(5px);
+  filter: blur(7px);
   user-select: none;
   letter-spacing: 0.05em;
 }
 
 .suggestion-noms .detail-parti {
   display: block;
+  font-size: 1.1rem;
   font-weight: 400;
   color: #d6def5;
 }
@@ -170,12 +173,20 @@
   background: var(--surface);
 }
 
-.zone--situation {
-  border-top: 4px solid var(--bleu);
+/* Titre du bloc : en premier, texte blanc sur fond coloré (bleu pour la situation, vert pour les convictions). */
+.zone-titre {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  font-size: 1.2rem;
 }
 
-.zone--convictions {
-  border-top: 4px solid var(--ameliorant);
+.zone--situation .zone-titre {
+  background: var(--bleu);
+}
+
+.zone--convictions .zone-titre {
+  background: var(--ameliorant);
 }
 
 .zone-onglets {
@@ -315,16 +326,53 @@
   padding: 0.4rem;
   line-height: 0;
 }
+.modale-lien-retour {
+  display: none;
+}
+/* Téléphone : la vue de travail est une étape à part, DANS la page (le menu reste visible en haut), qui remplace le tableau
+   de bord tant qu'elle est ouverte ; un lien en haut ramène à la simulation. */
 @media (max-width: 52rem) {
   .modale-fond:has(.modale--travail) {
+    position: static;
+    display: block;
     padding: 0;
-    place-items: stretch;
+    background: none;
+  }
+  .modale-fond[hidden]:has(.modale--travail) {
+    display: none;
   }
   .modale--travail {
     width: 100%;
-    max-height: 100dvh;
-    height: 100dvh;
-    border-radius: 0;
+    max-height: none;
+    overflow: visible;
+    border: 1px solid var(--filet);
+    border-radius: var(--rayon);
+    box-shadow: none;
+  }
+  .modale--travail .modale-entete {
+    position: static;
+  }
+  .modale--travail .modale-fermer {
+    display: none;
+  }
+  .modale-lien-retour {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: auto;
+    margin: 0 0 0.75rem;
+    padding: 0.25rem 0;
+    border: 0;
+    background: none;
+    color: var(--bleu);
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  body:has(.modale-fond:not([hidden]) .modale--travail) :is(.deux-zones, .tableau-defilement) {
+    display: none;
   }
 }
 
