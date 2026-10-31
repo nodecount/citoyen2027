@@ -27,11 +27,11 @@ const combine = (gagnants: GagnantAffiche[], extra: Partial<ResultatAffiche> = {
 const UN = combine([gagnant("C", "Nom-Reel-Centre", "slug-reel-c")]);
 
 const rendre = (p: Partial<Parameters<typeof BlocSuggestion>[0]> = {}) =>
-  renderToStaticMarkup(<BlocSuggestion etat="partiel" pourcent={17} source="situation" combine={UN} onReveler={() => {}} onRevenir={() => {}} {...p} />);
+  renderToStaticMarkup(<BlocSuggestion etat="partiel" pourcent={17} combine={UN} onReveler={() => {}} onRevenir={() => {}} {...p} />);
 
 describe("BlocSuggestion", () => {
   it("vide : titre fixe, nom fictif flouté, 0 %, bouton « Révéler » inactif", () => {
-    const html = rendre({ etat: "vide", pourcent: 0, source: null, combine: null });
+    const html = rendre({ etat: "vide", pourcent: 0, combine: null });
     expect(html).toContain("Mon candidat idéal");
     expect(html).toContain("XXXXXX YYYYYY");
     expect(html).toContain("0 %");
@@ -39,10 +39,12 @@ describe("BlocSuggestion", () => {
     expect(html).toContain("Répondez à une question");
   });
 
-  it("partiel : bouton actif, précision et source annoncées", () => {
+  it("partiel : bouton actif, précision annoncée, parti fictif flouté, plus de phrase « Calculé sur… »", () => {
     const html = rendre();
     expect(html).toContain("17 %");
-    expect(html).toContain("Calculé sur votre situation seule");
+    expect(html).not.toContain("Calculé sur");
+    expect(html).toContain("suggestion-parti--flou");
+    expect(html).toContain("Parti fictif");
     expect(html).not.toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
   });
 
@@ -64,6 +66,14 @@ describe("BlocSuggestion", () => {
     expect(html).toContain("Révélé · précision 85 %");
     expect(html).not.toContain("XXXXXX YYYYYY");
     expect(html.slice(html.indexOf('class="anneau-disque"'), html.indexOf("</div>", html.indexOf('class="anneau-disque"')))).not.toContain("%");
+  });
+
+  it("révélé : l'anneau et la ligne sous le nom montrent le score sur 100, plus la précision", () => {
+    const ligne = { ...gagnant("C", "Nom-Reel-Centre", "slug-reel-c"), rang: 1, note: 62 };
+    const html = rendre({ etat: "revele", pourcent: 85, combine: combine([gagnant("C", "Nom-Reel-Centre", "slug-reel-c")], { classement: [ligne] }) });
+    expect(html).toContain("Score : <strong>62</strong> sur 100");
+    expect(html).toContain('aria-valuenow="62"');
+    expect(html).toContain("Score du candidat suggéré");
   });
 
   it("égalité parfaite ou tous écartés : le dit, sans inventer de nom", () => {

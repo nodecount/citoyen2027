@@ -13,26 +13,24 @@ interface BlocSuggestionProps {
   etat: EtatSuggestion;
   // Part de réponses données (0 à 100), côtés confondus.
   pourcent: number;
-  source: "situation" | "convictions" | "les deux" | null;
   // Candidat qui cumule les deux critères. Ses identités ne sont lues que révélé.
   combine: ResultatAffiche | null;
   onReveler: () => void;
   onRevenir: () => void;
 }
 
-const LIGNE_SOURCE = {
-  situation: "Calculé sur votre situation seule",
-  convictions: "Calculé sur vos convictions seules",
-  "les deux": "Calculé sur votre situation et vos convictions",
-} as const;
+// Parti affiché, flouté, tant que la suggestion n'est pas révélée : jamais le vrai parti, qui n'est alors pas dans la page.
+export const PARTI_FICTIF = "Parti fictif";
 
-// Bloc central, sur fond bleu à tous les états : titre fixe, anneau de précision, nom du candidat (flouté tant que non révélé),
-// ce sur quoi repose la suggestion, puis le bouton de l'état.
-export function BlocSuggestion({ etat, pourcent, source, combine, onReveler, onRevenir }: BlocSuggestionProps) {
+// Bloc central, sur fond bleu à tous les états : titre fixe, anneau (précision, puis score une fois révélé), nom du candidat
+// (flouté, avec son parti, tant que non révélé) et, révélé, son score ; puis le bouton de l'état.
+export function BlocSuggestion({ etat, pourcent, combine, onReveler, onRevenir }: BlocSuggestionProps) {
   const revele = etat === "revele";
   const gagnants = combine && combine.departageable ? combine.gagnants : [];
   // Révélé seulement : c'est la seule fois où l'identité est lue.
   const identites = revele ? gagnants.flatMap((g) => (g.identite ? [g.identite] : [])) : [];
+  // Score du candidat (sur 100), lu seulement révélé : il remplace le pourcentage de précision autour du portrait.
+  const note = revele && identites.length > 0 ? combine?.classement[0]?.note ?? null : null;
 
   let nom: ReactNode;
   if (combine && gagnants.length === 0) {
@@ -64,9 +62,10 @@ export function BlocSuggestion({ etat, pourcent, source, combine, onReveler, onR
             <strong>{gagnants.length} candidats à égalité</strong>
           </p>
         )}
-        <p className="suggestion-nom suggestion-nom--flou" aria-hidden="true">
-          {NOM_FICTIF}
-        </p>
+        <div className="suggestion-identite" aria-hidden="true">
+          <p className="suggestion-nom suggestion-nom--flou">{NOM_FICTIF}</p>
+          <span className="detail-parti suggestion-parti--flou">{PARTI_FICTIF}</span>
+        </div>
       </>
     );
   }
@@ -74,11 +73,16 @@ export function BlocSuggestion({ etat, pourcent, source, combine, onReveler, onR
   return (
     <section className={`suggestion suggestion--${etat}`} aria-label="Mon candidat idéal">
       <h2>Mon candidat idéal</h2>
-      <AnneauPrecision pourcent={pourcent} revele={revele}>
+      <AnneauPrecision pourcent={note ?? pourcent} revele={revele} score={note !== null}>
         {identites.length > 0 ? <Pastille slug={identites[0].slug} nom={identites[0].nom} className="pastille--ideal" /> : <span aria-hidden="true">?</span>}
       </AnneauPrecision>
       {nom}
-      <p className="suggestion-source">{source ? LIGNE_SOURCE[source] : "Répondez à une question, d'un côté ou de l'autre, pour débloquer la suggestion."}</p>
+      {note !== null && (
+        <p className="suggestion-score">
+          Score : <strong>{note}</strong> sur 100
+        </p>
+      )}
+      {etat === "vide" && <p className="suggestion-source">Répondez à une question, d'un côté ou de l'autre, pour débloquer la suggestion.</p>}
       {revele ? (
         <button type="button" className="bouton-fantome" onClick={onRevenir}>
           Revenir aux questions

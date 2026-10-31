@@ -1,11 +1,11 @@
 [
   {
-    "theme": "education-jeunesse",
+    "theme": "defense",
     "segments": [
       {
-        "texte": "Augmenter les salaires des enseignants",
+        "texte": "Renforcer la souveraineté militaire européenne",
         "mesures": [
-          "tondelier-education-jeunesse-001"
+          "tondelier-defense-001"
         ]
       },
       {
@@ -13,9 +13,9 @@
         "mesures": []
       },
       {
-        "texte": "réduire le nombre d'élèves par classe",
+        "texte": "adapter les équipements aux risques émergents et climatiques",
         "mesures": [
-          "tondelier-education-jeunesse-002"
+          "tondelier-defense-002"
         ]
       },
       {
@@ -23,9 +23,127 @@
         "mesures": []
       },
       {
-        "texte": "intégrer davantage de savoirs pratiques à l'école",
+        "texte": "soutenir l'industrie de défense pour l'indépendance technologique",
+        "mesures": [
+          "tondelier-defense-003"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "tondelier-defense-001",
+      "tondelier-defense-002",
+      "tondelier-defense-003"
+    ],
+    "empreinte": "a3d1196701fd8431",
+    "date": "2026-10-31",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "education-jeunesse",
+    "segments": [
+      {
+        "texte": "Garantir la garde et des congés parentaux",
+        "mesures": [
+          "tondelier-education-jeunesse-001",
+          "tondelier-education-jeunesse-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "inciter au retour des 5 jours",
         "mesures": [
           "tondelier-education-jeunesse-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "généraliser les repas bio",
+        "mesures": [
+          "tondelier-education-jeunesse-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "améliorer les conditions d'enseignement",
+        "mesures": [
+          "tondelier-education-jeunesse-005",
+          "tondelier-education-jeunesse-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer le secondaire",
+        "mesures": [
+          "tondelier-education-jeunesse-007",
+          "tondelier-education-jeunesse-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire le financement du privé",
+        "mesures": [
+          "tondelier-education-jeunesse-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer des AESH titulaires",
+        "mesures": [
+          "tondelier-education-jeunesse-010"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "remplacer Parcoursup et MonMaster",
+        "mesures": [
+          "tondelier-education-jeunesse-011"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer la CVEC et construire des logements étudiants",
+        "mesures": [
+          "tondelier-education-jeunesse-012",
+          "tondelier-education-jeunesse-013"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "réorienter l'effort de recherche",
+        "mesures": [
+          "tondelier-education-jeunesse-014",
+          "tondelier-education-jeunesse-015"
         ]
       },
       {
@@ -36,36 +154,34 @@
     "propositions": [
       "tondelier-education-jeunesse-001",
       "tondelier-education-jeunesse-002",
-      "tondelier-education-jeunesse-003"
+      "tondelier-education-jeunesse-003",
+      "tondelier-education-jeunesse-004",
+      "tondelier-education-jeunesse-005",
+      "tondelier-education-jeunesse-006",
+      "tondelier-education-jeunesse-007",
+      "tondelier-education-jeunesse-008",
+      "tondelier-education-jeunesse-009",
+      "tondelier-education-jeunesse-010",
+      "tondelier-education-jeunesse-011",
+      "tondelier-education-jeunesse-012",
+      "tondelier-education-jeunesse-013",
+      "tondelier-education-jeunesse-014",
+      "tondelier-education-jeunesse-015"
     ],
-    "empreinte": "88a36dcec47bc1df",
-    "date": "2026-09-27",
+    "empreinte": "ddee24938755308c",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "environnement",
     "segments": [
       {
-        "texte": "Protéger et restaurer la biodiversité et les continuités écologiques",
+        "texte": "Transformer le système énergétique vers les renouvelables",
         "mesures": [
           "tondelier-envi-001",
           "tondelier-envi-002",
           "tondelier-envi-003",
           "tondelier-envi-004",
-          "tondelier-envi-005",
-          "tondelier-envi-006",
-          "tondelier-envi-020"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "interdire les polluants éternels et le plomb, et appliquer le principe pollueur-payeur",
-        "mesures": [
-          "tondelier-envi-007",
-          "tondelier-envi-008",
           "tondelier-envi-009",
           "tondelier-envi-010"
         ]
@@ -75,11 +191,12 @@
         "mesures": []
       },
       {
-        "texte": "garantir l'accès à l'eau potable et stopper les méga-bassines",
+        "texte": "sortir du nucléaire en préservant sa sûreté et ses déchets",
         "mesures": [
-          "tondelier-envi-011",
-          "tondelier-envi-012",
-          "tondelier-envi-013"
+          "tondelier-envi-005",
+          "tondelier-envi-006",
+          "tondelier-envi-007",
+          "tondelier-envi-008"
         ]
       },
       {
@@ -87,8 +204,11 @@
         "mesures": []
       },
       {
-        "texte": "encadrer la chasse et le statut des animaux",
+        "texte": "protéger et restaurer la biodiversité",
         "mesures": [
+          "tondelier-envi-011",
+          "tondelier-envi-012",
+          "tondelier-envi-013",
           "tondelier-envi-014",
           "tondelier-envi-015",
           "tondelier-envi-016"
@@ -99,11 +219,62 @@
         "mesures": []
       },
       {
-        "texte": "dépolluer les façades maritimes et renforcer le service forestier public",
+        "texte": "interdire les polluants, dépolluer les sols et sanctionner les pollueurs",
         "mesures": [
           "tondelier-envi-017",
           "tondelier-envi-018",
-          "tondelier-envi-019"
+          "tondelier-envi-019",
+          "tondelier-envi-020"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "garantir l'accès à l'eau potable, rénover les réseaux et geler les méga-bassines",
+        "mesures": [
+          "tondelier-envi-021",
+          "tondelier-envi-022",
+          "tondelier-envi-023",
+          "tondelier-envi-032",
+          "tondelier-envi-033",
+          "tondelier-envi-034"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "mieux protéger les animaux et encadrer la chasse",
+        "mesures": [
+          "tondelier-envi-024",
+          "tondelier-envi-025",
+          "tondelier-envi-026"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "protéger les forêts et le littoral",
+        "mesures": [
+          "tondelier-envi-027",
+          "tondelier-envi-028",
+          "tondelier-envi-029",
+          "tondelier-envi-030"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "instaurer un congé climatique",
+        "mesures": [
+          "tondelier-envi-031"
         ]
       },
       {
@@ -111,9 +282,17 @@
         "mesures": []
       },
       {
-        "texte": "instaurer un congé climatique",
+        "texte": "transformer le modèle agricole et alimentaire",
         "mesures": [
-          "tondelier-envi-021"
+          "tondelier-envi-035",
+          "tondelier-envi-036",
+          "tondelier-envi-037",
+          "tondelier-envi-038",
+          "tondelier-envi-039",
+          "tondelier-envi-040",
+          "tondelier-envi-041",
+          "tondelier-envi-042",
+          "tondelier-envi-043"
         ]
       },
       {
@@ -142,21 +321,41 @@
       "tondelier-envi-018",
       "tondelier-envi-019",
       "tondelier-envi-020",
-      "tondelier-envi-021"
+      "tondelier-envi-021",
+      "tondelier-envi-022",
+      "tondelier-envi-023",
+      "tondelier-envi-024",
+      "tondelier-envi-025",
+      "tondelier-envi-026",
+      "tondelier-envi-027",
+      "tondelier-envi-028",
+      "tondelier-envi-029",
+      "tondelier-envi-030",
+      "tondelier-envi-031",
+      "tondelier-envi-032",
+      "tondelier-envi-033",
+      "tondelier-envi-034",
+      "tondelier-envi-035",
+      "tondelier-envi-036",
+      "tondelier-envi-037",
+      "tondelier-envi-038",
+      "tondelier-envi-039",
+      "tondelier-envi-040",
+      "tondelier-envi-041",
+      "tondelier-envi-042",
+      "tondelier-envi-043"
     ],
-    "empreinte": "3c89fbfc8702064b",
-    "date": "2026-09-27",
+    "empreinte": "451c954245ef65ae",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
-    "theme": "finances-publiques",
+    "theme": "europe-international",
     "segments": [
       {
-        "texte": "Renforcer la fiscalité sur les successions",
+        "texte": "Faire respecter le droit international maritime",
         "mesures": [
-          "tondelier-finances-publiques-001",
-          "tondelier-finances-publiques-002",
-          "tondelier-finances-publiques-003"
+          "tondelier-europe-international-001"
         ]
       },
       {
@@ -164,9 +363,29 @@
         "mesures": []
       },
       {
-        "texte": "instaurer un impôt plancher sur les grandes fortunes",
+        "texte": "neutraliser les clauses protégeant les investissements fossiles",
         "mesures": [
-          "tondelier-finances-publiques-004"
+          "tondelier-europe-international-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "refuser les accords commerciaux non climatiques",
+        "mesures": [
+          "tondelier-europe-international-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "développer une diplomatie de la paix et féministe",
+        "mesures": [
+          "tondelier-europe-international-004"
         ]
       },
       {
@@ -174,8 +393,56 @@
         "mesures": []
       },
       {
-        "texte": "rétablir un ISF à dimension climatique",
+        "texte": "soutenir l'Ukraine et une paix durable au Moyen-Orient",
         "mesures": [
+          "tondelier-europe-international-005"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "tondelier-europe-international-001",
+      "tondelier-europe-international-002",
+      "tondelier-europe-international-003",
+      "tondelier-europe-international-004",
+      "tondelier-europe-international-005"
+    ],
+    "empreinte": "d5c8d9f3d62f645b",
+    "date": "2026-10-31",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "finances-publiques",
+    "segments": [
+      {
+        "texte": "Financer la transition climatique",
+        "mesures": [
+          "tondelier-finances-publiques-001",
+          "tondelier-finances-publiques-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "programmer les finances publiques vertes",
+        "mesures": [
+          "tondelier-finances-publiques-015"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer la dette et les règles européennes",
+        "mesures": [
+          "tondelier-finances-publiques-003",
+          "tondelier-finances-publiques-004",
           "tondelier-finances-publiques-005"
         ]
       },
@@ -184,9 +451,14 @@
         "mesures": []
       },
       {
-        "texte": "orienter les banques publiques vers la transition sociale et écologique",
+        "texte": "taxer davantage les grands patrimoines",
         "mesures": [
-          "tondelier-finances-publiques-006"
+          "tondelier-finances-publiques-006",
+          "tondelier-finances-publiques-007",
+          "tondelier-finances-publiques-008",
+          "tondelier-finances-publiques-009",
+          "tondelier-finances-publiques-010",
+          "tondelier-finances-publiques-020"
         ]
       },
       {
@@ -194,9 +466,13 @@
         "mesures": []
       },
       {
-        "texte": "proposer un taux zéro pour les énergies renouvelables",
+        "texte": "taxer les entreprises et la finance",
         "mesures": [
-          "tondelier-finances-publiques-007"
+          "tondelier-finances-publiques-011",
+          "tondelier-finances-publiques-014",
+          "tondelier-finances-publiques-019",
+          "tondelier-finances-publiques-021",
+          "tondelier-finances-publiques-022"
         ]
       },
       {
@@ -204,9 +480,22 @@
         "mesures": []
       },
       {
-        "texte": "réduire la part des actifs fossiles",
+        "texte": "réformer la fiscalité des revenus et la TVA",
         "mesures": [
-          "tondelier-finances-publiques-008"
+          "tondelier-finances-publiques-012",
+          "tondelier-finances-publiques-013",
+          "tondelier-finances-publiques-016",
+          "tondelier-finances-publiques-017"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer la lutte contre la fraude fiscale",
+        "mesures": [
+          "tondelier-finances-publiques-018"
         ]
       },
       {
@@ -214,9 +503,13 @@
         "mesures": []
       },
       {
-        "texte": "adopter un Community Reinvestment Act",
+        "texte": "orienter la finance vers la transition écologique",
         "mesures": [
-          "tondelier-finances-publiques-009"
+          "tondelier-finances-publiques-023",
+          "tondelier-finances-publiques-024",
+          "tondelier-finances-publiques-025",
+          "tondelier-finances-publiques-026",
+          "tondelier-finances-publiques-027"
         ]
       },
       {
@@ -233,21 +526,422 @@
       "tondelier-finances-publiques-006",
       "tondelier-finances-publiques-007",
       "tondelier-finances-publiques-008",
-      "tondelier-finances-publiques-009"
+      "tondelier-finances-publiques-009",
+      "tondelier-finances-publiques-010",
+      "tondelier-finances-publiques-011",
+      "tondelier-finances-publiques-012",
+      "tondelier-finances-publiques-013",
+      "tondelier-finances-publiques-014",
+      "tondelier-finances-publiques-015",
+      "tondelier-finances-publiques-016",
+      "tondelier-finances-publiques-017",
+      "tondelier-finances-publiques-018",
+      "tondelier-finances-publiques-019",
+      "tondelier-finances-publiques-020",
+      "tondelier-finances-publiques-021",
+      "tondelier-finances-publiques-022",
+      "tondelier-finances-publiques-023",
+      "tondelier-finances-publiques-024",
+      "tondelier-finances-publiques-025",
+      "tondelier-finances-publiques-026",
+      "tondelier-finances-publiques-027"
     ],
-    "empreinte": "60694ca5ac56b900",
-    "date": "2026-09-27",
+    "empreinte": "f5668a3247014e01",
+    "date": "2026-10-31",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "gouvernance-republique",
+    "segments": [
+      {
+        "texte": "Refonder les institutions et la Constitution",
+        "mesures": [
+          "tondelier-gouvernance-republique-001",
+          "tondelier-gouvernance-republique-002",
+          "tondelier-gouvernance-republique-003",
+          "tondelier-gouvernance-republique-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "élargir la démocratie directe et participative",
+        "mesures": [
+          "tondelier-gouvernance-republique-005",
+          "tondelier-gouvernance-republique-006",
+          "tondelier-gouvernance-republique-007",
+          "tondelier-gouvernance-republique-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "lutter contre les violences sexistes et les discriminations",
+        "mesures": [
+          "tondelier-gouvernance-republique-009",
+          "tondelier-gouvernance-republique-010",
+          "tondelier-gouvernance-republique-011",
+          "tondelier-gouvernance-republique-015",
+          "tondelier-gouvernance-republique-016"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer les droits des personnes handicapées",
+        "mesures": [
+          "tondelier-gouvernance-republique-012",
+          "tondelier-gouvernance-republique-013"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "libéraliser le changement d'état civil",
+        "mesures": [
+          "tondelier-gouvernance-republique-014"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "encadrer le numérique et les data centers",
+        "mesures": [
+          "tondelier-gouvernance-republique-017",
+          "tondelier-gouvernance-republique-018",
+          "tondelier-gouvernance-republique-019",
+          "tondelier-gouvernance-republique-021",
+          "tondelier-gouvernance-republique-022"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "limiter les écrans pour les enfants",
+        "mesures": [
+          "tondelier-gouvernance-republique-020"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "tondelier-gouvernance-republique-001",
+      "tondelier-gouvernance-republique-002",
+      "tondelier-gouvernance-republique-003",
+      "tondelier-gouvernance-republique-004",
+      "tondelier-gouvernance-republique-005",
+      "tondelier-gouvernance-republique-006",
+      "tondelier-gouvernance-republique-007",
+      "tondelier-gouvernance-republique-008",
+      "tondelier-gouvernance-republique-009",
+      "tondelier-gouvernance-republique-010",
+      "tondelier-gouvernance-republique-011",
+      "tondelier-gouvernance-republique-012",
+      "tondelier-gouvernance-republique-013",
+      "tondelier-gouvernance-republique-014",
+      "tondelier-gouvernance-republique-015",
+      "tondelier-gouvernance-republique-016",
+      "tondelier-gouvernance-republique-017",
+      "tondelier-gouvernance-republique-018",
+      "tondelier-gouvernance-republique-019",
+      "tondelier-gouvernance-republique-020",
+      "tondelier-gouvernance-republique-021",
+      "tondelier-gouvernance-republique-022"
+    ],
+    "empreinte": "ef4664016f12fe29",
+    "date": "2026-10-31",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "interieur-justice",
+    "segments": [
+      {
+        "texte": "Garantir les droits des exilés et réformer les politiques migratoires",
+        "mesures": [
+          "tondelier-interieur-justice-001",
+          "tondelier-interieur-justice-002",
+          "tondelier-interieur-justice-003",
+          "tondelier-interieur-justice-004",
+          "tondelier-interieur-justice-005",
+          "tondelier-interieur-justice-006",
+          "tondelier-interieur-justice-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer l'indépendance et les moyens de la justice",
+        "mesures": [
+          "tondelier-interieur-justice-008",
+          "tondelier-interieur-justice-009",
+          "tondelier-interieur-justice-011",
+          "tondelier-interieur-justice-014"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer la justice pénale, carcérale et environnementale",
+        "mesures": [
+          "tondelier-interieur-justice-010",
+          "tondelier-interieur-justice-012",
+          "tondelier-interieur-justice-013",
+          "tondelier-interieur-justice-015",
+          "tondelier-interieur-justice-016",
+          "tondelier-interieur-justice-017"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer la lutte contre le narcotrafic et réguler les drogues",
+        "mesures": [
+          "tondelier-interieur-justice-018",
+          "tondelier-interieur-justice-019",
+          "tondelier-interieur-justice-020",
+          "tondelier-interieur-justice-021",
+          "tondelier-interieur-justice-022"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réformer la formation, le maintien de l'ordre et le contrôle policier",
+        "mesures": [
+          "tondelier-interieur-justice-023",
+          "tondelier-interieur-justice-024",
+          "tondelier-interieur-justice-025",
+          "tondelier-interieur-justice-026",
+          "tondelier-interieur-justice-027",
+          "tondelier-interieur-justice-028",
+          "tondelier-interieur-justice-029"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "doter l'ANSSI de moyens suffisants",
+        "mesures": [
+          "tondelier-interieur-justice-030"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "améliorer les conditions de vie et les infrastructures ultramarines",
+        "mesures": [
+          "tondelier-interieur-justice-031",
+          "tondelier-interieur-justice-032",
+          "tondelier-interieur-justice-033",
+          "tondelier-interieur-justice-034",
+          "tondelier-interieur-justice-036"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réparer les dommages environnementaux et fonciers outre-mer",
+        "mesures": [
+          "tondelier-interieur-justice-037",
+          "tondelier-interieur-justice-038"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "réorienter les aides agricoles vers l'autonomie alimentaire",
+        "mesures": [
+          "tondelier-interieur-justice-035"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "tondelier-interieur-justice-001",
+      "tondelier-interieur-justice-002",
+      "tondelier-interieur-justice-003",
+      "tondelier-interieur-justice-004",
+      "tondelier-interieur-justice-005",
+      "tondelier-interieur-justice-006",
+      "tondelier-interieur-justice-007",
+      "tondelier-interieur-justice-008",
+      "tondelier-interieur-justice-009",
+      "tondelier-interieur-justice-010",
+      "tondelier-interieur-justice-011",
+      "tondelier-interieur-justice-012",
+      "tondelier-interieur-justice-013",
+      "tondelier-interieur-justice-014",
+      "tondelier-interieur-justice-015",
+      "tondelier-interieur-justice-016",
+      "tondelier-interieur-justice-017",
+      "tondelier-interieur-justice-018",
+      "tondelier-interieur-justice-019",
+      "tondelier-interieur-justice-020",
+      "tondelier-interieur-justice-021",
+      "tondelier-interieur-justice-022",
+      "tondelier-interieur-justice-023",
+      "tondelier-interieur-justice-024",
+      "tondelier-interieur-justice-025",
+      "tondelier-interieur-justice-026",
+      "tondelier-interieur-justice-027",
+      "tondelier-interieur-justice-028",
+      "tondelier-interieur-justice-029",
+      "tondelier-interieur-justice-030",
+      "tondelier-interieur-justice-031",
+      "tondelier-interieur-justice-032",
+      "tondelier-interieur-justice-033",
+      "tondelier-interieur-justice-034",
+      "tondelier-interieur-justice-035",
+      "tondelier-interieur-justice-036",
+      "tondelier-interieur-justice-037",
+      "tondelier-interieur-justice-038"
+    ],
+    "empreinte": "544d889ca88a5e29",
+    "date": "2026-10-31",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "reformes-etat",
+    "segments": [
+      {
+        "texte": "Garantir un accueil administratif physique",
+        "mesures": [
+          "tondelier-reformes-etat-001"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "créer un droit à la déconnexion",
+        "mesures": [
+          "tondelier-reformes-etat-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "mettre fin au New Public Management",
+        "mesures": [
+          "tondelier-reformes-etat-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "titulariser les contractuels pérennes",
+        "mesures": [
+          "tondelier-reformes-etat-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réorienter les préfectures vers les communes",
+        "mesures": [
+          "tondelier-reformes-etat-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "indexer le point d'indice sur l'inflation",
+        "mesures": [
+          "tondelier-reformes-etat-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "augmenter les catégories C et B",
+        "mesures": [
+          "tondelier-reformes-etat-007"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "revaloriser enseignants et chercheurs",
+        "mesures": [
+          "tondelier-reformes-etat-008"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "tondelier-reformes-etat-001",
+      "tondelier-reformes-etat-002",
+      "tondelier-reformes-etat-003",
+      "tondelier-reformes-etat-004",
+      "tondelier-reformes-etat-005",
+      "tondelier-reformes-etat-006",
+      "tondelier-reformes-etat-007",
+      "tondelier-reformes-etat-008"
+    ],
+    "empreinte": "8da113bd5df9e8ac",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "retraites-travail",
     "segments": [
       {
-        "texte": "Conditionner les aides aux entreprises et soutenir l'économie sociale et solidaire",
+        "texte": "Réorganiser le temps de travail et la pénibilité",
         "mesures": [
           "tondelier-retraites-travail-001",
           "tondelier-retraites-travail-002",
-          "tondelier-retraites-travail-003"
+          "tondelier-retraites-travail-003",
+          "tondelier-retraites-travail-011"
         ]
       },
       {
@@ -255,11 +949,10 @@
         "mesures": []
       },
       {
-        "texte": "renforcer les droits des salariés dans l'entreprise",
+        "texte": "renforcer la sécurité au travail",
         "mesures": [
           "tondelier-retraites-travail-004",
-          "tondelier-retraites-travail-005",
-          "tondelier-retraites-travail-006"
+          "tondelier-retraites-travail-005"
         ]
       },
       {
@@ -267,9 +960,19 @@
         "mesures": []
       },
       {
-        "texte": "améliorer les conditions et la protection au travail",
+        "texte": "garantir l'emploi des seniors et refonder l'assurance-chômage",
         "mesures": [
-          "tondelier-retraites-travail-007",
+          "tondelier-retraites-travail-006",
+          "tondelier-retraites-travail-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "encadrer le numérique, les CDD et la conscience professionnelle",
+        "mesures": [
           "tondelier-retraites-travail-008",
           "tondelier-retraites-travail-009",
           "tondelier-retraites-travail-010"
@@ -280,10 +983,10 @@
         "mesures": []
       },
       {
-        "texte": "garantir l'emploi et limiter les écarts de salaire",
+        "texte": "abroger la réforme des retraites",
         "mesures": [
-          "tondelier-retraites-travail-011",
-          "tondelier-retraites-travail-012"
+          "tondelier-retraites-travail-012",
+          "tondelier-retraites-travail-013"
         ]
       },
       {
@@ -291,10 +994,11 @@
         "mesures": []
       },
       {
-        "texte": "augmenter le SMIC et le point d'indice",
+        "texte": "revaloriser les pensions et les droits des retraites",
         "mesures": [
-          "tondelier-retraites-travail-013",
-          "tondelier-retraites-travail-014"
+          "tondelier-retraites-travail-014",
+          "tondelier-retraites-travail-015",
+          "tondelier-retraites-travail-016"
         ]
       },
       {
@@ -302,9 +1006,14 @@
         "mesures": []
       },
       {
-        "texte": "pénaliser les agroindustriels aux produits nocifs",
+        "texte": "relancer l'industrie et ses filières stratégiques",
         "mesures": [
-          "tondelier-retraites-travail-015"
+          "tondelier-retraites-travail-017",
+          "tondelier-retraites-travail-018",
+          "tondelier-retraites-travail-019",
+          "tondelier-retraites-travail-020",
+          "tondelier-retraites-travail-021",
+          "tondelier-retraites-travail-022"
         ]
       },
       {
@@ -327,173 +1036,17 @@
       "tondelier-retraites-travail-012",
       "tondelier-retraites-travail-013",
       "tondelier-retraites-travail-014",
-      "tondelier-retraites-travail-015"
+      "tondelier-retraites-travail-015",
+      "tondelier-retraites-travail-016",
+      "tondelier-retraites-travail-017",
+      "tondelier-retraites-travail-018",
+      "tondelier-retraites-travail-019",
+      "tondelier-retraites-travail-020",
+      "tondelier-retraites-travail-021",
+      "tondelier-retraites-travail-022"
     ],
-    "empreinte": "eda460e0fcba243f",
-    "date": "2026-09-27",
-    "modele": "claude-sonnet-5"
-  },
-  {
-    "theme": "social-solidarite",
-    "segments": [
-      {
-        "texte": "Abroger les réformes du chômage et des retraites",
-        "mesures": [
-          "tondelier-social-solidarite-001",
-          "tondelier-social-solidarite-007"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "développer l'emploi et les nouveaux droits sociaux",
-        "mesures": [
-          "tondelier-social-solidarite-002",
-          "tondelier-social-solidarite-003",
-          "tondelier-social-solidarite-004",
-          "tondelier-social-solidarite-005",
-          "tondelier-social-solidarite-006"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "réformer les retraites",
-        "mesures": [
-          "tondelier-social-solidarite-008",
-          "tondelier-social-solidarite-009",
-          "tondelier-social-solidarite-010",
-          "tondelier-social-solidarite-011",
-          "tondelier-social-solidarite-012"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "réformer les minima sociaux",
-        "mesures": [
-          "tondelier-social-solidarite-013",
-          "tondelier-social-solidarite-014"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "réduire le coût du logement et des services bancaires",
-        "mesures": [
-          "tondelier-social-solidarite-015",
-          "tondelier-social-solidarite-016"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "lutter contre les déserts alimentaires",
-        "mesures": [
-          "tondelier-social-solidarite-017",
-          "tondelier-social-solidarite-018"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "réformer l'hôpital public et l'accès aux soins",
-        "mesures": [
-          "tondelier-social-solidarite-019",
-          "tondelier-social-solidarite-020",
-          "tondelier-social-solidarite-021",
-          "tondelier-social-solidarite-022",
-          "tondelier-social-solidarite-023",
-          "tondelier-social-solidarite-024",
-          "tondelier-social-solidarite-025",
-          "tondelier-social-solidarite-026"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "renforcer la santé scolaire et l'accompagnement du grand âge",
-        "mesures": [
-          "tondelier-social-solidarite-027",
-          "tondelier-social-solidarite-028",
-          "tondelier-social-solidarite-029",
-          "tondelier-social-solidarite-030"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "transformer les transports et l'automobile",
-        "mesures": [
-          "tondelier-social-solidarite-031",
-          "tondelier-social-solidarite-032",
-          "tondelier-social-solidarite-033",
-          "tondelier-social-solidarite-034",
-          "tondelier-social-solidarite-035",
-          "tondelier-social-solidarite-036"
-        ]
-      },
-      {
-        "texte": ".",
-        "mesures": []
-      }
-    ],
-    "propositions": [
-      "tondelier-social-solidarite-001",
-      "tondelier-social-solidarite-002",
-      "tondelier-social-solidarite-003",
-      "tondelier-social-solidarite-004",
-      "tondelier-social-solidarite-005",
-      "tondelier-social-solidarite-006",
-      "tondelier-social-solidarite-007",
-      "tondelier-social-solidarite-008",
-      "tondelier-social-solidarite-009",
-      "tondelier-social-solidarite-010",
-      "tondelier-social-solidarite-011",
-      "tondelier-social-solidarite-012",
-      "tondelier-social-solidarite-013",
-      "tondelier-social-solidarite-014",
-      "tondelier-social-solidarite-015",
-      "tondelier-social-solidarite-016",
-      "tondelier-social-solidarite-017",
-      "tondelier-social-solidarite-018",
-      "tondelier-social-solidarite-019",
-      "tondelier-social-solidarite-020",
-      "tondelier-social-solidarite-021",
-      "tondelier-social-solidarite-022",
-      "tondelier-social-solidarite-023",
-      "tondelier-social-solidarite-024",
-      "tondelier-social-solidarite-025",
-      "tondelier-social-solidarite-026",
-      "tondelier-social-solidarite-027",
-      "tondelier-social-solidarite-028",
-      "tondelier-social-solidarite-029",
-      "tondelier-social-solidarite-030",
-      "tondelier-social-solidarite-031",
-      "tondelier-social-solidarite-032",
-      "tondelier-social-solidarite-033",
-      "tondelier-social-solidarite-034",
-      "tondelier-social-solidarite-035",
-      "tondelier-social-solidarite-036"
-    ],
-    "empreinte": "a5ab25638c90d51b",
-    "date": "2026-09-27",
+    "empreinte": "64486782cc2f11d3",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   }
 ]

@@ -25,13 +25,15 @@ interface PageQuestionsGeneralesProps {
   sectionsThemes?: SectionTheme[];
   profilThemes?: ProfilPartiel;
   onReponseTheme?: SurReponse;
+  // Formulaire intégré : commence une question à la fois (défaut) ou directement sur la grille de toutes les questions.
+  pasAPasInitial?: boolean;
 }
 
 // Les questions générales : utiles à plusieurs thèmes, posées d'abord et une seule fois. Les réponses sont un BROUILLON
 // tant que le visiteur n'a pas enregistré : c'est l'enregistrement qui fait apparaître (ou met à jour) les indicateurs
 // sur les portraits. Le visiteur peut y revenir à tout moment pour changer ou compléter ses réponses ; ensuite, chaque
 // thème permet de préciser d'autres informations, à son rythme.
-export default function PageQuestionsGenerales({ champs, questions, profilInitial, onValider, onAnnuler, integre = false, onEffacer, sectionsThemes = [], profilThemes = profilInitial, onReponseTheme }: PageQuestionsGeneralesProps) {
+export default function PageQuestionsGenerales({ champs, questions, profilInitial, onValider, onAnnuler, integre = false, onEffacer, sectionsThemes = [], profilThemes = profilInitial, onReponseTheme, pasAPasInitial = true }: PageQuestionsGeneralesProps) {
   const [brouillon, setBrouillon] = useState<ProfilPartiel>(profilInitial);
   const { repondues, total } = compterReponses(questions, brouillon);
   // Actif par défaut : les questions sans réponse sont mises en valeur dès l'arrivée, le visiteur peut le désactiver.
@@ -64,7 +66,7 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
   // Formulaire intégré : par défaut une question par écran (générales d'abord, puis celles de chaque thème) ; le visiteur peut
   // basculer sur la grille de toutes les questions. Une réponse générale va au brouillon (enregistré après une courte pause),
   // une réponse de thème s'applique tout de suite.
-  const [pasAPas, setPasAPas] = useState(true);
+  const [pasAPas, setPasAPas] = useState(pasAPasInitial);
   const idsGenerales = new Set(questions.map((q) => q.id));
   const profilFile: ProfilPartiel = { ...profilThemes };
   for (const q of questions) {
@@ -110,7 +112,7 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
     <>
     {/* Formulaire intégré : la progression dans une div à part, au-dessus de celle des questions ; l'indicateur d'enregistrement,
         hors des divs, en bas à droite sous le formulaire ; l'effacement est en bas de l'écran (PageThemes). */}
-    {integre && <PanneauProgression repondues={affiche.repondues} total={affiche.total} compte={compte} manquantesEnValeur={manquantesEnValeur} onManquantes={setManquantesEnValeur} />}
+    {integre && <PanneauProgression repondues={affiche.repondues} total={affiche.total} compte={compte} manquantesEnValeur={manquantesEnValeur} onManquantes={setManquantesEnValeur} manquantesAffichees={!pasAPas} />}
     <form onSubmit={valider} className={`questionnaire${integre ? " questionnaire--integre" : ""}`} id={integre ? "formulaire-general" : undefined} aria-label={integre ? "Ma situation" : undefined}>
       {integre ? null : <h1>Ma situation</h1>}
       {integre ? null : (

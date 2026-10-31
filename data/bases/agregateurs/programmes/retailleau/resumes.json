@@ -13,7 +13,7 @@
         "mesures": []
       },
       {
-        "texte": "consolider et moderniser la dissuasion nucléaire",
+        "texte": "consolider la dissuasion nucléaire",
         "mesures": [
           "retailleau-defense-002"
         ]
@@ -33,7 +33,7 @@
         "mesures": []
       },
       {
-        "texte": "renforcer les munitions et les missiles de longue portée",
+        "texte": "renforcer les munitions et missiles longue portée",
         "mesures": [
           "retailleau-defense-004"
         ]
@@ -71,48 +71,30 @@
       "retailleau-defense-005",
       "retailleau-defense-006"
     ],
-    "empreinte": "b5465f26b369c884",
-    "date": "2026-09-27",
+    "empreinte": "35eeeba8a02582ad",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "education-jeunesse",
     "segments": [
       {
-        "texte": "Développer les crèches privées et simplifier les normes",
+        "texte": "Soutenir l'offre et les métiers de la petite enfance",
         "mesures": [
           "retailleau-education-jeunesse-001",
           "retailleau-education-jeunesse-002",
-          "retailleau-education-jeunesse-003"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "revaloriser les professionnels de la petite enfance",
-        "mesures": [
+          "retailleau-education-jeunesse-003",
           "retailleau-education-jeunesse-004"
         ]
       },
       {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "les salaires des professeurs",
-        "mesures": [
-          "retailleau-education-jeunesse-005"
-        ]
-      },
-      {
         "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "créer une Ecole Normale du Professorat",
+        "texte": "revaloriser et former les professeurs",
         "mesures": [
+          "retailleau-education-jeunesse-005",
           "retailleau-education-jeunesse-006"
         ]
       },
@@ -121,7 +103,7 @@
         "mesures": []
       },
       {
-        "texte": "recentrer le primaire sur les fondamentaux",
+        "texte": "recentrer le primaire sur la lecture",
         "mesures": [
           "retailleau-education-jeunesse-007"
         ]
@@ -131,11 +113,10 @@
         "mesures": []
       },
       {
-        "texte": "évaluer les établissements et renforcer l'autonomie des directeurs",
+        "texte": "évaluer et autonomiser les établissements",
         "mesures": [
           "retailleau-education-jeunesse-008",
-          "retailleau-education-jeunesse-009",
-          "retailleau-education-jeunesse-016"
+          "retailleau-education-jeunesse-009"
         ]
       },
       {
@@ -143,7 +124,7 @@
         "mesures": []
       },
       {
-        "texte": "restaurer le mérite et étendre l'éducation prioritaire aux campagnes",
+        "texte": "restaurer le mérite et étendre l'éducation prioritaire",
         "mesures": [
           "retailleau-education-jeunesse-010",
           "retailleau-education-jeunesse-011"
@@ -154,10 +135,20 @@
         "mesures": []
       },
       {
-        "texte": "interdire les écrans et renforcer l'autorité à l'école",
+        "texte": "interdire les écrans et sanctionner les violences",
         "mesures": [
           "retailleau-education-jeunesse-012",
           "retailleau-education-jeunesse-013"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "apprendre l'usage de l'IA",
+        "mesures": [
+          "retailleau-education-jeunesse-014"
         ]
       },
       {
@@ -165,10 +156,10 @@
         "mesures": []
       },
       {
-        "texte": "développer l'IA et la filière professionnelle d'excellence",
+        "texte": "créer des filières et établissements autonomes",
         "mesures": [
-          "retailleau-education-jeunesse-014",
-          "retailleau-education-jeunesse-015"
+          "retailleau-education-jeunesse-015",
+          "retailleau-education-jeunesse-016"
         ]
       },
       {
@@ -194,19 +185,22 @@
       "retailleau-education-jeunesse-015",
       "retailleau-education-jeunesse-016"
     ],
-    "empreinte": "3973b482215654f0",
-    "date": "2026-09-27",
+    "empreinte": "7f6ed8c234a1d8d6",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "environnement",
     "segments": [
       {
-        "texte": "Développer le nucléaire",
+        "texte": "Relancer le nucléaire et l'hydraulique en stoppant les renouvelables",
         "mesures": [
           "retailleau-envi-001",
+          "retailleau-envi-002",
           "retailleau-envi-007",
           "retailleau-envi-008",
+          "retailleau-envi-011",
+          "retailleau-envi-012",
           "retailleau-envi-014"
         ]
       },
@@ -215,24 +209,10 @@
         "mesures": []
       },
       {
-        "texte": "relancer l'hydroélectricité et arrêter les subventions au solaire et à l'éolien",
-        "mesures": [
-          "retailleau-envi-002",
-          "retailleau-envi-011",
-          "retailleau-envi-012"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "baisser les factures et lever les freins à l'électrification",
+        "texte": "baisser les factures en supprimant des taxes",
         "mesures": [
           "retailleau-envi-003",
           "retailleau-envi-004",
-          "retailleau-envi-005",
-          "retailleau-envi-009",
           "retailleau-envi-013"
         ]
       },
@@ -241,7 +221,17 @@
         "mesures": []
       },
       {
-        "texte": "réaffirmer la souveraineté énergétique",
+        "texte": "lever la pénalisation du chauffage électrique",
+        "mesures": [
+          "retailleau-envi-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "affirmer la souveraineté énergétique",
         "mesures": [
           "retailleau-envi-006",
           "retailleau-envi-010",
@@ -253,11 +243,22 @@
         "mesures": []
       },
       {
-        "texte": "alléger les normes agricoles et environnementales",
+        "texte": "lever les freins à l'électrification",
+        "mesures": [
+          "retailleau-envi-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "alléger les normes et sécuriser l'eau",
         "mesures": [
           "retailleau-envi-016",
           "retailleau-envi-017",
-          "retailleau-envi-018"
+          "retailleau-envi-018",
+          "retailleau-envi-019"
         ]
       },
       {
@@ -265,10 +266,10 @@
         "mesures": []
       },
       {
-        "texte": "sécuriser l'eau et moderniser les exploitations",
+        "texte": "moderniser et transmettre les exploitations",
         "mesures": [
-          "retailleau-envi-019",
-          "retailleau-envi-020"
+          "retailleau-envi-020",
+          "retailleau-envi-021"
         ]
       },
       {
@@ -276,12 +277,9 @@
         "mesures": []
       },
       {
-        "texte": "soutenir les agriculteurs et leurs débouchés",
+        "texte": "lutter contre l'agribashing",
         "mesures": [
-          "retailleau-envi-021",
-          "retailleau-envi-022",
-          "retailleau-envi-023",
-          "retailleau-envi-025"
+          "retailleau-envi-022"
         ]
       },
       {
@@ -289,9 +287,11 @@
         "mesures": []
       },
       {
-        "texte": "refonder la PAC",
+        "texte": "soutenir les revenus agricoles",
         "mesures": [
-          "retailleau-envi-024"
+          "retailleau-envi-023",
+          "retailleau-envi-024",
+          "retailleau-envi-025"
         ]
       },
       {
@@ -326,27 +326,17 @@
       "retailleau-envi-024",
       "retailleau-envi-025"
     ],
-    "empreinte": "689fb6416aaac620",
-    "date": "2026-09-27",
+    "empreinte": "af1d7f198a2b3f0d",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "finances-publiques",
     "segments": [
       {
-        "texte": "Redresser les finances publiques par la baisse des dépenses",
+        "texte": "Redresser les finances publiques par les dépenses",
         "mesures": [
           "retailleau-finances-publiques-001"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "réduire l'aide au développement",
-        "mesures": [
-          "retailleau-finances-publiques-002"
         ]
       },
       {
@@ -354,8 +344,20 @@
         "mesures": []
       },
       {
-        "texte": "baisser les dotations aux agences",
+        "texte": "instaurer une règle d'or budgétaire",
         "mesures": [
+          "retailleau-finances-publiques-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "réduire les dépenses d'aide au développement, d'agences et d'effectifs",
+        "mesures": [
+          "retailleau-finances-publiques-002",
+          "retailleau-finances-publiques-003",
           "retailleau-finances-publiques-004"
         ]
       },
@@ -364,29 +366,9 @@
         "mesures": []
       },
       {
-        "texte": "réduire les postes de fonctions supports",
-        "mesures": [
-          "retailleau-finances-publiques-003"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "restreindre l'aide médicale d'État",
+        "texte": "réduire l'aide médicale d'État",
         "mesures": [
           "retailleau-finances-publiques-005"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "instaurer une règle d'or budgétaire",
-        "mesures": [
-          "retailleau-finances-publiques-006"
         ]
       },
       {
@@ -404,18 +386,9 @@
         "mesures": []
       },
       {
-        "texte": "réduire les cotisations sociales des entreprises",
+        "texte": "réduire les cotisations et exonérer les heures supplémentaires",
         "mesures": [
-          "retailleau-finances-publiques-008"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "exonérer les heures supplémentaires de cotisations",
-        "mesures": [
+          "retailleau-finances-publiques-008",
           "retailleau-finances-publiques-009"
         ]
       },
@@ -452,103 +425,15 @@
       "retailleau-finances-publiques-012",
       "retailleau-finances-publiques-013"
     ],
-    "empreinte": "c2f2527af4ada9b4",
-    "date": "2026-09-27",
-    "modele": "claude-sonnet-5"
-  },
-  {
-    "theme": "gouvernance-republique",
-    "segments": [
-      {
-        "texte": "Élargir le référendum d'initiative partagée",
-        "mesures": [
-          "retailleau-gouvernance-republique-001"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "réviser la Constitution pour limiter le Conseil constitutionnel",
-        "mesures": [
-          "retailleau-gouvernance-republique-002"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "faire primer le droit français sur le droit européen",
-        "mesures": [
-          "retailleau-gouvernance-republique-003"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "renforcer la souveraineté et l'innovation en matière de données et d'IA",
-        "mesures": [
-          "retailleau-gouvernance-republique-004",
-          "retailleau-gouvernance-republique-006",
-          "retailleau-gouvernance-republique-007",
-          "retailleau-gouvernance-republique-008",
-          "retailleau-gouvernance-republique-012"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "former les Français et déployer l'IA dans les entreprises",
-        "mesures": [
-          "retailleau-gouvernance-republique-005",
-          "retailleau-gouvernance-republique-009"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "simplifier l'État et les démarches administratives grâce à l'IA",
-        "mesures": [
-          "retailleau-gouvernance-republique-010",
-          "retailleau-gouvernance-republique-011"
-        ]
-      },
-      {
-        "texte": ".",
-        "mesures": []
-      }
-    ],
-    "propositions": [
-      "retailleau-gouvernance-republique-001",
-      "retailleau-gouvernance-republique-002",
-      "retailleau-gouvernance-republique-003",
-      "retailleau-gouvernance-republique-004",
-      "retailleau-gouvernance-republique-005",
-      "retailleau-gouvernance-republique-006",
-      "retailleau-gouvernance-republique-007",
-      "retailleau-gouvernance-republique-008",
-      "retailleau-gouvernance-republique-009",
-      "retailleau-gouvernance-republique-010",
-      "retailleau-gouvernance-republique-011",
-      "retailleau-gouvernance-republique-012"
-    ],
-    "empreinte": "48d4b4410bf2ac2b",
-    "date": "2026-09-27",
+    "empreinte": "231182dbfac78cd5",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "interieur-justice",
     "segments": [
       {
-        "texte": "Permettre une immigration de travail contrôlée",
+        "texte": "Permettre l'immigration de travail contrôlée",
         "mesures": [
           "retailleau-interieur-justice-001"
         ]
@@ -558,10 +443,9 @@
         "mesures": []
       },
       {
-        "texte": "réformer la justice et sa discipline",
+        "texte": "créer une cour disciplinaire de la magistrature",
         "mesures": [
-          "retailleau-interieur-justice-002",
-          "retailleau-interieur-justice-003"
+          "retailleau-interieur-justice-002"
         ]
       },
       {
@@ -569,8 +453,9 @@
         "mesures": []
       },
       {
-        "texte": "supprimer les juges d'application des peines",
+        "texte": "abolir la loi Belloubet et supprimer les JAP",
         "mesures": [
+          "retailleau-interieur-justice-003",
           "retailleau-interieur-justice-004"
         ]
       },
@@ -579,7 +464,7 @@
         "mesures": []
       },
       {
-        "texte": "durcir les peines pour violences et pédocriminalité",
+        "texte": "instaurer peines planchers et castration chimique",
         "mesures": [
           "retailleau-interieur-justice-005",
           "retailleau-interieur-justice-006"
@@ -590,7 +475,7 @@
         "mesures": []
       },
       {
-        "texte": "instaurer un état d'urgence anti-trafics avec bouclage des quartiers",
+        "texte": "instaurer l'état d'urgence anti-trafics et boucler quartiers",
         "mesures": [
           "retailleau-interieur-justice-007",
           "retailleau-interieur-justice-008"
@@ -601,7 +486,7 @@
         "mesures": []
       },
       {
-        "texte": "durcir la réponse judiciaire contre les narcotrafiquants et les mineurs impliqués",
+        "texte": "durcir réponse judiciaire et sanctions mineurs",
         "mesures": [
           "retailleau-interieur-justice-009",
           "retailleau-interieur-justice-010"
@@ -612,7 +497,7 @@
         "mesures": []
       },
       {
-        "texte": "saisir les ressources des narcotrafiquants",
+        "texte": "frapper financièrement narcotrafiquants",
         "mesures": [
           "retailleau-interieur-justice-011"
         ]
@@ -622,7 +507,7 @@
         "mesures": []
       },
       {
-        "texte": "réformer la Constitution pour ces mesures exceptionnelles",
+        "texte": "réformer la Constitution",
         "mesures": [
           "retailleau-interieur-justice-012"
         ]
@@ -657,15 +542,15 @@
       "retailleau-interieur-justice-012",
       "retailleau-interieur-justice-013"
     ],
-    "empreinte": "8e56d0c05f6508eb",
-    "date": "2026-09-27",
+    "empreinte": "751d107856df27a7",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "reformes-etat",
     "segments": [
       {
-        "texte": "Aligner le temps de travail des agents publics sur le droit commun",
+        "texte": "Aligner la durée de travail des agents publics",
         "mesures": [
           "retailleau-reformes-etat-001"
         ]
@@ -675,7 +560,7 @@
         "mesures": []
       },
       {
-        "texte": "réduire les postes de fonctions supports",
+        "texte": "réduire les effectifs des fonctions supports",
         "mesures": [
           "retailleau-reformes-etat-002"
         ]
@@ -689,15 +574,15 @@
       "retailleau-reformes-etat-001",
       "retailleau-reformes-etat-002"
     ],
-    "empreinte": "480142ea7c1e278d",
-    "date": "2026-09-27",
+    "empreinte": "7c84600d6220a3ca",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "retraites-travail",
     "segments": [
       {
-        "texte": "Exonérer de cotisations les heures supplémentaires",
+        "texte": "Exonérer les heures supplémentaires",
         "mesures": [
           "retailleau-retraites-travail-001",
           "retailleau-retraites-travail-006"
@@ -714,18 +599,18 @@
         ]
       },
       {
-        "texte": " et ",
+        "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "alléger les charges des seniors",
+        "texte": "faciliter l'emploi des seniors",
         "mesures": [
           "retailleau-retraites-travail-003",
           "retailleau-retraites-travail-011"
         ]
       },
       {
-        "texte": " ; ",
+        "texte": ", ",
         "mesures": []
       },
       {
@@ -739,9 +624,10 @@
         "mesures": []
       },
       {
-        "texte": "repousser l'âge de départ à 65 ans",
+        "texte": "relever l'âge de la retraite",
         "mesures": [
-          "retailleau-retraites-travail-007"
+          "retailleau-retraites-travail-007",
+          "retailleau-retraites-travail-008"
         ]
       },
       {
@@ -749,27 +635,17 @@
         "mesures": []
       },
       {
-        "texte": "indexer l'âge sur l'espérance de vie",
-        "mesures": [
-          "retailleau-retraites-travail-008"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "négocier l'âge selon la pénibilité",
+        "texte": "concerter sur l'âge des métiers pénibles",
         "mesures": [
           "retailleau-retraites-travail-010"
         ]
       },
       {
-        "texte": " ; ",
+        "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "développer la retraite par capitalisation",
+        "texte": "développer la capitalisation",
         "mesures": [
           "retailleau-retraites-travail-005",
           "retailleau-retraites-travail-009"
@@ -790,7 +666,7 @@
         "mesures": []
       },
       {
-        "texte": "réduire les prélèvements",
+        "texte": "réduire la fiscalité de production",
         "mesures": [
           "retailleau-retraites-travail-013",
           "retailleau-retraites-travail-019"
@@ -836,30 +712,52 @@
       "retailleau-retraites-travail-018",
       "retailleau-retraites-travail-019"
     ],
-    "empreinte": "40d12820b18fd396",
-    "date": "2026-09-27",
+    "empreinte": "bc4c601745fa9c10",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "social-solidarite",
     "segments": [
       {
-        "texte": "Réduire l'assistance et instaurer un revenu familial pour enfants",
+        "texte": "Réduire l'assistance via le CSU",
         "mesures": [
-          "retailleau-social-solidarite-001",
+          "retailleau-social-solidarite-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "instaurer un revenu familial conditionné et doublé",
+        "mesures": [
           "retailleau-social-solidarite-002",
           "retailleau-social-solidarite-003",
           "retailleau-social-solidarite-005"
         ]
       },
       {
-        "texte": ", tout en ",
+        "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "conservant certaines aides spécifiques",
+        "texte": "conserver les aides spécifiques",
         "mesures": [
           "retailleau-social-solidarite-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "recentrer l'accès au logement social",
+        "mesures": [
+          "retailleau-social-solidarite-006",
+          "retailleau-social-solidarite-026",
+          "retailleau-social-solidarite-027",
+          "retailleau-social-solidarite-028"
         ]
       },
       {
@@ -887,9 +785,8 @@
         "mesures": []
       },
       {
-        "texte": "alléger la fiscalité",
+        "texte": "déduire les intérêts d'emprunt",
         "mesures": [
-          "retailleau-social-solidarite-006",
           "retailleau-social-solidarite-009",
           "retailleau-social-solidarite-020"
         ]
@@ -899,7 +796,7 @@
         "mesures": []
       },
       {
-        "texte": "la transmission du patrimoine",
+        "texte": "relever les plafonds de dons familiaux",
         "mesures": [
           "retailleau-social-solidarite-010",
           "retailleau-social-solidarite-025"
@@ -910,10 +807,11 @@
         "mesures": []
       },
       {
-        "texte": "lever les contraintes de construction",
+        "texte": "simplifier et financer la construction de logements",
         "mesures": [
           "retailleau-social-solidarite-011",
           "retailleau-social-solidarite-013",
+          "retailleau-social-solidarite-014",
           "retailleau-social-solidarite-015",
           "retailleau-social-solidarite-016",
           "retailleau-social-solidarite-017",
@@ -922,7 +820,8 @@
           "retailleau-social-solidarite-021",
           "retailleau-social-solidarite-022",
           "retailleau-social-solidarite-023",
-          "retailleau-social-solidarite-024"
+          "retailleau-social-solidarite-024",
+          "retailleau-social-solidarite-032"
         ]
       },
       {
@@ -930,53 +829,21 @@
         "mesures": []
       },
       {
-        "texte": "réduire les aides au logement",
-        "mesures": [
-          "retailleau-social-solidarite-029",
-          "retailleau-social-solidarite-030",
-          "retailleau-social-solidarite-031"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "recentrer l'accès aux actifs",
-        "mesures": [
-          "retailleau-social-solidarite-026",
-          "retailleau-social-solidarite-027",
-          "retailleau-social-solidarite-028"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "garantir la tolérance zéro au squat",
+        "texte": "garantir la tolérance zéro envers le squat",
         "mesures": [
           "retailleau-social-solidarite-012"
         ]
       },
       {
-        "texte": ", ",
+        "texte": ", et ",
         "mesures": []
       },
       {
-        "texte": "lever l'encadrement des loyers",
+        "texte": "réduire certaines aides au logement",
         "mesures": [
-          "retailleau-social-solidarite-014"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "faciliter la mobilité familiale",
-        "mesures": [
-          "retailleau-social-solidarite-032"
+          "retailleau-social-solidarite-029",
+          "retailleau-social-solidarite-030",
+          "retailleau-social-solidarite-031"
         ]
       },
       {
@@ -1018,8 +885,8 @@
       "retailleau-social-solidarite-031",
       "retailleau-social-solidarite-032"
     ],
-    "empreinte": "46480fa5c2fecea7",
-    "date": "2026-09-27",
+    "empreinte": "d0cf737ba0ff8615",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   }
 ]

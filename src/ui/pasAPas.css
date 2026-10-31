@@ -4,6 +4,58 @@
   margin: 0.5rem auto 0;
 }
 
+/* Dans une vue de questions (pleine page) : la tête en haut, la question au milieu, les boutons en bas, sans défiler. */
+.modale--plein .pas-a-pas {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  min-height: 0;
+  margin-top: 0;
+}
+.modale--plein .pas-a-pas-question {
+  margin-block: auto;
+}
+.modale--plein .pas-a-pas--fin {
+  justify-content: center;
+}
+
+/* Compact : une question, ses réponses, et « Précédent / Passer » tiennent dans la hauteur de la fenêtre. */
+.modale--plein .modale-corps > .panneau-progression {
+  margin: 0 0 0.5rem;
+  padding: 0.45rem 1rem;
+}
+.modale--plein .questionnaire--integre {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.modale--plein .modale-corps > form,
+.modale--plein .modale-corps > section.convictions {
+  overflow-y: auto;
+}
+.modale--plein .pas-a-pas-tete {
+  margin-bottom: 0.5rem;
+}
+.modale--plein .pas-a-pas-question legend {
+  margin-bottom: 0.3rem;
+  font-size: 1.25rem;
+}
+.modale--plein .pas-a-pas-finalite {
+  margin-bottom: 0.6rem;
+}
+.modale--plein .pas-a-pas-choix {
+  gap: 0.4rem;
+}
+.modale--plein .pas-a-pas-option {
+  padding: 0.5rem 0.9rem;
+}
+.modale--plein .pas-a-pas .pas-a-pas-actions {
+  margin-top: 0.75rem;
+}
+
 .pas-a-pas-tete {
   margin-bottom: 1rem;
 }

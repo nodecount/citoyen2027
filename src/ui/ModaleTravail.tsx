@@ -1,5 +1,5 @@
-import { ArrowLeft, X } from "lucide-react";
-import { useEffect, useRef, type ReactNode } from "react";
+import { ArrowLeft, ArrowRight, X } from "lucide-react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 // Même seuil que la feuille de style : en dessous, la vue de travail est une étape dans la page, pas une fenêtre.
 const MOBILE = "(max-width: 52rem)";
@@ -9,13 +9,22 @@ interface ModaleTravailProps {
   titre: string;
   onFermer: () => void;
   children: ReactNode;
+  // Introduction affichée en pleine page, comme une toute première question sans réponse : on la passe par « Continuer »,
+  // puis elle ne reparaît plus. Elle n'est montrée que tant que `introAuDebut` est vrai (aucune réponse donnée).
+  intro?: ReactNode;
+  introAuDebut?: boolean;
+  // Vue de questions : le contenu occupe toute la hauteur de la fenêtre (une question par écran, sans défiler).
+  pleinePage?: boolean;
 }
 
 // Fenêtre de travail (questions de situation, convictions) posée par-dessus le tableau de bord : pas de changement de page sur
-// ordinateur, plein écran sur téléphone. Le contenu reste monté même fermée (seulement masqué) pour ne perdre aucun brouillon.
-// Échap, la croix, « Terminé » ou un clic sur le fond la ferment ; la page derrière ne défile plus tant qu'elle est ouverte.
-export function ModaleTravail({ ouverte, titre, onFermer, children }: ModaleTravailProps) {
+// ordinateur, étape dans la page sur téléphone. Le contenu reste monté même fermée ou derrière l'introduction (seulement masqué)
+// pour ne perdre aucun brouillon. Échap, la croix, « Terminé » ou un clic sur le fond la ferment ; la page derrière ne défile
+// plus tant qu'elle est ouverte (ordinateur).
+export function ModaleTravail({ ouverte, titre, onFermer, children, intro, introAuDebut = false, pleinePage = false }: ModaleTravailProps) {
   const panneau = useRef<HTMLDivElement>(null);
+  const [introVue, setIntroVue] = useState(false);
+  const afficherIntro = Boolean(intro) && introAuDebut && !introVue;
 
   useEffect(() => {
     if (!ouverte) return;
@@ -38,7 +47,7 @@ export function ModaleTravail({ ouverte, titre, onFermer, children }: ModaleTrav
 
   return (
     <div className="modale-fond" hidden={!ouverte} onMouseDown={(e) => e.target === e.currentTarget && onFermer()}>
-      <div className="modale modale--travail" role="dialog" aria-modal="true" aria-label={titre} tabIndex={-1} ref={panneau}>
+      <div className={`modale modale--travail${pleinePage ? " modale--plein" : ""}`} role="dialog" aria-modal="true" aria-label={titre} tabIndex={-1} ref={panneau}>
         {/* Téléphone seulement (caché sur ordinateur) : retour à la simulation. */}
         <button type="button" className="modale-lien-retour" onClick={onFermer}>
           <ArrowLeft size={18} aria-hidden="true" focusable="false" />
@@ -50,11 +59,22 @@ export function ModaleTravail({ ouverte, titre, onFermer, children }: ModaleTrav
             <X size={20} aria-hidden="true" focusable="false" />
           </button>
         </div>
-        {children}
-        <div className="barre-retour">
-          <button type="button" onClick={onFermer}>
-            Terminé
-          </button>
+        {intro && (
+          <div className="modale-intro" hidden={!afficherIntro}>
+            <div className="modale-intro-texte">{intro}</div>
+            <button type="button" className="modale-intro-continuer" onClick={() => setIntroVue(true)}>
+              Continuer
+              <ArrowRight size={18} aria-hidden="true" focusable="false" />
+            </button>
+          </div>
+        )}
+        <div className="modale-corps" hidden={afficherIntro}>
+          {children}
+          <div className="barre-retour">
+            <button type="button" onClick={onFermer}>
+              Terminé
+            </button>
+          </div>
         </div>
       </div>
     </div>

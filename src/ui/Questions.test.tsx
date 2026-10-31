@@ -95,7 +95,7 @@ describe("PageQuestionsGenerales", () => {
 
   it("formulaire intégré : un panneau au-dessus des questions avec le %, « N questions répondues sur M » et l'interrupteur des manquantes", () => {
     const html = renderToStaticMarkup(
-      <PageQuestionsGenerales champs={[ENUM, NOMBRE]} questions={[ENUM, NOMBRE]} profilInitial={{ logement: "locataire" }} onValider={() => {}} onAnnuler={() => {}} integre />,
+      <PageQuestionsGenerales champs={[ENUM, NOMBRE]} questions={[ENUM, NOMBRE]} profilInitial={{ logement: "locataire" }} onValider={() => {}} onAnnuler={() => {}} integre pasAPasInitial={false} />,
     );
     expect(html).toContain("Complétion des réponses :");
     expect(html.indexOf("Complétion des réponses :")).toBeLessThan(html.indexOf('role="progressbar"'));
@@ -113,6 +113,17 @@ describe("PageQuestionsGenerales", () => {
     // L'indicateur d'enregistrement est hors des divs, une seule fois, sous le formulaire.
     expect(html.match(/class="rangee-enregistrement"/g)).toHaveLength(1);
     expect(html.indexOf("rangee-enregistrement")).toBeGreaterThan(html.indexOf("</form>"));
+  });
+
+  it("formulaire intégré, une question à la fois : la progression reste en haut, sans l'interrupteur des manquantes", () => {
+    const html = renderToStaticMarkup(
+      <PageQuestionsGenerales champs={[ENUM, NOMBRE]} questions={[ENUM, NOMBRE]} profilInitial={{}} onValider={() => {}} onAnnuler={() => {}} integre />,
+    );
+    expect(html).toContain("Question 1 sur 2");
+    expect(html).toContain("panneau-progression");
+    expect(html).not.toContain('role="switch"');
+    expect(html).not.toContain("Mettre en valeur les réponses manquantes\n");
+    expect(html).not.toMatch(/<label class="interrupteur">/);
   });
 
   it("ne rend aucune question obligatoire", () => {

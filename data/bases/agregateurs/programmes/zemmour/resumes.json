@@ -217,7 +217,7 @@
         "mesures": []
       },
       {
-        "texte": "lancer un audit des politiques publiques",
+        "texte": "auditer les politiques publiques",
         "mesures": [
           "zemmour-finances-publiques-002"
         ]
@@ -237,7 +237,7 @@
         "mesures": []
       },
       {
-        "texte": "revenir sur les jours de carence des agents publics",
+        "texte": "revenir sur les trois jours de carence",
         "mesures": [
           "zemmour-finances-publiques-004"
         ]
@@ -247,7 +247,7 @@
         "mesures": []
       },
       {
-        "texte": "réduire le nombre d'élus locaux",
+        "texte": "rétablir le conseiller territorial",
         "mesures": [
           "zemmour-finances-publiques-005"
         ]
@@ -257,7 +257,7 @@
         "mesures": []
       },
       {
-        "texte": "baisser la CSG des travailleurs modestes",
+        "texte": "baisser la CSG",
         "mesures": [
           "zemmour-finances-publiques-006"
         ]
@@ -267,7 +267,7 @@
         "mesures": []
       },
       {
-        "texte": "instaurer une prime \"zéro charge\" pour les salariés",
+        "texte": "instaurer une prime zéro charge",
         "mesures": [
           "zemmour-finances-publiques-007"
         ]
@@ -286,8 +286,8 @@
       "zemmour-finances-publiques-006",
       "zemmour-finances-publiques-007"
     ],
-    "empreinte": "032922fc01d50342",
-    "date": "2026-09-27",
+    "empreinte": "c15d86fcb424ce57",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
@@ -665,29 +665,20 @@
     "theme": "social-solidarite",
     "segments": [
       {
-        "texte": "Recruter des médecins salariés",
+        "texte": "Recruter des médecins et rétablir les gardes obligatoires",
         "mesures": [
-          "zemmour-social-solidarite-001"
+          "zemmour-social-solidarite-001",
+          "zemmour-social-solidarite-003"
         ]
       },
       {
-        "texte": " et ",
+        "texte": ", ",
         "mesures": []
       },
       {
         "texte": "créer des services hospitaliers de proximité",
         "mesures": [
           "zemmour-social-solidarite-002"
-        ]
-      },
-      {
-        "texte": " dans les déserts médicaux, ",
-        "mesures": []
-      },
-      {
-        "texte": "rétablir la garde médicale obligatoire",
-        "mesures": [
-          "zemmour-social-solidarite-003"
         ]
       },
       {
@@ -705,7 +696,7 @@
         "mesures": []
       },
       {
-        "texte": "développer les transports en commun ruraux",
+        "texte": "désenclaver les bourgs ruraux en transports routiers",
         "mesures": [
           "zemmour-social-solidarite-005"
         ]
@@ -733,8 +724,8 @@
       "zemmour-social-solidarite-005",
       "zemmour-social-solidarite-006"
     ],
-    "empreinte": "dbffb734c432e216",
-    "date": "2026-09-27",
+    "empreinte": "7d4c497b4e441d05",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   }
 ]

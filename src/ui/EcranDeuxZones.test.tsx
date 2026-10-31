@@ -63,11 +63,11 @@ describe("EcranDeuxZones", () => {
     expect(html).not.toContain("Effacer");
   });
 
-  it("un côté rempli : « Continuer », lien vers les mesures, « Révéler » actif, source annoncée, effacements proposés", () => {
+  it("un côté rempli : « Continuer », lien vers les mesures, « Révéler » actif, effacements proposés", () => {
     const html = rendre({ situation: { repondues: 9, total: 18 }, mesuresAccessibles: true, peutEffacerReponses: true, combine: COMB });
     expect(html).toContain("Continuer");
     expect(html).toContain("Voir les mesures adaptées");
-    expect(html).toContain("Calculé sur votre situation seule");
+    expect(html).not.toContain("Calculé sur");
     expect(html).not.toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
     expect(html).toContain("Effacer mes réponses");
     expect(html).toContain("bouton-effacer");

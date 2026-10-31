@@ -5,7 +5,7 @@ import { ModaleAideScore, type ResultatAffiche } from "./CardCandidatIdeal";
 import { etatSuggestion, type Onglet, type OngletsZones } from "./etatZones";
 import { ModaleConfirmation } from "./ModaleConfirmation";
 import { PanneauCandidats } from "./PanneauCandidats";
-import { messageRevelation, progression, sourceDeLaSuggestion, type Comptes } from "./progression";
+import { messageRevelation, progression, type Comptes } from "./progression";
 import { ZoneOnglets } from "./ZoneOnglets";
 import "./deuxZones.css";
 
@@ -101,7 +101,7 @@ export function EcranDeuxZones(p: EcranDeuxZonesProps) {
         />
 
         <div className="deux-zones-centre">
-          <BlocSuggestion etat={etat} pourcent={prog.pourcent} source={sourceDeLaSuggestion(p.situation, p.convictions)} combine={p.combine} onReveler={() => setConfirmer(true)} onRevenir={p.onRevenir} />
+          <BlocSuggestion etat={etat} pourcent={prog.pourcent} combine={p.combine} onReveler={() => setConfirmer(true)} onRevenir={p.onRevenir} />
           <button type="button" className="secondaire zone-aide" aria-haspopup="dialog" onClick={() => setAide(true)}>
             <CircleHelp size={20} aria-hidden="true" focusable="false" />
             Comment est suggéré le candidat ?

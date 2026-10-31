@@ -3,7 +3,7 @@
     "theme": "defense",
     "segments": [
       {
-        "texte": "Augmenter les effectifs de réservistes et de volontaires du service militaire",
+        "texte": "Multiplier les réservistes et volontaires",
         "mesures": [
           "philippe-defense-001"
         ]
@@ -13,7 +13,7 @@
         "mesures": []
       },
       {
-        "texte": "massifier la production de drones tactiques",
+        "texte": "massifier la production de drones",
         "mesures": [
           "philippe-defense-002"
         ]
@@ -23,7 +23,7 @@
         "mesures": []
       },
       {
-        "texte": "lancer un grand plan munitions",
+        "texte": "lancer un plan munitions",
         "mesures": [
           "philippe-defense-003"
         ]
@@ -43,7 +43,7 @@
         "mesures": []
       },
       {
-        "texte": "lancer une nouvelle loi de programmation militaire de massification",
+        "texte": "lancer une nouvelle loi de programmation militaire",
         "mesures": [
           "philippe-defense-005"
         ]
@@ -60,26 +60,17 @@
       "philippe-defense-004",
       "philippe-defense-005"
     ],
-    "empreinte": "4daff3babc4a6b25",
-    "date": "2026-09-27",
+    "empreinte": "9410527df892790e",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "education-jeunesse",
     "segments": [
       {
-        "texte": "Instituer un droit de savoir pour les parents",
+        "texte": "Vérifier les antécédents des adultes encadrants",
         "mesures": [
-          "philippe-education-jeunesse-001"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "déployer les certificats d'honorabilité dans le périscolaire",
-        "mesures": [
+          "philippe-education-jeunesse-001",
           "philippe-education-jeunesse-002"
         ]
       },
@@ -88,11 +79,9 @@
         "mesures": []
       },
       {
-        "texte": "revoir le recrutement, la formation et la rémunération des enseignants",
+        "texte": "donner plus d'autonomie aux établissements",
         "mesures": [
-          "philippe-education-jeunesse-003",
-          "philippe-education-jeunesse-005",
-          "philippe-education-jeunesse-009"
+          "philippe-education-jeunesse-003"
         ]
       },
       {
@@ -100,7 +89,7 @@
         "mesures": []
       },
       {
-        "texte": "donner plus d'autonomie aux chefs d'établissement",
+        "texte": "augmenter le salaire des enseignants",
         "mesures": [
           "philippe-education-jeunesse-004"
         ]
@@ -110,7 +99,17 @@
         "mesures": []
       },
       {
-        "texte": "créer un service public universel de soutien scolaire",
+        "texte": "créer un service public de soutien scolaire",
+        "mesures": [
+          "philippe-education-jeunesse-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "adapter les rythmes scolaires",
         "mesures": [
           "philippe-education-jeunesse-006"
         ]
@@ -120,7 +119,7 @@
         "mesures": []
       },
       {
-        "texte": "adapter les rythmes scolaires aux besoins des enfants",
+        "texte": "concentrer le primaire sur les savoirs fondamentaux",
         "mesures": [
           "philippe-education-jeunesse-007"
         ]
@@ -130,7 +129,7 @@
         "mesures": []
       },
       {
-        "texte": "concentrer le primaire sur les savoirs fondamentaux",
+        "texte": "réviser le recrutement et la formation des professeurs",
         "mesures": [
           "philippe-education-jeunesse-008"
         ]
@@ -148,18 +147,17 @@
       "philippe-education-jeunesse-005",
       "philippe-education-jeunesse-006",
       "philippe-education-jeunesse-007",
-      "philippe-education-jeunesse-008",
-      "philippe-education-jeunesse-009"
+      "philippe-education-jeunesse-008"
     ],
-    "empreinte": "c4713dc914463388",
-    "date": "2026-09-27",
+    "empreinte": "424b270224372364",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "environnement",
     "segments": [
       {
-        "texte": "Ouvrir un accès préférentiel à l'énergie décarbonée",
+        "texte": "Relancer le nucléaire et les renouvelables",
         "mesures": [
           "philippe-envi-001"
         ]
@@ -169,52 +167,44 @@
         "mesures": []
       },
       {
-        "texte": "accélérer la décarbonation et la capture de carbone",
+        "texte": "ouvrir l'accès à l'énergie décarbonée",
+        "mesures": [
+          "philippe-envi-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "bâtir une politique de sécurité climatique territoriale",
         "mesures": [
           "philippe-envi-003",
-          "philippe-envi-004"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "climatiser les infrastructures fragiles et planter des arbres en ville",
-        "mesures": [
-          "philippe-envi-002",
-          "philippe-envi-006"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "rendre les rivières baignables et rénover les piscines",
-        "mesures": [
-          "philippe-envi-005"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "créer un opérateur unique d'adaptation des territoires",
-        "mesures": [
-          "philippe-envi-007"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "simplifier les normes agricoles et moderniser les réseaux",
-        "mesures": [
-          "philippe-envi-008",
           "philippe-envi-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "adapter les villes au climat et à l'eau",
+        "mesures": [
+          "philippe-envi-004",
+          "philippe-envi-007",
+          "philippe-envi-008",
+          "philippe-envi-011"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "cibler les émissions et capturer le carbone",
+        "mesures": [
+          "philippe-envi-005",
+          "philippe-envi-006"
         ]
       },
       {
@@ -222,10 +212,26 @@
         "mesures": []
       },
       {
-        "texte": "développer la souveraineté alimentaire des territoires, inscrite dans la Charte de l'environnement",
+        "texte": "renforcer la sécurité civile et la prévention des risques",
         "mesures": [
           "philippe-envi-010",
-          "philippe-envi-011"
+          "philippe-envi-012",
+          "philippe-envi-013",
+          "philippe-envi-014",
+          "philippe-envi-015"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "moderniser l'agriculture et la souveraineté alimentaire",
+        "mesures": [
+          "philippe-envi-016",
+          "philippe-envi-017",
+          "philippe-envi-018",
+          "philippe-envi-019"
         ]
       },
       {
@@ -244,10 +250,18 @@
       "philippe-envi-008",
       "philippe-envi-009",
       "philippe-envi-010",
-      "philippe-envi-011"
+      "philippe-envi-011",
+      "philippe-envi-012",
+      "philippe-envi-013",
+      "philippe-envi-014",
+      "philippe-envi-015",
+      "philippe-envi-016",
+      "philippe-envi-017",
+      "philippe-envi-018",
+      "philippe-envi-019"
     ],
-    "empreinte": "3843fc674e99c282",
-    "date": "2026-09-27",
+    "empreinte": "681ab17e8daba235",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
@@ -522,13 +536,13 @@
     "theme": "interieur-justice",
     "segments": [
       {
-        "texte": "Encadrer l'immigration par des quotas et des accords bilatéraux",
+        "texte": "Encadrer les flux migratoires",
         "mesures": [
           "philippe-interieur-justice-001",
           "philippe-interieur-justice-002",
           "philippe-interieur-justice-003",
-          "philippe-interieur-justice-005",
-          "philippe-interieur-justice-007"
+          "philippe-interieur-justice-007",
+          "philippe-interieur-justice-009"
         ]
       },
       {
@@ -536,17 +550,19 @@
         "mesures": []
       },
       {
-        "texte": "expulser les étrangers délinquants",
+        "texte": "expulser les étrangers en situation irrégulière",
         "mesures": [
-          "philippe-interieur-justice-004"
+          "philippe-interieur-justice-004",
+          "philippe-interieur-justice-005",
+          "philippe-interieur-justice-008"
         ]
       },
       {
-        "texte": " et ",
+        "texte": ", ",
         "mesures": []
       },
       {
-        "texte": "renforcer l'intégration par la langue et le travail",
+        "texte": "intégrer par la langue et le travail",
         "mesures": [
           "philippe-interieur-justice-006"
         ]
@@ -556,34 +572,13 @@
         "mesures": []
       },
       {
-        "texte": "durcir les peines et leur exécution",
+        "texte": "durcir les peines et réformer la justice",
         "mesures": [
-          "philippe-interieur-justice-008",
-          "philippe-interieur-justice-009",
           "philippe-interieur-justice-010",
-          "philippe-interieur-justice-019"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "réformer la justice et donner un pouvoir de sanction aux maires",
-        "mesures": [
           "philippe-interieur-justice-011",
           "philippe-interieur-justice-012",
           "philippe-interieur-justice-013",
-          "philippe-interieur-justice-014"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "protéger les mineurs victimes",
-        "mesures": [
+          "philippe-interieur-justice-014",
           "philippe-interieur-justice-015",
           "philippe-interieur-justice-016"
         ]
@@ -593,14 +588,11 @@
         "mesures": []
       },
       {
-        "texte": "mener une lutte d'exception contre le narcotrafic",
+        "texte": "protéger les mineurs et lutter contre le proxénétisme",
         "mesures": [
           "philippe-interieur-justice-017",
           "philippe-interieur-justice-018",
-          "philippe-interieur-justice-020",
-          "philippe-interieur-justice-021",
-          "philippe-interieur-justice-022",
-          "philippe-interieur-justice-026"
+          "philippe-interieur-justice-019"
         ]
       },
       {
@@ -608,10 +600,25 @@
         "mesures": []
       },
       {
-        "texte": "lutter contre la corruption des fonctionnaires",
+        "texte": "renforcer la réponse pénale au narcotrafic",
         "mesures": [
+          "philippe-interieur-justice-020",
+          "philippe-interieur-justice-021",
+          "philippe-interieur-justice-022",
           "philippe-interieur-justice-023",
-          "philippe-interieur-justice-024"
+          "philippe-interieur-justice-024",
+          "philippe-interieur-justice-025"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer les contrôles anticorruption",
+        "mesures": [
+          "philippe-interieur-justice-026",
+          "philippe-interieur-justice-027"
         ]
       },
       {
@@ -619,10 +626,10 @@
         "mesures": []
       },
       {
-        "texte": "réprimer les consommateurs et le proxénétisme en ligne",
+        "texte": "durcir la politique antidrogue",
         "mesures": [
-          "philippe-interieur-justice-025",
-          "philippe-interieur-justice-027"
+          "philippe-interieur-justice-028",
+          "philippe-interieur-justice-029"
         ]
       },
       {
@@ -657,10 +664,12 @@
       "philippe-interieur-justice-024",
       "philippe-interieur-justice-025",
       "philippe-interieur-justice-026",
-      "philippe-interieur-justice-027"
+      "philippe-interieur-justice-027",
+      "philippe-interieur-justice-028",
+      "philippe-interieur-justice-029"
     ],
-    "empreinte": "11f4528e50e60c2c",
-    "date": "2026-09-27",
+    "empreinte": "45ceba59ef167a06",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {

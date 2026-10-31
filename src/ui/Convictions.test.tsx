@@ -23,9 +23,19 @@ const NUCLEAIRE = { nucleaire: "garder_nucleaire" };
 
 const rendre = (c: Parameters<typeof PanneauConvictions>[0]) => renderToStaticMarkup(<PanneauConvictions {...c} />);
 
+describe("BlocConvictions, un sujet à la fois", () => {
+  it("par défaut : un seul sujet à l'écran, « Sujet 1 sur N », sans la grille ni l'interrupteur des manquantes", () => {
+    const html = renderToStaticMarkup(<BlocConvictions convictions={CONVICTIONS_VIDES} onChange={() => {}} />);
+    expect(html).toMatch(/Sujet 1 sur \d+/);
+    expect(html).not.toContain("<select");
+    expect(html).not.toMatch(/<label class="interrupteur">/);
+    expect(html).toContain("Voir tous les sujets d&#x27;un coup");
+  });
+});
+
 describe("BlocConvictions", () => {
   it("propose tous les sujets du catalogue, chacun avec « Pas d'avis » et ses positions, et l'exemplarité en interrupteur", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={CONVICTIONS_VIDES} onChange={() => {}} />);
+    const html = renderToStaticMarkup(<BlocConvictions pasAPasInitial={false} convictions={CONVICTIONS_VIDES} onChange={() => {}} />);
     expect(html).toContain("Mes convictions");
     for (const t of ["Nucléaire", "Énergies renouvelables et transition écologique", "Sortir du nucléaire", "Garder et développer le nucléaire", "Intelligence artificielle", "Encourager davantage l&#x27;IA", "Encadrer et limiter l&#x27;IA", "Europe", "Immigration", "Fiscalité et dépense publique", "Sécurité et justice", "Travail et retraites", "Libertés et société"]) expect(html, t).toContain(t);
     expect((html.match(/Pas d&#x27;avis<\/option>/g) ?? []).length).toBe(SUJETS_CONVICTION.length);
@@ -33,18 +43,18 @@ describe("BlocConvictions", () => {
     expect(html).toContain("sans condamnation");
   });
   it("ne cible plus de groupe précis (âge, statut, territoire) : uniquement des sujets", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={CONVICTIONS_VIDES} onChange={() => {}} />);
+    const html = renderToStaticMarkup(<BlocConvictions pasAPasInitial={false} convictions={CONVICTIONS_VIDES} onChange={() => {}} />);
     for (const t of ["Retraité(e)", "Propriétaire", "Moins de 30 ans", "Situation professionnelle"]) expect(html, t).not.toContain(t);
     expect(html).not.toContain('type="checkbox" checked');
   });
   it("présélectionne exactement ce que le visiteur a choisi et compte les positions", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "encadrer_ia" }, exemplarite: false }} onChange={() => {}} />);
+    const html = renderToStaticMarkup(<BlocConvictions pasAPasInitial={false} convictions={{ positions: { ia: "encadrer_ia" }, exemplarite: false }} onChange={() => {}} />);
     expect(html).toMatch(/<option value="encadrer_ia" selected="">/);
     expect((html.match(/selected=""/g) ?? []).length).toBe(SUJETS_CONVICTION.length); // 1 choix + les sept autres sujets, restés sur « Pas d'avis »
     expect(html).toContain(`1 conviction complétée sur ${SUJETS_CONVICTION.length}`);
   });
   it("le panneau de progression est au-dessus des cartes : % des positions, interrupteur des manquantes (actif au départ), pas de bouton", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "encadrer_ia" }, exemplarite: false }} onChange={() => {}} />);
+    const html = renderToStaticMarkup(<BlocConvictions pasAPasInitial={false} convictions={{ positions: { ia: "encadrer_ia" }, exemplarite: false }} onChange={() => {}} />);
     expect(html).toContain(`${Math.round((1 / SUJETS_CONVICTION.length) * 100)} %`);
     expect(html).toMatch(/role="progressbar"[^>]*aria-valuenow="\d+"/);
     expect(html).toMatch(/<input type="checkbox" role="switch" checked=""[^>]*\/><span class="interrupteur-piste"[^>]*><\/span>Mettre en valeur les réponses manquantes/);
@@ -54,7 +64,7 @@ describe("BlocConvictions", () => {
     expect(html.slice(html.indexOf('<section class="convictions'))).not.toContain("panneau-progression");
   });
   it("le bloc ne porte plus le bouton d'effacement (il est en bas de l'écran) ; l'indicateur d'enregistrement est hors des divs, une seule fois, sous les cartes", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "plus_ia" }, exemplarite: false }} onChange={() => {}} />);
+    const html = renderToStaticMarkup(<BlocConvictions pasAPasInitial={false} convictions={{ positions: { ia: "plus_ia" }, exemplarite: false }} onChange={() => {}} />);
     expect(html).not.toContain("Effacer mes convictions");
     expect(html).not.toContain("alertdialog");
     expect(html.match(/class="rangee-enregistrement"/g)).toHaveLength(1);
@@ -65,18 +75,18 @@ describe("BlocConvictions", () => {
     expect(panneau).not.toContain("Effacer");
   });
   it("« sans condamnation » cochée sans position : dit qu'elle ne change rien", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: {}, exemplarite: true }} onChange={() => {}} />);
+    const html = renderToStaticMarkup(<BlocConvictions pasAPasInitial={false} convictions={{ positions: {}, exemplarite: true }} onChange={() => {}} />);
     expect(html).toContain("ne change rien");
     expect(html).toContain("au moins une position");
   });
   it("« sans condamnation » cochée avec une position : dit ce qu'elle fait (écarter), et que les faits ne s'affichent pas", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "plus_ia" }, exemplarite: true }} onChange={() => {}} />);
+    const html = renderToStaticMarkup(<BlocConvictions pasAPasInitial={false} convictions={{ positions: { ia: "plus_ia" }, exemplarite: true }} onChange={() => {}} />);
     expect(html).toContain("écartés du résultat");
     expect(html).toContain("ne sont pas affichés");
     expect(html).not.toContain("ne change rien");
   });
   it("option décochée : aucune mention de l'option", () => {
-    const html = renderToStaticMarkup(<BlocConvictions convictions={{ positions: { ia: "plus_ia" }, exemplarite: false }} onChange={() => {}} />);
+    const html = renderToStaticMarkup(<BlocConvictions pasAPasInitial={false} convictions={{ positions: { ia: "plus_ia" }, exemplarite: false }} onChange={() => {}} />);
     expect(html).not.toContain("ne change rien");
     expect(html).not.toContain("écartés du résultat");
   });
@@ -217,7 +227,7 @@ describe("compteur de mesures sous la position choisie", () => {
   const avec = (positions: Record<string, string>) =>
     renderToStaticMarkup(
       <PropositionsBase.Provider value={[prop([etiquette("immigration", "restriction")]), { ...prop([etiquette("immigration", "restriction")]), id: "b" }]}>
-        <BlocConvictions convictions={{ positions, exemplarite: false }} onChange={() => {}} />
+        <BlocConvictions pasAPasInitial={false} convictions={{ positions, exemplarite: false }} onChange={() => {}} />
       </PropositionsBase.Provider>,
     );
   it("rien sous « Pas d'avis »", () => {

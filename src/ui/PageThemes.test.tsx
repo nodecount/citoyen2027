@@ -184,9 +184,9 @@ describe("tableau de bord du simulateur (trois blocs)", () => {
     expect(page({ profil: {}, generalSoumis: false })).toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
     expect(page()).not.toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
   });
-  it("une seule conviction, sans aucune réponse de situation : la suggestion est accessible et dit qu'elle repose sur les convictions", () => {
+  it("une seule conviction, sans aucune réponse de situation : la suggestion est accessible", () => {
     const html = page({ profil: {}, generalSoumis: false, convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
-    expect(html).toContain("Calculé sur vos convictions seules");
+    expect(html).not.toContain("Calculé sur");
     expect(html).not.toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
   });
   it("les trois vues de travail s'ouvrent en modale par-dessus le tableau de bord, qui reste affiché", () => {

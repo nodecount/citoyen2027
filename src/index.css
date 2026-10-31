@@ -912,6 +912,18 @@ button:where(:not(.portrait, .lien-menu, .bouton-base, .bouton-icone, .menu-burg
   background: var(--bleu-fonce);
 }
 
+/* Un bouton avec une icône : l'icône et le texte sont centrés sur la même ligne (sinon l'icône reste calée sur la ligne de
+   base du texte, donc trop basse). Les règles propres à un bouton (display, gap) l'emportent : `:where` ne pèse rien. */
+:where(button:has(> svg)) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+:where(button > svg) {
+  flex: none;
+}
+
 article {
   margin-bottom: 2rem;
   padding-top: 1rem;
@@ -1006,6 +1018,14 @@ article {
   /* Le bas de page doit rester atteignable malgré l'arrêt obligatoire. */
   html:has(.themes--plein-ecran) .pied-de-page {
     scroll-snap-align: end;
+  }
+  /* Le bas du corps de page (4 rem) rendait la fin du bas de page inatteignable : le point d'arrêt du bas de page tombait 4 rem
+     avant la fin du défilement. Cette marge passe DANS le bas de page, dont le bord inférieur coïncide alors avec la fin. */
+  html:has(.themes--plein-ecran) body {
+    padding-bottom: 0;
+  }
+  html:has(.themes--plein-ecran) .pied-de-page {
+    padding-bottom: 5.25rem;
   }
 }
 
@@ -1278,13 +1298,9 @@ article {
   }
 }
 
-/* Mobile : la carte est étroite, les bulles passent sur beaucoup de lignes et les quatre portraits (à 5 s d'écart) se
-   chevauchent. On n'en garde qu'un sur deux (donc 10 s d'écart) et la bulle prend toute la largeur utile, donc moins de lignes. */
+/* Mobile : la carte est étroite, donc les bulles passent sur beaucoup de lignes. Elles prennent toute la largeur utile (moins de
+   lignes, donc moins hautes) : les quatre portraits peuvent rester à 5 s d'écart sans se chevaucher. */
 @media (max-width: 40rem) {
-  .flux-item:nth-child(even) {
-    display: none;
-  }
-
   .flux-bulle {
     width: calc(100cqw - 6.5rem);
   }

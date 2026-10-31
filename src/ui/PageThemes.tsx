@@ -202,7 +202,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           brouillon en revenant au tableau de bord. */}
       {simulateur && (
         <>
-          <ModaleTravail ouverte={vue === "situation"} titre="Ma situation" onFermer={retour}>
+          <ModaleTravail ouverte={vue === "situation"} titre="Ma situation" onFermer={retour} pleinePage introAuDebut={avance.repondues === 0} intro={
             <IntroEtape etape="situation">
               <p>
                 <strong>Objectif :</strong> mesurer l'effet des mesures sur sa propre situation, en donnant des informations sur votre situation.
@@ -213,6 +213,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
                 <span>Vos informations sont sécurisées : votre navigateur les garde, sans jamais les envoyer, jusqu'à ce que vous les effaciez.</span>
               </p>
             </IntroEtape>
+          }>
             <PageQuestionsGenerales
               key={versionFormulaire}
               integre
@@ -241,7 +242,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
             />
           </ModaleTravail>
 
-          <ModaleTravail ouverte={vue === "convictions"} titre="Mes convictions" onFermer={retour}>
+          <ModaleTravail ouverte={vue === "convictions"} titre="Mes convictions" onFermer={retour} pleinePage introAuDebut={avance.convictions === 0} intro={
             <IntroEtape etape="convictions">
               <p>
                 <strong>Objectif :</strong> tenir compte de ses idées, pas seulement de sa situation.
@@ -252,6 +253,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
                 <span>Vos informations sont sécurisées : votre navigateur les garde, sans jamais les envoyer, jusqu'à ce que vous les effaciez.</span>
               </p>
             </IntroEtape>
+          }>
             <BlocConvictions
               convictions={convictions}
               onChange={(c) => {

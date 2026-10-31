@@ -21,6 +21,14 @@ interface PasAPasProps {
   onReponse: (etape: EtapeQuestion, brut: string | string[]) => void;
   // Quitte le pas à pas pour la grille de toutes les questions.
   onToutVoir: () => void;
+  // Ce que l'on pose : « Question » (situation) ou « Sujet » (convictions), et son pluriel.
+  nom?: string;
+  pluriel?: string;
+  // Phrase sous la réponse (nombre de mesures concernées) ; par défaut, celle des questions de situation. null : rien.
+  impact?: (etape: EtapeQuestion, valeur: string | string[] | number | undefined) => string | null;
+  // Texte de l'écran de fin, et contenu en plus (ex. l'option « sans condamnation » des convictions).
+  texteFin?: string;
+  fin?: React.ReactNode;
 }
 
 // Premier rang sans réponse (le visiteur qui revient reprend là où il s'est arrêté), à défaut le premier.
@@ -31,7 +39,7 @@ function rangDeDepart(etapes: EtapeQuestion[], profil: ProfilPartiel): number {
 
 // Une question par écran : libellé, finalité toujours visible (la place ne manque pas), réponses en grands choix. Rien n'est
 // présélectionné : « Passer » laisse la question sans réponse, jamais comptée comme « non ». Chaque réponse s'applique tout de suite.
-export function PasAPas({ etapes, profil, onReponse, onToutVoir }: PasAPasProps) {
+export function PasAPas({ etapes, profil, onReponse, onToutVoir, nom = "Question", pluriel = "questions", impact, texteFin = "Vos réponses sont enregistrées. Vous pouvez revenir en arrière pour les corriger, ou voir les mesures adaptées à votre situation.", fin }: PasAPasProps) {
   const [rang, setRang] = useState(() => rangDeDepart(etapes, profil));
   const propositions = useContext(PropositionsBase);
   const total = etapes.length;
@@ -42,7 +50,7 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir }: PasAPasProps)
 
   if (total === 0) {
     return (
-      <div className="pas-a-pas" role="group" aria-label="Questions sur ma situation">
+      <div className="pas-a-pas" role="group" aria-label={nom === "Question" ? "Questions sur ma situation" : "Sujets de mes convictions"}>
         <p>Aucune question à vous poser pour le moment.</p>
       </div>
     );
@@ -50,10 +58,11 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir }: PasAPasProps)
 
   if (fini || !etape) {
     return (
-      <div className="pas-a-pas pas-a-pas--fin" role="group" aria-label="Questions sur ma situation">
+      <div className="pas-a-pas pas-a-pas--fin" role="group" aria-label={nom === "Question" ? "Questions sur ma situation" : "Sujets de mes convictions"}>
         <Check size={40} aria-hidden="true" focusable="false" />
-        <h2>Vous avez fait le tour des questions</h2>
-        <p>Vos réponses sont enregistrées. Vous pouvez revenir en arrière pour les corriger, ou voir les mesures adaptées à votre situation.</p>
+        <h2>Vous avez fait le tour des {pluriel}</h2>
+        <p>{texteFin}</p>
+        {fin}
         <div className="pas-a-pas-actions">
           <button type="button" className="secondaire" onClick={() => setRang(total - 1)}>
             <ArrowLeft size={18} aria-hidden="true" focusable="false" />
@@ -61,7 +70,7 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir }: PasAPasProps)
           </button>
           <button type="button" className="secondaire" onClick={onToutVoir}>
             <ListChecks size={18} aria-hidden="true" focusable="false" />
-            Voir toutes mes réponses
+            Voir {pluriel === "questions" ? "toutes mes réponses" : "tous les sujets"}
           </button>
         </div>
       </div>
@@ -72,15 +81,16 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir }: PasAPasProps)
   const id = `pas-${champ.id}`;
   const valeur = profil[champ.id];
   const repondue = estRepondue(champ, profil);
-  const impactees = propositions ? compterMesuresImpactees(champ, profil, propositions) : null;
+  const impactees = impact ? null : propositions ? compterMesuresImpactees(champ, profil, propositions) : null;
+  const phraseImpact = impact ? impact(etape, valeur) : null;
   const choisis = Array.isArray(valeur) ? valeur : [];
   const pct = Math.round((courant / total) * 100);
 
   return (
-    <div className="pas-a-pas" role="group" aria-label="Questions sur ma situation">
+    <div className="pas-a-pas" role="group" aria-label={nom === "Question" ? "Questions sur ma situation" : "Sujets de mes convictions"}>
       <div className="pas-a-pas-tete">
         <p className="pas-a-pas-rang" aria-live="polite">
-          Question {courant + 1} sur {total}
+          {nom} {courant + 1} sur {total}
           {etape.theme && <span className="pas-a-pas-theme"> · {etape.theme}</span>}
         </p>
         <div className="pas-a-pas-barre" role="progressbar" aria-label="Avancement des questions" aria-valuemin={0} aria-valuemax={total} aria-valuenow={courant}>
@@ -129,6 +139,11 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir }: PasAPasProps)
           />
         )}
 
+        {phraseImpact && repondue && (
+          <p className="question-impact" aria-live="polite">
+            {phraseImpact}
+          </p>
+        )}
         {impactees !== null && repondue && (
           <p className="question-impact" aria-live="polite">
             {impactees === 0 ? "Aucune mesure des programmes ne concerne cette réponse." : impactees === 1 ? "1 mesure des programmes concerne cette réponse." : `${impactees} mesures des programmes concernent cette réponse.`}
@@ -155,7 +170,7 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir }: PasAPasProps)
       </div>
       <button type="button" className="lien-discret pas-a-pas-tout" onClick={onToutVoir}>
         <ListChecks size={16} aria-hidden="true" focusable="false" />
-        Voir toutes les questions d'un coup
+        Voir {pluriel === "questions" ? "toutes les questions" : "tous les sujets"} d'un coup
       </button>
     </div>
   );

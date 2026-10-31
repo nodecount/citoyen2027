@@ -1,11 +1,80 @@
 [
   {
-    "theme": "finances-publiques",
+    "theme": "environnement",
     "segments": [
       {
-        "texte": "Organiser des États généraux de la fiscalité",
+        "texte": "Interdire les importations non conformes",
         "mesures": [
-          "ruffin-finances-publiques-001"
+          "ruffin-envi-001",
+          "ruffin-envi-014"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer des emplois écologiques",
+        "mesures": [
+          "ruffin-envi-002",
+          "ruffin-envi-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "renforcer la planification et la participation citoyenne écologiques",
+        "mesures": [
+          "ruffin-envi-004",
+          "ruffin-envi-005",
+          "ruffin-envi-006",
+          "ruffin-envi-007"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "financer des protections solaires pour les précaires",
+        "mesures": [
+          "ruffin-envi-008"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "sanctionner les dirigeants responsables de pollutions",
+        "mesures": [
+          "ruffin-envi-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "mieux rémunérer les agriculteurs et leurs retraites",
+        "mesures": [
+          "ruffin-envi-010",
+          "ruffin-envi-011",
+          "ruffin-envi-013",
+          "ruffin-envi-020"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "financer les pratiques agricoles écologiques",
+        "mesures": [
+          "ruffin-envi-012",
+          "ruffin-envi-017"
         ]
       },
       {
@@ -13,9 +82,13 @@
         "mesures": []
       },
       {
-        "texte": "lutter contre l'évasion fiscale",
+        "texte": "développer une agriculture et alimentation durables locales",
         "mesures": [
-          "ruffin-finances-publiques-002"
+          "ruffin-envi-015",
+          "ruffin-envi-016",
+          "ruffin-envi-018",
+          "ruffin-envi-019",
+          "ruffin-envi-021"
         ]
       },
       {
@@ -24,20 +97,50 @@
       }
     ],
     "propositions": [
-      "ruffin-finances-publiques-001",
-      "ruffin-finances-publiques-002"
+      "ruffin-envi-001",
+      "ruffin-envi-002",
+      "ruffin-envi-003",
+      "ruffin-envi-004",
+      "ruffin-envi-005",
+      "ruffin-envi-006",
+      "ruffin-envi-007",
+      "ruffin-envi-008",
+      "ruffin-envi-009",
+      "ruffin-envi-010",
+      "ruffin-envi-011",
+      "ruffin-envi-012",
+      "ruffin-envi-013",
+      "ruffin-envi-014",
+      "ruffin-envi-015",
+      "ruffin-envi-016",
+      "ruffin-envi-017",
+      "ruffin-envi-018",
+      "ruffin-envi-019",
+      "ruffin-envi-020",
+      "ruffin-envi-021"
     ],
-    "empreinte": "e9e5369626e0321d",
-    "date": "2026-09-27",
+    "empreinte": "d12917651de1f347",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
-    "theme": "gouvernance-republique",
+    "theme": "finances-publiques",
     "segments": [
       {
-        "texte": "Réduire le salaire du président à un niveau proche du SMIC",
+        "texte": "Supprimer les avantages et rentes des dirigeants",
         "mesures": [
-          "ruffin-gouvernance-republique-001"
+          "ruffin-finances-publiques-001",
+          "ruffin-finances-publiques-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "encadrer la rémunération présidentielle et ministérielle",
+        "mesures": [
+          "ruffin-finances-publiques-002"
         ]
       },
       {
@@ -47,6 +150,75 @@
       {
         "texte": "réduire le budget de l'Élysée",
         "mesures": [
+          "ruffin-finances-publiques-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "organiser des états généraux de la fiscalité",
+        "mesures": [
+          "ruffin-finances-publiques-005"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "lutter contre l'évasion fiscale",
+        "mesures": [
+          "ruffin-finances-publiques-006"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "taxer les plus-values immobilières et résidences secondaires",
+        "mesures": [
+          "ruffin-finances-publiques-007",
+          "ruffin-finances-publiques-008"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "ruffin-finances-publiques-001",
+      "ruffin-finances-publiques-002",
+      "ruffin-finances-publiques-003",
+      "ruffin-finances-publiques-004",
+      "ruffin-finances-publiques-005",
+      "ruffin-finances-publiques-006",
+      "ruffin-finances-publiques-007",
+      "ruffin-finances-publiques-008"
+    ],
+    "empreinte": "e763a304ed75f893",
+    "date": "2026-10-31",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "gouvernance-republique",
+    "segments": [
+      {
+        "texte": "Réduire le salaire présidentiel",
+        "mesures": [
+          "ruffin-gouvernance-republique-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "voter une loi séparant État et argent",
+        "mesures": [
           "ruffin-gouvernance-republique-002"
         ]
       },
@@ -55,9 +227,11 @@
         "mesures": []
       },
       {
-        "texte": "supprimer les privilèges des dirigeants",
+        "texte": "renforcer la probité et la responsabilité des dirigeants",
         "mesures": [
-          "ruffin-gouvernance-republique-003"
+          "ruffin-gouvernance-republique-003",
+          "ruffin-gouvernance-republique-004",
+          "ruffin-gouvernance-republique-005"
         ]
       },
       {
@@ -65,9 +239,32 @@
         "mesures": []
       },
       {
-        "texte": "baisser les hauts salaires politiques",
+        "texte": "imposer des stages d'immersion aux ministres",
         "mesures": [
-          "ruffin-gouvernance-republique-004"
+          "ruffin-gouvernance-republique-006"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "encadrer le lobbying par une Haute Autorité et un registre",
+        "mesures": [
+          "ruffin-gouvernance-republique-007",
+          "ruffin-gouvernance-republique-009",
+          "ruffin-gouvernance-republique-010",
+          "ruffin-gouvernance-republique-011"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "interdire le cumul des mandats",
+        "mesures": [
+          "ruffin-gouvernance-republique-008"
         ]
       },
       {
@@ -75,9 +272,9 @@
         "mesures": []
       },
       {
-        "texte": "limiter l'influence des grandes entreprises et de la finance sur l'État",
+        "texte": "instaurer un droit à la formation rémunérée",
         "mesures": [
-          "ruffin-gouvernance-republique-005"
+          "ruffin-gouvernance-republique-012"
         ]
       },
       {
@@ -90,19 +287,56 @@
       "ruffin-gouvernance-republique-002",
       "ruffin-gouvernance-republique-003",
       "ruffin-gouvernance-republique-004",
-      "ruffin-gouvernance-republique-005"
+      "ruffin-gouvernance-republique-005",
+      "ruffin-gouvernance-republique-006",
+      "ruffin-gouvernance-republique-007",
+      "ruffin-gouvernance-republique-008",
+      "ruffin-gouvernance-republique-009",
+      "ruffin-gouvernance-republique-010",
+      "ruffin-gouvernance-republique-011",
+      "ruffin-gouvernance-republique-012"
     ],
-    "empreinte": "7523a662900a1af5",
-    "date": "2026-09-27",
+    "empreinte": "4bc1a7515925fa02",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
-    "theme": "social-solidarite",
+    "theme": "interieur-justice",
     "segments": [
       {
-        "texte": "Créer un plan de rénovation des salles des fêtes",
+        "texte": "Rendre le Parquet indépendant",
         "mesures": [
-          "ruffin-social-solidarite-001"
+          "ruffin-interieur-justice-001"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "supprimer la CJIP",
+        "mesures": [
+          "ruffin-interieur-justice-002"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "retirer au Gouvernement la nomination des procureurs",
+        "mesures": [
+          "ruffin-interieur-justice-003"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "plafonner les billets d'avion vers l'Outre-Mer",
+        "mesures": [
+          "ruffin-interieur-justice-004"
         ]
       },
       {
@@ -111,10 +345,306 @@
       }
     ],
     "propositions": [
-      "ruffin-social-solidarite-001"
+      "ruffin-interieur-justice-001",
+      "ruffin-interieur-justice-002",
+      "ruffin-interieur-justice-003",
+      "ruffin-interieur-justice-004"
     ],
-    "empreinte": "0f145a8fa267ff50",
-    "date": "2026-09-27",
+    "empreinte": "ce0d5d331bc36dcd",
+    "date": "2026-10-31",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "reformes-etat",
+    "segments": [
+      {
+        "texte": "Réinternaliser les compétences stratégiques de l'État",
+        "mesures": [
+          "ruffin-reformes-etat-001"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "ruffin-reformes-etat-001"
+    ],
+    "empreinte": "d42bfd8e29ebb882",
+    "date": "2026-10-31",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "retraites-travail",
+    "segments": [
+      {
+        "texte": "Reconnaître le statut et revaloriser les salaires des travailleurs essentiels",
+        "mesures": [
+          "ruffin-retraites-travail-001",
+          "ruffin-retraites-travail-002",
+          "ruffin-retraites-travail-003",
+          "ruffin-retraites-travail-004"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "mieux rémunérer les horaires atypiques et temps invisibles",
+        "mesures": [
+          "ruffin-retraites-travail-005",
+          "ruffin-retraites-travail-006",
+          "ruffin-retraites-travail-007",
+          "ruffin-retraites-travail-008",
+          "ruffin-retraites-travail-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "encadrer les temps partiels et l'intérim abusif",
+        "mesures": [
+          "ruffin-retraites-travail-010",
+          "ruffin-retraites-travail-013",
+          "ruffin-retraites-travail-014"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "garantir la reconversion et les droits sous-traitants",
+        "mesures": [
+          "ruffin-retraites-travail-011",
+          "ruffin-retraites-travail-012"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "faire payer les employeurs",
+        "mesures": [
+          "ruffin-retraites-travail-015"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "adapter le travail au climat",
+        "mesures": [
+          "ruffin-retraites-travail-016",
+          "ruffin-retraites-travail-017"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "garantir la retraite pour pénibilité",
+        "mesures": [
+          "ruffin-retraites-travail-018"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "ruffin-retraites-travail-001",
+      "ruffin-retraites-travail-002",
+      "ruffin-retraites-travail-003",
+      "ruffin-retraites-travail-004",
+      "ruffin-retraites-travail-005",
+      "ruffin-retraites-travail-006",
+      "ruffin-retraites-travail-007",
+      "ruffin-retraites-travail-008",
+      "ruffin-retraites-travail-009",
+      "ruffin-retraites-travail-010",
+      "ruffin-retraites-travail-011",
+      "ruffin-retraites-travail-012",
+      "ruffin-retraites-travail-013",
+      "ruffin-retraites-travail-014",
+      "ruffin-retraites-travail-015",
+      "ruffin-retraites-travail-016",
+      "ruffin-retraites-travail-017",
+      "ruffin-retraites-travail-018"
+    ],
+    "empreinte": "18ee009d539f4297",
+    "date": "2026-10-31",
+    "modele": "claude-sonnet-5"
+  },
+  {
+    "theme": "social-solidarite",
+    "segments": [
+      {
+        "texte": "Soutenir le monde associatif",
+        "mesures": [
+          "ruffin-social-solidarite-001",
+          "ruffin-social-solidarite-002",
+          "ruffin-social-solidarite-003"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "développer les vacances et loisirs populaires",
+        "mesures": [
+          "ruffin-social-solidarite-004",
+          "ruffin-social-solidarite-005",
+          "ruffin-social-solidarite-006",
+          "ruffin-social-solidarite-007",
+          "ruffin-social-solidarite-008",
+          "ruffin-social-solidarite-009"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "loger les travailleurs essentiels",
+        "mesures": [
+          "ruffin-social-solidarite-010",
+          "ruffin-social-solidarite-011",
+          "ruffin-social-solidarite-012"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "encadrer les loyers",
+        "mesures": [
+          "ruffin-social-solidarite-013"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "faciliter l'accession à la propriété",
+        "mesures": [
+          "ruffin-social-solidarite-014",
+          "ruffin-social-solidarite-015",
+          "ruffin-social-solidarite-016"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "protéger les locataires",
+        "mesures": [
+          "ruffin-social-solidarite-017",
+          "ruffin-social-solidarite-018"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "créer des places d'hébergement et de logement",
+        "mesures": [
+          "ruffin-social-solidarite-019",
+          "ruffin-social-solidarite-020",
+          "ruffin-social-solidarite-021"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "produire des logements sociaux",
+        "mesures": [
+          "ruffin-social-solidarite-022"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "rénover et réhabiliter les logements",
+        "mesures": [
+          "ruffin-social-solidarite-023",
+          "ruffin-social-solidarite-024"
+        ]
+      },
+      {
+        "texte": ", ",
+        "mesures": []
+      },
+      {
+        "texte": "développer le train et le TER",
+        "mesures": [
+          "ruffin-social-solidarite-025",
+          "ruffin-social-solidarite-027"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "baisser les péages autoroutiers",
+        "mesures": [
+          "ruffin-social-solidarite-026"
+        ]
+      },
+      {
+        "texte": ".",
+        "mesures": []
+      }
+    ],
+    "propositions": [
+      "ruffin-social-solidarite-001",
+      "ruffin-social-solidarite-002",
+      "ruffin-social-solidarite-003",
+      "ruffin-social-solidarite-004",
+      "ruffin-social-solidarite-005",
+      "ruffin-social-solidarite-006",
+      "ruffin-social-solidarite-007",
+      "ruffin-social-solidarite-008",
+      "ruffin-social-solidarite-009",
+      "ruffin-social-solidarite-010",
+      "ruffin-social-solidarite-011",
+      "ruffin-social-solidarite-012",
+      "ruffin-social-solidarite-013",
+      "ruffin-social-solidarite-014",
+      "ruffin-social-solidarite-015",
+      "ruffin-social-solidarite-016",
+      "ruffin-social-solidarite-017",
+      "ruffin-social-solidarite-018",
+      "ruffin-social-solidarite-019",
+      "ruffin-social-solidarite-020",
+      "ruffin-social-solidarite-021",
+      "ruffin-social-solidarite-022",
+      "ruffin-social-solidarite-023",
+      "ruffin-social-solidarite-024",
+      "ruffin-social-solidarite-025",
+      "ruffin-social-solidarite-026",
+      "ruffin-social-solidarite-027"
+    ],
+    "empreinte": "93cadeafcd3e2f5c",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   }
 ]

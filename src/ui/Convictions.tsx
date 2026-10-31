@@ -1,4 +1,4 @@
-import { Atom, Banknote, Briefcase, Building2, Car, Coins, Cpu, GraduationCap, Gavel, HeartPulse, House, Lock, Megaphone, Stethoscope, Swords, Wheat, Landmark, Leaf, Scale, ShieldCheck, Users, type LucideIcon } from "lucide-react";
+import { ListOrdered, Atom, Banknote, Briefcase, Building2, Car, Coins, Cpu, GraduationCap, Gavel, HeartPulse, House, Lock, Megaphone, Stethoscope, Swords, Wheat, Landmark, Leaf, Scale, ShieldCheck, Users, type LucideIcon } from "lucide-react";
 import { useContext, useState } from "react";
 import { compterMesuresPosition } from "../engine/mesuresImpactees";
 import { PropositionsBase } from "./PropositionsContexte";
@@ -10,6 +10,7 @@ import type { Proposition } from "../types";
 import { CONVICTIONS_VIDES, type Convictions } from "./memoireConvictions";
 import { RangeeEnregistrement, useSignalEnregistrement } from "./IndicateurEnregistrement";
 import { PanneauProgression } from "./PanneauProgression";
+import { PasAPas, type EtapeQuestion } from "./PasAPas";
 
 const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 
@@ -77,7 +78,7 @@ function phraseMesuresPosition(n: number): string {
 
 // Bloc « Mes convictions » : un sujet par carte, une position au choix, « Pas d'avis » par défaut (aucun score, aucun
 // classement ici : les positions ne servent qu'au résultat « convictions » de la card « candidat idéal »).
-export function BlocConvictions({ convictions, onChange: appliquer }: { convictions: Convictions; onChange: (c: Convictions) => void }) {
+export function BlocConvictions({ convictions, onChange: appliquer, pasAPasInitial = true }: { convictions: Convictions; onChange: (c: Convictions) => void; pasAPasInitial?: boolean }) {
   const propositions = useContext(PropositionsBase);
   const sujets = sujetsDisponibles(propositions);
   const { etat, signaler } = useSignalEnregistrement();
@@ -94,6 +95,29 @@ export function BlocConvictions({ convictions, onChange: appliquer }: { convicti
   // Actif par défaut : les sujets sans position sont mis en valeur dès l'arrivée, le visiteur peut le désactiver.
   const [manquantesEnValeur, setManquantesEnValeur] = useState(true);
   const nombre = sujets.filter((s) => convictions.positions[s.id] !== undefined).length;
+  // Par défaut un sujet par écran (comme les questions de situation) ; le visiteur peut basculer sur la grille de tous les sujets.
+  const [pasAPas, setPasAPas] = useState(pasAPasInitial);
+  const etapes: EtapeQuestion[] = sujets.map((s) => ({
+    champ: { id: s.id, label: s.libelle, type: "enum", options: s.positions.map((p) => p.id), libelles: Object.fromEntries(s.positions.map((p) => [p.id, p.libelle])) },
+  }));
+  const profilPositions = convictions.positions;
+  const exemplarite = (
+    <>
+      <label className="interrupteur">
+        <input type="checkbox" role="switch" checked={convictions.exemplarite} onChange={(e) => onChange({ ...convictions, exemplarite: e.target.checked })} />
+        <span className="interrupteur-piste" aria-hidden="true" />
+        Je tiens à un candidat sans condamnation
+      </label>
+      {/* Le simulateur est toujours à l'aveugle : les faits d'intégrité ne s'affichent jamais, ils servent seulement à écarter
+          des candidats du résultat « convictions » de la card « candidat idéal », qui n'existe qu'avec au moins une position. */}
+      {convictions.exemplarite &&
+        (nombre === 0 ? (
+          <p className="hint">Sans position choisie, cette option ne change rien : elle sert seulement à écarter des candidats du résultat « convictions ». Choisissez au moins une position.</p>
+        ) : (
+          <p className="hint">Les candidats ayant une condamnation connue, même avec un recours en cours, sont écartés du résultat « convictions ». Les faits ne sont pas affichés, pour ne pas dévoiler les noms.</p>
+        ))}
+    </>
+  );
   return (
     <>
       {/* La progression dans une div à part, au-dessus de celle des cartes ; l'indicateur d'enregistrement, hors des divs, en bas à
@@ -104,7 +128,30 @@ export function BlocConvictions({ convictions, onChange: appliquer }: { convicti
         compte={`${nombre} conviction${nombre > 1 ? "s" : ""} complétée${nombre > 1 ? "s" : ""} sur ${sujets.length}`}
         manquantesEnValeur={manquantesEnValeur}
         onManquantes={setManquantesEnValeur}
+        manquantesAffichees={!pasAPas}
       />
+      {pasAPas && (
+        <section className="convictions questionnaire questionnaire--integre" aria-label="Mes convictions">
+          <PasAPas
+            etapes={etapes}
+            profil={profilPositions}
+            nom="Sujet"
+            pluriel="sujets"
+            texteFin="Vos choix sont enregistrés. Un sujet sans choix n'influence pas le résultat. Vous pouvez revenir en arrière pour les corriger."
+            fin={exemplarite}
+            impact={(etape, valeur) => (propositions && typeof valeur === "string" && valeur ? phraseMesuresPosition(compterMesuresPosition(etape.champ.id, valeur, propositions)) : null)}
+            onReponse={(etape, brut) => choisir(etape.champ.id, typeof brut === "string" ? brut : "")}
+            onToutVoir={() => setPasAPas(false)}
+          />
+        </section>
+      )}
+      {!pasAPas && (
+        <button type="button" className="secondaire pas-a-pas-retour" onClick={() => setPasAPas(true)}>
+          <ListOrdered size={18} aria-hidden="true" focusable="false" />
+          Répondre un sujet à la fois
+        </button>
+      )}
+      {!pasAPas && (
       <section className="convictions questionnaire questionnaire--integre" aria-label="Mes convictions">
       <div className="section-questions--cartes">
         {sujets.map((sujet) => {
@@ -139,20 +186,9 @@ export function BlocConvictions({ convictions, onChange: appliquer }: { convicti
           );
         })}
       </div>
-      <label className="interrupteur">
-        <input type="checkbox" role="switch" checked={convictions.exemplarite} onChange={(e) => onChange({ ...convictions, exemplarite: e.target.checked })} />
-        <span className="interrupteur-piste" aria-hidden="true" />
-        Je tiens à un candidat sans condamnation
-      </label>
-      {/* Le simulateur est toujours à l'aveugle : les faits d'intégrité ne s'affichent jamais, ils servent seulement à écarter
-          des candidats du résultat « convictions » de la card « candidat idéal », qui n'existe qu'avec au moins une position. */}
-      {convictions.exemplarite &&
-        (nombre === 0 ? (
-          <p className="hint">Sans position choisie, cette option ne change rien : elle sert seulement à écarter des candidats du résultat « convictions ». Choisissez au moins une position.</p>
-        ) : (
-          <p className="hint">Les candidats ayant une condamnation connue, même avec un recours en cours, sont écartés du résultat « convictions ». Les faits ne sont pas affichés, pour ne pas dévoiler les noms.</p>
-        ))}
+      {exemplarite}
       </section>
+      )}
       <RangeeEnregistrement etat={etat} />
     </>
   );
