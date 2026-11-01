@@ -38,27 +38,19 @@
   },
   {
     "groupe": 2,
-    "empreinte": "a7a86f1eaa375b63",
+    "empreinte": "c0f4784458369300",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 11,
-    "sans_position": 11,
+    "etiquetees": 15,
+    "sans_position": 9,
     "rejetees": [
       {
-        "id": "lisnard-envi-011",
-        "raison": "relecture : Le texte décrit une débureaucratisation générale du service public, sans mention de l'agriculture ou de normes environnementales/agricoles."
-      },
-      {
-        "id": "lisnard-reformes-etat-009",
-        "raison": "relecture : Interdire la surtransposition ne reprend pas de compétences à l'UE ni n'en réduit le rôle, cela concerne seulement la fidélité de la transposition nationale."
-      },
-      {
-        "id": "lisnard-reformes-etat-014",
-        "raison": "relecture : Le texte parle de changer le statut (contrats vs statut de fonctionnaire) pour les fonctions non régaliennes, pas de réduire le nombre d'agents."
+        "id": "lisnard-reformes-etat-010",
+        "raison": "relecture : La mesure porte sur une réorganisation territoriale (État-Province-Bloc communal), relevant du sujet décentralisation, et non d'un changement de régime politique (VIe République, proportionnelle, RIC) visé par 'nouvelles_institutions'."
       }
     ],
-    "cout_reference_usd": 0.0897,
+    "cout_reference_usd": 0.0789,
     "appels": 2
   },
   {

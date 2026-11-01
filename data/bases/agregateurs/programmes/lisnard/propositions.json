@@ -1661,7 +1661,14 @@
     "sous_theme": "Agriculture",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "simplification",
+        "position": "simplifier_normes",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "simplification radicale du statut de l’exploitation agricole, avec un cadre unique"
+      }
+    ]
   },
   {
     "id": "lisnard-envi-011",
@@ -1684,7 +1691,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "simplification",
+        "position": "simplifier_normes",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Débureaucratisation massive (suppression des normes redondantes, guichet numérique unique, autonomie locale sur les modalités d’application)."
+      }
+    ]
   },
   {
     "id": "lisnard-envi-012",
@@ -1744,13 +1759,7 @@
         "sujet": "agriculture_normes",
         "position": "assouplir_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "les bassines sont possibles lorsqu’elles sont techniquement justifiées et localement décidées"
-      },
-      {
-        "sujet": "decentralisation",
-        "position": "decentraliser",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Fonder la gestion de l’eau sur la subsidiarité : les bassines sont possibles lorsqu’elles sont techniquement justifiées et localement décidées."
+        "extrait": "les bassines sont possibles lorsqu’elles sont techniquement justifiées et localement décidées."
       }
     ]
   },
@@ -1812,7 +1821,7 @@
         "sujet": "fonction_publique",
         "position": "moins_fonctionnaires",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Digitaliser le service public pour réduire la masse salariale tout en gardant une présence humaine pour répondre aux citoyens."
+        "extrait": "Digitaliser le service public pour réduire la masse salariale"
       }
     ]
   },
@@ -1862,7 +1871,14 @@
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "simplification",
+        "position": "simplifier_normes",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Revoir tous les codes pour les réduire."
+      }
+    ]
   },
   {
     "id": "lisnard-reformes-etat-004",
@@ -1910,7 +1926,14 @@
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "simplification",
+        "position": "simplifier_normes",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Confier à un ministre rattaché à Matignon de supprimer des textes"
+      }
+    ]
   },
   {
     "id": "lisnard-reformes-etat-006",
@@ -1934,14 +1957,7 @@
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "decentralisation",
-        "position": "etat_central",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer « l’agentialisation » et la régionalisation des services de l’État. Il ne doit plus y avoir qu’un seul interlocuteur au niveau déconcentré, le préfet et le sous-préfet."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "lisnard-reformes-etat-007",
@@ -1965,7 +1981,14 @@
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "simplification",
+        "position": "maintenir_normes",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Donner des moyens à l’État de contrôler le respect des normes. Des sanctions administratives, voire pénales doivent s’appliquer."
+      }
+    ]
   },
   {
     "id": "lisnard-reformes-etat-008",
@@ -1989,7 +2012,14 @@
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "simplification",
+        "position": "simplifier_normes",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer l’ARS, la Dreal, la MRAE, la Dreets"
+      }
+    ]
   },
   {
     "id": "lisnard-reformes-etat-009",
@@ -2012,7 +2042,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "simplification",
+        "position": "simplifier_normes",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire la surtransposition des textes européens."
+      }
+    ]
   },
   {
     "id": "lisnard-reformes-etat-010",
@@ -2035,21 +2073,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "institutions",
-        "position": "nouvelles_institutions",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Proposer par référendum constitutionnel un nouveau schéma institutionnel à trois niveaux : Etat - Province - Bloc communal."
-      },
-      {
-        "sujet": "decentralisation",
-        "position": "decentraliser",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Proposer par référendum constitutionnel un nouveau schéma institutionnel à trois niveaux : Etat - Province - Bloc communal."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "lisnard-reformes-etat-011",
@@ -2104,14 +2128,7 @@
     "sous_theme": "Fonction publique",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Diminuer de 33% à 25% le taux de tâches administratives dans la fonction publique et rendre au service public effectif 75% des effectifs (contre 66% actuellement soit 450 000 fonctionnaires)."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "lisnard-reformes-etat-013",
@@ -2158,7 +2175,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fonction publique",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "lisnard-reformes-etat-015",

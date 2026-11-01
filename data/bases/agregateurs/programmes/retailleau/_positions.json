@@ -1,44 +1,48 @@
 [
   {
     "groupe": 0,
-    "empreinte": "0acd3c3cc5f0341c",
-    "date": "2026-11-01",
-    "modele": "claude-sonnet-5",
-    "propositions": 25,
-    "etiquetees": 15,
-    "sans_position": 8,
-    "rejetees": [
-      {
-        "id": "retailleau-finances-publiques-007",
-        "raison": "relecture : Le relèvement du seuil d'exonération des donations profite largement à l'ensemble des contribuables transmettant un patrimoine, pas spécifiquement aux très hauts patrimoines visés par le sujet ultra_riches."
-      },
-      {
-        "id": "retailleau-interieur-justice-008",
-        "raison": "relecture : Boucler des quartiers et couper les télécommunications relève du maintien de l'ordre/sécurité et non de la surveillance (vidéosurveillance, reconnaissance faciale, accès aux données) telle que définie pour le sujet surveillance."
-      }
-    ],
-    "cout_reference_usd": 0.1071,
-    "appels": 2
-  },
-  {
-    "groupe": 1,
-    "empreinte": "157b32852feface6",
+    "empreinte": "59780e93c9d891aa",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 17,
+    "sans_position": 7,
+    "rejetees": [
+      {
+        "id": "retailleau-interieur-justice-009",
+        "raison": "relecture : La détention provisoire n'est pas une peine (condamnation) mais une mesure préalable au jugement ; l'allongement de sa durée ne correspond pas directement à 'allonger les peines' au sens de la définition prison."
+      }
+    ],
+    "cout_reference_usd": 0.1512,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "85ac7f1b42e4536a",
+    "date": "2026-11-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 15,
     "sans_position": 6,
     "rejetees": [
       {
-        "id": "retailleau-social-solidarite-010",
-        "raison": "relecture : Le relèvement du plafond des dons familiaux exonérés est une mesure générale pour toutes les familles, pas un allègement ciblé sur les très hauts patrimoines ou héritages comme l'exige la définition d'ultra_riches."
+        "id": "retailleau-social-solidarite-004",
+        "raison": "relecture : La mesure porte sur la réduction des prestations sociales (sujet aides_sociales), pas sur la fiscalité ; l'étiquette fiscalite/baisse_impots est un mauvais sujet."
       },
       {
-        "id": "retailleau-social-solidarite-022",
-        "raison": "relecture : Le ZAN (zéro artificialisation nette) est une norme d'urbanisme/aménagement du territoire liée au logement, pas une norme agricole ; le sujet agriculture_normes est mal choisi."
+        "id": "retailleau-social-solidarite-009",
+        "raison": "relecture : Il s'agit d'une déduction d'impôt pour les ménages acheteurs de résidence principale, ce qui relève de la fiscalité (baisse_impots) et non de la libération de l'offre de logement (pas de lien avec l'investissement locatif ou l'allégement de contraintes des bailleurs)."
+      },
+      {
+        "id": "retailleau-social-solidarite-012",
+        "raison": "relecture : La tolérance zéro envers le squat relève de la protection de la propriété et de la sécurité, pas du sujet libertés et société tel que défini (libertés individuelles, ordre moral, identité collective)."
+      },
+      {
+        "id": "retailleau-social-solidarite-020",
+        "raison": "relecture : Il s'agit d'une déduction fiscale pour les familles acheteuses, ce qui relève de la fiscalité (baisse_impots) plutôt que de la libération de l'offre de logement destinée aux bailleurs/investisseurs."
       }
     ],
-    "cout_reference_usd": 0.1352,
+    "cout_reference_usd": 0.1036,
     "appels": 2
   },
   {

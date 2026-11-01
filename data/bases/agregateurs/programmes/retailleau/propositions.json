@@ -88,7 +88,7 @@
         "sujet": "fonction_publique",
         "position": "moins_fonctionnaires",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Ne pas remplacer systématiquement les agents publics partants à la retraite pour les fonctions supports"
+        "extrait": "supprimer 250 000 à 300 000 postes sur le quinquennat"
       }
     ]
   },
@@ -233,6 +233,14 @@
         ],
         "dimension": "patrimoine",
         "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rehausser le seuil d’exonération des donations à 150 000 euros."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Rehausser le seuil d’exonération des donations à 150 000 euros."
       }
@@ -438,7 +446,14 @@
     "sous_theme": "Secteur bancaire & finance",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "systeme_retraite",
+        "position": "capitalisation",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Constituer à terme environ 1 000 Md€ de capital productif, afin de financer la réindustrialisation et de renforcer la soutenabilité du système de retraite."
+      }
+    ]
   },
   {
     "id": "retailleau-interieur-justice-001",
@@ -672,6 +687,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Boucler 24h/24 les quartiers gangrenés par le trafic de drogue, en contrôlant les entrées et sorties"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Boucler 24h/24 les quartiers gangrenés par le trafic de drogue, en contrôlant les entrées et sorties"
+      }
     ]
   },
   {
@@ -709,14 +732,6 @@
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "allongeant la durée de détention provisoire pour les narcotrafiquants"
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "prison",
-        "position": "plus_de_prison",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Durcir la réponse judiciaire, notamment en allongeant la durée de détention provisoire pour les narcotrafiquants."
       }
     ]
   },
@@ -894,13 +909,7 @@
         "sujet": "aides_sociales",
         "position": "conditionner_aides",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire l’assistance grâce au Compte social unique (CSU)"
-      },
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Gain : 10 Md€ d’économies."
+        "extrait": "Réduire l’assistance grâce au Compte social unique"
       }
     ]
   },
@@ -982,10 +991,10 @@
     ],
     "positions": [
       {
-        "sujet": "immigration",
-        "position": "restriction",
+        "sujet": "aides_sociales",
+        "position": "conditionner_aides",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Conditionner le revenu familial à une résidence régulière en France et à l’exercice d’une activité professionnelle depuis au moins cinq ans."
+        "extrait": "Conditionner le revenu familial à une résidence régulière en France et à l’exercice d’une activité professionnelle depuis au moins cinq ans"
       }
     ]
   },
@@ -1010,15 +1019,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Allocations & prestations sociales",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "proposition qui réduit de 25Md€ les prestations"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "retailleau-social-solidarite-005",
@@ -1080,14 +1081,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Allocations & prestations sociales",
     "titre_litteral": true,
-    "positions": [
-      {
-        "sujet": "aides_sociales",
-        "position": "conditionner_aides",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Recentrer le logement social sur ceux qui travaillent et leurs familles."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "retailleau-social-solidarite-007",
@@ -1216,14 +1210,6 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Réduire l'impôt sur le revenu des ménages qui achètent une résidence principale, grâce à la déduction d'une quote-part des intérêts d'emprunt"
       }
-    ],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire l’impôt sur le revenu des ménages qui achètent une résidence principale, grâce à la déduction d’une quote-part des intérêts d’emprunt"
-      }
     ]
   },
   {
@@ -1294,6 +1280,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "100 000 € pour ceux de moins de 40 ans"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "relèvement temporaire du plafond des dons familiaux exonérés à 150 000 € pour les bénéficiaires de moins de 30 ans"
+      }
     ]
   },
   {
@@ -1363,14 +1357,6 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Garantir la tolérance zéro envers le squat."
       }
-    ],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir la tolérance zéro envers le squat."
-      }
     ]
   },
   {
@@ -1429,7 +1415,7 @@
         "sujet": "logement",
         "position": "liberer_offre_logement",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer les dispositifs d’encadrement des loyers issus de la loi ELAN. Abroger les mécanismes de plafonnement prévus par la loi de 1989."
+        "extrait": "En finir avec l’encadrement des loyers. Supprimer les dispositifs d’encadrement des loyers issus de la loi ELAN."
       }
     ]
   },
@@ -1517,7 +1503,14 @@
     "sous_theme": "Logement",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "simplification",
+        "position": "simplifier_normes",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Diviser par deux les délais de construction avec une loi d’urgence."
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-018",
@@ -1576,7 +1569,7 @@
         "sujet": "logement",
         "position": "liberer_offre_logement",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Renforcer le statut de bailleur privé. L’amortissement universel à 4 % par an générera 350 000 logements supplémentaires sur la durée du quinquennat."
+        "extrait": "Renforcer le statut de bailleur privé. L’amortissement universel à 4 % par an générera 350 000 logements supplémentaires"
       }
     ]
   },
@@ -1600,15 +1593,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
-    "titre_litteral": true,
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rendre les intérêts d’emprunt déductibles (pour les familles : 50 % avec un enfant, 75 % avec deux, 100 % à partir de trois)."
-      }
-    ]
+    "titre_litteral": true
   },
   {
     "id": "retailleau-social-solidarite-021",
@@ -1655,7 +1640,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "freiner_transition",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer le ZAN."
+      }
+    ]
   },
   {
     "id": "retailleau-social-solidarite-023",
@@ -1681,8 +1674,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "logement",
-        "position": "liberer_offre_logement",
+        "sujet": "simplification",
+        "position": "simplifier_normes",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Instaurer un moratoire normatif de 10 ans sur les règles applicables à la construction de logements."
       }

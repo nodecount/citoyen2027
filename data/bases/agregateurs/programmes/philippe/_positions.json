@@ -1,85 +1,109 @@
 [
   {
     "groupe": 0,
-    "empreinte": "a1f74e8f414b386f",
+    "empreinte": "50249671f0854446",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 17,
-    "sans_position": 7,
+    "etiquetees": 16,
+    "sans_position": 5,
     "rejetees": [
       {
         "id": "philippe-finances-publiques-002",
-        "raison": "relecture : Exclure les dépenses militaires de la règle de déficit ne montre pas une volonté d'augmenter l'effort militaire, c'est une exemption et non une position sur la défense."
+        "raison": "relecture : L'exclusion des dépenses militaires de la règle d'or ne constitue pas une position en faveur d'une augmentation de l'effort militaire."
+      },
+      {
+        "id": "philippe-finances-publiques-006",
+        "raison": "relecture : Le pacte Dutreil concerne la transmission d'entreprises familiales en général, pas spécifiquement les très hauts patrimoines ; l'étiquette ultra_riches suppose une interprétation non établie par le texte."
+      },
+      {
+        "id": "philippe-finances-publiques-007",
+        "raison": "relecture : L'augmentation des plafonds d'exonération des donations n'est pas présentée comme ciblant les très hauts patrimoines ; le lien avec les ultra-riches relève d'une interprétation."
+      },
+      {
+        "id": "philippe-finances-publiques-008",
+        "raison": "relecture : Favoriser la transmission anticipée du patrimoine de son vivant ne vise pas spécifiquement les ultra-riches, le texte ne l'établit pas."
       }
     ],
-    "cout_reference_usd": 0.12,
+    "cout_reference_usd": 0.1403,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "82f7a362cb949901",
+    "empreinte": "7e566198f7757ed2",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 10,
-    "sans_position": 14,
+    "etiquetees": 11,
+    "sans_position": 11,
     "rejetees": [
       {
-        "id": "philippe-social-solidarite-004",
-        "raison": "relecture : L'étiquette entreprises/soutenir_entreprises repose sur un effet de second ordre (baisse du coût du travail résultant de l'exonération salariale) plutôt que sur une mesure directement destinée aux entreprises."
+        "id": "philippe-interieur-justice-026",
+        "raison": "relecture : Le criblage des fonctionnaires sensibles est une mesure de sécurité interne de l'administration, pas une extension de la surveillance des citoyens (vidéosurveillance, reconnaissance faciale, accès aux données) visée par la définition."
+      },
+      {
+        "id": "philippe-interieur-justice-028",
+        "raison": "relecture : Le recouvrement forcé des amendes sur les prestations sociales n'est pas une contrepartie d'activité imposée aux allocataires mais un mode de recouvrement d'une sanction pénale, ce qui ne correspond pas à la définition de conditionner_aides."
+      },
+      {
+        "id": "philippe-social-solidarite-007",
+        "raison": "relecture : La mesure vise le report modal du fret routier vers le ferroviaire, pas la restriction de la circulation automobile individuelle (voitures) visée par la définition du sujet voiture."
       }
     ],
-    "cout_reference_usd": 0.0709,
+    "cout_reference_usd": 0.0807,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "a00f7798a1a42b64",
+    "empreinte": "2da649f88791df9d",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 7,
     "sans_position": 18,
     "rejetees": [],
-    "cout_reference_usd": 0.0388,
+    "cout_reference_usd": 0.0404,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "d703582d91aab9b7",
+    "empreinte": "f467ee86b2126261",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 7,
-    "sans_position": 15,
+    "etiquetees": 15,
+    "sans_position": 6,
     "rejetees": [
       {
-        "id": "philippe-europe-international-005",
-        "raison": "relecture : Un achat groupé européen et un acte 'Buy European' relèvent d'une coordination renforcée au niveau de l'UE, donc de plus_europe, et non de souveraineté nationale."
-      },
-      {
         "id": "philippe-gouvernance-republique-003",
-        "raison": "relecture : Le texte distingue loi et règlement au niveau de l'État, sans établir clairement un transfert de pouvoir aux communes ou régions ; l'extrait ne fonde pas solidement la décentralisation."
+        "raison": "relecture : Renvoyer le dispositif législatif au règlement est un transfert de niveau normatif, pas une simplification ou réduction des normes elles-mêmes."
       },
       {
-        "id": "philippe-reformes-etat-003",
-        "raison": "relecture : Regrouper ou privatiser des agences ne montre pas directement une réduction du nombre de fonctionnaires, c'est un effet de second ordre supposé."
+        "id": "philippe-gouvernance-republique-004",
+        "raison": "relecture : Créer une présomption de légalité relève d'un dispositif juridique de sécurisation, pas explicitement d'une simplification ou réduction des normes/démarches."
+      },
+      {
+        "id": "philippe-gouvernance-republique-010",
+        "raison": "relecture : L'extrait porte sur une simplification du cadre juridique (sujet simplification), pas sur un soutien direct au développement de l'IA, et le texte précise même ne pas renoncer à la régulation."
+      },
+      {
+        "id": "philippe-education-jeunesse-003",
+        "raison": "relecture : Donner autonomie aux chefs d'établissement sur la discipline ne montre pas directement un durcissement (ecole_exigence), seulement un transfert de décision."
       }
     ],
-    "cout_reference_usd": 0.06,
+    "cout_reference_usd": 0.0914,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "dc29ffd411a1d8e2",
+    "empreinte": "32c1297e9e5d89b4",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 7,
     "etiquetees": 6,
     "sans_position": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.025,
+    "cout_reference_usd": 0.0251,
     "appels": 2
   }
 ]
