@@ -15,7 +15,7 @@ import { BlocConvictions, integritesVisibles } from "./Convictions";
 import { aDesConvictions, CONVICTIONS_VIDES, lireConvictions, memoriserConvictions, type Convictions } from "./memoireConvictions";
 import type { ModeAffichage } from "./memoireReponses";
 import { ModaleConfirmation } from "./ModaleConfirmation";
-import { IntroEtape, IntroMesures, type Vue } from "./ParcoursSimulateur";
+import { IntroFenetre, IntroMesures, type Vue } from "./ParcoursSimulateur";
 import { ModaleTravail } from "./ModaleTravail";
 import PageQuestionsGenerales from "./PageQuestionsGenerales";
 import { PropositionsBase } from "./PropositionsContexte";
@@ -212,23 +212,8 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           brouillon en revenant au tableau de bord. */}
       {simulateur && (
         <>
-          <ModaleTravail ouverte={vue === "situation"} titre="Ma situation" onFermer={retour} pleinePage introAuDebut={avance.repondues === 0} intro={
-            <IntroEtape etape="situation">
-              <p>
-                <strong>Objectif :</strong> mesurer l'effet des mesures sur sa propre situation, en donnant des informations sur votre situation.
-              </p>
-              <p>Toutes les questions sont facultatives, mais plus vous répondez, plus l'estimation est précise.</p>
-              <p className="intro-ligne-icone">
-                <Clock size={22} aria-hidden="true" focusable="false" />
-                <span>
-                  Durée : <strong>{dureeEstimee(avance.questions)}</strong> pour répondre à tout (temps moyen estimé).
-                </span>
-              </p>
-              <p className="intro-ligne-icone">
-                <Lock size={22} aria-hidden="true" focusable="false" />
-                <span>Vos réponses sont anonymes : rien n'est enregistré sur internet ni dans un cloud. Tout reste temporaire et local, sur votre ordinateur, jusqu'à ce que vous l'effaciez.</span>
-              </p>
-            </IntroEtape>
+          <ModaleTravail ouverte={vue === "situation"} titre="Ma situation" zone="situation" onFermer={retour} pleinePage introAuDebut={avance.repondues === 0} intro={
+            <IntroFenetre objectif="Mesurer l'effet des mesures sur votre situation." duree={`${dureeEstimee(avance.questions)} (temps moyen estimé)`}>Toutes les questions sont facultatives, mais plus vous répondez, plus l'estimation est précise.</IntroFenetre>
           }>
             <PageQuestionsGenerales
               key={versionFormulaire}
@@ -260,23 +245,8 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
             />
           </ModaleTravail>
 
-          <ModaleTravail ouverte={vue === "convictions"} titre="Mes convictions" onFermer={retour} pleinePage introAuDebut={avance.convictions === 0} intro={
-            <IntroEtape etape="convictions">
-              <p>
-                <strong>Objectif :</strong> tenir compte de ses idées, pas seulement de sa situation.
-              </p>
-              <p>Vous choisissez une position sur les sujets qui comptent pour vous. Un sujet sans choix n'influence pas le résultat.</p>
-              <p className="intro-ligne-icone">
-                <Clock size={22} aria-hidden="true" focusable="false" />
-                <span>
-                  Durée : <strong>{dureeEstimee(avance.sujets)}</strong> pour répondre à tous les sujets (temps moyen estimé).
-                </span>
-              </p>
-              <p className="intro-ligne-icone">
-                <Lock size={22} aria-hidden="true" focusable="false" />
-                <span>Vos réponses sont anonymes : rien n'est enregistré sur internet ni dans un cloud. Tout reste temporaire et local, sur votre ordinateur, jusqu'à ce que vous l'effaciez.</span>
-              </p>
-            </IntroEtape>
+          <ModaleTravail ouverte={vue === "convictions"} titre="Mes convictions" zone="convictions" onFermer={retour} pleinePage introAuDebut={avance.convictions === 0} intro={
+            <IntroFenetre objectif="Tenir compte de vos idées, pas seulement de votre situation." duree={`${dureeEstimee(avance.sujets)} (temps moyen estimé)`}>Vous choisissez une position sur les questions qui comptent pour vous. Une question sans choix n'influence pas le résultat.</IntroFenetre>
           }>
             <BlocConvictions
               convictions={convictions}
@@ -321,7 +291,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
           exploration, elles restent la page elle-même. La clé referme les détails ouverts quand les lettres changent de sens
           (« Revenir aux questions », autre base, retour en simulateur). */}
       {simulateur && (
-        <ModaleTravail ouverte={vue === "themes"} titre="Mesures adaptées à ma situation" onFermer={retour}>
+        <ModaleTravail ouverte={vue === "themes"} titre="Mesures adaptées à ma situation" onFermer={retour} large>
           {vue === "themes" && (
             <>
               <IntroMesures questionnaire={base.questionnaire} profil={profil} onCompleter={() => allerA("situation")} />

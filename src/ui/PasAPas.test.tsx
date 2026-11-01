@@ -42,10 +42,19 @@ describe("PasAPas", () => {
   });
 
   it("affiche « Suivant » et la réponse cochée quand la question a déjà une réponse", () => {
-    const html = rendre({ statut: "salarie", aides: ["apl"] }, [{ champ: AIDES }]);
+    const html = rendre({ statut: "salarie", aides: ["apl"], nombre_enfants: 1 }, [{ champ: AIDES }, { champ: ENFANTS }]);
     expect(html).toContain("Suivant");
     expect(html).toContain("Effacer ma réponse");
     expect(html).toMatch(/checked=""[^>]*\/><span>Aide au logement/);
+  });
+
+  it("à la dernière question, « Suivant » devient « Enregistrer et fermer » (réponse donnée ou non), sans « Passer »", () => {
+    const sans = rendre({}, [{ champ: ENFANTS }]);
+    expect(sans).toContain("Enregistrer et fermer");
+    expect(sans).not.toContain("Passer");
+    const avec = rendre({ nombre_enfants: 2 }, [{ champ: ENFANTS }]);
+    expect(avec).toContain("Enregistrer et fermer");
+    expect(avec).not.toContain(">Suivant<");
   });
 
   it("propose un champ nombre sans valeur par défaut", () => {

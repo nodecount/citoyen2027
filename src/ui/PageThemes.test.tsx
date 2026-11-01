@@ -194,7 +194,8 @@ describe("tableau de bord du simulateur (trois blocs)", () => {
       const html = page({ vueInitiale: vue, convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
       expect(html, vue).toContain("deux-zones"); // pas de changement de page : le tableau de bord reste derrière
       expect(html, vue).toContain("modale--travail");
-      expect(html, vue).toContain(">Terminé<");
+      // Les vues de questions ont un pied fixe « Enregistrer et fermer » ; la vue de lecture garde « Terminé ».
+      expect(html, vue).toContain(vue === "themes" ? ">Terminé<" : ">Enregistrer et fermer<");
       expect(html, vue).not.toContain("Retour à mon candidat idéal");
     }
   });
@@ -232,7 +233,7 @@ describe("tableau de bord du simulateur (trois blocs)", () => {
   it("« Effacer » est dans le bloc concerné, seulement s'il y a quelque chose à effacer", () => {
     const avec = page({ convictionsInitiales: { positions: { ia: "plus_ia" }, exemplarite: false } });
     expect(avec).toContain("Effacer mes réponses");
-    expect(avec).toContain("Effacer mes convictions");
+    expect(avec.match(/Effacer mes réponses/g)).toHaveLength(2); // un par bloc : situation et convictions
     expect(avec).toContain("bouton-effacer");
     const sans = page({ profil: {}, generalSoumis: false });
     expect(sans).not.toContain("Effacer mes");

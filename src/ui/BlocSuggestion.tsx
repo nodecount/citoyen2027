@@ -84,21 +84,23 @@ export function BlocSuggestion({ etat, pourcent, combine, onReveler, onRevenir }
       {nom}
       {note !== null && (
         <p className="suggestion-score">
-          Score : <strong>{note}</strong> sur 100
+          <strong>Score {note} %</strong>
         </p>
       )}
       {lignesDetail.length > 0 && (
-        <button type="button" className="bouton-fantome suggestion-detail" aria-haspopup="dialog" onClick={() => setDetailOuvert(true)}>
-          Voir le détail du calcul
+        <button type="button" className="bouton-revele suggestion-detail" aria-haspopup="dialog" onClick={() => setDetailOuvert(true)}>
+          Voir les détails
         </button>
       )}
       {detailOuvert && lignesDetail.length > 0 && <ModaleCandidatSuggere lignes={lignesDetail} onFermer={fermerDetail} />}
       {etat === "vide" && <p className="suggestion-source">Répondez à une question de votre situation ou de vos convictions pour débloquer la suggestion.</p>}
       {revele ? (
-        <button type="button" className="bouton-fantome" onClick={onRevenir}>
-          Revenir aux questions
-          <small>Révélé · précision {pourcent} %</small>
-        </button>
+        <div className="suggestion-retour">
+          <p className="suggestion-precision">Précision {pourcent} %</p>
+          <button type="button" className="bouton-fantome" onClick={onRevenir}>
+            Revenir aux questions
+          </button>
+        </div>
       ) : (
         <button type="button" className="bouton-revele" disabled={etat === "vide"} onClick={onReveler}>
           Révéler

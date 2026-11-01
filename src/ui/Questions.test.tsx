@@ -110,9 +110,8 @@ describe("PageQuestionsGenerales", () => {
     expect(html.indexOf("panneau-progression")).toBeLessThan(html.indexOf("<form"));
     expect(html.indexOf("<form")).toBeLessThan(html.indexOf("</form>"));
     expect(html.slice(html.indexOf("<form"))).not.toContain("panneau-progression");
-    // L'indicateur d'enregistrement est hors des divs, une seule fois, sous le formulaire.
-    expect(html.match(/class="rangee-enregistrement"/g)).toHaveLength(1);
-    expect(html.indexOf("rangee-enregistrement")).toBeGreaterThan(html.indexOf("</form>"));
+    // Plus d'indicateur « Enregistré » : l'enregistrement automatique est silencieux.
+    expect(html).not.toContain("rangee-enregistrement");
   });
 
   it("formulaire intégré, une question à la fois : la progression reste en haut, sans l'interrupteur des manquantes", () => {

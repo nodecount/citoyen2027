@@ -8,8 +8,8 @@ import { trouverPosition, trouverSujet } from "../positions";
 import { sujetsDisponibles } from "../engine/positions";
 import type { Proposition } from "../types";
 import { CONVICTIONS_VIDES, type Convictions } from "./memoireConvictions";
-import { RangeeEnregistrement, useSignalEnregistrement } from "./IndicateurEnregistrement";
 import { PanneauProgression } from "./PanneauProgression";
+import { ActionPied } from "./ModaleTravail";
 import { PasAPas, type EtapeQuestion } from "./PasAPas";
 
 const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
@@ -81,11 +81,7 @@ function phraseMesuresPosition(n: number): string {
 export function BlocConvictions({ convictions, onChange: appliquer, pasAPasInitial = true }: { convictions: Convictions; onChange: (c: Convictions) => void; pasAPasInitial?: boolean }) {
   const propositions = useContext(PropositionsBase);
   const sujets = sujetsDisponibles(propositions);
-  const { etat, signaler } = useSignalEnregistrement();
-  const onChange = (c: Convictions) => {
-    signaler();
-    appliquer(c);
-  };
+  const onChange = (c: Convictions) => appliquer(c);
   const choisir = (sujet: string, position: string) => {
     const positions = { ...convictions.positions };
     if (position === "") delete positions[sujet];
@@ -135,10 +131,8 @@ export function BlocConvictions({ convictions, onChange: appliquer, pasAPasIniti
           <PasAPas
             etapes={etapes}
             profil={profilPositions}
-            nom="Sujet"
-            motRang="Question"
-            pluriel="sujets"
-            texteFin="Vos choix sont enregistrés. Un sujet sans choix n'influence pas le résultat. Vous pouvez revenir en arrière pour les corriger."
+            groupe="Questions sur mes convictions"
+            texteFin="Vos choix sont enregistrés. Une question sans choix n'influence pas le résultat. Vous pouvez revenir en arrière pour les corriger."
             fin={exemplarite}
             impact={(etape, valeur) => (propositions && typeof valeur === "string" && valeur ? phraseMesuresPosition(compterMesuresPosition(etape.champ.id, valeur, propositions)) : null)}
             onReponse={(etape, brut) => choisir(etape.champ.id, typeof brut === "string" ? brut : "")}
@@ -147,10 +141,12 @@ export function BlocConvictions({ convictions, onChange: appliquer, pasAPasIniti
         </section>
       )}
       {!pasAPas && (
-        <button type="button" className="secondaire pas-a-pas-retour" onClick={() => setPasAPas(true)}>
+        <ActionPied>
+          <button type="button" className="secondaire pas-a-pas-retour" onClick={() => setPasAPas(true)}>
           <ListOrdered size={18} aria-hidden="true" focusable="false" />
-          Répondre un sujet à la fois
+          Répondre une question à la fois
         </button>
+        </ActionPied>
       )}
       {!pasAPas && (
       <section className="convictions questionnaire questionnaire--integre" aria-label="Mes convictions">
@@ -190,7 +186,6 @@ export function BlocConvictions({ convictions, onChange: appliquer, pasAPasIniti
       {exemplarite}
       </section>
       )}
-      {!pasAPas && <RangeeEnregistrement etat={etat} />}
     </>
   );
 }
@@ -261,7 +256,7 @@ function ConstatSujet({ sujetId, positionId, propositions }: { sujetId: string; 
           <span aria-hidden="true">{MOTS_POSITION[constat.niveau].symbole}</span> <strong>{MOTS_POSITION[constat.niveau].libelle}</strong>
         </>
       ) : (
-        <strong>pas de mesure sur ce sujet</strong>
+        <strong>pas de mesure sur cette question</strong>
       )}
       {constat.retenues.length > 0 && (
         <details className="pourquoi">
@@ -293,7 +288,7 @@ export function PanneauConvictions({ propositions, convictions, integrite }: { p
       {choix.length > 0 && (
         <>
           <p>
-            <strong>Vos convictions</strong>, sujet par sujet :
+            <strong>Vos convictions</strong>, question par question :
           </p>
           <ul>
             {choix.map(([sujet, position]) => (

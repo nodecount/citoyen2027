@@ -23,11 +23,11 @@ describe("Menu", () => {
     expect(rendre("questions-generales")).toMatch(/lien-menu--actif"[^>]*aria-current="page"[^>]*>Simulateur/);
   });
 
-  it("change de base par une icône qui ouvre une modale, avec le nom de la base active visible", () => {
+  it("ouvre la modale des sources par un bouton « Base de connaissances » dans le header", () => {
     const html = rendre("simulateur");
     expect(html).toMatch(/class="bouton-base"[^>]*aria-haspopup="dialog"/);
     expect(html).toContain("<svg"); // icône
-    expect(html).toContain("<span>Base A</span>");
+    expect(html).toContain("<span>Base de connaissances</span>");
     expect(html).not.toContain('role="dialog"'); // fermée tant qu'on n'a pas cliqué
   });
 

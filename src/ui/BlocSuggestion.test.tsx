@@ -63,7 +63,7 @@ describe("BlocSuggestion", () => {
     const html = rendre({ etat: "revele", pourcent: 85 });
     expect(html).toContain("Nom-Reel-Centre");
     expect(html).toContain("Revenir aux questions");
-    expect(html).toContain("Révélé · précision 85 %");
+    expect(html).toContain("Précision 85 %");
     expect(html).not.toContain("XXXXXX YYYYYY");
     expect(html.slice(html.indexOf('class="anneau-disque"'), html.indexOf("</div>", html.indexOf('class="anneau-disque"')))).not.toContain("%");
   });
@@ -71,7 +71,8 @@ describe("BlocSuggestion", () => {
   it("révélé : l'anneau et la ligne sous le nom montrent le score sur 100, plus la précision", () => {
     const ligne = { ...gagnant("C", "Nom-Reel-Centre", "slug-reel-c"), rang: 1, note: 62 };
     const html = rendre({ etat: "revele", pourcent: 85, combine: combine([gagnant("C", "Nom-Reel-Centre", "slug-reel-c")], { classement: [ligne] }) });
-    expect(html).toContain("Score : <strong>62</strong> sur 100");
+    expect(html).toContain("<strong>Score 62 %</strong>");
+    expect(html).not.toContain("Score : ");
     expect(html).toContain('aria-valuenow="62"');
     expect(html).toContain("Score du candidat suggéré");
   });

@@ -8,8 +8,7 @@ const BASES: InfoBase[] = [
   { id: "b", libelle: "Base B", description: "Description B.", avertissement: "" },
 ];
 
-const rendre = (ouverte: boolean, sansMesure?: Record<string, string[]>) =>
-  renderToStaticMarkup(<ModaleBase ouverte={ouverte} bases={BASES} actif="b" onChoisir={() => {}} onControle={() => {}} onFermer={() => {}} sansMesure={sansMesure} />);
+const rendre = (ouverte: boolean) => renderToStaticMarkup(<ModaleBase ouverte={ouverte} bases={BASES} onControle={() => {}} onFermer={() => {}} />);
 
 describe("ModaleBase", () => {
   it("n'existe pas dans la page tant qu'elle est fermée", () => {
@@ -23,38 +22,37 @@ describe("ModaleBase", () => {
     expect(html).toContain('aria-label="Fermer"');
   });
 
-  it("liste chaque base avec sa description, la base active cochée", () => {
+  it("liste chaque source avec sa description, sans aucun système de sélection ni phrase d'invitation à choisir", () => {
     const html = rendre(true);
     expect(html).toContain("Description A.");
     expect(html).toContain("Description B.");
-    const radio = (id: string) => html.match(new RegExp(`<input[^>]*value="${id}"[^>]*>`))?.[0] ?? "";
-    expect(radio("b")).toContain("checked");
-    expect(radio("a")).not.toContain("checked");
-    expect(html).toContain("choix-base choix-base--actif");
+    expect(html).not.toContain("<input");
+    expect(html).not.toContain("Choisissez la source");
   });
 
-  it("dit, sous chaque base, les candidats qu'elle ne couvre pas du tout ; rien quand la liste est vide ou absente", () => {
-    const html = rendre(true, { a: ["Nom-Un", "Nom-Deux"], b: [] });
-    expect(html).toContain("Sans mesure dans cette source pour le moment : Nom-Un, Nom-Deux.");
-    expect(html.match(/Sans mesure dans cette source/g)).toHaveLength(1);
+  it("ne liste plus les candidats sans mesure : cette information est dans la page de monitoring de la source", () => {
     expect(rendre(true)).not.toContain("Sans mesure dans cette source");
   });
 
-  it("grise le choix d'une base désactivée, et ses liens de contrôle, sans toucher aux autres", () => {
+  it("dit pour chaque source si elle est connectée (vert) ou déconnectée (rouge), en mots et en pictogramme", () => {
     const bases = [{ ...BASES[0], desactivee: true }, BASES[1]];
-    const html = renderToStaticMarkup(<ModaleBase ouverte bases={bases} actif="b" onChoisir={() => {}} onControle={() => {}} onFermer={() => {}} />);
-    const radio = (id: string) => html.match(new RegExp(`<input[^>]*value="${id}"[^>]*>`))?.[0] ?? "";
-    expect(radio("a")).toContain("disabled");
-    expect(radio("b")).not.toContain("disabled");
-    // Une base désactivée n'est pas sélectionnée : elle n'affiche donc aucun lien de contrôle.
-    expect(html.match(/<button[^>]*disabled=""[^>]*>Monitoring</g)).toBeNull();
+    const html = renderToStaticMarkup(<ModaleBase ouverte bases={bases} onControle={() => {}} onFermer={() => {}} />);
+    expect(html).toContain("source source--debranchee");
+    expect(html).toContain("source source--branchee");
+    expect(html).toContain(">Déconnectée<");
+    expect(html).toContain(">Connectée<");
+    expect(html.match(/<svg/g)?.length).toBeGreaterThanOrEqual(3); // un pictogramme par source, plus la croix
+    // Le pictogramme précède le nom de la source.
+    expect(html.indexOf("<svg")).toBeLessThan(html.indexOf("<strong>Base A</strong>"));
   });
 
-  it("n'affiche le monitoring et les tests de situations que pour la source sélectionnée", () => {
-    const html = rendre(true);
+  it("n'offre le monitoring et les tests de situations que pour une source connectée", () => {
+    const bases = [{ ...BASES[0], desactivee: true }, BASES[1]];
+    const html = renderToStaticMarkup(<ModaleBase ouverte bases={bases} onControle={() => {}} onFermer={() => {}} />);
     expect(html.match(/>Monitoring</g)).toHaveLength(1);
     expect(html.match(/>Tests de situations</g)).toHaveLength(1);
-    // Les liens sont sous la base B (active), pas sous la A.
-    expect(html.indexOf("Contrôle de cette source")).toBeGreaterThan(html.indexOf("Description B."));
+    // Les liens sont sous la source connectée (B), pas sous la déconnectée (A).
+    expect(html.indexOf(">Monitoring<")).toBeGreaterThan(html.indexOf("Description B."));
+    expect(rendre(true).match(/>Monitoring</g)).toHaveLength(2); // deux sources connectées : un lien chacune
   });
 });

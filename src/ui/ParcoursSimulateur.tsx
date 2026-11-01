@@ -1,4 +1,4 @@
-import { ArrowLeft, Compass, EyeOff, Target, UserRound, type LucideIcon } from "lucide-react";
+import { ArrowLeft, Clock, Compass, EyeOff, Lock, Target, UserRound, type LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import type { ProfilPartiel } from "../profil";
 import { compterReponses, type Questionnaire } from "../questionnaire";
@@ -21,6 +21,32 @@ export function IntroEtape({ etape, children }: { etape: Exclude<Vue, "zones">; 
   );
 }
 
+// Première page d'une fenêtre de questions : trois repères en cartes centrées (objectif, durée, anonymat), comme en tête de « À propos »,
+// puis une phrase. Une icône, un titre, une mini phrase par carte.
+export function IntroFenetre({ objectif, duree, children }: { objectif: string; duree: string; children?: ReactNode }) {
+  return (
+    <div className="intro-fenetre">
+      <ul className="reperes">
+        <li className="repere repere--bleu">
+          <Target aria-hidden="true" />
+          <strong>Objectif</strong>
+          <span>{objectif}</span>
+        </li>
+        <li className="repere repere--rouge">
+          <Clock aria-hidden="true" />
+          <strong>Durée</strong>
+          <span>{duree}</span>
+        </li>
+        <li className="repere repere--fonce">
+          <Lock aria-hidden="true" />
+          <strong>Anonyme</strong>
+          <span>Rien n'est enregistré sur internet. Tout reste sur votre ordinateur jusqu'à ce que vous l'effaciez.</span>
+        </li>
+      </ul>
+      {children && <p className="intro-fenetre-texte">{children}</p>}
+    </div>
+  );
+}
 // Retour au tableau de bord, en haut ET en bas de chaque vue de travail : jamais besoin de défiler pour revenir.
 export function BarreRetour({ onRetour, haut = false }: { onRetour: () => void; haut?: boolean }) {
   return (

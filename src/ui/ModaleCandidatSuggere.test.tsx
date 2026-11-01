@@ -31,24 +31,23 @@ const ligne = (extra: Partial<LigneClassement> = {}): LigneClassement => ({
 });
 
 describe("ModaleCandidatSuggere", () => {
-  it("donne les deux notes, leur moyenne et le calcul de chaque critère pour refaire la moyenne à la main", () => {
+  it("rappelle seulement, avec les phrases de l'autre fenêtre de détail, combien de mesures vont dans le sens du visiteur et à quoi correspond le 100", () => {
     const html = renderToStaticMarkup(<ModaleCandidatSuggere lignes={[ligne()]} onFermer={() => {}} />);
-    // situation : (2 − 1) ÷ 4 = 25 ; convictions : 1 ÷ 2 = 50 ; moyenne 37,5
-    expect(html).toContain("(25 + 50) ÷ 2 = <strong>37,5</strong>, soit 38 sur 100.");
+    // situation : 2 favorables, 1 défavorable, le 100 = 4 mesures, score 1 : note 25.
+    expect(html).toMatch(/<strong>2\/3<\/strong>\s*des mesures vous avantagent\./);
+    expect(html).toContain("Un score de 100 % correspond à 4 mesures, le maximum chez un candidat : 1 sur 4, soit un score de 25 %.");
     expect(html).toContain("Ma situation");
     expect(html).toContain("Mes convictions");
-    expect(html).toContain("Score : 2 − 1 = <strong>1</strong>.");
-    expect(html).toContain("1 ÷ 4 × 100 = <strong>25</strong>");
     expect(html).toContain("Nom-Suggere");
-  });
-  it("montre, pour le critère ouvert, les mesures en accord ET en désaccord, une par une", () => {
+    // Plus de formule ni de moyenne écrite.
+    for (const retire of ["Moyenne des deux notes", "÷", "Score : 2 − 1", "× 100"]) expect(html, retire).not.toContain(retire);
+  });  it("montre, pour le critère ouvert, les mesures en accord ET en désaccord, une par une", () => {
     const html = renderToStaticMarkup(<ModaleCandidatSuggere lignes={[ligne()]} onFermer={() => {}} />);
     for (const t of ["Sit-pour-1", "Sit-pour-2", "Sit-contre-1", "Favorables à votre situation", "Défavorables à votre situation"]) expect(html, t).toContain(t);
     expect(html).not.toContain("Conv-pour-1"); // dans l'onglet des convictions
   });
   it("un seul critère renseigné : sa note est reprise telle quelle, sans moyenne", () => {
     const html = renderToStaticMarkup(<ModaleCandidatSuggere lignes={[ligne({ criteres: { convictions: critere(["Conv-pour-1"], [], 2) } })]} onFermer={() => {}} />);
-    expect(html).toContain("Un seul critère est renseigné");
     expect(html).not.toContain("Moyenne des deux notes");
     expect(html).not.toContain("Ma situation");
   });
@@ -84,11 +83,14 @@ describe("BlocSuggestion : bouton du détail", () => {
   };
   it("révélé, avec le détail des critères : le bouton est proposé", () => {
     const html = renderToStaticMarkup(<BlocSuggestion etat="revele" pourcent={40} combine={combine(ligne().criteres)} onReveler={() => {}} onRevenir={() => {}} />);
-    expect(html).toContain("Voir le détail du calcul");
+    // Le score est écrit AU-DESSUS du bouton principal, qui ne contient que l'action.
+    expect(html).toMatch(/<strong>Score 65 %<\/strong><\/p><button type="button" class="bouton-revele suggestion-detail"[^>]*>Voir les détails<\/button>/);
+    // Puis, plus bas, la précision collée au bouton de retour.
+    expect(html).toMatch(/<div class="suggestion-retour"><p class="suggestion-precision">Précision \d+ %<\/p><button[^>]*>Revenir aux questions<\/button><\/div>/);
   });
   it("non révélé : aucun bouton, aucun détail dans la page", () => {
     const html = renderToStaticMarkup(<BlocSuggestion etat="partiel" pourcent={40} combine={combine(ligne().criteres)} onReveler={() => {}} onRevenir={() => {}} />);
-    expect(html).not.toContain("Voir le détail du calcul");
+    expect(html).not.toContain("Voir les détails");
     expect(html).not.toContain("Sit-pour-1");
   });
 });

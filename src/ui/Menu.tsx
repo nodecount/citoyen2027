@@ -1,6 +1,6 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useState } from "react";
 import { Database, Menu as Menu_, X } from "lucide-react";
-import { candidatsDeBase, chargerBase, type InfoBase } from "../data/bases";
+import type { InfoBase } from "../data/bases";
 import { ModaleBase } from "./ModaleBase";
 import type { Ecran } from "./router";
 
@@ -20,13 +20,6 @@ export function Menu({ ecran, onNaviguer, bases, baseActive, onChoisirBase }: Me
   const courante = bases.find((b) => b.id === baseActive);
   // Le formulaire général fait partie du parcours « Simulateur » : c'est cet onglet qui reste marqué.
   const onglet = ecran === "questions-generales" ? "simulateur" : ecran;
-  // Candidats sans mesure dans chaque source, dits dans la modale ; jamais pendant le simulateur, où les candidats sont masqués.
-  const enSimulateur = onglet === "simulateur";
-  const sansMesure = useMemo(
-    () => (modaleOuverte && !enSimulateur ? Object.fromEntries(bases.map((b) => [b.id, candidatsDeBase(chargerBase(b.id)).enCoursAnalyse.map((m) => m.nom)])) : undefined),
-    [modaleOuverte, enSimulateur, bases],
-  );
-
   // Sur écran étroit, les liens sont repliés derrière un bouton « burger » ; sur grand écran il est caché et les liens restent visibles.
   const [burgerOuvert, setBurgerOuvert] = useState(false);
 
@@ -71,14 +64,13 @@ export function Menu({ ecran, onNaviguer, bases, baseActive, onChoisirBase }: Me
             type="button"
             className="bouton-base"
             aria-haspopup="dialog"
-            aria-label={`Base de connaissances : ${courante.libelle}. Changer`}
-            title="Changer de base de connaissances"
+            title="Voir les sources de données"
             onClick={() => setModaleOuverte(true)}
           >
             <Database size={18} aria-hidden="true" />
-            <span>{courante.libelle}</span>
+            <span>Base de connaissances</span>
           </button>
-          <ModaleBase ouverte={modaleOuverte} bases={bases} actif={baseActive} onChoisir={onChoisirBase} sansMesure={sansMesure}
+          <ModaleBase ouverte={modaleOuverte} bases={bases}
             onControle={(id, cible) => {
               onChoisirBase(id);
               onNaviguer(cible);

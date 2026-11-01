@@ -1,4 +1,4 @@
-import { Lock } from "lucide-react";
+import { Compass, Lock, UserRound } from "lucide-react";
 import type { ReactNode } from "react";
 import type { Onglet } from "./etatZones";
 import "./deuxZones.css";
@@ -21,7 +21,10 @@ export function ZoneOnglets({ zone, onglet, candidatsOuverts, onChoisir, questio
   const idPanneau = `zone-${zone}-panneau`;
   return (
     <section className={`zone zone--${zone}`} aria-label={zone === "situation" ? "Ma situation" : "Mes convictions"}>
-      <h2 className="zone-titre">{zone === "situation" ? "Ma situation" : "Mes convictions"}</h2>
+      <h2 className="zone-titre">
+        {zone === "situation" ? <UserRound size={22} aria-hidden="true" focusable="false" /> : <Compass size={22} aria-hidden="true" focusable="false" />}
+        {zone === "situation" ? "Ma situation" : "Mes convictions"}
+      </h2>
       <div className="zone-onglets" role="tablist" aria-label={zone === "situation" ? "Ma situation" : "Mes convictions"}>
         <button type="button" role="tab" id={idOnglet("questions")} aria-selected={actif === "questions"} aria-controls={idPanneau} className="zone-onglet" onClick={() => onChoisir("questions")}>
           Questions

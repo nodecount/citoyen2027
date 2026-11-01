@@ -25,6 +25,8 @@ export function valeursDuProfil(profil: ProfilPartiel, champ: string): string[] 
     return n >= 3 ? ["au_moins_un", "trois_ou_plus"] : n > 0 ? ["au_moins_un"] : ["aucun"];
   }
   const valeur = profil[champ];
+  // « Les deux » (héritage déjà reçu ET à venir) : les deux valeurs conviennent, comme « trois enfants ou plus » pour les enfants.
+  if (champ === "heritage" && valeur === "les_deux") return ["recu", "a_venir", "les_deux"];
   if (Array.isArray(valeur)) return valeur.length > 0 ? valeur : null;
   return typeof valeur === "string" && valeur.trim().length > 0 ? [valeur] : null;
 }

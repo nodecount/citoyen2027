@@ -29,7 +29,7 @@ describe("BlocConvictions, un sujet à la fois", () => {
     expect(html).toMatch(/Question 1 sur \d+/);
     expect(html).not.toContain("<select");
     expect(html).not.toMatch(/<label class="interrupteur">/);
-    expect(html).toContain("Voir tous les sujets d&#x27;un coup");
+    expect(html).toContain("Voir toutes les questions d&#x27;un coup");
   });
 });
 
@@ -63,12 +63,12 @@ describe("BlocConvictions", () => {
     expect(html.indexOf("panneau-progression")).toBeLessThan(html.indexOf('<section class="convictions'));
     expect(html.slice(html.indexOf('<section class="convictions'))).not.toContain("panneau-progression");
   });
-  it("le bloc ne porte plus le bouton d'effacement (il est en bas de l'écran) ; l'indicateur d'enregistrement est hors des divs, une seule fois, sous les cartes", () => {
+  it("le bloc ne porte plus le bouton d'effacement (il est en bas de l'écran) ; aucun indicateur « Enregistré » nulle part", () => {
     const html = renderToStaticMarkup(<BlocConvictions pasAPasInitial={false} convictions={{ positions: { ia: "plus_ia" }, exemplarite: false }} onChange={() => {}} />);
     expect(html).not.toContain("Effacer mes convictions");
     expect(html).not.toContain("alertdialog");
-    expect(html.match(/class="rangee-enregistrement"/g)).toHaveLength(1);
-    expect(html.indexOf("rangee-enregistrement")).toBeGreaterThan(html.indexOf("</section>"));
+    expect(html).not.toContain("rangee-enregistrement");
+    expect(html).not.toContain("Enregistré");
     // Rien de l'indicateur ni de l'effacement dans le panneau.
     const panneau = html.slice(html.indexOf("panneau-progression"), html.indexOf('<section class="convictions'));
     expect(panneau).not.toContain("enregistrement");
@@ -112,7 +112,7 @@ describe("PanneauConvictions", () => {
     const nucleaire = items.find((i) => i.includes("Nucléaire :"))!;
     const ia = items.find((i) => i.includes("Intelligence artificielle :"))!;
     expect(nucleaire).toContain("proche de votre position");
-    expect(ia).toContain("pas de mesure sur ce sujet");
+    expect(ia).toContain("pas de mesure sur cette question");
     expect(ia).not.toContain("proche de votre position");
   });
   it("explique le constat : mesure, position défendue et extrait de source", () => {
@@ -122,9 +122,9 @@ describe("PanneauConvictions", () => {
     expect(html).toContain("Garder et développer le nucléaire");
     expect(html).toContain("extrait-de-test suffisamment long");
   });
-  it("candidat sans mesure étiquetée : pas de mesure sur ce sujet, jamais « opposé »", () => {
+  it("candidat sans mesure étiquetée : pas de mesure sur cette question, jamais « opposé »", () => {
     const html = rendre({ propositions: [prop([])], convictions: { positions: NUCLEAIRE, exemplarite: false }, integrite: null });
-    expect(html).toContain("pas de mesure sur ce sujet");
+    expect(html).toContain("pas de mesure sur cette question");
     expect(html).not.toContain("opposé");
   });  it("intégrité recensée : nature, juridiction, date et liens vers les sources", () => {
     const html = rendre({ propositions: [], convictions: { positions: {}, exemplarite: true }, integrite: RECENSEE });

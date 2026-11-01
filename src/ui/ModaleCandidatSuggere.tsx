@@ -8,8 +8,6 @@ import { PiedModale } from "./PiedModale";
 
 type Critere = "situation" | "convictions";
 
-// Un nombre à une décimale au plus, à la française (« 66,5 »).
-const nombre = (n: number) => String(Math.round(n * 10) / 10).replace(".", ",");
 const borne = (n: number) => Math.min(100, Math.max(0, Math.round(n)));
 
 const LIBELLES: Record<Critere, { onglet: string; unite: "thèmes" | "sujets"; de: string }> = {
@@ -17,24 +15,27 @@ const LIBELLES: Record<Critere, { onglet: string; unite: "thèmes" | "sujets"; d
   convictions: { onglet: "Mes convictions", unite: "sujets", de: "vos convictions" },
 };
 
-// Le calcul d'un critère, écrit pas à pas pour pouvoir le refaire à la main.
-function CalculCritere({ critere, d }: { critere: Critere; d: DetailCritere }) {
-  const l = LIBELLES[critere];
+// Les mêmes phrases que la fenêtre de détail d'un candidat du top : combien de mesures vont dans le sens du visiteur, et à combien
+// de mesures correspond le 100 quand la note est plus basse. Rien de plus.
+function TexteCritere({ critere, d }: { critere: Critere; d: DetailCritere }) {
+  const total = d.ameliorants + d.degradants;
+  if (total === 0) return null;
+  const note = borne(d.noteBrute);
   return (
-    <ul className="ideal-calcul">
-      <li>
-        <strong>{d.ameliorants}</strong> mesure{d.ameliorants > 1 ? "s" : ""} en accord avec {l.de}, <strong>{d.degradants}</strong> en désaccord.
-      </li>
-      <li>
-        Score : {d.ameliorants} − {d.degradants} = <strong>{d.score}</strong>.
-      </li>
-      <li>
-        Le 100 correspond à {d.reference} mesure{d.reference > 1 ? "s" : ""}, le maximum chez un candidat : {d.score} ÷ {d.reference} × 100 = <strong>{nombre(d.noteBrute)}</strong>.
-      </li>
-    </ul>
+    <p className="hint">
+      <strong>
+        {d.ameliorants}/{total}
+      </strong>{" "}
+      des mesures {critere === "convictions" ? "vont dans le sens de vos convictions" : "vous avantagent"}.
+      {note < 100 && (
+        <span>
+          {" "}
+          Un score de 100 % correspond à {d.reference} mesures, le maximum chez un candidat : {Math.max(0, d.score)} sur {d.reference}, soit un score de {note} %.
+        </span>
+      )}
+    </p>
   );
 }
-
 // Détail du candidat suggéré : ses deux notes (situation, convictions), leur moyenne, et pour chaque critère les mesures dans le sens
 // du visiteur et à l'opposé. Sert à refaire la moyenne soi-même. Ouverte seulement une fois la suggestion révélée.
 // `lignes` : le candidat de la première place, ou tous ceux à égalité (un onglet chacun).
@@ -61,7 +62,6 @@ export function ModaleCandidatSuggere({ lignes, onFermer }: { lignes: LigneClass
   const criteres = (["situation", "convictions"] as const).flatMap((c) => (ligne.criteres?.[c] ? [{ id: c, d: ligne.criteres[c]! }] : []));
   const ouvert = criteres.find((c) => c.id === critereChoisi) ?? criteres[0];
   const plusieurs = lignes.length > 1;
-  const moyenne = criteres.length === 2 ? (criteres[0].d.noteBrute + criteres[1].d.noteBrute) / 2 : null;
 
   return enPortail(
     <div className="modale-fond" onMouseDown={(e) => e.target === e.currentTarget && onFermer()}>
@@ -96,17 +96,6 @@ export function ModaleCandidatSuggere({ lignes, onFermer }: { lignes: LigneClass
             )}
           </div>
         )}
-        <p className="hint ideal-score-explication">
-          {moyenne !== null ? (
-            <>
-              Moyenne des deux notes : ({nombre(criteres[0].d.noteBrute)} + {nombre(criteres[1].d.noteBrute)}) ÷ 2 = <strong>{nombre(moyenne)}</strong>, soit {borne(moyenne)} sur 100.
-            </>
-          ) : criteres.length === 1 ? (
-            "Un seul critère est renseigné : sa note est reprise telle quelle."
-          ) : (
-            "Aucune mesure ne vous concerne chez ce candidat."
-          )}
-        </p>
         <div className="ideal-totaux">
           {criteres.map(({ id, d }) => (
             <div key={id} className="ideal-total">
@@ -125,7 +114,7 @@ export function ModaleCandidatSuggere({ lignes, onFermer }: { lignes: LigneClass
         <div id="panneau-suggere" className="ideal-modale-corps" role="tabpanel" aria-labelledby={ouvert ? `onglet-suggere-${ouvert.id}` : undefined}>
           {ouvert && (
             <>
-              <CalculCritere critere={ouvert.id} d={ouvert.d} />
+              <TexteCritere critere={ouvert.id} d={ouvert.d} />
               {ouvert.d.pour.length === 0 && ouvert.d.contre.length === 0 ? (
                 <p className="hint">Aucune mesure ne vous concerne chez ce candidat sur ce critère.</p>
               ) : (

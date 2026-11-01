@@ -49,7 +49,7 @@ html {
 html::before {
   content: "";
   display: block;
-  height: 5px;
+  height: 8px;
   background: linear-gradient(to right, var(--bleu) 0 33.34%, #fff 33.34% 66.67%, var(--rouge) 66.67% 100%);
   border-bottom: 1px solid #d8dde8;
 }
@@ -281,7 +281,9 @@ a {
   font-size: 1.35rem;
 }
 
-.choix-bases {
+/* Sources de données : une carte par source, un pictogramme vert (connectée) ou rouge (déconnectée) devant son nom. Le mot est écrit
+   aussi : la couleur ne porte jamais seule l'information. Les liens de contrôle n'existent que pour une source connectée. */
+.sources-bases {
   display: grid;
   gap: 0.6rem;
   margin: 1rem 0 0;
@@ -289,44 +291,61 @@ a {
   list-style: none;
 }
 
-.choix-base {
-  display: flex;
-  gap: 0.75rem;
-  align-items: flex-start;
+.source {
   padding: 0.8rem 0.9rem;
   border: 1px solid var(--filet);
+  border-left: 4px solid var(--rouge);
   border-radius: 8px;
-  cursor: pointer;
 }
 
-.choix-base:hover,
-.choix-base--actif {
-  border-color: var(--bleu);
-  background: var(--bleu-pale);
+.source--branchee {
+  border-left-color: var(--ameliorant);
 }
 
-.choix-base--desactivee {
-  opacity: 0.55;
-  cursor: not-allowed;
+.source p {
+  margin: 0;
 }
 
-.choix-base-controles .lien-menu:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
+.source-nom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem 0.5rem;
 }
 
-.choix-base input {
+.source--branchee .source-nom > svg {
+  color: var(--ameliorant);
+}
+
+.source--debranchee .source-nom > svg {
+  color: var(--rouge);
+}
+
+.source-etat {
+  margin-left: auto;
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.source--branchee .source-etat {
+  color: var(--ameliorant);
+}
+
+.source--debranchee .source-etat {
+  color: var(--rouge);
+}
+
+.source-description {
   margin-top: 0.25rem;
-}
-
-.choix-base > span {
-  display: grid;
-  gap: 0.2rem;
-}
-
-.choix-base-description {
   color: var(--encre-douce);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
+}
+
+.source-liens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  margin-top: 0.5rem;
 }
 /* ---- Accueil --------------------------------------------------------------------------------- */
 
@@ -678,52 +697,142 @@ a {
   font-size: 0.9375rem;
 }
 
-/* ---- À propos : une section = un bloc avec son icône ------------------------------------------ */
+/* ---- À propos : du texte rédigé, des titres, des encarts dans la marge ------------------------------ */
 
-.sections-a-propos {
+.a-propos {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+/* Les trois repères du haut : cartes centrées, une couleur d'accent chacune, une icône dans un disque, un titre, une mini phrase. */
+.reperes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
 }
 
-.bloc-a-propos {
-  padding: 1.25rem 1.3rem;
+@media (min-width: 48rem) {
+  .reperes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.repere {
+  --accent: var(--bleu);
+  --accent-pale: var(--bleu-pale);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.25rem 1rem;
   border: 1px solid var(--filet);
-  border-top: 4px solid var(--bleu);
+  border-top: 4px solid var(--accent);
   border-radius: var(--rayon);
-  background: var(--surface);
+  background: linear-gradient(180deg, var(--accent-pale) 0, var(--surface) 6rem);
   box-shadow: var(--ombre);
+  text-align: center;
 }
 
-.bloc-a-propos > svg {
+.repere--rouge {
+  --accent: var(--rouge);
+  --accent-pale: #fdeceb;
+}
+
+.repere--fonce {
+  --accent: var(--bleu-fonce);
+  --accent-pale: #e8edf8;
+}
+
+.repere > svg {
   box-sizing: content-box;
-  padding: 0.55rem;
-  border-radius: 10px;
-  background: var(--bleu-pale);
-  color: var(--bleu);
+  padding: 0.7rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
 }
 
-.bloc-a-propos h2 {
-  margin: 0.75rem 0 0.4rem;
+.repere > strong {
   font-size: 1.2rem;
   color: var(--bleu-fonce);
 }
 
-.bloc-a-propos p,
-.bloc-a-propos ul {
-  margin: 0.3rem 0;
+/* Un chapitre = un titre, des paragraphes, des sous-titres. Les encarts se rangent dans la marge, à côté du paragraphe qui les
+   précède (placement automatique de la grille) ; sur écran étroit, tout s'empile. */
+.chapitre {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: 2.5rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--filet);
 }
 
-.bloc-a-propos ul {
-  padding-left: 1.1rem;
+.chapitre > * {
+  grid-column: 1;
 }
 
-.bloc-credits,
-.bloc-limites,
-.bloc-schema {
-  margin-top: 1.25rem;
+.chapitre h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+  color: var(--bleu-fonce);
 }
+
+.chapitre h3 {
+  margin: 1.5rem 0 0.4rem;
+  font-size: 1.2rem;
+  color: var(--bleu-fonce);
+}
+
+.chapitre p {
+  max-width: 42rem;
+  margin: 0.4rem 0;
+  line-height: 1.65;
+}
+
+.encart {
+  margin: 0.75rem 0;
+  padding: 0.9rem 1rem;
+  border-left: 4px solid var(--bleu);
+  border-radius: 0 var(--rayon) var(--rayon) 0;
+  background: var(--bleu-pale);
+}
+
+.encart > strong {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--bleu-fonce);
+}
+
+.encart p {
+  margin: 0.2rem 0;
+  line-height: 1.5;
+}
+
+.encart--attention {
+  border-left-color: var(--rouge);
+  background: #fdf1f0;
+}
+
+@media (min-width: 60rem) {
+  .chapitre {
+    grid-template-columns: minmax(0, 1fr) 18rem;
+  }
+
+  .chapitre > .encart {
+    grid-column: 2;
+    align-self: start;
+    margin: 0;
+  }
+
+  /* Le schéma et les crédits ont besoin de toute la largeur. */
+  .chapitre--schema,
+  .chapitre:last-child {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 
 /* Schéma de la chaîne de traitement : une entrée, deux colonnes (situation / convictions), une sortie. Chaque étape nomme son acteur. */
 .schema-traitement {
@@ -845,12 +954,6 @@ a {
 
 /* Nom d'un candidat cité dans une phrase : la couleur du thème (bleu foncé), jamais le rouge (qui veut dire « dégradant »). */
 .nom-candidat {
-  color: var(--bleu-fonce);
-}
-
-.bloc-limites h3 {
-  margin: 1rem 0 0.25rem;
-  font-size: 1.05rem;
   color: var(--bleu-fonce);
 }
 
@@ -1730,11 +1833,6 @@ article {
   gap: 0.45rem;
   margin: 0;
   padding: 0.3rem 0.9rem;
-  line-height: 1.35;
-}
-
-.questionnaire-entete .enregistrement {
-  align-self: center;
   line-height: 1.35;
 }
 
@@ -3216,10 +3314,29 @@ button.ideal-egale[aria-selected="true"]:hover {
   margin: 0 0 0.75rem;
   padding-left: 1.2rem;
 }
-.suggestion-detail {
-  margin-top: 0.5rem;
+/* Collé sous le score : sans la marge haute des boutons, et en lien discret (souligné) plutôt qu'en gros bouton. */
+.suggestion-precision {
+  margin: 0;
+  font-size: 1rem;
+  color: #d6def5;
 }
-.ideal-modale-titre {
+/* Bloc révélé, de haut en bas : le score, puis « Voir les détails » ; un grand espace ; la précision collée au bouton de retour. */
+.suggestion button.suggestion-detail {
+  margin: 0;
+}
+.suggestion .suggestion-retour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  margin-top: 0.4rem;
+}
+.suggestion .suggestion-retour .suggestion-precision {
+  margin: 0;
+}
+.suggestion .suggestion-retour .bouton-fantome {
+  margin: 0;
+}.ideal-modale-titre {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -3765,15 +3882,6 @@ button.ideal-onglet:focus-visible {
   font-size: 1rem;
 }
 
-/* Indicateur d'enregistrement automatique : sa place est réservée (pas de saut de mise en page). */
-.enregistrement {
-  min-width: 9rem;
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--bleu-fonce);
-}
-
 
 /* ---- Parcours du simulateur : étapes, navigation, rappel des réponses ---------------------------------- */
 /* Menu des étapes : quatre segments de même largeur (sélectionnés ou non), avec une barre de progression sous chacun : pleine pour les
@@ -4168,31 +4276,6 @@ button.ideal-onglet:focus-visible {
   }
 }
 
-/* Indicateur d'enregistrement : « ghost » (ni bordure ni fond, juste le texte), petit, HORS du panneau et du formulaire, en bas à
-   droite sous le formulaire (Ma situation et Mes convictions). Le mot et le ✓ portent le sens ; la couleur ne fait que l'accompagner. */
-.rangee-enregistrement {
-  display: flex;
-  justify-content: flex-end;
-  min-height: 1.5rem;
-  margin: 0.3rem 0 0;
-}
-.enregistrement {
-  min-width: 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  text-align: right;
-  font-size: 0.9375rem;
-  font-weight: 600;
-}
-.enregistrement--enregistrement {
-  color: var(--bleu);
-}
-.enregistrement--enregistre {
-  color: var(--ameliorant);
-}
-
 /* Actions destructrices (décision du 2026-10-11, dérogation à « jamais de rouge sur un bouton ») : « Effacer … » est un bouton danger,
    en rouge. Contour rouge et texte rouge, fond transparent ; au survol, fond rouge pâle. La confirmation (« Oui, tout effacer »)
    est un danger plein. Le mot porte le sens : la couleur ne fait que l'accompagner. */
@@ -4457,4 +4540,3 @@ button.bouton-danger:hover {
 .test-verdict { margin: 1rem 0 0.5rem; border: 1px solid var(--filet); border-radius: 0.4rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; }
 .test-note { flex: 1 1 18rem; display: flex; flex-direction: column; gap: 0.25rem; }
 .test-note textarea { font: inherit; }
-.choix-base-controles { margin: 0.25rem 0 0.75rem 2rem; display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; align-items: center; }

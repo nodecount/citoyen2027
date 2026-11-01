@@ -1,4 +1,4 @@
-import { CircleHelp, Compass, ExternalLink, Eye, Trophy, UserRound, X } from "lucide-react";
+import { CircleHelp, ExternalLink, Eye, Trophy, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState, type ReactElement } from "react";
 import { createPortal } from "react-dom";
 import type { DetailCriteres, Raison } from "../engine/candidatIdeal";
@@ -267,17 +267,6 @@ export function RondScore({ note }: { note: number }) {
   );
 }
 
-// Même en-tête pour les deux résultats : une icône, et la question à laquelle il répond.
-function TitreResultat({ titre }: { titre: string }) {
-  const Icone = titre === "Selon votre situation" ? UserRound : Compass;
-  return (
-    <h3>
-      <Icone size={20} aria-hidden="true" focusable="false" />
-      {titre}
-    </h3>
-  );
-}
-
 // Portrait d'un candidat du top : sa photo une fois révélé, sa lettre anonyme tant que la card est floutée.
 function PortraitTop({ ligne, revele }: { ligne: LigneClassement; revele: boolean }) {
   const identite = revele ? ligne.identite : null;
@@ -334,7 +323,6 @@ export function ColonneTop({ resultat, revele, onOuvrir }: { resultat: ResultatA
   const places = [...new Set(lignes.map((l) => l.rang))].map((rang) => lignes.filter((l) => l.rang === rang));
   return (
     <div className="ideal-bloc ideal-top">
-      <TitreResultat titre={resultat.titre} />
       {lignes.length === 0 ? (
         resultat.tousEcartes ? (
           <p>
@@ -344,6 +332,8 @@ export function ColonneTop({ resultat, revele, onOuvrir }: { resultat: ResultatA
           <p className="hint">Aucun candidat n'a de résultat sur ce critère.</p>
         )
       ) : (
+        <>
+          {revele && <p className="ideal-top-consigne">Cliquer sur un candidat pour plus d'informations</p>}
         <ol className={`ideal-lignes${revele ? "" : " ideal-flou"}`} {...(revele ? {} : { "aria-hidden": true as const })}>
           {places.map((place) => (
             <li key={place[0].rang}>
@@ -351,6 +341,7 @@ export function ColonneTop({ resultat, revele, onOuvrir }: { resultat: ResultatA
             </li>
           ))}
         </ol>
+        </>
       )}
     </div>
   );
@@ -361,11 +352,10 @@ export function ColonneTop({ resultat, revele, onOuvrir }: { resultat: ResultatA
 export function BlocAbsent({ positionsChoisies }: { positionsChoisies: boolean }) {
   return (
     <div className="ideal-bloc ideal-bloc--absent">
-      <TitreResultat titre="Selon vos convictions" />
       {positionsChoisies ? (
         <p className="hint">
           Pas encore de résultat : les mesures des candidats n'ont pas encore
-          été étudiées sur les sujets que vous avez choisis.
+          été étudiées sur les questions que vous avez choisies.
         </p>
       ) : (
         <p className="hint">

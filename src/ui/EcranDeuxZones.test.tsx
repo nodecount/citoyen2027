@@ -50,28 +50,28 @@ const base = {
 const rendre = (p: Partial<Parameters<typeof EcranDeuxZones>[0]> = {}) => renderToStaticMarkup(<EcranDeuxZones {...base} {...p} />);
 
 describe("EcranDeuxZones", () => {
-  it("départ : deux « Commencer », compteurs à zéro, « Révéler » inactif, onglets Candidats verrouillés, pas de lien vers les mesures", () => {
+  it("départ : deux « Commencer le questionnaire », compteurs à zéro, « Révéler » inactif, onglets Candidats verrouillés, pas de lien vers les mesures", () => {
     const html = rendre();
     expect(html.match(/Commencer/g)).toHaveLength(2);
     // Les deux boutons ont le même style (fond bleu par défaut), aucun n'est « secondaire ».
-    expect(html.match(/<button type="button">Commencer<\/button>/g)).toHaveLength(2);
-    expect(html).toContain("0 question sur 18");
-    expect(html).toContain("0 sujet sur 35");
+    expect(html.match(/<button type="button" class="zone-principal">Commencer le questionnaire<\/button>/g)).toHaveLength(2);
+    expect(html).toContain("Vous avez répondu à 0 question sur 18");
+    expect(html).toContain("Vous avez répondu à 0 question sur 35");
     expect(html).toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
     expect(html.match(/aria-disabled="true"/g)).toHaveLength(2);
     expect(html).not.toContain("Voir les mesures adaptées");
     expect(html).not.toContain("Effacer");
   });
 
-  it("un côté rempli : « Continuer », lien vers les mesures, « Révéler » actif, effacements proposés", () => {
+  it("un côté rempli : « Reprendre le questionnaire », lien vers les mesures, « Révéler » actif, effacements proposés", () => {
     const html = rendre({ situation: { repondues: 9, total: 18 }, mesuresAccessibles: true, peutEffacerReponses: true, combine: COMB });
-    expect(html).toContain("Continuer");
+    expect(html).toContain("Reprendre le questionnaire");
     expect(html).toContain("Voir les mesures adaptées");
     expect(html).not.toContain("Calculé sur");
     expect(html).not.toMatch(/<button[^>]*disabled=""[^>]*>[^<]*Révéler/);
     expect(html).toContain("Effacer mes réponses");
     expect(html).toContain("bouton-effacer");
-    expect(html).not.toContain("Effacer mes convictions");
+    expect(html.match(/Effacer mes réponses/g)).toHaveLength(1); // un seul bouton d'effacement : celui de la situation
   });
 
   it("non révélé : aucune identité réelle dans la page, même si les résultats en portent", () => {
@@ -90,7 +90,7 @@ describe("EcranDeuxZones", () => {
     const html = rendre({ situation: { repondues: 9, total: 18 }, revele: true, onglets: { gauche: "questions", droite: "candidats" }, resultatSituation: SIT, resultatConvictions: CONV, combine: COMB });
     expect(html).not.toContain("Nom-Reel-Sit");
     expect(html).toContain("Nom-Reel-Conv");
-    expect(html).toContain("Continuer");
+    expect(html).toContain("Reprendre le questionnaire");
   });
 
   it("révélé, sans résultat convictions : le classement de droite dit pourquoi", () => {

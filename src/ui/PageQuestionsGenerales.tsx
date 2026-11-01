@@ -1,8 +1,8 @@
 import { Eraser, Eye, ListChecks, ListOrdered, Lock } from "lucide-react";
 import { PanneauProgression } from "./PanneauProgression";
+import { ActionPied } from "./ModaleTravail";
 import { PasAPas, type EtapeQuestion } from "./PasAPas";
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { RangeeEnregistrement, type EtatEnregistrement } from "./IndicateurEnregistrement";
 import { compterReponses, estRepondue, questionsVisibles, type SectionTheme } from "../questionnaire";
 import { mettreAJourReponse, type ProfilPartiel } from "../profil";
 import type { ChampProfil } from "../types";
@@ -41,7 +41,6 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
 
   // Enregistrement automatique (formulaire intégré) : chaque modification est appliquée après une courte pause, sans bouton.
   // « enregistrement » pendant la pause, « enregistre » une fois appliquée ; rien n'est affiché tant que rien n'a changé.
-  const [etatEnregistrement, setEtatEnregistrement] = useState<EtatEnregistrement>("repos");
   const premierRendu = useRef(true);
   const surValider = useRef(onValider);
   surValider.current = onValider;
@@ -51,10 +50,8 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
       premierRendu.current = false;
       return;
     }
-    setEtatEnregistrement("enregistrement");
     const minuteur = setTimeout(() => {
       surValider.current(brouillon);
-      setEtatEnregistrement("enregistre");
     }, 500);
     return () => clearTimeout(minuteur);
   }, [brouillon, integre]);
@@ -74,11 +71,13 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
     else profilFile[q.id] = brouillon[q.id];
   }
   const file: EtapeQuestion[] = [
-    ...questionsVisibles(questions, profilFile).map((champ) => ({ champ })),
-    ...sectionsThemes.flatMap(({ theme, questions: qs }) => questionsVisibles(qs, profilFile).map((champ) => ({ champ, theme: theme.libelle }))),
+    // Une question générale sert plusieurs thèmes : elle porte le libellé « Question générale » (toutes les questions en ont un).
+    ...questionsVisibles(questions, profilFile).map((champ) => ({ champ, theme: "Question générale" })),
+    ...sectionsThemes.flatMap(({ theme, questions: qs }) => questionsVisibles(qs, profilFile).map((champ) => ({ champ, theme: theme.libelle, themeId: theme.id }))),
   ];
-  // En pas à pas, le panneau compte la file entière (générales + thèmes), pour dire la même chose que « Question N sur M ».
-  const affiche = integre && pasAPas ? { repondues: file.filter((e) => estRepondue(e.champ, profilFile)).length, total: file.length } : { repondues, total };
+  // Formulaire intégré : le panneau compte la file entière (générales + thèmes), une question à la fois COMME en grille (la grille
+  // montre aussi les questions de thèmes) : même pourcentage dans les deux modes, et le même que le tableau de bord.
+  const affiche = integre ? { repondues: file.filter((e) => estRepondue(e.champ, profilFile)).length, total: file.length } : { repondues, total };
   function repondreEtape(etape: EtapeQuestion, brut: string | string[]) {
     if (idsGenerales.has(etape.champ.id)) repondre(etape.champ, brut);
     else onReponseTheme?.(etape.champ, brut);
@@ -147,10 +146,12 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
       )}
       {integre && pasAPas && <PasAPas etapes={file} profil={profilFile} onReponse={repondreEtape} onToutVoir={() => setPasAPas(false)} />}
       {integre && !pasAPas && (
-        <button type="button" className="secondaire pas-a-pas-retour" onClick={() => setPasAPas(true)}>
+        <ActionPied>
+          <button type="button" className="secondaire pas-a-pas-retour" onClick={() => setPasAPas(true)}>
           <ListOrdered size={18} aria-hidden="true" focusable="false" />
           Répondre une question à la fois
         </button>
+        </ActionPied>
       )}
       {!(integre && pasAPas) && (
       <div className={integre ? "grille-questions" : undefined}>
@@ -170,7 +171,6 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
       )}
       {!integre && actions}
     </form>
-    {integre && !pasAPas && <RangeeEnregistrement etat={etatEnregistrement} />}
     </>
   );
 }

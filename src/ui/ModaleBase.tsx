@@ -1,24 +1,19 @@
 import { useEffect, useRef } from "react";
-import { X } from "lucide-react";
+import { Plug, Unplug, X } from "lucide-react";
 import type { InfoBase } from "../data/bases";
 import { PiedModale } from "./PiedModale";
-import { ProgrammesSansMesure } from "./ProgrammesSansMesure";
 
 interface ModaleBaseProps {
   ouverte: boolean;
   bases: InfoBase[];
-  actif: string;
-  onChoisir: (id: string) => void;
   // Ouvre une page de contrôle (monitoring, tests de situations) POUR cette base : chaque source a son propre découpage.
   onControle: (id: string, cible: "monitoring" | "tests-situations") => void;
   onFermer: () => void;
-  // Par base, les candidats sans aucune mesure dans cette source (absent : rien n'est dit, comme en simulateur où les candidats sont masqués).
-  sansMesure?: Record<string, string[]>;
 }
 
-// Choix de la base de connaissances, dans une modale. Rendue seulement quand elle est ouverte (rien dans la page
+// État des sources de données, dans une modale (plus de sélection : une source connectée est affichée, une déconnectée ne l'est pas). Rendue seulement quand elle est ouverte (rien dans la page
 // sinon). Se ferme par Échap, par un clic hors du panneau, par le bouton de fermeture, ou en choisissant une base.
-export function ModaleBase({ ouverte, bases, actif, onChoisir, onControle, onFermer, sansMesure }: ModaleBaseProps) {
+export function ModaleBase({ ouverte, bases, onControle, onFermer }: ModaleBaseProps) {
   const panneau = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -42,52 +37,40 @@ export function ModaleBase({ ouverte, bases, actif, onChoisir, onControle, onFer
             <X size={20} aria-hidden="true" />
           </button>
         </div>
-        <p className="hint">Choisissez la source des données affichées sur tout le site.</p>
-        <ul className="choix-bases">
-          {bases.map((base) => (
-            <li key={base.id}>
-              <label className={[base.id === actif ? "choix-base choix-base--actif" : "choix-base", base.desactivee ? "choix-base--desactivee" : ""].join(" ").trim()}>
-                <input
-                  type="radio"
-                  name="base-de-connaissances"
-                  value={base.id}
-                  disabled={base.desactivee}
-                  checked={base.id === actif}
-                  onChange={() => {
-                    onChoisir(base.id);
-                    onFermer();
-                  }}
-                />
-                <span>
+        <ul className="sources-bases">
+          {bases.map((base) => {
+            const branchee = !base.desactivee;
+            const Pictogramme = branchee ? Plug : Unplug;
+            return (
+              <li key={base.id} className={branchee ? "source source--branchee" : "source source--debranchee"}>
+                <p className="source-nom">
+                  <Pictogramme size={20} aria-hidden="true" focusable="false" />
                   <strong>{base.libelle}</strong>
-                  <span className="choix-base-description">{base.description}</span>
-                </span>
-              </label>
-              <ProgrammesSansMesure noms={sansMesure?.[base.id] ?? []} />
-              {/* Les liens de contrôle n'apparaissent que pour la source sélectionnée. */}
-              {base.id === actif && (
-              <p className="choix-base-controles">
-                <span>Contrôle de cette source :</span>
-                {([["monitoring", "Monitoring"], ["tests-situations", "Tests de situations"]] as const).map(([cible, libelle]) => (
-                  <button
-                    key={cible}
-                    type="button"
-                    className="lien-menu"
-                    disabled={base.desactivee}
-                    onClick={() => {
-                      onControle(base.id, cible);
-                      onFermer();
-                    }}
-                  >
-                    {libelle}
-                  </button>
-                ))}
-              </p>
-              )}
-            </li>
-          ))}
-        </ul>
-        <PiedModale onFermer={onFermer} />
+                  <span className="source-etat">{branchee ? "Connectée" : "Déconnectée"}</span>
+                </p>
+                <p className="source-description">{base.description}</p>
+                {/* Les liens de contrôle n'existent que pour une source branchée. */}
+                {branchee && (
+                  <p className="source-liens">
+                    {([["monitoring", "Monitoring"], ["tests-situations", "Tests de situations"]] as const).map(([cible, libelle]) => (
+                      <button
+                        key={cible}
+                        type="button"
+                        className="lien-menu"
+                        onClick={() => {
+                          onControle(base.id, cible);
+                          onFermer();
+                        }}
+                      >
+                        {libelle}
+                      </button>
+                    ))}
+                  </p>
+                )}
+              </li>
+            );
+          })}
+        </ul>        <PiedModale onFermer={onFermer} />
       </div>
     </div>
   );

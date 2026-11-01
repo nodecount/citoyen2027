@@ -13,13 +13,25 @@
   min-height: 0;
   margin-top: 0;
 }
+/* La question est toujours calée en haut de la fenêtre (l'œil ne la cherche pas) ; ses réponses suivent juste dessous, sans être
+   centrées dans la place restante (alignement naturel). */
 .modale--plein .pas-a-pas-question {
-  margin-block: auto;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  margin-block: 0;
+}
+/* La phrase sur les mesures concernées et « Effacer ma réponse » sont calés en bas du contenu, juste au-dessus du pied de la fenêtre. */
+.modale--plein .pas-a-pas-ligne-reponse {
+  margin-top: auto;
+  padding-top: 0.5rem;
 }
 /* Le conteneur défile donc rogne ce qui dépasse : on garde de la place autour des réponses pour le contour de la réponse
    choisie ou au focus (3 px + 2 px de décalage) et des champs de saisie. */
 .modale--plein .pas-a-pas {
   padding-inline: 0.4rem;
+  padding-top: 1.5rem; /* de l'air entre le bandeau de complétion et la question */
 }
 .modale--plein .pas-a-pas-choix {
   padding-block: 0.4rem;
@@ -48,11 +60,8 @@
   margin-bottom: 0.5rem;
 }
 .modale--plein .pas-a-pas-question legend {
-  margin-bottom: 0.3rem;
+  margin-bottom: 1.4rem; /* de l'air entre le bloc titre / sous-titre et les réponses */
   font-size: 1.25rem;
-}
-.modale--plein .pas-a-pas-finalite {
-  margin-bottom: 0.6rem;
 }
 .modale--plein .pas-a-pas-choix {
   gap: 0.4rem;
@@ -68,32 +77,74 @@
   margin-bottom: 1rem;
 }
 
-.pas-a-pas-rang {
-  margin: 0 0 0.4rem;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--bleu-fonce);
+/* Sous-titre : le badge du thème puis la phrase, sur la même ligne (elle passe à la suivante si elle est longue). */
+.pas-a-pas-sous-titre {
+  display: block; /* texte qui coule : la phrase puis le badge à la suite, les lignes suivantes reviennent à gauche */
+  line-height: 1.2; /* interligne réduit */
 }
-
 .pas-a-pas-theme {
-  font-weight: 400;
-  color: var(--encre-douce);
-}
-
-.pas-a-pas-barre {
-  height: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 0.5rem;
+  padding: 0.05rem 0.6rem;
   border-radius: 999px;
   background: var(--bleu-pale);
+  color: var(--bleu-fonce);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* Rang de la question dans un petit rond bleu, devant le titre : le numéro dans le quart haut-gauche, le total dans le quart bas-droit
+   (chacun centré dans son espace), séparés par une fine barre oblique qui s'arrête avant les bords du cercle. */
+.pas-a-pas-rond {
+  position: relative;
+  display: inline-block;
+  flex: none;
+  box-sizing: border-box;
+  margin-right: 0.7rem;
+  width: 2.65rem;
+  height: 2.65rem;
   overflow: hidden;
-}
-
-.pas-a-pas-barre span {
-  display: block;
-  height: 100%;
+  border-radius: 50%;
   background: var(--bleu);
-  transition: width 0.25s ease;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1;
+  vertical-align: middle;
 }
 
+.pas-a-pas-rond::after {
+  content: "";
+  position: absolute;
+  top: 54%; /* la barre est poussée un peu vers la droite et vers le bas */
+  left: 54%;
+  width: 1px;
+  height: 58%;
+  background: #fff;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.pas-a-pas-num,
+.pas-a-pas-den {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+/* Le numéro en cours est un peu poussé vers la droite ; le total est plus petit. */
+.pas-a-pas-num {
+  top: 33%;
+  left: 34%;
+}
+
+.pas-a-pas-den {
+  top: 71%;
+  left: 71%;
+  font-size: 0.75rem;
+}
 .pas-a-pas-question {
   margin: 0;
   padding: 0;
@@ -101,18 +152,34 @@
   min-width: 0;
 }
 
+/* Le rond de numérotation est aligné en haut, sur la première ligne de la question. */
 .pas-a-pas-question legend {
+  display: flex;
+  align-items: flex-start;
   padding: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.9rem;
   font-size: 1.35rem;
   font-weight: 700;
   line-height: 1.3;
   color: var(--bleu-fonce);
 }
 
+.pas-a-pas-question legend.pas-a-pas-legende--seule {
+  align-items: center;
+}
+
+/* Le sous-titre est tout contre la question, dans le même groupe. */
+.pas-a-pas-titre {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
 .pas-a-pas-finalite {
-  margin: 0 0 1rem;
+  margin: 0;
   font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
   color: var(--encre-douce);
 }
 
@@ -235,4 +302,38 @@
     justify-content: center;
     padding-inline: 0.5rem;
   }
+}
+
+/* Ligne sous les réponses : la phrase « N mesures concernent cette réponse » à gauche, « Effacer ma réponse » à droite. */
+.pas-a-pas-ligne-reponse {
+  display: flex;
+  flex-direction: row; /* annule le « form div { flex-direction: column } » global */
+  flex-wrap: nowrap; /* la phrase se replie sur sa propre largeur : le bouton reste à droite, sur la même rangée */
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem 0.75rem;
+  margin-top: 0.5rem;
+}
+.pas-a-pas-ligne-reponse .question-impact {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+}
+.pas-a-pas-ligne-reponse button {
+  flex: none;
+  white-space: nowrap;
+}
+/* Même style que « Effacer mes réponses » du tableau de bord : rouge, sans bordure (ghost). */
+button.pas-a-pas-effacer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: var(--degradant);
+}
+button.pas-a-pas-effacer:hover {
+  background: color-mix(in srgb, var(--degradant) 10%, #ffffff);
+  color: var(--degradant);
 }

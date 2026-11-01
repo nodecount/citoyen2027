@@ -132,3 +132,11 @@ describe("retirerReponsesMasquees", () => {
     expect(retirerReponsesMasquees({ statut_professionnel: "retraite", metier_penible: "oui" }, champs)).toEqual({ statut_professionnel: "retraite" });
   });
 });
+
+describe("heritage : « Les deux »", () => {
+  it("une réponse « Les deux » convient à une mesure ciblant « déjà reçu » comme à une mesure ciblant « à venir »", () => {
+    expect(valeursDuProfil({ heritage: "les_deux" }, "heritage")).toEqual(expect.arrayContaining(["recu", "a_venir"]));
+    expect(valeursDuProfil({ heritage: "recu" }, "heritage")).toEqual(["recu"]);
+    expect(valeursDuProfil({ heritage: "non" }, "heritage")).toEqual(["non"]);
+  });
+});

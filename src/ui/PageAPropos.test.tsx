@@ -13,8 +13,23 @@ describe("PageAPropos", () => {
     expect(html).toContain("Rien n&#x27;est envoyé ni enregistré");
   });
 
-  it("présente chaque section dans un bloc avec son icône", () => {
-    expect((html.match(/<article class="bloc-a-propos[^"]*"><svg/g) ?? []).length).toBe(6);
+  it("est un texte rédigé : un titre, des chapitres à titres, des encarts dans la marge, pas de cartes", () => {
+    expect(html).not.toContain("<h1"); // le menu dit déjà où l'on est
+    expect((html.match(/<section class="chapitre/g) ?? []).length).toBe(6);
+    expect((html.match(/<aside class="encart/g) ?? []).length).toBeGreaterThanOrEqual(6);
+    for (const ancien of ["kpi", "bloc-a-propos", "essai-source"]) expect(html, ancien).not.toContain(ancien);
+  });
+
+  it("ouvre sur trois repères d'un coup d'œil : une icône, un titre, une mini phrase", () => {
+    expect((html.match(/<li class="repere repere--(bleu|rouge|fonce)"><svg[^>]*>[\s\S]*?<\/svg><strong>[^<]+<\/strong><span>[^<]+<\/span><\/li>/g) ?? []).length).toBe(3);
+    for (const t of ["Indépendant", "Même règle pour tous", "Vos données"]) expect(html, t).toContain(t);
+  });
+
+  it("a un vrai chapitre sur le choix de la source : trois essais et leur verdict, pourquoi iFRAP, ce qui est écarté, où voir les essais", () => {
+    expect(html).toContain("Le choix de la source des données");
+    expect(html).not.toContain("D&#x27;où viennent les données");
+    for (const t of ["Programmes officiels : en pause", "en pause", "écartée", "retenue", "ne sont pas vérifiées une à une", "Ce qui a été écarté d&#x27;emblée", "Tests de situations", "Monitoring", "Voir les essais"]) expect(html, t).toContain(t);
+    expect(html.indexOf("en pause")).toBeLessThan(html.indexOf("retenue"));
   });
 
   it("a un chapitre sur les limites et les partis pris (score en mesures, compromis des tranches, pondération laissée au citoyen)", () => {
@@ -24,7 +39,7 @@ describe("PageAPropos", () => {
     expect(html).toContain("nombre de mesures qui améliorent votre situation, moins le nombre de mesures qui la dégradent");
     expect(html).toContain("Il n&#x27;y a ni pourcentage ni pondération");
     expect(html).toContain("C&#x27;est à vous de peser les mesures");
-    expect(html).toContain("Noter sur 100");
+    expect(html).toContain("une note sur 100");
     expect(html).toContain("plus grand nombre de mesures qui vous concernent");
     expect(html).toContain("moyenne des deux notes");
     expect(html).not.toContain("—");

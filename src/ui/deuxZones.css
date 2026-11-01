@@ -175,6 +175,9 @@
 
 /* Titre du bloc : en premier, texte blanc sur fond coloré (bleu pour la situation, vert pour les convictions). */
 .zone-titre {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin: 0;
   padding: 0.75rem 1rem;
   color: #fff;
@@ -252,25 +255,17 @@
   color: var(--encre-douce);
 }
 
+/* La barre reprend le style de la fenêtre des questions (.panneau-barre, dans index.css) ; ici elle prend toute la largeur du bloc, et
+   celle des convictions est verte comme son bloc. */
 .zone-barre {
+  flex: none; /* dans un bloc en colonne, le « flex » de la fenêtre ferait une barre de 14 rem de haut */
   align-self: stretch;
-  height: 0.5rem;
-  border-radius: 999px;
-  background: var(--bleu-pale);
-  overflow: hidden;
+  max-width: none;
 }
 
-.zone-barre span {
-  display: block;
-  height: 100%;
-  background: var(--bleu);
-  transition: width 0.25s ease;
+.zone-barre--vert .panneau-barre-remplie {
+  background: linear-gradient(90deg, var(--ameliorant), color-mix(in srgb, var(--ameliorant) 70%, #000));
 }
-
-.zone-barre--vert span {
-  background: var(--ameliorant);
-}
-
 .zone-aide {
   display: inline-flex;
   align-items: center;
@@ -521,4 +516,265 @@
   font-size: 1rem;
   text-decoration: underline;
   cursor: pointer;
+}
+
+/* Phrase d'invite au-dessus du top des candidats : du texte ordinaire, pas une note discrète. */
+.ideal-top-consigne {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  color: var(--encre);
+}
+
+/* Le bouton qui ouvre ou reprend le questionnaire est centré dans son bloc. */
+.zone-corps .zone-principal {
+  align-self: center;
+}
+
+/* Vue de lecture des mesures adaptées : presque toute la largeur de l'écran (les cards de thèmes ont besoin de place), toute la
+   hauteur disponible. Sur téléphone, plus de cadre ni de marge : le contenu se lit comme sur la page Exploration. */
+.modale--large {
+  width: min(96rem, calc(100vw - 2rem));
+  height: calc(100vh - 2rem);
+  height: calc(100dvh - 2rem);
+}
+@media (max-width: 52rem) {
+  .modale--large {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+  }
+  .modale--large .modale-entete {
+    padding-inline: 0;
+  }
+}
+
+/* Pied fixe des fenêtres de questions : la bascule d'affichage à gauche, « Enregistrer et fermer » à droite, toujours en bas de la
+   fenêtre quel que soit le défilement. Un flou dégradé au-dessus dit qu'il reste du contenu à voir ; il disparaît en butée. */
+.modale-pied-travail {
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem 0 0;
+  border-top: 1px solid var(--filet);
+  background: var(--surface, #fff);
+}
+.modale-pied-travail[hidden] {
+  display: none;
+}
+.modale-pied-travail::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  height: 2.25rem;
+  background: linear-gradient(to top, var(--surface, #fff), rgba(255, 255, 255, 0));
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  -webkit-mask-image: linear-gradient(to top, #000, transparent);
+  mask-image: linear-gradient(to top, #000, transparent);
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.modale-pied-travail--butee::before {
+  opacity: 0;
+}
+.modale-pied-travail-bascule {
+  min-width: 0;
+}
+.modale-pied-travail-bascule > button,
+.modale-pied-travail-navigation button {
+  margin: 0;
+}
+/* Navigation d'une question à la fois : Précédent, Suivant (ou Passer), puis « Enregistrer et fermer » en ghost. */
+.modale-pied-travail-navigation {
+  margin-left: auto;
+}
+.modale-pied-travail-navigation .pas-a-pas-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+button.ghost {
+  border: 0;
+  background: transparent;
+  color: var(--bleu);
+  text-decoration: underline;
+}
+button.ghost:hover {
+  background: var(--bleu-pale);
+  color: var(--bleu-fonce);
+}
+.modale-pied-travail-fermer {
+  flex: none;
+  margin: 0;
+}
+@media (max-width: 40rem) {
+  /* Étroit : la navigation en haut du pied sur toute la largeur, la bascule dessous. */
+  .modale-pied-travail {
+    flex-wrap: wrap;
+  }
+  .modale-pied-travail-navigation {
+    flex: 1 1 100%;
+    order: -1;
+    margin-left: 0;
+  }
+  .modale-pied-travail-navigation .pas-a-pas-actions > button:not(.ghost) {
+    flex: 1 1 0;
+    padding-inline: 0.5rem;
+  }
+  .modale-pied-travail-bascule,
+  .modale-pied-travail-fermer {
+    flex: 1 1 0;
+  }
+  .modale-pied-travail-bascule > button,
+  .modale-pied-travail-fermer {
+    width: 100%;
+    padding-inline: 0.5rem;
+  }
+}
+@media (max-width: 52rem) {
+  /* Le pied porte déjà « Enregistrer et fermer » : plus besoin du bouton flottant ni de la marge qui lui était réservée. */
+  .modale--plein .modale-lien-retour {
+    display: none;
+  }
+  .modale--plein {
+    padding-bottom: 0.75rem;
+  }
+}
+/* « Effacer mes réponses » : sous le bouton principal, centré, sans bordure (ghost), en rouge. */
+.zone-corps button.zone-effacer {
+  align-self: center;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: var(--degradant);
+}
+.zone-corps button.zone-effacer:hover {
+  background: color-mix(in srgb, var(--degradant) 10%, #ffffff);
+  color: var(--degradant);
+}
+
+/* Première page d'une fenêtre de questions (l'introduction) : pas de grande carte encadrée, seulement du texte et des icônes. */
+.modale-intro .intro-etape {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+/* En-tête d'une fenêtre de questions : toute la barre du haut prend le fond (bleu situation, vert convictions) et l'icône du bloc du
+   tableau de bord, texte blanc, d'un bord à l'autre de la fenêtre. */
+.modale--travail .modale-entete--zone {
+  margin: -1.25rem -1.4rem 0.75rem;
+  padding: 0.8rem 1.4rem;
+  border-bottom: 0;
+  border-radius: 16px 16px 0 0;
+  color: #fff;
+}
+.modale--travail .modale-entete--situation {
+  background: var(--bleu);
+}
+.modale--travail .modale-entete--convictions {
+  background: var(--ameliorant);
+}
+.modale--travail .modale-titre-zone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  color: #fff;
+  font-size: 1.2rem;
+}
+/* Boutons posés sur la barre colorée : contour et texte blancs. */
+.modale-entete--zone .modale-fermer,
+.modale-entete--zone .modale-entete-bascule > button {
+  border-color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+.modale-entete--zone .modale-fermer:hover,
+.modale-entete--zone .modale-entete-bascule > button:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.28);
+  color: #fff;
+}
+/* Première page : les trois repères tiennent dans la fenêtre, puis une phrase centrée. */
+.intro-fenetre .reperes {
+  margin: 0 0 1rem;
+}
+.intro-fenetre-texte {
+  margin: 0;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+@media (max-width: 40rem) {
+  .intro-fenetre .repere {
+    padding: 0.8rem 0.9rem;
+  }
+}
+
+/* Bascule d'affichage des questions : dans l'en-tête, entre le titre et la croix. */
+.modale-entete-bascule {
+  margin-left: auto;
+  margin-right: 0.75rem;
+}
+.modale-entete-bascule[hidden] {
+  display: none;
+}
+.modale-entete-bascule > button {
+  margin: 0;
+}
+/* Pied : « Précédent » tout à gauche, « Enregistrer et fermer » (ghost) puis « Suivant » tout à droite. */
+.modale-pied-travail-navigation {
+  flex: 1;
+  margin-left: 0;
+}
+.modale-pied-travail-navigation .pas-a-pas-actions {
+  justify-content: space-between;
+  width: 100%;
+}
+.pas-a-pas-actions-droite {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.pas-a-pas-actions-droite > button {
+  margin: 0;
+}
+.modale-pied-travail-fermer {
+  margin-left: auto;
+}
+@media (max-width: 40rem) {
+  /* Étroit : le bouton de bascule passe sous le titre, sur toute la largeur de l'en-tête. */
+  .modale--travail .modale-entete {
+    flex-wrap: wrap;
+  }
+  .modale-entete-bascule {
+    order: 3;
+    flex: 1 1 100%;
+    margin: 0.5rem 0 0;
+  }
+  .modale-entete-bascule > button {
+    width: 100%;
+  }
+  .modale-pied-travail-navigation .pas-a-pas-actions > button,
+  .pas-a-pas-actions-droite > button:not(.ghost) {
+    padding-inline: 0.6rem;
+  }
 }
