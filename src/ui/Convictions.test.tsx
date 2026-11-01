@@ -24,9 +24,9 @@ const NUCLEAIRE = { nucleaire: "garder_nucleaire" };
 const rendre = (c: Parameters<typeof PanneauConvictions>[0]) => renderToStaticMarkup(<PanneauConvictions {...c} />);
 
 describe("BlocConvictions, un sujet à la fois", () => {
-  it("par défaut : un seul sujet à l'écran, « Sujet 1 sur N », sans la grille ni l'interrupteur des manquantes", () => {
+  it("par défaut : un seul sujet à l'écran, « Question 1 sur N », sans la grille ni l'interrupteur des manquantes", () => {
     const html = renderToStaticMarkup(<BlocConvictions convictions={CONVICTIONS_VIDES} onChange={() => {}} />);
-    expect(html).toMatch(/Sujet 1 sur \d+/);
+    expect(html).toMatch(/Question 1 sur \d+/);
     expect(html).not.toContain("<select");
     expect(html).not.toMatch(/<label class="interrupteur">/);
     expect(html).toContain("Voir tous les sujets d&#x27;un coup");

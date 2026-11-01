@@ -25,6 +25,8 @@ interface PasAPasProps {
   // Ce que l'on pose : « Question » (situation) ou « Sujet » (convictions), et son pluriel.
   nom?: string;
   pluriel?: string;
+  // Mot écrit devant le rang (« Question 5 sur 33 ») ; par défaut `nom`. Les convictions disent aussi « Question » : le visiteur répond à une question par sujet.
+  motRang?: string;
   // Phrase sous la réponse (nombre de mesures concernées) ; par défaut, celle des questions de situation. null : rien.
   impact?: (etape: EtapeQuestion, valeur: string | string[] | number | undefined) => string | null;
   // Texte de l'écran de fin, et contenu en plus (ex. l'option « sans condamnation » des convictions).
@@ -40,7 +42,7 @@ function rangDeDepart(etapes: EtapeQuestion[], profil: ProfilPartiel): number {
 
 // Une question par écran : libellé, finalité toujours visible (la place ne manque pas), réponses en grands choix. Rien n'est
 // présélectionné : « Passer » laisse la question sans réponse, jamais comptée comme « non ». Chaque réponse s'applique tout de suite.
-export function PasAPas({ etapes, profil, onReponse, onToutVoir, nom = "Question", pluriel = "questions", impact, texteFin = "Vos réponses sont enregistrées. Vous pouvez revenir en arrière pour les corriger, ou voir les mesures adaptées à votre situation.", fin }: PasAPasProps) {
+export function PasAPas({ etapes, profil, onReponse, onToutVoir, nom = "Question", pluriel = "questions", motRang, impact, texteFin = "Vos réponses sont enregistrées. Vous pouvez revenir en arrière pour les corriger, ou voir les mesures adaptées à votre situation.", fin }: PasAPasProps) {
   const [rang, setRang] = useState(() => rangDeDepart(etapes, profil));
   const propositions = useContext(PropositionsBase);
   const retourIntro = useContext(RetourIntroContexte);
@@ -99,7 +101,7 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir, nom = "Question
     <div className="pas-a-pas" role="group" aria-label={nom === "Question" ? "Questions sur ma situation" : "Sujets de mes convictions"}>
       <div className="pas-a-pas-tete">
         <p className="pas-a-pas-rang" aria-live="polite">
-          {nom} {courant + 1} sur {total}
+          {motRang ?? nom} {courant + 1} sur {total}
           {etape.theme && <span className="pas-a-pas-theme"> · {etape.theme}</span>}
         </p>
         <div className="pas-a-pas-barre" role="progressbar" aria-label="Avancement des questions" aria-valuemin={0} aria-valuemax={total} aria-valuenow={courant}>

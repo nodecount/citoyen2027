@@ -136,6 +136,7 @@ export function BlocConvictions({ convictions, onChange: appliquer, pasAPasIniti
             etapes={etapes}
             profil={profilPositions}
             nom="Sujet"
+            motRang="Question"
             pluriel="sujets"
             texteFin="Vos choix sont enregistrés. Un sujet sans choix n'influence pas le résultat. Vous pouvez revenir en arrière pour les corriger."
             fin={exemplarite}

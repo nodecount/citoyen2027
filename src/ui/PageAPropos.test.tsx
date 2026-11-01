@@ -25,7 +25,8 @@ describe("PageAPropos", () => {
     expect(html).toContain("Il n&#x27;y a ni pourcentage ni pondération");
     expect(html).toContain("C&#x27;est à vous de peser les mesures");
     expect(html).toContain("Noter sur 100");
-    expect(html).toContain("plus grand nombre de mesures qui touchent votre situation");
+    expect(html).toContain("plus grand nombre de mesures qui vous concernent");
+    expect(html).toContain("moyenne des deux notes");
     expect(html).not.toContain("—");
   });
 

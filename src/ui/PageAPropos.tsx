@@ -62,8 +62,8 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
           <li>Retenir seulement l'effet direct d'une mesure sur vous, pas ses conséquences sur l'économie.</li>
           <li>Calculer le score d'un candidat : le nombre de mesures qui améliorent votre situation, moins le nombre de mesures qui la dégradent. Il n'y a ni pourcentage ni pondération.</li>
           <li>Accorder un meilleur score à un candidat qui propose plus de mesures qui vous avantagent : c'est un parti pris assumé.</li>
-          <li>Noter sur 100, pour la lecture, le score des classements : 100 correspond au plus grand nombre de mesures qui touchent votre situation (favorables ou défavorables) chez un seul candidat, et un score nul ou négatif s'affiche 0. Le classement, lui, suit le score brut.</li>
-          <li>Lire cette note en tenant compte de vos réponses : 100 signifie que toutes les mesures qui vous concernent chez le candidat qui en a le plus sont à votre avantage. Ce n'est pas une probabilité de convenir, et deux visiteurs ne comparent pas leurs notes.</li>
+          <li>Noter sur 100, pour la lecture, le score de chaque critère (situation, convictions) : 100 correspond au plus grand nombre de mesures qui vous concernent (favorables ou défavorables) chez un seul candidat sur ce critère, et un score nul ou négatif s'affiche 0. Le classement d'un critère, lui, suit le score brut. Pour le candidat suggéré au centre, voir plus bas : c'est la moyenne des deux notes.</li>
+          <li>Lire cette note en tenant compte de vos réponses : 100 signifie que toutes les mesures qui vous concernent chez le candidat qui en a le plus sont à votre avantage. Ce candidat de référence n'est pas forcément dans le top : il peut avoir beaucoup de mesures dont certaines vont à l'opposé de votre sens, ou être écarté par « sans condamnation ». Ce n'est pas une probabilité de convenir, et deux visiteurs ne comparent pas leurs notes.</li>
           <li>Compter une grande mesure et une petite mesure chacune pour une. Aucun thème ne pèse plus qu'un autre.</li>
         </ul>
         <h3>Comment le candidat suggéré est calculé</h3>

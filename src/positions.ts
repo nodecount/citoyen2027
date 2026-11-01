@@ -290,8 +290,8 @@ export const SUJETS_CONVICTION: SujetConviction[] = [
     libelle: "Voiture et déplacements",
     question: "Sur la voiture et les déplacements, quelle position vous parle le plus ?",
     positions: [
-      { id: "defendre_voiture", libelle: "Moins de restrictions pour la voiture", definition: "supprimer ou assouplir les zones à faibles émissions, les restrictions de circulation et la fin des véhicules thermiques" },
-      { id: "restreindre_voiture", libelle: "Plus de restrictions pour la voiture, plus de transports", definition: "maintenir ou renforcer les zones à faibles émissions, la fin des véhicules thermiques, ou donner la priorité aux transports collectifs et au vélo" },
+      { id: "defendre_voiture", libelle: "Garder la voiture libre de circuler : moins d'interdictions (zones à faibles émissions, fin du thermique)",definition: "supprimer ou assouplir les zones à faibles émissions, les restrictions de circulation et la fin des véhicules thermiques" },
+      { id: "restreindre_voiture", libelle: "Limiter la voiture en ville et développer les transports en commun et le vélo",definition: "maintenir ou renforcer les zones à faibles émissions, la fin des véhicules thermiques, ou donner la priorité aux transports collectifs et au vélo" },
     ],
   },
   {
