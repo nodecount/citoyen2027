@@ -118,7 +118,7 @@ describe("RondScore dans la fenêtre de détail", () => {
     const l = { ...gagnant("C", "Nom-Reel-Situation", "slug-reel-a", 3), rang: 1, note: 37 };
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
     expect(html).toContain("Le score va de 0 à 100.");
-    expect(html).toContain("100 correspond au candidat qui a le plus de mesures qui vous concernent.");
+    expect(html).not.toContain("100 correspond");
     expect(html.indexOf("Le score va de 0 à 100")).toBeLessThan(html.indexOf("ideal-totaux"));
   });
   it("égalité : le rond suit le candidat sélectionné (même score, donc même note)", () => {

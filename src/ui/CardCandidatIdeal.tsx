@@ -436,8 +436,7 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
           </div>
         )}
         <p className="hint ideal-score-explication">
-          Le score va de 0 à 100. Il monte avec les mesures qui vous avantagent et baisse avec celles qui vous désavantagent. 100 correspond au candidat qui a le plus de mesures qui vous concernent.
-        </p>
+          Le score va de 0 à 100. Il monte avec les mesures qui vous avantagent et baisse avec celles qui vous désavantagent.        </p>
         {/* La barre du total (en groupes de mesures, ou en mesures si le visiteur le demande) d'abord, puis les onglets collés en
             haut de la fenêtre : favorables d'un côté, défavorables de l'autre. Le bouton discret change tout le contenu d'un coup. */}
         <div className="ideal-totaux">
