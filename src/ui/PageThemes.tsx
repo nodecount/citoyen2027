@@ -221,12 +221,12 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
               <p className="intro-ligne-icone">
                 <Clock size={22} aria-hidden="true" focusable="false" />
                 <span>
-                  Durée : <strong>{dureeEstimee(avance.questions)}</strong> pour répondre à tout, à raison d'une dizaine de secondes par question.
+                  Durée : <strong>{dureeEstimee(avance.questions)}</strong> pour répondre à tout (temps moyen estimé).
                 </span>
               </p>
               <p className="intro-ligne-icone">
                 <Lock size={22} aria-hidden="true" focusable="false" />
-                <span>Vos informations sont sécurisées : votre navigateur les garde, sans jamais les envoyer, jusqu'à ce que vous les effaciez.</span>
+                <span>Vos réponses sont anonymes : rien n'est enregistré sur internet ni dans un cloud. Tout reste temporaire et local, sur votre ordinateur, jusqu'à ce que vous l'effaciez.</span>
               </p>
             </IntroEtape>
           }>
@@ -269,12 +269,12 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
               <p className="intro-ligne-icone">
                 <Clock size={22} aria-hidden="true" focusable="false" />
                 <span>
-                  Durée : <strong>{dureeEstimee(avance.sujets)}</strong> pour répondre à tous les sujets, à raison d'une dizaine de secondes par sujet.
+                  Durée : <strong>{dureeEstimee(avance.sujets)}</strong> pour répondre à tous les sujets (temps moyen estimé).
                 </span>
               </p>
               <p className="intro-ligne-icone">
                 <Lock size={22} aria-hidden="true" focusable="false" />
-                <span>Vos informations sont sécurisées : votre navigateur les garde, sans jamais les envoyer, jusqu'à ce que vous les effaciez.</span>
+                <span>Vos réponses sont anonymes : rien n'est enregistré sur internet ni dans un cloud. Tout reste temporaire et local, sur votre ordinateur, jusqu'à ce que vous l'effaciez.</span>
               </p>
             </IntroEtape>
           }>

@@ -279,7 +279,7 @@ describe("après avoir eu des informations sur le visiteur", () => {
   it("invite à préciser un champ manquant : « mixte » par prudence plutôt que de conclure à la place du visiteur", () => {
     const cible = { ...HAUSSE, cibles: [{ champ: "logement", valeurs: ["locataire"] }] };
     const r = html([candidat("a", [prop("a", [cible])])], { tranche_age: "30_49" }, { theme: "fiscalite", candidat: "a" });
-    expect(r).toContain("Statut de logement");
+    expect(r).toContain("Statut de votre résidence principale");
     expect(portraits(r)).not.toContain('data-niveau="ameliorant"'); // il n'est pas « améliorant » tant que le logement est inconnu
     expect(portraits(r)).toContain('data-niveau="mixte"');
   });
@@ -302,7 +302,7 @@ describe("après avoir eu des informations sur le visiteur", () => {
     expect(portraits(r)).toContain("à préciser");
     expect(r).toContain("par prudence");
     expect(r).toContain("Répondez à");
-    expect(r).toContain("Statut de logement");
+    expect(r).toContain("Statut de votre résidence principale");
   });
 
   it("ne dit pas « à préciser » pour un « mixte » réel (favorable ET défavorable)", () => {
@@ -363,7 +363,7 @@ describe("questions propres à chaque thème", () => {
 
   it("apparaissent après, uniquement sur le thème concerné, chaque question préfixée « Pour affiner : », sans titre ni décompte", () => {
     const r = html(candidats, { tranche_age: "30_49" }, undefined, true);
-    expect(r).toContain("Pour affiner : Quel véhicule utilisez-vous le plus ?");
+    expect(r).toContain("Pour affiner : Quel véhicule motorisé utilisez-vous le plus ?");
     expect(r).not.toContain("Préciser ma situation pour ce thème");
     expect(r).not.toMatch(/\(\d+\/\d+ réponse/); // plus de décompte
     const carteRetraites = r.slice(r.indexOf('id="theme-retraites"'));
@@ -372,7 +372,7 @@ describe("questions propres à chaque thème", () => {
 
   it("disparaissent de la carte une fois répondues (elles se modifient dans le formulaire du haut)", () => {
     const r = html(candidats, { tranche_age: "30_49", vehicule: "thermique" }, undefined, true);
-    expect(r).not.toContain("Quel véhicule utilisez-vous le plus ?");
+    expect(r).not.toContain("Quel véhicule motorisé utilisez-vous le plus ?");
   });
 
   it("posent aussi les questions sensibles, sans mention « questions sensibles, facultatif » ni décompte", () => {
@@ -387,7 +387,7 @@ describe("questions propres à chaque thème", () => {
 
   it("ne reposent que sur les questions propres au thème : les questions générales n'y sont pas répétées", () => {
     const r = html(candidats, PROFIL, undefined, true);
-    expect(r).not.toContain("Statut de logement"); // question générale (deux thèmes) : posée dans le formulaire général
+    expect(r).not.toContain("Statut de votre résidence principale"); // question générale (deux thèmes) : posée dans le formulaire général
   });
 
   it("posent les questions sensibles directement, sans case d'accord préalable", () => {

@@ -1,4 +1,4 @@
-import { CircleHelp, Compass, Eye, Trophy, UserRound, X } from "lucide-react";
+import { CircleHelp, Compass, ExternalLink, Eye, Trophy, UserRound, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState, type ReactElement } from "react";
 import { createPortal } from "react-dom";
 import type { Raison } from "../engine/candidatIdeal";
@@ -56,11 +56,12 @@ const signe = (n: number) => (n > 0 ? `+${n}` : n < 0 ? `−${Math.abs(n)}` : "0
 // Les points du score, en deux listes parallèles (autant de blocs que le score en compte) : l'icône du thème, puis les groupes
 // des mesures (rien de plus).
 // Badges d'une série : un par groupe de mesures (ou par mesure), une seule fois par thème.
-export function badgesDe(points: Raison[], parMesure: boolean): Array<{ theme: string; groupe: string }> {
+export function badgesDe(points: Raison[], parMesure: boolean): Array<{ theme: string; groupe: string; lien?: string }> {
   const vus = new Set<string>();
   return points
     // Un groupe est un morceau de phrase, souvent en minuscules : sa première lettre est une majuscule (pas les titres de mesures).
-    .flatMap((p) => (parMesure ? p.mesures : p.groupes.map(premiereEnMajuscule)).map((groupe) => ({ theme: p.theme, groupe })))
+    // Une mesure garde le lien vers sa source quand elle en a un (jamais pour un groupe de mesures, qui en rassemble plusieurs).
+    .flatMap((p) => (parMesure ? p.mesures : p.groupes.map(premiereEnMajuscule)).map((groupe) => ({ theme: p.theme, groupe, lien: parMesure ? p.liens?.[groupe] : undefined })))
     .filter((b) => !vus.has(`${b.theme}|${b.groupe}`) && vus.add(`${b.theme}|${b.groupe}`));
 }
 
@@ -129,7 +130,7 @@ export function PoursContres({
   const cachés =
     Math.max(0, listePour.length - MESURES_VISIBLES) +
     Math.max(0, listeContre.length - MESURES_VISIBLES);
-  const visibles = (liste: Array<{ theme: string; groupe: string }>) =>
+  const visibles = (liste: Array<{ theme: string; groupe: string; lien?: string }>) =>
     deplie ? liste : liste.slice(0, MESURES_VISIBLES);
   const intitule = intitules(unite);
   const majuscule = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
@@ -140,7 +141,7 @@ export function PoursContres({
   );
   const badge = (
     sens: "pour" | "contre",
-    b: { theme: string; groupe: string },
+    b: { theme: string; groupe: string; lien?: string },
     i: number,
   ) => (
     <li
@@ -151,6 +152,11 @@ export function PoursContres({
         <IconeTheme themeId={b.theme} taille={18} />
       </span>
       <span className="ideal-raison-titre">{b.groupe}</span>
+      {b.lien && (
+        <a className="ideal-badge-source" href={b.lien} target="_blank" rel="noopener noreferrer" aria-label={`Ouvrir la source de la mesure : ${b.groupe} (nouvel onglet)`} title="Ouvrir la source">
+          <ExternalLink size={16} aria-hidden="true" focusable="false" />
+        </a>
+      )}
     </li>
   );
   return (
@@ -456,7 +462,7 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
               {explicationNote && (
                 <span className="ideal-score-reference">
                   {" "}
-                  Le 100 correspond à {explicationNote.reference} mesures, le maximum chez un candidat : {explicationNote.score} sur {explicationNote.reference}, soit {explicationNote.note}/100.
+                  Un score de 100 % correspond à {explicationNote.reference} mesures, le maximum chez un candidat : {explicationNote.score} sur {explicationNote.reference}, soit un score de {explicationNote.note} %.
                 </span>
               )}
             </>
@@ -522,27 +528,27 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
         <section>
           <h3>Le candidat suggéré</h3>
           <ul>
-            <li>Chaque candidat a deux scores : un selon votre situation, un selon vos convictions.</li>
-            <li>On fait la moyenne des deux : le candidat suggéré a la moyenne la plus élevée.</li>
-            <li>Dans chaque bloc, l'onglet « Candidats » montre les 3 meilleures places.</li>
+            <li>Attribuer à chaque candidat deux scores : un selon votre situation, un selon vos convictions.</li>
+            <li>Calculer la moyenne des deux : le candidat suggéré a la moyenne la plus élevée.</li>
+            <li>Voir les 3 meilleures places dans l'onglet « Candidats » de chaque bloc.</li>
           </ul>
         </section>
         <section>
           <h3>Le score d'un candidat</h3>
           <ul>
-            <li>Une mesure qui va dans votre sens rapporte 1 point au candidat. Une mesure à l'opposé lui retire 1 point.</li>
+            <li>Ajouter 1 point au candidat pour une mesure dans votre sens, lui retirer 1 point pour une mesure à l'opposé.</li>
           </ul>
         </section>
         <section>
           <h3>La précision</h3>
           <ul>
-            <li>Plus vous répondez aux questions, plus la suggestion est précise.</li>
+            <li>Répondre à davantage de questions pour une suggestion plus précise.</li>
           </ul>
         </section>
         <section>
           <h3>Bon à savoir</h3>
           <ul>
-            <li>La règle est la même pour tous. Le détail et les limites sont dans la page « À propos ».</li>
+            <li>Appliquer la même règle à tous. Retrouver le détail et les limites dans la page « À propos ».</li>
           </ul>
         </section>
       </div>

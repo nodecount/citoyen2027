@@ -11,8 +11,8 @@ describe("Accueil", () => {
   it.each(["officielle", "agregateurs"])("présente l'outil en une phrase, avec l'idée de personnalisation (base « %s »)", (id) => {
     const rendu = rendre(id);
     expect(rendu).toContain("Présidentielle 2027");
-    expect(rendu).toContain("pour vous");
-    expect(rendu).toContain("prochain mandat");
+    expect(rendu).toContain("Quel est le candidat qui vous correspond le mieux ?");
+    expect(rendu).toContain("Faites le test pour guider votre choix.");
     expect(rendu).toContain("Accéder au simulateur");
   });
 

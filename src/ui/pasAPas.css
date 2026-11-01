@@ -211,6 +211,18 @@
   justify-content: center;
 }
 
+/* Bouton principal de l'écran de fin : il ramène au simulateur. */
+.pas-a-pas--fin .pas-a-pas-retour-simulateur {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.5rem auto 1rem;
+}
+.pas-a-pas--fin .pas-a-pas-retour-simulateur svg {
+  color: inherit;
+}
+
 /* « Précédent » et « Passer / Suivant » restent toujours sur une même ligne ; sur téléphone ils se partagent la largeur. */
 .pas-a-pas .pas-a-pas-actions {
   flex-wrap: nowrap;

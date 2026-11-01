@@ -35,13 +35,13 @@ describe("Aide « Comment est suggéré le candidat ? »", () => {
     const mots = html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
     expect(mots).toBeLessThanOrEqual(110);
     expect(html.indexOf("Le candidat suggéré")).toBeLessThan(html.indexOf("Le score d&#x27;un candidat"));
-    expect(html).toContain("Plus vous répondez aux questions, plus la suggestion est précise.");
+    expect(html).toContain("Répondre à davantage de questions pour une suggestion plus précise.");
     expect(html).not.toContain("pas si le résultat est fiable");
     expect(html.match(/<h3>/g)).toHaveLength(4);
     expect(html).toContain("Comment est suggéré le candidat ?");
   });
   it("dit la règle : points, cumul au centre, 5 meilleurs, jauge, ex æquo, même règle pour tous", () => {
-    for (const t of ["rapporte 1 point au candidat", "lui retire 1 point", "la moyenne des deux", "3 meilleures places", "La règle est la même pour tous", "page « À propos »"]) expect(html, t).toContain(t);
+    for (const t of ["Ajouter 1 point au candidat", "lui retirer 1 point", "la moyenne des deux", "3 meilleures places", "Appliquer la même règle à tous", "page « À propos »"]) expect(html, t).toContain(t);
   });
   it("n'explique plus la barre dans l'aide : l'explication du score est dans la fenêtre de détail", () => {
     expect(html).not.toContain("La barre de score");
@@ -124,14 +124,14 @@ describe("RondScore dans la fenêtre de détail", () => {
     const l = { ...base, pour: quatre, contre: [], note: 50, reference: 8 };
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
     expect(html).toMatch(/<strong>4\/4<\/strong>\s*des mesures vous avantagent\./);
-    expect(html).toContain("Le 100 correspond à 8 mesures, le maximum chez un candidat : 4 sur 8, soit 50/100.");
+    expect(html).toContain("Un score de 100 % correspond à 8 mesures, le maximum chez un candidat : 4 sur 8, soit un score de 50 %.");
     expect(html).not.toContain("Le score va de 0 à 100");
     expect(html.indexOf("des mesures vous avantagent")).toBeLessThan(html.indexOf("ideal-totaux"));
   });
   it("note à 100 : la seconde phrase n'a pas lieu d'être ; sans mesure concernée : une phrase le dit", () => {
     const cent = renderToStaticMarkup(<ModaleDetail ligne={{ ...base, pour: quatre, contre: [], note: 100, reference: 4 }} unite="thèmes" critere="c" onFermer={() => {}} />);
     expect(cent).toContain("4/4");
-    expect(cent).not.toContain("Le 100 correspond");
+    expect(cent).not.toContain("Un score de 100 % correspond");
     const aucune = renderToStaticMarkup(<ModaleDetail ligne={{ ...base, pour: [], contre: [], note: 0, reference: 8 }} unite="thèmes" critere="c" onFermer={() => {}} />);
     expect(aucune).toContain("Aucune mesure ne vous concerne chez ce candidat.");
   });
@@ -139,7 +139,7 @@ describe("RondScore dans la fenêtre de détail", () => {
     const l = { ...base, pour: [{ theme: "logement", groupes: ["G1"], mesures: ["M1", "M2"] }], contre: [{ theme: "retraite", groupes: ["G2"], mesures: ["M3"] }], note: 33, reference: 3 };
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="c" onFermer={() => {}} />);
     expect(html).toMatch(/<strong>2\/3<\/strong>/);
-    expect(html).toContain("Le 100 correspond à 3 mesures, le maximum chez un candidat : 1 sur 3, soit 33/100.");
+    expect(html).toContain("Un score de 100 % correspond à 3 mesures, le maximum chez un candidat : 1 sur 3, soit un score de 33 %.");
   });
   it("convictions : « vont dans le sens de vos convictions », pas de votre situation", () => {
     const html = renderToStaticMarkup(<ModaleDetail ligne={{ ...base, pour: quatre, contre: [], note: 100, reference: 4 }} unite="sujets" critere="Selon vos convictions" onFermer={() => {}} />);

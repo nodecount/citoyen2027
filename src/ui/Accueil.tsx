@@ -27,8 +27,8 @@ export default function Accueil({ base, onCommencer, onOuvrir }: AccueilProps) {
       <div className="bandeau-accueil">
         <h1>Présidentielle 2027 : les programmes, thème par thème</h1>
         <p className="chapeau">
-          Les mesures des candidats, avec leurs sources. Et, si vous le voulez, ce qu'elles changeraient{" "}
-          <strong>pour vous</strong> pendant le prochain mandat.
+          Les mesures des candidats, avec leurs sources. Quel est le candidat qui vous correspond le mieux ?{" "}
+          <strong>Faites le test pour guider votre choix.</strong>
         </p>
         <button type="button" onClick={onCommencer}>
           Accéder au simulateur

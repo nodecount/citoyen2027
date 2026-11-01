@@ -201,7 +201,7 @@ export const SUJETS_CONVICTION: SujetConviction[] = [
     question: "Sur les aides sociales et le chômage, quelle position vous parle le plus ?",
     positions: [
       { id: "conditionner_aides", libelle: "Ajouter des conditions aux aides et à l'indemnisation", definition: "imposer une activité en contrepartie du RSA, rendre l'assurance chômage plus dégressive ou plus stricte, renforcer les contrôles" },
-      { id: "proteger_droits_sociaux", libelle: "Garder les aides et l'indemnisation sans condition en plus", definition: "maintenir ou étendre l'assurance chômage et les minima sociaux, sans contrepartie supplémentaire ; relever les minima" },
+      { id: "proteger_droits_sociaux", libelle: "Garder les aides et l'indemnisation telles qu'elles sont", definition: "maintenir ou étendre l'assurance chômage et les minima sociaux, sans contrepartie supplémentaire ; relever les minima" },
     ],
   },
   {

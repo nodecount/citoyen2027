@@ -5,7 +5,7 @@ import PageQuestionsGenerales from "./PageQuestionsGenerales";
 import { PropositionsBase } from "./PropositionsContexte";
 import { ChampQuestion, SectionQuestions } from "./Questions";
 
-const ENUM: ChampProfil = { id: "logement", label: "Statut de logement", type: "enum", options: ["locataire", "proprietaire"], libelles: { locataire: "Locataire", proprietaire: "Propriétaire" }, finalite: "Locataires et propriétaires ne sont pas concernés pareil." };
+const ENUM: ChampProfil = { id: "logement", label: "Statut de votre résidence principale", type: "enum", options: ["locataire", "proprietaire"], libelles: { locataire: "Locataire", proprietaire: "Propriétaire" }, finalite: "Locataires et propriétaires ne sont pas concernés pareil." };
 const MULTI: ChampProfil = { id: "aides", label: "Aides perçues", type: "multi", options: ["rsa", "apl"], libelles: { rsa: "RSA", apl: "Aide au logement" } };
 const NOMBRE: ChampProfil = { id: "nombre_enfants", label: "Enfants", type: "number" };
 const SENSIBLE: ChampProfil = { id: "nationalite", label: "Votre nationalité", type: "enum", options: ["francaise", "hors_ue"], libelles: { francaise: "Française", hors_ue: "Hors UE" }, sensible: true, finalite: "Certaines mesures dépendent de la nationalité." };

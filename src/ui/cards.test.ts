@@ -127,7 +127,7 @@ describe("construireCards", () => {
       const sansLogement = construireCards(THEMES, ciblees, { tranche_age: "30_49" })[0].lignes[0];
       expect(sansLogement.projection?.niveau).toBe("mixte");
       expect(sansLogement.projection?.incertain).toBe(true);
-      expect(sansLogement.messagesIncertitude.join(" ")).toContain("Statut de logement");
+      expect(sansLogement.messagesIncertitude.join(" ")).toContain("Statut de votre résidence principale");
       expect(sansLogement.messagesSansBadge).toEqual([]); // ce n'est pas une absence de badge : il y a un badge, et on explique
       expect(construireCards(THEMES, ciblees, { logement: "locataire" })[0].lignes[0].projection?.niveau).toBe("ameliorant");
       expect(construireCards(THEMES, ciblees, { logement: "proprietaire" })[0].lignes[0].projection?.niveau).toBe("non_concerne");

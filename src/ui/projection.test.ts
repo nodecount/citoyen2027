@@ -53,7 +53,7 @@ describe("decrireEffet", () => {
 
 describe("libelleChamp", () => {
   it("reprend l'intitulé du formulaire citoyen, ou le nom du champ à défaut", () => {
-    expect(libelleChamp("logement")).toBe("Statut de logement");
+    expect(libelleChamp("logement")).toBe("Statut de votre résidence principale");
     expect(libelleChamp("enfants_a_charge")).toBe("Enfants à charge");
     expect(libelleChamp("inconnu")).toBe("inconnu");
   });
@@ -65,7 +65,7 @@ describe("messagesSansBadge", () => {
       sansBadge({ raisons: ["informations_manquantes"], champsManquants: ["logement"] }),
       [proposition([])],
     );
-    expect(messages).toEqual(["Renseignez « Statut de logement » pour affiner ce résultat."]);
+    expect(messages).toEqual(["Renseignez « Statut de votre résidence principale » pour affiner ce résultat."]);
   });
 
   it("explique qu'un public non identifiable par le formulaire empêche la projection", () => {
@@ -92,7 +92,7 @@ describe("messagesSansBadge", () => {
       [proposition([])],
     );
     expect(messages).toHaveLength(2);
-    expect(messages[0]).toContain("Statut de logement");
+    expect(messages[0]).toContain("Statut de votre résidence principale");
     expect(messages[0]).toContain("Tranche d'âge");
   });
 
@@ -111,7 +111,7 @@ describe("messagesIncertitude", () => {
     const messages = messagesIncertitude(sansBadge({ niveau: "mixte", incertain: true, raisons: ["informations_manquantes"], champsManquants: ["logement"] }));
     expect(messages[0]).toContain("par prudence");
     expect(messages[0]).toContain("mixte");
-    expect(messages[1]).toContain("Statut de logement");
+    expect(messages[1]).toContain("Statut de votre résidence principale");
   });
 
   it("signale un public que le formulaire ne sait pas décrire", () => {

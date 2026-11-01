@@ -3563,6 +3563,17 @@ button.ideal-onglet:focus-visible {
   min-width: 0;
   overflow-wrap: anywhere;
 }
+/* Lien vers la source de la mesure : petite icône à droite du titre, bleue (couleur d'action). */
+.ideal-badge-source {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  height: 1.35em;
+  color: var(--bleu-fonce);
+}
+.ideal-badge-source:hover {
+  color: var(--bleu);
+}
 /* `>` : seule la ligne du candidat est une rangée à retour à la ligne, pas les badges qu'elle contient. */
 .ideal-gagnants > li {
   display: flex;

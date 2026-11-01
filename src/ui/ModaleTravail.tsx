@@ -1,5 +1,10 @@
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { createContext, useCallback, useEffect, useRef, useState, type ReactNode } from "react";
+
+// Fourni par la fenêtre quand elle a une introduction : le pas à pas s'en sert pour son « Précédent » de la première question.
+export const RetourIntroContexte = createContext<(() => void) | undefined>(undefined);
+// Fourni par la fenêtre : l'écran de fin des questions s'en sert pour ramener au simulateur.
+export const FermerContexte = createContext<(() => void) | undefined>(undefined);
 
 // Même seuil que la feuille de style : en dessous, la vue de travail est une étape dans la page, pas une fenêtre.
 const MOBILE = "(max-width: 52rem)";
@@ -24,7 +29,10 @@ interface ModaleTravailProps {
 export function ModaleTravail({ ouverte, titre, onFermer, children, intro, introAuDebut = false, pleinePage = false }: ModaleTravailProps) {
   const panneau = useRef<HTMLDivElement>(null);
   const [introVue, setIntroVue] = useState(false);
-  const afficherIntro = Boolean(intro) && introAuDebut && !introVue;
+  // « Précédent » sur la toute première question ramène à l'introduction, même une fois des réponses données.
+  const [introRevue, setIntroRevue] = useState(false);
+  const afficherIntro = Boolean(intro) && ((introAuDebut && !introVue) || introRevue);
+  const retourIntro = useCallback(() => setIntroRevue(true), []);
   // Toujours le dernier onFermer, sans relancer l'effet à chaque rendu : sinon chaque réponse remontait la page.
   const fermer = useRef(onFermer);
   fermer.current = onFermer;
@@ -65,14 +73,19 @@ export function ModaleTravail({ ouverte, titre, onFermer, children, intro, intro
         {intro && (
           <div className="modale-intro" hidden={!afficherIntro}>
             <div className="modale-intro-texte">{intro}</div>
-            <button type="button" className="modale-intro-continuer" onClick={() => setIntroVue(true)}>
+            <button type="button" className="modale-intro-continuer" onClick={() => {
+                setIntroVue(true);
+                setIntroRevue(false);
+              }}>
               Continuer
               <ArrowRight size={18} aria-hidden="true" focusable="false" />
             </button>
           </div>
         )}
         <div className="modale-corps" hidden={afficherIntro}>
-          {children}
+          <FermerContexte.Provider value={onFermer}>
+            <RetourIntroContexte.Provider value={intro ? retourIntro : undefined}>{children}</RetourIntroContexte.Provider>
+          </FermerContexte.Provider>
           <div className="barre-retour">
             <button type="button" onClick={onFermer}>
               Terminé

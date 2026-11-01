@@ -33,6 +33,9 @@ export interface Raison {
   groupes: string[];
   // Titres des mesures elles-mêmes (une fois chacune), pour qui préfère les voir plutôt que leurs groupes.
   mesures: string[];
+  // Adresse de la source de chaque mesure (titre → lien), quand elle en a une. Vide tant que le candidat est masqué : les cartes
+  // anonymisées n'ont plus de source, l'adresse trahirait l'auteur.
+  liens?: Record<string, string>;
 }
 
 export interface Solde {
@@ -95,7 +98,19 @@ function titresMesures(ligne: LignePourSolde, ids: Set<string>): string[] {
 
 // Un point du score pour ce candidat et ce thème : groupes et mesures qui le fondent.
 function point(ligne: LignePourSolde, theme: string, ids: Set<string>): Raison {
-  return { theme, groupes: groupes(ligne, ids), mesures: titresMesures(ligne, ids) };
+  const liens = liensMesures(ligne, ids);
+  return { theme, groupes: groupes(ligne, ids), mesures: titresMesures(ligne, ids), ...(Object.keys(liens).length > 0 ? { liens } : {}) };
+}
+
+// Lien vers la source de chaque mesure : la source primaire d'abord, à défaut la première qui a une adresse.
+function liensMesures(ligne: LignePourSolde, ids: Set<string>): Record<string, string> {
+  const liens: Record<string, string> = {};
+  for (const p of ligne.propositions) {
+    if (!ids.has(p.id) || liens[p.titre]) continue;
+    const source = p.sources.find((s) => s.type === "primaire" && s.url) ?? p.sources.find((s) => s.url);
+    if (source) liens[p.titre] = source.url;
+  }
+  return liens;
 }
 
 function groupes(ligne: LignePourSolde, ids: Set<string>): string[] {

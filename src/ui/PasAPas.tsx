@@ -4,6 +4,7 @@ import { compterMesuresImpactees } from "../engine/mesuresImpactees";
 import type { ProfilPartiel } from "../profil";
 import { estRepondue } from "../questionnaire";
 import type { ChampProfil } from "../types";
+import { FermerContexte, RetourIntroContexte } from "./ModaleTravail";
 import { PropositionsBase } from "./PropositionsContexte";
 import { libelleOption } from "./Questions";
 import "./pasAPas.css";
@@ -42,6 +43,8 @@ function rangDeDepart(etapes: EtapeQuestion[], profil: ProfilPartiel): number {
 export function PasAPas({ etapes, profil, onReponse, onToutVoir, nom = "Question", pluriel = "questions", impact, texteFin = "Vos réponses sont enregistrées. Vous pouvez revenir en arrière pour les corriger, ou voir les mesures adaptées à votre situation.", fin }: PasAPasProps) {
   const [rang, setRang] = useState(() => rangDeDepart(etapes, profil));
   const propositions = useContext(PropositionsBase);
+  const retourIntro = useContext(RetourIntroContexte);
+  const fermer = useContext(FermerContexte);
   const total = etapes.length;
   // La file change quand une réponse fait apparaître ou disparaître une question conditionnelle : le rang reste dans ses bornes.
   const courant = Math.min(rang, total);
@@ -63,6 +66,12 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir, nom = "Question
         <h2>Vous avez fait le tour des {pluriel}</h2>
         <p>{texteFin}</p>
         {fin}
+        {fermer && (
+          <button type="button" className="pas-a-pas-retour-simulateur" onClick={fermer}>
+            <Check size={18} aria-hidden="true" focusable="false" />
+            Retour au simulateur
+          </button>
+        )}
         <div className="pas-a-pas-actions">
           <button type="button" className="secondaire" onClick={() => setRang(total - 1)}>
             <ArrowLeft size={18} aria-hidden="true" focusable="false" />
@@ -157,7 +166,7 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir, nom = "Question
       </fieldset>
 
       <div className="pas-a-pas-actions">
-        <button type="button" className="secondaire" disabled={courant === 0} onClick={() => setRang(courant - 1)}>
+        <button type="button" className="secondaire" disabled={courant === 0 && !retourIntro} onClick={() => (courant === 0 ? retourIntro?.() : setRang(courant - 1))}>
           <ArrowLeft size={18} aria-hidden="true" focusable="false" />
           Précédent
         </button>
