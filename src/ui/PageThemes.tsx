@@ -4,7 +4,7 @@ import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/base
 import { lireOuverture, type Ecran } from "./router";
 import { aDesInformations, retirerReponsesMasquees, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
-import { classement, combinerParNotes, ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation } from "../engine/candidatIdeal";
+import { classement, combinerParNotes, detailCriteres, ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation } from "../engine/candidatIdeal";
 import { anonymiserCards } from "./aveugle";
 import { compterAvancement, dureeEstimee } from "./compteurs";
 import { EcranDeuxZones } from "./EcranDeuxZones";
@@ -123,7 +123,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
         ? soldesConvictions(cards, choixPositions)
         : soldesSituation(cards)
     : [];
-  const idealCumule = personnalise || convictionsIdeales ? versResultatAffiche("Selon votre situation et vos convictions", "thèmes", meilleurs(soldesCumul, ecartesCumul), correspondance, revele, soldesCumulAnonymes, classement(soldesCumul, ecartesCumul, 3, deuxCriteres ? 100 : undefined)) : null;
+  const idealCumule = personnalise || convictionsIdeales ? versResultatAffiche("Selon votre situation et vos convictions", "thèmes", meilleurs(soldesCumul, ecartesCumul), correspondance, revele, soldesCumulAnonymes, classement(soldesCumul, ecartesCumul, 3, deuxCriteres ? 100 : undefined), (slug) => detailCriteres(slug, personnalise ? soldesSit : null, convictionsIdeales ? soldesConv : null)) : null;
   const avance = compterAvancement(base.questionnaire, profil, convictions, propositions);
 
   const allerA = (suivante: Vue) => {

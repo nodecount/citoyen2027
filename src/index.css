@@ -3197,6 +3197,28 @@ button.ideal-egale[aria-selected="true"]:hover {
 .modale--aide {
   overflow-y: auto;
 }
+/* Bouton « Fermer » en bas de chaque fenêtre. */
+.modale-pied {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.75rem;
+}
+.modale-pied > button {
+  margin: 0;
+}
+@media (max-width: 40rem) {
+  .modale-pied > button {
+    width: 100%;
+  }
+}
+/* Calcul d'un critère du candidat suggéré, en lignes courtes à refaire à la main. */
+.ideal-calcul {
+  margin: 0 0 0.75rem;
+  padding-left: 1.2rem;
+}
+.suggestion-detail {
+  margin-top: 0.5rem;
+}
 .ideal-modale-titre {
   display: flex;
   align-items: center;
@@ -3247,9 +3269,13 @@ button.ideal-bascule:hover {
   .modale--ideal {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto auto auto auto auto minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto auto minmax(0, 1fr) auto;
     align-content: start;
     gap: 0.6rem 0.75rem;
+  }
+  .modale--ideal > .modale-pied {
+    grid-column: 1 / -1;
+    grid-row: 7;
   }
   .modale--ideal .modale-entete {
     display: contents;

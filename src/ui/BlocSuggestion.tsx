@@ -1,6 +1,7 @@
-import type { ReactNode } from "react";
+import { useCallback, useState, type ReactNode } from "react";
 import { AnneauPrecision } from "./AnneauPrecision";
 import type { ResultatAffiche } from "./CardCandidatIdeal";
+import { ModaleCandidatSuggere } from "./ModaleCandidatSuggere";
 import type { EtatSuggestion } from "./etatZones";
 import { Pastille } from "./Pastille";
 import { partiAffichable } from "./parti";
@@ -25,7 +26,11 @@ export const PARTI_FICTIF = "Parti fictif";
 // Bloc central, sur fond bleu à tous les états : titre fixe, anneau (précision, puis score une fois révélé), nom du candidat
 // (flouté, avec son parti, tant que non révélé) et, révélé, son score ; puis le bouton de l'état.
 export function BlocSuggestion({ etat, pourcent, combine, onReveler, onRevenir }: BlocSuggestionProps) {
+  const [detailOuvert, setDetailOuvert] = useState(false);
+  const fermerDetail = useCallback(() => setDetailOuvert(false), []);
   const revele = etat === "revele";
+  // Le détail des deux notes : le candidat de la première place (ou tous ceux à égalité), révélé seulement.
+  const lignesDetail = revele && combine?.departageable ? combine.classement.filter((l) => l.rang === 1 && l.identite && l.criteres) : [];
   const gagnants = combine && combine.departageable ? combine.gagnants : [];
   // Révélé seulement : c'est la seule fois où l'identité est lue.
   const identites = revele ? gagnants.flatMap((g) => (g.identite ? [g.identite] : [])) : [];
@@ -82,6 +87,12 @@ export function BlocSuggestion({ etat, pourcent, combine, onReveler, onRevenir }
           Score : <strong>{note}</strong> sur 100
         </p>
       )}
+      {lignesDetail.length > 0 && (
+        <button type="button" className="bouton-fantome suggestion-detail" aria-haspopup="dialog" onClick={() => setDetailOuvert(true)}>
+          Voir le détail du calcul
+        </button>
+      )}
+      {detailOuvert && lignesDetail.length > 0 && <ModaleCandidatSuggere lignes={lignesDetail} onFermer={fermerDetail} />}
       {etat === "vide" && <p className="suggestion-source">Répondez à une question de votre situation ou de vos convictions pour débloquer la suggestion.</p>}
       {revele ? (
         <button type="button" className="bouton-fantome" onClick={onRevenir}>

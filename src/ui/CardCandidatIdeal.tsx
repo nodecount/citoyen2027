@@ -1,11 +1,12 @@
 import { CircleHelp, Compass, ExternalLink, Eye, Trophy, UserRound, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState, type ReactElement } from "react";
 import { createPortal } from "react-dom";
-import type { Raison } from "../engine/candidatIdeal";
+import type { DetailCriteres, Raison } from "../engine/candidatIdeal";
 import { PREFIXE_ANONYME } from "./aveugle";
 import { IconeTheme } from "./icones";
 import { Pastille } from "./Pastille";
 import { partiAffichable } from "./parti";
+import { PiedModale } from "./PiedModale";
 import { premiereEnMajuscule } from "./VueThemes";
 
 // Card « candidat idéal » (décision du 2026-09-30, refondue le 2026-10-10) : seul endroit du produit qui désigne un candidat, par
@@ -24,6 +25,8 @@ export interface GagnantAffiche {
   // Mesures qui ont fait pencher le score (vides tant que la card est floutée).
   pour: Raison[];
   contre: Raison[];
+  // Candidat suggéré seulement, une fois révélé : le détail de chacune des deux notes dont on fait la moyenne.
+  criteres?: DetailCriteres;
 }
 
 // Une ligne du top : le rang est partagé par les ex æquo.
@@ -376,7 +379,7 @@ export function BlocAbsent({ positionsChoisies }: { positionsChoisies: boolean }
 
 // Les fenêtres sont rendues dans <body> : aucun parent (débordement caché, filtre, transformation) ne peut en fausser la taille.
 // Sans page (rendu statique des tests), elles restent en place.
-function enPortail(contenu: ReactElement) {
+export function enPortail(contenu: ReactElement) {
   return typeof document === "undefined" ? contenu : createPortal(contenu, document.body);
 }
 
@@ -385,7 +388,8 @@ function enPortail(contenu: ReactElement) {
 // `egales` : tous les candidats de la même place (au moins deux en cas d'égalité) ; un sélecteur permet de passer de l'un à l'autre.
 export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onFermer }: { ligne: LigneClassement; egales?: LigneClassement[]; unite: ResultatAffiche["unite"]; critere: string; onFermer: () => void }) {
   const fermer = useRef<HTMLButtonElement>(null);
-  const [parMesure, setParMesure] = useState(false);
+  // Par défaut les mesures elles-mêmes ; le bouton discret ramène aux groupes de mesures.
+  const [parMesure, setParMesure] = useState(true);
   const [lettre, setLettre] = useState(ligneInitiale.lettre);
   const ligne = egales?.find((l) => l.lettre === lettre) ?? ligneInitiale;
   const nPour = badgesDe(ligne.pour, parMesure).length;
@@ -495,6 +499,7 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
         <div id="panneau-mesures" className="ideal-modale-corps" role="tabpanel" aria-labelledby={`onglet-${cote}`}>
           <PoursContres key={`${critere}-${ligne.lettre}`} pour={ligne.pour} contre={ligne.contre} unite={unite} parMesureImpose={parMesure} toutAfficher sansTotal cote={cote} />
         </div>
+        <PiedModale onFermer={onFermer} />
       </div>
     </div>,
   );
@@ -551,6 +556,7 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
             <li>Appliquer la même règle à tous. Retrouver le détail et les limites dans la page « À propos ».</li>
           </ul>
         </section>
+        <PiedModale onFermer={onFermer} />
       </div>
     </div>,
   );

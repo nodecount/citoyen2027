@@ -1838,7 +1838,14 @@
     "titre_litteral": true,
     "effets": [
       {
-        "cibles": [],
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "mesure de libertés publiques que le formulaire ne sait pas rattacher à un profil"
+            ]
+          }
+        ],
         "dimension": "droits_et_libertes",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
@@ -2281,7 +2288,14 @@
     "titre_litteral": true,
     "effets": [
       {
-        "cibles": [],
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "mesure de libertés publiques que le formulaire ne sait pas rattacher à un profil"
+            ]
+          }
+        ],
         "dimension": "droits_et_libertes",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
@@ -3160,7 +3174,14 @@
     "titre_litteral": true,
     "effets": [
       {
-        "cibles": [],
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes concernées par la fin de vie"
+            ]
+          }
+        ],
         "dimension": "droits_et_libertes",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
@@ -3873,7 +3894,14 @@
     "titre_litteral": true,
     "effets": [
       {
-        "cibles": [],
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes concernées par la consommation de cannabis"
+            ]
+          }
+        ],
         "dimension": "droits_et_libertes",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",

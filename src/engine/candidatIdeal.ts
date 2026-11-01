@@ -251,6 +251,35 @@ export function combinerParNotes(situation: Solde[], convictions: Solde[]): Sold
   });
 }
 
+// Le détail d'un critère pour UN candidat, tel qu'il entre dans la moyenne : les mesures dans le sens du visiteur et à l'opposé, le
+// score, la référence du 100 et la note qui en découle (non arrondie et non bornée : c'est la valeur réellement moyennée).
+export interface DetailCritere {
+  ameliorants: number;
+  degradants: number;
+  score: number;
+  reference: number;
+  noteBrute: number;
+  pour: Raison[];
+  contre: Raison[];
+}
+
+export interface DetailCriteres {
+  situation?: DetailCritere;
+  convictions?: DetailCritere;
+}
+
+// Les deux notes d'un candidat, pour que le visiteur puisse refaire la moyenne lui-même. Même référence que `combinerParNotes`.
+// Un critère absent (`null` ou candidat introuvable) n'est pas renvoyé.
+export function detailCriteres(slug: string, situation: Solde[] | null, convictions: Solde[] | null): DetailCriteres {
+  const detail = (soldes: Solde[] | null): DetailCritere | undefined => {
+    const s = soldes?.find((x) => x.slug === slug);
+    if (!soldes || !s) return undefined;
+    const reference = Math.max(1, referenceDuCent(soldes));
+    return { ameliorants: s.ameliorants, degradants: s.degradants, score: s.solde, reference, noteBrute: (s.solde / reference) * 100, pour: s.pour, contre: s.contre };
+  };
+  return { situation: detail(situation), convictions: detail(convictions) };
+}
+
 // Trois façons de compter le même résultat, pour les comparer dans la page « Tests de situations » (le produit utilise les mesures) :
 // les mesures (règle du produit depuis le 2026-10-11), les groupes de mesures, ou les thèmes (ancienne règle, +1 / −1 par thème ou
 // par sujet × thème). Toujours favorables moins défavorables ; un groupe ou une mesure n'est compté qu'une fois par thème.

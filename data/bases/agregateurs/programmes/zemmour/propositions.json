@@ -1023,7 +1023,14 @@
     "titre_litteral": true,
     "effets": [
       {
-        "cibles": [],
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes concernées par la légitime défense"
+            ]
+          }
+        ],
         "dimension": "droits_et_libertes",
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",

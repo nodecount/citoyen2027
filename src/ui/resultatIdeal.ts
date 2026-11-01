@@ -1,11 +1,11 @@
-import type { Classe, Meilleurs, Solde } from "../engine/candidatIdeal";
+import type { Classe, DetailCriteres, Meilleurs, Solde } from "../engine/candidatIdeal";
 import { PREFIXE_ANONYME, type Correspondance } from "./aveugle";
 import type { GagnantAffiche, ResultatAffiche } from "./CardCandidatIdeal";
 
 // Pont entre le calcul (slugs réels) et la card (lettres). Tant que `revele` est faux, AUCUNE identité n'est transmise à la
 // card, pas même le slug réel : elle ne reçoit que les lettres. Une correspondance introuvable donne « ? » et aucune identité
 // (on ne devine jamais un nom).
-export function versResultatAffiche(titre: string, unite: ResultatAffiche["unite"], m: Meilleurs | null, correspondance: Correspondance[], revele: boolean, soldesAnonymes: Solde[] = [], classes: Classe[] = []): ResultatAffiche | null {
+export function versResultatAffiche(titre: string, unite: ResultatAffiche["unite"], m: Meilleurs | null, correspondance: Correspondance[], revele: boolean, soldesAnonymes: Solde[] = [], classes: Classe[] = [], criteres?: (slug: string) => DetailCriteres): ResultatAffiche | null {
   if (!m) return null;
   const afficher = (g: Solde): GagnantAffiche => {
     const c = correspondance.find((x) => x.slug === g.slug);
@@ -21,6 +21,8 @@ export function versResultatAffiche(titre: string, unite: ResultatAffiche["unite
       solde: g.solde,
       pour: revele ? g.pour : (anonyme?.pour ?? []),
       contre: revele ? g.contre : (anonyme?.contre ?? []),
+      // Le détail des deux notes porte les vrais textes : jamais transmis tant que la suggestion est floutée.
+      criteres: revele && c && criteres ? criteres(g.slug) : undefined,
     };
   };
   return {

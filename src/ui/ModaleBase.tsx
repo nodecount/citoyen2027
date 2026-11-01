@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 import type { InfoBase } from "../data/bases";
+import { PiedModale } from "./PiedModale";
 import { ProgrammesSansMesure } from "./ProgrammesSansMesure";
 
 interface ModaleBaseProps {
@@ -86,6 +87,7 @@ export function ModaleBase({ ouverte, bases, actif, onChoisir, onControle, onFer
             </li>
           ))}
         </ul>
+        <PiedModale onFermer={onFermer} />
       </div>
     </div>
   );

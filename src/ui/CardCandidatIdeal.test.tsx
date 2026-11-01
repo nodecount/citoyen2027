@@ -32,7 +32,7 @@ describe("Aide « Comment est suggéré le candidat ? »", () => {
   it("fenêtre modale lisible en 30 secondes : candidat suggéré (combinaison) d'abord, score d'un candidat, précision, bon à savoir", () => {
     for (const t of ['role="dialog"', "Le candidat suggéré", "Le score d&#x27;un candidat", "Bon à savoir", "La précision", "Fermer l&#x27;aide"]) expect(html, t).toContain(t);
     // 30 secondes de lecture : une centaine de mots au plus (hors titre et bouton de fermeture).
-    const mots = html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+    const mots = html.replace(/<div class="modale-pied">[\s\S]*?<\/div>/, "").replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
     expect(mots).toBeLessThanOrEqual(110);
     expect(html.indexOf("Le candidat suggéré")).toBeLessThan(html.indexOf("Le score d&#x27;un candidat"));
     expect(html).toContain("Répondre à davantage de questions pour une suggestion plus précise.");
@@ -188,31 +188,36 @@ describe("Détail d'une ligne (fenêtre)", () => {
   const ligne = { ...gagnant("C", "Nom-Reel-Situation", "slug-reel-a", 3), rang: 1 };
   it("fenêtre modale : nom, parti, score, rang et mesures ; bouton de fermeture", () => {
     const html = renderToStaticMarkup(<ModaleDetail ligne={ligne} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
-    for (const t of ["role=\"dialog\"", "aria-modal=\"true\"", "Nom-Reel-Situation", "Parti-test", "Mesure-pour", "Favorables <", "Défavorables <", "Fermer le détail"]) expect(html, t).toContain(t);
-    expect(html).not.toContain("Mesure-contre"); // les défavorables sont dans leur onglet
+    for (const t of ["role=\"dialog\"", "aria-modal=\"true\"", "Nom-Reel-Situation", "Parti-test", "Vraie-mesure-pour", "Favorables <", "Défavorables <", "Fermer le détail"]) expect(html, t).toContain(t);
+    expect(html).not.toContain("Vraie-mesure-contre"); // les défavorables sont dans leur onglet
     // Ni le critère ni le score et le rang : ils sont déjà dans la ligne cliquée.
     expect(html).not.toContain("du classement");
     expect(html).not.toContain("score +3");
   });
-  it("onglets en haut : favorables et défavorables, chacun avec son nombre en groupes de mesures ; favorables au départ ; bouton discret vers le détail par mesure", () => {
+  it("onglets en haut : favorables et défavorables, chacun avec son nombre de mesures ; favorables au départ ; bouton discret vers les groupes de mesures", () => {
     const l = { ...ligne, pour: [{ theme: "logement", groupes: ["G1", "G2"], mesures: ["Mes-un", "Mes-deux", "Mes-trois"] }], contre: [{ theme: "retraite", groupes: ["G3"], mesures: ["Mes-quatre"] }] };
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
     expect(html).toContain('role="tablist"');
-    expect(html).toMatch(/aria-selected="true"[^>]*>Favorables <span class="ideal-onglet-nombre">2</);
+    expect(html).toMatch(/aria-selected="true"[^>]*>Favorables <span class="ideal-onglet-nombre">3</);
     expect(html).toMatch(/aria-selected="false"[^>]*>Défavorables <span class="ideal-onglet-nombre">1</);
     expect(html.indexOf("ideal-onglets")).toBeLessThan(html.indexOf("ideal-badges"));
-    for (const t of ["G1", "G2"]) expect(html, t).toContain(t);
-    expect(html).not.toContain("G3"); // dans l'onglet des défavorables
-    expect(html).not.toContain("Mes-un"); // groupes de mesures au départ
-    expect(html).toContain("Voir le détail par mesure");
+    for (const t of ["Mes-un", "Mes-deux", "Mes-trois"]) expect(html, t).toContain(t);
+    expect(html).not.toContain("Mes-quatre"); // dans l'onglet des défavorables
+    expect(html).not.toContain("G1"); // les mesures elles-mêmes au départ, pas les groupes
+    expect(html).toContain("Voir par groupes de mesures");
     expect(html).not.toContain("ideal-voir-plus");
   });
-  it("au-dessus des onglets : une seule jauge de total, en groupes de mesures au départ", () => {
+  it("un bouton « Fermer » est posé sous la fenêtre", () => {
+    const html = renderToStaticMarkup(<ModaleDetail ligne={ligne} unite="thèmes" critere="c" onFermer={() => {}} />);
+    expect(html).toMatch(/<div class="modale-pied"><button[^>]*>Fermer<\/button><\/div><\/div><\/div>$/);
+    expect(renderToStaticMarkup(<ModaleAideScore onFermer={() => {}} />)).toContain('class="modale-pied"');
+  });
+  it("au-dessus des onglets : une seule jauge de total, en mesures au départ", () => {
     const l = { ...ligne, pour: [{ theme: "logement", groupes: ["G1", "G2"], mesures: ["Mes-un", "Mes-deux", "Mes-trois"] }], contre: [{ theme: "retraite", groupes: ["G3"], mesures: ["Mes-quatre"] }] };
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
     expect(html).not.toContain("Au total");
     const jauges = html.match(/aria-label="Score [^"]*favorable[^"]*"/g) ?? [];
-    expect(jauges).toEqual(['aria-label="Score +1 : 2 favorables moins 1 défavorable"']);
+    expect(jauges).toEqual(['aria-label="Score +2 : 3 favorables moins 1 défavorable"']);
     expect(html.indexOf("ideal-total-libelle")).toBeLessThan(html.indexOf('role="tablist"'));
   });
   it("égalité : des onglets, un par candidat de la ligne, avec le premier sélectionné ; pas d'onglets pour un seul candidat", () => {
@@ -232,7 +237,7 @@ describe("Détail d'une ligne (fenêtre)", () => {
     expect(renderToStaticMarkup(<ModaleDetail ligne={ligne} unite="thèmes" critere="c" onFermer={() => {}} />)).not.toContain("ideal-egale");
   });
   it("tout est montré dans la fenêtre, même au-delà de trois badges", () => {
-    const l = { ...ligne, pour: [{ theme: "logement", groupes: ["G1", "G2", "G3", "G4", "G5"], mesures: [] }], contre: [] };
+    const l = { ...ligne, pour: [{ theme: "logement", groupes: [], mesures: ["M1", "M2", "M3", "M4", "M5"] }], contre: [] };
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="c" onFermer={() => {}} />);
     expect(html.match(/class="ideal-badge ideal-badge--/g)).toHaveLength(5);
   });
