@@ -3167,8 +3167,14 @@ button.ideal-egale[aria-selected="true"]:hover {
   display: flex;
   flex-direction: column;
   width: min(40rem, 100%);
-  max-height: min(46rem, calc(100dvh - 2rem));
+  /* Hauteur fixe (et non maximale) : la fenêtre ne se redimensionne pas quand on change d'onglet ; seule la liste défile. */
+  height: min(46rem, calc(100dvh - 2rem));
   overflow: hidden;
+}
+@media (max-width: 40rem) {
+  .modale--ideal {
+    height: calc(100dvh - 2rem); /* téléphone : toute la hauteur disponible */
+  }
 }
 .modale--ideal > * {
   flex: none;
@@ -3222,26 +3228,80 @@ button.ideal-bascule:hover {
 /* Téléphone : l'en-tête se range sur deux lignes (nom + croix, puis le score), les totaux se lisent libellé au-dessus de la
    jauge et les deux onglets se partagent la largeur, pour que rien ne soit écrasé. */
 @media (max-width: 40rem) {
-  .modale--ideal .modale-entete {
-    flex-wrap: wrap;
-    align-items: flex-start;
+  /* Grille : nom + croix, (égalités), puis le rond du score et son explication sur une même ligne, les totaux, les onglets, et la
+     liste qui prend le reste de la hauteur et défile seule. L'en-tête « disparaît » pour que ses enfants entrent dans la grille. */
+  .modale--ideal {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto auto auto auto minmax(0, 1fr);
+    align-content: start;
     gap: 0.6rem 0.75rem;
   }
+  .modale--ideal .modale-entete {
+    display: contents;
+  }
   .modale--ideal .modale-entete > h2 {
-    flex: 1 1 calc(100% - 3.5rem); /* la croix reste à côté ; le rond du score passe à la ligne, à sa taille */
+    grid-column: 1 / 3;
+    grid-row: 1;
     min-width: 0;
     font-size: 1.2rem;
   }
   .modale--ideal .modale-entete > .bouton-icone {
-    order: 2;
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+  }
+  /* Candidats à égalité : une rangée d'onglets qui défile de côté (sans se replier ni écraser les noms) ; dans chaque onglet, le
+     portrait à gauche, le nom puis le badge du parti dessous. */
+  .modale--ideal .ideal-egales {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding-bottom: 0.3rem;
+    overflow-x: auto;
+  }
+  .modale--ideal .ideal-egale {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
     flex: none;
+    gap: 0 0.5rem;
+    padding: 0.3rem 0.8rem 0.3rem 0.3rem;
+    border-radius: 14px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  .modale--ideal .ideal-egale > .pastille {
+    grid-row: 1 / span 2;
+  }
+  .modale--ideal .ideal-egale .ideal-egale-parti {
+    grid-column: 2;
+    justify-self: start;
   }
   .modale--ideal .modale-entete > .ideal-rond {
-    order: 3;
-    flex: none;
+    grid-column: 1;
+    grid-row: 3;
+    align-self: center;
   }
-  .modale--ideal .modale-entete > .ideal-rond {
-    margin-right: auto; /* le rond du score se cale à gauche, sous le nom */
+  .modale--ideal .ideal-score-explication {
+    grid-column: 2 / -1;
+    grid-row: 3;
+    align-self: center;
+    margin: 0;
+  }
+  .modale--ideal .ideal-totaux {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+  .modale--ideal .ideal-onglets {
+    grid-column: 1 / -1;
+    grid-row: 5;
+  }
+  .modale--ideal > .ideal-modale-corps {
+    grid-column: 1 / -1;
+    grid-row: 6;
   }
   .ideal-total {
     flex-direction: column;
