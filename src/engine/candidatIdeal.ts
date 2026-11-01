@@ -232,6 +232,8 @@ export interface Classe {
   // Score noté sur 100 (décision du 2026-10-11) : le score du candidat rapporté au nombre de mesures qui touchent le visiteur
   // (favorables + défavorables) chez le candidat qui en a le plus (100 = ce nombre : toutes favorables). Jamais négatif : un score nul ou négatif vaut 0. Sert à la barre des tops ; le classement, lui, suit le score brut.
   note: number;
+  // La référence du 100 : le plus grand nombre de mesures qui touchent le visiteur chez un seul candidat (voir `classement`).
+  reference: number;
 }
 
 export function noteSur100(score: number, reference: number): number {
@@ -248,7 +250,7 @@ export function classement(soldes: Solde[], ecartes: ReadonlySet<string> = new S
   // candidats (écartés compris : elle ne bouge pas selon eux). Elle suit donc les réponses du visiteur.
   const reference = Math.max(0, ...soldes.map((s) => s.ameliorants + s.degradants));
   return tries
-    .map((s) => ({ solde: s, rang: scores.indexOf(s.solde) + 1, note: noteSur100(s.solde, reference) }))
+    .map((s) => ({ solde: s, rang: scores.indexOf(s.solde) + 1, note: noteSur100(s.solde, reference), reference }))
     .filter((c) => c.rang <= taille);
 }
 

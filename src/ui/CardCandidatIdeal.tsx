@@ -31,6 +31,8 @@ export interface LigneClassement extends GagnantAffiche {
   rang: number;
   // Score noté sur 100 (100 = le nombre de mesures du candidat qui en a le plus), jamais négatif : c'est ce que montre la barre du top.
   note?: number;
+  // Nombre de mesures du candidat qui en a le plus : ce qui vaut 100 (sert à expliquer la note dans la fenêtre de détail).
+  reference?: number;
 }
 
 export interface ResultatAffiche {
@@ -382,11 +384,13 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
   const ligne = egales?.find((l) => l.lettre === lettre) ?? ligneInitiale;
   const nPour = badgesDe(ligne.pour, parMesure).length;
   const nContre = badgesDe(ligne.contre, parMesure).length;
-  // Part des mesures qui vont dans le bon sens, en mesures (l'unité du score) : une lecture en plus du score, qui ne change pas le
-  // classement. Rien à dire quand aucune mesure ne concerne le visiteur.
+  // « 20/20 des mesures vous avantagent » : la part des mesures qui vont dans le bon sens, en mesures (l'unité du score), à côté du
+  // rond. Elle ne change pas le classement. La seconde phrase explique une note sous 100 même quand toutes les mesures sont
+  // favorables : le 100 est celui du candidat qui a le plus de mesures qui touchent le visiteur.
   const mesuresPour = badgesDe(ligne.pour, true).length;
   const mesuresContre = badgesDe(ligne.contre, true).length;
-  const partFavorable = mesuresPour + mesuresContre > 0 ? Math.round((mesuresPour / (mesuresPour + mesuresContre)) * 100) : null;
+  const mesuresTotal = mesuresPour + mesuresContre;
+  const explicationNote = ligne.reference !== undefined && ligne.note !== undefined && ligne.note < 100 && mesuresTotal > 0 ? { reference: ligne.reference, score: Math.max(0, mesuresPour - mesuresContre), note: ligne.note } : null;
   // Onglet ouvert : les favorables, sauf s'il n'y en a aucun alors qu'il y a des défavorables.
   const [coteChoisi, setCote] = useState<"pour" | "contre" | null>(null);
   const cote = coteChoisi ?? (nPour === 0 && nContre > 0 ? "contre" : "pour");
@@ -441,18 +445,26 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
           </div>
         )}
         <p className="hint ideal-score-explication">
-          {unite === "sujets"
-            ? "Le score va de 0 à 100. Il monte avec les mesures proches de vos convictions et baisse avec celles qui s'y opposent."
-            : "Le score va de 0 à 100. Il monte avec les mesures qui vous avantagent et baisse avec celles qui vous désavantagent."}
+          {mesuresTotal === 0 ? (
+            "Aucune mesure ne vous concerne chez ce candidat."
+          ) : (
+            <>
+              <strong>
+                {mesuresPour}/{mesuresTotal}
+              </strong>{" "}
+              des mesures {unite === "sujets" ? "vont dans le sens de vos convictions" : "vous avantagent"}.
+              {explicationNote && (
+                <span className="ideal-score-reference">
+                  {" "}
+                  Le candidat qui en a le plus en a {explicationNote.reference} : {explicationNote.score} sur {explicationNote.reference}, soit {explicationNote.note}/100.
+                </span>
+              )}
+            </>
+          )}
         </p>
         {/* La barre du total (en groupes de mesures, ou en mesures si le visiteur le demande) d'abord, puis les onglets collés en
             haut de la fenêtre : favorables d'un côté, défavorables de l'autre. Le bouton discret change tout le contenu d'un coup. */}
         <div className="ideal-totaux">
-          {partFavorable !== null && (
-            <p className="ideal-part">
-              <strong>{partFavorable} %</strong> des mesures qui {unite === "sujets" ? "touchent vos convictions vont dans leur sens" : "vous concernent vous avantagent"} ({mesuresPour} sur {mesuresPour + mesuresContre}).
-            </p>
-          )}
           <div className="ideal-total">
             <span className="ideal-total-libelle">{parMesure ? "Mesures" : "Groupes de mesures"}</span>
             <Jauge ameliorants={nPour} degradants={nContre} echelle={Math.max(nPour, nContre, 1)} />
@@ -508,40 +520,29 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
           </button>
         </div>
         <section>
-          <h3>Selon votre situation</h3>
+          <h3>Le candidat suggéré</h3>
           <ul>
-            <li>Chaque mesure qui améliore votre situation rapporte 1 point au candidat.</li>
-            <li>Chaque mesure qui la dégrade lui retire 1 point.</li>
-            <li>Les mesures qui ne vous concernent pas ne comptent pas.</li>
+            <li>Chaque candidat a deux scores : un selon votre situation, un selon vos convictions.</li>
+            <li>Les deux sont additionnés : le candidat suggéré a le total le plus élevé.</li>
+            <li>Dans chaque bloc, l'onglet « Candidats » montre les 3 meilleures places.</li>
           </ul>
         </section>
         <section>
-          <h3>Selon vos convictions</h3>
+          <h3>Le score d'un candidat</h3>
           <ul>
-            <li>Une mesure qui va dans le sens d'une position que vous avez choisie rapporte 1 point au candidat.</li>
-            <li>Une mesure qui va à l'opposé lui retire 1 point.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Les classements</h3>
-          <ul>
-            <li>Au centre : le candidat dont vos deux scores, additionnés, sont les plus élevés.</li>
-            <li>De chaque côté : les 3 meilleures places de chaque critère, les candidats à égalité partageant la même place.</li>
+            <li>Une mesure qui va dans votre sens rapporte 1 point au candidat. Une mesure à l'opposé lui retire 1 point.</li>
           </ul>
         </section>
         <section>
           <h3>La précision</h3>
           <ul>
-            <li>Plus vous répondez aux questions, plus la suggestion est précise.</li>          </ul>
+            <li>Plus vous répondez aux questions, plus la suggestion est précise.</li>
+          </ul>
         </section>
         <section>
           <h3>Bon à savoir</h3>
           <ul>
-            <li>La règle est la même pour tous les candidats.</li>
-            <li>Aucune mesure ni aucun thème ne compte plus qu'un autre : on compte des mesures, pas leur importance.</li>
-            <li>Un candidat qui propose plus de mesures qui vous avantagent obtient un meilleur score.</li>
-            <li>Le score est une aide à la lecture : à vous de peser les mesures qui comptent le plus pour vous.</li>
-            <li>Les limites de la méthode sont expliquées dans la page « À propos ».</li>
+            <li>La règle est la même pour tous. Le détail et les limites sont dans la page « À propos ».</li>
           </ul>
         </section>
       </div>

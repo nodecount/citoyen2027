@@ -66,6 +66,15 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
           <li>Cette note dépend donc de vos réponses : 100 signifie que toutes les mesures qui vous concernent chez le candidat qui en a le plus sont à votre avantage. Ce n'est pas une probabilité de convenir, et deux visiteurs ne comparent pas leurs notes.</li>
           <li>Une grande mesure et une petite mesure comptent chacune pour une. Aucun thème ne pèse plus qu'un autre.</li>
         </ul>
+        <h3>Comment le candidat suggéré est calculé</h3>
+        <ul>
+          <li>Premier aspect, le score d'un candidat selon votre situation : chaque mesure qui améliore votre situation lui rapporte 1 point, chaque mesure qui la dégrade lui en retire 1. Une mesure qui ne vous concerne pas ne compte pas, et un même thème compte chaque mesure une seule fois.</li>
+          <li>Premier aspect, selon vos convictions : sur chaque sujet où vous avez choisi une position, une mesure du candidat qui défend cette position lui rapporte 1 point, une mesure qui défend la position opposée lui en retire 1. Une mesure sans position reconnue ne compte pas. Si vous cochez « sans condamnation », les candidats concernés sont écartés de ce critère.</li>
+          <li>Second aspect, la combinaison : les deux scores sont additionnés, sans pondération (un point de situation vaut un point de conviction). Si vous n'avez répondu que d'un côté, seul ce côté compte.</li>
+          <li>Le candidat suggéré est celui dont le total est le plus élevé. En cas d'égalité, tous les candidats à égalité sont montrés : ils ne sont jamais départagés par l'ordre alphabétique. Un candidat sans aucun résultat n'est pas éligible.</li>
+          <li>Les onglets « Candidats » de chaque bloc montrent les 3 meilleures places de chaque critère, les candidats à égalité partageant la même place.</li>
+          <li>La fenêtre de détail d'un candidat dit combien de ses mesures vont dans votre sens (par exemple 18/19). Si sa note est sous 100 alors que toutes ses mesures sont favorables, elle explique pourquoi : le 100 est celui du candidat qui a le plus de mesures qui vous concernent. Ces phrases ne changent pas le classement.</li>
+        </ul>
         <h3>Ce qui reste à vous</h3>
         <ul>
           <li>Le candidat idéal est une suggestion. C'est à vous de peser les mesures qui comptent le plus pour vous, en les lisant.</li>

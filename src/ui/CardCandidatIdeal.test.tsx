@@ -29,15 +29,19 @@ const rendre = (p: { revele: boolean; situation: ResultatAffiche | null; convict
   );
 describe("Aide « Comment est suggéré le candidat ? »", () => {
   const html = renderToStaticMarkup(<ModaleAideScore onFermer={() => {}} />);
-  it("fenêtre modale en sections courtes : situation, convictions, classements, précision, bon à savoir", () => {
-    for (const t of ['role="dialog"', "Selon votre situation", "Selon vos convictions", "Les classements", "Bon à savoir", "La précision", "Fermer l&#x27;aide"]) expect(html, t).toContain(t);
+  it("fenêtre modale lisible en 30 secondes : candidat suggéré (combinaison) d'abord, score d'un candidat, précision, bon à savoir", () => {
+    for (const t of ['role="dialog"', "Le candidat suggéré", "Le score d&#x27;un candidat", "Bon à savoir", "La précision", "Fermer l&#x27;aide"]) expect(html, t).toContain(t);
+    // 30 secondes de lecture : une centaine de mots au plus (hors titre et bouton de fermeture).
+    const mots = html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+    expect(mots).toBeLessThanOrEqual(110);
+    expect(html.indexOf("Le candidat suggéré")).toBeLessThan(html.indexOf("Le score d&#x27;un candidat"));
     expect(html).toContain("Plus vous répondez aux questions, plus la suggestion est précise.");
     expect(html).not.toContain("pas si le résultat est fiable");
-    expect(html.match(/<h3>/g)).toHaveLength(5);
+    expect(html.match(/<h3>/g)).toHaveLength(4);
     expect(html).toContain("Comment est suggéré le candidat ?");
   });
   it("dit la règle : points, cumul au centre, 5 meilleurs, jauge, ex æquo, même règle pour tous", () => {
-    for (const t of ["rapporte 1 point au candidat", "lui retire 1 point", "Chaque mesure qui améliore votre situation","additionnés", "3 meilleures places de chaque critère", "on compte des mesures, pas leur importance","même pour tous"]) expect(html, t).toContain(t);
+    for (const t of ["rapporte 1 point au candidat", "lui retire 1 point", "additionnés", "3 meilleures places", "La règle est la même pour tous", "page « À propos »"]) expect(html, t).toContain(t);
   });
   it("n'explique plus la barre dans l'aide : l'explication du score est dans la fenêtre de détail", () => {
     expect(html).not.toContain("La barre de score");
@@ -114,30 +118,33 @@ describe("RondScore dans la fenêtre de détail", () => {
     expect(html.indexOf("ideal-rond")).toBeLessThan(html.indexOf('aria-label="Fermer le détail"'));
     expect(html.indexOf("ideal-rond")).toBeLessThan(html.indexOf("ideal-totaux"));
   });
-  it("la fenêtre de détail explique le score en deux phrases simples", () => {
-    const l = { ...gagnant("C", "Nom-Reel-Situation", "slug-reel-a", 3), rang: 1, note: 37 };
+  const base = { ...gagnant("C", "Nom-Reel-Situation", "slug-reel-a", 3), rang: 1 };
+  const quatre = [{ theme: "logement", groupes: ["G1"], mesures: ["M1", "M2", "M3", "M4"] }];
+  it("à droite du rond : « 4/4 des mesures vous avantagent » ; une note sous 100 est expliquée par le candidat qui a le plus de mesures", () => {
+    const l = { ...base, pour: quatre, contre: [], note: 50, reference: 8 };
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
-    expect(html).toContain("Le score va de 0 à 100.");
-    expect(html).not.toContain("100 correspond");
-    expect(html.indexOf("Le score va de 0 à 100")).toBeLessThan(html.indexOf("ideal-totaux"));
-    expect(html).toContain("mesures qui vous avantagent");
+    expect(html).toMatch(/<strong>4\/4<\/strong>\s*des mesures vous avantagent\./);
+    expect(html).toContain("Le candidat qui en a le plus en a 8 : 4 sur 8, soit 50/100.");
+    expect(html).not.toContain("Le score va de 0 à 100");
+    expect(html.indexOf("des mesures vous avantagent")).toBeLessThan(html.indexOf("ideal-totaux"));
   });
-  it("part des mesures qui vont dans le bon sens, en mesures, en plus du score ; rien sans mesure concernée", () => {
-    const ligne = { ...gagnant("C", "Nom-Reel-Situation", "slug-reel-a", 3), rang: 1, note: 37 };
-    const l = { ...ligne, pour: [{ theme: "logement", groupes: ["G1"], mesures: ["M1", "M2"] }], contre: [{ theme: "retraite", groupes: ["G2"], mesures: ["M3"] }] };
-    const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
-    expect(html).toContain("<strong>67 %</strong> des mesures qui vous concernent vous avantagent (2 sur 3)");
-    const conv = renderToStaticMarkup(<ModaleDetail ligne={l} unite="sujets" critere="Selon vos convictions" onFermer={() => {}} />);
-    expect(conv).toContain("des mesures qui touchent vos convictions vont dans leur sens (2 sur 3)");
-    expect(renderToStaticMarkup(<ModaleDetail ligne={{ ...ligne, pour: [], contre: [] }} unite="thèmes" critere="c" onFermer={() => {}} />)).not.toContain("ideal-part");
+  it("note à 100 : la seconde phrase n'a pas lieu d'être ; sans mesure concernée : une phrase le dit", () => {
+    const cent = renderToStaticMarkup(<ModaleDetail ligne={{ ...base, pour: quatre, contre: [], note: 100, reference: 4 }} unite="thèmes" critere="c" onFermer={() => {}} />);
+    expect(cent).toContain("4/4");
+    expect(cent).not.toContain("Le candidat qui en a le plus");
+    const aucune = renderToStaticMarkup(<ModaleDetail ligne={{ ...base, pour: [], contre: [], note: 0, reference: 8 }} unite="thèmes" critere="c" onFermer={() => {}} />);
+    expect(aucune).toContain("Aucune mesure ne vous concerne chez ce candidat.");
   });
-  it("convictions : l'explication parle de mesures proches de vos convictions, pas de votre situation", () => {
-    const l = { ...gagnant("C", "Nom-Reel-Situation", "slug-reel-a", 3), rang: 1, note: 37 };
-    const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="sujets" critere="Selon vos convictions" onFermer={() => {}} />);
-    expect(html).toContain("mesures proches de vos convictions");
-    expect(html).toContain("celles qui s&#x27;y opposent");
+  it("avec des mesures défavorables : le compte part des favorables sur toutes les mesures, la note reste celle du score", () => {
+    const l = { ...base, pour: [{ theme: "logement", groupes: ["G1"], mesures: ["M1", "M2"] }], contre: [{ theme: "retraite", groupes: ["G2"], mesures: ["M3"] }], note: 33, reference: 3 };
+    const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="c" onFermer={() => {}} />);
+    expect(html).toMatch(/<strong>2\/3<\/strong>/);
+    expect(html).toContain("Le candidat qui en a le plus en a 3 : 1 sur 3, soit 33/100.");
+  });
+  it("convictions : « vont dans le sens de vos convictions », pas de votre situation", () => {
+    const html = renderToStaticMarkup(<ModaleDetail ligne={{ ...base, pour: quatre, contre: [], note: 100, reference: 4 }} unite="sujets" critere="Selon vos convictions" onFermer={() => {}} />);
+    expect(html).toContain("des mesures vont dans le sens de vos convictions");
     expect(html).not.toContain("vous avantagent");
-    expect(html).not.toContain("vous désavantagent");
   });
   it("égalité : le rond suit le candidat sélectionné (même score, donc même note)", () => {
     const a = { ...gagnant("C", "Nom-A", "sa", 3), rang: 1, note: 37 };
