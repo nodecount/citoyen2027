@@ -3207,6 +3207,11 @@ button.ideal-egale[aria-selected="true"]:hover {
 .ideal-totaux {
   margin-top: 0.5rem;
 }
+.ideal-part {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  color: var(--encre);
+}
 /* Bouton discret : bascule tout le contenu de la fenêtre entre groupes de mesures et mesures. */
 button.ideal-bascule {
   display: inline-flex;
@@ -3320,6 +3325,21 @@ button.ideal-bascule:hover {
   .modale--ideal .ideal-onglet {
     min-width: 0;
   }
+}
+/* L'aide « Comment est suggéré le candidat ? » partage la classe de la fenêtre de détail mais reste un simple texte qui défile :
+   ni hauteur fixe ni grille (sinon ses sections se superposent sur téléphone). */
+.modale--ideal.modale--aide {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-height: min(46rem, calc(100dvh - 2rem));
+  overflow-y: auto;
+}
+.modale--ideal.modale--aide .modale-entete {
+  display: flex;
+}
+.modale--ideal.modale--aide > * {
+  flex: none;
 }
 .ideal-total {
   display: flex;

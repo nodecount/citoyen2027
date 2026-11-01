@@ -382,6 +382,11 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
   const ligne = egales?.find((l) => l.lettre === lettre) ?? ligneInitiale;
   const nPour = badgesDe(ligne.pour, parMesure).length;
   const nContre = badgesDe(ligne.contre, parMesure).length;
+  // Part des mesures qui vont dans le bon sens, en mesures (l'unité du score) : une lecture en plus du score, qui ne change pas le
+  // classement. Rien à dire quand aucune mesure ne concerne le visiteur.
+  const mesuresPour = badgesDe(ligne.pour, true).length;
+  const mesuresContre = badgesDe(ligne.contre, true).length;
+  const partFavorable = mesuresPour + mesuresContre > 0 ? Math.round((mesuresPour / (mesuresPour + mesuresContre)) * 100) : null;
   // Onglet ouvert : les favorables, sauf s'il n'y en a aucun alors qu'il y a des défavorables.
   const [coteChoisi, setCote] = useState<"pour" | "contre" | null>(null);
   const cote = coteChoisi ?? (nPour === 0 && nContre > 0 ? "contre" : "pour");
@@ -436,10 +441,18 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
           </div>
         )}
         <p className="hint ideal-score-explication">
-          Le score va de 0 à 100. Il monte avec les mesures qui vous avantagent et baisse avec celles qui vous désavantagent.        </p>
+          {unite === "sujets"
+            ? "Le score va de 0 à 100. Il monte avec les mesures proches de vos convictions et baisse avec celles qui s'y opposent."
+            : "Le score va de 0 à 100. Il monte avec les mesures qui vous avantagent et baisse avec celles qui vous désavantagent."}
+        </p>
         {/* La barre du total (en groupes de mesures, ou en mesures si le visiteur le demande) d'abord, puis les onglets collés en
             haut de la fenêtre : favorables d'un côté, défavorables de l'autre. Le bouton discret change tout le contenu d'un coup. */}
         <div className="ideal-totaux">
+          {partFavorable !== null && (
+            <p className="ideal-part">
+              <strong>{partFavorable} %</strong> des mesures qui {unite === "sujets" ? "touchent vos convictions vont dans leur sens" : "vous concernent vous avantagent"} ({mesuresPour} sur {mesuresPour + mesuresContre}).
+            </p>
+          )}
           <div className="ideal-total">
             <span className="ideal-total-libelle">{parMesure ? "Mesures" : "Groupes de mesures"}</span>
             <Jauge ameliorants={nPour} degradants={nContre} echelle={Math.max(nPour, nContre, 1)} />

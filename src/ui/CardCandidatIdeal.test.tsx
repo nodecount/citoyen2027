@@ -120,6 +120,24 @@ describe("RondScore dans la fenêtre de détail", () => {
     expect(html).toContain("Le score va de 0 à 100.");
     expect(html).not.toContain("100 correspond");
     expect(html.indexOf("Le score va de 0 à 100")).toBeLessThan(html.indexOf("ideal-totaux"));
+    expect(html).toContain("mesures qui vous avantagent");
+  });
+  it("part des mesures qui vont dans le bon sens, en mesures, en plus du score ; rien sans mesure concernée", () => {
+    const ligne = { ...gagnant("C", "Nom-Reel-Situation", "slug-reel-a", 3), rang: 1, note: 37 };
+    const l = { ...ligne, pour: [{ theme: "logement", groupes: ["G1"], mesures: ["M1", "M2"] }], contre: [{ theme: "retraite", groupes: ["G2"], mesures: ["M3"] }] };
+    const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
+    expect(html).toContain("<strong>67 %</strong> des mesures qui vous concernent vous avantagent (2 sur 3)");
+    const conv = renderToStaticMarkup(<ModaleDetail ligne={l} unite="sujets" critere="Selon vos convictions" onFermer={() => {}} />);
+    expect(conv).toContain("des mesures qui touchent vos convictions vont dans leur sens (2 sur 3)");
+    expect(renderToStaticMarkup(<ModaleDetail ligne={{ ...ligne, pour: [], contre: [] }} unite="thèmes" critere="c" onFermer={() => {}} />)).not.toContain("ideal-part");
+  });
+  it("convictions : l'explication parle de mesures proches de vos convictions, pas de votre situation", () => {
+    const l = { ...gagnant("C", "Nom-Reel-Situation", "slug-reel-a", 3), rang: 1, note: 37 };
+    const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="sujets" critere="Selon vos convictions" onFermer={() => {}} />);
+    expect(html).toContain("mesures proches de vos convictions");
+    expect(html).toContain("celles qui s&#x27;y opposent");
+    expect(html).not.toContain("vous avantagent");
+    expect(html).not.toContain("vous désavantagent");
   });
   it("égalité : le rond suit le candidat sélectionné (même score, donc même note)", () => {
     const a = { ...gagnant("C", "Nom-A", "sa", 3), rang: 1, note: 37 };
