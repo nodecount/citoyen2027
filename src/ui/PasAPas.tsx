@@ -104,7 +104,7 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir, nom = "Question
 
         {champ.type === "enum" || champ.type === "multi" ? (
           <div className="pas-a-pas-choix">
-            {(champ.options ?? []).map((option, i) => {
+            {(champ.options ?? []).map((option) => {
               const choisie = champ.type === "multi" ? choisis.includes(option) : valeur === option;
               return (
                 <label key={option} className={`pas-a-pas-option${choisie ? " pas-a-pas-option--choisie" : ""}`}>
@@ -113,7 +113,6 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir, nom = "Question
                     name={id}
                     value={option}
                     checked={choisie}
-                    autoFocus={i === 0 && !repondue}
                     onChange={(e) => {
                       if (champ.type === "multi") onReponse(etape, e.target.checked ? [...choisis, option] : choisis.filter((v) => v !== option));
                       else onReponse(etape, option);
@@ -134,7 +133,6 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir, nom = "Question
             placeholder="Non renseigné"
             value={valeur === undefined ? "" : String(valeur)}
             aria-label={champ.label}
-            autoFocus
             onChange={(e) => onReponse(etape, e.target.value)}
           />
         )}

@@ -170,7 +170,7 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
       )}
       {!integre && actions}
     </form>
-    {integre && <RangeeEnregistrement etat={etatEnregistrement} />}
+    {integre && !pasAPas && <RangeeEnregistrement etat={etatEnregistrement} />}
     </>
   );
 }

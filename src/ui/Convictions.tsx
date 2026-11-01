@@ -189,7 +189,7 @@ export function BlocConvictions({ convictions, onChange: appliquer, pasAPasIniti
       {exemplarite}
       </section>
       )}
-      <RangeeEnregistrement etat={etat} />
+      {!pasAPas && <RangeeEnregistrement etat={etat} />}
     </>
   );
 }

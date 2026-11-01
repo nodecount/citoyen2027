@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import Accueil from "./ui/Accueil";
+import { HautDePage } from "./ui/HautDePage";
 import { Menu } from "./ui/Menu";
 import { PiedDePage } from "./ui/PiedDePage";
 import PageThemes from "./ui/PageThemes";
@@ -60,6 +61,7 @@ export default function App() {
   return (
     <PropositionsBase.Provider value={propositionsDeBase}>
       <Menu ecran={ecran} onNaviguer={allerA} bases={BASES} baseActive={baseId} onChoisirBase={choisirBase} />
+      <HautDePage />
       {ecran === "monitoring" && <Monitoring base={base} />}
       {ecran === "tests-situations" && <PageTestsSituations base={base} />}
       {ecran === "accueil" && <Accueil base={base} onCommencer={() => allerA("simulateur")} onOuvrir={(ouverture) => allerA("exploration", ouverture)} />}

@@ -90,6 +90,7 @@ export const SUJETS_CONVICTION: SujetConviction[] = [
     positions: [
       { id: "travailler_plus", libelle: "Travailler plus longtemps", definition: "reculer ou durcir l'âge ou la durée de cotisation pour la retraite, ou allonger le temps de travail" },
       { id: "age_actuel", libelle: "Conserver l'âge actuel de départ", definition: "maintenir ou ramener l'âge légal de départ à la retraite, sans l'allonger" },
+      { id: "travailler_moins", libelle: "Travailler moins longtemps", definition: "avancer l'âge de départ à la retraite, réduire la durée de cotisation ou le temps de travail" },
     ],
   },
   {

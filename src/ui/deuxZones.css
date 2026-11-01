@@ -200,6 +200,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
+  margin: 0; /* annule la marge haute globale des boutons : les onglets touchent le titre */
   padding: 0.6rem 0.3rem;
   border: 0;
   border-radius: 0;
@@ -447,21 +448,34 @@
   .modale--travail .modale-fermer {
     display: none;
   }
+  /* Bouton flottant en bas à droite, toujours à portée du pouce. */
   .modale-lien-retour {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 30;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     width: auto;
-    margin: 0 0 0.75rem;
-    padding: 0.25rem 0;
+    margin: 0;
+    padding: 0.7rem 1rem;
     border: 0;
-    background: none;
-    color: var(--bleu);
+    border-radius: 999px;
+    background: var(--bleu);
+    color: #fff;
     font: inherit;
     font-size: 1rem;
-    font-weight: 600;
-    text-decoration: underline;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+  }
+  /* Le rond d'avancement se pose juste au-dessus du bouton de retour. */
+  body:has(.modale-fond:not([hidden]) .modale--travail) .progression-flottante {
+    bottom: 4.75rem;
+  }
+  .modale--plein {
+    padding-bottom: 4.5rem; /* le bouton flottant ne masque pas les derniers boutons */
   }
   body:has(.modale-fond:not([hidden]) .modale--travail) :is(.deux-zones, .tableau-defilement) {
     display: none;

@@ -25,6 +25,9 @@ export function ModaleTravail({ ouverte, titre, onFermer, children, intro, intro
   const panneau = useRef<HTMLDivElement>(null);
   const [introVue, setIntroVue] = useState(false);
   const afficherIntro = Boolean(intro) && introAuDebut && !introVue;
+  // Toujours le dernier onFermer, sans relancer l'effet à chaque rendu : sinon chaque réponse remontait la page.
+  const fermer = useRef(onFermer);
+  fermer.current = onFermer;
 
   useEffect(() => {
     if (!ouverte) return;
@@ -36,14 +39,14 @@ export function ModaleTravail({ ouverte, titre, onFermer, children, intro, intro
     const precedent = document.body.style.overflow;
     if (!etape) document.body.style.overflow = "hidden";
     const surTouche = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onFermer();
+      if (e.key === "Escape") fermer.current();
     };
     window.addEventListener("keydown", surTouche);
     return () => {
       document.body.style.overflow = precedent;
       window.removeEventListener("keydown", surTouche);
     };
-  }, [ouverte, onFermer]);
+  }, [ouverte]);
 
   return (
     <div className="modale-fond" hidden={!ouverte} onMouseDown={(e) => e.target === e.currentTarget && onFermer()}>

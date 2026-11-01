@@ -3,7 +3,7 @@
     "theme": "education-jeunesse",
     "segments": [
       {
-        "texte": "Suspendre la fermeture des écoles rurales",
+        "texte": "Suspendre les fermetures d'écoles rurales",
         "mesures": [
           "zemmour-education-jeunesse-001"
         ]
@@ -13,20 +13,10 @@
         "mesures": []
       },
       {
-        "texte": "instaurer un certificat de fin de primaire",
+        "texte": "instaurer un certificat et les filières du lycée",
         "mesures": [
-          "zemmour-education-jeunesse-002"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "restaurer les filières au lycée et étendre le latin et le grec",
-        "mesures": [
-          "zemmour-education-jeunesse-003",
-          "zemmour-education-jeunesse-007"
+          "zemmour-education-jeunesse-002",
+          "zemmour-education-jeunesse-003"
         ]
       },
       {
@@ -54,9 +44,10 @@
         "mesures": []
       },
       {
-        "texte": "instituer des classes de niveau au collège",
+        "texte": "instituer des niveaux et étendre le latin-grec",
         "mesures": [
-          "zemmour-education-jeunesse-006"
+          "zemmour-education-jeunesse-006",
+          "zemmour-education-jeunesse-007"
         ]
       },
       {
@@ -64,20 +55,11 @@
         "mesures": []
       },
       {
-        "texte": "sanctionner et encadrer les élèves perturbateurs",
+        "texte": "renforcer l'ordre et la discipline scolaires",
         "mesures": [
           "zemmour-education-jeunesse-008",
           "zemmour-education-jeunesse-009",
-          "zemmour-education-jeunesse-010"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "imposer la blouse au primaire",
-        "mesures": [
+          "zemmour-education-jeunesse-010",
           "zemmour-education-jeunesse-011"
         ]
       },
@@ -86,7 +68,7 @@
         "mesures": []
       },
       {
-        "texte": "réformer la formation des enseignants",
+        "texte": "remplacer les INSPE par des écoles régionales",
         "mesures": [
           "zemmour-education-jeunesse-012"
         ]
@@ -96,7 +78,7 @@
         "mesures": []
       },
       {
-        "texte": "revaloriser leurs salaires",
+        "texte": "revaloriser les salaires enseignants au mérite",
         "mesures": [
           "zemmour-education-jeunesse-013"
         ]
@@ -121,26 +103,26 @@
       "zemmour-education-jeunesse-012",
       "zemmour-education-jeunesse-013"
     ],
-    "empreinte": "e0b7ddf6dd577612",
-    "date": "2026-09-27",
+    "empreinte": "d69017b35ed95b5c",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
     "theme": "environnement",
     "segments": [
       {
-        "texte": "Maintenir et développer le nucléaire",
+        "texte": "Relancer le nucléaire existant",
         "mesures": [
           "zemmour-envi-001",
           "zemmour-envi-002"
         ]
       },
       {
-        "texte": ", ",
+        "texte": " et ",
         "mesures": []
       },
       {
-        "texte": "relancer la recherche sur le nucléaire du futur",
+        "texte": "la recherche sur le nucléaire du futur",
         "mesures": [
           "zemmour-envi-003"
         ]
@@ -150,7 +132,7 @@
         "mesures": []
       },
       {
-        "texte": "arrêter les projets d'éoliennes",
+        "texte": "arrêter tous les projets d'éoliennes",
         "mesures": [
           "zemmour-envi-004"
         ]
@@ -170,7 +152,7 @@
         "mesures": []
       },
       {
-        "texte": "développer une filière de recyclage des plastiques",
+        "texte": "développer le recyclage des plastiques",
         "mesures": [
           "zemmour-envi-006"
         ]
@@ -180,7 +162,7 @@
         "mesures": []
       },
       {
-        "texte": "développer l'aviation au biokérosène",
+        "texte": "doter la France d'un avion 100 % biokérosène",
         "mesures": [
           "zemmour-envi-007"
         ]
@@ -199,8 +181,8 @@
       "zemmour-envi-006",
       "zemmour-envi-007"
     ],
-    "empreinte": "5ae82111cc0a482b",
-    "date": "2026-09-27",
+    "empreinte": "fce36572b5cc7a97",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
@@ -294,9 +276,10 @@
     "theme": "gouvernance-republique",
     "segments": [
       {
-        "texte": "Organiser des référendums sur l'immigration et la justice",
+        "texte": "Organiser des référendums sur des sujets nationaux",
         "mesures": [
-          "zemmour-gouvernance-republique-001"
+          "zemmour-gouvernance-republique-001",
+          "zemmour-gouvernance-republique-002"
         ]
       },
       {
@@ -304,17 +287,7 @@
         "mesures": []
       },
       {
-        "texte": "élargir le recours au référendum",
-        "mesures": [
-          "zemmour-gouvernance-republique-002"
-        ]
-      },
-      {
-        "texte": " et ",
-        "mesures": []
-      },
-      {
-        "texte": "rendre obligatoire un référendum pour toute révision constitutionnelle ou traité européen",
+        "texte": "soumettre à référendum les révisions constitutionnelles et traités",
         "mesures": [
           "zemmour-gouvernance-republique-003"
         ]
@@ -324,18 +297,9 @@
         "mesures": []
       },
       {
-        "texte": "donner priorité aux lois nationales sur les textes internationaux",
+        "texte": "faire primer les lois nationales et le Parlement",
         "mesures": [
-          "zemmour-gouvernance-republique-004"
-        ]
-      },
-      {
-        "texte": ", ",
-        "mesures": []
-      },
-      {
-        "texte": "permettre au Parlement de trancher en cas d'inconstitutionnalité",
-        "mesures": [
+          "zemmour-gouvernance-republique-004",
           "zemmour-gouvernance-republique-005"
         ]
       },
@@ -354,7 +318,7 @@
         "mesures": []
       },
       {
-        "texte": "garantir le haut débit partout",
+        "texte": "garantir un accès internet haut débit partout",
         "mesures": [
           "zemmour-gouvernance-republique-007"
         ]
@@ -384,8 +348,8 @@
       "zemmour-gouvernance-republique-007",
       "zemmour-gouvernance-republique-008"
     ],
-    "empreinte": "7e767ef844675e01",
-    "date": "2026-09-27",
+    "empreinte": "f3202db57b8cedb3",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {
@@ -545,11 +509,9 @@
     "theme": "retraites-travail",
     "segments": [
       {
-        "texte": "Revaloriser le travail et la participation salariale",
+        "texte": "Revenir au travail plus rémunérateur",
         "mesures": [
-          "zemmour-retraites-travail-001",
-          "zemmour-retraites-travail-003",
-          "zemmour-retraites-travail-004"
+          "zemmour-retraites-travail-001"
         ]
       },
       {
@@ -557,7 +519,7 @@
         "mesures": []
       },
       {
-        "texte": "exonérer de cotisations les embauches en PME et l'apprentissage",
+        "texte": "exonérer les embauches et l'apprentissage",
         "mesures": [
           "zemmour-retraites-travail-002",
           "zemmour-retraites-travail-006",
@@ -570,10 +532,20 @@
         "mesures": []
       },
       {
-        "texte": "lutter contre le dumping social et faciliter la mobilité des chômeurs",
+        "texte": "défiscaliser la prime de participation",
         "mesures": [
-          "zemmour-retraites-travail-005",
-          "zemmour-retraites-travail-007"
+          "zemmour-retraites-travail-003",
+          "zemmour-retraites-travail-004"
+        ]
+      },
+      {
+        "texte": " ; ",
+        "mesures": []
+      },
+      {
+        "texte": "mettre fin au dumping social",
+        "mesures": [
+          "zemmour-retraites-travail-005"
         ]
       },
       {
@@ -581,17 +553,27 @@
         "mesures": []
       },
       {
-        "texte": "relever le seuil de consultation du CSE",
+        "texte": "favoriser la mobilité des chômeurs",
+        "mesures": [
+          "zemmour-retraites-travail-007"
+        ]
+      },
+      {
+        "texte": " et ",
+        "mesures": []
+      },
+      {
+        "texte": "relever le seuil du CSE",
         "mesures": [
           "zemmour-retraites-travail-010"
         ]
       },
       {
-        "texte": ", ",
+        "texte": " ; ",
         "mesures": []
       },
       {
-        "texte": "baisser les impôts de production et sur les sociétés",
+        "texte": "baisser les impôts des entreprises",
         "mesures": [
           "zemmour-retraites-travail-011",
           "zemmour-retraites-travail-012",
@@ -614,9 +596,10 @@
         "mesures": []
       },
       {
-        "texte": "créer un ministère de l'Industrie",
+        "texte": "réorganiser l'industrie, formation et aides",
         "mesures": [
           "zemmour-retraites-travail-016",
+          "zemmour-retraites-travail-017",
           "zemmour-retraites-travail-018"
         ]
       },
@@ -625,9 +608,8 @@
         "mesures": []
       },
       {
-        "texte": "contrôler les délocalisations et les investissements étrangers",
+        "texte": "contrôler les investissements étrangers",
         "mesures": [
-          "zemmour-retraites-travail-017",
           "zemmour-retraites-travail-019"
         ]
       },
@@ -657,8 +639,8 @@
       "zemmour-retraites-travail-018",
       "zemmour-retraites-travail-019"
     ],
-    "empreinte": "f5c96f4e8efe8aa9",
-    "date": "2026-09-27",
+    "empreinte": "dfa8227af46943c9",
+    "date": "2026-10-31",
     "modele": "claude-sonnet-5"
   },
   {

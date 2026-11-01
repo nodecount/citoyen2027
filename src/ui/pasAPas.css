@@ -16,6 +16,14 @@
 .modale--plein .pas-a-pas-question {
   margin-block: auto;
 }
+/* Le conteneur défile donc rogne ce qui dépasse : on garde de la place autour des réponses pour le contour de la réponse
+   choisie ou au focus (3 px + 2 px de décalage) et des champs de saisie. */
+.modale--plein .pas-a-pas {
+  padding-inline: 0.4rem;
+}
+.modale--plein .pas-a-pas-choix {
+  padding-block: 0.4rem;
+}
 .modale--plein .pas-a-pas--fin {
   justify-content: center;
 }

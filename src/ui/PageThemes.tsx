@@ -172,7 +172,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
       <ModaleConfirmation
         ouverte={confirmerEffacement}
         titre="Effacer vos réponses ?"
-        message="Toutes les informations saisies (questions générales, par thème et convictions) seront effacées, et les indicateurs disparaîtront des portraits. Cette action ne peut pas être annulée."
+        message="Toutes vos réponses (votre situation et vos convictions) seront supprimées, et le candidat suggéré disparaîtra. Vous ne pourrez pas les récupérer."
         libelleConfirmer="Oui, tout effacer"
         onConfirmer={() => {
           setConfirmerEffacement(false);
@@ -188,7 +188,7 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
       <ModaleConfirmation
         ouverte={confirmerConvictions}
         titre="Effacer vos convictions ?"
-        message="Vos choix (positions et intégrité) seront effacés de ce navigateur. Cette action ne peut pas être annulée."
+        message="Toutes vos réponses sur vos convictions seront supprimées. Vous ne pourrez pas les récupérer."
         libelleConfirmer="Oui, tout effacer"
         onConfirmer={() => {
           setConfirmerConvictions(false);

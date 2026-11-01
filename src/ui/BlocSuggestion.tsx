@@ -82,7 +82,7 @@ export function BlocSuggestion({ etat, pourcent, combine, onReveler, onRevenir }
           Score : <strong>{note}</strong> sur 100
         </p>
       )}
-      {etat === "vide" && <p className="suggestion-source">Répondez à une question, d'un côté ou de l'autre, pour débloquer la suggestion.</p>}
+      {etat === "vide" && <p className="suggestion-source">Répondez à une question de votre situation ou de vos convictions pour débloquer la suggestion.</p>}
       {revele ? (
         <button type="button" className="bouton-fantome" onClick={onRevenir}>
           Revenir aux questions
