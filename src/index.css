@@ -3240,20 +3240,25 @@ button.ideal-bascule:hover {
     order: 3;
     flex: none;
   }
+  .modale--ideal .modale-entete > .ideal-rond {
+    margin-right: auto; /* le rond du score se cale à gauche, sous le nom */
+  }
   .ideal-total {
     flex-direction: column;
     align-items: stretch;
     gap: 0.2rem;
   }
-  .ideal-total-libelle {
+  /* Colonne : les « flex » du bureau (libellé à 9,5 rem, jauge « 1 ») étiraient les blocs en hauteur, d'où le grand blanc et la
+     barre minuscule ; ici le libellé et la barre gardent leur hauteur, et la barre prend toute la largeur. */
+  .modale--ideal .ideal-total .ideal-total-libelle {
     flex: none;
   }
-  .ideal-onglets {
-    flex-wrap: wrap;
+  .modale--ideal .ideal-total .ideal-jauge {
+    flex: none;
+    width: 100%;
   }
-  .ideal-onglet {
-    flex: 1 1 8rem;
-    justify-content: center;
+  .modale--ideal .ideal-onglet {
+    min-width: 0;
   }
 }
 .ideal-total {
@@ -3271,42 +3276,43 @@ button.ideal-bascule:hover {
   flex: 1;
 }
 /* Onglets « Groupes de mesures » / « Mesures » : collés en haut de la fenêtre qui défile. */
+/* Deux vrais onglets, côte à côte (même style que ceux des blocs « Ma situation » / « Mes convictions ») : l'actif est souligné. */
 .ideal-onglets {
-  display: flex;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
   margin: 0.5rem 0 0.75rem;
-  padding-bottom: 0.6rem;
   border-bottom: 1px solid var(--filet);
 }
 .ideal-onglet {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   margin: 0;
-  padding: 0.4rem 0.9rem;
-  border: 1px solid var(--filet);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--bleu-fonce);
+  padding: 0.6rem 0.3rem;
+  border: 0;
+  border-radius: 0;
+  background: #f5f7fb;
+  color: var(--encre-douce);
   font: inherit;
   font-weight: 700;
   cursor: pointer;
 }
 /* Le style global des boutons passe le fond en bleu foncé au survol : on fixe ici fond ET texte pour que le texte reste lisible. */
 button.ideal-onglet:hover {
-  border-color: var(--bleu);
   background: var(--bleu-pale);
   color: var(--bleu-fonce);
 }
 .ideal-onglet[aria-selected="true"],
 button.ideal-onglet[aria-selected="true"]:hover {
-  border-color: var(--bleu-fonce);
-  background: var(--bleu-fonce);
-  color: #fff;
+  background: var(--surface);
+  color: var(--bleu-fonce);
+  box-shadow: inset 0 -3px 0 var(--bleu);
 }
 button.ideal-onglet:focus-visible {
   outline: 3px solid var(--bleu);
-  outline-offset: 2px;
+  outline-offset: -3px;
 }
 .ideal-onglet-nombre {
   min-width: 1.5rem;
@@ -3316,7 +3322,7 @@ button.ideal-onglet:focus-visible {
   text-align: center;
 }
 .ideal-onglet[aria-selected="true"] .ideal-onglet-nombre {
-  background: rgba(255, 255, 255, 0.25);
+  background: var(--bleu-pale);
 }
 .ideal-bloc h3 {
   display: flex;
