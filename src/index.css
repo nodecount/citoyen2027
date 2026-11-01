@@ -3201,6 +3201,61 @@ button.ideal-egale[aria-selected="true"]:hover {
 .ideal-totaux {
   margin-top: 0.5rem;
 }
+/* Bouton discret : bascule tout le contenu de la fenêtre entre groupes de mesures et mesures. */
+button.ideal-bascule {
+  display: inline-flex;
+  align-items: center;
+  margin: 0.2rem 0 0;
+  padding: 0.2rem 0;
+  border: 0;
+  background: none;
+  color: var(--bleu);
+  font: inherit;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+button.ideal-bascule:hover {
+  background: none;
+  color: var(--bleu-fonce);
+}
+/* Téléphone : l'en-tête se range sur deux lignes (nom + croix, puis le score), les totaux se lisent libellé au-dessus de la
+   jauge et les deux onglets se partagent la largeur, pour que rien ne soit écrasé. */
+@media (max-width: 40rem) {
+  .modale--ideal .modale-entete {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.6rem 0.75rem;
+  }
+  .modale--ideal .modale-entete > h2 {
+    flex: 1 1 calc(100% - 3.5rem); /* la croix reste à côté ; le rond du score passe à la ligne, à sa taille */
+    min-width: 0;
+    font-size: 1.2rem;
+  }
+  .modale--ideal .modale-entete > .bouton-icone {
+    order: 2;
+    flex: none;
+  }
+  .modale--ideal .modale-entete > .ideal-rond {
+    order: 3;
+    flex: none;
+  }
+  .ideal-total {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.2rem;
+  }
+  .ideal-total-libelle {
+    flex: none;
+  }
+  .ideal-onglets {
+    flex-wrap: wrap;
+  }
+  .ideal-onglet {
+    flex: 1 1 8rem;
+    justify-content: center;
+  }
+}
 .ideal-total {
   display: flex;
   align-items: center;
@@ -4155,14 +4210,14 @@ button.bouton-danger:hover {
     transition: none;
   }
 }
-/* Bouton « Haut de page » : téléphone seulement, en bas à gauche (la droite est prise par le rond d'avancement et le bouton de retour). */
+/* Bouton « Haut de page » : téléphone seulement, en bas à droite (la gauche est prise par le bouton « Retour à la simulation »). */
 .haut-de-page {
   display: none;
 }
 @media (max-width: 52rem) {
   .haut-de-page {
     position: fixed;
-    left: 1rem;
+    right: 1rem;
     bottom: 1rem;
     z-index: 40;
     display: grid;

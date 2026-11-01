@@ -163,29 +163,31 @@ describe("Détail d'une ligne (fenêtre)", () => {
   const ligne = { ...gagnant("C", "Nom-Reel-Situation", "slug-reel-a", 3), rang: 1 };
   it("fenêtre modale : nom, parti, score, rang et mesures ; bouton de fermeture", () => {
     const html = renderToStaticMarkup(<ModaleDetail ligne={ligne} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
-    for (const t of ["role=\"dialog\"", "aria-modal=\"true\"", "Nom-Reel-Situation", "Parti-test", "Mesure-pour", "Mesure-contre", "Favorables à votre situation", "Défavorables à votre situation", "Fermer le détail"]) expect(html, t).toContain(t);
+    for (const t of ["role=\"dialog\"", "aria-modal=\"true\"", "Nom-Reel-Situation", "Parti-test", "Mesure-pour", "Favorables <", "Défavorables <", "Fermer le détail"]) expect(html, t).toContain(t);
+    expect(html).not.toContain("Mesure-contre"); // les défavorables sont dans leur onglet
     // Ni le critère ni le score et le rang : ils sont déjà dans la ligne cliquée.
     expect(html).not.toContain("du classement");
     expect(html).not.toContain("score +3");
   });
-  it("onglets en haut : groupes de mesures et mesures, chacun avec son nombre ; groupes sélectionnés au départ ; pas de bouton de bascule ni de « Voir plus »", () => {
+  it("onglets en haut : favorables et défavorables, chacun avec son nombre en groupes de mesures ; favorables au départ ; bouton discret vers le détail par mesure", () => {
     const l = { ...ligne, pour: [{ theme: "logement", groupes: ["G1", "G2"], mesures: ["Mes-un", "Mes-deux", "Mes-trois"] }], contre: [{ theme: "retraite", groupes: ["G3"], mesures: ["Mes-quatre"] }] };
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
     expect(html).toContain('role="tablist"');
-    expect(html).toMatch(/aria-selected="true"[^>]*>Groupes de mesures <span class="ideal-onglet-nombre">3</);
-    expect(html).toMatch(/aria-selected="false"[^>]*>Mesures <span class="ideal-onglet-nombre">4</);
+    expect(html).toMatch(/aria-selected="true"[^>]*>Favorables <span class="ideal-onglet-nombre">2</);
+    expect(html).toMatch(/aria-selected="false"[^>]*>Défavorables <span class="ideal-onglet-nombre">1</);
     expect(html.indexOf("ideal-onglets")).toBeLessThan(html.indexOf("ideal-badges"));
-    for (const t of ["G1", "G2", "G3"]) expect(html, t).toContain(t);
-    expect(html).not.toContain("Mes-un");
-    expect(html).not.toContain("ideal-voir-mesures");
+    for (const t of ["G1", "G2"]) expect(html, t).toContain(t);
+    expect(html).not.toContain("G3"); // dans l'onglet des défavorables
+    expect(html).not.toContain("Mes-un"); // groupes de mesures au départ
+    expect(html).toContain("Voir le détail par mesure");
     expect(html).not.toContain("ideal-voir-plus");
   });
-  it("au-dessus des onglets : deux jauges de total (groupes puis mesures), à la place des phrases", () => {
+  it("au-dessus des onglets : une seule jauge de total, en groupes de mesures au départ", () => {
     const l = { ...ligne, pour: [{ theme: "logement", groupes: ["G1", "G2"], mesures: ["Mes-un", "Mes-deux", "Mes-trois"] }], contre: [{ theme: "retraite", groupes: ["G3"], mesures: ["Mes-quatre"] }] };
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
     expect(html).not.toContain("Au total");
     const jauges = html.match(/aria-label="Score [^"]*favorable[^"]*"/g) ?? [];
-    expect(jauges).toEqual(['aria-label="Score +1 : 2 favorables moins 1 défavorable"', 'aria-label="Score +2 : 3 favorables moins 1 défavorable"']);
+    expect(jauges).toEqual(['aria-label="Score +1 : 2 favorables moins 1 défavorable"']);
     expect(html.indexOf("ideal-total-libelle")).toBeLessThan(html.indexOf('role="tablist"'));
   });
   it("égalité : des onglets, un par candidat de la ligne, avec le premier sélectionné ; pas d'onglets pour un seul candidat", () => {
@@ -214,8 +216,8 @@ describe("Détail d'une ligne (fenêtre)", () => {
   });
   it("convictions : intitulés « proches / opposées à vos convictions »", () => {
     const html = renderToStaticMarkup(<ModaleDetail ligne={ligne} unite="sujets" critere="Selon vos convictions" onFermer={() => {}} />);
-    expect(html).toContain("Proches de vos convictions");
-    expect(html).toContain("Opposées à vos convictions");
+    expect(html).toMatch(/>Proches <span class="ideal-onglet-nombre">/);
+    expect(html).toMatch(/>Opposées <span class="ideal-onglet-nombre">/);
   });
 });
 

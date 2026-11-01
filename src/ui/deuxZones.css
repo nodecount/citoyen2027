@@ -451,7 +451,7 @@
   /* Bouton flottant en bas à droite, toujours à portée du pouce. */
   .modale-lien-retour {
     position: fixed;
-    right: 1rem;
+    left: 1rem;
     bottom: 1rem;
     z-index: 30;
     display: inline-flex;
@@ -470,9 +470,9 @@
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
-  /* Le rond d'avancement se pose juste au-dessus du bouton de retour. */
-  body:has(.modale-fond:not([hidden]) .modale--travail) .progression-flottante {
-    bottom: 4.75rem;
+  /* À droite, le rond d'avancement occupe le coin : le bouton « Haut de page » se pose au-dessus. */
+  body:has(.modale-fond:not([hidden]) .modale--travail) .haut-de-page {
+    bottom: 6rem;
   }
   .modale--plein {
     padding-bottom: 4.5rem; /* le bouton flottant ne masque pas les derniers boutons */

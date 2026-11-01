@@ -92,6 +92,7 @@ export function PoursContres({
   parMesureImpose,
   toutAfficher = false,
   sansTotal = false,
+  cote,
 }: {
   pour: Raison[];
   contre: Raison[];
@@ -107,6 +108,8 @@ export function PoursContres({
   toutAfficher?: boolean;
   // Le total est écrit ailleurs (au-dessus des onglets de la fenêtre).
   sansTotal?: boolean;
+  // Un seul côté (la fenêtre de détail sépare favorables et défavorables par onglets) : sans intitulé, il est dans l'onglet.
+  cote?: "pour" | "contre";
 }) {
   // Un seul bouton par card : il déplie les pour et les contre ensemble.
   const [depliePropre, setDeplie] = useState(deplieInitial);
@@ -117,8 +120,8 @@ export function PoursContres({
   if (pour.length === 0 && contre.length === 0) return null;
   // Un badge par groupe de mesures (et non un par point du score), ou par mesure quand le visiteur les demande : un même
   // badge n'apparaît qu'une fois par thème.
-  const listePour = badgesDe(pour, parMesure);
-  const listeContre = badgesDe(contre, parMesure);
+  const listePour = cote === "contre" ? [] : badgesDe(pour, parMesure);
+  const listeContre = cote === "pour" ? [] : badgesDe(contre, parMesure);
   const aDeplier = !toutAfficher && Math.max(listePour.length, listeContre.length) > MESURES_VISIBLES;
   // Badges que « Voir plus » révèle : ceux au-delà des trois premiers, pour et contre confondus.
   const cachés =
@@ -153,11 +156,14 @@ export function PoursContres({
       {/* Une seule ligne de badges (qui passe à la suivante quand elle est pleine) : les « pour » d'abord, les « contre » ensuite,
           chaque série précédée de son intitulé. */}
       <ul className="ideal-badges">
-        {listePour.length > 0 && etiquette("pour")}
+        {listePour.length > 0 && !cote && etiquette("pour")}
         {visibles(listePour).map((b, i) => badge("pour", b, i))}
-        {listeContre.length > 0 && etiquette("contre")}
+        {listeContre.length > 0 && !cote && etiquette("contre")}
         {visibles(listeContre).map((b, i) => badge("contre", b, i))}
       </ul>
+      {cote && (cote === "pour" ? listePour : listeContre).length === 0 && (
+        <p className="hint">Aucune mesure {cote === "pour" ? intitule.pourSing : intitule.contreSing}.</p>
+      )}
       {/* Une fois tout déplié : le total de chaque côté, en groupes de mesures (c'est ce que comptent les badges). */}
       {deplie && !sansTotal && <p className="hint ideal-badges-total">{phraseTotal(pour, contre, unite, parMesure)}</p>}
       {interactif && (aDeplier || parMesureImpose === undefined) && (
@@ -374,6 +380,11 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
   const [parMesure, setParMesure] = useState(false);
   const [lettre, setLettre] = useState(ligneInitiale.lettre);
   const ligne = egales?.find((l) => l.lettre === lettre) ?? ligneInitiale;
+  const nPour = badgesDe(ligne.pour, parMesure).length;
+  const nContre = badgesDe(ligne.contre, parMesure).length;
+  // Onglet ouvert : les favorables, sauf s'il n'y en a aucun alors qu'il y a des défavorables.
+  const [coteChoisi, setCote] = useState<"pour" | "contre" | null>(null);
+  const cote = coteChoisi ?? (nPour === 0 && nContre > 0 ? "contre" : "pour");
   useEffect(() => {
     const avant = document.activeElement as HTMLElement | null;
     fermer.current?.focus();
@@ -427,45 +438,32 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
         <p className="hint ideal-score-explication">
           Le score va de 0 à 100. Il monte avec les mesures qui vous avantagent et baisse avec celles qui vous désavantagent. 100 correspond au candidat qui a le plus de mesures qui vous concernent.
         </p>
-        {/* Les deux totaux (groupes, puis mesures) d'abord, puis les onglets collés en haut de la fenêtre : on change de vue sans
-            remonter, même avec beaucoup de mesures. */}
+        {/* La barre du total (en groupes de mesures, ou en mesures si le visiteur le demande) d'abord, puis les onglets collés en
+            haut de la fenêtre : favorables d'un côté, défavorables de l'autre. Le bouton discret change tout le contenu d'un coup. */}
         <div className="ideal-totaux">
-          {[
-            { mesures: false, libelle: "Groupes de mesures" },
-            { mesures: true, libelle: "Mesures" },
-          ].map(({ mesures, libelle }) => {
-            const nPour = badgesDe(ligne.pour, mesures).length;
-            const nContre = badgesDe(ligne.contre, mesures).length;
-            return (
-              <div key={libelle} className="ideal-total">
-                <span className="ideal-total-libelle">{libelle}</span>
-                <Jauge ameliorants={nPour} degradants={nContre} echelle={Math.max(nPour, nContre, 1)} />
-              </div>
-            );
-          })}
+          <div className="ideal-total">
+            <span className="ideal-total-libelle">{parMesure ? "Mesures" : "Groupes de mesures"}</span>
+            <Jauge ameliorants={nPour} degradants={nContre} echelle={Math.max(nPour, nContre, 1)} />
+          </div>
+          <button type="button" className="ideal-bascule" aria-pressed={parMesure} onClick={() => setParMesure(!parMesure)}>
+            {parMesure ? "Voir par groupes de mesures" : "Voir le détail par mesure"}
+          </button>
         </div>
-        <div className="ideal-onglets" role="tablist" aria-label="Affichage des mesures">
-          {[
-            { mesures: false, libelle: "Groupes de mesures" },
-            { mesures: true, libelle: "Mesures" },
-          ].map(({ mesures, libelle }) => (
-            <button
-              key={libelle}
-              type="button"
-              role="tab"
-              id={`onglet-${mesures ? "mesures" : "groupes"}`}
-              aria-selected={parMesure === mesures}
-              aria-controls="panneau-mesures"
-              className="ideal-onglet"
-              onClick={() => setParMesure(mesures)}
-            >
-              {libelle} <span className="ideal-onglet-nombre">{compterBadges(ligne.pour, ligne.contre, mesures)}</span>
+        <div className="ideal-onglets" role="tablist" aria-label="Favorables et défavorables">
+          {(
+            [
+              { id: "pour", libelle: unite === "sujets" ? "Proches" : "Favorables", n: nPour },
+              { id: "contre", libelle: unite === "sujets" ? "Opposées" : "Défavorables", n: nContre },
+            ] as const
+          ).map(({ id, libelle, n }) => (
+            <button key={id} type="button" role="tab" id={`onglet-${id}`} aria-selected={cote === id} aria-controls="panneau-mesures" className="ideal-onglet" onClick={() => setCote(id)}>
+              {libelle} <span className="ideal-onglet-nombre">{n}</span>
             </button>
           ))}
         </div>
-        {/* Seule la liste défile : l'en-tête, les totaux et les onglets restent à l'écran, et la fenêtre ne dépasse jamais la page. */}
-        <div id="panneau-mesures" className="ideal-modale-corps" role="tabpanel" aria-labelledby={`onglet-${parMesure ? "mesures" : "groupes"}`}>
-          <PoursContres key={`${critere}-${ligne.lettre}`} pour={ligne.pour} contre={ligne.contre} unite={unite} parMesureImpose={parMesure} toutAfficher sansTotal />
+        {/* Seule la liste défile : l'en-tête, la barre et les onglets restent à l'écran, et la fenêtre ne dépasse jamais la page. */}
+        <div id="panneau-mesures" className="ideal-modale-corps" role="tabpanel" aria-labelledby={`onglet-${cote}`}>
+          <PoursContres key={`${critere}-${ligne.lettre}`} pour={ligne.pour} contre={ligne.contre} unite={unite} parMesureImpose={parMesure} toutAfficher sansTotal cote={cote} />
         </div>
       </div>
     </div>,
