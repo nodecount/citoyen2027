@@ -482,6 +482,23 @@
   }
 }
 
+/* Fenêtres : les boutons d'action restent toujours sur la même ligne (jamais repliés), partout ; sur téléphone ils se partagent
+   la largeur à parts égales. */
+.modale .actions {
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+.modale--confirmation .actions > button {
+  min-width: 0;
+}
+@media (max-width: 40rem) {
+  .modale--confirmation .actions > button {
+    flex: 1 1 0;
+    width: auto;
+    padding-inline: 0.5rem;
+  }
+}
+
 /* Retour au tableau de bord, en haut et en bas des vues de travail */
 .barre-retour {
   display: flex;

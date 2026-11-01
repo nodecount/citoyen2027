@@ -1,93 +1,111 @@
 [
   {
     "groupe": 0,
-    "empreinte": "398ba8177c96dbaa",
-    "date": "2026-10-17",
+    "empreinte": "976f38eb8750e3e0",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 19,
     "sans_position": 5,
     "rejetees": [
       {
-        "id": "le-pen-finances-publiques-007",
-        "raison": "relecture : L'extrait évoque des dépenses sur des 'priorités nationales' de façon générique, sans montrer qu'il s'agit de dépenses ou prestations de solidarité, ce qui ne fonde pas spécifiquement l'étiquette redistribution."
+        "id": "le-pen-interieur-justice-006",
+        "raison": "relecture : La mesure taxe les transferts d'argent vers l'étranger, ce qui relève de la fiscalité et non directement d'une restriction de l'entrée, du séjour ou des droits des étrangers ; l'extrait ne montre pas de lien avec le sujet immigration."
       }
     ],
-    "cout_reference_usd": 0.1361,
+    "cout_reference_usd": 0.123,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "761059a4b25c7e14",
-    "date": "2026-10-17",
+    "empreinte": "0a32b616a4b0135a",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 16,
-    "sans_position": 9,
-    "rejetees": [],
-    "cout_reference_usd": 0.0796,
+    "etiquetees": 14,
+    "sans_position": 10,
+    "rejetees": [
+      {
+        "id": "le-pen-social-solidarite-007",
+        "raison": "relecture : Le texte décrit un transfert de la tutelle administrative des hôpitaux aux préfets et la suppression des ARS, ce qui ne montre pas directement un renforcement des moyens de l'hôpital public comme l'exige la position hopital_public."
+      }
+    ],
+    "cout_reference_usd": 0.0584,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "2570b44f90eb561f",
-    "date": "2026-10-17",
+    "empreinte": "c8131912e8b52ec6",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 14,
-    "sans_position": 6,
+    "etiquetees": 15,
+    "sans_position": 8,
     "rejetees": [
       {
-        "id": "le-pen-social-solidarite-019",
-        "raison": "relecture : Les salles de shoot concernent la réduction des risques pour les drogues dures (héroïne), pas le cannabis ; le sujet est erroné."
-      },
-      {
-        "id": "le-pen-social-solidarite-020",
-        "raison": "relecture : Remplacer une subvention par un prêt à taux zéro est un changement de mécanisme d'aide, pas une libéralisation de l'offre de logement (déréglementation, allègement de contraintes)."
-      },
-      {
-        "id": "le-pen-social-solidarite-025",
-        "raison": "relecture : La norme ZAN concerne l'artificialisation des sols/urbanisme, pas l'agriculture ; le sujet agriculture_normes est inadapté, il relève plutôt de la transition écologique."
-      },
-      {
-        "id": "le-pen-social-solidarite-029",
-        "raison": "relecture : Plafonner les APL n'est pas une conditionnalité d'activité ou un durcissement de contrôle au sens de la définition de conditionner_aides, mais une simple réduction du niveau d'aide."
+        "id": "le-pen-social-solidarite-021",
+        "raison": "relecture : La mesure durcit les sanctions contre les locataires impayés et accélère les expulsions, ce qui ne correspond pas à la définition de 'liberer_offre_logement' (fiscalité, normes, encadrement des loyers côté propriétaires) ; le sujet/position est mal choisi."
       },
       {
         "id": "le-pen-retraites-travail-008",
-        "raison": "relecture : Le pacte Dutreil concerne la fiscalité de la transmission patrimoniale (héritage d'entreprise), ce qui relève du sujet ultra_riches plutôt que d'un allègement général de la fiscalité des entreprises."
+        "raison": "relecture : Le pacte Dutreil concerne l'exonération de droits de transmission/succession des entreprises familiales, pas la fiscalité courante des entreprises (IS, impôts de production, cotisations) visée par 'soutenir_entreprises' ; sujet mal fondé."
       }
     ],
-    "cout_reference_usd": 0.0801,
+    "cout_reference_usd": 0.0799,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "cd7d00f7e9c173d4",
-    "date": "2026-10-17",
+    "empreinte": "0fd304cc795c2e56",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 15,
-    "sans_position": 10,
-    "rejetees": [],
-    "cout_reference_usd": 0.0566,
+    "etiquetees": 14,
+    "sans_position": 9,
+    "rejetees": [
+      {
+        "id": "le-pen-envi-015",
+        "raison": "relecture : L'extrait énonce un objectif de priorité sur la balance commerciale agricole sans mesure protectionniste concrète (taxe, quota, préférence), ce n'est pas une position fondée sur le texte."
+      },
+      {
+        "id": "le-pen-gouvernance-republique-002",
+        "raison": "relecture : La mesure porte sur le contrôle des rachats d'entreprises stratégiques par des intérêts étrangers, ce qui relève du sujet commerce/protectionnisme et non du sujet europe (intégration ou souveraineté vis-à-vis des institutions européennes)."
+      }
+    ],
+    "cout_reference_usd": 0.0724,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "6ce88fe92b4fbefe",
-    "date": "2026-10-17",
+    "empreinte": "047880f7fe806fee",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 23,
     "etiquetees": 9,
-    "sans_position": 13,
+    "sans_position": 9,
     "rejetees": [
       {
+        "id": "le-pen-gouvernance-republique-007",
+        "raison": "relecture : La mesure impose l'hébergement des données en France ou dans l'UE par des opérateurs français ou européens ; elle ne retire pas de compétence à l'UE ni n'en réduit le rôle, donc ne relève pas clairement de 'souverainete' sur le sujet Europe tel que défini."
+      },
+      {
+        "id": "le-pen-reformes-etat-001",
+        "raison": "relecture : Supprimer les EPCI et métropoles redonne du pouvoir aux communes plutôt qu'à l'État central ; c'est plus proche de 'decentraliser' que d''etat_central'."
+      },
+      {
         "id": "le-pen-reformes-etat-002",
-        "raison": "relecture : La « réinternalisation » d'agences dans l'administration peut accroître les effectifs publics, ce qui contredit l'étiquette moins_fonctionnaires appliquée uniformément."
+        "raison": "relecture : La réinternalisation de certaines agences peut réintégrer leur personnel dans la fonction publique, ce qui ne montre pas clairement une réduction nette du nombre de fonctionnaires."
+      },
+      {
+        "id": "le-pen-education-jeunesse-010",
+        "raison": "relecture : La suppression des INSPE concerne la formation des enseignants, pas l'organisation, les programmes, les rythmes ou le statut de l'école elle-même."
+      },
+      {
+        "id": "le-pen-education-jeunesse-011",
+        "raison": "relecture : Une prime d'activité étudiante liée à la réussite aux examens ne concerne pas la sélection à l'entrée des formations supérieures (Parcoursup, mérite à l'admission)."
       }
     ],
-    "cout_reference_usd": 0.0635,
+    "cout_reference_usd": 0.0626,
     "appels": 2
   }
 ]

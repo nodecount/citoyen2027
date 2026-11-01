@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { aDesInformations, mettreAJourReponse, questionVisible, retirerReponsesMasquees, valeursDuProfil, type ProfilPartiel } from "./profil";
+import { chargerBase } from "./data/bases";
 import type { ChampProfil } from "./types";
 
 const CHAMPS: ChampProfil[] = [
@@ -116,5 +117,18 @@ describe("retirerReponsesMasquees", () => {
   it("laisse intact un profil dont toutes les réponses sont visibles", () => {
     const profil = { logement: "locataire", logement_social: "non" };
     expect(retirerReponsesMasquees(profil, CHAMPS)).toEqual(profil);
+  });
+
+  it("changement de statut (base réelle) : les réponses liées à l'ancien statut sont retirées", () => {
+    const champs = chargerBase("agregateurs").champs;
+    const statut = champs.find((c) => c.id === "statut_professionnel")!;
+    // Retraité → salarié : le montant de la pension n'a plus d'objet.
+    const retraite = { statut_professionnel: "retraite", montant_pension: "moins_1000" };
+    expect(mettreAJourReponse(retraite, statut, "salarie", champs)).toEqual({ statut_professionnel: "salarie" });
+    // Salarié → retraité : « métier pénible » n'a plus d'objet, même si la réponse a été donnée plus tôt.
+    const salarie = { statut_professionnel: "salarie", metier_penible: "oui" };
+    expect(mettreAJourReponse(salarie, statut, "retraite", champs)).toEqual({ statut_professionnel: "retraite" });
+    // Le cas de la page : la réponse de thème est reprise du profil courant, puis le nettoyage final la retire.
+    expect(retirerReponsesMasquees({ statut_professionnel: "retraite", metier_penible: "oui" }, champs)).toEqual({ statut_professionnel: "retraite" });
   });
 });

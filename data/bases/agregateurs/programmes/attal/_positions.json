@@ -1,93 +1,105 @@
 [
   {
     "groupe": 0,
-    "empreinte": "8e48054b60dc6677",
-    "date": "2026-10-17",
+    "empreinte": "77756f2548beda07",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 14,
+    "etiquetees": 11,
     "sans_position": 7,
     "rejetees": [
       {
         "id": "attal-finances-publiques-001",
-        "raison": "relecture : L'extrait 'grâce à l'assurance chômage notamment' ne précise pas un durcissement des conditions d'indemnisation, seulement une source d'économies non détaillée."
+        "raison": "relecture : L'extrait sur l'assurance chômage mentionne seulement des économies, sans préciser qu'elles viennent d'un durcissement des conditions (conditionner_aides n'est pas établi)."
       },
       {
         "id": "attal-finances-publiques-003",
-        "raison": "relecture : 'Changer le système de retraite' est trop vague pour établir qu'il s'agit de travailler plus longtemps, et la réforme de l'assurance chômage n'est décrite que par son objectif d'économies, sans mention d'un durcissement des conditions."
+        "raison": "relecture : « Changer le système de retraite » ne précise pas le sens du changement, donc travailler_plus n'est pas établi par le texte; de même l'extrait sur l'assurance chômage ne montre qu'un objectif d'économies, pas un durcissement des conditions."
       },
       {
-        "id": "attal-interieur-justice-006",
-        "raison": "relecture : Créer un délit de contrainte au port du voile vise à protéger les personnes forcées, ce n'est pas une extension des interdits de port de signes religieux au sens de 'laicite_stricte'."
+        "id": "attal-finances-publiques-006",
+        "raison": "relecture : Une « année blanche » (gel) sur les prestations n'est pas un durcissement des conditions d'indemnisation ni une contrepartie imposée, ce qui ne correspond pas à la définition de conditionner_aides."
+      },
+      {
+        "id": "attal-finances-publiques-007",
+        "raison": "relecture : La création de collectivités uniques pour simplifier l'organisation territoriale ne montre pas un renforcement des compétences de l'État central ni le maintien de règles uniformes face aux collectivités."
+      },
+      {
+        "id": "attal-interieur-justice-004",
+        "raison": "relecture : Un permis à points de type canadien est un mécanisme de sélection des immigrants, pas nécessairement une restriction du volume d'immigration; la position restriction n'est pas clairement établie par le texte."
       },
       {
         "id": "attal-interieur-justice-008",
-        "raison": "relecture : Le texte ne fait que décrire un problème (sanction tardive, impunité) sans énoncer une mesure concrète de durcissement, la position est donc déduite et non établie par le texte."
+        "raison": "relecture : L'extrait décrit un constat (sanction tardive, message d'impunité) sans préciser la mesure concrète de durcissement envisagée, ce qui ne fonde pas clairement durcir_justice_mineurs."
+      },
+      {
+        "id": "attal-social-solidarite-002",
+        "raison": "relecture : Une « année blanche » sur les prestations est un gel budgétaire, pas un durcissement des conditions d'accès ou d'indemnisation, ce qui ne correspond pas à conditionner_aides."
       }
     ],
-    "cout_reference_usd": 0.1041,
+    "cout_reference_usd": 0.1097,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "1b306c08188f463c",
-    "date": "2026-10-17",
+    "empreinte": "fc74849dd9aa6f7e",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 12,
-    "sans_position": 10,
+    "etiquetees": 11,
+    "sans_position": 12,
     "rejetees": [
       {
         "id": "attal-social-solidarite-003",
-        "raison": "relecture : La construction de logements ne montre pas un encadrement des loyers ou du logement social ; l'extrait ne fonde pas spécifiquement la position encadrer_logement."
+        "raison": "relecture : Un plan de construction de logements ne relève pas spécifiquement de l'encadrement des loyers ou du logement social ; rien dans l'extrait n'indique un encadrement."
       },
       {
-        "id": "attal-retraites-travail-005",
-        "raison": "relecture : La mesure concerne la baisse des charges salariales pour augmenter les salaires, c'est un sujet de salaires et non une mesure d'allègement de la fiscalité des entreprises."
-      },
-      {
-        "id": "attal-retraites-travail-011",
-        "raison": "relecture : Permettre aux seniors de travailler (faculté) ne correspond pas à reculer ou durcir l'âge ou la durée de cotisation comme l'exige travailler_plus."
+        "id": "attal-envi-002",
+        "raison": "relecture : Sortir de la dépendance aux énergies fossiles pour l'indépendance énergétique ne mentionne pas les renouvelables et pourrait tout aussi bien passer par le nucléaire, l'étiquette plus_renouvelables n'est pas établie par le texte."
       }
     ],
-    "cout_reference_usd": 0.1282,
+    "cout_reference_usd": 0.1238,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "5436d202d015e0a3",
-    "date": "2026-10-17",
+    "empreinte": "4eb199d88227ea9e",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 15,
-    "sans_position": 7,
+    "sans_position": 6,
     "rejetees": [
       {
-        "id": "attal-education-jeunesse-006",
-        "raison": "relecture : Accorder de l'autonomie aux établissements correspond explicitement, selon la définition même, à 'reformer_ecole' (autonomie des établissements) et non à 'ecole_continuite'."
+        "id": "attal-gouvernance-republique-001",
+        "raison": "relecture : Un référendum annuel n'est pas une nouvelle constitution, une proportionnelle ni un RIC : ne correspond pas à la définition de nouvelles_institutions."
       },
       {
-        "id": "attal-education-jeunesse-009",
-        "raison": "relecture : Réduire le nombre d'élèves par classe ne dit pas explicitement recruter plus de fonctionnaires/enseignants, c'est une déduction (effet de second ordre)."
+        "id": "attal-reformes-etat-001",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Économies : 7 Md€ »"
+      },
+      {
+        "id": "attal-education-jeunesse-006",
+        "raison": "relecture : L'autonomie accordée aux établissements scolaires ne relève pas du sujet decentralisation, qui concerne le pouvoir des communes, départements, régions ou préfets."
       },
       {
         "id": "attal-education-jeunesse-013",
-        "raison": "relecture : 'Démassifier l'enseignement supérieur' n'établit pas explicitement une sélection à l'entrée fondée sur le mérite, c'est une interprétation."
+        "raison": "relecture : « Démassifier l'enseignement supérieur » ne précise pas de mécanisme de sélection au mérite, il faut interpréter l'intention pour la rattacher à selection_superieur."
       }
     ],
-    "cout_reference_usd": 0.0988,
+    "cout_reference_usd": 0.0984,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "5ac01c08107a99cc",
-    "date": "2026-10-17",
+    "empreinte": "865247a93b5def70",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "etiquetees": 1,
     "sans_position": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.0118,
+    "cout_reference_usd": 0.0119,
     "appels": 2
   }
 ]

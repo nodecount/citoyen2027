@@ -1,181 +1,168 @@
 [
   {
     "groupe": 0,
-    "empreinte": "7cf59a1f01ed99ed",
-    "date": "2026-10-17",
+    "empreinte": "9df05d72b4dd7ea9",
+    "date": "2026-11-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 19,
+    "sans_position": 5,
+    "rejetees": [
+      {
+        "id": "tondelier-finances-publiques-017",
+        "raison": "relecture : L'abattement de 10 % pour retraités aisés concerne des contribuables aisés mais pas spécifiquement les 'très hauts patrimoines/revenus' visés par la définition ultra_riches ; le sujet fiscalite/redistribution serait plus approprié."
+      }
+    ],
+    "cout_reference_usd": 0.1373,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "c8208cfb879cbb5c",
+    "date": "2026-11-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 17,
+    "sans_position": 8,
+    "rejetees": [],
+    "cout_reference_usd": 0.0636,
+    "appels": 2
+  },
+  {
+    "groupe": 2,
+    "empreinte": "bf341bd23486265b",
+    "date": "2026-11-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 7,
+    "sans_position": 16,
+    "rejetees": [
+      {
+        "id": "tondelier-interieur-justice-035",
+        "raison": "relecture : Le texte parle de réorienter les aides agricoles vers l'autonomie alimentaire locale, pas de pesticides, bio ou normes environnementales ; l'étiquette renforcer_normes_agri n'est pas fondée par l'extrait."
+      },
+      {
+        "id": "tondelier-interieur-justice-036",
+        "raison": "relecture : Supprimer le titre de séjour territorialisé restrictif pour l'appliquer le droit commun élargit les droits des personnes concernées, ce qui relève de l'ouverture et non de la restriction."
+      }
+    ],
+    "cout_reference_usd": 0.0442,
+    "appels": 2
+  },
+  {
+    "groupe": 3,
+    "empreinte": "22bc310f4f139a5f",
+    "date": "2026-11-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 10,
+    "sans_position": 14,
+    "rejetees": [
+      {
+        "id": "tondelier-social-solidarite-024",
+        "raison": "relecture : Le remboursement total des soins essentiels relève de l'organisation du système de santé (sujet sante_organisation), pas des minima sociaux ou de l'assurance chômage visés par aides_sociales."
+      }
+    ],
+    "cout_reference_usd": 0.0604,
+    "appels": 2
+  },
+  {
+    "groupe": 4,
+    "empreinte": "8564a588ef71305e",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 15,
     "sans_position": 8,
     "rejetees": [
       {
-        "id": "tondelier-finances-publiques-005",
-        "raison": "relecture : L'étiquette renouvelables est déduite d'un effet indirect (faciliter le financement) alors que la mesure décrite est une règle budgétaire sur le calcul du déficit, pas un développement direct des renouvelables."
+        "id": "tondelier-social-solidarite-050",
+        "raison": "relecture : Le trafic aérien n'est pas couvert par le sujet voiture/transports tel que défini (voitures, ZFE, véhicules thermiques, transports collectifs/vélo)."
       },
       {
-        "id": "tondelier-finances-publiques-021",
-        "raison": "relecture : La hausse de la Flat Tax s'applique à tous les revenus du capital et non spécifiquement aux ultra-riches, ce qui relève plutôt du sujet fiscalité/redistribution que de la taxation des très hauts patrimoines."
-      }
-    ],
-    "cout_reference_usd": 0.1276,
-    "appels": 2
-  },
-  {
-    "groupe": 1,
-    "empreinte": "41bbb71d30e5b27a",
-    "date": "2026-10-17",
-    "modele": "claude-sonnet-5",
-    "propositions": 25,
-    "etiquetees": 17,
-    "sans_position": 7,
-    "rejetees": [
-      {
-        "id": "tondelier-finances-publiques-026",
-        "raison": "relecture : Le Community Reinvestment Act vise l'accès au crédit pour les communautés défavorisées, pas la taxation des ultra-riches."
+        "id": "tondelier-social-solidarite-054",
+        "raison": "relecture : Créer un parc social de voitures facilite l'usage de la voiture plutôt que de la restreindre ou de développer les transports collectifs, ce n'est pas fondé par la définition de restreindre_voiture."
       }
     ],
     "cout_reference_usd": 0.0615,
     "appels": 2
   },
   {
-    "groupe": 2,
-    "empreinte": "d119291b7fd7794a",
-    "date": "2026-10-17",
-    "modele": "claude-sonnet-5",
-    "propositions": 25,
-    "etiquetees": 8,
-    "sans_position": 16,
-    "rejetees": [
-      {
-        "id": "tondelier-interieur-justice-035",
-        "raison": "relecture : La mesure porte sur la réorientation des aides agricoles européennes vers l'autonomie alimentaire, pas sur un renforcement des normes environnementales ou agricoles (pesticides, bio, etc.)."
-      }
-    ],
-    "cout_reference_usd": 0.0463,
-    "appels": 2
-  },
-  {
-    "groupe": 3,
-    "empreinte": "8f51db0e2d3e9f13",
-    "date": "2026-10-18",
-    "modele": "claude-sonnet-5",
-    "propositions": 25,
-    "etiquetees": 9,
-    "sans_position": 14,
-    "rejetees": [
-      {
-        "id": "tondelier-social-solidarite-016",
-        "raison": "relecture : Revaloriser les APL ne relève pas d'encadrer_logement (loyers/logement social) mais plutôt d'une aide sociale ; mauvais sujet/position."
-      },
-      {
-        "id": "tondelier-social-solidarite-024",
-        "raison": "relecture : Le remboursement total des soins essentiels relève de l'organisation de la santé, pas des minima sociaux/chômage visés par aides_sociales."
-      }
-    ],
-    "cout_reference_usd": 0.0504,
-    "appels": 2
-  },
-  {
-    "groupe": 4,
-    "empreinte": "792a32f833cb2c8d",
-    "date": "2026-10-18",
-    "modele": "claude-sonnet-5",
-    "propositions": 25,
-    "etiquetees": 14,
-    "sans_position": 11,
-    "rejetees": [],
-    "cout_reference_usd": 0.0531,
-    "appels": 2
-  },
-  {
     "groupe": 5,
-    "empreinte": "45710d986ad4d5ed",
-    "date": "2026-10-18",
+    "empreinte": "ebdb17da9e1d7a70",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 10,
     "sans_position": 15,
     "rejetees": [],
-    "cout_reference_usd": 0.049,
+    "cout_reference_usd": 0.0489,
     "appels": 2
   },
   {
     "groupe": 6,
-    "empreinte": "1d3c44876dda2277",
-    "date": "2026-10-18",
+    "empreinte": "30e0a9ddd06fd038",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 5,
-    "sans_position": 20,
+    "etiquetees": 2,
+    "sans_position": 23,
     "rejetees": [],
-    "cout_reference_usd": 0.0492,
+    "cout_reference_usd": 0.0292,
     "appels": 2
   },
   {
     "groupe": 7,
-    "empreinte": "ea1f47ad4020a0c4",
-    "date": "2026-10-18",
+    "empreinte": "9158f4e048c83c52",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 9,
-    "sans_position": 14,
+    "etiquetees": 11,
+    "sans_position": 12,
     "rejetees": [
       {
         "id": "tondelier-europe-international-003",
-        "raison": "relecture : Le texte refuse des accords commerciaux non conformes aux critères climatiques, ce qui relève d'une conditionnalité environnementale et non d'une logique de protection de l'économie nationale (préférence nationale, taxation des importations, relocalisation)."
+        "raison": "relecture : Le texte conditionne la ratification à des critères climatiques, ce qui ne montre pas directement une volonté protectionniste de protéger l'économie nationale des importations ou de la concurrence."
       },
       {
-        "id": "tondelier-gouvernance-republique-006",
-        "raison": "relecture : L'extension du droit de vote relève de l'organisation institutionnelle/démocratique et non des libertés individuelles telles que définies (choix de vie, expression, vie privée)."
+        "id": "tondelier-gouvernance-republique-004",
+        "raison": "relecture : Supprimer le 49-3 et assouplir les initiatives parlementaires relève de réformes limitées du cadre actuel, et non d'un changement d'institutions (nouvelle constitution, proportionnelle, RIC) ; cela correspond plutôt à 'institutions_actuelles'."
       }
     ],
-    "cout_reference_usd": 0.0525,
+    "cout_reference_usd": 0.0621,
     "appels": 2
   },
   {
     "groupe": 8,
-    "empreinte": "0e21b29b90114285",
-    "date": "2026-10-18",
+    "empreinte": "45c9f338122b08a9",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 14,
-    "sans_position": 7,
-    "rejetees": [
-      {
-        "id": "tondelier-gouvernance-republique-016",
-        "raison": "relecture : Former les fonctionnaires aux principes de 1905 n'indique pas clairement un maintien de la liberté de porter des signes religieux ni un nouvel interdit, la position est déduite et non établie."
-      },
-      {
-        "id": "tondelier-reformes-etat-003",
-        "raison": "relecture : Mettre fin au New Public Management et réduire la dépendance aux cabinets de conseil relève de l'organisation administrative, pas d'une baisse d'impôts ou de dépense publique au sens du sujet fiscalité."
-      },
-      {
-        "id": "tondelier-education-jeunesse-003",
-        "raison": "relecture : Revenir à la semaine de 5 jours modifie les rythmes scolaires, ce qui relève de reformer_ecole et non de ecole_continuite qui suppose l'absence de refonte de l'organisation."
-      },
-      {
-        "id": "tondelier-education-jeunesse-004",
-        "raison": "relecture : Généraliser des repas bio et végétariens dans la restauration scolaire ne relève pas du sujet agriculture_normes qui porte sur les normes agricoles et environnementales imposées aux exploitations."
-      }
-    ],
-    "cout_reference_usd": 0.1018,
+    "etiquetees": 10,
+    "sans_position": 15,
+    "rejetees": [],
+    "cout_reference_usd": 0.0583,
     "appels": 2
   },
   {
     "groupe": 9,
-    "empreinte": "f402098b81b2bbfa",
-    "date": "2026-10-18",
+    "empreinte": "8ac847b60b00fa11",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 12,
-    "etiquetees": 1,
-    "sans_position": 10,
+    "etiquetees": 4,
+    "sans_position": 6,
     "rejetees": [
       {
         "id": "tondelier-education-jeunesse-007",
-        "raison": "relecture : L'abrogation des réformes Blanquer et du Choc des savoirs relève de l'organisation du système éducatif (ecole_organisation), pas de la discipline scolaire ; le texte ne parle pas de sanctions, bienveillance ou inclusion."
+        "raison": "relecture : Abroger le « Choc des savoirs » relève d'une réforme structurelle (groupes de niveau, organisation) plutôt que de la discipline/sanctions ; le sujet ecole_discipline n'est pas fondé par ce texte."
+      },
+      {
+        "id": "tondelier-education-jeunesse-015",
+        "raison": "relecture : Réorienter le CIR vers les PME/ETI est une réallocation d'une aide existante, pas une mesure qui fait davantage contribuer ou encadre les entreprises comme l'exige la définition."
       }
     ],
-    "cout_reference_usd": 0.0301,
+    "cout_reference_usd": 0.0484,
     "appels": 2
   }
 ]

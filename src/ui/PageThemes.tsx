@@ -2,7 +2,7 @@ import { Lock } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
 import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/bases";
 import { lireOuverture, type Ecran } from "./router";
-import { aDesInformations, type ProfilPartiel } from "../profil";
+import { aDesInformations, retirerReponsesMasquees, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
 import { classement, combiner, ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation } from "../engine/candidatIdeal";
 import { anonymiserCards } from "./aveugle";
@@ -236,7 +236,9 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
                   }
                 }
                 invaliderIdeal();
-                onValider(fusion);
+                // Les réponses par thème reprises ci-dessus peuvent dépendre d'une réponse générale qui vient de changer (statut passé
+                // de « retraité » à « salarié », ou l'inverse) : celles devenues sans objet sont retirées, jamais gardées en cachette.
+                onValider(retirerReponsesMasquees(fusion, base.champs));
               }}
               onAnnuler={() => {}}
             />

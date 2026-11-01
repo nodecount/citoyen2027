@@ -1,69 +1,68 @@
 [
   {
     "groupe": 0,
-    "empreinte": "01aa2da10a8ba239",
-    "date": "2026-10-17",
+    "empreinte": "976562fafc35c5cc",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 1,
-    "sans_position": 23,
-    "rejetees": [
-      {
-        "id": "ruffin-social-solidarite-013",
-        "raison": "relecture : La mesure restreint/plafonne un dispositif de loyer sous conditions énergétiques, ce qui n'est pas un encadrement des loyers ou du logement social au sens de la définition, mais une condition technique liée à la rénovation énergétique."
-      }
-    ],
-    "cout_reference_usd": 0.101,
+    "etiquetees": 5,
+    "sans_position": 20,
+    "rejetees": [],
+    "cout_reference_usd": 0.0798,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "e53fb57ae2768788",
-    "date": "2026-10-17",
+    "empreinte": "e247457537f55df4",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 12,
-    "sans_position": 12,
+    "etiquetees": 8,
+    "sans_position": 14,
     "rejetees": [
       {
+        "id": "ruffin-social-solidarite-017",
+        "raison": "relecture : Sanctionner les logements illégaux ou surloués relève du contrôle/répression, pas de l'encadrement des loyers ou du logement social défini pour cette position."
+      },
+      {
         "id": "ruffin-social-solidarite-018",
-        "raison": "relecture : La mesure porte sur la prévention des expulsions et l'abrogation d'une loi anti-squat/expulsion, ce qui ne correspond pas à la définition d'encadrer_logement (loyers, logement social, logements vacants, locations touristiques)."
+        "raison": "relecture : L'abrogation de la loi Kasbarian-Bergé et la médiation avant expulsion concernent le droit des locataires face aux expulsions, ce qui ne correspond pas à la définition d'encadrer_logement (loyers, logement social, logements vacants, locations touristiques)."
+      },
+      {
+        "id": "ruffin-retraites-travail-009",
+        "raison": "relecture : Réduire l'amplitude horaire des journées de travail ne correspond pas à la définition de reduire_temps_travail, qui vise une réduction de la durée légale du travail, pas une réorganisation de l'étalement des horaires."
       }
     ],
-    "cout_reference_usd": 0.0767,
+    "cout_reference_usd": 0.0998,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "b45d66ab92c8803b",
-    "date": "2026-10-17",
+    "empreinte": "de7b54d960c89d0d",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 8,
+    "etiquetees": 10,
     "sans_position": 15,
-    "rejetees": [
-      {
-        "id": "ruffin-retraites-travail-018",
-        "raison": "relecture : Le texte porte sur un bonus de trimestres pour pénibilité, pas sur le maintien de l'âge légal de départ ; l'étiquette 'age_actuel' n'est pas fondée par cet extrait."
-      },
-      {
-        "id": "ruffin-envi-006",
-        "raison": "relecture : La mesure propose un référendum sur des mesures, sans que le texte lui-même défende l'accélération de la transition écologique, et l'extrait sur les vols intérieurs relève du sujet 'voiture' et non d'un sujet lié aux transports aériens/ferroviaires, donc étiquette multiple mal fondée."
-      }
-    ],
-    "cout_reference_usd": 0.0764,
+    "rejetees": [],
+    "cout_reference_usd": 0.0644,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "ea79bf80dea22330",
-    "date": "2026-10-17",
+    "empreinte": "90dfbafd33848137",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 17,
     "etiquetees": 0,
-    "sans_position": 17,
-    "rejetees": [],
-    "cout_reference_usd": 0.0212,
-    "appels": 1
+    "sans_position": 16,
+    "rejetees": [
+      {
+        "id": "ruffin-education-jeunesse-001",
+        "raison": "relecture : La mesure porte sur la pédagogie de l'enseignement artistique spécifiquement, pas sur une refonte de l'organisation générale du système éducatif comme l'exige la définition de reformer_ecole."
+      }
+    ],
+    "cout_reference_usd": 0.0295,
+    "appels": 2
   }
 ]

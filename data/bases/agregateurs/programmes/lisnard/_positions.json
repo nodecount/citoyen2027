@@ -1,69 +1,77 @@
 [
   {
     "groupe": 0,
-    "empreinte": "c29f65d294d8606e",
-    "date": "2026-10-17",
+    "empreinte": "3874b59290c5ec8c",
+    "date": "2026-11-01",
+    "modele": "claude-sonnet-5",
+    "propositions": 25,
+    "etiquetees": 18,
+    "sans_position": 6,
+    "rejetees": [
+      {
+        "id": "lisnard-interieur-justice-016",
+        "raison": "relecture : Le fait de ramener les forces de sécurité sur le terrain porte sur l'organisation du temps de travail policier, pas directement sur un durcissement répressif (peines, sanctions) ni un renforcement des moyens au sens de la définition."
+      }
+    ],
+    "cout_reference_usd": 0.1372,
+    "appels": 2
+  },
+  {
+    "groupe": 1,
+    "empreinte": "fc539b926121cbf0",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 16,
     "sans_position": 7,
     "rejetees": [
       {
-        "id": "lisnard-finances-publiques-003",
-        "raison": "relecture : Il s'agit d'un allègement général des droits de donation pour tous les parents, pas d'une mesure visant spécifiquement les très hauts patrimoines ou revenus ; relève plutôt de la fiscalité générale (baisse_impots) que de 'ultra_riches'."
+        "id": "lisnard-social-solidarite-006",
+        "raison": "relecture : Le texte supprime Parcoursup mais le remplace par une sélection simplifiée (LAS/PASS), ce qui ne montre pas un accès sans sélection comme l'exige la définition."
       },
       {
-        "id": "lisnard-interieur-justice-002",
-        "raison": "relecture : La mesure porte sur la fin des aménagements de peine, ce qui relève spécifiquement du sujet 'prison' (position plus_de_prison, qui vise explicitement à 'limiter les aménagements de peine') et non du sujet générique 'securite'."
+        "id": "lisnard-envi-006",
+        "raison": "relecture : L'extrait parle de souveraineté alimentaire et de capacités exportatrices, pas d'un assouplissement des normes agricoles ou environnementales."
       }
     ],
-    "cout_reference_usd": 0.1228,
-    "appels": 2
-  },
-  {
-    "groupe": 1,
-    "empreinte": "5c42f6d2f0d4d484",
-    "date": "2026-10-17",
-    "modele": "claude-sonnet-5",
-    "propositions": 25,
-    "etiquetees": 12,
-    "sans_position": 12,
-    "rejetees": [
-      {
-        "id": "lisnard-social-solidarite-004",
-        "raison": "relecture : Le texte porte sur la décentralisation de la gouvernance hospitalière (préfets, maires), ce qui ne fonde pas directement 'liberte_sante' (liberté d'installation des médecins ou place du privé)."
-      }
-    ],
-    "cout_reference_usd": 0.0998,
+    "cout_reference_usd": 0.0851,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "eb5feffb3a6a36c7",
-    "date": "2026-10-17",
+    "empreinte": "a7a86f1eaa375b63",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 8,
-    "sans_position": 17,
-    "rejetees": [],
-    "cout_reference_usd": 0.0599,
+    "etiquetees": 11,
+    "sans_position": 11,
+    "rejetees": [
+      {
+        "id": "lisnard-envi-011",
+        "raison": "relecture : Le texte décrit une débureaucratisation générale du service public, sans mention de l'agriculture ou de normes environnementales/agricoles."
+      },
+      {
+        "id": "lisnard-reformes-etat-009",
+        "raison": "relecture : Interdire la surtransposition ne reprend pas de compétences à l'UE ni n'en réduit le rôle, cela concerne seulement la fidélité de la transposition nationale."
+      },
+      {
+        "id": "lisnard-reformes-etat-014",
+        "raison": "relecture : Le texte parle de changer le statut (contrats vs statut de fonctionnaire) pour les fonctions non régaliennes, pas de réduire le nombre d'agents."
+      }
+    ],
+    "cout_reference_usd": 0.0897,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "4c2d4b225686cffb",
-    "date": "2026-10-17",
+    "empreinte": "85ca370b3d42ce30",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 7,
-    "etiquetees": 2,
-    "sans_position": 4,
-    "rejetees": [
-      {
-        "id": "lisnard-education-jeunesse-010",
-        "raison": "relecture : Créer des classes d'excellence relève de l'organisation pédagogique (filières/niveaux), pas de la discipline/sanction ou de l'évaluation exigeante visée par le sujet ecole_discipline : mauvais sujet."
-      }
-    ],
-    "cout_reference_usd": 0.028,
+    "etiquetees": 6,
+    "sans_position": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.0392,
     "appels": 2
   }
 ]

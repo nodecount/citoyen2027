@@ -77,14 +77,7 @@
     "sous_theme": "Economies & hausses de dépenses",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "entreprises",
-        "position": "encadrer_entreprises",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rendre effectif le droit de réquisition des usines et entreprises d’intérêt général par l’État."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "melenchon-finances-publiques-004",
@@ -170,7 +163,14 @@
     "sous_theme": "Economies & hausses de dépenses",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "moduler les droits de vote des actionnaires selon la durée d’engagement dans l’entreprise."
+      }
+    ]
   },
   {
     "id": "melenchon-finances-publiques-007",
@@ -557,14 +557,7 @@
     "sous_theme": "Fiscalité",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "redistribution",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer une taxe sur les transactions financières."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "melenchon-finances-publiques-020",
@@ -593,7 +586,7 @@
         "sujet": "entreprises",
         "position": "encadrer_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Refonder l’impôt sur les sociétés pour établir l’égalité devant l’impôt entre PME et grands groupes, instaurer un barème progressif en fonction des bénéfices réalisés et selon leur usage et favoriser l’investissement plutôt que la distribution de dividendes."
+        "extrait": "instaurer un barème progressif en fonction des bénéfices réalisés et selon leur usage et favoriser l’investissement plutôt que la distribution de dividendes."
       }
     ]
   },
@@ -712,8 +705,8 @@
     ],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer la flat tax et imposer les revenus du capital comme ceux du travail."
       }
@@ -829,7 +822,7 @@
         "sujet": "fiscalite",
         "position": "redistribution",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer une TVA à 21,6 % sur les produits de « grand luxe »"
+        "extrait": "Baisser la TVA sur les produits de première nécessité de 5,5 % à 5 %. Créer une TVA à 21,6 % sur les produits de « grand luxe »"
       }
     ]
   },
@@ -855,7 +848,14 @@
     "sous_theme": "Fiscalité",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un impôt universel sur les entreprises et sur les revenus des particuliers pour lutter contre l’évasion fiscale."
+      }
+    ]
   },
   {
     "id": "melenchon-finances-publiques-028",
@@ -939,7 +939,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
-    "titre_litteral": true
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Refonder la taxe foncière pour la rendre progressive et que chacun paie à hauteur de son patrimoine total réel."
+      }
+    ]
   },
   {
     "id": "melenchon-finances-publiques-031",
@@ -1158,7 +1166,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Secteur bancaire & finance",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-finances-publiques-039",
@@ -1181,7 +1190,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Secteur bancaire & finance",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-finances-publiques-040",
@@ -1204,7 +1214,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Secteur bancaire & finance",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer une caisse de péréquation interentreprises financée grâce à un barème progressif pour mutualiser la contribution sociale entre petites et grandes entreprises."
+      }
+    ]
   },
   {
     "id": "melenchon-interieur-justice-001",
@@ -1438,7 +1456,7 @@
         "sujet": "prison",
         "position": "alternatives_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "En finir avec la surpopulation carcérale par la mise en place d’un mécanisme contraignant de régulation carcérale et assurer aux personnes détenues les moyens de se réinsérer"
+        "extrait": "En finir avec la surpopulation carcérale par la mise en place d’un mécanisme contraignant de régulation carcérale et assurer aux personnes détenues les moyens de se réinsérer dans notre société."
       }
     ]
   },
@@ -1464,7 +1482,14 @@
     "sous_theme": "Justice & pénitentiaire",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "doubler les effectifs des services qui luttent contre les infractions financières, supprimer le verrou de Bercy, donner plus de moyens humains aux brigades en charge de la délinquance financière, augmenter le nombre de juges d’instruction"
+      }
+    ]
   },
   {
     "id": "melenchon-interieur-justice-010",
@@ -1488,7 +1513,14 @@
     "sous_theme": "Justice & pénitentiaire",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lutter contre l’impunité des agresseurs sexuels, la correctionnalisation des viols"
+      }
+    ]
   },
   {
     "id": "melenchon-interieur-justice-011",
@@ -1511,8 +1543,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "melenchon-interieur-justice-012",
@@ -1536,7 +1567,14 @@
     "sous_theme": "Justice & pénitentiaire",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "justice_mineurs",
+        "position": "priorite_educative",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger le code de justice pénale des mineurs de Dupond-Moretti pour instaurer un code de l’enfance combinant civil et pénal"
+      }
+    ]
   },
   {
     "id": "melenchon-interieur-justice-013",
@@ -1653,7 +1691,14 @@
         "extrait": "rendre obligatoire leur prise en charge jusqu’à 25 ans par un contrat jeune majeur"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "rendre obligatoire leur prise en charge jusqu’à 25 ans par un contrat jeune majeur"
+      }
+    ]
   },
   {
     "id": "melenchon-interieur-justice-016",
@@ -1713,7 +1758,7 @@
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "instaurer comme peine principale la déchéance des droits civiques des personnes physiques qui y participent"
+        "extrait": "Faciliter les poursuites contre les entreprises ou associations en cas d’activités illicites ou de fraude fiscale permettant le financement du terrorisme, instaurer comme peine principale la déchéance des droits civiques des personnes physiques qui y participent"
       }
     ]
   },
@@ -1739,14 +1784,7 @@
     "sous_theme": "Sécurité intérieure",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "surveillance",
-        "position": "plus_surveillance",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Renforcer les moyens humains du renseignement en revenant sur la fusion de la direction de la surveillance du territoire (DST) et des renseignements généraux (RG)."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "melenchon-interieur-justice-019",
@@ -1808,15 +1846,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "surveillance",
-        "position": "plus_surveillance",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Renforcer les moyens humains de la plateforme PHAROS en charge de la prévention et de la surveillance des violences sur Internet."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "melenchon-interieur-justice-021",
@@ -1870,7 +1900,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-interieur-justice-023",
@@ -2126,8 +2157,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Sécurité intérieure",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "melenchon-interieur-justice-032",
@@ -2151,14 +2181,7 @@
     "sous_theme": "Sécurité intérieure",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Construire de nouveaux centres d’activités de police de proximité."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "melenchon-interieur-justice-033",
@@ -2281,7 +2304,7 @@
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "plan pluriannuel d’investissement et de développement des services publics"
+        "extrait": "Engager un plan pluriannuel d’investissement et de développement des services publics."
       }
     ]
   },
@@ -2565,14 +2588,7 @@
         "extrait": "Interdire les pratiques de notation des allocataires de prestations sociales"
       }
     ],
-    "positions": [
-      {
-        "sujet": "surveillance",
-        "position": "vie_privee",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Interdire les pratiques de notation des allocataires de prestations sociales"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "melenchon-social-solidarite-005",
@@ -2616,7 +2632,7 @@
         "sujet": "aides_sociales",
         "position": "proteger_droits_sociaux",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "une assurance calculée à partir du premier jour de travail"
+        "extrait": "Revenir sur les réformes Macron en abrogeant l’éligibilité et les méthodes de calcul du montant et de la durée de l’allocation pour indemniser les chômeurs"
       }
     ]
   },
@@ -2747,7 +2763,7 @@
         "sujet": "aides_sociales",
         "position": "proteger_droits_sociaux",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Indemniser les chômeurs dès le premier jour de la fin de contrat"
+        "extrait": "Indemniser les chômeurs dès le premier jour de la fin de contrat."
       }
     ]
   },
@@ -2793,7 +2809,7 @@
         "sujet": "aides_sociales",
         "position": "proteger_droits_sociaux",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer l’obligation d’accepter une « offre raisonnable d’emploi »"
+        "extrait": "Supprimer l’obligation d’accepter une « offre raisonnable d’emploi »."
       }
     ]
   },
@@ -2839,7 +2855,7 @@
         "sujet": "aides_sociales",
         "position": "proteger_droits_sociaux",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abroger la présomption de démission en cas d’abandon de poste et le principe de fin des allocations chômage pour les intérimaires et les CDD qui refusent un CDI"
+        "extrait": "Abroger la présomption de démission en cas d’abandon de poste et le principe de fin des allocations chômage pour les intérimaires et les CDD qui refusent un CDI."
       }
     ]
   },
@@ -2885,7 +2901,7 @@
         "sujet": "aides_sociales",
         "position": "proteger_droits_sociaux",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir le maintien du revenu en cas de reconversion ou de formation"
+        "extrait": "Garantir le maintien du revenu en cas de reconversion ou de formation."
       }
     ]
   },
@@ -3053,7 +3069,7 @@
         "sujet": "aides_sociales",
         "position": "proteger_droits_sociaux",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Revaloriser l’AAH au niveau du SMIC"
+        "extrait": "Revaloriser l’AAH au niveau du SMIC."
       }
     ]
   },
@@ -3127,10 +3143,16 @@
     "effets": [],
     "positions": [
       {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Soutenir l’inclusion du droit à l’IVG et à la contraception, et leur accès gratuit pour toutes les femmes, dans la Charte européenne des droits fondamentaux."
+      },
+      {
         "sujet": "libertes",
         "position": "libertes_indiv",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "l’inclusion du droit à l’IVG et à la contraception, et leur accès gratuit pour toutes les femmes"
+        "extrait": "Soutenir l’inclusion du droit à l’IVG et à la contraception, et leur accès gratuit pour toutes les femmes"
       }
     ]
   },
@@ -3443,7 +3465,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "financer les hôpitaux par une dotation globale, un prix de journée et une tarification à l’acte pour les seules activités techniques programmées"
+      }
+    ]
   },
   {
     "id": "melenchon-social-solidarite-027",
@@ -3533,7 +3563,7 @@
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Engager un plan pluriannuel de recrutement des professionnels du soin et du médico-social, revaloriser les métiers, les salaires"
+        "extrait": "Engager un plan pluriannuel de recrutement des professionnels du soin et du médico-social"
       }
     ]
   },
@@ -3611,14 +3641,6 @@
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Financer l’augmentation du nombre de places en faculté de médecine"
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "enseignement_superieur",
-        "position": "acces_libre_superieur",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Financer l’augmentation du nombre de places en faculté de médecine en partant des besoins"
       }
     ]
   },
@@ -3760,14 +3782,7 @@
         "extrait": "Augmenter le nombre de places en faculté de médecine dans la filière psy."
       }
     ],
-    "positions": [
-      {
-        "sujet": "enseignement_superieur",
-        "position": "acces_libre_superieur",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter le nombre de places en faculté de médecine dans la filière psy."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "melenchon-social-solidarite-035",
@@ -3853,7 +3868,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Culture",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-social-solidarite-038",
@@ -4075,14 +4091,7 @@
         "extrait": "Mettre en place une garantie universelle des loyers créant un filet de sécurité contre les impayés de loyers pour les locataires, comme pour les propriétaires."
       }
     ],
-    "positions": [
-      {
-        "sujet": "logement",
-        "position": "encadrer_logement",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place une garantie universelle des loyers créant un filet de sécurité contre les impayés de loyers pour les locataires, comme pour les propriétaires."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "melenchon-social-solidarite-043",
@@ -4357,14 +4366,6 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "supprimer la niche fiscale sur les meublés de tourisme"
       }
-    ],
-    "positions": [
-      {
-        "sujet": "logement",
-        "position": "encadrer_logement",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Lutter contre la spéculation sur le logement en limitant les locations de courte durée à 60 jours par an et supprimer la niche fiscale sur les meublés de tourisme."
-      }
     ]
   },
   {
@@ -4415,7 +4416,7 @@
         "sujet": "logement",
         "position": "encadrer_logement",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Limiter la concentration immobilière en instaurant un plafond de cinq logements transmissibles par héritage"
+        "extrait": "instaurant un plafond de cinq logements transmissibles par héritage ; au-delà, les biens sont réquisitionnés par l’État"
       }
     ]
   },
@@ -4542,7 +4543,7 @@
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Reconstruire le maillage de transports en commun et de services publics, notamment dans les départements ruraux, les quartiers prioritaires et les Outre-mer"
+        "extrait": "Reconstruire le maillage de transports en commun et de services publics"
       }
     ]
   },
@@ -4611,7 +4612,7 @@
         "sujet": "voiture",
         "position": "restreindre_voiture",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Refuser la suppression des lignes ferroviaires du quotidien et en réouvrir, augmenter le nombre de trains et garantir des tarifs accessibles"
+        "extrait": "Refuser la suppression des lignes ferroviaires du quotidien et en réouvrir, augmenter le nombre de trains"
       }
     ]
   },
@@ -4834,7 +4835,7 @@
         "sujet": "entreprises",
         "position": "encadrer_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Accorder aux comités d’entreprise un droit de veto suspensif sur les plans de licenciements et de nouveaux droits de contrôle sur les finances de leur entreprise."
+        "extrait": "Accorder aux comités d’entreprise un droit de veto suspensif sur les plans de licenciements"
       }
     ]
   },
@@ -4859,15 +4860,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "entreprises",
-        "position": "encadrer_entreprises",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Donner plus de pouvoir aux salariés lors des procédures de redressement et de liquidation d’entreprise et instaurer le droit à un vote de défiance à l’égard des dirigeants d’entreprise"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "melenchon-retraites-travail-004",
@@ -4890,15 +4883,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "entreprises",
-        "position": "encadrer_entreprises",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter la représentation des salariés dans les instances de décision des grandes entreprises à au moins un tiers"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "melenchon-retraites-travail-005",
@@ -4959,7 +4944,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "titre_litteral": true
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "hausse_smic",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Tout chômeur de longue durée pourra se voir proposer d’être embauché au moins au SMIC revalorisé"
+      }
+    ]
   },
   {
     "id": "melenchon-retraites-travail-007",
@@ -5417,14 +5410,7 @@
         "extrait": "Revaloriser la rémunération des apprentis et des alternants."
       }
     ],
-    "positions": [
-      {
-        "sujet": "salaires",
-        "position": "hausse_smic",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Revaloriser la rémunération des apprentis et des alternants."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "melenchon-retraites-travail-019",
@@ -5659,7 +5645,7 @@
     "positions": [
       {
         "sujet": "travail",
-        "position": "age_actuel",
+        "position": "travailler_moins",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Abroger la réforme des retraites à 64 ans et rétablir le droit à la retraite à 60 ans avec 40 annuités de cotisation."
       }
@@ -6078,7 +6064,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "on ne prélève pas davantage à la nature de ce qu’elle est en état de reconstituer"
+      }
+    ]
   },
   {
     "id": "melenchon-envi-007",
@@ -6102,7 +6095,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "decentralisation",
+        "position": "decentraliser",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Redécouper les Régions à partir des bassins versants et leur confier l’eau comme première responsabilité"
+      }
+    ]
   },
   {
     "id": "melenchon-envi-008",
@@ -6156,7 +6156,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "dette",
+        "position": "investir_dette",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lancer un plan massif de 200 Md€ d’investissements écologiquement et socialement utiles"
+      }
+    ]
   },
   {
     "id": "melenchon-envi-010",
@@ -6185,7 +6193,7 @@
         "sujet": "voiture",
         "position": "restreindre_voiture",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Limiter la taille, le poids et les dimensions des SUV autorisés à la vente"
+        "extrait": "Limiter la taille, le poids et les dimensions des SUV autorisés à la vente et développer la construction française de véhicules électriques légers"
       }
     ]
   },
@@ -6243,7 +6251,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire les coupes rases sauf en cas d’impasse sanitaire avérée"
+      }
+    ]
   },
   {
     "id": "melenchon-envi-013",
@@ -6313,8 +6328,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Garantir des prix rémunérateurs aux producteurs par des prix planchers pour les agriculteurs, interdire les ventes à perte"
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "melenchon-envi-015",
@@ -6453,7 +6467,7 @@
         "sujet": "commerce",
         "position": "protectionnisme",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer un protectionnisme écologique en fonction des conditions de production et de rémunération du travail agricole."
+        "extrait": "Instaurer un protectionnisme écologique en fonction des conditions de production et de rémunération du travail agricole"
       }
     ]
   },
@@ -6523,7 +6537,7 @@
         "sujet": "agriculture_normes",
         "position": "renforcer_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Interdire les fermes-usines."
+        "extrait": "Interdire les fermes-usines"
       }
     ]
   },
@@ -6572,8 +6586,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Affaires étrangères & diplomatie",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "melenchon-europe-international-003",
@@ -6785,7 +6798,14 @@
     "sous_theme": "Union Européenne",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Conditionner la contribution française au budget de l’Union européenne."
+      }
+    ]
   },
   {
     "id": "melenchon-europe-international-011",
@@ -6846,12 +6866,6 @@
         "position": "souverainete",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Suspendre la participation (opt-out) de la France à certains programmes comme l’Europe de la défense"
-      },
-      {
-        "sujet": "defense",
-        "position": "moins_defense",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "s’opposer à la reconduction d’un Commissaire européen à la Défense dont le poste participe à l’édification d’une Europe de la guerre"
       }
     ]
   },
@@ -7432,7 +7446,7 @@
         "sujet": "institutions",
         "position": "nouvelles_institutions",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rendre obligatoire le recours au référendum en cas de modification de la Constitution ou d’adoption d’un nouveau traité européen"
+        "extrait": "Rendre obligatoire le recours au référendum en cas de modification de la Constitution ou d’adoption d’un nouveau traité européen."
       }
     ]
   },
@@ -7458,7 +7472,14 @@
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "decentralisation",
+        "position": "decentraliser",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre aux communes leur liberté de coopération."
+      }
+    ]
   },
   {
     "id": "melenchon-gouvernance-republique-022",
@@ -7482,7 +7503,14 @@
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "decentralisation",
+        "position": "decentraliser",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Donner à la Corse le statut garanti par l’article 74 de la Constitution."
+      }
+    ]
   },
   {
     "id": "melenchon-gouvernance-republique-023",
@@ -7569,7 +7597,14 @@
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "decentralisation",
+        "position": "decentraliser",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les mégarégions et les métropoles technocratiques, et revenir sur l’obligation d’appartenance des communes à des intercommunalités en abrogeant la loi portant sur la Nouvelle Organisation territoriale de la République (NOTRe)."
+      }
+    ]
   },
   {
     "id": "melenchon-gouvernance-republique-026",
@@ -7617,7 +7652,14 @@
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "decentralisation",
+        "position": "decentraliser",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Refuser les fusions forcées de communes."
+      }
+    ]
   },
   {
     "id": "melenchon-gouvernance-republique-028",
@@ -7641,7 +7683,14 @@
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "notamment pour recruter et revaloriser les agents"
+      }
+    ]
   },
   {
     "id": "melenchon-gouvernance-republique-029",
@@ -7665,7 +7714,14 @@
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Valoriser les emplois de secrétaires de mairies en favorisant le recrutement à temps complet et en développant des formations adaptées."
+      }
+    ]
   },
   {
     "id": "melenchon-gouvernance-republique-030",
@@ -7713,14 +7769,7 @@
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "libertes",
-        "position": "libertes_indiv",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "le droit fondamental de disposer de soi en toute circonstance"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "melenchon-gouvernance-republique-032",
@@ -7749,7 +7798,7 @@
         "sujet": "laicite",
         "position": "laicite_stricte",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place un plan de séparation de l’Eglise et de l’État sur les territoires où ce n'est pas encore le cas : abroger le concordat d’Alsace-Moselle"
+        "extrait": "Mettre en place un plan de séparation de l’Eglise et de l’État sur les territoires où ce n'est pas encore le cas : abroger le concordat d’Alsace-Moselle."
       }
     ]
   },
@@ -7811,7 +7860,7 @@
         "sujet": "laicite",
         "position": "laicite_stricte",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Refuser les financements publics pour la construction d’édifices religieux, d’activités cultuelles et d’établissements confessionnels"
+        "extrait": "Refuser les financements publics pour la construction d’édifices religieux, d’activités cultuelles et d’établissements confessionnels."
       }
     ]
   },
@@ -7852,7 +7901,14 @@
         "extrait": "Abroger les divers statuts spécifiques en vigueur dans les Outre-mer."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "decentralisation",
+        "position": "etat_central",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger les divers statuts spécifiques en vigueur dans les Outre-mer."
+      }
+    ]
   },
   {
     "id": "melenchon-gouvernance-republique-036",
@@ -8056,8 +8112,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "melenchon-education-jeunesse-005",
@@ -8094,14 +8149,6 @@
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Garantir la gratuité des crèches publiques."
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "redistribution",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir la gratuité des crèches publiques"
       }
     ]
   },
@@ -8161,7 +8208,7 @@
         "sujet": "ecole_organisation",
         "position": "ecole_continuite",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire partout les effectifs par classe pour faire mieux que la moyenne en Europe, qui est actuellement à 19 élèves par classe, en priorisant les maternelles et les classes des actuelles REP"
+        "extrait": "Réduire partout les effectifs par classe pour faire mieux que la moyenne en Europe, qui est actuellement à 19 élèves par classe, en priorisant les maternelles et les classes des actuelles REP."
       }
     ]
   },
@@ -8240,7 +8287,14 @@
         "extrait": "en proposant, si nécessaire, une garantie d’autonomie à partir de 16 ans"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Étendre la scolarité obligatoire à 18 ans, en proposant, si nécessaire, une garantie d’autonomie à partir de 16 ans."
+      }
+    ]
   },
   {
     "id": "melenchon-education-jeunesse-009",
@@ -8317,8 +8371,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Augmenter le nombre de classes pour les élèves primo-arrivants."
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "melenchon-education-jeunesse-011",
@@ -8387,8 +8440,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Mettre fin aux groupes de niveau au collège."
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "melenchon-education-jeunesse-013",
@@ -8426,8 +8478,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Refuser de conditionner l’entrée du lycée à l’obtention du Diplôme national du Brevet (DNB) et supprimer les classes préparatoires à la seconde."
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "melenchon-education-jeunesse-014",
@@ -8518,7 +8569,14 @@
         "extrait": "Rattraper le gel du point d’indice depuis 2010 et revaloriser les grilles salariales"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rattraper le gel du point d’indice depuis 2010 et revaloriser les grilles salariales en engageant une négociation avec les organisations syndicales et mettre fin au Pacte enseignant."
+      }
+    ]
   },
   {
     "id": "melenchon-education-jeunesse-016",
@@ -8666,7 +8724,14 @@
         "extrait": "Établir le diplôme national du baccalauréat, abroger les contre réformes du lycée, de la voie professionnelle et du collège."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Établir le diplôme national du baccalauréat, abroger les contre réformes du lycée, de la voie professionnelle et du collège."
+      }
+    ]
   },
   {
     "id": "melenchon-education-jeunesse-020",
@@ -8737,8 +8802,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "melenchon-education-jeunesse-023",
@@ -8775,6 +8839,14 @@
         ],
         "dimension": "acces_aux_services",
         "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Porter l’alimentation dans les cantines scolaires à du 100 % biologique et locale, réduire la part des protéines carnées au profit des protéines végétales et imposer une option végétarienne quotidienne."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Porter l’alimentation dans les cantines scolaires à du 100 % biologique et locale, réduire la part des protéines carnées au profit des protéines végétales et imposer une option végétarienne quotidienne."
       }
@@ -8887,7 +8959,14 @@
         "extrait": "Rétablir le baccalauréat professionnel en quatre ans, abroger les contre-réformes du lycée professionnel en renforçant notamment les enseignements généraux et en supprimant les nouvelles périodes de stage."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rétablir le baccalauréat professionnel en quatre ans, abroger les contre-réformes du lycée professionnel en renforçant notamment les enseignements généraux et en supprimant les nouvelles périodes de stage."
+      }
+    ]
   },
   {
     "id": "melenchon-education-jeunesse-027",
@@ -8957,8 +9036,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "melenchon-education-jeunesse-030",
@@ -9035,7 +9113,14 @@
     "sous_theme": "Education nationale",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer les grands instituts publics de recherche (CNRS, Inserm, Inrae, etc.), garants des recherches d’intérêt général et supprimer l’Agence nationale de la recherche."
+      }
+    ]
   },
   {
     "id": "melenchon-education-jeunesse-032",
@@ -9094,14 +9179,6 @@
         ],
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer la gratuité de l’enseignement supérieur, de la licence au doctorat, quelle que soit la nationalité des étudiants."
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "enseignement_superieur",
-        "position": "acces_libre_superieur",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Instaurer la gratuité de l’enseignement supérieur, de la licence au doctorat, quelle que soit la nationalité des étudiants."
       }
@@ -9332,6 +9409,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   }
 ]

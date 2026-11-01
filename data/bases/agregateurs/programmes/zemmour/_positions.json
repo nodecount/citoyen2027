@@ -1,23 +1,27 @@
 [
   {
     "groupe": 0,
-    "empreinte": "bc6993a04726db57",
-    "date": "2026-10-18",
+    "empreinte": "265740e227693685",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 19,
-    "sans_position": 4,
+    "sans_position": 3,
     "rejetees": [
       {
         "id": "zemmour-finances-publiques-004",
-        "raison": "relecture : La mesure concerne les droits/conditions des agents (jours de carence), pas un renforcement des effectifs ou des moyens des services publics : mauvaise position pour ce sujet."
+        "raison": "relecture : Supprimer les jours de carence ne relève pas de 'créer des postes ou renforcer les moyens des services publics' tel que défini par fonction_publique/plus_services_publics, c'est une mesure de protection sociale des agents, pas un renforcement de moyens."
+      },
+      {
+        "id": "zemmour-finances-publiques-005",
+        "raison": "relecture : La mesure réduit le nombre d'élus locaux via une fusion de mandats, ce qui ne correspond pas à 'maintenir ou renforcer les compétences de l'État central et l'uniformité des règles' tel que défini par etat_central."
       },
       {
         "id": "zemmour-interieur-justice-005",
-        "raison": "relecture : La dénonciation d'un accord bilatéral franco-algérien ne relève pas du sujet Europe/UE, mais de l'immigration."
+        "raison": "relecture : La dénonciation d'un accord bilatéral franco-algérien relève du sujet immigration (restriction des flux), pas du sujet europe/souveraineté qui concerne les compétences de l'UE."
       }
     ],
-    "cout_reference_usd": 0.126,
+    "cout_reference_usd": 0.1307,
     "appels": 2
   },
   {

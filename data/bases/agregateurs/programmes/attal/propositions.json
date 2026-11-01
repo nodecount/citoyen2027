@@ -172,14 +172,6 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Faire une année blanche sur l’ensemble des prestations sociales pour le budget 2028 sans toucher aux petites retraites"
       }
-    ],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Faire une année blanche sur l’ensemble des prestations sociales pour le budget 2028 sans toucher aux petites retraites"
-      }
     ]
   },
   {
@@ -203,8 +195,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "attal-finances-publiques-008",
@@ -281,7 +272,7 @@
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Atteindre 0 % du PIB du déficit public à horizon 2037, avec un premier point d’étape à 3 % avant 2032 pour un montant d’économies de 120 à 150 milliards à réaliser sur cette période"
+        "extrait": "Atteindre 0 % du PIB du déficit public à horizon 2037, avec un premier point d’étape à 3 % avant 2032 pour un montant d’économies de 120 à 150 milliards"
       }
     ]
   },
@@ -530,15 +521,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Immigration",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "immigration",
-        "position": "restriction",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place un permis à points pour l’immigration sur le modèle canadien"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "attal-interieur-justice-005",
@@ -607,7 +590,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-interieur-justice-007",
@@ -807,14 +791,6 @@
         ],
         "dimension": "revenu_disponible",
         "sens": "baisse",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "faire une année blanche sur l’ensemble des prestations sociales, en épargnant toutefois les petites retraites"
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "faire une année blanche sur l’ensemble des prestations sociales, en épargnant toutefois les petites retraites"
       }
@@ -1122,6 +1098,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Faire baisser les charges salariales pour augmenter les salaires."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "moderer_salaires",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire baisser les charges salariales pour augmenter les salaires."
+      }
     ]
   },
   {
@@ -1177,14 +1161,7 @@
     "sous_theme": "Emploi & travail",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "temps_travail",
-        "position": "reduire_temps_travail",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Permettre la semaine de quatre jours et une meilleure adaptation des horaires entre l'employeur et le salarié."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "attal-retraites-travail-008",
@@ -1278,7 +1255,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Système de retraite",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "attal-envi-001",
@@ -1332,15 +1310,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Energie",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "renouvelables",
-        "position": "plus_renouvelables",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Sortir de la dépendance aux énergies fossiles, afin de renforcer l’indépendance énergétique nationale."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "attal-envi-003",
@@ -1550,6 +1520,12 @@
         "position": "plus_ia",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Faire de l'Europe un acteur de premier plan dans les technologies qui compteront demain : l'intelligence artificielle, le quantique, les énergies propres."
+      },
+      {
+        "sujet": "europe",
+        "position": "plus_europe",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire de l'Europe un acteur de premier plan dans les technologies qui compteront demain"
       }
     ]
   },
@@ -1605,8 +1581,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "attal-gouvernance-republique-002",
@@ -1892,15 +1867,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fonction publique",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "moins_fonctionnaires",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place un plan de départs volontaires de fonctionnaires, avec un objectif de 100 000 postes supprimés."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "attal-reformes-etat-002",
@@ -2262,6 +2229,14 @@
         ],
         "dimension": "acces_aux_services",
         "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire le nombre d’élèves par classe notamment en primaire où avec moins de 20 élèves par classe."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Réduire le nombre d’élèves par classe notamment en primaire où avec moins de 20 élèves par classe."
       }

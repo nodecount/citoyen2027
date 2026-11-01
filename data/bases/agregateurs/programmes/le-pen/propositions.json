@@ -21,7 +21,14 @@
     "sous_theme": "Economies & hausses de dépenses",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Baisser les subventions de l'Etat et des collectivités aux associations ne relevant pas de l'intérêt général."
+      }
+    ]
   },
   {
     "id": "le-pen-finances-publiques-002",
@@ -50,7 +57,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser la dotation à l'audiovisuel public"
+        "extrait": "Baisser la dotation à l'audiovisuel public, puis privatisation"
       }
     ]
   },
@@ -112,7 +119,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rationaliser les dépenses de l'Etat (baisser son train de vie)"
+        "extrait": "Rationaliser les dépenses de l'Etat (baisser son train de vie)."
       }
     ]
   },
@@ -196,7 +203,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire de 78,8 Md€ les dépenses publiques"
+        "extrait": "Réduire de 78,8 Md€ les dépenses publiques."
       }
     ]
   },
@@ -221,7 +228,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-finances-publiques-008",
@@ -250,7 +258,7 @@
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer une règle d'or budgétaire constitutionnelle"
+        "extrait": "Instaurer une règle d'or budgétaire constitutionnelle. Le déficit devra obligatoirement être inférieur au seuil stabilisant de la dette"
       }
     ]
   },
@@ -281,7 +289,7 @@
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Ramener le déficit sous les 3 % d'ici 2032"
+        "extrait": "Ramener le déficit sous les 3 % d'ici 2032."
       }
     ]
   },
@@ -312,7 +320,7 @@
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Viser l'équilibre primaire dès 2028"
+        "extrait": "Viser l'équilibre primaire dès 2028."
       }
     ]
   },
@@ -343,7 +351,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer 120 taxes inutiles"
+        "extrait": "Supprimer 120 taxes inutiles."
       }
     ]
   },
@@ -382,7 +390,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer la TVA sur 100 produits de première nécessité"
+        "extrait": "Supprimer la TVA sur 100 produits de première nécessité."
       }
     ]
   },
@@ -410,16 +418,10 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer 3 impôts de production : la CFE, la C3S et la CVAE"
-      },
-      {
         "sujet": "entreprises",
         "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer 3 impôts de production : la CFE, la C3S et la CVAE"
+        "extrait": "Supprimer 3 impôts de production : la CFE, la C3S et la CVAE."
       }
     ]
   },
@@ -489,7 +491,7 @@
         "sujet": "entreprises",
         "position": "encadrer_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Corriger l'Impôt sur les Sociétés (IS) pour les grands groupes sur la base du chiffre d'affaires réalisé en France"
+        "extrait": "Corriger l'Impôt sur les Sociétés (IS) pour les grands groupes sur la base du chiffre d'affaires réalisé en France."
       }
     ]
   },
@@ -536,7 +538,7 @@
         "sujet": "fiscalite",
         "position": "baisse_impots",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Exonérer de taxe les successions familiales jusqu'à 300 000 € sur l'immobilier et aligner les donations (100 000 € tous les 10 ans)"
+        "extrait": "Exonérer de taxe les successions familiales jusqu'à 300 000 € sur l'immobilier et aligner les donations (100 000 € tous les 10 ans)."
       }
     ]
   },
@@ -567,7 +569,7 @@
         "sujet": "entreprises",
         "position": "encadrer_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Instaurer une taxe sur les rachats d'actions et une taxe sur les superdividendes"
+        "extrait": "Instaurer une taxe sur les rachats d'actions et une taxe sur les superdividendes."
       }
     ]
   },
@@ -593,14 +595,7 @@
     "sous_theme": "Secteur bancaire & finance",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "entreprises",
-        "position": "soutenir_entreprises",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un fonds souverain destiné à soutenir les PME"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-finances-publiques-019",
@@ -675,7 +670,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réserver les prestations familiales aux foyers ayant au moins un parent français"
+        "extrait": "Réserver les prestations familiales aux foyers ayant au moins un parent français."
       }
     ]
   },
@@ -721,7 +716,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Remplacer l'Aide Médicale d'État (AME) par l'Aide Médicale d'Urgence (AMU)"
+        "extrait": "Remplacer l'Aide Médicale d'État (AME) par l'Aide Médicale d'Urgence (AMU)."
       }
     ]
   },
@@ -767,7 +762,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réformer la politique de l'asile et supprimer le visa pour soins"
+        "extrait": "Réformer la politique de l'asile et supprimer le visa pour soins."
       }
     ]
   },
@@ -797,7 +792,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Organiser le départ des étrangers sans emploi"
+        "extrait": "Organiser le départ des étrangers sans emploi (selon la durée de résidence) ne pouvant subvenir à leurs besoins."
       }
     ]
   },
@@ -843,7 +838,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer une taxe de 1 000 €/an à l'embauche d'un travailleur extra-européen"
+        "extrait": "Créer une taxe de 1 000 €/an à l'embauche d'un travailleur extra-européen."
       }
     ]
   },
@@ -883,8 +878,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Taxer à 14 % les transferts d'argent vers les pays tiers."
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "le-pen-interieur-justice-007",
@@ -1142,12 +1136,6 @@
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Créer 7000 postes de policiers et gendarmes."
-      },
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer 7000 postes de policiers et gendarmes."
       }
     ]
   },
@@ -1397,14 +1385,7 @@
         "extrait": "Revaloriser les congés des proches aidants."
       }
     ],
-    "positions": [
-      {
-        "sujet": "aides_sociales",
-        "position": "proteger_droits_sociaux",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Revaloriser les congés des proches aidants."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-005",
@@ -1511,8 +1492,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "le-pen-social-solidarite-008",
@@ -1553,16 +1533,10 @@
     ],
     "positions": [
       {
-        "sujet": "sante_organisation",
-        "position": "hopital_public",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants et revaloriser leurs salaires."
-      },
-      {
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Au moins 10.000 places supplémentaires seront ouvertes dans les Instituts de Formation en Soins infirmiers (IFSI) et les centres de formation d’aides-soignants."
+        "extrait": "Recrutements massifs de personnels soignants pour combler les postes vacants et revaloriser leurs salaires."
       }
     ]
   },
@@ -1627,14 +1601,7 @@
     "sous_theme": "Santé",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "sante_organisation",
-        "position": "liberte_sante",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Organiser un partenariat entre les services d’urgence et des cabinets médicaux libéraux vers lesquels pourraient être réorientés les patients relevant de la médecine de ville et non des urgences."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-011",
@@ -1794,8 +1761,8 @@
     ],
     "positions": [
       {
-        "sujet": "fiscalite",
-        "position": "redistribution",
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Rembourser à 100 % les soins dentaires."
       }
@@ -1925,7 +1892,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-020",
@@ -1963,7 +1931,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Remplacer les subventions à la rénovation thermique des logements de MaPrimeRénov' par un dispositif de prêts à taux zéro 100 % Rénov."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-021",
@@ -1985,15 +1954,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
-    "titre_litteral": true,
-    "positions": [
-      {
-        "sujet": "logement",
-        "position": "liberer_offre_logement",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Durcir les sanctions contre les locataires qui ne paient pas leur loyer et accélérer les procédures d’expulsion en cas d’impayés."
-      }
-    ]
+    "titre_litteral": true
   },
   {
     "id": "le-pen-social-solidarite-022",
@@ -2160,7 +2121,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "freiner_transition",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer la norme \" ZAN\", zéro artificialisation nette."
+      }
+    ]
   },
   {
     "id": "le-pen-social-solidarite-026",
@@ -2186,8 +2155,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "logement",
-        "position": "liberer_offre_logement",
+        "sujet": "renouvelables",
+        "position": "freiner_transition",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer un très grand nombre de normes liées à la performance énergétique et environnementale inutiles et contraignantes."
       }
@@ -2291,7 +2260,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Plafonner les aides au logement (APL) à 90 % du loyer."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "le-pen-social-solidarite-030",
@@ -2503,7 +2473,7 @@
     "positions": [
       {
         "sujet": "travail",
-        "position": "age_actuel",
+        "position": "travailler_moins",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Permettre un départ à 60 ans pour ceux qui ont commencé à travailler avant 20 ans."
       }
@@ -2655,7 +2625,14 @@
     "sous_theme": "Energie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Retourner à un prix national de l’électricité."
+      }
+    ]
   },
   {
     "id": "le-pen-envi-003",
@@ -2729,7 +2706,7 @@
         "sujet": "renouvelables",
         "position": "freiner_transition",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "démantèlement progressif des parcs éoliens existants lorsqu’ils arrivent en fin de vie"
+        "extrait": "le démantèlement progressif des parcs éoliens existants lorsqu’ils arrivent en fin de vie"
       }
     ]
   },
@@ -2842,7 +2819,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Transformer et augmenter le Fonds Vert pour la lutte contre les risques climatiques"
+      }
+    ]
   },
   {
     "id": "le-pen-envi-009",
@@ -2960,7 +2944,14 @@
     "sous_theme": "Agriculture",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "renforcer_normes_agri",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lutter contre l’artificialisation des terres agricoles"
+      }
+    ]
   },
   {
     "id": "le-pen-envi-013",
@@ -3038,8 +3029,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Agriculture",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "le-pen-envi-016",
@@ -3202,14 +3192,7 @@
     "sous_theme": "Agriculture",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Atteindre 80% de produits français dans les cantines"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-envi-021",
@@ -3248,14 +3231,7 @@
         "extrait": "Abaisser la TVA sur les frais vétérinaires à 0 % pour les refuges et 10 % pour les particuliers."
       }
     ],
-    "positions": [
-      {
-        "sujet": "fiscalite",
-        "position": "baisse_impots",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abaisser la TVA sur les frais vétérinaires à 0 % pour les refuges et 10 % pour les particuliers"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "le-pen-envi-022",
@@ -3480,15 +3456,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place un contrôle strict avec facultés d'interdiction pour des intérêts étrangers ou non européens de racheter des entreprises françaises numériques stratégiques"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "le-pen-gouvernance-republique-003",
@@ -3512,7 +3480,14 @@
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place au niveau de l'UE ou de l'OCDE de taxes extraordinaires pour les entreprises étrangères du numérique."
+      }
+    ]
   },
   {
     "id": "le-pen-gouvernance-republique-004",
@@ -3637,15 +3612,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "europe",
-        "position": "souverainete",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rendre obligatoire l'hébergement des données des français, des entreprises françaises et des services publics en France et dans l'Union Européenne par des opérateurs français ou européens"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "le-pen-reformes-etat-001",
@@ -3668,8 +3635,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "le-pen-reformes-etat-002",
@@ -3745,7 +3711,7 @@
         "sujet": "fonction_publique",
         "position": "moins_fonctionnaires",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Ajuster les effectifs à la suite de la rationalisation des compétences des collectivités (ne pas remplacer certains départs à la retraite)."
+        "extrait": "ne pas remplacer certains départs à la retraite"
       }
     ]
   },
@@ -3997,10 +3963,10 @@
         "extrait": "Retour aux principes de la loi Ciotti de 2010 : valorisation de l'assiduité, instauration de peines plancher et généralisation de la vidéoprotection."
       },
       {
-        "sujet": "prison",
-        "position": "plus_de_prison",
+        "sujet": "surveillance",
+        "position": "plus_surveillance",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "instauration de peines plancher"
+        "extrait": "généralisation de la vidéoprotection"
       }
     ]
   },
@@ -4095,8 +4061,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "le-pen-education-jeunesse-011",
@@ -4134,8 +4099,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Créer une prime d'activité étudiante pour ceux réussissant leurs examens."
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "le-pen-education-jeunesse-012",

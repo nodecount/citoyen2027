@@ -1,123 +1,123 @@
 [
   {
     "groupe": 0,
-    "empreinte": "e2fad9732e057191",
-    "date": "2026-10-17",
+    "empreinte": "0acd3c3cc5f0341c",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 14,
-    "sans_position": 9,
+    "etiquetees": 15,
+    "sans_position": 8,
     "rejetees": [
       {
-        "id": "retailleau-interieur-justice-001",
-        "raison": "relecture : Le texte dit « permettre » une immigration de travail, ce qui relève plutôt de l'ouverture ; le « plus grand contrôle » ne suffit pas à fonder une étiquette de restriction sans interprétation."
+        "id": "retailleau-finances-publiques-007",
+        "raison": "relecture : Le relèvement du seuil d'exonération des donations profite largement à l'ensemble des contribuables transmettant un patrimoine, pas spécifiquement aux très hauts patrimoines visés par le sujet ultra_riches."
       },
       {
         "id": "retailleau-interieur-justice-008",
-        "raison": "relecture : Le bouclage physique d'un quartier (contrôle d'entrées/sorties, véhicules blindés) relève de la sécurité/répression et non de la surveillance des données ou de la vidéosurveillance définie pour ce sujet."
+        "raison": "relecture : Boucler des quartiers et couper les télécommunications relève du maintien de l'ordre/sécurité et non de la surveillance (vidéosurveillance, reconnaissance faciale, accès aux données) telle que définie pour le sujet surveillance."
       }
     ],
-    "cout_reference_usd": 0.1268,
+    "cout_reference_usd": 0.1071,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "e19a23610db2c60a",
-    "date": "2026-10-17",
+    "empreinte": "157b32852feface6",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 16,
-    "sans_position": 7,
+    "etiquetees": 17,
+    "sans_position": 6,
     "rejetees": [
       {
-        "id": "retailleau-social-solidarite-004",
-        "raison": "relecture : L'extrait ne décrit qu'une réduction globale des prestations (25Md€), pas une mise sous condition ou un durcissement de l'indemnisation comme le définit 'conditionner_aides'."
+        "id": "retailleau-social-solidarite-010",
+        "raison": "relecture : Le relèvement du plafond des dons familiaux exonérés est une mesure générale pour toutes les familles, pas un allègement ciblé sur les très hauts patrimoines ou héritages comme l'exige la définition d'ultra_riches."
       },
       {
         "id": "retailleau-social-solidarite-022",
-        "raison": "relecture : Le ZAN concerne l'urbanisme/artificialisation des sols pour le logement, pas les normes agricoles ou environnementales visées par le sujet 'agriculture_normes'."
+        "raison": "relecture : Le ZAN (zéro artificialisation nette) est une norme d'urbanisme/aménagement du territoire liée au logement, pas une norme agricole ; le sujet agriculture_normes est mal choisi."
       }
     ],
-    "cout_reference_usd": 0.0757,
+    "cout_reference_usd": 0.1352,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "9732dc05001e12eb",
-    "date": "2026-10-17",
+    "empreinte": "be26f060bb234d43",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 7,
-    "sans_position": 14,
+    "etiquetees": 8,
+    "sans_position": 13,
     "rejetees": [
       {
-        "id": "retailleau-social-solidarite-026",
-        "raison": "relecture : Le texte porte sur un ordre de priorité d'accès au logement social existant, pas sur l'encadrement des loyers ni la construction de logement social comme le définit encadrer_logement."
-      },
-      {
-        "id": "retailleau-social-solidarite-029",
-        "raison": "relecture : Supprimer une exonération fiscale revient à augmenter l'imposition des organismes HLM, ce qui va dans le sens inverse de baisse_impots."
-      },
-      {
-        "id": "retailleau-social-solidarite-031",
-        "raison": "relecture : Exclure des APL selon le revenu des parents n'est pas un dispositif de contrepartie d'activité ou de durcissement de l'assurance chômage visé par conditionner_aides."
-      },
-      {
         "id": "retailleau-retraites-travail-002",
-        "raison": "relecture : Le texte décrit une fusion de dispositifs pour rendre le travail visiblement rémunérateur, un effet incitatif, et ne prévoit pas explicitement une contrepartie d'activité obligatoire comme l'exige conditionner_aides."
+        "raison": "relecture : Le texte décrit une fusion de dispositifs pour rendre le travail incitatif, mais ne montre pas d'imposition d'une contrepartie d'activité ni de durcissement de l'indemnisation, condition requise pour conditionner_aides."
+      },
+      {
+        "id": "retailleau-retraites-travail-003",
+        "raison": "relecture : L'extrait n'est qu'un constat statistique sur l'emploi des seniors, il ne décrit aucune mesure allongeant la durée ou l'âge de travail."
+      },
+      {
+        "id": "retailleau-retraites-travail-004",
+        "raison": "relecture : L'étiquette repose sur l'effet attendu ('accélérer le retour à l'emploi') plutôt que sur le contenu concret de la mesure, qui n'est pas décrit dans l'extrait."
+      },
+      {
+        "id": "retailleau-retraites-travail-017",
+        "raison": "relecture : L'extrait, très vague, ne précise pas qu'il s'agit de très hauts patrimoines plutôt que de transmissions d'entreprises en général, ce qui ne fonde pas clairement l'étiquette ultra_riches."
       }
     ],
-    "cout_reference_usd": 0.0624,
+    "cout_reference_usd": 0.0772,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "e26fa0b3a5a7d9fd",
-    "date": "2026-10-17",
+    "empreinte": "1c7db2c35755fd70",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 14,
-    "sans_position": 9,
+    "etiquetees": 13,
+    "sans_position": 10,
     "rejetees": [
       {
-        "id": "retailleau-envi-002",
-        "raison": "relecture : L'hydroélectricité relève du sujet renouvelables, pas du nucléaire : l'étiquette nucleaire/garder_nucleaire est hors sujet pour cet extrait."
+        "id": "retailleau-envi-003",
+        "raison": "relecture : Le texte parle de faire baisser la facture grâce au nucléaire existant, mais ne défend pas explicitement le maintien ou le développement du parc nucléaire : c'est une inférence."
       },
       {
-        "id": "retailleau-envi-023",
-        "raison": "relecture : L'extrait parle de commande publique et de compétitivité, pas de taxation ou limitation des importations : la position protectionnisme n'est pas directement fondée par le texte, qui évoque plutôt un effet de second ordre (compétitivité)."
+        "id": "retailleau-envi-006",
+        "raison": "relecture : L'extrait sur la protection du réseau électrique contre le piratage ne porte pas sur le rapport à l'UE ni sur une reprise de compétences, et la mesure évoque même une coopération avec les partenaires européens."
       }
     ],
-    "cout_reference_usd": 0.0633,
+    "cout_reference_usd": 0.0607,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "fd6960303a0f5175",
-    "date": "2026-10-17",
+    "empreinte": "dea9720bae4973c5",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 19,
-    "sans_position": 6,
-    "rejetees": [],
-    "cout_reference_usd": 0.1037,
+    "sans_position": 5,
+    "rejetees": [
+      {
+        "id": "retailleau-gouvernance-republique-004",
+        "raison": "relecture : L'extrait porte sur la souveraineté des données face aux acteurs non européens (hébergement en Europe), pas sur un rapport de force entre souveraineté nationale et intégration européenne au sens du sujet 'europe'."
+      }
+    ],
+    "cout_reference_usd": 0.1539,
     "appels": 2
   },
   {
     "groupe": 5,
-    "empreinte": "b929fe6dc806c12d",
-    "date": "2026-10-17",
+    "empreinte": "fe4b37f949b5b7be",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "etiquetees": 6,
+    "etiquetees": 7,
     "sans_position": 6,
-    "rejetees": [
-      {
-        "id": "retailleau-education-jeunesse-010",
-        "raison": "relecture : L'extrait 'Restaurer le mérite et l'exigence' concerne l'examen d'entrée en 6ème et le bac, pas des sanctions disciplinaires contre harcèlement/violences ; ce n'est pas le sujet ecole_discipline mais plutôt ecole_organisation."
-      }
-    ],
-    "cout_reference_usd": 0.0349,
+    "rejetees": [],
+    "cout_reference_usd": 0.032,
     "appels": 2
   }
 ]

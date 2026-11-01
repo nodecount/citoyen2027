@@ -1,20 +1,20 @@
 [
   {
     "groupe": 0,
-    "empreinte": "9fe1826eb9164601",
-    "date": "2026-10-17",
+    "empreinte": "d865d3e5411a48ff",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 7,
-    "sans_position": 11,
+    "etiquetees": 10,
+    "sans_position": 8,
     "rejetees": [
       {
         "id": "glucksmann-finances-publiques-002",
-        "raison": "relecture : Rediriger des exonérations ne montre pas clairement un encadrement ou une hausse de contribution des entreprises, juste une réaffectation de fonds."
+        "raison": "relecture : « Rediriger » des exonérations ne dit pas qu'on va davantage encadrer ou taxer les entreprises, c'est une interprétation de l'intention."
       },
       {
-        "id": "glucksmann-finances-publiques-011",
-        "raison": "relecture : Le mécanisme de 'récupération' sur la transmission n'est pas précisé comme une taxation des ultra-riches, le texte reste vague sur l'outil fiscal utilisé."
+        "id": "glucksmann-finances-publiques-005",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Supprimer les exonérations de TVA et de taxe sur le kérosène… »"
       },
       {
         "id": "glucksmann-interieur-justice-001",
@@ -22,7 +22,7 @@
       },
       {
         "id": "glucksmann-interieur-justice-002",
-        "raison": "relecture : Il faut connaître le contenu de la loi immigration de 2024 pour en déduire que son abrogation va dans le sens de l'ouverture, ce que le texte seul ne montre pas."
+        "raison": "relecture : Le texte se limite à « abroger la loi immigration de 2024 » sans en décrire le contenu ; déduire qu'il s'agit d'une ouverture suppose une connaissance externe du contenu de cette loi."
       },
       {
         "id": "glucksmann-interieur-justice-003",
@@ -37,17 +37,17 @@
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Lancer un programme d’intervention rapide pour prévenir la d… »"
       }
     ],
-    "cout_reference_usd": 0.116,
+    "cout_reference_usd": 0.1199,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "5c74648bc5c5bcfe",
-    "date": "2026-10-17",
+    "empreinte": "fb9d148d89fb49b5",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 3,
-    "sans_position": 20,
+    "etiquetees": 4,
+    "sans_position": 19,
     "rejetees": [
       {
         "id": "glucksmann-interieur-justice-017",
@@ -58,17 +58,17 @@
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « contrer la financiarisation du système de santé, en finir av… »"
       }
     ],
-    "cout_reference_usd": 0.0444,
+    "cout_reference_usd": 0.0418,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "5e4e8e67b21c8a80",
-    "date": "2026-10-17",
+    "empreinte": "35805d386538db6b",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 6,
-    "sans_position": 9,
+    "etiquetees": 5,
+    "sans_position": 10,
     "rejetees": [
       {
         "id": "glucksmann-social-solidarite-017",
@@ -76,7 +76,7 @@
       },
       {
         "id": "glucksmann-social-solidarite-020",
-        "raison": "relecture : La loi Kasbarian concerne les expulsions/squats, pas l'encadrement des loyers ou le logement social ; l'étiquette 'encadrer_logement' n'est pas fondée par ce texte."
+        "raison": "relecture : Le texte ne précise pas le contenu de la loi Kasbarian ; établir que son abrogation va dans le sens d'un encadrement des loyers/logement social nécessite une connaissance extérieure de cette loi."
       },
       {
         "id": "glucksmann-social-solidarite-021",
@@ -84,7 +84,7 @@
       },
       {
         "id": "glucksmann-social-solidarite-022",
-        "raison": "relecture : Développer le rail n'affirme rien sur une restriction de la voiture (ZFE, fin du thermique) ; c'est un effet de second ordre supposé, non énoncé dans le texte."
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Lancer un Plan Rail national en lien avec les régions »"
       },
       {
         "id": "glucksmann-social-solidarite-023",
@@ -104,61 +104,53 @@
       },
       {
         "id": "glucksmann-social-solidarite-027",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « faire un moratoire sur les grands projets autoroutiers et ro… »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Repenser le système autoroutier, faire un moratoire sur les … »"
       },
       {
-        "id": "glucksmann-retraites-travail-007",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Généraliser le dispositif Territoires Zéro Chômeur de longue… »"
+        "id": "glucksmann-retraites-travail-011",
+        "raison": "relecture : Le texte ne dit pas ce que contenait la réforme Macron de 2023 (âge, cotisation) ; déduire qu'abroger revient à conserver l'âge actuel suppose une connaissance extérieure du contenu de cette réforme."
       }
     ],
-    "cout_reference_usd": 0.0534,
+    "cout_reference_usd": 0.0722,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "4709e6ac6a73aadd",
-    "date": "2026-10-17",
+    "empreinte": "01a7a8c576dc7586",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 6,
-    "sans_position": 14,
+    "etiquetees": 7,
+    "sans_position": 16,
     "rejetees": [
-      {
-        "id": "glucksmann-retraites-travail-017",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Renforcer nos outils de défense commerciale pour activer des… »"
-      },
       {
         "id": "glucksmann-envi-001",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Lancer un grand plan d’investissement pluriannuel dans toute… »"
       },
       {
-        "id": "glucksmann-envi-010",
-        "raison": "relecture : Le leasing social pour faciliter l'accès à une voiture électrique favorise l'usage de la voiture, ce n'est pas une mesure qui restreint la voiture ou développe les transports collectifs."
-      },
-      {
-        "id": "glucksmann-envi-016",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Faire une grande loi Climat engageant tous les ministères, p… »"
-      },
-      {
         "id": "glucksmann-envi-018",
-        "raison": "relecture : L'extrait parle de soutenir l'emploi et le revenu agricole et l'agriculture familiale, sans mentionner de normes environnementales renforcées (pesticides, bio, etc.)."
+        "raison": "relecture : Le texte évoque vaguement 'utilité écologique' et le revenu agricole sans préciser de normes environnementales renforcées (pesticides, bio), ce qui ne fonde pas clairement la position renforcer_normes_agri."
       }
     ],
-    "cout_reference_usd": 0.0515,
+    "cout_reference_usd": 0.0533,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "7f6836731560d8a3",
-    "date": "2026-10-17",
+    "empreinte": "4214873bcad692d3",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 8,
-    "sans_position": 14,
+    "sans_position": 13,
     "rejetees": [
       {
         "id": "glucksmann-envi-033",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Éliminer les produits chimiques dangereux en interdisant les… »"
+      },
+      {
+        "id": "glucksmann-europe-international-002",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Proposer un nouveau contrat de souveraineté qui clarifie la … »"
       },
       {
         "id": "glucksmann-europe-international-003",
@@ -169,17 +161,17 @@
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Instaurer la proportionnelle, de préférence par circonscript… »"
       }
     ],
-    "cout_reference_usd": 0.0472,
+    "cout_reference_usd": 0.0544,
     "appels": 2
   },
   {
     "groupe": 5,
-    "empreinte": "3284cda517d7ac44",
-    "date": "2026-10-17",
+    "empreinte": "61bdad810db8dd9a",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 8,
-    "sans_position": 12,
+    "etiquetees": 9,
+    "sans_position": 10,
     "rejetees": [
       {
         "id": "glucksmann-gouvernance-republique-005",
@@ -190,57 +182,69 @@
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « droit de vote à 16 ans et pour les étrangers extra-communaut… »"
       },
       {
+        "id": "glucksmann-gouvernance-republique-007",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « renforçant le pouvoir d’imposition des collectivités »"
+      },
+      {
         "id": "glucksmann-gouvernance-republique-013",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Abolir progressivement les différents régimes dérogatoires à… »"
       },
       {
         "id": "glucksmann-gouvernance-republique-020",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « pilotera un plan national d’investissement dans les infrastr… »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Créer une grande Agence industrielle du numérique et de l’IA… »"
       },
       {
         "id": "glucksmann-gouvernance-republique-023",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « réguler les contenus numériques accessibles aux mineurs et q… »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Créer une Autorité indépendante de protection des mineurs en… »"
       }
     ],
-    "cout_reference_usd": 0.0482,
+    "cout_reference_usd": 0.0481,
     "appels": 2
   },
   {
     "groupe": 6,
-    "empreinte": "d30cadb1764f8c6d",
-    "date": "2026-10-17",
+    "empreinte": "1e0f3d10426796c4",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 5,
-    "sans_position": 18,
+    "sans_position": 16,
     "rejetees": [
+      {
+        "id": "glucksmann-education-jeunesse-008",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Mettre fin aux inégalités géographiques dans l’accès aux étu… »"
+      },
       {
         "id": "glucksmann-education-jeunesse-011",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Revaloriser le salaire de tous les enseignants de manière co… »"
       },
       {
-        "id": "glucksmann-education-jeunesse-012",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Intégrer les établissements privés sous contrat à la carte s… »"
+        "id": "glucksmann-education-jeunesse-018",
+        "raison": "relecture : La mesure vise à compenser les inégalités géographiques d'accès, pas à supprimer une sélection; elle ne fonde pas l'étiquette acces_libre_superieur."
+      },
+      {
+        "id": "glucksmann-defense-003",
+        "raison": "relecture : Le texte porte sur la lutte contre la cybercriminalité et la défense cyber, pas sur une extension de la surveillance des citoyens au sens de la définition."
       }
     ],
-    "cout_reference_usd": 0.0447,
+    "cout_reference_usd": 0.0441,
     "appels": 2
   },
   {
     "groupe": 7,
-    "empreinte": "7351f11fc9643ec9",
-    "date": "2026-10-17",
+    "empreinte": "05e4e1b29923595a",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 4,
-    "etiquetees": 1,
-    "sans_position": 2,
+    "etiquetees": 0,
+    "sans_position": 3,
     "rejetees": [
       {
-        "id": "glucksmann-defense-009",
-        "raison": "relecture : Le texte parle de construire une autonomie stratégique européenne via des fonds européens réservés aux productions européennes, ce qui relève du renforcement de l'intégration européenne (plus_europe) et non d'une reprise de souveraineté nationale face à l'UE (souverainete), sens inversé du sujet."
+        "id": "glucksmann-defense-008",
+        "raison": "relecture : Il s'agit d'aide militaire à l'Ukraine et de saisie d'avoirs russes, pas d'une augmentation du budget de défense national ou d'un réarmement propre, ce qui ne correspond pas à la définition de plus_defense."
       }
     ],
-    "cout_reference_usd": 0.0212,
+    "cout_reference_usd": 0.0188,
     "appels": 2
   }
 ]

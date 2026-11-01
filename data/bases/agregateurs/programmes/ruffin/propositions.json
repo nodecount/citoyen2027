@@ -195,7 +195,14 @@
         "extrait": "Supprimer l'abattement progressif d'impôt sur les plus-values immobilières des terrains et résidences secondaires/locatives"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer l'abattement progressif d'impôt sur les plus-values immobilières des terrains et résidences secondaires/locatives"
+      }
+    ]
   },
   {
     "id": "ruffin-finances-publiques-008",
@@ -621,7 +628,14 @@
         "extrait": "Augmenter la contribution des employeurs au financement du logement des travailleurs essentiels, notamment dans les entreprises recourant massivement aux horaires atypiques."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter la contribution des employeurs au financement du logement des travailleurs essentiels"
+      }
+    ]
   },
   {
     "id": "ruffin-social-solidarite-011",
@@ -645,7 +659,14 @@
     "sous_theme": "Logement",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer la condition des dix salariés et plus pour accéder aux dispositifs du 1 % logement."
+      }
+    ]
   },
   {
     "id": "ruffin-social-solidarite-012",
@@ -707,7 +728,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "encadrer_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Conditionner et plafonner strict le recours aux « compléments de loyer » aux seuls logements rénovés"
+      }
+    ]
   },
   {
     "id": "ruffin-social-solidarite-014",
@@ -851,15 +880,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "logement",
-        "position": "encadrer_logement",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Porter les sanctions financières contre les logements illégaux ou surloués à au moins deux fois le montant des gains illicites perçus."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "ruffin-social-solidarite-018",
@@ -905,14 +926,7 @@
     "sous_theme": "Logement",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "logement",
-        "position": "encadrer_logement",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer 8 000 places d'hébergement d'urgence supplémentaires par an dans les zones tendues"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "ruffin-social-solidarite-020",
@@ -951,14 +965,7 @@
         "extrait": "Créer 200 000 places en résidences pour étudiants et jeunes actifs sur cinq ans via la mobilisation du foncier public et la construction hors-site."
       }
     ],
-    "positions": [
-      {
-        "sujet": "logement",
-        "position": "encadrer_logement",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer 200 000 places en résidences pour étudiants et jeunes actifs sur cinq ans"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "ruffin-social-solidarite-021",
@@ -982,14 +989,7 @@
     "sous_theme": "Logement",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "logement",
-        "position": "encadrer_logement",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Déployer un plan de création de 25 000 nouvelles places par an en résidences-autonomie et habitats inclusifs"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "ruffin-social-solidarite-022",
@@ -1033,7 +1033,7 @@
         "sujet": "logement",
         "position": "encadrer_logement",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Produire 200 000 logements sociaux et très sociaux à loyers modérés par an en rétablissant les crédits d'État accordés aux bailleurs sociaux."
+        "extrait": "Produire 200 000 logements sociaux et très sociaux à loyers modérés par an"
       }
     ]
   },
@@ -1095,7 +1095,7 @@
         "sujet": "logement",
         "position": "encadrer_logement",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Financer la réhabilitation de 60 000 à 80 000 logements vacants dégradés par an et accélérer les procédures d'expropriation ou de rachat par les collectivités"
+        "extrait": "accélérer les procédures d'expropriation ou de rachat par les collectivités des logements laissés à l'abandon depuis plus de deux ans"
       }
     ]
   },
@@ -1180,7 +1180,7 @@
         "sujet": "voiture",
         "position": "restreindre_voiture",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Développer les lignes de train du quotidien, le fret ferroviaire (tripler sa part), les trains de nuit et les liaisons européennes (pour réduire le trafic aérien de moitié)."
+        "extrait": "Développer les lignes de train du quotidien, le fret ferroviaire (tripler sa part), les trains de nuit et les liaisons européennes (pour réduire le trafic aérien de moitié)"
       }
     ]
   },
@@ -1600,8 +1600,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Réduire l’amplitude horaire des journées de travail et mieux rémunérer les heures invisibles."
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "ruffin-retraites-travail-010",
@@ -1805,7 +1804,14 @@
         "extrait": "Instaurer un principe de « broyeur-payeur » pour faire supporter aux employeurs le coût social des conditions de travail dégradées, notamment les conséquences sur la santé des salariés et les dépenses de Sécurité sociale."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un principe de « broyeur-payeur » pour faire supporter aux employeurs le coût social des conditions de travail dégradées"
+      }
+    ]
   },
   {
     "id": "ruffin-retraites-travail-016",
@@ -1906,6 +1912,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Garantir un droit à la retraite anticipée pour pénibilité en accordant un trimestre supplémentaire de retraite pour quatre trimestres cotisés dans un métier exposé."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "travailler_moins",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir un droit à la retraite anticipée pour pénibilité en accordant un trimestre supplémentaire de retraite pour quatre trimestres cotisés dans un métier exposé."
+      }
     ]
   },
   {
@@ -1931,6 +1945,12 @@
     "titre_litteral": true,
     "effets": [],
     "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire toute importation contenant des substances ou pesticides interdits en France."
+      },
       {
         "sujet": "agriculture_normes",
         "position": "renforcer_normes_agri",
@@ -2071,7 +2091,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "ruffin-envi-007",
@@ -2968,7 +2989,6 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   }
 ]

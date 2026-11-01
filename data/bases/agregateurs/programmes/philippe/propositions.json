@@ -27,6 +27,12 @@
         "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "baisser de 50 Md€ les impôts de production par an pendant 5 ans"
+      },
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "supprimer 50Md€ d'aides publiques improductives"
       }
     ]
   },
@@ -51,15 +57,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Economies & hausses de dépenses",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "dette",
-        "position": "reduire_dette",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "obligation constitutionnelle à limiter le déficit public"
-      }
-    ]
+    "effets": []
   },
   {
     "id": "philippe-finances-publiques-003",
@@ -112,7 +110,7 @@
         "sujet": "dette",
         "position": "reduire_dette",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "« règle d’or » budgétaire pour limiter les déficits publics en empêchant l’État de financer les dépenses courantes par la dette"
+        "extrait": "une « règle d’or » budgétaire pour limiter les déficits publics en empêchant l’État de financer les dépenses courantes par la dette"
       }
     ]
   },
@@ -168,7 +166,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ultra_riches",
+        "position": "ne_pas_taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Défendre le pacte Dutreil."
+      }
+    ]
   },
   {
     "id": "philippe-finances-publiques-007",
@@ -206,6 +212,14 @@
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Augmenter les plafonds d’exonération fiscale des donations pendant les trois premières années du quinquennat."
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "ultra_riches",
+        "position": "ne_pas_taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Augmenter les plafonds d'exonération fiscale des donations pendant les trois premières années du quinquennat."
       }
     ]
   },
@@ -285,7 +299,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "S'engager à ne pas créer de nouvel impôt sur le quinquennat."
+      }
+    ]
   },
   {
     "id": "philippe-finances-publiques-011",
@@ -990,7 +1012,13 @@
         "sujet": "surveillance",
         "position": "plus_surveillance",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "comme l'utilisation ciblée de la reconnaissance faciale"
+        "extrait": "des moyens juridiques d'exception, limités dans le temps et dans l'espace, comme l'utilisation ciblée de la reconnaissance faciale"
+      },
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un \"état d'urgence narco\" avec des moyens juridiques d'exception"
       }
     ]
   },
@@ -1110,8 +1138,8 @@
     ],
     "positions": [
       {
-        "sujet": "prison",
-        "position": "alternatives_prison",
+        "sujet": "justice_mineurs",
+        "position": "priorite_educative",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Créer des établissements de réinsertion et de soin pour les mineurs condamnés pour narcotrafic."
       }
@@ -1255,6 +1283,14 @@
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "le recouvrement forcé des amendes, y compris sur les prestations sociales"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer une \"tolérance zéro\" avec les consommateurs, par la mise en place d'opérations “place nette” dans les boîtes de nuit et festivals, le recouvrement forcé des amendes, y compris sur les prestations sociales."
       }
     ]
   },
@@ -1469,14 +1505,6 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "tout en réduisant le coût du travail pour les entreprises"
       }
-    ],
-    "positions": [
-      {
-        "sujet": "temps_travail",
-        "position": "travailler_davantage",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Exonérer de cotisations sociales les salariés qui acceptent de travailler plus longtemps, afin d’augmenter leur rémunération tout en réduisant le coût du travail pour les entreprises."
-      }
     ]
   },
   {
@@ -1563,7 +1591,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Transports",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "philippe-retraites-travail-001",
@@ -1763,13 +1792,13 @@
         "sujet": "nucleaire",
         "position": "garder_nucleaire",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "relançant le nucléaire"
+        "extrait": "Assurer notre souveraineté énergétique en relançant le nucléaire"
       },
       {
         "sujet": "renouvelables",
         "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "développant les renouvelables"
+        "extrait": "en développant les renouvelables et en électrifiant massivement nos usages"
       }
     ]
   },
@@ -1896,7 +1925,7 @@
         "sujet": "renouvelables",
         "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Accélérer la décarbonation du pays"
+        "extrait": "Accélérer la décarbonation du pays et investir massivement dans la capture de carbone pour limiter l'ampleur du réchauffement"
       }
     ]
   },
@@ -2365,15 +2394,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Union Européenne",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre en place un Buy European Tech Act et des achats technologiques groupés entre Etats membres."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-001",
@@ -2444,8 +2465,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "philippe-gouvernance-republique-004",
@@ -2595,14 +2615,7 @@
         "extrait": "une majorité numérique conditionnant l’accès aux réseaux sociaux"
       }
     ],
-    "positions": [
-      {
-        "sujet": "libertes",
-        "position": "cadre_collectif",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "une majorité numérique conditionnant l’accès aux réseaux sociaux"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "philippe-gouvernance-republique-009",
@@ -2656,7 +2669,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ia",
+        "position": "plus_ia",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Simplifier le cadre juridique européen applicable à l'IA, sans renoncer à une régulation éthique et protectrice des enfants."
+      }
+    ]
   },
   {
     "id": "philippe-gouvernance-republique-011",
@@ -2862,7 +2883,14 @@
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "decentralisation",
+        "position": "decentraliser",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Décentraliser la politique d'adaptation."
+      }
+    ]
   },
   {
     "id": "philippe-education-jeunesse-001",
@@ -2886,7 +2914,14 @@
     "sous_theme": "Services de la petite enfance",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "surveillance",
+        "position": "plus_surveillance",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instituer un \"droit de savoir\" pour permettre aux parents de saisir la police pour faire vérifier l'absence d'antécédents d'une personne entrant au contact de leur enfant."
+      }
+    ]
   },
   {
     "id": "philippe-education-jeunesse-002",
@@ -3028,14 +3063,7 @@
         "extrait": "Créer un service public universel du soutien scolaire, combinant assistant IA personnalisé et brigades d'anciens professeurs et d'étudiants volontaires."
       }
     ],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un service public universel du soutien scolaire, combinant assistant IA personnalisé et brigades d'anciens professeurs et d'étudiants volontaires."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "philippe-education-jeunesse-006",
@@ -3058,14 +3086,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
     "titre_litteral": true,
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "reformer_ecole",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Adapter les rythmes scolaires aux besoins des enfants : journées moins longues, plus de sport et de culture, vacances d'été raccourcies pour éviter la déperdition des savoirs."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "philippe-education-jeunesse-007",
@@ -3089,7 +3110,14 @@
     "sous_theme": "Education nationale",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "ecole_continuite",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Concentrer l'enseignement primaire sur les savoirs fondamentaux, lire, écrire, compter."
+      }
+    ]
   },
   {
     "id": "philippe-education-jeunesse-008",
@@ -3229,7 +3257,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer notre flotte navale, notamment en doublant le nombre de navires aux Antilles pour lutter contre le narcotrafic et sécuriser nos Outre-mer."
+      }
+    ]
   },
   {
     "id": "philippe-defense-005",

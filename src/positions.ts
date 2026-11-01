@@ -340,6 +340,17 @@ export const SUJETS_CONVICTION: SujetConviction[] = [
     ],
   },
   {
+    // Décision du 2026-11-01 : la décentralisation (marges locales pour les communes, les préfets et les élus) est un axe distinct
+    // des « Institutions politiques » (Ve ou VIe République) ; plusieurs candidats la portent (Lisnard en tête).
+    id: "decentralisation",
+    libelle: "Décentralisation et pouvoir local",
+    question: "Sur la décentralisation et le pouvoir local, quelle position vous parle le plus ?",
+    positions: [
+      { id: "decentraliser", libelle: "Donner plus de pouvoir aux communes et aux territoires", definition: "transférer des compétences, des moyens ou des marges de décision aux communes, aux départements, aux régions ou aux préfets, ou supprimer des agences nationales au profit des élus locaux" },
+      { id: "etat_central", libelle: "Garder un État central fort et des règles communes", definition: "maintenir ou renforcer les compétences de l'État national, l'uniformité des règles et le contrôle central sur les collectivités" },
+    ],
+  },
+  {
     // Décision du 2026-10-18 : Parcoursup est un sujet d'actualité (mobilisation lycéenne et étudiante d'octobre 2026) et
     // six mesures de la base agregateurs le traitent dans des sens opposés ; « Système éducatif » ne le couvrait pas.
     id: "enseignement_superieur",

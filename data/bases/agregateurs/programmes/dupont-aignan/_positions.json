@@ -1,69 +1,85 @@
 [
   {
     "groupe": 0,
-    "empreinte": "07bd13b1b84269c1",
-    "date": "2026-10-17",
+    "empreinte": "87a98c616d1a1ae7",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 15,
-    "sans_position": 6,
+    "etiquetees": 16,
+    "sans_position": 4,
     "rejetees": [
       {
-        "id": "dupont-aignan-interieur-justice-014",
-        "raison": "relecture : Le brouillage de téléphones et l'interception de drones en milieu carcéral relève de la sécurité des prisons et non de la surveillance générale (vidéosurveillance, reconnaissance faciale, données) visée par la définition du sujet surveillance."
+        "id": "dupont-aignan-interieur-justice-016",
+        "raison": "relecture : Faire payer les détenus leur incarcération est une mesure financière, pas un durcissement des peines ou des moyens répressifs tel que défini par 'repression'."
       },
       {
-        "id": "dupont-aignan-interieur-justice-016",
-        "raison": "relecture : Faire contribuer financièrement les détenus à leur incarcération n'est ni un durcissement des peines ni un renforcement des moyens de police/prison/sanction tel que défini pour 'repression', c'est une mesure budgétaire."
+        "id": "dupont-aignan-interieur-justice-020",
+        "raison": "relecture : La présomption de légitime défense relève de la protection juridique de l'usage de la force, pas de l'armement de la police tel que défini par le sujet police_armement."
       },
       {
         "id": "dupont-aignan-social-solidarite-001",
-        "raison": "relecture : Élargir le PTZ aide les acquéreurs (demande) et ne correspond pas à 'libérer l'offre de logement privée', qui vise l'allégement de contraintes pour les propriétaires/investisseurs locatifs."
+        "raison": "relecture : Élargir le PTZ est une aide à l'achat pour les ménages, ce n'est pas alléger la fiscalité des propriétaires ni supprimer l'encadrement des loyers comme l'exige 'liberer_offre_logement'."
       },
       {
         "id": "dupont-aignan-social-solidarite-002",
-        "raison": "relecture : Créer un prêt aidé pour l'achat d'un premier logement par les classes moyennes ne relève pas de 'libérer l'offre de logement privée' (allégement fiscal/normatif pour propriétaires ou investissement locatif), c'est une aide à la demande."
+        "raison": "relecture : Créer un prêt aidé pour l'accession à la propriété des classes moyennes ne correspond pas à la définition de liberer_offre_logement (allègement fiscal des propriétaires, fin de l'encadrement des loyers, investissement locatif)."
+      },
+      {
+        "id": "dupont-aignan-social-solidarite-003",
+        "raison": "relecture : La mesure concerne les donations immobilières pour tous les ménages (enfants/petits-enfants), pas spécifiquement les très hauts patrimoines visés par le sujet ultra_riches."
       }
     ],
-    "cout_reference_usd": 0.0982,
+    "cout_reference_usd": 0.1294,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "e47260966e5997a2",
-    "date": "2026-10-17",
+    "empreinte": "e73e6fde8f6ec00a",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 12,
-    "sans_position": 12,
+    "etiquetees": 11,
+    "sans_position": 9,
     "rejetees": [
       {
-        "id": "dupont-aignan-gouvernance-republique-010",
-        "raison": "relecture : Le texte parle de préférence nationale dans les marchés de l'IA (protectionnisme), pas d'un encouragement direct au développement de l'IA elle-même."
+        "id": "dupont-aignan-envi-004",
+        "raison": "relecture : Il s'agit d'une exonération de succession pour les jeunes agriculteurs transmettant de petites surfaces, non d'une mesure visant les très hauts patrimoines ou ultra-riches."
+      },
+      {
+        "id": "dupont-aignan-europe-international-001",
+        "raison": "relecture : Sortir du commandement militaire de l'OTAN ne relève pas du sujet Europe (UE) tel que défini, mais de l'Alliance atlantique."
+      },
+      {
+        "id": "dupont-aignan-europe-international-004",
+        "raison": "relecture : Le texte évoque seulement l'affirmation d'une présence française, sans mentionner une hausse du budget militaire, un réarmement ou un service national."
+      },
+      {
+        "id": "dupont-aignan-gouvernance-republique-003",
+        "raison": "relecture : La suspension d'aides pour non-respect de la laïcité n'est pas une conditionnalité d'activité ou de contrôle chômage/RSA telle que définie dans le sujet aides_sociales."
+      },
+      {
+        "id": "dupont-aignan-gouvernance-republique-007",
+        "raison": "relecture : Le déploiement d'un cloud souverain relève de la souveraineté numérique et non directement de l'encouragement du développement ou de l'usage de l'IA."
       }
     ],
-    "cout_reference_usd": 0.0658,
+    "cout_reference_usd": 0.0681,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "b561fb9f51f71d1c",
-    "date": "2026-10-17",
+    "empreinte": "72d2c96ecd92d8ce",
+    "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "etiquetees": 9,
+    "etiquetees": 10,
     "sans_position": 2,
     "rejetees": [
       {
         "id": "dupont-aignan-gouvernance-republique-014",
-        "raison": "relecture : L'extraction de terres rares et matières premières n'est pas une norme agricole ; le sujet agriculture_normes ne couvre pas l'extraction minière/fonds marins."
-      },
-      {
-        "id": "dupont-aignan-defense-008",
-        "raison": "relecture : Renforcer la présence de l'État au capital des groupes de défense relève de la participation/nationalisation, pas de la définition d'encadrer_entreprises (taxation, conditionnement des aides, encadrement des dividendes/licenciements/rémunérations)."
+        "raison": "relecture : L'extraction de terres rares et minières n'est pas une mesure agricole ; le sujet agriculture_normes/assouplir_normes_agri ne correspond pas à l'extrait."
       }
     ],
-    "cout_reference_usd": 0.0704,
+    "cout_reference_usd": 0.0384,
     "appels": 2
   }
 ]
