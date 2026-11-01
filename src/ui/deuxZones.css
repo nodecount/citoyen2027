@@ -477,7 +477,7 @@
   .modale--plein {
     padding-bottom: 4.5rem; /* le bouton flottant ne masque pas les derniers boutons */
   }
-  body:has(.modale-fond:not([hidden]) .modale--travail) :is(.deux-zones, .tableau-defilement) {
+  body:has(.modale-fond:not([hidden]) .modale--travail) :is(.deux-zones, .tableaux-resultat) {
     display: none;
   }
 }

@@ -32,5 +32,5 @@ export function messageRevelation(situation: Comptes, convictions: Comptes): str
   const source = sourceDeLaSuggestion(situation, convictions);
   const cote = source === "situation" ? "côté situation seulement" : source === "convictions" ? "côté convictions seulement" : "situation et convictions";
   const reponses = `${p.repondues} réponse${p.repondues > 1 ? "s" : ""} sur ${p.total} question${p.total > 1 ? "s" : ""}`;
-  return `Cette suggestion a ${p.pourcent} % de précision : ${reponses}, ${cote}. Elle changera si vous répondez à d'autres questions, et sera de nouveau masquée.`;
+  return `Cette suggestion a ${p.pourcent} % de précision : ${reponses}, ${cote}. Elle pourra être revue si vous répondez à d'autres questions.`;
 }

@@ -82,7 +82,7 @@ describe("BlocConvictions", () => {
   it("« sans condamnation » cochée avec une position : dit ce qu'elle fait (écarter), et que les faits ne s'affichent pas", () => {
     const html = renderToStaticMarkup(<BlocConvictions pasAPasInitial={false} convictions={{ positions: { ia: "plus_ia" }, exemplarite: true }} onChange={() => {}} />);
     expect(html).toContain("écartés du résultat");
-    expect(html).toContain("ne sont pas affichés");
+    expect(html).not.toContain("ne sont pas affichés");
     expect(html).not.toContain("ne change rien");
   });
   it("option décochée : aucune mention de l'option", () => {

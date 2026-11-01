@@ -114,7 +114,7 @@ export function BlocConvictions({ convictions, onChange: appliquer, pasAPasIniti
         (nombre === 0 ? (
           <p className="hint">Sans position choisie, cette option ne change rien : elle sert seulement à écarter des candidats du résultat « convictions ». Choisissez au moins une position.</p>
         ) : (
-          <p className="hint">Les candidats ayant une condamnation connue, même avec un recours en cours, sont écartés du résultat « convictions ». Les faits ne sont pas affichés, pour ne pas dévoiler les noms.</p>
+          <p className="hint">Les candidats ayant une condamnation connue, même avec un recours en cours, sont écartés du résultat « convictions ».</p>
         ))}
     </>
   );

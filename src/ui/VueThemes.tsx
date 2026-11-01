@@ -868,7 +868,7 @@ export function VueThemes({ cards, profil, personnalise, questionnaire, question
               <label className="interrupteur">
                 <input type="checkbox" role="switch" checked={masquer} onChange={(e) => setMasquer(e.target.checked)} />
                 <span className="interrupteur-piste" aria-hidden="true" />
-                Masquer les candidats dont les mesures ne changent rien à ma situation
+                Ne montrer que les candidats qui changent ma situation
               </label>
             </li>
           </ol>

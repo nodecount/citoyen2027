@@ -3025,6 +3025,18 @@ button.ideal-egale[aria-selected="true"]:hover {
   flex: none;
   margin: 0;
 }
+/* Téléphone : le badge du parti passe sous le nom, à la largeur de son texte. */
+@media (max-width: 52rem) {
+  .ideal-ligne-identite {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  .ideal-ligne .ideal-ligne-parti {
+    width: fit-content;
+    max-width: 100%;
+  }
+}
 .ideal-ligne-nom {
   font-weight: 700;
   overflow-wrap: anywhere;

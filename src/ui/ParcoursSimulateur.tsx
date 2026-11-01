@@ -64,7 +64,7 @@ export function IntroMesures({ questionnaire, profil, onCompleter }: { questionn
       <p className="intro-ligne-icone">
         <EyeOff size={22} aria-hidden="true" focusable="false" />
         <span>
-          Nous <strong>masquons</strong> le nom des candidats pour éviter les biais : chaque candidat garde la même lettre (A, B…) d'un thème à l'autre.
+          Les candidats sont désignés par une <strong>lettre</strong> (A, B…), la même d'un thème à l'autre, pour éviter les biais.
         </span>
       </p>
     </IntroEtape>

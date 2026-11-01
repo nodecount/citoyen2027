@@ -213,7 +213,7 @@ describe("tableau de bord du simulateur (trois blocs)", () => {
   it("la vue des thèmes montre les cards masquées, le tableau de bord n'en montre pas", () => {
     const themes = page({ vueInitiale: "themes" });
     expect(themes).toContain('class="grille-themes"');
-    expect(themes).toContain("masquons");
+    expect(themes).toContain("désignés par une <strong>lettre</strong>");
     expect(page()).not.toContain('class="grille-themes"');
   });
   it("révélé : les noms réels apparaissent au centre et dans les classements, et le bouton propose de revenir aux questions", () => {
@@ -295,7 +295,7 @@ describe("pages Exploration et Simulateur", () => {
     expect(reperes).toEqual(["ameliorant", "mixte", "degradant", "non_concerne"]);
     const derniere = legende.slice(legende.indexOf('class="echelle-hors"'));
     expect(derniere).toContain('role="switch"');
-    expect(derniere).toContain("Masquer les candidats dont les mesures ne changent rien à ma situation");
+    expect(derniere).toContain("Ne montrer que les candidats qui changent ma situation");
   });
 });
 
