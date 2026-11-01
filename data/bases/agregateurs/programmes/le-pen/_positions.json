@@ -1,111 +1,115 @@
 [
   {
     "groupe": 0,
-    "empreinte": "976f38eb8750e3e0",
+    "empreinte": "440a8a7b7ee6a0ff",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 19,
-    "sans_position": 5,
+    "etiquetees": 18,
+    "sans_position": 6,
     "rejetees": [
       {
-        "id": "le-pen-interieur-justice-006",
-        "raison": "relecture : La mesure taxe les transferts d'argent vers l'étranger, ce qui relève de la fiscalité et non directement d'une restriction de l'entrée, du séjour ou des droits des étrangers ; l'extrait ne montre pas de lien avec le sujet immigration."
+        "id": "le-pen-finances-publiques-011",
+        "raison": "relecture : Supprimer des taxes est une mesure de baisse d'impôts (sujet fiscalite/baisse_impots), pas une simplification de normes administratives."
       }
     ],
-    "cout_reference_usd": 0.123,
+    "cout_reference_usd": 0.1258,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "0a32b616a4b0135a",
+    "empreinte": "f491ab6f39682032",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 14,
-    "sans_position": 10,
+    "sans_position": 7,
     "rejetees": [
       {
-        "id": "le-pen-social-solidarite-007",
-        "raison": "relecture : Le texte décrit un transfert de la tutelle administrative des hôpitaux aux préfets et la suppression des ARS, ce qui ne montre pas directement un renforcement des moyens de l'hôpital public comme l'exige la position hopital_public."
+        "id": "le-pen-social-solidarite-004",
+        "raison": "relecture : La revalorisation des congés aidants ne relève pas des minima sociaux ou de l'assurance chômage définis pour le sujet aides_sociales, le sujet est mal choisi."
+      },
+      {
+        "id": "le-pen-social-solidarite-005",
+        "raison": "relecture : Transformer un prêt en subvention à la naissance est une mesure de politique familiale, pas une extension des minima sociaux ou de l'assurance chômage visée par aides_sociales."
+      },
+      {
+        "id": "le-pen-social-solidarite-006",
+        "raison": "relecture : La gratuité du permis de conduire n'est pas une aide sociale/chômage au sens défini (minima sociaux, assurance chômage), mauvais sujet."
+      },
+      {
+        "id": "le-pen-social-solidarite-015",
+        "raison": "relecture : Le remboursement à 100% des soins dentaires relève de l'organisation de la santé, pas des minima sociaux/chômage définis pour aides_sociales."
       }
     ],
-    "cout_reference_usd": 0.0584,
+    "cout_reference_usd": 0.081,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "c8131912e8b52ec6",
+    "empreinte": "011660e6bb832a7b",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 15,
-    "sans_position": 8,
+    "etiquetees": 18,
+    "sans_position": 3,
     "rejetees": [
       {
-        "id": "le-pen-social-solidarite-021",
-        "raison": "relecture : La mesure durcit les sanctions contre les locataires impayés et accélère les expulsions, ce qui ne correspond pas à la définition de 'liberer_offre_logement' (fiscalité, normes, encadrement des loyers côté propriétaires) ; le sujet/position est mal choisi."
+        "id": "le-pen-social-solidarite-019",
+        "raison": "relecture : Supprimer des salles de shoot n'est pas un durcissement de peine ni un renforcement des moyens policiers/carcéraux comme l'exige la définition de 'repression'; il s'agit plutôt d'un retrait de dispositif de réduction des risques, pas clairement classable sur cet axe."
       },
       {
-        "id": "le-pen-retraites-travail-008",
-        "raison": "relecture : Le pacte Dutreil concerne l'exonération de droits de transmission/succession des entreprises familiales, pas la fiscalité courante des entreprises (IS, impôts de production, cotisations) visée par 'soutenir_entreprises' ; sujet mal fondé."
+        "id": "le-pen-social-solidarite-020",
+        "raison": "relecture : Remplacer une subvention par un prêt à taux zéro pour la même rénovation thermique ne montre pas un ralentissement de la transition écologique, seulement un changement de mécanisme de financement."
+      },
+      {
+        "id": "le-pen-social-solidarite-021",
+        "raison": "relecture : Durcir les sanctions contre les locataires impayés ne relève pas directement de l'allègement des normes/fiscalité des propriétaires visé par 'liberer_offre_logement' ; l'effet sur l'offre de logement est un effet de second ordre supposé."
+      },
+      {
+        "id": "le-pen-social-solidarite-029",
+        "raison": "relecture : Plafonner les APL à 90% du loyer est une réduction du montant de l'aide, pas une contrepartie ou un contrôle renforcé comme l'exige 'conditionner_aides'."
       }
     ],
-    "cout_reference_usd": 0.0799,
+    "cout_reference_usd": 0.104,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "0fd304cc795c2e56",
+    "empreinte": "d69fc32bb138ee2b",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 14,
+    "etiquetees": 15,
     "sans_position": 9,
     "rejetees": [
       {
-        "id": "le-pen-envi-015",
-        "raison": "relecture : L'extrait énonce un objectif de priorité sur la balance commerciale agricole sans mesure protectionniste concrète (taxe, quota, préférence), ce n'est pas une position fondée sur le texte."
-      },
-      {
-        "id": "le-pen-gouvernance-republique-002",
-        "raison": "relecture : La mesure porte sur le contrôle des rachats d'entreprises stratégiques par des intérêts étrangers, ce qui relève du sujet commerce/protectionnisme et non du sujet europe (intégration ou souveraineté vis-à-vis des institutions européennes)."
+        "id": "le-pen-envi-014",
+        "raison": "relecture : Le texte critique vaguement les effets de la stratégie européenne sans préciser une action concrète d'assouplissement des normes agricoles."
       }
     ],
-    "cout_reference_usd": 0.0724,
+    "cout_reference_usd": 0.0649,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "047880f7fe806fee",
+    "empreinte": "5317873fe3558abf",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 23,
-    "etiquetees": 9,
-    "sans_position": 9,
+    "etiquetees": 11,
+    "sans_position": 10,
     "rejetees": [
       {
-        "id": "le-pen-gouvernance-republique-007",
-        "raison": "relecture : La mesure impose l'hébergement des données en France ou dans l'UE par des opérateurs français ou européens ; elle ne retire pas de compétence à l'UE ni n'en réduit le rôle, donc ne relève pas clairement de 'souverainete' sur le sujet Europe tel que défini."
-      },
-      {
-        "id": "le-pen-reformes-etat-001",
-        "raison": "relecture : Supprimer les EPCI et métropoles redonne du pouvoir aux communes plutôt qu'à l'État central ; c'est plus proche de 'decentraliser' que d''etat_central'."
-      },
-      {
         "id": "le-pen-reformes-etat-002",
-        "raison": "relecture : La réinternalisation de certaines agences peut réintégrer leur personnel dans la fonction publique, ce qui ne montre pas clairement une réduction nette du nombre de fonctionnaires."
+        "raison": "relecture : La suppression d'agences nationales correspond explicitement à la définition de 'decentraliser' (supprimer des agences au profit des élus locaux), pas à 'etat_central' ; l'étiquette est en sens inversé."
       },
       {
-        "id": "le-pen-education-jeunesse-010",
-        "raison": "relecture : La suppression des INSPE concerne la formation des enseignants, pas l'organisation, les programmes, les rythmes ou le statut de l'école elle-même."
-      },
-      {
-        "id": "le-pen-education-jeunesse-011",
-        "raison": "relecture : Une prime d'activité étudiante liée à la réussite aux examens ne concerne pas la sélection à l'entrée des formations supérieures (Parcoursup, mérite à l'admission)."
+        "id": "le-pen-reformes-etat-003",
+        "raison": "relecture : Le texte dit simplement 'appliquer les 35h', ce qui correspond au cadre légal existant ; conclure à 'travailler_davantage' suppose une interprétation sur le fait que les agents travaillaient moins auparavant, non établie directement par l'extrait."
       }
     ],
-    "cout_reference_usd": 0.0626,
+    "cout_reference_usd": 0.079,
     "appels": 2
   }
 ]

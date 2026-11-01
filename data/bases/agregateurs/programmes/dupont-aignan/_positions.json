@@ -1,73 +1,57 @@
 [
   {
     "groupe": 0,
-    "empreinte": "87a98c616d1a1ae7",
+    "empreinte": "b73eac6848bfa682",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 16,
+    "etiquetees": 19,
     "sans_position": 4,
     "rejetees": [
       {
-        "id": "dupont-aignan-interieur-justice-016",
-        "raison": "relecture : Faire payer les détenus leur incarcération est une mesure financière, pas un durcissement des peines ou des moyens répressifs tel que défini par 'repression'."
-      },
-      {
-        "id": "dupont-aignan-interieur-justice-020",
-        "raison": "relecture : La présomption de légitime défense relève de la protection juridique de l'usage de la force, pas de l'armement de la police tel que défini par le sujet police_armement."
-      },
-      {
         "id": "dupont-aignan-social-solidarite-001",
-        "raison": "relecture : Élargir le PTZ est une aide à l'achat pour les ménages, ce n'est pas alléger la fiscalité des propriétaires ni supprimer l'encadrement des loyers comme l'exige 'liberer_offre_logement'."
+        "raison": "relecture : L'élargissement du PTZ est une aide à l'accession des acheteurs (demande), ce qui ne correspond pas à la définition de liberer_offre_logement centrée sur l'allègement des contraintes des propriétaires bailleurs ou l'investissement locatif."
       },
       {
         "id": "dupont-aignan-social-solidarite-002",
-        "raison": "relecture : Créer un prêt aidé pour l'accession à la propriété des classes moyennes ne correspond pas à la définition de liberer_offre_logement (allègement fiscal des propriétaires, fin de l'encadrement des loyers, investissement locatif)."
-      },
-      {
-        "id": "dupont-aignan-social-solidarite-003",
-        "raison": "relecture : La mesure concerne les donations immobilières pour tous les ménages (enfants/petits-enfants), pas spécifiquement les très hauts patrimoines visés par le sujet ultra_riches."
+        "raison": "relecture : Le PAP est un prêt d'aide à l'achat pour les classes moyennes (demande de logement), ce qui ne relève pas de la définition de liberer_offre_logement centrée sur l'allègement des contraintes des propriétaires ou l'investissement locatif."
       }
     ],
-    "cout_reference_usd": 0.1294,
+    "cout_reference_usd": 0.1184,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "e73e6fde8f6ec00a",
+    "empreinte": "7214f479f1d1dfd8",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 11,
-    "sans_position": 9,
+    "etiquetees": 8,
+    "sans_position": 13,
     "rejetees": [
       {
-        "id": "dupont-aignan-envi-004",
-        "raison": "relecture : Il s'agit d'une exonération de succession pour les jeunes agriculteurs transmettant de petites surfaces, non d'une mesure visant les très hauts patrimoines ou ultra-riches."
-      },
-      {
         "id": "dupont-aignan-europe-international-001",
-        "raison": "relecture : Sortir du commandement militaire de l'OTAN ne relève pas du sujet Europe (UE) tel que défini, mais de l'Alliance atlantique."
+        "raison": "relecture : Sortir du commandement intégré de l'OTAN relève de la défense/souveraineté militaire, non du sujet Europe (intégration de l'UE)."
       },
       {
         "id": "dupont-aignan-europe-international-004",
-        "raison": "relecture : Le texte évoque seulement l'affirmation d'une présence française, sans mentionner une hausse du budget militaire, un réarmement ou un service national."
+        "raison": "relecture : « Affirmer la présence » dans une zone géographique ne montre pas directement une augmentation du budget ou de l'effort militaire, c'est une interprétation."
       },
       {
         "id": "dupont-aignan-gouvernance-republique-003",
-        "raison": "relecture : La suspension d'aides pour non-respect de la laïcité n'est pas une conditionnalité d'activité ou de contrôle chômage/RSA telle que définie dans le sujet aides_sociales."
+        "raison": "relecture : La suspension d'aides en cas de non-respect de la laïcité est une sanction punitive liée à la sécurité/laïcité, pas une conditionnalité d'activité ou de contrôle du chômage/RSA telle que définie."
       },
       {
-        "id": "dupont-aignan-gouvernance-republique-007",
-        "raison": "relecture : Le déploiement d'un cloud souverain relève de la souveraineté numérique et non directement de l'encouragement du développement ou de l'usage de l'IA."
+        "id": "dupont-aignan-gouvernance-republique-011",
+        "raison": "relecture : Le texte parle de soutenir les start-ups françaises en général, sans mentionner l'intelligence artificielle, ce qui ne fonde pas l'étiquette IA."
       }
     ],
-    "cout_reference_usd": 0.0681,
+    "cout_reference_usd": 0.091,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "72d2c96ecd92d8ce",
+    "empreinte": "845c02a24804e7d2",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 13,
@@ -76,10 +60,10 @@
     "rejetees": [
       {
         "id": "dupont-aignan-gouvernance-republique-014",
-        "raison": "relecture : L'extraction de terres rares et minières n'est pas une mesure agricole ; le sujet agriculture_normes/assouplir_normes_agri ne correspond pas à l'extrait."
+        "raison": "relecture : L'extraction de terres rares/matières premières n'est pas une norme agricole au sens de la définition (pesticides, eau, haies) ; sujet mal choisi."
       }
     ],
-    "cout_reference_usd": 0.0384,
+    "cout_reference_usd": 0.0413,
     "appels": 2
   }
 ]

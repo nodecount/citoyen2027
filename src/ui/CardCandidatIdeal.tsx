@@ -456,7 +456,7 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
               {explicationNote && (
                 <span className="ideal-score-reference">
                   {" "}
-                  Le candidat qui en a le plus en a {explicationNote.reference} : {explicationNote.score} sur {explicationNote.reference}, soit {explicationNote.note}/100.
+                  Le 100 correspond à {explicationNote.reference} mesures, le maximum chez un candidat : {explicationNote.score} sur {explicationNote.reference}, soit {explicationNote.note}/100.
                 </span>
               )}
             </>

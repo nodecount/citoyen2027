@@ -34,8 +34,8 @@ export const SUJETS_CONVICTION: SujetConviction[] = [
     libelle: "Énergies renouvelables et transition écologique",
     question: "Sur les énergies renouvelables et la transition écologique, quelle position vous parle le plus ?",
     positions: [
-      { id: "plus_renouvelables", libelle: "Accélérer la transition écologique", definition: "développer les énergies renouvelables (éolien, solaire, hydraulique…), renforcer les normes ou la sobriété environnementales, ou faire de la transition écologique une priorité" },
-      { id: "freiner_transition", libelle: "Freiner ou assouplir la transition écologique", definition: "limiter ou ralentir le développement des renouvelables (moratoire, suppression d'aides), assouplir ou supprimer des normes et contraintes environnementales" },
+      { id: "plus_renouvelables", libelle: "Aller plus vite sur la transition écologique", definition: "développer les énergies renouvelables (éolien, solaire, hydraulique…), renforcer les normes ou la sobriété environnementales, ou faire de la transition écologique une priorité" },
+      { id: "freiner_transition", libelle: "Aller moins vite sur la transition écologique", definition: "limiter ou ralentir le développement des renouvelables (moratoire, suppression d'aides), assouplir ou supprimer des normes et contraintes environnementales" },
     ],
   },
   {
@@ -138,7 +138,7 @@ export const SUJETS_CONVICTION: SujetConviction[] = [
     question: "Sur la discipline à l'école, quelle position vous parle le plus ?",
     positions: [
       { id: "ecole_exigence", libelle: "Plus d'autorité et de sanctions", definition: "durcir la discipline à l'école : sanctions, exclusions, uniforme, internats, redoublement ou évaluation plus exigeante" },
-      { id: "ecole_bienveillance", libelle: "Une école plus bienveillante et inclusive", definition: "privilégier l'accompagnement, la médiation, l'inclusion et la réduction des sanctions à l'école" },
+      { id: "ecole_bienveillance", libelle: "Plus de bienveillance et d'accompagnement", definition: "privilégier l'accompagnement, la médiation, l'inclusion et la réduction des sanctions à l'école" },
     ],
   },
   {
@@ -200,8 +200,8 @@ export const SUJETS_CONVICTION: SujetConviction[] = [
     libelle: "Aides sociales et chômage",
     question: "Sur les aides sociales et le chômage, quelle position vous parle le plus ?",
     positions: [
-      { id: "conditionner_aides", libelle: "Conditionner les aides, durcir l'indemnisation", definition: "imposer une activité en contrepartie du RSA, rendre l'assurance chômage plus dégressive ou plus stricte, renforcer les contrôles" },
-      { id: "proteger_droits_sociaux", libelle: "Garantir les droits sociaux sans contrepartie renforcée", definition: "maintenir ou étendre l'assurance chômage et les minima sociaux, sans contrepartie supplémentaire ; relever les minima" },
+      { id: "conditionner_aides", libelle: "Ajouter des conditions aux aides et à l'indemnisation", definition: "imposer une activité en contrepartie du RSA, rendre l'assurance chômage plus dégressive ou plus stricte, renforcer les contrôles" },
+      { id: "proteger_droits_sociaux", libelle: "Garder les aides et l'indemnisation sans condition en plus", definition: "maintenir ou étendre l'assurance chômage et les minima sociaux, sans contrepartie supplémentaire ; relever les minima" },
     ],
   },
   {
@@ -245,8 +245,8 @@ export const SUJETS_CONVICTION: SujetConviction[] = [
     libelle: "Laïcité et signes religieux",
     question: "Sur la laïcité et les signes religieux, quelle position vous parle le plus ?",
     positions: [
-      { id: "liberte_religieuse", libelle: "Garder une laïcité de liberté", definition: "maintenir la liberté de porter des signes religieux dans l'espace public et s'opposer à de nouveaux interdits" },
-      { id: "laicite_stricte", libelle: "Étendre les interdits au nom de la laïcité", definition: "interdire ou restreindre le port de signes religieux (voile, foulard) dans davantage de lieux ou renforcer la neutralité dans l'espace public" },
+      { id: "liberte_religieuse", libelle: "Garder la laïcité actuelle", definition: "maintenir la liberté de porter des signes religieux dans l'espace public et s'opposer à de nouveaux interdits" },
+      { id: "laicite_stricte", libelle: "Étendre les règles de laïcité", definition: "interdire ou restreindre le port de signes religieux (voile, foulard) dans davantage de lieux ou renforcer la neutralité dans l'espace public" },
     ],
   },
   {
@@ -290,8 +290,8 @@ export const SUJETS_CONVICTION: SujetConviction[] = [
     libelle: "Voiture et déplacements",
     question: "Sur la voiture et les déplacements, quelle position vous parle le plus ?",
     positions: [
-      { id: "defendre_voiture", libelle: "Défendre la voiture (supprimer les restrictions)", definition: "supprimer ou assouplir les zones à faibles émissions, les restrictions de circulation et la fin des véhicules thermiques" },
-      { id: "restreindre_voiture", libelle: "Restreindre la voiture, développer les transports", definition: "maintenir ou renforcer les zones à faibles émissions, la fin des véhicules thermiques, ou donner la priorité aux transports collectifs et au vélo" },
+      { id: "defendre_voiture", libelle: "Moins de restrictions pour la voiture", definition: "supprimer ou assouplir les zones à faibles émissions, les restrictions de circulation et la fin des véhicules thermiques" },
+      { id: "restreindre_voiture", libelle: "Plus de restrictions pour la voiture, plus de transports", definition: "maintenir ou renforcer les zones à faibles émissions, la fin des véhicules thermiques, ou donner la priorité aux transports collectifs et au vélo" },
     ],
   },
   {
@@ -317,8 +317,8 @@ export const SUJETS_CONVICTION: SujetConviction[] = [
     libelle: "Dette et déficit",
     question: "Sur la dette et le déficit, quelle position vous parle le plus ?",
     positions: [
-      { id: "reduire_dette", libelle: "Réduire la dette et le déficit en priorité", definition: "réduire le déficit et la dette publique en priorité (économies, règle budgétaire, désendettement)" },
-      { id: "investir_dette", libelle: "Investir quitte à creuser le déficit", definition: "financer des investissements ou des dépenses publiques même au prix d'un déficit plus élevé, ou refuser l'austérité" },
+      { id: "reduire_dette", libelle: "Priorité à la réduction de la dette et du déficit", definition: "réduire le déficit et la dette publique en priorité (économies, règle budgétaire, désendettement)" },
+      { id: "investir_dette", libelle: "Priorité à l'investissement, même avec plus de déficit", definition: "financer des investissements ou des dépenses publiques même au prix d'un déficit plus élevé, ou refuser l'austérité" },
     ],
   },
   {
@@ -348,6 +348,44 @@ export const SUJETS_CONVICTION: SujetConviction[] = [
     positions: [
       { id: "decentraliser", libelle: "Donner plus de pouvoir aux communes et aux territoires", definition: "transférer des compétences, des moyens ou des marges de décision aux communes, aux départements, aux régions ou aux préfets, ou supprimer des agences nationales au profit des élus locaux" },
       { id: "etat_central", libelle: "Garder un État central fort et des règles communes", definition: "maintenir ou renforcer les compétences de l'État national, l'uniformité des règles et le contrôle central sur les collectivités" },
+    ],
+  },
+  // Décision du 2026-11-01 (audit des questions, après le cas Lisnard) : quatre axes que des mesures de plusieurs candidats portent
+  // et qu'aucun sujet ne capturait. Les libellés de chaque paire sont parallèles et neutres (aucun côté n'est plus valorisant).
+  {
+    id: "simplification",
+    libelle: "Simplification et normes",
+    question: "Sur la simplification des normes et des démarches, quelle position vous parle le plus ?",
+    positions: [
+      { id: "simplifier_normes", libelle: "Simplifier et réduire les normes et les démarches", definition: "supprimer, regrouper ou alléger des normes, des codes, des procédures ou des autorisations ; réduire la bureaucratie ; interdire la surtransposition des textes européens" },
+      { id: "maintenir_normes", libelle: "Maintenir ou renforcer les règles et leur contrôle", definition: "maintenir ou renforcer des normes, des contrôles et des sanctions administratives, ou créer de nouvelles règles protectrices" },
+    ],
+  },
+  {
+    id: "prix_publics",
+    libelle: "Prix et services publics",
+    question: "Sur les prix et la propriété des services essentiels, quelle position vous parle le plus ?",
+    positions: [
+      { id: "encadrer_prix", libelle: "Encadrer les prix et reprendre la main publique", definition: "encadrer ou plafonner des prix ou des marges, renationaliser ou garder sous contrôle public des services essentiels (autoroutes, énergie, transports), lutter contre les monopoles" },
+      { id: "marche_prix", libelle: "Laisser les prix et les services au marché", definition: "refuser l'encadrement des prix, privatiser ou ouvrir à la concurrence des services, laisser jouer le marché" },
+    ],
+  },
+  {
+    id: "droit_travail",
+    libelle: "Droit du travail",
+    question: "Sur le droit du travail, quelle position vous parle le plus ?",
+    positions: [
+      { id: "proteger_salaries", libelle: "Protéger davantage les salariés", definition: "limiter les CDD et la précarité, renforcer la protection contre le licenciement, les conditions de travail et les droits des salariés" },
+      { id: "assouplir_travail", libelle: "Assouplir le droit du travail", definition: "assouplir le droit du travail, faciliter les contrats, les licenciements ou l'organisation du travail pour les entreprises" },
+    ],
+  },
+  {
+    id: "systeme_retraite",
+    libelle: "Système de retraite",
+    question: "Sur le système de retraite, quelle position vous parle le plus ?",
+    positions: [
+      { id: "repartition", libelle: "Garder la retraite par répartition", definition: "maintenir ou renforcer le système de retraite par répartition (financé par les cotisations actuelles), sans part individuelle" },
+      { id: "capitalisation", libelle: "Ajouter une part de capitalisation ou de choix individuel", definition: "introduire ou développer la capitalisation, des comptes individuels, le déblocage ou le choix individuel d'une épargne retraite" },
     ],
   },
   {

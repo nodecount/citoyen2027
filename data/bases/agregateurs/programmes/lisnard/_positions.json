@@ -1,40 +1,39 @@
 [
   {
     "groupe": 0,
-    "empreinte": "3874b59290c5ec8c",
+    "empreinte": "ffcec0613352cacb",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 18,
+    "etiquetees": 19,
     "sans_position": 6,
-    "rejetees": [
-      {
-        "id": "lisnard-interieur-justice-016",
-        "raison": "relecture : Le fait de ramener les forces de sécurité sur le terrain porte sur l'organisation du temps de travail policier, pas directement sur un durcissement répressif (peines, sanctions) ni un renforcement des moyens au sens de la définition."
-      }
-    ],
-    "cout_reference_usd": 0.1372,
+    "rejetees": [],
+    "cout_reference_usd": 0.1481,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "fc539b926121cbf0",
+    "empreinte": "11fdc1332899ad5c",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 16,
-    "sans_position": 7,
+    "sans_position": 6,
     "rejetees": [
       {
-        "id": "lisnard-social-solidarite-006",
-        "raison": "relecture : Le texte supprime Parcoursup mais le remplace par une sélection simplifiée (LAS/PASS), ce qui ne montre pas un accès sans sélection comme l'exige la définition."
+        "id": "lisnard-social-solidarite-009",
+        "raison": "relecture : L'extrait parle de construire une réglementation (encadrement), ce qui ne montre pas clairement un soutien/accélération de l'IA plutôt qu'un encadrement."
+      },
+      {
+        "id": "lisnard-envi-003",
+        "raison": "relecture : L'extrait 'respect de la réciprocité commerciale internationale' est trop vague pour établir une position protectionniste claire (limiter ou taxer les importations)."
       },
       {
         "id": "lisnard-envi-006",
-        "raison": "relecture : L'extrait parle de souveraineté alimentaire et de capacités exportatrices, pas d'un assouplissement des normes agricoles ou environnementales."
+        "raison": "relecture : Recentrer le contenu de la PAC n'implique pas directement une reprise de compétences à l'UE ou une réduction de son rôle, c'est une réorientation de politique au sein du cadre européen."
       }
     ],
-    "cout_reference_usd": 0.0851,
+    "cout_reference_usd": 0.079,
     "appels": 2
   },
   {
@@ -64,14 +63,14 @@
   },
   {
     "groupe": 3,
-    "empreinte": "85ca370b3d42ce30",
+    "empreinte": "99231ae06ca19bac",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 7,
-    "etiquetees": 6,
-    "sans_position": 1,
+    "etiquetees": 2,
+    "sans_position": 5,
     "rejetees": [],
-    "cout_reference_usd": 0.0392,
+    "cout_reference_usd": 0.0194,
     "appels": 2
   }
 ]

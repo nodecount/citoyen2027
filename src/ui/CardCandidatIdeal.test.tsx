@@ -124,14 +124,14 @@ describe("RondScore dans la fenêtre de détail", () => {
     const l = { ...base, pour: quatre, contre: [], note: 50, reference: 8 };
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="Selon votre situation" onFermer={() => {}} />);
     expect(html).toMatch(/<strong>4\/4<\/strong>\s*des mesures vous avantagent\./);
-    expect(html).toContain("Le candidat qui en a le plus en a 8 : 4 sur 8, soit 50/100.");
+    expect(html).toContain("Le 100 correspond à 8 mesures, le maximum chez un candidat : 4 sur 8, soit 50/100.");
     expect(html).not.toContain("Le score va de 0 à 100");
     expect(html.indexOf("des mesures vous avantagent")).toBeLessThan(html.indexOf("ideal-totaux"));
   });
   it("note à 100 : la seconde phrase n'a pas lieu d'être ; sans mesure concernée : une phrase le dit", () => {
     const cent = renderToStaticMarkup(<ModaleDetail ligne={{ ...base, pour: quatre, contre: [], note: 100, reference: 4 }} unite="thèmes" critere="c" onFermer={() => {}} />);
     expect(cent).toContain("4/4");
-    expect(cent).not.toContain("Le candidat qui en a le plus");
+    expect(cent).not.toContain("Le 100 correspond");
     const aucune = renderToStaticMarkup(<ModaleDetail ligne={{ ...base, pour: [], contre: [], note: 0, reference: 8 }} unite="thèmes" critere="c" onFermer={() => {}} />);
     expect(aucune).toContain("Aucune mesure ne vous concerne chez ce candidat.");
   });
@@ -139,7 +139,7 @@ describe("RondScore dans la fenêtre de détail", () => {
     const l = { ...base, pour: [{ theme: "logement", groupes: ["G1"], mesures: ["M1", "M2"] }], contre: [{ theme: "retraite", groupes: ["G2"], mesures: ["M3"] }], note: 33, reference: 3 };
     const html = renderToStaticMarkup(<ModaleDetail ligne={l} unite="thèmes" critere="c" onFermer={() => {}} />);
     expect(html).toMatch(/<strong>2\/3<\/strong>/);
-    expect(html).toContain("Le candidat qui en a le plus en a 3 : 1 sur 3, soit 33/100.");
+    expect(html).toContain("Le 100 correspond à 3 mesures, le maximum chez un candidat : 1 sur 3, soit 33/100.");
   });
   it("convictions : « vont dans le sens de vos convictions », pas de votre situation", () => {
     const html = renderToStaticMarkup(<ModaleDetail ligne={{ ...base, pour: quatre, contre: [], note: 100, reference: 4 }} unite="sujets" critere="Selon vos convictions" onFermer={() => {}} />);

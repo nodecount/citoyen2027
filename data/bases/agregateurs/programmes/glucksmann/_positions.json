@@ -1,28 +1,20 @@
 [
   {
     "groupe": 0,
-    "empreinte": "d865d3e5411a48ff",
+    "empreinte": "56d7ec528c5e5aac",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 10,
-    "sans_position": 8,
+    "sans_position": 9,
     "rejetees": [
-      {
-        "id": "glucksmann-finances-publiques-002",
-        "raison": "relecture : « Rediriger » des exonérations ne dit pas qu'on va davantage encadrer ou taxer les entreprises, c'est une interprétation de l'intention."
-      },
-      {
-        "id": "glucksmann-finances-publiques-005",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Supprimer les exonérations de TVA et de taxe sur le kérosène… »"
-      },
       {
         "id": "glucksmann-interieur-justice-001",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Créer des voies légales et sécurisées d’immigration de trava… »"
       },
       {
         "id": "glucksmann-interieur-justice-002",
-        "raison": "relecture : Le texte se limite à « abroger la loi immigration de 2024 » sans en décrire le contenu ; déduire qu'il s'agit d'une ouverture suppose une connaissance externe du contenu de cette loi."
+        "raison": "relecture : Le texte dit seulement « abroger la loi immigration de 2024 » sans en préciser le contenu ; conclure à une position d'ouverture suppose de connaître le contenu restrictif de cette loi, ce qui n'est pas établi par l'extrait."
       },
       {
         "id": "glucksmann-interieur-justice-003",
@@ -33,37 +25,37 @@
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Augmenter les effectifs des services judiciaires et pénitent… »"
       },
       {
+        "id": "glucksmann-interieur-justice-012",
+        "raison": "relecture : L'extrait retenu (« parcours individualisés de réinsertion ») ne montre pas une réduction de l'incarcération ou une alternative à la prison, et la mesure évoque par ailleurs investir dans des prisons rénovées, ce qui contredit l'étiquette alternatives_prison."
+      },
+      {
         "id": "glucksmann-interieur-justice-013",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Lancer un programme d’intervention rapide pour prévenir la d… »"
       }
     ],
-    "cout_reference_usd": 0.1199,
+    "cout_reference_usd": 0.1193,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "fb9d148d89fb49b5",
+    "empreinte": "48ba2e603169a623",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 4,
-    "sans_position": 19,
+    "sans_position": 20,
     "rejetees": [
-      {
-        "id": "glucksmann-interieur-justice-017",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Renforcer la lutte contre le terrorisme : juger en France le… »"
-      },
       {
         "id": "glucksmann-social-solidarite-003",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « contrer la financiarisation du système de santé, en finir av… »"
       }
     ],
-    "cout_reference_usd": 0.0418,
+    "cout_reference_usd": 0.0825,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "35805d386538db6b",
+    "empreinte": "c190c18eb80d2b74",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
@@ -76,7 +68,7 @@
       },
       {
         "id": "glucksmann-social-solidarite-020",
-        "raison": "relecture : Le texte ne précise pas le contenu de la loi Kasbarian ; établir que son abrogation va dans le sens d'un encadrement des loyers/logement social nécessite une connaissance extérieure de cette loi."
+        "raison": "relecture : Abroger la loi Kasbarian (procédure d'expulsion) ne parle pas d'encadrement des loyers ni de logement social, le texte ne fonde pas la position encadrer_logement."
       },
       {
         "id": "glucksmann-social-solidarite-021",
@@ -108,49 +100,65 @@
       },
       {
         "id": "glucksmann-retraites-travail-011",
-        "raison": "relecture : Le texte ne dit pas ce que contenait la réforme Macron de 2023 (âge, cotisation) ; déduire qu'abroger revient à conserver l'âge actuel suppose une connaissance extérieure du contenu de cette réforme."
+        "raison": "relecture : Abroger la réforme de 2023 revient à ramener l'âge légal à 62 ans, ce qui correspond à age_actuel et non à travailler_moins."
       }
     ],
-    "cout_reference_usd": 0.0722,
+    "cout_reference_usd": 0.0623,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "01a7a8c576dc7586",
+    "empreinte": "9a8ce40941bdf75f",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 7,
-    "sans_position": 16,
+    "etiquetees": 6,
+    "sans_position": 14,
     "rejetees": [
       {
         "id": "glucksmann-envi-001",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Lancer un grand plan d’investissement pluriannuel dans toute… »"
       },
       {
+        "id": "glucksmann-envi-007",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Soutenir la filière française de la petite voiture électriqu… »"
+      },
+      {
+        "id": "glucksmann-envi-010",
+        "raison": "relecture : La mesure facilite l'accès à une voiture électrique mais ne restreint ni ne défend l'usage de la voiture au sens des ZFE/thermique, elle ne fonde pas la position restreindre_voiture."
+      },
+      {
+        "id": "glucksmann-envi-016",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Faire une grande loi Climat engageant tous les ministères, p… »"
+      },
+      {
         "id": "glucksmann-envi-018",
-        "raison": "relecture : Le texte évoque vaguement 'utilité écologique' et le revenu agricole sans préciser de normes environnementales renforcées (pesticides, bio), ce qui ne fonde pas clairement la position renforcer_normes_agri."
+        "raison": "relecture : Le texte parle de soutenir l'emploi et le revenu agricole de façon générale sans mentionner de renforcement de normes environnementales précises."
       }
     ],
-    "cout_reference_usd": 0.0533,
+    "cout_reference_usd": 0.0468,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "4214873bcad692d3",
+    "empreinte": "bc7aff1f530c13bd",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 8,
-    "sans_position": 13,
+    "sans_position": 12,
     "rejetees": [
+      {
+        "id": "glucksmann-envi-023",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Garantir le revenu des agriculteurs par la mise en place de … »"
+      },
       {
         "id": "glucksmann-envi-033",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Éliminer les produits chimiques dangereux en interdisant les… »"
       },
       {
         "id": "glucksmann-europe-international-002",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Proposer un nouveau contrat de souveraineté qui clarifie la … »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « un véritable pacte girondin pour sortir de l’impuissance act… »"
       },
       {
         "id": "glucksmann-europe-international-003",
@@ -161,25 +169,21 @@
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Instaurer la proportionnelle, de préférence par circonscript… »"
       }
     ],
-    "cout_reference_usd": 0.0544,
+    "cout_reference_usd": 0.0451,
     "appels": 2
   },
   {
     "groupe": 5,
-    "empreinte": "61bdad810db8dd9a",
+    "empreinte": "1742e043045d2801",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 9,
-    "sans_position": 10,
+    "sans_position": 11,
     "rejetees": [
       {
         "id": "glucksmann-gouvernance-republique-005",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « jettera les bases d’une assemblée constituante pour changer … »"
-      },
-      {
-        "id": "glucksmann-gouvernance-republique-006",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « droit de vote à 16 ans et pour les étrangers extra-communaut… »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « une assemblée constituante pour changer la Constitution »"
       },
       {
         "id": "glucksmann-gouvernance-republique-007",
@@ -191,60 +195,51 @@
       },
       {
         "id": "glucksmann-gouvernance-republique-020",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Créer une grande Agence industrielle du numérique et de l’IA… »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « qui pilotera un plan national d’investissement dans les infr… »"
       },
       {
         "id": "glucksmann-gouvernance-republique-023",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Créer une Autorité indépendante de protection des mineurs en… »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « mettra en place un cadre strict incluant la vérification de … »"
       }
     ],
-    "cout_reference_usd": 0.0481,
+    "cout_reference_usd": 0.049,
     "appels": 2
   },
   {
     "groupe": 6,
-    "empreinte": "1e0f3d10426796c4",
+    "empreinte": "92550e2dade01bba",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 5,
-    "sans_position": 16,
+    "etiquetees": 7,
+    "sans_position": 15,
     "rejetees": [
       {
-        "id": "glucksmann-education-jeunesse-008",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Mettre fin aux inégalités géographiques dans l’accès aux étu… »"
+        "id": "glucksmann-education-jeunesse-007",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « transparence des financements, contrôle pédagogique renforcé… »"
       },
       {
         "id": "glucksmann-education-jeunesse-011",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « Revaloriser le salaire de tous les enseignants de manière co… »"
       },
       {
-        "id": "glucksmann-education-jeunesse-018",
-        "raison": "relecture : La mesure vise à compenser les inégalités géographiques d'accès, pas à supprimer une sélection; elle ne fonde pas l'étiquette acces_libre_superieur."
-      },
-      {
-        "id": "glucksmann-defense-003",
-        "raison": "relecture : Le texte porte sur la lutte contre la cybercriminalité et la défense cyber, pas sur une extension de la surveillance des citoyens au sens de la définition."
+        "id": "glucksmann-education-jeunesse-016",
+        "raison": "relecture : Le texte propose seulement de 'conduire un bilan' pour 'proposer' un futur modèle de financement, sans engager de création de postes ou de renforcement effectif des moyens des services publics."
       }
     ],
-    "cout_reference_usd": 0.0441,
+    "cout_reference_usd": 0.068,
     "appels": 2
   },
   {
     "groupe": 7,
-    "empreinte": "05e4e1b29923595a",
+    "empreinte": "10de51330f712d23",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 4,
-    "etiquetees": 0,
-    "sans_position": 3,
-    "rejetees": [
-      {
-        "id": "glucksmann-defense-008",
-        "raison": "relecture : Il s'agit d'aide militaire à l'Ukraine et de saisie d'avoirs russes, pas d'une augmentation du budget de défense national ou d'un réarmement propre, ce qui ne correspond pas à la définition de plus_defense."
-      }
-    ],
-    "cout_reference_usd": 0.0188,
+    "etiquetees": 2,
+    "sans_position": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0176,
     "appels": 2
   }
 ]

@@ -27,12 +27,6 @@
         "position": "souverainete",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Sortir de Schengen"
-      },
-      {
-        "sujet": "immigration",
-        "position": "restriction",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Sortir de Schengen et recruter 10 000 agents spécialisés."
       }
     ]
   },
@@ -63,7 +57,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Limiter strictement le regroupement familial et supprimer les privilèges accordés aux algériens."
+        "extrait": "Limiter strictement le regroupement familial et supprimer les privilèges accordés aux algériens"
       }
     ]
   },
@@ -116,7 +110,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer des quotas d'étudiants étrangers par filière et par niveau."
+        "extrait": "Créer des quotas d'étudiants étrangers par filière et par niveau"
       }
     ]
   },
@@ -162,7 +156,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Remise immédiate des mineurs isolés ou non accompagnés aux autorités de leur pays d'origine."
+        "extrait": "Remise immédiate des mineurs isolés ou non accompagnés aux autorités de leur pays d'origine"
       }
     ]
   },
@@ -193,7 +187,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Conditionner l'immigration économique au taux de chômage."
+        "extrait": "Conditionner l'immigration économique au taux de chômage"
       }
     ]
   },
@@ -239,7 +233,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer l'AME."
+        "extrait": "Supprimer l'AME"
       }
     ]
   },
@@ -294,7 +288,7 @@
         "sujet": "immigration",
         "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer les aides sociales non contributives pour les étrangers ( RSA, allocations familiales, aides au logement, etc.)."
+        "extrait": "Supprimer les aides sociales non contributives pour les étrangers"
       }
     ]
   },
@@ -340,7 +334,7 @@
         "sujet": "droit_du_sol",
         "position": "droit_sol_restreint",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer le droit du sol par référendum."
+        "extrait": "Supprimer le droit du sol par référendum"
       }
     ]
   },
@@ -411,7 +405,7 @@
         "sujet": "prison",
         "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer 40 000 nouvelles places de prison."
+        "extrait": "Créer 40 000 nouvelles places de prison"
       }
     ]
   },
@@ -442,7 +436,7 @@
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Recruter 20 000 surveillants supplémentaires."
+        "extrait": "Recruter 20 000 surveillants supplémentaires"
       }
     ]
   },
@@ -488,7 +482,7 @@
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rétablir l'uniforme de prisonnier."
+        "extrait": "Rétablir l'uniforme de prisonnier"
       }
     ]
   },
@@ -553,14 +547,7 @@
         "extrait": "Installer partout des dispositifs de brouillage intégral des téléphones et d'interception des drones."
       }
     ],
-    "positions": [
-      {
-        "sujet": "surveillance",
-        "position": "plus_surveillance",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Installer partout des dispositifs de brouillage intégral des téléphones et d'interception des drones."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "dupont-aignan-interieur-justice-015",
@@ -604,7 +591,7 @@
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Remettre en vigueur les fouilles systématiques après chaque visite."
+        "extrait": "Remettre en vigueur les fouilles systématiques après chaque visite"
       }
     ]
   },
@@ -644,7 +631,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Faire contribuer les détenus au coût de leur incarcération."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "dupont-aignan-interieur-justice-017",
@@ -670,10 +658,10 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
+        "sujet": "securite",
+        "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Recruter et former 10 000 policiers et gendarmes supplémentaires en 5 ans."
+        "extrait": "Recruter et former 10 000 policiers et gendarmes supplémentaires en 5 ans"
       }
     ]
   },
@@ -701,10 +689,10 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
+        "sujet": "immigration",
+        "position": "restriction",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Fixer un objectif de 10 000 douaniers et policiers supplémentaires aux frontières en 5 ans."
+        "extrait": "Fixer un objectif de 10 000 douaniers et policiers supplémentaires aux frontières en 5 ans"
       }
     ]
   },
@@ -730,7 +718,14 @@
     "sous_theme": "Sécurité intérieure",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place un plan national de rénovation des commissariats et casernes"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-interieur-justice-020",
@@ -768,6 +763,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Instaurer la présomption de légitime défense pour les forces de l'ordre."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer la présomption de légitime défense pour les forces de l'ordre"
+      }
     ]
   },
   {
@@ -797,7 +800,7 @@
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter sensiblement le taux de recouvrement des amendes."
+        "extrait": "Augmenter sensiblement le taux de recouvrement des amendes"
       }
     ]
   },
@@ -911,6 +914,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "réduisant de 15 à 10 ans le délai minimum entre deux donations"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "augmentant le plafond des donations exonérées de droits de 100 000 euros supplémentaires par enfant ou petit enfant et en réduisant de 15 à 10 ans le délai minimum entre deux donations"
+      }
     ]
   },
   {
@@ -934,7 +945,14 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Système de retraite",
     "titre_litteral": true,
-    "positions": []
+    "positions": [
+      {
+        "sujet": "systeme_retraite",
+        "position": "capitalisation",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Fournir un \" minimum retraite \" de 10 000 euros à chaque nouveau né français, qui sera gelé jusqu'à 60 ans"
+      }
+    ]
   },
   {
     "id": "dupont-aignan-envi-001",
@@ -1065,7 +1083,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Suppression des droits de succession sur les 100 premiers hectares transmis aux jeunes agriculteurs."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "dupont-aignan-envi-005",
@@ -1089,7 +1108,14 @@
     "sous_theme": "Agriculture",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "créer un label unique \" Produit en France\""
+      }
+    ]
   },
   {
     "id": "dupont-aignan-envi-006",
@@ -1158,14 +1184,7 @@
         "extrait": "autoriser la vente libre de céréales entre producteurs et éleveurs pour limiter les marges des intermédiaires"
       }
     ],
-    "positions": [
-      {
-        "sujet": "agriculture_normes",
-        "position": "assouplir_normes_agri",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "autoriser la vente libre de céréales entre producteurs et éleveurs pour limiter les marges des intermédiaires"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "dupont-aignan-europe-international-001",
@@ -1386,14 +1405,7 @@
     "sous_theme": "Egalité, laïcité & droits individuels",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "libertes",
-        "position": "cadre_collectif",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Conditionner l'ouverture d'une mosquée à la signature du Serment de fidélité à la République Française par l'imam et le président de l'association culturelle."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "dupont-aignan-gouvernance-republique-003",
@@ -1479,14 +1491,7 @@
     "sous_theme": "Egalité, laïcité & droits individuels",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "libertes",
-        "position": "cadre_collectif",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Fermer immédiatement toutes les associations ou lieux de culte qui refusent de signer la Charte de conformité de l'Islam."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "dupont-aignan-gouvernance-republique-006",
@@ -1540,7 +1545,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "dupont-aignan-gouvernance-republique-008",
@@ -1614,8 +1620,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "commerce",
-        "position": "protectionnisme",
+        "sujet": "ia",
+        "position": "plus_ia",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Assumer une préférence nationale dans les marchés de l'IA."
       }
@@ -1642,15 +1648,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "ia",
-        "position": "plus_ia",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Soutenir massivement les start-ups françaises pour éviter leur fuite vers la Silicon Valley."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "dupont-aignan-gouvernance-republique-012",
