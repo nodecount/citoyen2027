@@ -428,7 +428,14 @@
         "extrait": "Instaurer une TVA écologique modulée selon l'impact environnemental des produits"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer une TVA écologique modulée selon l'impact environnemental des produits."
+      }
+    ]
   },
   {
     "id": "tondelier-finances-publiques-013",
@@ -493,6 +500,12 @@
         "sujet": "fiscalite",
         "position": "redistribution",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Diminuer l’impôt sur le revenu pour les plus tranches les plus basses. Créer une tranche d'impôt sur le revenu à 60 % au-delà de 250 000 €/an."
+      },
+      {
+        "sujet": "ultra_riches",
+        "position": "taxer_ultra_riches",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Créer une tranche d'impôt sur le revenu à 60 % au-delà de 250 000 €/an."
       }
     ]
@@ -549,8 +562,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Fiscalité",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "tondelier-finances-publiques-016",
@@ -633,6 +645,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer l'abattement fiscal de 10 % pour les retraités aisés"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "redistribution",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer l'abattement fiscal de 10 % pour les retraités aisés."
+      }
     ]
   },
   {
@@ -657,14 +677,7 @@
     "sous_theme": "Fiscalité",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Augmenter le nombre d'agents de lutte contre la fraude et l'évasion fiscale."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "tondelier-finances-publiques-019",
@@ -771,14 +784,6 @@
         "sens": "baisse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Relever la Flat Tax (Prélèvement Forfaitaire Unique) de 3 points"
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "ultra_riches",
-        "position": "taxer_ultra_riches",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Relever la Flat Tax (Prélèvement Forfaitaire Unique) de 3 points."
       }
     ]
   },
@@ -969,10 +974,10 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "entreprises",
-        "position": "encadrer_entreprises",
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Obliger les banques et investisseurs à aligner leurs portefeuilles sur l'Accord de Paris"
+        "extrait": "Obliger les banques et investisseurs à aligner leurs portefeuilles sur l'Accord de Paris."
       }
     ]
   },
@@ -1032,7 +1037,7 @@
         "sujet": "immigration",
         "position": "ouverture",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir les droits fondamentaux des personnes exilées (scolarisation de tous les enfants, accès à l’AME et PUMA, suppression des délais de carence, interdiction des expulsions des personnes vivant avec une Affection Longue Durée, accès à des hébergements dignes)"
+        "extrait": "Garantir les droits fondamentaux des personnes exilées (scolarisation de tous les enfants, accès à l’AME et PUMA, suppression des délais de carence, interdiction des expulsions des personnes vivant avec une Affection Longue Durée, accès à des hébergements dignes)."
       }
     ]
   },
@@ -1078,7 +1083,7 @@
         "sujet": "immigration",
         "position": "ouverture",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Supprimer les Obligations de Quitter le Territoire Français (OQTF) automatiques ou inapplicables"
+        "extrait": "Supprimer les Obligations de Quitter le Territoire Français (OQTF) automatiques ou inapplicables."
       }
     ]
   },
@@ -1124,7 +1129,7 @@
         "sujet": "droit_du_sol",
         "position": "droit_sol_maintenu",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir l’application du droit du sol pour les enfants nés en France indépendamment de la situation des parents"
+        "extrait": "Garantir l’application du droit du sol pour les enfants nés en France indépendamment de la situation des parents."
       }
     ]
   },
@@ -1170,7 +1175,7 @@
         "sujet": "immigration",
         "position": "ouverture",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Réduire les mesures dérogatoires sur l’étude de la demande d’asile"
+        "extrait": "Réduire les mesures dérogatoires sur l’étude de la demande d’asile."
       }
     ]
   },
@@ -1201,7 +1206,7 @@
         "sujet": "immigration",
         "position": "ouverture",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Développer des politiques d’inclusion pour les étrangers vivant en France"
+        "extrait": "Développer des politiques d’inclusion pour les étrangers vivant en France."
       }
     ]
   },
@@ -1232,7 +1237,7 @@
         "sujet": "immigration",
         "position": "ouverture",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer des voies légales et sécurisées d’immigration par une révision du Pacte européen sur la migration et l’asile"
+        "extrait": "Créer des voies légales et sécurisées d’immigration par une révision du Pacte européen sur la migration et l’asile."
       }
     ]
   },
@@ -1263,7 +1268,7 @@
         "sujet": "immigration",
         "position": "ouverture",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Démanteler l’agence Frontex et créer une agence en charge de la protection des droits fondamentaux des personnes migrantes et en particulier du sauvetage en mer et sur terre"
+        "extrait": "Démanteler l’agence Frontex et créer une agence en charge de la protection des droits fondamentaux des personnes migrantes et en particulier du sauvetage en mer et sur terre."
       }
     ]
   },
@@ -1318,7 +1323,7 @@
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer 9 000 postes de magistrats, 10 000 postes de greffiers et 7 000 attachés de justice en 10 ans"
+        "extrait": "Créer 9 000 postes de magistrats, 10 000 postes de greffiers et 7 000 attachés de justice en 10 ans."
       }
     ]
   },
@@ -1349,7 +1354,7 @@
         "sujet": "justice_mineurs",
         "position": "priorite_educative",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Conserver la primauté de l'éducatif sur le répressif pour les mineurs délinquants"
+        "extrait": "Conserver la primauté de l'éducatif sur le répressif pour les mineurs délinquants."
       }
     ]
   },
@@ -1429,8 +1434,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Justice & pénitentiaire",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "tondelier-interieur-justice-014",
@@ -1515,7 +1519,7 @@
         "sujet": "prison",
         "position": "alternatives_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Adopter un moratoire sur la construction de nouvelles prisons"
+        "extrait": "Adopter un moratoire sur la construction de nouvelles prisons."
       }
     ]
   },
@@ -1546,7 +1550,7 @@
         "sujet": "prison",
         "position": "alternatives_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Développer les alternatives à la détention (probation, semi-liberté, TIG)"
+        "extrait": "Développer les alternatives à la détention (probation, semi-liberté, TIG)."
       }
     ]
   },
@@ -1577,7 +1581,7 @@
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Renforcer les moyens financiers et cyber de la police et de la justice contre les narcotrafiquants"
+        "extrait": "Renforcer les moyens financiers et cyber de la police et de la justice contre les narcotrafiquants."
       }
     ]
   },
@@ -1608,7 +1612,7 @@
         "sujet": "securite",
         "position": "repression",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer des juridictions pénales spécialisées (JIRS) dans chaque cour d'appel et renforcer le PNACO et l'OFAST"
+        "extrait": "Créer des juridictions pénales spécialisées (JIRS) dans chaque cour d'appel et renforcer le PNACO et l'OFAST."
       }
     ]
   },
@@ -1663,7 +1667,7 @@
         "sujet": "cannabis",
         "position": "legaliser_cannabis",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Légaliser et encadrer la production, la vente et la consommation de cannabis"
+        "extrait": "Légaliser et encadrer la production, la vente et la consommation de cannabis."
       }
     ]
   },
@@ -1689,14 +1693,7 @@
     "sous_theme": "Lutte contre le narcotrafic",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "prevention",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Dépénaliser l'usage personnel des autres drogues et réorienter vers un suivi sanitaire (modèle portugais)"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "tondelier-interieur-justice-023",
@@ -1955,7 +1952,14 @@
         "extrait": "Lutter contre la vie chère en luttant contre les monopoles historiques et en réformant l'octroi de mer"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "prix_publics",
+        "position": "encadrer_prix",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lutter contre la vie chère en luttant contre les monopoles historiques et en réformant l'octroi de mer."
+      }
+    ]
   },
   {
     "id": "tondelier-interieur-justice-032",
@@ -1994,7 +1998,14 @@
         "extrait": "Encadrer et plafonner les tarifs de desserte aérienne ultramarine"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "prix_publics",
+        "position": "encadrer_prix",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Encadrer et plafonner les tarifs de desserte aérienne ultramarine."
+      }
+    ]
   },
   {
     "id": "tondelier-interieur-justice-033",
@@ -2024,14 +2035,6 @@
         "sens": "hausse",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Lancer un plan quinquennal d'investissement public dans l'accès à l'eau potable, aux écoles et aux transports"
-      }
-    ],
-    "positions": [
-      {
-        "sujet": "dette",
-        "position": "investir_dette",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Lancer un plan quinquennal d'investissement public dans l'accès à l'eau potable, aux écoles et aux transports."
       }
     ]
   },
@@ -2080,7 +2083,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Outre-mer",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "tondelier-interieur-justice-036",
@@ -2102,7 +2106,8 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Outre-mer",
-    "titre_litteral": true
+    "titre_litteral": true,
+    "positions": []
   },
   {
     "id": "tondelier-interieur-justice-037",
@@ -2471,7 +2476,14 @@
         "extrait": "Indexer le montant des pensions."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Indexer le montant des pensions."
+      }
+    ]
   },
   {
     "id": "tondelier-social-solidarite-011",
@@ -2516,14 +2528,7 @@
         "extrait": "Améliorer les petites retraites."
       }
     ],
-    "positions": [
-      {
-        "sujet": "aides_sociales",
-        "position": "proteger_droits_sociaux",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Améliorer les petites retraites."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "tondelier-social-solidarite-012",
@@ -2687,8 +2692,7 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Revaloriser les APL de 10%."
       }
-    ],
-    "positions": []
+    ]
   },
   {
     "id": "tondelier-social-solidarite-017",
@@ -2790,15 +2794,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Santé",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "sante_organisation",
-        "position": "hopital_public",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Conditonner le remboursement public des soins dans les cliniques privées."
-      }
-    ]
+    "effets": []
   },
   {
     "id": "tondelier-social-solidarite-021",
@@ -2863,8 +2859,8 @@
     ],
     "positions": [
       {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
+        "sujet": "sante_organisation",
+        "position": "hopital_public",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Augmenter les moyens et revaloriser les métiers de la psychiatrie et de la pédopsychiatrie publique."
       }
@@ -2923,7 +2919,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Garantir un remboursement total des soins essentiels."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "tondelier-social-solidarite-025",
@@ -3620,7 +3617,7 @@
         "sujet": "renouvelables",
         "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Financer 500 000 rénovations performantes (MaPrimeRénov') par an"
+        "extrait": "Financer 500 000 rénovations performantes (MaPrimeRénov') par an et prendre en charge à 100 % le reste à charge des foyers modestes."
       }
     ]
   },
@@ -3899,7 +3896,8 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Transports",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "tondelier-retraites-travail-001",
@@ -4036,7 +4034,7 @@
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "recruter 200 inspecteurs du travail"
+        "extrait": "recruter 200 inspecteurs du travail."
       }
     ]
   },
@@ -4099,15 +4097,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Emploi & travail",
-    "titre_litteral": true,
-    "positions": [
-      {
-        "sujet": "aides_sociales",
-        "position": "proteger_droits_sociaux",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Généraliser la garantie d'emploi pour les chômeurs de plus de 55 ans (Territoire Zéro Chômeur)."
-      }
-    ]
+    "titre_litteral": true
   },
   {
     "id": "tondelier-retraites-travail-007",
@@ -4151,7 +4141,7 @@
         "sujet": "aides_sociales",
         "position": "proteger_droits_sociaux",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Refonder l'assurance-chômage en abrogeant les réformes de calcul des indemnités"
+        "extrait": "Refonder l'assurance-chômage en abrogeant les réformes de calcul des indemnités."
       }
     ]
   },
@@ -4231,7 +4221,14 @@
         "extrait": "Rendre le recours aux CDD plus cher par un renforcement du bonus-malus patronal."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "droit_travail",
+        "position": "proteger_salaries",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre le recours aux CDD plus cher par un renforcement du bonus-malus patronal."
+      }
+    ]
   },
   {
     "id": "tondelier-retraites-travail-010",
@@ -4339,7 +4336,7 @@
         "sujet": "travail",
         "position": "travailler_moins",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abroger la réforme des retraites décalant l'âge légal à 64 ans et rétablir immédiatement le départ à 62 ans (et viser ensuite un départ vers 60 ans)"
+        "extrait": "Abroger la réforme des retraites décalant l'âge légal à 64 ans et rétablir immédiatement le départ à 62 ans (et viser ensuite un départ vers 60 ans)."
       }
     ]
   },
@@ -4380,7 +4377,14 @@
         "extrait": "Réintroduire les 4 critères ouvrant le droit à une retraite anticipée pour les métiers pénibles."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "travailler_moins",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réintroduire les 4 critères ouvrant le droit à une retraite anticipée pour les métiers pénibles."
+      }
+    ]
   },
   {
     "id": "tondelier-retraites-travail-014",
@@ -4445,7 +4449,7 @@
         "sujet": "aides_sociales",
         "position": "proteger_droits_sociaux",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Revaloriser le minimum contributif et l'ASPA au niveau du seuil de pauvreté"
+        "extrait": "Revaloriser le minimum contributif et l'ASPA au niveau du seuil de pauvreté."
       }
     ]
   },
@@ -4582,7 +4586,14 @@
     "sous_theme": "Industrie & relocalisation",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "decentralisation",
+        "position": "decentraliser",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Donner un droit de préemption aux collectivités sur les machines-outils en cas de fermeture d'usine."
+      }
+    ]
   },
   {
     "id": "tondelier-retraites-travail-020",
@@ -4606,7 +4617,14 @@
     "sous_theme": "Industrie & relocalisation",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "prix_publics",
+        "position": "encadrer_prix",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Développer des « Contrats pour différence » (CPD) garantissant aux industriels un prix stable de l'électricité propre."
+      }
+    ]
   },
   {
     "id": "tondelier-retraites-travail-021",
@@ -4659,7 +4677,7 @@
         "sujet": "commerce",
         "position": "protectionnisme",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Imposer des clauses de sauvegarde environnementale et sociale aux frontières européennes (MACF élargi)"
+        "extrait": "Imposer des clauses de sauvegarde environnementale et sociale aux frontières européennes (MACF élargi)."
       }
     ]
   },
@@ -4690,7 +4708,7 @@
         "sujet": "renouvelables",
         "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Adopter la 3e Programmation Pluriannuelle de l'Énergie (PPE3) pour atteindre 44 % d'Energies Renouvelables dans la consommation brute globale en 2030"
+        "extrait": "Adopter la 3e Programmation Pluriannuelle de l'Énergie (PPE3) pour atteindre 44 % d'Energies Renouvelables dans la consommation brute globale en 2030."
       }
     ]
   },
@@ -4721,7 +4739,7 @@
         "sujet": "renouvelables",
         "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Accélérer la conversion ou fermeture de la dernière centrale à charbon de Saint-Avold"
+        "extrait": "Accélérer la conversion ou fermeture de la dernière centrale à charbon de Saint-Avold."
       }
     ]
   },
@@ -4755,7 +4773,14 @@
         "extrait": "Rendre les tarifs de l'électricité progressifs et réduire la part fixe de l'abonnement."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "prix_publics",
+        "position": "encadrer_prix",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rendre les tarifs de l'électricité progressifs et réduire la part fixe de l'abonnement."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-004",
@@ -4784,7 +4809,7 @@
         "sujet": "renouvelables",
         "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un prêt à taux zéro auprès de la Caisse des dépôts pour financer 60 % des projets EnR (Energies Renouvelables) locaux"
+        "extrait": "Créer un prêt à taux zéro auprès de la Caisse des dépôts pour financer 60 % des projets EnR (Energies Renouvelables) locaux."
       }
     ]
   },
@@ -4815,7 +4840,7 @@
         "sujet": "nucleaire",
         "position": "sortir_nucleaire",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Planifier l'arrêt progressif et étalé sur 20 ans des centrales nucléaires arrivées en fin de vie"
+        "extrait": "Planifier l'arrêt progressif et étalé sur 20 ans des centrales nucléaires arrivées en fin de vie."
       }
     ]
   },
@@ -4846,7 +4871,7 @@
         "sujet": "nucleaire",
         "position": "sortir_nucleaire",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Abandonner la construction des nouveaux réacteurs EPR-2 et SMR"
+        "extrait": "Abandonner la construction des nouveaux réacteurs EPR-2 et SMR."
       }
     ]
   },
@@ -4925,7 +4950,7 @@
         "sujet": "renouvelables",
         "position": "plus_renouvelables",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Soutenir le déploiement de 10 000 communautés énergétiques renouvelables citoyennes et locales"
+        "extrait": "Soutenir le déploiement de 10 000 communautés énergétiques renouvelables citoyennes et locales."
       }
     ]
   },
@@ -4951,7 +4976,14 @@
     "sous_theme": "Energie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Planifier le démantèlement du réseau de gaz fossile"
+      }
+    ]
   },
   {
     "id": "tondelier-envi-011",
@@ -4975,7 +5007,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre en place une politique nationale de protection et de développement des continuités écologiques."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-012",
@@ -4999,7 +5038,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer la trajectoire de la Zéro artificialisation nette (ZAN)."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-013",
@@ -5023,7 +5069,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abandonner les projets menaçant les zones humides."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-014",
@@ -5047,7 +5100,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Adopter et financer une stratégie de restauration de la biodiversité."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-015",
@@ -5071,7 +5131,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Refonder le service public de suivi et de protection de la nature."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-016",
@@ -5095,7 +5162,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Défendre, étendre et financer les parcs et les réserves naturels."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-017",
@@ -5119,7 +5193,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire l’ensemble des polluants éternels (PFAS) et des perturbateurs endoctriniens."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-018",
@@ -5143,7 +5224,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Faire appliquer systématiquement le principe pollueur-payeur."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-019",
@@ -5182,7 +5270,14 @@
         "extrait": "l’indemnisation des victimes du chlordécone"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Améliorer la dépollution des sols et des eaux et l’indemnisation des victimes du chlordécone."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-020",
@@ -5206,7 +5301,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire l’usage du plomb laminé en France."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-021",
@@ -5404,7 +5506,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lancer un plan de dépollution de nos façades maritimes et des fonds marins."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-028",
@@ -5428,7 +5537,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer le service public forestier."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-029",
@@ -5451,8 +5567,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "tondelier-envi-030",
@@ -5476,7 +5591,14 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer et maintenir une trame vieux bois."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-031",
@@ -5593,7 +5715,14 @@
     "sous_theme": "Agriculture",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Interdire l'usage des canalisations en plomb et du PVC/CVM dans les réseaux de distribution d'eau."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-035",
@@ -5647,14 +5776,7 @@
     "sous_theme": "Agriculture",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "agriculture_normes",
-        "position": "renforcer_normes_agri",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Durcir l'application du Zéro Artificialisation Nette (ZAN) sur le foncier agricole."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "tondelier-envi-037",
@@ -5702,14 +5824,7 @@
     "sous_theme": "Agriculture",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "aides_sociales",
-        "position": "proteger_droits_sociaux",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Soutenir les expérimentations de Sécurité Sociale de l'Alimentation."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "tondelier-envi-039",
@@ -5803,7 +5918,14 @@
         "extrait": "Adopter des prix planchers garantis aux producteurs agricoles."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "prix_publics",
+        "position": "encadrer_prix",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Adopter des prix planchers garantis aux producteurs agricoles."
+      }
+    ]
   },
   {
     "id": "tondelier-envi-042",
@@ -5936,7 +6058,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Affaires étrangères & diplomatie",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "protectionnisme",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Refuser la ratification de tout accord commercial ne respectant pas les critères climatiques (Mercosur, CETA, etc.)."
+      }
+    ]
   },
   {
     "id": "tondelier-europe-international-004",
@@ -6178,14 +6308,7 @@
         "extrait": "accorder le droit de vote aux résidents étrangers aux élections locales"
       }
     ],
-    "positions": [
-      {
-        "sujet": "immigration",
-        "position": "ouverture",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "accorder le droit de vote aux résidents étrangers aux élections locales"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "tondelier-gouvernance-republique-007",
@@ -6365,7 +6488,14 @@
         "extrait": "Intégrer l'AAH dans la 5e branche autonomie et l'augmenter de 250 €."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "aides_sociales",
+        "position": "proteger_droits_sociaux",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "l'augmenter de 250 €"
+      }
+    ]
   },
   {
     "id": "tondelier-gouvernance-republique-013",
@@ -6616,7 +6746,14 @@
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "cadre_collectif",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Recommander l'interdiction des écrans avant 3 ans et interdire leur usage à l'école avant 6 ans."
+      }
+    ]
   },
   {
     "id": "tondelier-gouvernance-republique-021",
@@ -6695,7 +6832,14 @@
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir l'accès à un guichet d'accueil physique administratif à moins de 15 minutes partout."
+      }
+    ]
   },
   {
     "id": "tondelier-reformes-etat-002",
@@ -6719,7 +6863,14 @@
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "libertes_indiv",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Créer un droit opposable à la non-connexion administrative."
+      }
+    ]
   },
   {
     "id": "tondelier-reformes-etat-003",
@@ -6819,7 +6970,14 @@
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "decentralisation",
+        "position": "decentraliser",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réorienter les préfectures vers des missions de soutien et d'ingénierie auprès des communes."
+      }
+    ]
   },
   {
     "id": "tondelier-reformes-etat-006",
@@ -6858,7 +7016,14 @@
         "extrait": "Indexer la valeur du point d'indice des fonctionnaires sur le taux d'inflation."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "salaires",
+        "position": "hausse_smic",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Indexer la valeur du point d'indice des fonctionnaires sur le taux d'inflation."
+      }
+    ]
   },
   {
     "id": "tondelier-reformes-etat-007",
@@ -6905,8 +7070,8 @@
     ],
     "positions": [
       {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
+        "sujet": "salaires",
+        "position": "hausse_smic",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Augmenter les rémunérations des catégories C et B de 10 %."
       }
@@ -6965,8 +7130,8 @@
     ],
     "positions": [
       {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
+        "sujet": "salaires",
+        "position": "hausse_smic",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Augmenter le traitement des enseignants de 15 % et des chercheurs de 10 % sur le quinquennat."
       }
@@ -7009,7 +7174,14 @@
         "extrait": "Construire un service public de la petite enfance garantissant un mode de garde de proximité."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Construire un service public de la petite enfance garantissant un mode de garde de proximité."
+      }
+    ]
   },
   {
     "id": "tondelier-education-jeunesse-002",
@@ -7031,8 +7203,7 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Services de la petite enfance",
-    "titre_litteral": true,
-    "positions": []
+    "titre_litteral": true
   },
   {
     "id": "tondelier-education-jeunesse-003",
@@ -7086,8 +7257,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "tondelier-education-jeunesse-005",
@@ -7112,8 +7282,8 @@
     "titre_litteral": true,
     "positions": [
       {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
+        "sujet": "ecole_organisation",
+        "position": "ecole_continuite",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Plafonner la taille des classes à 19 élèves maximum en primaire (12 élèves en REP/REP+)."
       }
@@ -7158,8 +7328,8 @@
     ],
     "positions": [
       {
-        "sujet": "fonction_publique",
-        "position": "plus_services_publics",
+        "sujet": "salaires",
+        "position": "hausse_smic",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Revaloriser le traitement des enseignants de 15 % en 5 ans."
       }
@@ -7366,7 +7536,14 @@
         "extrait": "Supprimer la Contribution de Vie Étudiante et de Campus (CVEC)."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fiscalite",
+        "position": "baisse_impots",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer la Contribution de Vie Étudiante et de Campus (CVEC)"
+      }
+    ]
   },
   {
     "id": "tondelier-education-jeunesse-013",
@@ -7405,7 +7582,14 @@
         "extrait": "Construire 150 000 logements étudiants et foyers de jeunes travailleurs."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "encadrer_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Construire 150 000 logements étudiants et foyers de jeunes travailleurs"
+      }
+    ]
   },
   {
     "id": "tondelier-education-jeunesse-014",
@@ -7452,7 +7636,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Enseignement supérieur",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "encadrer_entreprises",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réorienter le Crédit Impôt Recherche (CIR) vers l'innovation durable des PME/ETI"
+      }
+    ]
   },
   {
     "id": "tondelier-defense-001",
@@ -7476,14 +7668,7 @@
     "sous_theme": "Défense & armées",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "europe",
-        "position": "plus_europe",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "dans le cadre d'une souveraineté et d'une défense européenne renforcées"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "tondelier-defense-002",
@@ -7530,14 +7715,6 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Défense & armées",
     "titre_litteral": true,
-    "effets": [],
-    "positions": [
-      {
-        "sujet": "commerce",
-        "position": "protectionnisme",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Soutenir l'industrie de défense nationale et européenne sur des critères d'indépendance technologique"
-      }
-    ]
+    "effets": []
   }
 ]

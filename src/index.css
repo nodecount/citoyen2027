@@ -45,6 +45,15 @@ html {
   background: var(--fond);
 }
 
+/* Liseré bleu, blanc, rouge en haut du site (décoratif : le rouge ne porte aucune information). Le trait gris fait ressortir le blanc. */
+html::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background: linear-gradient(to right, var(--bleu) 0 33.34%, #fff 33.34% 66.67%, var(--rouge) 66.67% 100%);
+  border-bottom: 1px solid #d8dde8;
+}
+
 body {
   /* Une seule largeur pour toutes les pages ; à l'intérieur, les cartes de thèmes occupent toute la place. */
   max-width: calc(76rem + 600px);

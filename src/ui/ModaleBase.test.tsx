@@ -46,12 +46,15 @@ describe("ModaleBase", () => {
     const radio = (id: string) => html.match(new RegExp(`<input[^>]*value="${id}"[^>]*>`))?.[0] ?? "";
     expect(radio("a")).toContain("disabled");
     expect(radio("b")).not.toContain("disabled");
-    expect(html.match(/<button[^>]*disabled=""[^>]*>Monitoring</g)).toHaveLength(1);
+    // Une base désactivée n'est pas sélectionnée : elle n'affiche donc aucun lien de contrôle.
+    expect(html.match(/<button[^>]*disabled=""[^>]*>Monitoring</g)).toBeNull();
   });
 
-  it("propose, pour chaque base, son monitoring et ses tests de situations", () => {
+  it("n'affiche le monitoring et les tests de situations que pour la source sélectionnée", () => {
     const html = rendre(true);
-    expect(html.match(/>Monitoring</g)).toHaveLength(BASES.length);
-    expect(html.match(/>Tests de situations</g)).toHaveLength(BASES.length);
+    expect(html.match(/>Monitoring</g)).toHaveLength(1);
+    expect(html.match(/>Tests de situations</g)).toHaveLength(1);
+    // Les liens sont sous la base B (active), pas sous la A.
+    expect(html.indexOf("Contrôle de cette source")).toBeGreaterThan(html.indexOf("Description B."));
   });
 });

@@ -1,14 +1,19 @@
 [
   {
     "groupe": 0,
-    "empreinte": "47e09502396085bf",
+    "empreinte": "c447c2e92ad5e074",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 6,
     "etiquetees": 3,
-    "sans_position": 3,
-    "rejetees": [],
-    "cout_reference_usd": 0.0783,
+    "sans_position": 2,
+    "rejetees": [
+      {
+        "id": "roussel-retraites-travail-001",
+        "raison": "relecture : Nationaliser TotalEnergies relève plutôt de la prise de contrôle public d'une entreprise, non directement d'un encadrement des prix; l'extrait ne mentionne aucune mesure sur les prix."
+      }
+    ],
+    "cout_reference_usd": 0.0867,
     "appels": 2
   }
 ]

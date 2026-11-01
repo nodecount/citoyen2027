@@ -1,7 +1,7 @@
 [
   {
     "groupe": 0,
-    "empreinte": "265740e227693685",
+    "empreinte": "e325c659a734a8f5",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
@@ -10,76 +10,68 @@
     "rejetees": [
       {
         "id": "zemmour-finances-publiques-004",
-        "raison": "relecture : Supprimer les jours de carence ne relève pas de 'créer des postes ou renforcer les moyens des services publics' tel que défini par fonction_publique/plus_services_publics, c'est une mesure de protection sociale des agents, pas un renforcement de moyens."
+        "raison": "relecture : Revenir sur les jours de carence est une mesure sur les congés maladie des agents, pas sur le nombre de postes ou les moyens des services publics au sens de la définition."
       },
       {
         "id": "zemmour-finances-publiques-005",
-        "raison": "relecture : La mesure réduit le nombre d'élus locaux via une fusion de mandats, ce qui ne correspond pas à 'maintenir ou renforcer les compétences de l'État central et l'uniformité des règles' tel que défini par etat_central."
+        "raison": "relecture : Le rétablissement du conseiller territorial vise à réduire le nombre d'élus locaux, pas à transférer ou retirer des compétences entre État et collectivités comme le définit le sujet décentralisation."
       },
       {
         "id": "zemmour-interieur-justice-005",
-        "raison": "relecture : La dénonciation d'un accord bilatéral franco-algérien relève du sujet immigration (restriction des flux), pas du sujet europe/souveraineté qui concerne les compétences de l'UE."
+        "raison": "relecture : Dénoncer l'accord franco-algérien de 1968 relève de l'immigration/des relations bilatérales, pas de l'intégration ou de la souveraineté vis-à-vis de l'Union européenne."
       }
     ],
-    "cout_reference_usd": 0.1307,
+    "cout_reference_usd": 0.143,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "e66c35c52ed51c6c",
+    "empreinte": "6d927ed1407d2fb2",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 14,
-    "sans_position": 8,
+    "etiquetees": 16,
+    "sans_position": 7,
     "rejetees": [
       {
-        "id": "zemmour-interieur-justice-030",
-        "raison": "relecture : La présomption de légitime défense porte sur le cadre légal d'usage des armes, pas sur le maintien ou renforcement de l'armement/des moyens de la police au sens de la définition de police_armement."
+        "id": "zemmour-interieur-justice-026",
+        "raison": "relecture : Suspendre les aides aux délinquants n'est pas une condition d'activité/contrepartie au sens de conditionner_aides, qui vise le RSA ou le chômage, pas une sanction liée à la délinquance."
       },
       {
         "id": "zemmour-social-solidarite-004",
-        "raison": "relecture : Restaurer une limitation de vitesse routière n'entre pas dans la définition de restreindre_voiture, qui vise les ZFE, la fin des véhicules thermiques ou la priorité aux transports collectifs."
-      },
-      {
-        "id": "zemmour-retraites-travail-003",
-        "raison": "relecture : La défiscalisation de la prime de participation des salariés allège la fiscalité des salariés, pas les charges ou impôts des entreprises visés par soutenir_entreprises."
+        "raison": "relecture : Restaurer la limite de vitesse à 90km/h relève de la sécurité routière et non des ZFE/véhicules thermiques ou de la priorité aux transports collectifs visées par le sujet voiture."
       }
     ],
-    "cout_reference_usd": 0.098,
+    "cout_reference_usd": 0.0831,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "84bca298cbfbcf6b",
+    "empreinte": "c93f8e344683a600",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 18,
-    "sans_position": 5,
-    "rejetees": [
-      {
-        "id": "zemmour-retraites-travail-014",
-        "raison": "relecture : La suppression des droits de succession porte sur la transmission des entreprises familiales, ce qui relève du sujet entreprises (soutenir_entreprises) et non spécifiquement des très hauts patrimoines/ultra-riches."
-      },
-      {
-        "id": "zemmour-gouvernance-republique-005",
-        "raison": "relecture : Le texte modifie l'équilibre des pouvoirs via un vote du Congrès sur l'inconstitutionnalité, ce qui ne correspond pas aux critères définis pour nouvelles_institutions (nouvelle constitution, proportionnelle, RIC, constituante)."
-      }
-    ],
-    "cout_reference_usd": 0.0889,
+    "sans_position": 7,
+    "rejetees": [],
+    "cout_reference_usd": 0.0888,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "8c2a7697021134f7",
+    "empreinte": "253a373333981c59",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 16,
-    "etiquetees": 10,
+    "etiquetees": 9,
     "sans_position": 6,
-    "rejetees": [],
-    "cout_reference_usd": 0.0472,
+    "rejetees": [
+      {
+        "id": "zemmour-gouvernance-republique-006",
+        "raison": "relecture : La mesure porte sur la localisation souveraine des données, pas sur la surveillance des citoyens ou la protection de la vie privée face à la surveillance de sécurité ; le sujet/position ne correspondent pas au texte."
+      }
+    ],
+    "cout_reference_usd": 0.0428,
     "appels": 2
   }
 ]

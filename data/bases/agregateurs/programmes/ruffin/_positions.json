@@ -1,68 +1,55 @@
 [
   {
     "groupe": 0,
-    "empreinte": "976562fafc35c5cc",
+    "empreinte": "903b93c5571ac142",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 5,
-    "sans_position": 20,
+    "etiquetees": 7,
+    "sans_position": 18,
     "rejetees": [],
-    "cout_reference_usd": 0.0798,
+    "cout_reference_usd": 0.1202,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "e247457537f55df4",
+    "empreinte": "0fc884e4cc4c7e82",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 8,
-    "sans_position": 14,
-    "rejetees": [
-      {
-        "id": "ruffin-social-solidarite-017",
-        "raison": "relecture : Sanctionner les logements illégaux ou surloués relève du contrôle/répression, pas de l'encadrement des loyers ou du logement social défini pour cette position."
-      },
-      {
-        "id": "ruffin-social-solidarite-018",
-        "raison": "relecture : L'abrogation de la loi Kasbarian-Bergé et la médiation avant expulsion concernent le droit des locataires face aux expulsions, ce qui ne correspond pas à la définition d'encadrer_logement (loyers, logement social, logements vacants, locations touristiques)."
-      },
-      {
-        "id": "ruffin-retraites-travail-009",
-        "raison": "relecture : Réduire l'amplitude horaire des journées de travail ne correspond pas à la définition de reduire_temps_travail, qui vise une réduction de la durée légale du travail, pas une réorganisation de l'étalement des horaires."
-      }
-    ],
-    "cout_reference_usd": 0.0998,
+    "etiquetees": 17,
+    "sans_position": 8,
+    "rejetees": [],
+    "cout_reference_usd": 0.077,
     "appels": 2
   },
   {
     "groupe": 2,
-    "empreinte": "de7b54d960c89d0d",
+    "empreinte": "c91e75e4c8acbb32",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 10,
-    "sans_position": 15,
-    "rejetees": [],
-    "cout_reference_usd": 0.0644,
+    "etiquetees": 12,
+    "sans_position": 12,
+    "rejetees": [
+      {
+        "id": "ruffin-envi-006",
+        "raison": "relecture : Le texte propose un référendum sur des mesures climatiques précises, ce n'est pas une réforme institutionnelle (VIe République, proportionnelle, RIC en général) mais une modalité ponctuelle de décision sur l'écologie."
+      }
+    ],
+    "cout_reference_usd": 0.1365,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "90dfbafd33848137",
+    "empreinte": "ef5520401012125b",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 17,
-    "etiquetees": 0,
-    "sans_position": 16,
-    "rejetees": [
-      {
-        "id": "ruffin-education-jeunesse-001",
-        "raison": "relecture : La mesure porte sur la pédagogie de l'enseignement artistique spécifiquement, pas sur une refonte de l'organisation générale du système éducatif comme l'exige la définition de reformer_ecole."
-      }
-    ],
-    "cout_reference_usd": 0.0295,
+    "etiquetees": 2,
+    "sans_position": 15,
+    "rejetees": [],
+    "cout_reference_usd": 0.0331,
     "appels": 2
   }
 ]

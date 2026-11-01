@@ -717,10 +717,10 @@
     ],
     "positions": [
       {
-        "sujet": "immigration",
-        "position": "restriction",
+        "sujet": "droit_du_sol",
+        "position": "droit_sol_restreint",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Durcir les conditions de naturalisation, en augmentant la durée minimale de résidence en France de 5 ans à 10 ans"
+        "extrait": "Durcir les conditions de naturalisation, en augmentant la durée minimale de résidence en France de 5 ans à 10 ans, en exigeant une parfaite maitrise de la langue, une assimilation réelle, ainsi qu’une absence totale de condamnation judiciaire."
       }
     ]
   },
@@ -931,12 +931,6 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Introduire des peines planchers pour tous les crimes et délits."
-      },
-      {
         "sujet": "prison",
         "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
@@ -999,8 +993,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "securite",
-        "position": "repression",
+        "sujet": "prison",
+        "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Rétablir une peine de perpétuité réelle non-compressible"
       }
@@ -1065,7 +1059,7 @@
         "sujet": "fonction_publique",
         "position": "plus_services_publics",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Recruter davantage de magistrats"
+        "extrait": "Recruter davantage de magistrats et élargir leur recrutement"
       }
     ]
   },
@@ -1166,14 +1160,7 @@
         "extrait": "Expulser tous les squatteurs en moins de 72h, grâce au recours obligatoire à la force publique par les préfets."
       }
     ],
-    "positions": [
-      {
-        "sujet": "securite",
-        "position": "repression",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Expulser tous les squatteurs en moins de 72h, grâce au recours obligatoire à la force publique par les préfets"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "zemmour-interieur-justice-025",
@@ -1197,7 +1184,14 @@
     "sous_theme": "Justice & pénitentiaire",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "decentralisation",
+        "position": "decentraliser",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer le pouvoir des maires contre les occupations illégales de terrains publics"
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-026",
@@ -1235,14 +1229,6 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Suspendre les aides sociales aux délinquants."
       }
-    ],
-    "positions": [
-      {
-        "sujet": "aides_sociales",
-        "position": "conditionner_aides",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Suspendre les aides sociales aux délinquants"
-      }
     ]
   },
   {
@@ -1267,7 +1253,14 @@
     "sous_theme": "Justice & pénitentiaire",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "simplification",
+        "position": "simplifier_normes",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Simplifier le code de procédure pénale"
+      }
+    ]
   },
   {
     "id": "zemmour-interieur-justice-028",
@@ -1320,7 +1313,13 @@
         "sujet": "prison",
         "position": "plus_de_prison",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Construire 10 000 places de prison supplémentaires en simplifiant le processus administratif"
+        "extrait": "Construire 10 000 places de prison supplémentaires"
+      },
+      {
+        "sujet": "simplification",
+        "position": "simplifier_normes",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "en simplifiant le processus administratif"
       }
     ]
   },
@@ -1360,7 +1359,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Accorder aux policiers et aux gendarmes une présomption de légitime défense en cas d’usage de leurs armes."
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "zemmour-interieur-justice-031",
@@ -1404,7 +1404,7 @@
         "sujet": "police_armement",
         "position": "police_armee",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Généraliser progressivement l'armement obligatoire des polices municipales"
+        "extrait": "Généraliser progressivement l’armement obligatoire des polices municipales"
       }
     ]
   },
@@ -1447,10 +1447,16 @@
     ],
     "positions": [
       {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Recruter 1 000 médecins salariés par l’État sur 5 ans dans les déserts médicaux"
+      },
+      {
         "sujet": "sante_organisation",
         "position": "hopital_public",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Recruter 1 000 médecins salariés par l'État sur 5 ans dans les déserts médicaux"
+        "extrait": "Recruter 1 000 médecins salariés par l’État sur 5 ans dans les déserts médicaux"
       }
     ]
   },
@@ -1527,7 +1533,7 @@
         "sujet": "sante_organisation",
         "position": "hopital_public",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Rétablir un système de garde obligatoire pour les médecins sur l'ensemble du territoire national"
+        "extrait": "Rétablir un système de garde obligatoire pour les médecins sur l’ensemble du territoire national"
       }
     ]
   },
@@ -1607,7 +1613,14 @@
         "extrait": "Désenclaver les bourgs des secteurs ruraux par une offre locale d’accès aux transports en commun routiers"
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "voiture",
+        "position": "restreindre_voiture",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Désenclaver les bourgs des secteurs ruraux par une offre locale d’accès aux transports en commun routiers"
+      }
+    ]
   },
   {
     "id": "zemmour-social-solidarite-006",
@@ -1631,7 +1644,14 @@
     "sous_theme": "Transports",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "voiture",
+        "position": "restreindre_voiture",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Refaire des lignes de trains « de proximité » la priorité budgétaire de la SNCF"
+      }
+    ]
   },
   {
     "id": "zemmour-retraites-travail-001",
@@ -1684,7 +1704,7 @@
         "sujet": "entreprises",
         "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Maintenir l'exonération de cotisations patronales et salariales à hauteur du SMIC pendant deux ans"
+        "extrait": "Maintenir l’exonération de cotisations patronales et salariales à hauteur du SMIC pendant deux ans"
       }
     ]
   },
@@ -1724,7 +1744,8 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "en simplifiant et défiscalisant la prime de participation des salariés"
       }
-    ]
+    ],
+    "positions": []
   },
   {
     "id": "zemmour-retraites-travail-004",
@@ -1789,10 +1810,10 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "europe",
-        "position": "souverainete",
+        "sujet": "droit_travail",
+        "position": "proteger_salaries",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Mettre fin au dumping social provoqué par l'actuelle directive européenne sur les travailleurs détachés"
+        "extrait": "Mettre fin au dumping social provoqué par l’actuelle directive européenne sur les travailleurs détachés"
       }
     ]
   },
@@ -1976,7 +1997,7 @@
         "sujet": "entreprises",
         "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "exonération de cotisations patronales et salariales à hauteur du SMIC pendant 2 ans"
+        "extrait": "réinstaurant et maintenant l’exonération de cotisations patronales et salariales à hauteur du SMIC pendant 2 ans en cas d’embauche de l’apprenti"
       }
     ]
   },
@@ -2002,7 +2023,14 @@
     "sous_theme": "Emploi & travail",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "droit_travail",
+        "position": "assouplir_travail",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Relever le seuil de 50 à 250 salariés pour l’obligation de consultation du Comité social et économique (CSE)"
+      }
+    ]
   },
   {
     "id": "zemmour-retraites-travail-011",
@@ -2092,7 +2120,7 @@
         "sujet": "entreprises",
         "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Baisser le taux d’impôt sur les sociétés à 15 % pour les petites et moyennes entreprises"
+        "extrait": "Baisser le taux d’impôt sur les sociétés à 15 % pour les petites et moyennes entreprises, artisans, commerçants et agriculteurs jusqu’à 300 000 euros de bénéfices"
       }
     ]
   },
@@ -2129,6 +2157,14 @@
         ],
         "dimension": "patrimoine",
         "sens": "hausse",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer les droits de donation et de succession pour la transmission des entreprises familiales"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "entreprises",
+        "position": "soutenir_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer les droits de donation et de succession pour la transmission des entreprises familiales"
       }
@@ -2209,14 +2245,7 @@
     "sous_theme": "Industrie & relocalisation",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "ecole_organisation",
-        "position": "reformer_ecole",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "rattachant les lycées professionnels au ministère de l’Industrie"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "zemmour-retraites-travail-017",
@@ -2474,14 +2503,7 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "renouvelables",
-        "position": "plus_renouvelables",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Faire émerger une filière industrielle et de recherche dans le recyclage des plastiques afin d’atteindre l’objectif 2025 de 50 % de volume recyclés"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "zemmour-envi-007",
@@ -2505,14 +2527,7 @@
     "sous_theme": "Ecologie",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "renouvelables",
-        "position": "plus_renouvelables",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Faire de la France une pionnière de l’aviation bas carbone en la dotant du premier avion 100 % biokérosène avant 2030"
-      }
-    ]
+    "positions": []
   },
   {
     "id": "zemmour-gouvernance-republique-001",
@@ -2604,6 +2619,12 @@
         "position": "nouvelles_institutions",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Instaurer un référendum obligatoire pour toute proposition de révision de la Constitution, ratification de traité européen ou élargissement de l’UE"
+      },
+      {
+        "sujet": "europe",
+        "position": "souverainete",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Instaurer un référendum obligatoire pour toute proposition de révision de la Constitution, ratification de traité européen ou élargissement de l’UE"
       }
     ]
   },
@@ -2659,7 +2680,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Démocratie, élections et pouvoir législatif",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "institutions",
+        "position": "nouvelles_institutions",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Permettre au Parlement d’avoir le dernier mot en cas d’inconstitutionnalité d’une loi par un vote du Parlement réuni en Congrès à la majorité des 3/5e"
+      }
+    ]
   },
   {
     "id": "zemmour-gouvernance-republique-006",
@@ -2682,8 +2711,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Numérique et IA",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "zemmour-gouvernance-republique-007",
@@ -2780,8 +2808,8 @@
     ],
     "positions": [
       {
-        "sujet": "decentralisation",
-        "position": "decentraliser",
+        "sujet": "ecole_organisation",
+        "position": "ecole_continuite",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "en suspendant la fermeture des écoles rurales sans l’accord du maire"
       }
@@ -2811,8 +2839,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "ecole_discipline",
-        "position": "ecole_exigence",
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Pour la fin du primaire, instaurer un certificat de fin d’études."
       }
@@ -2871,14 +2899,7 @@
     "sous_theme": "Education nationale",
     "titre_litteral": true,
     "effets": [],
-    "positions": [
-      {
-        "sujet": "libertes",
-        "position": "cadre_collectif",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Interdire l’écriture inclusive jusque dans l’enseignement supérieur."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "zemmour-education-jeunesse-005",

@@ -47,81 +47,81 @@
   },
   {
     "groupe": 2,
-    "empreinte": "be26f060bb234d43",
+    "empreinte": "928d0e7f0b843d5d",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 8,
-    "sans_position": 13,
+    "etiquetees": 10,
+    "sans_position": 11,
     "rejetees": [
       {
-        "id": "retailleau-retraites-travail-002",
-        "raison": "relecture : Le texte décrit une fusion de dispositifs pour rendre le travail incitatif, mais ne montre pas d'imposition d'une contrepartie d'activité ni de durcissement de l'indemnisation, condition requise pour conditionner_aides."
+        "id": "retailleau-social-solidarite-031",
+        "raison": "relecture : Exclure des ménages aisés de l'APL est un ciblage par ressources, pas l'ajout d'une contrepartie d'activité ou un durcissement de l'indemnisation chômage ; cela relève plutôt d'une réduction de dépense publique que de 'conditionner_aides'."
+      },
+      {
+        "id": "retailleau-retraites-travail-001",
+        "raison": "relecture : L'extrait sur les entreprises hésitant à proposer des heures supplémentaires décrit un constat/justification et non une mesure de soutien direct aux entreprises (baisse de charges, simplification), c'est un effet de second ordre supposé."
       },
       {
         "id": "retailleau-retraites-travail-003",
-        "raison": "relecture : L'extrait n'est qu'un constat statistique sur l'emploi des seniors, il ne décrit aucune mesure allongeant la durée ou l'âge de travail."
-      },
-      {
-        "id": "retailleau-retraites-travail-004",
-        "raison": "relecture : L'étiquette repose sur l'effet attendu ('accélérer le retour à l'emploi') plutôt que sur le contenu concret de la mesure, qui n'est pas décrit dans l'extrait."
+        "raison": "relecture : 'Libérer le travail des seniors' ayant déjà tous leurs trimestres signifie leur permettre de travailler sans pénalité s'ils le souhaitent, ce qui ne revient pas directement à reculer l'âge ou la durée de cotisation comme l'exige 'travailler_plus'."
       },
       {
         "id": "retailleau-retraites-travail-017",
-        "raison": "relecture : L'extrait, très vague, ne précise pas qu'il s'agit de très hauts patrimoines plutôt que de transmissions d'entreprises en général, ce qui ne fonde pas clairement l'étiquette ultra_riches."
+        "raison": "relecture : 'Libérer la transmission du capital productif' vise la transmission d'entreprises en général et ne mentionne pas explicitement une fiscalité allégée pour les très hauts patrimoines, ce qui nécessite une interprétation pour l'associer à 'ne_pas_taxer_ultra_riches'."
       }
     ],
-    "cout_reference_usd": 0.0772,
+    "cout_reference_usd": 0.0893,
     "appels": 2
   },
   {
     "groupe": 3,
-    "empreinte": "1c7db2c35755fd70",
+    "empreinte": "16127cd62d294c20",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
     "etiquetees": 13,
-    "sans_position": 10,
+    "sans_position": 11,
     "rejetees": [
       {
-        "id": "retailleau-envi-003",
-        "raison": "relecture : Le texte parle de faire baisser la facture grâce au nucléaire existant, mais ne défend pas explicitement le maintien ou le développement du parc nucléaire : c'est une inférence."
-      },
-      {
-        "id": "retailleau-envi-006",
-        "raison": "relecture : L'extrait sur la protection du réseau électrique contre le piratage ne porte pas sur le rapport à l'UE ni sur une reprise de compétences, et la mesure évoque même une coopération avec les partenaires européens."
+        "id": "retailleau-envi-002",
+        "raison": "relecture : L'extrait ne parle pas du nucléaire mais de l'hydroélectricité et de l'arrêt des subventions à l'éolien/solaire ; l'étiquette nucleaire/garder_nucleaire n'est pas fondée par le texte (mauvais sujet)."
       }
     ],
-    "cout_reference_usd": 0.0607,
+    "cout_reference_usd": 0.0597,
     "appels": 2
   },
   {
     "groupe": 4,
-    "empreinte": "dea9720bae4973c5",
+    "empreinte": "45de8e583e608f8c",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 19,
+    "etiquetees": 18,
     "sans_position": 5,
     "rejetees": [
       {
-        "id": "retailleau-gouvernance-republique-004",
-        "raison": "relecture : L'extrait porte sur la souveraineté des données face aux acteurs non européens (hébergement en Europe), pas sur un rapport de force entre souveraineté nationale et intégration européenne au sens du sujet 'europe'."
+        "id": "retailleau-gouvernance-republique-001",
+        "raison": "relecture : Abaisser le seuil de signatures pour le référendum d'initiative partagée est une réforme limitée du mécanisme existant, pas la création d'institutions nouvelles (VIe République, proportionnelle, RIC, constituante)."
+      },
+      {
+        "id": "retailleau-gouvernance-republique-002",
+        "raison": "relecture : Permettre de contourner une censure du Conseil constitutionnel reste une révision ponctuelle de la Ve République, non la création de nouvelles institutions au sens de la définition (nouvelle constitution, proportionnelle, RIC, constituante)."
       }
     ],
-    "cout_reference_usd": 0.1539,
+    "cout_reference_usd": 0.1104,
     "appels": 2
   },
   {
     "groupe": 5,
-    "empreinte": "fe4b37f949b5b7be",
+    "empreinte": "70d8dbb23c203fee",
     "date": "2026-11-01",
     "modele": "claude-sonnet-5",
     "propositions": 13,
-    "etiquetees": 7,
-    "sans_position": 6,
+    "etiquetees": 8,
+    "sans_position": 5,
     "rejetees": [],
-    "cout_reference_usd": 0.032,
+    "cout_reference_usd": 0.0376,
     "appels": 2
   }
 ]

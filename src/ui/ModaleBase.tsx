@@ -63,6 +63,8 @@ export function ModaleBase({ ouverte, bases, actif, onChoisir, onControle, onFer
                 </span>
               </label>
               <ProgrammesSansMesure noms={sansMesure?.[base.id] ?? []} />
+              {/* Les liens de contrôle n'apparaissent que pour la source sélectionnée. */}
+              {base.id === actif && (
               <p className="choix-base-controles">
                 <span>Contrôle de cette source :</span>
                 {([["monitoring", "Monitoring"], ["tests-situations", "Tests de situations"]] as const).map(([cible, libelle]) => (
@@ -80,6 +82,7 @@ export function ModaleBase({ ouverte, bases, actif, onChoisir, onControle, onFer
                   </button>
                 ))}
               </p>
+              )}
             </li>
           ))}
         </ul>

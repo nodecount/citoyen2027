@@ -280,7 +280,14 @@
     "sous_theme": "Justice & pénitentiaire",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Supprimer l’actuelle convention judiciaire d’intérêt public (CJIP)."
+      }
+    ]
   },
   {
     "id": "ruffin-interieur-justice-003",
@@ -343,7 +350,14 @@
         "extrait": "Plafonner le prix des billets d’avion entre l’Hexagone et les territoires dits d’Outre-Mer."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "prix_publics",
+        "position": "encadrer_prix",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Plafonner le prix des billets d’avion entre l’Hexagone et les territoires dits d’Outre-Mer."
+      }
+    ]
   },
   {
     "id": "ruffin-social-solidarite-001",
@@ -630,8 +644,8 @@
     ],
     "positions": [
       {
-        "sujet": "entreprises",
-        "position": "encadrer_entreprises",
+        "sujet": "logement",
+        "position": "encadrer_logement",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Augmenter la contribution des employeurs au financement du logement des travailleurs essentiels"
       }
@@ -661,8 +675,8 @@
     "effets": [],
     "positions": [
       {
-        "sujet": "entreprises",
-        "position": "encadrer_entreprises",
+        "sujet": "logement",
+        "position": "encadrer_logement",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Supprimer la condition des dix salariés et plus pour accéder aux dispositifs du 1 % logement."
       }
@@ -880,7 +894,15 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "encadrer_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Porter les sanctions financières contre les logements illégaux ou surloués"
+      }
+    ]
   },
   {
     "id": "ruffin-social-solidarite-018",
@@ -902,7 +924,15 @@
     "statut": "partiel",
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Logement",
-    "titre_litteral": true
+    "titre_litteral": true,
+    "positions": [
+      {
+        "sujet": "logement",
+        "position": "encadrer_logement",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Abroger la loi Kasbarian-Bergé et privilégier la prévention des impayés et la médiation bailleur/locataire avant toute expulsion"
+      }
+    ]
   },
   {
     "id": "ruffin-social-solidarite-019",
@@ -1033,7 +1063,7 @@
         "sujet": "logement",
         "position": "encadrer_logement",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Produire 200 000 logements sociaux et très sociaux à loyers modérés par an"
+        "extrait": "Produire 200 000 logements sociaux et très sociaux à loyers modérés par an en rétablissant les crédits d'État accordés aux bailleurs sociaux"
       }
     ]
   },
@@ -1151,7 +1181,14 @@
     "sous_theme": "Transports",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "prix_publics",
+        "position": "encadrer_prix",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Reprendre en main les autoroutes pour abaisser le tarif des péages via une tarification publique"
+      }
+    ]
   },
   {
     "id": "ruffin-social-solidarite-027",
@@ -1274,7 +1311,7 @@
         "sujet": "salaires",
         "position": "hausse_smic",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Indexer les salaires sur l’inflation afin de préserver le pouvoir d’achat des travailleurs."
+        "extrait": "Indexer les salaires sur l’inflation afin de préserver le pouvoir d’achat des travailleurs"
       }
     ]
   },
@@ -1389,7 +1426,14 @@
         "extrait": "Doubler la rémunération des heures travaillées avant 8 h et après 18 h, en créant une catégorie spécifique d’horaires atypiques dans le Code du travail."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "droit_travail",
+        "position": "proteger_salaries",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Doubler la rémunération des heures travaillées avant 8 h et après 18 h, en créant une catégorie spécifique d’horaires atypiques dans le Code du travail"
+      }
+    ]
   },
   {
     "id": "ruffin-retraites-travail-006",
@@ -1442,7 +1486,14 @@
         "extrait": "Rémunérer les coupures de plus de deux heures imposées par l’employeur et instaurer une durée minimale de service."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "droit_travail",
+        "position": "proteger_salaries",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Rémunérer les coupures de plus de deux heures imposées par l’employeur et instaurer une durée minimale de service"
+      }
+    ]
   },
   {
     "id": "ruffin-retraites-travail-007",
@@ -1495,7 +1546,14 @@
         "extrait": "Ajouter du temps rémunéré à chaque prise de poste."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "droit_travail",
+        "position": "proteger_salaries",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Ajouter du temps rémunéré à chaque prise de poste"
+      }
+    ]
   },
   {
     "id": "ruffin-retraites-travail-008",
@@ -1548,7 +1606,14 @@
         "extrait": "Comptabiliser les temps de transport entre deux interventions comme du temps de travail effectif."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "droit_travail",
+        "position": "proteger_salaries",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Comptabiliser les temps de transport entre deux interventions comme du temps de travail effectif"
+      }
+    ]
   },
   {
     "id": "ruffin-retraites-travail-009",
@@ -1600,6 +1665,14 @@
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
         "extrait": "Réduire l’amplitude horaire des journées de travail et mieux rémunérer les heures invisibles."
       }
+    ],
+    "positions": [
+      {
+        "sujet": "droit_travail",
+        "position": "proteger_salaries",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Réduire l’amplitude horaire des journées de travail et mieux rémunérer les heures invisibles"
+      }
     ]
   },
   {
@@ -1639,7 +1712,14 @@
         "extrait": "Mettre fin aux temps partiels subis en limitant les dérogations conventionnelles à la durée minimale de travail et en sanctionnant les entreprises qui y recourent."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "droit_travail",
+        "position": "proteger_salaries",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Mettre fin aux temps partiels subis en limitant les dérogations conventionnelles à la durée minimale de travail et en sanctionnant les entreprises qui y recourent"
+      }
+    ]
   },
   {
     "id": "ruffin-retraites-travail-011",
@@ -1717,7 +1797,14 @@
         "extrait": "Garantir aux salariés sous-traitants les mêmes droits que ceux de l’entreprise donneuse d’ordre, en appliquant le régime le plus favorable en matière de rémunération et d’avantages."
       }
     ],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "droit_travail",
+        "position": "proteger_salaries",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Garantir aux salariés sous-traitants les mêmes droits que ceux de l'entreprise donneuse d'ordre"
+      }
+    ]
   },
   {
     "id": "ruffin-retraites-travail-013",
@@ -1741,7 +1828,14 @@
     "sous_theme": "Emploi & travail",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "droit_travail",
+        "position": "proteger_salaries",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Lutter contre l'usage abusif de l'intérim pour des activités permanentes, en contrôlant et en sanctionnant les entreprises"
+      }
+    ]
   },
   {
     "id": "ruffin-retraites-travail-014",
@@ -1765,7 +1859,14 @@
     "sous_theme": "Emploi & travail",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "droit_travail",
+        "position": "proteger_salaries",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Renforcer les moyens de l'inspection du travail afin de faire respecter les règles encadrant le recours à l'intérim"
+      }
+    ]
   },
   {
     "id": "ruffin-retraites-travail-015",
@@ -1918,7 +2019,7 @@
         "sujet": "travail",
         "position": "travailler_moins",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Garantir un droit à la retraite anticipée pour pénibilité en accordant un trimestre supplémentaire de retraite pour quatre trimestres cotisés dans un métier exposé."
+        "extrait": "Garantir un droit à la retraite anticipée pour pénibilité en accordant un trimestre supplémentaire de retraite pour quatre trimestres cotisés dans un métier exposé"
       }
     ]
   },
@@ -2091,8 +2192,7 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Ecologie",
     "titre_litteral": true,
-    "effets": [],
-    "positions": []
+    "effets": []
   },
   {
     "id": "ruffin-envi-007",
@@ -2184,7 +2284,7 @@
         "sujet": "entreprises",
         "position": "encadrer_entreprises",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un délit de faute systémique, pénaliser le manquement au devoir de vigilance et limiter la délégation de pouvoir pour sanctionner les dirigeants de multinationales responsables de pollutions majeures."
+        "extrait": "Créer un délit de faute systémique, pénaliser le manquement au devoir de vigilance et limiter la délégation de pouvoir pour sanctionner les dirigeants de multinationales responsables de pollutions majeures"
       }
     ]
   },
@@ -2363,14 +2463,7 @@
         "extrait": "Moduler les prix planchers pour garantir une rémunération supérieure aux produits sous label et issus de l'agriculture biologique."
       }
     ],
-    "positions": [
-      {
-        "sujet": "agriculture_normes",
-        "position": "renforcer_normes_agri",
-        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Moduler les prix planchers pour garantir une rémunération supérieure aux produits sous label et issus de l'agriculture biologique."
-      }
-    ]
+    "positions": []
   },
   {
     "id": "ruffin-envi-014",
@@ -2453,7 +2546,7 @@
         "sujet": "agriculture_normes",
         "position": "renforcer_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Développer l'élevage herbager et la polyculture-élevage à taille humaine en sortant du modèle hors-sol dépendant des importations de soja."
+        "extrait": "Développer l'élevage herbager et la polyculture-élevage à taille humaine en sortant du modèle hors-sol dépendant des importations de soja"
       }
     ]
   },
@@ -2483,7 +2576,7 @@
         "sujet": "agriculture_normes",
         "position": "renforcer_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Créer un fonds de garantie pour l'agriculture biologique rétablissant l'aide au maintien et renforçant les moyens de l'Agence Bio."
+        "extrait": "Créer un fonds de garantie pour l'agriculture biologique rétablissant l'aide au maintien et renforçant les moyens de l'Agence Bio"
       }
     ]
   },
@@ -2514,7 +2607,7 @@
         "sujet": "agriculture_normes",
         "position": "renforcer_normes_agri",
         "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
-        "extrait": "Imposer et accompagner le respect de 30 % de produits bio en restauration collective (cantines, hôpitaux) d'ici 2030, puis 50 % d'ici 2035."
+        "extrait": "Imposer et accompagner le respect de 30 % de produits bio en restauration collective (cantines, hôpitaux) d'ici 2030, puis 50 % d'ici 2035"
       }
     ]
   },
@@ -2966,7 +3059,14 @@
     "sous_theme": "Administrations et opérateurs",
     "titre_litteral": true,
     "effets": [],
-    "positions": []
+    "positions": [
+      {
+        "sujet": "fonction_publique",
+        "position": "plus_services_publics",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "réinternalisation des compétences stratégiques au sein des administrations publiques"
+      }
+    ]
   },
   {
     "id": "ruffin-education-jeunesse-001",
@@ -2989,6 +3089,14 @@
     "date_derniere_verification": "2026-10-12",
     "sous_theme": "Education nationale",
     "titre_litteral": true,
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "ecole_organisation",
+        "position": "reformer_ecole",
+        "source_url": "https://www.ifrap.org/comparateurs/presidentielles-2027",
+        "extrait": "Refonder la pédagogie de l'enseignement artistique à l'école en privilégiant la pratique directe et en ouvrant les établissements aux intervenants extérieurs"
+      }
+    ]
   }
 ]
