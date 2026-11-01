@@ -41,7 +41,7 @@ describe("Aide « Comment est suggéré le candidat ? »", () => {
     expect(html).toContain("Comment est suggéré le candidat ?");
   });
   it("dit la règle : points, cumul au centre, 5 meilleurs, jauge, ex æquo, même règle pour tous", () => {
-    for (const t of ["rapporte 1 point au candidat", "lui retire 1 point", "additionnés", "3 meilleures places", "La règle est la même pour tous", "page « À propos »"]) expect(html, t).toContain(t);
+    for (const t of ["rapporte 1 point au candidat", "lui retire 1 point", "la moyenne des deux", "3 meilleures places", "La règle est la même pour tous", "page « À propos »"]) expect(html, t).toContain(t);
   });
   it("n'explique plus la barre dans l'aide : l'explication du score est dans la fenêtre de détail", () => {
     expect(html).not.toContain("La barre de score");

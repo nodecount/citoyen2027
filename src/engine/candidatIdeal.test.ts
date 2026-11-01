@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { ConstatIntegrite } from "../data/integrite";
 import type { Proposition } from "../types";
-import { classement, combiner, ecartesParIntegrite, meilleurs, noteSur100, sansDonnees, selonPrisme, soldesConvictions, soldesSituation, type CardPourSolde, type Solde } from "./candidatIdeal";
+import { classement, combiner, combinerParNotes, ecartesParIntegrite, meilleurs, noteSur100, sansDonnees, selonPrisme, soldesConvictions, soldesSituation, type CardPourSolde, type Solde } from "./candidatIdeal";
 import type { NiveauProjection } from "./projection";
 
 const ligne = (slug: string, niveau: NiveauProjection | null, propositions: Proposition[] = []) => ({ meta: { slug }, projection: niveau === null ? null : { niveau }, propositions });
@@ -182,6 +182,32 @@ describe("combiner", () => {
     const sit = [solde("a", 3, 0), solde("b", 2, 0)];
     const conv = [solde("a", 0, 2), solde("b", 1, 0)];
     expect(meilleurs(combiner(sit, conv))!.gagnants.map((x) => x.slug)).toEqual(["b"]);
+  });
+});
+
+describe("combinerParNotes : moyenne des deux notes", () => {
+  it("chaque critère est noté avec sa référence, puis moyenné : 100 en situation et 30 en convictions donne 65, pas l'addition des points", () => {
+    // Situation : a a 20 mesures favorables (référence 20 = 100). Convictions : b a 10 mesures en tout (référence), a en a 3 favorables (30).
+    const sit = [solde("a", 20, 0), solde("b", 0, 0)];
+    const conv = [solde("a", 3, 0), solde("b", 10, 0)];
+    const [a, b] = combinerParNotes(sit, conv);
+    expect(a.noteMoyenne).toBeCloseTo(65, 5);
+    expect(b.noteMoyenne).toBeCloseTo(50, 5); // 0 en situation, 100 en convictions
+    // L'addition des points aurait donné a = 23 contre b = 10 ; la moyenne donne a = 65 contre b = 50 : même gagnant ici, mais
+    // l'écart ne dépend plus du critère qui compte le plus de mesures.
+    expect(meilleurs([a, b])!.gagnants.map((x) => x.slug)).toEqual(["a"]);
+  });
+  it("un critère riche en mesures n'écrase plus l'autre : le gagnant peut changer par rapport à l'addition", () => {
+    const sit = [solde("a", 20, 0), solde("b", 10, 0)]; // a 100, b 50
+    const conv = [solde("a", 0, 1), solde("b", 1, 0)]; // référence 1 : a −100 (négatif), b 100
+    expect(meilleurs(combiner(sit, conv))!.gagnants.map((x) => x.slug)).toEqual(["a"]); // 19 contre 11
+    expect(meilleurs(combinerParNotes(sit, conv))!.gagnants.map((x) => x.slug)).toEqual(["b"]); // 0 contre 75
+  });
+  it("sans critère convictions pour un candidat : sa note de situation seule ; classement avec la référence imposée 100", () => {
+    const [a] = combinerParNotes([solde("a", 4, 0), solde("c", 8, 0)], []);
+    expect(a.noteMoyenne).toBe(50);
+    const classes = classement(combinerParNotes([solde("a", 4, 0), solde("c", 8, 0)], []), new Set(), 3, 100);
+    expect(classes.map((c) => [c.solde.slug, c.note])).toEqual([["c", 100], ["a", 50]]);
   });
 });
 

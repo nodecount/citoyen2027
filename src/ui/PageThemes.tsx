@@ -1,12 +1,12 @@
-import { Lock } from "lucide-react";
+import { Clock, Lock } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
 import { candidatsDeBase, resumesManquants, type BaseCharge } from "../data/bases";
 import { lireOuverture, type Ecran } from "./router";
 import { aDesInformations, retirerReponsesMasquees, type ProfilPartiel } from "../profil";
 import { construireCards } from "./cards";
-import { classement, combiner, ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation } from "../engine/candidatIdeal";
+import { classement, combinerParNotes, ecartesParIntegrite, meilleurs, sansDonnees, soldesConvictions, soldesSituation } from "../engine/candidatIdeal";
 import { anonymiserCards } from "./aveugle";
-import { compterAvancement } from "./compteurs";
+import { compterAvancement, dureeEstimee } from "./compteurs";
 import { EcranDeuxZones } from "./EcranDeuxZones";
 import { cleIdentites, etatPourBase, recommencer, tirerGraine, type EtatIdeal } from "./etatIdeal";
 import { apresRevelation, choisirOnglet, ONGLETS_QUESTIONS, type OngletsZones } from "./etatZones";
@@ -107,13 +107,23 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
   const meilleursConvictions = soldesConv ? meilleurs(soldesConv, ecartes) : null;
   const convictionsIdeales =
     soldesConv && meilleursConvictions && !sansDonnees(meilleursConvictions) ? versResultatAffiche("Selon vos convictions", "sujets", meilleursConvictions, correspondance, revele, anonymisation ? soldesConvictions(cards, choixPositions) : [], classement(soldesConv, ecartes)) : null;
-  // Candidat idéal tous critères confondus : scores de la situation et des convictions additionnés (la situation seule quand il
+  // Candidat idéal tous critères confondus : moyenne des notes de la situation et des convictions (la situation seule quand il
   // n'y a pas de résultat « convictions », les convictions seules quand il n'y a pas de situation). Les écartés par l'intégrité le
   // sont dès que le critère convictions compte.
-  const soldesCumul = convictionsIdeales && soldesConv ? combiner(soldesSit, soldesConv) : soldesSit;
+  // Décision du 2026-11-01 : les deux critères sont d'abord notés sur 100 chacun, puis la MOYENNE des deux notes désigne le candidat
+  // (et non plus l'addition des points bruts, qui laissait le critère le plus riche en mesures écraser l'autre). D'un seul côté, la
+  // note de ce côté suffit.
+  const deuxCriteres = personnalise && convictionsIdeales !== null && soldesConv !== null;
+  const soldesCumul = deuxCriteres ? combinerParNotes(soldesSit, soldesConv!) : convictionsIdeales && soldesConv ? soldesConv : soldesSit;
   const ecartesCumul = convictionsIdeales ? ecartes : new Set<string>();
-  const soldesCumulAnonymes = anonymisation ? (convictionsIdeales && soldesConv ? combiner(soldesSituation(cards), soldesConvictions(cards, choixPositions)) : soldesSituation(cards)) : [];
-  const idealCumule = personnalise || convictionsIdeales ? versResultatAffiche("Selon votre situation et vos convictions", "thèmes", meilleurs(soldesCumul, ecartesCumul), correspondance, revele, soldesCumulAnonymes, classement(soldesCumul, ecartesCumul)) : null;
+  const soldesCumulAnonymes = anonymisation
+    ? deuxCriteres
+      ? combinerParNotes(soldesSituation(cards), soldesConvictions(cards, choixPositions))
+      : convictionsIdeales && soldesConv
+        ? soldesConvictions(cards, choixPositions)
+        : soldesSituation(cards)
+    : [];
+  const idealCumule = personnalise || convictionsIdeales ? versResultatAffiche("Selon votre situation et vos convictions", "thèmes", meilleurs(soldesCumul, ecartesCumul), correspondance, revele, soldesCumulAnonymes, classement(soldesCumul, ecartesCumul, 3, deuxCriteres ? 100 : undefined)) : null;
   const avance = compterAvancement(base.questionnaire, profil, convictions, propositions);
 
   const allerA = (suivante: Vue) => {
@@ -209,6 +219,12 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
               </p>
               <p>Toutes les questions sont facultatives, mais plus vous répondez, plus l'estimation est précise.</p>
               <p className="intro-ligne-icone">
+                <Clock size={22} aria-hidden="true" focusable="false" />
+                <span>
+                  Durée : <strong>{dureeEstimee(avance.questions)}</strong> pour répondre à tout, à raison d'une dizaine de secondes par question.
+                </span>
+              </p>
+              <p className="intro-ligne-icone">
                 <Lock size={22} aria-hidden="true" focusable="false" />
                 <span>Vos informations sont sécurisées : votre navigateur les garde, sans jamais les envoyer, jusqu'à ce que vous les effaciez.</span>
               </p>
@@ -250,6 +266,12 @@ export default function PageThemes({ base, profil, generalSoumis, onValider, onE
                 <strong>Objectif :</strong> tenir compte de ses idées, pas seulement de sa situation.
               </p>
               <p>Vous choisissez une position sur les sujets qui comptent pour vous. Un sujet sans choix n'influence pas le résultat.</p>
+              <p className="intro-ligne-icone">
+                <Clock size={22} aria-hidden="true" focusable="false" />
+                <span>
+                  Durée : <strong>{dureeEstimee(avance.sujets)}</strong> pour répondre à tous les sujets, à raison d'une dizaine de secondes par sujet.
+                </span>
+              </p>
               <p className="intro-ligne-icone">
                 <Lock size={22} aria-hidden="true" focusable="false" />
                 <span>Vos informations sont sécurisées : votre navigateur les garde, sans jamais les envoyer, jusqu'à ce que vous les effaciez.</span>

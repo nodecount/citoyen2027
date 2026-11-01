@@ -523,7 +523,7 @@ export function ModaleAideScore({ onFermer }: { onFermer: () => void }) {
           <h3>Le candidat suggéré</h3>
           <ul>
             <li>Chaque candidat a deux scores : un selon votre situation, un selon vos convictions.</li>
-            <li>Les deux sont additionnés : le candidat suggéré a le total le plus élevé.</li>
+            <li>On fait la moyenne des deux : le candidat suggéré a la moyenne la plus élevée.</li>
             <li>Dans chaque bloc, l'onglet « Candidats » montre les 3 meilleures places.</li>
           </ul>
         </section>

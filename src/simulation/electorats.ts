@@ -1,5 +1,5 @@
 import { candidatsDeBase, chargerBase, listerBases } from "../data/bases";
-import { combiner, meilleurs, selonPrisme, soldesConvictions, soldesSituation, type Prisme, type Solde } from "../engine/candidatIdeal";
+import { combinerParNotes, meilleurs, selonPrisme, soldesConvictions, soldesSituation, type Prisme, type Solde } from "../engine/candidatIdeal";
 import type { ChoixPositions } from "../positions";
 import { aDesInformations, mettreAJourReponse, type ProfilPartiel } from "../profil";
 import { construireCards } from "../ui/cards";
@@ -170,7 +170,7 @@ export function simuler(electorat: Electorat, baseId: string): ResultatBase {
   const prismes = {
     situation: soldesSit ? selonPrismes(soldesSit) : null,
     convictions: soldesConv ? selonPrismes(soldesConv) : null,
-    combine: soldesSit ? selonPrismes(soldesConv ? combiner(soldesSit, soldesConv) : soldesSit) : null,
+    combine: soldesSit ? selonPrismes(soldesConv ? combinerParNotes(soldesSit, soldesConv) : soldesSit) : null,
   };
 
   let situation: ResultatBase["situation"] = null;

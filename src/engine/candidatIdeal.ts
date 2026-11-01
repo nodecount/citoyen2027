@@ -43,6 +43,9 @@ export interface Solde {
   // Thèmes (situation) ou constats sujet × thème (convictions) où le candidat a un niveau : il n'est éligible que s'il y en a au moins un.
   analyses: number;
   solde: number;
+  // Seulement pour le candidat idéal tous critères : la moyenne des notes (situation, convictions) sur 100, non arrondie. Alors
+  // `solde` vaut cette moyenne et `ameliorants` / `degradants` additionnent les deux critères (affichage).
+  noteMoyenne?: number;
   // Les mesures derrière le score ; un thème « mixte » figure dans les deux listes, avec ses seules mesures favorables d'un côté et
   // ses seules mesures défavorables de l'autre.
   pour: Raison[];
@@ -210,6 +213,29 @@ export function combiner(situation: Solde[], convictions: Solde[]): Solde[] {
   });
 }
 
+// Le 100 d'un critère : le plus grand nombre de mesures qui touchent le visiteur (favorables + défavorables) chez un seul candidat,
+// tous candidats confondus (écartés compris : la référence ne bouge pas selon eux).
+export function referenceDuCent(soldes: Solde[]): number {
+  return Math.max(0, ...soldes.map((s) => s.ameliorants + s.degradants));
+}
+
+// Candidat idéal tous critères (décision du 2026-11-01, remplace l'addition des points bruts) : chaque critère est d'abord noté sur
+// 100 avec SA référence, puis les deux notes sont moyennées. Un critère qui compte beaucoup plus de mesures que l'autre ne l'écrase
+// donc plus. Le classement suit la moyenne non arrondie (les scores négatifs gardent leur ordre). Un candidat sans résultat
+// « convictions » garde sa seule note de situation.
+export function combinerParNotes(situation: Solde[], convictions: Solde[]): Solde[] {
+  const refSituation = Math.max(1, referenceDuCent(situation));
+  const refConvictions = Math.max(1, referenceDuCent(convictions));
+  const parSlug = new Map(convictions.map((s) => [s.slug, s]));
+  return situation.map((s) => {
+    const c = parSlug.get(s.slug);
+    const noteS = (s.solde / refSituation) * 100;
+    if (!c) return { ...s, solde: noteS, noteMoyenne: noteS };
+    const moyenne = (noteS + (c.solde / refConvictions) * 100) / 2;
+    return { ...combiner([s], [c])[0], solde: moyenne, noteMoyenne: moyenne };
+  });
+}
+
 // Trois façons de compter le même résultat, pour les comparer dans la page « Tests de situations » (le produit utilise les mesures) :
 // les mesures (règle du produit depuis le 2026-10-11), les groupes de mesures, ou les thèmes (ancienne règle, +1 / −1 par thème ou
 // par sujet × thème). Toujours favorables moins défavorables ; un groupe ou une mesure n'est compté qu'une fois par thème.
@@ -222,7 +248,8 @@ export function selonPrisme(s: Solde, prisme: Prisme): Solde {
       : new Set(points.flatMap((p) => (prisme === "groupes" ? p.groupes : p.mesures).map((nom) => `${p.theme}|${nom}`))).size;
   const ameliorants = compter(s.pour);
   const degradants = compter(s.contre);
-  return { ...s, ameliorants, degradants, solde: ameliorants - degradants };
+  // Le candidat idéal tous critères garde sa moyenne de notes dans le prisme des mesures (celui du produit).
+  return { ...s, ameliorants, degradants, solde: prisme === "mesures" && s.noteMoyenne !== undefined ? s.noteMoyenne : ameliorants - degradants };
 }
 
 export interface Classe {
@@ -243,12 +270,13 @@ export function noteSur100(score: number, reference: number): number {
 // Le top de `taille` PLACES (mêmes règles que `meilleurs` : ni écartés, ni sans indicateur). Les candidats à égalité de score
 // occupent la même place et sont tous gardés : une égalité n'est jamais tranchée, ni par l'ordre alphabétique ni par la coupe.
 // L'ordre à score égal est celui des données ; l'interface le range par lettre anonyme, sans rapport avec l'identité.
-export function classement(soldes: Solde[], ecartes: ReadonlySet<string> = new Set(), taille = 3): Classe[] {
+// `referenceImposee` : 100 pour le candidat idéal tous critères, dont le `solde` est déjà une note sur 100 (voir combinerParNotes).
+export function classement(soldes: Solde[], ecartes: ReadonlySet<string> = new Set(), taille = 3, referenceImposee?: number): Classe[] {
   const tries = soldes.filter((s) => !ecartes.has(s.slug) && s.analyses > 0).sort((a, b) => b.solde - a.solde);
   const scores = [...new Set(tries.map((s) => s.solde))];
   // La référence du 100 : le plus grand nombre de mesures qui touchent le visiteur (favorables + défavorables) parmi TOUS les
   // candidats (écartés compris : elle ne bouge pas selon eux). Elle suit donc les réponses du visiteur.
-  const reference = Math.max(0, ...soldes.map((s) => s.ameliorants + s.degradants));
+  const reference = referenceImposee ?? referenceDuCent(soldes);
   return tries
     .map((s) => ({ solde: s, rang: scores.indexOf(s.solde) + 1, note: noteSur100(s.solde, reference), reference }))
     .filter((c) => c.rang <= taille);
