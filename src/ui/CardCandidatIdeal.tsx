@@ -5,7 +5,7 @@ import type { DetailCriteres, Raison } from "../engine/candidatIdeal";
 import { PREFIXE_ANONYME } from "./aveugle";
 import { IconeTheme } from "./icones";
 import { Pastille } from "./Pastille";
-import { partiAffichable } from "./parti";
+import { bordAffichable, partiAffichable } from "./parti";
 import { PiedModale } from "./PiedModale";
 import { premiereEnMajuscule } from "./VueThemes";
 
@@ -298,6 +298,7 @@ function LignePlace({ place, revele, onOuvrir }: { place: LigneClassement[]; rev
           <span className="ideal-ligne-identite">
             <span className="ideal-ligne-nom">{identite ? identite.nom : `Candidat ${premier.lettre}`}</span>
             {identite && partiAffichable(identite.parti) && <span className="detail-parti ideal-ligne-parti">{partiAffichable(identite.parti)}</span>}
+            {identite && bordAffichable(identite.slug, identite.parti) && <span className="detail-parti ideal-ligne-parti detail-bord">{bordAffichable(identite.slug, identite.parti)}</span>}
           </span>
         ) : (
           <span className="ideal-ligne-nom">{place.length} candidats</span>
@@ -422,6 +423,7 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
               <span>
                 {identite.nom}
                 {partiAffichable(identite.parti) && <span className="detail-parti">{partiAffichable(identite.parti)}</span>}
+                {bordAffichable(identite.slug, identite.parti) && <span className="detail-parti detail-bord">{bordAffichable(identite.slug, identite.parti)}</span>}
               </span>
             </h2>
           )}
@@ -439,6 +441,7 @@ export function ModaleDetail({ ligne: ligneInitiale, egales, unite, critere, onF
                   <Pastille slug={l.identite.slug} nom={l.identite.nom} />
                   {l.identite.nom}
                   {partiAffichable(l.identite.parti) && <span className="detail-parti ideal-egale-parti">{partiAffichable(l.identite.parti)}</span>}
+                  {bordAffichable(l.identite.slug, l.identite.parti) && <span className="detail-parti ideal-egale-parti detail-bord">{bordAffichable(l.identite.slug, l.identite.parti)}</span>}
                 </button>
               ) : null,
             )}

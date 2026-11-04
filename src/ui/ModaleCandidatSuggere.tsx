@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import type { DetailCritere } from "../engine/candidatIdeal";
 import { enPortail, JaugeNote, PoursContres, RondScore, type LigneClassement } from "./CardCandidatIdeal";
 import { Pastille } from "./Pastille";
-import { partiAffichable } from "./parti";
+import { bordAffichable, partiAffichable } from "./parti";
 import { PiedModale } from "./PiedModale";
 
 type Critere = "situation" | "convictions";
@@ -75,6 +75,7 @@ export function ModaleCandidatSuggere({ lignes, onFermer }: { lignes: LigneClass
               <span>
                 {identite.nom}
                 {partiAffichable(identite.parti) && <span className="detail-parti">{partiAffichable(identite.parti)}</span>}
+                {bordAffichable(identite.slug, identite.parti) && <span className="detail-parti detail-bord">{bordAffichable(identite.slug, identite.parti)}</span>}
               </span>
             </h2>
           )}
@@ -91,6 +92,7 @@ export function ModaleCandidatSuggere({ lignes, onFermer }: { lignes: LigneClass
                   <Pastille slug={l.identite.slug} nom={l.identite.nom} />
                   {l.identite.nom}
                   {partiAffichable(l.identite.parti) && <span className="detail-parti ideal-egale-parti">{partiAffichable(l.identite.parti)}</span>}
+                  {bordAffichable(l.identite.slug, l.identite.parti) && <span className="detail-parti ideal-egale-parti detail-bord">{bordAffichable(l.identite.slug, l.identite.parti)}</span>}
                 </button>
               ) : null,
             )}

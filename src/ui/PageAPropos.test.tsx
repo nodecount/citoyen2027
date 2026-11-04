@@ -15,7 +15,7 @@ describe("PageAPropos", () => {
 
   it("est un texte rédigé : un titre, des chapitres à titres, des encarts dans la marge, pas de cartes", () => {
     expect(html).not.toContain("<h1"); // le menu dit déjà où l'on est
-    expect((html.match(/<section class="chapitre/g) ?? []).length).toBe(6);
+    expect((html.match(/<section class="chapitre/g) ?? []).length).toBe(7);
     expect((html.match(/<aside class="encart/g) ?? []).length).toBeGreaterThanOrEqual(6);
     for (const ancien of ["kpi", "bloc-a-propos", "essai-source"]) expect(html, ancien).not.toContain(ancien);
   });
@@ -53,6 +53,13 @@ describe("PageAPropos", () => {
     expect((html.match(/acteur--modele/g) ?? []).length).toBe(4);
     expect((html.match(/acteur--code/g) ?? []).length).toBe(5);
     expect(html).toContain("mot pour mot");
+  });
+
+  it("cite Wikipédia (bord politique) et casier-politique.fr (condamnations, avec sa licence) à titre d'information", () => {
+    expect(html).toContain("Données reprises à titre d&#x27;information");
+    expect(html).toContain("https://fr.wikipedia.org/wiki/Liste_de_partis_politiques_en_France");
+    expect(html).toContain('href="https://casier-politique.fr/"');
+    expect(html).toContain("CC BY-NC-SA 4.0");
   });
 
   it("crédite chaque photo : vignette, auteur, licence et source, cliquables", () => {

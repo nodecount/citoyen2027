@@ -16,6 +16,7 @@ const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", 
 
 // « 2025-06-10 » → « 10 juin 2025 » (les données gardent le format ISO, l'écran parle français).
 export function dateEnClair(iso: string): string {
+  if (/^\d{4}$/.test(iso)) return iso; // casier-politique.fr ne donne que l'année
   const [annee, mois, jour] = iso.split("-").map(Number);
   return `${jour === 1 ? "1er" : jour} ${MOIS[mois - 1]} ${annee}`;
 }
@@ -231,7 +232,7 @@ function ConstatIntegriteTexte({ integrite }: { integrite: ConstatIntegrite }) {
       <ul>
         {integrite.condamnations.map((c, i) => (
           <li key={`${i}-${c.date_decision}-${c.nature}`}>
-            {c.nature}, {c.juridiction}, décision du {dateEnClair(c.date_decision)} ({c.peine}). {c.statut === "non_definitive" && <strong>Pas établie comme définitive : {c.recours}. </strong>}<ListeSourcesIntegrite sources={c.sources} />
+            {c.origine === "casier-politique" ? `${c.nature}, décision en ${c.date_decision}` : `${c.nature}, ${c.juridiction}, décision du ${dateEnClair(c.date_decision)}`} ({c.peine}). {c.statut === "non_definitive" && <strong>Pas établie comme définitive : {c.recours}. </strong>}<ListeSourcesIntegrite sources={c.sources} />
           </li>
         ))}
       </ul>

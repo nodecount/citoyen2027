@@ -1,0 +1,78 @@
+{
+  "source": "Wikipédia, « Liste de partis politiques en France » (https://fr.wikipedia.org/wiki/Liste_de_partis_politiques_en_France), section « Partis nationaux ». Le bord est celui de la section où l'article range le parti du candidat ; attribué au parti, jamais au candidat seul. Généré par scripts/bords_politiques.py.",
+  "date": "2026-11-04",
+  "bords": {
+    "arthaud": "Extrême gauche",
+    "melenchon": "Gauche",
+    "roussel": "Gauche",
+    "ruffin": "Gauche",
+    "tondelier": "Gauche",
+    "faure": "Gauche",
+    "glucksmann": "Centre gauche",
+    "attal": "Centre",
+    "philippe": "Centre droit",
+    "retailleau": "Droite",
+    "lisnard": "Droite",
+    "dupont-aignan": "Extrême droite",
+    "le-pen": "Extrême droite",
+    "zemmour": "Extrême droite"
+  },
+  "details": {
+    "arthaud": {
+      "parti_wikipedia": "Lutte ouvrière",
+      "section": "Extrême gauche"
+    },
+    "melenchon": {
+      "parti_wikipedia": "La France insoumise",
+      "section": "Gauche et gauche radicale"
+    },
+    "roussel": {
+      "parti_wikipedia": "Parti communiste français",
+      "section": "Gauche et gauche radicale"
+    },
+    "ruffin": {
+      "parti_wikipedia": "Debout !",
+      "section": "Gauche et gauche radicale"
+    },
+    "tondelier": {
+      "parti_wikipedia": "Les Écologistes",
+      "section": "Gauche et gauche radicale"
+    },
+    "faure": {
+      "parti_wikipedia": "Parti socialiste (France)",
+      "section": "Gauche et gauche radicale"
+    },
+    "glucksmann": {
+      "parti_wikipedia": "Place publique (parti politique)",
+      "section": "Centre gauche"
+    },
+    "attal": {
+      "parti_wikipedia": "Renaissance (parti)",
+      "section": "Centre"
+    },
+    "philippe": {
+      "parti_wikipedia": "Horizons",
+      "section": "Centre droit"
+    },
+    "retailleau": {
+      "parti_wikipedia": "Les Républicains",
+      "section": "Droite"
+    },
+    "lisnard": {
+      "parti_wikipedia": "Les Républicains",
+      "section": "Droite"
+    },
+    "dupont-aignan": {
+      "parti_wikipedia": "Debout la France",
+      "section": "Droite radicale et extrême droite"
+    },
+    "le-pen": {
+      "parti_wikipedia": "Rassemblement national",
+      "section": "Droite radicale et extrême droite"
+    },
+    "zemmour": {
+      "parti_wikipedia": "Reconquête (parti politique)",
+      "section": "Droite radicale et extrême droite"
+    }
+  }
+}

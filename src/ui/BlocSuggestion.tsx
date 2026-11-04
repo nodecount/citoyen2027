@@ -4,7 +4,7 @@ import type { ResultatAffiche } from "./CardCandidatIdeal";
 import { ModaleCandidatSuggere } from "./ModaleCandidatSuggere";
 import type { EtatSuggestion } from "./etatZones";
 import { Pastille } from "./Pastille";
-import { partiAffichable } from "./parti";
+import { bordAffichable, partiAffichable } from "./parti";
 import "./deuxZones.css";
 
 // Nom affiché derrière le flou tant que la suggestion n'est pas révélée : jamais le vrai nom, qui n'est alors pas dans la page.
@@ -55,6 +55,7 @@ export function BlocSuggestion({ etat, pourcent, combine, onReveler, onRevenir }
           <li key={i.slug}>
             <strong>{i.nom}</strong>
             {partiAffichable(i.parti) && <span className="detail-parti">{partiAffichable(i.parti)}</span>}
+            {bordAffichable(i.slug, i.parti) && <span className="detail-parti detail-bord">{bordAffichable(i.slug, i.parti)}</span>}
           </li>
         ))}
       </ul>

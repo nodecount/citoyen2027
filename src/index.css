@@ -4337,6 +4337,13 @@ button.bouton-danger:hover {
   color: var(--bleu-fonce);
   vertical-align: middle;
 }
+/* Bord politique, à côté du parti : neutre (gris), aucune couleur de camp. */
+.detail-parti.detail-bord {
+  margin-left: 0.35rem;
+  border-color: var(--filet);
+  background: #f3f4f6;
+  color: var(--encre-douce);
+}
 .infobulle-parti {
   display: block;
   font-weight: 400;

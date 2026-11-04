@@ -1,0 +1,194 @@
+{
+  "source": "casier-politique.fr (https://casier-politique.fr/), de Raphaël Jolivet, données ouvertes du dépôt https://codeberg.org/raphael-jolivet/crapulopedia (data/out/affaires-out.csv). Licence CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/) : attribution, usage non commercial, partage dans les mêmes conditions. Généré par scripts/casier_politique.py.",
+  "licence": "CC BY-NC-SA 4.0",
+  "date": "2026-11-04",
+  "avertissement": "Reprise telle quelle des champs du site (prison et inéligibilité en mois, amende en euros ; recours : definitif, appel ou cassation). Le site ne donne ni la juridiction, ni la date exacte, ni la source de chaque décision. Un candidat absent n'est pas un candidat sans condamnation.",
+  "candidats": {
+    "le-pen": {
+      "nom_sur_le_site": "Marine Le Pen",
+      "fiche": "https://casier-politique.fr/p/Q12927_Marine%20Le%20Pen",
+      "parti_sur_le_site": "Rassemblement national",
+      "affaires": [
+        {
+          "annee": 2025,
+          "affaire": "Affaire des assistants parlementaires du Front national au Parlement européen",
+          "recours": "appel",
+          "prison_mois": 48,
+          "prison_avec_sursis_mois": 24,
+          "amende_euros": 100000,
+          "amende_avec_sursis_euros": 0,
+          "ineligibilite_mois": 60,
+          "ineligibilite_avec_sursis_mois": 0
+        },
+        {
+          "annee": 2023,
+          "affaire": "Affaire Cimade à Mayotte",
+          "recours": "definitif",
+          "prison_mois": 0,
+          "prison_avec_sursis_mois": 0,
+          "amende_euros": 500,
+          "amende_avec_sursis_euros": 500,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        },
+        {
+          "annee": 2020,
+          "affaire": "Affaire Jeanne / Riwal",
+          "recours": "definitif",
+          "prison_mois": 0,
+          "prison_avec_sursis_mois": 0,
+          "amende_euros": 18750,
+          "amende_avec_sursis_euros": 0,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        }
+      ]
+    },
+    "melenchon": {
+      "nom_sur_le_site": "Jean-Luc Mélenchon",
+      "fiche": "https://casier-politique.fr/p/Q5829_Jean-Luc%20M%C3%A9lenchon",
+      "parti_sur_le_site": "La France insoumise",
+      "affaires": [
+        {
+          "annee": 2023,
+          "affaire": "Non-respect du droit d'auteur de l'œuvre 'La Marianne asiatique'",
+          "recours": "definitif",
+          "prison_mois": 0,
+          "prison_avec_sursis_mois": 0,
+          "amende_euros": 40000,
+          "amende_avec_sursis_euros": 0,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        },
+        {
+          "annee": 2022,
+          "affaire": "Injure publique et diffamation contre des journalistes de Radio France",
+          "recours": "appel",
+          "prison_mois": 0,
+          "prison_avec_sursis_mois": 0,
+          "amende_euros": 500,
+          "amende_avec_sursis_euros": 500,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        },
+        {
+          "annee": 2021,
+          "affaire": "Diffamation contre Paulo Paranaguá (2e plainte)",
+          "recours": "definitif",
+          "prison_mois": 0,
+          "prison_avec_sursis_mois": 0,
+          "amende_euros": 500,
+          "amende_avec_sursis_euros": 500,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        },
+        {
+          "annee": 2019,
+          "affaire": "Rébellion et actes d'intimidation lors de la perquisition du 16 octobre 2018",
+          "recours": "definitif",
+          "prison_mois": 3,
+          "prison_avec_sursis_mois": 3,
+          "amende_euros": 8000,
+          "amende_avec_sursis_euros": 8000,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        }
+      ]
+    },
+    "zemmour": {
+      "nom_sur_le_site": "Éric Zemmour",
+      "fiche": "https://casier-politique.fr/p/Q288477_%C3%89ric%20Zemmour",
+      "parti_sur_le_site": "Reconquête",
+      "affaires": [
+        {
+          "annee": 2025,
+          "affaire": "Contestation de crime contre l'humanité (Pétain)",
+          "recours": "appel",
+          "prison_mois": 0,
+          "prison_avec_sursis_mois": 0,
+          "amende_euros": 10000,
+          "amende_avec_sursis_euros": 0,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        },
+        {
+          "annee": 2025,
+          "affaire": "Injure raciale (affaire de Crépol)",
+          "recours": "definitif",
+          "prison_mois": 0,
+          "prison_avec_sursis_mois": 0,
+          "amende_euros": 9000,
+          "amende_avec_sursis_euros": 0,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        },
+        {
+          "annee": 2024,
+          "affaire": "Provocation à la haine contre les migrants et les mineurs isolés (2019)",
+          "recours": "definitif",
+          "prison_mois": 0,
+          "prison_avec_sursis_mois": 0,
+          "amende_euros": 15000,
+          "amende_avec_sursis_euros": 0,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        },
+        {
+          "annee": 2023,
+          "affaire": "Injure à caractère raciste contre Hapsatou Sy (2018)",
+          "recours": "definitif",
+          "prison_mois": 0,
+          "prison_avec_sursis_mois": 0,
+          "amende_euros": 4000,
+          "amende_avec_sursis_euros": 0,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        },
+        {
+          "annee": 2022,
+          "affaire": "Complicité d'injure raciale et provocation à la haine (2020)",
+          "recours": "definitif",
+          "prison_mois": 0,
+          "prison_avec_sursis_mois": 0,
+          "amende_euros": 10000,
+          "amende_avec_sursis_euros": 0,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        },
+        {
+          "annee": 2022,
+          "affaire": "Contrefaçon de droits d'auteur (clip de candidature)",
+          "recours": "definitif",
+          "prison_mois": 0,
+          "prison_avec_sursis_mois": 0,
+          "amende_euros": 165000,
+          "amende_avec_sursis_euros": 0,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        },
+        {
+          "annee": 2018,
+          "affaire": "Provocation à la haine religieuse envers les musulmans (2016)",
+          "recours": "definitif",
+          "prison_mois": 0,
+          "prison_avec_sursis_mois": 0,
+          "amende_euros": 5000,
+          "amende_avec_sursis_euros": 0,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        },
+        {
+          "annee": 2011,
+          "affaire": "Provocation à la discrimination raciale (2010)",
+          "recours": "definitif",
+          "prison_mois": 0,
+          "prison_avec_sursis_mois": 0,
+          "amende_euros": 1000,
+          "amende_avec_sursis_euros": 1000,
+          "ineligibilite_mois": 0,
+          "ineligibilite_avec_sursis_mois": 0
+        }
+      ]
+    }
+  }
+}

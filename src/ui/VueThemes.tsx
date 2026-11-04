@@ -14,7 +14,7 @@ import { FluxCandidats } from "./FluxCandidats";
 import { aDesConvictions, CONVICTIONS_VIDES, type Convictions } from "./memoireConvictions";
 import { IconeTheme } from "./icones";
 import { Pastille } from "./Pastille";
-import { partiAffichable } from "./parti";
+import { bordAffichable, partiAffichable } from "./parti";
 import { NIVEAUX, decrireEffet } from "./projection";
 import { SectionQuestions, type SurReponse } from "./Questions";
 
@@ -313,6 +313,7 @@ function DetailCandidat({ ligne, profil, id, onFermer, vueInitiale, actionProfil
         <h3 className="detail-titre">
           {meta.nom}
           {partiAffichable(meta.parti) && <span className="detail-parti">{partiAffichable(meta.parti)}</span>}
+          {bordAffichable(meta.slug, meta.parti) && <span className="detail-parti detail-bord">{bordAffichable(meta.slug, meta.parti)}</span>}
         </h3>
         <div className="onglets-detail" role="group" aria-label="Affichage">
           <button type="button" aria-pressed={vueActive === "resume"} onClick={() => setVue("resume")}>
@@ -513,6 +514,7 @@ function Portrait({ ligne, ouvert, idDetail, onBasculer, neutre = false, simulat
   const niveau = neutre ? null : (ligne.projection?.niveau ?? null);
   const { nom } = ligne.meta;
   const parti = partiAffichable(ligne.meta.parti);
+  const bord = bordAffichable(ligne.meta.slug, ligne.meta.parti);
   const nombre = ligne.propositions.length;
   const precision = niveau ? ` — ${NIVEAUX[niveau].libelle}${ligne.projection?.incertain ? ", à préciser" : ""}` : "";
   // Exploration : le nombre de mesures du candidat. Simulateur : pas le total (40 mesures suffit à reconnaître un candidat),
@@ -557,7 +559,7 @@ function Portrait({ ligne, ouvert, idDetail, onBasculer, neutre = false, simulat
           bouton, d'où aria-hidden). */}
       <span className="infobulle infobulle--nom" aria-hidden="true">
         {nom}
-        {parti && <span className="infobulle-parti">{parti}</span>}
+        {parti && <span className="infobulle-parti">{bord ? `${parti} · ${bord}` : parti}</span>}
       </span>
     </li>
   );

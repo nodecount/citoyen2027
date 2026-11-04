@@ -147,6 +147,30 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
       </section>
 
       <section className="chapitre">
+        <h2>Données reprises à titre d'information</h2>
+        <h3>Le bord politique</h3>
+        <p>
+          Le bord affiché à côté du parti d'un candidat vient de la{" "}
+          <a href="https://fr.wikipedia.org/wiki/Liste_de_partis_politiques_en_France" target="_blank" rel="noopener noreferrer">
+            liste des partis politiques en France
+          </a>{" "}
+          de Wikipédia : c'est la section où l'article range le parti. Il n'entre dans aucun calcul.
+        </p>
+        <h3>Les condamnations</h3>
+        <p>
+          Les condamnations de certains candidats sont recoupées avec{" "}
+          <a href="https://casier-politique.fr/" target="_blank" rel="noopener noreferrer">
+            casier-politique.fr
+          </a>{" "}
+          (Raphaël Jolivet, licence{" "}
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">
+            CC BY-NC-SA 4.0
+          </a>
+          ). Un candidat absent de ce site n'est pas pour autant un candidat sans condamnation.
+        </p>
+      </section>
+
+      <section className="chapitre">
         <h2>Crédits photos</h2>
         <p>Photos sous licence libre, via Wikimedia Commons.</p>
         <ul className="liste-credits">
