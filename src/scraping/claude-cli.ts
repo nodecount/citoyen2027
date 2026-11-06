@@ -97,7 +97,7 @@ const lanceurReel: Lanceur = (executable, args, entree, cwd, timeoutMs) =>
     enfant.stdin.end(entree);
   });
 
-const MOTIFS_PANNE = /usage limit|limit reached|rate limit|not logged in|please run \/login|invalid api key|authentication|credit balance|overloaded_error/i;
+const MOTIFS_PANNE = /usage limit|limit reached|hit your [\w-]* ?limit|rate limit|not logged in|please run \/login|invalid api key|authentication|credit balance|overloaded_error/i;
 
 // Panne d'abonnement ou de commande → PanneCli (à ne pas réessayer) ; autre incident → Error (l'appelant peut réessayer).
 export async function appelerClaudeCli(prompt: string, systeme: string, schema: object, options: OptionsCli = {}): Promise<SortieCli> {

@@ -60,6 +60,11 @@ describe("appelerClaudeCli", () => {
     await expect(appelerClaudeCli("p", "s", SCHEMA, { lanceur })).rejects.toBeInstanceOf(PanneCli);
   });
 
+  it("traite la limite de 5 heures de l'abonnement comme une panne (message du 2026-11-07)", async () => {
+    const { lanceur } = lanceurQuiRepond(JSON.stringify({ is_error: true, result: "You've hit your 5-hour limit · resets 9:40pm (Europe/Paris)" }), 1);
+    await expect(appelerClaudeCli("p", "s", SCHEMA, { lanceur })).rejects.toBeInstanceOf(PanneCli);
+  });
+
   it("traite un compte non connecté comme une panne", async () => {
     const { lanceur } = lanceurQuiRepond("", 1, "Not logged in · Please run /login");
     await expect(appelerClaudeCli("p", "s", SCHEMA, { lanceur })).rejects.toBeInstanceOf(PanneCli);

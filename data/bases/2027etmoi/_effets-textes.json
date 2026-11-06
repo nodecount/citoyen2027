@@ -1,0 +1,1518 @@
+{
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/8430": {
+    "empreinte": "18cf0419cd25d687",
+    "passages": 15,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.3303
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280": {
+    "empreinte": "3d6c517b5592fde4",
+    "passages": 3,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes majeures atteintes d'une affection grave et incurable en phase avancée ou terminale, remplissant les conditions légales"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280",
+        "extrait": "Le droit à l’aide à mourir est le droit pour une personne qui en a exprimé la demande d’être autorisée à recourir à une substance létale et accompagnée"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.1581
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/8433": {
+    "empreinte": "347bde9e461e1fc5",
+    "passages": 14,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.3659
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/8042": {
+    "empreinte": "0b52ba3fda7ff633",
+    "passages": 5,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.088
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987": {
+    "empreinte": "ec7af0665dfd5d03",
+    "passages": 1,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "forces_ordre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
+        "extrait": "les agents de la police nationale et les militaires de la gendarmerie nationale sont présumés avoir agi dans l’un des cas autorisés par le présent article conformément aux conditions d’absolue nécessité et de stricte proportionnalité"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.0236
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/8427": {
+    "empreinte": "bd39ec8abd65784e",
+    "passages": 13,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8427",
+        "extrait": "En cas de circonstances exceptionnelles affectant gravement les conditions économiques des exploitations agricoles, un décret peut suspendre, pour une durée maximale d’un an, la perception de la redevance pour pollutions diffuses."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "consommateurs de produits du tabac"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8427",
+        "extrait": "La perte de recettes résultant pour l’État du I du présent article est compensée, à due concurrence, par la création d’une taxe additionnelle à l’accise sur les tabacs"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "propriétaires de terrains riverains d'une parcelle agricole utilisant des produits phytopharmaceutiques"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8427",
+        "extrait": "les terrains non bâtis ayant vocation à accueillir des constructions ou des installations et riverains d’une parcelle agricole où sont susceptibles d’être utilisés des produits phytopharmaceutiques mentionnés au même article L. 253‑1 peuvent être grevés d’une servitude"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8427",
+        "extrait": "le représentant de l’État dans le département peut, face à des attaques répétées et constatées d’une meute sur un troupeau, autoriser l’éleveur ou un mandataire désigné par lui à effectuer des tirs de prélèvement"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.4344
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/7408": {
+    "empreinte": "546e4ffed1450d1c",
+    "passages": 1,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "fonctionnaire"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7408",
+        "extrait": "Le droit au maintien dans les lieux d’un agent public civil ou militaire … qui s’est vu attribuer un logement sur proposition de son employeur dans le cadre des droits de réservation … peut être limité par une clause de fonction contenue dans le contrat de location."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "salarié d'une entreprise assurant un service public de transport de personnes ayant obtenu un logement via réservation de l'employeur"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7408",
+        "extrait": "d’un salarié d’un établissement public ou d’une entreprise assurant un service public de transport de personnes … qui s’est vu attribuer un logement sur proposition de son employeur … peut être limité par une clause de fonction"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "fonctionnaire"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7408",
+        "extrait": "La moitié au moins des locaux d’habitation ainsi créés est réservée au bénéfice des agents publics et salariés mentionnés au I de l’article L. 442‑7"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.0936
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/7405": {
+    "empreinte": "e3d8fd5c1689143b",
+    "passages": 3,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "securite_personnelle",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7405",
+        "extrait": "Au premier alinéa, le mot : « trente » est remplacé par le mot : « quatre‑vingt‑dix »"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.1572
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905": {
+    "empreinte": "fcf016aee36609c7",
+    "passages": 20,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "réserviste sanitaire salarié mobilisé"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
+        "extrait": "le réserviste sanitaire salarié a droit au maintien de sa rémunération par son employeur"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "militaires percevant la solde et les primes mentionnées à l'article L. 4251-1 du code de la défense"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
+        "extrait": "La solde et les accessoires versés en application du premier alinéa de l’article L. 4251‑1 du code de la défense ainsi que la prime de fidélité et les autres mesures d’encouragement versées en application du second alinéa du même article L. 4251‑1"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "militaires affectés à des missions de dissuasion nucléaire sur sous-marins nucléaires lanceurs d'engins"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
+        "extrait": "soit à des missions de dissuasion nucléaire accomplies par les sous‑marins nucléaires lanceurs d’engins"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "militaires qui quittent le service et sont involontairement privés d'emploi"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
+        "extrait": "Les militaires qui quittent le service et qui sont involontairement privés d’emploi ont droit à un revenu de remplacement, sous forme d’allocation de chômage."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "handicap",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
+        "extrait": "Des aménagements des modalités des épreuves des examens, des concours et des sélections organisés au titre du recrutement ou en cours de carrière peuvent être autorisés au profit de certains candidats relevant de l’une des catégories mentionnées aux 1° et 9° de l’article L. 5212‑13 du code du travail ou à l’article L. 111‑1 du code des pensions militaires d’invalidité et des victimes de guerre"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "titulaires de l'allocation de reconnaissance du combattant"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
+        "extrait": "L’allocation de reconnaissance du combattant fait l’objet d’une revalorisation, son montant étant porté de 52 à 53 points d’indice de pension militaire d’invalidité à compter du 1er janvier 2027"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "pensionnés de pension militaire d'invalidité"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
+        "extrait": "une revalorisation immédiate de 1,0 % du point de pension militaire d’invalidité au 1er janvier 2026, correspondant à l’inflation constatée"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.5812
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/4442": {
+    "empreinte": "74868469c103e39f",
+    "passages": 4,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.0965
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/4241": {
+    "empreinte": "8e8e8468c5e4af0a",
+    "passages": 1,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.0336
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/6319": {
+    "empreinte": "e54e33c0b7c3c1d3",
+    "passages": 19,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes ayant recours à la télémédecine pour un arrêt de travail"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/6319",
+        "extrait": "Aucun renouvellement ultérieur de l’arrêt de travail ne peut être prescrit par un acte de télémédecine."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/6319",
+        "extrait": "l’employeur peut faire procéder à une contre‑visite médicale dans les conditions prévues à l’avant‑dernier alinéa de l’article L. 1226‑1. Lorsque la contre‑visite médicale conclut à l’absence de justification de l’arrêt de travail ou lorsqu’il est impossible de procéder au contrôle pour un motif imputable au salarié, l’employeur peut interrompre le maintien du salaire."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "titulaires du compte personnel de formation ne se présentant pas, sans motif légitime, aux évaluations et épreuves d'examen"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/6319",
+        "extrait": "le titulaire ne peut mobiliser les droits inscrits sur son compte pour s’acquitter du règlement de l’organisme de formation. La Caisse des dépôts et consignations demande au titulaire le remboursement des sommes déjà utilisées"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.4939
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/1624": {
+    "empreinte": "17314bca5121daf3",
+    "passages": 2,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "parent d'un mineur, convoqué par le juge des enfants"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1624",
+        "extrait": "Le juge des enfants peut condamner à l’amende civile prévue par le code de procédure civile ceux qui, sans motif légitime, n’y ont pas déféré."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "parent d'un mineur ayant causé un dommage, condamné pour soustraction à ses obligations parentales en lien avec ce dommage"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1624",
+        "extrait": "l’assureur peut exiger de ce parent le versement d’une participation à l’indemnisation du dommage ne pouvant excéder 7 500 euros"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.0766
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/2107": {
+    "empreinte": "f1131100bfc2b205",
+    "passages": 3,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "soignant"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2107",
+        "extrait": "ne sont pas tenus de participer aux procédures prévues aux sous‑sections 2 et 3 de la présente section"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes recourant aux frais afférents à la mise en œuvre de l'aide à mourir"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2107",
+        "extrait": "Ni la participation de l’assuré, ni la franchise mentionnées respectivement aux II et III de l’article L. 160‑13 ne sont exigées pour… Les frais prévus au 3° de l’article L. 160‑8"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "titulaires d'un contrat d'assurance en cas de décès"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2107",
+        "extrait": "L’assurance en cas de décès doit couvrir le décès en cas de mise en œuvre de l’aide à mourir prévue à l’article L. 1111‑12‑1 du code de la santé publique."
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.1572
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/1308": {
+    "empreinte": "4b07d321b6179d20",
+    "passages": 1,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.0256
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/438": {
+    "empreinte": "046c617560ce653f",
+    "passages": 1,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.0064
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/217": {
+    "empreinte": "2b37969b472e486a",
+    "passages": 1,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.0341
+  },
+  "https://www.assemblee-nationale.fr/dyn/16/scrutins/3289": {
+    "empreinte": "42c58fd35077f73f",
+    "passages": 1,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.0077
+  },
+  "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533": {
+    "empreinte": "10f3a2d28a64b54f",
+    "passages": 4,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.0967
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473": {
+    "empreinte": "6b3aa7912a1298d3",
+    "passages": 19,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "europeenne",
+              "hors_ue"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473",
+        "extrait": "l’interdiction du territoire français est prononcée par la juridiction de jugement dans les conditions prévues à l’article 131‑30, soit à titre définitif, soit pour une durée de dix ans au plus, à l’encontre de tout étranger coupable de l’une des infractions définies aux articles 222‑34 à 222‑38"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes détenues affectées dans un quartier de lutte contre la criminalité organisée"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473",
+        "extrait": "font l’objet de fouilles intégrales systématiques après avoir été en contact physique avec une personne en mission ou en visite dans l’établissement sans être restées sous la surveillance constante d’un agent de l’administration pénitentiaire"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personne participant à des activités de trafic de stupéfiants dans un lieu faisant l'objet d'une mesure d'interdiction"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473",
+        "extrait": "le représentant de l’État dans le département ou, à Paris, le préfet de police peut, après en avoir informé le procureur de la République territorialement compétent, prononcer une mesure d’interdiction de paraître dans les lieux concernés à l’encontre de toute personne participant à ces activités"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "occupant d'un logement dont les agissements liés au trafic de stupéfiants troublent l'ordre public de manière grave ou répétée"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473",
+        "extrait": "le représentant de l’État dans le département peut enjoindre au bailleur de saisir le juge aux fins de résiliation du bail dans les conditions prévues à l’article L. 442‑4‑2 du présent code"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.4784
+  },
+  "https://www.assemblee-nationale.fr/dyn/16/scrutins/823": {
+    "empreinte": "05c440e21a235751",
+    "passages": 19,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "ménages résidant dans la commune d'accueil d'un parc d'énergies renouvelables"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823",
+        "extrait": "Des mesures en faveur des ménages résidant dans la commune d’accueil du parc d’énergies renouvelables afin de lutter contre la précarité énergétique. Ces mesures peuvent prendre la forme de versements directs aux ménages."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "ménages résidant dans la commune d'accueil du parc d'énergies renouvelables"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823",
+        "extrait": "Des mesures en faveur des ménages résidant dans la commune d’accueil du parc d’énergies renouvelables afin de lutter contre la précarité énergétique. Ces mesures peuvent prendre la forme de versements directs aux ménages."
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.4543
+  },
+  "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254": {
+    "empreinte": "0e4dfc72970fc52e",
+    "passages": 9,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "retraite"
+            ]
+          },
+          {
+            "champ": "metier",
+            "valeurs": [
+              "forces_ordre"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254",
+        "extrait": "les revenus perçus à l’occasion de l’exercice d’une activité mentionnée à l’article L. 611‑1 du code de la sécurité intérieure peuvent être entièrement cumulés avec la pension s’agissant des retraités des catégories actives de la police nationale"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "europeenne",
+              "hors_ue"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254",
+        "extrait": "Les ressortissants d’un État membre de l’Union européenne ou d’un État partie à l’accord sur l’Espace économique européen et les ressortissants de pays tiers doivent également justifier d’une connaissance de la langue française suffisante pour l’exercice d’une activité privée de sécurité"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes physiques achetant des articles pyrotechniques de divertissement"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254",
+        "extrait": "Lorsqu’une personne physique acquiert auprès d’un opérateur économique des articles pyrotechniques destinés au divertissement relevant des catégories définies par arrêté du ministre de l’intérieur, l’opérateur est tenu d’enregistrer la transaction et l’identité de l’acquéreur."
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.3564
+  },
+  "https://www.assemblee-nationale.fr/dyn/15/scrutins/49": {
+    "empreinte": "c4d3c129136c2bce",
+    "passages": 2,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.0408
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758": {
+    "empreinte": "13a79d0faeee9ef6",
+    "passages": 22,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "Le taux de la cotisation d’assurance maladie fixé en application de l’article L. 241‑2 du code de la sécurité sociale est réduit de 6 points au titre des rémunérations suivantes"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "victimes de violences sexuelles et sexistes"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "la prise en charge intégrale par l’assurance maladie des actes de prélèvements sur les victimes consécutifs à des violences sexuelles et sexistes"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes résidant en France de manière stable sans exercer d'activité professionnelle et sans affiliation par cotisations"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "bénéficie de la prise en charge des frais de santé mentionnée au premier alinéa de l’article L. 160‑1 à la condition de s’acquitter d’une participation financière"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "assurés souffrant d'une pathologie à risque d'évolution vers une affection de longue durée"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "peuvent bénéficier d’un parcours d’accompagnement préventif sur prescription médicale"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "soignant"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "les professionnels de santé exerçant, à titre libéral, en dehors des établissements ou des organismes mentionnés au I ainsi que les personnes employées dans le même lieu d’exercice les exposant ou exposant les personnes dont ils ont la charge à des risques de contamination doivent être vaccinés contre la grippe"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes résidant dans un établissement pour personnes âgées ou dépendantes"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "la vaccination contre la grippe est obligatoire, sauf contre‑indication médicale reconnue, pour les personnes résidant dans l’un des établissements mentionnés au I de l’article L. 313‑12 du code de l’action sociale et des familles pendant la période épidémique"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "patients pris en charge par des médecins mentionnés à l’article L. 162‑5‑10 (hors convention)"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "Les produits de santé, les actes et les prestations prescrits par les médecins mentionnés au premier alinéa du présent article ne donnent pas lieu à remboursement par les organismes d’assurance maladie"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "la maladie désignée dans un tableau de maladies professionnelles peut être reconnue d’origine professionnelle, après avis d’au moins deux médecins conseils recueilli dans des conditions fixées par décret, lorsqu’il est établi qu’elle est directement causée par le travail habituel de la victime"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "enfant_moins_3_ans",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "bénéficie, après avoir épuisé ce droit à congé, d’un congé supplémentaire de naissance."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "enfant_moins_3_ans",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "bénéficient, sur leur demande, d’indemnités journalières supplémentaires de naissance lorsqu’ils cessent d’exercer leur activité"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
+            "champ": "enfant_moins_3_ans",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "Aucun employeur ne peut rompre le contrat de travail d’un salarié pendant un congé supplémentaire de naissance"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "outre_mer"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "assurés nés à Saint-Pierre-et-Miquelon et à Mayotte concernés par le relèvement de l'âge légal de départ à la retraite"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "au premier alinéa, l’année : “1969” est remplacée par l’année : “1971”"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.9059
+  },
+  "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146": {
+    "empreinte": "64f9322b5fdd8c5b",
+    "passages": 12,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "couple de deux femmes ou femme non mariée"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
+        "extrait": "Tout couple formé d’un homme et d’une femme ou de deux femmes ou toute femme non mariée ont accès à l’assistance médicale à la procréation"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "couple de deux femmes ou femme non mariée"
+            ]
+          }
+        ],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
+        "extrait": "Pour l’assistance médicale à la procréation réalisée dans les conditions prévues au chapitre Ier du titre IV du livre Ier de la deuxième partie du code de la santé publique."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "couple de deux femmes ayant recours à un don avec tiers donneur"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
+        "extrait": "Pour les couples de femmes, la filiation est établie, à l’égard de chacune d’elles, par la reconnaissance qu’elles ont faite conjointement devant le notaire lors du recueil du consentement mentionné à l’article 342‑10."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "femme mineure non émancipée demandant une interruption de grossesse pour motif médical"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
+        "extrait": "l’interruption de grossesse pour motif médical ainsi que les actes médicaux et les soins qui lui sont liés peuvent être pratiqués à la demande de l’intéressée"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "soignant"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
+        "extrait": "Un médecin n’est jamais tenu de pratiquer une interruption de grossesse pour motif médical mais il doit informer, sans délai, l’intéressée de son refus"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personne dont la prise en charge médicale est susceptible d'altérer la fertilité"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
+        "extrait": "Toute personne dont la prise en charge médicale est susceptible d’altérer la fertilité ou dont la fertilité risque d’être prématurément altérée peut bénéficier du recueil ou du prélèvement et de la conservation de ses gamètes"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.3947
+  },
+  "https://www.senat.fr/scrutin-public/2006/scr2006-122.html": {
+    "empreinte": "0ba54d0ebb986545",
+    "passages": 5,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
+        "extrait": "Sont\nexonérés de l'impôt sur le revenu :"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
+        "extrait": "ouvre droit à une\ndéduction forfaitaire des cotisations patronales à hauteur d'un\nmontant fixé par décret"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "projet_achat",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
+        "extrait": "peuvent bénéficier d'un crédit d'impôt sur le revenu\nau titre des intérêts des prêts contractés"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "recu",
+              "a_venir"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
+        "extrait": "il est effectué un abattement de\n150 000 € sur la part de chacun des ascendants et sur la part de chacun des enfants\nvivants ou représentés par suite de prédécès\nou de renonciation"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "recu",
+              "a_venir"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "neveux et nièces héritiers"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
+        "extrait": "il est effectué un abattement de\n7500 € sur la part de chacun des neveux et\nnièces"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "situation_familiale",
+            "valeurs": [
+              "marie_pacse"
+            ]
+          },
+          {
+            "champ": "heritage",
+            "valeurs": [
+              "recu",
+              "a_venir"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
+        "extrait": "Sont\nexonérés de droits de mutation par décès le\nconjoint survivant et le partenaire lié au défunt par un pacte\ncivil de solidarité."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "tranche_patrimoine",
+            "valeurs": [
+              "plus_1_3m"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
+        "extrait": "L'impôt de solidarité sur la fortune du\nredevable ayant son domicile fiscal en France est réduit de la\ndifférence entre"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.2761
+  },
+  "https://www.senat.fr/scrutin-public/2007/scr2007-10.html": {
+    "empreinte": "b54a264138ba7c25",
+    "passages": 4,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "ressortissant étranger pour lequel le regroupement familial est sollicité"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
+        "extrait": "La délivrance du visa est\nsubordonnée à la production d'une attestation de suivi de cette\nformation."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "aah",
+              "aspa"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
+        "extrait": "Ces\ndispositions ne sont pas applicables lorsque la personne qui demande le\nregroupement familial est titulaire de l'allocation aux adultes\nhandicapés"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étranger admis au séjour au titre du regroupement familial dont la communauté de vie a été rompue en raison de violences conjugales"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
+        "extrait": "l'autorité\nadministrative ne peut procéder\nau retrait du titre de séjour de l'étranger admis au\nséjour au titre du regroupement familial"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "conjoint étranger d'un ressortissant français demandant un visa de long séjour"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
+        "extrait": "le conjoint\nde Français âgé de moins de\nsoixante-cinq ans\nbénéficie, dans le pays où il sollicite le visa, d'une\névaluation de son degré de connaissance de la langue"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "ne_en_france_parents_etrangers",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
+        "extrait": "la nationalité française peut être réclamée, au\nnom de l'enfant mineur né en France de parents étrangers,\nà partir de l'âge de treize ans"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
+        "extrait": "L'obligation de quitter le territoire\nfrançais n'a pas à faire l'objet d'une motivation."
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.2396
+  },
+  "https://www.senat.fr/scrutin-public/2006/scr2006-40.html": {
+    "empreinte": "a3ce8d287becd7dc",
+    "passages": 6,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.1321
+  },
+  "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421": {
+    "empreinte": "e129badca6729022",
+    "passages": 14,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "fonctionnaire"
+            ]
+          }
+        ],
+        "dimension": "securite_personnelle",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
+        "extrait": "Lorsqu’elle est informée, par quelque moyen que ce soit, de l’existence d’un risque manifeste d’atteinte grave à l’intégrité physique du fonctionnaire, la collectivité publique prend, sans délai et à titre conservatoire, les mesures d’urgence de nature à faire cesser ce risque"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "dirigeant d'une association ou d'un groupement dissous pour atteinte à l'ordre public"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
+        "extrait": "Le dirigeant d’une association ou d’un groupement dissous en application du présent article ne peut fonder, diriger ou administrer une association ou un groupement pendant une durée de trois ans"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "enfant ou héritier du défunt, ressortissant de l'UE ou résidant dans l'UE, dont la succession est régie par une loi étrangère sans mécanisme réservataire"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
+        "extrait": "chaque enfant ou ses héritiers ou ses ayants cause peuvent effectuer un prélèvement compensatoire sur les biens existants, situés en France au jour du décès, de façon à être rétablis dans les droits réservataires que leur octroie la loi française"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étranger vivant en France en état de polygamie"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
+        "extrait": "Aucun document de séjour ne peut être délivré à un étranger qui vit en France en état de polygamie. Tout document de séjour détenu par un étranger dans une telle situation est retiré."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "parents souhaitant instruire leurs enfants dans la famille"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
+        "extrait": "à condition d’y avoir été autorisées par l’autorité de l’État compétente en matière d’éducation, lui donner l’instruction en famille"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "allocations_familiales"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "famille pratiquant l'instruction en famille sans justificatif d'autorisation"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
+        "extrait": "En l’absence de production effective de l’une de ces pièces, aucune prestation ne peut être versée."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personne condamnée pour l'une des infractions prévues aux articles 421-1 à 421-8 du code pénal"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
+        "extrait": "Toute personne condamnée pour l’une des infractions prévues aux articles 421‑1 à 421‑8 du code pénal ne peut diriger ou administrer un établissement public du culte ou une association à objet cultuel pendant une durée de dix ans à compter de la date à laquelle la condamnation est devenue définitive."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "nationalite",
+            "valeurs": [
+              "europeenne",
+              "hors_ue"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "coupable de l'infraction définie à l'article 433-21 du code pénal"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
+        "extrait": "L’interdiction du territoire français peut être prononcée dans les conditions prévues à l’article 131‑30, soit à titre définitif, soit pour une durée de dix ans au plus, à l’encontre de tout étranger coupable de l’infraction définie à l’article 433‑21."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personne condamnée pour l'une des infractions prévues aux articles 421-1 à 421-6 du code pénal"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
+        "extrait": "Toute personne condamnée pour l’une des infractions prévues aux articles 421‑1 à 421‑6 du code pénal ne peut diriger ou administrer une association cultuelle pendant une durée de dix ans à compter de la date à laquelle la condamnation est devenue définitive."
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.5762
+  },
+  "https://www.senat.fr/scrutin-public/2025/scr2025-337.html": {
+    "empreinte": "2bb725633856871e",
+    "passages": 1,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "mineurs de quinze ans"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-337.html",
+        "extrait": "L’accès à un service de réseaux sociaux en ligne fourni par une plateforme en ligne est interdit aux mineurs de quinze ans."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "enfants_scolarises",
+            "valeurs": [
+              "college",
+              "lycee"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-337.html",
+        "extrait": "les mots : « et les collèges » sont remplacés par les mots : « , les collèges et les lycées »"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.0535
+  },
+  "https://www.senat.fr/scrutin-public/2025/scr2025-169.html": {
+    "empreinte": "d2522bb618830284",
+    "passages": 1,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.021
+  },
+  "https://www.senat.fr/scrutin-public/2025/scr2025-338.html": {
+    "empreinte": "782b0052aafc840d",
+    "passages": 14,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes se trouvant ou circulant dans les zones frontalières, portuaires, aéroportuaires, gares et sections autoroutières définies par la loi"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-338.html",
+        "extrait": "peuvent, à toute heure, contrôler l’identité de toute personne, quel que soit son comportement, se trouvant ou circulant dans les zones et les lieux suivants :"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "forces_ordre"
+            ]
+          }
+        ],
+        "dimension": "securite_personnelle",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-338.html",
+        "extrait": "tout agent de la police nationale ou de la gendarmerie nationale peut, lorsque la révélation de son identité est susceptible de faire peser une menace sur sa vie ou son intégrité physique ou sur celles de ses proches, être identifié, à défaut de ses nom et prénom, par un numéro d'immatriculation administrative"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "agent de l'administration des douanes"
+            ]
+          }
+        ],
+        "dimension": "securite_personnelle",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-338.html",
+        "extrait": "tout agent de l'administration des douanes peut être identifié, à défaut de ses nom et prénom, par le numéro de sa commission d'emploi, sa qualité et son service ou son unité d'affectation"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personne employée par un exploitant portuaire détentrice d'une autorisation, d'un agrément ou d'une habilitation de sûreté"
+            ]
+          }
+        ],
+        "dimension": "securite_personnelle",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-338.html",
+        "extrait": "peut demander à ce qu'un responsable hiérarchique d'un niveau suffisant, défini par décret, l'autorise nominativement et par décision motivée à être identifiée uniquement par un numéro d'immatriculation administrative"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.4728
+  },
+  "https://www.senat.fr/scrutin-public/2025/scr2025-340.html": {
+    "empreinte": "7f369186dced407c",
+    "passages": 13,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "propriétaires de terrains non bâtis riverains d'une parcelle agricole où des produits phytopharmaceutiques sont susceptibles d'être utilisés"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-340.html",
+        "extrait": "les terrains non bâtis ayant vocation à accueillir des constructions ou des installations et riverains d’une parcelle agricole où sont susceptibles d’être utilisés des produits phytopharmaceutiques mentionnés au même article L. 253-1 peuvent être grevés d’une servitude. Celle-ci délimite une bande, d’une largeur maximale de dix mètres à compter de la limite séparative de la parcelle agricole, où :\n\n« 1° Sont interdites toute construction et toute installation"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "lieutenant de louveterie"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-340.html",
+        "extrait": "Les missions ordonnées par l’autorité administrative compétente ouvrent droit à une autorisation d’absence du lieutenant de louveterie pendant son temps de travail."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-340.html",
+        "extrait": "Les tirs d’effarouchement et de défense sont autorisés pour prévenir des dommages importants à l’élevage dans les espaces protégés"
+      }
+    ],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.448
+  },
+  "https://www.senat.fr/scrutin-public/2023/scr2023-136.html": {
+    "empreinte": "a95644a131817348",
+    "passages": 1,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-06",
+    "cout_reference_usd": 0.0089
+  }
+}
