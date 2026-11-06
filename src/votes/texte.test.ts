@@ -6,6 +6,18 @@ describe("htmlEnTexte", () => {
     const html = `<html><head><style>p{}</style></head><body><p>Article&nbsp;1er</p><p>Il est &laquo; ajouté &raquo; l&#39;article L. 1.</p></body></html>`;
     expect(htmlEnTexte(html)).toBe("Article 1er\nIl est « ajouté » l'article L. 1.");
   });
+
+  it("garde les lettres accentuées écrites en entités (pages du Sénat) au lieu de les remplacer par une espace", () => {
+    expect(htmlEnTexte("<p>S&eacute;nat, adopt&eacute; &agrave; l&rsquo;unanimit&eacute; : &Eacute;tat, c&oelig;ur, fran&ccedil;ais</p>")).toBe("Sénat, adopté à l’unanimité : État, cœur, français");
+  });
+
+  it("décode les entités numériques, décimales et hexadécimales", () => {
+    expect(htmlEnTexte("<p>d&#233;put&#xE9;s &#8217;</p>")).toBe("députés ’");
+  });
+
+  it("remplace toujours une entité inconnue par une espace, sans la laisser dans le texte", () => {
+    expect(htmlEnTexte("<p>a&inconnue;b</p>")).toBe("a b");
+  });
 });
 
 describe("numeroArticle", () => {

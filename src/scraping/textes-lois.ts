@@ -99,6 +99,20 @@ export function textesAdoptesSenat(pageDossier: string): TexteAdopteSenat[] {
   return textes;
 }
 
+// Une page /leg/tas… du Sénat commence par le menu du site et un volet « autres formats » : le texte analysé doit commencer au titre
+// de la loi (juste avant « Le Sénat a adopté… le projet de loi dont la teneur suit »), à défaut au premier article.
+export function corpsDuTexteSenat(texte: string): string {
+  const lignes = texte.split("\n");
+  const formule = lignes.findIndex((l) => /teneur suit/i.test(l));
+  if (formule >= 0) {
+    let debut = formule;
+    for (let i = formule - 1; i >= Math.max(0, formule - 6); i--) if (/^(projet|proposition)\s+de\s+(loi|résolution)/i.test(lignes[i])) { debut = i; break; }
+    return lignes.slice(debut).join("\n");
+  }
+  const article = lignes.findIndex((l) => /^article\s+(1er|premier|1)\b/i.test(l));
+  return article >= 0 ? lignes.slice(article).join("\n") : texte;
+}
+
 export async function trouverTexteSenat(scrutin: ScrutinSource, telecharger: Telecharger): Promise<TexteLoi | null> {
   try {
     const base = new URL(scrutin.url).origin;
@@ -113,7 +127,7 @@ export async function trouverTexteSenat(scrutin: ScrutinSource, telecharger: Tel
       } catch {
         continue;
       }
-      const texte = htmlEnTexte(html);
+      const texte = corpsDuTexteSenat(htmlEnTexte(html));
       if (texte.length < 20) continue;
       return { texte, url: `${base}${t.chemin}`, libelle: `Texte n° ${t.numero}` };
     }

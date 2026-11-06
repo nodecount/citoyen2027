@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
-import { dateDuTexte, documentsAdoptesAN, lienDossierAN, lienDossierSenat, textesAdoptesSenat, trouverTexteAN, trouverTexteSenat } from "./textes-lois";
+import { corpsDuTexteSenat, dateDuTexte, documentsAdoptesAN, lienDossierAN, lienDossierSenat, textesAdoptesSenat, trouverTexteAN, trouverTexteSenat } from "./textes-lois";
 import type { ScrutinSource } from "./votes2027etmoi";
 
 const fixture = (nom: string) => readFileSync(resolve(process.cwd(), "src/scraping/fixtures", nom), "utf-8");
@@ -147,5 +147,36 @@ describe("trouverTexteSenat", () => {
   it("renvoie null, sans lever, sur une page introuvable ou sans lien de dossier", async () => {
     expect(await trouverTexteSenat(scrutinSenat, telechargeur({}))).toBeNull();
     expect(await trouverTexteSenat(scrutinSenat, telechargeur({ [scrutinSenat.url]: "<html></html>" }))).toBeNull();
+  });
+});
+
+describe("corpsDuTexteSenat", () => {
+  // Structure réelle d'une page /leg/tas… du Sénat : menu du site, volet « Autres formats », puis l'en-tête de la loi et ses articles.
+  const page = [
+    "Aller au contenu", "Aller à la navigation", "La galaxie Sénat", "Réseaux sociaux", "Autres formats", "En savoir plus sur le texte", "Le dossier législatif",
+    "N° 166", "SÉNAT", "SESSION EXTRAORDINAIRE DE 2025-2026", "21 juillet 2026", "PROJET DE LOI", "d'urgence pour la protection et la souveraineté agricoles", "(Texte définitif)",
+    "Le Sénat a adopté, dans les conditions prévues à l'article 45 de la Constitution, le projet de loi dont la teneur suit :",
+    "Voir les numéros :", "Article 1er", "Le code rural est ainsi modifié.",
+  ].join("\n");
+
+  it("commence au titre de la loi : ni menu du site ni volet « autres formats »", () => {
+    const corps = corpsDuTexteSenat(page);
+    expect(corps.startsWith("PROJET DE LOI")).toBe(true);
+    expect(corps).not.toContain("Aller au contenu");
+    expect(corps).toContain("Le code rural est ainsi modifié.");
+  });
+
+  it("à défaut de formule d'adoption, commence au premier article", () => {
+    expect(corpsDuTexteSenat("Menu\nAutre menu\nArticle 1er\nTexte de l'article.").startsWith("Article 1er")).toBe(true);
+  });
+
+  it("rend le texte entier quand rien ne permet de repérer le début de la loi", () => {
+    expect(corpsDuTexteSenat("Un texte sans repère.")).toBe("Un texte sans repère.");
+  });
+
+  it("trouverTexteSenat n'emporte pas le menu du site", async () => {
+    const html = `<html><body>${page.split("\n").map((l) => `<p>${l}</p>`).join("")}</body></html>`;
+    const t = await trouverTexteSenat(scrutinSenat, telechargeur({ ...PAGES_SENAT, [`${SENAT}/leg/tas25-166.html`]: html }));
+    expect(t!.texte.startsWith("PROJET DE LOI")).toBe(true);
   });
 });

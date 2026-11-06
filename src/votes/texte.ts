@@ -2,6 +2,22 @@
 // articles. Le texte reste celui de la source, mot pour mot (seuls les balises, entités et espaces sont normalisés), parce
 // que les effets structurés ensuite doivent citer des extraits retrouvés dans ce texte.
 
+// Lettres accentuées et ponctuation que les pages du Sénat écrivent en entités (« S&eacute;nat ») : les remplacer par une espace
+// ferait perdre les accents, donc les extraits cités ne se retrouveraient plus mot pour mot. Toute autre entité inconnue devient une espace.
+const ENTITES: Record<string, string> = {
+  eacute: "é", egrave: "è", ecirc: "ê", euml: "ë", agrave: "à", acirc: "â", auml: "ä", icirc: "î", iuml: "ï", ocirc: "ô", ouml: "ö",
+  ugrave: "ù", ucirc: "û", uuml: "ü", ccedil: "ç", Eacute: "É", Egrave: "È", Ecirc: "Ê", Agrave: "À", Acirc: "Â", Icirc: "Î", Ocirc: "Ô",
+  Ugrave: "Ù", Ucirc: "Û", Ccedil: "Ç", oelig: "œ", OElig: "Œ", rsquo: "’", lsquo: "‘", ldquo: "“", rdquo: "”", ndash: "–", mdash: "—",
+  hellip: "…", deg: "°", euro: "€", middot: "·", sect: "§",
+};
+
+function decoderEntite(_entite: string, nom: string): string {
+  if (nom.startsWith("#")) {
+    const code = nom[1] === "x" || nom[1] === "X" ? parseInt(nom.slice(2), 16) : parseInt(nom.slice(1), 10);
+    return Number.isInteger(code) && code > 0 && code <= 0x10ffff ? String.fromCodePoint(code) : " ";
+  }
+  return ENTITES[nom] ?? " ";
+}
 export function htmlEnTexte(html: string): string {
   const corps = html.includes("<body") ? html.slice(html.indexOf("<body")) : html;
   return corps
@@ -15,7 +31,7 @@ export function htmlEnTexte(html: string): string {
     .replace(/&#0?39;|&apos;/g, "'")
     .replace(/&laquo;/g, "«")
     .replace(/&raquo;/g, "»")
-    .replace(/&#?\w+;/g, " ")
+    .replace(/&(#x[0-9a-f]+|#\d+|[a-z][a-z0-9]*);/gi, decoderEntite)
     .replace(/[ \t  ]+/g, " ")
     .split("\n")
     .map((l) => l.trim())
