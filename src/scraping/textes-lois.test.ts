@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
-import { dateDuTexte, documentsAdoptesAN, lienDossierAN, trouverTexteAN } from "./textes-lois";
+import { dateDuTexte, documentsAdoptesAN, lienDossierAN, lienDossierSenat, textesAdoptesSenat, trouverTexteAN, trouverTexteSenat } from "./textes-lois";
 import type { ScrutinSource } from "./votes2027etmoi";
 
 const fixture = (nom: string) => readFileSync(resolve(process.cwd(), "src/scraping/fixtures", nom), "utf-8");
@@ -87,5 +87,65 @@ describe("trouverTexteAN", () => {
     expect(await trouverTexteAN(scrutin, telechargeur({}))).toBeNull();
     expect(await trouverTexteAN(scrutin, telechargeur({ [scrutin.url]: "<html></html>" }))).toBeNull();
     expect(await trouverTexteAN(scrutin, telechargeur({ ...PAGES, [`${BASE}/dyn/opendata/PRJLANR5L15BTA0061.html`]: "<html>", [`${BASE}/dyn/opendata/PRJLANR5L15BTA0087.html`]: "<html>" }))).toBeNull();
+  });
+});
+
+// ─── Sénat ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+const SENAT = "https://www.senat.fr";
+const scrutinSenat: ScrutinSource = {
+  id: "senat-2025-340",
+  chambre: "SENAT",
+  date: "2026-07-21",
+  titre: "Sur l'ensemble du projet de loi d'urgence pour la protection et la souveraineté agricoles",
+  type: "ensemble",
+  resultat: "adopté",
+  url: `${SENAT}/scrutin-public/2025/scr2025-340.html`,
+  votes: {},
+};
+const TEXTE_152 = "<html><body><p>Article 1er</p><p>Texte modifié par le Sénat le 2 juillet 2026.</p></body></html>";
+const PAGES_SENAT = {
+  [scrutinSenat.url]: fixture("scrutin-senat-340.html"),
+  [`${SENAT}/dossier-legislatif/pjl25-689.html`]: fixture("dossier-senat-pjl25-689.html"),
+  [`${SENAT}/leg/tas25-152.html`]: TEXTE_152,
+  [`${SENAT}/leg/tas25-166.html`]: fixture("texte-senat-tas25-166.html"),
+};
+
+describe("lienDossierSenat", () => {
+  it("lit le dossier législatif sur la page d'un scrutin du Sénat", () => {
+    expect(lienDossierSenat(fixture("scrutin-senat-340.html"), SENAT)).toBe(`${SENAT}/dossier-legislatif/pjl25-689.html`);
+  });
+
+  it("renvoie null quand la page ne mène à aucun dossier", () => {
+    expect(lienDossierSenat("<html><body>Rien ici</body></html>", SENAT)).toBeNull();
+  });
+});
+
+describe("textesAdoptesSenat", () => {
+  it("liste, dans l'ordre, les textes adoptés du dossier avec leur numéro et leur date", () => {
+    expect(textesAdoptesSenat(fixture("dossier-senat-pjl25-689.html"))).toEqual([
+      { chemin: "/leg/tas25-152.html", numero: "152", date: "2026-07-02" },
+      { chemin: "/leg/tas25-166.html", numero: "166", date: "2026-07-21" },
+    ]);
+  });
+});
+
+describe("trouverTexteSenat", () => {
+  it("prend le texte adopté à la date du scrutin, pas le précédent", async () => {
+    const t = await trouverTexteSenat(scrutinSenat, telechargeur(PAGES_SENAT));
+    expect(t).not.toBeNull();
+    expect(t!.libelle).toBe("Texte n° 166");
+    expect(t!.url).toBe(`${SENAT}/leg/tas25-166.html`);
+    expect(t!.texte).toContain("Article 1");
+  });
+
+  it("prend le premier texte quand le scrutin lui est antérieur ou contemporain", async () => {
+    const t = await trouverTexteSenat({ ...scrutinSenat, date: "2026-07-01" }, telechargeur(PAGES_SENAT));
+    expect(t!.libelle).toBe("Texte n° 152");
+  });
+
+  it("renvoie null, sans lever, sur une page introuvable ou sans lien de dossier", async () => {
+    expect(await trouverTexteSenat(scrutinSenat, telechargeur({}))).toBeNull();
+    expect(await trouverTexteSenat(scrutinSenat, telechargeur({ [scrutinSenat.url]: "<html></html>" }))).toBeNull();
   });
 });

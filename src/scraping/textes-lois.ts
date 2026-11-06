@@ -73,3 +73,52 @@ export async function trouverTexteAN(scrutin: ScrutinSource, telecharger: Telech
     return null;
   }
 }
+
+// ─── Sénat ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+// La page d'un scrutin porte un lien /dossier-legislatif/<nom>.html ; la page du dossier liste, pour chaque lecture, le texte
+// adopté (/leg/tas<session>-<numéro>.html) avec, dans son libellé, la date de l'adoption.
+
+export function lienDossierSenat(pageScrutin: string, base: string): string | null {
+  const m = pageScrutin.match(/href=['"](\/dossier-legislatif\/[^'"]+\.html)['"]/);
+  return m ? `${base}${m[1]}` : null;
+}
+
+export interface TexteAdopteSenat {
+  chemin: string;
+  numero: string;
+  date: string | null;
+}
+
+export function textesAdoptesSenat(pageDossier: string): TexteAdopteSenat[] {
+  const textes: TexteAdopteSenat[] = [];
+  for (const m of pageDossier.matchAll(/<li><a href=['"](\/leg\/tas[^'"]+\.html)['"]>Texte<\/a>([^<]*)<\/li>/g)) {
+    const numero = m[2].match(/n°\s*(\d+)/)?.[1];
+    if (!numero || textes.some((t) => t.chemin === m[1])) continue;
+    textes.push({ chemin: m[1], numero, date: dateDuTexte(m[2]) });
+  }
+  return textes;
+}
+
+export async function trouverTexteSenat(scrutin: ScrutinSource, telecharger: Telecharger): Promise<TexteLoi | null> {
+  try {
+    const base = new URL(scrutin.url).origin;
+    const dossier = lienDossierSenat(await telecharger(scrutin.url), base);
+    if (!dossier) return null;
+    const jourDuScrutin = scrutin.date.slice(0, 10);
+    for (const t of textesAdoptesSenat(await telecharger(dossier))) {
+      if (t.date === null || t.date < jourDuScrutin) continue;
+      let html: string;
+      try {
+        html = await telecharger(`${base}${t.chemin}`);
+      } catch {
+        continue;
+      }
+      const texte = htmlEnTexte(html);
+      if (texte.length < 20) continue;
+      return { texte, url: `${base}${t.chemin}`, libelle: `Texte n° ${t.numero}` };
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
