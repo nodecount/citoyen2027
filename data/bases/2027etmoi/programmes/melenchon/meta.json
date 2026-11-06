@@ -1,0 +1,22 @@
+{
+  "slug": "melenchon",
+  "nom": "Jean-Luc Mélenchon",
+  "parti": "La France insoumise",
+  "sources_officielles": [
+    {
+      "type": "primaire",
+      "label": "Assemblée nationale et Sénat — scrutins publics et textes adoptés",
+      "url": "https://data.assemblee-nationale.fr/travaux-parlementaires/votes",
+      "nom": "Parlement",
+      "annee": 2026
+    },
+    {
+      "type": "secondaire",
+      "label": "2027etmoi — votes au Parlement des candidats à l'élection présidentielle 2027 (Licence Ouverte 2.0)",
+      "url": "https://www.data.gouv.fr/datasets/votes-au-parlement-des-candidats-a-lelection-presidentielle-2027",
+      "nom": "2027etmoi",
+      "annee": 2026
+    }
+  ],
+  "date_derniere_maj": "2026-11-06"
+}

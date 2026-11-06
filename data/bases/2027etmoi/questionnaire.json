@@ -1,0 +1,128 @@
+{
+  "description": "Pertinence des questions pour les thèmes de la base « votes » (lot test de recherche du 2026-10-18). Le formulaire est celui de la base « agregateurs », repris tel quel pour pouvoir comparer les trois sources sur un même citoyen ; chaque thème de cette base reprend les questions des thèmes de « agregateurs » dont il se rapproche. À réviser d'après les mesures de CETTE base si la source est retenue.",
+  "pertinence": {
+    "tranche_age": [
+      "retraites",
+      "budget-securite-sociale",
+      "economie-entreprises",
+      "sante-fin-de-vie",
+      "logement",
+      "numerique-jeunesse"
+    ],
+    "statut_professionnel": [
+      "retraites",
+      "budget-securite-sociale",
+      "economie-entreprises",
+      "sante-fin-de-vie",
+      "logement",
+      "numerique-jeunesse"
+    ],
+    "tranche_revenus": [
+      "retraites",
+      "budget-securite-sociale",
+      "economie-entreprises",
+      "sante-fin-de-vie",
+      "logement"
+    ],
+    "situation_familiale": [
+      "budget-securite-sociale"
+    ],
+    "nombre_enfants": [
+      "budget-securite-sociale",
+      "numerique-jeunesse"
+    ],
+    "logement": [
+      "logement",
+      "energie-climat"
+    ],
+    "territoire": [
+      "budget-securite-sociale",
+      "securite-justice",
+      "immigration-nationalite",
+      "sante-fin-de-vie",
+      "agriculture",
+      "logement",
+      "numerique-jeunesse",
+      "energie-climat"
+    ],
+    "metier": [
+      "retraites",
+      "budget-securite-sociale",
+      "securite-justice",
+      "immigration-nationalite",
+      "economie-entreprises",
+      "sante-fin-de-vie",
+      "agriculture",
+      "logement",
+      "numerique-jeunesse",
+      "energie-climat"
+    ],
+    "nationalite": [
+      "budget-securite-sociale",
+      "securite-justice",
+      "immigration-nationalite",
+      "sante-fin-de-vie",
+      "logement",
+      "numerique-jeunesse"
+    ],
+    "statut_sejour": [
+      "budget-securite-sociale",
+      "securite-justice",
+      "immigration-nationalite",
+      "sante-fin-de-vie",
+      "logement"
+    ],
+    "aides_percues": [
+      "budget-securite-sociale"
+    ],
+    "handicap": [
+      "sante-fin-de-vie"
+    ],
+    "tranche_patrimoine": [
+      "budget-securite-sociale"
+    ],
+    "logements_hors_residence": [
+      "logement"
+    ],
+    "logement_social": [
+      "logement"
+    ],
+    "projet_achat": [
+      "logement"
+    ],
+    "vehicule": [
+      "agriculture",
+      "energie-climat"
+    ],
+    "metier_penible": [
+      "retraites",
+      "economie-entreprises"
+    ],
+    "carriere_longue": [
+      "retraites",
+      "economie-entreprises"
+    ],
+    "aidant_familial": [
+      "sante-fin-de-vie"
+    ],
+    "enfants_scolarises": [
+      "numerique-jeunesse"
+    ],
+    "ne_en_france_parents_etrangers": [
+      "securite-justice",
+      "immigration-nationalite"
+    ],
+    "montant_pension": [
+      "retraites"
+    ],
+    "heritage": [
+      "budget-securite-sociale"
+    ],
+    "enfant_moins_3_ans": [
+      "budget-securite-sociale"
+    ],
+    "desert_medical": [
+      "sante-fin-de-vie"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { LONGUEUR_MAX_ARTICLE } from "../votes/conversion";
 import type { Theme } from "../types";
-import { classerScrutins, convertirVotes, retenirScrutins, type ScrutinSource, type TexteLoi } from "./votes2027etmoi";
+import { classerScrutins, convertirVotes, restreindreAuxCandidats, retenirScrutins, type ScrutinSource, type TexteLoi } from "./votes2027etmoi";
 
 function scrutin(surcharge: Partial<ScrutinSource> = {}): ScrutinSource {
   return {
@@ -124,5 +124,27 @@ describe("convertirVotes", () => {
     expect(sansTheme.parCandidat.size).toBe(0);
     const sansNom = convertirVotes([scrutin()], themes, textes, { "le-pen": "Marine Le Pen" }, "2026-11-06");
     expect([...sansNom.parCandidat.keys()]).toEqual(["le-pen"]);
+  });
+});
+
+describe("restreindreAuxCandidats", () => {
+  const scrutins = [
+    scrutin({ id: "a", votes: { melenchon: "contre", "le-pen": "pour" } }),
+    scrutin({ id: "b", votes: { melenchon: "absent", "le-pen": "pour" } }),
+    scrutin({ id: "c", votes: { attal: "pour" } }),
+  ];
+
+  it("sans liste, ne touche à rien", () => {
+    expect(restreindreAuxCandidats(scrutins, undefined)).toEqual(scrutins);
+  });
+
+  it("ne garde que les votes des candidats demandés, et les scrutins où l'un d'eux a voté pour ou contre", () => {
+    const restreints = restreindreAuxCandidats(scrutins, ["melenchon"]);
+    expect(restreints.map((s) => s.id)).toEqual(["a"]);
+    expect(restreints[0].votes).toEqual({ melenchon: "contre" });
+  });
+
+  it("n'invente rien pour un candidat sans vote : aucun scrutin", () => {
+    expect(restreindreAuxCandidats(scrutins, ["lisnard"])).toEqual([]);
   });
 });

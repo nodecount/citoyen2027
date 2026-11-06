@@ -33,6 +33,18 @@ export function retenirScrutins(scrutins: ScrutinSource[]): ScrutinSource[] {
   );
 }
 
+// Pilote : ne garder que les votes des candidats demandés, et les scrutins où l'un d'eux a voté pour ou contre. Sans liste, rien ne
+// change.
+export function restreindreAuxCandidats(scrutins: ScrutinSource[], slugs: string[] | undefined): ScrutinSource[] {
+  if (slugs === undefined) return scrutins;
+  const restreints: ScrutinSource[] = [];
+  for (const s of scrutins) {
+    const votes = Object.fromEntries(Object.entries(s.votes).filter(([slug]) => slugs.includes(slug)));
+    if (Object.values(votes).some((v) => v === "pour" || v === "contre")) restreints.push({ ...s, votes });
+  }
+  return restreints;
+}
+
 const TAILLE_LOT = 20;
 
 // Le fichier ne donne pas de thème : le modèle choisit, pour chaque scrutin, un thème de la base d'après son titre, ou « aucun ».

@@ -19,5 +19,12 @@
     "description": "Votes des groupes parlementaires sur les articles clés de 15 lois de la XVIIe législature (lot test de recherche).",
     "avertissement": "Lot test de recherche : votes de groupes à l'Assemblée nationale (2024-2026), rattachés aux partis. Un vote n'est pas un engagement de programme.",
     "desactivee": true
+  },
+  {
+    "id": "2027etmoi",
+    "libelle": "Votes des candidats",
+    "description": "Votes de chaque candidat à l'Assemblée nationale et au Sénat, relevés par 2027etmoi.",
+    "avertissement": "Votes réels des candidats qui ont siégé, relevés par 2027etmoi ; un vote n'est pas un engagement de programme pour 2027.",
+    "desactivee": true
   }
 ]
