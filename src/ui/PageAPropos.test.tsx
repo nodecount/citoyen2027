@@ -55,9 +55,10 @@ describe("PageAPropos", () => {
     expect(html).toContain("mot pour mot");
   });
 
-  it("cite Wikipédia (bord politique) et casier-politique.fr (condamnations, avec sa licence) à titre d'information", () => {
+  it("cite 2027etmoi (bord politique, avec sa licence) et casier-politique.fr (condamnations, avec sa licence) à titre d'information", () => {
     expect(html).toContain("Données reprises à titre d&#x27;information");
-    expect(html).toContain("https://fr.wikipedia.org/wiki/Liste_de_partis_politiques_en_France");
+    expect(html).toContain("https://www.data.gouv.fr/datasets/candidatures-a-lelection-presidentielle-2027-statuts-sources");
+    expect(html).toContain("Licence Ouverte 2.0");
     expect(html).toContain('href="https://casier-politique.fr/"');
     expect(html).toContain("CC BY-NC-SA 4.0");
   });

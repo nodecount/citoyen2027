@@ -150,11 +150,11 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
         <h2>Données reprises à titre d'information</h2>
         <h3>Le bord politique</h3>
         <p>
-          Le bord affiché à côté du parti d'un candidat vient de la{" "}
-          <a href="https://fr.wikipedia.org/wiki/Liste_de_partis_politiques_en_France" target="_blank" rel="noopener noreferrer">
-            liste des partis politiques en France
+          Le bord affiché à côté du parti d'un candidat vient du jeu de données{" "}
+          <a href="https://www.data.gouv.fr/datasets/candidatures-a-lelection-presidentielle-2027-statuts-sources" target="_blank" rel="noopener noreferrer">
+            Candidatures à l'élection présidentielle 2027
           </a>{" "}
-          de Wikipédia : c'est la section où l'article range le parti. Il n'entre dans aucun calcul.
+          publié par 2027etmoi sur data.gouv.fr (Licence Ouverte 2.0) : c'est le bloc que la source donne au candidat. Un candidat classé « autre » n'a pas de bord affiché. Il n'entre dans aucun calcul.
         </p>
         <h3>Les condamnations</h3>
         <p>
