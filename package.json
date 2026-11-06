@@ -11,6 +11,7 @@
     "scrape:ifrap": "tsx src/scraping/run-ifrap.ts",
     "scrape:votes": "tsx src/votes/run-votes.ts",
     "scrape:2027etmoi": "tsx src/scraping/run-2027etmoi.ts",
+    "scrape:structurer-textes": "tsx src/scraping/run-structuration-textes.ts",
     "scrape:structurer": "tsx src/scraping/run-structuration.ts",
     "scrape:couverture": "tsx src/scraping/run-couverture.ts",
     "scrape:positions": "tsx src/scraping/run-positions.ts",

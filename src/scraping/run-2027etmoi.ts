@@ -4,6 +4,7 @@ import { dirname, resolve } from "node:path";
 import type { CandidatMeta, Proposition, Theme } from "../types";
 import { appelerClaudeCli, MODELE_CLI } from "./claude-cli";
 import { chargerPropositionsCandidat, conserverEffets, dossierCandidat, ecrirePropositionsCandidat } from "./ecriture";
+import { nomFichierTexte } from "./structuration-textes";
 import { trouverTexteAN, trouverTexteSenat } from "./textes-lois";
 import { classerScrutins, convertirVotes, restreindreAuxCandidats, retenirScrutins, type ScrutinSource, type TexteLoi } from "./votes2027etmoi";
 
@@ -18,7 +19,8 @@ import { classerScrutins, convertirVotes, restreindreAuxCandidats, retenirScruti
 const RACINE = process.cwd();
 const BASE = resolve(RACINE, "data/bases/2027etmoi");
 const CACHE = resolve(RACINE, "cache/scrape/2027etmoi");
-const URL_VOTES = "https://2027etmoi.fr/data/votes.json";
+const DOSSIER_TEXTES = resolve(CACHE, "textes");
+const URL_VOTES ="https://2027etmoi.fr/data/votes.json";
 const URL_CANDIDATS = "https://2027etmoi.fr/data/candidats.json";
 const URL_JEU_VOTES = "https://www.data.gouv.fr/datasets/votes-au-parlement-des-candidats-a-lelection-presidentielle-2027";
 const IDENTIFICATION = "citoyen2027-simulateur (projet non commercial ; contact : voir le dépôt du projet)";
@@ -111,6 +113,12 @@ async function main(): Promise<void> {
   const textes = new Map<string, TexteLoi | null>();
   for (const s of classes) textes.set(s.id, s.chambre === "AN" ? await trouverTexteAN(s, telecharger) : await trouverTexteSenat(s, telecharger));
   const retrouves = [...textes.values()].filter((t) => t !== null).length;
+  // Texte COMPLET de chaque loi, gardé hors dépôt pour `scrape:structurer-textes` (la mesure, elle, n'en affiche que le début).
+  mkdirSync(DOSSIER_TEXTES, { recursive: true });
+  for (const s of classes) {
+    const t = textes.get(s.id);
+    if (t) writeFileSync(resolve(DOSSIER_TEXTES, nomFichierTexte(s.url)), t.texte);
+  }
 
   const date = new Date().toISOString().slice(0, 10);
   const noms = Object.fromEntries(candidats.candidats.map((c) => [c.id, c.nom]));
