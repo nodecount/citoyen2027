@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Equal, Lock, Scale } from "lucide-react";
 import type { InfoBase } from "../data/bases";
 import { Pastille, PORTRAITS } from "./Pastille";
@@ -8,9 +9,22 @@ interface PageAProposProps {
   nomsParSlug: Record<string, string>;
 }
 
-// Page « À propos » : du texte rédigé, des titres, des phrases courtes. Les encarts (`aside`) se rangent dans la marge à côté du
-// paragraphe qui les précède, pour utiliser la largeur de l'écran ; sur téléphone ils passent sous le texte.
+// Page « À propos » : du texte rédigé, des titres, des phrases courtes. Les encarts (`aside`) suivent le texte, dans la continuité, sur toute la largeur de la colonne.
 // Les chiffres sur les sources sont relevés dans les données le 1er novembre 2026 (à mettre à jour avec elles).
+// Chapitre replié par défaut (un <details>) : la page reste courte, le visiteur ouvre ce qui l'intéresse.
+function Chapitre({ titre, large, ouvert, children }: { titre: string; large?: boolean; ouvert?: boolean; children: ReactNode }) {
+  return (
+    <section className="chapitre chapitre--repli">
+      <details open={ouvert}>
+        <summary>
+          <h2>{titre}</h2>
+        </summary>
+        <div className={large ? "chapitre-corps chapitre-corps--large" : "chapitre-corps"}>{children}</div>
+      </details>
+    </section>
+  );
+}
+
 export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
   // Seuls les portraits des candidats présents dans une base sont crédités (un candidat retiré de la source n'a plus de photo affichée).
   const credits = Object.entries(PORTRAITS)
@@ -38,19 +52,17 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
         </li>
       </ul>
 
-      <section className="chapitre">
-        <h2>L'essentiel</h2>
+      <Chapitre titre="L'essentiel" ouvert>
         <p>Ce simulateur aide à lire les programmes des candidats à la présidentielle de 2027. Il ne dit pas pour qui voter.</p>
+        <aside className="encart">
+          <strong>Vos réponses restent chez vous</strong>
+          <p>Elles sont gardées dans votre navigateur pour votre prochaine visite. Pour les effacer, utilisez le bouton « Effacer mes réponses » en bas de chaque bloc du simulateur.</p>
+        </aside>
         <p>Vous répondez à quelques questions sur votre situation, et vous choisissez des positions sur des questions de société. Le simulateur repère alors les mesures de chaque candidat qui vous concernent, et celles qui vont dans le sens de vos convictions.</p>
         <p>La règle est la même pour tous les candidats : le score compte des mesures, sans pondération.</p>
-        <aside className="encart">
-          <strong>Effacer vos réponses</strong>
-          <p>Vos réponses sont gardées dans votre navigateur pour votre prochaine visite. Vous pouvez les effacer à tout moment.</p>
-        </aside>
-      </section>
+      </Chapitre>
 
-      <section className="chapitre">
-        <h2>Le choix de la source des données</h2>
+      <Chapitre titre="Le choix de la source des données">
         <p>Quatre sources ont été essayées, avec le même calcul et les mêmes profils types. Une seule est affichée par défaut : le comparateur iFRAP.</p>
         <aside className="encart">
           <strong>Voir les essais</strong>
@@ -84,13 +96,25 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
           <strong>Les limites de cette source</strong>
           <p>Elle est secondaire : ses mesures ne sont pas vérifiées une à une dans les programmes, et elles n'ont pas de date. iFRAP est une fondation que des tiers décrivent comme libérale ; elle affirme son indépendance des partis.</p>
         </aside>
+      </Chapitre>
 
-        <h3>Ce qui a été écarté d'emblée</h3>
-        <p>Les simulateurs produits par un parti ou un candidat ne sont jamais utilisés, même comme point de départ. Le site candidatspresidentielles2027.fr n'est pas lu non plus : sa protection bloque la lecture automatique, et nous ne la contournons pas.</p>
-      </section>
+      <Chapitre titre="Les sources qui nous ont aidés">
+        <p>Ces initiatives, repérées pendant l'étude de ce qui existait déjà, ont nourri l'outil. Elles sont indépendantes des partis.</p>
+        <h3>
+          <a href="https://www.data.gouv.fr/organizations/2027etmoi/datasets" target="_blank" rel="noopener noreferrer">2027etmoi sur data.gouv.fr</a>
+        </h3>
+        <p>Des jeux de données ouverts sur les candidats et leurs votes. Ils fournissent la base « {libelle("2027etmoi", "Votes des candidats")} ».</p>
+        <h3>
+          <a href="https://monvote2027.fr/" target="_blank" rel="noopener noreferrer">MonVote2027</a>
+        </h3>
+        <p>Un quiz qui pose les questions une à une et rapproche vos positions de celles des candidats. Sa façon de poser les questions nous a inspiré le pas à pas.</p>
+        <h3>
+          <a href="https://casier-politique.fr/" target="_blank" rel="noopener noreferrer">casier-politique.fr</a>
+        </h3>
+        <p>Le site de Raphaël Jolivet, qui recense les condamnations des personnalités politiques. Nous reprenons ses données ouvertes (licence CC BY-NC-SA 4.0) pour les condamnations affichées, toujours attribuées à ce site et liées à sa fiche.</p>
+      </Chapitre>
 
-      <section className="chapitre">
-        <h2>Comment le candidat suggéré est calculé</h2>
+      <Chapitre titre="Comment le candidat suggéré est calculé">
         <p>Chaque candidat reçoit deux notes sur 100 : une selon votre situation, une selon vos convictions. Le candidat suggéré est celui dont la moyenne des deux notes est la plus élevée.</p>
         <aside className="encart">
           <strong>Un exemple</strong>
@@ -116,10 +140,9 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
 
         <h3>Pour aller plus loin</h3>
         <p>Les onglets « Candidats » de chaque bloc montrent les 3 meilleures places de chaque critère. La fenêtre de détail d'un candidat indique combien de ses mesures vont dans votre sens, par exemple 18 sur 19. Si sa note est sous 100 alors que toutes ses mesures sont favorables, elle explique pourquoi : le 100 est celui du candidat qui a le plus de mesures qui vous concernent.</p>
-      </section>
+      </Chapitre>
 
-      <section className="chapitre">
-        <h2>Limites et partis pris</h2>
+      <Chapitre titre="Limites et partis pris">
         <p>Le simulateur a des limites, et il vaut mieux les connaître.</p>
 
         <h3>Ce que nous vous demandons</h3>
@@ -144,16 +167,14 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
           <strong>Les candidats absents</strong>
           <p>Un candidat dont les mesures ne sont pas encore intégrées ne peut pas ressortir. Le résultat dépend de ce qui est publié et de ce qui a été traité à ce jour.</p>
         </aside>
-      </section>
+      </Chapitre>
 
-      <section className="chapitre chapitre--schema">
-        <h2>Comment les mesures sont traitées</h2>
+      <Chapitre titre="Comment les mesures sont traitées" large>
         <p>Chaque étape dit qui agit : le code, ou un modèle d'IA que le code contrôle.</p>
         <SchemaTraitement />
-      </section>
+      </Chapitre>
 
-      <section className="chapitre">
-        <h2>Données reprises à titre d'information</h2>
+      <Chapitre titre="Données reprises à titre d'information">
         <h3>Le bord politique</h3>
         <p>
           Le bord affiché à côté du parti d'un candidat vient du jeu de données{" "}
@@ -174,10 +195,9 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
           </a>
           ). Un candidat absent de ce site n'est pas pour autant un candidat sans condamnation.
         </p>
-      </section>
+      </Chapitre>
 
-      <section className="chapitre">
-        <h2>Crédits photos</h2>
+      <Chapitre titre="Crédits photos" large>
         <p>Photos sous licence libre, via Wikimedia Commons.</p>
         <ul className="liste-credits">
           {credits.map(([slug, p]) => (
@@ -199,7 +219,7 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
             </li>
           ))}
         </ul>
-      </section>
+      </Chapitre>
     </article>
   );
 }

@@ -15,7 +15,7 @@ describe("PageAPropos", () => {
 
   it("est un texte rédigé : un titre, des chapitres à titres, des encarts dans la marge, pas de cartes", () => {
     expect(html).not.toContain("<h1"); // le menu dit déjà où l'on est
-    expect((html.match(/<section class="chapitre/g) ?? []).length).toBe(7);
+    expect((html.match(/<section class="chapitre/g) ?? []).length).toBe(8);
     expect((html.match(/<aside class="encart/g) ?? []).length).toBeGreaterThanOrEqual(6);
     for (const ancien of ["kpi", "bloc-a-propos", "essai-source"]) expect(html, ancien).not.toContain(ancien);
   });
@@ -28,7 +28,7 @@ describe("PageAPropos", () => {
   it("a un vrai chapitre sur le choix de la source : trois essais et leur verdict, pourquoi iFRAP, ce qui est écarté, où voir les essais", () => {
     expect(html).toContain("Le choix de la source des données");
     expect(html).not.toContain("D&#x27;où viennent les données");
-    for (const t of ["Programmes officiels : en pause", "en pause", "écartée", "retenue", "ne sont pas vérifiées une à une", "Ce qui a été écarté d&#x27;emblée", "Tests de situations", "Monitoring", "Voir les essais"]) expect(html, t).toContain(t);
+    for (const t of ["Programmes officiels : en pause", "en pause", "écartée", "retenue", "ne sont pas vérifiées une à une", "Tests de situations", "Monitoring", "Voir les essais"]) expect(html, t).toContain(t);
     expect(html.indexOf("en pause")).toBeLessThan(html.indexOf("retenue"));
   });
 

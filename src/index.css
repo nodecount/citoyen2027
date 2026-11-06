@@ -769,8 +769,59 @@ a {
   border-top: 1px solid var(--filet);
 }
 
-.chapitre > * {
+.chapitre > *,
+.chapitre-corps > * {
   grid-column: 1;
+}
+
+/* Chapitre replié : le titre est le résumé du <details>, le corps reprend la grille texte + marge. */
+.chapitre--repli {
+  display: block;
+}
+
+.chapitre--repli > details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.chapitre--repli > details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.chapitre--repli > details > summary::after {
+  content: "";
+  flex: none;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-right: 0.3rem;
+  border-right: 3px solid var(--bleu);
+  border-bottom: 3px solid var(--bleu);
+  transform: rotate(45deg);
+  transition: transform 0.15s;
+}
+
+.chapitre--repli > details[open] > summary::after {
+  transform: rotate(-135deg);
+}
+
+.chapitre--repli > details > summary:focus-visible {
+  outline: 3px solid var(--bleu);
+  outline-offset: 4px;
+}
+
+.chapitre--repli h2 {
+  margin: 0;
+}
+
+.chapitre-corps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: 2.5rem;
+  padding-top: 0.75rem;
 }
 
 .chapitre h2 {
@@ -786,7 +837,7 @@ a {
 }
 
 .chapitre p {
-  max-width: 42rem;
+  max-width: none;
   margin: 0.4rem 0;
   line-height: 1.65;
 }
@@ -815,23 +866,7 @@ a {
   background: #fdf1f0;
 }
 
-@media (min-width: 60rem) {
-  .chapitre {
-    grid-template-columns: minmax(0, 1fr) 18rem;
-  }
-
-  .chapitre > .encart {
-    grid-column: 2;
-    align-self: start;
-    margin: 0;
-  }
-
-  /* Le schéma et les crédits ont besoin de toute la largeur. */
-  .chapitre--schema,
-  .chapitre:last-child {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
+/* Les encarts restent dans la continuité du texte (décision du 2026-11-06) : plus de marge à droite. */
 
 
 /* Schéma de la chaîne de traitement : une entrée, deux colonnes (situation / convictions), une sortie. Chaque étape nomme son acteur. */
