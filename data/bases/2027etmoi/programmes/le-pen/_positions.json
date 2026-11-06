@@ -1,7 +1,7 @@
 [
   {
     "groupe": 0,
-    "empreinte": "e52550a599792c48",
+    "empreinte": "bc90237a4b41000f",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
@@ -9,27 +9,27 @@
     "sans_position": 15,
     "rejetees": [
       {
-        "id": "le-pen-securite-justice-an-17-2958",
-        "raison": "relecture : Le maintien en rétention vise des personnes condamnées en vue d'une mesure administrative (rétention), pas une augmentation des places de prison ou des peines, ce qui ne correspond pas clairement à 'plus_de_prison'."
+        "id": "le-pen-securite-justice-an-17-7987",
+        "raison": "relecture : Le texte instaure une présomption de légitime défense (immunité juridique pour l'usage de l'arme), ce qui ne concerne pas l'armement/les moyens matériels de la police mais le cadre légal de leur usage ; ce n'est pas ce que définit le sujet police_armement."
       },
       {
-        "id": "le-pen-securite-justice-an-17-1473",
-        "raison": "relecture : L'extrait ne montre qu'une coordination administrative des services de lutte contre le narcotrafic, sans durcissement des peines ni renforcement explicite des moyens répressifs, donc il ne fonde pas clairement l'étiquette 'repression'."
+        "id": "le-pen-securite-justice-an-17-2958",
+        "raison": "relecture : Le 'maintien en rétention' désigne une rétention administrative/de sûreté distincte de l'incarcération en prison ; l'étiquette plus_de_prison n'est pas fondée par ce texte."
       }
     ],
-    "cout_reference_usd": 0.2601,
+    "cout_reference_usd": 0.2098,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "9cd8d68e8b38b71e",
+    "empreinte": "95e16f19597e8bf9",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 12,
-    "etiquetees": 7,
-    "sans_position": 5,
+    "etiquetees": 8,
+    "sans_position": 4,
     "rejetees": [],
-    "cout_reference_usd": 0.1815,
+    "cout_reference_usd": 0.1011,
     "appels": 2
   }
 ]

@@ -1,26 +1,35 @@
 [
   {
     "groupe": 0,
-    "empreinte": "94b9bbae66a1cc69",
+    "empreinte": "6f614c5387dc2da9",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 0,
-    "sans_position": 25,
-    "rejetees": [],
-    "cout_reference_usd": 0.1627,
-    "appels": 1
+    "etiquetees": 7,
+    "sans_position": 16,
+    "rejetees": [
+      {
+        "id": "retailleau-securite-justice-senat-2016-123",
+        "raison": "relecture : Le périmètre de protection avec palpations et fouilles relève du maintien de l'ordre physique, pas de la surveillance des données/vidéosurveillance définie par le sujet 'surveillance' : mauvais sujet."
+      },
+      {
+        "id": "retailleau-securite-justice-senat-2009-276",
+        "raison": "relecture : Le texte interdit la dissimulation du visage en général, sans mentionner les signes religieux ou le voile ; l'étiquette 'laicite_stricte' suppose une interprétation non fondée par l'extrait."
+      }
+    ],
+    "cout_reference_usd": 0.2684,
+    "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "959cbd90bcb39944",
+    "empreinte": "ff14ed971918a974",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 3,
     "etiquetees": 0,
     "sans_position": 3,
     "rejetees": [],
-    "cout_reference_usd": 0.0213,
+    "cout_reference_usd": 0.0211,
     "appels": 1
   }
 ]
