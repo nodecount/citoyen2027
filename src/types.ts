@@ -44,6 +44,9 @@ export interface Proposition {
   // uniquement à savoir si l'interface peut citer `titre` entre guillemets sans le faire passer pour autre chose
   // qu'une reformulation.
   titre_litteral?: boolean;
+  // Base « 2027etmoi » : la proposition est le vote d'un candidat sur un texte. Les effets et positions décrivent le texte ;
+  // un vote « contre » les inverse à la lecture (src/engine/sensDuVote.ts). Absent partout ailleurs.
+  vote?: "pour" | "contre";
 }
 
 // Texte « pourquoi et en quoi le programme de ce candidat touche ce thème », un par candidat × thème.

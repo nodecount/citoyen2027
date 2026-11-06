@@ -2,6 +2,7 @@ import { trouverPosition } from "../positions";
 import { valeursDuProfil, type ProfilPartiel } from "../profil";
 import type { ChampProfil, Proposition } from "../types";
 import { statutEffet } from "./projection";
+import { effetsDeLaProposition, positionsDeLaProposition } from "./sensDuVote";
 
 // Nombre de mesures (tous candidats confondus, chacune comptée une fois) dont un effet vise la réponse donnée à CETTE
 // question, sans que le reste du profil l'écarte : un effet « hors cible » d'après une autre réponse n'est pas compté,
@@ -15,7 +16,7 @@ export function compterMesuresImpactees(champ: ChampProfil, profil: ProfilPartie
   let compte = 0;
   for (const proposition of propositions) {
     if (proposition.statut === "provisoire") continue;
-    const visee = (proposition.effets ?? []).some((effet) => {
+    const visee = effetsDeLaProposition(proposition).some((effet) => {
       const critere = effet.cibles.find((c) => c.champ === champCible);
       if (!critere || !reponses.some((v) => critere.valeurs.includes(v))) return false;
       const statut = statutEffet(profil, effet);
@@ -30,5 +31,5 @@ export function compterMesuresImpactees(champ: ChampProfil, profil: ProfilPartie
 // étiquetées comptent : une mesure sans étiquette n'est jamais « pour » ni « contre » (src/positions.ts).
 export function compterMesuresPosition(sujetId: string, positionId: string, propositions: Proposition[]): number {
   if (!trouverPosition(sujetId, positionId)) return 0;
-  return propositions.filter((p) => p.statut !== "provisoire" && (p.positions ?? []).some((e) => e.sujet === sujetId && e.position === positionId)).length;
+  return propositions.filter((p) => p.statut !== "provisoire" && positionsDeLaProposition(p).some((e) => e.sujet === sujetId && e.position === positionId)).length;
 }

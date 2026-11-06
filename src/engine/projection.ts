@@ -3,6 +3,7 @@ import { CHAMP_AUTRE, type Effet } from "../effets";
 import { valeursDuProfil, type ProfilPartiel } from "../profil";
 import type { Proposition } from "../types";
 import { polarite, type Polarite } from "./polarite";
+import { effetsDeLaProposition } from "./sensDuVote";
 
 // Indicateur de projection d'un candidat sur un thème pour un citoyen — règles documentées dans
 // docs/superpowers/specs/2026-09-24-fil-rouge-themes-projection-design.md et CLAUDE.md.
@@ -105,7 +106,7 @@ export function projeterTheme(profil: ProfilPartiel, propositions: Proposition[]
   for (const proposition of propositions) {
     // Même périmètre que l'affichage : une fiche « provisoire » est une recherche inachevée.
     if (proposition.statut === "provisoire") continue;
-    for (const effet of proposition.effets ?? []) {
+    for (const effet of effetsDeLaProposition(proposition)) {
       nombreEffets += 1;
       const statut = statutEffet(profil, effet);
       if (statut.type === "hors_cible") {

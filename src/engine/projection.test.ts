@@ -106,6 +106,27 @@ describe("polarite (table documentée : quel sens améliore la situation matéri
   });
 });
 
+describe("vote d'un candidat : le « contre » se lit du côté du citoyen", () => {
+  // Le texte voté fait baisser le revenu disponible d'un salarié : voter pour le dégrade, voter contre le protège.
+  const salarie = [{ champ: "statut_professionnel", valeurs: ["salarie"] }];
+  const texte = [effet({ dimension: "revenu_disponible", sens: "baisse", cibles: salarie })];
+
+  it("un vote pour un texte qui dégrade le salarié le dégrade", () => {
+    expect(projeterTheme(PROFIL, [proposition(texte, { vote: "pour" })]).niveau).toBe("degradant");
+  });
+
+  it("un vote contre ce même texte l'améliore", () => {
+    expect(projeterTheme(PROFIL, [proposition(texte, { vote: "contre" })]).niveau).toBe("ameliorant");
+  });
+
+  it("un vote contre un texte au sens indéterminé ne devient ni favorable ni défavorable", () => {
+    const indetermine = [effet({ sens: "indetermine", cibles: salarie })];
+    const niveau = projeterTheme(PROFIL, [proposition(indetermine, { vote: "contre" })]).niveau;
+    expect(niveau).not.toBe("ameliorant");
+    expect(niveau).not.toBe("degradant");
+  });
+});
+
 describe("projeterTheme — les quatre niveaux", () => {
   it("améliorant : un effet favorable qui vise le profil", () => {
     const p = proposition([

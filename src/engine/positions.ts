@@ -1,5 +1,6 @@
 import { SUJETS_CONVICTION, trouverPosition, type PositionMesure, type SujetConviction } from "../positions";
 import type { Proposition } from "../types";
+import { positionsDeLaProposition } from "./sensDuVote";
 
 // Constat « convictions » d'un candidat sur un thème, pour UN sujet choisi par le visiteur : ce que ses mesures étiquetées
 // sur ce sujet disent par rapport à la position choisie. Règle publique, sans pondération :
@@ -22,7 +23,7 @@ export function projeterPosition(sujetId: string, positionChoisie: string, propo
   let opposees = 0;
   for (const proposition of propositions) {
     if (proposition.statut === "provisoire") continue;
-    for (const etiquette of proposition.positions ?? []) {
+    for (const etiquette of positionsDeLaProposition(proposition)) {
       if (etiquette.sujet !== sujetId) continue;
       const conforme = etiquette.position === positionChoisie;
       retenues.push({ propositionId: proposition.id, etiquette, conforme });
@@ -42,7 +43,7 @@ export function sujetsDisponibles(propositions: Proposition[] | null): SujetConv
   const etiquetes = new Set<string>();
   for (const p of propositions) {
     if (p.statut === "provisoire") continue;
-    for (const e of p.positions ?? []) etiquetes.add(e.sujet);
+    for (const e of positionsDeLaProposition(p)) etiquetes.add(e.sujet);
   }
   return SUJETS_CONVICTION.filter((s) => etiquetes.has(s.id));
 }
