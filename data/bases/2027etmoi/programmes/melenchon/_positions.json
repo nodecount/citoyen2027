@@ -1,14 +1,23 @@
 [
   {
     "groupe": 0,
-    "empreinte": "1107cd3b983fd236",
+    "empreinte": "a009cf527c8f110b",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 10,
-    "etiquetees": 7,
-    "sans_position": 3,
-    "rejetees": [],
-    "cout_reference_usd": 0.1442,
+    "etiquetees": 4,
+    "sans_position": 4,
+    "rejetees": [
+      {
+        "id": "melenchon-securite-justice-an-15-3254",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « les agents de police municipale exercent les compétences de … »"
+      },
+      {
+        "id": "melenchon-economie-entreprises-an-15-2059",
+        "raison": "relecture : L'extrait ne donne que le titre du projet de loi de ratification du CETA, sans indiquer si la proposition soutient ou s'oppose à cette ratification ; rien ne fonde l'étiquette libre_echange."
+      }
+    ],
+    "cout_reference_usd": 0.1964,
     "appels": 2
   }
 ]

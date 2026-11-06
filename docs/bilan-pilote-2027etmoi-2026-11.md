@@ -3,6 +3,21 @@
 Pilote du 2026-11-06. Candidats : Mélenchon, Le Pen, Retailleau (demandé en plus) et Lisnard (cas témoin, sans mandat).
 Plan : `docs/superpowers/plans/2026-11-06-base-2027etmoi.md`. Conception : `docs/superpowers/specs/2026-11-04-base-2027etmoi-votes-design.md`.
 
+## Mise à jour du 2026-11-06 (après correction d'un défaut, voie B)
+Le premier pilote contenait un **défaut de ma part** : pour les 30 mesures issues du Sénat, le « texte de la loi » analysé était le **menu du site** (« Aller au contenu, La galaxie Sénat… ») et les lettres accentuées avaient disparu (entités `&eacute;` remplacées par une espace). Les chiffres du premier tableau ci-dessous étaient donc faussés pour tout le Sénat, et l'explication que j'avais donnée du zéro de Retailleau (texte trop court) était fausse. Corrigé et testé (`corpsDuTexteSenat`, `htmlEnTexte`), puis pilote refait deux fois :
+
+| Mesure sur 75 | Premier pilote (menu du Sénat) | Sénat corrigé, 2 500 caractères | Sénat corrigé, **8 000 caractères** |
+|---|---|---|---|
+| avec un effet décrit | 5 (6,7 %) | 6 (8,0 %) | **13 (17,3 %)** |
+| dont public décrit par le formulaire | 2 (2,7 %) | 3 (4,0 %) | **5 (6,7 %)** |
+| avec une position de conviction | 15 (20 %) | 30 (40 %) | **33 (44 %)** |
+| Retailleau, avec effet | 0 | 2 | **8** |
+| coût de référence (structuration + positions) | 1,95 $ | 1,33 $ | 2,87 $ |
+
+Un premier vote « contre » avec effet apparaît (Mélenchon, loi sur l'immigration de 2007 : le texte baisse l'accès de certains étrangers à des services, lu pour un vote contre comme une hausse). Le sens inversé est conforme à la règle décidée.
+
+Une loi fait en moyenne 127 000 caractères : 8 000 n'en couvrent qu'environ 6 %. Le gain de 6 % à 17 % montre que lire davantage aide, mais on est loin de lire la loi entière.
+
 ## Ce qui marche
 - **Récolte** : 124 scrutins retenus sur 188 pour toute la base (Assemblée nationale et Sénat, hors motions de censure et résolutions) ; pour le pilote, 67 scrutins classés dans un thème (14 écartés, « aucun thème »).
 - **Texte de loi retrouvé pour 53 scrutins sur 67 (79 %)**, soit 59 propositions sur 75.
@@ -25,7 +40,7 @@ C'est le même goulot que celui mesuré le 18 octobre sur la base `votes` (3 à 
 ## Points à connaître
 1. **Le sens « contre » n'a pas pu être contrôlé sur des données réelles.** Les 5 mesures avec effet sont toutes des votes « pour ». L'inversion est testée (6 tests du moteur, dont un qui échoue quand on la désactive), pas encore vue sur un vrai vote contre.
 2. **13 scrutins de l'Assemblée n'ont pas de lien vers leur dossier législatif** sur leur page officielle (dont la loi Climat de 2021), et 1 dossier du Sénat n'a pas de texte adopté. Piste : les dossiers législatifs en données ouvertes (utilisés par `src/votes/run-votes.ts`).
-3. **Le texte analysé est le début de la loi** (2 500 caractères au plus). Retailleau (28 mesures) n'a aucun effet : les dispositions utiles sont souvent plus loin dans le texte. Cause non vérifiée.
+3. **Le texte analysé est le début de la loi** (8 000 caractères au plus depuis la mise à jour). *(Le zéro de Retailleau du premier pilote venait du menu du Sénat pris pour le texte, voir la mise à jour en tête.)*
 4. **La simulation d'électorats ne sert à rien ici** : `src/simulation/run-electorats.ts` donne des lignes identiques pour iFRAP, votes et 2027etmoi. Problème du script, antérieur à ce travail. Fichier généré non commité.
 5. **Questionnaire et schéma** de la base sont une copie de ceux de la base `votes`, non ajustés.
 

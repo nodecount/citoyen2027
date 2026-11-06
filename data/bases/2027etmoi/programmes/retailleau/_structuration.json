@@ -2,123 +2,132 @@
   {
     "theme": "agriculture",
     "groupe": 0,
-    "empreinte": "286afde422628c13",
+    "empreinte": "a408305a9dc07ff1",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
     "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.01,
+    "cout_reference_usd": 0.0186,
     "appels": 1
   },
   {
     "theme": "budget-securite-sociale",
     "groupe": 0,
-    "empreinte": "09b6260df2b92fb6",
+    "empreinte": "cb468171955841b8",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 3,
     "avec_effets": 0,
     "sans_effet": 3,
     "rejetees": [],
-    "cout_reference_usd": 0.0201,
+    "cout_reference_usd": 0.0494,
     "appels": 1
   },
   {
     "theme": "economie-entreprises",
     "groupe": 0,
-    "empreinte": "ae9efead8d41ba90",
+    "empreinte": "347fea8b5e061b47",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 1,
     "sans_effet": 0,
     "rejetees": [],
-    "cout_reference_usd": 0.0272,
+    "cout_reference_usd": 0.0403,
     "appels": 2
   },
   {
     "theme": "energie-climat",
     "groupe": 0,
-    "empreinte": "bb8b498f610b3bf3",
+    "empreinte": "901f64ae1fc49a60",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 6,
     "avec_effets": 0,
     "sans_effet": 6,
     "rejetees": [],
-    "cout_reference_usd": 0.0343,
+    "cout_reference_usd": 0.0906,
     "appels": 1
   },
   {
     "theme": "immigration-nationalite",
     "groupe": 0,
-    "empreinte": "04c257690b166408",
+    "empreinte": "968191ad4e8eba1c",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 7,
-    "avec_effets": 0,
-    "sans_effet": 6,
+    "avec_effets": 5,
+    "sans_effet": 0,
     "rejetees": [
       {
-        "id": "retailleau-immigration-nationalite-senat-2011-66",
-        "raison": "relecture : Le texte accorde le droit de vote aux seuls étrangers non ressortissants de l'UE, mais l'effet cible aussi les nationalités 'europeenne', élargissant le périmètre réel."
+        "id": "retailleau-immigration-nationalite-senat-2023-109",
+        "raison": "relecture : Le second effet cible la « personne rejointe » alors que l'extrait montre que l'autorisation de séjour (donc l'exigence linguistique) s'applique à l'étranger qui vient rejoindre, pas à la personne déjà en France."
+      },
+      {
+        "id": "retailleau-immigration-nationalite-senat-2023-43",
+        "raison": "relecture : Le second effet cible la « personne rejointe » alors que l'extrait montre que l'autorisation de séjour (donc l'exigence linguistique) s'applique à l'étranger qui vient rejoindre, pas à la personne déjà en France."
       }
     ],
-    "cout_reference_usd": 0.0578,
+    "cout_reference_usd": 0.3328,
     "appels": 2
   },
   {
     "theme": "numerique-jeunesse",
     "groupe": 0,
-    "empreinte": "e4638b371d280d6b",
+    "empreinte": "5c08e77b76921de8",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 1,
-    "avec_effets": 1,
+    "avec_effets": 0,
     "sans_effet": 0,
-    "rejetees": [],
-    "cout_reference_usd": 0.0266,
+    "rejetees": [
+      {
+        "id": "retailleau-numerique-jeunesse-senat-2025-337",
+        "raison": "relecture : Le premier effet élargit indûment la cible à 'moins_30' alors que le texte vise uniquement les mineurs de moins de quinze ans."
+      }
+    ],
+    "cout_reference_usd": 0.0374,
     "appels": 2
   },
   {
     "theme": "retraites",
     "groupe": 0,
-    "empreinte": "32837c0c9021ca9f",
+    "empreinte": "60d3b5725a58efad",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 2,
     "avec_effets": 0,
     "sans_effet": 2,
     "rejetees": [],
-    "cout_reference_usd": 0.016,
+    "cout_reference_usd": 0.0359,
     "appels": 1
   },
   {
     "theme": "sante-fin-de-vie",
     "groupe": 0,
-    "empreinte": "bd3e92b5bb05f09a",
+    "empreinte": "e0e2dc61897fc6d5",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 4,
     "avec_effets": 0,
     "sans_effet": 4,
     "rejetees": [],
-    "cout_reference_usd": 0.0207,
+    "cout_reference_usd": 0.042,
     "appels": 1
   },
   {
     "theme": "securite-justice",
     "groupe": 0,
-    "empreinte": "f8324396393d4465",
+    "empreinte": "d9d3278c9fbec9aa",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 3,
-    "avec_effets": 0,
-    "sans_effet": 3,
+    "avec_effets": 2,
+    "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.0214,
-    "appels": 1
+    "cout_reference_usd": 0.0837,
+    "appels": 2
   }
 ]

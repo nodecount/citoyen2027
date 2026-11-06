@@ -1,35 +1,39 @@
 [
   {
     "groupe": 0,
-    "empreinte": "6f614c5387dc2da9",
+    "empreinte": "a9d8b508eb30fef1",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 7,
-    "sans_position": 16,
+    "etiquetees": 12,
+    "sans_position": 10,
     "rejetees": [
       {
         "id": "retailleau-securite-justice-senat-2016-123",
-        "raison": "relecture : Le périmètre de protection avec palpations et fouilles relève du maintien de l'ordre physique, pas de la surveillance des données/vidéosurveillance définie par le sujet 'surveillance' : mauvais sujet."
+        "raison": "relecture : L'extrait sur les MICAS décrit des restrictions individuelles de déplacement/pointage et non de la vidéosurveillance, de la reconnaissance faciale ou de l'accès aux données/messageries visés par la définition du sujet surveillance ; l'étiquette plus_surveillance est donc mal fondée par cet extrait (l'étiquette repression sur les périmètres de protection reste correcte)."
       },
       {
         "id": "retailleau-securite-justice-senat-2009-276",
-        "raison": "relecture : Le texte interdit la dissimulation du visage en général, sans mentionner les signes religieux ou le voile ; l'étiquette 'laicite_stricte' suppose une interprétation non fondée par l'extrait."
+        "raison": "relecture : L'extrait interdit toute dissimulation du visage dans l'espace public sans mentionner de signe religieux, de voile ou de foulard ; conclure à l'étiquette laicite_stricte suppose une connaissance extérieure (loi anti-niqab) non établie par le texte cité."
+      },
+      {
+        "id": "retailleau-energie-climat-senat-2008-109",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « elle s'engage à porter la part des énergies renouvelables à … »"
       }
     ],
-    "cout_reference_usd": 0.2684,
+    "cout_reference_usd": 0.5921,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "ff14ed971918a974",
+    "empreinte": "00e248121e69af89",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 3,
     "etiquetees": 0,
     "sans_position": 3,
     "rejetees": [],
-    "cout_reference_usd": 0.0211,
+    "cout_reference_usd": 0.0512,
     "appels": 1
   }
 ]

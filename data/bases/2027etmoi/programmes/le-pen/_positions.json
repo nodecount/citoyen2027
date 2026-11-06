@@ -1,35 +1,52 @@
 [
   {
     "groupe": 0,
-    "empreinte": "bc90237a4b41000f",
+    "empreinte": "9f1b37f215ff56e4",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 8,
-    "sans_position": 15,
+    "etiquetees": 11,
+    "sans_position": 10,
     "rejetees": [
       {
         "id": "le-pen-securite-justice-an-17-7987",
-        "raison": "relecture : Le texte instaure une présomption de légitime défense (immunité juridique pour l'usage de l'arme), ce qui ne concerne pas l'armement/les moyens matériels de la police mais le cadre légal de leur usage ; ce n'est pas ce que définit le sujet police_armement."
+        "raison": "relecture : Le texte instaure une présomption de légitime défense (immunité juridique) pour l'usage de l'arme, ce qui relève de l'encadrement légal de l'usage de la force et non d'un maintien ou renforcement de l'armement lui-même ; sujet mal choisi (plutôt sécurité/répression)."
       },
       {
-        "id": "le-pen-securite-justice-an-17-2958",
-        "raison": "relecture : Le 'maintien en rétention' désigne une rétention administrative/de sûreté distincte de l'incarcération en prison ; l'étiquette plus_de_prison n'est pas fondée par ce texte."
+        "id": "le-pen-immigration-nationalite-an-17-7405",
+        "raison": "relecture : L'extrait cité décrit une prise en charge médicale, sociale et psychologique visant à mettre fin à la mesure, ce qui ne fonde pas clairement une position de répression plutôt que de prévention."
+      },
+      {
+        "id": "le-pen-securite-justice-an-17-1473",
+        "raison": "relecture : L'extrait n'est que le titre général du texte sur le narcotrafic et ne montre pas de mesure précise allant dans le sens de la répression plutôt que de la prévention."
+      },
+      {
+        "id": "le-pen-securite-justice-an-17-1041",
+        "raison": "relecture : L'extrait n'est que le titre général du texte et ne montre pas de mesure précise allant dans le sens de la répression plutôt que de la prévention."
       }
     ],
-    "cout_reference_usd": 0.2098,
+    "cout_reference_usd": 0.4502,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "95e16f19597e8bf9",
+    "empreinte": "088d791380dd8416",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 12,
-    "etiquetees": 8,
+    "etiquetees": 6,
     "sans_position": 4,
-    "rejetees": [],
-    "cout_reference_usd": 0.1011,
+    "rejetees": [
+      {
+        "id": "le-pen-securite-justice-an-15-3254",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « les agents de police municipale exercent les compétences de … »"
+      },
+      {
+        "id": "le-pen-economie-entreprises-an-15-49",
+        "raison": "relecture : L'extrait porte sur les modalités procédurales de négociation et validation des accords collectifs, pas sur un assouplissement concret des contrats, licenciements ou conditions de travail pour les entreprises."
+      }
+    ],
+    "cout_reference_usd": 0.2026,
     "appels": 2
   }
 ]

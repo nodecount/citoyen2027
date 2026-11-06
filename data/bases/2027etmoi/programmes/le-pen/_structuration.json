@@ -2,110 +2,115 @@
   {
     "theme": "agriculture",
     "groupe": 0,
-    "empreinte": "e413369a9f9c5cff",
+    "empreinte": "e124f17a031af848",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 4,
     "avec_effets": 0,
     "sans_effet": 4,
     "rejetees": [],
-    "cout_reference_usd": 0.0118,
+    "cout_reference_usd": 0.0206,
     "appels": 1
   },
   {
     "theme": "armee-defense",
     "groupe": 0,
-    "empreinte": "3deb9552a6fb5d59",
+    "empreinte": "c35dc0fe5f0216e2",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 3,
     "avec_effets": 0,
     "sans_effet": 3,
     "rejetees": [],
-    "cout_reference_usd": 0.0109,
+    "cout_reference_usd": 0.0207,
     "appels": 1
   },
   {
     "theme": "budget-securite-sociale",
     "groupe": 0,
-    "empreinte": "9563100a5f1bdf3b",
+    "empreinte": "194a3eecd3767ee3",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 3,
     "avec_effets": 0,
     "sans_effet": 3,
     "rejetees": [],
-    "cout_reference_usd": 0.0212,
+    "cout_reference_usd": 0.0585,
     "appels": 1
   },
   {
     "theme": "economie-entreprises",
     "groupe": 0,
-    "empreinte": "bd7e6b55f734c17e",
+    "empreinte": "43758b1e8598de5d",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 5,
     "avec_effets": 0,
     "sans_effet": 5,
     "rejetees": [],
-    "cout_reference_usd": 0.0143,
+    "cout_reference_usd": 0.023,
     "appels": 1
   },
   {
     "theme": "energie-climat",
     "groupe": 0,
-    "empreinte": "65dbe1f4d255e25d",
+    "empreinte": "0d3e6fa58ab9dd59",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 3,
     "avec_effets": 0,
     "sans_effet": 3,
     "rejetees": [],
-    "cout_reference_usd": 0.0157,
+    "cout_reference_usd": 0.0343,
     "appels": 1
   },
   {
     "theme": "immigration-nationalite",
     "groupe": 0,
-    "empreinte": "e541844ec42eac93",
+    "empreinte": "a8d4d7107658263a",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 4,
-    "avec_effets": 1,
-    "sans_effet": 2,
+    "avec_effets": 0,
+    "sans_effet": 3,
     "rejetees": [
       {
         "id": "le-pen-immigration-nationalite-an-17-1308",
-        "raison": "relecture : Le texte ne modifie les conditions d'acquisition de la nationalité qu'à Mayotte, alors que la cible 'ne_en_france_parents_etrangers' vise tous les enfants nés en France de parents étrangers sans restriction géographique, élargissant indûment le périmètre."
+        "raison": "relecture : Le texte vise spécifiquement Mayotte et non l'ensemble de l'outre-mer, ce qui élargit indûment le périmètre de la cible."
       }
     ],
-    "cout_reference_usd": 0.0422,
+    "cout_reference_usd": 0.0505,
     "appels": 2
   },
   {
     "theme": "logement",
     "groupe": 0,
-    "empreinte": "39caea6a7bc7209a",
+    "empreinte": "4c39349e3abe609e",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 1,
-    "avec_effets": 1,
+    "avec_effets": 0,
     "sans_effet": 0,
-    "rejetees": [],
-    "cout_reference_usd": 0.0272,
-    "appels": 2
+    "rejetees": [
+      {
+        "id": "le-pen-logement-an-17-7408",
+        "raison": "un effet est invalide (cibles, dimension, sens ou longueur de l'extrait)"
+      }
+    ],
+    "cout_reference_usd": 0.0306,
+    "appels": 1
   },
   {
     "theme": "numerique-jeunesse",
     "groupe": 0,
-    "empreinte": "dc547da546b7f1b1",
+    "empreinte": "ba7009d532cf28b0",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 1,
     "avec_effets": 0,
     "sans_effet": 1,
     "rejetees": [],
-    "cout_reference_usd": 0.0101,
+    "cout_reference_usd": 0.0241,
     "appels": 1
   },
   {
@@ -124,32 +129,27 @@
   {
     "theme": "sante-fin-de-vie",
     "groupe": 0,
-    "empreinte": "7128525ee398b8b2",
+    "empreinte": "b07618524868cada",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 4,
     "avec_effets": 0,
     "sans_effet": 4,
     "rejetees": [],
-    "cout_reference_usd": 0.0239,
+    "cout_reference_usd": 0.0516,
     "appels": 1
   },
   {
     "theme": "securite-justice",
     "groupe": 0,
-    "empreinte": "193560355b0409ed",
+    "empreinte": "268c1e710548e2c3",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 8,
-    "avec_effets": 0,
-    "sans_effet": 7,
-    "rejetees": [
-      {
-        "id": "le-pen-securite-justice-an-17-8042",
-        "raison": "relecture : Les cibles sont vides alors que le texte vise précisément les victimes de violences conjugales/intrafamiliales et de certaines infractions sur mineurs de quinze ans, ce qui élargit le périmètre à tous les citoyens."
-      }
-    ],
-    "cout_reference_usd": 0.0488,
+    "avec_effets": 3,
+    "sans_effet": 5,
+    "rejetees": [],
+    "cout_reference_usd": 0.1507,
     "appels": 2
   }
 ]
