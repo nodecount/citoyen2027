@@ -51,7 +51,7 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
 
       <section className="chapitre">
         <h2>Le choix de la source des données</h2>
-        <p>Trois sources ont été essayées, avec le même calcul et les mêmes profils types. Une seule est affichée par défaut : le comparateur iFRAP.</p>
+        <p>Quatre sources ont été essayées, avec le même calcul et les mêmes profils types. Une seule est affichée par défaut : le comparateur iFRAP.</p>
         <aside className="encart">
           <strong>Voir les essais</strong>
           <p>Ouvrez le choix de la source (l'icône dans le menu), puis « Tests de situations » : onze profils types passés dans le calcul exact du site, pour chaque source. « Monitoring » montre l'état de la collecte.</p>
@@ -68,6 +68,12 @@ export default function PageAPropos({ bases, nomsParSlug }: PageAProposProps) {
           <strong>8 candidats, 823 mesures, dont 92 avec des effets, et aucune position de convictions.</strong> Un vote n'est pas un engagement : un groupe vote selon des compromis, parfois un texte dont il récuse des mesures.
         </p>
         <p>Au 18 octobre, le même candidat ressortait pour presque tous les profils types, et aucun résultat n'était possible côté convictions. Rattacher un groupe parlementaire à un candidat reste enfin une approximation.</p>
+
+        <h3>{libelle("2027etmoi", "Votes des candidats")} : à l'essai</h3>
+        <p>
+          <strong>Les votes de chaque candidat à l'Assemblée nationale et au Sénat.</strong> Ils sont relevés par 2027etmoi (Licence Ouverte 2.0), avec le lien de la page officielle de chaque scrutin.
+        </p>
+        <p>Seuls les candidats qui ont siégé ont des votes. Un vote n'est pas un engagement de programme : il montre un acte passé, pas une promesse pour 2027. Un vote contre un texte est lu comme le refus de ses effets.</p>
 
         <h3>{libelle("agregateurs", "Comparateur iFRAP")} : retenue</h3>
         <p>
