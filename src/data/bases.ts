@@ -3,6 +3,7 @@ import type { EntreeAVerifier } from "../ingestion/depot";
 import { construireQuestionnaire, type Questionnaire } from "../questionnaire";
 import { champsDeBase } from "../schemaBase";
 import type { CandidatMeta, ChampProfil, Proposition, Remarque, ResumeRefuse, ResumeTheme, SyntheseTheme, Theme } from "../types";
+import { appliquerPartiCommun } from "./partiCommun";
 import { assemblerCandidats, type CandidatCharge, type CandidatsCharges } from "./chargerCandidats";
 
 // Une « base de connaissances » = un référentiel de thèmes + un dossier par candidat, dans data/bases/<id>/.
@@ -94,7 +95,7 @@ export function chargerBase(id: string): BaseCharge {
     themes,
     champs: champsDeBase(info.id),
     questionnaire: construireQuestionnaire(champsDeBase(info.id), pertinence, themes),
-    metas: regrouperParBaseEtSlug(metaModules, info.id),
+    metas: appliquerPartiCommun(regrouperParBaseEtSlug(metaModules, info.id)),
     propositions: regrouperParBaseEtSlug(propositionsModules, info.id),
     syntheses: regrouperParBaseEtSlug(synthesesModules, info.id),
     resumes: regrouperParBaseEtSlug(resumesModules, info.id),
