@@ -21,7 +21,8 @@
     "sous_theme": "L'ensemble du projet de loi portant lutte contre le dérèglement climatique et renforcement de la résilience face à ses effets (première lecture).",
     "titre_litteral": false,
     "vote": "contre",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-securite-justice-an-15-3421",
@@ -389,6 +390,14 @@
         "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
         "extrait": "Toute personne dont la prise en charge médicale est susceptible d’altérer la fertilité ou dont la fertilité risque d’être prématurément altérée peut bénéficier du recueil ou du prélèvement et de la conservation de ses gamètes"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "libertes_indiv",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
+        "extrait": "Tout couple formé d’un homme et d’une femme ou de deux femmes ou toute femme non mariée ont accès à l’assistance médicale à la procréation"
+      }
     ]
   },
   {
@@ -413,7 +422,15 @@
     "sous_theme": "L'ensemble du projet de loi autorisant la ratification de l'accord économique et commercial global entre l'Union européenne et ses États membres, d'une part, et le Canada, d'autre part, et de l'accord de partenariat stratégique entre l'Union européenne et ses États membres, d'une part, et le Canada, d'autre part (première lecture).",
     "titre_litteral": false,
     "vote": "contre",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "libre_echange",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059",
+        "extrait": "projet de loi autorisant la ratification de l'accord économique et commercial global entre l'Union européenne et ses États membres, d'une part, et le Canada, d'autre part"
+      }
+    ]
   },
   {
     "id": "melenchon-immigration-nationalite-an-15-578",
@@ -437,7 +454,8 @@
     "sous_theme": "L'ensemble du projet de loi pour une immigration maîtrisée, un droit d'asile effectif et une intégration réussie (première lecture).",
     "titre_litteral": false,
     "vote": "contre",
-    "effets": []
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-economie-entreprises-an-15-49",
@@ -468,7 +486,15 @@
     "sous_theme": "L'ensemble du projet de loi d'habilitation à prendre par ordonnances les mesures pour le renforcement du dialogue social (première lecture).",
     "titre_litteral": false,
     "vote": "contre",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "droit_travail",
+        "position": "assouplir_travail",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/49",
+        "extrait": "en reconnaissant dans les autres domaines la primauté de la négociation d’entreprise"
+      }
+    ]
   },
   {
     "id": "melenchon-immigration-nationalite-senat-2007-10",
@@ -730,6 +756,20 @@
         "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
         "extrait": "L'impôt de solidarité sur la fortune du\nredevable ayant son domicile fiscal en France est réduit de la\ndifférence entre"
       }
+    ],
+    "positions": [
+      {
+        "sujet": "temps_travail",
+        "position": "travailler_davantage",
+        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
+        "extrait": "Sont\nexonérés de l'impôt sur le revenu :\n« 1° Les salaires versés aux\nsalariés au titre des heures supplémentaires de travail"
+      },
+      {
+        "sujet": "ultra_riches",
+        "position": "ne_pas_taxer_ultra_riches",
+        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
+        "extrait": "L'impôt de solidarité sur la fortune du\nredevable ayant son domicile fiscal en France est réduit de la\ndifférence entre"
+      }
     ]
   },
   {
@@ -761,6 +801,14 @@
     "sous_theme": "Sur l'ensemble du projet de loi, adopté par l'Assemblée nationale après déclaration d'urgence, relatif au secteur de l'énergie",
     "titre_litteral": false,
     "vote": "contre",
-    "effets": []
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "prix_publics",
+        "position": "marche_prix",
+        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-40.html",
+        "extrait": "Tout consommateur final\nd'électricité peut, pour chacun de ses sites de consommation,\nlibrement choisir son fournisseur d'électricité."
+      }
+    ]
   }
 ]

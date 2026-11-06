@@ -1,39 +1,43 @@
 [
   {
     "groupe": 0,
-    "empreinte": "a9d8b508eb30fef1",
+    "empreinte": "e9b72d281e49ddc5",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 12,
-    "sans_position": 10,
+    "etiquetees": 13,
+    "sans_position": 8,
     "rejetees": [
       {
-        "id": "retailleau-securite-justice-senat-2016-123",
-        "raison": "relecture : L'extrait sur les MICAS décrit des restrictions individuelles de déplacement/pointage et non de la vidéosurveillance, de la reconnaissance faciale ou de l'accès aux données/messageries visés par la définition du sujet surveillance ; l'étiquette plus_surveillance est donc mal fondée par cet extrait (l'étiquette repression sur les périmètres de protection reste correcte)."
+        "id": "retailleau-agriculture-senat-2025-340",
+        "raison": "relecture : L'extrait porte sur une mesure sanitaire de suspension d'importations à risque pour la santé, pas sur une logique de protection économique/protectionnisme commercial direct."
+      },
+      {
+        "id": "retailleau-sante-fin-de-vie-senat-2025-169",
+        "raison": "relecture : L'extrait ne fait que constater le rejet procédural du texte par le Sénat, sans exposer d'argument de fond en faveur des soins palliatifs contre l'aide active à mourir."
       },
       {
         "id": "retailleau-securite-justice-senat-2009-276",
-        "raison": "relecture : L'extrait interdit toute dissimulation du visage dans l'espace public sans mentionner de signe religieux, de voile ou de foulard ; conclure à l'étiquette laicite_stricte suppose une connaissance extérieure (loi anti-niqab) non établie par le texte cité."
+        "raison": "relecture : L'extrait interdit toute dissimulation du visage dans l'espace public sans mentionner de signe religieux, ce qui ne fonde pas directement une étiquette de laïcité stricte sans connaissance extérieure sur la 'loi anti-burqa'."
       },
       {
         "id": "retailleau-energie-climat-senat-2008-109",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « elle s'engage à porter la part des énergies renouvelables à … »"
       }
     ],
-    "cout_reference_usd": 0.5921,
+    "cout_reference_usd": 0.8143,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "00e248121e69af89",
+    "empreinte": "40cc9038f99da88d",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 3,
-    "etiquetees": 0,
-    "sans_position": 3,
+    "etiquetees": 3,
+    "sans_position": 0,
     "rejetees": [],
-    "cout_reference_usd": 0.0512,
-    "appels": 1
+    "cout_reference_usd": 0.1605,
+    "appels": 2
   }
 ]

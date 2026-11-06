@@ -1,7 +1,7 @@
 [
   {
     "groupe": 0,
-    "empreinte": "9f1b37f215ff56e4",
+    "empreinte": "a9089bcc455a963b",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 25,
@@ -9,44 +9,35 @@
     "sans_position": 10,
     "rejetees": [
       {
-        "id": "le-pen-securite-justice-an-17-7987",
-        "raison": "relecture : Le texte instaure une présomption de légitime défense (immunité juridique) pour l'usage de l'arme, ce qui relève de l'encadrement légal de l'usage de la force et non d'un maintien ou renforcement de l'armement lui-même ; sujet mal choisi (plutôt sécurité/répression)."
+        "id": "le-pen-agriculture-an-17-8427",
+        "raison": "relecture : L'extrait sur protectionnisme concerne une mesure sanitaire temporaire liée au retrait d'une autorisation UE pour motifs de santé, pas une mesure protectionniste économique délibérée visant à protéger l'économie nationale."
       },
       {
-        "id": "le-pen-immigration-nationalite-an-17-7405",
-        "raison": "relecture : L'extrait cité décrit une prise en charge médicale, sociale et psychologique visant à mettre fin à la mesure, ce qui ne fonde pas clairement une position de répression plutôt que de prévention."
+        "id": "le-pen-securite-justice-an-17-7987",
+        "raison": "relecture : Le texte instaure une présomption de légitime défense sur l'usage des armes existantes, il ne porte pas sur le maintien ou le renforcement de l'armement de la police."
+      },
+      {
+        "id": "le-pen-securite-justice-an-17-1624",
+        "raison": "relecture : L'extrait sur la comparution immédiate accélère la procédure mais ne correspond pas à la définition de durcir_justice_mineurs (abaisser la majorité pénale, limiter l'excuse de minorité, alourdir les peines, créer des centres fermés)."
       },
       {
         "id": "le-pen-securite-justice-an-17-1473",
-        "raison": "relecture : L'extrait n'est que le titre général du texte sur le narcotrafic et ne montre pas de mesure précise allant dans le sens de la répression plutôt que de la prévention."
-      },
-      {
-        "id": "le-pen-securite-justice-an-17-1041",
-        "raison": "relecture : L'extrait n'est que le titre général du texte et ne montre pas de mesure précise allant dans le sens de la répression plutôt que de la prévention."
+        "raison": "relecture : L'extrait crée un service de coordination administrative contre le crime organisé, ce qui ne montre pas directement un durcissement des peines ou un renforcement des moyens répressifs tel que défini."
       }
     ],
-    "cout_reference_usd": 0.4502,
+    "cout_reference_usd": 0.5542,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "088d791380dd8416",
+    "empreinte": "02fb2a8fed072683",
     "date": "2026-11-06",
     "modele": "claude-sonnet-5",
     "propositions": 12,
-    "etiquetees": 6,
-    "sans_position": 4,
-    "rejetees": [
-      {
-        "id": "le-pen-securite-justice-an-15-3254",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « les agents de police municipale exercent les compétences de … »"
-      },
-      {
-        "id": "le-pen-economie-entreprises-an-15-49",
-        "raison": "relecture : L'extrait porte sur les modalités procédurales de négociation et validation des accords collectifs, pas sur un assouplissement concret des contrats, licenciements ou conditions de travail pour les entreprises."
-      }
-    ],
-    "cout_reference_usd": 0.2026,
+    "etiquetees": 11,
+    "sans_position": 1,
+    "rejetees": [],
+    "cout_reference_usd": 0.2832,
     "appels": 2
   }
 ]

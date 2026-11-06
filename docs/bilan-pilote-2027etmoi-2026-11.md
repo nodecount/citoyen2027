@@ -16,6 +16,19 @@ Le premier pilote contenait un **défaut de ma part** : pour les 30 mesures issu
 
 Un premier vote « contre » avec effet apparaît (Mélenchon, loi sur l'immigration de 2007 : le texte baisse l'accès de certains étrangers à des services, lu pour un vote contre comme une hausse). Le sens inversé est conforme à la règle décidée.
 
+### Troisième passage : chaque loi lue en entier, une seule fois (2026-11-07)
+`npm run scrape:structurer-textes` : la loi est découpée en passages de 12 000 caractères (plafond 400 000), décrite une fois, puis ses effets sont donnés à tous ses votants (pour comme contre). Mesure sur 75 :
+
+| Mesure | 8 000 caractères | **Loi entière, mutualisée** |
+|---|---|---|
+| avec un effet décrit | 13 (17,3 %) | **38 (50,7 %)** |
+| dont effet « pour tout le monde » | 0 | 2 |
+| avec une position de conviction | 33 (44 %) | **43 (57 %)** |
+| Retailleau, avec effet | 8 | **19** |
+| coût de référence de la structuration | 2,9 $ (par candidat) | 16,6 $ (53 lois, une fois) |
+
+Le coût de la lecture est désormais **par loi**, plus par votant : étendre à 28 candidats ajoute surtout des lois nouvelles (124 scrutins en tout). Limites : ces effets ne sont pas relus par un humain ; une loi entière mélange souvent du favorable et du défavorable (mesures « mixtes »), et le public décrit par le formulaire reste à mesurer (chantier du formulaire).
+
 Une loi fait en moyenne 127 000 caractères : 8 000 n'en couvrent qu'environ 6 %. Le gain de 6 % à 17 % montre que lire davantage aide, mais on est loin de lire la loi entière.
 
 ## Ce qui marche
