@@ -20,7 +20,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi portant lutte contre le dérèglement climatique et renforcement de la résilience face à ses effets (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-securite-justice-an-15-3421",
@@ -50,7 +52,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi confortant le respect des principes de la République (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-securite-justice-an-15-3254",
@@ -80,7 +84,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi relative à la sécurité globale (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-sante-fin-de-vie-an-15-2146",
@@ -110,7 +116,24 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi relatif à la bioéthique (première lecture).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "couple de deux femmes ou femme non mariée"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
+        "extrait": "Tout couple formé d’un homme et d’une femme ou de deux femmes ou toute femme non mariée ont accès à l’assistance médicale à la procréation"
+      }
+    ],
+    "positions": []
   },
   {
     "id": "melenchon-economie-entreprises-an-15-2059",
@@ -133,7 +156,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi autorisant la ratification de l'accord économique et commercial global entre l'Union européenne et ses États membres, d'une part, et le Canada, d'autre part, et de l'accord de partenariat stratégique entre l'Union européenne et ses États membres, d'une part, et le Canada, d'autre part (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-immigration-nationalite-an-15-578",
@@ -156,7 +181,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi pour une immigration maîtrisée, un droit d'asile effectif et une intégration réussie (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-economie-entreprises-an-15-49",
@@ -186,7 +213,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi d'habilitation à prendre par ordonnances les mesures pour le renforcement du dialogue social (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-immigration-nationalite-senat-2007-10",
@@ -216,7 +245,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "Sur l'ensemble du projet de loi, adopté par l'Assemblée nationale après déclaration d'urgence, relatif à la maîtrise de l'immigration, à l'intégration et à l'asile",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-economie-entreprises-senat-2006-122",
@@ -246,7 +277,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "Sur l'article premier du projet de loi, adopté par l'Assemblée nationale, après déclaration d'urgence, en faveur du travail, de l'emploi et du pouvoir d'achat (Exonération fiscale et sociale des heures supplémentaires)",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "melenchon-energie-climat-senat-2006-40",
@@ -276,6 +309,8 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "Sur l'ensemble du projet de loi, adopté par l'Assemblée nationale après déclaration d'urgence, relatif au secteur de l'énergie",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   }
 ]

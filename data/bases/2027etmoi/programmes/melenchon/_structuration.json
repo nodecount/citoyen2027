@@ -1,0 +1,67 @@
+[
+  {
+    "theme": "economie-entreprises",
+    "groupe": 0,
+    "empreinte": "ab2a8b409d5a1f2f",
+    "date": "2026-11-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 3,
+    "avec_effets": 0,
+    "sans_effet": 3,
+    "rejetees": [],
+    "cout_reference_usd": 0.0425,
+    "appels": 1
+  },
+  {
+    "theme": "energie-climat",
+    "groupe": 0,
+    "empreinte": "b8bb4f9cd4724c54",
+    "date": "2026-11-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0379,
+    "appels": 1
+  },
+  {
+    "theme": "immigration-nationalite",
+    "groupe": 0,
+    "empreinte": "eac4646fe50276cd",
+    "date": "2026-11-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0379,
+    "appels": 1
+  },
+  {
+    "theme": "sante-fin-de-vie",
+    "groupe": 0,
+    "empreinte": "7c6b8db5f02140ee",
+    "date": "2026-11-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 1,
+    "avec_effets": 1,
+    "sans_effet": 0,
+    "rejetees": [],
+    "cout_reference_usd": 0.0569,
+    "appels": 2
+  },
+  {
+    "theme": "securite-justice",
+    "groupe": 0,
+    "empreinte": "0d851899769bab42",
+    "date": "2026-11-06",
+    "modele": "claude-sonnet-5",
+    "propositions": 2,
+    "avec_effets": 0,
+    "sans_effet": 2,
+    "rejetees": [],
+    "cout_reference_usd": 0.0416,
+    "appels": 1
+  }
+]

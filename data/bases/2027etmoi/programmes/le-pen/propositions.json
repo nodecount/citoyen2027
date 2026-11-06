@@ -27,7 +27,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi visant à offrir des réponses immédiates aux phénomènes troublant l'ordre public, la sécurité et la tranquilité de nos concitoyens (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-numerique-jeunesse-an-17-8430",
@@ -57,7 +59,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi relatif à la protection des enfants (première lecture).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-agriculture-an-17-8427",
@@ -87,7 +91,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi d'urgence pour la protection et la souveraineté agricoles (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-sante-fin-de-vie-an-17-8280",
@@ -117,7 +123,16 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi relative au droit à l'aide à mourir (lecture définitive).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fin_de_vie",
+        "position": "aide_active_mourir",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280",
+        "extrait": "Le droit à l’aide à mourir est le droit pour une personne qui en a exprimé la demande d’être autorisée à recourir à une substance létale"
+      }
+    ]
   },
   {
     "id": "le-pen-securite-justice-an-17-8042",
@@ -147,7 +162,24 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi sur la justice criminelle et le respect des victimes (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "victime d'une infraction commise par son conjoint, concubin ou partenaire de pacs, ou mineur de quinze ans victime d'un ascendant ou d'une personne ayant autorité"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8042",
+        "extrait": "informe la victime ou son représentant légal de son droit d’être assistée par un avocat et de bénéficier de l’aide juridictionnelle"
+      }
+    ],
+    "positions": []
   },
   {
     "id": "le-pen-securite-justice-an-17-7987",
@@ -177,7 +209,31 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre, dans l'exercice de leurs fonctions (première lecture).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "forces_ordre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
+        "extrait": "sont présumés avoir agi dans l’un des cas autorisés par le présent article conformément aux conditions d’absolue nécessité et de stricte proportionnalité"
+      }
+    ],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
+        "extrait": "les agents de la police nationale et les militaires de la gendarmerie nationale peuvent faire un usage absolument nécessaire et strictement proportionné de leur arme dans le but exclusif d’empêcher la réitération, dans un temps rapproché, d’un ou de plusieurs meurtres ou tentatives de meurtre"
+      }
+    ]
   },
   {
     "id": "le-pen-armee-defense-an-17-7905",
@@ -207,7 +263,16 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi actualisant la programmation militaire pour les années 2024 à 2030 et portant diverses dispositions intéressant la défense (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "defense",
+        "position": "plus_defense",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
+        "extrait": "l’objectif de porter l’effort national de défense de 2 % du produit intérieur brut en 2025 à 2,5 % au minimum en 2030, avec l’objectif d’atteindre 3,5 % à l’horizon 2035"
+      }
+    ]
   },
   {
     "id": "le-pen-logement-an-17-7408",
@@ -237,7 +302,30 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi visant à améliorer l'accès au logement des travailleurs des services publics (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "fonctionnaire"
+            ]
+          },
+          {
+            "champ": "logement",
+            "valeurs": [
+              "locataire"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7408",
+        "extrait": "Le droit au maintien dans les lieux d’un agent public civil ou militaire ou, dans les zones mentionnées à l’article 17 de la loi n° 89 462 du 6 juillet 1989… peut être limité par une clause de fonction contenue dans le contrat de location."
+      }
+    ],
+    "positions": []
   },
   {
     "id": "le-pen-immigration-nationalite-an-17-7405",
@@ -267,7 +355,24 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi visant à renforcer la sécurité, la rétention administrative et la prévention des risques d’attentat (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personne à l'égard de laquelle il existe des raisons sérieuses de penser que son comportement constitue une menace grave pour l'ordre et la sécurité publics, en raison de son adhésion à des théories incitant ou faisant l'apologie d'actes de terrorisme"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7405",
+        "extrait": "peut faire obligation à une personne à l’égard de laquelle il existe des raisons sérieuses de penser que son comportement constitue une menace grave pour l’ordre et la sécurité publics, en raison de son adhésion à des théories incitant ou faisant l’apologie d’actes de terrorisme et d’agissements susceptibles d’être en tout ou partie liés à des troubles mentaux … de se soumettre à un examen psychiatrique"
+      }
+    ],
+    "positions": []
   },
   {
     "id": "le-pen-budget-securite-sociale-an-17-6319",
@@ -297,7 +402,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi relatif à la lutte contre les fraudes sociales et fiscales (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-economie-entreprises-an-17-6184",
@@ -320,7 +427,16 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi de simplification de la vie économique (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "simplification",
+        "position": "simplifier_normes",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/6184",
+        "extrait": "L'ensemble du projet de loi de simplification de la vie économique"
+      }
+    ]
   },
   {
     "id": "le-pen-budget-securite-sociale-an-17-4758",
@@ -350,7 +466,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi de financement de la sécurité sociale pour 2026 (lecture définitive).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-armee-defense-an-17-4698",
@@ -373,7 +491,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "La déclaration du Gouvernement portant sur la stratégie de défense nationale (application de l'article 50-1 de la Constitution).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-budget-securite-sociale-an-17-4442",
@@ -403,7 +523,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi de fin de gestion pour 2025 (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-economie-entreprises-an-17-4241",
@@ -433,7 +555,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "La première partie du projet de loi de finances pour 2026 (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-securite-justice-an-17-2958",
@@ -456,7 +580,8 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi visant à faciliter le maintien en rétention des personnes condamnées pour des faits d’une particulière gravité et présentant de forts risques de récidive (première lecture).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": []
   },
   {
     "id": "le-pen-agriculture-an-17-2957",
@@ -479,7 +604,16 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi visant à lever les contraintes à l'exercice du métier d'agriculteur (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "agriculture_normes",
+        "position": "assouplir_normes_agri",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2957",
+        "extrait": "visant à lever les contraintes à l'exercice du métier d'agriculteur"
+      }
+    ]
   },
   {
     "id": "le-pen-energie-climat-an-17-2653",
@@ -502,7 +636,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi portant programmation nationale pour l'énergie et le climat pour les années 2025 à 2035 (première lecture).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-sante-fin-de-vie-an-17-2107",
@@ -532,7 +668,16 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L’ensemble de la proposition de loi relative au droit à l’aide à mourir (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "fin_de_vie",
+        "position": "aide_active_mourir",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2107",
+        "extrait": "Le droit à l’aide à mourir consiste à autoriser et à accompagner une personne qui en a exprimé la demande à recourir à une substance létale"
+      }
+    ]
   },
   {
     "id": "le-pen-securite-justice-an-17-1624",
@@ -562,7 +707,16 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi visant à renforcer l'autorité de la justice à l'égard des mineurs délinquants et de leurs parents (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "parents_mineurs",
+        "position": "sanctionner_parents",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1624",
+        "extrait": "Le juge des enfants peut condamner à l’amende civile prévue par le code de procédure civile ceux qui, sans motif légitime, n’y ont pas déféré."
+      }
+    ]
   },
   {
     "id": "le-pen-securite-justice-an-17-1473",
@@ -592,7 +746,8 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi visant à sortir la France du piège du narcotrafic (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": []
   },
   {
     "id": "le-pen-immigration-nationalite-an-17-1308",
@@ -622,7 +777,15 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi visant à renforcer les conditions d'accès à la nationalité française à Mayotte (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "positions": [
+      {
+        "sujet": "droit_du_sol",
+        "position": "droit_sol_restreint",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1308",
+        "extrait": "visant à renforcer les conditions d’accès à la nationalité française à Mayotte"
+      }
+    ]
   },
   {
     "id": "le-pen-securite-justice-an-17-1041",
@@ -645,7 +808,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi relative au renforcement de la sûreté dans les transports (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-agriculture-an-17-456",
@@ -668,7 +833,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "La déclaration du Gouvernement portant sur les négociations en cours relatives à l'accord d'association entre l'Union européenne et le Mercosur (application de l'article 50-1 de la Constitution).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-economie-entreprises-an-17-438",
@@ -698,7 +865,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "La première partie du projet de loi de finances pour 2025 (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-retraites-an-17-217",
@@ -728,7 +897,16 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi visant à restaurer un système de retraite plus juste en annulant les dernières réformes portant sur l’âge de départ et le nombre d’annuités (première lecture).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "travail",
+        "position": "travailler_moins",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217",
+        "extrait": "restaurer un système de retraite plus juste en annulant\nles dernières réformes portant sur l’âge de départ et le nombre d’annuités"
+      }
+    ]
   },
   {
     "id": "le-pen-agriculture-an-16-3966",
@@ -751,7 +929,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi d'orientation pour la souveraineté alimentaire et agricole et le renouvellement des générations en agriculture (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-sante-fin-de-vie-an-16-3289",
@@ -781,7 +961,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L’ensemble du projet de loi constitutionnelle relatif à la liberté de recourir à l’interruption volontaire de grossesse (première lecture).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-immigration-nationalite-an-16-3213",
@@ -804,7 +986,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi pour contrôler l'immigration, améliorer l'intégration (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-armee-defense-an-16-1778",
@@ -827,7 +1011,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L’ensemble du projet de loi relatif à la programmation militaire pour les années 2024 à 2030 et portant diverses dispositions intéressant la défense (première lecture).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-energie-climat-an-16-1533",
@@ -857,7 +1043,16 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi relatif à l'accélération des procédures liées à la construction de nouvelles installations nucléaires à proximité de sites nucléaires existants et au fonctionnement des installations existantes (texte de la commission mixte paritaire).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "nucleaire",
+        "position": "garder_nucleaire",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533",
+        "extrait": "relatif à l’accélération des procédures liées à la construction\nde nouvelles installations nucléaires à proximité de sites nucléaires existants et au fonctionnement des installations existantes"
+      }
+    ]
   },
   {
     "id": "le-pen-energie-climat-an-16-823",
@@ -887,7 +1082,16 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi relatif à l'accélération de la production d'énergies renouvelables (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "renouvelables",
+        "position": "plus_renouvelables",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823",
+        "extrait": "relatif à l’accélération de la production d’énergies renouvelables"
+      }
+    ]
   },
   {
     "id": "le-pen-securite-justice-an-15-3254",
@@ -917,7 +1121,16 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble de la proposition de loi relative à la sécurité globale (première lecture).",
     "titre_litteral": false,
-    "vote": "pour"
+    "vote": "pour",
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "securite",
+        "position": "repression",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254",
+        "extrait": "leurs agents de police municipale exercent les compétences de police judiciaire"
+      }
+    ]
   },
   {
     "id": "le-pen-sante-fin-de-vie-an-15-2146",
@@ -947,7 +1160,16 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi relatif à la bioéthique (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "libertes",
+        "position": "libertes_indiv",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
+        "extrait": "Tout couple formé d’un homme et d’une femme ou de deux femmes ou toute femme non mariée ont accès à l’assistance médicale à la procréation"
+      }
+    ]
   },
   {
     "id": "le-pen-economie-entreprises-an-15-2059",
@@ -970,7 +1192,16 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi autorisant la ratification de l'accord économique et commercial global entre l'Union européenne et ses États membres, d'une part, et le Canada, d'autre part, et de l'accord de partenariat stratégique entre l'Union européenne et ses États membres, d'une part, et le Canada, d'autre part (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "commerce",
+        "position": "libre_echange",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059",
+        "extrait": "autorisant la ratification de l'accord économique et commercial global entre l'Union européenne et ses États membres, d'une part, et le Canada, d'autre part"
+      }
+    ]
   },
   {
     "id": "le-pen-immigration-nationalite-an-15-578",
@@ -993,7 +1224,9 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi pour une immigration maîtrisée, un droit d'asile effectif et une intégration réussie (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": []
   },
   {
     "id": "le-pen-economie-entreprises-an-15-49",
@@ -1023,6 +1256,15 @@
     "date_derniere_verification": "2026-11-06",
     "sous_theme": "L'ensemble du projet de loi d'habilitation à prendre par ordonnances les mesures pour le renforcement du dialogue social (première lecture).",
     "titre_litteral": false,
-    "vote": "contre"
+    "vote": "contre",
+    "effets": [],
+    "positions": [
+      {
+        "sujet": "droit_travail",
+        "position": "assouplir_travail",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/49",
+        "extrait": "reconnaître et d’attribuer une place centrale à la négociation collective, notamment la négociation d’entreprise"
+      }
+    ]
   }
 ]
