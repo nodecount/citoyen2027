@@ -1,5 +1,5 @@
 import type { Proposition, Source, Theme } from "../types";
-import { dateEnClair, LONGUEUR_MAX_ARTICLE, tronquer } from "../votes/conversion";
+import { dateEnClair, tronquer } from "../votes/conversion";
 
 // Base « 2027etmoi » : les votes nominatifs des candidats au Parlement (jeu de données 2027etmoi, Licence Ouverte 2.0), lus par le
 // même moteur que les mesures de programme. Un vote devient une proposition par candidat ; le texte voté est décrit une fois,
@@ -89,6 +89,11 @@ function objetDuVote(titre: string): string {
   return net.charAt(0).toLowerCase() + net.slice(1);
 }
 
+// Fenêtre de texte donnée au modèle pour UNE LOI ENTIÈRE : plus large que celle d'un article (2 500 caractères), car les
+// dispositions qui touchent un citoyen sont rarement dans les premiers articles. Un texte plus long est coupé et le dit
+// (hypothèse affichée).
+export const LONGUEUR_MAX_LOI = 8000;
+
 export interface RapportVotes {
   propositions: number;
   sansTexte: number;
@@ -112,7 +117,7 @@ export function convertirVotes(
     const chambre = CHAMBRE[s.chambre];
     if (chambre === undefined) continue;
     const annee = Number(s.date.slice(0, 4));
-    const { texte: extrait, tronque } = texte ? tronquer(texte.texte) : { texte: s.titre, tronque: false };
+    const { texte: extrait, tronque } = texte ? tronquer(texte.texte, LONGUEUR_MAX_LOI) : { texte: s.titre, tronque: false };
     const sources: Source[] = [{ type: "primaire", label: `${chambre.label} — scrutin public`, url: s.url, nom: `${chambre.nom} (scrutin)`, annee }];
     if (texte) sources.push({ type: "primaire", label: `${chambre.label} — texte de la loi (${texte.libelle})`, url: texte.url, nom: `${chambre.nom} (texte)`, annee });
 
@@ -127,7 +132,7 @@ export function convertirVotes(
         `Vote nominatif de ${nom} : ${position} (résultat du scrutin : ${s.resultat}). Ce n'est pas un engagement de programme pour 2027.`,
         position === "contre" ? "Pour un vote contre, le moteur retient le contraire de l'effet du texte : refuser un effet n'est pas proposer l'effet inverse, c'est une hypothèse de lecture." : "",
         texte ? "" : "Texte de la loi non retrouvé : aucun effet ne peut être décrit.",
-        tronque ? `Texte tronqué à ${LONGUEUR_MAX_ARTICLE} caractères.` : "",
+        tronque ? `Texte tronqué à ${LONGUEUR_MAX_LOI} caractères.` : "",
       ]
         .filter((phrase) => phrase !== "")
         .join(" ");

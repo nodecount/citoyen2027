@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { LONGUEUR_MAX_ARTICLE } from "../votes/conversion";
 import type { Theme } from "../types";
-import { classerScrutins, convertirVotes, restreindreAuxCandidats, retenirScrutins, type ScrutinSource, type TexteLoi } from "./votes2027etmoi";
+import { classerScrutins, convertirVotes, LONGUEUR_MAX_LOI, restreindreAuxCandidats, retenirScrutins, type ScrutinSource, type TexteLoi } from "./votes2027etmoi";
 
 function scrutin(surcharge: Partial<ScrutinSource> = {}): ScrutinSource {
   return {
@@ -86,12 +86,14 @@ describe("convertirVotes", () => {
     expect(contre.resume_factuel).not.toMatch(/a vot[ée]/);
   });
 
-  it("tronque un texte trop long et le dit dans l'hypothèse", () => {
-    const long: TexteLoi = { ...texte, texte: "Phrase. ".repeat(1000) };
+  it("tronque une loi trop longue à la fenêtre prévue pour une loi (plus large que celle d'un article) et le dit dans l'hypothèse", () => {
+    const long: TexteLoi = { ...texte, texte: "Phrase. ".repeat(5000) };
     const { parCandidat } = convertir(new Map([["an-15-351", long]]));
     const p = parCandidat.get("le-pen")![0];
-    expect(p.resume_factuel.length).toBeLessThanOrEqual(LONGUEUR_MAX_ARTICLE);
-    expect(p.hypotheses_calcul).toContain("tronqué");
+    expect(LONGUEUR_MAX_LOI).toBeGreaterThan(LONGUEUR_MAX_ARTICLE);
+    expect(p.resume_factuel.length).toBeLessThanOrEqual(LONGUEUR_MAX_LOI);
+    expect(p.resume_factuel.length).toBeGreaterThan(LONGUEUR_MAX_ARTICLE);
+    expect(p.hypotheses_calcul).toContain(`tronqué à ${LONGUEUR_MAX_LOI} caractères`);
   });
 
   it("attribue le vote au candidat lui-même, daté, avec deux sources primaires", () => {
