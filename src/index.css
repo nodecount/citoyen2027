@@ -866,6 +866,34 @@ a {
   background: #fdf1f0;
 }
 
+/* Monitoring : chiffres d'ensemble de la base affichée. */
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--filet);
+  border-top: 4px solid var(--bleu);
+  border-radius: var(--rayon);
+  background: var(--surface);
+  box-shadow: var(--ombre);
+}
+
+.kpi > strong {
+  font-size: 1.8rem;
+  line-height: 1.1;
+  color: var(--bleu-fonce);
+}
+
 /* Les encarts restent dans la continuité du texte (décision du 2026-11-06) : plus de marge à droite. */
 
 

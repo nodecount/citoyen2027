@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { candidatsDeBase, type BaseCharge } from "../data/bases";
 import { ProgrammesSansMesure } from "./ProgrammesSansMesure";
+import { indicateursBase } from "./monitoring/indicateurs";
 import { calculerCouverture, type CouvertureCandidat } from "./monitoring/couverture";
 import type { RequeteRelance, ResultatRelance } from "../ingestion/serveur-local";
 
@@ -29,6 +30,7 @@ function decrireResultat(r: {
 
 export default function Monitoring({ base }: { base: BaseCharge }) {
   const themes = base.themes;
+  const kpi = indicateursBase(base);
   const couverture: CouvertureCandidat[] = calculerCouverture(themes, base.metas, base.propositions, base.aVerifier);
 
   const [serveurDisponible, setServeurDisponible] = useState(false);
@@ -88,6 +90,20 @@ export default function Monitoring({ base }: { base: BaseCharge }) {
     <section className="monitoring">
       <h1>Monitoring du pipeline d'ingestion</h1>
       <p>Base affichée : {base.info.libelle}.</p>
+      <ul className="kpis">
+        {[
+          [`${kpi.candidatsAvecMesures} / ${kpi.candidatsTotal}`, "candidats avec des mesures"],
+          [String(kpi.themes), "thèmes"],
+          [String(kpi.mesures), "mesures"],
+          [String(kpi.mesuresAvecEffets), "mesures avec des effets"],
+          [String(kpi.mesuresAvecPosition), "mesures avec une position de convictions"],
+        ].map(([valeur, libelle]) => (
+          <li className="kpi" key={libelle}>
+            <strong>{valeur}</strong>
+            <span>{libelle}</span>
+          </li>
+        ))}
+      </ul>
       <ProgrammesSansMesure noms={candidatsDeBase(base).enCoursAnalyse.map((m) => m.nom)} />
 
       {couverture.length === 0 && <p>Aucune donnée de candidat trouvée dans data/bases/{base.info.id}/programmes/.</p>}
