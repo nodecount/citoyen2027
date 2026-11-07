@@ -669,6 +669,16 @@ button.ghost:hover {
     width: 100%;
     padding-inline: 0.5rem;
   }
+  /* Vue groupée : « Enregistrer et fermer » est seul dans le pied (la navigation est vide) ; il est centré, sur une seule ligne,
+     et s'élargit à volonté. */
+  .modale-pied-travail-navigation:empty {
+    display: none;
+  }
+  .modale-pied-travail-fermer {
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+  }
 }
 @media (max-width: 52rem) {
   /* Le pied porte déjà « Enregistrer et fermer » : plus besoin du bouton flottant ni de la marge qui lui était réservée. */
