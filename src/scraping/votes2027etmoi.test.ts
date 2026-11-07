@@ -33,6 +33,7 @@ describe("retenirScrutins", () => {
       scrutin({ id: "pe-1", chambre: "PE", type: "appel_nominal" }),
       scrutin({ id: "mc-1", type: "motion_censure", titre: "La motion de censure, déposée en application de l'article 49." }),
       scrutin({ id: "res-1", titre: "La proposition de résolution affirmant le soutien de l'Assemblée nationale à l'Ukraine." }),
+      scrutin({ id: "decl-1", titre: "La déclaration du Gouvernement portant sur la stratégie de défense nationale (application de l'article 50-1 de la Constitution)." }),
     ]);
     expect(retenus).toEqual([]);
   });

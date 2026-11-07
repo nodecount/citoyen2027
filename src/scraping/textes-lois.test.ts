@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
-import { corpsDuTexteSenat, dateDuTexte, documentsAdoptesAN, lienDossierAN, lienDossierSenat, textesAdoptesSenat, trouverTexteAN, trouverTexteSenat } from "./textes-lois";
+import { corpsDuTexteSenat, dateDuTexte, documentsAdoptesAN, lienDossierAN, lienDossierSenat, textesAdoptesSenat, titreDeLoi, trouverDossierParTitre, trouverTexteAN, trouverTexteSenat } from "./textes-lois";
 import type { ScrutinSource } from "./votes2027etmoi";
 
 const fixture = (nom: string) => readFileSync(resolve(process.cwd(), "src/scraping/fixtures", nom), "utf-8");
@@ -87,6 +87,52 @@ describe("trouverTexteAN", () => {
     expect(await trouverTexteAN(scrutin, telechargeur({}))).toBeNull();
     expect(await trouverTexteAN(scrutin, telechargeur({ [scrutin.url]: "<html></html>" }))).toBeNull();
     expect(await trouverTexteAN(scrutin, telechargeur({ ...PAGES, [`${BASE}/dyn/opendata/PRJLANR5L15BTA0061.html`]: "<html>", [`${BASE}/dyn/opendata/PRJLANR5L15BTA0087.html`]: "<html>" }))).toBeNull();
+  });
+});
+
+describe("titreDeLoi", () => {
+  it("ne garde que le titre formel de la loi, sans « l'ensemble », lecture, parenthèses ni typographie", () => {
+    expect(titreDeLoi("L’ensemble du projet de loi pour contrôler l’immigration, améliorer l’intégration (texte de la commission mixte paritaire).")).toBe("projet de loi pour controler l'immigration, ameliorer l'integration");
+    expect(titreDeLoi("Sur l'ensemble de la proposition de loi relative au renforcement de la sûreté dans les transports")).toBe("proposition de loi relative au renforcement de la surete dans les transports");
+    expect(titreDeLoi("Projet de loi  pour   X (première lecture)")).toBe("projet de loi pour x");
+  });
+});
+
+describe("trouverDossierParTitre", () => {
+  const index = [
+    { legislature: 16, titre: "Projet de loi pour contrôler l’immigration, améliorer l’intégration", chemin: "DLR5L16N47118" },
+    { legislature: 16, titre: "Reprendre le contrôle de la politique d'immigration, d'intégration et d'asile", chemin: "reprendre_controle" },
+    { legislature: 15, titre: "Projet de loi pour contrôler l’immigration, améliorer l’intégration", chemin: "autre_legislature" },
+  ];
+  const titre = "L'ensemble du projet de loi pour contrôler l'immigration, améliorer l'intégration (texte de la commission mixte paritaire).";
+
+  it("trouve le dossier de la même législature dont le titre est celui de la loi, à la typographie près", () => {
+    expect(trouverDossierParTitre(titre, 16, index, BASE)).toBe(`${BASE}/dyn/16/dossiers/DLR5L16N47118`);
+  });
+
+  it("à défaut dans la même législature, prend le dossier d'une autre législature si le titre n'y est porté qu'une fois", () => {
+    const seul = [{ legislature: 16, titre: "Proposition de loi relative au renforcement de la sûreté dans les transports", chemin: "DLR5L16N49176" }];
+    expect(trouverDossierParTitre("L'ensemble de la proposition de loi relative au renforcement de la sûreté dans les transports (texte de la commission mixte paritaire).", 17, seul, BASE)).toBe(`${BASE}/dyn/16/dossiers/DLR5L16N49176`);
+    expect(trouverDossierParTitre("L'ensemble de la proposition de loi relative au renforcement de la sûreté dans les transports", 17, [...seul, { ...seul[0], legislature: 15, chemin: "x" }], BASE)).toBeNull();
+  });
+
+  it("ne devine pas : titre inconnu, titre seulement voisin, ou deux dossiers pour le même titre → null", () => {
+    expect(trouverDossierParTitre("L'ensemble du projet de loi pour autre chose", 16, index, BASE)).toBeNull();
+    expect(trouverDossierParTitre("L'ensemble du projet de loi pour contrôler l'immigration", 16, index, BASE)).toBeNull();
+    expect(trouverDossierParTitre(titre, 16, [...index, { ...index[0], chemin: "doublon" }], BASE)).toBeNull();
+  });
+});
+
+describe("trouverTexteAN avec un dossier de secours", () => {
+  it("passe par le dossier de secours quand la page du scrutin n'en porte pas", async () => {
+    const pages = { ...PAGES, [scrutin.url]: "<html>sans dossier</html>" };
+    const secours = () => `${BASE}/dyn/15/dossiers/orientation_reussite_etudiants`;
+    expect(await trouverTexteAN(scrutin, telechargeur(pages))).toBeNull();
+    expect((await trouverTexteAN(scrutin, telechargeur(pages), secours))!.libelle).toBe("T.A. n° 61");
+  });
+
+  it("reste à null si le secours n'en trouve pas non plus", async () => {
+    expect(await trouverTexteAN(scrutin, telechargeur({ [scrutin.url]: "<html></html>" }), () => null)).toBeNull();
   });
 });
 

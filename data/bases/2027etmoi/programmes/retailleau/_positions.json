@@ -1,43 +1,40 @@
 [
   {
     "groupe": 0,
-    "empreinte": "e9b72d281e49ddc5",
-    "date": "2026-11-06",
+    "empreinte": "37911603dc42a45a",
+    "date": "2026-11-07",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 13,
-    "sans_position": 8,
+    "etiquetees": 14,
+    "sans_position": 9,
     "rejetees": [
       {
-        "id": "retailleau-agriculture-senat-2025-340",
-        "raison": "relecture : L'extrait porte sur une mesure sanitaire de suspension d'importations à risque pour la santé, pas sur une logique de protection économique/protectionnisme commercial direct."
-      },
-      {
-        "id": "retailleau-sante-fin-de-vie-senat-2025-169",
-        "raison": "relecture : L'extrait ne fait que constater le rejet procédural du texte par le Sénat, sans exposer d'argument de fond en faveur des soins palliatifs contre l'aide active à mourir."
-      },
-      {
         "id": "retailleau-securite-justice-senat-2009-276",
-        "raison": "relecture : L'extrait interdit toute dissimulation du visage dans l'espace public sans mentionner de signe religieux, ce qui ne fonde pas directement une étiquette de laïcité stricte sans connaissance extérieure sur la 'loi anti-burqa'."
+        "raison": "relecture : L'extrait interdit de dissimuler son visage dans l'espace public sans mentionner de signes religieux ; le rattacher à la laïcité (restriction du voile) suppose une interprétation extérieure au texte."
       },
       {
         "id": "retailleau-energie-climat-senat-2008-109",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « elle s'engage à porter la part des énergies renouvelables à … »"
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « elle s'engage\nà porter la part des énergies renouvelables à … »"
       }
     ],
-    "cout_reference_usd": 0.8143,
+    "cout_reference_usd": 0.3383,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "40cc9038f99da88d",
-    "date": "2026-11-06",
+    "empreinte": "f5aaad71ac178d75",
+    "date": "2026-11-07",
     "modele": "claude-sonnet-5",
     "propositions": 3,
-    "etiquetees": 3,
-    "sans_position": 0,
-    "rejetees": [],
-    "cout_reference_usd": 0.1605,
+    "etiquetees": 1,
+    "sans_position": 1,
+    "rejetees": [
+      {
+        "id": "retailleau-economie-entreprises-senat-2006-122",
+        "raison": "relecture : Le texte défiscalise les heures supplémentaires sans les imposer, ce qui relève de 'moderer_salaires'/soutien au travail choisi, mais l'étiquette 'travailler_davantage' sur le sujet temps_travail suppose un effet incitatif de second ordre plutôt qu'une mesure imposant directement un allongement du temps de travail."
+      }
+    ],
+    "cout_reference_usd": 0.0723,
     "appels": 2
   }
 ]

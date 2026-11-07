@@ -1,43 +1,40 @@
 [
   {
     "groupe": 0,
-    "empreinte": "a9089bcc455a963b",
-    "date": "2026-11-06",
+    "empreinte": "30e2c785e592931f",
+    "date": "2026-11-07",
     "modele": "claude-sonnet-5",
     "propositions": 25,
-    "etiquetees": 11,
+    "etiquetees": 13,
     "sans_position": 10,
     "rejetees": [
       {
-        "id": "le-pen-agriculture-an-17-8427",
-        "raison": "relecture : L'extrait sur protectionnisme concerne une mesure sanitaire temporaire liée au retrait d'une autorisation UE pour motifs de santé, pas une mesure protectionniste économique délibérée visant à protéger l'économie nationale."
-      },
-      {
         "id": "le-pen-securite-justice-an-17-7987",
-        "raison": "relecture : Le texte instaure une présomption de légitime défense sur l'usage des armes existantes, il ne porte pas sur le maintien ou le renforcement de l'armement de la police."
+        "raison": "relecture : L'extrait décrit une présomption légale de légitime défense (justification juridique de l'usage de l'arme), pas une mesure de maintien ou de renforcement de l'armement/des moyens d'intervention de la police au sens de la définition."
       },
       {
-        "id": "le-pen-securite-justice-an-17-1624",
-        "raison": "relecture : L'extrait sur la comparution immédiate accélère la procédure mais ne correspond pas à la définition de durcir_justice_mineurs (abaisser la majorité pénale, limiter l'excuse de minorité, alourdir les peines, créer des centres fermés)."
-      },
-      {
-        "id": "le-pen-securite-justice-an-17-1473",
-        "raison": "relecture : L'extrait crée un service de coordination administrative contre le crime organisé, ce qui ne montre pas directement un durcissement des peines ou un renforcement des moyens répressifs tel que défini."
+        "id": "le-pen-immigration-nationalite-an-17-7405",
+        "raison": "relecture : L'extrait retenu décrit une prise en charge médicale, sociale et psychologique visant à mettre fin à la mesure, ce qui relève de l'accompagnement et ne fonde pas clairement une position de pure répression."
       }
     ],
-    "cout_reference_usd": 0.5542,
+    "cout_reference_usd": 0.6201,
     "appels": 2
   },
   {
     "groupe": 1,
-    "empreinte": "02fb2a8fed072683",
-    "date": "2026-11-06",
+    "empreinte": "4431394841e559d9",
+    "date": "2026-11-07",
     "modele": "claude-sonnet-5",
-    "propositions": 12,
-    "etiquetees": 11,
-    "sans_position": 1,
-    "rejetees": [],
-    "cout_reference_usd": 0.2832,
+    "propositions": 10,
+    "etiquetees": 7,
+    "sans_position": 2,
+    "rejetees": [
+      {
+        "id": "le-pen-securite-justice-an-15-3254",
+        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « les agents de police municipale exercent les compétences de … »"
+      }
+    ],
+    "cout_reference_usd": 0.2005,
     "appels": 2
   }
 ]

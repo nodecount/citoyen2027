@@ -1,11 +1,12 @@
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import type { CandidatMeta, Proposition, Theme } from "../types";
 import { appelerClaudeCli, MODELE_CLI } from "./claude-cli";
 import { chargerPropositionsCandidat, conserverEffets, dossierCandidat, ecrirePropositionsCandidat } from "./ecriture";
 import { nomFichierTexte } from "./structuration-textes";
-import { trouverTexteAN, trouverTexteSenat } from "./textes-lois";
+import { trouverDossierParTitre, trouverTexteAN, trouverTexteSenat, type DossierIndexe } from "./textes-lois";
 import { classerScrutins, convertirVotes, restreindreAuxCandidats, retenirScrutins, type ScrutinSource, type TexteLoi } from "./votes2027etmoi";
 
 // Usage : npm run scrape:2027etmoi [-- --candidats=melenchon,le-pen --depuis-cache]
@@ -67,7 +68,45 @@ function lireJson<T>(chemin: string, parDefaut: T): T {
   return existsSync(chemin) ? (JSON.parse(readFileSync(chemin, "utf-8")) as T) : parDefaut;
 }
 
-const SYSTEME_THEMES = "Tu classes des scrutins parlementaires français par thème de la vie des citoyens. Tu ne réponds que par l'objet demandé.";
+// Dossiers législatifs de l'Assemblée en données ouvertes (Licence Ouverte 2.0) : pour les scrutins dont la page ne porte pas de lien
+// vers leur dossier, le dossier est retrouvé par le titre de la loi. Archive téléchargée une fois par législature (cache hors dépôt),
+// extraite avec `tar` (présent sous Windows 10+, macOS ; sous Linux, bsdtar).
+const ARCHIVES_DOSSIERS: Record<number, string> = {
+  15: "https://data.assemblee-nationale.fr/static/openData/repository/15/loi/dossiers_legislatifs/Dossiers_Legislatifs_XV.json.zip",
+  16: "https://data.assemblee-nationale.fr/static/openData/repository/16/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip",
+  17: "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip",
+};
+const indexParLegislature = new Map<number, DossierIndexe[]>();
+
+async function indexDesDossiers(legislature: number): Promise<DossierIndexe[]> {
+  const connu = indexParLegislature.get(legislature);
+  if (connu) return connu;
+  const url = ARCHIVES_DOSSIERS[legislature];
+  if (!url) return [];
+  const dossier = resolve(CACHE, "dossiers-an", String(legislature));
+  const json = resolve(dossier, "json/dossierParlementaire");
+  if (!existsSync(json)) {
+    mkdirSync(dossier, { recursive: true });
+    const archive = resolve(dossier, "archive.zip");
+    console.log(`[requête] ${url}`);
+    const reponse = await fetch(url, { headers: { "User-Agent": IDENTIFICATION } });
+    if (!reponse.ok) throw new Error(`${url} répond ${reponse.status}`);
+    writeFileSync(archive, Buffer.from(await reponse.arrayBuffer()));
+    execFileSync("tar", ["-xf", archive, "-C", dossier]);
+  }
+  const index: DossierIndexe[] = [];
+  for (const nom of readdirSync(json)) {
+    if (!nom.endsWith(".json")) continue;
+    const d = (JSON.parse(readFileSync(resolve(json, nom), "utf-8")) as { dossierParlementaire?: { titreDossier?: { titre?: string; titreChemin?: string } } }).dossierParlementaire;
+    const titre = d?.titreDossier?.titre;
+    const chemin = d?.titreDossier?.titreChemin;
+    if (typeof titre === "string" && typeof chemin === "string") index.push({ legislature, titre, chemin });
+  }
+  indexParLegislature.set(legislature, index);
+  return index;
+}
+
+const SYSTEME_THEMES ="Tu classes des scrutins parlementaires français par thème de la vie des citoyens. Tu ne réponds que par l'objet demandé.";
 const SCHEMA_THEMES = {
   type: "object",
   properties: {
@@ -111,7 +150,14 @@ async function main(): Promise<void> {
 
   // Texte de la loi, une fois par scrutin (les pages sont en cache).
   const textes = new Map<string, TexteLoi | null>();
-  for (const s of classes) textes.set(s.id, s.chambre === "AN" ? await trouverTexteAN(s, telecharger) : await trouverTexteSenat(s, telecharger));
+  // Index des dossiers par titre : toutes les législatures connues dès qu'un scrutin de l'Assemblée est en jeu (une loi peut passer
+  // d'une législature à la suivante).
+  if (classes.some((s) => s.chambre === "AN")) for (const leg of Object.keys(ARCHIVES_DOSSIERS)) await indexDesDossiers(Number(leg));
+  const dossierDeSecours = (s: ScrutinSource): string | null => {
+    const leg = Number(s.url.match(/\/dyn\/(\d+)\//)?.[1]);
+    return trouverDossierParTitre(s.titre, leg, [...indexParLegislature.values()].flat(), new URL(s.url).origin);
+  };
+  for (const s of classes) textes.set(s.id, s.chambre === "AN" ? await trouverTexteAN(s, telecharger, dossierDeSecours) : await trouverTexteSenat(s, telecharger));
   const retrouves = [...textes.values()].filter((t) => t !== null).length;
   // Texte COMPLET de chaque loi, gardé hors dépôt pour `scrape:structurer-textes` (la mesure, elle, n'en affiche que le début).
   mkdirSync(DOSSIER_TEXTES, { recursive: true });

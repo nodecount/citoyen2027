@@ -1,27 +1,23 @@
 [
   {
     "groupe": 0,
-    "empreinte": "6ec34f8283b5f8c9",
-    "date": "2026-11-06",
+    "empreinte": "174c3ff0c7417143",
+    "date": "2026-11-07",
     "modele": "claude-sonnet-5",
     "propositions": 10,
     "etiquetees": 5,
-    "sans_position": 2,
+    "sans_position": 3,
     "rejetees": [
-      {
-        "id": "melenchon-securite-justice-an-15-3421",
-        "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « veille au respect des principes de laïcité et de neutralité … »"
-      },
       {
         "id": "melenchon-securite-justice-an-15-3254",
         "raison": "l'extrait d'une étiquette n'est pas retrouvé dans le texte : « les agents de police municipale exercent les compétences de … »"
       },
       {
-        "id": "melenchon-immigration-nationalite-senat-2007-10",
-        "raison": "relecture : L'extrait montre une procédure de réclamation de la nationalité conditionnée à partir de 13 ans, ce qui relève d'un encadrement/restriction de l'accès à la nationalité et ne démontre pas clairement un maintien ou un élargissement du droit du sol."
+        "id": "melenchon-economie-entreprises-an-15-2059",
+        "raison": "relecture : Le texte ne contient que l'intitulé du projet de loi de ratification du CETA, sans aucun contenu montrant une défense du libre-échange ni d'ailleurs la position prise par l'auteur sur ce texte."
       }
     ],
-    "cout_reference_usd": 0.3134,
+    "cout_reference_usd": 0.1358,
     "appels": 2
   }
 ]

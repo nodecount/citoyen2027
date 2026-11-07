@@ -45,12 +45,48 @@ function adresseTexteAN(base: string, id: string): { url: string; libelle: strin
   return { url: `${base}/dyn/${m[1]}/textes/l${m[1]}t${m[2]}_texte-adopte-seance`, libelle: `T.A. n° ${Number(m[2])}` };
 }
 
+// Titre formel d'une loi, comparable d'un document à l'autre : sans « l'ensemble de… », lecture ou texte entre parenthèses, accents,
+// majuscules, apostrophes typographiques ni espaces multiples.
+export function titreDeLoi(titre: string): string {
+  return titre
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase()
+    .replace(/[’‘`]/g, "'")
+    .replace(/\([^)]*\)/g, " ")
+    .replace(/^\s*(sur\s+)?l'ensemble\s+(du|de la|de l'|des)\s*/, "")
+    .replace(/[.\s]+$/, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+export interface DossierIndexe {
+  legislature: number;
+  titre: string;
+  chemin: string;
+}
+
+// Dossier législatif dont le titre est celui de la loi votée, dans la même législature. Les pages de scrutin de l'Assemblée n'ont pas
+// toujours de lien vers leur dossier : le jeu de données ouvertes des dossiers (titre + identifiant de chemin) le retrouve. Un titre
+// seulement voisin ou porté par deux dossiers ne suffit pas : on ne devine pas une loi, on renonce (la mesure reste sans effet).
+export function trouverDossierParTitre(titreScrutin: string, legislature: number, index: DossierIndexe[], base: string): string | null {
+  const cherche = titreDeLoi(titreScrutin);
+  if (cherche === "") return null;
+  const memeTitre = index.filter((d) => titreDeLoi(d.titre) === cherche);
+  const dansLaLegislature = memeTitre.filter((d) => d.legislature === legislature);
+  // Une loi commencée sous une législature et votée sous la suivante garde son dossier d'origine : on le prend si le titre n'est
+  // porté qu'une seule fois, toutes législatures confondues.
+  const retenu = dansLaLegislature.length > 0 ? (dansLaLegislature.length === 1 ? dansLaLegislature[0] : null) : memeTitre.length === 1 ? memeTitre[0] : null;
+  return retenu ? `${base}/dyn/${retenu.legislature}/dossiers/${retenu.chemin}` : null;
+}
+
 // Texte adopté à l'issue de la lecture où le scrutin a eu lieu : le premier texte adopté dont la date est celle du scrutin ou
-// postérieure. Aucune requête n'est faite hors de la page du scrutin, de son dossier et des textes testés, dans l'ordre.
-export async function trouverTexteAN(scrutin: ScrutinSource, telecharger: Telecharger): Promise<TexteLoi | null> {
+// postérieure. Aucune requête n'est faite hors de la page du scrutin, de son dossier et des textes testés, dans l'ordre. Sans lien de
+// dossier sur la page du scrutin, `dossierDeSecours` en propose un.
+export async function trouverTexteAN(scrutin: ScrutinSource, telecharger: Telecharger, dossierDeSecours?: (scrutin: ScrutinSource) => string | null): Promise<TexteLoi | null> {
   try {
     const base = new URL(scrutin.url).origin;
-    const dossier = lienDossierAN(await telecharger(scrutin.url), base);
+    const dossier = lienDossierAN(await telecharger(scrutin.url), base) ?? dossierDeSecours?.(scrutin) ?? null;
     if (!dossier) return null;
     const jourDuScrutin = scrutin.date.slice(0, 10);
     for (const id of documentsAdoptesAN(await telecharger(dossier))) {

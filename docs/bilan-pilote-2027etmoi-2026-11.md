@@ -29,6 +29,12 @@ Un premier vote « contre » avec effet apparaît (Mélenchon, loi sur l'immigra
 
 Le coût de la lecture est désormais **par loi**, plus par votant : étendre à 28 candidats ajoute surtout des lois nouvelles (124 scrutins en tout). Limites : ces effets ne sont pas relus par un humain ; une loi entière mélange souvent du favorable et du défavorable (mesures « mixtes »), et le public décrit par le formulaire reste à mesurer (chantier du formulaire).
 
+### Quatrième passage : formulaire de la base et 14 textes manquants (2026-11-07)
+- **Formulaire** : la structuration suit maintenant le formulaire de CHAQUE base (elle utilisait celui d'`agregateurs`). Ajouts justifiés par les 190 effets du pilote : options « réfugié ou apatride » et « regroupement familial » (situation de séjour), question « incapacité permanente reconnue ». Aucune question retirée (le pilote ne compte que 3 candidats). Les publics trop dispersés (PMA, victimes de violences, parents de mineurs, militaires de missions précises…) restent « autre ».
+- **Textes manquants** : 14 scrutins sans texte au départ → 7. Deux « déclarations du Gouvernement » sont écartées de la sélection (ce ne sont pas des lois). Cinq textes sont retrouvés par le titre formel de la loi dans les dossiers législatifs en données ouvertes (égalité stricte du titre, titre unique ; sinon on renonce). Restent 7 : le dossier porte un titre court différent du titre du scrutin (immigration 2018, climat 2021, loi de programmation militaire…), une loi de 2018 sans dossier au titre identique, et un texte du Sénat. Un rapprochement approximatif risquerait d'attacher la mauvaise loi : non fait.
+- **Résultat** (73 mesures, 2 déclarations écartées) : 35 avec effet (48 %), dont 8 sans aucun critère « autre » (public entièrement décrit par le formulaire) ; 40 avec une position de conviction (55 %) ; 69 réponses du formulaire sans mesure favorable, 74 sans mesure défavorable. Le nombre d'effets est stable (38 → 35 : le modèle est non déterministe, et le nouveau formulaire déplace des effets de « autre » vers de vrais critères).
+- **À savoir** : refaire `scrape:2027etmoi` remet le texte affiché au début de la loi et efface les convictions ; l'ordre est donc `scrape:2027etmoi`, `scrape:structurer-textes`, `scrape:positions` (avec `--force` si le texte a changé), `scrape:couverture`.
+
 Une loi fait en moyenne 127 000 caractères : 8 000 n'en couvrent qu'environ 6 %. Le gain de 6 % à 17 % montre que lire davantage aide, mais on est loin de lire la loi entière.
 
 ## Ce qui marche

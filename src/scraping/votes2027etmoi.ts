@@ -25,11 +25,11 @@ export interface TexteLoi {
 }
 
 // Une seule règle pour tous les candidats : ni le candidat ni son bord n'entrent dans la sélection. Sont écartés le Parlement
-// européen (accès automatique refusé, textes très techniques), les motions de censure et les propositions de résolution (aucun
-// effet direct sur un citoyen).
+// européen (accès automatique refusé, textes très techniques), les motions de censure, les propositions de résolution et les
+// déclarations du Gouvernement (aucun texte de loi, aucun effet direct sur un citoyen).
 export function retenirScrutins(scrutins: ScrutinSource[]): ScrutinSource[] {
   return scrutins.filter(
-    (s) => (s.chambre === "AN" || s.chambre === "SENAT") && s.type !== "motion_censure" && !/^(la |l['’])?proposition de résolution/i.test(s.titre.trim()),
+    (s) => (s.chambre === "AN" || s.chambre === "SENAT") && s.type !== "motion_censure" && !/^(la |l['’])?(proposition de résolution|déclaration du gouvernement)/i.test(s.titre.trim()),
   );
 }
 

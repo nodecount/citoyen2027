@@ -1,15 +1,38 @@
 {
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/8430": {
-    "empreinte": "18cf0419cd25d687",
+    "empreinte": "cdd8002669094f0c",
     "passages": 15,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.3303
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.3187
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280": {
-    "empreinte": "3d6c517b5592fde4",
+    "empreinte": "d45cd72ca1ad499a",
     "passages": 3,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280",
+        "extrait": "Ni la participation de l’assuré, ni la franchise mentionnées respectivement aux II et III de l’article L. 160‑13 ne sont exigées pour : … Les frais prévus au 3° de l’article L. 160‑8"
+      },
+      {
+        "cibles": [],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280",
+        "extrait": "L’assurance en cas de décès couvre le décès résultant de la mise en œuvre de l’aide à mourir prévue à l’article L. 1111‑12‑1 du code de la santé publique."
+      }
+    ],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.1506
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/8433": {
+    "empreinte": "89e51c531a484df0",
+    "passages": 14,
     "tronque": false,
     "effets": [
       {
@@ -17,37 +40,63 @@
           {
             "champ": "autre",
             "valeurs": [
-              "personnes majeures atteintes d'une affection grave et incurable en phase avancée ou terminale, remplissant les conditions légales"
+              "titulaires du permis de conduire pendant le délai probatoire"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280",
-        "extrait": "Le droit à l’aide à mourir est le droit pour une personne qui en a exprimé la demande d’être autorisée à recourir à une substance létale et accompagnée"
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8433",
+        "extrait": "le fait de conduire, pendant le délai probatoire prévu à l’article L. 223‑1, un véhicule dont la puissance du moteur dépasse un seuil déterminé par voie réglementaire"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "particuliers détenant ou transportant du protoxyde d'azote au-delà d'une quantité maximale"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8433",
+        "extrait": "Sont interdits, pour un particulier, la détention et le transport d’une quantité de protoxyde d’azote supérieure à la quantité maximale prévue à l’article L. 3611‑2"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "exploitant d'un établissement visé par un arrêté de fermeture pour trouble à l'ordre public"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8433",
+        "extrait": "En cas de réitération de ce trouble, la durée maximale de la fermeture est portée à six mois."
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.1581
-  },
-  "https://www.assemblee-nationale.fr/dyn/17/scrutins/8433": {
-    "empreinte": "347bde9e461e1fc5",
-    "passages": 14,
-    "tronque": false,
-    "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.3659
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.611
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/8042": {
-    "empreinte": "0b52ba3fda7ff633",
+    "empreinte": "b46fcc9770ce9584",
     "passages": 5,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.088
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0884
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987": {
-    "empreinte": "ec7af0665dfd5d03",
+    "empreinte": "3f2a72a53d2183d7",
     "passages": 1,
     "tronque": false,
     "effets": [
@@ -66,48 +115,20 @@
         "extrait": "les agents de la police nationale et les militaires de la gendarmerie nationale sont présumés avoir agi dans l’un des cas autorisés par le présent article conformément aux conditions d’absolue nécessité et de stricte proportionnalité"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0236
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0296
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/8427": {
-    "empreinte": "bd39ec8abd65784e",
+    "empreinte": "820d41f8570d431e",
     "passages": 13,
     "tronque": false,
     "effets": [
       {
         "cibles": [
           {
-            "champ": "metier",
-            "valeurs": [
-              "agriculteur"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8427",
-        "extrait": "En cas de circonstances exceptionnelles affectant gravement les conditions économiques des exploitations agricoles, un décret peut suspendre, pour une durée maximale d’un an, la perception de la redevance pour pollutions diffuses."
-      },
-      {
-        "cibles": [
-          {
             "champ": "autre",
             "valeurs": [
-              "consommateurs de produits du tabac"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8427",
-        "extrait": "La perte de recettes résultant pour l’État du I du présent article est compensée, à due concurrence, par la création d’une taxe additionnelle à l’accise sur les tabacs"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "propriétaires de terrains riverains d'une parcelle agricole utilisant des produits phytopharmaceutiques"
+              "propriétaires de terrains non bâtis riverains d'une parcelle agricole"
             ]
           }
         ],
@@ -126,16 +147,16 @@
           }
         ],
         "dimension": "droits_et_libertes",
-        "sens": "hausse",
+        "sens": "baisse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8427",
-        "extrait": "le représentant de l’État dans le département peut, face à des attaques répétées et constatées d’une meute sur un troupeau, autoriser l’éleveur ou un mandataire désigné par lui à effectuer des tirs de prélèvement"
+        "extrait": "La durée minimale d’adhésion des membres d’une organisation de producteurs ou d’une association d’organisations de producteurs reconnue dans le secteur du lait… est de cinq ans renouvelable."
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.4344
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.3739
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/7408": {
-    "empreinte": "546e4ffed1450d1c",
+    "empreinte": "c29c545aae6244b8",
     "passages": 1,
     "tronque": false,
     "effets": [
@@ -144,81 +165,66 @@
           {
             "champ": "statut_professionnel",
             "valeurs": [
-              "fonctionnaire"
+              "fonctionnaire",
+              "salarie"
             ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7408",
-        "extrait": "Le droit au maintien dans les lieux d’un agent public civil ou militaire … qui s’est vu attribuer un logement sur proposition de son employeur dans le cadre des droits de réservation … peut être limité par une clause de fonction contenue dans le contrat de location."
-      },
-      {
-        "cibles": [
+          },
           {
             "champ": "autre",
             "valeurs": [
-              "salarié d'une entreprise assurant un service public de transport de personnes ayant obtenu un logement via réservation de l'employeur"
+              "agent public ou salarié logé par son employeur dans le cadre d'un droit de réservation, via une clause de fonction"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7408",
-        "extrait": "d’un salarié d’un établissement public ou d’une entreprise assurant un service public de transport de personnes … qui s’est vu attribuer un logement sur proposition de son employeur … peut être limité par une clause de fonction"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "fonctionnaire"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7408",
-        "extrait": "La moitié au moins des locaux d’habitation ainsi créés est réservée au bénéfice des agents publics et salariés mentionnés au I de l’article L. 442‑7"
+        "extrait": "Le droit au maintien dans les lieux d’un agent public civil ou militaire ou... d’un salarié d’un établissement public ou d’une entreprise assurant un service public de transport de personnes... qui s’est vu attribuer un logement sur proposition de son employeur dans le cadre des droits de réservation... peut être limité par une clause de fonction contenue dans le contrat de location."
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0936
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0852
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/7405": {
-    "empreinte": "e3d8fd5c1689143b",
+    "empreinte": "a0207229576615e0",
     "passages": 3,
     "tronque": false,
     "effets": [
       {
         "cibles": [
           {
-            "champ": "statut_sejour",
+            "champ": "autre",
             "valeurs": [
-              "sans_titre"
+              "personnes condamnées pour certaines infractions ou inscrites au fichier judiciaire national automatisé des auteurs d'infractions terroristes ou sexuelles/violentes"
             ]
           }
         ],
-        "dimension": "securite_personnelle",
+        "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7405",
-        "extrait": "Au premier alinéa, le mot : « trente » est remplacé par le mot : « quatre‑vingt‑dix »"
+        "extrait": "l’officier de l’état civil saisit sans délai le procureur de la République. Il en informe le demandeur. Si le procureur de la République s’oppose à ce changement, le demandeur ou son représentant légal peut saisir le juge aux affaires familiales."
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.1572
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.1849
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905": {
-    "empreinte": "fcf016aee36609c7",
+    "empreinte": "964648076fd1005d",
     "passages": 20,
     "tronque": false,
     "effets": [
       {
         "cibles": [
           {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          },
+          {
             "champ": "autre",
             "valeurs": [
-              "réserviste sanitaire salarié mobilisé"
+              "réserviste sanitaire mobilisé sur son temps de travail"
             ]
           }
         ],
@@ -230,23 +236,29 @@
       {
         "cibles": [
           {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "fonctionnaire"
+            ]
+          },
+          {
             "champ": "autre",
             "valeurs": [
-              "militaires percevant la solde et les primes mentionnées à l'article L. 4251-1 du code de la défense"
+              "volontaire d'un engagement dans la réserve sanitaire"
             ]
           }
         ],
-        "dimension": "revenu_disponible",
+        "dimension": "protection_sociale",
         "sens": "hausse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
-        "extrait": "La solde et les accessoires versés en application du premier alinéa de l’article L. 4251‑1 du code de la défense ainsi que la prime de fidélité et les autres mesures d’encouragement versées en application du second alinéa du même article L. 4251‑1"
+        "extrait": "Aucun licenciement ou déclassement professionnel ni aucune sanction disciplinaire ne peuvent être prononcés à l’encontre du réserviste sanitaire en raison des absences résultant de l’application du présent chapitre"
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "militaires affectés à des missions de dissuasion nucléaire sur sous-marins nucléaires lanceurs d'engins"
+              "personnels des sous-marins nucléaires lanceurs d'engins affectés à des missions de dissuasion nucléaire"
             ]
           }
         ],
@@ -254,86 +266,46 @@
         "sens": "hausse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
         "extrait": "soit à des missions de dissuasion nucléaire accomplies par les sous‑marins nucléaires lanceurs d’engins"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "militaires qui quittent le service et sont involontairement privés d'emploi"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
-        "extrait": "Les militaires qui quittent le service et qui sont involontairement privés d’emploi ont droit à un revenu de remplacement, sous forme d’allocation de chômage."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "handicap",
-            "valeurs": [
-              "oui"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
-        "extrait": "Des aménagements des modalités des épreuves des examens, des concours et des sélections organisés au titre du recrutement ou en cours de carrière peuvent être autorisés au profit de certains candidats relevant de l’une des catégories mentionnées aux 1° et 9° de l’article L. 5212‑13 du code du travail ou à l’article L. 111‑1 du code des pensions militaires d’invalidité et des victimes de guerre"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "titulaires de l'allocation de reconnaissance du combattant"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
-        "extrait": "L’allocation de reconnaissance du combattant fait l’objet d’une revalorisation, son montant étant porté de 52 à 53 points d’indice de pension militaire d’invalidité à compter du 1er janvier 2027"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "pensionnés de pension militaire d'invalidité"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7905",
-        "extrait": "une revalorisation immédiate de 1,0 % du point de pension militaire d’invalidité au 1er janvier 2026, correspondant à l’inflation constatée"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.5812
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.5486
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/4442": {
-    "empreinte": "74868469c103e39f",
+    "empreinte": "dd952de66c717b5a",
     "passages": 4,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0965
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0954
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/4241": {
-    "empreinte": "8e8e8468c5e4af0a",
+    "empreinte": "15776a866c702e2f",
     "passages": 1,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0336
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0345
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/6319": {
-    "empreinte": "e54e33c0b7c3c1d3",
+    "empreinte": "4fc5d6b275f93e5b",
     "passages": 19,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.4079
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/1624": {
+    "empreinte": "a2dae83a4c4d6b00",
+    "passages": 2,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0966
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/2107": {
+    "empreinte": "915e4c44b3458120",
+    "passages": 3,
     "tronque": false,
     "effets": [
       {
@@ -341,89 +313,29 @@
           {
             "champ": "autre",
             "valeurs": [
-              "personnes ayant recours à la télémédecine pour un arrêt de travail"
+              "personnes atteintes d'une affection grave et incurable en phase avancée ou terminale, souffrant de façon réfractaire ou insupportable"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2107",
+        "extrait": "Être atteinte d’une affection grave et incurable, quelle qu’en soit la cause, qui engage le pronostic vital, en phase avancée"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes atteintes d'une affection grave et incurable en phase avancée ou terminale, souffrant de façon réfractaire ou insupportable"
             ]
           }
         ],
         "dimension": "acces_aux_services",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/6319",
-        "extrait": "Aucun renouvellement ultérieur de l’arrêt de travail ne peut être prescrit par un acte de télémédecine."
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2107",
+        "extrait": "Ce droit comprend la possibilité d’accéder à l’aide à mourir dans les conditions prévues à la section 2 bis du chapitre Ier du présent titre"
       },
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/6319",
-        "extrait": "l’employeur peut faire procéder à une contre‑visite médicale dans les conditions prévues à l’avant‑dernier alinéa de l’article L. 1226‑1. Lorsque la contre‑visite médicale conclut à l’absence de justification de l’arrêt de travail ou lorsqu’il est impossible de procéder au contrôle pour un motif imputable au salarié, l’employeur peut interrompre le maintien du salaire."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "titulaires du compte personnel de formation ne se présentant pas, sans motif légitime, aux évaluations et épreuves d'examen"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/6319",
-        "extrait": "le titulaire ne peut mobiliser les droits inscrits sur son compte pour s’acquitter du règlement de l’organisme de formation. La Caisse des dépôts et consignations demande au titulaire le remboursement des sommes déjà utilisées"
-      }
-    ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.4939
-  },
-  "https://www.assemblee-nationale.fr/dyn/17/scrutins/1624": {
-    "empreinte": "17314bca5121daf3",
-    "passages": 2,
-    "tronque": false,
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "parent d'un mineur, convoqué par le juge des enfants"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1624",
-        "extrait": "Le juge des enfants peut condamner à l’amende civile prévue par le code de procédure civile ceux qui, sans motif légitime, n’y ont pas déféré."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "parent d'un mineur ayant causé un dommage, condamné pour soustraction à ses obligations parentales en lien avec ce dommage"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1624",
-        "extrait": "l’assureur peut exiger de ce parent le versement d’une participation à l’indemnisation du dommage ne pouvant excéder 7 500 euros"
-      }
-    ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0766
-  },
-  "https://www.assemblee-nationale.fr/dyn/17/scrutins/2107": {
-    "empreinte": "f1131100bfc2b205",
-    "passages": 3,
-    "tronque": false,
-    "effets": [
       {
         "cibles": [
           {
@@ -443,93 +355,78 @@
           {
             "champ": "autre",
             "valeurs": [
-              "personnes recourant aux frais afférents à la mise en œuvre de l'aide à mourir"
+              "personnes atteintes d'une affection grave et incurable en phase avancée ou terminale, souffrant de façon réfractaire ou insupportable"
             ]
           }
         ],
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2107",
-        "extrait": "Ni la participation de l’assuré, ni la franchise mentionnées respectivement aux II et III de l’article L. 160‑13 ne sont exigées pour… Les frais prévus au 3° de l’article L. 160‑8"
+        "extrait": "Ni la participation de l’assuré, ni la franchise mentionnées respectivement aux II et III de l’article L. 160‑13 ne sont exigées pour"
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "titulaires d'un contrat d'assurance en cas de décès"
+              "personnes titulaires d'un contrat d'assurance en cas de décès"
             ]
           }
         ],
-        "dimension": "patrimoine",
+        "dimension": "protection_sociale",
         "sens": "hausse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2107",
         "extrait": "L’assurance en cas de décès doit couvrir le décès en cas de mise en œuvre de l’aide à mourir prévue à l’article L. 1111‑12‑1 du code de la santé publique."
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.1572
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.1449
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/1308": {
-    "empreinte": "4b07d321b6179d20",
+    "empreinte": "cd7017377d8c2b4e",
     "passages": 1,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0256
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0258
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/438": {
-    "empreinte": "046c617560ce653f",
+    "empreinte": "80b0bb926b0c1fd5",
     "passages": 1,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
+    "date": "2026-11-07",
     "cout_reference_usd": 0.0064
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/217": {
-    "empreinte": "2b37969b472e486a",
+    "empreinte": "022553a91e069526",
     "passages": 1,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0341
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0344
   },
   "https://www.assemblee-nationale.fr/dyn/16/scrutins/3289": {
-    "empreinte": "42c58fd35077f73f",
+    "empreinte": "f285364d3ae3f3af",
     "passages": 1,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0077
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0076
   },
   "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533": {
-    "empreinte": "10f3a2d28a64b54f",
+    "empreinte": "2cac76849b1879a1",
     "passages": 4,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0967
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.098
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473": {
-    "empreinte": "6b3aa7912a1298d3",
+    "empreinte": "e2dfc89bf1f3c085",
     "passages": 19,
     "tronque": false,
     "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "nationalite",
-            "valeurs": [
-              "europeenne",
-              "hors_ue"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473",
-        "extrait": "l’interdiction du territoire français est prononcée par la juridiction de jugement dans les conditions prévues à l’article 131‑30, soit à titre définitif, soit pour une durée de dix ans au plus, à l’encontre de tout étranger coupable de l’une des infractions définies aux articles 222‑34 à 222‑38"
-      },
       {
         "cibles": [
           {
@@ -549,35 +446,35 @@
           {
             "champ": "autre",
             "valeurs": [
-              "personne participant à des activités de trafic de stupéfiants dans un lieu faisant l'objet d'une mesure d'interdiction"
+              "personnes participant à des activités de trafic de stupéfiants dans les lieux concernés"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473",
-        "extrait": "le représentant de l’État dans le département ou, à Paris, le préfet de police peut, après en avoir informé le procureur de la République territorialement compétent, prononcer une mesure d’interdiction de paraître dans les lieux concernés à l’encontre de toute personne participant à ces activités"
+        "extrait": "prononcer une mesure d’interdiction de paraître dans les lieux concernés à l’encontre de toute personne participant à ces activités."
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "occupant d'un logement dont les agissements liés au trafic de stupéfiants troublent l'ordre public de manière grave ou répétée"
+              "occupant habituel d'un logement dont les agissements liés au trafic de stupéfiants troublent l'ordre public"
             ]
           }
         ],
-        "dimension": "patrimoine",
+        "dimension": "acces_aux_services",
         "sens": "baisse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473",
-        "extrait": "le représentant de l’État dans le département peut enjoindre au bailleur de saisir le juge aux fins de résiliation du bail dans les conditions prévues à l’article L. 442‑4‑2 du présent code"
+        "extrait": "le représentant de l’État dans le département peut enjoindre au bailleur de saisir le juge aux fins de résiliation du bail"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.4784
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.4274
   },
   "https://www.assemblee-nationale.fr/dyn/16/scrutins/823": {
-    "empreinte": "05c440e21a235751",
+    "empreinte": "43535f6cc6b3f864",
     "passages": 19,
     "tronque": false,
     "effets": [
@@ -594,93 +491,29 @@
         "sens": "hausse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823",
         "extrait": "Des mesures en faveur des ménages résidant dans la commune d’accueil du parc d’énergies renouvelables afin de lutter contre la précarité énergétique. Ces mesures peuvent prendre la forme de versements directs aux ménages."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "ménages résidant dans la commune d'accueil du parc d'énergies renouvelables"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823",
-        "extrait": "Des mesures en faveur des ménages résidant dans la commune d’accueil du parc d’énergies renouvelables afin de lutter contre la précarité énergétique. Ces mesures peuvent prendre la forme de versements directs aux ménages."
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.4543
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.4092
   },
   "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254": {
-    "empreinte": "0e4dfc72970fc52e",
+    "empreinte": "6740281af6be1ab3",
     "passages": 9,
     "tronque": false,
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "retraite"
-            ]
-          },
-          {
-            "champ": "metier",
-            "valeurs": [
-              "forces_ordre"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254",
-        "extrait": "les revenus perçus à l’occasion de l’exercice d’une activité mentionnée à l’article L. 611‑1 du code de la sécurité intérieure peuvent être entièrement cumulés avec la pension s’agissant des retraités des catégories actives de la police nationale"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "nationalite",
-            "valeurs": [
-              "europeenne",
-              "hors_ue"
-            ]
-          }
-        ],
-        "dimension": "emploi",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254",
-        "extrait": "Les ressortissants d’un État membre de l’Union européenne ou d’un État partie à l’accord sur l’Espace économique européen et les ressortissants de pays tiers doivent également justifier d’une connaissance de la langue française suffisante pour l’exercice d’une activité privée de sécurité"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes physiques achetant des articles pyrotechniques de divertissement"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254",
-        "extrait": "Lorsqu’une personne physique acquiert auprès d’un opérateur économique des articles pyrotechniques destinés au divertissement relevant des catégories définies par arrêté du ministre de l’intérieur, l’opérateur est tenu d’enregistrer la transaction et l’identité de l’acquéreur."
-      }
-    ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.3564
+    "effets": [],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.1765
   },
   "https://www.assemblee-nationale.fr/dyn/15/scrutins/49": {
-    "empreinte": "c4d3c129136c2bce",
+    "empreinte": "0ed0c75bca954a0a",
     "passages": 2,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0408
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0387
   },
   "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758": {
-    "empreinte": "13a79d0faeee9ef6",
+    "empreinte": "d28ae156247452b5",
     "passages": 22,
     "tronque": false,
     "effets": [
@@ -694,21 +527,83 @@
           }
         ],
         "dimension": "cout_du_travail",
-        "sens": "baisse",
+        "sens": "hausse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
-        "extrait": "Le taux de la cotisation d’assurance maladie fixé en application de l’article L. 241‑2 du code de la sécurité sociale est réduit de 6 points au titre des rémunérations suivantes"
+        "extrait": "À la fin du dernier alinéa de l’article L. 137‑12 du code de la sécurité sociale, le taux : « 30 % » est remplacé par le taux : « 40 % »"
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "victimes de violences sexuelles et sexistes"
+              "entreprises de 250 salariés ou plus bénéficiant de la réduction générale de cotisations"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "les mots : « et moins de deux cent cinquante » sont supprimés"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "créateurs ou repreneurs d'entreprise bénéficiant de l'exonération de cotisations (ACRE)"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "les mots : « l’exonération est totale » sont remplacés par les mots : « le montant de l’exonération, qui est fixé par décret, ne peut excéder 25 % de ces cotisations »"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          },
+          {
+            "champ": "incapacite_permanente",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "Ne sont pas incluses dans l’assiette les sommes versées aux non‑salariés agricoles pour les maladies professionnelles et les accidents du travail ou en réparation des maladies causées par des pesticides"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "consommateurs de boissons alcoolisées additionnées de substances stimulantes (caféine, taurine, guaranine)"
             ]
           }
         ],
         "dimension": "cout_de_la_vie",
-        "sens": "baisse",
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "sont soumises à la même taxe"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "victimes de violences sexuelles et sexistes dans les territoires concernés par l'expérimentation"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
         "extrait": "la prise en charge intégrale par l’assurance maladie des actes de prélèvements sur les victimes consécutifs à des violences sexuelles et sexistes"
       },
@@ -717,12 +612,12 @@
           {
             "champ": "autre",
             "valeurs": [
-              "personnes résidant en France de manière stable sans exercer d'activité professionnelle et sans affiliation par cotisations"
+              "personnes résidant en France de manière stable sans activité professionnelle et non redevables de cotisations sociales en vertu d'une convention internationale"
             ]
           }
         ],
-        "dimension": "cout_de_la_vie",
-        "sens": "hausse",
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
         "extrait": "bénéficie de la prise en charge des frais de santé mentionnée au premier alinéa de l’article L. 160‑1 à la condition de s’acquitter d’une participation financière"
       },
@@ -752,42 +647,42 @@
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
-        "extrait": "les professionnels de santé exerçant, à titre libéral, en dehors des établissements ou des organismes mentionnés au I ainsi que les personnes employées dans le même lieu d’exercice les exposant ou exposant les personnes dont ils ont la charge à des risques de contamination doivent être vaccinés contre la grippe"
+        "extrait": "les professionnels de santé exerçant, à titre libéral... doivent être vaccinés contre la grippe"
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "personnes résidant dans un établissement pour personnes âgées ou dépendantes"
+              "personnes résidant dans un établissement médico-social (type EHPAD) pendant la période épidémique de grippe"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
-        "extrait": "la vaccination contre la grippe est obligatoire, sauf contre‑indication médicale reconnue, pour les personnes résidant dans l’un des établissements mentionnés au I de l’article L. 313‑12 du code de l’action sociale et des familles pendant la période épidémique"
+        "extrait": "la vaccination contre la grippe est obligatoire, sauf contre‑indication médicale reconnue, pour les personnes résidant dans l’un des établissements mentionnés au I de l’article L. 313‑12"
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "patients pris en charge par des médecins mentionnés à l’article L. 162‑5‑10 (hors convention)"
+              "patients recevant un médicament appartenant à un groupe biologique similaire"
             ]
           }
         ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
+        "dimension": "cout_de_la_vie",
+        "sens": "hausse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
-        "extrait": "Les produits de santé, les actes et les prestations prescrits par les médecins mentionnés au premier alinéa du présent article ne donnent pas lieu à remboursement par les organismes d’assurance maladie"
+        "extrait": "limitée à la base de remboursement la plus chère en vigueur pour les médicaments biologiques similaires appartenant au groupe biologique similaire concerné"
       },
       {
         "cibles": [
           {
-            "champ": "statut_professionnel",
+            "champ": "autre",
             "valeurs": [
-              "salarie"
+              "personnes atteintes d'une maladie professionnelle ne remplissant que la condition de délai de prise en charge"
             ]
           }
         ],
@@ -801,20 +696,34 @@
           {
             "champ": "statut_professionnel",
             "valeurs": [
-              "salarie"
+              "independant"
             ]
           },
           {
-            "champ": "enfant_moins_3_ans",
+            "champ": "autre",
             "valeurs": [
-              "oui"
+              "ayants droit d'un assuré du régime des non-salariés agricoles titulaire d'une prestation d'invalidité ou d'une rente d'incapacité permanente avant son décès"
             ]
           }
         ],
         "dimension": "protection_sociale",
         "sens": "hausse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
-        "extrait": "bénéficie, après avoir épuisé ce droit à congé, d’un congé supplémentaire de naissance."
+        "extrait": "Ce capital décès est également versé aux ayants droit d’un assuré ayant une durée minimale d’affiliation dans le régime des non‑salariés agricoles définie par décret et titulaire, au cours des trois mois précédant son décès, de l’une des prestations d’invalidité mentionnées à l’article L. 732‑8 ou d’une rente mentionnée à l’article L. 752‑6 associée à un taux d’incapacité permanente supérieur à un taux fixé par décret"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "fonctionnaire"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
+        "extrait": "la fraction du traitement maintenu, qui est dégressive entre le premier et le second mois du congé, ne peut être inférieure à 50 %"
       },
       {
         "cibles": [
@@ -823,18 +732,12 @@
             "valeurs": [
               "salarie"
             ]
-          },
-          {
-            "champ": "enfant_moins_3_ans",
-            "valeurs": [
-              "oui"
-            ]
           }
         ],
-        "dimension": "revenu_disponible",
+        "dimension": "protection_sociale",
         "sens": "hausse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
-        "extrait": "bénéficient, sur leur demande, d’indemnités journalières supplémentaires de naissance lorsqu’ils cessent d’exercer leur activité"
+        "extrait": "Lorsque l’assuré bénéficie du congé supplémentaire de naissance dans les conditions prévues à l’article L. 1225‑46‑2 du code du travail, il reçoit, pendant la durée de ce congé, une indemnité journalière, à condition de cesser tout travail salarié durant la période d’indemnisation"
       },
       {
         "cibles": [
@@ -854,127 +757,42 @@
         "dimension": "emploi",
         "sens": "hausse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
-        "extrait": "Aucun employeur ne peut rompre le contrat de travail d’un salarié pendant un congé supplémentaire de naissance"
+        "extrait": "Aucun employeur ne peut rompre le contrat de travail d’un salarié pendant un congé supplémentaire de naissance mentionné à l’article L. 1225‑46‑2."
       },
       {
         "cibles": [
           {
-            "champ": "territoire",
+            "champ": "statut_professionnel",
             "valeurs": [
-              "outre_mer"
+              "salarie"
             ]
           },
           {
-            "champ": "autre",
+            "champ": "enfant_moins_3_ans",
             "valeurs": [
-              "assurés nés à Saint-Pierre-et-Miquelon et à Mayotte concernés par le relèvement de l'âge légal de départ à la retraite"
+              "oui"
             ]
           }
         ],
-        "dimension": "protection_sociale",
-        "sens": "baisse",
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
-        "extrait": "au premier alinéa, l’année : “1969” est remplacée par l’année : “1971”"
+        "extrait": "bénéficient, sur leur demande, d’indemnités journalières supplémentaires de naissance lorsqu’ils cessent d’exercer leur activité ou ne la reprennent pas à l’expiration des durées minimales"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.9059
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.9505
   },
   "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146": {
-    "empreinte": "64f9322b5fdd8c5b",
+    "empreinte": "e8ba25eee2dea4e3",
     "passages": 12,
     "tronque": false,
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "couple de deux femmes ou femme non mariée"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
-        "extrait": "Tout couple formé d’un homme et d’une femme ou de deux femmes ou toute femme non mariée ont accès à l’assistance médicale à la procréation"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "couple de deux femmes ou femme non mariée"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
-        "extrait": "Pour l’assistance médicale à la procréation réalisée dans les conditions prévues au chapitre Ier du titre IV du livre Ier de la deuxième partie du code de la santé publique."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "couple de deux femmes ayant recours à un don avec tiers donneur"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
-        "extrait": "Pour les couples de femmes, la filiation est établie, à l’égard de chacune d’elles, par la reconnaissance qu’elles ont faite conjointement devant le notaire lors du recueil du consentement mentionné à l’article 342‑10."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "femme mineure non émancipée demandant une interruption de grossesse pour motif médical"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
-        "extrait": "l’interruption de grossesse pour motif médical ainsi que les actes médicaux et les soins qui lui sont liés peuvent être pratiqués à la demande de l’intéressée"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "metier",
-            "valeurs": [
-              "soignant"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
-        "extrait": "Un médecin n’est jamais tenu de pratiquer une interruption de grossesse pour motif médical mais il doit informer, sans délai, l’intéressée de son refus"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personne dont la prise en charge médicale est susceptible d'altérer la fertilité"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
-        "extrait": "Toute personne dont la prise en charge médicale est susceptible d’altérer la fertilité ou dont la fertilité risque d’être prématurément altérée peut bénéficier du recueil ou du prélèvement et de la conservation de ses gamètes"
-      }
-    ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.3947
+    "effets": [],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.3144
   },
   "https://www.senat.fr/scrutin-public/2006/scr2006-122.html": {
-    "empreinte": "0ba54d0ebb986545",
+    "empreinte": "80520edd20340f03",
     "passages": 5,
     "tronque": false,
     "effets": [
@@ -990,7 +808,7 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
-        "extrait": "Sont\nexonérés de l'impôt sur le revenu :"
+        "extrait": "Sont\nexonérés de l'impôt sur le revenu :\n« 1° Les salaires versés aux\nsalariés au titre des heures supplémentaires de travail"
       },
       {
         "cibles": [
@@ -1018,98 +836,27 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
-        "extrait": "peuvent bénéficier d'un crédit d'impôt sur le revenu\nau titre des intérêts des prêts contractés"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "heritage",
-            "valeurs": [
-              "recu",
-              "a_venir"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
-        "extrait": "il est effectué un abattement de\n150 000 € sur la part de chacun des ascendants et sur la part de chacun des enfants\nvivants ou représentés par suite de prédécès\nou de renonciation"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "heritage",
-            "valeurs": [
-              "recu",
-              "a_venir"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "neveux et nièces héritiers"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
-        "extrait": "il est effectué un abattement de\n7500 € sur la part de chacun des neveux et\nnièces"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "situation_familiale",
-            "valeurs": [
-              "marie_pacse"
-            ]
-          },
-          {
-            "champ": "heritage",
-            "valeurs": [
-              "recu",
-              "a_venir"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
-        "extrait": "Sont\nexonérés de droits de mutation par décès le\nconjoint survivant et le partenaire lié au défunt par un pacte\ncivil de solidarité."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "tranche_patrimoine",
-            "valeurs": [
-              "plus_1_3m"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2006/scr2006-122.html",
-        "extrait": "L'impôt de solidarité sur la fortune du\nredevable ayant son domicile fiscal en France est réduit de la\ndifférence entre"
+        "extrait": "peuvent bénéficier d'un crédit d'impôt sur le revenu\nau titre des intérêts des prêts contractés\nauprès d'un établissement financier à raison de cette\nopération"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.2761
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.2897
   },
   "https://www.senat.fr/scrutin-public/2007/scr2007-10.html": {
-    "empreinte": "b54a264138ba7c25",
+    "empreinte": "44bb96a336d2208a",
     "passages": 4,
     "tronque": false,
     "effets": [
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "statut_sejour",
             "valeurs": [
-              "ressortissant étranger pour lequel le regroupement familial est sollicité"
+              "regroupement_familial"
             ]
           }
         ],
-        "dimension": "acces_aux_services",
+        "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
         "extrait": "La délivrance du visa est\nsubordonnée à la production d'une attestation de suivi de cette\nformation."
@@ -1119,43 +866,70 @@
           {
             "champ": "aides_percues",
             "valeurs": [
-              "aah",
-              "aspa"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
-        "extrait": "Ces\ndispositions ne sont pas applicables lorsque la personne qui demande le\nregroupement familial est titulaire de l'allocation aux adultes\nhandicapés"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étranger admis au séjour au titre du regroupement familial dont la communauté de vie a été rompue en raison de violences conjugales"
+              "aah"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
-        "extrait": "l'autorité\nadministrative ne peut procéder\nau retrait du titre de séjour de l'étranger admis au\nséjour au titre du regroupement familial"
+        "extrait": "Ces dispositions ne sont pas applicables lorsque la personne qui demande le\nregroupement familial est titulaire de l'allocation aux adultes\nhandicapés"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "aspa"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
+        "extrait": "ou de l'allocation\nsupplémentaire mentionnée à l'article L. 815-24\ndu même code"
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "conjoint étranger d'un ressortissant français demandant un visa de long séjour"
+              "conjoint de Français sollicitant un visa de long séjour"
             ]
           }
         ],
-        "dimension": "acces_aux_services",
+        "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
-        "extrait": "le conjoint\nde Français âgé de moins de\nsoixante-cinq ans\nbénéficie, dans le pays où il sollicite le visa, d'une\névaluation de son degré de connaissance de la langue"
+        "extrait": "le conjoint\nde Français âgé de moins de soixante-cinq ans\nbénéficie, dans le pays où il sollicite le visa, d'une\névaluation de son degré de connaissance de la langue"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "demandeur_asile"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
+        "extrait": "les mots :\n« quarante-huit heures » sont remplacés par les\nmots : « quatre jours »"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "titre_long_sejour"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
+        "extrait": "une carte de résident permanent, à durée\nindéterminée, peut être délivrée à\nl'étranger qui en fait la demande"
       },
       {
         "cibles": [
@@ -1184,21 +958,49 @@
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
         "extrait": "L'obligation de quitter le territoire\nfrançais n'a pas à faire l'objet d'une motivation."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
+        "extrait": "si elle peut justifier\nde la régularité de son séjour sur le territoire dans des\nconditions définies par décret en Conseil\nd'État"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2007/scr2007-10.html",
+        "extrait": "Tout\nsalarié a le droit de bénéficier, sur justification, d'un\ncongé non rémunéré d'une demi-journée pour\nassister à sa cérémonie d'accueil dans la\ncitoyenneté française."
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.2396
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.2256
   },
   "https://www.senat.fr/scrutin-public/2006/scr2006-40.html": {
-    "empreinte": "a3ce8d287becd7dc",
+    "empreinte": "02abea62ed37696a",
     "passages": 6,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.1321
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.1424
   },
   "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421": {
-    "empreinte": "e129badca6729022",
+    "empreinte": "8c3cdb1f96f90bb1",
     "passages": 14,
     "tronque": false,
     "effets": [
@@ -1221,132 +1023,49 @@
           {
             "champ": "autre",
             "valeurs": [
-              "dirigeant d'une association ou d'un groupement dissous pour atteinte à l'ordre public"
+              "parents souhaitant instruire leurs enfants en famille"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
-        "extrait": "Le dirigeant d’une association ou d’un groupement dissous en application du présent article ne peut fonder, diriger ou administrer une association ou un groupement pendant une durée de trois ans"
+        "extrait": "ou bien, à condition d’y avoir été autorisées par l’autorité de l’État compétente en matière d’éducation, lui donner l’instruction en famille"
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "enfant ou héritier du défunt, ressortissant de l'UE ou résidant dans l'UE, dont la succession est régie par une loi étrangère sans mécanisme réservataire"
-            ]
-          }
-        ],
-        "dimension": "patrimoine",
-        "sens": "hausse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
-        "extrait": "chaque enfant ou ses héritiers ou ses ayants cause peuvent effectuer un prélèvement compensatoire sur les biens existants, situés en France au jour du décès, de façon à être rétablis dans les droits réservataires que leur octroie la loi française"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étranger vivant en France en état de polygamie"
+              "personne condamnée pour une infraction définie aux articles 421-1 à 421-8 du code pénal"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
-        "extrait": "Aucun document de séjour ne peut être délivré à un étranger qui vit en France en état de polygamie. Tout document de séjour détenu par un étranger dans une telle situation est retiré."
+        "extrait": "Toute personne condamnée pour l’une des infractions prévues aux articles 421‑1 à 421‑8 du code pénal ne peut diriger ou administrer un établissement public du culte ou une association à objet cultuel pendant une durée de dix ans"
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "parents souhaitant instruire leurs enfants dans la famille"
+              "personne condamnée pour une infraction définie aux articles 421-1 à 421-6 du code pénal"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
-        "extrait": "à condition d’y avoir été autorisées par l’autorité de l’État compétente en matière d’éducation, lui donner l’instruction en famille"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "aides_percues",
-            "valeurs": [
-              "allocations_familiales"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "famille pratiquant l'instruction en famille sans justificatif d'autorisation"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
-        "extrait": "En l’absence de production effective de l’une de ces pièces, aucune prestation ne peut être versée."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personne condamnée pour l'une des infractions prévues aux articles 421-1 à 421-8 du code pénal"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
-        "extrait": "Toute personne condamnée pour l’une des infractions prévues aux articles 421‑1 à 421‑8 du code pénal ne peut diriger ou administrer un établissement public du culte ou une association à objet cultuel pendant une durée de dix ans à compter de la date à laquelle la condamnation est devenue définitive."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "nationalite",
-            "valeurs": [
-              "europeenne",
-              "hors_ue"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "coupable de l'infraction définie à l'article 433-21 du code pénal"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
-        "extrait": "L’interdiction du territoire français peut être prononcée dans les conditions prévues à l’article 131‑30, soit à titre définitif, soit pour une durée de dix ans au plus, à l’encontre de tout étranger coupable de l’infraction définie à l’article 433‑21."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personne condamnée pour l'une des infractions prévues aux articles 421-1 à 421-6 du code pénal"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
-        "extrait": "Toute personne condamnée pour l’une des infractions prévues aux articles 421‑1 à 421‑6 du code pénal ne peut diriger ou administrer une association cultuelle pendant une durée de dix ans à compter de la date à laquelle la condamnation est devenue définitive."
+        "extrait": "Toute personne condamnée pour l’une des infractions prévues aux articles 421‑1 à 421‑6 du code pénal ne peut diriger ou administrer une association cultuelle pendant une durée de dix ans"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.5762
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.606
   },
   "https://www.senat.fr/scrutin-public/2025/scr2025-337.html": {
-    "empreinte": "2bb725633856871e",
+    "empreinte": "a2fda33adb3516ca",
     "passages": 1,
     "tronque": false,
     "effets": [
@@ -1359,7 +1078,7 @@
             ]
           }
         ],
-        "dimension": "droits_et_libertes",
+        "dimension": "acces_aux_services",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-337.html",
         "extrait": "L’accès à un service de réseaux sociaux en ligne fourni par une plateforme en ligne est interdit aux mineurs de quinze ans."
@@ -1380,100 +1099,57 @@
         "extrait": "les mots : « et les collèges » sont remplacés par les mots : « , les collèges et les lycées »"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0535
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0461
   },
   "https://www.senat.fr/scrutin-public/2025/scr2025-169.html": {
-    "empreinte": "d2522bb618830284",
+    "empreinte": "c5026db512a80b0f",
     "passages": 1,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
+    "date": "2026-11-07",
     "cout_reference_usd": 0.021
   },
   "https://www.senat.fr/scrutin-public/2025/scr2025-338.html": {
-    "empreinte": "782b0052aafc840d",
+    "empreinte": "3cea580bce4df757",
     "passages": 14,
     "tronque": false,
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes se trouvant ou circulant dans les zones frontalières, portuaires, aéroportuaires, gares et sections autoroutières définies par la loi"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-338.html",
-        "extrait": "peuvent, à toute heure, contrôler l’identité de toute personne, quel que soit son comportement, se trouvant ou circulant dans les zones et les lieux suivants :"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "metier",
-            "valeurs": [
-              "forces_ordre"
-            ]
-          }
-        ],
-        "dimension": "securite_personnelle",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-338.html",
-        "extrait": "tout agent de la police nationale ou de la gendarmerie nationale peut, lorsque la révélation de son identité est susceptible de faire peser une menace sur sa vie ou son intégrité physique ou sur celles de ses proches, être identifié, à défaut de ses nom et prénom, par un numéro d'immatriculation administrative"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "agent de l'administration des douanes"
-            ]
-          }
-        ],
-        "dimension": "securite_personnelle",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-338.html",
-        "extrait": "tout agent de l'administration des douanes peut être identifié, à défaut de ses nom et prénom, par le numéro de sa commission d'emploi, sa qualité et son service ou son unité d'affectation"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personne employée par un exploitant portuaire détentrice d'une autorisation, d'un agrément ou d'une habilitation de sûreté"
-            ]
-          }
-        ],
-        "dimension": "securite_personnelle",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-338.html",
-        "extrait": "peut demander à ce qu'un responsable hiérarchique d'un niveau suffisant, défini par décret, l'autorise nominativement et par décision motivée à être identifiée uniquement par un numéro d'immatriculation administrative"
-      }
-    ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.4728
+    "effets": [],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.2831
   },
   "https://www.senat.fr/scrutin-public/2025/scr2025-340.html": {
-    "empreinte": "7f369186dced407c",
+    "empreinte": "66f3b218578a34e6",
     "passages": 13,
     "tronque": false,
     "effets": [
       {
         "cibles": [
           {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "indetermine",
+        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-340.html",
+        "extrait": "En cas de circonstances exceptionnelles affectant gravement les conditions économiques des exploitations agricoles, un décret peut suspendre, pour une durée maximale d’un an, la perception de la redevance pour pollutions diffuses."
+      },
+      {
+        "cibles": [
+          {
             "champ": "autre",
             "valeurs": [
-              "propriétaires de terrains non bâtis riverains d'une parcelle agricole où des produits phytopharmaceutiques sont susceptibles d'être utilisés"
+              "propriétaires de terrains non bâtis riverains d'une parcelle agricole, ayant vocation à accueillir des constructions"
             ]
           }
         ],
         "dimension": "patrimoine",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-340.html",
-        "extrait": "les terrains non bâtis ayant vocation à accueillir des constructions ou des installations et riverains d’une parcelle agricole où sont susceptibles d’être utilisés des produits phytopharmaceutiques mentionnés au même article L. 253-1 peuvent être grevés d’une servitude. Celle-ci délimite une bande, d’une largeur maximale de dix mètres à compter de la limite séparative de la parcelle agricole, où :\n\n« 1° Sont interdites toute construction et toute installation"
+        "extrait": "les terrains non bâtis ayant vocation à accueillir des constructions ou des installations et riverains d’une parcelle agricole où sont susceptibles d’être utilisés des produits phytopharmaceutiques mentionnés au même article L. 253-1 peuvent être grevés d’une servitude"
       },
       {
         "cibles": [
@@ -1488,35 +1164,21 @@
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-340.html",
         "extrait": "Les missions ordonnées par l’autorité administrative compétente ouvrent droit à une autorisation d’absence du lieutenant de louveterie pendant son temps de travail."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "metier",
-            "valeurs": [
-              "agriculteur"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-340.html",
-        "extrait": "Les tirs d’effarouchement et de défense sont autorisés pour prévenir des dommages importants à l’élevage dans les espaces protégés"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.448
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.4073
   },
   "https://www.senat.fr/scrutin-public/2023/scr2023-136.html": {
-    "empreinte": "a95644a131817348",
+    "empreinte": "47caef31a44685d3",
     "passages": 1,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0089
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0098
   },
   "https://www.senat.fr/scrutin-public/2025/scr2025-61.html": {
-    "empreinte": "495dde2bee3f24a9",
+    "empreinte": "57a35f2bfdc1e7ac",
     "passages": 22,
     "tronque": false,
     "effets": [
@@ -1525,28 +1187,29 @@
           {
             "champ": "statut_professionnel",
             "valeurs": [
-              "independant"
+              "independant",
+              "chef_entreprise"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
-        "extrait": "le cotisant bénéficie d’une remise d’office de la totalité des pénalités et majorations de retard pour les dettes apurées prévues par le plan d’étalement de la dette"
+        "extrait": "le cotisant bénéficie d’une remise d’office de la totalité des pénalités et majorations de retard pour les dettes apurées prévues par le plan d’étalement de la dette."
       },
       {
         "cibles": [
           {
-            "champ": "statut_professionnel",
+            "champ": "autre",
             "valeurs": [
-              "retraite"
+              "personnes résidant en France de manière stable et régulière, n'exerçant pas d'activité professionnelle en France, non imposables en France"
             ]
           }
         ],
-        "dimension": "revenu_disponible",
+        "dimension": "cout_de_la_vie",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
-        "extrait": "le montant : « 11 128 € » est remplacé par le montant : « 12 817 €"
+        "extrait": "les personnes résidant en France de manière stable et régulière, n’exerçant pas d’activité professionnelle en France, qui ne sont pas imposables en France en application d’une convention internationale, bénéficient de la prise en charge des frais de santé mentionnée au premier alinéa de l’article L. 160-1 sous réserve de s’acquitter d’une participation financière"
       },
       {
         "cibles": [
@@ -1560,162 +1223,10 @@
         "dimension": "cout_du_travail",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
-        "extrait": "Cette réduction s’applique aux cotisations et contributions mentionnées au I dues sur les revenus d’activité pris en compte pour la détermination de l’assiette des cotisations"
+        "extrait": "Le taux de la cotisation d’assurance maladie, fixé en application de l’article L. 241-2 du code de la sécurité sociale, est réduit de 6 points au titre des rémunérations suivantes"
       },
       {
         "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "résidents en France de manière stable et régulière sans activité professionnelle, non imposables en France en application d'une convention internationale"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
-        "extrait": "bénéficient de la prise en charge des frais de santé mentionnée au premier alinéa de l’article L. 160-1 sous réserve de s’acquitter d’une participation financière, dans des conditions fixées par décret en Conseil d’État"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "femmes âgées de 45 à 65 ans"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
-        "extrait": "Toutes les femmes âgées de quarante-cinq ans à soixante-cinq ans bénéficient d’une consultation longue prise en charge par l’assurance maladie"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          },
-          {
-            "champ": "enfant_moins_3_ans",
-            "valeurs": [
-              "oui"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
-        "extrait": "Lorsque l’assuré bénéficie du congé supplémentaire de naissance dans les conditions prévues à l’article L. 1225-46-2 du code du travail, il reçoit, pendant la durée de ce congé, une indemnité journalière"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "salarie"
-            ]
-          },
-          {
-            "champ": "enfant_moins_3_ans",
-            "valeurs": [
-              "oui"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
-        "extrait": "Aucun employeur ne peut rompre le contrat de travail d’un salarié pendant un congé supplémentaire de naissance"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "montant_pension",
-            "valeurs": [
-              "plus_2000"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
-        "extrait": "les pensions de retraite servies par les régimes obligatoires de base et leurs majorations, accessoires et suppléments sont revalorisés d’un coefficient égal à un pour l’année 2026"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "montant_pension",
-            "valeurs": [
-              "moins_1000",
-              "1000_1300"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
-        "extrait": "est inférieur ou égal, le mois précédant celui auquel intervient la revalorisation, à 1 400 euros brut par mois, sont revalorisés à hauteur du coefficient mentionné à l’article L. 161-25 du même code"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "montant_pension",
-            "valeurs": [
-              "1300_2000"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "montant total des pensions inférieur ou égal à 1 400 euros brut par mois"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
-        "extrait": "est inférieur ou égal, le mois précédant celui auquel intervient la revalorisation, à 1 400 euros brut par mois, sont revalorisés à hauteur du coefficient mentionné à l’article L. 161-25 du même code"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "montant_pension",
-            "valeurs": [
-              "1300_2000"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "montant total des pensions supérieur à 1 416 euros brut par mois"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
-        "extrait": "Pour les assurés dont le montant total des pensions avant revalorisation est supérieur à 1 412 euros brut et inférieur ou égal à 1 416 euros brut, le coefficient mentionné au même article L. 161-25 est égal à 1,002"
-      }
-    ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.9148
-  },
-  "https://www.senat.fr/scrutin-public/2023/scr2023-109.html": {
-    "empreinte": "bb565ff062fb7034",
-    "passages": 15,
-    "tronque": false,
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "nationalite",
-            "valeurs": [
-              "hors_ue"
-            ]
-          },
           {
             "champ": "statut_professionnel",
             "valeurs": [
@@ -1723,69 +1234,62 @@
             ]
           }
         ],
-        "dimension": "emploi",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-109.html",
-        "extrait": "Le statut d’entrepreneur individuel n’est pas accessible aux étrangers ressortissants de pays non membres de l’Union européenne, d’un autre État partie à l’Espace économique européen ou de la Confédération suisse ne disposant pas d’un titre de séjour les autorisant à exercer sous ce statut."
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
+        "extrait": "il perçoit une rémunération complémentaire aux rémunérations de ses activités de soins lorsque celles-ci sont inférieures à un seuil"
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "titulaire d'une carte de séjour talent-salarié qualifié"
+              "femmes âgées de quarante-cinq ans à soixante-cinq ans"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
+        "extrait": "Toutes les femmes âgées de quarante-cinq ans à soixante-cinq ans bénéficient d’une consultation longue prise en charge par l’assurance maladie et destinée à les informer et à repérer les éventuels facteurs de risques au moment de la ménopause."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "fonctionnaire"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "femmes fonctionnaires ou militaires ayant accouché postérieurement à leur recrutement"
             ]
           }
         ],
         "dimension": "protection_sociale",
         "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-109.html",
-        "extrait": "lorsque l’étranger bénéficiaire de cette carte dans les conditions prévues aux 1° et 2° du présent article se trouve involontairement privé d’emploi à la date du renouvellement de sa carte, celle-ci est renouvelée pour une durée équivalente à celle des droits qu’il a acquis à l’allocation d’assurance"
-      },
+        "source_url": "https://www.senat.fr/scrutin-public/2025/scr2025-61.html",
+        "extrait": "Bonification d’un trimestre pour chacun de leurs enfants nés depuis le 1er janvier 2004, pour les femmes fonctionnaires ou militaires, ayant accouché postérieurement à leur recrutement"
+      }
+    ],
+    "date": "2026-11-07",
+    "cout_reference_usd": 1.0889
+  },
+  "https://www.senat.fr/scrutin-public/2023/scr2023-109.html": {
+    "empreinte": "863178cf27c60a39",
+    "passages": 15,
+    "tronque": false,
+    "effets": [
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "metier",
             "valeurs": [
-              "étranger mineur de moins de 18 ans"
+              "soignant"
             ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-109.html",
-        "extrait": "L’étranger mineur de dix-huit ans ne peut faire l’objet d’une décision portant obligation de quitter le territoire français."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étranger victime de soumission à des conditions d'hébergement indignes qui dépose plainte"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-109.html",
-        "extrait": "L’étranger qui dépose plainte… se voit délivrer une carte de séjour temporaire portant la mention “vie privée et familiale” d’une durée d’un an"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étranger bénéficiaire de l'aide au retour"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-109.html",
-        "extrait": "Cette aide au retour ne peut lui être attribuée qu’une seule fois."
-      },
-      {
-        "cibles": [
+          },
           {
             "champ": "nationalite",
             "valeurs": [
@@ -1793,48 +1297,158 @@
             ]
           }
         ],
-        "dimension": "protection_sociale",
+        "dimension": "emploi",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-109.html",
-        "extrait": "ne peuvent procéder à la radiation des personnes qui ne sont pas ressortissantes d’un État membre de l’Union européenne… avant la fin du troisième mois"
+        "extrait": "l’étranger qui bénéficie d’une décision d’affectation … se voit délivrer une carte pluriannuelle portant la mention “talent-profession médicale et de la pharmacie”"
       },
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "statut_sejour",
             "valeurs": [
-              "étranger assigné à résidence en vue de son éloignement"
+              "sans_titre"
             ]
           }
         ],
-        "dimension": "cout_de_la_vie",
+        "dimension": "securite_personnelle",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-109.html",
-        "extrait": "après le mot : « résidence », sont insérés les mots : « à ses frais »"
+        "extrait": "Est punie de deux ans d’emprisonnement et de 75 000 € d’amende l’infraction mentionnée au premier alinéa du présent I lorsque les faits sont commis alors que l’occupant est une personne vulnérable, notamment un ressortissant étranger en situation irrégulière"
       },
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "statut_sejour",
             "valeurs": [
-              "étrangers dont la demande d'asile a été définitivement rejetée"
+              "sans_titre"
             ]
           }
         ],
-        "dimension": "acces_aux_services",
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-109.html",
+        "extrait": "L’étranger qui dépose plainte contre une personne qu’il accuse d’avoir commis à son encontre des faits constitutifs de l’infraction de soumission à des conditions d’hébergement incompatibles avec la dignité humaine … se voit délivrer une carte de séjour temporaire portant la mention “vie privée et familiale” d’une durée d’un an."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-109.html",
-        "extrait": "les personnes ayant fait l’objet d’une décision de rejet définitive de leur demande d’asile ne peuvent pas s’y maintenir"
+        "extrait": "le mot : « trois » est remplacé par le mot : « cinq »"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "ne_en_france_parents_etrangers",
+            "valeurs": [
+              "oui"
+            ]
+          },
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "outre_mer"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-109.html",
+        "extrait": "Pour un enfant né dans la collectivité territoriale de Guyane, l’article 21-7 n’est applicable que si, à la date de sa naissance, l’un de ses parents au moins résidait en France de manière régulière, sous couvert d’un titre de séjour, et de manière ininterrompue depuis plus de neuf mois."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "outre_mer"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étranger résidant régulièrement à Mayotte depuis au moins trois ans sous couvert d'un titre de longue durée"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-109.html",
+        "extrait": "L’étranger qui séjourne régulièrement à Mayotte depuis au moins trois ans sous couvert d’un des titres d’une durée de validité d’au moins cinq ans prévus par le présent code ou par des conventions internationales peut demander à bénéficier de son droit à être rejoint, au titre du regroupement familial"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.7575
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.6238
   },
   "https://www.senat.fr/scrutin-public/2023/scr2023-43.html": {
-    "empreinte": "8e5f062c08803d08",
+    "empreinte": "1645dd010da9831f",
     "passages": 14,
     "tronque": false,
     "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "regroupement_familial"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-43.html",
+        "extrait": "le mot : « dix-huit » est remplacé par le mot : « vingt-quatre »"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étranger demandant un titre de séjour pour motif familial (vie privée et familiale)"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-43.html",
+        "extrait": "L’étranger justifie de ressources stables, régulières et suffisantes"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-43.html",
+        "extrait": "N’ayant pas satisfait à l’obligation qui lui a été faite de quitter le territoire français dans les formes et délais prescrits par l’autorité administrative"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "soignant"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-43.html",
+        "extrait": "se voit délivrer une carte pluriannuelle portant la mention “talent-profession médicale et de la pharmacie” d’une durée maximale de quatre ans"
+      },
       {
         "cibles": [
           {
@@ -1858,17 +1472,17 @@
             ]
           }
         ],
-        "dimension": "droits_et_libertes",
+        "dimension": "securite_personnelle",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-43.html",
-        "extrait": "l’officier de police judiciaire ou, sous contrôle de celui-ci, l’agent de police judiciaire peut, sur autorisation du procureur de la République que l’officier de police judiciaire a saisi préalablement, procéder à cette opération sans le consentement de l’intéressé, en présence de son avocat"
+        "extrait": "l’officier de police judiciaire ou, sous contrôle de celui-ci, l’agent de police judiciaire peut, sur autorisation du procureur de la République que l’officier de police judiciaire a saisi préalablement, procéder à cette opération sans le consentement de l’intéressé"
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "étranger accompagné d'un mineur de seize ans en rétention administrative"
+              "étranger accompagné d'un mineur de seize ans en centre de rétention"
             ]
           }
         ],
@@ -1880,116 +1494,54 @@
       {
         "cibles": [
           {
-            "champ": "statut_sejour",
-            "valeurs": [
-              "sans_titre"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-43.html",
-        "extrait": "Le représentant de l’État dans le département informe sans délai les organismes mentionnés à l’article L. 114-10-1-1 du code de la sécurité sociale ainsi que l’organisme mentionné à l’article L. 5312-1 du code du travail lorsqu’il prend une décision de refus de séjour, de retrait de titre ou document de séjour ou d’expulsion."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "statut_sejour",
-            "valeurs": [
-              "sans_titre"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-43.html",
-        "extrait": "après le mot : « emprisonnement », sont insérés les mots : « et de 15 000 € d’amende »"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "statut_sejour",
-            "valeurs": [
-              "sans_titre"
-            ]
-          },
-          {
             "champ": "autre",
             "valeurs": [
-              "victime de soumission à des conditions d'hébergement indignes ayant déposé plainte"
+              "étranger sous interdiction de retour en raison d'une menace grave pour l'ordre public"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
-        "sens": "hausse",
+        "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2023/scr2023-43.html",
-        "extrait": "L’étranger qui dépose plainte contre une personne qu’il accuse d’avoir commis à son encontre des faits constitutifs de l’infraction de soumission à des conditions d’hébergement incompatibles avec la dignité humaine... se voit délivrer une carte de séjour temporaire portant la mention “vie privée et familiale” d’une durée d’un an."
+        "extrait": "et dix ans en cas de menace grave pour l’ordre public"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.9192
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.8298
   },
   "https://www.senat.fr/scrutin-public/2022/scr2022-110.html": {
-    "empreinte": "25ed9d33afe35f5f",
+    "empreinte": "4c82a1adb5f9f3c3",
     "passages": 5,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.1089
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0848
   },
   "https://www.senat.fr/scrutin-public/2022/scr2022-251.html": {
-    "empreinte": "b0d0a67f8d689dce",
+    "empreinte": "d2d11c3e684550da",
     "passages": 18,
     "tronque": false,
     "effets": [
       {
         "cibles": [
           {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "chef_entreprise"
-            ]
-          }
-        ],
-        "dimension": "cout_du_travail",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html",
-        "extrait": "une pénalité, dans la limite de 1 % des rémunérations et gains, au sens du premier alinéa de l’article L. 242-1 du code de la sécurité sociale"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "chef_entreprise"
-            ]
-          }
-        ],
-        "dimension": "cout_du_travail",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html",
-        "extrait": "Les rémunérations versées au salarié durant les douze premiers mois d’exécution de ce contrat sont exonérées des cotisations dues au titre du 1° de l’article L. 241-6 du même code."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "metier_penible",
-            "valeurs": [
-              "oui"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html",
-        "extrait": "Le financement des frais afférents à une ou plusieurs actions mentionnées aux 1°, 2° ou 3° de l’article L. 6313-1 dans le cadre d’un projet de reconversion professionnelle et, le cas échéant, le financement de sa rémunération pendant un congé de reconversion professionnelle"
-      },
-      {
-        "cibles": [
-          {
             "champ": "autre",
             "valeurs": [
-              "victimes titulaires d'une rente pour incapacité permanente reconnue au titre d'une maladie professionnelle ou d'un accident du travail"
+              "personne condamnée pénalement pour crimes ou délits commis à l'encontre de son enfant, privée ou s'étant vu retirer l'autorité parentale"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html",
+        "extrait": "l’assuré ne peut bénéficier de la majoration prévue au premier alinéa du présent article s’il a été privé de l’exercice de l’autorité parentale ou s’est vu retirer l’autorité parentale consécutivement à une condamnation pénale"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "incapacite_permanente",
+            "valeurs": [
+              "oui"
             ]
           }
         ],
@@ -2007,16 +1559,63 @@
             ]
           }
         ],
-        "dimension": "acces_aux_services",
+        "dimension": "protection_sociale",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html",
-        "extrait": "À l’occasion de la visite de mi-carrière prévue à l’article L. 4624-2-2, le professionnel de santé au travail apprécie l’état de santé du salarié"
+        "extrait": "Le financement des frais afférents à une ou plusieurs actions mentionnées aux 1°, 2° ou 3° de l’article L. 6313-1 dans le cadre d’un projet de reconversion professionnelle"
       },
       {
         "cibles": [
           {
             "champ": "statut_professionnel",
             "valeurs": [
+              "retraite"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "pension liquidée à taux plein avec une durée de cotisations longue"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html",
+        "extrait": "les pensions de vieillesse personnelles de base du régime général de sécurité sociale... sont assorties d’une majoration, dont le montant est défini par décret, lorsque les deux conditions suivantes sont remplies"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "territoire",
+            "valeurs": [
+              "outre_mer"
+            ]
+          },
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "retraite"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html",
+        "extrait": "Les pensions de vieillesse servies par le régime mahorais ayant pris effet avant le 31 août 2023 sont majorées à titre exceptionnel au 1er septembre 2023 d’un montant forfaitaire fixé par décret"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "50_64"
+            ]
+          },
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie",
               "independant"
             ]
           }
@@ -2024,21 +1623,27 @@
         "dimension": "protection_sociale",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html",
-        "extrait": "L’assuré exerçant à titre exclusif une activité salariée ou non salariée qui, n’étant pas assujettie à une durée d’activité définie par un employeur, lui procure un revenu minimal et donne lieu à diminution des revenus professionnels"
+        "extrait": "Le bénéfice d’une retraite progressive est accordé, à condition d’avoir atteint un âge, inférieur à celui mentionné à l’article L. 161-17-2"
       },
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "statut_professionnel",
             "valeurs": [
-              "médecins bénéficiant de l'exonération de cotisation prévue à l'article 13 de la loi n° 2022-1616 du 23 décembre 2022"
+              "fonctionnaire"
+            ]
+          },
+          {
+            "champ": "tranche_age",
+            "valeurs": [
+              "50_64"
             ]
           }
         ],
         "dimension": "protection_sociale",
-        "sens": "baisse",
+        "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html",
-        "extrait": "ne se constituent, au titre des périodes concernées, aucun droit à retraite de base en vue d’une seconde pension"
+        "extrait": "une pension partielle est servie, à sa demande, au fonctionnaire qui exerce à titre exclusif son activité à temps partiel"
       },
       {
         "cibles": [
@@ -2051,21 +1656,36 @@
           {
             "champ": "autre",
             "valeurs": [
-              "ayant atteint l'âge prévu pour la retraite progressive"
+              "salarié ayant atteint l'âge d'accès à la retraite progressive"
             ]
           }
         ],
         "dimension": "emploi",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html",
-        "extrait": "Lorsqu’un salarié ayant atteint l’âge prévu au premier alinéa de l’article L. 161-22-1-5 du code de la sécurité sociale demande à travailler à temps partiel, il adresse sa demande, dans des conditions fixées par décret, à l’employeur"
+        "extrait": "À défaut de réponse écrite et motivée dans un délai de deux mois à compter de la réception de la demande, l’accord de l’employeur est réputé acquis"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "salarie",
+              "retraite"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html",
+        "extrait": "Chaque salarié ne peut bénéficier que d’une seule indemnité de départ ou de mise à la retraite. L’indemnité est attribuée lors de la première liquidation complète de la retraite."
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "assurés dont la durée cotisée est inférieure à dix années ou dont la carrière a été interrompue"
+              "assuré dont la durée cotisée est inférieure à dix années ou dont la carrière a été interrompue"
             ]
           }
         ],
@@ -2073,68 +1693,103 @@
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html",
         "extrait": "se voient proposer un rendez-vous de conseil sur leur carrière"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "allocations_familiales"
+            ]
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html",
+        "extrait": "l’allocation de soutien familial a été revalorisée de 50 % en novembre 2022"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.896
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.777
   },
   "https://www.senat.fr/scrutin-public/2022/scr2022-249.html": {
-    "empreinte": "a0f081b79c5bf8c9",
+    "empreinte": "e0a377f125bd8601",
     "passages": 19,
     "tronque": false,
     "effets": [
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "statut_professionnel",
             "valeurs": [
-              "assurés nés à compter du 1er septembre 1961 ayant versé des cotisations de rachat de trimestres et n'ayant pas encore liquidé leur pension"
+              "chef_entreprise"
             ]
           }
         ],
-        "dimension": "patrimoine",
+        "dimension": "cout_du_travail",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "par l’assuré né à compter du 1er septembre 1961 lui sont remboursées à sa demande, à la condition qu’il n’ait fait valoir aucun des droits aux pensions personnelles de retraite"
+        "extrait": "Le taux de cette contribution est fixé à 30 %."
       },
       {
         "cibles": [
           {
-            "champ": "autre",
+            "champ": "tranche_age",
             "valeurs": [
-              "parent privé de l'autorité parentale suite à condamnation pour crime ou délit contre son enfant"
+              "moins_30",
+              "30_49"
             ]
           }
         ],
         "dimension": "protection_sociale",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "L’assuré ne peut bénéficier de la majoration prévue au premier alinéa s’il a été privé de l’exercice de l’autorité parentale ou s’est vu retirer l’autorité parentale consécutivement à une condamnation pénale"
+        "extrait": "Il est porté à soixante-quatre ans pour les assurés nés à compter du 1er janvier 1968."
       },
       {
         "cibles": [
           {
+            "champ": "tranche_age",
+            "valeurs": [
+              "50_64"
+            ]
+          },
+          {
             "champ": "autre",
             "valeurs": [
-              "parent dont l'autre parent a perdu l'autorité parentale suite à condamnation"
+              "assurés nés à compter du 1er janvier 1968"
             ]
           }
         ],
         "dimension": "protection_sociale",
-        "sens": "hausse",
+        "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "les trimestres attribués au parent condamné et dont la pension n’a pas encore été liquidée sont attribués à l’autre parent"
+        "extrait": "Il est porté à soixante-quatre ans pour les assurés nés à compter du 1er janvier 1968."
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "mère assurée sociale bénéficiaire de la majoration de durée d'assurance"
+              "parent privé ou déchu de l'autorité parentale suite à une condamnation pénale pour crime ou délit sexuel sur son enfant"
             ]
           }
         ],
-        "dimension": "protection_sociale",
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
+        "extrait": "L’assuré ne peut bénéficier de la majoration prévue au premier alinéa s’il a été privé de l’exercice de l’autorité parentale ou s’est vu retirer l’autorité parentale consécutivement à une condamnation pénale au titre des crimes ou délits prévus à la section 1 du chapitre Ier du titre II du livre II du code pénal"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "mère assurée sociale bénéficiant de la majoration de durée d'assurance pour enfant"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
         "extrait": "Le bénéfice de cette majoration en faveur de la mère assurée sociale ne peut être inférieur à deux trimestres."
@@ -2144,42 +1799,28 @@
           {
             "champ": "autre",
             "valeurs": [
-              "mère assurée sociale bénéficiaire de la majoration de durée d'assurance pour enfant"
+              "père assuré social bénéficiant jusque-là de la majoration de durée d'assurance partagée pour enfant"
             ]
           }
         ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "les mots : « partagée par moitié entre les deux parents » sont remplacés par les mots : « attribuée à la mère »"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "père assurée social précédemment bénéficiaire de la moitié de la majoration"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
+        "dimension": "patrimoine",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "les mots : « partagée par moitié entre les deux parents » sont remplacés par les mots : « attribuée à la mère »"
+        "extrait": "les mots : « partagée par moitié entre les deux parents » sont remplacés par les mots : « attribuée à la mère »."
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "parent dont l'enfant est décédé avant son quatrième anniversaire"
+              "parent d'un enfant décédé avant la fin de sa quatrième année"
             ]
           }
         ],
-        "dimension": "protection_sociale",
+        "dimension": "patrimoine",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "en cas de décès de l’enfant avant la fin de la quatrième année suivant sa naissance ou son adoption, la majoration prévue au II est égale à quatre trimestres"
+        "extrait": "en cas de décès de l’enfant avant la fin de la quatrième année suivant sa naissance ou son adoption, la majoration prévue au II est égale à quatre trimestres."
       },
       {
         "cibles": [
@@ -2190,10 +1831,38 @@
             ]
           }
         ],
-        "dimension": "protection_sociale",
+        "dimension": "patrimoine",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "la personne condamnée ne peut bénéficier de cette majoration"
+        "extrait": "la personne condamnée ne peut bénéficier de cette majoration."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "metier_penible",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
+        "extrait": "d’actions de formation mentionnées à l’article L. 6323-6 du code du travail et d’actions de reconversion et de prévention de la désinsertion professionnelle à destination des salariés particulièrement exposés aux facteurs"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "metier_penible",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
+        "extrait": "Le salarié titulaire du compte professionnel de prévention peut demander à son employeur, dans des conditions précisées par décret, un congé de reconversion professionnelle afin de suivre tout ou partie des actions de formation incluses dans son projet de reconversion professionnelle."
       },
       {
         "cibles": [
@@ -2207,168 +1876,93 @@
         "dimension": "acces_aux_services",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "Le fonds a pour mission de participer au financement par les employeurs d’actions de sensibilisation et de prévention, d’actions de formation… et d’actions de reconversion et de prévention de la désinsertion professionnelle à destination des salariés particulièrement exposés"
+        "extrait": "Une visite médicale est organisée entre le soixantième et le soixante et unième anniversaire du salarié."
       },
       {
         "cibles": [
           {
-            "champ": "territoire",
+            "champ": "autre",
             "valeurs": [
-              "outre_mer"
+              "orphelin dont un parent est décédé, disparu ou déclaré absent"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
+        "extrait": "l’orphelin a droit à une pension pour chaque assuré décédé, disparu ou absent"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "metier",
+            "valeurs": [
+              "agriculteur"
             ]
           },
           {
             "champ": "statut_professionnel",
             "valeurs": [
-              "retraite"
+              "independant"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "Les pensions de vieillesse servies par le régime mahorais, ayant pris effet avant le 31 août 2023, sont majorées à titre exceptionnel au 1er septembre 2023 d’un montant forfaitaire fixé par décret."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "territoire",
-            "valeurs": [
-              "outre_mer"
-            ]
-          },
-          {
-            "champ": "aides_percues",
-            "valeurs": [
-              "aspa"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "Le montant maximum de l’allocation spéciale pour les personnes âgées prévu à l’article 29 de l’ordonnance n° 2002-411 du 27 mars 2002 relative à la protection sanitaire et sociale à Mayotte est revalorisé à titre exceptionnel"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes ayant eu un congé de maternité ayant débuté avant le 1er janvier 2012"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "Il est également applicable aux indemnités journalières d’assurance maternité versées dans le cadre des congés maternité ayant débuté avant le 1er janvier 2012"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "sapeurs-pompiers volontaires ayant accompli au moins dix années de service"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "Les sapeurs-pompiers volontaires ayant accompli dix années de service en qualité de sapeur-pompier volontaire ont droit à une bonification de leur durée d’assurance de trois trimestres."
+        "extrait": "le taux : « 26,67 % » est remplacé par le taux : « 26,02 % »"
       },
       {
         "cibles": [
           {
             "champ": "statut_professionnel",
             "valeurs": [
-              "salarie"
+              "fonctionnaire"
             ]
-          },
+          }
+        ],
+        "dimension": "revenu_disponible",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
+        "extrait": "une pension partielle est servie, à sa demande, au fonctionnaire qui exerce à titre exclusif son activité à temps partiel dans les conditions prévues au chapitre II du titre Ier du livre VI du code général de la fonction publique"
+      },
+      {
+        "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "salariés ayant atteint l'âge d'accès à la retraite progressive"
+              "salarié ayant atteint l'âge proche de la retraite demandant à travailler à temps partiel"
             ]
           }
         ],
         "dimension": "emploi",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "À défaut de réponse écrite et motivée dans un délai de deux mois à compter de la réception de la demande, l’accord de l’employeur est réputé acquis."
-      },
-      {
-        "cibles": [],
-        "dimension": "protection_sociale",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "portant une hausse progressive de l’âge d’ouverture des droits (AOD) de soixante-deux à soixante-quatre ans, au rythme d’un trimestre par génération à compter du 1er septembre 2023"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes inaptes au travail ou reconnues invalides"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "dispenser de la hausse de l’AOD les personnes inaptes au travail ou reconnues invalides"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "carriere_longue",
-            "valeurs": [
-              "oui"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "assurés ayant commencé à travailler précocement de partir plus tôt que l’âge de droit commun avec notamment un renforcement du dispositif « carrières longues »"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "bénéficiaires du minimum contributif"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "les minima de pension seront revalorisés pour les nouveaux retraités à partir de 2023 mais également pour ceux déjà partis à la retraite et bénéficiant du minimum contributif"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "retraite"
-            ]
-          }
-        ],
-        "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2022/scr2022-249.html",
-        "extrait": "une revalorisation de 0,8 % au 1er janvier 2023 pour les retraites"
+        "extrait": "Lorsqu’un salarié ayant atteint l’âge prévu au premier alinéa de l’article L. 161-22-1-5 du code de la sécurité sociale demande à travailler à temps partiel, il adresse sa demande, dans des conditions fixées par décret, à l’employeur. À défaut de réponse écrite et motivée dans un délai de deux mois à compter de la réception de la demande, l’accord de l’employeur est réputé acquis."
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.892
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.8441
   },
   "https://www.senat.fr/scrutin-public/2018/scr2018-170.html": {
-    "empreinte": "b67d94fedc3c1539",
+    "empreinte": "93f2df06a1e11228",
     "passages": 14,
     "tronque": false,
     "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "salariés des installations de production d'électricité dont l'emploi serait supprimé du fait de la fermeture de ces installations"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2018/scr2018-170.html",
+        "extrait": "permettant la mise en place par l’État, ses opérateurs et les régions, pour ce qui relève de leurs compétences, d’un accompagnement spécifique :\n\n1° Pour les salariés des entreprises exploitant les installations de production d’électricité"
+      },
       {
         "cibles": [
           {
@@ -2378,25 +1972,25 @@
             ]
           }
         ],
-        "dimension": "cout_de_la_vie",
-        "sens": "indetermine",
+        "dimension": "droits_et_libertes",
+        "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2018/scr2018-170.html",
         "extrait": "après le mot : « minimale », sont insérés les mots : « , défini par un seuil maximal de 330 kWh de consommation d’énergie primaire par mètre carré et par an, »"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.3027
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.3161
   },
   "https://www.senat.fr/scrutin-public/2017/scr2017-6.html": {
-    "empreinte": "bfb1446ce5209ddf",
+    "empreinte": "85c181da6f46fbe7",
     "passages": 6,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.1366
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.132
   },
   "https://www.senat.fr/scrutin-public/2016/scr2016-123.html": {
-    "empreinte": "25e31c1a760015c7",
+    "empreinte": "0fce89c8c333a9fa",
     "passages": 5,
     "tronque": false,
     "effets": [
@@ -2405,28 +1999,28 @@
           {
             "champ": "autre",
             "valeurs": [
-              "personne à l'égard de laquelle il existe des raisons sérieuses de penser que son comportement constitue une menace terroriste"
+              "personne à l'égard de laquelle il existe des raisons sérieuses de penser que son comportement constitue une menace terroriste (mesure de contrôle administratif et de surveillance prononcée par le ministre de l'intérieur)"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2016/scr2016-123.html",
-        "extrait": "Ne pas se déplacer à l'extérieur d'un périmètre géographique déterminé, qui ne peut être inférieur à la commune"
+        "extrait": "Ne pas se déplacer à\nl'extérieur d'un périmètre géographique\ndéterminé"
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "personne pour laquelle il existe des raisons sérieuses de penser que son comportement constitue une menace d'une particulière gravité pour la sécurité et l'ordre publics"
+              "personne dont le comportement constitue une menace d'une particulière gravité pour la sécurité et l'ordre publics, dont le domicile fait l'objet d'une visite administrative"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2016/scr2016-123.html",
-        "extrait": "peut, après accord exprès du juge des libertés et\nde la détention du tribunal de grande instance de Paris, être\nretenue sur place par l'officier de police judiciaire"
+        "extrait": "être\nretenue sur place par l'officier de police judiciaire pendant le temps\nstrictement nécessaire au déroulement des opérations"
       },
       {
         "cibles": [
@@ -2444,11 +2038,11 @@
         "extrait": "vérifier le respect, par les personnes dont\nla nationalité étrangère peut être déduite\nd'éléments objectifs extérieurs à la personne\nmême de l'intéressé, des obligations de détention,\nde port et de présentation des pièces ou documents"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.2226
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.2613
   },
   "https://www.senat.fr/scrutin-public/2020/scr2020-148.html": {
-    "empreinte": "a2ca066c33647159",
+    "empreinte": "5af557060cfd3042",
     "passages": 34,
     "tronque": true,
     "effets": [
@@ -2464,84 +2058,56 @@
         "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2020/scr2020-148.html",
-        "extrait": "Les contribuables domiciliés en France au sens de l’article 4 B peuvent bénéficier d’une réduction d’impôt sur le revenu à raison des dépenses qu’ils supportent au titre de l’application aux moulins à eau à usage énergétique dont ils sont propriétaires"
+        "extrait": "les contribuables domiciliés en France au sens de l’article 4 B peuvent bénéficier d’une réduction d’impôt sur le revenu à raison des dépenses qu’ils supportent au titre de l’application aux moulins à eau à usage énergétique dont ils sont propriétaires des prescriptions relatives à la préservation de la biodiversité et à la restauration de la continuité écologique."
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "propriétaires de véhicules diesel immatriculés avant le 31 décembre 2010 ou essence immatriculés avant le 31 décembre 2005, circulant en zone à faibles émissions mobilité"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2020/scr2020-148.html",
-        "extrait": "les mesures de restriction interdisent, au plus tard le 1er janvier 2030, les véhicules diesel et assimilés dont la date de première immatriculation est antérieure au 31 décembre 2010 ainsi que les véhicules essence et assimilés dont la date de première immatriculation est antérieure au 31 décembre 2005"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "statut_professionnel",
-            "valeurs": [
-              "independant",
-              "chef_entreprise"
+              "personnes physiques sous conditions de ressources achetant un véhicule émettant au plus 50 g de CO2/km"
             ]
           }
         ],
         "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2020/scr2020-148.html",
-        "extrait": "peuvent consentir un prêt ne portant pas intérêt aux personnes physiques et morales pour financer l’acquisition d’un véhicule lourd peu polluant affecté au transport de marchandises"
+        "extrait": "peuvent consentir un prêt ne portant pas intérêt, sous conditions de ressources, aux personnes physiques et morales pour financer l’acquisition d’un véhicule dont le poids total autorisé en charge est inférieur ou égal à 2,6 tonnes émettant une quantité de dioxyde de carbone inférieure ou égale à 50 grammes par kilomètre."
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "passagers de lignes aériennes intérieures dont le trajet est également assuré en moins de 2h30 par le train"
+              "personnes sous conditions de ressources ayant une difficulté d'accès à une offre adaptée de transports collectifs"
             ]
           }
         ],
         "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2020/scr2020-148.html",
+        "extrait": "L’accès au service social de location de véhicules terrestres à moteur est ouvert, sous conditions de ressources, à toute personne physique majeure domiciliée en France et justifiant d’une difficulté d’accès à une offre adaptée de transports collectifs au regard de sa situation familiale, personnelle ou professionnelle."
+      },
+      {
+        "cibles": [],
+        "dimension": "cout_de_la_vie",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2020/scr2020-148.html",
-        "extrait": "Sont interdits, sur le fondement de l’article 20 du règlement (CE) n° 1008/2008 du Parlement européen et du Conseil du 24 septembre 2008 précité, les services réguliers de transport aérien public de passagers concernant toutes les liaisons aériennes à l’intérieur du territoire français dont le trajet est également assuré sur le réseau ferré national sans correspondance et par plusieurs liaisons quotidiennes d’une durée inférieure à deux heures trente."
+        "extrait": "Les billets de train pour le transport des voyageurs."
       },
       {
         "cibles": [
-          {
-            "champ": "logement",
-            "valeurs": [
-              "proprietaire"
-            ]
-          },
           {
             "champ": "autre",
             "valeurs": [
-              "logement appartenant à la classe E, F ou G mis en vente"
+              "usagers pratiquant le covoiturage ou circulant en transport en commun sur autoroute"
             ]
           }
         ],
         "dimension": "cout_de_la_vie",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2020/scr2020-148.html",
-        "extrait": "un audit énergétique est réalisé et est communiqué dans les conditions et selon les modalités prévues aux articles L. 271-4 à L. 271-6"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "logement",
-            "valeurs": [
-              "locataire"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
         "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2020/scr2020-148.html",
-        "extrait": "la réalisation de travaux d’économie d’énergie dans les parties privatives, nécessitant la libération des lieux et permettant d’atteindre le niveau de performance minimal au sens de l’article L. 173-1-1 du code de la construction et de l’habitation"
+        "extrait": "Des tarifs de péages privilégiés pour favoriser les véhicules transportant un nombre minimal d’occupants, notamment dans le cadre du covoiturage"
       },
       {
         "cibles": [
@@ -2552,33 +2118,47 @@
             ]
           }
         ],
-        "dimension": "cout_de_la_vie",
-        "sens": "hausse",
+        "dimension": "revenu_disponible",
+        "sens": "baisse",
         "source_url": "https://www.senat.fr/scrutin-public/2020/scr2020-148.html",
-        "extrait": "Ce fonds de travaux est alimenté par une cotisation annuelle obligatoire. Chaque copropriétaire contribue au fonds"
+        "extrait": "Ce fonds de travaux est alimenté par une cotisation annuelle obligatoire. Chaque copropriétaire contribue au fonds selon les mêmes modalités que celles décidées par l’assemblée générale pour le versement des provisions du budget prévisionnel."
+      },
+      {
+        "cibles": [
+          {
+            "champ": "logement",
+            "valeurs": [
+              "proprietaire"
+            ]
+          }
+        ],
+        "dimension": "patrimoine",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2020/scr2020-148.html",
+        "extrait": "Elles ne donnent pas lieu à un remboursement par le syndicat des copropriétaires à l’occasion de la cession d’un lot."
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 1.1132
+    "date": "2026-11-07",
+    "cout_reference_usd": 1.2201
   },
   "https://www.senat.fr/scrutin-public/2014/scr2014-215.html": {
-    "empreinte": "be6c163671f4ff78",
+    "empreinte": "0aaf0eeebe214bf4",
     "passages": 1,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0483
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0489
   },
   "https://www.senat.fr/scrutin-public/2013/scr2013-42.html": {
-    "empreinte": "e2ef5bf1557b9834",
+    "empreinte": "6650eb49cb5ae905",
     "passages": 1,
     "tronque": false,
     "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0481
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0487
   },
   "https://www.senat.fr/scrutin-public/2011/scr2011-66.html": {
-    "empreinte": "4d620a75136f1c49",
+    "empreinte": "dd13563c4e8cd2c7",
     "passages": 1,
     "tronque": false,
     "effets": [
@@ -2595,160 +2175,30 @@
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2011/scr2011-66.html",
         "extrait": "Le droit de vote\net d'éligibilité aux élections municipales est\naccordé aux étrangers non ressortissants de l'Union\neuropéenne résidant en France."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "nationalite",
-            "valeurs": [
-              "europeenne"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2011/scr2011-66.html",
-        "extrait": "les mots : « peut être » sont\nremplacés par le mot : « est » et le\nmot : « seuls » est supprimé."
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0197
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0183
   },
   "https://www.senat.fr/scrutin-public/2015/scr2015-13.html": {
-    "empreinte": "156f4b4952dbd045",
+    "empreinte": "0b9346cdfbd7c4ed",
     "passages": 9,
     "tronque": false,
     "effets": [
       {
         "cibles": [
           {
-            "champ": "statut_sejour",
+            "champ": "nationalite",
             "valeurs": [
-              "sans_titre"
-            ]
-          }
-        ],
-        "dimension": "cout_de_la_vie",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2015/scr2015-13.html",
-        "extrait": "sous réserve, s'il est majeur, de s'être\nacquitté, à son propre titre et au titre des personnes majeures\nà sa charge telles que définies ci-dessus, d'un droit annuel dont\nle montant est fixé par décret"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "étranger ayant conclu un contrat d'accueil et d'intégration, assidu et ayant atteint le niveau de langue prescrit"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2015/scr2015-13.html",
-        "extrait": "bénéficie de\nla délivrance de la carte de séjour pluriannuelle"
-      }
-    ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.3018
-  },
-  "https://www.senat.fr/scrutin-public/2010/scr2010-195.html": {
-    "empreinte": "32518da0807f5124",
-    "passages": 4,
-    "tronque": false,
-    "effets": [],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.187
-  },
-  "https://www.senat.fr/scrutin-public/2009/scr2009-276.html": {
-    "empreinte": "da7137e45cac0486",
-    "passages": 1,
-    "tronque": false,
-    "effets": [
-      {
-        "cibles": [],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2009/scr2009-276.html",
-        "extrait": "Nul ne peut, dans l'espace public, porter une tenue\ndestinée à dissimuler son visage."
-      }
-    ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.0238
-  },
-  "https://www.senat.fr/scrutin-public/2017/scr2017-171.html": {
-    "empreinte": "c5d636da1f6b9b6e",
-    "passages": 11,
-    "tronque": false,
-    "effets": [
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes reconnues apatrides"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2017/scr2017-171.html",
-        "extrait": "La carte de séjour est délivrée dans un\ndélai d'un mois à compter de la notification de la\ndécision reconnaissant le statut d'apatride par l'Office français\nde protection des réfugiés et apatrides ou la Cour nationale du\ndroit d'asile."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "personnes reconnues réfugiées"
-            ]
-          }
-        ],
-        "dimension": "acces_aux_services",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2017/scr2017-171.html",
-        "extrait": "La carte de\nrésident est délivrée dans un délai d'un mois à compter de la\nnotification de la décision de reconnaissance de la qualité de\nréfugié par l'Office français de protection des\nréfugiés et apatrides ou la Cour nationale du droit\nd'asile."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "statut_sejour",
-            "valeurs": [
-              "demandeur_asile"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2017/scr2017-171.html",
-        "extrait": "entraîne de plein droit le refus ou, le cas échéant, le\nretrait du bénéfice des conditions matérielles\nd'accueil."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "statut_sejour",
-            "valeurs": [
-              "demandeur_asile"
-            ]
-          }
-        ],
-        "dimension": "droits_et_libertes",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2017/scr2017-171.html",
-        "extrait": "où il est tenu de résider le temps de l'examen de sa demande\nd'asile."
-      },
-      {
-        "cibles": [
-          {
-            "champ": "statut_sejour",
-            "valeurs": [
-              "sans_titre"
+              "europeenne",
+              "hors_ue"
             ]
           }
         ],
         "dimension": "revenu_disponible",
         "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2017/scr2017-171.html",
-        "extrait": "Cette aide au retour ne peut lui\nêtre attribuée qu'une seule fois."
+        "source_url": "https://www.senat.fr/scrutin-public/2015/scr2015-13.html",
+        "extrait": "Chaque étranger contribue financièrement aux formations qu'il doit suivre, à la hauteur de ses ressources, selon des modalités définies par décret."
       },
       {
         "cibles": [
@@ -2760,57 +2210,218 @@
             ]
           },
           {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "etudiant"
+            ]
+          }
+        ],
+        "dimension": "emploi",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2015/scr2015-13.html",
+        "extrait": "Pendant la durée de cette autorisation, son titulaire est autorisé à\nchercher et à exercer un emploi en relation avec sa formation et assorti\nd'une rémunération supérieure à un seuil\nfixé par décret."
+      },
+      {
+        "cibles": [
+          {
             "champ": "autre",
             "valeurs": [
-              "jeune au pair accueilli dans une famille d'accueil"
+              "personnes tenues à l'obligation alimentaire à l'égard d'un bénéficiaire de l'aide médicale d'urgence"
             ]
           }
         ],
         "dimension": "revenu_disponible",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2017/scr2017-171.html",
-        "extrait": "le repos\nhebdomadaire et le versement d'une somme à titre d'argent de poche."
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2015/scr2015-13.html",
+        "extrait": "Les prestations prises en charge par l'aide médicale d'urgence peuvent\nêtre recouvrées auprès des personnes tenues à\nl'obligation alimentaire à l'égard des\nbénéficiaires de cette aide."
       },
       {
         "cibles": [
           {
             "champ": "statut_sejour",
             "valeurs": [
-              "demandeur_asile"
-            ]
-          },
-          {
-            "champ": "autre",
-            "valeurs": [
-              "mineur non accompagné"
+              "sans_titre"
             ]
           }
         ],
-        "dimension": "emploi",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2017/scr2017-171.html",
-        "extrait": "est autorisé à poursuivre son contrat pendant la\ndurée de traitement de la demande."
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2015/scr2015-13.html",
+        "extrait": "le mot : « trente » est\nremplacé par le mot : « sept »"
+      }
+    ],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.3911
+  },
+  "https://www.senat.fr/scrutin-public/2010/scr2010-195.html": {
+    "empreinte": "c851adc294f96f50",
+    "passages": 4,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes demandant la nationalité française par naturalisation"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-195.html",
+        "extrait": "sont\ninsérés les mots : « , de l'histoire, de la\nculture et de la société françaises, dont le niveau et les\nmodalités d'évaluation sont fixés par décret en\nConseil d'État, »"
       },
       {
         "cibles": [
           {
             "champ": "autre",
             "valeurs": [
-              "étranger titulaire d'une carte de séjour délivrée en tant que victime de violences conjugales ou familiales ayant déposé plainte"
+              "conjoints étrangers demandant la nationalité française par mariage"
             ]
           }
         ],
         "dimension": "droits_et_libertes",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2017/scr2017-171.html",
-        "extrait": "Une fois arrivée à expiration, la\ncarte de séjour mentionnée au présent article est\nrenouvelée de plein droit même après l'expiration de\nl'ordonnance de protection lorsque l'étranger a porté plainte\ncontre l'auteur des faits, pendant la durée de la procédure\npénale y afférente"
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-195.html",
+        "extrait": "également justifier d'une\nconnaissance suffisante, selon sa condition, de la langue française,\ndont le niveau et les modalités d'évaluation sont fixés\npar décret en Conseil d'État"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "groupe d'au moins dix étrangers arrivant en France en dehors d'un point de passage frontalier"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-195.html",
+        "extrait": "Lorsqu'il est manifeste qu'un groupe d'au moins\ndix étrangers vient d'arriver en France en dehors d'un point de\npassage frontalier, en un même lieu ou sur un ensemble de lieux distants\nd'au plus dix kilomètres, la zone d'attente s'étend, pour une\ndurée maximale de vingt-six jours"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étrangers maintenus en zone d'attente"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-195.html",
+        "extrait": "toute juridiction, y\ncompris la Cour de cassation, qui est saisie d'une demande d'annulation ou qui\nrelève d'office une telle irrégularité ne peut prononcer\nla mainlevée de la mesure de maintien en zone d'attente que lorsque\ncelle-ci a eu pour effet de porter atteinte aux droits de\nl'étranger"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étrangers malades sollicitant un titre de séjour pour raison médicale"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-195.html",
+        "extrait": "Les mots : « qu'il ne puisse\neffectivement bénéficier » sont remplacés par\nles mots : « de l'absence »"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étrangers placés en rétention administrative"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-195.html",
+        "extrait": "les\nmots : « quarante-huit heures » sont remplacés\npar les mots : « quatre jours »"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étrangers résidant en France depuis moins de trois mois dont le comportement constitue une menace pour l'ordre public ou ayant méconnu les règles relatives au travail"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-195.html",
+        "extrait": "L'autorité\nadministrative compétente peut, par arrêté motivé,\ndécider qu'un étranger… doit être\nreconduit\nà la frontière :\n« 1° Si son comportement constitue une\nmenace pour l'ordre public."
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.5876
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.2102
+  },
+  "https://www.senat.fr/scrutin-public/2009/scr2009-276.html": {
+    "empreinte": "c94a0483dc298ff9",
+    "passages": 1,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes portant une tenue destinée à dissimuler leur visage dans l'espace public"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2009/scr2009-276.html",
+        "extrait": "Nul ne peut, dans l'espace public, porter une tenue\ndestinée à dissimuler son visage."
+      }
+    ],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0263
+  },
+  "https://www.senat.fr/scrutin-public/2017/scr2017-171.html": {
+    "empreinte": "038784f55a80a1d7",
+    "passages": 11,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "refugie_apatride"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2017/scr2017-171.html",
+        "extrait": "La carte de séjour est délivrée dans un délai d'un mois à compter de la notification de la décision reconnaissant le statut d'apatride"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.senat.fr/scrutin-public/2017/scr2017-171.html",
+        "extrait": "le mot :\n« six » est remplacé par le mot :\n« dix »"
+      }
+    ],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.6304
   },
   "https://www.senat.fr/scrutin-public/2008/scr2008-109.html": {
-    "empreinte": "2b161797aa691c3f",
+    "empreinte": "8fb8d0ebb435e37d",
     "passages": 12,
     "tronque": false,
     "effets": [
@@ -2823,13 +2434,42 @@
             ]
           }
         ],
-        "dimension": "patrimoine",
+        "dimension": "revenu_disponible",
         "sens": "hausse",
         "source_url": "https://www.senat.fr/scrutin-public/2008/scr2008-109.html",
-        "extrait": "les acquéreurs de logements dont la performance énergétique excédera les seuils fixés par la réglementation applicable pourront bénéficier d'un avantage supplémentaire au titre de l'aide à l'accession à la propriété et du prêt à taux zéro"
+        "extrait": "les acquéreurs de logements dont la performance énergétique excédera les seuils fixés par la réglementation applicable pourront bénéficier d'un avantage supplémentaire au titre de l'aide à l'accession à la propriété et du prêt à taux zéro."
+      }
+    ],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.2702
+  },
+  "https://www.senat.fr/scrutin-public/2010/scr2010-82.html": {
+    "empreinte": "79bd7b8f4aefe923",
+    "passages": 11,
+    "tronque": false,
+    "effets": [
+      {
+        "cibles": [
+          {
+            "champ": "incapacite_permanente",
+            "valeurs": [
+              "oui"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-82.html",
+        "extrait": "La\ncondition d'âge prévue au premier alinéa de l'article\nL. 351-1 est abaissée, dans des conditions fixées par\ndécret, pour les assurés qui justifient d'une incapacité\npermanente"
       },
       {
         "cibles": [
+          {
+            "champ": "aides_percues",
+            "valeurs": [
+              "aspa"
+            ]
+          },
           {
             "champ": "metier",
             "valeurs": [
@@ -2837,68 +2477,102 @@
             ]
           }
         ],
+        "dimension": "patrimoine",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-82.html",
+        "extrait": "ce dernier ainsi que les bâtiments qui en sont indissociables ne sont pas pris en compte pour l'application du deuxième alinéa"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "conjoint survivant d'un assuré affilié à l'assurance vieillesse"
+            ]
+          }
+        ],
         "dimension": "revenu_disponible",
         "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2008/scr2008-109.html",
-        "extrait": "le crédit d'impôt en faveur de l'agriculture biologique sera doublé dès l'année 2009 afin de favoriser la conversion des exploitations agricoles vers l'agriculture biologique"
+        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-82.html",
+        "extrait": "L'assurance veuvage garantit au conjoint survivant de l'assuré qui a été affilié, à titre obligatoire ou volontaire, à l'assurance vieillesse du régime général"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_professionnel",
+            "valeurs": [
+              "chef_entreprise"
+            ]
+          },
+          {
+            "champ": "autre",
+            "valeurs": [
+              "entreprises d'au moins cinquante salariés"
+            ]
+          }
+        ],
+        "dimension": "cout_du_travail",
+        "sens": "hausse",
+        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-82.html",
+        "extrait": "Les entreprises d'au moins cinquante salariés sont soumises à une pénalité à la charge de l'employeur lorsqu'elles ne sont pas couvertes par un accord relatif à l'égalité professionnelle"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.3099
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.5721
   },
-  "https://www.senat.fr/scrutin-public/2010/scr2010-82.html": {
-    "empreinte": "b7210f132b43e7e1",
-    "passages": 11,
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/2958": {
+    "empreinte": "22fd5f51706bd1f1",
+    "passages": 1,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.0246
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/2957": {
+    "empreinte": "6e1a6a2241b8c7b0",
+    "passages": 4,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.1013
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/1041": {
+    "empreinte": "71501fcf5dba8f5f",
+    "passages": 4,
+    "tronque": false,
+    "effets": [],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.085
+  },
+  "https://www.assemblee-nationale.fr/dyn/17/scrutins/6184": {
+    "empreinte": "f7f66dd4b8f5b8dd",
+    "passages": 18,
     "tronque": false,
     "effets": [
       {
         "cibles": [
           {
-            "champ": "autre",
-            "valeurs": [
-              "assurés justifiant d'une incapacité permanente reconnue au titre d'une maladie professionnelle ou d'un accident du travail"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-82.html",
-        "extrait": "La\ncondition d'âge prévue au premier alinéa de l'article\nL. 351-1 est abaissée, dans des conditions fixées par\ndécret, pour les assurés qui justifient d'une incapacité\npermanente au sens de l'article L. 434-2 au moins égale à un\ntaux déterminé par décret, lorsque cette incapacité\nest reconnue au titre d'une maladie professionnelle mentionnée à\nl'article L. 461-1 ou au titre d'un accident du travail mentionné\nà l'article L. 411-1"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "autre",
-            "valeurs": [
-              "travailleurs non salariés agricoles justifiant d'une incapacité permanente reconnue au titre d'une maladie professionnelle ou d'un accident du travail"
-            ]
-          }
-        ],
-        "dimension": "protection_sociale",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-82.html",
-        "extrait": "La\ncondition d'âge prévue à l'article L. 732-18 est\nabaissée, dans les conditions fixées par décret, pour les\nassurés qui justifient d'une incapacité permanente au sens de\nl'article L. 752-6 au moins égale à un taux\ndéterminé par décret, lorsque cette incapacité est\nreconnue au titre d'une maladie professionnelle mentionnée au second\nalinéa de l'article L. 752-2 ou d'un accident du travail\nmentionné au premier alinéa du même article"
-      },
-      {
-        "cibles": [
-          {
-            "champ": "tranche_age",
-            "valeurs": [
-              "50_64"
-            ]
-          },
-          {
             "champ": "statut_professionnel",
             "valeurs": [
-              "sans_emploi"
+              "independant",
+              "chef_entreprise"
             ]
           }
         ],
-        "dimension": "emploi",
-        "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-82.html",
-        "extrait": "perçoivent sur leur demande une aide\nà l'embauche, en contrat à durée\nindéterminée ou à durée déterminée\nd'au moins six mois, de demandeurs d'emploi âgés de cinquante-cinq\nans ou plus"
-      },
+        "dimension": "cout_de_la_vie",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/6184",
+        "extrait": "Les sommes payées à titre de garantie par le preneur à bail d’un local mentionné à l’article L. 145‑32-1 ne peuvent excéder le montant des loyers dus au titre d’un trimestre."
+      }
+    ],
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.4404
+  },
+  "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213": {
+    "empreinte": "31e18b962c686ce6",
+    "passages": 14,
+    "tronque": false,
+    "effets": [
       {
         "cibles": [
           {
@@ -2909,53 +2583,208 @@
           }
         ],
         "dimension": "cout_du_travail",
-        "sens": "baisse",
-        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-82.html",
-        "extrait": "Les employeurs qui se trouvent dans le champ d'éligibilité de la\nréduction prévue à l'article L. 241-13 du code de la\nsécurité sociale perçoivent sur leur demande une aide\nà l'embauche"
+        "sens": "hausse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "le montant : « 15 000 euros » est remplacé par le montant : « 30 000 euros »"
       },
       {
         "cibles": [
           {
-            "champ": "statut_professionnel",
+            "champ": "autre",
             "valeurs": [
-              "salarie"
-            ]
-          },
-          {
-            "champ": "tranche_age",
-            "valeurs": [
-              "50_64"
+              "étranger mineur de dix-huit ans"
             ]
           }
         ],
-        "dimension": "revenu_disponible",
+        "dimension": "droits_et_libertes",
         "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-82.html",
-        "extrait": "peut demander la liquidation de sa pension de\nvieillesse et le service d'une fraction de celle-ci"
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "L’étranger mineur de dix‑huit ans ne peut faire l’objet d’une décision portant obligation de quitter le territoire français"
       },
       {
         "cibles": [
           {
-            "champ": "statut_professionnel",
+            "champ": "statut_sejour",
             "valeurs": [
-              "sans_emploi"
+              "demandeur_asile"
             ]
-          },
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "L’autorité administrative peut assigner à résidence ou, si cette mesure est insuffisante et sur la base d’une appréciation au cas par cas, placer en rétention le demandeur d’asile dont le comportement constitue une menace à l’ordre public"
+      },
+      {
+        "cibles": [
           {
-            "champ": "tranche_age",
+            "champ": "autre",
             "valeurs": [
-              "50_64",
-              "65_plus"
+              "étranger placé en rétention administrative"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "les mots : « de six mois » sont remplacés par les mots : « d’un an »"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "jeune majeur faisant l'objet d'une obligation de quitter le territoire français"
             ]
           }
         ],
         "dimension": "protection_sociale",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "et à l’exclusion de ceux faisant l’objet d’une décision portant obligation de quitter le territoire français en application de l’article L. 611‑1 du code de l’entrée et du séjour des étrangers et du droit d’asile"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étranger victime de conditions d'hébergement incompatibles avec la dignité humaine ayant déposé plainte"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
         "sens": "hausse",
-        "source_url": "https://www.senat.fr/scrutin-public/2010/scr2010-82.html",
-        "extrait": "Les demandeurs d'emploi qui en\nbénéficient au 31 décembre 2010 continuent d'en\nbénéficier jusqu'à l'âge prévu à\nl'article L. 351-1 du code de la sécurité\nsociale."
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "L’étranger qui dépose plainte contre une personne qu’il accuse d’avoir commis à son encontre des faits constitutifs de l’infraction de soumission à des conditions d’hébergement incompatibles avec la dignité humaine, mentionnée à l’article 225‑14 du code pénal, se voit délivrer une carte de séjour temporaire portant la mention “vie privée et familiale” d’une durée d’un an"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étranger sous interdiction de retour sur le territoire français"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "sont ajoutés les mots : « , et dix ans en cas de menace grave pour l’ordre public »"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "les visas mentionnés aux articles L. 312‑1 à L. 312‑4 ne sont pas délivrés à l’étranger qui a fait l’objet d’une obligation de quitter le territoire français depuis moins de cinq ans et n’apporte pas la preuve qu’il a quitté le territoire français"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "demandeur d'asile dont la demande a fait l'objet d'une décision définitive de rejet"
+            ]
+          }
+        ],
+        "dimension": "protection_sociale",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "La décision définitive de rejet prononcée par l’Office français de protection des réfugiés et apatrides, le cas échéant après que la Cour nationale du droit d’asile a statué, entraîne l’interruption immédiate de la prise en charge des frais de santé"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "sans_titre"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "L’étranger ne bénéficiant pas d’un droit au séjour en France et faisant l’objet d’une décision portant obligation de quitter le territoire français… ne peut être hébergé au sein du dispositif d’hébergement d’urgence que dans l’attente de son éloignement"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "statut_sejour",
+            "valeurs": [
+              "refugie_apatride"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "le droit du réfugié ou du bénéficiaire de la protection subsidiaire à être rejoint par les membres de sa famille est soumis au chapitre IV du titre III du livre IV du présent code si la demande de visa prévue à l’article L. 561‑5 n’a pas été introduite dans le délai de dix‑huit mois à compter de l’octroi du statut de réfugié"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "personnes ayant fait l'objet d'une décision de rejet définitive de leur demande d'asile"
+            ]
+          }
+        ],
+        "dimension": "acces_aux_services",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "les personnes ayant fait l’objet d’une décision de rejet définitive de leur demande d’asile ne peuvent pas s’y maintenir"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "étranger condamné à une peine d'interdiction du territoire pour des actes de terrorisme ou faisant l'objet d'une mesure d'éloignement liée à des activités terroristes"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "l’appel interjeté contre une décision mettant fin à la rétention est suspensif lorsque l’intéressé a été condamné à une peine d’interdiction du territoire pour des actes de terrorisme… L’intéressé est maintenu à la disposition de la justice jusqu’à ce qu’il soit statué sur le fond"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "enfant né dans la collectivité territoriale de Guyane de parents étrangers dont aucun ne réside en France de manière régulière depuis plus de neuf mois à la date de naissance"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "Pour un enfant né dans la collectivité territoriale de Guyane, l’article 21‑7 n’est applicable que si, à la date de sa naissance, l’un de ses parents au moins résidait en France de manière régulière, sous couvert d’un titre de séjour, et de manière ininterrompue depuis plus de neuf mois"
+      },
+      {
+        "cibles": [
+          {
+            "champ": "autre",
+            "valeurs": [
+              "enfant né à Saint-Martin de parents étrangers dont aucun ne réside en France de manière régulière depuis plus de trois mois à la date de naissance"
+            ]
+          }
+        ],
+        "dimension": "droits_et_libertes",
+        "sens": "baisse",
+        "source_url": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "extrait": "Pour un enfant né à Saint‑Martin, l’article 21‑7 n’est applicable que si, à la date de sa naissance, l’un de ses parents au moins résidait en France de manière régulière, sous couvert d’un titre de séjour, et de manière ininterrompue depuis plus de trois mois"
       }
     ],
-    "date": "2026-11-06",
-    "cout_reference_usd": 0.6387
+    "date": "2026-11-07",
+    "cout_reference_usd": 0.8702
   }
 }
