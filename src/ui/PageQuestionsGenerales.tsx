@@ -1,7 +1,7 @@
 import { Eraser, Eye, ListChecks, ListOrdered, Lock } from "lucide-react";
 import { PanneauProgression } from "./PanneauProgression";
 import { ActionPied } from "./ModaleTravail";
-import { PasAPas, type EtapeQuestion } from "./PasAPas";
+import { BasculeAffichage, PasAPas, type EtapeQuestion } from "./PasAPas";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { compterReponses, estRepondue, questionsVisibles, type SectionTheme } from "../questionnaire";
 import { mettreAJourReponse, type ProfilPartiel } from "../profil";
@@ -147,10 +147,7 @@ export default function PageQuestionsGenerales({ champs, questions, profilInitia
       {integre && pasAPas && <PasAPas etapes={file} profil={profilFile} onReponse={repondreEtape} onToutVoir={() => setPasAPas(false)} />}
       {integre && !pasAPas && (
         <ActionPied>
-          <button type="button" className="secondaire pas-a-pas-retour" onClick={() => setPasAPas(true)}>
-          <ListOrdered size={18} aria-hidden="true" focusable="false" />
-          Répondre une question à la fois
-        </button>
+          <BasculeAffichage toutes onChange={(toutes) => setPasAPas(!toutes)} />
         </ActionPied>
       )}
       {!(integre && pasAPas) && (

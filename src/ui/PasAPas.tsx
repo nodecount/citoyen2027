@@ -1,10 +1,10 @@
-import { ArrowLeft, ArrowRight, Check, Eraser, ListChecks } from "lucide-react";
-import { useContext, useState } from "react";
+import { ArrowLeft, ArrowRight, Check, Eraser, LayoutList, ListChecks, Square } from "lucide-react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { compterMesuresImpactees } from "../engine/mesuresImpactees";
 import type { ProfilPartiel } from "../profil";
 import { estRepondue } from "../questionnaire";
 import type { ChampProfil } from "../types";
-import { ActionPied, FermerContexte, RetourIntroContexte, useNavigationPied } from "./ModaleTravail";
+import { ActionPied, FermerContexte, RetourIntroContexte, remonterEnHaut, useNavigationPied } from "./ModaleTravail";
 import { IconeTheme } from "./icones";
 import { PropositionsBase } from "./PropositionsContexte";
 import { libelleOption } from "./Questions";
@@ -25,6 +25,8 @@ interface PasAPasProps {
   onReponse: (etape: EtapeQuestion, brut: string | string[]) => void;
   // Quitte le pas à pas pour la grille de toutes les questions.
   onToutVoir: () => void;
+  // Libellé d'un dernier choix « neutre » qui passe la question sans rien enregistrer (convictions : « Pas d'avis / avis plus nuancé »).
+  optionNeutre?: string;
   // Nom accessible du groupe de questions (situation ou convictions) : on ne pose jamais que des « questions » au visiteur.
   groupe?: string;
   // Phrase sous la réponse (nombre de mesures concernées) ; par défaut, celle des questions de situation. null : rien.
@@ -42,9 +44,26 @@ function rangDeDepart(etapes: EtapeQuestion[], profil: ProfilPartiel): number {
 
 // Une question par écran : libellé, finalité toujours visible (la place ne manque pas), réponses en grands choix. Rien n'est
 // présélectionné : « Passer » laisse la question sans réponse, jamais comptée comme « non ». Chaque réponse s'applique tout de suite.
+// Change l'affichage des questions : deux boutons côte à côte, icône + mot. À gauche une question à la fois, à droite toutes les
+// questions groupées. Le même contrôle dans les deux vues : seul le segment actif change.
+export function BasculeAffichage({ toutes, onChange }: { toutes: boolean; onChange: (toutes: boolean) => void }) {
+  return (
+    <div className="bascule-vue" role="group" aria-label="Affichage des questions">
+      <button type="button" className={`bascule-vue-segment${toutes ? "" : " bascule-vue-segment--actif"}`} aria-pressed={!toutes} title="Répondre une question à la fois" onClick={() => toutes && onChange(false)}>
+        <Square size={18} aria-hidden="true" focusable="false" />
+        Une par une
+      </button>
+      <button type="button" className={`bascule-vue-segment${toutes ? " bascule-vue-segment--actif" : ""}`} aria-pressed={toutes} title="Voir toutes les questions d'un coup" onClick={() => !toutes && onChange(true)}>
+        <LayoutList size={18} aria-hidden="true" focusable="false" />
+        Groupées
+      </button>
+    </div>
+  );
+}
+
 // Dans une fenêtre de questions, « Précédent », « Suivant » (ou « Passer » tant que rien n'est répondu) et « Enregistrer et fermer »
 // sont rangés dans le pied fixe de la fenêtre ; à la dernière question, « Suivant » devient « Enregistrer et fermer ».
-export function PasAPas({ etapes, profil, onReponse, onToutVoir, groupe = "Questions sur ma situation", impact, texteFin = "Vos réponses sont enregistrées. Vous pouvez revenir en arrière pour les corriger, ou voir les mesures adaptées à votre situation.", fin }: PasAPasProps) {
+export function PasAPas({ etapes, profil, onReponse, onToutVoir, optionNeutre, groupe = "Questions sur ma situation", impact, texteFin = "Vos réponses sont enregistrées. Vous pouvez revenir en arrière pour les corriger, ou voir les mesures adaptées à votre situation.", fin }: PasAPasProps) {
   const [rang, setRang] = useState(() => rangDeDepart(etapes, profil));
   const propositions = useContext(PropositionsBase);
   const retourIntro = useContext(RetourIntroContexte);
@@ -56,6 +75,15 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir, groupe = "Quest
   const etape = fini ? null : etapes[courant];
   // Une question affichée : la navigation du pied de la fenêtre est la nôtre (sinon le pied ne propose que « Enregistrer et fermer »).
   useNavigationPied(Boolean(etape));
+  // Chaque changement de question (Passer, Suivant, Précédent) ramène en haut, comme « Enregistrer et fermer » ramène en haut de la page.
+  const premierRendu = useRef(true);
+  useEffect(() => {
+    if (premierRendu.current) {
+      premierRendu.current = false;
+      return;
+    }
+    remonterEnHaut();
+  }, [courant]);
 
   if (total === 0) {
     return (
@@ -154,6 +182,20 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir, groupe = "Quest
                 </label>
               );
             })}
+            {/* Choix neutre (convictions) : équivaut à passer la question. Aucune position n'est enregistrée (une réponse déjà
+                donnée est effacée) et on passe à la suivante ; ce n'est jamais une position. */}
+            {optionNeutre && (
+              <button
+                type="button"
+                className="pas-a-pas-option pas-a-pas-option--neutre"
+                onClick={() => {
+                  if (repondue) onReponse(etape, champ.type === "multi" ? [] : "");
+                  setRang(courant + 1);
+                }}
+              >
+                {optionNeutre}
+              </button>
+            )}
           </div>
         ) : (
           <input
@@ -195,7 +237,7 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir, groupe = "Quest
         <div className="pas-a-pas-actions">
           <button type="button" className="secondaire" disabled={courant === 0 && !retourIntro} onClick={() => (courant === 0 ? retourIntro?.() : setRang(courant - 1))}>
             <ArrowLeft size={18} aria-hidden="true" focusable="false" />
-            Précédent
+            <span className="libelle-bouton">Précédent</span>
           </button>
           {/* À droite : « Enregistrer et fermer » (ghost) juste à gauche de « Suivant ». À la dernière question, « Suivant » devient
               « Enregistrer et fermer » (réponse donnée ou non). */}
@@ -212,7 +254,7 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir, groupe = "Quest
                   </button>
                 )}
                 <button type="button" onClick={() => setRang(courant + 1)}>
-                  {repondue ? "Suivant" : "Passer"}
+                  <span className="libelle-bouton">{repondue ? "Suivant" : "Passer"}</span>
                   <ArrowRight size={18} aria-hidden="true" focusable="false" />
                 </button>
               </>
@@ -221,10 +263,8 @@ export function PasAPas({ etapes, profil, onReponse, onToutVoir, groupe = "Quest
         </div>
       </ActionPied>
       <ActionPied>
-        <button type="button" className="secondaire pas-a-pas-tout" onClick={onToutVoir}>
-          <ListChecks size={16} aria-hidden="true" focusable="false" />
-          Voir toutes les questions d'un coup
-        </button>
+        <BasculeAffichage toutes={false} onChange={(toutes) => toutes && onToutVoir()} />
+
       </ActionPied>
     </div>
   );

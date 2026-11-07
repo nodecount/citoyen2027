@@ -215,6 +215,20 @@
   font-weight: 700;
 }
 
+/* Choix neutre : un bouton qui passe la question, au même gabarit que les choix mais en pointillés et sans état « choisi ». */
+button.pas-a-pas-option--neutre {
+  width: 100%;
+  margin: 0;
+  border-style: dashed;
+  background: var(--surface);
+  color: var(--encre);
+  font-weight: 400;
+  text-align: left;
+}
+button.pas-a-pas-option--neutre:hover {
+  background: var(--bleu-pale);
+}
+
 .pas-a-pas-option input {
   width: 1.2rem;
   height: 1.2rem;
@@ -322,6 +336,17 @@
 .pas-a-pas-ligne-reponse button {
   flex: none;
   white-space: nowrap;
+}
+/* Téléphone : la phrase sur une ligne, « Effacer ma réponse » sur la ligne dessous (à gauche). */
+@media (max-width: 40rem) {
+  .pas-a-pas-ligne-reponse {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pas-a-pas-ligne-reponse .question-impact {
+    flex: none;
+    width: 100%;
+  }
 }
 /* Même style que « Effacer mes réponses » du tableau de bord : rouge, sans bordure (ghost). */
 button.pas-a-pas-effacer {

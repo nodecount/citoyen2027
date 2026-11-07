@@ -465,9 +465,33 @@
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
-  /* À droite, le rond d'avancement occupe le coin : le bouton « Haut de page » se pose au-dessus. */
-  body:has(.modale-fond:not([hidden]) .modale--travail) .haut-de-page {
-    bottom: 6rem;
+  /* Le rond d'avancement (%) se range en haut à droite de la fenêtre, dans la barre colorée du titre (la croix est cachée ici) :
+     en bas à droite il recouvrait « Suivant ». */
+  .modale--travail {
+    position: relative;
+  }
+  .modale--travail .progression-flottante {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.5rem;
+    bottom: auto;
+    z-index: 3;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 0.875rem;
+    box-shadow: none;
+  }
+  /* Même rond dans les deux affichages (une question à la fois / toutes) : celui de l'affichage une question à la fois.
+     L'état « appuyé » de la grille (réponses manquantes en valeur) ne change pas son style. */
+  .modale--travail .progression-flottante[aria-pressed="true"] {
+    background: var(--surface);
+    color: var(--bleu-fonce);
+  }
+  .modale--travail .progression-flottante[aria-pressed="true"] .progression-flottante-fond {
+    stroke: #e8eefb;
+  }
+  .modale--travail .progression-flottante[aria-pressed="true"] .progression-flottante-valeur {
+    stroke: var(--bleu);
   }
   .modale--plein {
     padding-bottom: 4.5rem; /* le bouton flottant ne masque pas les derniers boutons */
@@ -723,9 +747,110 @@ button.ghost:hover {
   font-size: 1.125rem;
   line-height: 1.5;
 }
-@media (max-width: 40rem) {
+/* Téléphone : les cartes sont empilées, donc on range chacune en deux colonnes (icône à gauche, titre puis texte à droite)
+   au lieu de centrer trois blocs hauts. */
+@media (max-width: 47.99rem) {
+  .intro-fenetre .reperes {
+    gap: 0.6rem;
+    margin: 0 0 0.75rem;
+  }
   .intro-fenetre .repere {
-    padding: 0.8rem 0.9rem;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 0.8rem;
+    row-gap: 0.1rem;
+    padding: 0.6rem 0.8rem;
+    border-top-width: 1px;
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(90deg, var(--accent-pale) 0, var(--surface) 5rem);
+    text-align: left;
+  }
+  .intro-fenetre .repere > svg {
+    grid-row: 1 / span 2;
+    padding: 0.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .intro-fenetre .repere > strong {
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+  .intro-fenetre .repere > span {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+  .intro-fenetre-texte {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+/* Bascule d'affichage : deux boutons côte à côte (gauche = une par une, droite = toutes groupées), icône + mot. Le même
+   contrôle dans les deux vues : seul le segment actif change. Sur la barre colorée des fenêtres : contour blanc, segment actif
+   plein blanc. */
+.bascule-vue {
+  --seg-ligne: var(--bleu);
+  --seg-texte: var(--bleu);
+  --seg-fond-actif: var(--bleu);
+  --seg-texte-actif: #fff;
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 2px solid var(--seg-ligne);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.modale-entete--zone .bascule-vue {
+  --seg-ligne: rgba(255, 255, 255, 0.8);
+  --seg-texte: #fff;
+  --seg-fond-actif: #fff;
+  --seg-texte-actif: var(--bleu-fonce);
+}
+.bascule-vue-segment {
+  display: inline-flex;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--seg-texte);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.bascule-vue-segment + .bascule-vue-segment {
+  border-left: 2px solid var(--seg-ligne);
+}
+.bascule-vue-segment:hover {
+  background: color-mix(in srgb, var(--seg-texte) 15%, transparent);
+  color: var(--seg-texte);
+}
+.bascule-vue-segment--actif,
+.bascule-vue-segment--actif:hover {
+  background: var(--seg-fond-actif);
+  color: var(--seg-texte-actif);
+  cursor: default;
+}
+.bascule-vue-segment:focus-visible {
+  outline: 3px solid var(--seg-texte);
+  outline-offset: -5px;
+}
+.bascule-vue-segment--actif:focus-visible {
+  outline-color: var(--seg-texte-actif);
+}
+@media (min-width: 40.01rem) {
+  .bascule-vue {
+    width: auto;
   }
 }
 
@@ -776,5 +901,54 @@ button.ghost:hover {
   .modale-pied-travail-navigation .pas-a-pas-actions > button,
   .pas-a-pas-actions-droite > button:not(.ghost) {
     padding-inline: 0.6rem;
+  }
+  /* Pied : « Précédent » et « Enregistrer et fermer » gardent leur taille minimale ; c'est « Suivant » (ou « Passer ») qui prend
+     toute la place restante. */
+  /* « Précédent » : taille fixe (la règle plus haut lui donnait « flex: 1 1 0 », donc la moitié de la ligne). */
+  .modale-pied-travail-navigation .pas-a-pas-actions > button:not(.ghost) {
+    flex: 0 0 auto;
+    width: 2.75rem;
+    max-width: 2.75rem;
+  }
+  /* « Enregistrer et fermer » (ghost) : s'étend comme « Suivant » et partage avec lui la place restante ; le texte passe sur deux
+     lignes au besoin. */
+  .modale-pied-travail-navigation .pas-a-pas-actions-droite > button.ghost {
+    flex: 1 1 0;
+    padding-inline: 0.25rem;
+    line-height: 1.15;
+    white-space: normal;
+    text-align: center;
+  }
+  .modale-pied-travail-navigation .pas-a-pas-actions-droite {
+    flex: 1;
+    min-width: 0;
+  }
+  /* « Suivant » / « Passer » : taille fixe comme « Précédent » (sauf seul dans son groupe : à la dernière question il devient
+     « Enregistrer et fermer » et s'étend). */
+  .modale-pied-travail-navigation .pas-a-pas-actions-droite > button:not(.ghost):not(:only-child) {
+    flex: 0 0 auto;
+    width: 2.75rem;
+    max-width: 2.75rem;
+  }
+  .modale-pied-travail-navigation .pas-a-pas-actions-droite > button:only-child {
+    flex: 1;
+  }
+  .modale-pied-travail-navigation .pas-a-pas-actions-droite > .ghost {
+    flex: none;
+  }
+  /* Précédent / Suivant (ou Passer) : simples boutons icône ; le libellé reste lu par les lecteurs d'écran. */
+  .modale-pied-travail-navigation .libelle-bouton {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  .modale-pied-travail-navigation .pas-a-pas-actions > button,
+  .pas-a-pas-actions-droite > button:not(.ghost) {
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    justify-content: center;
   }
 }

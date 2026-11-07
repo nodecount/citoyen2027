@@ -10,7 +10,7 @@ import type { Proposition } from "../types";
 import { CONVICTIONS_VIDES, type Convictions } from "./memoireConvictions";
 import { PanneauProgression } from "./PanneauProgression";
 import { ActionPied } from "./ModaleTravail";
-import { PasAPas, type EtapeQuestion } from "./PasAPas";
+import { BasculeAffichage, PasAPas, type EtapeQuestion } from "./PasAPas";
 
 const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 
@@ -133,6 +133,7 @@ export function BlocConvictions({ convictions, onChange: appliquer, pasAPasIniti
             etapes={etapes}
             profil={profilPositions}
             groupe="Questions sur mes convictions"
+            optionNeutre="Pas d'avis / avis plus nuancé"
             texteFin="Vos choix sont enregistrés. Une question sans choix n'influence pas le résultat. Vous pouvez revenir en arrière pour les corriger."
             fin={exemplarite}
             impact={(etape, valeur) => (propositions && typeof valeur === "string" && valeur ? phraseMesuresPosition(compterMesuresPosition(etape.champ.id, valeur, propositions)) : null)}
@@ -143,10 +144,7 @@ export function BlocConvictions({ convictions, onChange: appliquer, pasAPasIniti
       )}
       {!pasAPas && (
         <ActionPied>
-          <button type="button" className="secondaire pas-a-pas-retour" onClick={() => setPasAPas(true)}>
-          <ListOrdered size={18} aria-hidden="true" focusable="false" />
-          Répondre une question à la fois
-        </button>
+          <BasculeAffichage toutes onChange={(toutes) => setPasAPas(!toutes)} />
         </ActionPied>
       )}
       {!pasAPas && (

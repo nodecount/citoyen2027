@@ -33,6 +33,14 @@ export function ActionPied({ zone = "bascule", children }: { zone?: "bascule" | 
   const emplacement = pied ? pied[zone] : null;
   return emplacement ? createPortal(children, emplacement) : <>{children}</>;
 }
+// Ramène en haut : la page (téléphone) et les zones qui défilent dans la fenêtre (ordinateur).
+export function remonterEnHaut() {
+  if (typeof window === "undefined") return;
+  window.scrollTo?.(0, 0);
+  document.querySelectorAll<HTMLElement>(".modale--travail .modale-corps, .modale--travail .modale-corps > form, .modale--travail .modale-corps > section, .modale--travail .modale-intro").forEach((el) => {
+    el.scrollTop = 0;
+  });
+}
 // Même seuil que la feuille de style : en dessous, la vue de travail est une étape dans la page, pas une fenêtre.
 const MOBILE = "(max-width: 52rem)";
 
@@ -156,6 +164,7 @@ export function ModaleTravail({ ouverte, titre, onFermer, children, intro, intro
             <button type="button" className="modale-intro-continuer" onClick={() => {
                 setIntroVue(true);
                 setIntroRevue(false);
+                requestAnimationFrame(remonterEnHaut);
               }}>
               Continuer
               <ArrowRight size={18} aria-hidden="true" focusable="false" />
