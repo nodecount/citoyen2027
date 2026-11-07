@@ -35,6 +35,18 @@ Le coût de la lecture est désormais **par loi**, plus par votant : étendre à
 - **Résultat** (73 mesures, 2 déclarations écartées) : 35 avec effet (48 %), dont 8 sans aucun critère « autre » (public entièrement décrit par le formulaire) ; 40 avec une position de conviction (55 %) ; 69 réponses du formulaire sans mesure favorable, 74 sans mesure défavorable. Le nombre d'effets est stable (38 → 35 : le modèle est non déterministe, et le nouveau formulaire déplace des effets de « autre » vers de vrais critères).
 - **À savoir** : refaire `scrape:2027etmoi` remet le texte affiché au début de la loi et efface les convictions ; l'ordre est donc `scrape:2027etmoi`, `scrape:structurer-textes`, `scrape:positions` (avec `--force` si le texte a changé), `scrape:couverture`.
 
+### Essai d'un filtre classique avant le modèle (2026-11-08)
+Question posée : un modèle de texte ancien (mots-clés, TF-IDF) peut-il écarter les articles sans portée pour un citoyen, afin d'économiser l'abonnement ? Mesuré sur 58 lois, 2 876 articles, dont **137 seulement (4,8 %)** portent un passage cité par un effet (vérité de référence = ce que le modèle a lui-même retenu).
+
+| Filtre | Articles gardés | Caractères gardés | Effets retrouvés |
+|---|---|---|---|
+| Mots-clés larges (montants, droits, étrangers, salariés…) | 86 % | 97 % | 97,8 % |
+| Mots-clés resserrés | 53 % | 81 % | 83,2 % |
+| TF-IDF + régression logistique, validation croisée par loi, seuil à 97 % | 77 % | **94 %** | 97,1 % |
+| même modèle, seuil à 90 % | 52 % | 74 % | 90,5 % |
+
+Conclusion : **non retenu**. Un texte de loi est plein des mêmes mots (« montant », « droit », « les mots… sont remplacés ») que l'article soit sans portée ou central ; à 97 % de rappel on garde 94 % des caractères, soit environ 6 % d'économie, contre 3 % d'effets perdus sans qu'on le sache. Les longs articles, qui coûtent le plus, sont aussi ceux qui contiennent le plus souvent un effet. Autres leviers à tester : première lecture par un modèle plus petit, et étendre uniquement aux lois votées par plusieurs candidats.
+
 Une loi fait en moyenne 127 000 caractères : 8 000 n'en couvrent qu'environ 6 %. Le gain de 6 % à 17 % montre que lire davantage aide, mais on est loin de lire la loi entière.
 
 ## Ce qui marche
