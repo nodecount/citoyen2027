@@ -155,6 +155,19 @@ describe("decrireLesTextes", () => {
     expect(journal.u1.effets).toHaveLength(1);
   });
 
+  it("cible les champs du formulaire de la base 2027etmoi (ici « incapacité permanente », absent des autres bases)", async () => {
+    const texte = "Article 1er\nLes assurés reconnus en incapacité permanente voient leur pension relevée.";
+    const modele = {
+      appeler: async (prompt: string, systeme: string): Promise<SortieCli> => {
+        const ids = [...prompt.matchAll(/"id": "([^"]+)"/g)].map((m) => m[1]);
+        if (systeme.includes("relecteur")) return reponse({ verdicts: ids.map((id) => ({ id, verdict: "PASS" })) });
+        return reponse({ resultats: ids.map((id) => ({ id, effets: [{ cibles: [{ champ: "incapacite_permanente", valeurs: ["oui"] }], dimension: "revenu_disponible", sens: "hausse", extrait: "incapacité permanente voient leur pension relevée" }] })) });
+      },
+    };
+    const { journal } = await decrireLesTextes([{ url: "u9", theme: "retraites", texte }], {}, themes, modele, {});
+    expect(journal.u9.effets).toHaveLength(1);
+  });
+
   it("s'arrête au plafond de coût sans perdre ce qui est fait", async () => {
     const textes = ["u1", "u2", "u3"].map((url) => ({ url, theme: "immigration", texte: loi + url }));
     const { journal, arret } = await decrireLesTextes(textes, {}, themes, fauxModele([]), { plafondRefUsd: 0.15, concurrence: 1 });

@@ -8,6 +8,7 @@ import {
   controlerReponse,
   decouperEnGroupes,
   empreinteGroupe,
+  empreintePrompts,
   structurerGroupe,
   type EntreeStructuration,
 } from "./structuration";
@@ -64,6 +65,34 @@ describe("construireRequete", () => {
     const { prompt } = construireRequeteVerification("X", "T", ENTREES, effets);
     expect(prompt).toContain("x-1");
     expect(prompt).not.toContain("x-2");
+  });
+});
+
+describe("structuration selon le formulaire de la base", () => {
+  const TEXTE = "Une aide de 100 € par mois est versée aux parents isolés.";
+  const entrees: EntreeStructuration[] = [{ id: "p-1", texte: TEXTE, url: URL }];
+  const effetParentIsole = { cibles: [{ champ: "parent_isole", valeurs: ["oui"] }], dimension: "revenu_disponible", sens: "hausse", extrait: "100 € par mois est versée aux parents isolés" };
+
+  it("donne au modèle les champs de la base demandée (par défaut : agregateurs)", () => {
+    expect(construireRequete("X", "T", entrees).systeme).not.toContain("`parent_isole`");
+    expect(construireRequete("X", "T", entrees, "officielle").systeme).toContain("`parent_isole`");
+  });
+
+  it("n'accepte un effet que sur un champ de la base demandée", () => {
+    const reponse = { resultats: [{ id: "p-1", effets: [effetParentIsole] }] };
+    expect(controlerReponse(reponse, entrees).get("p-1")!.statut).toBe("rejetee");
+    expect(controlerReponse(reponse, entrees, "officielle").get("p-1")!.statut).toBe("structuree");
+  });
+
+  it("l'empreinte des prompts suit le formulaire de la base : changer ses questions refait ses lois, pas celles des autres", () => {
+    expect(empreintePrompts("officielle")).not.toBe(empreintePrompts("agregateurs"));
+    expect(empreintePrompts()).toBe(empreintePrompts("agregateurs"));
+  });
+
+  it("structurerGroupe valide les effets selon la base passée", async () => {
+    const appeler = async (_p: string, systeme: string) => (systeme.includes("relecteur") ? sortie({ verdicts: [{ id: "p-1", verdict: "PASS" }] }) : sortie({ resultats: [{ id: "p-1", effets: [effetParentIsole] }] }));
+    expect((await structurerGroupe("X", "T", entrees, { appeler }, "officielle")).resultats.get("p-1")!.statut).toBe("structuree");
+    expect((await structurerGroupe("X", "T", entrees, { appeler })).resultats.get("p-1")!.statut).toBe("rejetee");
   });
 });
 

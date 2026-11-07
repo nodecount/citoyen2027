@@ -16,7 +16,10 @@ export const LECTURE_MAX = 400_000;
 // Passages envoyés ensemble au modèle (≈ 100 000 caractères par appel).
 export const PASSAGES_PAR_APPEL = 8;
 
-const NOM_LECTEUR = "le texte d'une loi votée au Parlement";
+// Les effets d'une loi ciblent les champs du formulaire de CETTE base, pas ceux d'une autre source.
+export const BASE_VOTES = "2027etmoi";
+
+const NOM_LECTEUR ="le texte d'une loi votée au Parlement";
 const REPERE_PASSAGES = "\n\n[Passages retenus plus loin dans la loi]\n";
 
 export function decouperEnPassages(texte: string, taille: number = TAILLE_PASSAGE): { passages: string[]; tronque: boolean } {
@@ -64,7 +67,7 @@ export function fusionnerEffets(listes: Effet[][]): Effet[] {
 
 // Change dès que le texte de la loi, la taille de lecture ou les prompts changent : la loi est alors à refaire.
 export function empreinteTexte(texte: string): string {
-  return createHash("sha256").update(empreintePrompts()).update(`\n${TAILLE_PASSAGE}/${LECTURE_MAX}\n`).update(texte).digest("hex").slice(0, 16);
+  return createHash("sha256").update(empreintePrompts(BASE_VOTES)).update(`\n${TAILLE_PASSAGE}/${LECTURE_MAX}\n`).update(texte).digest("hex").slice(0, 16);
 }
 
 // Nom du fichier où la récolte garde le texte complet d'une loi (cache hors dépôt), d'après l'adresse de son scrutin.
@@ -120,7 +123,7 @@ async function lireUneLoi(texte: TexteAStructurer, themeLibelle: string, outils:
   const parPassage: Effet[][] = [];
   let cout = 0;
   for (let i = 0; i < entrees.length; i += PASSAGES_PAR_APPEL) {
-    const rapport = await structurerGroupe(NOM_LECTEUR, themeLibelle, entrees.slice(i, i + PASSAGES_PAR_APPEL), outils);
+    const rapport = await structurerGroupe(NOM_LECTEUR, themeLibelle, entrees.slice(i, i + PASSAGES_PAR_APPEL), outils, BASE_VOTES);
     cout += rapport.coutReferenceUsd;
     // Un passage refusé (extrait introuvable, relecture) perd ses effets, mais pas ceux des autres passages.
     for (const r of rapport.resultats.values()) if (r.statut === "structuree") parPassage.push(r.effets);

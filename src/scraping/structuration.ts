@@ -35,42 +35,49 @@ export type ResultatProposition =
   | { statut: "structuree"; effets: Effet[] }
   | { statut: "rejetee"; raison: string };
 
-const SCHEMA_EFFET = {
-  type: "object",
-  properties: {
-    cibles: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: { champ: { type: "string", enum: champsCibles(BASE_STRUCTURATION) }, valeurs: { type: "array", items: { type: "string" } } },
-        required: ["champ", "valeurs"],
-        additionalProperties: false,
+function schemaEffet(baseId: string) {
+  return {
+    type: "object",
+    properties: {
+      cibles: {
+        type: "array",
+        items: {
+          type: "object",
+          properties: { champ: { type: "string", enum: champsCibles(baseId) }, valeurs: { type: "array", items: { type: "string" } } },
+          required: ["champ", "valeurs"],
+          additionalProperties: false,
+        },
       },
+      dimension: { type: "string", enum: [...DIMENSIONS_EFFET] },
+      sens: { type: "string", enum: [...SENS_EFFET] },
+      extrait: { type: "string" },
     },
-    dimension: { type: "string", enum: [...DIMENSIONS_EFFET] },
-    sens: { type: "string", enum: [...SENS_EFFET] },
-    extrait: { type: "string" },
-  },
-  required: ["cibles", "dimension", "sens", "extrait"],
-  additionalProperties: false,
-} as const;
+    required: ["cibles", "dimension", "sens", "extrait"],
+    additionalProperties: false,
+  } as const;
+}
 
-export const SCHEMA_STRUCTURATION = {
-  type: "object",
-  properties: {
-    resultats: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: { id: { type: "string" }, effets: { type: "array", items: SCHEMA_EFFET } },
-        required: ["id", "effets"],
-        additionalProperties: false,
+// Schéma de réponse attendu du modèle : les champs ciblables sont ceux du formulaire de la base.
+export function schemaStructuration(baseId: string = BASE_STRUCTURATION) {
+  return {
+    type: "object",
+    properties: {
+      resultats: {
+        type: "array",
+        items: {
+          type: "object",
+          properties: { id: { type: "string" }, effets: { type: "array", items: schemaEffet(baseId) } },
+          required: ["id", "effets"],
+          additionalProperties: false,
+        },
       },
     },
-  },
-  required: ["resultats"],
-  additionalProperties: false,
-} as const;
+    required: ["resultats"],
+    additionalProperties: false,
+  } as const;
+}
+
+export const SCHEMA_STRUCTURATION = schemaStructuration();
 
 export const SCHEMA_VERIFICATION = {
   type: "object",
@@ -95,11 +102,11 @@ function lirePrompt(nom: string): string {
 
 // Les prompts ET la liste des champs du profil qu'ils donnent au modèle : ajouter ou changer une question du formulaire
 // rend les groupes « à refaire » (les effets pourraient désormais viser ce champ au lieu de « autre »).
-export function empreintePrompts(): string {
+export function empreintePrompts(baseId: string = BASE_STRUCTURATION): string {
   return createHash("sha256")
     .update(lirePrompt("structuration.md"))
     .update(lirePrompt("verification-structuration.md"))
-    .update(descriptionChampsProfil(BASE_STRUCTURATION))
+    .update(descriptionChampsProfil(baseId))
     .digest("hex")
     .slice(0, 16);
 }
@@ -122,8 +129,8 @@ function listeNumerotee(entrees: EntreeStructuration[]): string {
   return JSON.stringify(entrees.map((e) => ({ id: e.id, texte: e.texte })), null, 1);
 }
 
-export function construireRequete(candidat: string, theme: string, entrees: EntreeStructuration[]): { systeme: string; prompt: string } {
-  const systeme = remplirGabarit(lirePrompt("structuration.md"), { CANDIDAT: candidat, THEME: theme, CHAMPS_PROFIL: descriptionChampsProfil(BASE_STRUCTURATION) });
+export function construireRequete(candidat: string, theme: string, entrees: EntreeStructuration[], baseId: string = BASE_STRUCTURATION): { systeme: string; prompt: string } {
+  const systeme = remplirGabarit(lirePrompt("structuration.md"), { CANDIDAT: candidat, THEME: theme, CHAMPS_PROFIL: descriptionChampsProfil(baseId) });
   return { systeme, prompt: `Propositions à structurer (${entrees.length}) :\n${listeNumerotee(entrees)}` };
 }
 
@@ -146,7 +153,7 @@ function debut(texte: string): string {
 
 // Contrôles déterministes de la réponse : identifiants connus et non dupliqués, effets valides, extraits retrouvés mot pour mot
 // dans LE texte de la proposition concernée. Toute proposition non conforme est rejetée avec sa raison.
-export function controlerReponse(structure: unknown, entrees: EntreeStructuration[]): Map<string, ResultatProposition> {
+export function controlerReponse(structure: unknown, entrees: EntreeStructuration[], baseId: string = BASE_STRUCTURATION): Map<string, ResultatProposition> {
   const resultats = new Map<string, ResultatProposition>();
   const parId = new Map(entrees.map((e) => [e.id, e]));
   const liste = (structure as { resultats?: unknown })?.resultats;
@@ -172,7 +179,7 @@ export function controlerReponse(structure: unknown, entrees: EntreeStructuratio
     let raison: string | null = null;
     for (const e of effetsBruts) {
       const effet = { ...(e as Record<string, unknown>), source_url: entree.url };
-      if (!validerEffet(effet, [entree.url], BASE_STRUCTURATION)) {
+      if (!validerEffet(effet, [entree.url], baseId)) {
         raison = "un effet est invalide (cibles, dimension, sens ou longueur de l'extrait)";
         break;
       }
@@ -219,15 +226,15 @@ export interface RapportGroupe {
 
 // Un groupe = un candidat × un thème (au plus TAILLE_GROUPE propositions). Deux appels : structuration puis relecture des
 // seules propositions qui ont des effets. Les propositions trop courtes pour porter un extrait valide n'ont pas d'effet.
-export async function structurerGroupe(candidat: string, theme: string, entrees: EntreeStructuration[], outils: OutilsAppel): Promise<RapportGroupe> {
+export async function structurerGroupe(candidat: string, theme: string, entrees: EntreeStructuration[], outils: OutilsAppel, baseId: string = BASE_STRUCTURATION): Promise<RapportGroupe> {
   const trop_courtes = entrees.filter((e) => e.texte.trim().length < LONGUEUR_MIN_TEXTE);
   const aTraiter = entrees.filter((e) => e.texte.trim().length >= LONGUEUR_MIN_TEXTE);
   const resultats = new Map<string, ResultatProposition>(trop_courtes.map((e) => [e.id, { statut: "structuree", effets: [] }]));
   if (aTraiter.length === 0) return { resultats, coutReferenceUsd: 0, appels: 0 };
 
-  const requete = construireRequete(candidat, theme, aTraiter);
-  const premiere = await outils.appeler(requete.prompt, requete.systeme, SCHEMA_STRUCTURATION);
-  const controles = controlerReponse(premiere.structure, aTraiter);
+  const requete = construireRequete(candidat, theme, aTraiter, baseId);
+  const premiere = await outils.appeler(requete.prompt, requete.systeme, baseId === BASE_STRUCTURATION ? SCHEMA_STRUCTURATION : schemaStructuration(baseId));
+  const controles = controlerReponse(premiere.structure, aTraiter, baseId);
   let cout = premiere.coutReferenceUsd;
   let appels = 1;
 
