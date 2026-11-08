@@ -47,6 +47,16 @@ Question posée : un modèle de texte ancien (mots-clés, TF-IDF) peut-il écart
 
 Conclusion : **non retenu**. Un texte de loi est plein des mêmes mots (« montant », « droit », « les mots… sont remplacés ») que l'article soit sans portée ou central ; à 97 % de rappel on garde 94 % des caractères, soit environ 6 % d'économie, contre 3 % d'effets perdus sans qu'on le sache. Les longs articles, qui coûtent le plus, sont aussi ceux qui contiennent le plus souvent un effet. Autres leviers à tester : première lecture par un modèle plus petit, et étendre uniquement aux lois votées par plusieurs candidats.
 
+### Essai d'un modèle plus petit (Haiku) pour la lecture (2026-11-08)
+Échantillon : 4 lois (144 000 caractères), 14 effets décrits par Sonnet au pilote. Même chaîne (lecture + relecture) relancée avec Haiku, puis, pour mesurer le bruit, avec Sonnet une seconde fois :
+
+| Relance | Effets | Communs avec le premier passage de Sonnet | Coût de référence |
+|---|---|---|---|
+| Haiku | 7 | 3 | **0,06 $** |
+| Sonnet (2ᵉ passage) | 7 | 3 | 0,77 $ |
+
+**Le résultat varie d'un passage à l'autre quel que soit le modèle** : Sonnet d'accord avec lui-même sur 3 effets sur 14 seulement (14 puis 7). Haiku fait aussi bien que Sonnet rejoué, pour environ 13 fois moins cher. Échantillon petit (4 lois) : conclusion provisoire. Conséquence plus large : les effets d'une loi ne sont pas stables d'un passage à l'autre (aussi vu sur 38 → 35 mesures avec effet), ce qui pose la question d'un second passage pour recouper.
+
 Une loi fait en moyenne 127 000 caractères : 8 000 n'en couvrent qu'environ 6 %. Le gain de 6 % à 17 % montre que lire davantage aide, mais on est loin de lire la loi entière.
 
 ## Ce qui marche
